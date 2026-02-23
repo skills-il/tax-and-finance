@@ -1,0 +1,53 @@
+name: Skill Validation
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - '**/SKILL.md'
+      - '**/*.py'
+      - '**/*.sh'
+      - '**/*.js'
+      - '**/*.ts'
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Find changed skill files
+        id: changed
+        run: |
+          FILES=$(gh pr diff ${{ github.event.pull_request.number }} --name-only | grep 'SKILL.md$' || true)
+          echo "files<<EOF" >> $GITHUB_OUTPUT
+          echo "$FILES" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+        env:
+          GH_TOKEN: ${{ github.token }}
+
+      - name: Validate SKILL.md files
+        if: steps.changed.outputs.files != ''
+        run: |
+          chmod +x scripts/validate-skill.sh
+          # shellcheck disable=SC2086
+          ./scripts/validate-skill.sh ${{ steps.changed.outputs.files }}
+
+      - name: Post validation results
+        if: always() && steps.changed.outputs.files != ''
+        run: |
+          if [ "${{ steps.changed.conclusion || 'success' }}" = "success" ]; then
+            gh pr comment ${{ github.event.pull_request.number }} --body "## Skill Validation Passed
+
+          All SKILL.md files are valid."
+          else
+            gh pr comment ${{ github.event.pull_request.number }} --body "## Skill Validation Failed
+
+          Please check the workflow logs for details. See [CONTRIBUTING.md](https://github.com/skills-il/.github/blob/main/CONTRIBUTING.md) for the full spec."
+          fi
+        env:
+          GH_TOKEN: ${{ github.token }}
