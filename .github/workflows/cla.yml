@@ -1,0 +1,37 @@
+name: CLA Assistant
+
+on:
+  issue_comment:
+    types: [created]
+  pull_request_target:
+    types: [opened, synchronize]
+
+permissions:
+  actions: write
+  contents: write
+  pull-requests: write
+  statuses: write
+
+jobs:
+  cla:
+    runs-on: ubuntu-latest
+    if: |
+      (github.event_name == 'pull_request_target') ||
+      (github.event_name == 'issue_comment' && github.event.comment.body == 'I have read the CLA and I sign it')
+    steps:
+      - uses: contributor-assistant/github-action@v2.6.1
+        with:
+          remote-organization-name: skills-il
+          remote-repository-name: .github
+          path-to-signatures: 'signatures/cla.json'
+          path-to-document: 'https://github.com/skills-il/.github/blob/main/CLA.md'
+          branch: 'main'
+          allowlist: 'dependabot[bot],github-actions[bot]'
+          custom-notsigned-prcomment: |
+            Thank you for your contribution! Before we can merge this PR, you need to sign our [Contributor License Agreement](https://github.com/skills-il/.github/blob/main/CLA.md).
+
+            Please read the CLA and reply with the following comment to sign:
+
+            > I have read the CLA and I sign it
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
