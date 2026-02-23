@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     if: false  # Enable when SNYK_TOKEN is configured
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - name: Install mcp-scan
         run: pip install mcp-scan
       - name: Run mcp-scan on SKILL.md files
