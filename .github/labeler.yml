@@ -1,0 +1,7 @@
+israeli-e-invoice:
+  - changed-files:
+    - any-glob-to-any-file: 'israeli-e-invoice/**'
+
+shekel-currency-converter:
+  - changed-files:
+    - any-glob-to-any-file: 'shekel-currency-converter/**'
