@@ -1,0 +1,48 @@
+name: Bug Report
+description: Report a problem with a skill in this category
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: dropdown
+    id: skill
+    attributes:
+      label: Which skill?
+      options:
+        - israeli-e-invoice
+        - shekel-currency-converter
+        - Other
+    validations:
+      required: true
+  - type: dropdown
+    id: agent
+    attributes:
+      label: Which AI agent?
+      options:
+        - Claude Code
+        - Cursor
+        - GitHub Copilot
+        - Windsurf
+        - OpenCode
+        - Codex
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      placeholder: Describe what went wrong...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      placeholder: What should have happened...
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Error output / logs
+      render: shell
