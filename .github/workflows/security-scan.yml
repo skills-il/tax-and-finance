@@ -1,0 +1,38 @@
+name: Security Scan
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - '**/SKILL.md'
+      - '**/scripts/**'
+
+permissions:
+  contents: read
+  pull-requests: write
+
+# Snyk mcp-scan (uncomment when SNYK_TOKEN is configured as a repo secret)
+# Detects prompt injection, data exfiltration, credential theft, and
+# obfuscated payloads using LLM-based intent analysis.
+jobs:
+  mcp-scan:
+    name: Snyk Agent Scan
+    runs-on: ubuntu-latest
+    if: false  # Enable when SNYK_TOKEN is configured
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install mcp-scan
+        run: pip install mcp-scan
+      - name: Run mcp-scan on SKILL.md files
+        run: |
+          find . -name 'SKILL.md' -exec mcp-scan {} \;
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+      - name: Post scan results
+        if: always()
+        run: |
+          gh pr comment ${{ github.event.pull_request.number }} --body "## Security Scan Complete
+
+          Snyk mcp-scan has finished. Check workflow logs for details."
+        env:
+          GH_TOKEN: ${{ github.token }}
