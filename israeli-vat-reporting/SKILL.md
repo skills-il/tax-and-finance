@@ -1,19 +1,40 @@
 ---
 name: israeli-vat-reporting
 description: >-
-  Prepare, validate, and guide submission of Israeli VAT reports (Doch Maam)
-  per Tax Authority standards. Use when user asks about VAT reporting, VAT
+  Prepare, validate, and guide submission of Israeli VAT reports (Doch Maam) per
+  Tax Authority standards. Use when user asks about VAT reporting, VAT
   calculation, "doch maam", "maam", Israeli VAT filing, VAT deadlines, or
   input/output VAT reconciliation. Supports monthly, bi-monthly, and annual
   reporting. Handles zero-rated exports, exempt transactions, and Eilat zone
   rules. Do NOT use for income tax, corporate tax, or non-Israeli VAT systems.
 license: MIT
-compatibility: "Works with Claude Code, Claude.ai, Cursor. Network access optional for SHAAM API."
+compatibility: >-
+  Works with Claude Code, Claude.ai, Cursor. Network access optional for SHAAM
+  API.
 metadata:
   author: skills-il
   version: 1.0.0
   category: tax-and-finance
-  tags: [vat, maam, tax, reporting, shaam, israel]
+  tags:
+    - vat
+    - maam
+    - tax
+    - reporting
+    - shaam
+    - israel
+  display_name:
+    he: דיווח מע"מ ישראלי
+    en: Israeli Vat Reporting
+  display_description:
+    he: הכנה ואימות של דוחות מע"מ (דו"ח מעמ) בהתאם לדרישות רשות המסים
+    en: >-
+      Prepare, validate, and guide submission of Israeli VAT reports (Doch Maam)
+      per Tax Authority standards. Use when user asks about VAT reporting, VAT
+      calculation, "doch maam", "maam", Israeli VAT filing, VAT deadlines, or
+      input/output VAT reconciliation. Supports monthly, bi-monthly, and annual
+      reporting. Handles zero-rated exports, exempt transactions, and Eilat zone
+      rules. Do NOT use for income tax, corporate tax, or non-Israeli VAT
+      systems.
 ---
 
 # Israeli VAT Reporting
