@@ -24,11 +24,11 @@ jobs:
           remote-organization-name: skills-il
           remote-repository-name: .github
           path-to-signatures: 'signatures/cla.json'
-          path-to-document: 'https://github.com/skills-il/.github/blob/main/CLA.md'
-          branch: 'main'
+          path-to-document: 'https://github.com/skills-il/.github/blob/master/CLA.md'
+          branch: 'master'
           allowlist: 'dependabot[bot],github-actions[bot]'
           custom-notsigned-prcomment: |
-            Thank you for your contribution! Before we can merge this PR, you need to sign our [Contributor License Agreement](https://github.com/skills-il/.github/blob/main/CLA.md).
+            Thank you for your contribution! Before we can merge this PR, you need to sign our [Contributor License Agreement](https://github.com/skills-il/.github/blob/master/CLA.md).
 
             Please read the CLA and reply with the following comment to sign:
 
