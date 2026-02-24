@@ -3,17 +3,35 @@ name: israeli-tax-withholding
 description: >-
   Israeli tax withholding (nikui mas bemakor) rates, certificates, and
   calculations. Use when user asks about withholding tax, "nikui mas",
-  withholding certificates, "ishur nikui", tax coordination (tium mas),
-  or needs to calculate withholding amounts. Covers payments to suppliers,
-  freelancers, landlords, and cross-border payments. Do NOT use for employee
-  payroll tax (see israeli-payroll-calculator) or VAT reporting.
+  withholding certificates, "ishur nikui", tax coordination (tium mas), or needs
+  to calculate withholding amounts. Covers payments to suppliers, freelancers,
+  landlords, and cross-border payments. Do NOT use for employee payroll tax (see
+  israeli-payroll-calculator) or VAT reporting.
 license: MIT
-compatibility: "Network access helpful for SHAAM certificate lookup."
+compatibility: Network access helpful for SHAAM certificate lookup.
 metadata:
   author: skills-il
   version: 1.0.0
   category: tax-and-finance
-  tags: [tax, withholding, nikui-mas, certificates, shaam, israel]
+  tags:
+    - tax
+    - withholding
+    - nikui-mas
+    - certificates
+    - shaam
+    - israel
+  display_name:
+    he: ניכוי מס במקור
+    en: Israeli Tax Withholding
+  display_description:
+    he: 'חישובי ניכוי מס, אישורים והתנהלות מול רשות המסים'
+    en: >-
+      Israeli tax withholding (nikui mas bemakor) rates, certificates, and
+      calculations. Use when user asks about withholding tax, "nikui mas",
+      withholding certificates, "ishur nikui", tax coordination (tium mas), or
+      needs to calculate withholding amounts. Covers payments to suppliers,
+      freelancers, landlords, and cross-border payments. Do NOT use for employee
+      payroll tax (see israeli-payroll-calculator) or VAT reporting.
 ---
 
 # Israeli Tax Withholding
