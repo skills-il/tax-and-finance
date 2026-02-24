@@ -10,3 +10,4 @@ Thumbs.db
 
 # Node (if skills include scripts with dependencies)
 node_modules/
+__pycache__/
