@@ -2,20 +2,38 @@
 name: israeli-bank-connector
 description: >-
   Analyze Israeli bank transactions, spending patterns, and financial data
-  across Israeli banks and credit card companies. Use when user asks about
-  bank transactions, spending analysis, "cheshbon bank", budget tracking,
-  or needs to categorize Israeli banking data. Enhances israeli-bank-mcp,
-  il-bank-mcp, and asher-mcp servers with financial analysis workflows.
-  Supports Hapoalim, Leumi, Discount, Mizrahi, Visa Cal, Max, Isracard.
-  Do NOT use for payment initiation, money transfers, or investment advice.
+  across Israeli banks and credit card companies. Use when user asks about bank
+  transactions, spending analysis, "cheshbon bank", budget tracking, or needs to
+  categorize Israeli banking data. Enhances israeli-bank-mcp, il-bank-mcp, and
+  asher-mcp servers with financial analysis workflows. Supports Hapoalim, Leumi,
+  Discount, Mizrahi, Visa Cal, Max, Isracard. Do NOT use for payment initiation,
+  money transfers, or investment advice.
 license: MIT
-compatibility: "Requires israeli-bank-mcp or il-bank-mcp MCP server. Claude Code recommended."
+compatibility: Requires israeli-bank-mcp or il-bank-mcp MCP server. Claude Code recommended.
 metadata:
   author: skills-il
   version: 1.0.0
   category: tax-and-finance
-  tags: [banking, transactions, finance, spending, israel]
+  tags:
+    - banking
+    - transactions
+    - finance
+    - spending
+    - israel
   mcp-server: israeli-bank-mcp
+  display_name:
+    he: מחבר בנקאות ישראלי
+    en: Israeli Bank Connector
+  display_description:
+    he: 'ניתוח עו"ש, כרטיסי אשראי והוצאות מול הבנקים הישראליים'
+    en: >-
+      Analyze Israeli bank transactions, spending patterns, and financial data
+      across Israeli banks and credit card companies. Use when user asks about
+      bank transactions, spending analysis, "cheshbon bank", budget tracking, or
+      needs to categorize Israeli banking data. Enhances israeli-bank-mcp,
+      il-bank-mcp, and asher-mcp servers with financial analysis workflows.
+      Supports Hapoalim, Leumi, Discount, Mizrahi, Visa Cal, Max, Isracard. Do
+      NOT use for payment initiation, money transfers, or investment advice.
 ---
 
 # Israeli Bank Connector
