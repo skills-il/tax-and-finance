@@ -2,7 +2,7 @@ name: Skill Validation
 
 on:
   pull_request:
-    branches: [main]
+    branches: [master]
     paths:
       - '**/SKILL.md'
       - '**/*.py'

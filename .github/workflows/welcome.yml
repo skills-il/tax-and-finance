@@ -16,8 +16,8 @@ jobs:
     steps:
       - uses: actions/first-interaction@v3
         with:
-          repo-token: ${{ github.token }}
-          pr-message: |
+          repo_token: ${{ github.token }}
+          pr_message: |
             Welcome to Skills IL! Thanks for your first contribution.
 
             Our automated checks are running now:
@@ -27,7 +27,7 @@ jobs:
             While you wait, make sure you've reviewed our [Contributing Guide](https://github.com/skills-il/.github/blob/main/CONTRIBUTING.md).
 
             A maintainer will review your PR within 48 hours.
-          issue-message: |
+          issue_message: |
             Thanks for opening your first issue! We'll take a look soon.
 
             If this is a security concern, please email security@agentskills.co.il instead.

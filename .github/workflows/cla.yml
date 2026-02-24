@@ -34,4 +34,4 @@ jobs:
 
             > I have read the CLA and I sign it
         env:
-          GITHUB_TOKEN: ${{ github.token }}
+          GITHUB_TOKEN: ${{ secrets.CLA_TOKEN }}

@@ -77,8 +77,8 @@ for file in "$@"; do
     fi
   fi
 
-  # 6. XML angle brackets anywhere in frontmatter
-  if echo "$FRONTMATTER" | grep -qE '[<>]'; then
+  # 6. XML angle brackets anywhere in frontmatter (exclude YAML block scalar indicators like >- and |-)
+  if echo "$FRONTMATTER" | grep -v -E '^[[:space:]]*[>|]-?[[:space:]]*$' | grep -v -E ':[[:space:]]+[>|]-?[[:space:]]*$' | grep -qE '[<>]'; then
     ERRORS="$ERRORS\n- $file: Frontmatter contains forbidden XML angle brackets"
   fi
 

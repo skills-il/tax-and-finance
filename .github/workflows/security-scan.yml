@@ -2,7 +2,7 @@ name: Security Scan
 
 on:
   pull_request:
-    branches: [main]
+    branches: [master]
     paths:
       - '**/SKILL.md'
       - '**/scripts/**'
@@ -11,14 +11,12 @@ permissions:
   contents: read
   pull-requests: write
 
-# Snyk mcp-scan (uncomment when SNYK_TOKEN is configured as a repo secret)
-# Detects prompt injection, data exfiltration, credential theft, and
-# obfuscated payloads using LLM-based intent analysis.
+# Snyk mcp-scan — detects prompt injection, data exfiltration, credential theft,
+# and obfuscated payloads using LLM-based intent analysis.
 jobs:
   mcp-scan:
     name: Snyk Agent Scan
     runs-on: ubuntu-latest
-    if: false  # Enable when SNYK_TOKEN is configured
     steps:
       - uses: actions/checkout@v6
       - name: Install mcp-scan
