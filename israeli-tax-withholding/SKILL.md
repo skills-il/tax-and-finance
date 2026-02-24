@@ -81,6 +81,15 @@ Result: Verify certificate year, check SHAAM, confirm vendor TIN matches certifi
 User says: "I need to pay a US company for software licenses"
 Result: Default 25% withholding on payments to non-residents. Check if tax treaty applies (US-Israel treaty may reduce to 10-15%). Recommend consulting tax advisor for treaty benefits.
 
+## Bundled Resources
+
+### Scripts
+- `scripts/calculate_withholding.py` — Calculates Israeli tax withholding (nikui mas bemakor) amounts for various payment types (services, rent, royalties, dividends, non-resident payments). Supports certificate-based reduced rates and outputs net payment plus VAT breakdown. Run: `python scripts/calculate_withholding.py --help`
+
+### References
+- `references/withholding-rates.md` — Complete default withholding rates by payment type under Section 164 (income payments) and Section 170 (special payments), including rates for individuals, companies, major shareholders, and non-residents. Consult when determining the correct default rate for a payment.
+- `references/certificate-guide.md` — Guide to Israeli withholding certificates: types (Ishur Nikui Mas BeMakor, Ishur Tium Mas), application process, validity periods, and verification procedures via SHAAM. Consult when a vendor presents a withholding certificate or when guiding users through the certificate application process.
+
 ## Troubleshooting
 
 ### Error: "Certificate expired"

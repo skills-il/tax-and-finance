@@ -107,11 +107,21 @@ Actions:
 4. Check: Allocation requirement based on amount
 Result: Credit invoice referencing original, with correct VAT reversal
 
+## Bundled Resources
+
+### Scripts
+- `scripts/validate_invoice.py` — Validates Israeli e-invoice JSON against SHAAM requirements: checks required fields, TIN (mispar osek) format and check digit, invoice type codes, VAT calculation accuracy, and allocation number thresholds. Also referenced in Troubleshooting below. Run: `python scripts/validate_invoice.py --help`
+
+### References
+- `references/shaam-api-reference.md` — SHAAM (Tax Authority) API endpoints for requesting allocation numbers, OAuth2 authentication setup, and request/response formats. Consult when integrating with the SHAAM e-invoice API. Also referenced in Step 4 above.
+- `references/invoice-types.md` — Complete listing of Israeli invoice type codes (300, 305, 310, 320, 330, 400) with required fields per type, VAT applicability, and allocation number requirements. Consult when determining which invoice type to use.
+- `references/compliance-timeline.md` — Progressive e-invoice mandate timeline per Amendment 157 to the VAT Law, showing threshold reductions from 25,000 NIS down to all invoices. Consult when checking current allocation number thresholds.
+
 ## Troubleshooting
 
 ### Error: "Invalid TIN format"
 Cause: Israeli TIN (mispar osek) must be exactly 9 digits with valid check digit
-Solution: Verify the number with the check digit algorithm. Run scripts/validate-invoice.py for validation.
+Solution: Verify the number with the check digit algorithm. Run scripts/validate_invoice.py for validation.
 
 ### Error: "Allocation number required"
 Cause: Invoice amount exceeds current threshold for mandatory allocation

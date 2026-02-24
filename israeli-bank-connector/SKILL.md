@@ -76,6 +76,15 @@ Result: List of detected recurring charges with amounts, frequency, and suggesti
 User says: "Export my business expenses for my accountant"
 Result: Filtered and categorized business transactions with VAT amounts, ready for import into accounting software.
 
+## Bundled Resources
+
+### Scripts
+- `scripts/categorize_transactions.py` — Categorizes Israeli bank transactions by spending category using Israeli-specific merchant pattern matching (Shufersal, Rami Levy, Rav-Kav, etc.). Accepts transaction JSON and outputs categorized spending summaries. Run: `python scripts/categorize_transactions.py --help`
+
+### References
+- `references/spending-categories.md` — Israeli spending category definitions with Hebrew terms and common merchant examples for each category (housing/diur, groceries/mazon, transportation/tahaburah, utilities/shartuim, etc.). Consult when customizing categorization rules or explaining categories to users.
+- `references/supported-banks.md` — List of supported Israeli banks (Hapoalim, Leumi, Discount, Mizrahi-Tefahot, FIBI) and credit card companies (Visa Cal, Max, Isracard) with bank codes and MCP server compatibility notes. Consult when setting up bank connections or troubleshooting missing accounts.
+
 ## Troubleshooting
 
 ### Error: "2FA required"

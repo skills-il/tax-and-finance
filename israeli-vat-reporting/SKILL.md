@@ -101,6 +101,16 @@ Actions:
 4. Note: Exports reported in Field 2, no VAT but supports input VAT recovery
 Result: VAT report with zero-rated export handling
 
+## Bundled Resources
+
+### Scripts
+- `scripts/calculate_vat.py` — Computes net VAT liability from sales (output) and purchase (input) records, applies Israeli deduction rules for non-deductible and partially deductible expenses, and maps results to Form 874 fields. Run: `python scripts/calculate_vat.py --help`
+
+### References
+- `references/vat-regulations.md` — Summary of Israeli VAT law including current and historical VAT rates, registration types (Osek Morsheh, Osek Patur), and filing obligations. Consult when verifying VAT rate or registration rules.
+- `references/reporting-calendar.md` — Filing deadlines for monthly and bi-monthly VAT reporters, including the 15th-of-following-month rule. Consult when determining reporting period and deadline for a specific month.
+- `references/special-cases.md` — Rules for zero-rated transactions (exports, tourism, Eilat zone), exempt transactions (financial services, residential rent), and the distinction between zero-rated and exempt for input VAT recovery. Consult when handling exports or unusual transaction types.
+
 ## Troubleshooting
 
 ### Error: "Reporting period mismatch"

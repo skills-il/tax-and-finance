@@ -90,6 +90,15 @@ Result: Explain self-employed pension obligations, keren hishtalmut benefits, ta
 User says: "I'm 60, when can I start withdrawing pension?"
 Result: Explain retirement ages, early pension options and reduction rates, lump sum vs monthly pension tradeoffs.
 
+## Bundled Resources
+
+### Scripts
+- `scripts/calculate_pension.py` — Computes mandatory pension contributions (employee, employer, severance), keren hishtalmut benefits, and basic retirement savings projections for both employees and self-employed. Run: `python scripts/calculate_pension.py --help`
+
+### References
+- `references/pension-fund-types.md` — Detailed comparison of Israeli pension vehicles: Keren Pensia, Bituach Menahalim, Kupat Gemel, and Kranot Neemanot, including fee structures, insurance components, and major fund providers. Consult when advising on pension fund selection in Step 6.
+- `references/tax-benefits.md` — Israeli pension tax benefits including the 35% tax credit on employee contributions, employer contribution exclusions, keren hishtalmut tax-free gains, and self-employed deduction rules. Consult when calculating tax savings from pension and savings contributions.
+
 ## Troubleshooting
 
 ### Error: "Pension fund not transferring"

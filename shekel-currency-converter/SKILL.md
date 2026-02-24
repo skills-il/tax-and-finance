@@ -94,6 +94,15 @@ Result: "USD/ILS representative rate on Jan 1, 2026: 3.5800 (Bank of Israel shaa
 User says: "I need the EUR rate for my VAT report for December 2025"
 Result: Provides the representative rate for the relevant date, noting it is the official rate for tax purposes.
 
+## Bundled Resources
+
+### Scripts
+- `scripts/fetch_rates.py` — Fetches official Bank of Israel representative exchange rates (shaar yatzig) and performs currency conversions to/from NIS. Supports current rates, historical date lookups, and listing all available currencies. Run: `python scripts/fetch_rates.py --help`
+
+### References
+- `references/boi-api-guide.md` — Bank of Israel exchange rate API documentation including endpoints, XML response structure, update schedule (daily ~15:30 IST), and historical rate query parameters. Consult when troubleshooting API calls or understanding rate publication timing.
+- `references/currency-codes.md` — Supported currency codes with Hebrew names, typical NIS rate ranges, and unit values (important for JPY and other multi-unit currencies). Consult when parsing user currency requests or handling unit-based conversions.
+
 ## Troubleshooting
 
 ### Error: "Rate not available for date"

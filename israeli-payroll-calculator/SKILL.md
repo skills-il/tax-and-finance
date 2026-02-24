@@ -99,6 +99,16 @@ Result: Total employer cost approximately 19,500-20,000 NIS including all contri
 User says: "Compare a 25,000 NIS offer with a 22,000 NIS + car offer"
 Result: Side-by-side comparison accounting for car tax benefit (shovi rechev)
 
+## Bundled Resources
+
+### Scripts
+- `scripts/calculate_payroll.py` — Calculates Israeli gross-to-net salary with progressive income tax brackets, Bituach Leumi, health tax, and pension contributions. Supports employee and employer cost views. Run: `python scripts/calculate_payroll.py --help`
+
+### References
+- `references/tax-brackets.md` — 2025 Israeli income tax brackets (annual and monthly) with progressive rates from 10% to 50%. Also referenced in Step 2 and Troubleshooting below. Consult when computing income tax or verifying bracket thresholds.
+- `references/bituach-leumi-rates.md` — 2025 Bituach Leumi (National Insurance) and health tax rates for employees and employers, covering both the reduced bracket (up to 7,122 NIS) and full bracket (up to 49,030 NIS). Consult when calculating NI and health deductions in Step 3.
+- `references/credit-points.md` — Israeli tax credit points (nekudot zikui) value and full eligibility table covering base credits, gender, new immigrants, children, single parents, and disability. Consult when determining a taxpayer's total credit points beyond the defaults in Step 1.
+
 ## Troubleshooting
 
 ### Error: "Tax brackets may be outdated"
