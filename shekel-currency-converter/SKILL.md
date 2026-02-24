@@ -2,19 +2,38 @@
 name: shekel-currency-converter
 description: >-
   Convert currencies to/from Israeli New Shekel (NIS/ILS) using Bank of Israel
-  official exchange rates. Use when user asks to convert shekels, NIS, ILS,
-  asks about exchange rates, "shaar yatzig" (representative rate), or needs
-  currency conversion for Israeli tax or business purposes. Supports 30+
-  currencies with current and historical rates. Do NOT use for cryptocurrency
-  or unofficial money exchange rates.
+  official exchange rates. Use when user asks to convert shekels, NIS, ILS, asks
+  about exchange rates, "shaar yatzig" (representative rate), or needs currency
+  conversion for Israeli tax or business purposes. Supports 30+ currencies with
+  current and historical rates. Do NOT use for cryptocurrency or unofficial
+  money exchange rates.
 license: MIT
-allowed-tools: "Bash(python:*) WebFetch"
-compatibility: "Requires network access for Bank of Israel API. Works with Claude Code, Claude.ai, Cursor."
+allowed-tools: 'Bash(python:*) WebFetch'
+compatibility: >-
+  Requires network access for Bank of Israel API. Works with Claude Code,
+  Claude.ai, Cursor.
 metadata:
   author: skills-il
   version: 1.0.0
   category: tax-and-finance
-  tags: [currency, shekel, nis, exchange-rate, bank-of-israel]
+  tags:
+    - currency
+    - shekel
+    - nis
+    - exchange-rate
+    - bank-of-israel
+  display_name:
+    he: ממיר מטבע שקל
+    en: Shekel Currency Converter
+  display_description:
+    he: המרת מטבעות בזמן אמת מול בנק ישראל עם תמיכה בכל המטבעות
+    en: >-
+      Convert currencies to/from Israeli New Shekel (NIS/ILS) using Bank of
+      Israel official exchange rates. Use when user asks to convert shekels,
+      NIS, ILS, asks about exchange rates, "shaar yatzig" (representative rate),
+      or needs currency conversion for Israeli tax or business purposes.
+      Supports 30+ currencies with current and historical rates. Do NOT use for
+      cryptocurrency or unofficial money exchange rates.
 ---
 
 # Shekel Currency Converter
