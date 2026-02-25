@@ -1,0 +1,14 @@
+version: 2
+
+# Socket.dev — supply chain security analysis
+# Detects typosquatting, malware, install scripts, and risky dependencies.
+# Requires installing the Socket GitHub App: https://github.com/apps/socket-security
+
+projectIgnorePaths:
+  - "node_modules"
+
+githubApp:
+  enabled: true
+  pullRequestAlertsEnabled: true
+  dependencyOverviewEnabled: true
+  projectReportsEnabled: true

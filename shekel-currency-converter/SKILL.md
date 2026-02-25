@@ -112,3 +112,4 @@ Solution: Use the last available business day rate. Bank of Israel publishes rat
 ### Error: "Currency not supported"
 Cause: Bank of Israel does not publish a rate for this currency
 Solution: Suggest using USD or EUR as intermediate currency for conversion.
+

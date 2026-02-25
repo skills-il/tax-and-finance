@@ -10,6 +10,7 @@ on:
 permissions:
   contents: read
   pull-requests: write
+  security-events: write
 
 # Snyk mcp-scan — detects prompt injection, data exfiltration, credential theft,
 # and obfuscated payloads using LLM-based intent analysis.
@@ -29,8 +30,56 @@ jobs:
       - name: Post scan results
         if: always()
         run: |
-          gh pr comment ${{ github.event.pull_request.number }} --body "## Security Scan Complete
+          gh pr comment ${{ github.event.pull_request.number }} --body "## 🔍 Snyk Agent Scan
 
           Snyk mcp-scan has finished. Check workflow logs for details."
+        env:
+          GH_TOKEN: ${{ github.token }}
+
+  # Cisco Skill Scanner — static analysis + behavioral dataflow analysis
+  # for prompt injection, data exfiltration, and malicious code patterns.
+  skill-scanner:
+    name: Cisco Skill Scanner
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install Cisco Skill Scanner
+        run: pip install cisco-ai-skill-scanner
+      - name: Run skill scanner on all skills
+        run: |
+          skill-scanner scan-all . \
+            --recursive \
+            --use-behavioral \
+            --fail-on-findings \
+            --format sarif \
+            --output skill-scanner-results.sarif
+      - name: Upload SARIF to GitHub Security
+        if: always()
+        uses: github/codeql-action/upload-sarif@v3
+        with:
+          sarif_file: skill-scanner-results.sarif
+          category: cisco-skill-scanner
+      - name: Post scan results
+        if: always()
+        run: |
+          if [ -f skill-scanner-results.sarif ]; then
+            findings=$(python3 -c "import json; d=json.load(open('skill-scanner-results.sarif')); print(sum(len(r.get('results',[])) for r in d.get('runs',[])))")
+            if [ "$findings" -gt 0 ]; then
+              gh pr comment ${{ github.event.pull_request.number }} --body "## ⚠️ Cisco Skill Scanner
+
+          Found **$findings** finding(s). Check the Security tab for details."
+            else
+              gh pr comment ${{ github.event.pull_request.number }} --body "## ✅ Cisco Skill Scanner
+
+          No findings detected (static + behavioral analysis)."
+            fi
+          else
+            gh pr comment ${{ github.event.pull_request.number }} --body "## ❌ Cisco Skill Scanner
+
+          Scanner failed to produce results. Check workflow logs."
+          fi
         env:
           GH_TOKEN: ${{ github.token }}
