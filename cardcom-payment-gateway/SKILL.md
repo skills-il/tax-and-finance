@@ -19,12 +19,20 @@ metadata:
   version: 1.0.0
   category: tax-and-finance
   tags:
-    - payments
-    - credit-card
-    - cardcom
-    - invoice
-    - slikat-ashrai
-    - israel
+    he:
+      - תשלומים
+      - כרטיס-אשראי
+      - קארדקום
+      - חשבונית
+      - סליקת-אשראי
+      - ישראל
+    en:
+      - payments
+      - credit-card
+      - cardcom
+      - invoice
+      - slikat-ashrai
+      - israel
   display_name:
     he: שער תשלומים קארדקום
     en: Cardcom Payment Gateway
