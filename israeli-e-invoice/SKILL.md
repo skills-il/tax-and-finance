@@ -17,12 +17,20 @@ metadata:
   version: 1.0.0
   category: tax-and-finance
   tags:
-    - tax
-    - invoice
-    - e-invoice
-    - vat
-    - shaam
-    - israel
+    he:
+      - מיסים
+      - חשבונית
+      - חשבונית-אלקטרונית
+      - מע״מ
+      - שע״מ
+      - ישראל
+    en:
+      - tax
+      - invoice
+      - e-invoice
+      - vat
+      - shaam
+      - israel
   display_name:
     he: חשבונית אלקטרונית ישראלית
     en: Israeli E Invoice
