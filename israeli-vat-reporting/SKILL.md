@@ -35,6 +35,14 @@ metadata:
       reporting. Handles zero-rated exports, exempt transactions, and Eilat zone
       rules. Do NOT use for income tax, corporate tax, or non-Israeli VAT
       systems.
+  supported_agents:
+    - claude-code
+    - cursor
+    - github-copilot
+    - windsurf
+    - opencode
+    - codex
+    - openclaw
 ---
 
 # Israeli VAT Reporting
