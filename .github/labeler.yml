@@ -5,3 +5,11 @@ israeli-e-invoice:
 shekel-currency-converter:
   - changed-files:
     - any-glob-to-any-file: 'shekel-currency-converter/**'
+
+israeli-freelancer-ops:
+  - changed-files:
+    - any-glob-to-any-file: 'israeli-freelancer-ops/**'
+
+israeli-client-payment-chaser:
+  - changed-files:
+    - any-glob-to-any-file: 'israeli-client-payment-chaser/**'

@@ -8,7 +8,9 @@ body:
     attributes:
       label: Which skill?
       options:
+        - israeli-client-payment-chaser
         - israeli-e-invoice
+        - israeli-freelancer-ops
         - shekel-currency-converter
         - Other
     validations:
@@ -23,6 +25,7 @@ body:
         - GitHub Copilot
         - Windsurf
         - OpenCode
+        - OpenClaw
         - Codex
         - Other
     validations:
