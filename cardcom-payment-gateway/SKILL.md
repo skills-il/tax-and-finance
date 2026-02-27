@@ -47,7 +47,6 @@ metadata:
     - windsurf
     - opencode
     - codex
-    - openclaw
 ---
 
 # Cardcom Payment Gateway
