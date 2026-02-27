@@ -32,6 +32,14 @@ metadata:
       needs to calculate withholding amounts. Covers payments to suppliers,
       freelancers, landlords, and cross-border payments. Do NOT use for employee
       payroll tax (see israeli-payroll-calculator) or VAT reporting.
+  supported_agents:
+    - claude-code
+    - cursor
+    - github-copilot
+    - windsurf
+    - opencode
+    - codex
+    - openclaw
 ---
 
 # Israeli Tax Withholding
