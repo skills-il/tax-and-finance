@@ -41,7 +41,6 @@ metadata:
     - windsurf
     - opencode
     - codex
-    - openclaw
 ---
 
 # Israeli Bank Connector
