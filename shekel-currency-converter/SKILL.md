@@ -17,11 +17,18 @@ metadata:
   version: 1.0.0
   category: tax-and-finance
   tags:
-    - currency
-    - shekel
-    - nis
-    - exchange-rate
-    - bank-of-israel
+    he:
+      - מטבע
+      - שקל
+      - ש״ח
+      - שער-חליפין
+      - בנק-ישראל
+    en:
+      - currency
+      - shekel
+      - nis
+      - exchange-rate
+      - bank-of-israel
   display_name:
     he: ממיר מטבע שקל
     en: Shekel Currency Converter
