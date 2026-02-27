@@ -19,12 +19,20 @@ metadata:
   version: 1.0.0
   category: tax-and-finance
   tags:
-    - debt-collection
-    - invoices
-    - payment
-    - legal
-    - freelancer
-    - israel
+    he:
+      - גביית-חובות
+      - invoices
+      - תשלום
+      - משפטי
+      - עצמאי
+      - ישראל
+    en:
+      - debt-collection
+      - invoices
+      - payment
+      - legal
+      - freelancer
+      - israel
   display_name:
     he: גובה חובות לקוחות ישראלי
     en: Israeli Client Payment Chaser
