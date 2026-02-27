@@ -35,6 +35,14 @@ metadata:
       understanding Israeli payslip items. Covers employees, freelancers
       (atzmai), and employer cost calculations. Do NOT use for US, UK, or other
       countries' payroll calculations.
+  supported_agents:
+    - claude-code
+    - cursor
+    - github-copilot
+    - windsurf
+    - opencode
+    - codex
+    - openclaw
 ---
 
 # Israeli Payroll Calculator
