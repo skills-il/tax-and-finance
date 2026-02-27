@@ -37,6 +37,14 @@ metadata:
       (305), credit invoice (310), receipt (320), and proforma (330) types. Do
       NOT use for general accounting, bookkeeping, or non-Israeli invoice
       formats.
+  supported_agents:
+    - claude-code
+    - cursor
+    - github-copilot
+    - windsurf
+    - opencode
+    - codex
+    - openclaw
 ---
 
 # Israeli E-Invoice
