@@ -19,11 +19,18 @@ metadata:
   version: 1.0.0
   category: tax-and-finance
   tags:
-    - payments
-    - credit-card
-    - tranzila
-    - slikat-ashrai
-    - israel
+    he:
+      - תשלומים
+      - כרטיס-אשראי
+      - טרנזילה
+      - סליקת-אשראי
+      - ישראל
+    en:
+      - payments
+      - credit-card
+      - tranzila
+      - slikat-ashrai
+      - israel
   display_name:
     he: שער תשלומים טרנזילה
     en: Tranzila Payment Gateway
