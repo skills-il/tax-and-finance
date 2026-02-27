@@ -39,6 +39,14 @@ metadata:
       online payments. Supports both legacy CGI endpoints and modern API V2.
       Do NOT use for Cardcom integration (use cardcom-payment-gateway), general
       accounting, or non-payment financial queries.
+  supported_agents:
+    - claude-code
+    - cursor
+    - github-copilot
+    - windsurf
+    - opencode
+    - codex
+    - openclaw
 ---
 
 # Tranzila Payment Gateway
