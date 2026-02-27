@@ -40,6 +40,14 @@ metadata:
       invoicing, or needs combined payment + document generation. Supports REST
       API V11 and legacy endpoints. Do NOT use for Tranzila integration (use
       tranzila-payment-gateway), general accounting, or non-payment queries.
+  supported_agents:
+    - claude-code
+    - cursor
+    - github-copilot
+    - windsurf
+    - opencode
+    - codex
+    - openclaw
 ---
 
 # Cardcom Payment Gateway
