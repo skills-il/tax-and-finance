@@ -34,6 +34,14 @@ metadata:
       il-bank-mcp, and asher-mcp servers with financial analysis workflows.
       Supports Hapoalim, Leumi, Discount, Mizrahi, Visa Cal, Max, Isracard. Do
       NOT use for payment initiation, money transfers, or investment advice.
+  supported_agents:
+    - claude-code
+    - cursor
+    - github-copilot
+    - windsurf
+    - opencode
+    - codex
+    - openclaw
 ---
 
 # Israeli Bank Connector
