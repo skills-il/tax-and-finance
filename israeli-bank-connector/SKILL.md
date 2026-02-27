@@ -15,11 +15,18 @@ metadata:
   version: 1.0.0
   category: tax-and-finance
   tags:
-    - banking
-    - transactions
-    - finance
-    - spending
-    - israel
+    he:
+      - בנקאות
+      - עסקאות
+      - פיננסים
+      - הוצאות
+      - ישראל
+    en:
+      - banking
+      - transactions
+      - finance
+      - spending
+      - israel
   mcp-server: israeli-bank-mcp
   display_name:
     he: מחבר בנקאות ישראלי
