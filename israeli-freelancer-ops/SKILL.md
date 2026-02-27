@@ -20,13 +20,22 @@ metadata:
   version: 1.0.0
   category: tax-and-finance
   tags:
-    - freelancer
-    - tax
-    - vat
-    - osek-murshe
-    - osek-patur
-    - accounting
-    - israel
+    he:
+      - עצמאי
+      - מיסים
+      - מע״מ
+      - עוסק-מורשה
+      - עוסק-פטור
+      - חשבונאות
+      - ישראל
+    en:
+      - freelancer
+      - tax
+      - vat
+      - osek-murshe
+      - osek-patur
+      - accounting
+      - israel
   display_name:
     he: ניהול תפעול לפרילנסר ישראלי
     en: Israeli Freelancer Operations
