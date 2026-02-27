@@ -15,11 +15,18 @@ metadata:
   version: 1.0.0
   category: tax-and-finance
   tags:
-    - pension
-    - retirement
-    - savings
-    - keren-hishtalmut
-    - israel
+    he:
+      - פנסיה
+      - פרישה
+      - חיסכון
+      - קרן-השתלמות
+      - ישראל
+    en:
+      - pension
+      - retirement
+      - savings
+      - keren-hishtalmut
+      - israel
   display_name:
     he: יועץ פנסיה ישראלי
     en: Israeli Pension Advisor
