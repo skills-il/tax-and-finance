@@ -34,6 +34,14 @@ metadata:
       Covers mandatory pension, voluntary savings, and withdrawal rules. Do NOT
       provide specific investment recommendations or fund performance
       comparisons.
+  supported_agents:
+    - claude-code
+    - cursor
+    - github-copilot
+    - windsurf
+    - opencode
+    - codex
+    - openclaw
 ---
 
 # Israeli Pension Advisor
