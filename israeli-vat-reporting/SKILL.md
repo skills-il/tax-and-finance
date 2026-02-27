@@ -42,7 +42,6 @@ metadata:
     - windsurf
     - opencode
     - codex
-    - openclaw
 ---
 
 # Israeli VAT Reporting
