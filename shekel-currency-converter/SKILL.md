@@ -34,6 +34,14 @@ metadata:
       or needs currency conversion for Israeli tax or business purposes.
       Supports 30+ currencies with current and historical rates. Do NOT use for
       cryptocurrency or unofficial money exchange rates.
+  supported_agents:
+    - claude-code
+    - cursor
+    - github-copilot
+    - windsurf
+    - opencode
+    - codex
+    - openclaw
 ---
 
 # Shekel Currency Converter
