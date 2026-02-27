@@ -14,12 +14,20 @@ metadata:
   version: 1.0.0
   category: tax-and-finance
   tags:
-    - tax
-    - withholding
-    - nikui-mas
-    - certificates
-    - shaam
-    - israel
+    he:
+      - מיסים
+      - ניכוי-מס
+      - ניכוי-מס
+      - אישורים
+      - שע״מ
+      - ישראל
+    en:
+      - tax
+      - withholding
+      - nikui-mas
+      - certificates
+      - shaam
+      - israel
   display_name:
     he: ניכוי מס במקור
     en: Israeli Tax Withholding
