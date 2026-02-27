@@ -16,12 +16,20 @@ metadata:
   version: 1.0.0
   category: tax-and-finance
   tags:
-    - payroll
-    - salary
-    - tax
-    - bituach-leumi
-    - pension
-    - israel
+    he:
+      - שכר
+      - משכורת
+      - מיסים
+      - ביטוח-לאומי
+      - פנסיה
+      - ישראל
+    en:
+      - payroll
+      - salary
+      - tax
+      - bituach-leumi
+      - pension
+      - israel
   display_name:
     he: מחשבון שכר ישראלי
     en: Israeli Payroll Calculator
