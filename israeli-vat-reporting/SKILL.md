@@ -16,12 +16,20 @@ metadata:
   version: 1.0.0
   category: tax-and-finance
   tags:
-    - vat
-    - maam
-    - tax
-    - reporting
-    - shaam
-    - israel
+    he:
+      - מע״מ
+      - מע״מ
+      - מיסים
+      - דיווח
+      - שע״מ
+      - ישראל
+    en:
+      - vat
+      - maam
+      - tax
+      - reporting
+      - shaam
+      - israel
   display_name:
     he: דיווח מע"מ ישראלי
     en: Israeli Vat Reporting
