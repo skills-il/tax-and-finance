@@ -148,7 +148,7 @@ Track cumulative annual revenue against the osek patur threshold:
 
 When the threshold is reached or projected to be exceeded, explain the implications:
 - Must register as osek murshe with the Tax Authority
-- Must start charging VAT (17%) on all invoices
+- Must start charging VAT (18%) on all invoices
 - Must issue hashbonit mas (tax invoice) instead of kabala (receipt)
 - Can now deduct input VAT (mas tsumos) on business expenses
 - Must file bi-monthly VAT returns

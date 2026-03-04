@@ -84,7 +84,7 @@ Parse the following fields from each invoice:
 | Invoice number | מספר חשבונית | Header | Sequential |
 | Date | תאריך | Header | DD/MM/YYYY format |
 | Net amount | סכום לפני מע"מ | Line items sum | Before VAT |
-| VAT amount | סכום מע"מ | VAT line | = Net * 0.17 |
+| VAT amount | סכום מע"מ | VAT line | = Net * 0.18 |
 | Total amount | סכום כולל | Bottom | = Net + VAT |
 | Allocation number | מספר הקצאה | If above threshold | SHAAM allocated |
 
@@ -93,18 +93,18 @@ For Israeli invoices where only the total (gross) amount is visible:
 
 ```python
 # VAT extraction from gross amount (כלל השישית)
-vat_rate = 0.17  # 17% standard rate
-gross_amount = 1170  # סכום כולל מע"מ
+vat_rate = 0.18  # 18% standard rate
+gross_amount = 1180  # סכום כולל מע"מ
 
-# Method: VAT = gross * (rate / (1 + rate)) = gross * (17/117)
+# Method: VAT = gross * (rate / (1 + rate)) = gross * (18/118)
 vat_amount = gross_amount * (vat_rate / (1 + vat_rate))
-# = 1170 * (0.17 / 1.17) = 1170 * 0.1453 = 170
+# = 1170 * (0.18 / 1.18) = 1180 * 0.1525 = 180
 
 net_amount = gross_amount - vat_amount
-# = 1170 - 170 = 1000
+# = 1180 - 180 = 1000
 ```
 
-Shortcut: VAT = Total / 6.882 (approximately 1/6 of the gross, hence "klal hashishit")
+Shortcut: VAT = Total / 6.556 (approximately 1/6 of the gross, hence "klal hashishit")
 
 ### Step 4: Categorize by Tax Authority Standards
 Assign each expense to a Tax Authority category:
@@ -169,11 +169,11 @@ Result: Organized expense report with VAT summary ready for accountant
 ### Example 2: VAT Extraction from Receipts
 User says: "I paid 5,850 NIS total for cloud services. What is the VAT portion?"
 Actions:
-1. Apply 1/6 rule: VAT = 5,850 * (0.17 / 1.17) = 850 NIS
-2. Net amount: 5,850 - 850 = 5,000 NIS
+1. Apply 1/6 rule: VAT = 5,850 * (0.18 / 1.18) = 892.37 NIS
+2. Net amount: 5,850 - 892.37 = 4,957.63 NIS
 3. Categorize: Communications (code 50) for cloud services
 4. Note: Verify supplier is Osek Murshe and issued tax invoice
-Result: VAT of 850 NIS extractable, net expense 5,000 NIS in Communications category
+Result: VAT of 892.37 NIS extractable, net expense 4,957.63 NIS in Communications category
 
 ### Example 3: Osek Patur Invoice Handling
 User says: "I got an invoice from a freelance designer, but there is no VAT line"

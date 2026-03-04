@@ -55,8 +55,8 @@ metadata:
 |------|-------------------|
 | BOI Interest Rate | 4.50% (check boi.org.il) |
 | Prime Rate | BOI + 1.50% = ~6.00% |
-| VAT (Ma'am) | 17% |
-| Minimum Wage | 5,880.02 NIS/month |
+| VAT (Ma'am) | 18% |
+| Minimum Wage | 6,000 NIS/month (verify current rate) |
 | Average Wage | ~12,500 NIS/month |
 
 ## Mashkanta (Mortgage) Tracks
@@ -123,7 +123,7 @@ Result: Mortgage comparison with monthly payments and total cost per track
 
 ### Error: "Tax calculation doesn't match pay slip"
 Cause: Tax credits (nekudot zikui) not properly applied
-Solution: Every Israeli resident gets 2.25 base credit points. Women get 0.5 additional. New immigrants get extra credits for 3.5 years. Each point is worth ~235 NIS/month (2024). Apply credits before calculating tax.
+Solution: Every Israeli resident gets 2.25 base credit points. Women get 0.5 additional. New immigrants get extra credits for 3.5 years. Each point is worth ~242 NIS/month (2025). Apply credits before calculating tax.
 
 ### Error: "Arnona amount seems wrong"
 Cause: Arnona varies significantly by city, zone, and property classification

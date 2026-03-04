@@ -77,8 +77,8 @@ For all invoice types, gather:
 - **Payment:** Method (cash, transfer, check, credit card), terms
 
 ### Step 3: Calculate VAT
-- Standard Israeli VAT rate: **17%** (as of 2025, verify current rate)
-- VAT calculation: `vat_amount = net_amount * 0.17`
+- Standard Israeli VAT rate: **18%** (as of 2025, verify current rate)
+- VAT calculation: `vat_amount = net_amount * 0.18`
 - Total: `gross_amount = net_amount + vat_amount`
 - For VAT-exempt transactions (osek patur), no VAT line -- use receipt (320) instead
 
@@ -122,7 +122,7 @@ User says: "Create a tax invoice for a web development project, 15,000 NIS to AB
 Actions:
 1. Identify: Tax Invoice (type 300), above threshold -- allocation needed
 2. Collect: Seller and buyer details
-3. Calculate: Net 15,000 + VAT 2,550 = Total 17,550 NIS
+3. Calculate: Net 15,000 + VAT 2,700 = Total 17,700 NIS
 4. Guide: Request allocation number from SHAAM
 5. Generate: Formatted invoice document
 Result: Complete tax invoice with all required fields and allocation number guidance
@@ -166,7 +166,7 @@ Solution: Request allocation number from SHAAM API before issuing invoice. See S
 
 ### Error: "VAT rate mismatch"
 Cause: Using incorrect VAT rate (rate changes periodically)
-Solution: Verify current rate at the Tax Authority website. Standard rate is 17% as of 2025.
+Solution: Verify current rate at the Tax Authority website. Standard rate is 18% as of 2025.
 
 ### Error: "Invoice type not suitable"
 Cause: Wrong invoice type selected for the transaction

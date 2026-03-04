@@ -105,7 +105,7 @@ VAT (if applicable): Calculated separately on full amount
 
 ### Example 1: Payment to Freelancer
 User says: "I need to pay a freelancer 10,000 NIS for consulting"
-Result: Default 20% withholding = 2,000 NIS withheld, 8,000 NIS net payment + 1,700 NIS VAT (if osek morsheh). Recommend asking freelancer for their withholding certificate.
+Result: Default 20% withholding = 2,000 NIS withheld, 8,000 NIS net payment + 1,800 NIS VAT (if osek morsheh). Recommend asking freelancer for their withholding certificate.
 
 ### Example 2: Certificate Check
 User says: "A vendor gave me a 0% withholding certificate, is it valid?"
