@@ -1,15 +1,63 @@
+boi-economic-data:
+  - changed-files:
+    - any-glob-to-any-file: 'boi-economic-data/**'
+
+cardcom-payment-gateway:
+  - changed-files:
+    - any-glob-to-any-file: 'cardcom-payment-gateway/**'
+
+il-invoice-organizer:
+  - changed-files:
+    - any-glob-to-any-file: 'il-invoice-organizer/**'
+
+israeli-bank-connector:
+  - changed-files:
+    - any-glob-to-any-file: 'israeli-bank-connector/**'
+
+israeli-client-payment-chaser:
+  - changed-files:
+    - any-glob-to-any-file: 'israeli-client-payment-chaser/**'
+
 israeli-e-invoice:
   - changed-files:
     - any-glob-to-any-file: 'israeli-e-invoice/**'
-
-shekel-currency-converter:
-  - changed-files:
-    - any-glob-to-any-file: 'shekel-currency-converter/**'
 
 israeli-freelancer-ops:
   - changed-files:
     - any-glob-to-any-file: 'israeli-freelancer-ops/**'
 
-israeli-client-payment-chaser:
+israeli-payment-orchestrator:
   - changed-files:
-    - any-glob-to-any-file: 'israeli-client-payment-chaser/**'
+    - any-glob-to-any-file: 'israeli-payment-orchestrator/**'
+
+israeli-payroll-calculator:
+  - changed-files:
+    - any-glob-to-any-file: 'israeli-payroll-calculator/**'
+
+israeli-pension-advisor:
+  - changed-files:
+    - any-glob-to-any-file: 'israeli-pension-advisor/**'
+
+israeli-startup-financial-model:
+  - changed-files:
+    - any-glob-to-any-file: 'israeli-startup-financial-model/**'
+
+israeli-tax-withholding:
+  - changed-files:
+    - any-glob-to-any-file: 'israeli-tax-withholding/**'
+
+israeli-vat-reporting:
+  - changed-files:
+    - any-glob-to-any-file: 'israeli-vat-reporting/**'
+
+shekel-currency-converter:
+  - changed-files:
+    - any-glob-to-any-file: 'shekel-currency-converter/**'
+
+tase-stock-analysis:
+  - changed-files:
+    - any-glob-to-any-file: 'tase-stock-analysis/**'
+
+tranzila-payment-gateway:
+  - changed-files:
+    - any-glob-to-any-file: 'tranzila-payment-gateway/**'

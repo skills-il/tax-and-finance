@@ -8,10 +8,22 @@ body:
     attributes:
       label: Which skill?
       options:
+        - boi-economic-data
+        - cardcom-payment-gateway
+        - il-invoice-organizer
+        - israeli-bank-connector
         - israeli-client-payment-chaser
         - israeli-e-invoice
         - israeli-freelancer-ops
+        - israeli-payment-orchestrator
+        - israeli-payroll-calculator
+        - israeli-pension-advisor
+        - israeli-startup-financial-model
+        - israeli-tax-withholding
+        - israeli-vat-reporting
         - shekel-currency-converter
+        - tase-stock-analysis
+        - tranzila-payment-gateway
         - Other
     validations:
       required: true
