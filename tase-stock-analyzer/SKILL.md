@@ -81,3 +81,43 @@ Sunday-Thursday, 09:59 (pre-open) to 17:25 (closing auction). No trading Friday-
 - isa.gov.il: ISA regulatory decisions
 - bizportal.co.il: Financial analysis
 - globes.co.il: Market news
+
+## Examples
+
+### Example 1: Analyze a TASE Index Composition
+User says: "Show me the TA-35 index composition and sector breakdown"
+Actions:
+1. List current TA-35 constituents by weight
+2. Group by sector: technology, finance, real estate, healthcare, energy
+3. Identify dual-listed companies (also on NASDAQ/NYSE)
+4. Show YTD performance vs global benchmarks (S&P 500, STOXX Europe)
+5. Note recent additions/removals from the index
+Result: TA-35 composition analysis with sector allocation and performance context
+
+### Example 2: Research an Israeli Stock
+User says: "Tell me about Bank Leumi stock on TASE"
+Actions:
+1. Identify: Bank Leumi (LUMI), banking sector, TA-35 constituent
+2. Key data: market cap, P/E ratio, dividend yield, 52-week range
+3. Recent MAYA filings: quarterly reports, material events
+4. Dual listing status and foreign investor activity
+5. Sector comparison with Bank Hapoalim (POLI) and Mizrahi Tefahot (MZTF)
+Result: Comprehensive stock overview with Israeli banking sector context
+
+## Bundled Resources
+
+### Scripts
+- `scripts/tase_fetcher.py` -- TASE index composition viewer with sector breakdowns and dual-listed company data. Run: `python scripts/tase_fetcher.py --help`
+
+### References
+- `references/tase-indices.md` -- Reference for major TASE indices (TA-35, TA-90, TA-125, TA-SME60), trading hours, MAYA disclosure system, and data sources. Consult when analyzing Israeli market indices or looking up TASE-specific information.
+
+## Troubleshooting
+
+### Error: "Stock data not found"
+Cause: Company may be listed under Hebrew name or different ticker format
+Solution: TASE uses numeric securities numbers (mispar niyar) as primary identifiers. Search by security number if the ticker or name doesn't match. Hebrew company names on TASE may differ from the English name.
+
+### Error: "Prices shown don't include after-hours trading"
+Cause: TASE has specific trading phases not captured in closing price
+Solution: TASE trading: pre-open (9:00-9:59), continuous (10:00-17:14), closing auction (17:14-17:25). After-hours orders queue for next day. Always specify which price point you're referencing.

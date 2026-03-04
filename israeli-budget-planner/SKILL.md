@@ -88,3 +88,43 @@ BOI rules: Max LTV 75% first home, max 33.33% variable rate, max 33.33% CPI-link
 - Keren Pensia: Tax-deductible, locked until retirement
 - Keren Hishtalmut: Tax-free after 6 years
 - Kupat Gemel: Capital gains exempt, 6-year lock
+
+## Examples
+
+### Example 1: Create a Monthly Household Budget
+User says: "Help me plan a monthly budget for a family in Tel Aviv"
+Actions:
+1. Input gross salary, calculate net after tax (brackets: 10%-50%)
+2. Deduct Bituach Leumi (3.5%/12%), health tax (3.1%/5%), pension (6.5%)
+3. Budget categories: rent/mortgage (30-40%), groceries (15%), transport (10%), utilities (8%), childcare
+4. Include arnona estimate for Tel Aviv (varies by zone, ~500-1500 NIS/month)
+5. Savings target: keren hishtalmut + pension + emergency fund
+Result: Complete monthly budget with Israeli-specific deductions and savings plan
+
+### Example 2: Evaluate a Mashkanta (Mortgage) Option
+User says: "Should I take a fixed or variable rate mortgage in Israel?"
+Actions:
+1. Compare mortgage tracks: Prime-linked, fixed (kvua), CPI-linked (tzamud madad)
+2. Calculate monthly payment for each track at current BOI rate
+3. Apply Bank of Israel's PTI limit (max 40% of income)
+4. Factor in life insurance and structural insurance requirements
+5. Compare total cost over 15/20/25 year terms
+Result: Mortgage comparison with monthly payments and total cost per track
+
+## Bundled Resources
+
+### Scripts
+- `scripts/budget_calculator.py` -- Calculates Israeli household budget including income tax, Bituach Leumi, health tax, pension deductions, and mashkanta payments. Run: `python scripts/budget_calculator.py --help`
+
+### References
+- `references/israeli-financial-rates.md` -- Current BOI interest rates, mortgage guidelines, arnona rates by city, cost of living benchmarks, and savings vehicle comparisons. Consult when calculating specific financial figures or comparing options.
+
+## Troubleshooting
+
+### Error: "Tax calculation doesn't match pay slip"
+Cause: Tax credits (nekudot zikui) not properly applied
+Solution: Every Israeli resident gets 2.25 base credit points. Women get 0.5 additional. New immigrants get extra credits for 3.5 years. Each point is worth ~235 NIS/month (2024). Apply credits before calculating tax.
+
+### Error: "Arnona amount seems wrong"
+Cause: Arnona varies significantly by city, zone, and property classification
+Solution: Arnona is calculated per square meter and varies by municipality. Tel Aviv residential ranges from 45-120 NIS/sqm/year depending on zone. Check the specific municipality's rate table.

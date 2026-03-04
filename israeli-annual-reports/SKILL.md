@@ -83,3 +83,43 @@ Israeli public companies adopted IFRS in 2008. Prior reports use Israeli GAAP. B
 - Sec. 172: Board approval required
 - Sec. 267-269: Audit committee requirements
 - Sec. 270-275: Related party transaction approvals
+
+## Examples
+
+### Example 1: Analyze a TASE-Listed Company's Annual Report
+User says: "Help me understand Teva's latest annual report from MAYA"
+Actions:
+1. Identify report type: Annual Report (Doch Shnati) filed on MAYA system
+2. Locate key sections: Balance Sheet (Maazanit), Income Statement (Doch Revach VeHefsed), Cash Flow
+3. Extract key metrics: revenue, operating profit, net profit in NIS
+4. Compare with previous year and sector benchmarks
+5. Note auditor opinion and any qualifications
+Result: Structured analysis of annual report with key financial highlights in context
+
+### Example 2: Compare Israeli Bank Financial Statements
+User says: "Compare Leumi and Hapoalim annual reports"
+Actions:
+1. Pull latest annual reports from MAYA (maya.tase.co.il)
+2. Extract comparable metrics: total assets, net income, ROE, capital adequacy
+3. Normalize data to NIS millions for comparison
+4. Note regulatory differences in reporting (Bank of Israel requirements)
+5. Create comparison table with key ratios
+Result: Side-by-side comparison of two Israeli banks' financial performance
+
+## Bundled Resources
+
+### Scripts
+- `scripts/financial_parser.py` -- Hebrew-English financial term glossary with search functionality covering balance sheets, income statements, and MAYA filings. Run: `python scripts/financial_parser.py --help`
+
+### References
+- `references/hebrew-financial-terms.md` -- Complete Hebrew-English financial terminology reference with tables for financial statements, income statement items, MAYA filing types, and Israeli accounting standards (IFRS-IL). Consult when translating financial terms or navigating Hebrew financial documents.
+
+## Troubleshooting
+
+### Error: "Cannot find report on MAYA system"
+Cause: Company may file under a different Hebrew name or subsidiary
+Solution: Search MAYA by securities number (mispar niyar) rather than company name. Hebrew company names may differ from the English trading name.
+
+### Error: "Financial terms not matching standard translations"
+Cause: Israeli companies sometimes use non-standard Hebrew financial terminology
+Solution: Consult `references/hebrew-financial-terms.md` for standard terms. Some companies use colloquial Hebrew instead of formal accounting terms (e.g., "רווחים" instead of "רווח נקי").
