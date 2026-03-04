@@ -2,51 +2,37 @@
 """
 Israeli Invoice Categorizer
 
-Parses invoice data from JSON input and categorizes expenses per
-Tax Authority (Rashut HaMisim) official expense categories.
-Calculates VAT amounts, flags compliance issues, and generates
-summary reports suitable for accountant review.
+Parses invoice data (JSON input), categorizes expenses per Israeli Tax Authority
+(Rashut HaMisim) official categories, calculates VAT amounts, flags compliance
+issues, and generates summary reports.
 
 Usage:
     python categorize_invoices.py --input invoices.json --output categorized.json
     python categorize_invoices.py --input invoices.json --report
-    python categorize_invoices.py --help
-
-Input JSON format:
-    [
-        {
-            "invoice_number": "1001",
-            "date": "15/01/2025",
-            "vendor_name": "Office Depot Israel",
-            "vendor_number": "514567890",
-            "description": "Office supplies",
-            "total_with_vat": 585.0,
-            "stated_vat": 85.0,
-            "category_hint": "office"
-        },
-        ...
-    ]
+    python categorize_invoices.py --input invoices.json --validate
 """
 
 import argparse
 import json
+import re
 import sys
-from dataclasses import dataclass, field, asdict
-from datetime import datetime
-from typing import Optional
+from datetime import datetime, date
+from decimal import Decimal, ROUND_HALF_UP
+from typing import Any
 
 # ---------------------------------------------------------------------------
-# Israeli VAT constants
+# Constants
 # ---------------------------------------------------------------------------
-VAT_RATE = 0.17
-VAT_DIVISOR = 117  # total * 17 / 117 = VAT amount
-VAT_TOLERANCE_NIS = 1.0  # rounding tolerance
 
-# ---------------------------------------------------------------------------
-# Tax Authority expense categories (Rashut HaMisim)
-# ---------------------------------------------------------------------------
-EXPENSE_CATEGORIES = {
-    1:  {"he": "חומרי גלם",           "en": "Raw materials"},
+VAT_RATE = Decimal("0.17")
+VAT_DIVISOR = Decimal("117")
+VAT_MULTIPLIER = Decimal("17")
+VAT_TOLERANCE_NIS = Decimal("1")
+ROUNDING = ROUND_HALF_UP
+
+# Israeli Tax Authority official expense categories
+EXPENSE_CATEGORIES: dict[int, dict[str, str]] = {
+    1:  {"he": "חומרי גלם",          "en": "Raw materials"},
     2:  {"he": "קבלני משנה",          "en": "Subcontractors"},
     3:  {"he": "שכר עבודה",           "en": "Wages and salaries"},
     4:  {"he": "ביטוח לאומי מעסיק",    "en": "Employer NII"},
@@ -60,353 +46,753 @@ EXPENSE_CATEGORIES = {
     12: {"he": "הוצאות אחרות",        "en": "Other expenses"},
 }
 
-# Keyword-to-category mapping for auto-categorization
-CATEGORY_KEYWORDS = {
-    1:  ["raw material", "חומרי גלם", "חומר גלם", "materials", "production"],
-    2:  ["subcontract", "קבלן", "קבלני משנה", "freelance", "outsource", "consultant"],
-    3:  ["salary", "wages", "שכר", "payroll", "משכורת"],
-    4:  ["bituach leumi", "ביטוח לאומי", "national insurance", "nii"],
-    5:  ["rent", "שכירות", "lease", "שכ\"ד", "office space"],
-    6:  ["insurance", "ביטוח", "polisa", "פוליסה"],
-    7:  ["electric", "water", "חשמל", "מים", "arnona", "ארנונה", "utility"],
-    8:  ["phone", "internet", "טלפון", "אינטרנט", "cellular", "סלולר", "communication", "תקשורת"],
-    9:  ["fuel", "gas", "דלק", "vehicle", "רכב", "car", "parking", "חניה", "toll", "אגרה"],
-    10: ["depreciation", "פחת", "amortization"],
-    11: ["office", "משרד", "supplies", "stationery", "printing", "הדפסה", "ציוד משרדי"],
-    12: [],  # fallback category
+# Keyword-based category detection (Hebrew and English)
+CATEGORY_KEYWORDS: dict[int, list[str]] = {
+    1:  ["חומרי גלם", "חומרים", "raw material", "materials", "production supplies"],
+    2:  ["קבלן", "קבלני משנה", "subcontract", "outsourc", "freelanc", "שירותי"],
+    3:  ["שכר", "משכורת", "salary", "wage", "payroll"],
+    4:  ["ביטוח לאומי", "national insurance", "bituach leumi", "nii"],
+    5:  ["שכירות", "rent", "lease", "השכרה"],
+    6:  ["ביטוח", "insurance", "פוליסה", "policy"],
+    7:  ["חשמל", "מים", "electricity", "water", "חברת חשמל", "מקורות", "utility"],
+    8:  ["תקשורת", "טלפון", "אינטרנט", "סלולר", "phone", "internet", "telecom",
+         "cellcom", "partner", "pelephone", "bezeq", "בזק", "סלקום", "פרטנר",
+         "פלאפון", "הוט"],
+    9:  ["דלק", "רכב", "fuel", "gas station", "vehicle", "car", "parking", "חניה",
+         "sonol", "paz", "delek", "סונול", "פז", "דור אלון", "ten"],
+    10: ["פחת", "depreciation", "ציוד", "equipment", "מחשב", "computer",
+         "ריהוט", "furniture"],
+    11: ["משרד", "office", "ציוד משרדי", "נייר", "טונר", "paper", "toner",
+         "stationery", "הדפסה", "printing"],
 }
 
-# Business number prefixes
-HP_PREFIXES = ("51", "52")  # Hevra Peratit (private company)
-AMUTA_PREFIX = "58"         # Amuta (non-profit / registered association)
+# Business entity type prefixes
+HP_PREFIXES = ("51", "52")
+AMUTA_PREFIX = "58"
+
+# Invoice document types
+INVOICE_TYPES = {
+    "tax_invoice": {
+        "he": "חשבונית מס",
+        "en": "Tax Invoice",
+        "vat_deductible": True,
+    },
+    "tax_invoice_receipt": {
+        "he": "חשבונית מס / קבלה",
+        "en": "Tax Invoice Receipt",
+        "vat_deductible": True,
+    },
+    "receipt": {
+        "he": "קבלה",
+        "en": "Receipt",
+        "vat_deductible": False,
+    },
+    "credit_invoice": {
+        "he": "חשבונית זיכוי",
+        "en": "Credit Invoice",
+        "vat_deductible": True,
+    },
+    "proforma": {
+        "he": "חשבונית פרופורמה",
+        "en": "Proforma Invoice",
+        "vat_deductible": False,
+    },
+}
 
 
 # ---------------------------------------------------------------------------
-# Data classes
+# Business number validation
 # ---------------------------------------------------------------------------
-@dataclass
-class InvoiceRecord:
-    """Represents a single parsed and categorized invoice."""
-    invoice_number: str
-    date: str
-    vendor_name: str
-    vendor_number: str
-    description: str
-    total_with_vat: float
-    stated_vat: Optional[float]
-    calculated_vat: float
-    amount_before_vat: float
-    category_code: int
-    category_name_en: str
-    category_name_he: str
-    vendor_type: str  # osek_murshe, osek_patur, hp, amuta, unknown
-    vat_deductible: bool
-    flags: list = field(default_factory=list)
 
-
-@dataclass
-class CategorySummary:
-    """Aggregated summary for one expense category."""
-    code: int
-    name_en: str
-    name_he: str
-    count: int = 0
-    total_before_vat: float = 0.0
-    total_vat: float = 0.0
-    total_with_vat: float = 0.0
-
-
-# ---------------------------------------------------------------------------
-# Core functions
-# ---------------------------------------------------------------------------
-def validate_business_number(number: str) -> tuple[bool, str]:
+def validate_business_number(number: str) -> dict[str, Any]:
     """
-    Validate an Israeli business number (mispar osek / HP / amuta).
-    Returns (is_valid, entity_type).
+    Validate an Israeli business number (9 digits).
+    Returns entity type and validity info.
 
-    Israeli business numbers are 9 digits. The check digit is validated
-    using a weighted sum algorithm similar to Luhn.
+    Israeli business numbers use a Luhn-like check-digit algorithm:
+    - Multiply alternating digits by 1 and 2
+    - If product > 9, subtract 9
+    - Sum all results; valid if total % 10 == 0
     """
-    cleaned = number.strip().replace("-", "")
+    cleaned = re.sub(r"[\s\-]", "", number)
+    result: dict[str, Any] = {
+        "number": cleaned,
+        "valid_format": False,
+        "entity_type": None,
+        "entity_type_he": None,
+        "check_digit_valid": False,
+    }
 
-    if not cleaned.isdigit() or len(cleaned) != 9:
-        return False, "unknown"
+    if not re.match(r"^\d{9}$", cleaned):
+        result["error"] = (
+            f"Business number must be exactly 9 digits, "
+            f"got {len(cleaned)} characters"
+        )
+        return result
 
-    # Determine entity type by prefix
+    result["valid_format"] = True
+
+    # Determine entity type from prefix
     if cleaned.startswith(HP_PREFIXES):
-        entity_type = "hp"
+        result["entity_type"] = "hevra_peratit"
+        result["entity_type_he"] = 'חברה פרטית (ח"פ)'
     elif cleaned.startswith(AMUTA_PREFIX):
-        entity_type = "amuta"
+        result["entity_type"] = "amuta"
+        result["entity_type_he"] = "עמותה"
     else:
-        entity_type = "osek_murshe"
+        result["entity_type"] = "osek"
+        result["entity_type_he"] = "עוסק (מורשה/פטור)"
 
-    # Israeli business number check-digit validation
-    # Weights alternate: 1, 2, 1, 2, 1, 2, 1, 2, 1
-    weights = [1, 2, 1, 2, 1, 2, 1, 2, 1]
+    # Luhn-like check-digit validation
     total = 0
-    for digit_char, weight in zip(cleaned, weights):
-        product = int(digit_char) * weight
-        # Sum the digits of the product (e.g., 14 -> 1 + 4 = 5)
-        total += product // 10 + product % 10
+    for i, ch in enumerate(cleaned):
+        digit = int(ch)
+        if i % 2 == 0:
+            val = digit
+        else:
+            val = digit * 2
+            if val > 9:
+                val -= 9
+        total += val
 
-    is_valid = total % 10 == 0
-    return is_valid, entity_type
+    result["check_digit_valid"] = (total % 10 == 0)
+    return result
 
 
-def calculate_vat(total_with_vat: float) -> tuple[float, float]:
+# ---------------------------------------------------------------------------
+# VAT calculations
+# ---------------------------------------------------------------------------
+
+def extract_vat_from_total(total_with_vat: Decimal) -> dict[str, Decimal]:
+    """Extract VAT from a total that includes VAT using the 1/6 rule."""
+    vat = (total_with_vat * VAT_MULTIPLIER / VAT_DIVISOR).quantize(
+        Decimal("0.01"), rounding=ROUNDING
+    )
+    before_vat = total_with_vat - vat
+    return {"before_vat": before_vat, "vat": vat, "total": total_with_vat}
+
+
+def calculate_vat_from_net(amount_before_vat: Decimal) -> dict[str, Decimal]:
+    """Calculate VAT from a net amount (before VAT)."""
+    vat = (amount_before_vat * VAT_RATE).quantize(
+        Decimal("0.01"), rounding=ROUNDING
+    )
+    total = amount_before_vat + vat
+    return {"before_vat": amount_before_vat, "vat": vat, "total": total}
+
+
+def verify_vat(
+    stated_before_vat: Decimal | None,
+    stated_vat: Decimal | None,
+    stated_total: Decimal | None,
+) -> dict[str, Any]:
     """
-    Extract VAT from a total amount using the 1/6 rule.
-    Israeli VAT: 17%, so VAT = total * 17 / 117.
-
-    Returns (vat_amount, amount_before_vat).
+    Verify VAT consistency across stated amounts.
+    Returns calculated values and any mismatches.
     """
-    vat_amount = round(total_with_vat * 17 / VAT_DIVISOR, 2)
-    amount_before_vat = round(total_with_vat - vat_amount, 2)
-    return vat_amount, amount_before_vat
+    issues: list[str] = []
+    calculated: dict[str, Decimal] = {}
+
+    if stated_total is not None:
+        calc = extract_vat_from_total(stated_total)
+        calculated = calc
+        if stated_vat is not None:
+            diff = abs(stated_vat - calc["vat"])
+            if diff > VAT_TOLERANCE_NIS:
+                issues.append(
+                    f"VAT mismatch: stated {stated_vat}, "
+                    f"calculated {calc['vat']} (difference: {diff} NIS)"
+                )
+        if stated_before_vat is not None:
+            diff = abs(stated_before_vat - calc["before_vat"])
+            if diff > VAT_TOLERANCE_NIS:
+                issues.append(
+                    f"Before-VAT mismatch: stated {stated_before_vat}, "
+                    f"calculated {calc['before_vat']} (difference: {diff} NIS)"
+                )
+    elif stated_before_vat is not None:
+        calc = calculate_vat_from_net(stated_before_vat)
+        calculated = calc
+        if stated_vat is not None:
+            diff = abs(stated_vat - calc["vat"])
+            if diff > VAT_TOLERANCE_NIS:
+                issues.append(
+                    f"VAT mismatch: stated {stated_vat}, "
+                    f"calculated {calc['vat']} (difference: {diff} NIS)"
+                )
+    else:
+        issues.append(
+            "Insufficient amount data: need at least "
+            "total_with_vat or amount_before_vat"
+        )
+
+    return {"calculated": calculated, "issues": issues}
 
 
-def categorize_by_description(description: str, category_hint: str = "") -> int:
+# ---------------------------------------------------------------------------
+# Invoice categorization
+# ---------------------------------------------------------------------------
+
+def categorize_by_keywords(description: str, vendor_name: str = "") -> int:
     """
-    Auto-categorize an invoice based on its description and optional hint.
-    Returns a category code (1-12).
+    Categorize an invoice based on description and vendor name keywords.
+    Returns the category code (1-12). Defaults to 12 (Other) if no match.
     """
-    search_text = f"{description} {category_hint}".lower()
+    text = f"{description} {vendor_name}".lower()
 
-    for code, keywords in CATEGORY_KEYWORDS.items():
+    for cat_code, keywords in CATEGORY_KEYWORDS.items():
         for keyword in keywords:
-            if keyword.lower() in search_text:
-                return code
+            if keyword.lower() in text:
+                return cat_code
 
     return 12  # Default: Other expenses
 
 
-def process_invoice(raw: dict) -> InvoiceRecord:
-    """Process a single raw invoice dict into a categorized InvoiceRecord."""
-    total_with_vat = float(raw.get("total_with_vat", 0))
-    stated_vat = raw.get("stated_vat")
-    if stated_vat is not None:
-        stated_vat = float(stated_vat)
+def determine_vat_deductibility(invoice: dict[str, Any]) -> dict[str, Any]:
+    """
+    Determine how much VAT is deductible based on invoice type and category.
+    Applies special rules for vehicles (2/3 deductible) and entertainment.
+    """
+    vat_amount = Decimal(str(invoice.get("vat_amount", 0)))
+    category = invoice.get("category_code", 12)
+    invoice_type = invoice.get("invoice_type", "tax_invoice")
+    type_info = INVOICE_TYPES.get(invoice_type, INVOICE_TYPES["tax_invoice"])
 
-    vendor_number = str(raw.get("vendor_number", "")).strip()
-    description = raw.get("description", "")
-    category_hint = raw.get("category_hint", "")
+    result: dict[str, Any] = {
+        "total_vat": vat_amount,
+        "deductible_vat": Decimal("0"),
+        "non_deductible_vat": vat_amount,
+        "deduction_rate": Decimal("0"),
+        "rule_applied": None,
+    }
 
-    # Calculate VAT
-    calculated_vat, amount_before_vat = calculate_vat(total_with_vat)
+    if not type_info["vat_deductible"]:
+        result["rule_applied"] = "Invoice type not eligible for VAT deduction"
+        return result
 
-    # Validate business number
-    is_valid_bn, vendor_type = validate_business_number(vendor_number)
+    # Check business number presence
+    business_number = invoice.get("business_number", "")
+    if not business_number:
+        result["rule_applied"] = "Missing business number - VAT not deductible"
+        return result
 
-    # Determine VAT deductibility
-    vat_deductible = vendor_type in ("osek_murshe", "hp") and is_valid_bn
+    # Vehicle expenses: only 2/3 deductible for non-commercial vehicles
+    if category == 9 and not invoice.get("commercial_vehicle", False):
+        deductible = (vat_amount * 2 / 3).quantize(
+            Decimal("0.01"), rounding=ROUNDING
+        )
+        result["deductible_vat"] = deductible
+        result["non_deductible_vat"] = vat_amount - deductible
+        result["deduction_rate"] = Decimal("0.6667")
+        result["rule_applied"] = (
+            "Vehicle expense: 2/3 VAT deductible (non-commercial vehicle)"
+        )
+        return result
 
-    # Categorize
-    category_code = categorize_by_description(description, category_hint)
-    cat_info = EXPENSE_CATEGORIES.get(category_code, EXPENSE_CATEGORIES[12])
+    # Standard: full deduction
+    result["deductible_vat"] = vat_amount
+    result["non_deductible_vat"] = Decimal("0")
+    result["deduction_rate"] = Decimal("1")
+    result["rule_applied"] = "Standard full VAT deduction"
+    return result
 
-    # Compliance flags
-    flags = []
 
-    if not raw.get("invoice_number"):
-        flags.append("Missing invoice number")
+def determine_income_tax_deductibility(invoice: dict[str, Any]) -> dict[str, Any]:
+    """
+    Determine income tax deductibility percentage.
+    Entertainment/meals are only 80% deductible for income tax.
+    """
+    total = Decimal(str(invoice.get("total_with_vat", 0)))
+    description = invoice.get("description", "").lower()
 
-    if not vendor_number:
-        flags.append("Missing vendor business number")
-    elif not is_valid_bn:
-        flags.append(f"Invalid business number: {vendor_number}")
+    entertainment_keywords = [
+        "אירוח", "ארוחה", "מסעדה", "entertainment", "meal",
+        "restaurant", "catering", "כיבוד",
+    ]
 
-    if not raw.get("date"):
-        flags.append("Missing invoice date")
-    else:
-        try:
-            inv_date = datetime.strptime(raw["date"], "%d/%m/%Y")
-            if inv_date > datetime.now():
-                flags.append(f"Future-dated invoice: {raw['date']}")
-        except ValueError:
-            flags.append(f"Invalid date format: {raw['date']} (expected DD/MM/YYYY)")
+    for kw in entertainment_keywords:
+        if kw in description:
+            deductible = (total * Decimal("0.80")).quantize(
+                Decimal("0.01"), rounding=ROUNDING
+            )
+            return {
+                "total": total,
+                "deductible_amount": deductible,
+                "non_deductible_amount": total - deductible,
+                "deduction_rate": Decimal("0.80"),
+                "rule_applied": (
+                    "Entertainment/meals: 80% deductible for income tax"
+                ),
+            }
 
-    if stated_vat is not None and abs(stated_vat - calculated_vat) > VAT_TOLERANCE_NIS:
-        flags.append(
-            f"VAT mismatch: stated {stated_vat:.2f}, calculated {calculated_vat:.2f}"
+    return {
+        "total": total,
+        "deductible_amount": total,
+        "non_deductible_amount": Decimal("0"),
+        "deduction_rate": Decimal("1"),
+        "rule_applied": "Standard full income tax deduction",
+    }
+
+
+# ---------------------------------------------------------------------------
+# Invoice validation
+# ---------------------------------------------------------------------------
+
+def validate_invoice(invoice: dict[str, Any]) -> list[str]:
+    """
+    Validate a single invoice against Israeli legal requirements.
+    Returns a list of issues found.
+    """
+    issues: list[str] = []
+    inv_num = invoice.get("invoice_number", "N/A")
+
+    # 1. Required fields
+    required_fields = [
+        "business_name", "business_number", "invoice_number", "date",
+    ]
+    for field in required_fields:
+        if not invoice.get(field):
+            issues.append(
+                f"Invoice #{inv_num}: Missing required field '{field}'"
+            )
+
+    # Need at least one amount field
+    has_amounts = any(
+        invoice.get(f) for f in ["total_with_vat", "amount_before_vat"]
+    )
+    if not has_amounts:
+        issues.append(
+            f"Invoice #{inv_num}: Missing amount fields "
+            "(need total_with_vat or amount_before_vat)"
         )
 
-    if vendor_type == "osek_patur" and stated_vat and stated_vat > 0:
-        flags.append("Osek Patur should not charge VAT")
+    # 2. Business number validation
+    biz_num = invoice.get("business_number", "")
+    if biz_num:
+        biz_result = validate_business_number(str(biz_num))
+        if not biz_result["valid_format"]:
+            issues.append(
+                f"Invoice #{inv_num}: Invalid business number format - "
+                f"{biz_result.get('error', '')}"
+            )
+        elif not biz_result["check_digit_valid"]:
+            issues.append(
+                f"Invoice #{inv_num}: Business number check digit "
+                "validation failed"
+            )
 
-    # Vehicle expense partial deduction flag
-    if category_code == 9:
-        flags.append("Vehicle expense: only 2/3 of VAT is deductible for non-commercial vehicles")
-
-    return InvoiceRecord(
-        invoice_number=str(raw.get("invoice_number", "")),
-        date=str(raw.get("date", "")),
-        vendor_name=str(raw.get("vendor_name", "")),
-        vendor_number=vendor_number,
-        description=description,
-        total_with_vat=total_with_vat,
-        stated_vat=stated_vat,
-        calculated_vat=calculated_vat,
-        amount_before_vat=amount_before_vat,
-        category_code=category_code,
-        category_name_en=cat_info["en"],
-        category_name_he=cat_info["he"],
-        vendor_type=vendor_type,
-        vat_deductible=vat_deductible,
-        flags=flags,
+    # 3. VAT verification
+    stated_before = (
+        Decimal(str(invoice["amount_before_vat"]))
+        if invoice.get("amount_before_vat") else None
+    )
+    stated_vat = (
+        Decimal(str(invoice["vat_amount"]))
+        if invoice.get("vat_amount") else None
+    )
+    stated_total = (
+        Decimal(str(invoice["total_with_vat"]))
+        if invoice.get("total_with_vat") else None
     )
 
+    if stated_total or stated_before:
+        vat_result = verify_vat(stated_before, stated_vat, stated_total)
+        for issue in vat_result["issues"]:
+            issues.append(f"Invoice #{inv_num}: {issue}")
 
-def generate_report(records: list[InvoiceRecord]) -> str:
-    """Generate a summary report from categorized invoice records."""
-    # Build category summaries
-    summaries: dict[int, CategorySummary] = {}
-    for code, info in EXPENSE_CATEGORIES.items():
-        summaries[code] = CategorySummary(
-            code=code, name_en=info["en"], name_he=info["he"]
+    # 4. Date validation
+    date_str = invoice.get("date", "")
+    if date_str:
+        try:
+            inv_date = datetime.strptime(date_str, "%d/%m/%Y").date()
+            if inv_date > date.today():
+                issues.append(
+                    f"Invoice #{inv_num}: Future-dated invoice ({date_str})"
+                )
+        except ValueError:
+            issues.append(
+                f"Invoice #{inv_num}: Invalid date format '{date_str}' "
+                "(expected DD/MM/YYYY)"
+            )
+
+    # 5. E-invoice check (from 2024)
+    e_invoice_required = invoice.get("e_invoice_required", False)
+    if e_invoice_required and not invoice.get("allocation_number"):
+        issues.append(
+            f"Invoice #{inv_num}: E-invoice allocation number "
+            "(mispar hiktzaot) missing - "
+            "required for invoices above threshold since 2024"
         )
 
-    total_vat = 0.0
-    non_deductible_vat = 0.0
-    all_flags = []
+    return issues
 
-    for rec in records:
-        s = summaries[rec.category_code]
-        s.count += 1
-        s.total_before_vat += rec.amount_before_vat
-        s.total_with_vat += rec.total_with_vat
-        s.total_vat += rec.calculated_vat
-        total_vat += rec.calculated_vat
 
-        if not rec.vat_deductible:
-            non_deductible_vat += rec.calculated_vat
-        elif rec.category_code == 9:
-            # Vehicle: only 2/3 deductible
-            non_deductible_vat += rec.calculated_vat / 3
+# ---------------------------------------------------------------------------
+# Processing pipeline
+# ---------------------------------------------------------------------------
 
-        for flag_msg in rec.flags:
-            all_flags.append(f"  ! Invoice #{rec.invoice_number}: {flag_msg}")
+def process_invoice(invoice: dict[str, Any]) -> dict[str, Any]:
+    """Process a single invoice: categorize, calculate VAT, validate."""
+    result = dict(invoice)
 
-    deductible_vat = total_vat - non_deductible_vat
+    # Auto-categorize if no category provided
+    if "category_code" not in result:
+        result["category_code"] = categorize_by_keywords(
+            result.get("description", ""),
+            result.get("business_name", ""),
+        )
 
-    lines = []
+    cat_code = result["category_code"]
+    cat_info = EXPENSE_CATEGORIES.get(cat_code, EXPENSE_CATEGORIES[12])
+    result["category_name_he"] = cat_info["he"]
+    result["category_name_en"] = cat_info["en"]
+
+    # Calculate/verify VAT
+    stated_total = (
+        Decimal(str(result["total_with_vat"]))
+        if result.get("total_with_vat") else None
+    )
+    stated_before = (
+        Decimal(str(result["amount_before_vat"]))
+        if result.get("amount_before_vat") else None
+    )
+    stated_vat = (
+        Decimal(str(result["vat_amount"]))
+        if result.get("vat_amount") else None
+    )
+
+    if stated_total and not stated_vat:
+        calc = extract_vat_from_total(stated_total)
+        result["vat_amount"] = float(calc["vat"])
+        result["amount_before_vat"] = float(calc["before_vat"])
+    elif stated_before and not stated_total:
+        calc = calculate_vat_from_net(stated_before)
+        result["vat_amount"] = float(calc["vat"])
+        result["total_with_vat"] = float(calc["total"])
+
+    # VAT deductibility
+    vat_ded = determine_vat_deductibility(result)
+    result["deductible_vat"] = float(vat_ded["deductible_vat"])
+    result["non_deductible_vat"] = float(vat_ded["non_deductible_vat"])
+    result["vat_deduction_rule"] = vat_ded["rule_applied"]
+
+    # Income tax deductibility
+    income_ded = determine_income_tax_deductibility(result)
+    result["income_tax_deductible_amount"] = float(
+        income_ded["deductible_amount"]
+    )
+    result["income_tax_deduction_rule"] = income_ded["rule_applied"]
+
+    # Validate
+    result["validation_issues"] = validate_invoice(result)
+
+    # Business number info
+    biz_num = result.get("business_number", "")
+    if biz_num:
+        biz_info = validate_business_number(str(biz_num))
+        result["entity_type"] = biz_info["entity_type"]
+        result["entity_type_he"] = biz_info["entity_type_he"]
+
+    return result
+
+
+def process_invoices(
+    invoices: list[dict[str, Any]],
+) -> list[dict[str, Any]]:
+    """Process a list of invoices."""
+    return [process_invoice(inv) for inv in invoices]
+
+
+# ---------------------------------------------------------------------------
+# Report generation
+# ---------------------------------------------------------------------------
+
+def generate_report(
+    invoices: list[dict[str, Any]],
+    business_name: str = "",
+    business_number: str = "",
+    period: str = "",
+) -> str:
+    """Generate a summary report for the accountant."""
+    lines: list[str] = []
     lines.append("=" * 60)
-    lines.append("  Invoice Summary Report / דוח סיכום חשבוניות")
+    lines.append("Invoice Summary Report / דוח סיכום חשבוניות")
     lines.append("=" * 60)
-    lines.append(f"  Total invoices processed: {len(records)}")
-    lines.append("")
-    lines.append("--- Expense Breakdown by Category ---")
-    lines.append(f"  {'Category':<25} | {'Count':>5} | {'Before VAT':>12} | {'VAT':>10} | {'Total':>12}")
-    lines.append(f"  {'-'*25}-+-{'-'*5}-+-{'-'*12}-+-{'-'*10}-+-{'-'*12}")
 
-    for code in sorted(summaries.keys()):
-        s = summaries[code]
-        if s.count == 0:
-            continue
+    if period:
+        lines.append(f"Period / תקופה: {period}")
+    if business_name:
         lines.append(
-            f"  {s.name_en:<25} | {s.count:>5} | {s.total_before_vat:>10,.2f}  | {s.total_vat:>8,.2f}  | {s.total_with_vat:>10,.2f}"
+            f"Business / עסק: {business_name} | "
+            f"Osek Number / מספר עוסק: {business_number}"
+        )
+    lines.append(f'Total invoices / סה"כ חשבוניות: {len(invoices)}')
+    lines.append("")
+
+    # Aggregate by category
+    cat_summary: dict[int, dict[str, Any]] = {}
+    total_before_vat = Decimal("0")
+    total_vat = Decimal("0")
+    total_with_vat = Decimal("0")
+    total_deductible_vat = Decimal("0")
+    total_non_deductible_vat = Decimal("0")
+    all_issues: list[str] = []
+
+    for inv in invoices:
+        cat = inv.get("category_code", 12)
+        if cat not in cat_summary:
+            cat_info = EXPENSE_CATEGORIES.get(cat, EXPENSE_CATEGORIES[12])
+            cat_summary[cat] = {
+                "name_he": cat_info["he"],
+                "name_en": cat_info["en"],
+                "count": 0,
+                "before_vat": Decimal("0"),
+                "vat": Decimal("0"),
+                "total": Decimal("0"),
+            }
+
+        before = Decimal(str(inv.get("amount_before_vat", 0)))
+        vat = Decimal(str(inv.get("vat_amount", 0)))
+        total = Decimal(str(inv.get("total_with_vat", 0)))
+
+        cat_summary[cat]["count"] += 1
+        cat_summary[cat]["before_vat"] += before
+        cat_summary[cat]["vat"] += vat
+        cat_summary[cat]["total"] += total
+
+        total_before_vat += before
+        total_vat += vat
+        total_with_vat += total
+        total_deductible_vat += Decimal(str(inv.get("deductible_vat", 0)))
+        total_non_deductible_vat += Decimal(
+            str(inv.get("non_deductible_vat", 0))
         )
 
-    lines.append("")
-    lines.append("--- VAT Summary / סיכום מע\"מ ---")
-    lines.append(f"  Total input VAT (mas tsumos):    {total_vat:>10,.2f} NIS")
-    lines.append(f"  Non-deductible VAT:              {non_deductible_vat:>10,.2f} NIS")
-    lines.append(f"  Net deductible VAT:              {deductible_vat:>10,.2f} NIS")
+        for issue in inv.get("validation_issues", []):
+            all_issues.append(issue)
 
-    if all_flags:
-        lines.append("")
+    # Expense breakdown by category
+    lines.append(
+        "--- Expense Breakdown by Category / פירוט הוצאות לפי קטגוריה ---"
+    )
+    lines.append(
+        f"{'Category':<25} | {'Count':>5} | "
+        f"{'Before VAT':>14} | {'VAT':>12} | {'Total':>14}"
+    )
+    lines.append("-" * 80)
+
+    for cat_code in sorted(cat_summary.keys()):
+        s = cat_summary[cat_code]
+        lines.append(
+            f"{s['name_en']:<25} | {s['count']:>5} | "
+            f"{s['before_vat']:>11,.2f} NIS | "
+            f"{s['vat']:>9,.2f} NIS | "
+            f"{s['total']:>11,.2f} NIS"
+        )
+
+    lines.append("-" * 80)
+    lines.append(
+        f"{'TOTAL':<25} | "
+        f"{sum(s['count'] for s in cat_summary.values()):>5} | "
+        f"{total_before_vat:>11,.2f} NIS | "
+        f"{total_vat:>9,.2f} NIS | "
+        f"{total_with_vat:>11,.2f} NIS"
+    )
+    lines.append("")
+
+    # VAT summary
+    lines.append('--- VAT Summary / סיכום מע"מ ---')
+    lines.append(
+        f'Total input VAT (מע"מ תשומות):        '
+        f"{total_vat:>12,.2f} NIS"
+    )
+    lines.append(
+        f"Non-deductible VAT (לא ניתן לניכוי):   "
+        f"{total_non_deductible_vat:>12,.2f} NIS"
+    )
+    net_deductible = total_deductible_vat
+    lines.append(
+        f'Net deductible VAT (מע"מ נטו לניכוי):  '
+        f"{net_deductible:>12,.2f} NIS"
+    )
+    lines.append("")
+
+    # Flagged items
+    if all_issues:
         lines.append("--- Flagged Items / פריטים מסומנים ---")
-        lines.extend(all_flags)
+        for issue in all_issues:
+            lines.append(f"! {issue}")
+    else:
+        lines.append("--- No issues found / לא נמצאו בעיות ---")
 
     lines.append("")
+    lines.append("=" * 60)
     return "\n".join(lines)
 
 
 # ---------------------------------------------------------------------------
-# CLI entry point
+# JSON serialization helper
 # ---------------------------------------------------------------------------
-def main():
+
+class DecimalEncoder(json.JSONEncoder):
+    """JSON encoder that handles Decimal objects."""
+
+    def default(self, o: Any) -> Any:
+        if isinstance(o, Decimal):
+            return float(o)
+        return super().default(o)
+
+
+# ---------------------------------------------------------------------------
+# CLI
+# ---------------------------------------------------------------------------
+
+def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
-        description="Israeli Invoice Categorizer -- Categorize invoices per Tax Authority expense categories",
-        formatter_class=argparse.RawDescriptionHelpFormatter,
-        epilog="""
-Example input (invoices.json):
-[
-    {
-        "invoice_number": "1001",
-        "date": "15/01/2025",
-        "vendor_name": "Office Depot Israel",
-        "vendor_number": "514567890",
-        "description": "Office supplies and printing",
-        "total_with_vat": 585.00,
-        "stated_vat": 85.00,
-        "category_hint": "office"
-    }
-]
-        """,
+        description=(
+            "Israeli Invoice Categorizer - Categorize invoices per "
+            "Tax Authority categories, calculate VAT, and generate reports."
+        ),
+        epilog=(
+            "Example: python categorize_invoices.py "
+            "--input invoices.json --output categorized.json --report"
+        ),
     )
     parser.add_argument(
         "--input", "-i",
         required=True,
-        help="Path to input JSON file containing invoice data",
+        help=(
+            "Path to input JSON file containing invoice data. "
+            "Expected format: JSON array of invoice objects, or a JSON "
+            "object with 'invoices' array and optional 'business_name', "
+            "'business_number', 'period' fields."
+        ),
     )
     parser.add_argument(
         "--output", "-o",
-        help="Path to output JSON file for categorized results",
+        help=(
+            "Path to output JSON file for categorized results. "
+            "If not specified, results are printed to stdout."
+        ),
     )
     parser.add_argument(
         "--report", "-r",
         action="store_true",
-        help="Print a human-readable summary report to stdout",
+        help=(
+            "Generate a human-readable summary report for the accountant."
+        ),
     )
     parser.add_argument(
-        "--validate-only",
+        "--validate", "-v",
         action="store_true",
-        help="Only validate invoices without categorizing (exit code 1 if issues found)",
+        help=(
+            "Only validate invoices (no categorization output). "
+            "Prints validation issues and exits with code 1 if issues found."
+        ),
     )
+    parser.add_argument(
+        "--format",
+        choices=["json", "text"],
+        default="json",
+        help="Output format for categorized results (default: json).",
+    )
+    return parser
 
+
+def load_input(
+    path: str,
+) -> tuple[list[dict[str, Any]], dict[str, str]]:
+    """
+    Load invoice data from JSON file.
+    Returns (invoices_list, metadata_dict).
+    """
+    with open(path, "r", encoding="utf-8") as f:
+        data = json.load(f)
+
+    metadata: dict[str, str] = {}
+
+    if isinstance(data, list):
+        return data, metadata
+    elif isinstance(data, dict):
+        invoices = data.get("invoices", [])
+        metadata = {
+            "business_name": data.get("business_name", ""),
+            "business_number": data.get("business_number", ""),
+            "period": data.get("period", ""),
+        }
+        return invoices, metadata
+    else:
+        print(f"Error: Unexpected JSON structure in {path}", file=sys.stderr)
+        sys.exit(1)
+
+
+def main() -> None:
+    parser = build_parser()
     args = parser.parse_args()
 
     # Load input
-    try:
-        with open(args.input, "r", encoding="utf-8") as f:
-            raw_invoices = json.load(f)
-    except FileNotFoundError:
-        print(f"Error: Input file not found: {args.input}", file=sys.stderr)
-        sys.exit(1)
-    except json.JSONDecodeError as e:
-        print(f"Error: Invalid JSON in {args.input}: {e}", file=sys.stderr)
+    invoices, metadata = load_input(args.input)
+
+    if not invoices:
+        print("No invoices found in input file.", file=sys.stderr)
         sys.exit(1)
 
-    if not isinstance(raw_invoices, list):
-        print("Error: Input JSON must be an array of invoice objects", file=sys.stderr)
-        sys.exit(1)
+    # Process
+    processed = process_invoices(invoices)
 
-    # Process invoices
-    records = [process_invoice(inv) for inv in raw_invoices]
+    # Validate-only mode
+    if args.validate:
+        all_issues: list[str] = []
+        for inv in processed:
+            all_issues.extend(inv.get("validation_issues", []))
 
-    # Check for validation issues
-    has_issues = any(rec.flags for rec in records)
-
-    if args.validate_only:
-        if has_issues:
-            for rec in records:
-                for flag_msg in rec.flags:
-                    print(f"Invoice #{rec.invoice_number}: {flag_msg}", file=sys.stderr)
+        if all_issues:
+            print(
+                f"Found {len(all_issues)} validation issue(s):\n",
+                file=sys.stderr,
+            )
+            for issue in all_issues:
+                print(f"  ! {issue}", file=sys.stderr)
             sys.exit(1)
         else:
-            print("All invoices passed validation.")
+            print(f"All {len(processed)} invoices passed validation.")
             sys.exit(0)
 
-    # Output categorized JSON
+    # Output categorized results
     if args.output:
-        output_data = [asdict(rec) for rec in records]
+        output_data = {
+            "metadata": metadata,
+            "invoices": processed,
+            "summary": {
+                "total_invoices": len(processed),
+                "total_issues": sum(
+                    len(inv.get("validation_issues", []))
+                    for inv in processed
+                ),
+            },
+        }
         with open(args.output, "w", encoding="utf-8") as f:
-            json.dump(output_data, f, ensure_ascii=False, indent=2)
-        print(f"Categorized data written to: {args.output}")
+            json.dump(
+                output_data, f,
+                ensure_ascii=False, indent=2, cls=DecimalEncoder,
+            )
+        print(f"Categorized {len(processed)} invoices -> {args.output}")
+    elif not args.report:
+        # Print JSON to stdout
+        json.dump(
+            processed, sys.stdout,
+            ensure_ascii=False, indent=2, cls=DecimalEncoder,
+        )
+        print()
 
-    # Print report
-    if args.report or not args.output:
-        report = generate_report(records)
+    # Report
+    if args.report:
+        report = generate_report(
+            processed,
+            business_name=metadata.get("business_name", ""),
+            business_number=metadata.get("business_number", ""),
+            period=metadata.get("period", ""),
+        )
         print(report)
 
 
