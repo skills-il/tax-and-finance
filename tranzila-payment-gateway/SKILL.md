@@ -16,7 +16,7 @@ compatibility: >-
   Claude.ai, Cursor.
 metadata:
   author: skills-il
-  version: 1.0.0
+  version: 1.1.0
   category: tax-and-finance
   tags:
     he:
@@ -37,15 +37,9 @@ metadata:
   display_description:
     he: אינטגרציה עם טרנזילה לסליקת אשראי, תשלומים בתשלומים, טוקניזציה והחזרים
     en: >-
-      Integrate Tranzila payment processing into Israeli applications -- covers
-      iframe payments, tokenization, installments (tashlumim), refunds, 3D Secure,
-      and Bit wallet. Use when user asks to accept payments via Tranzila, integrate
-      Israeli credit card processing, set up "slikat ashrai", handle tashlumim
-      (installment payments), create payment tokens, process refunds through
-      Tranzila, or mentions "Tranzila", "tranzila API", "secure5", or Israeli
-      online payments. Supports both legacy CGI endpoints and modern API V2.
-      Do NOT use for Cardcom integration (use cardcom-payment-gateway), general
-      accounting, or non-payment financial queries.
+      Israeli payment gateway integration with Tranzila -- iframe, Hosted Fields,
+      API V2, tokenization, installments, Bit wallet, 3D Secure, payment requests,
+      standing orders, and invoicing.
   supported_agents:
     - claude-code
     - cursor
@@ -53,7 +47,6 @@ metadata:
     - windsurf
     - opencode
     - codex
-    - antigravity
 ---
 
 # Tranzila Payment Gateway
@@ -63,6 +56,10 @@ metadata:
 Tranzila is one of Israel's leading payment processors (solek), operating since 1999. It connects to the Shva network (reshet shva) -- Israel's central card processing infrastructure -- and supports all Israeli card issuers: Isracard, Visa Cal, Leumi Card/Max.
 
 This skill guides integration with Tranzila for accepting credit card payments (slikat kartis ashrai) in Israeli applications.
+
+**Official docs:** `https://docs.tranzila.com/`
+
+**Test credentials:** Visa test card `4444333322221111`, Isracard test `12312312`, any CVV (e.g. `333`), any future expiry. Configure your terminal for sandbox mode via the Tranzila dashboard.
 
 ## Instructions
 
@@ -93,7 +90,19 @@ Remind the user to store credentials securely (environment variables, secrets ma
 
 ### Step 3: Implement the Payment Flow
 
-#### Option A: Iframe Integration (Recommended Start)
+#### Option A: Hosted Fields (Recommended for Custom UX)
+
+Hosted Fields let you design your own checkout form while Tranzila securely handles card inputs:
+
+1. Include the Tranzila Hosted Fields JS on your page
+2. Create container `<div>` elements for card number, expiry, and CVV
+3. Initialize fields with your terminal name and styling options
+4. On submit, the JS generates a `TranzilaTK` token without card data touching your server
+5. Send the token to your backend for charging via API V2
+
+This gives full design control while maintaining SAQ-A-EP PCI compliance. Refer to `https://docs.tranzila.com/docs/payments-billing/o033w842qo397-hosted-fields`.
+
+#### Option B: Iframe Integration (Quick Start)
 
 1. Embed the Tranzila iframe in your checkout page:
    - URL: `https://direct.tranzila.com/{supplier}/iframenew.php`
@@ -108,7 +117,7 @@ Remind the user to store credentials securely (environment variables, secrets ma
 3. Confirm transaction server-side (recommended):
    - Use the three-sided handshake to verify the transaction is genuine
 
-#### Option B: Server-to-Server via API V2
+#### Option C: Server-to-Server via API V2
 
 For token charging, refunds, and operations that don't involve card entry:
 
@@ -182,7 +191,53 @@ Tokens (asmachta) let you charge returning customers without handling card data 
 - Response includes additional fields for authentication status
 - Some Israeli issuers may not support 3DS for all card types
 
-### Step 7: Handle Errors
+### Step 7: Accept Bit Payments
+
+Tranzila supports Bit (Israel's popular mobile payment app). The flow differs from card payments:
+
+1. Initiate a Bit payment via the API -- Tranzila returns a Bit payment URL
+2. Redirect the customer to the Bit URL or display a QR code
+3. Customer approves payment in the Bit app
+4. Tranzila sends the result to your `notify_url`
+5. Bit refunds use a separate refund endpoint specific to Bit transactions
+
+Key parameters: `bit=1` to enable Bit, response includes `bit_url` for customer redirect. Refer to `https://docs.tranzila.com/docs/payments-billing/dcljft4y7sgj2-bit`.
+
+### Step 8: Generate Payment Request Links
+
+Payment Requests (TRAPI) let you send payment links via email or SMS without building a checkout page:
+
+1. Create a payment request via API with amount, description, and customer contact
+2. Tranzila generates a secure payment link
+3. Send the link to the customer (Tranzila can send automatically via email/SMS)
+4. Customer clicks the link and pays on a Tranzila-hosted page
+5. You receive the result via webhook
+
+This is useful for invoicing, phone orders, or any scenario where you need to collect payment without an embedded form.
+
+### Step 9: Set Up Standing Orders (Recurring Payments)
+
+For automated recurring billing beyond simple token charging, Tranzila offers Standing Orders:
+
+1. Create a standing order with payment schedule (amount, frequency, start/end dates)
+2. Tranzila automatically charges the customer on schedule
+3. Monitor results via the Reports API or webhook notifications
+4. Cancel or modify standing orders via API
+
+Standing orders are a paid feature -- contact Tranzila to enable on your terminal. Refer to `https://docs.tranzila.com/docs/payments-billing/7lwf8jetxm6oq-create-a-standing-order`.
+
+### Step 10: Generate Invoices
+
+Tranzila has an Invoicing API for generating digitally-signed tax documents approved by the Israeli Income Tax Authority:
+
+1. Create invoices tied to transactions or standalone
+2. Invoices are digitally signed for tax compliance
+3. Supports tax invoices, receipts, and credit notes
+4. Can be auto-generated with PayPal payments
+
+Refer to `https://docs.tranzila.com/docs/invoices/e6843c7e8bc43-invoices-api` for the full invoicing reference.
+
+### Step 11: Handle Errors
 
 Check the `Response` field in every transaction result. `000` means approved -- anything else is an error.
 
@@ -237,6 +292,30 @@ Actions:
 3. Set: sum to refund amount (partial or full)
 4. Verify: Response=000 for successful refund
 Result: Refund processed and linked to original transaction.
+
+### Example 5: Accept Bit Payment
+User says: "I want to let customers pay with Bit on my website"
+Actions:
+1. Enable: Set `bit=1` in the payment request
+2. Redirect: Send customer to the `bit_url` from the response
+3. Handle: Receive payment confirmation at notify_url
+4. Verify: Check Response=000 for successful Bit payment
+Result: Customers can pay using Israel's Bit mobile wallet alongside credit cards.
+
+### Example 6: Send Payment Link via SMS
+User says: "I need to collect payment from a customer over the phone"
+Actions:
+1. Create: Payment request via TRAPI with amount and customer phone number
+2. Send: Tranzila sends SMS with payment link automatically
+3. Wait: Customer opens link and pays on Tranzila's hosted page
+4. Confirm: Receive webhook notification when payment completes
+Result: Payment collected remotely without building a checkout page.
+
+## Community Libraries
+
+- **tranzilajs** (TypeScript/Node.js) -- Modern SDK with HMAC auth, Bit payments, credit card ops, iframe generation. Install: `npm install tranzilajs`. See: `https://github.com/NirTatcher/tranzilajs`
+- **omnipay-tranzila** (PHP/Omnipay) -- Community gateway plugin
+- **active_merchant_tranzila** (Ruby) -- ActiveMerchant gateway adapter
 
 ## Bundled Resources
 
