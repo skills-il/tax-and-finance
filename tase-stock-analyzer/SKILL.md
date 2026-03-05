@@ -46,6 +46,7 @@ metadata:
     - windsurf
     - opencode
     - codex
+    - antigravity
 ---
 
 # TASE Stock Analyzer

@@ -48,6 +48,7 @@ metadata:
     - opencode
     - codex
     - openclaw
+    - antigravity
 ---
 
 # Israeli Tax Withholding

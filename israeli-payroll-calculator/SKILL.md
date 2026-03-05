@@ -51,6 +51,7 @@ metadata:
     - opencode
     - codex
     - openclaw
+    - antigravity
 ---
 
 # Israeli Payroll Calculator

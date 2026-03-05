@@ -47,6 +47,7 @@ metadata:
     - windsurf
     - opencode
     - codex
+    - antigravity
 ---
 
 # Israeli Annual Reports

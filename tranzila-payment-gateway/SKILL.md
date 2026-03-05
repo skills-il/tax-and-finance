@@ -53,6 +53,7 @@ metadata:
     - windsurf
     - opencode
     - codex
+    - antigravity
 ---
 
 # Tranzila Payment Gateway

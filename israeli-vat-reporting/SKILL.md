@@ -50,6 +50,7 @@ metadata:
     - windsurf
     - opencode
     - codex
+    - antigravity
 ---
 
 # Israeli VAT Reporting
