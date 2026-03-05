@@ -16,7 +16,7 @@ compatibility: >-
   Claude.ai, Cursor.
 metadata:
   author: skills-il
-  version: 1.0.0
+  version: 1.1.0
   category: tax-and-finance
   tags:
     he:
@@ -39,15 +39,9 @@ metadata:
   display_description:
     he: אינטגרציה עם קארדקום לסליקת אשראי, הפקת חשבוניות מס וקבלות אוטומטית
     en: >-
-      Integrate Cardcom payment processing and Israeli invoice generation into
-      applications -- covers Low Profile payments, tokenization, recurring billing,
-      and automatic tax invoice/receipt creation per Israeli law. Use when user asks
-      to accept payments via Cardcom, generate Israeli invoices with payments,
-      set up "slikat ashrai" with hashbonit, handle recurring billing (hora'ot keva),
-      or mentions "Cardcom", "CardCom API", "Low Profile", Israeli payment with
-      invoicing, or needs combined payment + document generation. Supports REST
-      API V11 and legacy endpoints. Do NOT use for Tranzila integration (use
-      tranzila-payment-gateway), general accounting, or non-payment queries.
+      Israeli payment gateway with integrated invoicing -- Low Profile, OpenFields,
+      tokenization, Bit/Google Pay/PayPal, recurring billing, tax invoices, receipts,
+      and credit notes per Israeli law.
   supported_agents:
     - claude-code
     - cursor
@@ -55,7 +49,6 @@ metadata:
     - windsurf
     - opencode
     - codex
-    - antigravity
 ---
 
 # Cardcom Payment Gateway
@@ -66,17 +59,22 @@ Cardcom is an Israeli payment processor with a unique strength: integrated invoi
 
 This skill guides integration with Cardcom's REST API V11 for payments, tokenization, recurring billing, and document generation.
 
+**Official docs:** `https://secure.cardcom.solutions/api/v11/DOCS` (Swagger/Redoc)
+
+**Developer support:** `dev@secure.cardcom.co.il` or 03-9436100 (press 2)
+
 ## Instructions
 
 ### Step 1: Choose Integration Pattern
 
 | Pattern | Card Data Handling | Best For |
 |---------|-------------------|----------|
-| **Low Profile (iframe/redirect)** | Cardcom handles card entry | Most integrations -- minimal PCI scope |
+| **Low Profile (iframe/redirect)** | Cardcom handles card entry | Most integrations -- minimal PCI scope (SAQ-A) |
+| **OpenFields (embedded fields)** | Card inputs hosted by Cardcom in your form | Custom UI with PCI compliance (SAQ-A) |
 | **ChargeToken (server-to-server)** | Token only, no raw card data | Recurring charges, subscription billing |
 | **CreateDocument (server-to-server)** | No card data | Standalone invoice/receipt generation |
 
-Most Israeli merchants use **Low Profile** for initial payment + token creation, then **ChargeToken** for recurring charges. Both can auto-generate invoices.
+Most Israeli merchants use **Low Profile** for initial payment + token creation, then **ChargeToken** for recurring charges. Use **OpenFields** when you need full control over the checkout design. Both payment methods can auto-generate invoices.
 
 ### Step 2: Set Up Authentication
 
@@ -144,6 +142,30 @@ POST https://secure.cardcom.solutions/api/v11/LowProfile/GetLpResult
 ```
 
 Check `DealResponse` = 0 for success. Extract `Token` for future charges.
+
+#### OpenFields Integration (Custom UI)
+
+OpenFields is Cardcom's newest integration pattern (2026). It lets you build your own payment form while Cardcom-hosted iframes handle sensitive card inputs:
+
+1. Create a Low Profile session via `/api/v11/LowProfile/Create`
+2. Embed Cardcom's OpenFields JS on your page
+3. Mount secure iframe fields for card number, expiry, and CVV inside your form
+4. On submit, the JS tokenizes card data and submits to Cardcom
+5. Retrieve results via `GetLpResult`
+
+This gives full design control while maintaining SAQ-A PCI compliance. Official examples: `https://github.com/CardCom` (React and vanilla JS).
+
+#### Alternative Payment Methods
+
+The Low Profile response includes URLs for alternative payment methods when enabled on your terminal:
+
+| Method | Response Field | Notes |
+|--------|---------------|-------|
+| **Bit** | `BitUrl` | Israel's most popular mobile payment app |
+| **Google Pay** | `GooglePayUrl` | For mobile and web |
+| **PayPal** | `PayPalUrl` | International payments |
+
+Display these alongside the credit card form to give customers more payment options.
 
 ### Step 4: Generate Israeli Tax Documents
 
@@ -255,7 +277,29 @@ POST https://secure.cardcom.solutions/api/v11/Transactions/RefundByTransactionId
 
 This both refunds the payment AND generates a credit note (hashbonit zikui) -- handling both the financial and tax compliance sides in one call.
 
-### Step 7: Handle Errors
+### Step 7: Handle Token Replacements (Muhlafim)
+
+When credit cards are replaced (expired, lost, reissued), Cardcom can automatically update stored tokens:
+
+1. Check for updated tokens periodically via `GetMuhlafimByDate` or `GetNewMuhlafim`
+2. These endpoints return tokens where the underlying card was replaced by the issuer
+3. Update your stored token data (new expiry, last 4 digits) in your database
+4. Mark replacements as processed via `UpdateMuhlafimDone`
+
+This prevents failed charges when customers receive new cards -- critical for subscription-based businesses.
+
+### Step 8: Use Suspended Deals (Deferred Payments)
+
+Suspended deals let you authorize a payment without immediate charge:
+
+1. Create a suspended deal via Low Profile with `Operation: "SuspendDealOnly"`
+2. The payment is authorized but not charged
+3. Activate the deal later via `SuspendedDealActivateOne` when ready to charge
+4. Optionally cancel unused suspended deals via `RevokeLowProfileDeal`
+
+Useful for pre-authorizations, hotel bookings, or services billed after delivery.
+
+### Step 9: Handle Errors
 
 Check response codes in every API call. A response of `0` means success.
 
@@ -312,6 +356,32 @@ Actions:
 3. Process: Refund + credit note generated in single API call
 4. Verify: DealResponse=0 for success
 Result: Refund processed and hashbonit zikui (credit note) generated automatically.
+
+### Example 5: Accept Bit Payment
+User says: "I want to let customers pay with Bit in addition to credit cards"
+Actions:
+1. Enable: Bit on your Cardcom terminal via dashboard
+2. Create: Low Profile session as usual
+3. Display: Show the `BitUrl` from the response alongside the card form
+4. Handle: Same webhook flow -- DealResponse=0 for success
+Result: Customers can choose between credit card and Bit payment.
+
+### Example 6: Custom Checkout with OpenFields
+User says: "I want to design my own payment form but keep PCI compliance"
+Actions:
+1. Create: Low Profile session to get the OpenFields token
+2. Embed: Cardcom OpenFields JS and mount secure iframe fields in your form
+3. Style: Apply your own CSS to the form while card inputs remain Cardcom-hosted
+4. Submit: JS tokenizes and sends card data directly to Cardcom
+5. Retrieve: Get results via GetLpResult
+Result: Fully custom checkout design with SAQ-A PCI compliance.
+
+## Community Libraries
+
+- **@tsdiapi/cardcom** (TypeScript/Node.js) -- API V11 client with payments, refunds, tokenization, transaction queries. Install: `npm install @tsdiapi/cardcom`
+- **yadahan/laravel-cardcom** (PHP/Laravel) -- Full integration with charges, refunds, tokens, invoices, multi-terminal
+- **CardCom/OpenFields-FrontEnd-React** (React) -- Official React OpenFields example. See: `https://github.com/CardCom/OpenFields-FrontEnd-React`
+- **CardCom/OpenFields-Backend-Node** (Node.js) -- Official Node.js backend example
 
 ## Bundled Resources
 
