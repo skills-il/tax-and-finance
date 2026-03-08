@@ -87,7 +87,7 @@ After calculating the base arnona, check if the user qualifies for any discounts
 | Disabled (50-74% disability) | Up to 40% | National Insurance Institute (Bituach Leumi) disability certificate |
 | Disabled (75-100% disability) | Up to 80% | National Insurance Institute disability certificate |
 | Low income (individual) | 20-80% | Income below municipality threshold (varies by city) |
-| Student | Up to 50% | Full-time student, lives alone, income below threshold |
+| Student | Up to 80% | Full-time student, lives alone, income below threshold |
 | Single parent | Up to 20% | Recognized single parent status |
 | Large family (4+ children) | Up to 20% | Four or more dependent children |
 | Bereaved family | Up to 66% | Ministry of Defense bereaved family recognition |

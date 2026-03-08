@@ -3,7 +3,7 @@ name: gws-israeli-business-sheets
 description: >-
   Google Sheets financial tracking and automation for Israeli freelancers and small
   businesses using the Google Workspace CLI (gws). Use when user asks to create
-  income/expense sheets with Shekel formatting, track VAT (17%) calculations,
+  income/expense sheets with Shekel formatting, track VAT (18%) calculations,
   generate tax-period summaries for accountants, backup spreadsheets as CSV, or
   auto-log payments. Do NOT use for direct bank API integrations, payroll processing,
   or filing taxes with the Israel Tax Authority.
@@ -89,7 +89,7 @@ When the user wants to set up a new income/expense tracking sheet, create it wit
 | B | Description | תיאור | Text | What the transaction is |
 | C | Category | קטגוריה | Text | Tax-deductible category |
 | D | Amount (excl. VAT) | סכום (ללא מע"מ) | ILS currency | Net amount |
-| E | VAT (17%) | מע"מ (17%) | ILS currency | Calculated VAT |
+| E | VAT (18%) | מע"מ (18%) | ILS currency | Calculated VAT |
 | F | Total (incl. VAT) | סכום כולל מע"מ | ILS currency | Gross amount |
 | G | Type | סוג | Income/Expense | Direction of money |
 | H | Invoice # | מספר חשבונית | Text | Invoice reference |
@@ -119,7 +119,7 @@ gws sheets create --title "Business Tracker 2026"
 
 # Set up headers in the first row
 gws sheets append --spreadsheet-id SPREADSHEET_ID --range "Sheet1!A1:J1" \
-  --values '[["Date","Description","Category","Amount (excl. VAT)","VAT (17%)","Total (incl. VAT)","Type","Invoice #","Payment Method","Notes"]]'
+  --values '[["Date","Description","Category","Amount (excl. VAT)","VAT (18%)","Total (incl. VAT)","Type","Invoice #","Payment Method","Notes"]]'
 ```
 
 ### Step 3: Append Income and Expense Entries
@@ -129,27 +129,27 @@ When the user wants to log a transaction, calculate the VAT automatically and ap
 **For income entries (user received payment):**
 
 ```bash
-# Calculate: if user received 5,850 ILS total, the breakdown is:
-# Amount excl. VAT = Total / 1.17 = 5,000 ILS
-# VAT = Amount * 0.17 = 850 ILS
+# Calculate: if user received 5,900 ILS total, the breakdown is:
+# Amount excl. VAT = Total / 1.18 = 5,000 ILS
+# VAT = Amount * 0.18 = 900 ILS
 gws sheets append --spreadsheet-id SPREADSHEET_ID --range "Sheet1!A:J" \
-  --values '[["15/01/2026","Web Development Project","Professional Services","5000","850","5850","Income","INV-2026-001","Bank Transfer",""]]'
+  --values '[["15/01/2026","Web Development Project","Professional Services","5000","900","5900","Income","INV-2026-001","Bank Transfer",""]]'
 ```
 
 **For expense entries:**
 
 ```bash
-# Example: Office internet bill of 234 ILS (200 + 34 VAT)
+# Example: Office internet bill of 236 ILS (200 + 36 VAT)
 gws sheets append --spreadsheet-id SPREADSHEET_ID --range "Sheet1!A:J" \
-  --values '[["20/01/2026","Bezeq Internet","Phone & Internet","200","34","234","Expense","","Direct Debit",""]]'
+  --values '[["20/01/2026","Bezeq Internet","Phone & Internet","200","36","236","Expense","","Direct Debit",""]]'
 ```
 
 **VAT calculation formulas:**
 
 | Scenario | Formula | Example |
 |----------|---------|---------|
-| Have total (incl. VAT), need breakdown | Amount = Total / 1.17, VAT = Total - Amount | 1170 / 1.17 = 1000, VAT = 170 |
-| Have net amount, need total | VAT = Amount * 0.17, Total = Amount + VAT | 1000 * 0.17 = 170, Total = 1170 |
+| Have total (incl. VAT), need breakdown | Amount = Total / 1.18, VAT = Total - Amount | 1180 / 1.18 = 1000, VAT = 180 |
+| Have net amount, need total | VAT = Amount * 0.18, Total = Amount + VAT | 1000 * 0.18 = 180, Total = 1180 |
 | Meal expense (80% deductible) | Deductible = Amount * 0.80 | 500 * 0.80 = 400 |
 
 ### Step 4: Read and Summarize Financial Data
@@ -207,7 +207,7 @@ gws sheets append --spreadsheet-id SPREADSHEET_ID --range "VAT-Period-1!A1:D1" \
 
 # Append summary rows
 gws sheets append --spreadsheet-id SPREADSHEET_ID --range "VAT-Period-1!A:D" \
-  --values '[["Total Income","50000","8500","15"],["Total Expenses","20000","3400","25"],["VAT Liability","","5100",""],["Net Profit","30000","",""]]'
+  --values '[["Total Income","50000","9000","15"],["Total Expenses","20000","3600","25"],["VAT Liability","","5400",""],["Net Profit","30000","",""]]'
 ```
 
 ### Step 6: Backup Sheets as CSV
@@ -236,9 +236,9 @@ When the user provides transaction data in bulk (from a bank statement or invoic
 # Append multiple rows in one call
 gws sheets append --spreadsheet-id SPREADSHEET_ID --range "Sheet1!A:J" \
   --values '[
-    ["01/02/2026","Client A - Monthly Retainer","Professional Services","10000","1700","11700","Income","INV-2026-010","Bank Transfer",""],
-    ["03/02/2026","AWS Hosting","Software & Subscriptions","450","76.50","526.50","Expense","","Credit Card",""],
-    ["05/02/2026","Business Lunch - Client B","Meals & Entertainment","300","51","351","Expense","","Credit Card","80% deductible"]
+    ["01/02/2026","Client A - Monthly Retainer","Professional Services","10000","1800","11800","Income","INV-2026-010","Bank Transfer",""],
+    ["03/02/2026","AWS Hosting","Software & Subscriptions","450","81","531","Expense","","Credit Card",""],
+    ["05/02/2026","Business Lunch - Client B","Meals & Entertainment","300","54","354","Expense","","Credit Card","80% deductible"]
   ]'
 ```
 
@@ -249,7 +249,7 @@ Before making changes, always offer the user a dry-run preview.
 ```bash
 # Preview what would be appended without writing
 gws sheets append --spreadsheet-id SPREADSHEET_ID --range "Sheet1!A:J" \
-  --values '[["15/03/2026","Test Entry","Office Rent","5000","850","5850","Expense","","Bank Transfer",""]]' \
+  --values '[["15/03/2026","Test Entry","Office Rent","5000","900","5900","Expense","","Bank Transfer",""]]' \
   --dry-run
 ```
 
@@ -282,10 +282,10 @@ Result: A clean VAT period summary both in the Google Sheet and as a local CSV f
 
 ### Example 3: Auto-Log Bank Transfers into Expense Sheet
 
-User says: "I got these payments this month: Client A paid 11,700 for consulting, I paid 526.50 for hosting, and 351 for a business lunch"
+User says: "I got these payments this month: Client A paid 11,800 for consulting, I paid 531 for hosting, and 354 for a business lunch"
 
 Actions:
-1. Parse each transaction, calculate VAT breakdown (divide totals by 1.17)
+1. Parse each transaction, calculate VAT breakdown (divide totals by 1.18)
 2. Categorize: consulting = Professional Services (income), hosting = Software & Subscriptions (expense), lunch = Meals & Entertainment (expense, 80% deductible)
 3. Use `gws sheets append` with multi-row values array
 4. Confirm all entries were logged with correct VAT calculations
@@ -318,4 +318,4 @@ Solution: Verify the spreadsheet ID from the Google Sheets URL (the string betwe
 
 ### Error: "VAT calculation mismatch"
 Cause: Rounding differences between manual calculation and sheet formulas.
-Solution: Always round VAT to 2 decimal places. Use the formula: `Math.round(amount * 17) / 100` for precise Shekel calculations. Israeli tax authority accepts rounding to the nearest agora.
+Solution: Always round VAT to 2 decimal places. Use the formula: `Math.round(amount * 18) / 100` for precise Shekel calculations. Israeli tax authority accepts rounding to the nearest agora.

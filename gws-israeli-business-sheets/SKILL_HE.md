@@ -3,7 +3,7 @@ name: gws-israeli-business-sheets
 description: >-
   מעקב פיננסי ואוטומציה בגיליונות Google לפרילנסרים ועסקים קטנים בישראל באמצעות
   Google Workspace CLI (gws). Use when user asks to ליצור גיליונות הכנסות/הוצאות
-  עם עיצוב שקלים, לחשב מע"מ (17%), להפיק סיכומי תקופות מס לרואה חשבון, לגבות
+  עם עיצוב שקלים, לחשב מע"מ (18%), להפיק סיכומי תקופות מס לרואה חשבון, לגבות
   כ-CSV, או לרשום תשלומים אוטומטית. Do NOT use for אינטגרציות ישירות עם API
   של בנקים, עיבוד משכורות, או הגשת דוחות למס הכנסה.
 license: MIT
@@ -49,7 +49,7 @@ gws auth status
 | B | Description | תיאור | טקסט | מהות העסקה |
 | C | Category | קטגוריה | טקסט | קטגוריית ניכוי מס |
 | D | Amount (excl. VAT) | סכום (ללא מע"מ) | מטבע ILS | סכום נטו |
-| E | VAT (17%) | מע"מ (17%) | מטבע ILS | מע"מ מחושב |
+| E | VAT (18%) | מע"מ (18%) | מטבע ILS | מע"מ מחושב |
 | F | Total (incl. VAT) | סכום כולל מע"מ | מטבע ILS | סכום ברוטו |
 | G | Type | סוג | הכנסה/הוצאה | כיוון הכסף |
 | H | Invoice # | מספר חשבונית | טקסט | הפניה לחשבונית |
@@ -79,7 +79,7 @@ gws sheets create --title "Business Tracker 2026"
 
 # הגדרת כותרות בשורה הראשונה
 gws sheets append --spreadsheet-id SPREADSHEET_ID --range "Sheet1!A1:J1" \
-  --values '[["Date","Description","Category","Amount (excl. VAT)","VAT (17%)","Total (incl. VAT)","Type","Invoice #","Payment Method","Notes"]]'
+  --values '[["Date","Description","Category","Amount (excl. VAT)","VAT (18%)","Total (incl. VAT)","Type","Invoice #","Payment Method","Notes"]]'
 ```
 
 ### שלב 3: הוספת רשומות הכנסה והוצאה
@@ -89,27 +89,27 @@ gws sheets append --spreadsheet-id SPREADSHEET_ID --range "Sheet1!A1:J1" \
 **לרשומות הכנסה (המשתמש קיבל תשלום):**
 
 ```bash
-# חישוב: אם המשתמש קיבל 5,850 ש"ח סה"כ, הפירוט הוא:
-# סכום ללא מע"מ = סה"כ / 1.17 = 5,000 ש"ח
-# מע"מ = סכום * 0.17 = 850 ש"ח
+# חישוב: אם המשתמש קיבל 5,900 ש"ח סה"כ, הפירוט הוא:
+# סכום ללא מע"מ = סה"כ / 1.18 = 5,000 ש"ח
+# מע"מ = סכום * 0.18 = 900 ש"ח
 gws sheets append --spreadsheet-id SPREADSHEET_ID --range "Sheet1!A:J" \
-  --values '[["15/01/2026","Web Development Project","Professional Services","5000","850","5850","Income","INV-2026-001","Bank Transfer",""]]'
+  --values '[["15/01/2026","Web Development Project","Professional Services","5000","900","5900","Income","INV-2026-001","Bank Transfer",""]]'
 ```
 
 **לרשומות הוצאה:**
 
 ```bash
-# דוגמה: חשבון אינטרנט בזק של 234 ש"ח (200 + 34 מע"מ)
+# דוגמה: חשבון אינטרנט בזק של 236 ש"ח (200 + 36 מע"מ)
 gws sheets append --spreadsheet-id SPREADSHEET_ID --range "Sheet1!A:J" \
-  --values '[["20/01/2026","Bezeq Internet","Phone & Internet","200","34","234","Expense","","Direct Debit",""]]'
+  --values '[["20/01/2026","Bezeq Internet","Phone & Internet","200","36","236","Expense","","Direct Debit",""]]'
 ```
 
 **נוסחאות חישוב מע"מ:**
 
 | תרחיש | נוסחה | דוגמה |
 |--------|-------|-------|
-| יש סכום כולל מע"מ, צריך פירוט | סכום = סה"כ / 1.17, מע"מ = סה"כ - סכום | 1170 / 1.17 = 1000, מע"מ = 170 |
-| יש סכום נטו, צריך סה"כ | מע"מ = סכום * 0.17, סה"כ = סכום + מע"מ | 1000 * 0.17 = 170, סה"כ = 1170 |
+| יש סכום כולל מע"מ, צריך פירוט | סכום = סה"כ / 1.18, מע"מ = סה"כ - סכום | 1180 / 1.18 = 1000, מע"מ = 180 |
+| יש סכום נטו, צריך סה"כ | מע"מ = סכום * 0.18, סה"כ = סכום + מע"מ | 1000 * 0.18 = 180, סה"כ = 1180 |
 | הוצאת ארוחה (80% מוכר) | מוכר = סכום * 0.80 | 500 * 0.80 = 400 |
 
 ### שלב 4: קריאה וסיכום נתונים פיננסיים
@@ -167,7 +167,7 @@ gws sheets append --spreadsheet-id SPREADSHEET_ID --range "VAT-Period-1!A1:D1" \
 
 # הוספת שורות סיכום
 gws sheets append --spreadsheet-id SPREADSHEET_ID --range "VAT-Period-1!A:D" \
-  --values '[["Total Income","50000","8500","15"],["Total Expenses","20000","3400","25"],["VAT Liability","","5100",""],["Net Profit","30000","",""]]'
+  --values '[["Total Income","50000","9000","15"],["Total Expenses","20000","3600","25"],["VAT Liability","","5400",""],["Net Profit","30000","",""]]'
 ```
 
 ### שלב 6: גיבוי גיליונות כ-CSV
@@ -196,9 +196,9 @@ python scripts/backup-sheets.py --spreadsheet-id SPREADSHEET_ID --output-dir ./b
 # הוספת מספר שורות בקריאה אחת
 gws sheets append --spreadsheet-id SPREADSHEET_ID --range "Sheet1!A:J" \
   --values '[
-    ["01/02/2026","Client A - Monthly Retainer","Professional Services","10000","1700","11700","Income","INV-2026-010","Bank Transfer",""],
-    ["03/02/2026","AWS Hosting","Software & Subscriptions","450","76.50","526.50","Expense","","Credit Card",""],
-    ["05/02/2026","Business Lunch - Client B","Meals & Entertainment","300","51","351","Expense","","Credit Card","80% deductible"]
+    ["01/02/2026","Client A - Monthly Retainer","Professional Services","10000","1800","11800","Income","INV-2026-010","Bank Transfer",""],
+    ["03/02/2026","AWS Hosting","Software & Subscriptions","450","81","531","Expense","","Credit Card",""],
+    ["05/02/2026","Business Lunch - Client B","Meals & Entertainment","300","54","354","Expense","","Credit Card","80% deductible"]
   ]'
 ```
 
@@ -209,7 +209,7 @@ gws sheets append --spreadsheet-id SPREADSHEET_ID --range "Sheet1!A:J" \
 ```bash
 # תצוגה מקדימה של מה שיתווסף ללא כתיבה בפועל
 gws sheets append --spreadsheet-id SPREADSHEET_ID --range "Sheet1!A:J" \
-  --values '[["15/03/2026","Test Entry","Office Rent","5000","850","5850","Expense","","Bank Transfer",""]]' \
+  --values '[["15/03/2026","Test Entry","Office Rent","5000","900","5900","Expense","","Bank Transfer",""]]' \
   --dry-run
 ```
 
@@ -242,10 +242,10 @@ gws sheets append --spreadsheet-id SPREADSHEET_ID --range "Sheet1!A:J" \
 
 ### דוגמה 3: רישום אוטומטי של העברות בנקאיות לגיליון הוצאות
 
-המשתמש אומר: "קיבלתי החודש תשלומים: לקוח א' שילם 11,700 על ייעוץ, שילמתי 526.50 על אחסון, ו-351 על ארוחה עסקית"
+המשתמש אומר: "קיבלתי החודש תשלומים: לקוח א' שילם 11,800 על ייעוץ, שילמתי 531 על אחסון, ו-354 על ארוחה עסקית"
 
 פעולות:
-1. ניתוח כל עסקה, חישוב פירוט מע"מ (חלוקת סה"כ ב-1.17)
+1. ניתוח כל עסקה, חישוב פירוט מע"מ (חלוקת סה"כ ב-1.18)
 2. קטגוריזציה: ייעוץ = שירותים מקצועיים (הכנסה), אחסון = תוכנה ומנויים (הוצאה), ארוחה = ארוחות ואירוח (הוצאה, 80% מוכר)
 3. שימוש ב-`gws sheets append` עם מערך ערכים מרובי-שורות
 4. אישור שכל הרשומות נרשמו עם חישובי מע"מ נכונים
@@ -278,4 +278,4 @@ gws sheets append --spreadsheet-id SPREADSHEET_ID --range "Sheet1!A:J" \
 
 ### שגיאה: "VAT calculation mismatch"
 סיבה: הבדלי עיגול בין חישוב ידני לנוסחאות הגיליון.
-פתרון: תמיד לעגל מע"מ ל-2 ספרות אחרי הנקודה. יש להשתמש בנוסחה: `Math.round(amount * 17) / 100` לחישובי שקלים מדויקים. רשות המיסים מקבלת עיגול לאגורה הקרובה.
+פתרון: תמיד לעגל מע"מ ל-2 ספרות אחרי הנקודה. יש להשתמש בנוסחה: `Math.round(amount * 18) / 100` לחישובי שקלים מדויקים. רשות המיסים מקבלת עיגול לאגורה הקרובה.
