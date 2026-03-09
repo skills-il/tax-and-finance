@@ -14,7 +14,7 @@ compatibility: >-
   Requires Google OAuth setup via gws auth login. Works with Claude Code, Cursor,
   GitHub Copilot, Windsurf, OpenCode, and Codex.
 metadata:
-  author: choroshin
+  author: skills-il
   version: 1.0.0
   category: tax-and-finance
   tags:
