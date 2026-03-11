@@ -1,46 +1,58 @@
 ---
 name: israeli-arnona-optimizer
 description: >-
-  Calculate municipal property tax (arnona) for Israeli properties, check discount eligibility,
-  and draft appeal letters to arnona committees. Use when a user needs to estimate arnona payments
-  by municipality, zone, and property usage type, verify eligibility for discounts (olim, soldiers,
-  elderly, disabled, low income, students, single parents), or prepare formal appeals with legal
-  references. Covers all major Israeli municipalities including Tel Aviv, Jerusalem, Haifa, and
-  Beer Sheva. Do NOT use for income tax (mas hachnasa), VAT (maam), or national insurance (bituach leumi)
-  calculations, which fall under separate Israeli tax authorities.
+  Calculate municipal property tax (arnona) for Israeli properties, check discount
+  eligibility, and draft appeal letters to arnona committees. Use when a user needs
+  to estimate arnona payments by municipality, zone, and property usage type, verify
+  eligibility for discounts (olim, soldiers, elderly, disabled, low income, students,
+  single parents), or prepare formal appeals with legal references. Covers all major
+  Israeli municipalities including Tel Aviv, Jerusalem, Haifa, and Beer Sheva. Do
+  NOT use for income tax (mas hachnasa), VAT (maam), or national insurance (bituach
+  leumi) calculations, which fall under separate Israeli tax authorities.
 license: MIT
-allowed-tools: "Bash(python:*) Read Edit Write WebFetch"
-compatibility: "Requires Python 3.8+ for calculator script"
+allowed-tools: Bash(python:*) Read Edit Write WebFetch
+compatibility: Requires Python 3.8+ for calculator script
 metadata:
   author: skills-il
   version: 1.0.0
   category: tax-and-finance
   tags:
     he:
-      - ארנונה
-      - מס-רכוש
-      - מס-עירוני
-      - הנחות
-      - ערעור-מס
+    - ארנונה
+    - מס-רכוש
+    - מס-עירוני
+    - הנחות
+    - ערעור-מס
     en:
-      - arnona
-      - property-tax
-      - municipal-tax
-      - discounts
-      - tax-appeal
+    - arnona
+    - property-tax
+    - municipal-tax
+    - discounts
+    - tax-appeal
   display_name:
-    he: "אופטימיזציית ארנונה ישראלית"
-    en: "Israeli Arnona Optimizer"
+    he: אופטימיזציית ארנונה ישראלית
+    en: Israeli Arnona Optimizer
   display_description:
-    he: "חישוב ארנונה עירונית, בדיקת זכאות להנחות, וניסוח מכתבי ערעור לוועדות ארנונה בישראל"
-    en: "Calculate municipal arnona, check discount eligibility, and draft appeal letters to arnona committees in Israel"
+    he: >-
+      חישוב ארנונה עירונית, בדיקת זכאות להנחות, וניסוח מכתבי ערעור לוועדות ארנונה
+      בישראל
+    en: >-
+      Calculate municipal property tax (arnona) for Israeli properties, check discount
+      eligibility, and draft appeal letters to arnona committees. Use when a user
+      needs to estimate arnona payments by municipality, zone, and property usage
+      type, verify eligibility for discounts (olim, soldiers, elderly, disabled, low
+      income, students, single parents), or prepare formal appeals with legal references.
+      Covers all major Israeli municipalities including Tel Aviv, Jerusalem, Haifa,
+      and Beer Sheva. Do NOT use for income tax (mas hachnasa), VAT (maam), or national
+      insurance (bituach leumi) calculations, which fall under separate Israeli tax
+      authorities.
   supported_agents:
-    - claude-code
-    - cursor
-    - github-copilot
-    - windsurf
-    - opencode
-    - codex
+  - claude-code
+  - cursor
+  - github-copilot
+  - windsurf
+  - opencode
+  - codex
 ---
 
 # Israeli Arnona Optimizer
