@@ -3,45 +3,54 @@ name: israeli-mortgage-comparator
 description: >-
   Compare mortgage tracks (maslulei mashkanta) across Israeli banks, calculate monthly
   payments for mixed-track portfolios, and understand Bank of Israel regulations including
-  LTV limits and CPI-linked caps. Use when a user needs to evaluate mortgage offers from
-  different banks, calculate refinancing savings, or understand how Prime rate changes affect
-  their payments. Covers Leumi, Hapoalim, Discount, Mizrachi-Tefahot, FIBI, Mercantile,
-  and Yahav. Do NOT use for commercial real estate loans, business credit lines, or
-  non-Israeli mortgage products.
+  LTV limits and CPI-linked caps. Use when a user needs to evaluate mortgage offers
+  from different banks, calculate refinancing savings, or understand how Prime rate
+  changes affect their payments. Covers Leumi, Hapoalim, Discount, Mizrachi-Tefahot,
+  FIBI, Mercantile, and Yahav. Do NOT use for commercial real estate loans, business
+  credit lines, or non-Israeli mortgage products.
 license: MIT
-allowed-tools: "Bash(python:*) WebFetch"
+allowed-tools: Bash(python:*) WebFetch
 metadata:
   author: skills-il
   version: 1.0.0
   category: tax-and-finance
   tags:
     he:
-      - משכנתא
-      - בנקים
-      - ריבית
-      - השוואת מחירים
-      - נדל"ן
-      - פריים
+    - משכנתא
+    - בנקים
+    - ריבית
+    - השוואת מחירים
+    - נדל"ן
+    - פריים
     en:
-      - mortgage
-      - banks
-      - interest-rate
-      - price-comparison
-      - real-estate
-      - prime-rate
+    - mortgage
+    - banks
+    - interest-rate
+    - price-comparison
+    - real-estate
+    - prime-rate
   display_name:
-    he: "השוואת משכנתאות בישראל"
-    en: "Israeli Mortgage Comparator"
+    he: השוואת משכנתאות בישראל
+    en: Israeli Mortgage Comparator
   display_description:
-    he: "השוואת מסלולי משכנתא בין בנקים ישראליים, חישוב תשלומים חודשיים והבנת תקנות בנק ישראל"
-    en: "Compare mortgage tracks across Israeli banks, calculate monthly payments, and understand Bank of Israel regulations"
+    he: >-
+      השוואת מסלולי משכנתא בין בנקים ישראליים, חישוב תשלומים חודשיים והבנת תקנות בנק
+      ישראל
+    en: >-
+      Compare mortgage tracks (maslulei mashkanta) across Israeli banks, calculate
+      monthly payments for mixed-track portfolios, and understand Bank of Israel regulations
+      including LTV limits and CPI-linked caps. Use when a user needs to evaluate
+      mortgage offers from different banks, calculate refinancing savings, or understand
+      how Prime rate changes affect their payments. Covers Leumi, Hapoalim, Discount,
+      Mizrachi-Tefahot, FIBI, Mercantile, and Yahav. Do NOT use for commercial real
+      estate loans, business credit lines, or non-Israeli mortgage products.
   supported_agents:
-    - claude-code
-    - cursor
-    - github-copilot
-    - windsurf
-    - opencode
-    - codex
+  - claude-code
+  - cursor
+  - github-copilot
+  - windsurf
+  - opencode
+  - codex
 ---
 
 # Israeli Mortgage Comparator
