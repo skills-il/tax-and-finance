@@ -1,52 +1,55 @@
 ---
 name: tase-stock-analyzer
 description: >-
-  Analyze Tel Aviv Stock Exchange (TASE) securities, indices, and corporate
-  disclosures. Use when user asks about Israeli stocks, TASE indices (TA-35,
-  TA-125, TA-90), MAYA filings, dual-listed companies, or menayot analysis.
-  Covers index composition, sector breakdown, MAYA disclosure types, ISA
-  regulations, and Bizportal/Globes Finance data sources.
+  Analyze Tel Aviv Stock Exchange (TASE) securities, indices, and corporate disclosures.
+  Use when user asks about Israeli stocks, TASE indices (TA-35, TA-125, TA-90), MAYA
+  filings, dual-listed companies, or menayot analysis. Covers index composition, sector
+  breakdown, MAYA disclosure types, ISA regulations, and Bizportal/Globes Finance
+  data sources.
 license: MIT
-compatibility: >-
-  Works with Claude Code, Cursor, GitHub Copilot, Windsurf, OpenCode, Codex.
+compatibility: Works with Claude Code, Cursor, GitHub Copilot, Windsurf, OpenCode,
+  Codex.
 metadata:
   author: skills-il
   version: 1.0.0
   category: tax-and-finance
   tags:
     he:
-      - בורסה
-      - מניות
-      - מדדים
-      - מאיה
-      - ניירות-ערך
-      - ישראל
+    - בורסה
+    - מניות
+    - מדדים
+    - מאיה
+    - ניירות-ערך
+    - ישראל
     en:
-      - stock-exchange
-      - stocks
-      - indices
-      - maya
-      - securities
-      - israel
+    - stock-exchange
+    - stocks
+    - indices
+    - maya
+    - securities
+    - israel
   display_name:
-    he: "מנתח מניות הבורסה"
-    en: "TASE Stock Analyzer"
+    he: מנתח מניות הבורסה
+    en: TASE Stock Analyzer
   display_description:
     he: >-
-      ניתוח מניות, מדדים ודיווחים בבורסה לניירות ערך בתל אביב. שימוש כשצריך
-      מידע על מדדי ת"א-35, ת"א-125, ת"א-90, דיווחי מאיה, חברות רישום כפול,
-      או ניתוח סקטורי של הבורסה.
+      ניתוח מניות, מדדים ודיווחים בבורסה לניירות ערך בתל אביב. שימוש כשצריך מידע על
+      מדדי ת"א-35, ת"א-125, ת"א-90, דיווחי מאיה, חברות רישום כפול, או ניתוח סקטורי
+      של הבורסה.
     en: >-
-      Analyze Tel Aviv Stock Exchange securities, indices, and corporate
-      disclosures
+      Analyze Tel Aviv Stock Exchange (TASE) securities, indices, and corporate disclosures.
+      Use when user asks about Israeli stocks, TASE indices (TA-35, TA-125, TA-90),
+      MAYA filings, dual-listed companies, or menayot analysis. Covers index composition,
+      sector breakdown, MAYA disclosure types, ISA regulations, and Bizportal/Globes
+      Finance data sources.
   supported_agents:
-    - claude-code
-    - cursor
-    - github-copilot
-    - windsurf
-    - opencode
-    - codex
-    - antigravity
+  - claude-code
+  - cursor
+  - github-copilot
+  - windsurf
+  - opencode
+  - codex
+  - antigravity
 ---
 
 # TASE Stock Analyzer
