@@ -1,52 +1,57 @@
 ---
 name: tranzila-payment-gateway
 description: >-
-  Integrate Tranzila payment processing into Israeli applications -- covers
-  iframe payments, tokenization, installments (tashlumim), refunds, 3D Secure,
-  and Bit wallet. Use when user asks to accept payments via Tranzila, integrate
-  Israeli credit card processing, set up "slikat ashrai", handle tashlumim
-  (installment payments), create payment tokens, process refunds through
-  Tranzila, or mentions "Tranzila", "tranzila API", "secure5", or Israeli
-  online payments. Supports both legacy CGI endpoints and modern API V2.
-  Do NOT use for Cardcom integration (use cardcom-payment-gateway), general
-  accounting, or non-payment financial queries.
+  Integrate Tranzila payment processing into Israeli applications -- covers iframe
+  payments, tokenization, installments (tashlumim), refunds, 3D Secure, and Bit wallet.
+  Use when user asks to accept payments via Tranzila, integrate Israeli credit card
+  processing, set up "slikat ashrai", handle tashlumim (installment payments), create
+  payment tokens, process refunds through Tranzila, or mentions "Tranzila", "tranzila
+  API", "secure5", or Israeli online payments. Supports both legacy CGI endpoints
+  and modern API V2. Do NOT use for Cardcom integration (use cardcom-payment-gateway),
+  general accounting, or non-payment financial queries.
 license: MIT
 compatibility: >-
-  Requires network access for Tranzila API calls. Works with Claude Code,
-  Claude.ai, Cursor.
+  Requires network access for Tranzila API calls. Works with Claude Code, Claude.ai,
+  Cursor.
 metadata:
   author: skills-il
   version: 1.1.0
   category: tax-and-finance
   tags:
     he:
-      - תשלומים
-      - כרטיס-אשראי
-      - טרנזילה
-      - סליקת-אשראי
-      - ישראל
+    - תשלומים
+    - כרטיס-אשראי
+    - טרנזילה
+    - סליקת-אשראי
+    - ישראל
     en:
-      - payments
-      - credit-card
-      - tranzila
-      - slikat-ashrai
-      - israel
+    - payments
+    - credit-card
+    - tranzila
+    - slikat-ashrai
+    - israel
   display_name:
     he: שער תשלומים טרנזילה
     en: Tranzila Payment Gateway
   display_description:
     he: אינטגרציה עם טרנזילה לסליקת אשראי, תשלומים בתשלומים, טוקניזציה והחזרים
     en: >-
-      Israeli payment gateway integration with Tranzila -- iframe, Hosted Fields,
-      API V2, tokenization, installments, Bit wallet, 3D Secure, payment requests,
-      standing orders, and invoicing.
+      Integrate Tranzila payment processing into Israeli applications -- covers iframe
+      payments, tokenization, installments (tashlumim), refunds, 3D Secure, and Bit
+      wallet. Use when user asks to accept payments via Tranzila, integrate Israeli
+      credit card processing, set up "slikat ashrai", handle tashlumim (installment
+      payments), create payment tokens, process refunds through Tranzila, or mentions
+      "Tranzila", "tranzila API", "secure5", or Israeli online payments. Supports
+      both legacy CGI endpoints and modern API V2. Do NOT use for Cardcom integration
+      (use cardcom-payment-gateway), general accounting, or non-payment financial
+      queries.
   supported_agents:
-    - claude-code
-    - cursor
-    - github-copilot
-    - windsurf
-    - opencode
-    - codex
+  - claude-code
+  - cursor
+  - github-copilot
+  - windsurf
+  - opencode
+  - codex
 ---
 
 # Tranzila Payment Gateway
