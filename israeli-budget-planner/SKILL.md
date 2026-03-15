@@ -11,7 +11,7 @@ compatibility: Works with Claude Code, Cursor, GitHub Copilot, Windsurf, OpenCod
   Codex.
 metadata:
   author: skills-il
-  version: 1.0.0
+  version: 1.1.0
   category: tax-and-finance
   tags:
     he:
@@ -59,7 +59,7 @@ metadata:
 | BOI Interest Rate | 4.50% (check boi.org.il) |
 | Prime Rate | BOI + 1.50% = ~6.00% |
 | VAT (Ma'am) | 18% |
-| Minimum Wage | 6,000 NIS/month (verify current rate) |
+| Minimum Wage | Verify current 2026 rate with government sources |
 | Average Wage | ~12,500 NIS/month |
 
 ## Mashkanta (Mortgage) Tracks
@@ -72,7 +72,7 @@ metadata:
 
 BOI rules: Max LTV 75% first home, max 33.33% variable rate, max 33.33% CPI-linked.
 
-## Arnona by City (NIS/sqm/month, approx.)
+## Arnona by City (NIS/sqm/month, 2024 rates - verify current)
 - Tel Aviv: 85-130
 - Jerusalem: 55-80
 - Haifa: 45-65
@@ -126,7 +126,7 @@ Result: Mortgage comparison with monthly payments and total cost per track
 
 ### Error: "Tax calculation doesn't match pay slip"
 Cause: Tax credits (nekudot zikui) not properly applied
-Solution: Every Israeli resident gets 2.25 base credit points. Women get 0.5 additional. New immigrants get extra credits for 3.5 years. Each point is worth ~242 NIS/month (2025). Apply credits before calculating tax.
+Solution: Every Israeli resident gets 2.25 base credit points. Women get 0.5 additional. New immigrants get extra credits for 3.5 years. Each point is worth approximately 250 NIS/month (verify current 2026 rate). Apply credits before calculating tax.
 
 ### Error: "Arnona amount seems wrong"
 Cause: Arnona varies significantly by city, zone, and property classification

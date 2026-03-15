@@ -1,3 +1,56 @@
+---
+name: israeli-budget-planner
+description: >-
+  Plan household and personal budgets with Israeli-specific costs, rates, and financial
+  products. Use when user asks about budgeting in Israel, mortgage (mashkanta) calculations,
+  arnona rates, cost of living, takciv, or monthly expense planning. Covers Bank of
+  Israel prime rate, mashkanta tracks, arnona by city, Sal Briut costs, and Israeli
+  household benchmarks.
+license: MIT
+compatibility: Works with Claude Code, Cursor, GitHub Copilot, Windsurf, OpenCode,
+  Codex.
+metadata:
+  author: skills-il
+  version: 1.1.0
+  category: tax-and-finance
+  tags:
+    he:
+    - תקציב
+    - משכנתא
+    - ארנונה
+    - יוקר-המחיה
+    - חיסכון
+    - ישראל
+    en:
+    - budget
+    - mortgage
+    - arnona
+    - cost-of-living
+    - savings
+    - israel
+  display_name:
+    he: מתכנן תקציב ישראלי
+    en: Israeli Budget Planner
+  display_description:
+    he: >-
+      תכנון תקציב משק בית עם עלויות, שיעורים ומוצרים פיננסיים ישראליים. שימוש כשצריך
+      חישובי משכנתא, שיעורי ארנונה, תכנון הוצאות חודשיות, או מידע על יוקר המחיה בישראל.
+    en: >-
+      Plan household and personal budgets with Israeli-specific costs, rates, and
+      financial products. Use when user asks about budgeting in Israel, mortgage (mashkanta)
+      calculations, arnona rates, cost of living, takciv, or monthly expense planning.
+      Covers Bank of Israel prime rate, mashkanta tracks, arnona by city, Sal Briut
+      costs, and Israeli household benchmarks.
+  supported_agents:
+  - claude-code
+  - cursor
+  - github-copilot
+  - windsurf
+  - opencode
+  - codex
+  - antigravity
+---
+
 # מתכנן תקציב ישראלי
 
 ## שיעורים פיננסיים מרכזיים
@@ -6,7 +59,7 @@
 | ריבית בנק ישראל | 4.50% (בדקו ב-boi.org.il) |
 | ריבית פריים | בנק ישראל + 1.50% = ~6.00% |
 | מע"מ | 18% |
-| שכר מינימום | 6,000 ש"ח/חודש (ודאו שיעור עדכני) |
+| שכר מינימום | ודאו שיעור עדכני לשנת 2026 ממקורות ממשלתיים |
 | שכר ממוצע | ~12,500 ש"ח/חודש |
 
 ## מסלולי משכנתא
@@ -19,7 +72,7 @@
 
 הנחיות בנק ישראל: LTV מקסימלי 75% דירה ראשונה, שליש ריבית משתנה, שליש צמוד מדד.
 
-## ארנונה לפי עיר (ש"ח/מ"ר/חודש, בקירוב)
+## ארנונה לפי עיר (ש"ח/מ"ר/חודש, תעריפי 2024 - ודאו עדכניות)
 - תל אביב: 85-130
 - ירושלים: 55-80
 - חיפה: 45-65
@@ -73,7 +126,7 @@
 
 ### שגיאה: "חישוב המס לא תואם לתלוש השכר"
 סיבה: נקודות זיכוי לא הוחלו כראוי
-פתרון: כל תושב ישראלי מקבל 2.25 נקודות זיכוי בסיס. נשים מקבלות 0.5 נוספת. עולים חדשים מקבלים נקודות נוספות ל-3.5 שנים. כל נקודה שווה ~242 ש"ח/חודש (2025). החילו נקודות זיכוי לפני חישוב המס.
+פתרון: כל תושב ישראלי מקבל 2.25 נקודות זיכוי בסיס. נשים מקבלות 0.5 נוספת. עולים חדשים מקבלים נקודות נוספות ל-3.5 שנים. כל נקודה שווה בקירוב 250 ש"ח/חודש (ודאו שיעור עדכני לשנת 2026). החילו נקודות זיכוי לפני חישוב המס.
 
 ### שגיאה: "סכום הארנונה נראה שגוי"
 סיבה: ארנונה משתנה משמעותית לפי עיר, אזור וסיווג נכס
