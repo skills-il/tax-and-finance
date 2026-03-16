@@ -1,0 +1,26 @@
+# Eval queries for grow-payment-gateway
+# Format: +/- query (+ = should trigger, - = should NOT trigger, ? = edge case)
+
+# Positive queries (should trigger this skill)
++ integrate Grow payment gateway into my Next.js app
++ how do I use the Meshulam API to accept payments
++ create a payment page with Grow
++ set up recurring billing with Grow tokens
++ handle Grow webhook callbacks in my Express server
++ create payment link drishat tashlum with Grow
++ refund a transaction via Grow API
++ how to use createPaymentProcess in Grow
++ integrate Bit payments through Meshulam
++ grow-il API integration help
+
+# Negative queries (should NOT trigger this skill)
+- integrate Cardcom payment gateway
+- set up Tranzila for credit card processing
+- route payments across multiple Israeli gateways
+- calculate Israeli VAT for invoices
+- set up Stripe payments for my app
+
+# Edge case queries
+? accept payments in Israel (too generic, but could match)
+? Israeli payment gateway integration (generic, multiple gateways)
+? set up slikat ashrai for my website (Hebrew term, could be any gateway)
