@@ -13,7 +13,7 @@ allowed-tools: 'Bash(python:*)'
 compatibility: 'Works with Claude Code, Claude.ai, Cursor. No network access required.'
 metadata:
   author: skills-il
-  version: 1.0.0
+  version: 1.0.1
   category: tax-and-finance
   tags:
     he:
@@ -144,6 +144,13 @@ Result: Side-by-side comparison accounting for car tax benefit (shovi rechev)
 - `references/tax-brackets.md` — 2025 Israeli income tax brackets (annual and monthly) with progressive rates from 10% to 50%. Also referenced in Step 2 and Troubleshooting below. Consult when computing income tax or verifying bracket thresholds.
 - `references/bituach-leumi-rates.md` — 2025 Bituach Leumi (National Insurance) and health tax rates for employees and employers, covering both the reduced bracket (up to 7,122 NIS) and full bracket (up to 49,030 NIS). Consult when calculating NI and health deductions in Step 3.
 - `references/credit-points.md` — Israeli tax credit points (nekudot zikui) value and full eligibility table covering base credits, gender, new immigrants, children, single parents, and disability. Consult when determining a taxpayer's total credit points beyond the defaults in Step 1.
+
+## Gotchas
+- Israeli income tax brackets (madregot mas) change annually. Agents may use outdated 2023 or 2024 brackets. Always verify the current year's brackets from the Tax Authority.
+- Bituach Leumi has two separate rate tiers: a reduced rate on income up to 60% of the average wage, and a normal rate above it. Agents often apply a flat rate, missing this two-tier structure.
+- Israeli payroll includes mandatory pension contributions (6.5% employee, 7.5% employer as of 2025). Agents may omit these or use the older 5.5%/6% rates.
+- Overtime in Israel is calculated differently than in the US: 125% for the first 2 hours, 150% after that (not 1.5x for all overtime). Friday/holiday overtime starts at 150%.
+- The "neku'dot zikui" (tax credit points) system is uniquely Israeli. Each point reduces tax by a fixed NIS amount per month. Agents may not know that women get an extra half-point, and new olim get additional points for 3.5 years.
 
 ## Troubleshooting
 

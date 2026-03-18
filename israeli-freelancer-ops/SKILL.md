@@ -16,7 +16,7 @@ compatibility: >-
   alerts and browser-based utility bill collection.
 metadata:
   author: skills-il
-  version: 1.0.0
+  version: 1.0.1
   category: tax-and-finance
   tags:
     he:
@@ -237,6 +237,12 @@ Result: Complete accountant package (havila l'roe cheshbon) with 12 monthly fold
 ### References
 - `references/deadline-calendar.md` — Complete Israeli tax deadline calendar for freelancers: VAT filing dates, Bituach Leumi quarterly payments, annual report deadlines, and advance tax payment (mkdamot) schedule. Includes both osek murshe and osek patur timelines, plus holiday adjustments. Consult when setting up deadline alerts in Step 4.
 - `references/utility-portals.md` — Login URLs, bill download paths, and automation notes for Israeli utility providers (IEC, Bezeq, HOT, Partner, water corporations, Arnona portals). Includes 2FA/OTP handling guidance per portal. Consult when configuring browser-based bill collection in Step 3.
+
+## Gotchas
+- Agents may confuse Osek Murshe (licensed dealer, charges VAT) with Osek Patur (exempt dealer, no VAT). The threshold for Osek Patur changes annually and was 120,000 NIS for 2025. Exceeding it mid-year requires immediate registration upgrade.
+- Israeli freelancers must file bi-monthly VAT reports (doch du-chodshi) even in zero-revenue periods. Agents may skip months with no income, but a missing report triggers penalties.
+- Bituach Leumi advance payments (mikdamot) for self-employed are based on projected annual income, not actual monthly revenue. Agents may calculate contributions based on current month earnings.
+- Invoice numbering in Israel must be sequential with no gaps. Agents may suggest starting from an arbitrary number or allowing gaps, which violates Tax Authority requirements.
 
 ## Troubleshooting
 

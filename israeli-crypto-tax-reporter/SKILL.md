@@ -15,7 +15,7 @@ allowed-tools: Bash(python:*) Read Edit Write WebFetch
 compatibility: Requires Python 3.8+ for calculator script
 metadata:
   author: skills-il
-  version: 1.0.0
+  version: 1.0.1
   category: tax-and-finance
   tags:
     he:
@@ -258,6 +258,12 @@ Result: Under the conservative approach recommended by most Israeli tax advisors
 ### References
 - `references/crypto-tax-regulations.md` -- Israeli Tax Authority circulars, relevant Income Tax Ordinance sections, classification rules for different crypto activities, and reporting deadlines. Consult when determining the correct tax treatment for specific crypto activities.
 - `references/crypto-tax-scenarios.md` -- Worked examples covering simple trades, crypto-to-crypto swaps, DeFi staking, NFT sales, mining income, airdrops, and hard forks. Consult when calculating tax for specific transaction types.
+
+## Gotchas
+- Israel taxes crypto as property (capital gains), not as currency. Agents may apply currency exchange rules or VAT to crypto transactions, which is incorrect under Israeli tax law.
+- The Israeli capital gains tax rate on crypto is 25% for individuals (mas revach hon), not the US 15%/20% rates. Agents trained on US tax data will use the wrong rate.
+- Israeli crypto tax reporting uses FIFO (First In, First Out) as the default cost basis method. Agents may default to average cost or LIFO, which are not standard practice in Israel.
+- Crypto-to-crypto swaps are taxable events in Israel. Agents may treat them as non-taxable exchanges, which was the old US rule but has never been the case in Israel.
 
 ## Troubleshooting
 

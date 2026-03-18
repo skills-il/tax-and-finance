@@ -12,7 +12,7 @@ license: MIT
 allowed-tools: Bash(python:*) WebFetch
 metadata:
   author: skills-il
-  version: 1.0.0
+  version: 1.0.1
   category: tax-and-finance
   tags:
     he:
@@ -367,6 +367,12 @@ Actions:
 6. Suggest additional measures: LED bulbs, AC at 24-25 degrees, unplug standby devices
 
 Result: User receives a practical action plan for shifting consumption to off-peak hours, with estimated monthly savings of 80-120 ILS, plus an ongoing monitoring strategy using the IEC app.
+
+## Gotchas
+- Israel Electric Corporation (Chevrat Hashmal) rates change quarterly based on fuel cost adjustments. Agents may use outdated rates from a previous quarter. Always check the current tariff from the IEC website.
+- Water rates in Israel use a tiered pricing structure: a lower rate for basic consumption (up to 3.5 cubic meters per person per month) and a higher rate above it. Agents may apply a flat rate.
+- Israeli utility bills include VAT (18%) on top of the listed rates. Agents may calculate costs using the pre-VAT tariff without adding VAT, underestimating the actual bill.
+- The electricity market in Israel opened to competition in 2023, allowing private generators. Agents may only reference IEC rates without mentioning competitive alternatives like OPC or Dalia.
 
 ## Troubleshooting
 

@@ -12,7 +12,7 @@ license: MIT
 compatibility: Requires israeli-bank-mcp or il-bank-mcp MCP server. Claude Code recommended.
 metadata:
   author: skills-il
-  version: 1.0.0
+  version: 1.0.1
   category: tax-and-finance
   tags:
     he:
@@ -117,6 +117,12 @@ Result: Filtered and categorized business transactions with VAT amounts, ready f
 ### References
 - `references/spending-categories.md` — Israeli spending category definitions with Hebrew terms and common merchant examples for each category (housing/diur, groceries/mazon, transportation/tahaburah, utilities/shartuim, etc.). Consult when customizing categorization rules or explaining categories to users.
 - `references/supported-banks.md` — List of supported Israeli banks (Hapoalim, Leumi, Discount, Mizrahi-Tefahot, FIBI) and credit card companies (Visa Cal, Max, Isracard) with bank codes and MCP server compatibility notes. Consult when setting up bank connections or troubleshooting missing accounts.
+
+## Gotchas
+- Israeli banks use the "Open Banking" standard mandated by the Bank of Israel, not the European PSD2 standard. Agents may reference PSD2 APIs or UK Open Banking endpoints that do not exist in Israel.
+- Bank Leumi, Hapoalim, Discount, Mizrahi-Tefahot, and First International each have different API implementations. There is no single unified API across all Israeli banks.
+- Israeli bank account numbers include a branch number (snif) prefix. Agents may validate account numbers using international IBAN format, but Israeli domestic transfers use the local branch+account format.
+- Credit card statements in Israel are issued by separate companies (Isracard, Max, CAL) and not directly by the banks. Agents may try to fetch credit card data from the bank API instead of the card company.
 
 ## Troubleshooting
 

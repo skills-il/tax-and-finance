@@ -12,7 +12,7 @@ license: MIT
 allowed-tools: Bash(python:*) WebFetch
 metadata:
   author: skills-il
-  version: 1.0.0
+  version: 1.0.1
   category: tax-and-finance
   tags:
     he:
@@ -308,6 +308,12 @@ Actions:
 7. Compare rates from 3+ banks, noting some banks are more friendly to investment property mortgages
 
 Result: User receives the LTV constraint analysis, total acquisition cost (including higher purchase tax), mortgage payment projections vs. expected rental income, and a comparison of bank offers for investment property mortgages.
+
+## Gotchas
+- Israeli mortgages (mashkantaot) must contain at least two tracks (maslulim) by Bank of Israel regulation. Agents may suggest a single-track mortgage, which is not allowed.
+- The Prime rate in Israel (ribit prime) is the BOI rate + 1.5%. Agents may use the US Prime rate (which has a different spread) or forget to add the 1.5% margin.
+- CPI-linked mortgage tracks (tzmudot madad) adjust the outstanding principal by the CPI index, not just the interest rate. Agents may only adjust the interest payment without also adjusting the principal.
+- Israeli banks charge a "ptor me-onesh" (early repayment penalty) that varies by track type. Agents may suggest refinancing without accounting for this penalty, which can be 0.5-2% of the remaining balance.
 
 ## Troubleshooting
 

@@ -15,7 +15,7 @@ compatibility: >-
   Cursor, GitHub Copilot, Windsurf, OpenCode, Codex.
 metadata:
   author: skills-il
-  version: 1.0.0
+  version: 1.0.1
   category: tax-and-finance
   tags:
     he:
@@ -175,6 +175,12 @@ Result: Exact CPI adjustment with new rent calculation
 
 ### References
 - `references/boi-api.md` -- Bank of Israel API endpoints (SDMX format), authentication, rate limits, and data structure. Consult when building integrations or troubleshooting API calls.
+
+## Gotchas
+- Agents often query BOI exchange rates for Friday or Saturday, but the representative rate (sha'ar yatzig) is only published on business days (Sunday-Thursday). Use the last available Thursday rate for weekends.
+- The BOI SDMX API returns XML by default, not JSON. Agents must either parse XML or add the correct Accept header for JSON format.
+- Agents may confuse the BOI representative rate (indicative, published once daily at ~15:30) with real-time forex rates. The BOI rate is not suitable for intraday trading decisions.
+- CPI data from CBS lags by about 6 weeks: January's CPI is published around February 15th. Agents may try to fetch current-month CPI that does not exist yet.
 
 ## Troubleshooting
 

@@ -16,7 +16,7 @@ compatibility: >-
   Python 3.8+ for helper scripts.
 metadata:
   author: skills-il
-  version: 1.0.0
+  version: 1.0.1
   category: tax-and-finance
   tags:
     he:
@@ -192,6 +192,12 @@ Result: Full amount recorded as expense with no VAT deduction, flagged for accou
 
 ### References
 - `references/expense-categories.md` -- Complete list of Tax Authority expense categories with codes, common examples, and special rules for deductibility (vehicle 2/3 rule, entertainment limits). Consult when categorizing unusual expenses.
+
+## Gotchas
+- Agents often calculate VAT as `amount * 0.18` when extracting from a total, but the correct formula to extract VAT from a VAT-inclusive amount is `total / 1.18 * 0.18` (or equivalently `total * 18/118`). This "1/6 rule" is specific to Israeli bookkeeping.
+- Osek Patur (exempt dealer) invoices have no VAT component. Agents may still try to extract VAT from these invoices, producing incorrect bookkeeping entries.
+- Israeli invoice numbers are not globally unique. Different suppliers can have the same invoice number. Always index by supplier + invoice number combination.
+- Hebrew OCR on scanned invoices frequently misreads the characters vav (ו) and zayin (ז), and confuses final-mem (ם) with samekh (ס). Verify extracted amounts and names.
 
 ## Troubleshooting
 

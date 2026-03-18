@@ -14,7 +14,7 @@ compatibility: >-
   Claude.ai, Cursor.
 metadata:
   author: skills-il
-  version: 1.0.0
+  version: 1.0.1
   category: tax-and-finance
   tags:
     he:
@@ -154,6 +154,12 @@ Result: Credit invoice referencing original, with correct VAT reversal
 - `references/shaam-api-reference.md` — SHAAM (Tax Authority) API endpoints for requesting allocation numbers, OAuth2 authentication setup, and request/response formats. Consult when integrating with the SHAAM e-invoice API. Also referenced in Step 4 above.
 - `references/invoice-types.md` — Complete listing of Israeli invoice type codes (300, 305, 310, 320, 330, 400) with required fields per type, VAT applicability, and allocation number requirements. Consult when determining which invoice type to use.
 - `references/compliance-timeline.md` — Progressive e-invoice mandate timeline per Amendment 157 to the VAT Law, showing threshold reductions from 25,000 NIS down to all invoices. Consult when checking current allocation number thresholds.
+
+## Gotchas
+- Israeli e-invoices require a SHAAM allocation number (mispar hiktza'a) from the Tax Authority. Agents may generate invoices without this number, making them non-compliant.
+- The e-invoice XML schema follows the Israeli Tax Authority specification, not the European Peppol or UBL standard. Agents may generate UBL-formatted XML that Israeli systems cannot process.
+- Starting from 2024, Israeli businesses above the turnover threshold must issue e-invoices. Agents may not check whether the business meets this threshold before skipping e-invoice requirements.
+- The SHAAM system validates the buyer's tax ID (mispar osek) in real-time. Agents may use placeholder or invalid tax IDs that will be rejected by the validation service.
 
 ## Troubleshooting
 

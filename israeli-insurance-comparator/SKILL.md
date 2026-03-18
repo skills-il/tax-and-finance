@@ -12,7 +12,7 @@ license: MIT
 allowed-tools: Bash(python:*) WebFetch
 metadata:
   author: skills-il
-  version: 1.0.0
+  version: 1.0.1
   category: tax-and-finance
   tags:
     he:
@@ -289,6 +289,12 @@ Actions:
 7. Factor in the urgency: if surgery is needed soon, the waiting period may make the upgrade ineffective in the short term
 
 Result: User receives a cost-benefit analysis comparing Maccabi Sheli vs. Zahav premiums against the expected surgery costs, plus alternative private insurance options if the waiting period is a problem.
+
+## Gotchas
+- Israeli car insurance has three distinct mandatory/optional layers: Hova (mandatory third-party), Makif (comprehensive), and Tzad Gimel (third-party property). Agents may conflate these or use US/UK insurance terminology that does not map to Israeli categories.
+- Insurance premiums in Israel are quoted per year, not per month. Agents may present monthly prices when the API returns annual figures, causing 12x confusion.
+- The Bituach Hova (mandatory car insurance) pool is regulated by the government and prices are set by committee. Agents may suggest "shopping around" for this type, which has limited price variation.
+- Israeli health insurance has a public layer (kupat cholim) and supplementary private layers (shaban, mashlim). Agents may compare only private plans without noting the universal public coverage.
 
 ## Troubleshooting
 

@@ -15,7 +15,7 @@ compatibility: >-
   Code, Cursor, GitHub Copilot, Windsurf, OpenCode, Codex.
 metadata:
   author: skills-il
-  version: 1.0.0
+  version: 1.0.1
   category: tax-and-finance
   tags:
     he:
@@ -166,6 +166,12 @@ Result: Summary of recent disclosures with material items highlighted
 ### References
 - `references/tase-api.md` -- TASE API endpoints for market data, index composition, and Maya filings search. Consult when integrating live market data.
 - `references/capital-gains.md` -- Israeli capital gains tax rules for securities: rates, exemptions, loss offsetting, substantial shareholder rules, and foreign resident treaty considerations.
+
+## Gotchas
+- The Tel Aviv Stock Exchange (TASE) trades Sunday through Thursday, not Monday through Friday. Agents may schedule market queries or expect data for Fridays and Saturdays, which are non-trading days.
+- TASE ticker symbols follow a different format than US exchanges. Israeli stocks use numeric codes (e.g., 604611 for Teva) alongside short Hebrew names. Agents may try to use US-style letter tickers.
+- Israeli stock prices on TASE are quoted in agorot (1/100 of a shekel), not in shekels. Agents may display raw prices without dividing by 100, showing prices 100x too high.
+- Dual-listed Israeli companies (e.g., Teva, Check Point) trade on both TASE and NASDAQ with different prices due to exchange rate fluctuations. Agents may not reconcile the price difference.
 
 ## Troubleshooting
 

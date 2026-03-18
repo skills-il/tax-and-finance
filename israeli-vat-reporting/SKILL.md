@@ -13,7 +13,7 @@ compatibility: >-
   API.
 metadata:
   author: skills-il
-  version: 1.0.0
+  version: 1.0.1
   category: tax-and-finance
   tags:
     he:
@@ -147,6 +147,12 @@ Result: VAT report with zero-rated export handling
 - `references/vat-regulations.md` — Summary of Israeli VAT law including current and historical VAT rates, registration types (Osek Morsheh, Osek Patur), and filing obligations. Consult when verifying VAT rate or registration rules.
 - `references/reporting-calendar.md` — Filing deadlines for monthly and bi-monthly VAT reporters, including the 15th-of-following-month rule. Consult when determining reporting period and deadline for a specific month.
 - `references/special-cases.md` — Rules for zero-rated transactions (exports, tourism, Eilat zone), exempt transactions (financial services, residential rent), and the distinction between zero-rated and exempt for input VAT recovery. Consult when handling exports or unusual transaction types.
+
+## Gotchas
+- Agents almost always use the old 17% VAT rate. The current Israeli VAT rate is 18% (effective January 2025). This single error cascades through all calculations.
+- Israeli VAT reports are filed bi-monthly (every two months), not quarterly as in many European countries. Agents may suggest quarterly filing, which will result in missed deadlines and penalties.
+- Osek Patur businesses (annual revenue under 120,000 NIS in 2025) do not charge or report VAT. Agents may generate VAT reports for businesses that should not be filing them.
+- Input VAT (mas tsumost) from car purchases is only 2/3 deductible in Israel. Agents may claim full VAT deduction on vehicle-related expenses.
 
 ## Troubleshooting
 

@@ -14,7 +14,7 @@ allowed-tools: Bash(python:*) Read Edit Write WebFetch
 compatibility: Requires Python 3.8+ for calculator script
 metadata:
   author: skills-il
-  version: 1.0.0
+  version: 1.0.1
   category: tax-and-finance
   tags:
     he:
@@ -210,6 +210,12 @@ Result: The agent drafts a formal appeal letter in Hebrew addressed to the Haifa
 ### References
 - `references/arnona-rates-guide.md` -- Comprehensive guide to arnona rate structures, zone classifications, usage types, and billing cycles across Israeli municipalities. Consult when determining the correct rate for a specific property.
 - `references/arnona-discounts-guide.md` -- Complete reference for all arnona discount categories, eligibility criteria, required documentation, and municipality-specific variations. Consult when checking if a user qualifies for arnona discounts.
+
+## Gotchas
+- Arnona rates vary dramatically between municipalities. Agents may use Tel Aviv rates for Haifa properties or vice versa. Always verify rates against the specific municipality (iriya or mo'atza).
+- Arnona discounts (hanacha) have strict eligibility windows and require annual renewal. Agents may suggest discounts the user no longer qualifies for or that have expired.
+- Property classification (residential vs. commercial) significantly affects arnona rates. Agents may misclassify home offices, which in Israel are usually still taxed at residential rates unless formally rezoned.
+- Arnona appeal deadlines are typically 90 days from the annual bill date. Agents may draft appeals after the deadline has passed, making them void.
 
 ## Troubleshooting
 

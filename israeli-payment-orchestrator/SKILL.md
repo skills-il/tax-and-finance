@@ -15,7 +15,7 @@ compatibility: >-
   Python 3.8+ for helper scripts.
 metadata:
   author: skills-il
-  version: 1.0.0
+  version: 1.0.1
   category: tax-and-finance
   tags:
     he:
@@ -242,6 +242,12 @@ Result: Installment payment configured with cost breakdown for merchant
 
 ### References
 - `references/gateway-matrix.md` -- Detailed feature comparison of Israeli payment gateways: API formats, installment support, recurring billing, hosted pages, settlement timelines, and fee structures. Consult when evaluating or switching gateways.
+
+## Gotchas
+- Each Israeli payment gateway (Cardcom, Tranzila, Grow) has a completely different API format: Cardcom uses JSON, Tranzila uses form-encoded key-value pairs, and Grow uses multipart/form-data. Agents may apply one gateway's format to another.
+- Israeli payment processing requires Israeli business registration (osek murshe/patur). Agents may suggest setting up payment processing before verifying the business has proper registration with the Tax Authority.
+- PCI DSS compliance requirements in Israel follow the same international standard, but Israeli acquirers (Isracard, Visa CAL) may have additional local requirements. Agents may generate PCI-compliant code that misses Israeli acquirer-specific fields.
+- Bit (Israel's dominant mobile payment) refunds use a different API endpoint than credit card refunds on most gateways. Agents may use the credit card refund endpoint for Bit transactions.
 
 ## Troubleshooting
 

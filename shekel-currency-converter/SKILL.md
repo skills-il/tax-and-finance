@@ -14,7 +14,7 @@ compatibility: >-
   Claude.ai, Cursor.
 metadata:
   author: skills-il
-  version: 1.0.0
+  version: 1.0.1
   category: tax-and-finance
   tags:
     he:
@@ -137,6 +137,12 @@ Result: Provides the representative rate for the relevant date, noting it is the
 ### References
 - `references/boi-api-guide.md` — Bank of Israel exchange rate API documentation including endpoints, XML response structure, update schedule (daily ~15:30 IST), and historical rate query parameters. Consult when troubleshooting API calls or understanding rate publication timing.
 - `references/currency-codes.md` — Supported currency codes with Hebrew names, typical NIS rate ranges, and unit values (important for JPY and other multi-unit currencies). Consult when parsing user currency requests or handling unit-based conversions.
+
+## Gotchas
+- The official NIS currency code is ILS (ISO 4217), but Israelis colloquially say "shekel" or "shekalim". Agents may not recognize "NIS" as a valid currency code or confuse it with the pre-1985 "Old Shekel" (IS).
+- Bank of Israel exchange rates are published once daily at ~15:30. Agents may fetch rates before publication time and get yesterday's rate without indicating it is stale.
+- NIS formatting uses the shekel sign before the number, with comma for thousands and period for decimals (e.g., 1,234.56). Agents may use the European convention (1.234,56) or place the symbol after the number.
+- When converting for tax purposes, Israeli law requires using the BOI representative rate (sha'ar yatzig) for the specific transaction date, not a live forex rate. Agents may use real-time rates that are not legally valid for tax reporting.
 
 ## Troubleshooting
 

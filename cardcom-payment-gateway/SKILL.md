@@ -16,7 +16,7 @@ compatibility: >-
   Cursor.
 metadata:
   author: skills-il
-  version: 1.1.0
+  version: 1.1.1
   category: tax-and-finance
   tags:
     he:
@@ -398,6 +398,12 @@ Result: Fully custom checkout design with SAQ-A PCI compliance.
 
 ### Scripts
 - `scripts/validate_cardcom_response.py` -- Validates a Cardcom API response: checks response codes for transaction, token, and invoice operations, verifies required fields, and flags common integration issues. Run: `python scripts/validate_cardcom_response.py --help`
+
+## Gotchas
+- Agents often send Cardcom API requests as `application/json`, but the V11 API expects JSON with a `Content-Type: application/json` header. Older Cardcom APIs used form-encoded data, so agents trained on older examples may use the wrong format.
+- The `TerminalNumber` must be sent as an integer, not a string. Agents commonly wrap it in quotes, causing error 5033.
+- Agents may hardcode VAT at 17%, but the current Israeli VAT rate is 18% (effective January 2025). Cardcom calculates VAT server-side, so the Document amounts should be net of VAT unless specified otherwise.
+- Cardcom's test terminal (1000) does not support all features available in production. Agents may write integration tests that pass in sandbox but fail in production due to terminal-specific configurations.
 
 ## Troubleshooting
 

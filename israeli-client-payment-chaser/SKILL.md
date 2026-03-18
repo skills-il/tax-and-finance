@@ -15,7 +15,7 @@ compatibility: >-
   automation and WhatsApp message delivery.
 metadata:
   author: skills-il
-  version: 1.0.0
+  version: 1.0.1
   category: tax-and-finance
   tags:
     he:
@@ -208,6 +208,12 @@ Result: Comprehensive aging report with client risk scores. Cash flow forecast s
 ### References
 - `references/legal-escalation.md` — Israeli legal framework for debt collection: demand letter (michtav hitchayvut) requirements, Small Claims Court (tvi'ot ktanot) thresholds and filing process, interest calculation rules, and registered mail documentation. Consult when preparing legal escalation in Steps 3 and 5.
 - `references/reminder-templates.md` — WhatsApp and email reminder templates in Hebrew for each escalation stage (friendly, follow-up, formal, pre-legal). Templates are customizable with placeholder fields. Consult when configuring reminder messages in Step 2.
+
+## Gotchas
+- Israeli payment terms (shotef) work differently than net-30/60/90. "Shotef + 30" means end of current month plus 30 days, not 30 days from invoice date. Agents may miscalculate due dates.
+- Formal debt collection (hotza'a lapo'al) in Israel requires a court order or an unpaid check. Agents may suggest filing a claim without the proper prerequisites.
+- Interest on late payments in Israel is regulated by the Late Payment Law (Chok Ichurei Tashlumim). The statutory interest rate changes periodically. Agents may use a generic or outdated rate.
+- Payment reminder communications in Israel must be in Hebrew for Hebrew-speaking clients. Agents may generate English-only reminders that lack legal standing in Israeli small claims court.
 
 ## Troubleshooting
 

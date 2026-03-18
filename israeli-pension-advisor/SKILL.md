@@ -12,7 +12,7 @@ license: MIT
 compatibility: No network required.
 metadata:
   author: skills-il
-  version: 1.0.0
+  version: 1.0.1
   category: tax-and-finance
   tags:
     he:
@@ -132,6 +132,12 @@ Result: Explain retirement ages, early pension options and reduction rates, lump
 ### References
 - `references/pension-fund-types.md` — Detailed comparison of Israeli pension vehicles: Keren Pensia, Bituach Menahalim, Kupat Gemel, and Kranot Neemanot, including fee structures, insurance components, and major fund providers. Consult when advising on pension fund selection in Step 6.
 - `references/tax-benefits.md` — Israeli pension tax benefits including the 35% tax credit on employee contributions, employer contribution exclusions, keren hishtalmut tax-free gains, and self-employed deduction rules. Consult when calculating tax savings from pension and savings contributions.
+
+## Gotchas
+- Israeli pension has three distinct product types: comprehensive pension fund (keren pensia makifa), provident fund (kupat gemel), and managers' insurance (bituach menahalim). Agents may treat them as interchangeable, but they have different fee structures and withdrawal rules.
+- Pension fund management fees in Israel have two components: from deposits (up to 4%) and from accumulated savings (up to 0.5% annually). Agents may quote only one component.
+- The retirement age in Israel is 67 for men and 65 for women (gradually increasing). Agents may use the US retirement age of 67 for both genders.
+- Israeli pension funds invest significantly in local government bonds (igrot chov mimshaltiiot), which means returns are partially linked to Israeli economic performance. Agents should not compare Israeli pension returns directly to US 401(k) S&P 500 benchmarks.
 
 ## Troubleshooting
 

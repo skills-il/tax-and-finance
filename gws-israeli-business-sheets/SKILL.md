@@ -15,7 +15,7 @@ compatibility: >-
   GitHub Copilot, Windsurf, OpenCode, and Codex.
 metadata:
   author: skills-il
-  version: 1.0.0
+  version: 1.0.1
   category: tax-and-finance
   tags:
     he:
@@ -301,6 +301,12 @@ Result: Three new rows appended to the tracking sheet with proper categorization
 ### References
 - `references/israeli-tax-categories.md` -- Complete list of Israeli tax-deductible expense categories with deduction rates. Consult when categorizing a business expense.
 - `references/gws-sheets-recipes.md` -- Common gws CLI recipes for Google Sheets operations. Consult when performing sheet operations beyond basic read/append.
+
+## Gotchas
+- Agents often use the old 17% VAT rate in calculations. The current Israeli VAT rate is 18% (effective January 2025). All VAT formulas must use 0.18, not 0.17.
+- Israeli date format is DD/MM/YYYY, not MM/DD/YYYY. Agents default to US date format, which causes incorrect date entries (e.g., 03/01/2026 means January 3rd in Israel, not March 1st).
+- The Google Workspace CLI (`gws`) requires server-side OAuth authentication. Agents may try to use API keys or service accounts, which are not supported by `gws auth login`.
+- Agents may categorize car expenses as 100% deductible, but Israeli tax law limits car expense deductions to 45% or a fixed amount. This is a common mistake in expense categorization.
 
 ## Troubleshooting
 

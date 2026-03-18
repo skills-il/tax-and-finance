@@ -15,7 +15,7 @@ compatibility: >-
   Cursor.
 metadata:
   author: skills-il
-  version: 1.1.0
+  version: 1.1.1
   category: tax-and-finance
   tags:
     he:
@@ -331,6 +331,12 @@ Result: Payment collected remotely without building a checkout page.
 
 ### Scripts
 - `scripts/validate_tranzila_response.py` -- Validates a Tranzila transaction response: checks response code, verifies required fields are present, and flags common issues (missing confirmation code, mismatched amounts). Run: `python scripts/validate_tranzila_response.py --help`
+
+## Gotchas
+- Tranzila API uses form-encoded key-value pairs (not JSON). Agents default to JSON request bodies, which Tranzila will reject or ignore. Send requests as `application/x-www-form-urlencoded`.
+- Tranzila's test mode uses the same endpoint as production but with a different `supplier` parameter. Agents may accidentally send test transactions to the production terminal or vice versa.
+- The response format from Tranzila is a plain-text key=value string separated by newlines, not JSON. Agents may try to `JSON.parse()` the response, which will throw an error.
+- Israeli credit card numbers have different BIN ranges than US/European cards. Tranzila validates cards locally, so test cards from Stripe or other international gateways will not work.
 
 ## Troubleshooting
 

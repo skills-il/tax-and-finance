@@ -11,7 +11,7 @@ compatibility: Works with Claude Code, Cursor, GitHub Copilot, Windsurf, OpenCod
   Codex.
 metadata:
   author: skills-il
-  version: 1.1.0
+  version: 1.1.1
   category: tax-and-finance
   tags:
     he:
@@ -121,6 +121,12 @@ Result: Mortgage comparison with monthly payments and total cost per track
 
 ### References
 - `references/israeli-financial-rates.md` -- Current BOI interest rates, mortgage guidelines, arnona rates by city, cost of living benchmarks, and savings vehicle comparisons. Consult when calculating specific financial figures or comparing options.
+
+## Gotchas
+- Agents often use US mortgage conventions (30-year fixed rate) for Israeli mortgages. Israeli mashkantaot use a mix of tracks (maslulim): Prime-linked, CPI-linked fixed, CPI-linked variable, and fixed-rate unlinked, with typical terms of 15-30 years.
+- Bituach Leumi (National Insurance) deductions are mandatory for all Israeli workers and reduce take-home pay significantly. Agents may omit these from budget calculations, using gross salary as available income.
+- Israeli rent is commonly quoted as monthly amounts excluding arnona and va'ad bayit (building maintenance). Agents may compare rents without accounting for these additional fixed costs that can add 500-2,000 NIS/month.
+- The Hishtalmut fund (keren hishtalmut) is a unique Israeli savings vehicle with tax benefits. Agents unfamiliar with Israeli financial products may suggest generic savings accounts instead.
 
 ## Troubleshooting
 

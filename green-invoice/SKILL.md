@@ -19,7 +19,7 @@ compatibility: >-
   Tools). Works with Claude Code, Claude.ai, Cursor.
 metadata:
   author: skills-il
-  version: 1.0.0
+  version: 1.0.1
   category: tax-and-finance
   tags:
     he:
@@ -450,6 +450,13 @@ Result: All new documents automatically downloaded and organized by type and mon
 ### References
 - `references/api-reference.md` -- Complete Green Invoice API endpoint reference with request/response schemas, all enum codes, and payload examples. Consult when building API integrations or debugging request formats.
 - `references/document-workflows.md` -- Common Israeli business document workflows: freelancer billing, retainer invoicing, refund flows, multi-currency billing, and e-commerce integration patterns. Consult when designing invoicing automation or choosing the correct document type sequence.
+
+## Gotchas
+- Agents often use document type 305 (Tax Invoice) instead of 320 (Tax Invoice-Receipt), which is the correct type for most Israeli B2C transactions where payment is received immediately.
+- The VAT rate in Green Invoice API responses reflects the business type setting, not a hardcoded value. Agents should not override VAT calculations unless the document has mixed-VAT items.
+- Green Invoice JWT tokens expire periodically. Agents may cache a token and reuse it across sessions without refreshing, leading to 401 errors.
+- Agents sometimes pass `vatType: 1` at the document level thinking it means "include VAT", but it actually means "VAT exempt". Use `vatType: 0` for standard VAT behavior.
+- The API changed its branding from "Green Invoice" to "Morning" but the API domain remains `api.greeninvoice.co.il`. Agents may try to use a non-existent `api.morning.co.il` endpoint.
 
 ## Troubleshooting
 

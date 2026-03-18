@@ -17,7 +17,7 @@ compatibility: >-
   Works with Claude Code, OpenClaw, Cursor, Windsurf, Codex, GitHub Copilot.
 metadata:
   author: skills-il
-  version: 1.0.0
+  version: 1.0.1
   category: tax-and-finance
   tags:
     he:
@@ -391,6 +391,12 @@ Actions:
 ### References
 - `references/form-guide.md` - Overview of all Israeli tax forms covered by this skill, including form numbers, who must file, deadlines, and key fields. Covers Forms 1301, 1214, 126, 856, 6111, 1322, 1325. Consult when the user asks about a specific form or needs to determine which forms apply to their situation.
 - `references/tax-brackets-credits.md` - Current income tax brackets (2025, frozen through 2027), nekudot zikui point values and eligibility categories, surtax thresholds, and corporate tax rates. Consult for any income tax calculation or when verifying tax credit point entitlements.
+
+## Gotchas
+- Israeli annual tax returns (doch shnati) are due by April 30 for salaried employees and July 31 for self-employed. Agents may use the US April 15 deadline.
+- Israeli tax returns use Form 1301 for individuals, not 1040. Agents may reference US form numbers and fields that do not exist in the Israeli system.
+- Capital gains in Israel are reported on a separate schedule and may have different rates (25% for financial assets, up to 50% for real estate depending on holding period and property count). Agents may apply a single capital gains rate.
+- Tax credit points (neku'dot zikui) must be claimed annually and vary by personal status (marital, children, new oleh, discharged soldier). Agents may use a default value without checking eligibility.
 
 ## Troubleshooting
 

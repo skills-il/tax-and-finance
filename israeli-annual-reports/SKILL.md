@@ -12,7 +12,7 @@ compatibility: >-
   Works with Claude Code, Cursor, GitHub Copilot, Windsurf, OpenCode, Codex.
 metadata:
   author: skills-il
-  version: 1.0.0
+  version: 1.0.1
   category: tax-and-finance
   tags:
     he:
@@ -114,6 +114,12 @@ Result: Side-by-side comparison of two Israeli banks' financial performance
 
 ### References
 - `references/hebrew-financial-terms.md` -- Complete Hebrew-English financial terminology reference with tables for financial statements, income statement items, MAYA filing types, and Israeli accounting standards (IFRS-IL). Consult when translating financial terms or navigating Hebrew financial documents.
+
+## Gotchas
+- Israeli fiscal year follows the calendar year (January-December), not the US October-September fiscal year. Agents trained on US data may assume the wrong fiscal year boundaries.
+- IFRS is the mandatory reporting standard for Israeli public companies since 2008. Agents may generate US GAAP-formatted financial statements, which are not compliant in Israel.
+- Israeli annual reports are filed with MAYA (the TASE electronic filing system), not with the SEC. Agents may reference EDGAR or SEC filing conventions.
+- Monetary amounts in Israeli reports use NIS (New Israeli Shekel), not ILS. While the ISO code is ILS, the common abbreviation in reports is NIS or the shekel sign.
 
 ## Troubleshooting
 

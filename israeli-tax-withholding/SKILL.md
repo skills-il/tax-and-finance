@@ -11,7 +11,7 @@ license: MIT
 compatibility: Network access helpful for SHAAM certificate lookup.
 metadata:
   author: skills-il
-  version: 1.0.0
+  version: 1.0.1
   category: tax-and-finance
   tags:
     he:
@@ -124,6 +124,12 @@ Result: Default 25% withholding on payments to non-residents. Check if tax treat
 ### References
 - `references/withholding-rates.md` — Complete default withholding rates by payment type under Section 164 (income payments) and Section 170 (special payments), including rates for individuals, companies, major shareholders, and non-residents. Consult when determining the correct default rate for a payment.
 - `references/certificate-guide.md` — Guide to Israeli withholding certificates: types (Ishur Nikui Mas BeMakor, Ishur Tium Mas), application process, validity periods, and verification procedures via SHAAM. Consult when a vendor presents a withholding certificate or when guiding users through the certificate application process.
+
+## Gotchas
+- Israeli withholding tax (nikui mas bemakor) rates are set by the Tax Authority per business, not as a flat rate. A new freelancer may have a 30-47% default rate, while an established one may have 0% with a ptor (exemption certificate). Agents may use a single hardcoded rate.
+- Withholding tax exemption certificates (ishur ptor nikui mas bemakor) expire annually and must be renewed. Agents may reference a ptor without checking its validity period.
+- When paying a foreign contractor, Israel requires withholding tax unless a tax treaty provides a reduced rate. Agents may apply domestic rates to international payments or skip withholding entirely.
+- The withholding tax on rent payments to individuals is 35% by default. Agents may use the lower corporate rate or the zero rate that only applies when the landlord has a valid ptor certificate.
 
 ## Troubleshooting
 

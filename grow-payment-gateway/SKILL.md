@@ -19,7 +19,7 @@ compatibility: >-
   Works with Claude Code, Cursor, GitHub Copilot, Windsurf, OpenCode, Codex.
 metadata:
   author: skills-il
-  version: 1.0.0
+  version: 1.0.1
   category: tax-and-finance
   tags:
     he:
@@ -443,6 +443,12 @@ Grow offers pre-configured payment page types, each with a different `pageCode`:
 **HTTPS is mandatory** for iframe integrations. HTTP will not work.
 
 **URL length limit:** 2000 characters. Use `cField` values instead of long query strings.
+
+## Gotchas
+- The most common integration mistake: Grow's API requires `multipart/form-data` for all requests, NOT `application/json`. Agents almost always default to JSON, which causes the API to reject the request silently or return a parsing error.
+- All Grow API requests must originate from a server. Client-side (browser) requests are blocked with 403. Agents may generate frontend fetch() calls that will never work.
+- After receiving a payment webhook, you MUST call `approveTransaction` to close the loop. Agents often skip this step, which leaves transactions in a pending state in Grow's system.
+- Payment page URLs expire after 10 minutes. Agents may store and reuse a URL across sessions, leading to blank pages or errors.
 
 ## Troubleshooting
 
