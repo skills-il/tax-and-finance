@@ -24,12 +24,6 @@
 
 ## Deals Platforms
 
-### GROO
-- **Type:** Group buying / daily deals
-- **Specialty:** Restaurants, experiences, travel, services
-- **Best for:** Dining deals (up to 50% off), spa/wellness, local experiences
-- **Tip:** Check expiration dates on vouchers carefully
-
 ### BuyMe
 - **Type:** Gift card marketplace
 - **Specialty:** Gift cards for 1,000+ brands, often at discount

@@ -3,7 +3,7 @@ name: israeli-smart-saver
 description: >-
   Save money in Israel through smart shopping, cashback optimization, subscription
   auditing, and deal hunting. Covers Zap.co.il price comparison, BuyMe gift card
-  strategies, Cashback.co.il and Cashdo rebate programs, GROO deals, credit card
+  strategies, Cashback.co.il and Cashdo rebate programs, credit card
   perks maximization (Visa Cal, Max, Isracard), loyalty program stacking, seasonal
   sale timing, and recurring expense optimization. Use when user asks about "lachsoch
   kesef", saving money in Israel, Israeli coupons, cashback, "hashvaat mechirim",
@@ -41,12 +41,12 @@ metadata:
     he: >-
       חיסכון בישראל דרך קנייה חכמה, אופטימיזציה של קאשבק, ביקורת מנויים וציד
       דילים. כולל השוואת מחירים ב-Zap, אסטרטגיות BuyMe, תוכניות קאשבק (Cashback.co.il,
-      Cashdo), דילים ב-GROO, מיקסום הטבות כרטיסי אשראי (ויזה כאל, מקס, ישראכרט),
+      Cashdo), מיקסום הטבות כרטיסי אשראי (ויזה כאל, מקס, ישראכרט),
       שילוב מועדוני לקוחות, תזמון מבצעים עונתיים וצמצום הוצאות חוזרות.
     en: >-
       Save money in Israel through smart shopping, cashback optimization, subscription
       auditing, and deal hunting. Covers Zap price comparison, BuyMe strategies,
-      cashback programs, GROO deals, credit card perks, loyalty stacking, seasonal
+      cashback programs, credit card perks, loyalty stacking, seasonal
       sales, and recurring expense reduction. Helps identify unnecessary subscriptions
       and maximize savings on everyday purchases.
   supported_agents:
@@ -185,9 +185,7 @@ Add up monthly savings x 12. Even 200 NIS/month in savings = **2,400 NIS/year**.
 
 | Platform | What It Offers | Best For |
 |----------|---------------|----------|
-| GROO | Group buying deals, experiences, restaurants | Dining, activities, travel |
 | BuyMe | Gift cards, experiences, discounted vouchers | Gift giving, self-purchases at discount |
-| Groupon Israel | Local deals, services, restaurants | Similar to GROO |
 | Yours.co.il | Fashion and lifestyle deals | Clothing, accessories |
 
 ## Telecom Savings (Quick Guide)
