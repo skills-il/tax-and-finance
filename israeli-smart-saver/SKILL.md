@@ -65,8 +65,7 @@ metadata:
 | Platform | URL | What It Compares | Best For |
 |----------|-----|-----------------|----------|
 | Zap | zap.co.il | Electronics, appliances, gadgets | Finding lowest price across retailers |
-| Pricez | pricez.co.il | Electronics, fashion, home | Alternative to Zap with different retailers |
-| Shufersal Compare | shufersal.co.il | Groceries | Use israeli-grocery-price-intelligence instead |
+| Pricez | pricez.co.il | Groceries, pharmacy products | Food and pharmacy price comparison across chains |
 | Wisebuy | wisebuy.co.il | Electronics, appliances | Expert reviews + price comparison |
 
 ### Zap.co.il Strategies
