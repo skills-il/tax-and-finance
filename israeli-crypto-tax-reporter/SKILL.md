@@ -15,7 +15,7 @@ allowed-tools: Bash(python:*) Read Edit Write WebFetch
 compatibility: Requires Python 3.8+ for calculator script
 metadata:
   author: skills-il
-  version: 1.0.1
+  version: 1.1.0
   category: tax-and-finance
   tags:
     he:
@@ -74,7 +74,7 @@ Before performing any calculations, ensure you understand the key regulatory pri
 - **Individuals**: 25% capital gains tax on profits. If the seller is a "significant shareholder" (baal meniayot mahuti) of a crypto project, the rate is 30%.
 - **Business/traders**: If crypto activity constitutes a business (esek), gains are taxed as ordinary income at marginal rates (up to 50%). The classification depends on frequency, volume, and whether the taxpayer holds crypto as inventory vs. investment.
 - **Companies**: Standard corporate tax rate (23%) applies to capital gains.
-- **Surtax (mas yesafim)**: For individuals with annual income exceeding 733,000 NIS (2026 threshold, CPI-adjusted), an additional 3% surtax applies to the excess.
+- **Surtax (mas yesafim)**: For individuals with annual income exceeding the threshold (which is adjusted annually for CPI), an additional 3% surtax applies to the excess. Thresholds are subject to annual CPI adjustments and should be verified with current Israeli Tax Authority publications.
 
 **Cost basis method:**
 - Israel mandates **FIFO** (First In, First Out) for calculating cost basis unless the taxpayer can demonstrate a different method was consistently applied.
@@ -192,8 +192,8 @@ Guide the user through the tax filing process:
 
 1. **Compile Form 1325**: List all capital gain events with the data from Step 5
 2. **File annual tax return**: Include Form 1325 as an appendix to the annual tax return (doch shnati)
-3. **Filing deadline**: Generally April 30 of the following year for individuals (extensions may apply for accountant-filed returns, typically until July 31)
-4. **Self-assessment**: Individuals with crypto gains exceeding 733,000 NIS must also account for surtax (mas yesafim)
+3. **Filing deadline**: Generally mid to late April of the following year for individuals (extensions may apply for accountant-filed returns). Verify current deadlines with the Israeli Tax Authority as they may change annually.
+4. **Self-assessment**: Individuals with crypto gains exceeding the surtax threshold must also account for surtax (mas yesafim)
 5. **Record keeping**: Maintain all transaction records, exchange exports, and wallet data for at least 7 years
 
 **When to recommend professional help:**
@@ -214,10 +214,10 @@ Actions:
 1. Identify the transaction: single buy, single sell
 2. Calculate capital gain: 120,000 - 80,000 = 40,000 NIS
 3. Apply 25% capital gains tax: 40,000 x 0.25 = 10,000 NIS
-4. Check surtax threshold: 40,000 NIS gain is well below the 733,000 NIS threshold, so no surtax
+4. Check surtax threshold: 40,000 NIS gain is well below the surtax threshold, so no surtax
 5. Note the holding period: 7 months (short-term, but rate is still 25% for crypto)
 
-Result: The capital gain is 40,000 NIS. The tax liability is 10,000 NIS (25% rate). The user should have filed an advance payment (mikdama) within 30 days of the August sale. If not yet filed, the user should file and pay as soon as possible to minimize interest penalties. The gain should be reported on Form 1325 as part of the 2024 annual tax return (due April 30, 2025).
+Result: The capital gain is 40,000 NIS. The tax liability is 10,000 NIS (25% rate). The user should have filed an advance payment (mikdama) within 30 days of the August sale. If not yet filed, the user should file and pay as soon as possible to minimize interest penalties. The gain should be reported on Form 1325 as part of the 2024 annual tax return.
 
 ### Example 2: Crypto-to-Crypto Trade with FIFO
 
