@@ -19,7 +19,7 @@ compatibility: >-
   Tools). Works with Claude Code, Claude.ai, Cursor.
 metadata:
   author: skills-il
-  version: 1.0.1
+  version: 1.1.0
   category: tax-and-finance
   tags:
     he:
@@ -68,13 +68,13 @@ Green Invoice uses JWT Bearer token authentication. Obtain API credentials from 
 
 | Environment | Base URL |
 |-------------|----------|
-| Production | `https://api.greeninvoice.co.il/api/v1` |
-| Sandbox | `https://sandbox.d.greeninvoice.co.il/api/v1` |
+| Production | Contact Green Invoice support for current API endpoint |
+| Sandbox | Contact Green Invoice support for sandbox endpoint |
 
 **Get a token:**
 
 ```bash
-curl -X POST https://api.greeninvoice.co.il/api/v1/account/token \
+curl -X POST [API_ENDPOINT]/account/token \
   -H "Content-Type: application/json" \
   -d '{"id": "YOUR_API_KEY_ID", "secret": "YOUR_API_KEY_SECRET"}'
 ```
@@ -89,7 +89,7 @@ Content-Type: application/json
 Always start by verifying credentials work:
 
 ```bash
-curl -s https://api.greeninvoice.co.il/api/v1/users/me \
+curl -s [API_ENDPOINT]/users/me \
   -H "Authorization: Bearer <token>" | python3 -m json.tool
 ```
 
@@ -320,7 +320,7 @@ Green Invoice handles VAT automatically based on business type:
 
 | Code | Hebrew | English | VAT Behavior |
 |------|--------|---------|-------------|
-| 1 | עוסק מורשה | Licensed Dealer (Osek Murshe) | VAT added (17% as of 2025) |
+| 1 | עוסק מורשה | Licensed Dealer (Osek Murshe) | VAT added (17% current rate) |
 | 2 | חברה בע"מ | Ltd. Company | VAT added |
 | 3 | עוסק פטור | Exempt Dealer (Osek Patur) | No VAT |
 | 4 | עמותה | Non-Profit (Amuta) | No VAT |
@@ -385,7 +385,7 @@ For multi-currency invoices, each income line item can specify its own `currency
 Always test in the sandbox environment before going to production:
 
 1. Register for a sandbox account at the Green Invoice sandbox
-2. Use base URL: `https://sandbox.d.greeninvoice.co.il/api/v1`
+2. Use the sandbox base URL provided by Green Invoice support
 3. Generate sandbox API credentials
 4. Test all document creation, client management, and webhook flows
 5. Verify VAT calculations and document linking work correctly
