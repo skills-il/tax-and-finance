@@ -11,7 +11,7 @@ license: MIT
 compatibility: Network access helpful for SHAAM certificate lookup.
 metadata:
   author: skills-il
-  version: 1.0.1
+  version: 1.0.2
   category: tax-and-finance
   tags:
     he:
@@ -96,7 +96,7 @@ VAT (if applicable): Calculated separately on full amount
 | Ishur Nikui Mas Rechisha | ishur nikui mas rechisha | Real estate purchase tax withholding |
 
 ### Step 6: How to Obtain a Certificate
-1. Apply via SHAAM portal (https://www.misim.gov.il)
+1. Apply via SHAAM portal (contact Tax Authority for current portal access)
 2. Provide: TIN, financial statements, tax returns
 3. Processing time: 2-4 weeks
 4. Certificate valid for current tax year (January-December)
