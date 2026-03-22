@@ -45,7 +45,7 @@ class PaymentRequest:
 
 class PaymentResult:
     success: bool
-    gateway_used: str        # שער תשלום שנבחר
+    gateway_used: str        # תשלום גטווי שנבחר
     transaction_id: str      # מזהה עסקה
     approval_number: str     # מספר אישור
     shva_reference: str      # מספר שב"א
