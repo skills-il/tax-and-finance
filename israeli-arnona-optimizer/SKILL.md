@@ -11,10 +11,10 @@ description: >-
   leumi) calculations, which fall under separate Israeli tax authorities.
 license: MIT
 allowed-tools: Bash(python:*) Read Edit Write WebFetch
-compatibility: Requires Python 3.8+ for calculator script
+compatibility: Requires Python 3.10+ for calculator script
 metadata:
   author: skills-il
-  version: 1.0.1
+  version: 1.1.0
   category: tax-and-finance
   tags:
     he:
@@ -153,12 +153,12 @@ Help the user understand their payment options:
 
 ### Step 6: Provide Municipality Contact Information
 
-Direct the user to the relevant arnona department:
+Direct the user to the relevant arnona department. Note that municipality contact details should be verified on official websites as phone numbers and contact information may change:
 
-- **Tel Aviv**: tel-aviv.gov.il, *6195, arnona@mail.tel-aviv.gov.il
-- **Jerusalem**: jerusalem.muni.il, *6226, arnona@jerusalem.muni.il
-- **Haifa**: haifa.muni.il, *2404, arnona@haifa.muni.il
-- **Beer Sheva**: beer-sheva.muni.il, *6230
+- **Tel Aviv**: tel-aviv.gov.il, arnona@mail.tel-aviv.gov.il
+- **Jerusalem**: jerusalem.muni.il, arnona@jerusalem.muni.il
+- **Haifa**: haifa.muni.il, arnona@haifa.muni.il
+- **Beer Sheva**: beer-sheva.muni.il
 
 Remind the user that all communications with the arnona department should be documented in writing and sent via registered mail (doar rashum) or through the municipality's online portal.
 
