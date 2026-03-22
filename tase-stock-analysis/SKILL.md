@@ -15,7 +15,7 @@ compatibility: >-
   Code, Cursor, GitHub Copilot, Windsurf, OpenCode, Codex.
 metadata:
   author: skills-il
-  version: 1.0.1
+  version: 1.1.0
   category: tax-and-finance
   tags:
     he:
@@ -93,15 +93,15 @@ When the user has sold or plans to sell securities:
 | Scenario | Tax Rate | Notes |
 |----------|----------|-------|
 | Individual, non-substantial shareholder | 25% | Standard rate on net gain |
-| Substantial shareholder (over 10%) | 30% | Higher rate applies |
-| Inflationary component (pre-2003 shares) | Exempt | Only real gain is taxed |
+| Substantial shareholder (over 10%) | 25% up to NIS 650,000, then 30% | Graduated rate structure |
+| Shares eligible for inflationary adjustment (varies by acquisition date and asset type) | Exempt | Only real gain is taxed, consult current regulations |
 | Offsetting losses (kizuz hefsedim) | Allowed | Losses offset gains in same tax year |
 | Foreign resident | Treaty-dependent | Check double taxation treaty |
 
 Calculation:
 ```
 net_gain = sale_price - purchase_price - transaction_costs
-tax = net_gain * 0.25  # or 0.30 for substantial shareholder
+tax = net_gain * 0.25  # or graduated rate for substantial shareholder
 ```
 
 ### Step 5: Evaluate Dual-Listed Opportunities
@@ -185,4 +185,4 @@ Solution: Use Bank of Israel representative rate (sha'ar yatzig) published daily
 
 ### Error: "Capital gains calculation unclear"
 Cause: Complex scenarios like partial sales, inflationary adjustments, or inherited shares
-Solution: For shares purchased before 2003, inflationary component may be exempt. For inherited shares, acquisition cost is market value at inheritance date. Consult a tax advisor (yo'etz mas) for complex cases.
+Solution: For shares eligible for inflationary adjustment (varies by acquisition date and asset type), consult current tax regulations for specific dates. For inherited shares, acquisition cost is market value at inheritance date. Consult a tax advisor (yo'etz mas) for complex cases.
