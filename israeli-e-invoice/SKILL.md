@@ -14,7 +14,7 @@ compatibility: >-
   Claude.ai, Cursor.
 metadata:
   author: skills-il
-  version: 1.0.1
+  version: 1.1.0
   category: tax-and-finance
   tags:
     he:
@@ -78,8 +78,8 @@ For all invoice types, gather:
 - **Payment:** Method (cash, transfer, check, credit card), terms
 
 ### Step 3: Calculate VAT
-- Standard Israeli VAT rate: **18%** (as of 2025, verify current rate)
-- VAT calculation: `vat_amount = net_amount * 0.18`
+- Standard Israeli VAT rate: **Always verify current rate with the Tax Authority** (was 18% as of 2025, rates may change)
+- VAT calculation: `vat_amount = net_amount * vat_rate`
 - Total: `gross_amount = net_amount + vat_amount`
 - For VAT-exempt transactions (osek patur), no VAT line -- use receipt (320) instead
 
@@ -89,7 +89,7 @@ Determine if an allocation number is needed:
 - **Current thresholds:**
   - Until June 2025: transactions over 10,000 NIS
   - July 2025 - December 2025: transactions over 5,000 NIS
-  - January 2026+: Verify current threshold (mandate expanding)
+  - January 2026+: Check current threshold with the Tax Authority (thresholds continue to decrease)
 - **Not required for:** Receipts (320), proforma (330), invoices below threshold
 
 If allocation number IS required:
@@ -123,7 +123,7 @@ User says: "Create a tax invoice for a web development project, 15,000 NIS to AB
 Actions:
 1. Identify: Tax Invoice (type 300), above threshold -- allocation needed
 2. Collect: Seller and buyer details
-3. Calculate: Net 15,000 + VAT 2,700 = Total 17,700 NIS
+3. Calculate: Net 15,000 + VAT (at current rate) = Total amount
 4. Guide: Request allocation number from SHAAM
 5. Generate: Formatted invoice document
 Result: Complete tax invoice with all required fields and allocation number guidance
@@ -173,7 +173,7 @@ Solution: Request allocation number from SHAAM API before issuing invoice. See S
 
 ### Error: "VAT rate mismatch"
 Cause: Using incorrect VAT rate (rate changes periodically)
-Solution: Verify current rate at the Tax Authority website. Standard rate is 18% as of 2025.
+Solution: Always verify current rate with the Tax Authority. Check their website or contact them directly for the most up-to-date VAT rate.
 
 ### Error: "Invoice type not suitable"
 Cause: Wrong invoice type selected for the transaction
