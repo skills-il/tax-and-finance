@@ -16,7 +16,7 @@ compatibility: >-
   Cursor.
 metadata:
   author: skills-il
-  version: 1.1.1
+  version: 1.1.2
   category: tax-and-finance
   tags:
     he:
@@ -65,7 +65,7 @@ Cardcom is an Israeli payment processor with a unique strength: integrated invoi
 
 This skill guides integration with Cardcom's REST API V11 for payments, tokenization, recurring billing, and document generation.
 
-**Official docs:** `https://secure.cardcom.solutions/api/v11/DOCS` (Swagger/Redoc)
+**Official docs:** `https://cardcom.co.il/docs/api/` (Swagger/Redoc)
 
 **Developer support:** `dev@secure.cardcom.co.il` or 03-9436100 (press 2)
 
@@ -103,7 +103,7 @@ This is a two-step process:
 **Step 3a: Create the payment page**
 
 ```
-POST https://secure.cardcom.solutions/api/v11/LowProfile/Create
+POST https://secure.cardcom.solutions/Interface/LowProfile.aspx
 Content-Type: application/json
 
 {
@@ -112,9 +112,9 @@ Content-Type: application/json
   "ApiPassword": "your-api-password",
   "ReturnValue": "unique-order-id",
   "Amount": 100.00,
-  "SuccessRedirectUrl": "https://yoursite.com/success",
-  "FailedRedirectUrl": "https://yoursite.com/failed",
-  "WebHookUrl": "https://yoursite.com/webhook",
+  "SuccessRedirectUrl": "https://example.com/success",
+  "FailedRedirectUrl": "https://example.com/failed",
+  "WebHookUrl": "https://example.com/webhook",
   "Document": {
     "DocTypeToCreate": 101,
     "Name": "Customer Name",
@@ -138,7 +138,7 @@ Response includes `Url` -- redirect customer there or embed as iframe.
 After payment completes, Cardcom calls your `WebHookUrl` or you query:
 
 ```
-POST https://secure.cardcom.solutions/api/v11/LowProfile/GetLpResult
+POST https://secure.cardcom.solutions/Interface/BillGoldGetLowProfileIndicator.aspx
 {
   "TerminalNumber": 1000,
   "ApiName": "your-api-name",
@@ -153,11 +153,11 @@ Check `DealResponse` = 0 for success. Extract `Token` for future charges.
 
 OpenFields is Cardcom's newest integration pattern (2026). It lets you build your own payment form while Cardcom-hosted iframes handle sensitive card inputs:
 
-1. Create a Low Profile session via `/api/v11/LowProfile/Create`
+1. Create a Low Profile session via `/Interface/LowProfile.aspx`
 2. Embed Cardcom's OpenFields JS on your page
 3. Mount secure iframe fields for card number, expiry, and CVV inside your form
 4. On submit, the JS tokenizes card data and submits to Cardcom
-5. Retrieve results via `GetLpResult`
+5. Retrieve results via `BillGoldGetLowProfileIndicator.aspx`
 
 This gives full design control while maintaining SAQ-A PCI compliance. Official examples: `https://github.com/CardCom` (React and vanilla JS).
 
@@ -193,7 +193,7 @@ Add the `Document` object to your Low Profile or ChargeToken request (as shown i
 **Standalone document creation:**
 
 ```
-POST https://secure.cardcom.solutions/api/v11/Documents/CreateDocument
+POST https://secure.cardcom.solutions/Interface/CreateDocument.aspx
 {
   "TerminalNumber": 1000,
   "ApiName": "your-api-name",
@@ -235,7 +235,7 @@ For subscriptions and recurring billing (hora'ot keva):
 3. **Charge the token:**
 
 ```
-POST https://secure.cardcom.solutions/api/v11/Transactions/Transaction
+POST https://secure.cardcom.solutions/Interface/BillGoldCharge.aspx
 {
   "TerminalNumber": 1000,
   "ApiName": "your-api-name",
@@ -267,7 +267,7 @@ Each token charge can automatically generate and email an invoice.
 Refund a transaction and optionally generate a credit note:
 
 ```
-POST https://secure.cardcom.solutions/api/v11/Transactions/RefundByTransactionId
+POST https://secure.cardcom.solutions/Interface/BillGoldRefund.aspx
 {
   "TerminalNumber": 1000,
   "ApiName": "your-api-name",
