@@ -15,11 +15,11 @@ description: >-
   israeli-payment-orchestrator), or non-payment queries.
 license: MIT
 compatibility: >-
-  Requires network access for Grow API calls (sandbox.meshulam.co.il / api.meshulam.co.il).
-  Works with Claude Code, Cursor, GitHub Copilot, Windsurf, OpenCode, Codex.
+  Requires network access for Grow API calls (grow.business). Works with Claude Code,
+  Cursor, GitHub Copilot, Windsurf, OpenCode, Codex.
 metadata:
   author: skills-il
-  version: 1.0.1
+  version: 1.0.2
   category: tax-and-finance
   tags:
     he:
@@ -100,8 +100,8 @@ Grow uses three credentials provided during merchant onboarding:
 
 | Environment | Base URL |
 |-------------|----------|
-| Sandbox (testing) | `https://sandbox.meshulam.co.il` |
-| Production | `https://api.meshulam.co.il` |
+| Sandbox (testing) | `https://grow.business` |
+| Production | `https://grow.business` |
 
 **Critical: Server-side only.** All API requests must originate from your server. Client-side (browser) requests are blocked by Grow.
 
@@ -173,18 +173,18 @@ This is the most common integration -- create a hosted payment page and redirect
 **Example request:**
 
 ```bash
-curl -X POST https://sandbox.meshulam.co.il/api/light/server/1.0/createPaymentProcess \
+curl -X POST https://grow.business/api/light/server/1.0/createPaymentProcess \
   -F "pageCode=YOUR_PAGE_CODE" \
   -F "userId=YOUR_USER_ID" \
   -F "sum=149.90" \
-  -F "successUrl=https://yoursite.com/payment/success" \
-  -F "cancelUrl=https://yoursite.com/payment/cancel" \
+  -F "successUrl=https://example.com/payment/success" \
+  -F "cancelUrl=https://example.com/payment/cancel" \
   -F "description=Monthly subscription" \
   -F "pageField[fullName]=Israel Israeli" \
   -F "pageField[phone]=0501234567" \
   -F "pageField[email]=customer@example.com" \
   -F "paymentNum=1" \
-  -F "notifyUrl=https://yoursite.com/api/grow/webhook" \
+  -F "notifyUrl=https://example.com/api/grow/webhook" \
   -F "cField1=order-12345"
 ```
 
@@ -208,7 +208,7 @@ After receiving the server callback, you MUST call `approveTransaction` to confi
 **Endpoint:** `POST /api/light/server/1.0/approveTransaction`
 
 ```bash
-curl -X POST https://sandbox.meshulam.co.il/api/light/server/1.0/approveTransaction \
+curl -X POST https://grow.business/api/light/server/1.0/approveTransaction \
   -F "pageCode=YOUR_PAGE_CODE" \
   -F "transactionId=TRANSACTION_ID_FROM_CALLBACK"
 ```
@@ -291,7 +291,7 @@ Use a dedicated recurring page code configured in the Grow dashboard:
 Use `createTransactionWithToken` with automatic scheduling:
 
 ```bash
-curl -X POST https://sandbox.meshulam.co.il/api/light/server/1.0/createTransactionWithToken \
+curl -X POST https://grow.business/api/light/server/1.0/createTransactionWithToken \
   -F "pageCode=YOUR_PAGE_CODE" \
   -F "userId=YOUR_USER_ID" \
   -F "sum=99.00" \
@@ -309,7 +309,7 @@ You control when each charge fires:
 **First payment (save token):**
 
 ```bash
-curl -X POST https://sandbox.meshulam.co.il/api/light/server/1.0/createTransactionWithToken \
+curl -X POST https://grow.business/api/light/server/1.0/createTransactionWithToken \
   -F "pageCode=YOUR_PAGE_CODE" \
   -F "userId=YOUR_USER_ID" \
   -F "sum=99.00" \
@@ -322,7 +322,7 @@ The response includes `recurringDebitId` -- save this to link future charges.
 **Subsequent charges:**
 
 ```bash
-curl -X POST https://sandbox.meshulam.co.il/api/light/server/1.0/createTransactionWithToken \
+curl -X POST https://grow.business/api/light/server/1.0/createTransactionWithToken \
   -F "pageCode=YOUR_PAGE_CODE" \
   -F "userId=YOUR_USER_ID" \
   -F "sum=99.00" \
