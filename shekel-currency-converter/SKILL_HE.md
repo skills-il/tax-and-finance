@@ -24,14 +24,14 @@
 
 **שער נוכחי:**
 ```
-Fetch: https://www.boi.org.il/currency.xml
+Fetch: https://boi.org.il/currency.xml
 Parse XML for the requested currency code
 Extract: rate, unit, change from previous day
 ```
 
 **שער היסטורי:**
 ```
-Fetch: https://www.boi.org.il/PublicApi/GetExchangeRates?date=YYYY-MM-DD
+Fetch: https://boi.org.il/PublicApi/GetExchangeRates?date=YYYY-MM-DD
 Parse response for requested currency
 Note: Rates not available for Shabbat/holidays -- use last available business day
 ```
