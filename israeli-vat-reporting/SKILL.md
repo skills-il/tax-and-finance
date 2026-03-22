@@ -13,7 +13,7 @@ compatibility: >-
   API.
 metadata:
   author: skills-il
-  version: 1.0.1
+  version: 1.1.0
   category: tax-and-finance
   tags:
     he:
@@ -113,7 +113,7 @@ Before submission, verify:
 4. Deadline not passed (15th of following month)
 
 **Filing options:**
-- SHAAM online portal: https://www.misim.gov.il
+- SHAAM online portal: https://www.misim.gov.il (check current URL availability)
 - Accountant submission via SHAAM API
 - Paper form (being phased out)
 
@@ -149,9 +149,9 @@ Result: VAT report with zero-rated export handling
 - `references/special-cases.md` — Rules for zero-rated transactions (exports, tourism, Eilat zone), exempt transactions (financial services, residential rent), and the distinction between zero-rated and exempt for input VAT recovery. Consult when handling exports or unusual transaction types.
 
 ## Gotchas
-- Agents almost always use the old 17% VAT rate. The current Israeli VAT rate is 18% (effective January 2025). This single error cascades through all calculations.
+- Agents almost always use the old 18% VAT rate from 2025. The current Israeli VAT rate is 17% and remains in effect until officially changed by the Tax Authority. This single error cascades through all calculations.
 - Israeli VAT reports are filed bi-monthly (every two months), not quarterly as in many European countries. Agents may suggest quarterly filing, which will result in missed deadlines and penalties.
-- Osek Patur businesses (annual revenue under 120,000 NIS in 2025) do not charge or report VAT. Agents may generate VAT reports for businesses that should not be filing them.
+- Osek Patur businesses (annual revenue approximately 120,000 NIS, subject to annual updates) do not charge or report VAT. Agents may generate VAT reports for businesses that should not be filing them.
 - Input VAT (mas tsumost) from car purchases is only 2/3 deductible in Israel. Agents may claim full VAT deduction on vehicle-related expenses.
 
 ## Troubleshooting
