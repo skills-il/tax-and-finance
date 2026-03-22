@@ -15,7 +15,7 @@ compatibility: >-
   Cursor.
 metadata:
   author: skills-il
-  version: 1.1.1
+  version: 1.1.2
   category: tax-and-finance
   tags:
     he:
@@ -110,7 +110,7 @@ This gives full design control while maintaining SAQ-A-EP PCI compliance. Refer 
 #### Option B: Iframe Integration (Quick Start)
 
 1. Embed the Tranzila iframe in your checkout page:
-   - URL: `https://direct.tranzila.com/{supplier}/iframenew.php`
+   - URL: `https://direct.tranzila.com/{supplier}/iframe.php`
    - Add query parameters: `sum`, `currency`, `cred_type`
    - Default mode creates a token (J5); use J4 for one-time charge
 
@@ -229,7 +229,7 @@ For automated recurring billing beyond simple token charging, Tranzila offers St
 3. Monitor results via the Reports API or webhook notifications
 4. Cancel or modify standing orders via API
 
-Standing orders are a paid feature -- contact Tranzila to enable on your terminal. Refer to `https://docs.tranzila.com/docs/payments-billing/7lwf8jetxm6oq-create-a-standing-order`.
+Standing orders are a paid feature -- contact Tranzila to enable on your terminal. Refer to Tranzila's documentation for detailed standing order setup instructions.
 
 ### Step 10: Generate Invoices
 
@@ -240,7 +240,7 @@ Tranzila has an Invoicing API for generating digitally-signed tax documents appr
 3. Supports tax invoices, receipts, and credit notes
 4. Can be auto-generated with PayPal payments
 
-Refer to `https://docs.tranzila.com/docs/invoices/e6843c7e8bc43-invoices-api` for the full invoicing reference.
+Refer to Tranzila's invoicing documentation for the complete invoicing API reference.
 
 ### Step 11: Handle Errors
 
