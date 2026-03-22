@@ -12,7 +12,7 @@ compatibility: >-
   Works with Claude Code, Cursor, GitHub Copilot, Windsurf, OpenCode, Codex.
 metadata:
   author: skills-il
-  version: 1.0.1
+  version: 1.1.0
   category: tax-and-finance
   tags:
     he:
@@ -53,7 +53,7 @@ metadata:
 # Israeli Annual Reports
 
 ## Reporting Framework
-Israeli public companies adopted IFRS in 2008. Prior reports use Israeli GAAP. Banks follow BOI adaptations, insurance companies follow IFRS 17 since 2023.
+Israeli public companies adopted IFRS in 2008. Prior reports use Israeli GAAP. Banks follow BOI adaptations. Insurance companies follow IFRS 17, with implementation beginning January 1, 2023, though many jurisdictions including Israel experienced implementation challenges and extended transition periods as of 2026.
 
 ## Report Types and Deadlines
 | Report | Deadline | Content |
@@ -61,7 +61,7 @@ Israeli public companies adopted IFRS in 2008. Prior reports use Israeli GAAP. B
 | Annual (Doch Titkufti) | 3 months after year-end | Audited financials, board report |
 | Quarterly (Doch Rivoni) | 2 months after quarter | Reviewed interim financials |
 | Immediate (Doch Miyadi) | Hours after event | Material events |
-| Shelf Prospectus | Valid up to 3 years | Securities offering framework |
+| Shelf Prospectus | Validity period subject to current regulations | Securities offering framework |
 
 ## Annual Report Structure
 - Part A: Description of Business (operations, markets, risks)
@@ -100,7 +100,7 @@ Result: Structured analysis of annual report with key financial highlights in co
 ### Example 2: Compare Israeli Bank Financial Statements
 User says: "Compare Leumi and Hapoalim annual reports"
 Actions:
-1. Pull latest annual reports from MAYA (maya.tase.co.il)
+1. Pull latest annual reports from MAYA (access through current TASE filing system)
 2. Extract comparable metrics: total assets, net income, ROE, capital adequacy
 3. Normalize data to NIS millions for comparison
 4. Note regulatory differences in reporting (Bank of Israel requirements)
