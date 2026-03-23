@@ -1,19 +1,9 @@
 ---
 name: israeli-freelancer-ops
-description: >-
-  Manage daily operations for Israeli freelancers (osek murshe, osek patur) — invoice
-  aging, utility bill collection, tax deadline reminders, and accountant packages.
-  Use when user asks about "freelancer operations", "osek murshe workflow", "osek
-  patur tracking", "invoice aging", "accountant package", "freelancer tax deadlines",
-  "utility bills collection", or "חבילה לרואה חשבון". Covers VAT filing deadline alerts,
-  Bituach Leumi payment tracking, osek patur threshold monitoring, and organized monthly
-  accounting exports. Do NOT use for invoice generation (use israeli-e-invoice), VAT
-  reporting (use israeli-vat-reporting), or payroll calculation.
+description: Manage daily operations for Israeli freelancers (osek murshe, osek patur) - invoice aging, utility bill collection, tax deadline reminders, and accountant packages. Use when user asks about "freelancer operations", "osek murshe workflow", "osek patur tracking", "invoice aging", "accountant package", "freelancer tax deadlines", "utility bills collection". Covers VAT filing deadline alerts, Bituach Leumi payment tracking, osek patur threshold monitoring, and organized monthly accounting exports.
 license: MIT
 allowed-tools: "Bash(python:*) WebFetch"
-compatibility: >-
-  Works with Claude Code, OpenClaw, Cursor. OpenClaw recommended for scheduled deadline
-  alerts and browser-based utility bill collection.
+compatibility: Works with Claude Code, OpenClaw, Cursor. OpenClaw recommended for scheduled deadline alerts and browser-based utility bill collection.
 ---
 
 # Israeli Freelancer Operations
