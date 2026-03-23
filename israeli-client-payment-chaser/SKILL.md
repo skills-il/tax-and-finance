@@ -1,57 +1,9 @@
 ---
 name: israeli-client-payment-chaser
-description: >-
-  Chase unpaid invoices and manage debt collection for Israeli freelancers and businesses.
-  Use when user asks about "unpaid invoices Israel", "payment reminder", "invoice
-  aging", "debt collection freelancer", "michtav hitchayvut", "demand letter Hebrew",
-  "tvi'ot ktanot", or "גביית חובות". Covers graduated WhatsApp/email reminder escalation,
-  Hebrew demand letter generation, Small Claims Court eligibility assessment, and
-  Shabbat/holiday- aware scheduling. Do NOT use for invoice generation (use israeli-e-invoice)
-  or general accounting.
+description: Chase unpaid invoices and manage debt collection for Israeli freelancers and businesses. Use when user asks about "unpaid invoices Israel", "payment reminder", "invoice aging", "debt collection freelancer", "michtav hitchayvut", "demand letter Hebrew", "tvi'ot ktanot", or "גביית חובות". Covers graduated WhatsApp/email reminder escalation, Hebrew demand letter generation, Small Claims Court eligibility assessment, and Shabbat/holiday- aware scheduling. Do NOT use for invoice generation (use israeli-e-invoice) or general accounting.
 license: MIT
 allowed-tools: Bash(python:*) WebFetch
-compatibility: >-
-  Works with Claude Code, OpenClaw, Cursor. OpenClaw recommended for scheduled reminder
-  automation and WhatsApp message delivery.
-metadata:
-  author: skills-il
-  version: 1.0.1
-  category: tax-and-finance
-  tags:
-    he:
-    - גביית-חובות
-    - invoices
-    - תשלום
-    - משפטי
-    - עצמאי
-    - ישראל
-    en:
-    - debt-collection
-    - invoices
-    - payment
-    - legal
-    - freelancer
-    - israel
-  display_name:
-    he: גובה חובות לקוחות ישראלי
-    en: Israeli Client Payment Chaser
-  display_description:
-    he: >-
-      מעקב גבייה וניהול חובות לקוחות לפרילנסרים ועסקים ישראליים — תזכורות מדורגות,
-      מכתבי התחייבות, ותביעות קטנות
-    en: >-
-      Chase unpaid invoices and manage debt collection for Israeli freelancers and
-      businesses. Use when user asks about "unpaid invoices Israel", "payment reminder",
-      "invoice aging", "debt collection freelancer", "michtav hitchayvut", "demand
-      letter Hebrew", "tvi'ot ktanot", or "גביית חובות". Covers graduated WhatsApp/email
-      reminder escalation, Hebrew demand letter generation, Small Claims Court eligibility
-      assessment, and Shabbat/holiday- aware scheduling. Do NOT use for invoice generation
-      (use israeli-e-invoice) or general accounting.
-  openclaw:
-    requires:
-      bins: []
-      env: []
-    emoji: 💰
+compatibility: Works with Claude Code, OpenClaw, Cursor. OpenClaw recommended for scheduled reminder automation and WhatsApp message delivery.
 ---
 
 # Israeli Client Payment Chaser

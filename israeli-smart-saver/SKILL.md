@@ -1,61 +1,8 @@
 ---
 name: israeli-smart-saver
-description: >-
-  Save money in Israel through smart shopping, cashback optimization, subscription
-  auditing, and deal hunting. Covers Zap.co.il price comparison, BuyMe gift card
-  strategies, Cashback.co.il and Cashdo rebate programs, credit card
-  perks maximization (Visa Cal, Max, Isracard), loyalty program stacking, seasonal
-  sale timing, and recurring expense optimization. Use when user asks about "lachsoch
-  kesef", saving money in Israel, Israeli coupons, cashback, "hashvaat mechirim",
-  subscription audit, "kamah ani meshalem", credit card benefits, "hotza'ot",
-  reducing expenses, or smart shopping tips. Helps Israelis reduce monthly spending
-  by identifying unnecessary subscriptions, switching to cheaper alternatives, and
-  maximizing cashback on everyday purchases. Do NOT use for investment advice (use
-  israeli-pension-advisor), mortgage comparison (use israeli-mortgage-comparator),
-  or grocery price comparison (use israeli-grocery-price-intelligence).
+description: Save money in Israel through smart shopping, cashback optimization, subscription auditing, and deal hunting. Covers Zap.co.il price comparison, BuyMe gift card strategies, Cashback.co.il and Cashdo rebate programs, credit card perks maximization (Visa Cal, Max, Isracard), loyalty program stacking, seasonal sale timing, and recurring expense optimization. Use when user asks about "lachsoch kesef", saving money in Israel, Israeli coupons, cashback, "hashvaat mechirim", subscription audit, "kamah ani meshalem", credit card benefits, "hotza'ot", reducing expenses, or smart shopping tips. Helps Israelis reduce monthly spending by identifying unnecessary subscriptions, switching to cheaper alternatives, and maximizing cashback on everyday purchases. Do NOT use for investment advice (use israeli-pension-advisor), mortgage comparison (use israeli-mortgage-comparator), or grocery price comparison (use israeli-grocery-price-intelligence).
 license: MIT
 compatibility: Works with Claude Code, Cursor, GitHub Copilot, Windsurf, OpenCode, Codex.
-metadata:
-  author: skills-il
-  version: 1.1.0
-  category: tax-and-finance
-  tags:
-    he:
-      - חיסכון
-      - קאשבק
-      - קופונים
-      - מנויים
-      - השוואת-מחירים
-      - ישראל
-    en:
-      - savings
-      - cashback
-      - coupons
-      - subscriptions
-      - price-comparison
-      - israel
-  display_name:
-    he: חוסך חכם בישראל
-    en: Israeli Smart Saver
-  display_description:
-    he: >-
-      חיסכון בישראל דרך קנייה חכמה, אופטימיזציה של קאשבק, ביקורת מנויים וציד
-      דילים. כולל השוואת מחירים ב-Zap, אסטרטגיות BuyMe, תוכניות קאשבק (Cashback.co.il,
-      Cashdo), מיקסום הטבות כרטיסי אשראי (ויזה כאל, מקס, ישראכרט),
-      שילוב מועדוני לקוחות, תזמון מבצעים עונתיים וצמצום הוצאות חוזרות.
-    en: >-
-      Save money in Israel through smart shopping, cashback optimization, subscription
-      auditing, and deal hunting. Covers Zap price comparison, BuyMe strategies,
-      cashback programs, credit card perks, loyalty stacking, seasonal
-      sales, and recurring expense reduction. Helps identify unnecessary subscriptions
-      and maximize savings on everyday purchases.
-  supported_agents:
-    - claude-code
-    - cursor
-    - github-copilot
-    - windsurf
-    - opencode
-    - codex
 ---
 
 # Israeli Smart Saver

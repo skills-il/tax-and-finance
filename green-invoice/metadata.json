@@ -1,0 +1,40 @@
+{
+  "author": "skills-il",
+  "version": "1.1.0",
+  "category": "tax-and-finance",
+  "tags": {
+    "he": [
+      "חשבונית-ירוקה",
+      "מורנינג",
+      "חשבונית",
+      "מע״מ",
+      "תשלומים",
+      "ישראל"
+    ],
+    "en": [
+      "green-invoice",
+      "morning",
+      "invoice",
+      "vat",
+      "payments",
+      "israel"
+    ]
+  },
+  "display_name": {
+    "he": "חשבונית ירוקה (מורנינג)",
+    "en": "Green Invoice (Morning)"
+  },
+  "display_description": {
+    "he": "אינטגרציה עם API של חשבונית ירוקה (מורנינג) ליצירת חשבוניות, קבלות, ניהול לקוחות ועיבוד תשלומים לעסקים בישראל",
+    "en": "Integrate Green Invoice (Morning) API for Israeli invoicing, receipts, client management, and payment processing for businesses in Israel"
+  },
+  "supported_agents": [
+    "claude-code",
+    "cursor",
+    "github-copilot",
+    "windsurf",
+    "opencode",
+    "codex",
+    "antigravity"
+  ]
+}

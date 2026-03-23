@@ -1,63 +1,9 @@
 ---
 name: israeli-tax-returns
-description: >-
-  Prepare and file Israeli tax returns with Reshut HaMisim. Covers Form 1301 (individual),
-  Form 1214 (corporate), Form 126 (employer salary), Form 856 (supplier payments), Form 6111
-  (financial statements), mikdamot (advance payments), Mas Shevach (real estate capital gains),
-  and securities capital gains (Forms 1322/1325). Use when user asks about "doch shnati",
-  "tax return Israel", "Form 1301", "Form 1214", "mas hachnasa", "mikdamot", "mas shevach
-  declaration", "capital gains report", "nekudot zikui", "mas yesafim", or "דוח שנתי".
-  Guides income classification, deductions, tax credits, surtax, deadlines, and SHAAM submission.
-  Do NOT use for VAT reporting (use israeli-vat-reporting), withholding tax (use
-  israeli-tax-withholding), crypto tax (use israeli-crypto-tax-reporter), payroll (use
-  israeli-payroll-calculator), or invoicing (use israeli-e-invoice).
+description: Prepare and file Israeli tax returns with Reshut HaMisim. Covers Form 1301 (individual), Form 1214 (corporate), Form 126 (employer salary), Form 856 (supplier payments), Form 6111 (financial statements), mikdamot (advance payments), Mas Shevach (real estate capital gains), and securities capital gains (Forms 1322/1325). Use when user asks about "doch shnati", "tax return Israel", "Form 1301", "Form 1214", "mas hachnasa", "mikdamot", "mas shevach declaration", "capital gains report", "nekudot zikui", "mas yesafim", or "דוח שנתי". Guides income classification, deductions, tax credits, surtax, deadlines, and SHAAM submission. Do NOT use for VAT reporting (use israeli-vat-reporting), withholding tax (use israeli-tax-withholding), crypto tax (use israeli-crypto-tax-reporter), payroll (use israeli-payroll-calculator), or invoicing (use israeli-e-invoice).
 license: MIT
 allowed-tools: Bash(python:*) WebFetch
-compatibility: >-
-  Works with Claude Code, OpenClaw, Cursor, Windsurf, Codex, GitHub Copilot.
-metadata:
-  author: skills-il
-  version: 1.0.1
-  category: tax-and-finance
-  tags:
-    he:
-    - מס-הכנסה
-    - דוח-שנתי
-    - החזר-מס
-    - נקודות-זיכוי
-    - מס-שבח
-    - מקדמות
-    - ישראל
-    en:
-    - income-tax
-    - tax-return
-    - annual-report
-    - tax-credits
-    - capital-gains
-    - advance-payments
-    - israel
-  display_name:
-    he: דוחות מס ישראליים
-    en: Israeli Tax Returns
-  display_description:
-    he: >-
-      הכנה והגשה של דוחות מס לרשות המסים בישראל, כולל דוח שנתי ליחיד (טופס 1301),
-      דוח שנתי לחברה (טופס 1214), דוח מעסיק (טופס 126), דוח תשלומים לספקים (טופס 856),
-      דוח כספי (טופס 6111), מקדמות מס, הצהרת מס שבח מקרקעין, ורווח הון מניירות ערך
-    en: >-
-      Prepare and file Israeli tax returns with Reshut HaMisim. Covers Form 1301 (individual),
-      Form 1214 (corporate), Form 126 (employer salary), Form 856 (supplier payments), Form 6111
-      (financial statements), mikdamot (advance payments), Mas Shevach (real estate capital gains),
-      and securities capital gains (Forms 1322/1325). Guides income classification, deductions,
-      tax credits, surtax, deadlines, and SHAAM submission. Do NOT use for VAT reporting (use
-      israeli-vat-reporting), withholding tax (use israeli-tax-withholding), crypto tax (use
-      israeli-crypto-tax-reporter), payroll (use israeli-payroll-calculator), or invoicing
-      (use israeli-e-invoice).
-  openclaw:
-    requires:
-      bins: []
-      env: []
-    emoji: "\U0001F4CB"
+compatibility: Works with Claude Code, OpenClaw, Cursor, Windsurf, Codex, GitHub Copilot.
 ---
 
 # Israeli Tax Returns

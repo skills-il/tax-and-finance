@@ -1,0 +1,40 @@
+{
+  "author": "skills-il",
+  "version": "1.1.0",
+  "category": "tax-and-finance",
+  "tags": {
+    "he": [
+      "דוחות-כספיים",
+      "דוח-שנתי",
+      "מאיה",
+      "תקינה-חשבונאית",
+      "רגולציה",
+      "ישראל"
+    ],
+    "en": [
+      "financial-reports",
+      "annual-report",
+      "maya",
+      "accounting-standards",
+      "regulation",
+      "israel"
+    ]
+  },
+  "display_name": {
+    "he": "דוחות שנתיים ישראליים",
+    "en": "Israeli Annual Reports"
+  },
+  "display_description": {
+    "he": "ניתוח דוחות שנתיים, דיווחים כספיים ודרישות רגולטוריות של חברות ישראליות. שימוש כשצריך לקרוא דוח תקופתי, להבין מונחים פיננסיים בעברית, לנתח דיווחי מאיה, או להבין את דרישות חוק החברות.",
+    "en": "Navigate and analyze Israeli corporate annual reports, financial filings, and regulatory disclosures"
+  },
+  "supported_agents": [
+    "claude-code",
+    "cursor",
+    "github-copilot",
+    "windsurf",
+    "opencode",
+    "codex",
+    "antigravity"
+  ]
+}

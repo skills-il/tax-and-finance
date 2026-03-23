@@ -1,57 +1,9 @@
 ---
 name: israeli-payroll-calculator
-description: >-
-  Calculate Israeli payroll including income tax, Bituach Leumi (National
-  Insurance), health tax, pension contributions, and net salary. Use when user
-  asks to calculate salary, "tlush maskoret", payroll deductions, "bruto to
-  neto", employer cost, tax credits (nekudot zikui), or needs help understanding
-  Israeli payslip items. Covers employees, freelancers (atzmai), and employer
-  cost calculations. Do NOT use for US, UK, or other countries' payroll
-  calculations.
+description: Calculate Israeli payroll including income tax, Bituach Leumi (National Insurance), health tax, pension contributions, and net salary. Use when user asks to calculate salary, "tlush maskoret", payroll deductions, "bruto to neto", employer cost, tax credits (nekudot zikui), or needs help understanding Israeli payslip items. Covers employees, freelancers (atzmai), and employer cost calculations. Do NOT use for US, UK, or other countries' payroll calculations.
 license: MIT
-allowed-tools: 'Bash(python:*)'
-compatibility: 'Works with Claude Code, Claude.ai, Cursor. No network access required.'
-metadata:
-  author: skills-il
-  version: 1.0.1
-  category: tax-and-finance
-  tags:
-    he:
-      - שכר
-      - משכורת
-      - מיסים
-      - ביטוח-לאומי
-      - פנסיה
-      - ישראל
-    en:
-      - payroll
-      - salary
-      - tax
-      - bituach-leumi
-      - pension
-      - israel
-  display_name:
-    he: מחשבון שכר ישראלי
-    en: Israeli Payroll Calculator
-  display_description:
-    he: 'חישוב משכורת כולל מס הכנסה, ביטוח לאומי, פנסיה והפרשות'
-    en: >-
-      Calculate Israeli payroll including income tax, Bituach Leumi (National
-      Insurance), health tax, pension contributions, and net salary. Use when
-      user asks to calculate salary, "tlush maskoret", payroll deductions,
-      "bruto to neto", employer cost, tax credits (nekudot zikui), or needs help
-      understanding Israeli payslip items. Covers employees, freelancers
-      (atzmai), and employer cost calculations. Do NOT use for US, UK, or other
-      countries' payroll calculations.
-  supported_agents:
-    - claude-code
-    - cursor
-    - github-copilot
-    - windsurf
-    - opencode
-    - codex
-    - openclaw
-    - antigravity
+allowed-tools: Bash(python:*)
+compatibility: Works with Claude Code, Claude.ai, Cursor. No network access required.
 ---
 
 # Israeli Payroll Calculator

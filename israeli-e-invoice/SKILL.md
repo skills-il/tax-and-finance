@@ -1,58 +1,8 @@
 ---
 name: israeli-e-invoice
-description: >-
-  Generate, validate, and manage Israeli e-invoices (hashbonit electronit) per
-  Tax Authority (SHAAM) standards. Use when user asks to create Israeli
-  invoices, request allocation numbers, validate invoice compliance, or asks
-  about "hashbonit", "e-invoice", "SHAAM", "allocation number", or Israeli
-  invoicing requirements. Supports tax invoice (300), tax invoice/receipt (305),
-  credit invoice (310), receipt (320), and proforma (330) types. Do NOT use for
-  general accounting, bookkeeping, or non-Israeli invoice formats.
+description: Generate, validate, and manage Israeli e-invoices (hashbonit electronit) per Tax Authority (SHAAM) standards. Use when user asks to create Israeli invoices, request allocation numbers, validate invoice compliance, or asks about "hashbonit", "e-invoice", "SHAAM", "allocation number", or Israeli invoicing requirements. Supports tax invoice (300), tax invoice/receipt (305), credit invoice (310), receipt (320), and proforma (330) types. Do NOT use for general accounting, bookkeeping, or non-Israeli invoice formats.
 license: MIT
-compatibility: >-
-  Requires network access for SHAAM API calls. Works with Claude Code,
-  Claude.ai, Cursor.
-metadata:
-  author: skills-il
-  version: 1.1.0
-  category: tax-and-finance
-  tags:
-    he:
-      - מיסים
-      - חשבונית
-      - חשבונית-אלקטרונית
-      - מע״מ
-      - שע״מ
-      - ישראל
-    en:
-      - tax
-      - invoice
-      - e-invoice
-      - vat
-      - shaam
-      - israel
-  display_name:
-    he: חשבונית אלקטרונית ישראלית
-    en: Israeli E Invoice
-  display_description:
-    he: יצירה ואימות של חשבוניות אלקטרוניות בתקן רשות המסים הישראלית
-    en: >-
-      Generate, validate, and manage Israeli e-invoices (hashbonit electronit)
-      per Tax Authority (SHAAM) standards. Use when user asks to create Israeli
-      invoices, request allocation numbers, validate invoice compliance, or asks
-      about "hashbonit", "e-invoice", "SHAAM", "allocation number", or Israeli
-      invoicing requirements. Supports tax invoice (300), tax invoice/receipt
-      (305), credit invoice (310), receipt (320), and proforma (330) types. Do
-      NOT use for general accounting, bookkeeping, or non-Israeli invoice
-      formats.
-  supported_agents:
-    - claude-code
-    - cursor
-    - github-copilot
-    - windsurf
-    - opencode
-    - codex
-    - antigravity
+compatibility: Requires network access for SHAAM API calls. Works with Claude Code, Claude.ai, Cursor.
 ---
 
 # Israeli E-Invoice

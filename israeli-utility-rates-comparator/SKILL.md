@@ -1,55 +1,8 @@
 ---
 name: israeli-utility-rates-comparator
-description: >-
-  Compare electricity providers, water tariffs, natural gas rates, and arnona (municipal
-  property tax) across Israeli municipalities and utility companies. Use when a user
-  needs to understand IEC tariff structures, calculate solar panel ROI, compare tiered
-  water pricing, or evaluate arnona differences between cities. Covers electricity
-  market deregulation, independent power producers, Mekorot water pricing, and municipal
-  rate variations. Do NOT use for commercial/industrial utility contracts, telecommunications
-  comparisons, or utility infrastructure investment analysis.
+description: Compare electricity providers, water tariffs, natural gas rates, and arnona (municipal property tax) across Israeli municipalities and utility companies. Use when a user needs to understand IEC tariff structures, calculate solar panel ROI, compare tiered water pricing, or evaluate arnona differences between cities. Covers electricity market deregulation, independent power producers, Mekorot water pricing, and municipal rate variations. Do NOT use for commercial/industrial utility contracts, telecommunications comparisons, or utility infrastructure investment analysis.
 license: MIT
 allowed-tools: Bash(python:*) WebFetch
-metadata:
-  author: skills-il
-  version: 1.0.1
-  category: tax-and-finance
-  tags:
-    he:
-    - חשמל
-    - מים
-    - גז
-    - ארנונה
-    - תעריפים
-    - השוואת מחירים
-    en:
-    - electricity
-    - water
-    - gas
-    - arnona
-    - tariffs
-    - price-comparison
-  display_name:
-    he: השוואת תעריפי חשמל ומים בישראל
-    en: Israeli Utility Rates Comparator
-  display_description:
-    he: השוואת ספקי חשמל, תעריפי מים וגז וארנונה בין רשויות מקומיות בישראל
-    en: >-
-      Compare electricity providers, water tariffs, natural gas rates, and arnona
-      (municipal property tax) across Israeli municipalities and utility companies.
-      Use when a user needs to understand IEC tariff structures, calculate solar panel
-      ROI, compare tiered water pricing, or evaluate arnona differences between cities.
-      Covers electricity market deregulation, independent power producers, Mekorot
-      water pricing, and municipal rate variations. Do NOT use for commercial/industrial
-      utility contracts, telecommunications comparisons, or utility infrastructure
-      investment analysis.
-  supported_agents:
-  - claude-code
-  - cursor
-  - github-copilot
-  - windsurf
-  - opencode
-  - codex
 ---
 
 # Israeli Utility Rates Comparator

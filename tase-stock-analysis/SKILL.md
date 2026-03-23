@@ -1,61 +1,8 @@
 ---
 name: tase-stock-analysis
-description: >-
-  Analyze Israeli stocks on TASE (Tel Aviv Stock Exchange), track TA-35 and
-  TA-125 indices, and evaluate dual-listed companies (TASE + NASDAQ). Use when
-  user asks about Israeli stocks, "boorsa", "TA-35", "TASE", Maya filings,
-  dual-listed companies, or Israeli capital gains tax on securities. Provides
-  index composition, Maya (TASE disclosure) filings lookup, capital gains tax
-  calculations (25% on securities), and Bank of Israel interest rate context
-  for valuation. Do NOT use for general international stock analysis unrelated
-  to Israel, or for cryptocurrency trading.
+description: Analyze Israeli stocks on TASE (Tel Aviv Stock Exchange), track TA-35 and TA-125 indices, and evaluate dual-listed companies (TASE + NASDAQ). Use when user asks about Israeli stocks, "boorsa", "TA-35", "TASE", Maya filings, dual-listed companies, or Israeli capital gains tax on securities. Provides index composition, Maya (TASE disclosure) filings lookup, capital gains tax calculations (25% on securities), and Bank of Israel interest rate context for valuation. Do NOT use for general international stock analysis unrelated to Israel, or for cryptocurrency trading.
 license: MIT
-compatibility: >-
-  Requires network access for TASE API and Maya filings. Works with Claude
-  Code, Cursor, GitHub Copilot, Windsurf, OpenCode, Codex.
-metadata:
-  author: skills-il
-  version: 1.1.0
-  category: tax-and-finance
-  tags:
-    he:
-      - בורסה
-      - מניות
-      - ת"א-35
-      - השקעות
-      - שוק-הון
-      - ישראל
-    en:
-      - stock
-      - tase
-      - ta-35
-      - investments
-      - capital-market
-      - israel
-  display_name:
-    he: ניתוח מניות בורסת ת"א
-    en: TASE Stock Analysis
-  display_description:
-    he: >-
-      ניתוח מניות בבורסת תל אביב, מעקב אחר מדדי ת"א-35 ות"א-125, והערכת
-      חברות דואליות. כולל חישוב מס רווחי הון ושילוב דיווחי מאי"ה.
-    en: >-
-      Analyze Israeli stocks on TASE (Tel Aviv Stock Exchange), track TA-35 and
-      TA-125 indices, and evaluate dual-listed companies (TASE + NASDAQ). Use
-      when user asks about Israeli stocks, "boorsa", "TA-35", "TASE", Maya
-      filings, dual-listed companies, or Israeli capital gains tax on
-      securities. Provides index composition, Maya filings lookup, capital gains
-      tax calculations (25% on securities), and Bank of Israel interest rate
-      context for valuation. Do NOT use for general international stock analysis
-      unrelated to Israel, or for cryptocurrency trading.
-  supported_agents:
-    - claude-code
-    - cursor
-    - github-copilot
-    - windsurf
-    - opencode
-    - codex
-    - antigravity
+compatibility: Requires network access for TASE API and Maya filings. Works with Claude Code, Cursor, GitHub Copilot, Windsurf, OpenCode, Codex.
 ---
 
 # TASE Stock Analysis

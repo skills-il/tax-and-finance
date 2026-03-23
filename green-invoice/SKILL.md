@@ -1,59 +1,8 @@
 ---
 name: green-invoice
-description: >-
-  Integrate Green Invoice (Morning) API for Israeli invoicing, receipts, client
-  management, and payment processing. Use when user asks to create invoices via
-  Green Invoice, generate hashbonit mas through Morning API, manage clients in
-  Green Invoice, set up webhook automation for document creation, query
-  documents or expenses, or mentions "Green Invoice", "Morning", "hashbonit
-  yeruka", "greeninvoice API", Israeli cloud invoicing, or needs to create tax
-  invoice-receipt (cheshbonit mas/kabala). Covers all 13 document types, 8
-  payment types, client CRUD, item catalog, and webhook integration. Do NOT use
-  for SHAAM allocation numbers or Tax Authority e-invoice compliance (use
-  israeli-e-invoice), Cardcom payment processing (use cardcom-payment-gateway),
-  or Tranzila integration (use tranzila-payment-gateway).
+description: Integrate Green Invoice (Morning) API for Israeli invoicing, receipts, client management, and payment processing. Use when user asks to create invoices via Green Invoice, generate hashbonit mas through Morning API, manage clients in Green Invoice, set up webhook automation for document creation, query documents or expenses, or mentions "Green Invoice", "Morning", "hashbonit yeruka", "greeninvoice API", Israeli cloud invoicing, or needs to create tax invoice-receipt (cheshbonit mas/kabala). Covers all 13 document types, 8 payment types, client CRUD, item catalog, and webhook integration. Do NOT use for SHAAM allocation numbers or Tax Authority e-invoice compliance (use israeli-e-invoice), Cardcom payment processing (use cardcom-payment-gateway), or Tranzila integration (use tranzila-payment-gateway).
 license: MIT
-compatibility: >-
-  Requires network access for Green Invoice API calls (api.greeninvoice.co.il).
-  API credentials obtained from Green Invoice dashboard (Settings, Developer
-  Tools). Works with Claude Code, Claude.ai, Cursor.
-metadata:
-  author: skills-il
-  version: 1.1.0
-  category: tax-and-finance
-  tags:
-    he:
-      - חשבונית-ירוקה
-      - מורנינג
-      - חשבונית
-      - מע״מ
-      - תשלומים
-      - ישראל
-    en:
-      - green-invoice
-      - morning
-      - invoice
-      - vat
-      - payments
-      - israel
-  display_name:
-    he: חשבונית ירוקה (מורנינג)
-    en: Green Invoice (Morning)
-  display_description:
-    he: >-
-      אינטגרציה עם API של חשבונית ירוקה (מורנינג) ליצירת חשבוניות, קבלות, ניהול
-      לקוחות ועיבוד תשלומים לעסקים בישראל
-    en: >-
-      Integrate Green Invoice (Morning) API for Israeli invoicing, receipts,
-      client management, and payment processing for businesses in Israel
-  supported_agents:
-    - claude-code
-    - cursor
-    - github-copilot
-    - windsurf
-    - opencode
-    - codex
-    - antigravity
+compatibility: Requires network access for Green Invoice API calls (api.greeninvoice.co.il). API credentials obtained from Green Invoice dashboard (Settings, Developer Tools). Works with Claude Code, Claude.ai, Cursor.
 ---
 
 # Green Invoice (Morning)

@@ -1,59 +1,9 @@
 ---
 name: israeli-crypto-tax-reporter
-description: >-
-  Calculate cryptocurrency capital gains tax per Israeli Tax Authority (Reshut HaMisim)
-  regulations and generate Form 1325 reporting data. Use when a user needs to compute
-  crypto tax obligations using FIFO cost basis, classify DeFi income (staking, liquidity
-  mining, airdrops) for Israeli tax purposes, prepare annual tax filing data, or understand
-  reporting thresholds and advance payment (mikdamot) requirements. Covers Section
-  2(1) of the Income Tax Ordinance, Circular 2018/05, and the 25% capital gains rate
-  for individuals. Do NOT use for non-Israeli tax jurisdictions, general income tax
-  calculations, or VAT (maam) on crypto business activities, which require separate
-  professional consultation.
+description: Calculate cryptocurrency capital gains tax per Israeli Tax Authority (Reshut HaMisim) regulations and generate Form 1325 reporting data. Use when a user needs to compute crypto tax obligations using FIFO cost basis, classify DeFi income (staking, liquidity mining, airdrops) for Israeli tax purposes, prepare annual tax filing data, or understand reporting thresholds and advance payment (mikdamot) requirements. Covers Section 2(1) of the Income Tax Ordinance, Circular 2018/05, and the 25% capital gains rate for individuals. Do NOT use for non-Israeli tax jurisdictions, general income tax calculations, or VAT (maam) on crypto business activities, which require separate professional consultation.
 license: MIT
 allowed-tools: Bash(python:*) Read Edit Write WebFetch
 compatibility: Requires Python 3.8+ for calculator script
-metadata:
-  author: skills-il
-  version: 1.1.0
-  category: tax-and-finance
-  tags:
-    he:
-    - מס-קריפטו
-    - מטבעות-דיגיטליים
-    - רווחי-הון
-    - דיווח-מס
-    - בלוקצ'יין
-    en:
-    - crypto-tax
-    - cryptocurrency
-    - capital-gains
-    - tax-reporting
-    - blockchain
-  display_name:
-    he: דיווח מס קריפטו ישראלי
-    en: Israeli Crypto Tax Reporter
-  display_description:
-    he: >-
-      חישוב מס רווחי הון על מטבעות דיגיטליים, הפקת נתוני טופס 1325, וסיווג הכנסות
-      DeFi לפי רשות המסים הישראלית
-    en: >-
-      Calculate cryptocurrency capital gains tax per Israeli Tax Authority (Reshut
-      HaMisim) regulations and generate Form 1325 reporting data. Use when a user
-      needs to compute crypto tax obligations using FIFO cost basis, classify DeFi
-      income (staking, liquidity mining, airdrops) for Israeli tax purposes, prepare
-      annual tax filing data, or understand reporting thresholds and advance payment
-      (mikdamot) requirements. Covers Section 2(1) of the Income Tax Ordinance, Circular
-      2018/05, and the 25% capital gains rate for individuals. Do NOT use for non-Israeli
-      tax jurisdictions, general income tax calculations, or VAT (maam) on crypto
-      business activities, which require separate professional consultation.
-  supported_agents:
-  - claude-code
-  - cursor
-  - github-copilot
-  - windsurf
-  - opencode
-  - codex
 ---
 
 # Israeli Crypto Tax Reporter

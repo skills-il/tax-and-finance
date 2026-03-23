@@ -1,0 +1,38 @@
+{
+  "author": "skills-il",
+  "version": "1.0.1",
+  "category": "tax-and-finance",
+  "tags": {
+    "he": [
+      "פנסיה",
+      "פרישה",
+      "חיסכון",
+      "קרן-השתלמות",
+      "ישראל"
+    ],
+    "en": [
+      "pension",
+      "retirement",
+      "savings",
+      "keren-hishtalmut",
+      "israel"
+    ]
+  },
+  "display_name": {
+    "he": "יועץ פנסיה ישראלי",
+    "en": "Israeli Pension Advisor"
+  },
+  "display_description": {
+    "he": "ניווט בין קרנות פנסיה, קופות גמל וחיסכון לפרישה",
+    "en": "Navigate the Israeli pension and savings system including pension funds (keren pensia), manager's insurance (bituach menahalim), training funds (keren hishtalmut), and retirement planning. Use when user asks about Israeli pension, \"pensia\", \"keren hishtalmut\", retirement savings, \"bituach menahalim\", pension contributions, or tax benefits from savings. Covers mandatory pension, voluntary savings, and withdrawal rules. Do NOT provide specific investment recommendations or fund performance comparisons."
+  },
+  "supported_agents": [
+    "claude-code",
+    "cursor",
+    "github-copilot",
+    "windsurf",
+    "opencode",
+    "codex",
+    "antigravity"
+  ]
+}

@@ -1,63 +1,8 @@
 ---
 name: israeli-payment-orchestrator
-description: >-
-  Orchestrate Israeli payment gateways (Cardcom, Tranzila, PayMe, Meshulam,
-  iCredit, Pelecard) with unified routing, fallback, and installments
-  (tashlumim). Use when user asks about multi-gateway payment integration,
-  "slikat kartisim", "tashlumim", payment routing, Shva network, BOI Directive
-  357, gateway comparison, or building a payment abstraction layer for Israeli
-  merchants. Provides unified API patterns, installment handling, Shva clearing
-  rules, and regulatory compliance. Do NOT use for single gateway setup (use
-  cardcom-payment-gateway or tranzila-payment-gateway instead).
+description: Orchestrate Israeli payment gateways (Cardcom, Tranzila, PayMe, Meshulam, iCredit, Pelecard) with unified routing, fallback, and installments (tashlumim). Use when user asks about multi-gateway payment integration, "slikat kartisim", "tashlumim", payment routing, Shva network, BOI Directive 357, gateway comparison, or building a payment abstraction layer for Israeli merchants. Provides unified API patterns, installment handling, Shva clearing rules, and regulatory compliance. Do NOT use for single gateway setup (use cardcom-payment-gateway or tranzila-payment-gateway instead).
 license: MIT
-compatibility: >-
-  Works with Claude Code, Cursor, GitHub Copilot, Windsurf, OpenCode, Codex.
-  Python 3.8+ for helper scripts.
-metadata:
-  author: skills-il
-  version: 1.0.1
-  category: tax-and-finance
-  tags:
-    he:
-      - תשלומים
-      - סליקה
-      - שב"א
-      - כרטיסי-אשראי
-      - תשלומים
-      - ישראל
-    en:
-      - payments
-      - gateway
-      - shva
-      - credit-cards
-      - installments
-      - israel
-  display_name:
-    he: תזמור תשלומים ישראלי
-    en: Israeli Payment Orchestrator
-  display_description:
-    he: >-
-      תזמור שערי תשלום ישראליים (Cardcom, Tranzila, PayMe, Meshulam, iCredit,
-      Pelecard) עם ניתוב אחיד, fallback ותשלומים. כולל השוואת שערים, טיפול
-      בתשלומים ועמידה בהנחיות בנק ישראל.
-    en: >-
-      Orchestrate Israeli payment gateways (Cardcom, Tranzila, PayMe, Meshulam,
-      iCredit, Pelecard) with unified routing, fallback, and installments
-      (tashlumim). Use when user asks about multi-gateway payment integration,
-      "slikat kartisim", "tashlumim", payment routing, Shva network, BOI
-      Directive 357, gateway comparison, or building a payment abstraction layer
-      for Israeli merchants. Provides unified API patterns, installment handling,
-      Shva clearing rules, and regulatory compliance. Do NOT use for single
-      gateway setup (use cardcom-payment-gateway or tranzila-payment-gateway
-      instead).
-  supported_agents:
-    - claude-code
-    - cursor
-    - github-copilot
-    - windsurf
-    - opencode
-    - codex
-    - antigravity
+compatibility: Works with Claude Code, Cursor, GitHub Copilot, Windsurf, OpenCode, Codex. Python 3.8+ for helper scripts.
 ---
 
 # Israeli Payment Orchestrator

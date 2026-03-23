@@ -1,56 +1,8 @@
 ---
 name: israeli-insurance-comparator
-description: >-
-  Compare car insurance (mandatory hova, comprehensive makif, third-party), home insurance,
-  and health supplementary insurance across 20+ Israeli insurers using official government
-  calculators and private comparison platforms. Use when a user needs to find the
-  cheapest insurance quote, understand policy differences, or prepare for annual renewal
-  negotiations. Guides through CMA calculator at car.cma.gov.il, Hova.co.il, Shukabit,
-  Wobi, and Bestie. Do NOT use for life insurance, pension fund selection, or travel
-  insurance comparisons.
+description: Compare car insurance (mandatory hova, comprehensive makif, third-party), home insurance, and health supplementary insurance across 20+ Israeli insurers using official government calculators and private comparison platforms. Use when a user needs to find the cheapest insurance quote, understand policy differences, or prepare for annual renewal negotiations. Guides through CMA calculator at car.cma.gov.il, Hova.co.il, Shukabit, Wobi, and Bestie. Do NOT use for life insurance, pension fund selection, or travel insurance comparisons.
 license: MIT
 allowed-tools: Bash(python:*) WebFetch
-metadata:
-  author: skills-il
-  version: 1.0.1
-  category: tax-and-finance
-  tags:
-    he:
-    - ביטוח
-    - רכב
-    - השוואת מחירים
-    - פוליסה
-    - ביטוח חובה
-    - ביטוח מקיף
-    en:
-    - insurance
-    - car-insurance
-    - price-comparison
-    - policy
-    - mandatory-insurance
-    - comprehensive-insurance
-  display_name:
-    he: השוואת ביטוחים בישראל
-    en: Israeli Insurance Comparator
-  display_description:
-    he: >-
-      השוואת ביטוחי רכב, דירה וביטוח משלים בריאות בין חברות הביטוח בישראל באמצעות
-      מחשבונים ממשלתיים ופלטפורמות השוואה
-    en: >-
-      Compare car insurance (mandatory hova, comprehensive makif, third-party), home
-      insurance, and health supplementary insurance across 20+ Israeli insurers using
-      official government calculators and private comparison platforms. Use when a
-      user needs to find the cheapest insurance quote, understand policy differences,
-      or prepare for annual renewal negotiations. Guides through CMA calculator at
-      car.cma.gov.il, Hova.co.il, Shukabit, Wobi, and Bestie. Do NOT use for life
-      insurance, pension fund selection, or travel insurance comparisons.
-  supported_agents:
-  - claude-code
-  - cursor
-  - github-copilot
-  - windsurf
-  - opencode
-  - codex
 ---
 
 # Israeli Insurance Comparator

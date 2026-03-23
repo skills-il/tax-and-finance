@@ -1,56 +1,9 @@
 ---
 name: gws-israeli-business-sheets
-description: >-
-  Google Sheets financial tracking and automation for Israeli freelancers and small
-  businesses using the Google Workspace CLI (gws). Use when user asks to create
-  income/expense sheets with Shekel formatting, track VAT (18%) calculations,
-  generate tax-period summaries for accountants, backup spreadsheets as CSV, or
-  auto-log payments. Do NOT use for direct bank API integrations, payroll processing,
-  or filing taxes with the Israel Tax Authority.
+description: Google Sheets financial tracking and automation for Israeli freelancers and small businesses using the Google Workspace CLI (gws). Use when user asks to create income/expense sheets with Shekel formatting, track VAT (18%) calculations, generate tax-period summaries for accountants, backup spreadsheets as CSV, or auto-log payments. Do NOT use for direct bank API integrations, payroll processing, or filing taxes with the Israel Tax Authority.
 license: MIT
-allowed-tools: "Bash(gws:*) Bash(npx:*) Bash(node:*) Bash(python:*) Read Write Edit"
-compatibility: >-
-  Requires Node.js 18+ and the Google Workspace CLI (npm install -g @google/gws).
-  Requires Google OAuth setup via gws auth login. Works with Claude Code, Cursor,
-  GitHub Copilot, Windsurf, OpenCode, and Codex.
-metadata:
-  author: skills-il
-  version: 1.0.1
-  category: tax-and-finance
-  tags:
-    he:
-      - גוגל-וורקספייס
-      - גוגל-שיטס
-      - מעקב-הוצאות
-      - מע"מ
-      - פרילנסר
-      - הנהלת-חשבונות
-    en:
-      - google-workspace
-      - google-sheets
-      - expense-tracking
-      - vat
-      - freelancer
-      - accounting
-  display_name:
-    he: "גיליונות עסקיים ישראליים עם GWS"
-    en: "GWS Israeli Business Sheets"
-  display_description:
-    he: >-
-      אוטומציית תהליכי גיליונות אלקטרוניים פיננסיים לעסקים ישראליים באמצעות
-      Google Workspace CLI -- מעקב הוצאות, חישובי מע"מ, סיכומי תקופות מס
-      וייצוא CSV לרואה חשבון.
-    en: >-
-      Automate Google Sheets financial workflows for Israeli businesses using the
-      Google Workspace CLI -- expense tracking, VAT calculations, tax-period
-      summaries, and accountant-ready CSV exports.
-  supported_agents:
-    - claude-code
-    - cursor
-    - github-copilot
-    - windsurf
-    - opencode
-    - codex
+allowed-tools: Bash(gws:*) Bash(npx:*) Bash(node:*) Bash(python:*) Read Write Edit
+compatibility: Requires Node.js 18+ and the Google Workspace CLI (npm install -g @google/gws). Requires Google OAuth setup via gws auth login. Works with Claude Code, Cursor, GitHub Copilot, Windsurf, OpenCode, and Codex.
 ---
 
 # GWS Israeli Business Sheets

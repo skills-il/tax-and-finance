@@ -1,0 +1,40 @@
+{
+  "author": "skills-il",
+  "version": "1.1.1",
+  "category": "tax-and-finance",
+  "tags": {
+    "he": [
+      "תקציב",
+      "משכנתא",
+      "ארנונה",
+      "יוקר-המחיה",
+      "חיסכון",
+      "ישראל"
+    ],
+    "en": [
+      "budget",
+      "mortgage",
+      "arnona",
+      "cost-of-living",
+      "savings",
+      "israel"
+    ]
+  },
+  "display_name": {
+    "he": "מתכנן תקציב ישראלי",
+    "en": "Israeli Budget Planner"
+  },
+  "display_description": {
+    "he": "תכנון תקציב משק בית עם עלויות, שיעורים ומוצרים פיננסיים ישראליים. שימוש כשצריך חישובי משכנתא, שיעורי ארנונה, תכנון הוצאות חודשיות, או מידע על יוקר המחיה בישראל.",
+    "en": "Plan household and personal budgets with Israeli-specific costs, rates, and financial products. Use when user asks about budgeting in Israel, mortgage (mashkanta) calculations, arnona rates, cost of living, takciv, or monthly expense planning. Covers Bank of Israel prime rate, mashkanta tracks, arnona by city, Sal Briut costs, and Israeli household benchmarks."
+  },
+  "supported_agents": [
+    "claude-code",
+    "cursor",
+    "github-copilot",
+    "windsurf",
+    "opencode",
+    "codex",
+    "antigravity"
+  ]
+}

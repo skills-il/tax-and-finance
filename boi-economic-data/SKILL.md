@@ -1,59 +1,8 @@
 ---
 name: boi-economic-data
-description: >-
-  Fetch and analyze Bank of Israel (BOI) economic data: interest rates, CPI
-  (madad hamchirim), exchange rates (sha'ar yatzig), and CBS statistics. Use
-  when user asks about BOI interest rate, "ribit Bnak Israel", exchange rates,
-  "sha'ar yatzig", CPI index, "madad", inflation data, or Israeli economic
-  indicators. Foundation skill for Israeli financial analytics. Provides API
-  access to data.boi.org.il and CBS data. Do NOT use for stock market data (use
-  tase-stock-analysis instead) or for currency conversion (use
-  shekel-currency-converter instead).
+description: Fetch and analyze Bank of Israel (BOI) economic data: interest rates, CPI (madad hamchirim), exchange rates (sha'ar yatzig), and CBS statistics. Use when user asks about BOI interest rate, "ribit Bnak Israel", exchange rates, "sha'ar yatzig", CPI index, "madad", inflation data, or Israeli economic indicators. Foundation skill for Israeli financial analytics. Provides API access to data.boi.org.il and CBS data. Do NOT use for stock market data (use tase-stock-analysis instead) or for currency conversion (use shekel-currency-converter instead).
 license: MIT
-compatibility: >-
-  Requires network access for Bank of Israel API. Works with Claude Code,
-  Cursor, GitHub Copilot, Windsurf, OpenCode, Codex.
-metadata:
-  author: skills-il
-  version: 1.0.1
-  category: tax-and-finance
-  tags:
-    he:
-      - בנק-ישראל
-      - ריבית
-      - שע"ח
-      - מדד-המחירים
-      - כלכלה
-      - ישראל
-    en:
-      - boi
-      - interest-rate
-      - exchange-rate
-      - cpi
-      - economy
-      - israel
-  display_name:
-    he: נתונים כלכליים מבנק ישראל
-    en: BOI Economic Data
-  display_description:
-    he: >-
-      שליפה וניתוח נתונים כלכליים מבנק ישראל: ריבית, מדד המחירים לצרכן, שערי
-      חליפין ונתוני הלמ"ס. כולל גישת API ל-data.boi.org.il.
-    en: >-
-      Fetch and analyze Bank of Israel (BOI) economic data: interest rates, CPI
-      (madad hamchirim), exchange rates (sha'ar yatzig), and CBS statistics. Use
-      when user asks about BOI interest rate, exchange rates, CPI index, or
-      Israeli economic indicators. Foundation skill for Israeli financial
-      analytics. Do NOT use for stock market data (use tase-stock-analysis
-      instead) or for currency conversion (use shekel-currency-converter instead).
-  supported_agents:
-    - claude-code
-    - cursor
-    - github-copilot
-    - windsurf
-    - opencode
-    - codex
-    - antigravity
+compatibility: Requires network access for Bank of Israel API. Works with Claude Code, Cursor, GitHub Copilot, Windsurf, OpenCode, Codex.
 ---
 
 # BOI Economic Data
