@@ -10,7 +10,7 @@ description: >-
   accounting exports. Do NOT use for invoice generation (use israeli-e-invoice), VAT
   reporting (use israeli-vat-reporting), or payroll calculation.
 license: MIT
-allowed-tools: Bash(python:*) WebFetch
+allowed-tools: "Bash(python:*) WebFetch"
 compatibility: >-
   Works with Claude Code, OpenClaw, Cursor. OpenClaw recommended for scheduled deadline
   alerts and browser-based utility bill collection.
