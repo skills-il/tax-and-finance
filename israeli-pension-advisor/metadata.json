@@ -1,6 +1,6 @@
 {
   "author": "skills-il",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "category": "tax-and-finance",
   "tags": {
     "he": [
@@ -8,14 +8,26 @@
       "פרישה",
       "חיסכון",
       "קרן-השתלמות",
-      "ישראל"
+      "ישראל",
+      "ביטוח-מנהלים",
+      "קופת-גמל",
+      "סעיף-14",
+      "דמי-ניהול",
+      "הטבות-מס",
+      "פיצויים"
     ],
     "en": [
       "pension",
       "retirement",
       "savings",
       "keren-hishtalmut",
-      "israel"
+      "israel",
+      "bituach-menahalim",
+      "kupat-gemel",
+      "section-14",
+      "management-fees",
+      "tax-benefits",
+      "pitzuim"
     ]
   },
   "display_name": {
@@ -23,8 +35,8 @@
     "en": "Israeli Pension Advisor"
   },
   "display_description": {
-    "he": "ניווט בין קרנות פנסיה, קופות גמל וחיסכון לפרישה",
-    "en": "Navigate the Israeli pension and savings system including pension funds (keren pensia), manager's insurance (bituach menahalim), training funds (keren hishtalmut), and retirement planning. Use when user asks about Israeli pension, \"pensia\", \"keren hishtalmut\", retirement savings, \"bituach menahalim\", pension contributions, or tax benefits from savings. Covers mandatory pension, voluntary savings, and withdrawal rules. Do NOT provide specific investment recommendations or fund performance comparisons."
+    "he": "ניווט במערכת הפנסיה והחיסכון הישראלית, כולל קרנות פנסיה, ביטוח מנהלים, קרנות השתלמות ותכנון פרישה. הפעילו כשמשתמש שואל על פנסיה, קרן השתלמות, חיסכון לפרישה, הפרשות מעסיק, דמי ניהול או הטבות מס מחיסכון. החלטות פנסיוניות לא מושכלות עולות מאות אלפי שקלים לאורך החיים. אל תשתמשו להמלצות השקעה ספציפיות או השוואת ביצועי קרנות.",
+    "en": "Navigate the Israeli pension and savings system including pension funds (keren pensia), manager's insurance (bituach menahalim), training funds (keren hishtalmut), and retirement planning. Use when user asks about Israeli pension, \"pensia\", \"keren hishtalmut\", retirement savings, \"bituach menahalim\", pension contributions, or tax benefits from savings. Covers mandatory pension, voluntary savings, and withdrawal rules. Uninformed pension decisions cost hundreds of thousands of NIS over a lifetime. Do NOT provide specific investment recommendations or fund performance comparisons."
   },
   "supported_agents": [
     "claude-code",

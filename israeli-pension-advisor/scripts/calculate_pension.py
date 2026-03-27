@@ -16,7 +16,7 @@ import argparse
 from dataclasses import dataclass
 
 
-# Pension contribution rates (2025)
+# Pension contribution rates (2026)
 PENSION_EMPLOYEE = 0.06          # 6%
 PENSION_EMPLOYER = 0.065         # 6.5%
 PENSION_SEVERANCE = 0.06         # 6%
@@ -25,12 +25,15 @@ PENSION_SEVERANCE = 0.06         # 6%
 HISHTALMUT_EMPLOYEE = 0.025      # 2.5%
 HISHTALMUT_EMPLOYER = 0.075      # 7.5%
 
-# Self-employed rates
-SELF_PENSION_RATE = 0.1276       # Total pension contribution
-SELF_HISHTALMUT_MAX = 20520      # Annual max with tax benefit
+# Self-employed rates (2026)
+SELF_PENSION_LOW_RATE = 0.0445   # Up to half avg wage
+SELF_PENSION_HIGH_RATE = 0.1255  # Half to full avg wage
+SELF_HISHTALMUT_MAX = 20566      # Tax-free profit ceiling (2026)
+SELF_HISHTALMUT_DEDUCT = 13202   # Tax deduction ceiling (2026)
 
-# Insurable salary ceiling
-PENSION_CEILING = 44000          # NIS/month (2025, approximate)
+# Reference wage and fund ceiling (2026)
+AVG_WAGE = 13769                 # Average wage 2026
+COMPREHENSIVE_FUND_MAX = 5645    # Max monthly pension deposit (20.5% of 2x avg wage, 2026)
 
 
 @dataclass
@@ -64,7 +67,9 @@ def calculate_pension_contributions(
     Returns:
         PensionBreakdown with all contribution details.
     """
-    insurable = min(monthly_salary, PENSION_CEILING)
+    total_contribution_rate = PENSION_EMPLOYEE + PENSION_EMPLOYER + PENSION_SEVERANCE
+    max_insurable = COMPREHENSIVE_FUND_MAX / total_contribution_rate
+    insurable = min(monthly_salary, max_insurable)
 
     employee_pension = round(insurable * PENSION_EMPLOYEE, 2)
     employer_pension = round(insurable * PENSION_EMPLOYER, 2)
@@ -98,7 +103,8 @@ def calculate_pension_contributions(
 def project_retirement(
     monthly_salary: float,
     current_age: int,
-    retirement_age: int = 67,
+    gender: str = "male",
+    retirement_age: int = None,
     annual_return: float = 0.04,
     existing_balance: float = 0,
 ) -> dict:
@@ -107,19 +113,25 @@ def project_retirement(
     Args:
         monthly_salary: Current gross monthly salary.
         current_age: Current age in years.
-        retirement_age: Target retirement age.
+        gender: "male" or "female" (affects default retirement age).
+        retirement_age: Target retirement age (defaults by gender: male 67, female 64).
         annual_return: Expected annual investment return rate.
         existing_balance: Current pension balance.
 
     Returns:
         Dictionary with projection details.
     """
+    if retirement_age is None:
+        retirement_age = 67 if gender == "male" else 64
+
     years = retirement_age - current_age
     if years <= 0:
         return {"error": "Already at or past retirement age"}
 
-    insurable = min(monthly_salary, PENSION_CEILING)
-    monthly_contribution = insurable * (PENSION_EMPLOYEE + PENSION_EMPLOYER)
+    total_contribution_rate = PENSION_EMPLOYEE + PENSION_EMPLOYER + PENSION_SEVERANCE
+    max_insurable = COMPREHENSIVE_FUND_MAX / total_contribution_rate
+    insurable = min(monthly_salary, max_insurable)
+    monthly_contribution = insurable * (PENSION_EMPLOYEE + PENSION_EMPLOYER + PENSION_SEVERANCE)
     monthly_return = (1 + annual_return) ** (1 / 12) - 1
 
     balance = existing_balance
@@ -145,7 +157,7 @@ def project_retirement(
 def format_breakdown(breakdown: PensionBreakdown) -> str:
     """Format pension breakdown for display."""
     lines = [
-        "=== Israeli Pension Contributions ===",
+        "=== Israeli Pension Contributions (2026) ===",
         "",
         f"  Gross Salary:            {breakdown.gross_salary:>10,.2f} NIS/month",
         "",
@@ -197,13 +209,17 @@ def main():
     )
     parser.add_argument("--age", type=int, default=30, help="Current age for projection")
     parser.add_argument(
+        "--female", action="store_true",
+        help="Use female retirement age (~64 in 2026)"
+    )
+    parser.add_argument(
         "--example", action="store_true", help="Show example calculation"
     )
 
     args = parser.parse_args()
 
     if args.example:
-        print("Example: 20,000 NIS salary with keren hishtalmut")
+        print("Example: 20,000 NIS salary with keren hishtalmut (2026 rates)")
         print()
         breakdown = calculate_pension_contributions(20000, include_hishtalmut=True)
         print(format_breakdown(breakdown))
@@ -220,18 +236,46 @@ def main():
         parser.print_help()
         sys.exit(1)
 
+    gender = "female" if args.female else "male"
+
+    if args.self_employed:
+        annual_income = args.salary * 12
+        half_avg = AVG_WAGE / 2
+        if args.salary <= half_avg:
+            mandatory = args.salary * SELF_PENSION_LOW_RATE
+        else:
+            mandatory = (half_avg * SELF_PENSION_LOW_RATE
+                         + min(args.salary - half_avg, AVG_WAGE - half_avg) * SELF_PENSION_HIGH_RATE)
+
+        print("=== Self-Employed Pension (2026) ===")
+        print()
+        print(f"  Monthly Income:                {args.salary:>10,.2f} NIS")
+        print(f"  Annual Income:                 {annual_income:>10,.2f} NIS")
+        print()
+        print(f"  Mandatory Pension (monthly):   {mandatory:>10,.2f} NIS")
+        print(f"  Mandatory Pension (annual):    {mandatory * 12:>10,.2f} NIS")
+        print()
+        print(f"  Keren Hishtalmut:")
+        print(f"    Tax deduction ceiling:       {SELF_HISHTALMUT_DEDUCT:>10,} NIS/year")
+        print(f"    Profit-exempt ceiling:       {SELF_HISHTALMUT_MAX:>10,} NIS/year")
+        print()
+        print("  NOTE: Consult a licensed pension advisor (yoetz pensioni)")
+        print("        for personalized recommendations.")
+        return
+
     breakdown = calculate_pension_contributions(args.salary, args.hishtalmut)
     print(format_breakdown(breakdown))
 
     if args.project:
+        retirement_age = 64 if args.female else 67
         print()
-        print(f"  --- Retirement Projection (age {args.age} -> 67) ---")
-        projection = project_retirement(args.salary, args.age)
+        print(f"  --- Retirement Projection (age {args.age} -> {retirement_age}) ---")
+        projection = project_retirement(args.salary, args.age, gender=gender)
         if "error" in projection:
             print(f"  {projection['error']}")
         else:
             print(f"  Monthly contribution:     {projection['monthly_contribution']:>10,.2f} NIS")
-            print(f"  Projected balance at 67:  {projection['projected_balance']:>10,.2f} NIS")
+            print(f"  Projected balance at {retirement_age}:  {projection['projected_balance']:>10,.2f} NIS")
             print(f"  Est. monthly pension:     {projection['estimated_monthly_pension']:>10,.2f} NIS")
             print(f"  Assumptions: {projection['assumptions']}")
 
