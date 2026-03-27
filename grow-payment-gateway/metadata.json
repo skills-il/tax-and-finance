@@ -40,6 +40,7 @@
     "github-copilot",
     "windsurf",
     "opencode",
-    "codex"
+    "codex",
+    "gemini-cli"
   ]
 }

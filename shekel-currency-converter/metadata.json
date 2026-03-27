@@ -31,6 +31,7 @@
     "cursor",
     "github-copilot",
     "windsurf",
-    "opencode"
+    "opencode",
+    "gemini-cli"
   ]
 }

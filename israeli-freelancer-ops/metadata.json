@@ -3,8 +3,24 @@
   "version": "1.0.1",
   "category": "tax-and-finance",
   "tags": {
-    "he": ["עצמאי", "מיסים", "מע״מ", "עוסק-מורשה", "עוסק-פטור", "חשבונאות", "ישראל"],
-    "en": ["freelancer", "tax", "vat", "osek-murshe", "osek-patur", "accounting", "israel"]
+    "he": [
+      "עצמאי",
+      "מיסים",
+      "מע״מ",
+      "עוסק-מורשה",
+      "עוסק-פטור",
+      "חשבונאות",
+      "ישראל"
+    ],
+    "en": [
+      "freelancer",
+      "tax",
+      "vat",
+      "osek-murshe",
+      "osek-patur",
+      "accounting",
+      "israel"
+    ]
   },
   "display_name": {
     "he": "ניהול תפעול לפרילנסר ישראלי",
@@ -14,9 +30,22 @@
     "he": "ניהול תפעול יומיומי לפרילנסרים ועוסקים מורשים בישראל - מעקב חשבוניות, גביית חשבונות שירות, תזכורות מועדי דיווח, וחבילה לרואה חשבון",
     "en": "Manage daily operations for Israeli freelancers (osek murshe, osek patur) - invoice aging, utility bill collection, tax deadline reminders, and accountant packages."
   },
-  "supported_agents": ["claude-code", "cursor", "github-copilot", "windsurf", "opencode", "codex", "openclaw", "antigravity"],
+  "supported_agents": [
+    "claude-code",
+    "cursor",
+    "github-copilot",
+    "windsurf",
+    "opencode",
+    "codex",
+    "openclaw",
+    "antigravity",
+    "gemini-cli"
+  ],
   "openclaw": {
-    "requires": { "bins": [], "env": [] },
+    "requires": {
+      "bins": [],
+      "env": []
+    },
     "emoji": "📋"
   }
 }
