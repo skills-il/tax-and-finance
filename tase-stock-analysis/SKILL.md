@@ -2,7 +2,6 @@
 name: tase-stock-analysis
 description: Analyze Israeli stocks on TASE (Tel Aviv Stock Exchange), track TA-35 and TA-125 indices, and evaluate dual-listed companies (TASE + NASDAQ). Use when user asks about Israeli stocks, "boorsa", "TA-35", "TASE", Maya filings, dual-listed companies, or Israeli capital gains tax on securities. Provides index composition, Maya (TASE disclosure) filings lookup, capital gains tax calculations (25% on securities), and Bank of Israel interest rate context for valuation. Do NOT use for general international stock analysis unrelated to Israel, or for cryptocurrency trading.
 license: MIT
-compatibility: Requires network access for TASE API and Maya filings. Works with Claude Code, Cursor, GitHub Copilot, Windsurf, OpenCode, Codex.
 ---
 
 # TASE Stock Analysis
@@ -32,7 +31,7 @@ For any stock analysis, layer in Israeli-specific factors:
 - **Bank of Israel interest rate:** Current BOI rate affects valuations and sector rotation
 - **Shekel/Dollar exchange rate:** Critical for dual-listed arbitrage and foreign exposure
 - **Sector composition:** Israeli market heavy in banking (Hapoalim, Leumi, Discount), pharma (Teva), tech
-- **Market hours:** TASE trades Sunday-Thursday, 09:59-17:14 (pre-open from 09:02)
+- **Market hours:** TASE trades Monday-Friday. Monday-Thursday 09:59-17:14, Friday shortened session 09:59-13:50. No trading on Saturday (Shabbat) or Jewish holidays
 
 ### Step 4: Calculate Capital Gains Tax (Mas Revach Hon)
 When the user has sold or plans to sell securities:
@@ -40,7 +39,7 @@ When the user has sold or plans to sell securities:
 | Scenario | Tax Rate | Notes |
 |----------|----------|-------|
 | Individual, non-substantial shareholder | 25% | Standard rate on net gain |
-| Substantial shareholder (over 10%) | 25% up to NIS 650,000, then 30% | Graduated rate structure |
+| Substantial shareholder (over 10%) | 30% | Flat rate on entire gain (Section 91(b)(2)) |
 | Shares eligible for inflationary adjustment (varies by acquisition date and asset type) | Exempt | Only real gain is taxed, consult current regulations |
 | Offsetting losses (kizuz hefsedim) | Allowed | Losses offset gains in same tax year |
 | Foreign resident | Treaty-dependent | Check double taxation treaty |
@@ -48,14 +47,14 @@ When the user has sold or plans to sell securities:
 Calculation:
 ```
 net_gain = sale_price - purchase_price - transaction_costs
-tax = net_gain * 0.25  # or graduated rate for substantial shareholder
+tax = net_gain * 0.25  # or 0.30 for substantial shareholder (10%+)
 ```
 
 ### Step 5: Evaluate Dual-Listed Opportunities
 For dual-listed companies (e.g., Check Point, CyberArk, NICE, Sapiens):
 1. Compare TASE price (in NIS) vs. US price (in USD) using current exchange rate
 2. Account for ADR ratio (some dual-listed have different share ratios)
-3. Factor in different trading hours (TASE closes before US opens)
+3. Factor in different trading hours (TASE and US markets now overlap on Monday-Friday, but Friday TASE closes early at 13:50)
 4. Note tax treaty implications -- Israeli residents pay Israeli capital gains tax regardless of which exchange
 
 ### Step 6: Review Maya Filings
@@ -140,7 +139,7 @@ Result: Summary of recent disclosures with material items highlighted
 - `references/capital-gains.md` -- Israeli capital gains tax rules for securities: rates, exemptions, loss offsetting, substantial shareholder rules, and foreign resident treaty considerations.
 
 ## Gotchas
-- The Tel Aviv Stock Exchange (TASE) trades Sunday through Thursday, not Monday through Friday. Agents may schedule market queries or expect data for Fridays and Saturdays, which are non-trading days.
+- Since January 2026, TASE trades Monday through Friday (previously Sunday-Thursday). Friday sessions are shortened (09:59-13:50). Agents trained on pre-2026 data may still assume Sunday-Thursday trading and schedule queries on Sundays, which are now non-trading days.
 - TASE ticker symbols follow a different format than US exchanges. Israeli stocks use numeric codes (e.g., 604611 for Teva) alongside short Hebrew names. Agents may try to use US-style letter tickers.
 - Israeli stock prices on TASE are quoted in agorot (1/100 of a shekel), not in shekels. Agents may display raw prices without dividing by 100, showing prices 100x too high.
 - Dual-listed Israeli companies (e.g., Teva, Check Point) trade on both TASE and NASDAQ with different prices due to exchange rate fluctuations. Agents may not reconcile the price difference.

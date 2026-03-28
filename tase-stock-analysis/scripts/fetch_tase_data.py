@@ -21,8 +21,8 @@ from urllib.request import urlopen, Request
 from urllib.error import URLError
 
 
-# TASE API base URL (public market data)
-TASE_API_BASE = "https://api.tase.co.il/api"
+# TASE API base URL (Data Hub gateway)
+TASE_API_BASE = "https://openapigw.tase.co.il/tase/prod"
 
 # Index identifiers
 INDICES = {
@@ -85,9 +85,9 @@ def fetch_index_data(index_key: str) -> dict:
     print(f"Fetching {index_info['name']} ({index_info['hebrew']}) data...")
     print(f"TASE API endpoint: {TASE_API_BASE}/index/{index_info['id']}/components")
     print()
-    print("Note: TASE API requires authentication token from tase.co.il.")
+    print("Note: TASE API requires OAuth2 authentication token.")
     print("For development, use the example data below or register at:")
-    print("  https://info.tase.co.il/heb/marketdata/pages/api.aspx")
+    print("  https://openapi.tase.co.il/tase/prod/")
     print()
 
     return {

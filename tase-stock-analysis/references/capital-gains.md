@@ -38,6 +38,6 @@
 - Filing deadline: April 30 of following year (extensions available)
 
 ## Common Exemptions
-- Shares in qualifying startups (Angels Law, Section 20) -- up to 100% exemption
+- Shares in qualifying startups (Angels Law, originally Section 20 of the 2011-2012 Economic Policy Law; renewed as a standalone temporary order in 2023, effective through December 2026) -- tax benefits include deductions and capital gains deferral on reinvestment
 - Shares received through employee stock options (Section 102) -- special rules apply
 - Government bonds (Igrot Chov Memshaltiyot) -- certain bonds have preferential rates
