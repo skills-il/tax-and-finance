@@ -67,6 +67,31 @@ Check relevant disclosures on the Maya system (TASE disclosure platform):
 
 Summarize key findings and flag any material items.
 
+### MCP Integration: Live TASE Data
+
+For live market data, use the **TASE MCP Server** ([skills-il/tase-mcp](https://github.com/skills-il/tase-mcp)).
+
+**Prerequisites:**
+- TASE Data Hub API key (register at https://openapi.tase.co.il/tase/prod/, some products are paid)
+- MCP server installed: `npx github:skills-il/tase-mcp`
+
+**Setup:**
+Set the environment variable `TASE_API_KEY` with your API key.
+
+**Available MCP Tools:**
+| Tool | What it does |
+|------|-------------|
+| `tase_list_securities` | List all traded securities |
+| `tase_get_security` | Get security details by ID |
+| `tase_get_security_eod` | End-of-day price data |
+| `tase_list_indices` | List all TASE indices |
+| `tase_get_index_eod` | End-of-day data for an index |
+| `tase_get_index_components` | Index composition with weights |
+| `tase_get_maya_announcements` | Maya company filings |
+| `tase_get_management_positions` | Board and management holdings |
+
+**Note:** The TASE API requires a paid subscription for some products. Without MCP, this skill provides analysis guidance using general market knowledge. With MCP, the agent fetches live market data directly from the official TASE Data Hub.
+
 ## Examples
 
 ### Example 1: TA-35 Index Overview
