@@ -1,6 +1,6 @@
 {
   "author": "skills-il",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "category": "tax-and-finance",
   "tags": {
     "he": [
@@ -27,8 +27,8 @@
     "en": "Israeli Freelancer Operations"
   },
   "display_description": {
-    "he": "ניהול תפעול יומיומי לפרילנסרים ועוסקים מורשים בישראל - מעקב חשבוניות, גביית חשבונות שירות, תזכורות מועדי דיווח, וחבילה לרואה חשבון",
-    "en": "Manage daily operations for Israeli freelancers (osek murshe, osek patur) - invoice aging, utility bill collection, tax deadline reminders, and accountant packages."
+    "he": "ניהול תפעול יומיומי לפרילנסרים ועוסקים מורשים בישראל - מעקב גיול חשבוניות עם תזכורות גבייה, איסוף חשבונות שירות באוטומציה, התראות מועדי מס (מע\"מ, ביטוח לאומי, מקדמות, דו\"ח שנתי), מעקב תקרת עוסק פטור, והכנת חבילה לרואה חשבון. מונע דיווחי מע\"מ שמתפספסים, חשבוניות שנשכחות, והעברות לא מסודרות. אל תשתמשו להכנת דו\"ח מע\"מ, הנפקת חשבוניות, או ניהול שכר.",
+    "en": "Manage daily operations for Israeli freelancers (osek murshe, osek patur) - invoice aging with collection reminders, utility bill collection via browser automation, tax deadline alerts (VAT, Bituach Leumi, mkdamot, annual report), osek patur threshold monitoring, and organized accountant packages. Prevents missed VAT filings, forgotten invoice follow-ups, and disorganized accountant handoffs. Do NOT use for VAT return preparation, e-invoice generation, or payroll management."
   },
   "supported_agents": [
     "claude-code",

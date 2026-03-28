@@ -83,6 +83,18 @@ The advance amount is set by the Tax Authority based on the previous year's inco
 
 Osek patur freelancers have fewer filing obligations:
 - **No VAT returns** — exempt from VAT filing
+- **Annual VAT declaration** — by January 31 of the following year, report previous year's turnover to the VAT office
 - **Bituach Leumi** — same quarterly schedule as above
-- **Annual tax report** — same deadline (March 31, with possible extensions)
-- **Threshold monitoring** — track revenue throughout the year; if the annual threshold (~120,000 NIS) is exceeded, must convert to osek murshe
+- **Annual tax report** — same deadline (March 31, with possible extensions). Esek za'ir (micro business) may be exempt from the annual report.
+- **Threshold monitoring** — track revenue throughout the year; if the annual threshold (122,833 NIS for 2026) is exceeded, must convert to osek murshe
+
+## Detailed VAT Reporting (From 2026)
+
+Starting January 2026, osek murshe businesses with annual turnover exceeding 500,000 NIS must file detailed VAT reports (doch meforat, report 874). This requirement:
+- Lists each invoice individually in the VAT report
+- Forces a switch from bi-monthly to monthly filing
+- Applies to the first reporting period of January 2026 (monthly) or January-February 2026 (bi-monthly, before the switch)
+
+## Israel Invoice Allocation Numbers (From 2026)
+
+Starting January 1, 2026, tax invoices (hashbonit mas) exceeding 10,000 NIS (before VAT) must include an allocation number (mispar haktza'a) from the Tax Authority. From June 2026, the threshold drops to 5,000 NIS. This is required for the recipient to deduct input VAT (mas tsumos).
