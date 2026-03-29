@@ -3,6 +3,7 @@ name: cardcom-payment-gateway
 description: Integrate Cardcom payment processing and Israeli invoice generation into applications -- covers Low Profile payments, tokenization, recurring billing, and automatic tax invoice/receipt creation per Israeli law. Use when user asks to accept payments via Cardcom, generate Israeli invoices with payments, set up "slikat ashrai" with hashbonit, handle recurring billing (hora'ot keva), or mentions "Cardcom", "CardCom API", "Low Profile", Israeli payment with invoicing, or needs combined payment + document generation. Supports REST API V11 and legacy endpoints. Do NOT use for Tranzila integration (use tranzila-payment-gateway), general accounting, or non-payment queries.
 license: MIT
 compatibility: Requires network access for Cardcom API calls. Works with Claude Code, Claude.ai, Cursor.
+version: 1.0.1
 ---
 
 # Cardcom Payment Gateway
@@ -13,7 +14,7 @@ Cardcom is an Israeli payment processor with a unique strength: integrated invoi
 
 This skill guides integration with Cardcom's REST API V11 for payments, tokenization, recurring billing, and document generation.
 
-**Official docs:** `https://cardcom.co.il/docs/api/` (Swagger/Redoc)
+**Official docs:** Available through Cardcom developer portal (contact dev@secure.cardcom.co.il for access)
 
 **Developer support:** `dev@secure.cardcom.co.il` or 03-9436100 (press 2)
 
