@@ -3,6 +3,7 @@ name: israeli-budget-planner
 description: Plan household and personal budgets with Israeli-specific costs, rates, and financial products. Use when user asks about budgeting in Israel, mortgage (mashkanta) calculations, arnona rates, cost of living, takciv, or monthly expense planning. Covers Bank of Israel prime rate, mashkanta tracks, arnona by city, Sal Briut costs, and Israeli household benchmarks.
 license: MIT
 compatibility: Works with Claude Code, Cursor, GitHub Copilot, Windsurf, OpenCode, Codex.
+version: 1.0.1
 ---
 
 # Israeli Budget Planner
@@ -10,8 +11,8 @@ compatibility: Works with Claude Code, Cursor, GitHub Copilot, Windsurf, OpenCod
 ## Key Financial Rates
 | Rate | Value (Reference) |
 |------|-------------------|
-| BOI Interest Rate | 4.50% (check boi.org.il) |
-| Prime Rate | BOI + 1.50% = ~6.00% |
+| BOI Interest Rate | 4.50% (rates change frequently, verify at boi.org.il) |
+| Prime Rate | BOI + 1.00% = ~5.50% |
 | VAT (Ma'am) | 18% |
 | Minimum Wage | Verify current 2026 rate with government sources |
 | Average Wage | ~12,500 NIS/month |
@@ -26,13 +27,13 @@ compatibility: Works with Claude Code, Cursor, GitHub Copilot, Windsurf, OpenCod
 
 BOI rules: Max LTV 75% first home, max 33.33% variable rate, max 33.33% CPI-linked.
 
-## Arnona by City (NIS/sqm/month, 2024 rates - verify current)
-- Tel Aviv: 85-130
-- Jerusalem: 55-80
-- Haifa: 45-65
-- Beer Sheva: 35-50
-- Raanana: 70-95
-- Herzliya: 75-100
+## Arnona by City (NIS/sqm/year, 2024 rates - verify current)
+- Tel Aviv: 1,020-1,560
+- Jerusalem: 660-960
+- Haifa: 540-780
+- Beer Sheva: 420-600
+- Raanana: 840-1,140
+- Herzliya: 900-1,200
 
 ## Monthly Budget Template (Couple + 1 Child)
 - Housing: 4,000-8,000 (25-35%)
@@ -86,8 +87,8 @@ Result: Mortgage comparison with monthly payments and total cost per track
 
 ### Error: "Tax calculation doesn't match pay slip"
 Cause: Tax credits (nekudot zikui) not properly applied
-Solution: Every Israeli resident gets 2.25 base credit points. Women get 0.5 additional. New immigrants get extra credits for 3.5 years. Each point is worth approximately 250 NIS/month (verify current 2026 rate). Apply credits before calculating tax.
+Solution: Every Israeli resident gets 2.25 base credit points. Women get 0.5 additional. New immigrants get extra credits for 3.5 years. Each point is worth approximately 250 NIS/month (verify current 2026 value with tax authorities). Apply credits before calculating tax.
 
 ### Error: "Arnona amount seems wrong"
 Cause: Arnona varies significantly by city, zone, and property classification
-Solution: Arnona is calculated per square meter and varies by municipality. Tel Aviv residential ranges from 45-120 NIS/sqm/year depending on zone. Check the specific municipality's rate table.
+Solution: Arnona is calculated per square meter annually and varies by municipality. Tel Aviv residential ranges from 85-130 NIS/sqm/year depending on zone. Check the specific municipality's rate table.
