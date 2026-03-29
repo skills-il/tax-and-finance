@@ -5,7 +5,7 @@
 | Environment | URL |
 |-------------|-----|
 | Sandbox | `https://sandbox.meshulam.co.il` |
-| Production | `https://api.meshulam.co.il` |
+| Production | `https://secure.meshulam.co.il` |
 
 ## Authentication
 

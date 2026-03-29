@@ -18,7 +18,7 @@ set -euo pipefail
 
 # Determine base URL
 if [ "${GROW_ENV:-sandbox}" = "production" ]; then
-  BASE_URL="https://api.meshulam.co.il"
+  BASE_URL="https://secure.meshulam.co.il"
 else
   BASE_URL="https://sandbox.meshulam.co.il"
 fi

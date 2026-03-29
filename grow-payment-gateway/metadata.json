@@ -1,6 +1,6 @@
 {
   "author": "skills-il",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "category": "tax-and-finance",
   "tags": {
     "he": [
@@ -31,7 +31,7 @@
     "en": "Grow Payment Gateway (Meshulam)"
   },
   "display_description": {
-    "he": "אינטגרציה עם Grow (משולם) לסליקת אשראי, דפי תשלום, טוקניזציה, חיובים חוזרים, דרישות תשלום, החזרים וחשבוניות -- מכסה את כל ה-API של Grow כולל Bit, Apple Pay, Google Pay ו-NFC",
+    "he": "אינטגרציה עם Grow (משולם) לסליקת אשראי באפליקציות ישראליות -- דפי תשלום (iframe/redirect/SDK), טוקניזציה, חיובים חוזרים, דרישות תשלום, החזרים, חשבוניות ו-webhooks דרך Light API של Grow. מכסה אשראי, Bit, Apple Pay ו-Google Pay. מונע טעויות אינטגרציה נפוצות כמו שליחת JSON במקום FormData, קריאות מצד הלקוח במקום השרת, ודילוג על approveTransaction. לא מיועד לאינטגרציה עם קארדקום (cardcom-payment-gateway), טרנזילה (tranzila-payment-gateway), או תזמור תשלומים בין שערים (israeli-payment-orchestrator).",
     "en": "Integrate Grow by Meshulam payment gateway into Israeli applications -- covers payment pages (iframe/redirect/SDK), tokenization, recurring billing, payment links, refunds, invoices, webhooks, and 3DS authentication via the Grow Light API. Use when user asks to accept payments via Grow or Meshulam, set up \"slikat ashrai\" with Grow, create payment links (drishat tashlum), handle recurring charges (hora'ot keva) via Grow tokens, process refunds or Bit cancellations, integrate Grow webhooks, or mentions \"Grow\", \"Meshulam\", \"grow-il\", \"meshulam.co.il\", Grow payment page, or Grow API. Prevents costly integration mistakes by guiding correct FormData request format, server-side-only restrictions, and the mandatory approveTransaction step that many developers miss. Do NOT use for Cardcom integration (use cardcom-payment-gateway), Tranzila integration (use tranzila-payment-gateway), general payment orchestration across multiple gateways (use israeli-payment-orchestrator), or non-payment queries."
   },
   "supported_agents": [

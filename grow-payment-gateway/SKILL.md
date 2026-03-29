@@ -2,8 +2,6 @@
 name: grow-payment-gateway
 description: Integrate Grow by Meshulam payment gateway into Israeli applications -- covers payment pages (iframe/redirect/SDK), tokenization, recurring billing, payment links, refunds, invoices, webhooks, and 3DS authentication via the Grow Light API. Use when user asks to accept payments via Grow or Meshulam, set up "slikat ashrai" with Grow, create payment links (drishat tashlum), handle recurring charges (hora'ot keva) via Grow tokens, process refunds or Bit cancellations, integrate Grow webhooks, or mentions "Grow", "Meshulam", "grow-il", "meshulam.co.il", Grow payment page, or Grow API. Prevents costly integration mistakes by guiding correct FormData request format, server-side-only restrictions, and the mandatory approveTransaction step that many developers miss. Do NOT use for Cardcom integration (use cardcom-payment-gateway), Tranzila integration (use tranzila-payment-gateway), general payment orchestration across multiple gateways (use israeli-payment-orchestrator), or non-payment queries.
 license: MIT
-compatibility: Requires network access for Grow API calls (grow.business). Works with Claude Code, Cursor, GitHub Copilot, Windsurf, OpenCode, Codex.
-version: 1.0.1
 ---
 
 # Grow Payment Gateway (Meshulam)
@@ -34,8 +32,8 @@ Grow uses three credentials provided during merchant onboarding:
 
 | Environment | Base URL |
 |-------------|----------|
-| Sandbox (testing) | `https://grow.business` |
-| Production | `https://grow.business` |
+| Sandbox (testing) | `https://sandbox.meshulam.co.il` |
+| Production | `https://secure.meshulam.co.il` |
 
 **Critical: Server-side only.** All API requests must originate from your server. Client-side (browser) requests are blocked by Grow.
 
@@ -107,7 +105,7 @@ This is the most common integration -- create a hosted payment page and redirect
 **Example request:**
 
 ```bash
-curl -X POST https://grow.business/api/light/server/1.0/createPaymentProcess \
+curl -X POST https://sandbox.meshulam.co.il/api/light/server/1.0/createPaymentProcess \
   -F "pageCode=YOUR_PAGE_CODE" \
   -F "userId=YOUR_USER_ID" \
   -F "sum=149.90" \
@@ -142,7 +140,7 @@ After receiving the server callback, you MUST call `approveTransaction` to confi
 **Endpoint:** `POST /api/light/server/1.0/approveTransaction`
 
 ```bash
-curl -X POST https://grow.business/api/light/server/1.0/approveTransaction \
+curl -X POST https://sandbox.meshulam.co.il/api/light/server/1.0/approveTransaction \
   -F "pageCode=YOUR_PAGE_CODE" \
   -F "transactionId=TRANSACTION_ID_FROM_CALLBACK"
 ```
@@ -225,7 +223,7 @@ Use a dedicated recurring page code configured in the Grow dashboard:
 Use `createTransactionWithToken` with automatic scheduling:
 
 ```bash
-curl -X POST https://grow.business/api/light/server/1.0/createTransactionWithToken \
+curl -X POST https://sandbox.meshulam.co.il/api/light/server/1.0/createTransactionWithToken \
   -F "pageCode=YOUR_PAGE_CODE" \
   -F "userId=YOUR_USER_ID" \
   -F "sum=99.00" \
@@ -243,7 +241,7 @@ You control when each charge fires:
 **First payment (save token):**
 
 ```bash
-curl -X POST https://grow.business/api/light/server/1.0/createTransactionWithToken \
+curl -X POST https://sandbox.meshulam.co.il/api/light/server/1.0/createTransactionWithToken \
   -F "pageCode=YOUR_PAGE_CODE" \
   -F "userId=YOUR_USER_ID" \
   -F "sum=99.00" \
@@ -256,7 +254,7 @@ The response includes `recurringDebitId` -- save this to link future charges.
 **Subsequent charges:**
 
 ```bash
-curl -X POST https://grow.business/api/light/server/1.0/createTransactionWithToken \
+curl -X POST https://sandbox.meshulam.co.il/api/light/server/1.0/createTransactionWithToken \
   -F "pageCode=YOUR_PAGE_CODE" \
   -F "userId=YOUR_USER_ID" \
   -F "sum=99.00" \
