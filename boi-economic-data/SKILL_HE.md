@@ -1,3 +1,11 @@
+---
+name: boi-economic-data
+description: "Fetch and analyze Bank of Israel (BOI) economic data: interest rates, CPI (madad hamchirim), exchange rates (sha'ar yatzig), and CBS statistics. Use when user asks about BOI interest rate, ribit Bank Israel, exchange rates, sha'ar yatzig, CPI index, madad, inflation data, or Israeli economic indicators. Foundation skill for Israeli financial analytics. Provides API access to data.boi.org.il and CBS data. Do NOT use for stock market data (use tase-stock-analysis instead) or for currency conversion (use shekel-currency-converter instead)."
+license: MIT
+compatibility: "Requires network access for Bank of Israel API. Works with Claude Code, Cursor, GitHub Copilot, Windsurf, OpenCode, Codex."
+version: 1.0.1
+---
+
 # נתונים כלכליים מבנק ישראל
 
 ## הוראות
@@ -8,23 +16,23 @@
 | סוג נתונים | אנגלית | מקור | תדירות עדכון |
 |-------------|---------|------|--------------|
 | ריבית בנק ישראל | Interest rate | הוועדה המוניטרית | ~6 פעמים בשנה |
-| שערי חליפין (שער יציג) | Exchange rates | בנק ישראל | יומי (מתפרסם ~15:30) |
-| מדד המחירים לצרכן | CPI | למ"ס (הלשכה המרכזית לסטטיסטיקה) | חודשי (15 לחודש העוקב) |
+| שערי חליפין (שער יציג) | Exchange rates | בנק ישראל | יומי (מתפרסם ~16:00) |
+| מדד המחירים לצרכן | CPI | למ"ס (הלשכה המרכזית לסטטיסטיקה) | חודשי (בערך ה-15 לחודש העוקב) |
 | ציפיות אינפלציה | Inflation expectations | בנק ישראל | חודשי |
 | תשואת אג"ח ממשלתי | Government bonds yield | בנק ישראל / בורסה | יומי |
 | אגרגטים מוניטריים | Monetary aggregates | בנק ישראל | חודשי |
 
 ### שלב 2: שליפת נתונים מ-API של בנק ישראל
-בנק ישראל מספק נתונים ציבוריים דרך REST API ב-`data.boi.org.il`:
+בנק ישראל מספק נתונים ציבוריים דרך REST API ב-`data.boi.org.il`. הערה: מבנה נקודות הקצה עשוי להשתנות, יש לאמת את נקודות הקצה הנוכחיות לפני השימוש.
 
 **שערי חליפין (שער יציג):**
 ```
-GET https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI/EXR/1.0?startperiod={date}&endperiod={date}
+GET https://data.boi.org.il/api/data/EXR?format=json&startperiod={date}&endperiod={date}
 ```
 
 **ריבית:**
 ```
-GET https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI/IR_INTEREST/1.0
+GET https://data.boi.org.il/api/data/IR_INTEREST?format=json
 ```
 
 השתמשו ב-`scripts/fetch_boi_rates.py` לשליפת נתונים פשוטה.
@@ -41,7 +49,7 @@ GET https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI/IR_INTERE
 | פרנק שוויצרי | CHF | מטבע מקלט |
 
 נקודות מרכזיות:
-- שער יציג מתפרסם פעם ביום בשעה ~15:30
+- שער יציג מתפרסם פעם ביום בשעה 16:00 בקירוב
 - משמש כשער רשמי לחישובי מס, חוזים ודיווח כספי
 - בסופי שבוע וחגים חל השער האחרון שפורסם
 - לשערים תוך-יומיים, השתמשו בפלטפורמות מט"ח (שער בנק ישראל אינדיקטיבי)
@@ -63,6 +71,8 @@ GET https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI/IR_INTERE
 - **התאמות שכירות:** חוזי שכירות רבים בישראל צמודים מדד
 - **מדרגות מס:** מתעדכנות שנתית לפי מדד
 - **מזונות ופסקי דין:** לעתים קרובות צמודים מדד
+
+הערה: לוח שנת פרסומים של למ"ס עשוי להשתנות. נתוני מדד מתפרסמים בדרך כלל בסביבות ה-15 לחודש העוקב, אך יש לאמת את לוחות הזמנים הנוכחיים של למ"ס.
 
 ### שלב 5: מעקב אחר החלטות ריבית
 הוועדה המוניטרית של בנק ישראל קובעת את הריבית:
@@ -89,7 +99,7 @@ GET https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI/IR_INTERE
 פעולות:
 1. הרצת `python scripts/fetch_boi_rates.py --currency USD`
 2. הצגת שער יציג עם תאריך
-3. הערה: שער מתפרסם ב-~15:30, לפני כן חל שער אתמול
+3. הערה: שער מתפרסם בשעה 16:00 בקירוב, לפני כן חל שער אתמול
 תוצאה: שער יציג USD/NIS נוכחי עם הקשר
 
 ### דוגמה 2: השפעת ריבית
@@ -121,7 +131,7 @@ GET https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI/IR_INTERE
 ## מלכודות נפוצות
 - סוכנים שולחים לעתים קרובות שאילתות לשערי חליפין בימי שישי-שבת, אבל השער היציג מתפרסם רק בימי עסקים (ראשון-חמישי). יש להשתמש בשער האחרון מיום חמישי לסופי שבוע.
 - ה-API של בנק ישראל בפורמט SDMX מחזיר XML כברירת מחדל, לא JSON. צריך לנתח XML או להוסיף את כותרת Accept הנכונה לפורמט JSON.
-- סוכנים עלולים לבלבל בין השער היציג של בנק ישראל (אינדיקטיבי, מתפרסם פעם ביום ב-15:30~) לבין שערי מט"ח בזמן אמת. השער היציג לא מתאים להחלטות מסחר תוך-יומיות.
+- סוכנים עלולים לבלבל בין השער היציג של בנק ישראל (אינדיקטיבי, מתפרסם פעם ביום בשעה 16:00 בקירוב) לבין שערי מט"ח בזמן אמת. השער היציג לא מתאים להחלטות מסחר תוך-יומיות.
 - נתוני מדד המחירים מהלמ"ס מגיעים בפיגור של כ-6 שבועות: מדד ינואר מתפרסם סביב 15 בפברואר. סוכנים עלולים לנסות למשוך מדד של החודש הנוכחי שעדיין לא קיים.
 
 ## פתרון בעיות
@@ -131,9 +141,9 @@ GET https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI/IR_INTERE
 פתרון: בנק ישראל מפרסם שערים בימי עסקים בלבד (ראשון-חמישי). ליום שישי/שבת, השתמשו בשער האחרון שפורסם (יום חמישי). השתמשו בשאילתת טווח תאריכים ב-API לקבלת השער הזמין האחרון.
 
 ### שגיאה: "CPI data not yet available"
-סיבה: הלמ"ס מפרסם מדד סביב ה-15 לחודש העוקב
+סיבה: הלמ"ס מפרסם מדד בסביבות ה-15 לחודש העוקב
 פתרון: אם מדד החודש הנוכחי אינו זמין, השתמשו במדד המפורסם האחרון. בדקו לוח שנת פרסומים של הלמ"ס לתאריכי פרסום מדויקים.
 
 ### שגיאה: "Exchange rate seems stale"
 סיבה: שימוש בשער יציג לפני שעת הפרסום היומית
-פתרון: שער יציג מתפרסם ב-~15:30 שעון ישראל. לפני כן, שער יום קודם הוא הרשמי. לשערים אינדיקטיביים תוך-יומיים, השתמשו בפידים של בנקים או מט"ח.
+פתרון: שער יציג מתפרסם בשעה 16:00 בקירוב בשעון ישראל. לפני כן, שער יום קודם הוא הרשמי. לשערים אינדיקטיביים תוך-יומיים, השתמשו בפידים של בנקים או מט"ח.

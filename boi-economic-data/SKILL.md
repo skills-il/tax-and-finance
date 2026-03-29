@@ -3,6 +3,7 @@ name: boi-economic-data
 description: "Fetch and analyze Bank of Israel (BOI) economic data: interest rates, CPI (madad hamchirim), exchange rates (sha'ar yatzig), and CBS statistics. Use when user asks about BOI interest rate, ribit Bank Israel, exchange rates, sha'ar yatzig, CPI index, madad, inflation data, or Israeli economic indicators. Foundation skill for Israeli financial analytics. Provides API access to data.boi.org.il and CBS data. Do NOT use for stock market data (use tase-stock-analysis instead) or for currency conversion (use shekel-currency-converter instead)."
 license: MIT
 compatibility: "Requires network access for Bank of Israel API. Works with Claude Code, Cursor, GitHub Copilot, Windsurf, OpenCode, Codex."
+version: 1.0.1
 ---
 
 # BOI Economic Data
@@ -15,23 +16,23 @@ Ask the user what economic data they need:
 | Data Type | Hebrew | Source | Update Frequency |
 |-----------|--------|--------|-----------------|
 | Interest rate | ריבית בנק ישראל | BOI Monetary Committee | Announced ~6 times/year |
-| Exchange rates | שערי חליפין (שער יציג) | BOI | Daily (published ~15:30) |
-| CPI (Consumer Price Index) | מדד המחירים לצרכן | CBS (Lishkat HaStatistika) | Monthly (15th of following month) |
+| Exchange rates | שערי חליפין (שער יציג) | BOI | Daily (published ~16:00) |
+| CPI (Consumer Price Index) | מדד המחירים לצרכן | CBS (Lishkat HaStatistika) | Monthly (around 15th of following month) |
 | Inflation expectations | ציפיות אינפלציה | BOI | Monthly |
 | Government bonds yield | תשואת אג"ח ממשלתי | BOI / TASE | Daily |
 | Monetary aggregates | אגרגטים מוניטריים | BOI | Monthly |
 
 ### Step 2: Fetch Data from BOI API
-The Bank of Israel provides public data via REST API at `data.boi.org.il`:
+The Bank of Israel provides public data via REST API at `data.boi.org.il`. Note: API endpoint structure may change, verify current endpoints before use.
 
 **Exchange Rates (Sha'ar Yatzig):**
 ```
-GET https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI/EXR/1.0?startperiod={date}&endperiod={date}
+GET https://data.boi.org.il/api/data/EXR?format=json&startperiod={date}&endperiod={date}
 ```
 
 **Interest Rate:**
 ```
-GET https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI/IR_INTEREST/1.0
+GET https://data.boi.org.il/api/data/IR_INTEREST?format=json
 ```
 
 Use `scripts/fetch_boi_rates.py` for simplified data fetching.
@@ -48,7 +49,7 @@ BOI publishes representative exchange rates (sha'ar yatzig) daily:
 | Swiss Franc | CHF | Safe haven |
 
 Key points:
-- Representative rate published once daily at ~15:30
+- Representative rate published once daily at approximately 16:00
 - Used as official rate for tax calculations, contracts, financial reporting
 - Weekend and holiday rates use last published rate
 - For intraday rates, use forex platforms (BOI rate is indicative)
@@ -70,6 +71,8 @@ CPI uses:
 - **Rent adjustments:** Many Israeli leases are CPI-linked (tzmud madad)
 - **Tax brackets:** Updated annually by CPI
 - **Alimony and legal judgments:** Often CPI-linked
+
+Note: CBS publication schedule may vary. CPI data is typically published around the 15th of the following month, but verify current CBS publication schedules.
 
 ### Step 5: Track Interest Rate Decisions
 BOI Monetary Committee sets the interest rate:
@@ -96,7 +99,7 @@ User says: "What is today's dollar-shekel exchange rate?"
 Actions:
 1. Run `python scripts/fetch_boi_rates.py --currency USD`
 2. Display representative rate (sha'ar yatzig) with date
-3. Note: Rate published at ~15:30, before that yesterday's rate applies
+3. Note: Rate published at approximately 16:00, before that yesterday's rate applies
 Result: Current USD/NIS representative rate with context
 
 ### Example 2: Interest Rate Impact
@@ -128,7 +131,7 @@ Result: Exact CPI adjustment with new rent calculation
 ## Gotchas
 - Agents often query BOI exchange rates for Friday or Saturday, but the representative rate (sha'ar yatzig) is only published on business days (Sunday-Thursday). Use the last available Thursday rate for weekends.
 - The BOI SDMX API returns XML by default, not JSON. Agents must either parse XML or add the correct Accept header for JSON format.
-- Agents may confuse the BOI representative rate (indicative, published once daily at ~15:30) with real-time forex rates. The BOI rate is not suitable for intraday trading decisions.
+- Agents may confuse the BOI representative rate (indicative, published once daily at approximately 16:00) with real-time forex rates. The BOI rate is not suitable for intraday trading decisions.
 - CPI data from CBS lags by about 6 weeks: January's CPI is published around February 15th. Agents may try to fetch current-month CPI that does not exist yet.
 
 ## Troubleshooting
@@ -143,4 +146,4 @@ Solution: If current month's CPI is not available, use the latest published inde
 
 ### Error: "Exchange rate seems stale"
 Cause: Using representative rate before daily publication time
-Solution: BOI representative rate is published at ~15:30 Israel time. Before that, the previous day's rate is the official rate. For intraday indicative rates, use bank or forex feeds.
+Solution: BOI representative rate is published at approximately 16:00 Israel time. Before that, the previous day's rate is the official rate. For intraday indicative rates, use bank or forex feeds.
