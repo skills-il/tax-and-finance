@@ -3,12 +3,13 @@ name: israeli-annual-reports
 description: Navigate and analyze Israeli corporate annual reports (dochot titkuftiim), financial filings, and regulatory disclosures. Use when user asks about Israeli annual reports, MAYA filings, IFRS financial statements, doch titkufti, dochot kaspiyim, or Companies Law reporting requirements. Covers TASE filing types, Israeli GAAP to IFRS transition, Hebrew financial terminology, and key financial statement analysis.
 license: MIT
 compatibility: Works with Claude Code, Cursor, GitHub Copilot, Windsurf, OpenCode, Codex.
+version: 1.0.1
 ---
 
 # Israeli Annual Reports
 
 ## Reporting Framework
-Israeli public companies adopted IFRS in 2008. Prior reports use Israeli GAAP. Banks follow BOI adaptations. Insurance companies follow IFRS 17, with implementation beginning January 1, 2023, though many jurisdictions including Israel experienced implementation challenges and extended transition periods as of 2026.
+Israeli public companies adopted IFRS in 2008. Prior reports use Israeli GAAP. Banks follow BOI adaptations. Insurance companies follow IFRS 17, which was implemented starting January 1, 2023. As of 2026, most Israeli insurance companies have successfully completed their IFRS 17 transition, though some continue to refine their implementation processes.
 
 ## Report Types and Deadlines
 | Report | Deadline | Content |
