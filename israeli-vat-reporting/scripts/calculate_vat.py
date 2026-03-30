@@ -17,7 +17,7 @@ from dataclasses import dataclass, field, asdict
 from typing import Optional
 
 
-VAT_RATE = 0.17  # 17% standard Israeli VAT rate (2025)
+VAT_RATE = 0.18  # 18% standard Israeli VAT rate (effective January 2025)
 
 # Non-deductible expense categories
 NON_DEDUCTIBLE = {"entertainment", "gifts", "fines"}

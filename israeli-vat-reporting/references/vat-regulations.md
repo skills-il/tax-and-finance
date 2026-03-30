@@ -1,8 +1,8 @@
 # Israeli VAT Regulations Summary
 
 ## VAT Rate
-- Standard rate: **17%** (effective since October 2015)
-- Previous rates: 18% (2012-2015), 17% (2010-2012), 16.5% (2009-2010)
+- Standard rate: **18%** (effective since January 1, 2025, per the 2025 Budget Law)
+- Previous rates: 17% (2015-2024), 18% (2012-2015), 17% (2010-2012), 16.5% (2009-2010)
 - Rate changes require Knesset legislation
 
 ## Registration Types

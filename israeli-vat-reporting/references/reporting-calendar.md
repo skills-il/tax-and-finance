@@ -1,7 +1,7 @@
 # Israeli VAT Reporting Calendar
 
 ## Monthly Reporters
-Businesses with annual turnover > 1.5M NIS and all companies (Ltd/chevra).
+Businesses with annual turnover > ~1,725,000 NIS and all companies (Ltd/chevra).
 
 | Period | Deadline |
 |--------|----------|
@@ -19,7 +19,14 @@ Businesses with annual turnover > 1.5M NIS and all companies (Ltd/chevra).
 | December | January 15 |
 
 ## Bi-Monthly Reporters
-Businesses with annual turnover < 1.5M NIS (osek morsheh).
+Businesses with annual turnover < ~1,725,000 NIS (osek morsheh).
+
+**Deadline types:**
+- Manual filing: 15th of the month after the period ends
+- Online filing (SHAAM portal): 19th of the month after the period ends (by 6:30 PM)
+- Detailed report filers: Payment extended to 23rd of the month after the period ends
+
+The deadlines below show the manual (15th) date. For online filing, add 4 days.
 
 | Period | Deadline |
 |--------|----------|
@@ -35,7 +42,7 @@ Osek Patur (exempt dealers) file an annual summary.
 - Deadline: March 31 of the following year
 
 ## Late Filing Penalties
-- 0.25% of net VAT per week of delay
+- NIS 239 per two-week period of delay (as of July 2024)
 - Linkage differentials (hatzamada) to CPI
 - Interest at Bank of Israel rate + 4%
 - Persistent late filers may face additional sanctions
