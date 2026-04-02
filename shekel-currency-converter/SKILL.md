@@ -92,6 +92,16 @@ Result: Provides the representative rate for the relevant date, noting it is the
 - `references/boi-api-guide.md` — Bank of Israel exchange rate API documentation including endpoints, XML response structure, update schedule (daily ~15:30 IST), and historical rate query parameters. Consult when troubleshooting API calls or understanding rate publication timing.
 - `references/currency-codes.md` — Supported currency codes with Hebrew names, typical NIS rate ranges, and unit values (important for JPY and other multi-unit currencies). Consult when parsing user currency requests or handling unit-based conversions.
 
+## Recommended MCP Servers
+
+For live exchange rate data, pair this skill with:
+
+| MCP Server | What it provides | Install |
+|------------|-----------------|---------|
+| **boi-exchange** | Official Bank of Israel daily representative rates (sha'ar yatzig) for 30+ currencies, historical rate series, rate change calculations, and direct currency conversion via BOI SDMX API. No API key required. | [Install boi-exchange](https://agentskills.co.il/en/mcps/boi-exchange) |
+
+When the `boi-exchange` MCP is available, use its tools for real-time conversions instead of the static reference tables above. The MCP provides the official representative rate (shaar yatzig) which is the legally binding rate for tax purposes.
+
 ## Gotchas
 - The official NIS currency code is ILS (ISO 4217), but Israelis colloquially say "shekel" or "shekalim". Agents may not recognize "NIS" as a valid currency code or confuse it with the pre-1985 "Old Shekel" (IS).
 - Bank of Israel exchange rates are published once daily at ~15:30. Agents may fetch rates before publication time and get yesterday's rate without indicating it is stale.

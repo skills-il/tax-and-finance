@@ -77,6 +77,20 @@ Result: Mortgage comparison with monthly payments and total cost per track
 ### References
 - `references/israeli-financial-rates.md` -- Current BOI interest rates, mortgage guidelines, arnona rates by city, cost of living benchmarks, and savings vehicle comparisons. Consult when calculating specific financial figures or comparing options.
 
+## Recommended MCP Servers
+
+For live financial data, pair this skill with:
+
+| MCP Server | What it provides | Install |
+|------------|-----------------|---------|
+| **boi-exchange** | Live Bank of Israel exchange rates and interest rate data | [Install](https://agentskills.co.il/en/mcps/boi-exchange) |
+| **israeli-cbs** | Consumer Price Index (CPI), housing indices, and economic statistics from the Central Bureau of Statistics | [Install](https://agentskills.co.il/en/mcps/israeli-cbs) |
+| **israel-statistics** | Additional CBS price indices and inflation-adjusted price calculations | [Install](https://agentskills.co.il/en/mcps/israel-statistics) |
+| **il-budget** | Israeli government budget data, procurement contracts, and support payment information | [Install](https://agentskills.co.il/en/mcps/il-budget) |
+| **budgetkey** | Comprehensive Israeli State Budget data (1997-2025) with full SQL query support | [Install](https://agentskills.co.il/en/mcps/budgetkey) |
+
+When these MCPs are available, use them for real-time rates and indices instead of the static reference tables above.
+
 ## Gotchas
 - Agents often use US mortgage conventions (30-year fixed rate) for Israeli mortgages. Israeli mashkantaot use a mix of tracks (maslulim): Prime-linked, CPI-linked fixed, CPI-linked variable, and fixed-rate unlinked, with typical terms of 15-30 years.
 - Bituach Leumi (National Insurance) deductions are mandatory for all Israeli workers and reduce take-home pay significantly. Agents may omit these from budget calculations, using gross salary as available income.
