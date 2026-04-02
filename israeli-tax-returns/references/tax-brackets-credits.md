@@ -1,20 +1,20 @@
 # Israeli Income Tax Brackets and Tax Credits Reference
 
-## Income Tax Brackets (2025, Frozen Through 2027)
+## Income Tax Brackets (2026)
 
-These brackets apply to active income (employment, self-employment, business income) for Israeli tax residents:
+These brackets apply to active income (employment, self-employment, business income) for Israeli tax residents. Brackets 3-5 were expanded by the Economic Efficiency Law 2026 (approved March 30, 2026, retroactive to January 1, 2026). Brackets 1-2 and 6 remain frozen at 2025 values.
 
 | Bracket | Annual Income Range (NIS) | Monthly Equivalent (NIS) | Marginal Rate |
 |---------|--------------------------|--------------------------|---------------|
 | 1 | 0 - 84,120 | 0 - 7,010 | 10% |
 | 2 | 84,121 - 120,720 | 7,011 - 10,060 | 14% |
-| 3 | 120,721 - 193,800 | 10,061 - 16,150 | 20% |
-| 4 | 193,801 - 269,280 | 16,151 - 22,440 | 31% |
-| 5 | 269,281 - 560,280 | 22,441 - 46,690 | 35% |
+| 3 | 120,721 - 228,000 | 10,061 - 19,000 | 20% |
+| 4 | 228,001 - 301,200 | 19,001 - 25,100 | 31% |
+| 5 | 301,201 - 560,280 | 25,101 - 46,690 | 35% |
 | 6 | 560,281 - 721,560 | 46,691 - 60,130 | 47% |
-| Surtax | Above 721,560 | Above 60,130 | 50% (47% + 3%) |
+| Surtax | Above 721,560 | Above 60,130 | See Surtax section |
 
-**Note:** Brackets are frozen (not inflation-adjusted) for 2025-2027. This effectively increases the real tax burden as wages rise with inflation.
+**Note:** Brackets 1-2 and 6 are frozen (not inflation-adjusted). This effectively increases the real tax burden as wages rise with inflation.
 
 ## Corporate Tax Rate
 
@@ -30,20 +30,19 @@ These brackets apply to active income (employment, self-employment, business inc
 | Listed securities (individual) | 25% | Standard rate |
 | Listed securities (substantial shareholder 10%+) | 30% | Higher rate for controlling stakes |
 | Real estate (Mas Shevach) | 25% | On real gain after inflation adjustment |
-| Real estate (pre-2014 portion, linear method) | 0% or historical rate | Being phased out 2026-2030 |
+| Real estate (pre-2014 portion, linear method) | 0% or historical rate | Phase-out proposed by Ministry of Finance in 2024; not yet enacted as of April 2026 |
 
-## Surtax (Mas Yesafim)
+## Surtax (Mas Yesafim), Two-Tier System from 2026
 
-- **Threshold:** Annual taxable income above 721,560 NIS (2025)
-- **Rate:** 3% on the excess above the threshold
-- **Applies to:** All income types (employment, business, passive, capital gains)
-- **Effective top rate:** 50% (47% marginal + 3% surtax)
+- **Threshold:** Annual taxable income above 721,560 NIS (2025-2027, frozen)
+- **Employment and active income:** 3% on the excess above the threshold (effective top rate: 50%)
+- **Capital and passive income (dividends, interest, rent, capital gains):** 5% on the excess above the threshold (3% base + 2% additional surcharge)
+- **From 2026:** Mas Shevach on investment properties is included in the surtax income calculation
 
 ## Nekudot Zikui (Tax Credit Points)
 
 ### Value Per Point
-- **2025:** 2,904 NIS per year (242 NIS per month)
-- The value is updated annually for inflation (but frozen 2025-2027)
+- **2025-2027:** 2,904 NIS per year (242 NIS per month), frozen (not inflation-adjusted)
 
 ### Base Entitlements
 
@@ -83,14 +82,14 @@ These brackets apply to active income (employment, self-employment, business inc
 
 | Track | Tax Rate | Key Rules |
 |-------|----------|-----------|
-| Exempt | 0% | Monthly rent below ceiling (~5,654 NIS/month in 2025). No expenses deductible. |
+| Exempt | 0% | Monthly rent below ceiling (5,654 NIS/month, 2025-2027, frozen, no longer indexed). No expenses deductible. |
 | Flat rate | 10% | On gross rent. No expenses deductible. Must pay by January 31 of following year. |
 | Marginal | 10%-50% | Progressive rates. Full expense deduction (depreciation, mortgage interest, maintenance). Report with Form 1301. |
 
 ## Real Estate Tax Exemptions
 
 ### Single Apartment Exemption (Ptur Dira Yechida)
-- Sale price below ~5,008,000 NIS (2025 ceiling)
+- Sale price below 5,008,000 NIS (2024-2027 ceiling, frozen)
 - Seller's only residential property in Israel
 - Owned for at least 18 months
 - Seller is an Israeli resident
@@ -100,7 +99,7 @@ These brackets apply to active income (employment, self-employment, business inc
 - For properties purchased before January 7, 2014
 - Only the post-2014 portion of gain is taxed at 25%
 - Pre-2014 portion may be exempt or at historical lower rate
-- Being phased out starting 2026, full abolition by 2030
+- Phase-out proposed by Ministry of Finance in 2024; not yet enacted into law as of April 2026
 
 ## Key Filing Deadlines
 

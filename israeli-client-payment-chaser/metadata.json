@@ -1,6 +1,6 @@
 {
   "author": "skills-il",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "category": "tax-and-finance",
   "tags": {
     "he": [
@@ -9,7 +9,9 @@
       "תשלום",
       "משפטי",
       "עצמאי",
-      "ישראל"
+      "ישראל",
+      "תביעות-קטנות",
+      "מכתב-דרישה"
     ],
     "en": [
       "debt-collection",
@@ -17,7 +19,9 @@
       "payment",
       "legal",
       "freelancer",
-      "israel"
+      "israel",
+      "small-claims",
+      "demand-letter"
     ]
   },
   "display_name": {
@@ -25,9 +29,10 @@
     "en": "Israeli Client Payment Chaser"
   },
   "display_description": {
-    "he": "מעקב גבייה וניהול חובות לקוחות לפרילנסרים ועסקים ישראליים — תזכורות מדורגות, מכתבי התחייבות, ותביעות קטנות",
+    "he": "מעקב גבייה וניהול חובות לקוחות לפרילנסרים ועסקים ישראליים. תזכורות מדורגות, מכתבי דרישה, ותביעות קטנות. השתמשו כשלקוח לא משלם חשבונית, צריך מכתב התחייבות, או רוצים לבדוק זכאות לתביעה קטנה. לא לשימוש עבור הפקת חשבוניות (השתמשו ב-israeli-e-invoice) או הנהלת חשבונות כללית.",
     "en": "Chase unpaid invoices and manage debt collection for Israeli freelancers and businesses. Use when user asks about \"unpaid invoices Israel\", \"payment reminder\", \"invoice aging\", \"debt collection freelancer\", \"michtav hitchayvut\", \"demand letter Hebrew\", \"tvi'ot ktanot\", or \"גביית חובות\". Covers graduated WhatsApp/email reminder escalation, Hebrew demand letter generation, Small Claims Court eligibility assessment, and Shabbat/holiday- aware scheduling. Do NOT use for invoice generation (use israeli-e-invoice) or general accounting."
   },
+  "supported_agents": ["claude-code", "cursor", "github-copilot", "windsurf", "opencode", "codex", "openclaw", "antigravity", "gemini-cli"],
   "openclaw": {
     "requires": {
       "bins": [],

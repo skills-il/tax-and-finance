@@ -31,18 +31,18 @@ Store tracking data in persistent memory for ongoing monitoring across sessions.
 ### Step 2: Configure Graduated Reminder Schedule
 Set up a Shabbat/chagim-aware reminder escalation sequence. **No reminders may be sent on Shabbat (Friday sunset to Saturday sunset) or Jewish holidays.** If a scheduled reminder falls on a blocked day, move it to the next business day (typically Sunday). See references/legal-escalation.md for major holiday dates.
 
-- **Day 30 — Friendly WhatsApp:**
+- **Day 30, Friendly WhatsApp:**
   "היי [שם], רציתי לבדוק לגבי חשבונית מספר [X] מ-[DATE] בסך [AMOUNT] ש"ח. אשמח לעדכון."
 
-- **Day 45 — Follow-up WhatsApp:**
+- **Day 45, Follow-up WhatsApp:**
   "שלום [שם], תזכורת נוספת לגבי חשבונית [X]. סה"כ לתשלום: [AMOUNT] ש"ח. פרטי העברה: [BANK DETAILS]."
 
-- **Day 60 — Formal email** with invoice copy attached and a clear payment deadline.
+- **Day 60, Formal email** with invoice copy attached and a clear payment deadline.
 
-- **Day 75 — Warning of potential legal steps:**
+- **Day 75, Warning of potential legal steps:**
   "שלום [שם], למרות פניותינו הקודמות, חשבונית [X] טרם שולמה. ללא תשלום תוך 14 יום, ניאלץ לשקול צעדים נוספים."
 
-- **Day 90+ — Escalation alert:** Evaluate legal options (see Step 5). Generate formal demand letter (see Step 3).
+- **Day 90+, Escalation alert:** Evaluate legal options (see Step 5). Generate formal demand letter (see Step 3).
 
 See references/reminder-templates.md for complete, customizable templates at each stage.
 
@@ -56,11 +56,13 @@ Generate a formal Hebrew demand letter at the 60 or 90 day mark. The letter must
 5. **Payment deadline:** Typically 14 days from letter date
 6. **Warning of legal action:** Clear statement that failure to pay will result in legal proceedings
 
-**Interest calculation:** As per the Adjudication of Interest and Linkage Law (חוק פסיקת ריבית והצמדה), interest on business debts accrues from the invoice due date. The rate is the Bank of Israel rate plus a margin. Verify the current rate at boi.org.il.
+**Interest calculation:** As per the Adjudication of Interest and Linkage Law (חוק פסיקת ריבית והצמדה), interest on business debts accrues from the invoice due date. The rate is the Bank of Israel rate plus a margin. Verify the current rate at boi.org.il. Current Bank of Israel rate: 4.00% (March 2026).
+
+**Amendment 9 interest reform (2025):** The 2025 reform split late payment charges into "interest" (ribit) and "late payment fees" (dmei pigurim) and eliminated compound interest on enforcement debts. When calculating interest for demand letters, use the simple interest method per the reformed law.
 
 **Delivery options:**
-- Registered mail (doar rashum / דואר רשום) — provides legal proof of sending. Keep the postal receipt.
-- Email with read receipt — supplementary, not a replacement for registered mail for legal purposes.
+- Registered mail (doar rashum / דואר רשום): provides legal proof of sending. Keep the postal receipt.
+- Email with read receipt: supplementary, not a replacement for registered mail for legal purposes.
 
 See references/legal-escalation.md for full demand letter requirements and format.
 
@@ -76,7 +78,7 @@ Record and follow up on payment commitments:
 ### Step 5: Evaluate Small Claims Court (Tvi'ot Ktanot) Eligibility
 When a debt reaches 90+ days and collection efforts have failed, assess Small Claims Court eligibility:
 
-**Threshold:** Up to 38,900 NIS (verify current amount at the courts website — updated periodically).
+**Threshold:** Up to 39,900 NIS (2026, verify current amount at the courts website, updated periodically).
 
 **Eligibility checklist:**
 - Was proper written notice (demand letter) sent to the debtor?
@@ -86,7 +88,7 @@ When a debt reaches 90+ days and collection efforts have failed, assess Small Cl
 
 **Filing guide:**
 - **Required documents:** Original invoice, delivery/work confirmation, copies of all demand letters sent, communication history log, postal receipts for registered mail
-- **Filing fee:** Typically 1% of the claim amount, minimum approximately 80 NIS
+- **Filing fee:** 1% of the claim amount, minimum 50 NIS (2026)
 - **Court location:** Determined by the debtor's address jurisdiction (beit mishpat l'tvi'ot ktanot)
 - **Timeline:** Filing to hearing date is typically 30-60 days
 - **Representation:** In Small Claims Court, parties represent themselves (no lawyers allowed)
@@ -141,7 +143,7 @@ Actions:
 2. Note: promise was made on [date], 14 days overdue on promise
 3. Draft escalated WhatsApp message referencing the broken promise
 4. Prepare formal demand letter (michtav hitchayvut)
-5. Assess Small Claims eligibility (invoice: 22,000 NIS — under threshold)
+5. Assess Small Claims eligibility (invoice: 22,000 NIS, under threshold)
 6. Present escalation options to user
 Result: Escalated follow-up sent. Demand letter ready for registered mail. Small Claims filing guide prepared with required documents and filing steps.
 
@@ -158,14 +160,15 @@ Result: Comprehensive aging report with client risk scores. Cash flow forecast s
 ## Bundled Resources
 
 ### References
-- `references/legal-escalation.md` — Israeli legal framework for debt collection: demand letter (michtav hitchayvut) requirements, Small Claims Court (tvi'ot ktanot) thresholds and filing process, interest calculation rules, and registered mail documentation. Consult when preparing legal escalation in Steps 3 and 5.
-- `references/reminder-templates.md` — WhatsApp and email reminder templates in Hebrew for each escalation stage (friendly, follow-up, formal, pre-legal). Templates are customizable with placeholder fields. Consult when configuring reminder messages in Step 2.
+- `references/legal-escalation.md` - Israeli legal framework for debt collection: demand letter (michtav hitchayvut) requirements, Small Claims Court (tvi'ot ktanot) thresholds and filing process, interest calculation rules, and registered mail documentation. Consult when preparing legal escalation in Steps 3 and 5.
+- `references/reminder-templates.md` - WhatsApp and email reminder templates in Hebrew for each escalation stage (friendly, follow-up, formal, pre-legal). Templates are customizable with placeholder fields. Consult when configuring reminder messages in Step 2.
 
 ## Gotchas
 - Israeli payment terms (shotef) work differently than net-30/60/90. "Shotef + 30" means end of current month plus 30 days, not 30 days from invoice date. Agents may miscalculate due dates.
-- Formal debt collection (hotza'a lapo'al) in Israel requires a court order or an unpaid check. Agents may suggest filing a claim without the proper prerequisites.
+- Formal debt collection (hotza'a lapo'al) in Israel requires a court judgment, bounced check with bank Notice of Dishonor, promissory note, or other enforceable instrument. Agents may suggest filing a claim without the proper prerequisites.
 - Interest on late payments in Israel is regulated by the Late Payment Law (Chok Ichurei Tashlumim). The statutory interest rate changes periodically. Agents may use a generic or outdated rate.
 - Payment reminder communications in Israel must be in Hebrew for Hebrew-speaking clients. Agents may generate English-only reminders that lack legal standing in Israeli small claims court.
+- Statute of limitations (hithayyashnut): commercial debts have a 3-year limitation period; general civil debts have a 7-year period. This is critical for the 90+ day escalation guidance. If a debt is approaching the limitation deadline, escalation to legal action must be prioritized immediately.
 
 ## Troubleshooting
 
@@ -174,12 +177,12 @@ Cause: Schedule not properly configured for Jewish holidays or Shabbat times.
 Solution: Verify Shabbat/holiday calendar is loaded. Shabbat starts Friday at sunset (varies by season) and ends Saturday after nightfall. Check references/legal-escalation.md for major holiday dates. Reschedule any blocked reminders to the next business day (typically Sunday).
 
 ### Error: "Small Claims threshold exceeded"
-Cause: Invoice amount exceeds the Small Claims Court maximum (currently 38,900 NIS).
+Cause: Invoice amount exceeds the Small Claims Court maximum (currently 39,900 NIS).
 Solution: For amounts above the threshold, the claim must go to Magistrate Court (Beit Mishpat Shalom) which requires legal representation. Recommend the user consult a lawyer. For multiple invoices to the same debtor, consider whether they can be combined or must be filed separately.
 
 ### Error: "Demand letter delivery not confirmed"
 Cause: Registered mail (doar rashum) was returned or not collected by debtor.
-Solution: Registered mail has legal standing even if not collected — keep the postal receipt as proof of sending. If the debtor's address is wrong, attempt to verify through the Population Authority (Misrad HaPnim). Consider alternative delivery methods recognized by Israeli courts.
+Solution: Registered mail has legal standing even if not collected. Keep the postal receipt as proof of sending. If the debtor's address is wrong, attempt to verify through the Population Authority (Misrad HaPnim). Consider alternative delivery methods recognized by Israeli courts.
 
 ### Error: "Interest calculation disputed"
 Cause: Applied incorrect interest rate or calculation method.

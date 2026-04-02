@@ -56,7 +56,7 @@
 ### Mas Shevach Declaration - Real Estate Capital Gains (הצהרת מס שבח)
 - **Who files:** Anyone selling real estate in Israel
 - **Deadline:** 30 days from sale (40 days if requesting exemption)
-- **Filed with:** Israel Land Authority / Real Estate Taxation offices (not SHAAM)
+- **Filed with:** Reshut HaMisim (Israel Tax Authority) via the misim.gov.il portal or real estate taxation offices (Misrad Misui Mekarkein)
 - **Tax rate:** 25% on real gain (with inflation adjustment)
 - **Key exemptions:** Single apartment exemption (ptur dira yechida), linear method for pre-2014 purchases
 

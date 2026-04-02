@@ -3,7 +3,7 @@ name: israeli-tax-returns
 description: Prepare and file Israeli tax returns with Reshut HaMisim. Covers Form 1301 (individual), Form 1214 (corporate), Form 126 (employer salary), Form 856 (supplier payments), Form 6111 (financial statements), mikdamot (advance payments), Mas Shevach (real estate capital gains), and securities capital gains (Forms 1322/1325). Use when user asks about "doch shnati", "tax return Israel", "Form 1301", "Form 1214", "mas hachnasa", "mikdamot", "mas shevach declaration", "capital gains report", "nekudot zikui", "mas yesafim", or "דוח שנתי". Guides income classification, deductions, tax credits, surtax, deadlines, and SHAAM submission. Do NOT use for VAT reporting (use israeli-vat-reporting), withholding tax (use israeli-tax-withholding), crypto tax (use israeli-crypto-tax-reporter), payroll (use israeli-payroll-calculator), or invoicing (use israeli-e-invoice).
 license: MIT
 allowed-tools: Bash(python:*) WebFetch
-compatibility: Works with Claude Code, OpenClaw, Cursor, Windsurf, Codex, GitHub Copilot.
+compatibility: Works with Claude Code, OpenClaw, Cursor, Windsurf, Codex, GitHub Copilot, opencode, antigravity.
 ---
 
 # Israeli Tax Returns
@@ -69,13 +69,13 @@ Israeli law offers three options for taxing residential rental income:
 
 | Track | Rate | Conditions |
 |-------|------|------------|
-| Exempt | 0% | Monthly rent below the exempt ceiling (approximately 5,654 NIS/month in 2025, adjusted annually) |
+| Exempt | 0% | Monthly rent below the exempt ceiling (5,654 NIS/month, 2025-2027, frozen, no longer indexed) |
 | Flat rate | 10% | On gross rent, no deductions allowed. Payment by January 31 of following year |
 | Marginal | Progressive rates (10%-50%) | Full deduction of expenses (depreciation, mortgage interest, maintenance). Filed with Form 1301 |
 
 ### Step 3: Nekudot Zikui (Tax Credit Points) Calculation
 
-Each nekudot zikui point reduces the annual tax liability by 2,904 NIS (2025 value, approximately 242 NIS/month). Calculate the taxpayer's total points:
+Each nekudot zikui point reduces the annual tax liability by 2,904 NIS (2025-2027, frozen, approximately 242 NIS/month). Calculate the taxpayer's total points:
 
 | Category | Points | Notes |
 |----------|--------|-------|
@@ -99,17 +99,22 @@ A married woman (2.75 points) with two children aged 3 and 7 (2.5 + 1.0 = 3.5 po
 
 ### Step 4: Income Tax Brackets and Surtax
 
-Apply the progressive income tax rates to taxable income. Brackets for 2025 (frozen through 2027, not adjusted for inflation):
+Apply the progressive income tax rates to taxable income. Brackets for 2026 (brackets 1-2 and 6 frozen at 2025 values; brackets 3-5 expanded by the Economic Efficiency Law 2026, approved March 30, 2026, retroactive to January 1, 2026):
 
 | Bracket | Annual Income Range (NIS) | Rate |
 |---------|--------------------------|------|
 | 1 | 0 - 84,120 | 10% |
 | 2 | 84,121 - 120,720 | 14% |
-| 3 | 120,721 - 193,800 | 20% |
-| 4 | 193,801 - 269,280 | 31% |
-| 5 | 269,281 - 560,280 | 35% |
+| 3 | 120,721 - 228,000 | 20% |
+| 4 | 228,001 - 301,200 | 31% |
+| 5 | 301,201 - 560,280 | 35% |
 | 6 | 560,281 - 721,560 | 47% |
-| 7 (surtax) | Above 721,560 | 50% (47% + 3% mas yesafim) |
+| Surtax | Above 721,560 | See below |
+
+**Surtax (mas yesafim), two-tier system from 2026:**
+- Employment and active income: 3% above 721,560 NIS (effective top rate: 50%)
+- Capital and passive income (dividends, interest, rent, capital gains): 5% above 721,560 NIS (3% base + 2% additional surcharge)
+- From 2026, Mas Shevach on investment properties is included in the surtax income calculation
 
 **Corporate tax rate:** 23% flat rate on taxable profits for companies (Chevra).
 
@@ -181,7 +186,7 @@ Deadline: April 30 of the following year. Required for payments to freelancers, 
 ### Step 7: Capital Gains Reports
 
 **Real Estate Capital Gains (Mas Shevach):**
-When selling real property in Israel, the seller must file a Mas Shevach declaration with the Israel Land Authority (Misrad HaMishpatim, previously Minhal Mekarkei Yisrael) within:
+When selling real property in Israel, the seller must file a Mas Shevach declaration with Reshut HaMisim (Israel Tax Authority) via the misim.gov.il portal or real estate taxation offices (Misrad Misui Mekarkein) within:
 - 30 days from the sale date (standard)
 - 40 days from the sale date (if requesting an exemption)
 
@@ -200,12 +205,12 @@ x 25% tax rate
 Full exemption from Mas Shevach if ALL conditions are met:
 - This is the seller's only residential property in Israel
 - Owned for at least 18 months
-- Sale price is below the exemption ceiling (approximately 5,008,000 NIS in 2025)
+- Sale price is below the exemption ceiling (5,008,000 NIS, 2024-2027, frozen)
 - Seller is an Israeli resident
 - Partial exemption applies proportionally above the ceiling
 
 **Linear method (shita liniarit):**
-For properties purchased before January 7, 2014, only the portion of gain attributable to the period after that date is taxed at 25%. The pre-2014 portion may be exempt or taxed at a lower historical rate. This benefit is being phased out gradually starting 2026, with full abolition planned by 2030.
+For properties purchased before January 7, 2014, only the portion of gain attributable to the period after that date is taxed at 25%. The pre-2014 portion may be exempt or taxed at a lower historical rate. A phase-out of this benefit was proposed by the Ministry of Finance in 2024; not yet enacted into law as of April 2026.
 
 **Securities Capital Gains (Forms 1322/1325):**
 Capital gains from selling stocks, bonds, mutual funds, and other securities:
@@ -339,7 +344,7 @@ Actions:
 - `references/tax-brackets-credits.md` - Current income tax brackets (2025, frozen through 2027), nekudot zikui point values and eligibility categories, surtax thresholds, and corporate tax rates. Consult for any income tax calculation or when verifying tax credit point entitlements.
 
 ## Gotchas
-- Israeli annual tax returns (doch shnati) are due by April 30 for salaried employees and July 31 for self-employed. Agents may use the US April 15 deadline.
+- Israeli annual tax returns (doch shnati) have a standard deadline of April 30 for all filers, with May 31 for electronic/double-entry filing. Self-employed with CPA representation get extensions via the CPA association agreement with the Tax Authority (typically September 30). Agents may use the US April 15 deadline.
 - Israeli tax returns use Form 1301 for individuals, not 1040. Agents may reference US form numbers and fields that do not exist in the Israeli system.
 - Capital gains in Israel are reported on a separate schedule and may have different rates (25% for financial assets, up to 50% for real estate depending on holding period and property count). Agents may apply a single capital gains rate.
 - Tax credit points (neku'dot zikui) must be claimed annually and vary by personal status (marital, children, new oleh, discharged soldier). Agents may use a default value without checking eligibility.
@@ -352,7 +357,7 @@ Solution: Determine the entity type first. Individuals and sole proprietors file
 
 ### Error: "Tax calculation does not match expected amount"
 Cause: Common mistakes include applying wrong bracket thresholds, forgetting the surtax (mas yesafim) on income above 721,560 NIS, or miscounting nekudot zikui.
-Solution: Verify the income is being split across brackets correctly (each bracket applies only to the income within its range). Verify all applicable nekudot zikui are included. Check whether the 3% surtax applies. Cross-reference with references/tax-brackets-credits.md for current values.
+Solution: Verify the income is being split across brackets correctly (each bracket applies only to the income within its range). Verify all applicable nekudot zikui are included. Check whether the surtax applies (3% on active income, 5% on passive/capital income above 721,560 NIS). Cross-reference with references/tax-brackets-credits.md for current values.
 
 ### Error: "Mas Shevach deadline missed"
 Cause: The 30-day (or 40-day) filing deadline from the sale date has passed.

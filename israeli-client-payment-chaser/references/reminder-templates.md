@@ -1,14 +1,14 @@
 # Payment Reminder Templates (Hebrew)
 
 Customizable templates for each escalation stage. Replace placeholders with actual values:
-- `[NAME]` — client name (שם הלקוח)
-- `[INVOICE_NUMBER]` — invoice number (מספר חשבונית)
-- `[AMOUNT]` — amount in NIS (סכום בש"ח)
-- `[DATE]` — invoice date (תאריך חשבונית)
-- `[DUE_DATE]` — payment due date (תאריך פירעון)
-- `[BANK_DETAILS]` — bank transfer details (פרטי העברה בנקאית)
-- `[BUSINESS_NAME]` — creditor business name (שם העסק)
-- `[DEADLINE]` — payment deadline in demand letter (מועד אחרון לתשלום)
+- `[NAME]`: client name (שם הלקוח)
+- `[INVOICE_NUMBER]`: invoice number (מספר חשבונית)
+- `[AMOUNT]`: amount in NIS (סכום בש"ח)
+- `[DATE]`: invoice date (תאריך חשבונית)
+- `[DUE_DATE]`: payment due date (תאריך פירעון)
+- `[BANK_DETAILS]`: bank transfer details (פרטי העברה בנקאית)
+- `[BUSINESS_NAME]`: creditor business name (שם העסק)
+- `[DEADLINE]`: payment deadline in demand letter (מועד אחרון לתשלום)
 
 ## Stage 1: Friendly WhatsApp (Day 30)
 
@@ -37,7 +37,7 @@ Customizable templates for each escalation stage. Replace placeholders with actu
 
 ## Stage 3: Formal Email (Day 60)
 
-**Subject:** דרישת תשלום — חשבונית מספר [INVOICE_NUMBER]
+**Subject:** דרישת תשלום, חשבונית מספר [INVOICE_NUMBER]
 
 ```
 לכבוד [NAME],
@@ -62,7 +62,7 @@ Customizable templates for each escalation stage. Replace placeholders with actu
 
 ## Stage 4: Warning of Legal Steps (Day 75)
 
-**Subject:** התראה לפני נקיטת צעדים — חשבונית מספר [INVOICE_NUMBER]
+**Subject:** התראה לפני נקיטת צעדים, חשבונית מספר [INVOICE_NUMBER]
 
 ```
 לכבוד [NAME],
@@ -88,7 +88,7 @@ Customizable templates for each escalation stage. Replace placeholders with actu
 
 ## Stage 5: Final Notice / Demand Letter Cover (Day 90+)
 
-**Subject:** מכתב דרישה סופי — חשבונית מספר [INVOICE_NUMBER]
+**Subject:** מכתב דרישה סופי, חשבונית מספר [INVOICE_NUMBER]
 
 ```
 לכבוד [NAME],
@@ -118,7 +118,7 @@ Customizable templates for each escalation stage. Replace placeholders with actu
 
 ## Usage Notes
 
-- All templates should be reviewed before sending — adjust tone and details as needed
+- All templates should be reviewed before sending. Adjust tone and details as needed
 - For WhatsApp messages (Stages 1-2), keep the tone professional but friendly
 - For email messages (Stages 3-5), use formal business Hebrew
 - Always verify the recipient's name and invoice details before sending
