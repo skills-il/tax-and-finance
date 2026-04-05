@@ -4,6 +4,7 @@ description: Calculate cryptocurrency capital gains tax per Israeli Tax Authorit
 license: MIT
 allowed-tools: Bash(python:*) Read Edit Write WebFetch
 compatibility: Requires Python 3.8+ for calculator script
+version: 1.0.1
 ---
 
 # Israeli Crypto Tax Reporter
@@ -23,7 +24,7 @@ Before performing any calculations, ensure you understand the key regulatory pri
 **Tax rates:**
 - **Individuals**: 25% capital gains tax on profits. If the seller is a "significant shareholder" (baal meniayot mahuti) of a crypto project, the rate is 30%.
 - **Business/traders**: If crypto activity constitutes a business (esek), gains are taxed as ordinary income at marginal rates (up to 50%). The classification depends on frequency, volume, and whether the taxpayer holds crypto as inventory vs. investment.
-- **Companies**: Standard corporate tax rate (23%) applies to capital gains.
+- **Companies**: Standard corporate tax rate (25%) applies to capital gains.
 - **Surtax (mas yesafim)**: For individuals with annual income exceeding the threshold (which is adjusted annually for CPI), an additional 3% surtax applies to the excess. Thresholds are subject to annual CPI adjustments and should be verified with current Israeli Tax Authority publications.
 
 **Cost basis method:**
