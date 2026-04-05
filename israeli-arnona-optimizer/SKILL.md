@@ -4,6 +4,7 @@ description: Calculate municipal property tax (arnona) for Israeli properties, c
 license: MIT
 allowed-tools: Bash(python:*) Read Edit Write WebFetch
 compatibility: Requires Python 3.10+ for calculator script
+version: 1.0.1
 ---
 
 # Israeli Arnona Optimizer
@@ -31,7 +32,7 @@ python scripts/arnona-calculator.py --municipality "tel-aviv" --area 80 --zone A
 The calculator applies the correct rate per sqm based on the municipality's published rate tables. Key rate structures:
 
 - **Tel Aviv-Yafo**: Rates range from approximately 75 to 130 NIS/sqm/year for residential depending on zone (zones 1-4). Commercial rates are 2-4x higher.
-- **Jerusalem**: Rates range from approximately 55 to 95 NIS/sqm/year for residential. Divided into zones alef through heh.
+- **Jerusalem**: Rates range from approximately 55 to 95 NIS/sqm/year for residential. Divided into zones 1-5.
 - **Haifa**: Rates range from approximately 50 to 90 NIS/sqm/year for residential. Lower overall compared to Tel Aviv.
 - **Beer Sheva**: Rates range from approximately 35 to 60 NIS/sqm/year for residential. Among the lowest for major cities.
 
@@ -82,7 +83,7 @@ If the user believes their arnona assessment is incorrect, help them draft an ap
 5. **Empty/vacant property**: The property has been vacant for an extended period (some municipalities offer partial exemptions for vacant properties, typically up to 6 months).
 
 **Appeal process:**
-- File the appeal (hasaga) within 90 days of receiving the arnona bill.
+- File the appeal (hasaga) within 120 days of receiving the arnona bill.
 - The arnona manager (menahel ha-arnona) must respond within 60 days.
 - If dissatisfied with the manager's decision, appeal to the arnona appeals committee (vaada le-erurim) within 30 days.
 - Further appeals go to the Administrative Court (Beit Mishpat le-Inyanim Minhaliyim).
@@ -151,7 +152,7 @@ Actions:
 4. Include instructions for obtaining a professional surveyor measurement
 5. Provide the Haifa arnona committee address and filing deadline
 
-Result: The agent drafts a formal appeal letter in Hebrew addressed to the Haifa arnona manager (menahel arnona, iriyat Haifa), stating the discrepancy between the recorded area (95 sqm) and actual area (82 sqm), referencing the relevant regulation, requesting a re-measurement by a municipal surveyor, and asking for retroactive correction and refund. The user is advised to attach a private surveyor's measurement report and send via registered mail within 90 days of the bill date.
+Result: The agent drafts a formal appeal letter in Hebrew addressed to the Haifa arnona manager (menahel arnona, iriyat Haifa), stating the discrepancy between the recorded area (95 sqm) and actual area (82 sqm), referencing the relevant regulation, requesting a re-measurement by a municipal surveyor, and asking for retroactive correction and refund. The user is advised to attach a private surveyor's measurement report and send via registered mail within 120 days of the bill date.
 
 ## Bundled Resources
 
@@ -166,7 +167,7 @@ Result: The agent drafts a formal appeal letter in Hebrew addressed to the Haifa
 - Arnona rates vary dramatically between municipalities. Agents may use Tel Aviv rates for Haifa properties or vice versa. Always verify rates against the specific municipality (iriya or mo'atza).
 - Arnona discounts (hanacha) have strict eligibility windows and require annual renewal. Agents may suggest discounts the user no longer qualifies for or that have expired.
 - Property classification (residential vs. commercial) significantly affects arnona rates. Agents may misclassify home offices, which in Israel are usually still taxed at residential rates unless formally rezoned.
-- Arnona appeal deadlines are typically 90 days from the annual bill date. Agents may draft appeals after the deadline has passed, making them void.
+- Arnona appeal deadlines are typically 120 days from the annual bill date. Agents may draft appeals after the deadline has passed, making them void.
 
 ## Troubleshooting
 
@@ -179,9 +180,9 @@ Cause: The discount type specified does not match one of the supported discount 
 Solution: Run `python scripts/arnona-calculator.py --list-discounts` to see all supported discount categories. Common mistakes include using "immigrant" instead of "oleh", or "senior" instead of "elderly". The supported categories are: oleh, soldier, elderly, disabled, low-income, student, single-parent, large-family, bereaved, holocaust-survivor.
 
 ### Error: "Zone not valid for this municipality"
-Cause: Each municipality uses its own zone classification system. Tel Aviv uses numbered zones (1-4), Jerusalem uses Hebrew letter zones (alef-heh), and other cities have their own systems.
+Cause: Each municipality uses its own zone classification system. Tel Aviv uses numbered zones (1-4), Jerusalem uses numbered zones (1-5), and other cities have their own systems.
 Solution: Check the zone classification for your specific municipality. If unsure of your zone, look at a previous arnona bill (it shows the zone), or contact the municipality's arnona department. The `references/arnona-rates-guide.md` file lists the zone systems for each supported municipality.
 
 ### Error: "Cannot determine appeal deadline"
 Cause: The appeal filing deadline depends on when the arnona bill was received, and the system cannot verify the receipt date.
-Solution: The general rule is 90 days from the date of the arnona bill for filing an appeal (hasaga) to the arnona manager. After receiving the manager's decision, the user has 30 days to appeal to the appeals committee (vaada le-erurim). Always recommend filing as early as possible and keeping proof of the filing date (registered mail receipt or online submission confirmation).
+Solution: The general rule is 120 days from the date of the arnona bill for filing an appeal (hasaga) to the arnona manager. After receiving the manager's decision, the user has 30 days to appeal to the appeals committee (vaada le-erurim). Always recommend filing as early as possible and keeping proof of the filing date (registered mail receipt or online submission confirmation).
