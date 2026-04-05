@@ -3,6 +3,7 @@ name: israeli-e-invoice
 description: Generate, validate, and manage Israeli e-invoices (hashbonit electronit) per Tax Authority (SHAAM) standards. Use when user asks to create Israeli invoices, request allocation numbers, validate invoice compliance, or asks about "hashbonit", "e-invoice", "SHAAM", "allocation number", or Israeli invoicing requirements. Supports tax invoice (300), tax invoice/receipt (305), credit invoice (310), receipt (320), and proforma (330) types. Do NOT use for general accounting, bookkeeping, or non-Israeli invoice formats.
 license: MIT
 compatibility: Requires network access for SHAAM API calls. Works with Claude Code, Claude.ai, Cursor.
+version: 1.0.1
 ---
 
 # Israeli E-Invoice
@@ -28,7 +29,7 @@ For all invoice types, gather:
 - **Payment:** Method (cash, transfer, check, credit card), terms
 
 ### Step 3: Calculate VAT
-- Standard Israeli VAT rate: **Always verify current rate with the Tax Authority** (was 18% as of 2025, rates may change)
+- Standard Israeli VAT rate: **Always verify current rate with the Tax Authority** (standard rate is 17% as of 2024-2026, but rates may change)
 - VAT calculation: `vat_amount = net_amount * vat_rate`
 - Total: `gross_amount = net_amount + vat_amount`
 - For VAT-exempt transactions (osek patur), no VAT line -- use receipt (320) instead
@@ -36,10 +37,7 @@ For all invoice types, gather:
 ### Step 4: Check Allocation Number Requirement
 Determine if an allocation number is needed:
 - **Required if:** Invoice amount >= current threshold AND invoice type is 300, 305, or 310
-- **Current thresholds:**
-  - Until June 2025: transactions over 10,000 NIS
-  - July 2025 - December 2025: transactions over 5,000 NIS
-  - January 2026+: Check current threshold with the Tax Authority (thresholds continue to decrease)
+- **Current thresholds:** Always verify current thresholds with the Tax Authority, as requirements change over time
 - **Not required for:** Receipts (320), proforma (330), invoices below threshold
 
 If allocation number IS required:

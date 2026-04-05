@@ -1,3 +1,11 @@
+---
+name: israeli-e-invoice
+description: Generate, validate, and manage Israeli e-invoices (hashbonit electronit) per Tax Authority (SHAAM) standards. Use when user asks to create Israeli invoices, request allocation numbers, validate invoice compliance, or asks about "hashbonit", "e-invoice", "SHAAM", "allocation number", or Israeli invoicing requirements. Supports tax invoice (300), tax invoice/receipt (305), credit invoice (310), receipt (320), and proforma (330) types. Do NOT use for general accounting, bookkeeping, or non-Israeli invoice formats.
+license: MIT
+compatibility: Requires network access for SHAAM API calls. Works with Claude Code, Claude.ai, Cursor.
+version: 1.0.1
+---
+
 # חשבונית אלקטרונית ישראלית
 
 ## הוראות
@@ -21,7 +29,7 @@
 - **תשלום:** אמצעי תשלום (מזומן, העברה, צ'ק, כרטיס אשראי), תנאי תשלום
 
 ### שלב 3: חישוב מע"מ
-- שיעור מע"מ סטנדרטי בישראל: **יש תמיד לוודא שיעור עדכני עם רשות המסים** (היה 18% נכון ל-2025, השיעורים עלולים להשתנות)
+- שיעור מע"מ סטנדרטי בישראל: **יש תמיד לוודא שיעור עדכני עם רשות המסים** (השיעור הסטנדרטי הוא 17% נכון ל-2024-2026, אך השיעורים עלולים להשתנות)
 - חישוב מע"מ: `vat_amount = net_amount * vat_rate`
 - סה"כ: `gross_amount = net_amount + vat_amount`
 - לעסקאות פטורות ממע"מ (עוסק פטור), אין שורת מע"מ -- השתמשו בקבלה (320) במקום
@@ -29,10 +37,7 @@
 ### שלב 4: בדיקת דרישת מספר הקצאה
 קבעו אם נדרש מספר הקצאה:
 - **נדרש אם:** סכום החשבונית >= הסף הנוכחי וסוג החשבונית הוא 300, 305, או 310
-- **ספים נוכחיים:**
-  - עד יוני 2025: עסקאות מעל 10,000 ש"ח
-  - יולי 2025 - דצמבר 2025: עסקאות מעל 5,000 ש"ח
-  - ינואר 2026 ואילך: יש לבדוק את הסף העדכני עם רשות המסים (הספים ממשיכים להקטין)
+- **ספים נוכחיים:** יש תמיד לוודא ספים עדכניים עם רשות המסים, מאחר שהדרישות משתנות לאורך זמן
 - **לא נדרש עבור:** קבלות (320), פרופורמה (330), חשבוניות מתחת לסף
 
 אם מספר הקצאה כן נדרש:
