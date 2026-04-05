@@ -2,6 +2,7 @@
 name: israeli-payment-orchestrator
 description: Orchestrate Israeli payment gateways (Cardcom, Tranzila, PayMe, Meshulam, iCredit, Pelecard) with unified routing, fallback, and installments (tashlumim). Use when user asks about multi-gateway payment integration, "slikat kartisim", "tashlumim", payment routing, Shva network, BOI Directive 357, gateway comparison, or building a payment abstraction layer for Israeli merchants. Provides unified API patterns, installment handling, Shva clearing rules, and regulatory compliance. Do NOT use for single gateway setup (use cardcom-payment-gateway or tranzila-payment-gateway instead).
 license: MIT
+version: 1.0.1
 compatibility: Works with Claude Code, Cursor, GitHub Copilot, Windsurf, OpenCode, Codex. Python 3.8+ for helper scripts.
 ---
 
@@ -134,7 +135,7 @@ Comply with Bank of Israel and Shva regulations:
 
 | Regulation | Hebrew | Requirement | Impact |
 |------------|--------|-------------|--------|
-| BOI Directive 357 | הוראה 357 | Transaction data retention, reporting | Store all transaction details 7 years |
+| Transaction data retention | שמירת נתוני עסקאות | Transaction data retention, reporting | Store all transaction details 7 years |
 | PCI DSS | תקן PCI | Card data security | Use tokenization, never store full card numbers |
 | Shva regulations | תקנות שב"א | Clearing and settlement rules | Adhere to clearing windows and dispute timelines |
 | Consumer Protection | הגנת הצרכן | Refund rights, clear pricing | Display installment terms clearly |
