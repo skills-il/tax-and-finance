@@ -1,0 +1,43 @@
+{
+  "author": "skills-il",
+  "version": "1.0.0",
+  "category": "tax-and-finance",
+  "tags": {
+    "he": [
+      "אופציות-לעובדים",
+      "סעיף-102",
+      "מס-רווח-הון",
+      "RSU",
+      "אקזיט",
+      "הייטק",
+      "נאמן",
+      "ישראל"
+    ],
+    "en": [
+      "stock-options",
+      "section-102",
+      "capital-gains-tax",
+      "rsu",
+      "startup-exit",
+      "tech-employee",
+      "trustee",
+      "israel"
+    ]
+  },
+  "display_name": {
+    "he": "מחשבון מס אופציות לעובדים",
+    "en": "Israeli Stock Options Tax Calculator"
+  },
+  "display_description": {
+    "he": "חישוב מדויק של המס שעובד הייטק ישראלי ישלם על אופציות ו-RSU לפי סעיף 102 לפקודת מס הכנסה. מכסה מימוש, מכירה ואירועי אקזיט (רכישה, הנפקה, מכירה משנית). מפיק פירוט מס מלא: רווח ברוטו, חלק הכנסת עבודה (שיעור שולי), חלק רווח הון (25%), מס יסף (3%+2% מעל הסף), ביטוח לאומי, וסכום נטו. משווה מסלול רווח הון מול מסלול פירותי זה לצד זה. השתמשו כשעובד שואל כמה מס ישלם על אופציות, כשמתקרב אקזיט ורוצים לדעת כמה יישאר בסוף, או כשצריך להחליט בין מסלול הוני לפירותי. לא לשימוש עבור מס קריפטו (israeli-crypto-tax-reporter), הקמת תוכנית ESOP (israeli-startup-toolkit), משיכת רווחים לבעלי שליטה (israeli-corporate-tax-strategy), הגשת דוח שנתי (israeli-tax-returns), או חישוב שכר (israeli-payroll-calculator).",
+    "en": "Calculate the exact tax an Israeli tech employee will pay on stock options and RSUs under Section 102 of the Income Tax Ordinance. Covers exercise, sale, and exit events (acquisition, IPO, secondary sale). Produces a detailed tax breakdown showing gross gain, employment income portion (marginal rate), capital gains portion (25%), surtax (3%+2% above threshold), Bituach Leumi, and net proceeds after tax. Compares capital gains track vs income track side-by-side. Use when an employee asks how much tax they will owe on options, when a startup exit is approaching and they want to know net proceeds, or when deciding between capital gains and income tracks. Do NOT use for crypto taxation (use israeli-crypto-tax-reporter), company-side ESOP setup (use israeli-startup-toolkit), controlling shareholder profit extraction (use israeli-corporate-tax-strategy), annual tax return filing (use israeli-tax-returns), or payroll calculations (use israeli-payroll-calculator)."
+  },
+  "supported_agents": ["claude-code", "cursor", "github-copilot", "windsurf", "opencode", "codex", "openclaw", "antigravity"],
+  "openclaw": {
+    "requires": {
+      "bins": [],
+      "env": []
+    },
+    "emoji": "📊"
+  }
+}
