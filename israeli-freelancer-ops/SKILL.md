@@ -13,7 +13,7 @@ Determine the user's business type and tax obligations:
 
 - **Osek Murshe (עוסק מורשה):** Authorized dealer, registered for VAT. Must file VAT returns, issue tax invoices (hashbonit mas), and can deduct input VAT (mas tsumos).
 - **Osek Patur (עוסק פטור):** Exempt dealer, under revenue threshold (122,833 NIS for 2026). Issues receipts (kabala) only, does not charge or report VAT.
-- **Esek Za'ir (עסק זעיר):** Micro business track available since 2025. Freelancers under the osek patur threshold can register as esek za'ir to receive a 30% normative expense deduction (no receipts needed) and simplified reporting (exempt from annual tax report in most cases). Ask whether the user is registered as esek za'ir, as it affects expense tracking and reporting requirements.
+- **Esek Za'ir (עסק זעיר):** Micro business track available since 2024. Freelancers under the osek patur threshold can register as esek za'ir to receive a 30% normative expense deduction (no receipts needed) and simplified reporting (exempt from annual tax report in most cases). Ask whether the user is registered as esek za'ir, as it affects expense tracking and reporting requirements.
 
 Key profile details to collect:
 - Business type (osek murshe / osek patur / esek za'ir)
@@ -35,7 +35,7 @@ Track all issued invoices by payment status using aging buckets:
 | 90+ day | 90+ days | Alert for escalation |
 
 Configure graduated reminder schedule:
-- **Day 30:** Friendly WhatsApp message — "היי, רציתי לבדוק לגבי חשבונית מספר [X] מתאריך [DATE]. אשמח לעדכון על מועד התשלום."
+- **Day 30:** Friendly WhatsApp message: "היי, רציתי לבדוק לגבי חשבונית מספר [X] מתאריך [DATE]. אשמח לעדכון על מועד התשלום."
 - **Day 60:** Formal email follow-up with invoice copy attached, payment details (bank transfer info), and a clear due date.
 - **Day 90+:** Alert the freelancer for escalation consideration. Suggest using the israeli-client-payment-chaser skill for structured collection (if available).
 
@@ -73,12 +73,12 @@ Configure proactive alerts for Israeli tax deadlines:
 |----------|-----------|------|---------|
 | VAT filing (osek murshe) | Bi-monthly | 15th of the month after the period | Deadlines: Mar 15, May 15, Jul 15, Sep 15, Nov 15, Jan 15 |
 | VAT filing (monthly filers) | Monthly | 15th of each month | For businesses exceeding the monthly threshold |
-| Bituach Leumi (self-employed) | Quarterly | 15th of Jan, Apr, Jul, Oct | National Insurance advance payments |
-| Annual tax report (doch shnati) | Yearly | By March 31 | Extensions possible via accountant |
+| Bituach Leumi (self-employed) | Monthly | 15th of each month | National Insurance advance payments |
+| Annual tax report (doch shnati) | Yearly | By April 30 | Extensions possible via accountant (online filers may get until May 31 or later) |
 | Advance tax payments (mkdamot) | Bi-monthly | 15th of the month after the period | If applicable per Tax Authority assessment |
 | Osek patur annual declaration | Yearly | January 31 | Report previous year's turnover to VAT office |
 
-**Detailed VAT reporting (from 2026):** Osek murshe businesses with annual turnover exceeding 500,000 NIS must now file detailed VAT reports (doch meforat, report 874) listing each invoice individually. This also forces a switch from bi-monthly to monthly filing. Ask the user about their annual turnover to determine if this applies.
+**Detailed VAT reporting (from 2026):** Osek murshe businesses with annual turnover exceeding 500,000 NIS must now file detailed VAT reports (doch meforat, report 874) listing each invoice individually. This also forces a switch from bi-monthly to monthly filing, and the filing deadline changes from the 15th to the **23rd** of the following month. Ask the user about their annual turnover to determine if this applies.
 
 Reminder schedule for each deadline:
 - **7 days before:** First alert via WhatsApp/Telegram with what to prepare
@@ -89,8 +89,8 @@ If a deadline falls on Shabbat (Saturday), it moves to Sunday. If it falls on a 
 
 Include per-deadline preparation notes:
 - VAT filing: have all sales and purchase invoices ready, calculate net VAT (output minus input)
-- Bituach Leumi: verify quarterly advance amount from latest assessment
-- Annual report: coordinate with accountant, ensure all monthly packages delivered
+- Bituach Leumi: verify monthly advance amount from latest assessment
+- Annual report: coordinate with accountant, ensure all monthly packages delivered. Standard deadline is April 30; online filers may get later extensions.
 - Mkdamot: check assessment letter for payment coupon amounts
 
 ### Step 5: Monitor Osek Patur Threshold
@@ -98,9 +98,9 @@ Track cumulative annual revenue against the osek patur threshold:
 
 - **Current threshold (2026):** 122,833 NIS annually (verify at misim.gov.il as this is adjusted periodically for inflation; was 120,000 NIS in 2024-2025)
 - **Alert levels:**
-  - **70% (~86,000 NIS):** Informational — "You've reached 70% of the annual threshold. Consider planning for potential transition."
-  - **85% (~104,400 NIS):** Warning — "Approaching threshold. Review implications of converting to osek murshe."
-  - **95% (~116,700 NIS):** Urgent — "Very close to threshold. Conversion may be required soon."
+  - **70% (~86,000 NIS):** Informational. "You've reached 70% of the annual threshold. Consider planning for potential transition."
+  - **85% (~104,400 NIS):** Warning. "Approaching threshold. Review implications of converting to osek murshe."
+  - **95% (~116,700 NIS):** Urgent. "Very close to threshold. Conversion may be required soon."
 
 When the threshold is reached or projected to be exceeded, explain the implications:
 - Must register as osek murshe with the Tax Authority
@@ -125,12 +125,12 @@ Generate a transition checklist:
 Compile an organized monthly or quarterly package for the accountant:
 
 **Package contents:**
-1. **Issued invoices** — All invoices/receipts issued during the period, sorted by date
-2. **Received invoices/receipts** — All expense documents (business purchases, subscriptions, equipment)
-3. **Bank statement summary** — Transaction list matched to invoices where possible
-4. **Utility bills** — Bills collected in Step 3, organized by provider
-5. **Revenue summary** — Running annual total with monthly breakdown
-6. **Cover sheet** — Summary page with key numbers
+1. **Issued invoices:** All invoices/receipts issued during the period, sorted by date
+2. **Received invoices/receipts:** All expense documents (business purchases, subscriptions, equipment)
+3. **Bank statement summary:** Transaction list matched to invoices where possible
+4. **Utility bills:** Bills collected in Step 3, organized by provider
+5. **Revenue summary:** Running annual total with monthly breakdown
+6. **Cover sheet:** Summary page with key numbers
 
 **Cover sheet fields:**
 - Period covered (month/quarter/year)
@@ -189,8 +189,8 @@ Result: Complete accountant package (havila l'roe cheshbon) with 12 monthly fold
 ## Bundled Resources
 
 ### References
-- `references/deadline-calendar.md` — Complete Israeli tax deadline calendar for freelancers: VAT filing dates, Bituach Leumi quarterly payments, annual report deadlines, and advance tax payment (mkdamot) schedule. Includes both osek murshe and osek patur timelines, plus holiday adjustments. Consult when setting up deadline alerts in Step 4.
-- `references/utility-portals.md` — Login URLs, bill download paths, and automation notes for Israeli utility providers (IEC, Bezeq, HOT, Partner, water corporations, Arnona portals). Includes 2FA/OTP handling guidance per portal. Consult when configuring browser-based bill collection in Step 3.
+- `references/deadline-calendar.md`: Complete Israeli tax deadline calendar for freelancers: VAT filing dates, Bituach Leumi monthly payments, annual report deadlines, and advance tax payment (mkdamot) schedule. Includes both osek murshe and osek patur timelines, plus holiday adjustments. Consult when setting up deadline alerts in Step 4.
+- `references/utility-portals.md`: Login URLs, bill download paths, and automation notes for Israeli utility providers (IEC, Bezeq, HOT, Partner, water corporations, Arnona portals). Includes 2FA/OTP handling guidance per portal. Consult when configuring browser-based bill collection in Step 3.
 
 ## Gotchas
 - Agents may confuse Osek Murshe (licensed dealer, charges VAT) with Osek Patur (exempt dealer, no VAT). The threshold for Osek Patur is 122,833 NIS for 2026 (was 120,000 NIS in 2024-2025, adjusted for inflation). Exceeding it mid-year requires immediate registration upgrade.
