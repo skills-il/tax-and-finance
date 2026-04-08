@@ -9,38 +9,6 @@ description: >-
   אל תשתמש עבור ביטוח חיים, בחירת קרן פנסיה, או השוואות ביטוח נסיעות.
 license: MIT
 allowed-tools: "Bash(python:*) WebFetch"
-metadata:
-  author: skills-il
-  version: 1.0.0
-  category: tax-and-finance
-  tags:
-    he:
-      - ביטוח
-      - רכב
-      - השוואת מחירים
-      - פוליסה
-      - ביטוח חובה
-      - ביטוח מקיף
-    en:
-      - insurance
-      - car-insurance
-      - price-comparison
-      - policy
-      - mandatory-insurance
-      - comprehensive-insurance
-  display_name:
-    he: "השוואת ביטוחים בישראל"
-    en: "Israeli Insurance Comparator"
-  display_description:
-    he: "השוואת ביטוחי רכב, דירה וביטוח משלים בריאות בין חברות הביטוח בישראל באמצעות מחשבונים ממשלתיים ופלטפורמות השוואה"
-    en: "Compare car, home, and health supplementary insurance across Israeli insurers using government calculators and comparison platforms"
-  supported_agents:
-    - claude-code
-    - cursor
-    - github-copilot
-    - windsurf
-    - opencode
-    - codex
 ---
 
 # השוואת ביטוחים בישראל
@@ -124,15 +92,16 @@ metadata:
 - מציגה הבדלי כיסוי ולא רק מחיר
 
 **Wobi (wobi.co.il):**
-- אתר השוואת ביטוח ישראלי גדול
+- אתר השוואת ביטוח ישראלי גדול (נרכש על ידי הפניקס באוקטובר 2025)
 - מכסה ביטוח רכב, דירה, בריאות, חיים ועסקי
 - מציע ייעוץ טלפוני עם סוכנים מורשים
 - יכול לטפל בכל תהליך הרכישה
+- הערה: מאז רכישת הפניקס, Wobi אינו עצמאי לחלוטין. כדאי להצליב הצעות מחיר עם פלטפורמות נוספות
 
 **Bestie (bestie.co.il):**
-- השוואת ביטוח מבוססת AI
-- מספק המלצות מותאמות אישית
-- מכסה ביטוח רכב, דירה ובריאות
+- פלטפורמת השוואה עצמאית (לא חברת ביטוח ולא סוכנות)
+- מספקת המלצות מותאמות אישית על בסיס שאלון קצר
+- מכסה ביטוח רכב, דירה, בריאות ומשכנתא
 - טוב להבנה איזו רמת כיסוי באמת נדרשת
 
 **InsuranceFind (insurancefind.co.il):**
@@ -231,7 +200,7 @@ metadata:
 3. **תקופת אכשרה**: חלק מהכיסויים מופעלים רק לאחר תקופת המתנה
 4. **תנאי ביטול**: הבן קנסות על ביטול מוקדם
 5. **תהליך תביעה**: דע כיצד להגיש תביעה ואילו מסמכים נדרשים
-6. **ערוץ תלונות**: רשות שוק ההון מטפלת בתלונות צרכנים ב-pniyot.cma.gov.il
+6. **ערוץ תלונות**: רשות שוק ההון מטפלת בתלונות צרכנים ב-pe.cma.gov.il
 
 ## דוגמאות
 

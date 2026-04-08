@@ -1,6 +1,6 @@
 {
   "author": "skills-il",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "category": "tax-and-finance",
   "tags": {
     "he": [
@@ -25,7 +25,7 @@
     "en": "Israeli Insurance Comparator"
   },
   "display_description": {
-    "he": "השוואת ביטוחי רכב, דירה וביטוח משלים בריאות בין חברות הביטוח בישראל באמצעות מחשבונים ממשלתיים ופלטפורמות השוואה",
+    "he": "השוואת ביטוחי רכב (חובה, מקיף, צד ג׳), ביטוח דירה וביטוח משלים בריאות בין למעלה מ-20 חברות ביטוח ישראליות באמצעות מחשבונים ממשלתיים ופלטפורמות השוואה פרטיות. השתמש כשצריך למצוא את ההצעה הזולה ביותר, להבין הבדלים בין פוליסות, או להתכונן לחידוש שנתי. מנחה דרך מחשבון רשות שוק ההון, Hova.co.il, שוקבית, Wobi ו-Bestie. אל תשתמש עבור ביטוח חיים, בחירת קרן פנסיה, או השוואות ביטוח נסיעות.",
     "en": "Compare car insurance (mandatory hova, comprehensive makif, third-party), home insurance, and health supplementary insurance across 20+ Israeli insurers using official government calculators and private comparison platforms. Use when a user needs to find the cheapest insurance quote, understand policy differences, or prepare for annual renewal negotiations. Guides through CMA calculator at car.cma.gov.il, Hova.co.il, Shukabit, Wobi, and Bestie. Do NOT use for life insurance, pension fund selection, or travel insurance comparisons."
   },
   "supported_agents": [

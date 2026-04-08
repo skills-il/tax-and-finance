@@ -86,15 +86,16 @@ After getting the government baseline, check private platforms for potentially b
 - Shows coverage differences, not just price
 
 **Wobi (wobi.co.il):**
-- Large Israeli insurance comparison site
+- Large Israeli insurance comparison site (acquired by The Phoenix Holdings in Oct 2025)
 - Covers car, home, health, life, and business insurance
 - Offers phone consultation with licensed agents
 - Can handle the entire purchase process
+- Note: Since the Phoenix acquisition, Wobi is no longer fully independent. Cross-check quotes with other platforms
 
 **Bestie (bestie.co.il):**
-- AI-powered insurance comparison
-- Provides personalized recommendations
-- Covers car, home, and health insurance
+- Independent comparison platform (not an insurer or broker)
+- Provides personalized recommendations based on a short questionnaire
+- Covers car, home, health, and mortgage insurance
 - Good for understanding which coverage level you actually need
 
 **InsuranceFind (insurancefind.co.il):**
@@ -193,7 +194,7 @@ Before finalizing any insurance purchase:
 3. **Waiting periods (תקופת אכשרה)**: Some coverages activate only after a waiting period
 4. **Cancellation terms**: Understand penalties for early cancellation
 5. **Claims process**: Know how to file a claim (tvi'a) and required documentation
-6. **Complaint channel**: The CMA (Rasha) handles consumer complaints at pniyot.cma.gov.il
+6. **Complaint channel**: The CMA (Rasha) handles consumer complaints at pe.cma.gov.il
 
 ## Examples
 
