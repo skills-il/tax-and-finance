@@ -22,7 +22,7 @@
 ## Bituach Menahalim (Manager's Insurance)
 - **Type:** Insurance-based savings product
 - **Components:** Savings + separate risk insurance (disability, life)
-- **Management fees:** 0.5-1.5% of balance + up to 4% of contributions
+- **Management fees:** Up to 1.05% of balance + up to 4% of contributions
 - **Investment:** Multiple tracks available (stocks, bonds, etc.)
 - **Payout:** Monthly pension or partial lump sum
 
@@ -42,7 +42,7 @@
 - **Type:** Medium-term savings
 - **Lock-in:** 6 years (3 years for education/training)
 - **Tax:** Gains tax-free after 6 years (for employees)
-- **Contribution ceiling for tax benefit:** ~15,712 NIS/year employee (2.5% of ceiling salary)
+- **Contribution ceiling for tax benefit:** Salary ceiling for tax-free employer contribution: 15,712 NIS/month (2026)
 - **Most popular savings product in Israel**
 
 ### For Employees
@@ -51,7 +51,7 @@
 - Salary ceiling for tax-free employer contribution: 15,712 NIS/month (2026). Max total contribution at ceiling: 1,571 NIS/month (10% of ceiling salary)
 
 ### For Self-Employed
-- Two ceilings: Tax deduction from income: up to 13,202 NIS/year (4.5% of income up to 293,397 NIS/year). Profit-exempt ceiling: 20,566 NIS/year.
+- Two ceilings: Tax deduction from income: up to 13,203 NIS/year (4.5% of income up to 293,397 NIS/year). Profit-exempt ceiling: 20,566 NIS/year.
 - Tax benefit: deduction from taxable income
 
 ## Kupat Gemel (Provident Fund)

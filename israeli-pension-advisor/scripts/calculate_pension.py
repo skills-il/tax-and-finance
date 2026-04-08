@@ -29,7 +29,7 @@ HISHTALMUT_EMPLOYER = 0.075      # 7.5%
 SELF_PENSION_LOW_RATE = 0.0445   # Up to half avg wage
 SELF_PENSION_HIGH_RATE = 0.1255  # Half to full avg wage
 SELF_HISHTALMUT_MAX = 20566      # Tax-free profit ceiling (2026)
-SELF_HISHTALMUT_DEDUCT = 13202   # Tax deduction ceiling (2026)
+SELF_HISHTALMUT_DEDUCT = 13203   # Tax deduction ceiling (2026)
 
 # Reference wage and fund ceiling (2026)
 AVG_WAGE = 13769                 # Average wage 2026

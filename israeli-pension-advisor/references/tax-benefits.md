@@ -30,7 +30,7 @@
 - Qualifying income ceiling for pension: 232,800 NIS/year (19,400 NIS/month, 2026)
 
 ### Keren Hishtalmut
-- Tax deduction: up to 13,202 NIS/year (4.5% of income up to 293,397 NIS)
+- Tax deduction: up to 13,203 NIS/year (4.5% of income up to 293,397 NIS)
 - Profit-exempt ceiling: 20,566 NIS/year
 - Gains tax-free after 6 years
 

@@ -31,7 +31,7 @@ Since 2008, all employees must have pension. Average wage (2026): 13,769 NIS/mon
 - **Employer pension:** 6.5% of salary (includes disability insurance component up to 2.5%)
 - **Employer severance (pitzuim):** 6% of salary (mandatory minimum)
 - **Total mandatory minimum:** 18.5% of salary
-- **Comprehensive pension fund max deposit:** 5,645 NIS/month (67,768 NIS/year, 2026). Contributions above this go to a supplementary fund.
+- **Comprehensive pension fund max deposit:** 5,645 NIS/month (67,740 NIS/year, 2026). Contributions above this go to a supplementary fund.
 
 **Section 14 (most common arrangement):**
 - Full severance obligation is 8.33% of salary (one month per year of service)
@@ -65,7 +65,7 @@ Most popular Israeli savings vehicle:
 - **Withdrawal after 3 years:** For education/training purposes only
 
 **For self-employed (two separate ceilings):**
-- **Tax deduction from income:** Up to 13,202 NIS/year (4.5% of income up to 293,397 NIS)
+- **Tax deduction from income:** Up to 13,203 NIS/year (4.5% of income up to 293,397 NIS)
 - **Profit-exempt ceiling:** 20,566 NIS/year (gains on deposits up to this amount are tax-free after 6 years)
 
 **Note:** In 2024 the Treasury proposed eliminating keren hishtalmut tax-free status for future deposits. As of 2026, this has not been enacted and the tax benefit remains in place.
@@ -88,7 +88,7 @@ Most popular Israeli savings vehicle:
 - Qualifying pension threshold: 9,430 NIS/month
 
 ### Step 5: Withdrawal Rules
-- **Pension:** Age 67 (men) / ~63.5 (women, 2026, rising to 65 by 2032)
+- **Pension:** Age 67 (men) / ~63 (women, 2026, rising to 65 by 2035)
 - **Early pension:** Available before retirement age with 35% tax on withdrawal. Exceptions for disability, low income, or terminal illness
 - **Keren hishtalmut:** After 6 years (tax-free), or 3 years (education only)
 - **Severance (pitzuim):** Upon termination, subject to Section 14 arrangement. Tax-exempt up to 13,750 NIS per year of service
@@ -105,7 +105,7 @@ Most popular Israeli savings vehicle:
 **Bituach Menahalim (Manager's Insurance):**
 - Separate insurance component (risk premium)
 - More investment track flexibility
-- Higher management fees (typically 0.5-1.5% balance + up to 4% deposits)
+- Higher management fees (up to 1.05% balance + up to 4% deposits)
 - Declining for new policies since 2013
 - May be suitable for high earners with existing policies wanting more control
 
@@ -117,11 +117,11 @@ Result: Explain mandatory pension (keren pensia vs bituach menahalim), mention d
 
 ### Example 2: Self-Employed Savings
 User says: "I'm a freelancer, how should I save for retirement?"
-Result: Explain mandatory pension rates (4.45% + 12.55%), keren hishtalmut two ceilings (13,202 deduction vs 20,566 profit-exempt), maximum deductible pension (38,412 NIS/year). Recommend maximizing keren hishtalmut first.
+Result: Explain mandatory pension rates (4.45% + 12.55%), keren hishtalmut two ceilings (13,203 deduction vs 20,566 profit-exempt), maximum deductible pension (38,412 NIS/year). Recommend maximizing keren hishtalmut first.
 
 ### Example 3: Approaching Retirement
 User says: "I'm 60, when can I start withdrawing pension?"
-Result: Explain retirement ages (67 men, ~63.5 women in 2026), early withdrawal 35% tax, pension payout tax exemption (57.5% exempt, up to 5,422 NIS/month tax-free), lump sum vs monthly pension tradeoffs.
+Result: Explain retirement ages (67 men, ~63 women in 2026), early withdrawal 35% tax, pension payout tax exemption (57.5% exempt, up to 5,422 NIS/month tax-free), lump sum vs monthly pension tradeoffs.
 
 ## Bundled Resources
 
@@ -135,9 +135,9 @@ Result: Explain retirement ages (67 men, ~63.5 women in 2026), early withdrawal 
 ## Gotchas
 - Israeli pension has three distinct product types: comprehensive pension fund (keren pensia makifa), provident fund (kupat gemel), and managers' insurance (bituach menahalim). Agents may treat them as interchangeable, but they have different fee structures, insurance components, and withdrawal rules.
 - Pension fund management fees in Israel have two components: from deposits (up to 6% for non-default funds) and from accumulated savings (up to 0.5% annually). Agents may quote only one component. Default selected funds cap at 0.22% balance + 1% deposits.
-- The retirement age in Israel is 67 for men and ~63.5 for women in 2026 (gradually rising to 65 by 2032). Agents may use the US retirement age of 67 for both genders, or cite the outdated 62 for women.
+- The retirement age in Israel is 67 for men and ~63 for women in 2026 (gradually rising to 65 by 2035). Agents may use the US retirement age of 67 for both genders, or cite the outdated 62 for women.
 - Israeli pension funds invest significantly in local government bonds (igrot chov mimshaltiiot), which means returns are partially linked to Israeli economic performance. Agents should not compare Israeli pension returns directly to US 401(k) S&P 500 benchmarks.
-- Self-employed keren hishtalmut has TWO separate ceilings: the tax deduction ceiling (13,202 NIS/year) and the profit-exempt ceiling (20,566 NIS/year). Agents often conflate these into a single figure.
+- Self-employed keren hishtalmut has TWO separate ceilings: the tax deduction ceiling (13,203 NIS/year) and the profit-exempt ceiling (20,566 NIS/year). Agents often conflate these into a single figure.
 
 ## Troubleshooting
 
@@ -151,4 +151,4 @@ Solution: Employer must contribute retroactively from the applicable start date.
 
 ### Error: "Cannot withdraw keren hishtalmut"
 Cause: Lock-in period not completed
-Solution: Standard lock-in is 6 years from first deposit. Early withdrawal (3 years) only for education/training with documentation. Withdrawal before maturity is taxed at the marginal income tax rate (up to 47%).
+Solution: Standard lock-in is 6 years from first deposit. Early withdrawal (3 years) only for education/training with documentation. Withdrawal before maturity is taxed at the marginal income tax rate (up to 50% including surtax for high earners).
