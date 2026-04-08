@@ -153,3 +153,4 @@ Solution: Employer must contribute retroactively from the applicable start date.
 Cause: Lock-in period not completed
 Solution: Standard lock-in is 6 years from first deposit. Early withdrawal (3 years) only for education/training with documentation. Withdrawal before maturity is taxed at the marginal income tax rate (up to 50% including surtax for high earners).
 
+# v2.0.1
