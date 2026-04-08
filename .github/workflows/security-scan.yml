@@ -18,16 +18,54 @@ permissions:
   security-events: write
 
 jobs:
+  detect-changes:
+    name: Detect Changed Skills
+    runs-on: ubuntu-latest
+    outputs:
+      changed_dirs: ${{ steps.changed.outputs.dirs }}
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+      - name: Find changed skill directories
+        id: changed
+        run: |
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            BASE="origin/${{ github.base_ref }}"
+          elif [ "${{ github.event.before }}" = "0000000000000000000000000000000000000000" ]; then
+            # First push -- scan all skill directories
+            DIRS=$(find . -maxdepth 2 -name 'SKILL.md' -not -path './.github/*' | sed 's|/SKILL.md||;s|^\./||' | sort | tr '\n' ' ')
+            echo "dirs=$DIRS" >> "$GITHUB_OUTPUT"
+            echo "First push -- scanning all: $DIRS"
+            exit 0
+          else
+            BASE="${{ github.event.before }}"
+          fi
+
+          DIRS=$(git diff --name-only "$BASE" "${{ github.sha }}" -- '*/SKILL.md' '*/scripts/*' | \
+            sed 's|/.*||' | sort -u | tr '\n' ' ')
+
+          echo "dirs=$DIRS" >> "$GITHUB_OUTPUT"
+          echo "Changed skill directories: $DIRS"
+
   mcp-scan:
     name: Snyk Agent Scan
+    needs: detect-changes
+    if: needs.detect-changes.outputs.changed_dirs != ''
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
       - name: Install mcp-scan
         run: pip install mcp-scan
-      - name: Run mcp-scan on SKILL.md files
+      - name: Run mcp-scan on changed SKILL.md files
         run: |
-          find . -name 'SKILL.md' -exec mcp-scan {} \;
+          for dir in ${{ needs.detect-changes.outputs.changed_dirs }}; do
+            if [ -f "$dir/SKILL.md" ]; then
+              echo "::group::Scanning $dir/SKILL.md"
+              mcp-scan "$dir/SKILL.md"
+              echo "::endgroup::"
+            fi
+          done
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
       - name: Post scan results
@@ -35,12 +73,14 @@ jobs:
         run: |
           gh pr comment ${{ github.event.pull_request.number }} --body "## Security Scan Complete
 
-          Snyk mcp-scan has finished. Check workflow logs for details."
+          Snyk mcp-scan has finished scanning changed skills. Check workflow logs for details."
         env:
           GH_TOKEN: ${{ github.token }}
 
   cisco-scan:
     name: Cisco Skill Scanner
+    needs: detect-changes
+    if: needs.detect-changes.outputs.changed_dirs != ''
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
@@ -49,12 +89,17 @@ jobs:
           python-version: '3.12'
       - name: Install Cisco Skill Scanner
         run: pip install cisco-ai-skill-scanner
-      - name: Scan all skills
+      - name: Scan changed skills
         run: |
-          skill-scanner scan-all . --fail-on-severity high --format sarif --output results.sarif || true
+          for dir in ${{ needs.detect-changes.outputs.changed_dirs }}; do
+            echo "::group::Scanning $dir"
+            skill-scanner scan-all "$dir" --fail-on-severity high --format sarif --output "results-${dir}.sarif" || true
+            echo "::endgroup::"
+          done
       - name: Upload SARIF results
         if: always()
         uses: github/codeql-action/upload-sarif@v4
         with:
-          sarif_file: results.sarif
+          sarif_file: .
+          category: cisco-skill-scanner
         continue-on-error: true
