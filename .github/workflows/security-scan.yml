@@ -91,15 +91,18 @@ jobs:
         run: pip install cisco-ai-skill-scanner
       - name: Scan changed skills
         run: |
+          # scan-all expects a parent directory containing skill subdirectories,
+          # so symlink only changed skills into a temp dir
+          mkdir -p .scan-target
           for dir in ${{ needs.detect-changes.outputs.changed_dirs }}; do
-            echo "::group::Scanning $dir"
-            skill-scanner scan-all "$dir" --fail-on-severity high --format sarif --output "results-${dir}.sarif" || true
-            echo "::endgroup::"
+            ln -s "$PWD/$dir" ".scan-target/$dir"
           done
+          echo "Scanning: $(ls .scan-target)"
+          skill-scanner scan-all .scan-target --fail-on-severity high --format sarif --output results.sarif || true
       - name: Upload SARIF results
         if: always()
         uses: github/codeql-action/upload-sarif@v4
         with:
-          sarif_file: .
+          sarif_file: results.sarif
           category: cisco-skill-scanner
         continue-on-error: true
