@@ -1,6 +1,6 @@
 ---
 name: israeli-bank-connector
-description: Analyze Israeli bank transactions, spending patterns, and financial data across Israeli banks and credit card companies. Use when user asks about bank transactions, spending analysis, "cheshbon bank", budget tracking, or needs to categorize Israeli banking data. Enhances israeli-bank-mcp, il-bank-mcp, and asher-mcp servers with financial analysis workflows. Supports Hapoalim, Leumi, Discount, Mizrahi, Visa Cal, Max, Isracard. Do NOT use for payment initiation, money transfers, or investment advice.
+description: Analyze Israeli bank transactions, spending patterns, and financial data across Israeli banks and credit card companies. Use when user asks about bank transactions, spending analysis, "cheshbon bank", budget tracking, or needs to categorize Israeli banking data. Enhances israeli-bank-mcp, il-bank-mcp, and asher-mcp servers with financial analysis workflows. Supports Hapoalim, Leumi, Discount, Mizrahi-Tefahot, First International (FIBI), Visa Cal, Max, Isracard, and Amex. Do NOT use for payment initiation, money transfers, or investment advice.
 license: MIT
 compatibility: Requires israeli-bank-mcp or il-bank-mcp MCP server. Claude Code recommended.
 ---
@@ -25,15 +25,15 @@ Fetch transaction data for the requested period:
 Apply Israeli-specific categorization:
 | Category | Hebrew | Examples |
 |----------|--------|---------|
-| Housing | diur | Rent, arnona, vaad bayit |
-| Groceries | mazon | Shufersal, Rami Levy, Victory |
-| Transportation | tahaburah | Rav-Kav, fuel, Gett |
-| Utilities | shartuim | Electric Company, Mekorot, Bezeq |
-| Healthcare | briut | Kupat Cholim, pharmacy |
-| Education | chinuch | Gan, school, courses |
-| Entertainment | bilui | Restaurants, cinema, streaming |
-| Insurance | bituach | Health, car, home insurance |
-| Savings | chisachon | Pension, keren hishtalmut |
+| Housing | דיור (diur) | Rent, arnona, vaad bayit |
+| Groceries | מזון (mazon) | Shufersal, Rami Levy, Victory |
+| Transportation | תחבורה (tahaburah) | Rav-Kav, fuel, Gett |
+| Utilities | שירותים (shartuim) | Electric Company, Mekorot, Bezeq |
+| Healthcare | בריאות (briut) | Kupat Cholim, pharmacy |
+| Education | חינוך (chinuch) | Gan, school, courses |
+| Entertainment | בילוי (bilui) | Restaurants, cinema, streaming |
+| Insurance | ביטוח (bituach) | Health, car, home insurance |
+| Savings | חיסכון (chisachon) | Pension, keren hishtalmut |
 
 ### Step 4: Present Insights
 Provide:
@@ -66,14 +66,14 @@ Result: Filtered and categorized business transactions with VAT amounts, ready f
 ## Bundled Resources
 
 ### Scripts
-- `scripts/categorize_transactions.py` — Categorizes Israeli bank transactions by spending category using Israeli-specific merchant pattern matching (Shufersal, Rami Levy, Rav-Kav, etc.). Accepts transaction JSON and outputs categorized spending summaries. Run: `python scripts/categorize_transactions.py --help`
+- `scripts/categorize_transactions.py` — Categorizes Israeli bank transactions by spending category using Israeli-specific merchant pattern matching (Shufersal, Rami Levy, Rav-Kav, etc.). Accepts transaction JSON and outputs categorized spending summaries. Run: `python scripts/categorize_transactions.py --example` for a demo, or `python scripts/categorize_transactions.py --json transactions.json` for real data. Add `--output-json` for machine-readable output.
 
 ### References
 - `references/spending-categories.md` — Israeli spending category definitions with Hebrew terms and common merchant examples for each category (housing/diur, groceries/mazon, transportation/tahaburah, utilities/shartuim, etc.). Consult when customizing categorization rules or explaining categories to users.
 - `references/supported-banks.md` — List of supported Israeli banks (Hapoalim, Leumi, Discount, Mizrahi-Tefahot, FIBI) and credit card companies (Visa Cal, Max, Isracard) with bank codes and MCP server compatibility notes. Consult when setting up bank connections or troubleshooting missing accounts.
 
 ## Gotchas
-- Israeli banks use the "Open Banking" standard mandated by the Bank of Israel, not the European PSD2 standard. Agents may reference PSD2 APIs or UK Open Banking endpoints that do not exist in Israel.
+- Israel's Open Banking regulation is based on the Berlin Group NextGenPSD2 framework but adapted for Israel with its own timeline and implementation. Full rollout across all banks is still ongoing (as of 2026). Agents may reference UK Open Banking or generic PSD2 endpoints that do not exist in Israel. In practice, israeli-bank-scrapers uses headless browser scraping, not official Open Banking APIs.
 - Bank Leumi, Hapoalim, Discount, Mizrahi-Tefahot, and First International each have different API implementations. There is no single unified API across all Israeli banks.
 - Israeli bank account numbers include a branch number (snif) prefix. Agents may validate account numbers using international IBAN format, but Israeli domestic transfers use the local branch+account format.
 - Credit card statements in Israel are issued by separate companies (Isracard, Max, CAL) and not directly by the banks. Agents may try to fetch credit card data from the bank API instead of the card company.
