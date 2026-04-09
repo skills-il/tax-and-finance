@@ -30,7 +30,17 @@
     "he": "ניתוח אסטרטגי להשוואת שיטות משיכת רווחים מחברה ישראלית: שכר, דיבידנד, הלוואת בעלים ודמי ניהול. הסקיל מחשב את נטל המס הכולל בכל שיטה, מזהה את האסטרטגיה האופטימלית לפי סכום ההערכה ומבנה החברה, ומוודא עמידה בכללי רשות המסים. השתמשו כשצריכים לשלם שומת מס אישית מכספי החברה, להשוות דיבידנד מול משכורת, לבדוק השלכות מס של הלוואת בעלים לפי סעיף 3(ט), או לתכנן משיכת רווחים כבעל שליטה. מונע טעויות יקרות בניתוח ניכוי מס במקור, ביטוח לאומי, מס יסף ומס חברות. לא לשימוש עבור דיווח מע\"מ (israeli-vat-reporting), שכר עבודה (israeli-payroll-calculator), דוח שנתי (israeli-tax-returns), או מס קריפטו (israeli-crypto-tax-reporter).",
     "en": "Strategic tax analysis for Israeli company owners (baalei shlita) comparing salary, dividends, shareholder loans, and management fees as profit extraction methods. Calculates total tax burden across methods, identifies optimal strategy based on assessment amount and company structure, and verifies compliance with Israeli Tax Authority rules. Use when you need to pay a personal tax assessment from company funds, compare dividend vs salary, analyze shareholder loan tax implications under Section 3(tet), or plan profit extraction as a controlling shareholder. Prevents costly extraction mistakes by analyzing withholding, Bituach Leumi, surtax, and corporate tax interactions. Do NOT use for VAT reporting (use israeli-vat-reporting), payroll processing (use israeli-payroll-calculator), annual tax return filing (use israeli-tax-returns), or crypto tax (use israeli-crypto-tax-reporter)."
   },
-  "supported_agents": ["claude-code", "cursor", "github-copilot", "windsurf", "opencode", "codex", "openclaw", "antigravity"],
+  "supported_agents": [
+    "claude-code",
+    "cursor",
+    "github-copilot",
+    "windsurf",
+    "opencode",
+    "codex",
+    "openclaw",
+    "antigravity",
+    "gemini-cli"
+  ],
   "openclaw": {
     "requires": {
       "bins": [],
