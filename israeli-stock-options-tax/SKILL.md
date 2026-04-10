@@ -14,6 +14,14 @@ Israeli tech employees receive stock options or RSUs as a significant part of th
 
 ## Instructions
 
+### Privacy & Data Security
+
+> [!CAUTION]
+> This skill handles sensitive financial and personal data (PII) including salaries, grant amounts, and employer names.
+> - **Local Calculation Only**: You MUST perform all monetary and tax calculations locally using Python. Never send specific financial amounts (e.g., "the tax on 500k NIS") or personal names to `WebFetch` or external search tools.
+> - **Data Minimization**: Only ask the user for the data required for the specific calculation. Do not log or persist sensitive financial numbers.
+> - **External Reference**: Use `WebFetch` only to retrieve generic data like USD/ILS exchange rates or current tax brackets, but never include user-specific values in the query URL.
+
 ### Step 1: Identify the Grant Type
 
 Ask the user what type of equity they hold:
@@ -213,12 +221,6 @@ Help the employee think about WHEN to exercise:
 
 **Critical warning for early exercise:** If the employee exercises options early (pays the exercise price to get shares), they must ensure the trustee continues to hold the shares for the full 24-month period from grant date. Early exercise does NOT restart or shorten the 24-month clock.
 
-## Recommended MCP Servers
-
-| MCP Server | Use For |
-|------------|---------|
-| `tase-mcp` | Current TASE stock prices for Israeli-listed companies |
-| `boi-exchange` | USD/ILS exchange rates for converting option values |
 
 ## Gotchas
 
