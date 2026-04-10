@@ -221,6 +221,20 @@ Help the employee think about WHEN to exercise:
 
 **Critical warning for early exercise:** If the employee exercises options early (pays the exercise price to get shares), they must ensure the trustee continues to hold the shares for the full 24-month period from grant date. Early exercise does NOT restart or shorten the 24-month clock.
 
+## Optional Integration: MCP Servers
+
+While local Python calculation is the default for maximum privacy, you may optionally use MCP servers for live data (e.g., currency rates).
+
+> [!CAUTION]
+> **Security Warning**: When using external MCP servers:
+> 1. Ensure you have audited the MCP server source code (e.g., `skills-il/boi-exchange`).
+> 2. **Never** include personally identifiable information (PII) or sensitive salaries in MCP tool parameters if they are processed by external web services.
+> 3. Verify the installation source: `npx github:skills-il/boi-exchange`.
+
+| MCP Server | Use For |
+|------------|---------|
+| `tase-mcp` | Current TASE stock prices for Israeli-listed companies |
+| `boi-exchange` | USD/ILS exchange rates for converting option values |
 
 ## Gotchas
 

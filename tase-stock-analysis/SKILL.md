@@ -75,8 +75,28 @@ Check relevant disclosures on the Maya system (TASE disclosure platform):
 Summarize key findings and flag any material items.
 
 
+### Optional MCP Integration: Live TASE Data
+
+For live market data directly from the TASE Data Hub, you can optionally use the **TASE MCP Server** ([skills-il/tase-mcp](https://github.com/skills-il/tase-mcp)).
+
+> [!CAUTION]
+> **Security Warning**: Running external MCP servers directly from GitHub (e.g., `npx github:skills-il/tase-mcp`) involves risk. 
+> - **Trust**: Only use MCP servers from trusted publishers.
+> - **Privacy**: Verify that the MCP server does not log sensitive query parameters.
+> - **API Key**: Never hardcode your `TASE_API_KEY` in the server configuration; use environment variables.
+
+**Prerequisites:**
+- TASE Data Hub API key (register at https://openapi.tase.co.il/tase/prod/)
+- MCP server installed: `npx github:skills-il/tase-mcp`
+
+| Tool | What it does |
+|------|-------------|
+| `tase_list_securities` | List all traded securities |
+| `tase_get_security` | Get security details by ID |
+| `tase_get_maya_announcements` | Maya company filings |
+
 > [!NOTE]
-> This skill provides analysis guidance using general market knowledge and the local `fetch_tase_data.py` script. For live market data, the agent can use `WebFetch` to browse official TASE updates, provided no sensitive user data is leaked in the process.
+> This skill provides analysis guidance using general market knowledge and the local `fetch_tase_data.py` script. The MCP server is a powerful but optional tool for real-time institutional data.
 
 
 ## Examples
