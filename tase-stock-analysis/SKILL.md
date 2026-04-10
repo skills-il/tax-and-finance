@@ -93,7 +93,12 @@ For live market data directly from the TASE Data Hub, you can optionally use the
 |------|-------------|
 | `tase_list_securities` | List all traded securities |
 | `tase_get_security` | Get security details by ID |
+| `tase_get_security_eod` | End-of-day price data |
+| `tase_list_indices` | List all TASE indices |
+| `tase_get_index_eod` | End-of-day data for an index |
+| `tase_get_index_components` | Index composition with weights |
 | `tase_get_maya_announcements` | Maya company filings |
+| `tase_get_management_positions` | Board and management holdings |
 
 > [!NOTE]
 > This skill provides analysis guidance using general market knowledge and the local `fetch_tase_data.py` script. The MCP server is a powerful but optional tool for real-time institutional data.

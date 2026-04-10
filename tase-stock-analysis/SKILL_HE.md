@@ -87,7 +87,12 @@ tax = net_gain * 0.25  # או 0.30 לבעל מניות מהותי (10%+)
 |-----|---------|
 | `tase_list_securities` | רשימת כל ניירות הערך הנסחרים |
 | `tase_get_security` | פרטי נייר ערך לפי מזהה |
+| `tase_get_security_eod` | נתוני סוף יום |
+| `tase_list_indices` | רשימת כל המדדים |
+| `tase_get_index_eod` | נתוני סוף יום של מדד |
+| `tase_get_index_components` | הרכב מדד עם משקלות |
 | `tase_get_maya_announcements` | דיווחי מאי"ה |
+| `tase_get_management_positions` | החזקות דירקטוריון והנהלה |
 
 > [!NOTE]
 > מיומנות זו מספקת הנחיות ניתוח על בסיס ידע כללי והסקריפט המקומי `fetch_tase_data.py`. שרת ה-MCP הוא כלי חזק אך אופציונלי לנתונים מוסדיים בזמן אמת.
