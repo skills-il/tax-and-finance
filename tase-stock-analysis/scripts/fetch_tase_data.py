@@ -12,6 +12,7 @@ Usage:
     python scripts/fetch_tase_data.py --example
 """
 
+import os
 import sys
 import json
 import argparse
@@ -63,8 +64,8 @@ def fetch_json(url: str, headers: Optional[dict] = None) -> dict:
     try:
         with urlopen(req, timeout=10) as response:
             return json.loads(response.read().decode("utf-8"))
-    except URLError as e:
-        print(f"Error fetching {url}: {e}")
+    except URLError:
+        print("Error: Could not connect to the TASE API Gateway. Please check your network or API status.")
         sys.exit(1)
 
 
@@ -159,6 +160,12 @@ def main():
 
     if not any([args.index, args.stock, args.example]):
         parser.print_help()
+        sys.exit(1)
+
+    if (args.index or args.stock) and not os.environ.get("TASE_API_KEY"):
+        print("Error: TASE_API_KEY environment variable is required for live data.")
+        print("Please set it: export TASE_API_KEY='your_api_key_here'")
+        print("For a demonstration, use the --example flag.")
         sys.exit(1)
 
     if args.example:
