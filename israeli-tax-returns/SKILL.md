@@ -88,9 +88,9 @@ Each nekudot zikui point reduces the annual tax liability by 2,904 NIS (2025-202
 | Children aged 6-17 | 1.0 per child | For each child |
 | Child aged 18 | 0.5 | Last year of child credit |
 | Single parent | 1.0 | Divorced, widowed, or separated with custody |
-| Academic degree (BA) | 1.0 | For one year after completion |
-| Academic degree (MA) | 0.5 | For one year after completion |
-| Vocational certificate | 1.0 | For one year after completion |
+| Academic degree (BA) | 1.0 | Per year, for up to 3 years matching study duration (graduates 2023+). Graduates 2014-2022: 1 year only |
+| Academic degree (MA) | 0.5 | For 2 years after completion (graduates 2023+). Graduates 2014-2022: 1 year only |
+| Vocational certificate | 1.0 | Per year, for up to 3 years matching study duration (graduates 2023+). Graduates 2014-2022: 1 year only |
 | Disability (100% or blind) | 2.0 | Permanent |
 | Combat reserve soldiers | 0.5-1.0 | Based on reserve days (from 2026: 0.5 points for 20+ days, 0.75 for 45+ days, 1.0 for 60+ days) |
 

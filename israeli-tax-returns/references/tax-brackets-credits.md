@@ -72,9 +72,9 @@ These brackets apply to active income (employment, self-employment, business inc
 | Category | Points | Conditions |
 |----------|--------|------------|
 | Single parent | 1.0 | Divorced, widowed, separated with custody |
-| Academic degree (BA) | 1.0 | For 1 year after completion |
-| Academic degree (MA) | 0.5 | For 1 year after completion |
-| Vocational certificate | 1.0 | For 1 year after completion |
+| Academic degree (BA) | 1.0 | Per year, for up to 3 years matching study duration (graduates 2023+). Graduates 2014-2022: 1 year only |
+| Academic degree (MA) | 0.5 | For 2 years after completion (graduates 2023+). Graduates 2014-2022: 1 year only |
+| Vocational certificate | 1.0 | Per year, for up to 3 years matching study duration (graduates 2023+). Graduates 2014-2022: 1 year only |
 | Disability (100% or blind) | 2.0 | Permanent disability |
 | Combat reserve soldiers (from 2026) | 0.5-1.0 | 0.5 for 20+ days, 0.75 for 45+ days, 1.0 for 60+ days |
 
