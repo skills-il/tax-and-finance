@@ -64,9 +64,8 @@ def fetch_url(url: str) -> str:
     try:
         with urlopen(req, timeout=15) as response:
             return response.read().decode("utf-8")
-    except URLError as e:
-        print(f"Error fetching {url}: {e}")
-        print("Note: BOI API requires internet access.")
+    except URLError:
+        print("Error: Could not connect to the BOI API. Please check your network connection.")
         sys.exit(1)
 
 
@@ -94,7 +93,6 @@ def fetch_exchange_rate(currency: str, days: int = 1) -> list:
            f"&c[CURRENCY]={currency}")
 
     print(f"Fetching {currency} exchange rate from BOI...")
-    print(f"API URL: {url}")
     print()
 
     try:
