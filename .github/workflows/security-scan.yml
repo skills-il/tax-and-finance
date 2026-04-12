@@ -56,7 +56,7 @@ jobs:
     steps:
       - uses: actions/checkout@v6
       - name: Install mcp-scan
-        run: pip install mcp-scan
+        run: pip install 'mcp-scan==0.3.39'
       - name: Run mcp-scan on changed SKILL.md files
         run: |
           for dir in ${{ needs.detect-changes.outputs.changed_dirs }}; do
