@@ -209,6 +209,16 @@ When negotiating with telecom or subscription providers, the discount offered by
 ### 5. Israeli Consumer Protection Law on Cancellation
 Under the Israeli Consumer Protection Law, consumers can cancel most service contracts within 14 days ("tkufat tzinun"). For telecom and ongoing services, cancellation can be done at any time with up to 30 days notice. Agents should know these rights when guiding users through cancellations.
 
+## Reference Links
+
+| Source | URL | What to Check |
+|--------|-----|---------------|
+| Zap.co.il price comparison | https://www.zap.co.il | Live Israeli retailer price comparison for electronics, appliances, and more |
+| Consumer Council | https://www.consumers.org.il | Consumer rights, cooling-off period, complaint filing |
+| Gov.il consumer protection | https://www.gov.il/he/departments/consumer_protection_authority | Official cancellation rules, cooling-off period, enforcement |
+| Misim.gov.il – credit card rules | https://www.gov.il/he/service/credit-card-complaint | BOI credit card dispute process |
+| Bank of Israel customer info | https://www.boi.org.il/en/information-and-service-to-the-public/banking-customer-service-information/ | Bank fee comparisons and consumer banking guidance |
+
 ## Troubleshooting
 
 ### Error: "Cashback not tracked"

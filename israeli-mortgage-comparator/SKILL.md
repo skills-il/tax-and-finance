@@ -267,6 +267,16 @@ Result: User receives the LTV constraint analysis, total acquisition cost (inclu
 - CPI-linked mortgage tracks (tzmudot madad) adjust the outstanding principal by the CPI index, not just the interest rate. Agents may only adjust the interest payment without also adjusting the principal.
 - Israeli banks charge a "ptor me-onesh" (early repayment penalty) that varies by track type. Agents may suggest refinancing without accounting for this penalty, which can be 0.5-2% of the remaining balance.
 
+## Reference Links
+
+| Source | URL | What to Check |
+|--------|-----|---------------|
+| Bank of Israel (BOI) | https://www.boi.org.il | Current BOI interest rate, Prime rate decisions, announcements |
+| BOI banking supervision | https://www.boi.org.il/en/economic-roles/supervision-and-regulation/supervision-of-the-banking-system/ | LTV limits, multi-track requirement, supervisory caps |
+| Bank of Israel credit data | https://www.creditdata.org.il | Free annual credit report lookup at the BOI credit bureau (BDI) |
+| Mechir LaMishtaken | https://www.gov.il/he/departments/topics/mehirlmishtaken | Reduced-price apartment eligibility and entitlement rules |
+| mashkanta.co.il calculators | https://www.mashkanta.co.il | Multi-track payment calculators that account for CPI linkage |
+
 ## Troubleshooting
 
 ### Error: "Bank rejected the mortgage application despite meeting LTV requirements"

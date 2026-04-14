@@ -85,6 +85,16 @@ Result: Default 25% withholding on payments to non-residents. Check if tax treat
 - When paying a foreign contractor, Israel requires withholding tax unless a tax treaty provides a reduced rate. Agents may apply domestic rates to international payments or skip withholding entirely.
 - The withholding tax on rent payments to individuals is 35% by default. Agents may use the lower corporate rate or the zero rate that only applies when the landlord has a valid ptor certificate.
 
+## Reference Links
+
+| Source | URL | What to Check |
+|--------|-----|---------------|
+| Israel Tax Authority | https://www.gov.il/he/departments/israel_tax_authority | Default withholding rates per activity, annual updates |
+| Withholding exemption certificate lookup | https://www.misim.gov.il/gmishurim | Verify a vendor's ptor status and validity period |
+| Form 856 / 856A filing | https://www.gov.il/he/service/form-856 | Monthly and annual withholding reporting forms |
+| Income Tax Ordinance s.164/170 | https://www.nevo.co.il/law_html/law01/255_001.htm | Legal basis for withholding on services, rent, non-residents |
+| Tax treaty list | https://www.gov.il/he/departments/guides/taxation-agreements | Reduced rates for payments to foreign contractors |
+
 ## Troubleshooting
 
 ### Error: "Certificate expired"

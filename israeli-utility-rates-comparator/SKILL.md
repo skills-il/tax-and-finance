@@ -327,6 +327,16 @@ Result: User receives a practical action plan for shifting consumption to off-pe
 - Israeli utility bills include VAT (18%) on top of the listed rates. Agents may calculate costs using the pre-VAT tariff without adding VAT, underestimating the actual bill.
 - The electricity market in Israel opened to competition in 2023, allowing private generators. Agents may only reference IEC rates without mentioning competitive alternatives like OPC or Dalia.
 
+## Reference Links
+
+| Source | URL | What to Check |
+|--------|-----|---------------|
+| Electricity Authority (PUA) | https://www.gov.il/he/departments/electricity_authority | Current quarterly electricity tariffs, TOU schedules, regulatory updates |
+| Israel Electric Corporation | https://www.iec.co.il | Residential tariff plans, smart meter rollout, consumption monitoring |
+| Water Authority | https://www.gov.il/he/departments/water_authority | Tiered water rates, household allocation, municipal corporations |
+| Natural Gas Authority | https://www.gov.il/he/departments/natural_gas_authority | Consumer gas pricing, supplier list, connection rules |
+| Arnona property tax rates | https://www.gov.il/he/service/arnona-payment | Municipal arnona tariffs and discount eligibility |
+
 ## Troubleshooting
 
 ### Error: "My electricity bill seems much higher than expected for my consumption level"

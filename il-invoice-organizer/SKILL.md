@@ -34,7 +34,9 @@ Parse the following fields from each invoice:
 | Net amount | סכום לפני מע"מ | Line items sum | Before VAT |
 | VAT amount | סכום מע"מ | VAT line | = Net * 0.18 |
 | Total amount | סכום כולל | Bottom | = Net + VAT |
-| Allocation number | מספר הקצאה | If above threshold | SHAAM allocated |
+| Allocation number | מספר הקצאה | B2B invoices ≥ NIS 5,000 | SHAAM allocation required |
+
+Note: As of 2026 the SHAAM e-invoice allocation number (מספר הקצאה) is mandatory for B2B tax invoices with a pre-VAT amount of NIS 5,000 or more. Invoices above the threshold without an allocation number are not valid for VAT input deduction.
 
 ### Step 3: Extract VAT (1/6 Rule)
 For Israeli invoices where only the total (gross) amount is visible:
@@ -145,6 +147,16 @@ Result: Full amount recorded as expense with no VAT deduction, flagged for accou
 - Osek Patur (exempt dealer) invoices have no VAT component. Agents may still try to extract VAT from these invoices, producing incorrect bookkeeping entries.
 - Israeli invoice numbers are not globally unique. Different suppliers can have the same invoice number. Always index by supplier + invoice number combination.
 - Hebrew OCR on scanned invoices frequently misreads the characters vav (ו) and zayin (ז), and confuses final-mem (ם) with samekh (ס). Verify extracted amounts and names.
+
+## Reference Links
+
+| Source | URL | What to Check |
+|--------|-----|---------------|
+| Israel Tax Authority | https://www.gov.il/he/departments/israel_tax_authority | Current VAT rate, e-invoice regulations, expense categories |
+| SHAAM e-invoice portal | https://www.gov.il/he/service/digital-invoices-service | Allocation number threshold, how to verify a supplier's allocation |
+| Invoice compliance rules | https://www.gov.il/he/pages/invoices-format | Required fields and formats for a tax invoice |
+| Business lookup | https://www.gov.il/he/service/business-id-search | Verify a supplier's TIN and status (Osek Murshe / Osek Patur) |
+| Expense deduction rules | https://www.gov.il/he/departments/guides/income-tax-allowed-expenses | Vehicle 2/3 rule, entertainment 80% rule, mixed-use deductions |
 
 ## Troubleshooting
 

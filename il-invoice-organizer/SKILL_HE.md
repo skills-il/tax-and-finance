@@ -181,6 +181,16 @@ python scripts/categorize_invoices.py --input invoices.json --output categorized
 - מספרי חשבוניות ישראליים אינם ייחודיים גלובלית. ספקים שונים יכולים להיות עם אותו מספר חשבונית. תמיד יש לאנדקס לפי שילוב ספק + מספר חשבונית.
 - OCR בעברית על חשבוניות סרוקות מבלבל לעתים בין האותיות ו' ל-ז', ובין ם' ל-ס'. יש לאמת סכומים ושמות שחולצו.
 
+## קישורי עזר
+
+| מקור | כתובת | מה לבדוק |
+|------|-------|----------|
+| רשות המסים | https://www.gov.il/he/departments/israel_tax_authority | שיעור מע"מ עדכני, תקנות חשבונית דיגיטלית, קטגוריות הוצאה |
+| מערכת שע"ם להקצאת חשבוניות | https://www.gov.il/he/service/digital-invoices-service | סף הקצאת מספר, אימות הקצאה של ספק |
+| דרישות פורמט חשבונית | https://www.gov.il/he/pages/invoices-format | שדות חובה ופורמט של חשבונית מס |
+| חיפוש עוסק | https://www.gov.il/he/service/business-id-search | אימות מספר עוסק וסטטוס (מורשה/פטור) |
+| כללי ניכוי הוצאות | https://www.gov.il/he/departments/guides/income-tax-allowed-expenses | כלל הרכב 2/3, כלל האירוח 80%, שימוש מעורב |
+
 ## פתרון בעיות
 
 ### שגיאה: "סכום המע"מ אינו תואם את הערך המחושב"

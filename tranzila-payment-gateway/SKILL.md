@@ -289,6 +289,15 @@ Result: Payment collected remotely without building a checkout page.
 - The response format from Tranzila is a plain-text key=value string separated by newlines, not JSON. Agents may try to `JSON.parse()` the response, which will throw an error.
 - Israeli credit card numbers have different BIN ranges than US/European cards. Tranzila validates cards locally, so test cards from Stripe or other international gateways will not work.
 
+## Reference Links
+
+| Source | URL | What to Check |
+|--------|-----|---------------|
+| Tranzila developer docs | https://docs.tranzila.com/ | API reference, authentication, supported card networks, 3DS flow, error codes |
+| Hosted Fields integration | https://docs.tranzila.com/docs/payments-billing/o033w842qo397-hosted-fields | PCI-friendly embedded card capture |
+| Tranzila company site | https://www.tranzila.com | Terminal enablement requests, installment permissions, contact, PCI certification |
+| tranzilajs community client | https://github.com/NirTatcher/tranzilajs | Community TypeScript/Node client and usage examples |
+
 ## Troubleshooting
 
 ### Error: "Response code 200 -- Application error"

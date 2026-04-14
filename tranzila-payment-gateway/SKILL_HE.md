@@ -272,6 +272,15 @@ supplier={terminal}&TranzilaPW={password}&TranzilaTK={token}&expdate={MMYY}&sum=
 - פורמט התגובה מטרנזילה הוא מחרוזת טקסט פשוט של מפתח=ערך מופרדת בשורות חדשות, לא JSON. סוכנים עלולים לנסות JSON.parse() על התגובה, מה שיזרוק שגיאה.
 - למספרי כרטיסי אשראי ישראליים טווחי BIN שונים מכרטיסים אמריקאיים/אירופיים. טרנזילה מאמתת כרטיסים מקומית, כך שכרטיסי בדיקה מ-Stripe או שערים בינלאומיים אחרים לא יעבדו.
 
+## קישורי עזר
+
+| מקור | כתובת | מה לבדוק |
+|------|-------|----------|
+| תיעוד מפתחים של טרנזילה | https://docs.tranzila.com/ | מסמכי API, אימות, רשתות כרטיסים, תהליך 3DS, קודי שגיאה |
+| Hosted Fields | https://docs.tranzila.com/docs/payments-billing/o033w842qo397-hosted-fields | שילוב שדות מוטמעים תואמי PCI |
+| אתר טרנזילה | https://www.tranzila.com | הפעלת טרמינל, הרשאות תשלומים, פרטי קשר, אישור PCI |
+| ספריית tranzilajs קהילתית | https://github.com/NirTatcher/tranzilajs | לקוח TypeScript/Node קהילתי ודוגמאות שימוש |
+
 ## פתרון בעיות
 
 ### שגיאה: "Response code 200 -- Application error"
