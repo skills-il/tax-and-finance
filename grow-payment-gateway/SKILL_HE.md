@@ -381,7 +381,7 @@ Grow מציעה סוגי דפי תשלום מוכנים מראש, כל אחד ע
 | בעיה | סיבה | פתרון |
 |---------|-------|---------|
 | API מחזיר 403 או תגובה ריקה | בקשה מצד הלקוח | העבירו קריאות API לשרת; Grow חוסמת בקשות מדפדפן |
-| שגיאת פענוח בבקשה | שימוש ב-JSON content type | עברו ל-`multipart/form-data` (FormData), לא `application/json` |
+| שגיאת פענוח בבקשה | שימוש ב-JSON content type | תעברו ל-`multipart/form-data` (FormData), לא `application/json` |
 | כתובת דף תשלום פגה | כתובת ישנה מ-10 דקות | קראו ל-`createPaymentProcess` שוב לכתובת חדשה |
 | Webhook לא התקבל | webhooks לא מופעלים | פנו ל-`apisupport@grow.business` להפעלה |
 | עסקה לא נמצאה | סביבה לא נכונה | ודאו שעסקאות sandbox נשאלות מול כתובת sandbox |
