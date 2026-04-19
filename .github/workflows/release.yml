@@ -2,6 +2,14 @@ name: Release
 on:
   push:
     tags: ['v*']
+permissions:
+  id-token: write
+  contents: write
+  attestations: write
 jobs:
   release:
     uses: skills-il/release-workflow/.github/workflows/release.yml@v1
+    permissions:
+      id-token: write
+      contents: write
+      attestations: write
