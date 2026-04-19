@@ -348,6 +348,18 @@ Actions:
 - Israeli tax returns use Form 1301 for individuals, not 1040. Agents may reference US form numbers and fields that do not exist in the Israeli system.
 - Capital gains in Israel are reported on a separate schedule and may have different rates (25% for financial assets, up to 50% for real estate depending on holding period and property count). Agents may apply a single capital gains rate.
 - Tax credit points (neku'dot zikui) must be claimed annually and vary by personal status (marital, children, new oleh, discharged soldier). Agents may use a default value without checking eligibility.
+- From 2026, Mas Shevach on a non-exempt investment property is counted toward the taxpayer's surtax income (5% on active-plus-capital income above 721,560 NIS). Agents may treat Mas Shevach and surtax as fully separate and under-report the combined liability.
+
+## Reference Links
+
+| Source | URL | What to Check |
+|--------|-----|---------------|
+| Israel Tax Authority (Reshut HaMisim) | https://www.gov.il/en/departments/israel_tax_authority | Official forms, filing guides, announcements |
+| SHAAM online filing portal | https://www.misim.gov.il | Electronic submission of all returns and declarations |
+| Kol-Zchut income tax brackets | https://www.kolzchut.org.il/he/%D7%9E%D7%93%D7%A8%D7%92%D7%95%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94 | Current-year annual and monthly bracket thresholds |
+| Kol-Zchut tax credit points | https://www.kolzchut.org.il/he/%D7%A0%D7%A7%D7%95%D7%93%D7%AA_%D7%96%D7%99%D7%9B%D7%95%D7%99 | Nekudot zikui value, eligibility categories |
+| Kol-Zchut Mas Shevach calculation | https://www.kolzchut.org.il/he/%D7%97%D7%99%D7%A9%D7%95%D7%91_%D7%9E%D7%A1_%D7%A9%D7%91%D7%97 | Real estate capital gains calculation, exemptions, linear method |
+| Israel Real Estate Taxation office | https://www.gov.il/he/departments/topics/land_taxation | Mas Shevach and Mas Rechisha forms, declarations, rates |
 
 ## Troubleshooting
 
