@@ -1,0 +1,41 @@
+{
+  "author": "skills-il",
+  "version": "1.0.0",
+  "category": "tax-and-finance",
+  "tags": {
+    "he": [
+      "ייצוא",
+      "Incoterms",
+      "חשבונית-מסחרית",
+      "EUR.1",
+      "תעודת-מקור",
+      "ישראל"
+    ],
+    "en": [
+      "export",
+      "incoterms",
+      "commercial-invoice",
+      "eur1",
+      "certificate-of-origin",
+      "israel"
+    ]
+  },
+  "display_name": {
+    "he": "ערכת מסמכי ייצוא ישראלית",
+    "en": "Israeli Export Shipping Kit"
+  },
+  "display_description": {
+    "he": "יצירת חבילת מסמכי ייצוא מלאה למייצא ישראלי: חשבונית מסחרית דו-לשונית, רשימת אריזה, שטר מטען / AWB / CMR, חשבונית פרופורמה, ומסמכי מקור (EUR.1, הצהרת מקור, US-Israel, טופס B239 לקנדה). מטפל ב-Incoterms 2020 (FOB, CIF, DDP, EXW, FCA, CPT, CIP, DAP, DPU, CFR, FAS). מתאים למי שמייצא בפעם הראשונה, מייצא חוזר ומעוניין במעמד מייצא מאושר, או מתמודד עם דחייה מכסית. אל תשתמשו לחישוב מס יבוא (יש israeli-customs-duty-calculator).",
+    "en": "Generate the full export document set for Israeli exporters: commercial invoice (HE+EN), packing list, bill of lading / AWB / CMR, proforma, and origin documents (EUR.1, invoice declaration, US-Israel Origin Invoice Declaration, CIFTA Form B239). Handles Incoterms 2020 (FOB, CIF, DDP, EXW, FCA, CPT, CIP, DAP, DPU, CFR, FAS). Use when user asks about exporting from Israel, choosing an Incoterm, EUR.1, approved exporter status, or recovering from a border rejection. Do NOT use for import tax calculation (use israeli-customs-duty-calculator)."
+  },
+  "supported_agents": [
+    "claude-code",
+    "cursor",
+    "github-copilot",
+    "windsurf",
+    "opencode",
+    "codex",
+    "antigravity",
+    "gemini-cli"
+  ]
+}

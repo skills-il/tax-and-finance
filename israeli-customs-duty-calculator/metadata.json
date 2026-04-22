@@ -1,0 +1,41 @@
+{
+  "author": "skills-il",
+  "version": "1.0.0",
+  "category": "tax-and-finance",
+  "tags": {
+    "he": [
+      "מכס",
+      "יבוא",
+      "מע\"מ",
+      "HS-code",
+      "הסכם-סחר",
+      "ישראל"
+    ],
+    "en": [
+      "customs",
+      "import",
+      "vat",
+      "hs-code",
+      "fta",
+      "israel"
+    ]
+  },
+  "display_name": {
+    "he": "מחשבון מכס ומסי יבוא",
+    "en": "Israeli Customs Duty Calculator"
+  },
+  "display_description": {
+    "he": "סיווג מוצרים בקוד HS ישראלי 8 ספרות וחישוב עלות מלאה של יבוא לישראל: מכס, מע\"מ 18%, מס קנייה. מתאים לחישוב מס על הזמנות מאמזון או עלי אקספרס, בדיקת תקרת הפטור האישי, איתור שיעור מכס ב-Shaar Olami, והוכחת מקור להעדפה מארצות הברית, האיחוד האירופי, בריטניה או קנדה. אל תשתמשו לדיווח מע\"מ שוטף או לייצוא.",
+    "en": "Classify products into Israeli 8-digit HS codes and calculate full landed cost for imports to Israel: customs duty, VAT 18%, and purchase tax (mas kniya). Use when user asks about Israel import tax on an Amazon or AliExpress order, the personal import threshold, Shaar Olami tariff lookup, FTA preference from US/EU/UK/Canada, or commercial CIF clearance. Do NOT use for domestic VAT reporting (use israeli-vat-reporting) or for export documentation (use israeli-export-shipping-kit)."
+  },
+  "supported_agents": [
+    "claude-code",
+    "cursor",
+    "github-copilot",
+    "windsurf",
+    "opencode",
+    "codex",
+    "antigravity",
+    "gemini-cli"
+  ]
+}
