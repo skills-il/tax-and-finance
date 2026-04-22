@@ -23,7 +23,7 @@ A demand letter is not legally required before filing a claim, but Israeli court
 ## Small Claims Court (Beit Mishpat L'Tvi'ot Ktanot / בית משפט לתביעות קטנות)
 
 ### Jurisdiction and Threshold
-- **Maximum claim amount:** 39,900 NIS (2026, updated periodically; verify at the courts administration website)
+- **Maximum claim amount:** 39,900 NIS (as of January 1, 2026; updated periodically, verify at the courts administration website)
 - **Court location:** Determined by the debtor's place of residence or business address
 - **Who can file:** Individuals and businesses (osek murshe/patur)
 
@@ -52,8 +52,8 @@ If multiple invoices to the same debtor exceed the Small Claims threshold when c
 - **Accrual start date:** Interest begins from the invoice due date (not the invoice issue date)
 - **Rate:** Bank of Israel base rate + statutory margin
 - **Linkage (hatzmada):** In addition to interest, the debt amount is linked to the Consumer Price Index (CPI) from the due date
-- **Compound interest:** Israeli law generally applies simple interest, not compound, unless otherwise agreed in the contract. The 2025 Amendment 9 reform further eliminated compound interest on enforcement debts and split late payment charges into "interest" (ribit) and "late payment fees" (dmei pigurim).
-- **Verify current rate:** Check the Bank of Israel website (boi.org.il) for the current base rate. Current rate: 4.00% (March 2026).
+- **Compound interest:** Israeli law generally applies simple interest, not compound, unless otherwise agreed in the contract. Amendment 9 to the Interest and Linkage Law (effective January 1, 2025) further eliminated compound interest on enforcement debts and split late payment charges into "interest" (ribit) and "late payment fees" (dmei pigurim). Late payment fees now accrue quarterly starting 3 months after the due date, rather than compounding.
+- **Verify current rate:** Check the Bank of Israel website (boi.org.il) for the current base rate. Current rate: 4.00% (held unchanged at the March 30, 2026 decision).
 
 ### Contractual vs Statutory Interest
 - If the contract specifies an interest rate, that rate applies (within legal limits)

@@ -1,6 +1,6 @@
 ---
 name: israeli-client-payment-chaser
-description: Chase unpaid invoices and manage debt collection for Israeli freelancers and businesses. Use when user asks about "unpaid invoices Israel", "payment reminder", "invoice aging", "debt collection freelancer", "michtav hitchayvut", "demand letter Hebrew", "tvi'ot ktanot", or "גביית חובות". Covers graduated WhatsApp/email reminder escalation, Hebrew demand letter generation, Small Claims Court eligibility assessment, and Shabbat/holiday- aware scheduling. Do NOT use for invoice generation (use israeli-e-invoice) or general accounting.
+description: Chase unpaid invoices and manage debt collection for Israeli freelancers and businesses. Use when user asks about "unpaid invoices Israel", "payment reminder", "invoice aging", "debt collection freelancer", "michtav hitchayvut", "demand letter Hebrew", "tvi'ot ktanot", or "גביית חובות". Covers graduated WhatsApp/email reminder escalation, Hebrew demand letter generation, Small Claims Court eligibility assessment, and Shabbat/holiday-aware scheduling. Do NOT use for invoice generation (use israeli-e-invoice) or general accounting.
 license: MIT
 allowed-tools: Bash(python:*) WebFetch
 compatibility: Works with Claude Code, OpenClaw, Cursor. OpenClaw recommended for scheduled reminder automation and WhatsApp message delivery.
@@ -56,9 +56,9 @@ Generate a formal Hebrew demand letter at the 60 or 90 day mark. The letter must
 5. **Payment deadline:** Typically 14 days from letter date
 6. **Warning of legal action:** Clear statement that failure to pay will result in legal proceedings
 
-**Interest calculation:** As per the Adjudication of Interest and Linkage Law (חוק פסיקת ריבית והצמדה), interest on business debts accrues from the invoice due date. The rate is the Bank of Israel rate plus a margin. Verify the current rate at boi.org.il. Current Bank of Israel rate: 4.00% (March 2026).
+**Interest calculation:** As per the Adjudication of Interest and Linkage Law (חוק פסיקת ריבית והצמדה), interest on business debts accrues from the invoice due date. The rate is the Bank of Israel rate plus a margin. Verify the current rate at boi.org.il. Current Bank of Israel rate: 4.00% (held unchanged at the March 30, 2026 decision).
 
-**Amendment 9 interest reform (2025):** The 2025 reform split late payment charges into "interest" (ribit) and "late payment fees" (dmei pigurim) and eliminated compound interest on enforcement debts. When calculating interest for demand letters, use the simple interest method per the reformed law.
+**Amendment 9 interest reform (effective January 1, 2025):** The reform split late payment charges into "interest" (ribit) and "late payment fees" (dmei pigurim), and eliminated compound interest on enforcement debts. Late payment fees now accrue quarterly (starting 3 months after the due date) rather than compounding. When calculating interest for demand letters, use the simple interest method per the reformed law.
 
 **Delivery options:**
 - Registered mail (doar rashum / דואר רשום): provides legal proof of sending. Keep the postal receipt.
@@ -78,7 +78,7 @@ Record and follow up on payment commitments:
 ### Step 5: Evaluate Small Claims Court (Tvi'ot Ktanot) Eligibility
 When a debt reaches 90+ days and collection efforts have failed, assess Small Claims Court eligibility:
 
-**Threshold:** Up to 39,900 NIS (2026, verify current amount at the courts website, updated periodically).
+**Threshold:** Up to 39,900 NIS (as of January 1, 2026; verify current amount at the courts administration website, updated periodically).
 
 **Eligibility checklist:**
 - Was proper written notice (demand letter) sent to the debtor?
@@ -162,6 +162,17 @@ Result: Comprehensive aging report with client risk scores. Cash flow forecast s
 ### References
 - `references/legal-escalation.md` - Israeli legal framework for debt collection: demand letter (michtav hitchayvut) requirements, Small Claims Court (tvi'ot ktanot) thresholds and filing process, interest calculation rules, and registered mail documentation. Consult when preparing legal escalation in Steps 3 and 5.
 - `references/reminder-templates.md` - WhatsApp and email reminder templates in Hebrew for each escalation stage (friendly, follow-up, formal, pre-legal). Templates are customizable with placeholder fields. Consult when configuring reminder messages in Step 2.
+
+## Reference Links
+
+| Source | URL | What to Check |
+|--------|-----|---------------|
+| Bank of Israel - interest rates | https://www.boi.org.il/information/interestrates/primerates/ | Current BoI base rate used for statutory interest calculation |
+| Courts Administration - Small Claims service page | https://www.gov.il/he/service/filing_a_small_claim | Current threshold, filing process, jurisdiction rules |
+| Kol-Zchut - Filing a small claim (Hebrew) | https://www.kolzchut.org.il/he/%D7%94%D7%92%D7%A9%D7%AA_%D7%AA%D7%91%D7%99%D7%A2%D7%94_%D7%A7%D7%98%D7%A0%D7%94 | Plain-language eligibility and procedure guide |
+| Nevo - Adjudication of Interest and Linkage Law (text) | https://www.nevo.co.il/law_html/law00/75001.htm | Full statutory text, including Amendment 9 (2025) |
+| Israel Post - Registered mail service | https://www.israelpost.co.il | Registered mail (doar rashum) service and pricing |
+| HebCal - Jewish calendar | https://www.hebcal.com | Shabbat times and holiday dates for reminder scheduling |
 
 ## Gotchas
 - Israeli payment terms (shotef) work differently than net-30/60/90. "Shotef + 30" means end of current month plus 30 days, not 30 days from invoice date. Agents may miscalculate due dates.
