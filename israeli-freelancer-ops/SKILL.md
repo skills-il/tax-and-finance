@@ -77,6 +77,7 @@ Configure proactive alerts for Israeli tax deadlines:
 | Annual tax report (doch shnati) | Yearly | By April 30 | Extensions possible via accountant (online filers may get until May 31 or later) |
 | Advance tax payments (mkdamot) | Bi-monthly | 15th of the month after the period | If applicable per Tax Authority assessment |
 | Osek patur annual declaration | Yearly | January 31 | Report previous year's turnover to VAT office |
+| Self-employed pension deposit (Section 45A + 47) | Yearly | **December 31** | Last day to deposit into pension fund, kupat gemel, or polisat bituach to claim that year's 35 percent tax credit (Section 45A) and the up-to-11 percent income deduction (Section 47). Missing this date forfeits the benefit. |
 
 **Detailed VAT reporting (from 2026):** Osek murshe businesses with annual turnover exceeding 500,000 NIS must now file detailed VAT reports (doch meforat, report 874) listing each invoice individually. This also forces a switch from bi-monthly to monthly filing, and the filing deadline changes from the 15th to the **23rd** of the following month. Ask the user about their annual turnover to determine if this applies.
 
@@ -92,6 +93,7 @@ Include per-deadline preparation notes:
 - Bituach Leumi: verify monthly advance amount from latest assessment
 - Annual report: coordinate with accountant, ensure all monthly packages delivered. Standard deadline is April 30; online filers may get later extensions.
 - Mkdamot: check assessment letter for payment coupon amounts
+- Pension deposit (Dec 31): alert by **December 15** with the year's business income to date and the 45A/47 ceilings (5.5 percent of income qualifies for the Section 45A credit; up to 11 percent qualifies for the Section 47 deduction, verify ceilings on kolzchut.org.il). Skipping the deposit by Dec 31 loses the credit for the whole year.
 
 ### Step 5: Monitor Osek Patur Threshold
 Track cumulative annual revenue against the osek patur threshold:

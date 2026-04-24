@@ -37,7 +37,7 @@ Form 1301 is the main annual income tax return for individuals and non-corporate
 
 **Who must file Form 1301:**
 - Self-employed individuals (osek murshe or osek patur)
-- Individuals whose gross salary exceeded 721,560 NIS (surtax threshold, 2025)
+- Individuals whose gross salary exceeded 721,560 NIS (surtax threshold, frozen 2025-2027)
 - Individuals with income from multiple employers
 - Individuals with foreign income or assets abroad exceeding reporting thresholds
 - Anyone who received capital gains during the tax year
@@ -53,7 +53,7 @@ Form 1301 is the main annual income tax return for individuals and non-corporate
 | Income from rentals | Residential and commercial rental income, chosen tax track |
 | Income from capital and investments | Interest, dividends, capital gains |
 | Foreign income | All income sourced outside Israel (Appendix 1327) |
-| Deductions and credits | Pension contributions (Section 47), donations (Section 46), life insurance |
+| Deductions and credits | Pension contributions (Sections 45A and 47), donations (Section 46), life insurance |
 | Nekudot zikui (tax credit points) | See Step 3 for full calculation |
 
 **Key appendices to prepare:**
@@ -96,6 +96,31 @@ Each nekudot zikui point reduces the annual tax liability by 2,904 NIS (2025-202
 
 **Calculation example:**
 A married woman (2.75 points) with two children aged 3 and 7 (2.5 + 1.0 = 3.5 points) = 6.25 total points = 6.25 x 2,904 = 18,150 NIS annual tax reduction.
+
+### Step 3.5: Pension Contribution Credit (Section 45A) and Deduction (Section 47)
+
+Pension contributions receive two separate tax benefits that must both be claimed on Form 1301. Missing either is one of the most common filing errors.
+
+**Section 45A: 35 percent income tax credit (zikui)**
+- Reduces tax liability directly by 35 percent of the qualifying pension contribution
+- Applies to both employees and self-employed who deposit into a pension fund, insurance policy with a pension component, or kupat gemel l-kitzba
+- Employee (sachir) ceiling: qualifying contribution up to 7 percent of eligible salary (capped at 23,232 NIS/month for 2026, so maximum monthly credited deposit is 1,626 NIS).
+- Self-employed (atzmai) eligibility: 5.5 percent of business income is the ceiling used for the 45A credit (verify the exact annual figure each year on kolzchut.org.il or pensuni.com before applying to a return)
+- Claim on Form 1301 in the credits section, separate line from nekudot zikui
+
+**Section 47: pension deduction (nikui)**
+- Reduces taxable income (not tax directly) by the contribution amount
+- Self-employed can deduct up to 11 percent of annual business income (capped at the qualifying ceiling)
+- Employee contributions above the 7 percent 45A threshold can qualify under Section 47
+- Always preferred for high marginal-rate taxpayers; verify whether a self-employed filer benefits more from 45A (credit) or 47 (deduction) based on their marginal bracket
+
+**Combined rule:** the same shekel cannot double-count. Self-employed filers typically structure deposits so that part qualifies for 45A (credit) and part for 47 (deduction) within the 16.5 percent combined ceiling.
+
+**Calculation example (self-employed, 300,000 NIS annual business income):**
+- Pension deposit: 33,000 NIS (11 percent of income)
+- Section 47 deduction: reduces taxable income by up to 33,000 NIS (marginal benefit depends on bracket)
+- Section 45A credit: 35 percent of up to 5.5 percent of income = up to 16,500 NIS eligible, so up to 5,775 NIS direct tax reduction
+- Always verify the exact current ceilings at kolzchut.org.il before quoting a number
 
 ### Step 4: Income Tax Brackets and Surtax
 
@@ -298,7 +323,7 @@ Actions:
 
 ### Example 2: Company Filing Corporate Tax Return (Form 1214)
 
-User says: "Our company needs to file the annual report for tax year 2025"
+User says: "Our company needs to file the annual report for the most recently closed tax year"
 
 Actions:
 1. Gather audited financial statements (profit and loss, balance sheet)

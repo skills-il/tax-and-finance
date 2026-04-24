@@ -4,10 +4,10 @@
 
 | Code | Hebrew | English | VAT Included | Typical Use |
 |------|--------|---------|-------------|-------------|
-| 1 | hashbonit mas | Tax Invoice | Yes (17%) | B2B sales, services rendered |
+| 1 | hashbonit mas | Tax Invoice | Yes (18%) | B2B sales, services rendered |
 | 2 | hashbonit zikui | Credit Note | Yes (reversal) | Refunds, corrections, cancellations |
 | 3 | kabala | Receipt | No | Payment confirmation only |
-| 101 | hashbonit mas / kabala | Tax Invoice + Receipt | Yes (17%) | B2C with payment (most common) |
+| 101 | hashbonit mas / kabala | Tax Invoice + Receipt | Yes (18%) | B2C with payment (most common) |
 | 400 | -- | Iframe Document | Varies | Generated within Low Profile iframe |
 
 ## When to Use Each Type (Israeli Tax Law)
@@ -50,7 +50,7 @@
 
 ## VAT Handling
 
-- Default: amounts are **VAT inclusive** -- Cardcom extracts the 17% VAT automatically
+- Default: amounts are **VAT inclusive** -- Cardcom extracts the 18% VAT automatically
 - For VAT-exempt items: set `IsVatFree: true` on the product line
 - For fully VAT-free documents: set `IsVatFree: true` on the InvoiceHead
 - Mixed invoices: some lines taxable, some exempt -- set per line item
@@ -89,13 +89,13 @@ The emailed document includes a PDF attachment and a link to view online.
     "Products": [
       {
         "Description": "Annual software license",
-        "UnitCost": 1170.00,
+        "UnitCost": 1180.00,
         "Quantity": 1,
         "IsVatFree": false
       },
       {
         "Description": "Setup fee",
-        "UnitCost": 234.00,
+        "UnitCost": 236.00,
         "Quantity": 1,
         "IsVatFree": false
       }
@@ -104,4 +104,4 @@ The emailed document includes a PDF attachment and a link to view online.
 }
 ```
 
-VAT breakdown: total 1404 NIS inclusive = 1200 NIS net + 204 NIS VAT (17%).
+VAT breakdown: total 1416 NIS inclusive = 1200 NIS net + 216 NIS VAT (18%).

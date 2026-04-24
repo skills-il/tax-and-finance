@@ -15,7 +15,7 @@ import argparse
 from dataclasses import dataclass
 
 
-VAT_RATE = 0.17  # Standard Israeli VAT rate
+VAT_RATE = 0.18  # Standard Israeli VAT rate (raised from 17% on Jan 1, 2025)
 
 # Default withholding rates by payment type
 DEFAULT_RATES = {
@@ -96,7 +96,7 @@ def format_result(result: WithholdingResult) -> str:
         f"",
         f"  Payment Type:         {result.payment_type}",
         f"  Gross Amount:         {result.gross_amount:>10,.2f} NIS",
-        f"  VAT (17%):           +{result.vat_amount:>10,.2f} NIS",
+        f"  VAT (18%):           +{result.vat_amount:>10,.2f} NIS",
         f"  Total Invoice:        {result.total_invoice:>10,.2f} NIS",
         f"",
         f"  Withholding Rate:     {result.withholding_rate * 100:>9.1f}% ({rate_source})",

@@ -103,9 +103,9 @@ Salary (maskoret) is a deductible expense for the company, avoiding the 23% corp
 
 | Income Range | Employee NI | Employee Health | Employer NI |
 |-------------|------------|----------------|-------------|
-| Up to 7,122 NIS/month | 0.4% | 3.1% | 4.46% |
-| 7,122 - 47,465 NIS/month | 7.0% | 5.0% | 7.38% |
-| Above 47,465 NIS/month | 0% (ceiling) | 0% (ceiling) | 0% (ceiling) |
+| Up to 7,703 NIS/month | 0.4% | 3.1% | 4.46% |
+| 7,703 - 51,910 NIS/month | 7.0% | 5.0% | 7.38% |
+| Above 51,910 NIS/month | 0% (ceiling) | 0% (ceiling) | 0% (ceiling) |
 
 Note: Controlling shareholder NI rates (4.46%/7.38% employer) differ slightly from regular employees (4.51%/7.60%).
 
@@ -187,8 +187,8 @@ A shareholder can provide management services to the company through a separate 
 
 | Income Range | NI Rate | Health Rate | Total |
 |-------------|---------|-------------|-------|
-| Up to 7,122 NIS/month | 2.87% | 3.1% | 5.97% |
-| 7,122 - 47,465 NIS/month | 12.83% | 5.0% | 17.83% |
+| Up to 7,703 NIS/month | 2.87% | 3.1% | 5.97% |
+| 7,703 - 51,910 NIS/month | 12.83% | 5.0% | 17.83% |
 
 Note: 52% of the NI amount is tax-deductible.
 
@@ -262,7 +262,7 @@ Before recommending any strategy, verify these compliance requirements:
 
 3. **Section 3(tet) interest rate confusion.** The deemed interest rate changes annually. For 2026 it is **6.53%** (Section 3(tet)) and **4.9%** (Section 3(yod) for CPI-linked loans). Using old rates or confusing the two sections produces wrong calculations. Always specify the tax year.
 
-4. **Forgetting Bituach Leumi on salary.** When comparing salary vs dividend, agents often compare only income tax rates. Salary carries an additional ~12% employee NI+health and ~7.38% employer NI (for controlling shareholders), which significantly changes the breakeven point. The NI ceiling (47,465 NIS/month) is also frequently missed.
+4. **Forgetting Bituach Leumi on salary.** When comparing salary vs dividend, agents often compare only income tax rates. Salary carries an additional ~12% employee NI+health and ~7.38% employer NI (for controlling shareholders), which significantly changes the breakeven point. The NI ceiling (51,910 NIS/month for 2026) is also frequently missed.
 
 5. **Mixing up controlling shareholder NI rates.** Controlling shareholder employees (baalei shlita) have slightly different NI rates (employer: 4.46%/7.38%) than regular employees (4.51%/7.60%). Using regular rates for a baal shlita produces incorrect calculations and may trigger audit questions.
 

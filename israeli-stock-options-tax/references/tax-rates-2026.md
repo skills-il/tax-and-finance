@@ -36,17 +36,17 @@ The capital income surtax applies to: capital gains, dividends, interest, rental
 
 | Component | Reduced Rate | Full Rate | Reduced Bracket | Full Bracket |
 |-----------|-------------|-----------|----------------|-------------|
-| Bituach Leumi | 0.4% | 7.0% | Up to 7,122/month | 7,122 - 47,465/month |
-| Health Insurance | 3.1% | 5.0% | Up to 7,122/month | 7,122 - 47,465/month |
+| Bituach Leumi | 0.4% | 7.0% | Up to 7,703/month | 7,703 - 51,910/month |
+| Health Insurance | 3.1% | 5.0% | Up to 7,703/month | 7,703 - 51,910/month |
 | **Total** | **3.5%** | **12.0%** | | |
 
-Maximum monthly income for BL: 47,465 NIS (income above this is exempt).
+Maximum monthly income for BL: 51,910 NIS (income above this is exempt). The reduced-rate ceiling (60 percent of the average wage) rose to 7,703 for 2026.
 
 ## Bituach Leumi - Employer Portion
 
 | Component | Rate | Bracket |
 |-----------|------|---------|
-| Bituach Leumi (employer) | 7.6% | Up to 49,030/month |
+| Bituach Leumi (employer) | 7.6% | Up to 51,910/month |
 
 ## Dividend Tax
 
@@ -82,6 +82,6 @@ Credit points reduce income tax but do NOT apply to capital gains tax under the 
 | Threshold | Amount (2026) | Relevance |
 |-----------|-------------|-----------|
 | Surtax threshold | 721,560 NIS/year | 3% surtax on all income + 2% on capital |
-| BL maximum salary | 47,465 NIS/month | No BL above this |
-| Employer BL max | 49,030 NIS/month | No employer BL above this |
+| BL maximum salary | 51,910 NIS/month | No BL above this (2026) |
+| Employer BL max | 51,910 NIS/month | No employer BL above this (2026) |
 | Top income tax bracket | 46,691+ NIS/month | 47% rate (up to 60,130/month) |

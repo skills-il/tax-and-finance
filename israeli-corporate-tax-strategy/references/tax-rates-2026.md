@@ -67,23 +67,23 @@ The 52% rate includes: 47% base + 3% surtax + 2% additional surtax on non-labor 
 
 | Income Range | Employee NI | Employee Health | Employer NI |
 |-------------|------------|----------------|-------------|
-| Up to 7,122 NIS/month | 0.4% | 3.1% | 4.46% |
-| 7,122 - 47,465 NIS/month | 7.0% | 5.0% | 7.38% |
-| Above 47,465 NIS/month | 0% (ceiling) | 0% (ceiling) | 0% (ceiling) |
+| Up to 7,703 NIS/month | 0.4% | 3.1% | 4.46% |
+| 7,703 - 51,910 NIS/month | 7.0% | 5.0% | 7.38% |
+| Above 51,910 NIS/month | 0% (ceiling) | 0% (ceiling) | 0% (ceiling) |
 
 ### Regular Employees (for comparison)
 
 | Income Range | Employee NI | Employee Health | Employer NI |
 |-------------|------------|----------------|-------------|
-| Up to 7,122 NIS/month | 0.4% | 3.1% | 4.51% |
-| 7,122 - 47,465 NIS/month | 7.0% | 5.0% | 7.60% |
+| Up to 7,703 NIS/month | 0.4% | 3.1% | 4.51% |
+| 7,703 - 51,910 NIS/month | 7.0% | 5.0% | 7.60% |
 
 ### Self-Employed
 
 | Income Range | NI Rate | Health Rate | Total |
 |-------------|---------|-------------|-------|
-| Up to 7,122 NIS/month | 2.87% | 3.1% | 5.97% |
-| 7,122 - 47,465 NIS/month | 12.83% | 5.0% | 17.83% |
+| Up to 7,703 NIS/month | 2.87% | 3.1% | 5.97% |
+| 7,703 - 51,910 NIS/month | 12.83% | 5.0% | 17.83% |
 
 52% of NI amount is tax-deductible.
 
@@ -101,5 +101,5 @@ The 52% rate includes: 47% base + 3% surtax + 2% additional surtax on non-labor 
 | Threshold | 2026 Value |
 |-----------|-----------|
 | Surtax threshold | 721,560 NIS/year |
-| NI maximum insurable income | 47,465 NIS/month |
+| NI maximum insurable income | 51,910 NIS/month |
 | Rental income exempt ceiling | 5,654 NIS/month (frozen 2025-2027) |

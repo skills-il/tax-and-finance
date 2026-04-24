@@ -36,9 +36,9 @@ INCOME_TAX_BRACKETS = [
     (float("inf"), 0.50),
 ]
 
-# Bituach Leumi thresholds (annual)
-NI_THRESHOLD_LOW = 7_122 * 12   # 85,464
-NI_THRESHOLD_HIGH = 47_465 * 12  # 569,580
+# Bituach Leumi thresholds (annual, 2026)
+NI_THRESHOLD_LOW = 7_703 * 12   # 92,436
+NI_THRESHOLD_HIGH = 51_910 * 12  # 622,920
 
 # Employee NI + Health rates
 EMPLOYEE_NI_LOW = 0.004 + 0.031   # 3.5%

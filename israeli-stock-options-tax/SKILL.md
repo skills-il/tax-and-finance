@@ -139,13 +139,13 @@ Plus 3% surtax on annual income above 721,560 NIS (total top rate: 50%).
 
 Bituach Leumi (National Insurance) and health tax apply ONLY to the employment income portion (income track, non-trustee, 3(i)). They do NOT apply to capital gains track.
 
-| Component | Reduced Rate (up to 7,122/month) | Full Rate (7,122-47,465/month) |
+| Component | Reduced Rate (up to 7,703/month) | Full Rate (7,703-51,910/month) |
 |-----------|----------------------------------|-------------------------------|
 | Bituach Leumi (employee) | 0.4% | 7.0% |
 | Health Insurance (employee) | 3.1% | 5.0% |
 | **Total employee** | **3.5%** | **12.0%** |
 
-Maximum monthly ceiling: 47,465 NIS. Income above this ceiling does not incur additional BL/health contributions. For a lump-sum option exercise, the employment income portion is spread over the vesting period for BL calculation purposes.
+Maximum monthly ceiling: 51,910 NIS (2026). Income above this ceiling does not incur additional BL/health contributions. For a lump-sum option exercise, the employment income portion is spread over the vesting period for BL calculation purposes.
 
 ### Step 6: Generate the Tax Comparison Report
 
