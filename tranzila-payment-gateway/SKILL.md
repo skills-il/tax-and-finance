@@ -56,12 +56,14 @@ Hosted Fields let you design your own checkout form while Tranzila securely hand
 4. On submit, the JS generates a `TranzilaTK` token without card data touching your server
 5. Send the token to your backend for charging via API V2
 
-This gives full design control while maintaining SAQ-A-EP PCI compliance. Refer to `https://docs.tranzila.com/docs/payments-billing/o033w842qo397-hosted-fields`.
+This gives full design control while maintaining SAQ-A-EP PCI compliance. Refer to the Hosted Fields section under `https://docs.tranzila.com/` (deep slug paths change frequently; navigate from the Payments &amp; Billing index).
+
+> **Webhook signature verification.** When Tranzila POSTs the result to your `notify_url`, do NOT trust it on inbound shape alone. Verify by either (a) issuing a follow-up server-to-server `confirm` API call against `tranzila71dt.cgi` to confirm the transaction id, or (b) validating the `myid` you provided round-trips back, or (c) signing your own checksum into the form fields and verifying it on receipt. Without this step, anyone with your `notify_url` can fake transaction-success callbacks.
 
 #### Option B: Iframe Integration (Quick Start)
 
 1. Embed the Tranzila iframe in your checkout page:
-   - URL: `https://direct.tranzila.com/{supplier}/iframe.php`
+   - URL: `https://direct.tranzila.com/{supplier}/iframenew.php`
    - Add query parameters: `sum`, `currency`, `cred_type`
    - Default mode creates a token (J5); use J4 for one-time charge
 
@@ -191,6 +193,8 @@ Tranzila has an Invoicing API for generating digitally-signed tax documents appr
 3. Supports tax invoices, receipts, and credit notes
 4. Can be auto-generated with PayPal payments
 
+**Israel Tax Authority allocation number (mispar haktza'a) — mandatory for B2B invoices over thresholds.** Since 2025-01-01 the ITA requires every B2B tax invoice over a threshold to carry an allocation number obtained from SHAAM via API. Threshold schedule: NIS 20,000 (from Jan 2025), **NIS 10,000 from Jan 2026**, **NIS 5,000 from Jun 2026**. Without the allocation number, the buyer cannot deduct input VAT on the invoice. If you generate invoices through Tranzila's Invoicing API, confirm with Tranzila support that allocation-number requests are wired through SHAAM for invoices at or above the current threshold; if not, fall back to a separate invoicing provider (Green Invoice, Morning, etc.) that does integrate with SHAAM, or request allocation numbers directly via the ITA portal.
+
 Refer to Tranzila's invoicing documentation for the complete invoicing API reference.
 
 ### Step 11: Handle Errors
@@ -294,7 +298,8 @@ Result: Payment collected remotely without building a checkout page.
 | Source | URL | What to Check |
 |--------|-----|---------------|
 | Tranzila developer docs | https://docs.tranzila.com/ | API reference, authentication, supported card networks, 3DS flow, error codes |
-| Hosted Fields integration | https://docs.tranzila.com/docs/payments-billing/o033w842qo397-hosted-fields | PCI-friendly embedded card capture |
+| Hosted Fields integration | https://docs.tranzila.com/ (Payments &amp; Billing → Hosted Fields) | PCI-friendly embedded card capture |
+| Israel Tax Authority allocation numbers | https://www.gov.il/en/service/allocation-number-application-tax-invoice | Mandatory for invoices ≥ NIS 10K (Jan 2026), drops to NIS 5K (Jun 2026) |
 | Tranzila company site | https://www.tranzila.com | Terminal enablement requests, installment permissions, contact, PCI certification |
 | tranzilajs community client | https://github.com/NirTatcher/tranzilajs | Community TypeScript/Node client and usage examples |
 

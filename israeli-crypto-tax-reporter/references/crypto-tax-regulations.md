@@ -56,22 +56,16 @@ Published by the Israeli Tax Authority on February 19, 2018, this is the primary
 
 ### Subsequent Guidance and Court Rulings
 
-**Tax Authority Ruling 3141/18 (2018):**
-- Confirmed that Bitcoin mining constitutes a "business" when conducted at commercial scale
-- Mining income is taxable upon creation of the coins, not upon sale
-
-**Tax Authority Ruling 7706/19 (2019):**
-- Addressed taxation of utility tokens vs. security tokens
-- Utility tokens: treated as prepaid service rights (may have VAT implications)
+**ITA Circular 07/2018 ("Taxation of Token Issuance for Services / Products in Development"):**
+- Addressed taxation of utility-token vs security-token issuances
+- Utility tokens: treated as prepaid service rights (may carry VAT implications for the issuer)
 - Security tokens: treated as securities under existing tax rules
 
-**Kfar Saba Magistrate Court, 2020:**
-- Upheld the Tax Authority's position that crypto is a taxable asset
-- Rejected the argument that crypto should be treated as "foreign currency" (which would have different tax consequences)
+**District-court line of decisions, 2020-2024:**
+- Multiple Israeli district-court rulings (including Be'er Sheva District) have classified frequent crypto trading (high transaction volume relative to portfolio size, sustained over multiple years, with active position management) as a business activity, taxing the gains at marginal income rates instead of 25% capital gains. Specific case names (Copel, Norkin and others) should be looked up by the agent on `psakdin.co.il` or `nevo.co.il` before being cited.
+- The ITA's position that crypto is a taxable asset (not foreign currency) has been consistently upheld; agents should never cite specific case docket numbers without first verifying them on a legal database.
 
-**Be'er Sheva District Court, 2022:**
-- Established that frequent crypto trading (hundreds of transactions per year) constitutes a business
-- Applied marginal income tax rates instead of 25% capital gains rate
+**Note on case citations:** never invent or fabricate ruling numbers. If a specific docket is needed, look it up on `nevo.co.il`, `psakdin.co.il`, or the Israeli Tax Authority's published rulings (`mas.gov.il/החלטות-מיסוי`); otherwise, describe the line of authority generically.
 
 ## Tax Rates Summary
 
@@ -83,7 +77,7 @@ Published by the Israeli Tax Authority on February 19, 2018, this is the primary
 | Capital gains (significant shareholder) | 30% | Holding 10%+ of a project |
 | Business income | 10-50% | Marginal rates based on total income |
 | Passive income (interest/dividends) | 25% | From crypto lending, some staking |
-| Surtax (mas yesafim) | +3% | On income exceeding 721,560 NIS/year (2024) |
+| Surtax (mas yesafim) | +5% (post-2025 reform; verify 2026 figure) | On income (now including capital gains) exceeding the CPI-adjusted threshold (~721,560 NIS for 2025; verify 2026 on mas.gov.il) |
 
 ### For Companies (Chevra)
 
@@ -114,7 +108,7 @@ Filed with the annual tax return for capital gain events:
 The comprehensive annual return that includes:
 - All income sources (salary, business, capital gains, passive income)
 - Form 1325 is attached as a schedule
-- Filing deadline: April 30 for individuals, extensions available
+- Filing deadline (Form 1301 individual annual return): **May 31** of the following year for online filing (paper filing earlier in May); extensions to end of July or even September available via רואה חשבון. The "April 30" deadline is outdated.
 
 ### Advance Tax Payments (Mikdamot)
 

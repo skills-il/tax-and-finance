@@ -34,17 +34,20 @@ INDICES = {
     "TAREAL": {"id": "146", "name": "TA-Real Estate", "hebrew": 'ת"א-נדל"ן'},
 }
 
-# Well-known dual-listed companies (TASE securities number -> NASDAQ/NYSE ticker)
+# Well-known dual-listed companies (TASE securities number -> NASDAQ/NYSE ticker).
+# IMPORTANT: TASE security numbers are easy to misattribute. Cross-check at
+# https://market.tase.co.il/en/market_data/security/{number} before using.
+# The numbers below were spot-checked in 2026-04 against market.tase.co.il.
 DUAL_LISTED = {
     "662577": {"name": "Bank Hapoalim", "us_ticker": None},
-    "604611": {"name": "Check Point", "us_ticker": "CHKP"},
     "1092508": {"name": "CyberArk", "us_ticker": "CYBR"},
-    "691212": {"name": "NICE", "us_ticker": "NICE"},
     "1084992": {"name": "Sapiens", "us_ticker": "SPNS"},
-    "604645": {"name": "Teva", "us_ticker": "TEVA"},
     "1082285": {"name": "Fiverr", "us_ticker": "FVRR"},
-    "604629": {"name": "ICL", "us_ticker": "ICL"},
 }
+# Removed pre-2026 entries with unverified numbers (Check Point, NICE, Teva, ICL).
+# Look these up directly via market.tase.co.il/en/market_data/security/{number}
+# or by company name at https://market.tase.co.il/en/market_data/companies/
+# 604611 is Bank Leumi (NOT Check Point and NOT Teva, despite earlier mappings).
 
 
 def fetch_json(url: str, headers: Optional[dict] = None) -> dict:
@@ -125,23 +128,28 @@ def fetch_stock_data(securities_number: str) -> dict:
 
 
 def generate_example() -> dict:
-    """Generate example TA-35 data for demonstration."""
+    """Generate example TA-35 data for demonstration.
+
+    NOTE: Constituent weights and security numbers below are illustrative only
+    and may be stale. Always verify against the live TASE OpenAPI before
+    presenting to users. To verify a security number, hit
+    https://market.tase.co.il/en/market_data/security/{number}.
+    """
     return {
         "index": "TA-35",
         "date": datetime.now().strftime("%Y-%m-%d"),
         "components": [
+            # Spot-checked 2026-04 against market.tase.co.il:
             {"name": "Bank Hapoalim", "hebrew": "בנק הפועלים", "weight_pct": 8.2, "securities_no": "662577"},
-            {"name": "Bank Leumi", "hebrew": "בנק לאומי", "weight_pct": 7.5, "securities_no": "604654"},
-            {"name": "ICL Group", "hebrew": "כי\"ל", "weight_pct": 5.8, "securities_no": "604629"},
-            {"name": "Teva Pharmaceutical", "hebrew": "טבע", "weight_pct": 5.1, "securities_no": "604645"},
-            {"name": "Check Point", "hebrew": "צ'ק פוינט", "weight_pct": 4.9, "securities_no": "604611"},
-            {"name": "NICE", "hebrew": "נייס", "weight_pct": 4.3, "securities_no": "691212"},
-            {"name": "Bank Discount", "hebrew": "בנק דיסקונט", "weight_pct": 4.0, "securities_no": "691205"},
-            {"name": "Mizrahi Tefahot", "hebrew": "מזרחי טפחות", "weight_pct": 3.8, "securities_no": "695437"},
-            {"name": "Elbit Systems", "hebrew": "אלביט מערכות", "weight_pct": 3.5, "securities_no": "604630"},
-            {"name": "Tower Semiconductor", "hebrew": "טאואר", "weight_pct": 3.2, "securities_no": "604642"},
+            {"name": "Bank Leumi", "hebrew": "בנק לאומי", "weight_pct": 7.5, "securities_no": "604611"},
+            # The following weights/security numbers are approximate placeholders;
+            # verify before quoting. Several legacy entries here had wrong
+            # security numbers (Check Point/Teva/NICE/ICL). Look up by name at
+            # https://market.tase.co.il/en/market_data/companies/ instead of
+            # trusting hardcoded numbers.
+            {"name": "Bank Discount", "hebrew": "בנק דיסקונט", "weight_pct": 4.0, "securities_no": "691212"},
         ],
-        "note": "Example data for demonstration. Use TASE API for live data.",
+        "note": "Example data for demonstration only. Use the live TASE OpenAPI for production.",
     }
 
 

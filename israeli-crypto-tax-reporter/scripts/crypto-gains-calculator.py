@@ -40,8 +40,11 @@ from typing import Optional
 INDIVIDUAL_TAX_RATE = 0.25
 SIGNIFICANT_SHAREHOLDER_RATE = 0.30
 CORPORATE_TAX_RATE = 0.23
-SURTAX_RATE = 0.03
-SURTAX_THRESHOLD = 721_560  # NIS, 2024 threshold
+# 2025 budget legislation raised mas yesafim from 3% to 5% AND extended it to
+# capital gains. Verify the 2026 threshold on mas.gov.il before relying on the
+# constant below. The 721,560 figure is the 2025 CPI-adjusted threshold.
+SURTAX_RATE = 0.05
+SURTAX_THRESHOLD = 721_560  # NIS, 2025 threshold; refresh annually
 ADVANCE_PAYMENT_DAYS = 30
 
 
@@ -486,7 +489,7 @@ def format_report(report: TaxReport) -> str:
     ])
 
     if report.surtax > 0:
-        lines.append(f"  Surtax (3%):                {report.surtax:>15,.2f} NIS")
+        lines.append(f"  Surtax (5%):                {report.surtax:>15,.2f} NIS")
 
     lines.extend([
         f"  -----------------------------------------",
@@ -552,7 +555,7 @@ def format_form_1325(report: TaxReport) -> str:
     ])
 
     if report.surtax > 0:
-        lines.append(f"Surtax (3%): {report.surtax:,.2f} NIS")
+        lines.append(f"Surtax (5%): {report.surtax:,.2f} NIS")
 
     return "\n".join(lines)
 

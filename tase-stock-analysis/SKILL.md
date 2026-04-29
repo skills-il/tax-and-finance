@@ -140,7 +140,8 @@ Result: Summary of recent disclosures with material items highlighted
 
 ## Gotchas
 - Since January 2026, TASE trades Monday through Friday (previously Sunday-Thursday). Friday sessions are shortened (09:59-13:50). Agents trained on pre-2026 data may still assume Sunday-Thursday trading and schedule queries on Sundays, which are now non-trading days.
-- TASE ticker symbols follow a different format than US exchanges. Israeli stocks use numeric codes (e.g., 604611 for Teva) alongside short Hebrew names. Agents may try to use US-style letter tickers.
+- TASE ticker symbols follow a different format than US exchanges. Israeli stocks use numeric securities codes alongside short Hebrew names. **Always verify a security number before using it** by hitting `https://market.tase.co.il/en/market_data/security/{number}` (e.g., 662577 = Bank Hapoalim, 604611 = Bank Leumi). As of 2026-04, English alpha tickers (POLI, LEUMI, TEVA, NICE, CHKP, ICL) are also usable on TASE alongside numeric codes — prefer alpha tickers for clarity. Never hardcode security numbers from memory; fetch them from the TASE OpenAPI by company name.
+- **Equity settlement is T+1.** Israel transitioned to T+1 settlement for equities; foreign investors may negotiate T+2 with their broker. The skill's pre-2024 references to T+2 across the board are stale.
 - Israeli stock prices on TASE are quoted in agorot (1/100 of a shekel), not in shekels. Agents may display raw prices without dividing by 100, showing prices 100x too high.
 - Dual-listed Israeli companies (e.g., Teva, Check Point) trade on both TASE and NASDAQ with different prices due to exchange rate fluctuations. Agents may not reconcile the price difference.
 

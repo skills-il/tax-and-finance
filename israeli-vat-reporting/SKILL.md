@@ -19,8 +19,8 @@ Ask the user about their business registration:
 | Amuta (Non-profit) | amuta | Any | Monthly or Bi-monthly |
 | Company (Ltd) | chevra | Any | Monthly |
 
-Monthly reporting: Annual turnover > ~1,725,000 NIS (updated periodically)
-Bi-monthly reporting: Annual turnover < ~1,725,000 NIS
+Monthly reporting: Annual turnover > NIS 1,500,000 (per Section 69A(g) of the VAT Law)
+Bi-monthly reporting: Annual turnover < NIS 1,500,000
 
 ### Step 2: Collect Transaction Data
 For the reporting period, gather:
@@ -31,8 +31,8 @@ For the reporting period, gather:
 ### Step 3: Calculate VAT Liability
 
 ```
-Output VAT (mas etzot)    = Sum of VAT on all sales invoices
-Input VAT (mas tsmachot)  = Sum of VAT on deductible purchase invoices
+Output VAT (mas asakot, מס עסקאות)    = Sum of VAT on all sales invoices
+Input VAT (mas tsumot, מס תשומות)     = Sum of VAT on deductible purchase invoices
 Net VAT                   = Output VAT - Input VAT
 
 If Net > 0: Business owes SHAAM (payment due)
@@ -79,7 +79,7 @@ Before submission, verify:
 ### Example 1: Monthly VAT Report
 User says: "Help me prepare my VAT report for January 2026"
 Actions:
-1. Determine: Monthly reporter (turnover > ~1,725,000 NIS or company)
+1. Determine: Monthly reporter (turnover > NIS 1,500,000 or company)
 2. Collect: January sales and purchase invoices
 3. Calculate: Output VAT 34,000 - Input VAT 22,000 = Net 12,000 NIS owed
 4. Prepare: Form 874 with all fields mapped
@@ -109,7 +109,7 @@ Result: VAT report with zero-rated export handling
 - Agents frequently use the old 17% VAT rate. The current Israeli VAT rate is **18%** (effective January 1, 2025, per the 2025 Budget Law). This single error cascades through all calculations. Always verify the rate before computing.
 - Israeli VAT reports are filed bi-monthly (every two months), not quarterly as in many European countries. Agents may suggest quarterly filing, which will result in missed deadlines and penalties.
 - Osek Patur businesses (annual revenue approximately 120,000 NIS, subject to annual updates) do not charge or report VAT. Agents may generate VAT reports for businesses that should not be filing them.
-- Input VAT (mas tsumost) from car purchases is only 2/3 deductible in Israel. Agents may claim full VAT deduction on vehicle-related expenses.
+- Input VAT (mas tsumot) from car purchases is only 2/3 deductible in Israel. Agents may claim full VAT deduction on vehicle-related expenses.
 - From 2026, input VAT deduction requires a valid allocation number (mispar haktzaa) on invoices above the threshold (NIS 10,000 from January 2026, NIS 5,000 from June 2026). Agents may ignore this requirement, leading to rejected deductions.
 
 ## Troubleshooting

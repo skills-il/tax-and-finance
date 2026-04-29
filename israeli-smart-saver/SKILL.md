@@ -45,7 +45,7 @@ Maximize savings by combining multiple discount layers on a single purchase:
 - 3% credit card cashback = 30 NIS
 - 5% Cashback.co.il = 50 NIS
 - 10% off via discounted BuyMe card = 100 NIS
-- Total saved: ~180 NIS (18%)
+- Total saved: approximately 172 NIS (~17%). Note: cashback platforms like Cashback.co.il typically rebate on the post-discount net amount, not the gross. So if BuyMe gives 10% off (1,000 → 900), Cashback rebates 5% × 900 = 45 NIS and the credit card rebates 3% × 900 = 27 NIS. Stacked total: 100 + 45 + 27 = 172 NIS.
 
 ## Credit Card Perks Optimization
 
@@ -198,7 +198,7 @@ Result: Recommendation to switch or negotiate, with specific plan comparison.
 Some cashback platforms (Cashback.co.il, Cashdo) do not stack with each other. Using two cashback extensions simultaneously can cause neither to track the purchase. Always use only one cashback platform per transaction.
 
 ### 2. BuyMe Gift Cards Are Not Refundable
-When buying discounted BuyMe gift cards as a savings strategy, remember they are generally non-refundable. Only buy them for stores where you are certain to shop. Expired gift cards are governed by Israeli consumer law (valid for minimum 3 years from purchase as required by Israeli Consumer Protection Law).
+When buying discounted BuyMe gift cards as a savings strategy, remember they are generally non-refundable. Only buy them for stores where you are certain to shop. Expired gift cards are governed by Israeli consumer law (minimum 5-year validity from issuance per Consumer Protection Law Tikun 47, 2017, codified in Sec. 14יג1).
 
 ### 3. Installment Payments (Tashlumim) Are Not Always Free
 While most Israeli retailers offer interest-free installments, some charge interest for longer terms (above 12 payments) or for certain product categories. Always verify "tashlumim l'lo ribit" (interest-free installments) before assuming.
@@ -216,7 +216,8 @@ Under the Israeli Consumer Protection Law, consumers can cancel most service con
 | Zap.co.il price comparison | https://www.zap.co.il | Live Israeli retailer price comparison for electronics, appliances, and more |
 | Consumer Council | https://www.consumers.org.il | Consumer rights, cooling-off period, complaint filing |
 | Gov.il consumer protection | https://www.gov.il/he/departments/consumer_protection_authority | Official cancellation rules, cooling-off period, enforcement |
-| Misim.gov.il – credit card rules | https://www.gov.il/he/service/credit-card-complaint | BOI credit card dispute process |
+| Israeli credit card complaint portal | https://www.gov.il/he/service/credit-card-complaint | gov.il credit-card dispute filing service |
+| Bank of Israel - Banking Supervision Department | https://www.boi.org.il/en/information-and-service-to-the-public/ | Bank-side complaint and consumer banking guidance |
 | Bank of Israel customer info | https://www.boi.org.il/en/information-and-service-to-the-public/banking-customer-service-information/ | Bank fee comparisons and consumer banking guidance |
 
 ## Troubleshooting

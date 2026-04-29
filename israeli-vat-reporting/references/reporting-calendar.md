@@ -1,7 +1,7 @@
 # Israeli VAT Reporting Calendar
 
 ## Monthly Reporters
-Businesses with annual turnover > ~1,725,000 NIS and all companies (Ltd/chevra).
+Businesses with annual turnover > NIS 1,500,000 and all companies (Ltd/chevra).
 
 | Period | Deadline |
 |--------|----------|
@@ -19,7 +19,7 @@ Businesses with annual turnover > ~1,725,000 NIS and all companies (Ltd/chevra).
 | December | January 15 |
 
 ## Bi-Monthly Reporters
-Businesses with annual turnover < ~1,725,000 NIS (osek morsheh).
+Businesses with annual turnover < NIS 1,500,000 (osek morsheh).
 
 **Deadline types:**
 - Manual filing: 15th of the month after the period ends

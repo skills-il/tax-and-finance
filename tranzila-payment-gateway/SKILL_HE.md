@@ -39,7 +39,9 @@ Hosted Fields מאפשרים לכם לעצב את טופס התשלום שלכם
 4. בשליחה, ה-JS מייצר טוקן `TranzilaTK` ללא שנתוני כרטיס עוברים דרך השרת שלכם
 5. שלחו את הטוקן לשרת שלכם לחיוב דרך API V2
 
-זה נותן שליטה מלאה בעיצוב תוך שמירה על עמידה ב-SAQ-A-EP PCI. ראו `https://docs.tranzila.com/docs/payments-billing/o033w842qo397-hosted-fields`.
+זה נותן שליטה מלאה בעיצוב תוך שמירה על עמידה ב-SAQ-A-EP PCI. ראו את חלק Hosted Fields תחת `https://docs.tranzila.com/` (קישורי slug עמוקים משתנים, נווטו מהאינדקס Payments &amp; Billing).
+
+> **אימות חתימה ב-webhook.** כש-Tranzila שולח POST לתוצאה ל-`notify_url`, אל תסמכו על הצורה של הקריאה. אמתו על-ידי קריאת `confirm` שרת-לשרת מול `tranzila71dt.cgi` כדי לאשר את מזהה העסקה, או על-ידי בדיקה ש-`myid` שהעברתם חוזר זהה, או על-ידי checksum שאתם חותמים בעצמכם בשדות הטופס ובודקים בקבלה. בלי זה, כל מי שיודע את ה-`notify_url` יכול לזייף הצלחות עסקה.
 
 #### אפשרות ב: אינטגרציית Iframe (התחלה מהירה)
 
@@ -163,7 +165,7 @@ supplier={terminal}&TranzilaPW={password}&TranzilaTK={token}&expdate={MMYY}&sum=
 3. עקבו אחר תוצאות דרך Reports API או התראות webhook
 4. בטלו או שנו הוראות קבע דרך API
 
-הוראות קבע הן תכונה בתשלום -- פנו לטרנזילה להפעלה במסוף שלכם. ראו `https://docs.tranzila.com/docs/payments-billing/7lwf8jetxm6oq-create-a-standing-order`.
+הוראות קבע הן תכונה בתשלום -- פנו לטרנזילה להפעלה במסוף שלכם. ראו את חלק Standing Orders תחת `https://docs.tranzila.com/`.
 
 ### שלב 10: הפקת חשבוניות
 
@@ -174,7 +176,9 @@ supplier={terminal}&TranzilaPW={password}&TranzilaTK={token}&expdate={MMYY}&sum=
 3. תמיכה בחשבוניות מס, קבלות, וחשבוניות זיכוי
 4. ניתן להפיק אוטומטית עם תשלומי PayPal
 
-ראו `https://docs.tranzila.com/docs/invoices/e6843c7e8bc43-invoices-api` למדריך החשבוניות המלא.
+**מספר הקצאה (allocation number) של רשות המסים, חובה לחשבוניות B2B מעל סף.** מ-1.1.2025 רשות המסים דורשת מספר הקצאה מ-שע"ם לכל חשבונית מס B2B מעל הסף. לוח: 20,000 ש"ח (מ-ינואר 2025), **10,000 ש"ח מ-ינואר 2026**, **5,000 ש"ח מ-יוני 2026**. בלי מספר הקצאה הקונה לא יכול לקזז מע"מ תשומות. אם אתם מנפיקים חשבוניות דרך ה-Invoicing API של Tranzila, אמתו עם תמיכת Tranzila שבקשות מספר הקצאה מועברות לשע"ם עבור חשבוניות מעל הסף הנוכחי; אם לא, השתמשו בספק חשבוניות נפרד (Green Invoice, Morning) שמחובר לשע"ם, או בקשו מספרי הקצאה ישירות בפורטל רשות המסים.
+
+ראו את חלק Invoices תחת `https://docs.tranzila.com/` למדריך החשבוניות המלא.
 
 ### שלב 11: טיפול בשגיאות
 
@@ -277,7 +281,8 @@ supplier={terminal}&TranzilaPW={password}&TranzilaTK={token}&expdate={MMYY}&sum=
 | מקור | כתובת | מה לבדוק |
 |------|-------|----------|
 | תיעוד מפתחים של טרנזילה | https://docs.tranzila.com/ | מסמכי API, אימות, רשתות כרטיסים, תהליך 3DS, קודי שגיאה |
-| Hosted Fields | https://docs.tranzila.com/docs/payments-billing/o033w842qo397-hosted-fields | שילוב שדות מוטמעים תואמי PCI |
+| Hosted Fields | https://docs.tranzila.com/ (Payments &amp; Billing → Hosted Fields) | שילוב שדות מוטמעים תואמי PCI |
+| מספרי הקצאה רשות המסים | https://www.gov.il/he/service/allocation-number-application-tax-invoice | חובה לחשבוניות B2B מעל 10,000 ש"ח (ינואר 2026), יורד ל-5,000 ש"ח (יוני 2026) |
 | אתר טרנזילה | https://www.tranzila.com | הפעלת טרמינל, הרשאות תשלומים, פרטי קשר, אישור PCI |
 | ספריית tranzilajs קהילתית | https://github.com/NirTatcher/tranzilajs | לקוח TypeScript/Node קהילתי ודוגמאות שימוש |
 

@@ -9,6 +9,12 @@ allowed-tools: Bash(python:*) WebFetch
 
 ## Instructions
 
+### Step 0: Inventory Existing Policies via Har HaBituach
+
+Before comparing offers, the user should pull their existing policy inventory from **Har HaBituach** (`https://harb.cma.gov.il/`), the CMA-operated personal-policy aggregator. Har HaBituach lists every policy the user holds across all Israeli insurers (life, health, pension, disability, mortgage life, supplementary HMO, manager's insurance, etc.). Many users discover overlapping or expired coverage they had forgotten. Skipping this step is the most common reason a comparison ends up over-insuring or duplicating coverage.
+
+Authentication is via Israeli ID + a one-time SMS or email code. The interface is Hebrew-only.
+
 ### Step 1: Identify the Insurance Type Needed
 
 Determine which insurance product the user is comparing. Israeli insurance falls into these main categories:
@@ -242,6 +248,22 @@ Actions:
 7. Factor in the urgency: if surgery is needed soon, the waiting period may make the upgrade ineffective in the short term
 
 Result: User receives a cost-benefit analysis comparing Maccabi Sheli vs. Zahav premiums against the expected surgery costs, plus alternative private insurance options if the waiting period is a problem.
+
+## Bituach Siudi (Long-Term Care) Crisis 2025-2026
+
+A major structural change broke the Israeli long-term-care market in 2025-2026 and any 2026 comparison must surface it:
+
+- **Ministry of Health ordered the four kupot cholim to STOP selling new bituach siudi (long-term care) policies from July 1, 2025**, and to cease all bituach siudi operations by January 1, 2026. The kupot-channel policies that millions of Israelis held are no longer the recommended model.
+- **The CMA tightened the patient-eligibility definition to 4-of-6 ADLs (activities of daily living)** effective January 1, 2025 (was 3-of-6). Patients who would have qualified under the old definition may not qualify now.
+- **Remaining options for new long-term-care coverage:** private bituach siudi from major insurers (Phoenix, Migdal, Harel, Clal, Menorah), and Bituach Leumi's siudi track. Pricing and underwriting differ significantly across these. Verify current availability per insurer; the market is still adjusting.
+
+When a user asks about "bituach siudi" in 2026, surface this disruption explicitly — quoting the pre-2025 kupot-channel framing as if still active is misleading.
+
+## War / Iron Swords Coverage Considerations
+
+- **Reservist (miluim) policies:** call-up under Order 8 may trigger automatic coverage adjustments on disability and life policies (some carriers waive premiums; others apply standard exclusions). Bituach Leumi's reservist track operates separately and pays for service-related disability or death.
+- **Travel-insurance war exclusions:** since Iron Swords (Oct 2023), most travel insurers exclude active-war-zone destinations and may exclude flights routed through them. Verify the geographic exclusion clause before purchase.
+- **Disability and life-insurance terror clauses:** check the policy's "war risk" and "terror" definitions; some payouts are reduced or excluded for organized hostilities, while pure terror events are usually still covered (verify per policy).
 
 ## Gotchas
 - Israeli car insurance has three distinct mandatory/optional layers: Hova (mandatory third-party), Makif (comprehensive), and Tzad Gimel (third-party property). Agents may conflate these or use US/UK insurance terminology that does not map to Israeli categories.

@@ -7,6 +7,22 @@ allowed-tools: Bash(python:*) WebFetch
 
 # Israeli Mortgage Comparator
 
+## Snapshot (verify before quoting)
+
+| Variable | Value | Source |
+|---|---|---|
+| BoI rate (Apr 2026) | 4.0% (cut from 4.25% on 2026-01-05; held through Mar 2026) | bankisrael.gov.il |
+| Prime rate (Apr 2026) | 5.5% (= BoI + 1.5%) | derived from BoI |
+| BoI forecast | gradual decline to ~3.5% by Q4 2026 | BoI staff forecasts |
+| Purchase tax (mas rechisha) bracket 0% | up to 1,978,745 NIS | mas.gov.il, brackets frozen 2025-2027 |
+| Investment-property purchase tax | 8% up to 6,055,070 NIS, 10% above | mas.gov.il |
+| Foreign-resident max LTV | 50% (some banks 50-60%) | BoI Banking Supervision |
+| First-time buyer (mathil) max LTV | 75% | BoI Banking Supervision |
+| Upgrader (meshaper) max LTV | 70% | BoI Banking Supervision |
+| Investor (mashkia) max LTV | 50% | BoI Banking Supervision |
+
+These figures are time-sensitive; agents should re-verify the BoI rate and purchase-tax brackets on every fresh use.
+
 ## Instructions
 
 ### Step 1: Understand the Israeli Mortgage System
@@ -35,15 +51,15 @@ Bank of Israel imposes strict regulations on mortgage composition. These are cri
 - Investment property (dira l'hashkaa): up to 50%
 - These are maximum limits; banks can offer less
 
-**Track composition limits:**
-- CPI-linked tracks: maximum 66.67% (two-thirds) of total mortgage
-- Variable rate tracks (any type): maximum 33.33% (one-third) of total mortgage
-- Prime track: counted as variable, so limited to one-third
-- These limits prevent over-concentration of risk in any single type
+**Track composition limits (current rule, in force since BoI Banking Supervision change of January 17, 2023):**
+- **Fixed-rate tracks must be at least 33.33% (one-third)** of the total mortgage, NIS-denominated
+- Variable + Prime combined can be up to **66.67% (two-thirds)** of the loan
+- The pre-2023 separate cap of "Prime track ≤ 33.33%" was scrapped. Prime can now go up to two-thirds.
+- These limits keep at least one-third of the loan immune to short-term rate spikes.
 
 **Payment-to-income ratio:**
-- Maximum monthly payment should not exceed approximately 40% of net household income
-- Banks calculate this based on a stress test assuming interest rate increases
+- BoI does not legally cap PTI, but flags &gt;40% PTI as "high risk", which raises the bank's capital requirement. Many banks will decline above this threshold.
+- Banks must run a **stress test** assuming Prime + 3 percentage points and CPI tracks at elevated inflation scenarios; borrowers should run the same test on their own.
 
 ### Step 3: Gather User's Financial Details
 
@@ -222,7 +238,7 @@ Actions:
 1. Calculate loan amount: 2,500,000 - 700,000 = 1,800,000 ILS (72% LTV, within the 75% first-apartment limit)
 2. Verify payment-to-income ratio: monthly payments should stay below ~10,000 ILS (40% of 25,000)
 3. Request the specific rate offers from both banks for each track
-4. Design 3 track combinations respecting BoI regulations (max 66.67% CPI-linked, max 33.33% variable)
+4. Design 3 track combinations respecting BoI regulations (minimum 33.33% fixed; variable + Prime combined up to 66.67%)
 5. Calculate monthly payments for each combination at each bank's rates
 6. Calculate total cost over 25-year and 30-year terms
 7. Stress-test: show what happens if Prime increases by 1% and if inflation averages 3%
@@ -260,6 +276,19 @@ Actions:
 7. Compare rates from 3+ banks, noting some banks are more friendly to investment property mortgages
 
 Result: User receives the LTV constraint analysis, total acquisition cost (including higher purchase tax), mortgage payment projections vs. expected rental income, and a comparison of bank offers for investment property mortgages.
+
+## Reservist statutory mortgage protections
+
+A reservist (משרת מילואים) called up under Order 8 for 5 or more consecutive days has statutory rights vis-à-vis the mortgage during the call-up:
+
+- Right to defer monthly payments without late fees during active reserve duty
+- Foreclosure freeze for the duration of active duty
+- The bank cannot demand penalty interest or accelerate the loan due to the deferral
+- Spouse / co-borrower may invoke the same protections when the reservist is the primary earner
+
+The temporary Iron Swords loan-relief framework (broader payment freezes, fee waivers extended to all war-zone evacuees) **expired on January 1, 2026**; only the statutory reservist protections remain in force. Agents must not quote the expired framework as still active.
+
+War-displaced residents (מפונים) from Tkuma authority programs may have separate evacuee-specific arrangements; verify with the bank's social work / evacuee desk.
 
 ## Gotchas
 - Israeli mortgages (mashkantaot) must contain at least two tracks (maslulim) by Bank of Israel regulation. Agents may suggest a single-track mortgage, which is not allowed.

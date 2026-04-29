@@ -24,8 +24,8 @@ Before performing any calculations, ensure you understand the key regulatory pri
 **Tax rates:**
 - **Individuals**: 25% capital gains tax on profits. If the seller is a "significant shareholder" (baal meniayot mahuti) of a crypto project, the rate is 30%.
 - **Business/traders**: If crypto activity constitutes a business (esek), gains are taxed as ordinary income at marginal rates (up to 50%). The classification depends on frequency, volume, and whether the taxpayer holds crypto as inventory vs. investment.
-- **Companies**: Standard corporate tax rate (25%) applies to capital gains.
-- **Surtax (mas yesafim)**: For individuals with annual income exceeding the threshold (which is adjusted annually for CPI), an additional 3% surtax applies to the excess. Thresholds are subject to annual CPI adjustments and should be verified with current Israeli Tax Authority publications.
+- **Companies**: Standard corporate tax rate (**23%**, since 2018) applies to capital gains.
+- **Surtax (mas yesafim)**: 2025 budget legislation raised the surtax rate and **explicitly extended it to passive income (capital gains, dividends, interest, rentals)**. For individuals with annual income exceeding the CPI-adjusted threshold (NIS ~721,560 for 2025; verify the 2026 figure on the ITA site), the surtax is **5% on the excess** (some sources reference a tiered 3% band + 5% beyond for specific income types — verify against mas.gov.il before quoting). The pre-2025 framing of "3% surtax on labor income only" is obsolete. **Crypto capital gains are now within the surtax base**, which materially raises the effective rate on large crypto realizations.
 
 **Cost basis method:**
 - Israel mandates **FIFO** (First In, First Out) for calculating cost basis unless the taxpayer can demonstrate a different method was consistently applied.
