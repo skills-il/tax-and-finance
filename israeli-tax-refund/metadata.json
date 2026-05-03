@@ -1,0 +1,91 @@
+{
+  "name": "israeli-tax-refund",
+  "version": "1.1.0",
+  "license": "MIT",
+  "category": "tax-and-finance",
+  "author": {
+    "name": "Roei Basha",
+    "email": "roei.bas@gmail.com"
+  },
+  "display_name": {
+    "he": "חישוב החזר מס – טופס 106",
+    "en": "Israeli Tax Refund – Form 106"
+  },
+  "display_description": {
+    "he": "מחשבון החזר מס לשכירים על בסיס טופס 106 וטופס 161. מזהה נקודות זיכוי שלא נוצלו, מחשב חבות מס אמיתית, ומנחה לגבי פיצויי פיטורים ופריסת מס.",
+    "en": "Israeli tax refund calculator for salaried employees based on Form 106 and Form 161. Identifies unused credit points, calculates true tax liability, and guides on severance pay and tax spreading."
+  },
+  "description": "Israeli tax refund calculator for salaried employees based on Form 106 and Form 161. Use when user uploads Form 106 / 161 / 161a / 161d, asks \"kama hechzar magiya li\", \"teum mas\", \"nikudot zikui\", \"madregot mas\", \"pitzuyim\", \"prisa shel mas\", \"retzef zchuyot\", \"retzef kitzba\", or mentions life events: job change, maternity leave, \"chofashat leida\", military reserve duty \"miluim\", unemployment \"avoda\", termination \"pitsurin\", retirement \"prisha\", stock losses \"hafsdim beShuk haHon\", lump-sum bonuses, mortgage life insurance \"bituach chayim al mashkanta\", or Form 135/867. Do NOT use for business accounting or VAT (use a dedicated self-employed skill instead).",
+  "tags": {
+    "he": [
+      "החזר מס",
+      "טופס 106",
+      "טופס 161",
+      "נקודות זיכוי",
+      "פיצויי פיטורים",
+      "מס הכנסה",
+      "שכיר"
+    ],
+    "en": [
+      "tax refund",
+      "form 106",
+      "form 161",
+      "credit points",
+      "severance pay",
+      "income tax",
+      "salaried employee"
+    ]
+  },
+  "allowed_tools": "Bash(python:*) WebFetch",
+  "compatibility": "No external APIs required. Works with Claude Code, Claude.ai, Cursor. PDF/image upload required for full form extraction.",
+  "supported_agents": [
+    "claude-code",
+    "claude.ai",
+    "cursor"
+  ],
+  "references": [
+    {
+      "file": "references/tax-brackets.md",
+      "description": "מדרגות מס לשנים 2020–2026 וערך נקודת זיכוי לפי שנה",
+      "consult_when": "Calculating tax liability for any year 2020–2025"
+    },
+    {
+      "file": "references/credit-points.md",
+      "description": "רשימה מלאה של נקודות זיכוי – ילדים, השכלה, מילואים, עלייה, זיכויים ישירים ופטורים",
+      "consult_when": "Identifying credit points the user may have missed"
+    },
+    {
+      "file": "references/required-docs.md",
+      "description": "מסמכים נדרשים להגשת טופס 135, מסודרים לפי נושא",
+      "consult_when": "User asks which documents to gather before filing"
+    },
+    {
+      "file": "references/form-161.md",
+      "description": "מדריך מלא לטופס 161 – פרישה, פיצויים, רצף זכויות/קצבה ופריסת מס",
+      "consult_when": "All severance, termination, and tax-spreading calculations"
+    }
+  ],
+  "reference_links": [
+    {
+      "source": "Israeli Tax Authority",
+      "url": "https://www.gov.il/he/departments/israel_tax_authority",
+      "what_to_check": "Tax rates, forms, circulars, credit point values"
+    },
+    {
+      "source": "Tax Refund Filing (Form 135)",
+      "url": "https://www.misim.gov.il/emd/",
+      "what_to_check": "Online filing portal for annual tax refund requests"
+    },
+    {
+      "source": "National Insurance Institute",
+      "url": "https://www.btl.gov.il",
+      "what_to_check": "Maternity pay, unemployment benefits, reserve duty compensation"
+    },
+    {
+      "source": "Credit Points Guide",
+      "url": "https://www.gov.il/he/departments/israel_tax_authority/guides",
+      "what_to_check": "Current credit point values and eligibility updates"
+    }
+  ],
+  "submission_url": "https://agentskills.co.il/en/submit"
+}
