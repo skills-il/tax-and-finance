@@ -5,6 +5,9 @@ on:
     branches: [master]
     paths:
       - '**/SKILL.md'
+      - '**/SKILL_HE.md'
+      - '**/metadata.json'
+      - '**/evidence.json'
       - '**/*.py'
       - '**/*.sh'
       - '**/*.js'
@@ -37,13 +40,44 @@ jobs:
           # shellcheck disable=SC2086
           ./scripts/validate-skill.sh ${{ steps.changed.outputs.files }}
 
+      - name: Check evidence.json present for touched skill folders
+        if: steps.changed.outputs.files != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          # Forward-only enforcement: any skill folder touched in this PR must
+          # contain evidence.json. Skills not touched in this PR are exempt
+          # (lazy backfill: they pick up the gate on their next update).
+          # See /he/guides/how-we-validate Layer 2 + .claude/skills/update-skill/SKILL.md.
+          set -e
+          TOUCHED_DIRS=$(gh pr diff ${{ github.event.pull_request.number }} --name-only \
+            | grep -oE '^[^/]+/' \
+            | sort -u \
+            | sed 's:/$::' \
+            | grep -vE '^(\.github|scripts|\.|docs)$' || true)
+          MISSING=""
+          for dir in $TOUCHED_DIRS; do
+            if [ -f "$dir/SKILL.md" ] && [ ! -f "$dir/evidence.json" ]; then
+              MISSING="$MISSING\n  - $dir/evidence.json"
+            fi
+          done
+          if [ -n "$MISSING" ]; then
+            echo "::error::Touched skill folders are missing evidence.json:"
+            printf "%b\n" "$MISSING"
+            echo ""
+            echo "Every PR that touches a skill folder must include evidence.json."
+            echo "Build it via the update-skill or skills-il-admin-creator admin workflow."
+            echo "See: https://agentskills.co.il/he/guides/how-we-validate"
+            exit 1
+          fi
+
       - name: Post validation results
         if: always() && steps.changed.outputs.files != ''
         run: |
           if [ "${{ steps.changed.conclusion || 'success' }}" = "success" ]; then
             gh pr comment ${{ github.event.pull_request.number }} --body "## Skill Validation Passed
 
-          All SKILL.md files are valid."
+          All SKILL.md files are valid and touched skill folders carry evidence.json."
           else
             gh pr comment ${{ github.event.pull_request.number }} --body "## Skill Validation Failed
 
