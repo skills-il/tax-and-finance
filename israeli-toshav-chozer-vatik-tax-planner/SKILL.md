@@ -35,9 +35,9 @@ Ask the user, in this order:
 
 | Income kind | Source | Vatik | Regular toshav chozer | No track |
 |---|---|---|---|---|
-| Active (employment, business) | Foreign | Exempt 10 years | Taxable from day 1 | Taxable |
-| Passive (dividend, interest, rent, royalty) | Foreign | Exempt 10 years | Exempt 5 years (only if asset acquired during the period abroad) | Taxable |
-| Capital gain | Foreign | Exempt 10 years | Exempt 10 years (only if asset acquired during the period abroad and not Israeli-property-linked) | Taxable |
+| Active (employment, business) | Foreign | Exempt 10 years (Section 14) | Taxable from day 1 | Taxable |
+| Passive (dividend, interest, rent, royalty) | Foreign | Exempt 10 years (Section 14) | Exempt 5 years (only if asset acquired during the period abroad) | Taxable |
+| Capital gain | Foreign | Exempt 10 years (Section 97(b3)) | Exempt 10 years (only if asset acquired during the period abroad and not Israeli-property-linked) | Taxable |
 | Any | Israeli | Taxable | Taxable | Taxable |
 
 This matrix is ISRAELI tax only. US citizens see Step 6.
@@ -71,6 +71,8 @@ Compare the user's Israeli tax-residency start date (from Step 1) to **1 January
   - Hatzharat Hon (capital declaration) when the Tax Authority requests one.
   - Trust + CFC disclosures if applicable.
 
+**Trustee-level reporting (new, separate from beneficiary reporting).** Amendment 272 also imposes a NEW reporting obligation on **Israeli-resident trustees** of foreign trusts whose beneficiaries are vatik or oleh, even when the trust itself remains exempt at the beneficiary level. A returnee who is also serving as a trustee of a family trust must check this independently of their personal Form 1301 reporting. The Shibolet writeup (in Reference Links) covers the trustee-side rules; standard practitioner reference for the dual obligation.
+
 For background, read `references/2026-reporting-change.md`.
 
 ### Step 5: Apply the 2026 Hok Iddud Israeli-source labor cap
@@ -84,6 +86,29 @@ Separately from section 14, the 2026 חוק עידוד עלייה לישראל �
 - 2030: 150,000 NIS
 
 This is the single biggest planning lever for a 2026 returnee with a high Israeli salary. Stacking the new Israeli-source labor exemption with section 14 on foreign income can shield substantial total income in the early years. The 2026 cap is calculated proportionally to the residency period during that year.
+
+**What does NOT qualify under this Israeli-source exemption.** Hok Iddud covers labor income only. The following remain fully taxable Israeli-side throughout the 5-year window:
+
+- Rental income (from Israeli or foreign property)
+- Accrued interest
+- Dividends
+
+A returnee who structures comp as a dividend out of their Israeli company expecting the 600K shield gets none of it.
+
+**Family-employment sub-cap: 140,000 NIS/year.** When the returnee draws labor income from a business owned by an immediate family member (parent, spouse, sibling, child, in-law), the Hok Iddud exemption is capped at **140,000 NIS per year**, separately and lower than the general 600K/1M annual caps above. A vatik returning to a family business who structures their salary assuming the general cap will massively over-exempt. Verify the family-relationship definition with a CPA, since edge cases (spouse's parent, family member who owns less than 100%) need confirmation against the final regulations.
+
+**Residency safeguard (clawback for 2028 and 2029).** Eligibility for the full 5-year exemption is forfeited if the returnee spends **fewer than 75 days in Israel during 2028** OR **fewer than 75 days during 2029**. This is a hard clawback that voids the full Hok Iddud exemption (potentially worth 3.1M NIS over the window). A vatik planning a sabbatical year, an extended overseas project, or a return-to-the-host-country move in 2028-2029 needs to track day counts against the 75-day floor and consult a CPA before committing to a multi-month absence. The 2026 and 2027 cap years carry no such presence test (the standard center-of-life residency rule still applies).
+
+### Step 5.5: Stack the tax credit points benefit
+
+Separately from section 14 (foreign income) and Hok Iddud (Israeli labor), vatik returnees and olim are entitled to additional **tax credit points** (nekudot zikui) under the Income Tax Ordinance. The Hok Iddud 2026 article confirms the current scheme:
+
+- **1-3 tax credit points per year for approximately 4.5 years from the return / aliyah date.**
+- **Worth roughly 3,000 NIS to 9,000 NIS per year** in reduced Israeli tax, depending on the point allocation by year of residency.
+- Applied AGAINST Israeli-source tax (after the Hok Iddud labor exemption is exhausted).
+- Useful for returnees with modest Israeli salaries that fall under the Hok Iddud cap, the credit points still reduce tax on the portion above the cap or on Israeli interest/dividends/rent.
+
+This is a small but real benefit that stacks with everything else. A vatik who earns 800K Israeli salary in 2026 with 600K exempt under Hok Iddud should still claim the credit points against tax on the 200K residual.
 
 ### Step 6: Special case, US citizens (and other global-taxation citizenships)
 
@@ -201,7 +226,7 @@ None. This skill is text-based planning. No live API integration with Mas Hachna
 5. **Form 1348 is not your friend.** That form belongs to Israelis LEAVING Israel. Returning residents file Form 1301 + Schedule D-1, and the bank typically requests Form 2409 for incoming foreign transfers. Do not file Form 1348 unless you are arguing non-residency for some pre-return portion of a year.
 6. **US citizens still owe US tax on Israeli-exempt income.** The US-Israel treaty saving clause (Article 6(3)) lets the US tax US citizens as if the treaty did not exist. No FTC, because no Israeli tax was paid. The single biggest surprise for returnees from CA and NY. Route every US-person returnee to a US-Israel cross-border CPA.
 7. **RSUs and stock options are sourced by VESTING period, not grant date.** A US RSU granted in 2024 that vests through 2028, where the employee worked in Israel for years 2026-2028, is largely Israeli-source for those years. Section 14 does NOT shield this portion.
-8. **Section 14(b) year-of-acclimation election: 90-day deadline.** Must be filed in writing within 90 days of arrival via Form 1130. Miss the window and the deferral is unavailable. Engage a CPA BEFORE landing or in the first 30 days, not at year-end.
+8. **Section 14(b) year-of-acclimation (Shnat Histaglut) election: 90-day deadline, with strategic implications.** Must be filed in writing within 90 days of arrival via Form 1130. The election treats year 1 as non-resident, deferring the start of the 10-year vatik clock to year 2, useful for try-before-commit returnees who may leave again, or for someone who wants to defer the Hok Iddud window start. Tradeoff: electing Shnat Histaglut from a 2026 arrival pushes the Hok Iddud Israeli-source labor exemption start to 2027, sacrificing the 2026 600K cap. For most 2026 returnees with Israeli salary, the cost of skipping the 2026 cap exceeds the value of the deferral. Engage a CPA BEFORE landing or in the first 30 days to weigh this against expected Israeli income. Miss the 90-day window and the deferral option is unavailable.
 9. **Israeli-source income is fully taxable throughout the 10-year window.** Section 14 exempts FOREIGN income only. TASE trading, Israeli rentals, Israeli salary above the 2026 labor caps, Israeli dividends: all taxed at normal Israeli rates.
 10. **Spouse not eligible for vatik.** A returnee married to an Israeli citizen who never left does NOT make the spouse a vatik. Joint filing (תיק מאוחד) can drag exempt income into the household calculation in non-trivial ways. The interaction with the spouse's Israeli filing is complex; consult a CPA.
 11. **Center-of-life break during the 10-year abroad window can disqualify vatik.** The 10 years of foreign residency must be CONTINUOUS. A 13-month sabbatical back in Israel (family in Israel, kids in Israeli schools) during the window can reset the clock, dropping the returnee to regular track or no track. Short visits do not break continuity; multi-month center-of-life shifts can.
@@ -230,6 +255,8 @@ None. This skill is text-based planning. No live API integration with Mas Hachna
 | IRS, US-Israel treaty PDF | https://www.irs.gov/pub/irs-trty/israel.pdf |
 | Shivat Zion, Tax Benefits for Olim (plain-English overview) | https://shivatzion-support.freshdesk.com/en/support/solutions/articles/501000348713-tax-benefits-for-olim |
 | Shivat Zion, Toshav Chozer overview | https://shivatzion-support.freshdesk.com/en/support/solutions/articles/501000348813-returning-resident-toshav-chozer |
+| Shivat Zion, 2026 Tax Reform Benefits for New Olim and Returning Residents | https://shivatzion-support.freshdesk.com/en/support/solutions/articles/501000361627-2026-tax-reform-benefits-for-new-olim-and-returning-residents |
+| Belong, Toshav Chozer rights and benefits | https://belong.co.il/living/returning-residents-toshav-chozer-rights-benefits/ |
 
 ## Troubleshooting
 

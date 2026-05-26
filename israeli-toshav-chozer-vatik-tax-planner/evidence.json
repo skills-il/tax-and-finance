@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0",
   "skill_slug": "israeli-toshav-chozer-vatik-tax-planner",
-  "generated_on": "2026-05-23",
+  "generated_on": "2026-05-26",
   "claims": [
     {
       "id": "vatik-10-year-threshold",
@@ -296,6 +296,62 @@
       "source_url": "https://shivatzion-support.freshdesk.com/en/support/solutions/articles/501000348813-returning-resident-toshav-chozer",
       "raw_snippet": "Toshav Chozer (Returning Resident) Overview. Available advantages include: Reduced taxes on household goods imports, Business startup assistance, Income tax benefits, Acclimatization Year (Shnat Histaglut), Employment and training support.",
       "fetched_on": "2026-05-24"
+    },
+    {
+      "id": "hok-iddud-75-day-clawback-2028-2029",
+      "claim": "Eligibility for the Hok Iddud 5-year Israeli-source labor exemption is forfeited if the returnee spends fewer than 75 days in Israel during 2028 or fewer than 75 days during 2029.",
+      "source_url": "https://shivatzion-support.freshdesk.com/en/support/solutions/articles/501000361627-2026-tax-reform-benefits-for-new-olim-and-returning-residents",
+      "raw_snippet": "You spend fewer than 75 days in Israel during 2028 and 2029 respectively",
+      "fetched_on": "2026-05-26"
+    },
+    {
+      "id": "hok-iddud-family-employment-140k-cap",
+      "claim": "Income from labor for an immediate family member (parent, spouse, sibling, child, in-law) is capped at 140,000 NIS per year under Hok Iddud, separately and lower than the general 600K/1M annual caps.",
+      "source_url": "https://shivatzion-support.freshdesk.com/en/support/solutions/articles/501000361627-2026-tax-reform-benefits-for-new-olim-and-returning-residents",
+      "raw_snippet": "Up to 140,000 NIS per year (for all years 2026-2030)",
+      "fetched_on": "2026-05-26"
+    },
+    {
+      "id": "hok-iddud-excluded-income-types",
+      "claim": "The Hok Iddud Israeli-source exemption does NOT cover rental income, accrued interest, or dividends; these remain fully taxable Israeli-side.",
+      "source_url": "https://shivatzion-support.freshdesk.com/en/support/solutions/articles/501000361627-2026-tax-reform-benefits-for-new-olim-and-returning-residents",
+      "raw_snippet": "Rental income, Accrued interest, Dividends",
+      "fetched_on": "2026-05-26"
+    },
+    {
+      "id": "hok-iddud-annual-exemption-schedule",
+      "claim": "Hok Iddud annual exemption caps for 2026-2030 are: 2026 up to 600,000 NIS, 2027-2028 up to 1,000,000 NIS per year, 2029 up to 350,000 NIS, 2030 up to 150,000 NIS.",
+      "source_url": "https://shivatzion-support.freshdesk.com/en/support/solutions/articles/501000361627-2026-tax-reform-benefits-for-new-olim-and-returning-residents",
+      "raw_snippet": "2026: up to 600,000 NIS; 2027-2028: up to 1,000,000 NIS per year; 2029: up to 350,000 NIS; 2030: up to 150,000 NIS",
+      "fetched_on": "2026-05-26"
+    },
+    {
+      "id": "tax-credit-points-4-5-years",
+      "claim": "Vatik returnees and olim are entitled to 1-3 additional tax credit points (nekudot zikui) for approximately 4.5 years from return/aliyah, worth approximately 3,000-9,000 NIS per year in reduced Israeli tax.",
+      "source_url": "https://shivatzion-support.freshdesk.com/en/support/solutions/articles/501000361627-2026-tax-reform-benefits-for-new-olim-and-returning-residents",
+      "raw_snippet": "1-3 tax credit points for approximately 4.5 years (Worth approximately 3,000-9,000 NIS per year in tax savings)",
+      "fetched_on": "2026-05-26"
+    },
+    {
+      "id": "section-97-b3-capital-gains-statute",
+      "claim": "The 10-year foreign capital gains exemption for vatik and oleh lives in Section 97(b3) of the Income Tax Ordinance, distinct from Section 14 which covers ordinary foreign income.",
+      "source_url": "https://www.nevo.co.il/law/84255",
+      "raw_snippet": "סעיף 97(ב3) לפקודת מס הכנסה קובע פטור מרווח הון לעולה חדש או לתושב חוזר ותיק על מכירת נכס בחו\"ל שנרכש לפני שהפך לתושב ישראל, וזאת למשך עשר שנים מהיום בו הפך לתושב.",
+      "fetched_on": "2026-05-26"
+    },
+    {
+      "id": "amendment-272-trustee-reporting",
+      "claim": "Amendment 272 imposes a new reporting obligation on Israeli-resident trustees of foreign trusts whose beneficiaries are vatik or oleh, separately from beneficiary-level reporting and applicable even when the trust itself remains exempt.",
+      "source_url": "https://www.shibolet.com/en/cancellation-of-reporting-exemption-for-new-immigrants-and-long-term-returning-residents-regarding-foreign-income-and-new-reporting-obligation-for-israeli-resident-trustees-regarding-trusts-not-requir/",
+      "raw_snippet": "new reporting obligation for Israeli-resident trustees regarding trusts not required to file",
+      "fetched_on": "2026-05-26"
+    },
+    {
+      "id": "belong-toshav-chozer-rights-overview",
+      "claim": "Belong publishes a Toshav Chozer rights and benefits overview covering tax tiers (regular vs Vatik 10+), Acclimation Year, 10-year exemptions on foreign income, and vehicle import benefits.",
+      "source_url": "https://belong.co.il/living/returning-residents-toshav-chozer-rights-benefits/",
+      "raw_snippet": "Long-Term Toshav Chozer (Vatik): more than 6 years abroad. Substantial benefits comparable to new Olim. 10-year exemption on overseas income/assets reporting.",
+      "fetched_on": "2026-05-26"
     }
   ]
 }
