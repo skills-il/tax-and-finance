@@ -1,0 +1,18 @@
+{
+  "cycles": [
+    {
+      "version": "1.2.0",
+      "date": "2026-05-31",
+      "lessons": [
+        "CRITICAL fixed: Maccabi supplementary tiers were inverted. Maccabi Zahav is the BASIC SHABAN tier; Maccabi Sheli is the PREMIUM add-on layered on top. Fixed the tier table AND Example 3 (which framed 'upgrading to Zahav' as the premium move). Also corrected Clalit to 'Mushlam Zahav / Mushlam Platinum' and Meuhedet premium tier 'Si' -> 'Shia' (שיא).",
+        "CRITICAL fixed: 'VAT is included in insurance premiums in Israel' was false (appeared twice, EN+HE). Insurers are taxed as a financial institution (mosad kaspi) and premiums are NOT VAT-rated; corrected to say the quoted premium is final and platform differences come from fees/discounts not tax.",
+        "CRITICAL fixed (framing): the Bituach Siudi July-2025/Jan-2026 'stop selling' dates were a Ministry of Health DRAFT directive that was never enforced; sales continued (~4.9M insured) and the wind-down slipped to end-2026 (handoff) / 2027 (run-off clause). Reframed so the dates are not presented as accomplished facts.",
+        "MAJOR fixed: earthquake coverage is NOT via an 'Israeli Earthquake Insurance Pool' and not 'since 2013'; it is included by default by law on an opt-out basis directly from each insurer (~10% deductible). Mandatory-coverage reform is under discussion, not law as of 2026.",
+        "MAJOR fixed: Bestie covers car/home/travel/mortgage (NOT health supplementary); InsuranceFind is an informational directory, not a live quote aggregator. Softened the Wobi/Phoenix line to 'agreed/signed Oct 2025, pending CMA conditions'.",
+        "Verified accurate (no change): ADL 4-of-6 from 1.1.2025; all four gov calculator URLs live (harb/car.cma.gov.il, govcarins.mof.gov.il, pe.cma.gov.il); Hova/Shukabit/Wobi/Bestie domains live.",
+        "Expert MAJORs fixed: (M1) Step 3 reworded, the CMA car.cma.gov.il hova tool returns the regulated standardized tariff price, not 'sorted competitive quotes' (it contradicted the skill's own Gotchas); (M2) softened the MoF makif simulator framing (educational, not purchasable quotes; makif is market-priced); (M3/M4) added the two core SHABAN facts, premiums are MoH-regulated/uniform per age band and tied to your own kupa (switch kupa first), and SHABAN has guaranteed acceptance/no underwriting vs private commercial policies that underwrite (decisive for the Example 3 knee-surgery case). Also updated Har HaBituach login to the government national-identity system.",
+        "Deferred to next cycle: two evidence.json source_urls are imperfect (the gov.il earthquake-insurance guide URL 404s; the wobi-phoenix calcalist URL returns the siudi article) though both claims are independently verified true, repoint them. Also MINOR: CMA tool is 24/7 (drop the office-hours framing), and 'rishuyon shimush' is a vehicle-licensing fee not an insurance-quote line item."
+      ]
+    }
+  ]
+}

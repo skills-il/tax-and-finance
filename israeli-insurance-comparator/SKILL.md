@@ -13,7 +13,7 @@ allowed-tools: Bash(python:*) WebFetch
 
 Before comparing offers, the user should pull their existing policy inventory from **Har HaBituach** (`https://harb.cma.gov.il/`), the CMA-operated personal-policy aggregator. Har HaBituach lists every policy the user holds across all Israeli insurers (life, health, pension, disability, mortgage life, supplementary HMO, manager's insurance, etc.). Many users discover overlapping or expired coverage they had forgotten. Skipping this step is the most common reason a comparison ends up over-insuring or duplicating coverage.
 
-Authentication is via Israeli ID + a one-time SMS or email code. The interface is Hebrew-only.
+Authentication is via the Israeli government national-identity system (Hizdahut Memshaltit), using your ID. The interface is Hebrew-only.
 
 ### Step 1: Identify the Insurance Type Needed
 
@@ -66,13 +66,13 @@ Start with official government calculators for unbiased baseline pricing:
 **For mandatory car insurance (bituach hova):**
 1. Navigate to **car.cma.gov.il** - the Capital Market Authority (CMA / רשות שוק ההון) official insurance calculator
 2. Enter vehicle and driver details
-3. The system queries all licensed insurers in real time and returns sorted quotes
+3. The tool returns the standardized hova price for your risk profile. Hova premiums are set by a regulated tariff (the price is committee-priced by driver/vehicle risk band), so this is NOT a competitive quote marketplace, the variation between insurers is only the small loading or discount each is permitted to apply on top of the tariff
 4. Results show: insurer name, annual premium, monthly payment option, and coverage details
-5. Note: This is the most reliable source as insurers are required by law to provide accurate quotes
+5. Note: this is the reliable baseline because the hova price is standardized by regulation, not because insurers compete on it
 
 **For comprehensive car insurance comparison:**
 1. Navigate to **govcarins.mof.gov.il** - Ministry of Finance simulator
-2. This tool helps estimate comprehensive insurance costs and understand coverage components
+2. This is an educational cost-estimation tool to understand makif coverage components and ballpark costs, it does NOT return real, purchasable quotes. Unlike hova, makif is fully market-priced (wide variance driven by underwriting), so the only way to get real makif numbers is the private platforms or a direct insurer quote
 3. Compare deductible amounts (hashtatfut atzmit) across insurers
 
 ### Step 4: Use Private Comparison Platforms
@@ -92,21 +92,21 @@ After getting the government baseline, check private platforms for potentially b
 - Shows coverage differences, not just price
 
 **Wobi (wobi.co.il):**
-- Large Israeli insurance comparison site (acquired by The Phoenix Holdings in Oct 2025)
+- Large Israeli insurance comparison site (agreed to be acquired by The Phoenix Holdings; deal signed Oct 2025 and subject to CMA conditions)
 - Covers car, home, health, life, and business insurance
 - Offers phone consultation with licensed agents
 - Can handle the entire purchase process
-- Note: Since the Phoenix acquisition, Wobi is no longer fully independent. Cross-check quotes with other platforms
+- Note: with the pending Phoenix deal, Wobi may no longer be fully independent. Cross-check quotes with other platforms
 
 **Bestie (bestie.co.il):**
 - Independent comparison platform (not an insurer or broker)
 - Provides personalized recommendations based on a short questionnaire
-- Covers car, home, health, and mortgage insurance
+- Covers car, home, travel, and mortgage insurance (not health supplementary)
 - Good for understanding which coverage level you actually need
 
 **InsuranceFind (insurancefind.co.il):**
-- Aggregates quotes from multiple insurers
-- Good for niche insurance products
+- An informational directory / guide to Israeli insurers (not a live quote aggregator)
+- Useful for background research on companies and product types, not for pulling real-time quotes
 
 ### Step 5: Compare Car Insurance Quotes
 
@@ -146,25 +146,28 @@ For home insurance, compare:
 | Loss of rent coverage | | | |
 
 Important notes:
-- **Earthquake coverage**: Since 2013, standard policies include earthquake coverage per the Israeli Earthquake Insurance Pool. Verify this is included.
+- **Earthquake coverage**: By law, earthquake coverage is included by default in standard home policies (structure and contents), provided directly by each insurer (there is no central "earthquake pool" for home insurance). The insured can opt out to lower the premium, so verify it has not been waived. A typical earthquake deductible is around 10%. Making the coverage mandatory is under discussion but is not yet law as of 2026.
 - **Mortgage requirement**: If you have a mortgage, the bank typically requires structure insurance assigned (meshuabed) to the bank. Ask the insurer about bank assignment.
 - **Underinsurance penalty**: If your coverage amount is less than the actual value, the insurer can apply a proportional reduction (klal yachasi) to any claim.
 
 ### Step 7: Compare Health Supplementary Insurance
 
-Israeli health supplementary insurance operates in tiers from each kupat cholim:
+Israeli health supplementary insurance (SHABAN) operates in tiers from each kupat cholim. Two facts shape the whole comparison:
 
-**Clalit (Clalit Mushlam / Clalit Platinum):**
-- Mushlam: Basic supplementary tier
-- Platinum: Premium tier with shorter wait times and broader specialist access
+- **SHABAN price is regulated and uniform, not shoppable.** The Ministry of Health sets SHABAN premiums per age band, so everyone the same age in the same kupa pays the same price, you cannot negotiate it. And you can only buy the SHABAN of YOUR kupat cholim, you cannot mix-and-match. So the real decision is (a) which kupa to belong to, (b) basic vs premium tier within it, and (c) whether to add a private commercial health policy on top. Switching SHABAN means first switching kupa (free, via Bituach Leumi, up to a couple of times a year).
+- **SHABAN has guaranteed acceptance, private insurance does not.** By law SHABAN has no medical underwriting and no pre-existing-condition exclusions, anyone can join regardless of health. Private commercial health policies (Harel, Migdal, Clal) DO underwrite and can decline, load, or exclude a known condition. This is decisive when someone already has a diagnosis (see Example 3): a private policy bought now would likely exclude that condition, while SHABAN and its premium add-on cannot.
 
-**Maccabi (Maccabi Sheli / Maccabi Zahav):**
-- Maccabi Sheli: Basic supplementary
-- Maccabi Zahav: Premium tier
+**Clalit (Clalit Mushlam Zahav / Mushlam Platinum):**
+- Mushlam Zahav: Basic supplementary tier (SHABAN)
+- Mushlam Platinum: Premium tier with shorter wait times and broader specialist access
 
-**Meuhedet (Meuhedet Adif / Meuhedet Si):**
+**Maccabi (Maccabi Zahav / Maccabi Sheli):**
+- Maccabi Zahav: Basic supplementary (SHABAN, no medical underwriting)
+- Maccabi Sheli: Premium add-on layered on top of Zahav (medical underwriting, higher surgery ceilings, free choice of surgeon)
+
+**Meuhedet (Meuhedet Adif / Meuhedet Shia):**
 - Adif: Basic supplementary
-- Si: Premium tier
+- Shia (שיא): Premium tier
 
 **Leumit (Leumit Kesef / Leumit Zahav):**
 - Kesef: Basic supplementary
@@ -229,35 +232,35 @@ Actions:
 3. Note that the bank needs the policy assigned (meshuabed) to them as beneficiary
 4. Compare quotes from Harel, Migdal, Clal, Phoenix, and Menora via Shukabit
 5. Check if the mortgage bank has a preferred insurer (sometimes offers discounted rates)
-6. Verify earthquake coverage is included (mandatory since 2013)
+6. Verify earthquake coverage is included (included by default by law on an opt-out basis, provided by the insurer, not a central pool)
 7. Recommend contents insurance amount based on typical household inventory
 
 Result: User receives 4-5 home insurance quotes showing structure + contents premiums, with guidance on the minimum coverage the bank will accept and recommended additional coverage.
 
 ### Example 3: Comparing Health Supplementary Insurance for a Family
 
-User says: "We're a family of 4 in Maccabi and thinking about upgrading to Maccabi Zahav. Is it worth it? My wife needs knee surgery."
+User says: "We're a family of 4 in Maccabi and thinking about adding Maccabi Sheli on top of our Maccabi Zahav. Is it worth it? My wife needs knee surgery."
 
 Actions:
-1. Identify current tier (likely Maccabi Sheli or no supplementary)
-2. Look up Maccabi Zahav benefits: private hospital surgery coverage, specialist access, shorter wait times
-3. Calculate monthly premium for the family (2 adults + 2 children, need ages for accurate pricing)
-4. Compare the surgery coverage: Maccabi Sheli vs. Maccabi Zahav for orthopedic surgery
+1. Identify current tier (Maccabi Zahav is the basic SHABAN supplementary; Maccabi Sheli is the premium add-on that sits on top of it)
+2. Look up Maccabi Sheli benefits: higher private-hospital surgery ceilings, free choice of surgeon, broader specialist access beyond what Zahav already covers
+3. Calculate monthly premium for the family (2 adults + 2 children, need ages for accurate pricing; Sheli is priced on top of the Zahav base)
+4. Compare the surgery coverage: Maccabi Zahav alone vs. Zahav + Sheli for orthopedic surgery
 5. Check waiting period (tku'fat achshara) for surgery benefits - typically 6-12 months
 6. Compare with private health insurance from commercial insurers (Harel, Migdal, Clal) as an alternative
 7. Factor in the urgency: if surgery is needed soon, the waiting period may make the upgrade ineffective in the short term
 
-Result: User receives a cost-benefit analysis comparing Maccabi Sheli vs. Zahav premiums against the expected surgery costs, plus alternative private insurance options if the waiting period is a problem.
+Result: User receives a cost-benefit analysis comparing Zahav-alone vs. Zahav + Sheli premiums against the expected surgery costs, plus alternative private insurance options if the waiting period is a problem.
 
 ## Bituach Siudi (Long-Term Care) Crisis 2025-2026
 
-A major structural change broke the Israeli long-term-care market in 2025-2026 and any 2026 comparison must surface it:
+The Israeli long-term-care market is in a multi-year transition, and any 2026 comparison must surface it. Be careful with the dates: the original deadlines were a Ministry of Health draft directive that was NOT enforced.
 
-- **Ministry of Health ordered the four kupot cholim to STOP selling new bituach siudi (long-term care) policies from July 1, 2025**, and to cease all bituach siudi operations by January 1, 2026. The kupot-channel policies that millions of Israelis held are no longer the recommended model.
+- **The Ministry of Health's proposed order to make the four kupot cholim stop selling new bituach siudi (long-term care) from July 1, 2025 was never finalized.** That date passed with no enforcement and kupot-channel sales continued (roughly 4.9M insured). The Ministry retreated from the ultimatum, and the operative horizon was pushed back: the kupot-channel handoff now runs to **end of 2026**, and the CMA's removal of the "self-liquidation/run-off" clause that lets insurers exit takes effect in 2027. So the kupot-channel policies are being wound down, but on a slower 2026-2027 timeline, not the original 2025 dates.
 - **The CMA tightened the patient-eligibility definition to 4-of-6 ADLs (activities of daily living)** effective January 1, 2025 (was 3-of-6). Patients who would have qualified under the old definition may not qualify now.
-- **Remaining options for new long-term-care coverage:** private bituach siudi from major insurers (Phoenix, Migdal, Harel, Clal, Menorah), and Bituach Leumi's siudi track. Pricing and underwriting differ significantly across these. Verify current availability per insurer; the market is still adjusting.
+- **Options for new long-term-care coverage:** the existing kupot-channel policies (still in force during the transition), private bituach siudi from major insurers (Phoenix, Migdal, Harel, Clal, Menorah), and Bituach Leumi's siudi track. Pricing and underwriting differ significantly across these. Verify current availability per insurer; the market is still adjusting.
 
-When a user asks about "bituach siudi" in 2026, surface this disruption explicitly — quoting the pre-2025 kupot-channel framing as if still active is misleading.
+When a user asks about "bituach siudi" in 2026, surface this transition explicitly, but do NOT state the July-2025 / January-2026 dates as accomplished facts, they were a proposed directive that slipped to a 2026-2027 timeline.
 
 ## War / Iron Swords Coverage Considerations
 
@@ -283,7 +286,7 @@ Solution: Verify the license plate format (7 or 8 digits, no dashes). For newly 
 
 Cause: Different platforms may use slightly different underwriting models, have exclusive deals with certain insurers, or apply promotional discounts not available elsewhere. Some platforms also show base price before taxes/fees while others show the final price.
 
-Solution: Always compare the final annual premium including all fees and taxes (VAT is included in insurance premiums in Israel). Check if the quote includes "rishuyon shimush" (usage fee) which some platforms list separately. Use the CMA government calculator as the baseline since it shows standardized pricing, then check if private platforms offer better deals. When in doubt, call the insurer directly to verify the quoted price.
+Solution: Always compare the final annual premium including all fees. Note that insurance premiums in Israel are NOT subject to VAT (insurers are taxed as financial institutions, paying profit-and-payroll tax instead of charging VAT), so the quoted premium is the final price and any differences between platforms come from fees and discounts, not tax. Check if the quote includes "rishuyon shimush" (usage fee) which some platforms list separately. Use the CMA government calculator as the baseline since it shows standardized pricing, then check if private platforms offer better deals. When in doubt, call the insurer directly to verify the quoted price.
 
 ### Error: "My shin-nun (no-claims) years don't match what the insurer shows"
 

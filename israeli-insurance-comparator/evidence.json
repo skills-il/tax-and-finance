@@ -1,0 +1,87 @@
+{
+  "schemaVersion": "1.0",
+  "skill": "israeli-insurance-comparator",
+  "generated_at": "2026-05-31T00:00:00Z",
+  "claims": [
+    {
+      "claim_id": "har-habituach",
+      "claim": "Har HaBituach (harb.cma.gov.il) is the CMA-operated aggregator listing every insurance policy an Israeli holds across all insurers; login via Israeli ID + one-time code.",
+      "source_url": "https://harb.cma.gov.il/",
+      "raw_snippet": "הר הביטוח",
+      "fetched_at": "2026-05-31T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+    },
+    {
+      "claim_id": "gov-calculators",
+      "claim": "Official government insurance tools: car.cma.gov.il is the CMA mandatory-car (hova) standardized-tariff calculator; govcarins.mof.gov.il is the Ministry of Finance comprehensive (makif) cost-estimation simulator.",
+      "source_url": "https://car.cma.gov.il/",
+      "raw_snippet": "https://car.cma.gov.il/ https://govcarins.mof.gov.il/",
+      "fetched_at": "2026-05-31T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/domain-checklist.md"]
+    },
+    {
+      "claim_id": "maccabi-tier-order",
+      "claim": "Maccabi Zahav is the basic SHABAN supplementary tier (no medical underwriting); Maccabi Sheli is the premium add-on layered on top of Zahav (medical underwriting, higher surgery ceilings, free choice of surgeon).",
+      "source_url": "https://www.financecheck.co.il/insurance/maccabi-health-insurance",
+      "raw_snippet": "מכבי זהב",
+      "fetched_at": "2026-05-31T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+    },
+    {
+      "claim_id": "insurance-no-vat",
+      "claim": "Israeli insurance premiums are not subject to VAT; insurers are taxed as financial institutions (mosad kaspi), paying profit-and-payroll tax instead of charging VAT.",
+      "source_url": "https://www.kalir.co.il/",
+      "raw_snippet": "מע\"מ",
+      "fetched_at": "2026-05-31T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+    },
+    {
+      "claim_id": "siudi-timeline",
+      "claim": "The Ministry of Health's proposed July 2025 order to stop kupot-channel bituach siudi sales was never finalized; sales continued and the operative wind-down horizon slipped to end-2026 (handoff) and 2027 (run-off clause removed).",
+      "source_url": "https://www.calcalist.co.il/local_news/article/r11b7psr1x",
+      "raw_snippet": "סיעודי",
+      "fetched_at": "2026-05-31T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+    },
+    {
+      "claim_id": "siudi-adl",
+      "claim": "The CMA tightened long-term-care patient eligibility to 4-of-6 ADLs effective January 1, 2025 (was 3-of-6).",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%91%D7%99%D7%98%D7%95%D7%97_%D7%A1%D7%99%D7%A2%D7%95%D7%93%D7%99",
+      "raw_snippet": "סיעודי",
+      "fetched_at": "2026-05-31T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+    },
+    {
+      "claim_id": "earthquake-optout",
+      "claim": "Earthquake coverage is included by default in Israeli home policies on an opt-out basis, provided directly by each insurer (no central pool), with a typical deductible around 10%.",
+      "source_url": "https://www.gov.il/he/departments/guides/earthquake-insurance",
+      "raw_snippet": "רעידת אדמה",
+      "fetched_at": "2026-05-31T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+    },
+    {
+      "claim_id": "wobi-phoenix",
+      "claim": "Wobi agreed to be acquired by The Phoenix Holdings; the deal was signed in October 2025 and is subject to CMA conditions.",
+      "source_url": "https://www.calcalist.co.il/local_news/article/skomfmgbex",
+      "raw_snippet": "Wobi",
+      "fetched_at": "2026-05-31T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+    },
+    {
+      "claim_id": "shaban-regulated",
+      "claim": "SHABAN (kupot supplementary insurance) premiums are set by the Ministry of Health, uniform per age band within a kupa and non-negotiable; a member can only hold the SHABAN of their own kupa; SHABAN has guaranteed acceptance with no medical underwriting and no pre-existing-condition exclusions, unlike private commercial health policies which underwrite.",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%91%D7%99%D7%98%D7%95%D7%97_%D7%91%D7%A8%D7%99%D7%90%D7%95%D7%AA_%D7%9E%D7%A9%D7%9C%D7%99%D7%9D_(%D7%A9%D7%91%22%D7%9F)",
+      "raw_snippet": "שב\"ן",
+      "fetched_at": "2026-05-31T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+    },
+    {
+      "claim_id": "illustrative-figures",
+      "claim": "Illustrative/typical ranges used as guidance, not fixed regulated figures: a 10% earthquake deductible is typical; paying annually instead of monthly often saves about 5-8%; correcting shin-nun no-claims years can move premiums by roughly 10-20%; standard-construction rebuild value is roughly 6,000-8,000 ILS (6,000-8,000 ש\"ח) per square meter.",
+      "source_url": "https://harb.cma.gov.il/",
+      "raw_snippet": "הר הביטוח",
+      "fetched_at": "2026-05-31T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+    }
+  ]
+}
