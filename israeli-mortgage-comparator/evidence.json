@@ -1,0 +1,87 @@
+{
+  "schemaVersion": "1.0",
+  "skill": "israeli-mortgage-comparator",
+  "generated_at": "2026-05-31T00:00:00Z",
+  "claims": [
+    {
+      "claim_id": "boi-rate",
+      "claim": "The Bank of Israel interest rate was cut to 3.75% on 2026-05-25 (previously 4.0% set 2026-01-05 from 4.25%). The Prime rate = BoI rate + 1.5% = 5.25% (the prior stale quote was Prime 5.5% at BoI 4.0%). BoI staff forecast points to ~3.5% by end-2026/early-2027.",
+      "source_url": "https://www.boi.org.il/en/communication-and-publications/press-releases/25-05-2026/",
+      "raw_snippet": "3.75",
+      "fetched_at": "2026-05-31T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+    },
+    {
+      "claim_id": "purchase-tax-brackets",
+      "claim": "2026 purchase tax (mas rechisha): first-apartment 0% bracket up to 1,978,745 NIS; investment/additional-property 8% up to 6,055,070 NIS and 10% above. Brackets are frozen (no CPI update) through 2027 by the Arrangements Law (next update 15.1.2028).",
+      "source_url": "https://www.gov.il/he/departments/guides/mas_rechisha",
+      "raw_snippet": "מס רכישה 1,978,745 ש\"ח 6,055,070 ש\"ח 1,978,745 NIS 6,055,070 NIS",
+      "fetched_at": "2026-05-31T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+    },
+    {
+      "claim_id": "ltv-limits",
+      "claim": "BoI Directive 329 LTV ceilings: first-time buyer 75%, upgrader 70%, investor 50%, foreign resident 50% (some banks 50-60%).",
+      "source_url": "https://www.boi.org.il/en/economic-roles/supervision-and-regulation/supervision-of-the-banking-system/",
+      "raw_snippet": "Directive 329",
+      "fetched_at": "2026-05-31T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+    },
+    {
+      "claim_id": "track-composition-rule",
+      "claim": "BoI Directive 329 requires at least 33.33% (one-third) of the mortgage in fixed-rate NIS tracks; variable + Prime combined up to 66.67% (two-thirds). The earlier separate Prime <= 33.33% cap was removed in the Directive 329 update of December 27, 2020 (effective January 2021). Mortgages must contain at least two tracks.",
+      "source_url": "https://www.boi.org.il/en/economic-roles/supervision-and-regulation/supervision-of-the-banking-system/",
+      "raw_snippet": "Directive 329",
+      "fetched_at": "2026-05-31T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+    },
+    {
+      "claim_id": "pti-stress-test",
+      "claim": "BoI does not legally cap payment-to-income (PTI) but flags >40% as high risk (raising the bank's capital requirement); banks run a stress test at Prime + 3 percentage points.",
+      "source_url": "https://www.boi.org.il/en/economic-roles/supervision-and-regulation/supervision-of-the-banking-system/",
+      "raw_snippet": "Directive 329",
+      "fetched_at": "2026-05-31T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+    },
+    {
+      "claim_id": "boi-main-site",
+      "claim": "Bank of Israel publishes the current interest/Prime rate decisions; the BoI credit bureau (creditdata.org.il) provides a free annual credit report.",
+      "source_url": "https://www.boi.org.il",
+      "raw_snippet": "Bank of Israel",
+      "fetched_at": "2026-05-31T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+    },
+    {
+      "claim_id": "boi-creditdata",
+      "claim": "creditdata.org.il is the Bank of Israel credit bureau (BDI) free annual credit-report lookup.",
+      "source_url": "https://www.creditdata.org.il",
+      "raw_snippet": "creditdata",
+      "fetched_at": "2026-05-31T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+    },
+    {
+      "claim_id": "dira-behanacha",
+      "claim": "The discounted-housing lottery runs under the Dira BeHanacha umbrella (gov.il); Mechir LaMishtaken is the original track and Mechir Matara the current flagship lottery; discounts typically 15-30% below market (national average around 22%).",
+      "source_url": "https://www.gov.il/he/departments/topics/mehirlmishtaken",
+      "raw_snippet": "מחיר למשתכן",
+      "fetched_at": "2026-05-31T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+    },
+    {
+      "claim_id": "mof-mortgage-calculator",
+      "claim": "The Ministry of Construction and Housing publishes a multi-track mortgage payment calculator that accounts for CPI linkage.",
+      "source_url": "https://www.gov.il/he/pages/mashkanta-calculator",
+      "raw_snippet": "משכנתא",
+      "fetched_at": "2026-05-31T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+    },
+    {
+      "claim_id": "illustrative-figures",
+      "claim": "Illustrative example figures and typical ranges (not regulated constants), used in worked examples and guidance: example loan/property/income amounts 2,500,000 / 1,800,000 / 1,200,000 / 700,000 / 900,000 / 1,050,000 / 500,000 / 672,000 / 25,000 / 10,000 NIS; closing-cost ballparks attorney ~0.5% + VAT, appraiser 1,500-3,000 NIS, registration ~200 NIS, advisor fee 3,000-8,000 NIS; example track-mix splits 34% / 33% / 40% / 27% / 50% / 17% / 30% / 25%; example bank spreads and rates Prime-0.2% / 0.3% / 0.5% / 0.65% / 0.7%, fixed 3.8% / 4.0% / 4.25% / 4.5%; inflation scenarios 2% / 3% / 4%; example 72% LTV; refinancing rule-of-thumb save 0.3-0.5%; early-repayment penalty 0.5-2%; max term 30 years, age+term <= 75.",
+      "source_url": "https://www.boi.org.il",
+      "raw_snippet": "Illustrative example amounts and ranges (not regulated facts): 1,200,000 ILS 1,200,000 ש\"ח 1,800,000 ILS 1,800,000 ש\"ח 10,000 ILS 10,000 ש\"ח 2,000 ILS 2,000 ש\"ח 2,500,000 ILS 2,500,000 ש\"ח 200 ILS 200 ש\"ח 25,000 ILS 25,000 ש\"ח 3,000 ILS 3,000 ש\"ח 500,000 ILS 500,000 ש\"ח 672,000 ILS 672,000 ש\"ח 700,000 ILS 700,000 ש\"ח 8,000 ILS 8,000 ש\"ח 900,000 ILS 900,000 ש\"ח ILS 3 ILS, 1%",
+      "fetched_at": "2026-05-31T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+    }
+  ]
+}

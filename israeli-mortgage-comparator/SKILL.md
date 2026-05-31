@@ -11,12 +11,12 @@ allowed-tools: Bash(python:*) WebFetch
 
 | Variable | Value | Source |
 |---|---|---|
-| BoI rate (Apr 2026) | 4.0% (cut from 4.25% on 2026-01-05; held through Mar 2026) | bankisrael.gov.il |
-| Prime rate (Apr 2026) | 5.5% (= BoI + 1.5%) | derived from BoI |
-| BoI forecast | gradual decline to ~3.5% by Q4 2026 | BoI staff forecasts |
+| BoI rate (May 2026) | 3.75% (cut from 4.0% on 2026-05-25; 4.0% was set 2026-01-05 from 4.25% and held Feb/Mar 2026) | bankisrael.gov.il |
+| Prime rate (May 2026) | 5.25% (= BoI + 1.5%) | derived from BoI |
+| BoI forecast | gradual decline to ~3.5% by end-2026 / early-2027 per BoI staff forecast | BoI staff forecasts |
 | Purchase tax (mas rechisha) bracket 0% | up to 1,978,745 NIS | mas.gov.il, brackets frozen 2025-2027 |
 | Investment-property purchase tax | 8% up to 6,055,070 NIS, 10% above | mas.gov.il |
-| Foreign-resident max LTV | 50% (some banks 50-60%) | BoI Banking Supervision |
+| Foreign-resident max LTV | 50% (regulatory ceiling; banks may offer less, not more) | BoI Banking Supervision |
 | First-time buyer (mathil) max LTV | 75% | BoI Banking Supervision |
 | Upgrader (meshaper) max LTV | 70% | BoI Banking Supervision |
 | Investor (mashkia) max LTV | 50% | BoI Banking Supervision |
@@ -51,7 +51,7 @@ Bank of Israel imposes strict regulations on mortgage composition. These are cri
 - Investment property (dira l'hashkaa): up to 50%
 - These are maximum limits; banks can offer less
 
-**Track composition limits (current rule, in force since BoI Banking Supervision change of January 17, 2023):**
+**Track composition limits (current rule, in force since the BoI Directive 329 update of December 27, 2020, effective January 2021):**
 - **Fixed-rate tracks must be at least 33.33% (one-third)** of the total mortgage, NIS-denominated
 - Variable + Prime combined can be up to **66.67% (two-thirds)** of the loan
 - The pre-2023 separate cap of "Prime track ≤ 33.33%" was scrapped. Prime can now go up to two-thirds.
@@ -182,9 +182,9 @@ Create a summary comparison:
 
 ### Step 9: Understand Government Programs
 
-**Mechir LaMishtaken (מחיר למשתכן):**
-- Government subsidized housing lottery for eligible buyers
-- Discounted property prices (typically 20-30% below market)
+**Discounted housing lottery (Dira BeHanacha / דירה בהנחה umbrella):**
+- Government subsidized housing lottery for eligible buyers. The program runs under the "Dira BeHanacha" (דירה בהנחה) umbrella; "Mechir LaMishtaken" (מחיר למשתכן) is the original track and "Mechir Matara" (מחיר מטרה) is the current flagship lottery variant, check gov.il for the active lottery
+- Discounted property prices (typically 15-30% below market, national average around 22%)
 - Eligibility based on housing history and marital status
 - Special mortgage terms may apply for these properties
 
@@ -286,7 +286,7 @@ A reservist (משרת מילואים) called up under Order 8 for 5 or more cons
 - The bank cannot demand penalty interest or accelerate the loan due to the deferral
 - Spouse / co-borrower may invoke the same protections when the reservist is the primary earner
 
-The temporary Iron Swords loan-relief framework (broader payment freezes, fee waivers extended to all war-zone evacuees) **expired on January 1, 2026**; only the statutory reservist protections remain in force. Agents must not quote the expired framework as still active.
+Beyond the statutory reservist protections, the Bank of Israel periodically activates a temporary bank-relief framework (broader payment deferrals, fee waivers for war-zone evacuees and affected borrowers) during active conflict periods. These frameworks have specific eligibility windows and expiry dates that change as the security situation changes, so agents must **verify the current framework status and dates at boi.org.il before quoting** rather than assuming any particular framework is either active or lapsed. The statutory reservist (Order 8, 5+ days) protections below are permanent and apply independently of any temporary framework.
 
 War-displaced residents (מפונים) from Tkuma authority programs may have separate evacuee-specific arrangements; verify with the bank's social work / evacuee desk.
 
@@ -304,7 +304,7 @@ War-displaced residents (מפונים) from Tkuma authority programs may have se
 | BOI banking supervision | https://www.boi.org.il/en/economic-roles/supervision-and-regulation/supervision-of-the-banking-system/ | LTV limits, multi-track requirement, supervisory caps |
 | Bank of Israel credit data | https://www.creditdata.org.il | Free annual credit report lookup at the BOI credit bureau (BDI) |
 | Mechir LaMishtaken | https://www.gov.il/he/departments/topics/mehirlmishtaken | Reduced-price apartment eligibility and entitlement rules |
-| mashkanta.co.il calculators | https://www.mashkanta.co.il | Multi-track payment calculators that account for CPI linkage |
+| Ministry of Construction mortgage calculator | https://www.gov.il/he/pages/mashkanta-calculator | Multi-track payment calculator that accounts for CPI linkage |
 
 ## Troubleshooting
 
@@ -318,7 +318,7 @@ Solution: Request a detailed rejection reason from the bank (they are required t
 
 Cause: Many borrowers underestimate the impact of CPI linkage on their mortgage. When inflation runs at 3-4% annually, the outstanding balance on CPI-linked tracks grows significantly. For example, a 500,000 ILS CPI-linked track at 3% inflation grows to ~672,000 ILS after 10 years before any principal payments. The "low interest rate" on CPI-linked tracks is misleading because it doesn't include the inflation cost.
 
-Solution: Always calculate the total cost of CPI-linked tracks under multiple inflation scenarios (2%, 3%, 4%). Compare the total cost (interest + CPI adjustments) against fixed non-linked tracks. In high-inflation environments (Israel averaged 3-4% in recent years), fixed non-linked tracks often end up cheaper despite their higher nominal interest rate. Consider reducing CPI exposure by allocating more to fixed non-linked and Prime tracks, staying well below the 66.67% CPI maximum. Use spreadsheet calculations or online mortgage calculators (like the one at mashkanta.co.il) that properly account for CPI linkage.
+Solution: Always calculate the total cost of CPI-linked tracks under multiple inflation scenarios (2%, 3%, 4%). Compare the total cost (interest + CPI adjustments) against fixed non-linked tracks. In high-inflation environments (Israel averaged 3-4% in recent years), fixed non-linked tracks often end up cheaper despite their higher nominal interest rate. Consider reducing CPI exposure by allocating more to fixed non-linked and Prime tracks, staying well below the 66.67% CPI maximum. Use spreadsheet calculations or online mortgage calculators (such as the Ministry of Construction calculator at gov.il) that properly account for CPI linkage.
 
 ### Error: "Early repayment penalty is unexpectedly high on fixed-rate track"
 

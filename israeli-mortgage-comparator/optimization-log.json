@@ -1,0 +1,18 @@
+{
+  "cycles": [
+    {
+      "version": "1.2.0",
+      "date": "2026-05-31",
+      "lessons": [
+        "CRITICAL fixed: the BoI rate in the Snapshot was stale (4.0%/Prime 5.5%). The BoI cut to 3.75% on 2026-05-25, so Prime is now 5.25%. Snapshot updated; the BoI rate is the single most drift-prone figure here and must be re-checked on every use.",
+        "CRITICAL fixed (framing): the skill flatly claimed the Iron Swords loan-relief framework 'expired on January 1, 2026' and told agents not to quote it. A temporary BoI relief framework is active again in 2026 during conflict periods. Replaced the absolute claim with verify-at-boi.org.il-before-quoting language; the statutory reservist (Order 8) protections are permanent and stated as such.",
+        "MAJOR fixed: the track-composition rule date was wrong (Jan 17 2023). The Directive 329 change that removed the Prime<=1/3 cap and substituted the >=1/3-fixed rule was published 27.12.2020 (effective Jan 2021). Rule content was correct; only the date.",
+        "MAJOR fixed: dead reference link mashkanta.co.il (DNS does not resolve) replaced with the Ministry of Construction calculator at gov.il (in the Reference Links table AND the inline troubleshooting mention).",
+        "MINOR fixed: Mechir LaMishtaken rebranded under the 'Dira BeHanacha' umbrella with 'Mechir Matara' as the current flagship lottery; noted, discount range widened to 15-30% (avg ~22%).",
+        "Verified accurate (no change): purchase-tax brackets (0% up to 1,978,745; investment 8% up to 6,055,070, 10% above) and the freeze through 2027 (next update 15.1.2028); LTV ceilings 75/70/50; the >=1/3-fixed track rule; PTI >40% high-risk flag + Prime+3 stress test; reservist Order-8 protections.",
+        "Deferred (next cycle): SKILL_HE.md has no Snapshot table (EN has one), so EN/HE ## parity is 7 vs 6; consider adding a HE snapshot. Also HE frontmatter still carries a stale metadata block (version 1.0.0); metadata belongs in metadata.json.",
+        "Expert findings REJECTED after verification: (a) Expert claimed 'purchase-tax frozen 2025-2027' is wrong, but my own web search + research + Judge all confirm the Arrangements Law froze the brackets through 2027 (next update 15.1.2028), the claim is CORRECT; (b) Expert claimed the HE Step 2 omits the Prime+3 stress test and >40% PTI flag, but both are present in SKILL_HE.md (Prime+3 and the 40% flag). Applied the Expert's VALID findings: added the HE Snapshot table (Hebrew users now get a verify-before-quoting rate anchor; also fixes EN/HE ## parity 7/7), fixed 'foreign 50-60% LTV' to '50% ceiling, banks may offer less not more', and synced the stale HE frontmatter version to 1.2.0."
+      ]
+    }
+  ]
+}
