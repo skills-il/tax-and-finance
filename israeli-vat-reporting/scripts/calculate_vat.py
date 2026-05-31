@@ -2,7 +2,7 @@
 """Calculate Israeli VAT liability for periodic reporting.
 
 Computes net VAT from sales (output) and purchase (input) records,
-applies Israeli deduction rules, and maps results to Form 874 fields.
+applies Israeli deduction rules, and maps results to the periodic VAT return fields.
 
 Usage:
     python scripts/calculate_vat.py --sales 100000 --purchases 60000
@@ -30,7 +30,7 @@ PARTIAL_DEDUCTIBLE = {
 
 @dataclass
 class VATReport:
-    """Israeli Form 874 VAT report structure."""
+    """Israeli periodic VAT return structure."""
     period: str = ""
     total_sales_incl_vat: float = 0.0       # Field 1
     zero_rated_sales: float = 0.0           # Field 2
@@ -115,7 +115,7 @@ def prepare_vat_report(
     purchases: Optional[list[dict]] = None,
     adjustments: float = 0.0,
 ) -> VATReport:
-    """Prepare a complete VAT report (Form 874).
+    """Prepare a complete periodic VAT return.
 
     Args:
         period: Reporting period string (e.g., "2026-01" or "2026-01-02").
@@ -124,7 +124,7 @@ def prepare_vat_report(
         adjustments: Manual adjustments amount.
 
     Returns:
-        VATReport with all Form 874 fields populated.
+        VATReport with all periodic-return fields populated.
     """
     sales = sales or []
     purchases = purchases or []
@@ -152,7 +152,7 @@ def format_report(report: VATReport) -> str:
     """Format VAT report for display."""
     direction = "TO PAY" if report.amount_due > 0 else "REFUND DUE"
     lines = [
-        f"=== Israeli VAT Report (Form 874) ===",
+        f"=== Israeli Periodic VAT Return ===",
         f"Period: {report.period}",
         f"",
         f"  Field 1 - Total Sales (incl VAT):  {report.total_sales_incl_vat:>12,.2f} NIS",
@@ -173,7 +173,7 @@ def format_report(report: VATReport) -> str:
 def main():
     """Main entry point."""
     parser = argparse.ArgumentParser(
-        description="Calculate Israeli VAT liability for Form 874"
+        description="Calculate Israeli VAT liability for the periodic return"
     )
     parser.add_argument(
         "--sales", type=float, help="Total sales amount (net, before VAT)"

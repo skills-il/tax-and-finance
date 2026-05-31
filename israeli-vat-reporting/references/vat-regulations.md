@@ -1,20 +1,20 @@
 # Israeli VAT Regulations Summary
 
 ## VAT Rate
-- Standard rate: **18%** (effective since January 1, 2025, per the 2025 Budget Law)
-- Previous rates: 17% (2015-2024), 18% (2012-2015), 17% (2010-2012), 16.5% (2009-2010)
+- Standard rate: **18%** (effective since January 1, 2025, per the 2025 Budget/Arrangements Law; unchanged for 2026-2027)
+- Previous rates: 17% (Oct 2015 to Dec 2024), 18% (Jun 2013 to Sep 2015), 17% (Sep 2012 to Jun 2013), 16% (Jan 2010 to Sep 2012), 16.5% (Jul 2009 to Dec 2009)
 - Rate changes require Knesset legislation
 
 ## Registration Types
 
 ### Osek Morsheh (Licensed Dealer)
-- Annual turnover above ~120,000 NIS (updated periodically)
+- Annual turnover above ~122,833 NIS (updated periodically)
 - Must charge and collect VAT
 - Can claim input VAT deductions
 - Must file periodic VAT returns
 
 ### Osek Patur (Exempt Dealer)
-- Annual turnover below ~120,000 NIS
+- Annual turnover below ~122,833 NIS
 - Cannot charge VAT on invoices
 - Cannot claim input VAT deductions
 - Files annual report only

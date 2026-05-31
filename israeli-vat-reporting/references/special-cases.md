@@ -11,12 +11,11 @@ Important: Zero-rated means VAT at 0%, NOT exempt. Seller can still claim
 input VAT deductions on related purchases.
 
 ## Exempt Transactions (No VAT)
-- Financial services (subject to Mas Sachir instead)
-- Residential property rental (under certain ceilings)
-- Basic food items (fruits, vegetables - partial list)
-- Public transportation
-- Medical and dental services
-- Educational services (certified institutions)
+- Financial services (financial institutions pay Mas Sachar VeRevach instead of VAT)
+- Residential property rental (within the statutory ceiling, when let to an individual for residence)
+- A non-profit (malkar) or financial institution selling an asset it used (specific cases)
+
+Note: unlike the EU, Israel has NO general VAT exemption for food, public transport, or medical/dental services, those are standard-rated (18%). Do not zero out output VAT on them. Verify any claimed exemption against the VAT Law before applying it.
 
 Important: Exempt means no VAT charged AND no input VAT recovery on related
 purchases.

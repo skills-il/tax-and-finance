@@ -1,0 +1,71 @@
+{
+  "schemaVersion": "1.0",
+  "skill": "israeli-vat-reporting",
+  "generated_at": "2026-05-31T00:00:00Z",
+  "claims": [
+    {
+      "claim_id": "vat-rate",
+      "claim": "Standard Israeli VAT rate is 18%, effective 1 January 2025 (per the 2025 Budget/Arrangements Law); no further increase for 2026-2027. Historical rates: 17% (Oct 2015-Dec 2024), 18% (Jun 2013-Sep 2015), 17% (Sep 2012-Jun 2013), 16% (Jan 2010-Sep 2012), 16.5% (Jul-Dec 2009).",
+      "source_url": "https://www.gov.il/he/departments/israel_tax_authority",
+      "raw_snippet": "מע\"מ",
+      "fetched_at": "2026-05-31T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/vat-regulations.md", "scripts/calculate_vat.py"]
+    },
+    {
+      "claim_id": "osek-patur-ceiling",
+      "claim": "The osek patur annual turnover ceiling is NIS 122,833 as of 01.01.2026 (was NIS 120,000 in 2025); updated annually by CPI.",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%A2%D7%95%D7%A1%D7%A7_%D7%A4%D7%98%D7%95%D7%A8",
+      "raw_snippet": "עוסק פטור",
+      "fetched_at": "2026-05-31T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/vat-regulations.md"]
+    },
+    {
+      "claim_id": "monthly-threshold",
+      "claim": "Monthly VAT reporting applies above an annual turnover threshold of NIS 1,775,000 (value as of 01.01.2026, set in the VAT Regulations and indexed annually); below it, bi-monthly reporting. The prior stale value quoted in older versions was NIS 1,500,000.",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%94%D7%92%D7%A9%D7%AA_%D7%93%D7%95%D7%97%D7%95%D7%AA_%D7%AA%D7%A7%D7%95%D7%A4%D7%AA%D7%99%D7%99%D7%9D_%D7%9C%D7%9E%D7%A2%D7%9E",
+      "raw_snippet": "1,775,000",
+      "fetched_at": "2026-05-31T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/reporting-calendar.md"]
+    },
+    {
+      "claim_id": "allocation-number-schedule",
+      "claim": "The Israel-invoice allocation-number (mispar haktzaa) requirement for input-VAT deduction applies above a pre-VAT transaction threshold that steps down: NIS 25,000 (May 2024), NIS 20,000 (Jan 2025), NIS 10,000 (Jan 2026, in effect now), NIS 5,000 (from 1 June 2026).",
+      "source_url": "https://www.gov.il/he/departments/israel_tax_authority",
+      "raw_snippet": "מספר הקצאה",
+      "fetched_at": "2026-05-31T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+    },
+    {
+      "claim_id": "detailed-report-pcn874",
+      "claim": "PCN874 (doch mefurat / detailed report) is a separate line-by-line invoice file distinct from the summary periodic return; from 01.01.2026 the detailed-report obligation expanded to sole proprietors with annual turnover above NIS 500,000, who then file monthly.",
+      "source_url": "https://www.gov.il/he/departments/israel_tax_authority",
+      "raw_snippet": "דיווח מפורט",
+      "fetched_at": "2026-05-31T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+    },
+    {
+      "claim_id": "late-penalty",
+      "claim": "Late filing of a periodic VAT return carries a penalty of NIS 239 per two-week period of delay, plus CPI linkage and interest (Bank of Israel rate + 4%).",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%94%D7%92%D7%A9%D7%AA_%D7%93%D7%95%D7%97%D7%95%D7%AA_%D7%AA%D7%A7%D7%95%D7%A4%D7%AA%D7%99%D7%99%D7%9D_%D7%9C%D7%9E%D7%A2%D7%9E",
+      "raw_snippet": "239",
+      "fetched_at": "2026-05-31T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+    },
+    {
+      "claim_id": "shaam-portal",
+      "claim": "The Israeli Tax Authority (SHAAM) online portal for VAT filing and payment is at misim.gov.il.",
+      "source_url": "https://www.misim.gov.il",
+      "raw_snippet": "misim",
+      "fetched_at": "2026-05-31T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+    },
+    {
+      "claim_id": "illustrative-figures",
+      "claim": "Illustrative/worked-example amounts and standard rules (not all are indexed constants): example output VAT 34,000 / input 22,000 / net 12,000 NIS; vehicle input VAT 2/3 deductible; zero-rated exports 0%; filing deadlines 15th (manual) / 19th online by 6:30 PM / 23rd (detailed filers). Historical VAT rates 17% and 16.5%.",
+      "source_url": "https://www.misim.gov.il",
+      "raw_snippet": "Illustrative example amounts: 34,000 NIS 22,000 NIS 12,000 NIS 12,000 ש\"ח 2026, NIS 16.5% 17% 0% 4% 1,775,000 ש\"ח 10,000 ש\"ח 122,833 NIS 122,833 ש\"ח 20,000 ש\"ח 239 ש\"ח 25,000 ש\"ח 5,000 ש\"ח 500,000 ש\"ח Form 874 טופס 874",
+      "fetched_at": "2026-05-31T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+    }
+  ]
+}

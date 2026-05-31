@@ -1,0 +1,18 @@
+{
+  "cycles": [
+    {
+      "version": "1.4.0",
+      "date": "2026-05-31",
+      "lessons": [
+        "CRITICAL fixed: monthly/bi-monthly reporting threshold was stale (NIS 1,500,000, and a stray 1,725,000 in HE Example). Correct value is NIS 1,775,000 as of 01.01.2026 (indexed in the VAT Regulations). Also removed the wrong 'Section 69A(g)' citation (that section governs the detailed report, not the bi-monthly turnover line).",
+        "CRITICAL fixed: 'Form 874' mislabeled the simple periodic return. Reframed Step 4 as the periodic summary return and added that PCN874 (doch mefurat) is a SEPARATE line-by-line file; from 01.01.2026 the detailed-report obligation expanded to sole proprietors with turnover > NIS 500,000 (who then file monthly).",
+        "MAJOR fixed: osek patur ceiling ~120,000 -> NIS 122,833 (01.01.2026, was 120,000 in 2025).",
+        "MAJOR fixed: allocation-number thresholds presented chronologically with full schedule (25,000 May2024 / 20,000 Jan2025 / 10,000 Jan2026 in effect now / 5,000 from 1 Jun 2026) and noted the threshold is on the pre-VAT amount.",
+        "Fixed HE transliteration error (mas etzot/tsmachot -> mas asakot/tsumot). Stripped pre-existing em-dashes from Bundled Resources bullets.",
+        "Verified accurate (no change): VAT rate 18% (since 1.1.2025, no 2026-2027 increase); late penalty NIS 239 per two weeks + BoI+4%; deadlines 15/19(18:30)/23; vehicle 2/3, Eilat no-VAT, exports zero-rated, financial services exempt.",
+        "Deferred MINOR: Example 1 still says 'Form 874 with all fields mapped' (loose naming); script docstring maps to 'Form 874 fields'. Tighten to 'periodic return' next cycle. Add the 2024/2025 allocation history to the Gotcha too.",
+        "Panel round 2: Judge caught wrong HISTORICAL VAT-rate table (18% from 2012, 16.5% through 2010) -> corrected to the real sequence (16.5% Jul-Dec2009, 16% 2010-Sep2012, 17% Sep2012-Jun2013, 18% Jun2013-Sep2015, 17% Oct2015-2024, 18% from 2025). Expert MAJOR fixed: periodic-return Fields 1 & 5 were mislabeled 'including VAT' -> corrected to the net taxable base (excluding VAT), with a note that equipment/fixed-asset inputs are reported separately from other inputs; harmonized the residual 'Form 874' naming in Example 1 + the script to 'periodic VAT return'. Also corrected references/special-cases.md exempt list (removed food/transport/medical, which are standard-rated in Israel, not exempt). Deferred (next cycle): the script still folds all inputs into one Field 6 and reports gross sales base; restructure to split equipment vs other inputs and use the net base; round amount-due to whole shekels."
+      ]
+    }
+  ]
+}

@@ -14,13 +14,13 @@ Ask the user about their business registration:
 
 | Type | Hebrew | Annual Turnover | Reporting Period |
 |------|--------|----------------|-----------------|
-| Osek Morsheh (Licensed Dealer) | osek morsheh | > 120K NIS | Monthly or Bi-monthly |
-| Osek Patur (Exempt Dealer) | osek patur | < ~120K NIS | Annual summary only |
+| Osek Morsheh (Licensed Dealer) | osek morsheh | > 122,833 NIS | Monthly or Bi-monthly |
+| Osek Patur (Exempt Dealer) | osek patur | < ~122,833 NIS | Annual summary only |
 | Amuta (Non-profit) | amuta | Any | Monthly or Bi-monthly |
 | Company (Ltd) | chevra | Any | Monthly |
 
-Monthly reporting: Annual turnover > NIS 1,500,000 (per Section 69A(g) of the VAT Law)
-Bi-monthly reporting: Annual turnover < NIS 1,500,000
+Monthly reporting: Annual turnover > NIS 1,775,000 (threshold set in the VAT Regulations and indexed annually; value as of 01.01.2026)
+Bi-monthly reporting: Annual turnover < NIS 1,775,000
 
 ### Step 2: Collect Transaction Data
 For the reporting period, gather:
@@ -45,22 +45,24 @@ If Net < 0: SHAAM owes business (refund claim)
 - Entertainment: NOT deductible
 - Mixed business/personal: Proportional deduction only
 
-### Step 4: Fill Form 874 Fields
-Map calculated values to form fields:
-- Field 1: Total sales (including VAT)
+### Step 4: Fill the Periodic VAT Return Fields
+The regular periodic VAT return (doch tkufati) is a summary report. Map the calculated values to its fields:
+- Field 1: Taxable sales (the net base, EXCLUDING VAT; the VAT on them goes in Field 4)
 - Field 2: Zero-rated sales (exports)
 - Field 3: Exempt sales
 - Field 4: Total output VAT
-- Field 5: Total purchases (including VAT)
+- Field 5: Taxable purchases / inputs (the net base, EXCLUDING VAT; report equipment/fixed-asset inputs separately from other inputs on the real form)
 - Field 6: Input VAT claimed
 - Field 7: Net VAT (Field 4 - Field 6)
 - Field 8: Adjustments (if any)
 - Field 9: Amount to pay / refund
 
+**Detailed report (PCN874 / doch mefurat) is a SEPARATE filing.** Do not confuse the summary return above with PCN874, the line-by-line structured file (one row per invoice: number, date, pre-VAT amount, VAT, counterparty business number, allocation number) that businesses above the detailed-report threshold must submit IN ADDITION. From 01.01.2026 the detailed-report obligation expanded to sole proprietors (osek) with annual turnover above NIS 500,000, who then also move to monthly filing.
+
 ### Step 5: Validate and Submit
 Before submission, verify:
 1. All sales invoices accounted for (cross-reference with e-invoice allocation numbers)
-2. Input VAT claims supported by valid tax invoices with allocation numbers (required for invoices >= NIS 5,000 from June 2026, >= NIS 10,000 from January 2026)
+2. Input VAT claims supported by valid tax invoices with allocation numbers (mispar haktzaa), required above a pre-VAT transaction threshold that steps down on a schedule: NIS 25,000 (from May 2024), NIS 20,000 (from Jan 2025), NIS 10,000 (from Jan 2026, in effect now), NIS 5,000 (from 1 June 2026). Always check the threshold in force on the invoice date
 3. Correct reporting period selected
 4. Deadline not passed (see below)
 
@@ -79,10 +81,10 @@ Before submission, verify:
 ### Example 1: Monthly VAT Report
 User says: "Help me prepare my VAT report for January 2026"
 Actions:
-1. Determine: Monthly reporter (turnover > NIS 1,500,000 or company)
+1. Determine: Monthly reporter (turnover > NIS 1,775,000 or company)
 2. Collect: January sales and purchase invoices
 3. Calculate: Output VAT 34,000 - Input VAT 22,000 = Net 12,000 NIS owed
-4. Prepare: Form 874 with all fields mapped
+4. Prepare: the periodic VAT return with all fields mapped
 5. Guide: Submit via SHAAM portal by February 19th (online deadline)
 Result: Complete VAT report ready for filing
 
@@ -98,17 +100,17 @@ Result: VAT report with zero-rated export handling
 ## Bundled Resources
 
 ### Scripts
-- `scripts/calculate_vat.py` — Computes net VAT liability from sales (output) and purchase (input) records, applies Israeli deduction rules for non-deductible and partially deductible expenses, and maps results to Form 874 fields. Run: `python scripts/calculate_vat.py --help`
+- `scripts/calculate_vat.py`, Computes net VAT liability from sales (output) and purchase (input) records, applies Israeli deduction rules for non-deductible and partially deductible expenses, and maps results to the periodic VAT return fields. Run: `python scripts/calculate_vat.py --help`
 
 ### References
-- `references/vat-regulations.md` — Summary of Israeli VAT law including current and historical VAT rates, registration types (Osek Morsheh, Osek Patur), and filing obligations. Consult when verifying VAT rate or registration rules.
-- `references/reporting-calendar.md` — Filing deadlines for monthly and bi-monthly VAT reporters, including the 15th (manual) and 19th (online) deadline rules. Consult when determining reporting period and deadline for a specific month.
-- `references/special-cases.md` — Rules for zero-rated transactions (exports, tourism, Eilat zone), exempt transactions (financial services, residential rent), and the distinction between zero-rated and exempt for input VAT recovery. Consult when handling exports or unusual transaction types.
+- `references/vat-regulations.md`, Summary of Israeli VAT law including current and historical VAT rates, registration types (Osek Morsheh, Osek Patur), and filing obligations. Consult when verifying VAT rate or registration rules.
+- `references/reporting-calendar.md`, Filing deadlines for monthly and bi-monthly VAT reporters, including the 15th (manual) and 19th (online) deadline rules. Consult when determining reporting period and deadline for a specific month.
+- `references/special-cases.md`, Rules for zero-rated transactions (exports, tourism, Eilat zone), exempt transactions (financial services, residential rent), and the distinction between zero-rated and exempt for input VAT recovery. Consult when handling exports or unusual transaction types.
 
 ## Gotchas
 - Agents frequently use the old 17% VAT rate. The current Israeli VAT rate is **18%** (effective January 1, 2025, per the 2025 Budget Law). This single error cascades through all calculations. Always verify the rate before computing.
 - Israeli VAT reports are filed bi-monthly (every two months), not quarterly as in many European countries. Agents may suggest quarterly filing, which will result in missed deadlines and penalties.
-- Osek Patur businesses (annual revenue approximately 120,000 NIS, subject to annual updates) do not charge or report VAT. Agents may generate VAT reports for businesses that should not be filing them.
+- Osek Patur businesses (annual revenue approximately 122,833 NIS, subject to annual updates) do not charge or report VAT. Agents may generate VAT reports for businesses that should not be filing them.
 - Input VAT (mas tsumot) from car purchases is only 2/3 deductible in Israel. Agents may claim full VAT deduction on vehicle-related expenses.
 - From 2026, input VAT deduction requires a valid allocation number (mispar haktzaa) on invoices above the threshold (NIS 10,000 from January 2026, NIS 5,000 from June 2026). Agents may ignore this requirement, leading to rejected deductions.
 
