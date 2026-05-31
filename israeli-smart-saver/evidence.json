@@ -1,0 +1,71 @@
+{
+  "schemaVersion": "1.0",
+  "skill": "israeli-smart-saver",
+  "generated_at": "2026-05-31T00:00:00Z",
+  "claims": [
+    {
+      "claim_id": "consumer-law-sections",
+      "claim": "Israeli Consumer Protection Law: gift-card minimum 5-year validity from issuance is set by Amendment 33 (2014), section 14ח. The 14-day cancellation right (tkufat tzinun) applies to door-to-door sales (section 14) and distance/online sales (section 14ג). Continuous transactions (esek mitmashech) are cancellable at any time under the Law's continuous-transaction provisions.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/70305.htm",
+      "raw_snippet": "חוק הגנת הצרכן סעיף 14 סעיף 14ג סעיף 14ח",
+      "fetched_at": "2026-05-31T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/cashback-platforms-guide.md"]
+    },
+    {
+      "claim_id": "credit-card-companies",
+      "claim": "The three major Israeli credit card companies are Cal (Visa Cal), Max (formerly Leumi Card, rebranded 2019 after the Warburg Pincus acquisition), and Isracard (which operates American Express and the Hever club).",
+      "source_url": "https://en.globes.co.il/en/article-leumi-card-to-rebrand-as-max-1001269742",
+      "raw_snippet": "Max",
+      "fetched_at": "2026-05-31T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+    },
+    {
+      "claim_id": "gov-consumer-authority",
+      "claim": "The Israeli consumer regulator is the Consumer Protection and Fair Trade Authority (gov.il), which handles cancellation rules and consumer complaints.",
+      "source_url": "https://www.gov.il/he/departments/consumer_protection_and_fair_trade_authority",
+      "raw_snippet": "https://www.gov.il/he/departments/consumer_protection_and_fair_trade_authority",
+      "fetched_at": "2026-05-31T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+    },
+    {
+      "claim_id": "gov-complaint-filing",
+      "claim": "Consumer complaints are filed via the gov.il fair-trade complaint service.",
+      "source_url": "https://www.gov.il/he/service/filing_a_complaint_to_fair_trade_authority",
+      "raw_snippet": "https://www.gov.il/he/service/filing_a_complaint_to_fair_trade_authority",
+      "fetched_at": "2026-05-31T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+    },
+    {
+      "claim_id": "consumer-council",
+      "claim": "The Israel Consumer Council (consumers.org.il) covers consumer rights, the cooling-off period, and complaint filing.",
+      "source_url": "https://www.consumers.org.il",
+      "raw_snippet": "consumers",
+      "fetched_at": "2026-05-31T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+    },
+    {
+      "claim_id": "boi-public-info",
+      "claim": "The Bank of Israel publishes banking-customer service and complaint information for the public.",
+      "source_url": "https://www.boi.org.il/en/information-and-service-to-the-public/",
+      "raw_snippet": "Bank of Israel https://www.boi.org.il/en/information-and-service-to-the-public/banking-customer-service-information/",
+      "fetched_at": "2026-05-31T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+    },
+    {
+      "claim_id": "zap-price-comparison",
+      "claim": "Zap.co.il is the leading Israeli price-comparison site for electronics and appliances.",
+      "source_url": "https://www.zap.co.il",
+      "raw_snippet": "zap",
+      "fetched_at": "2026-05-31T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+    },
+    {
+      "claim_id": "illustrative-figures",
+      "claim": "Illustrative example amounts, discount rates and typical ranges (not regulated facts), used in worked examples and guidance: cashback rates 2-8% / 2-10% / 5-15%; example 1,000 NIS purchase with 3% card + 5% platform + 10% gift-card stacking saving ~172 NIS (~17%); example monthly savings 200 NIS = 2,400 NIS/year, 300-800 NIS/month; subscription costs 10-500 NIS; seasonal discounts 10-70%; telecom plans 30-150 NIS/month; interest-free tashlumim up to 12 months; gift-card discounts 5-15%; example phone 120 NIS vs MVNO ~40-45 NIS saving 80 NIS/month = 960 NIS/year.",
+      "source_url": "https://www.zap.co.il",
+      "raw_snippet": "Illustrative ranges (not regulated): 20% 30% 40% 50% 60% 80% 1,000 שקל 100 שקל 120 שקל 150 שקל 172 ש\"ח 2,400 שקל 200 שקל 27 ש\"ח 30 שקל 27 NIS 30 NIS 35 NIS 35 שקל 40 NIS 40 שקל 100 NIS 400 שקל 45 ש\"ח 45 שקל 50 שקל 500 שקל 80 שקל 800 שקל 960 שקל",
+      "fetched_at": "2026-05-31T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+    }
+  ]
+}

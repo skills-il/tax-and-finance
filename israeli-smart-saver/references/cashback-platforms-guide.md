@@ -17,9 +17,9 @@
 - **Typical cashback:** 2-10%
 
 ### PayBack
-- **Type:** Points-based loyalty system
-- **How it works:** Earn points at partner stores, redeem for rewards
-- **Payout:** Points redeemed for gift cards or products
+- **Type:** Cashback service
+- **How it works:** Earn cash back ("kesef chozer") on purchases at partner stores
+- **Payout:** Rebated to the user across partner stores
 - **Coverage:** Multiple retail chains
 
 ## Deals Platforms
@@ -28,20 +28,19 @@
 - **Type:** Gift card marketplace
 - **Specialty:** Gift cards for 1,000+ brands, often at discount
 - **Best for:** Buying gift cards below face value (5-15% off) as a savings strategy
-- **Important:** Gift cards are non-refundable but valid for minimum 5 years (Israeli law)
+- **Important:** Gift cards are non-refundable but valid for a minimum of 5 years (Consumer Protection Law, Amendment 33 of 2014, Sec. 14ח)
 - **Tip:** Buy gift cards for stores where you regularly shop
 
 ### Yours.co.il
-- **Type:** Fashion deals
-- **Specialty:** Clothing, accessories, lifestyle
-- **Best for:** Fashion-focused shoppers looking for deals
+- **Type:** Members' discount club
+- **Specialty:** Benefits across food, leisure, shopping, events, and travel
+- **Best for:** Members looking for general everyday discounts
 
 ## Coupon Aggregators
 
 | Site | Focus | Notes |
 |------|-------|-------|
 | israelcoupon.co.il | General coupons | Hebrew-focused |
-| couponmania.co.il | Online shopping codes | Check before any online purchase |
 | iSaveMoney | Facebook group | Community-shared deals |
 
 ## Tips for Maximum Savings

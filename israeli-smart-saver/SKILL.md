@@ -28,7 +28,7 @@ compatibility: Works with Claude Code, Cursor, GitHub Copilot, Windsurf, OpenCod
 |----------|-----|-------------|-----------------|
 | Cashback.co.il | cashback.co.il | Browser extension + app, earn rebates on purchases | 2-8% at most stores |
 | Cashdo | cashdo.co.il | Cashback on purchases at Israeli retailers | 2-10% depending on store |
-| PayBack | pay-back.co.il | Points-based rebate system | Varies by partner |
+| PayBack | pay-back.co.il | Cashback service across partner stores | Varies by partner |
 | BuyMe | buyme.co.il | Gift cards at discount, sometimes below face value | 5-15% via discounted cards |
 
 ### Cashback Stacking Strategy
@@ -53,13 +53,13 @@ Maximize savings by combining multiple discount layers on a single purchase:
 
 | Company | Popular Cards | Best Perks |
 |---------|-------------|-----------|
-| Visa Cal (CAL) | Cal Benefit, Cal Young | Category-specific cashback, dining discounts |
-| Leumi Card | Max Back, Max Family | Flat cashback across all purchases |
-| Isracard | Americard, Isra Club | Points system, flight rewards |
+| Visa Cal (CAL) | Cash Cal Pro, Cal Young | Category-specific cashback, dining discounts |
+| Max (formerly Leumi Card) | Max Back Total | Flat cashback across all purchases |
+| Isracard | Isracard Cashback, American Express (Hever club) | Points / cashback, flight rewards |
 
 ### Key Credit Card Benefits to Use
 
-- **Installment payments (tashlumim)** -- interest-free installments up to 12 months at most Israeli retailers. Always choose tashlumim over regular payments for large purchases
+- **Installment payments (tashlumim)** -- many Israeli retailers offer interest-free installments, but the interest-free window is often only 3-6 payments; longer terms (and credit-company "credit"/kredit plans) frequently carry interest. Always verify "tashlumim l'lo ribit" (interest-free) for the specific term before choosing installments over a single payment
 - **Extended warranty** -- most premium cards add 1 year warranty on electronics
 - **Purchase protection** -- covers damage or theft for 90 days after purchase
 - **Airport lounge access** -- premium cards include Priority Pass or equivalent
@@ -71,7 +71,7 @@ Maximize savings by combining multiple discount layers on a single purchase:
 |-----------------|----------------------|-----|
 | High spender (8K+ NIS/month) | Flat cashback (Max Back) | Percentage-based savings add up |
 | Supermarket-heavy | Category cashback with grocery bonus | Higher cashback rate on groceries |
-| Traveler | Points/miles card (Isracard Platinum) | Accumulate for flights |
+| Traveler | Points/miles card (an American Express / Hever travel card) | Accumulate for flights |
 | Family | Family card with multi-user benefits | Shared points, family discounts |
 
 ## Subscription Audit Workflow
@@ -93,7 +93,7 @@ Check these sources for recurring charges:
 | Telecom | Cellcom, Partner, Pelephone, HOT Mobile | 50-150 NIS | Switch to MVNO (Golan, Rami Levy Mobile) |
 | Internet | Bezeq, HOT, Partner, Cellcom | 80-150 NIS | Bundle with TV, negotiate renewal |
 | Gym | Holmes Place, Hapoel, local studios | 150-400 NIS | Municipal pools/gyms (much cheaper) |
-| Insurance | Various | 100-500 NIS | Compare annually on Madlan/Bituach.co.il |
+| Insurance | Various | 100-500 NIS | Compare annually; pull your full policy list from Har HaBituach (harb.cma.gov.il) to spot duplicate coverage |
 | Bank fees | All banks | 20-50 NIS | Negotiate or switch to digital bank |
 | Cloud storage | iCloud, Google One, Dropbox | 10-30 NIS | Use free tier, consolidate services |
 | News | Haaretz, TheMarker, Ynet+ | 30-60 NIS | Check if included with credit card perks |
@@ -132,7 +132,7 @@ Add up monthly savings x 12. Even 200 NIS/month in savings = **2,400 NIS/year**.
 | Platform | What It Offers | Best For |
 |----------|---------------|----------|
 | BuyMe | Gift cards, experiences, discounted vouchers | Gift giving, self-purchases at discount |
-| Yours.co.il | Fashion and lifestyle deals | Clothing, accessories |
+| Yours.co.il | Members' discount club (food, leisure, shopping, events, travel) | General everyday benefits |
 
 ## Telecom Savings (Quick Guide)
 
@@ -140,9 +140,8 @@ Israeli mobile plans are competitive. Budget-conscious options:
 
 | Provider | Type | Typical Plan | Notes |
 |----------|------|-------------|-------|
-| Golan Telecom | MVNO | 30-50 NIS/month, unlimited | Cheapest, no-frills |
+| Golan Telecom | Independent operator | 30-50 NIS/month, unlimited | Cheap, no-frills |
 | Rami Levy Mobile | MVNO | 30-50 NIS/month | Good value |
-| 012 Mobile | MVNO | 35-60 NIS/month | Decent coverage |
 | Hot Mobile | Full carrier | 50-80 NIS/month | Better coverage |
 | Cellcom/Partner/Pelephone | Full carrier | 70-150 NIS/month | Best coverage, highest price |
 
@@ -198,7 +197,7 @@ Result: Recommendation to switch or negotiate, with specific plan comparison.
 Some cashback platforms (Cashback.co.il, Cashdo) do not stack with each other. Using two cashback extensions simultaneously can cause neither to track the purchase. Always use only one cashback platform per transaction.
 
 ### 2. BuyMe Gift Cards Are Not Refundable
-When buying discounted BuyMe gift cards as a savings strategy, remember they are generally non-refundable. Only buy them for stores where you are certain to shop. Expired gift cards are governed by Israeli consumer law (minimum 5-year validity from issuance per Consumer Protection Law Tikun 47, 2017, codified in Sec. 14יג1).
+When buying discounted BuyMe gift cards as a savings strategy, remember they are generally non-refundable. Only buy them for stores where you are certain to shop. Expired gift cards are governed by Israeli consumer law (minimum 5-year validity from issuance under the Consumer Protection Law, Amendment 33 of 2014, Sec. 14ח). A 2025 reform added a right to request an extension for higher-value vouchers, so check the current rules before treating a card as expired.
 
 ### 3. Installment Payments (Tashlumim) Are Not Always Free
 While most Israeli retailers offer interest-free installments, some charge interest for longer terms (above 12 payments) or for certain product categories. Always verify "tashlumim l'lo ribit" (interest-free installments) before assuming.
@@ -207,7 +206,7 @@ While most Israeli retailers offer interest-free installments, some charge inter
 When negotiating with telecom or subscription providers, the discount offered by the retention department typically expires after 12-18 months. Set a calendar reminder to renegotiate before the discount period ends, or the price reverts to full.
 
 ### 5. Israeli Consumer Protection Law on Cancellation
-Under the Israeli Consumer Protection Law, consumers can cancel most service contracts within 14 days ("tkufat tzinun"). For telecom and ongoing services, cancellation can be done at any time with up to 30 days notice. Agents should know these rights when guiding users through cancellations.
+Under the Israeli Consumer Protection Law, the 14-day cancellation right ("tkufat tzinun") attaches specifically to door-to-door sales (Sec. 14) and distance/online sales (Sec. 14ג), not to every service contract. Continuous service contracts (e.g. telecom, gym, streaming) can instead be cancelled at any time under the Law's continuous-transaction (esek mitmashech) provisions, with charges stopping shortly after notice. Agents should know which regime applies when guiding users through cancellations.
 
 ## Reference Links
 
@@ -215,8 +214,8 @@ Under the Israeli Consumer Protection Law, consumers can cancel most service con
 |--------|-----|---------------|
 | Zap.co.il price comparison | https://www.zap.co.il | Live Israeli retailer price comparison for electronics, appliances, and more |
 | Consumer Council | https://www.consumers.org.il | Consumer rights, cooling-off period, complaint filing |
-| Gov.il consumer protection | https://www.gov.il/he/departments/consumer_protection_authority | Official cancellation rules, cooling-off period, enforcement |
-| Israeli credit card complaint portal | https://www.gov.il/he/service/credit-card-complaint | gov.il credit-card dispute filing service |
+| Gov.il consumer protection | https://www.gov.il/he/departments/consumer_protection_and_fair_trade_authority | Official cancellation rules, cooling-off period, enforcement |
+| Gov.il complaint filing | https://www.gov.il/he/service/filing_a_complaint_to_fair_trade_authority | gov.il consumer complaint filing service |
 | Bank of Israel - Banking Supervision Department | https://www.boi.org.il/en/information-and-service-to-the-public/ | Bank-side complaint and consumer banking guidance |
 | Bank of Israel customer info | https://www.boi.org.il/en/information-and-service-to-the-public/banking-customer-service-information/ | Bank fee comparisons and consumer banking guidance |
 
@@ -228,7 +227,7 @@ Solution: Disable ad blockers and other cashback extensions before clicking thro
 
 ### Error: "Cannot cancel subscription"
 Cause: Service provider making cancellation difficult
-Solution: Under Israeli law, cancellation must be as easy as sign-up. If the provider requires a phone call, ask for the cancellation department directly. If they refuse, file a complaint with the Consumer Council (Moetzet HaTzarchanut) or via the Gov.il complaint system.
+Solution: Israeli law requires cancellation to be reasonably accessible and bars providers from making it unreasonably difficult. If the provider requires a phone call, ask for the cancellation department directly. If they refuse, file a complaint with the Consumer Council (Moetzet HaTzarchanut) or via the Gov.il complaint system.
 
 ### Error: "Credit card benefits not applied"
 Cause: Purchase category may not match the cashback category
