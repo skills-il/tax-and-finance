@@ -15,11 +15,13 @@
 | Index | ID | Hebrew |
 |-------|----|--------|
 | TA-35 | 142 | ת"א-35 |
-| TA-125 | 143 | ת"א-125 |
-| TA-90 | 164 | ת"א-90 |
-| TA-Banks | 145 | ת"א-בנקים |
-| TA-Real Estate | 146 | ת"א-נדל"ן |
-| TA-Tech | 147 | ת"א-טכנולוגיה |
+| TA-125 | 137 | ת"א-125 |
+| TA-90 | 143 | ת"א-90 |
+| TA-Bank | 194 | ת"א-בנקים |
+| TA-RealEstate | 149 | ת"א-נדל"ן |
+| TA-Technology | 169 | ת"א-טכנולוגיה |
+
+Verify a current ID by opening the index page (e.g. market.tase.co.il/en/market_data/index/137/about for TA-125) before hardcoding.
 
 ## Maya (Disclosure) System
 - **URL:** https://maya.tase.co.il

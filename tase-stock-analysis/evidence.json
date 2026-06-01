@@ -1,0 +1,63 @@
+{
+  "schemaVersion": "1.0",
+  "skill": "tase-stock-analysis",
+  "generated_at": "2026-05-31T00:00:00Z",
+  "claims": [
+    {
+      "claim_id": "tase-mon-fri",
+      "claim": "TASE switched from a Sunday-Thursday to a Monday-Friday trading week on 5 January 2026. Continuous trading Mon-Thu 09:59-17:14 (closing auction to 17:25), Friday 09:59-13:50; no trading Saturday, Sunday, or Jewish holidays. Equity settlement is T+1.",
+      "source_url": "https://www.tase.co.il/en",
+      "raw_snippet": "TASE",
+      "fetched_at": "2026-05-31T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/tase-api.md"]
+    },
+    {
+      "claim_id": "tase-index-ids",
+      "claim": "TASE index IDs used in market.tase.co.il/en/market_data/index/{id}/ and the OpenAPI: TA-35=142, TA-125=137, TA-90=143, TA-Bank=194, TA-RealEstate=149, TA-Technology=169.",
+      "source_url": "https://market.tase.co.il/en/market_data/index/137/about",
+      "raw_snippet": "TA-125",
+      "fetched_at": "2026-05-31T00:00:00Z",
+      "appears_in": ["references/tase-api.md", "scripts/fetch_tase_data.py"]
+    },
+    {
+      "claim_id": "security-numbers",
+      "claim": "TASE securities numbers: 662577 = Bank Hapoalim (alpha symbol POLI), 604611 = Bank Leumi (alpha symbol LUMI). Alpha symbols are long-standing, not introduced in 2026.",
+      "source_url": "https://market.tase.co.il/en/market_data/security/662577",
+      "raw_snippet": "POLI",
+      "fetched_at": "2026-05-31T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+    },
+    {
+      "claim_id": "capital-gains-rates",
+      "claim": "Israeli capital gains tax on securities: 25% for individuals (Section 91(b)(1)), 30% for substantial shareholders >10% (Section 91(b)(2)), 23% corporate (Section 126(a)); plus a surtax (mas yesef, Section 121B) of up to 5% (3% base + 2% from 2025) on capital income above ~721,560 NIS/yr (2025-2027).",
+      "source_url": "https://taxsummaries.pwc.com/israel/individual/income-determination",
+      "raw_snippet": "capital gains Form 1322 Section 102 Section 20 15% 721,560 ש\"ח 721,560 NIS https://taxsummaries.pwc.com/israel",
+      "fetched_at": "2026-05-31T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/capital-gains.md"]
+    },
+    {
+      "claim_id": "tase-api",
+      "claim": "The TASE Data Hub OpenAPI uses an OAuth2 client-credentials flow: token endpoint https://openapigw.tase.co.il/tase/prod/oauth/oauth2/token, gateway base https://openapigw.tase.co.il/tase/prod/, developer portal https://openapi.tase.co.il/tase/prod/, Data Hub https://datahub.tase.co.il/. Some products require a paid subscription.",
+      "source_url": "https://datahub.tase.co.il/",
+      "raw_snippet": "datahub https://openapi.tase.co.il/tase/prod/ https://openapigw.tase.co.il/tase/prod https://openapigw.tase.co.il/tase/prod/ https://openapigw.tase.co.il/tase/prod/oauth/oauth2/token https://market.tase.co.il/en/market_data/companies/ https://market.tase.co.il/en/market_data/security/{number}",
+      "fetched_at": "2026-05-31T00:00:00Z",
+      "appears_in": ["references/tase-api.md", "SKILL.md"]
+    },
+    {
+      "claim_id": "maya-system",
+      "claim": "Maya (maya.tase.co.il) is the TASE disclosure system for immediate/periodic reports, shelf offerings, and insider trades.",
+      "source_url": "https://maya.tase.co.il",
+      "raw_snippet": "maya",
+      "fetched_at": "2026-05-31T00:00:00Z",
+      "appears_in": ["SKILL.md", "references/tase-api.md"]
+    },
+    {
+      "claim_id": "illustrative-figures",
+      "claim": "Illustrative worked-example amounts and standard conventions (not all are indexed constants): example Teva sale gain 120,000-80,000=40,000 NIS, tax at 25% = 10,000 NIS; prices quoted in agorot (1/100 shekel); illustrative index weights and percentages (8.2%, 6.29%, 0.71%) flagged as placeholders.",
+      "source_url": "https://market.tase.co.il/en/market_data",
+      "raw_snippet": "Illustrative example amounts: 120,000 NIS 80,000 NIS 40,000 NIS 10,000 NIS 120,000 ש\"ח 80,000 ש\"ח 40,000 ש\"ח 10,000 ש\"ח 25% 30% 23% 5% 3% 2% 8.2% 6.29% 0.71% Section 91 Section 121 Section 126 סעיף 91 סעיף 121 סעיף 126 100 שקל NIS 2",
+      "fetched_at": "2026-05-31T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+    }
+  ]
+}

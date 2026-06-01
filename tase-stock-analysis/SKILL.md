@@ -40,6 +40,7 @@ When the user has sold or plans to sell securities:
 |----------|----------|-------|
 | Individual, non-substantial shareholder | 25% | Standard rate on net gain |
 | Substantial shareholder (over 10%) | 30% | Flat rate on entire gain (Section 91(b)(2)) |
+| High-income individual | + surtax (mas yesef) | An additional surtax applies to capital income above the annual threshold (~721,560 NIS for 2025-2027): 3% base + a further 2% from 2025 = up to 5% on the slice over the threshold, on top of the 25%/30%. A high earner's effective rate on securities gains can reach ~30%. |
 | Shares eligible for inflationary adjustment (varies by acquisition date and asset type) | Exempt | Only real gain is taxed, consult current regulations |
 | Offsetting losses (kizuz hefsedim) | Allowed | Losses offset gains in same tax year |
 | Foreign resident | Treaty-dependent | Check double taxation treaty |
@@ -55,7 +56,7 @@ For dual-listed companies (e.g., Check Point, CyberArk, NICE, Sapiens):
 1. Compare TASE price (in NIS) vs. US price (in USD) using current exchange rate
 2. Account for ADR ratio (some dual-listed have different share ratios)
 3. Factor in different trading hours (TASE and US markets now overlap on Monday-Friday, but Friday TASE closes early at 13:50)
-4. Note tax treaty implications -- Israeli residents pay Israeli capital gains tax regardless of which exchange
+4. Note tax treaty implications -- Israeli residents pay Israeli capital gains tax regardless of which exchange. For a share bought or sold in USD, the Israeli taxable gain is computed in shekels, so the shekel/dollar movement between purchase and sale is part of the taxable gain (not a separate FX item). US tax withheld is generally creditable against the Israeli tax under the Israel-US treaty (zikui mas zar) to avoid double taxation
 
 ### Step 6: Review Maya Filings
 Check relevant disclosures on the Maya system (TASE disclosure platform):
@@ -140,7 +141,7 @@ Result: Summary of recent disclosures with material items highlighted
 
 ## Gotchas
 - Since January 2026, TASE trades Monday through Friday (previously Sunday-Thursday). Friday sessions are shortened (09:59-13:50). Agents trained on pre-2026 data may still assume Sunday-Thursday trading and schedule queries on Sundays, which are now non-trading days.
-- TASE ticker symbols follow a different format than US exchanges. Israeli stocks use numeric securities codes alongside short Hebrew names. **Always verify a security number before using it** by hitting `https://market.tase.co.il/en/market_data/security/{number}` (e.g., 662577 = Bank Hapoalim, 604611 = Bank Leumi). As of 2026-04, English alpha tickers (POLI, LEUMI, TEVA, NICE, CHKP, ICL) are also usable on TASE alongside numeric codes — prefer alpha tickers for clarity. Never hardcode security numbers from memory; fetch them from the TASE OpenAPI by company name.
+- TASE ticker symbols follow a different format than US exchanges. Israeli stocks use numeric securities codes alongside short Hebrew names. **Always verify a security number before using it** by hitting `https://market.tase.co.il/en/market_data/security/{number}` (e.g., 662577 = Bank Hapoalim, 604611 = Bank Leumi). TASE securities also carry long-standing English alpha symbols (e.g. POLI = Hapoalim, LUMI = Leumi, TEVA, NICE, CHKP, ICL) alongside the numeric codes; prefer the alpha symbol for clarity (note Leumi's symbol is LUMI, not LEUMI). These symbols are not new, they have existed for years. Never hardcode security numbers from memory; fetch them from the TASE OpenAPI by company name.
 - **Equity settlement is T+1.** Israel transitioned to T+1 settlement for equities; foreign investors may negotiate T+2 with their broker. The skill's pre-2024 references to T+2 across the board are stale.
 - Israeli stock prices on TASE are quoted in agorot (1/100 of a shekel), not in shekels. Agents may display raw prices without dividing by 100, showing prices 100x too high.
 - Dual-listed Israeli companies (e.g., Teva, Check Point) trade on both TASE and NASDAQ with different prices due to exchange rate fluctuations. Agents may not reconcile the price difference.

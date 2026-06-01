@@ -28,10 +28,11 @@ TASE_API_BASE = "https://openapigw.tase.co.il/tase/prod"
 # Index identifiers
 INDICES = {
     "TA35": {"id": "142", "name": "TA-35", "hebrew": 'ת"א-35'},
-    "TA125": {"id": "143", "name": "TA-125", "hebrew": 'ת"א-125'},
-    "TA90": {"id": "164", "name": "TA-90", "hebrew": 'ת"א-90'},
-    "TABANK": {"id": "145", "name": "TA-Banks", "hebrew": 'ת"א-בנקים'},
-    "TAREAL": {"id": "146", "name": "TA-Real Estate", "hebrew": 'ת"א-נדל"ן'},
+    "TA125": {"id": "137", "name": "TA-125", "hebrew": 'ת"א-125'},
+    "TA90": {"id": "143", "name": "TA-90", "hebrew": 'ת"א-90'},
+    "TABANK": {"id": "194", "name": "TA-Bank", "hebrew": 'ת"א-בנקים'},
+    "TAREAL": {"id": "149", "name": "TA-RealEstate", "hebrew": 'ת"א-נדל"ן'},
+    "TATECH": {"id": "169", "name": "TA-Technology", "hebrew": 'ת"א-טכנולוגיה'},
 }
 
 # Well-known dual-listed companies (TASE securities number -> NASDAQ/NYSE ticker).
@@ -140,7 +141,7 @@ def generate_example() -> dict:
         "date": datetime.now().strftime("%Y-%m-%d"),
         "components": [
             # Spot-checked 2026-04 against market.tase.co.il:
-            {"name": "Bank Hapoalim", "hebrew": "בנק הפועלים", "weight_pct": 8.2, "securities_no": "662577"},
+            {"name": "Bank Hapoalim", "hebrew": "בנק הפועלים", "weight_pct": 6.29, "securities_no": "662577"},
             {"name": "Bank Leumi", "hebrew": "בנק לאומי", "weight_pct": 7.5, "securities_no": "604611"},
             # The following weights/security numbers are approximate placeholders;
             # verify before quoting. Several legacy entries here had wrong

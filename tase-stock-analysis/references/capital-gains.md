@@ -8,6 +8,9 @@
 | Substantial shareholder (10%+) | 30% | Section 91(b)(2) |
 | Israeli corporation | Corporate rate (23%) | Section 126(a) |
 | Foreign resident (treaty) | Per treaty, often 0-15% | Varies |
+| High-income individual (surtax / mas yesef) | +5% on the slice above ~721,560 NIS/yr (3% base + 2% from 2025) | Section 121B |
+
+The surtax (mas yesef) applies on top of the base rate to capital income above the annual threshold (~721,560 NIS for 2025-2027), so a high earner's effective rate on securities gains can reach about 30%.
 
 ## Key Rules
 

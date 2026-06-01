@@ -1,0 +1,16 @@
+{
+  "cycles": [
+    {
+      "version": "1.5.0",
+      "date": "2026-05-31",
+      "lessons": [
+        "CRITICAL fixed: 5 of 6 TASE index IDs were wrong in both references/tase-api.md AND scripts/fetch_tase_data.py (the data-fetch path). Verified against market.tase.co.il: TA-125 is 137 (not 143), TA-90 is 143 (not 164), TA-Bank 194, TA-RealEstate 149, TA-Technology 169; TA-35=142 was correct. Independently re-confirmed TA-125=137 via the official index URL.",
+        "MAJOR fixed: capital-gains section omitted the surtax (mas yesef). Added that individuals above ~721,560 NIS/yr owe up to 5% surtax (3% base + 2% from 2025) on capital income on top of 25%/30%, so a high earner's effective rate can reach ~30% (Section 121B).",
+        "MAJOR fixed: alpha-ticker gotcha was mis-framed as 'introduced 2026-04' (they are long-standing official TASE symbols) and listed 'LEUMI' for Bank Leumi whose symbol is LUMI. Reframed and corrected to LUMI.",
+        "Verified accurate (no change): the Monday-Friday trading switch (effective 5 Jan 2026) and hours; T+1 equity settlement; security numbers 662577 Hapoalim / 604611 Leumi; agorot quoting; OAuth2 client-credentials flow + endpoints; 25%/30%/Section 91(b)(2) base rates; Maya/datahub/openapi URLs.",
+        "Deferred MINOR: openapi.tase.co.il portal now 301-redirects to the Data Hub lobby (still live); refresh the illustrative TA-35 weight (Hapoalim ~6.29% now vs 8.2% placeholder).",
+        "Panel round 2: added TA-Technology=169 to the script INDICES dict (it was in the reference + evidence but not the script, so --index could not fetch it; corrected the log's overstated 'fixed in both' wording). Added dual-listed tax note (Israeli-resident gain on USD shares is computed in shekels so FX is part of the taxable gain; US tax is creditable via the Israel-US treaty). Refreshed the example Hapoalim weight 8.2%->6.29%. Fixed a heredoc path bug that wrote domain-checklist.md to the repo root instead of the skill folder."
+      ]
+    }
+  ]
+}
