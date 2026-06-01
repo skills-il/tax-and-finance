@@ -9,7 +9,7 @@ compatibility: Requires network access for Tranzila API calls. Works with Claude
 
 ## Overview
 
-Tranzila is one of Israel's leading payment processors (solek), operating since 1999. It connects to the Shva network (reshet shva) -- Israel's central card processing infrastructure -- and supports all Israeli card issuers: Isracard, Visa Cal, Leumi Card/Max.
+Tranzila is one of Israel's leading payment processors (solek), operating since 1999. It connects to the Shva network (reshet shva) -- Israel's central card processing infrastructure -- and supports all Israeli card issuers: Isracard, Visa Cal, and Max (formerly Leumi Card).
 
 This skill guides integration with Tranzila for accepting credit card payments (slikat kartis ashrai) in Israeli applications.
 
@@ -39,8 +39,13 @@ Tranzila uses different credentials depending on the integration:
 - `supplier` -- Terminal name (provided by Tranzila)
 - `TranzilaPW` -- Transaction password
 
-**For API V2:**
-- `X-tranzila-api-app-key` HTTP header -- Application key from Tranzila dashboard
+**For API V2 (api.tranzila.com/v1):** authentication is a 4-header HMAC-SHA256 handshake, NOT a single key header. Every request must send all four:
+- `X-tranzila-api-app-key` -- your public application key
+- `X-tranzila-api-request-time` -- current Unix time in SECONDS
+- `X-tranzila-api-nonce` -- a random nonce (about 40 bytes)
+- `X-tranzila-api-access-token` -- `hmac_sha256(secret + request_time + nonce, app_key)` (HMAC-SHA256 of the app key, keyed with secret concatenated with the request-time and nonce)
+
+You get both a public app key and a secret key when you enrol in API V2. A request with only `X-tranzila-api-app-key` is rejected. (Base URL is `https://api.tranzila.com/v1`; "API V2" is the auth-generation name, not a `/v2` path.) Confirm the exact concatenation order in the Authentication page at docs.tranzila.com before shipping.
 
 Remind the user to store credentials securely (environment variables, secrets manager) and never commit them to source control.
 
@@ -100,7 +105,7 @@ Israeli payments have unique features that differ from international processing:
 - Set `cred_type=8` for regular installments
 - Parameters: `npay` (number of payments minus 1), `fpay` (first payment), `spay` (subsequent payments)
 - The sum of `fpay + (npay * spay)` must equal the total `sum`
-- Not all terminals are authorized for installments (error code 111 if not)
+- Not all terminals are authorized for installments (you get an error if the terminal is not enabled for them; check the exact code in the official table)
 
 **Credit Types (cred_type):**
 
@@ -151,15 +156,15 @@ Tokens (asmachta) let you charge returning customers without handling card data 
 
 ### Step 7: Accept Bit Payments
 
-Tranzila supports Bit (Israel's popular mobile payment app). The flow differs from card payments:
+Tranzila supports Bit (Israel's popular mobile payment app) through a **dedicated Bit API**, not a flag on the card-charge CGI. It has its own `Bit - Init` and `Bit - Refund` POST endpoints under `https://api.tranzila.com/v1` using the same 4-header HMAC auth as the rest of API V2.
 
-1. Initiate a Bit payment via the API -- Tranzila returns a Bit payment URL
+1. Call the Bit Init endpoint via the API -- Tranzila returns a Bit payment URL
 2. Redirect the customer to the Bit URL or display a QR code
 3. Customer approves payment in the Bit app
 4. Tranzila sends the result to your `notify_url`
-5. Bit refunds use a separate refund endpoint specific to Bit transactions
+5. Bit refunds use the dedicated Bit Refund endpoint, not the card refund flow
 
-Key parameters: `bit=1` to enable Bit, response includes `bit_url` for customer redirect. Refer to `https://docs.tranzila.com/docs/payments-billing/dcljft4y7sgj2-bit`.
+**Bit constraints (from the docs):** NIS only, transaction sum must be above 5 NIS, and the merchant needs a Visa or Isracard identifier, **Max-only merchants are not offered Bit at this time**. Bit does not support Hosted Fields or 3DS. Do not assume a `bit=1` / `bit_url` parameterization on the legacy CGI; use the dedicated Bit API. Refer to `https://docs.tranzila.com/docs/payments-billing/dcljft4y7sgj2-bit`.
 
 ### Step 8: Generate Payment Request Links
 
@@ -193,27 +198,27 @@ Tranzila has an Invoicing API for generating digitally-signed tax documents appr
 3. Supports tax invoices, receipts, and credit notes
 4. Can be auto-generated with PayPal payments
 
-**Israel Tax Authority allocation number (mispar haktza'a) — mandatory for B2B invoices over thresholds.** Since 2025-01-01 the ITA requires every B2B tax invoice over a threshold to carry an allocation number obtained from SHAAM via API. Threshold schedule: NIS 20,000 (from Jan 2025), **NIS 10,000 from Jan 2026**, **NIS 5,000 from Jun 2026**. Without the allocation number, the buyer cannot deduct input VAT on the invoice. If you generate invoices through Tranzila's Invoicing API, confirm with Tranzila support that allocation-number requests are wired through SHAAM for invoices at or above the current threshold; if not, fall back to a separate invoicing provider (Green Invoice, Morning, etc.) that does integrate with SHAAM, or request allocation numbers directly via the ITA portal.
+**Israel Tax Authority allocation number (mispar haktza'a), mandatory for B2B invoices over thresholds.** Since 2025-01-01 the ITA requires every B2B tax invoice over a threshold to carry an allocation number obtained from SHAAM via API. Threshold schedule: NIS 20,000 (from Jan 2025), **NIS 10,000 from Jan 2026**, **NIS 5,000 from Jun 2026**. Without the allocation number, the buyer cannot deduct input VAT on the invoice. If you generate invoices through Tranzila's Invoicing API, confirm with Tranzila support that allocation-number requests are wired through SHAAM for invoices at or above the current threshold; if not, fall back to a separate invoicing provider (Green Invoice, Morning, etc.) that does integrate with SHAAM, or request allocation numbers directly via the ITA portal.
 
 Refer to Tranzila's invoicing documentation for the complete invoicing API reference.
 
 ### Step 11: Handle Errors
 
-Check the `Response` field in every transaction result. `000` means approved -- anything else is an error.
+Check the `Response` field in every transaction result. `000` means approved -- anything else is a decline or error.
 
-Common errors to handle in your code:
+**Important: the HTTP status of an API V2 call is 200 even on a declined/failed transaction.** The HTTP 200 does NOT mean success; read the `Response` / response-code field in the body for the actual SHVA result. And there are TWO separate code spaces: the SHVA/issuer codes (hundreds of codes, e.g. card-issuer refusals are in the 300s, installment errors in the 400s) and a separate 3D-Secure code set (900-930). Do not assume codes from Stripe or other gateways.
 
-| Code | Meaning | Hebrew | User Action |
-|------|---------|--------|-------------|
-| 004 | Card declined | kartis surav | Ask user to try another card |
-| 036 | Card expired | kartis pagum tokef | Ask user to update card details |
-| 107 | Amount exceeds limit | chriga memichsa | Reduce amount or contact bank |
-| 111 | Not authorized for installments | ein harshaah letashlumim | Contact Tranzila to enable |
-| 125 | Not authorized for Amex | ein harshaah le-Amex | Contact Tranzila to enable |
-| 200 | Application error | shegihat mimshal | Retry; if persistent, check parameters |
-| 900 | 3DS authentication failed | imut 3DS nichal | Retry without 3DS or ask user to authenticate |
+A few confirmed codes (verify the rest against `references/error-codes.md` and the official "Transaction Response Codes" page at docs.tranzila.com):
 
-For the full error code reference (170+ codes), consult `references/error-codes.md`.
+| Code | Meaning | User Action |
+|------|---------|-------------|
+| 000 | Approved | Transaction completed |
+| 004 | Refusal / declined (contact card owner) | Ask user to try another card |
+| 036 | Card expired | Ask user to update card details |
+| 037 | Installment error (transaction sum must equal first payment + fixed payments times count) | Recompute the installment amounts |
+| 900 | 3D Secure authentication failed (3DS code space 900-930) | Re-authenticate or retry without 3DS |
+
+For the full reference (260+ SHVA codes plus the separate 900-930 3DS set), consult `references/error-codes.md` and verify against the official docs, do NOT hardcode codes from memory.
 
 ## Examples
 
@@ -256,10 +261,11 @@ Result: Refund processed and linked to original transaction.
 ### Example 5: Accept Bit Payment
 User says: "I want to let customers pay with Bit on my website"
 Actions:
-1. Enable: Set `bit=1` in the payment request
-2. Redirect: Send customer to the `bit_url` from the response
+1. Call the dedicated Bit Init endpoint (api.tranzila.com/v1, 4-header HMAC auth) -- not a flag on the card CGI
+2. Redirect: Send customer to the Bit payment URL from the response (or show a QR)
 3. Handle: Receive payment confirmation at notify_url
-4. Verify: Check Response=000 for successful Bit payment
+4. Verify: Check the response code for a successful Bit payment
+5. Note constraints: NIS only, sum > 5 NIS, merchant needs a Visa/Isracard identifier (Max-only merchants not supported)
 Result: Customers can pay using Israel's Bit mobile wallet alongside credit cards.
 
 ### Example 6: Send Payment Link via SMS
@@ -305,13 +311,13 @@ Result: Payment collected remotely without building a checkout page.
 
 ## Troubleshooting
 
-### Error: "Response code 200 -- Application error"
-Cause: Missing or invalid parameters in the API request
-Solution: Verify all required parameters are present: supplier, TranzilaPW, sum, ccno (or TranzilaTK), expdate. Check parameter names are exact (case-sensitive).
+### Error: "Transaction rejected with a non-000 response code"
+Cause: Missing or invalid parameters, a card-issuer decline, or a config/permission issue. Remember the HTTP status is 200 even on failure, read the `Response` field for the actual code.
+Solution: Verify all required parameters are present: supplier, TranzilaPW, sum, ccno (or TranzilaTK), expdate. Check parameter names are exact (case-sensitive). Look up the exact response code in the official Transaction Response Codes page (see references/error-codes.md), do not guess its meaning.
 
-### Error: "Response code 111 -- Terminal not authorized for installments"
-Cause: Your Tranzila terminal does not have installment permissions enabled
-Solution: Contact Tranzila support (073-222-4444) to enable installment processing on your terminal.
+### Error: "Terminal not authorized for installments / Amex"
+Cause: Your Tranzila terminal does not have installment (or Amex) permissions enabled.
+Solution: Contact Tranzila support (073-222-4444) to enable installment or Amex processing on your terminal.
 
 ### Error: "Token charge fails but iframe worked"
 Cause: Common when using wrong endpoint or missing expdate

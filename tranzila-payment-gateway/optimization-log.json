@@ -1,0 +1,18 @@
+{
+  "cycles": [
+    {
+      "version": "1.3.0",
+      "date": "2026-05-31",
+      "lessons": [
+        "CRITICAL fixed: API V2 auth was wrong. It is a 4-header HMAC-SHA256 handshake (X-tranzila-api-app-key + X-tranzila-api-request-time + X-tranzila-api-nonce + X-tranzila-api-access-token = hmac_sha256 of the app key keyed with secret+request_time+nonce), not a single key header. Documented all four headers in SKILL.md, SKILL_HE.md, and api-parameters.md.",
+        "CRITICAL fixed: API base URL was wrong (api.tranzila.com/v2/transaction). Correct base is api.tranzila.com/v1; 'API V2' is the auth-generation name, not a /v2 path.",
+        "CRITICAL fixed: the error-code table was largely fabricated (036/107/111/125/200 mismapped; 200 is the HTTP status not an error code; 700s are PinPad not Masav; 951-954 are PayPal). Rewrote Step 11 + references/error-codes.md to only the verified codes (000 approved, 004 refusal, 036 expired, 037 installment error, 900 3DS-failed) and explained the two code spaces (SHVA hundreds + 3DS 900-930) and the HTTP-200-on-failure caveat, with a strong 'verify against the official docs' instruction. 900=3DS-failed was actually correct and kept.",
+        "MAJOR fixed: Bit was mis-described as a bit=1 flag / bit_url on the CGI (fabricated). Bit is a dedicated API (Bit Init/Refund under api.tranzila.com/v1, HMAC auth) with constraints (NIS only, sum > 5 NIS, Visa/Isracard identifier, Max-only merchants not offered, no Hosted Fields/3DS).",
+        "MINOR fixed: 'Leumi Card/Max' -> 'Max (formerly Leumi Card)'; '170+ codes' -> '260+ SHVA + separate 3DS set'. Stripped a pre-existing em-dash from the allocation block.",
+        "Verified accurate (no change): iframe + legacy CGI endpoints (direct.tranzila.com/.../iframenew.php, secure5.tranzila.com tranzila31/36a/31tk.cgi); cred_type 1/2/3/5/8/9; currency 1/2/3/7; tranmode K/VK/AK/C{index}; TranzilaTK; allocation-number schedule (20K/10K/5K); support 073-222-4444; test cards; tranzilajs lib.",
+        "Could not fully verify (flagged as plausible-unverified): 3DS success-field names (eci/xid/cavv) in 3ds-flow.md, and the ITA-approved-digital-signature wording for Tranzila's Invoicing API (skill already hedges 'confirm with Tranzila support').",
+        "Round-2 correction: a verification subagent (cross-checking the active_merchant_tranzila gem, which the skill cites) caught that the first research agent's error-code corrections were themselves wrong, expired is 036 (not 015; 015 is a strip-mismatch), and installment-sum mismatch is 037 (not 406; 406 is not a SHVA code, and 111 is 'cancel not allowed', not 'installments not authorized'). Re-corrected the table to 000/004/036/037/900 and dropped the contested codes. Also fixed X-tranzila-api-request-time units: SECONDS (per tranzilajs), not milliseconds (would break the HMAC). Lesson: do not trust a single agent's specific API-code claims; cross-check against a real client implementation."
+      ]
+    }
+  ]
+}

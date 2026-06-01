@@ -20,12 +20,16 @@ https://direct.tranzila.com/{supplier}/iframenew.php?sum=100&currency=1&cred_typ
 - **J4 mode**: One-time charge -- card is charged immediately, no token returned.
 
 ### API V2 Authentication
+Base URL is `https://api.tranzila.com/v1` ("API V2" is the auth-generation name, not a `/v2` path). Authentication is a 4-header HMAC-SHA256 handshake; ALL four headers are required:
 ```
-POST https://api.tranzila.com/v2/transaction
-X-tranzila-api-app-key: {your-app-key}
+POST https://api.tranzila.com/v1/{resource}
+X-tranzila-api-app-key: {public app key}
+X-tranzila-api-request-time: {unix time in seconds}
+X-tranzila-api-nonce: {~40-byte random nonce}
+X-tranzila-api-access-token: {hmac_sha256(secret + request_time + nonce, app_key)}
 Content-Type: application/json
 ```
-The `X-tranzila-api-app-key` header replaces `supplier` + `TranzilaPW` for API V2 calls. Obtain the key from the Tranzila merchant dashboard.
+You enrol in API V2 to get a public app key and a secret key; the access-token is the HMAC-SHA256 of the app key, keyed with the secret concatenated with the request-time and nonce. A request with only `X-tranzila-api-app-key` is rejected. These headers replace `supplier` + `TranzilaPW`. Confirm the exact concatenation order on the Authentication page at docs.tranzila.com before shipping.
 
 ## Common Parameters
 

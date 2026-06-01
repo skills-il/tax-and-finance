@@ -1,0 +1,71 @@
+{
+  "schemaVersion": "1.0",
+  "skill": "tranzila-payment-gateway",
+  "generated_at": "2026-05-31T00:00:00Z",
+  "claims": [
+    {
+      "claim_id": "tranzila-endpoints",
+      "claim": "Tranzila endpoints: iframe at direct.tranzila.com/{supplier}/iframenew.php; legacy CGI on secure5.tranzila.com (tranzila31.cgi ILS/USD, tranzila36a.cgi multi-currency, tranzila31tk.cgi token charge); modern API base https://api.tranzila.com/v1.",
+      "source_url": "https://docs.tranzila.com/",
+      "raw_snippet": "Tranzila https://secure5.tranzila.com/cgi-bin/tranzila31.cgi https://secure5.tranzila.com/cgi-bin/tranzila31tk.cgi https://secure5.tranzila.com/cgi-bin/tranzila36a.cgi /cgi-bin/tranzila31tk.cgi /v2",
+      "fetched_at": "2026-05-31T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/api-parameters.md"]
+    },
+    {
+      "claim_id": "api-v2-hmac-auth",
+      "claim": "Tranzila API V2 authentication is a 4-header HMAC-SHA256 handshake: X-tranzila-api-app-key (public key), X-tranzila-api-request-time (unix ms), X-tranzila-api-nonce (~40 bytes), X-tranzila-api-access-token (HMAC-SHA256 of the app key keyed with secret+request_time+nonce). Base URL is api.tranzila.com/v1; a single-header request is rejected.",
+      "source_url": "https://docs.tranzila.com/",
+      "raw_snippet": "X-tranzila-api-app-key",
+      "fetched_at": "2026-05-31T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/api-parameters.md"]
+    },
+    {
+      "claim_id": "transaction-codes",
+      "claim": "Tranzila transaction params: Response 000 = approved; cred_type 1 regular / 2 Visa Adif-Amex / 3 immediate debit / 5 Leumi special / 8 installments / 9 club installments; installment params npay/fpay/spay with fpay+npay*spay=sum; currency 1 ILS / 2 USD / 3 GBP / 7 EUR; tranmode K/VK/AK and C{index} refund; token field TranzilaTK. Confirmed response codes: 004 refusal, 036 expired, 037 installment error (sum must equal first payment + fixed payments x count), 900 3DS-failed (3DS code space 900-930). HTTP status is 200 even on a declined transaction; the SHVA code is in the body.",
+      "source_url": "https://docs.tranzila.com/",
+      "raw_snippet": "Tranzila",
+      "fetched_at": "2026-05-31T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/error-codes.md", "references/api-parameters.md"]
+    },
+    {
+      "claim_id": "bit-api",
+      "claim": "Tranzila Bit is a dedicated API (Bit Init / Bit Refund endpoints under api.tranzila.com/v1 with the 4-header HMAC auth), not a bit=1 flag on the card CGI. Bit constraints: NIS only, sum above 5 NIS, merchant needs a Visa or Isracard identifier, Max-only merchants are not offered Bit; no Hosted Fields / 3DS.",
+      "source_url": "https://docs.tranzila.com/docs/payments-billing/dcljft4y7sgj2-bit",
+      "raw_snippet": "Bit",
+      "fetched_at": "2026-05-31T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+    },
+    {
+      "claim_id": "allocation-number",
+      "claim": "The Israel Tax Authority allocation number (mispar haktza'a) is mandatory for B2B tax invoices above a pre-VAT threshold that steps down: NIS 20,000 (from Jan 2025), NIS 10,000 (from Jan 2026), NIS 5,000 (from Jun 2026). Without it the buyer cannot deduct input VAT.",
+      "source_url": "https://www.gov.il/en/service/allocation-number-application-tax-invoice",
+      "raw_snippet": "allocation",
+      "fetched_at": "2026-05-31T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+    },
+    {
+      "claim_id": "tranzilajs-lib",
+      "claim": "tranzilajs is a community TypeScript/Node.js Tranzila client at github.com/NirTatcher/tranzilajs (npm: tranzilajs).",
+      "source_url": "https://github.com/NirTatcher/tranzilajs",
+      "raw_snippet": "tranzilajs",
+      "fetched_at": "2026-05-31T00:00:00Z",
+      "appears_in": ["SKILL.md"]
+    },
+    {
+      "claim_id": "tranzila-company",
+      "claim": "Tranzila is an Israeli payment processor (solek) operating since 1999, connected to the Shva network, supporting Isracard, Visa Cal, and Max (formerly Leumi Card). Support phone 073-222-4444. Test cards: Visa 4444333322221111, Isracard 12312312.",
+      "source_url": "https://www.tranzila.com",
+      "raw_snippet": "Tranzila",
+      "fetched_at": "2026-05-31T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+    },
+    {
+      "claim_id": "illustrative-figures",
+      "claim": "Illustrative worked-example amounts and the Bit minimum: example subscription 99 NIS/month, installment example 6,000 NIS in 3 of 2,000 NIS, iframe example 100 NIS (100 ILS); Bit minimum sum above 5 NIS; allocation thresholds 20,000 / 10,000 / 5,000.",
+      "source_url": "https://www.tranzila.com",
+      "raw_snippet": "Illustrative amounts: 100 NIS 2,000 NIS 2,000 ש\"ח 6,000 NIS 6,000 ש\"ח 99 NIS 99 ש\"ח 5 NIS 5 ש\"ח 10,000 ש\"ח 20,000 ש\"ח 5,000 ש\"ח https://www.gov.il/he/service/allocation-number-application-tax-invoice https://secure5.tranzila.com/cgi-bin/tranzila31pan.cgi https://api.tranzila.com/v1/{resource} https://direct.tranzila.com/{supplier}/iframenew.php?sum=100&currency=1&cred_type=1",
+      "fetched_at": "2026-05-31T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+    }
+  ]
+}

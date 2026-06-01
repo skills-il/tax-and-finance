@@ -89,7 +89,7 @@ Not all transactions will go through 3DS. Handle these cases:
 
 ## Israeli Issuer Notes
 
-- **Isracard, Visa Cal, Leumi Card/Max** all support 3DS V2 for Visa and Mastercard branded cards
+- **Isracard, Visa Cal, and Max (formerly Leumi Card)** all support 3DS V2 for Visa and Mastercard branded cards
 - **American Express** cards issued in Israel have limited 3DS support -- most Amex transactions fall back to non-3DS
 - **Diners Club** cards generally do not support 3DS in Israel
 - Israeli issuers commonly use SMS OTP for authentication (rather than app-based or biometric)
