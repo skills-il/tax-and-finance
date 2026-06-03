@@ -1,6 +1,6 @@
 {
   "author": "skills-il",
-  "version": "1.2.1",
+  "version": "2.0.0",
   "category": "tax-and-finance",
   "tags": {
     "he": [
@@ -23,8 +23,8 @@
     "en": "Shekel Currency Converter"
   },
   "display_description": {
-    "he": "המרת מטבעות בזמן אמת מול בנק ישראל עם תמיכה בכל המטבעות",
-    "en": "Convert currencies to/from Israeli New Shekel (NIS/ILS) using Bank of Israel official exchange rates. Use when user asks to convert shekels, NIS, ILS, asks about exchange rates, \"shaar yatzig\" (representative rate), or needs currency conversion for Israeli tax or business purposes. Supports 30+ currencies with current and historical rates. Do NOT use for cryptocurrency or unofficial money exchange rates."
+    "he": "המרת מטבעות מול השער היציג של בנק ישראל, כולל שער לתאריך מס. תומך ב-14 המטבעות הרשמיים שבנק ישראל מפרסם, עם שער נוכחי ושער היסטורי לכל תאריך עסקה.",
+    "en": "Convert currencies to/from Israeli New Shekel (NIS/ILS) using Bank of Israel official representative rates (shaar yatzig). Use when user asks to convert shekels, NIS, ILS, asks about exchange rates, \"shaar yatzig\" (representative rate), or needs currency conversion for Israeli tax or business purposes. Covers the official Bank of Israel published currencies (14 currencies) with current and historical (tax-date) rates. Do NOT use for cryptocurrency or unofficial money exchange rates."
   },
   "supported_agents": [
     "claude-code",

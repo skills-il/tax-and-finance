@@ -1,0 +1,37 @@
+{
+  "skill": "shekel-currency-converter",
+  "cycles": [
+    {
+      "date": "2026-06-03",
+      "from_version": "1.2.1",
+      "to_version": "2.0.0",
+      "type": "major",
+      "summary": "Data-source migration. The XML feed (currency.xml) is dead and the XML parsing the skill taught was fabricated. Migrated current rates to the live JSON endpoint (PublicApi/GetExchangeRates) and historical/tax-date rates to the BOI SDMX EXR series (the JSON ?date= param is ignored). Corrected the currency count (14, not 30+), the publish schedule (Mon-Thu soon after 15:15 / Fri soon after 12:15, no Sat/Sun/holidays, not Sunday-Thursday), documented currentChange as a percent, added the import-VAT customs-rate caveat and the tax-date rule, added a Reference Links table, refreshed stale example rates to labeled illustrative values, and rewrote fetch_rates.py to actually fetch JSON + SDMX with publication-day walk-back. Created evidence.json (cited claims) and this log. Routing description updated (eval gate applies).",
+      "changes": [
+        "SKILL.md + SKILL_HE.md: Step 2 rewritten (JSON + SDMX), new tax-date section, Reference Links table, corrected gotchas/troubleshooting, illustrative example rates.",
+        "metadata.json: version 1.2.1 -> 2.0.0; display_description (both langs) rewritten.",
+        "references/boi-api-guide.md: XML block replaced with JSON shape + SDMX + customs caveat + 14-currency list.",
+        "references/currency-codes.md: 14-currency list, illustrative labeled rates, import-VAT customs caveat.",
+        "scripts/fetch_rates.py: JSON fetch + SDMX historical with walk-back; sample rates refreshed; --date now functional.",
+        "evidence.json + optimization-log.json created."
+      ],
+      "deferrals": [
+        "Did not add a Tax Authority customs-rate live-lookup helper to fetch_rates.py (the gov.il exchange-rate query system has no documented public JSON API; the skill instead points users to the weekly customs rate in prose). Defer until a stable customs-rate endpoint is confirmed.",
+        "Did not enumerate per-currency typical-range tables for all 14 currencies in currency-codes.md (kept the 6 primary ones); low value, daily-moving figures."
+      ]
+    },
+    {
+      "date": "2026-06-04",
+      "from_version": "2.0.0",
+      "to_version": "2.0.0",
+      "type": "patch-in-place",
+      "summary": "Post-judge safety + correctness refinements; no factual/evidence claim changed (judge PASS / eval ACCEPT still hold). MAJOR tax-safety fix: fetch_rates.py no longer silently substitutes hardcoded _sample_rates() on a fetch failure and stamps it as the official shaar yatzig. It now raises RateFetchError and FAILS LOUD (stderr + non-zero exit, no tax-stamped output). Sample data is reachable only via an explicit --demo/--offline flag and is clearly labeled 'ILLUSTRATIVE SAMPLE DATA, NOT the official rate, do not use for tax'. Minors: publication time corrected to soon-after-15:15 / soon-after-12:15 (matches BOI explanatory notes; evidence row already stated this) in SKILL.md, SKILL_HE.md, references; fixed the stale 14-day comment in fetch_historical_rate (code is 21 days); unit basis now read from the SDMX UNIT_MULT column (unit = 10**UNIT_MULT) instead of a hardcoded JPY/LBP map (verified live: USD UNIT_MULT=0 -> 1, JPY=2 -> 100, LBP=1 -> 10); a --date fetch failure now reports a fetch error and the 'unsupported currency' message only fires for an actually-unsupported currency (checked up front against the 14-currency set).",
+      "changes": [
+        "scripts/fetch_rates.py: RateFetchError fail-loud on current + historical fetch failure; --demo/--offline flag gates labeled sample output; UNIT_MULT-derived unit; 21-day comment fix; main() distinguishes unsupported-currency (exit 2) from no-data-for-date and fetch-failure.",
+        "SKILL.md + SKILL_HE.md: publication time 15:15/12:15; one-line note that the helper fails loud and never substitutes sample rates.",
+        "references/boi-api-guide.md: publication time 15:15/12:15."
+      ],
+      "deferrals": []
+    }
+  ]
+}
