@@ -1,0 +1,16 @@
+{
+  "cycles": [
+    {
+      "version": "1.3.0",
+      "date": "2026-06-04",
+      "lessons": [
+        "Arnona per-city numbers replaced with fetch-from-municipality guidance; consider an israeli-cbs/municipality MCP integration next cycle.",
+        "Re-confirm BOI rate + prime each cycle (highest-drift facts).",
+        "Net-pay engine was stale: headline rates were right but the script constants (BL 0.4%/7%, health 3.1%/5%, threshold 7,122, pre-2026 tax brackets) drove wrong affordability math. Fixed to 2026 employee rates (BL 1.04%/7%, health 3.23%/5.17%, step 7,703, ceiling 51,910) and widened 2026 brackets (20% to 228,000, 31% to 301,200), sourced live to BTL via Playwright (BTL/gov.il block curl with 403).",
+        "Prose vs code must agree: Example 1 said BL 3.5%/12% (employer/invalid figures) while the script used different values. Always cross-check SKILL prose deductions against the script constants each cycle.",
+        "Mortgage single-rate run is prime-only and understates the real blended payment given the >=1/3-fixed mix rule; now labeled illustrative in both prose and script. A future cycle could add a --blend flag that computes 1/3-fixed + 2/3-prime automatically.",
+        "BTL rate pages must be read with Playwright, not curl/WebFetch (403). Keep the live BTL URLs in evidence.json as the source of record."
+      ]
+    }
+  ]
+}

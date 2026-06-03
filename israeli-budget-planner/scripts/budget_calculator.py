@@ -13,18 +13,25 @@ Usage:
 import argparse
 from decimal import Decimal, ROUND_HALF_UP
 
+# 2026 annual income-tax brackets (widened retroactively from 1 Jan 2026 under
+# the Economic Efficiency Law; the 20% step now runs to 228,000 and the 31% step
+# to 301,200 NIS/year). Source: kolzchut מדרגות מס הכנסה, ITA 2026 table.
 TAX_BRACKETS = [
     (84120, Decimal("0.10")), (120720, Decimal("0.14")),
-    (193800, Decimal("0.20")), (269280, Decimal("0.31")),
+    (228000, Decimal("0.20")), (301200, Decimal("0.31")),
     (560280, Decimal("0.35")), (721560, Decimal("0.47")),
     (999999999, Decimal("0.50")),
 ]
 
-BITUACH_LEUMI_LOW = Decimal("0.004")
+# 2026 employee (salaried) rates. Bituach Leumi employee rose to 1.04% reduced
+# (Amendment 252, effective 2026) / 7% full. Health-tax employee 3.23% / 5.17%.
+# Both bands split at the reduced-collection step (60% of average wage) = 7,703.
+# Source: BTL "לעובדים שכירים" + "שיעורי דמי ביטוח בריאות" (verified 2026).
+BITUACH_LEUMI_LOW = Decimal("0.0104")
 BITUACH_LEUMI_HIGH = Decimal("0.07")
-HEALTH_TAX_LOW = Decimal("0.031")
-HEALTH_TAX_HIGH = Decimal("0.05")
-BL_THRESHOLD = Decimal("7122")
+HEALTH_TAX_LOW = Decimal("0.0323")
+HEALTH_TAX_HIGH = Decimal("0.0517")
+BL_THRESHOLD = Decimal("7703")
 CREDIT_POINTS = Decimal("2.25")
 CREDIT_VALUE = Decimal("242")
 
@@ -62,6 +69,7 @@ def show_salary_breakdown(salary):
     tax = calc_monthly_tax(salary)
     bl = calc_bituach_leumi(salary)
     health = calc_health_tax(salary)
+    # Employee pension contribution: 6% minimum; 6.5% is also common.
     pension = Decimal(str(salary)) * Decimal("0.06")
     net = Decimal(str(salary)) - tax - bl - health - pension
 
@@ -71,11 +79,11 @@ def show_salary_breakdown(salary):
     print(f"  Income tax:          {tax:>10,.2f} NIS")
     print(f"  Bituach Leumi:       {bl:>10,.2f} NIS")
     print(f"  Health tax:          {health:>10,.2f} NIS")
-    print(f"  Pension (6%):        {pension:>10,.2f} NIS")
+    print(f"  Pension (6%, min):   {pension:>10,.2f} NIS")
     print(f"  --------------------------------")
     print(f"  Net salary:          {net:>10,.2f} NIS")
 
-def calc_mortgage(amount, years, rate=0.055):
+def calc_mortgage(amount, years, rate=0.0525):
     monthly_rate = Decimal(str(rate)) / 12
     n_payments = years * 12
     amt = Decimal(str(amount))
@@ -90,6 +98,9 @@ def calc_mortgage(amount, years, rate=0.055):
     print(f"  Monthly payment: {payment:>12,.2f} NIS")
     print(f"  Total paid:      {total:>12,.0f} NIS")
     print(f"  Total interest:  {total - amt:>12,.0f} NIS")
+    print(f"  Note: single-rate run is illustrative, prime-only. BOI rules force")
+    print(f"  at least 1/3 fixed-unlinked (4.5-6.5%), so your real blended-track")
+    print(f"  payment will be higher. Re-run per track and sum, or pass --rate.")
 
 def main():
     parser = argparse.ArgumentParser(description="Israeli budget calculator")
@@ -97,7 +108,10 @@ def main():
     parser.add_argument("--mortgage", action="store_true", help="Calculate mortgage")
     parser.add_argument("--amount", type=float, help="Mortgage amount in NIS")
     parser.add_argument("--years", type=int, default=25, help="Mortgage term in years")
-    parser.add_argument("--rate", type=float, default=0.055, help="Annual interest rate")
+    parser.add_argument("--rate", type=float, default=0.0525,
+                        help="Annual interest rate (default 0.0525 = prime, May 2026). "
+                             "Illustrative, prime-only: BOI mix rules force >=1/3 fixed-unlinked, "
+                             "so a real blended-track payment is higher. Override per track.")
     args = parser.parse_args()
 
     if args.salary:
