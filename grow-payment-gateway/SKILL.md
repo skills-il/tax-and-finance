@@ -80,18 +80,18 @@ This is the most common integration -- create a hosted payment page and redirect
 | `notifyUrl` | string | Server-to-server callback URL |
 | `invoiceNotifyUrl` | string | Invoice webhook URL |
 | `cField1` - `cField9` | string | Custom merchant fields (passed back in callbacks) |
-| `transactionTypes[0]` | integer | Payment method filter (see table below) |
+| `transactionTypes[]` | array | Restrict which payment methods appear (SDK-wallet pages only). Each method is a fixed array index, see table below |
 
-**Payment method codes (transactionTypes):**
+**Payment methods (transactionTypes) -- SDK-wallet pages only.** Each method maps to a FIXED array index (there are no numeric value-codes; include a method by setting its index):
 
-| Code | Payment Method |
-|------|---------------|
-| 1 | Credit Card |
-| 5 | Pay Box |
-| 6 | Bit |
-| 13 | Apple Pay |
-| 14 | Google Pay |
-| 15 | Bank Transfer |
+| Index | Payment Method |
+|-------|---------------|
+| `transactionTypes[0]` | Credit Card |
+| `transactionTypes[1]` | Bit |
+| `transactionTypes[2]` | Apple Pay |
+| `transactionTypes[3]` | Google Pay |
+| `transactionTypes[4]` | Bank transfer |
+| `transactionTypes[5]` | Pay Box |
 
 **Invoice line items (optional):**
 
@@ -400,7 +400,7 @@ Grow offers pre-configured payment page types, each with a different `pageCode`:
 
 | Source | URL | What to Check |
 |--------|-----|---------------|
-| Grow API Reference | https://grow-il.readme.io/reference/overview | Current endpoints, payment-method codes, request/response shapes |
+| Grow API Reference | https://grow-il.readme.io/reference/overview | Current endpoints, transactionTypes indices, request/response shapes |
 | Grow Documentation | https://grow-il.readme.io/docs | Tokenization, recurring, J-code installments, webhooks |
 | Grow Product Overview | https://grow-il.readme.io/docs/about-grow-products | Which Grow products exist and how they map to API surface |
 | Meshulam (Grow) Production Base | https://secure.meshulam.co.il/ | Confirms production host; do not point production traffic at sandbox.meshulam.co.il |

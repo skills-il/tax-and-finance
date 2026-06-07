@@ -74,18 +74,18 @@ Grow משתמשת בשלושה פרטי גישה שמסופקים בעת הצט�
 | `notifyUrl` | string | כתובת callback שרת-לשרת |
 | `invoiceNotifyUrl` | string | כתובת webhook לחשבונית |
 | `cField1` - `cField9` | string | שדות מותאמים (מוחזרים ב-callbacks) |
-| `transactionTypes[0]` | integer | סינון אמצעי תשלום (ראו טבלה למטה) |
+| `transactionTypes[]` | array | הגבלת אמצעי התשלום שיוצגו (בדפי SDK wallet בלבד). כל אמצעי הוא אינדקס קבוע במערך, ראו טבלה למטה |
 
-**קודי אמצעי תשלום (transactionTypes):**
+**אמצעי תשלום (transactionTypes) -- בדפי SDK wallet בלבד.** כל אמצעי ממופה לאינדקס קבוע במערך (אין קודים מספריים, מפעילים אמצעי על ידי קביעת האינדקס שלו):
 
-| קוד | אמצעי תשלום |
+| אינדקס | אמצעי תשלום |
 |------|---------------|
-| 1 | כרטיס אשראי |
-| 5 | Pay Box |
-| 6 | Bit |
-| 13 | Apple Pay |
-| 14 | Google Pay |
-| 15 | העברה בנקאית |
+| `transactionTypes[0]` | כרטיס אשראי |
+| `transactionTypes[1]` | Bit |
+| `transactionTypes[2]` | Apple Pay |
+| `transactionTypes[3]` | Google Pay |
+| `transactionTypes[4]` | העברה בנקאית |
+| `transactionTypes[5]` | Pay Box |
 
 **פריטי חשבונית (אופציונלי):**
 
@@ -394,7 +394,7 @@ Grow מציעה סוגי דפי תשלום מוכנים מראש, כל אחד ע
 
 | מקור | קישור | מה לבדוק |
 |------|-------|---------|
-| תיעוד API של Grow | https://grow-il.readme.io/reference/overview | endpoints נוכחיים, קודי אמצעי תשלום, מבני בקשה ותגובה |
+| תיעוד API של Grow | https://grow-il.readme.io/reference/overview | endpoints נוכחיים, אינדקסי transactionTypes, מבני בקשה ותגובה |
 | תיעוד Grow | https://grow-il.readme.io/docs | טוקניזציה, חיובים חוזרים, תשלומי J-code, webhooks |
 | סקירת מוצרי Grow | https://grow-il.readme.io/docs/about-grow-products | אילו מוצרים קיימים ב-Grow ואיך הם ממופים ל-API |
 | כתובת בסיס פרודקשן (Meshulam) | https://secure.meshulam.co.il/ | אישור שכתובת הפרודקשן נכונה, לא להפנות תעבורה לסביבת sandbox |

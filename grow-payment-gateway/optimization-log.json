@@ -1,0 +1,14 @@
+{
+  "cycles": [
+    {
+      "version": "1.2.1",
+      "date": "2026-06-07",
+      "lessons": [
+        "API surface verified against grow-il.readme.io. One CRITICAL fix: the transactionTypes payment-method table used fabricated numeric value-codes (1=CC, 5=PayBox, 6=Bit, 13=Apple Pay, 14=Google Pay, 15=Bank Transfer). The real API uses FIXED positional array indices (0 CC, 1 Bit, 2 Apple Pay, 3 Google Pay, 4 Bank transfer, 5 Pay Box) and is SDK-wallet-only. Fixed in SKILL.md, SKILL_HE.md, and references/api-endpoints.md.",
+        "Everything else verified correct: base URLs (sandbox.meshulam.co.il / secure.meshulam.co.il), /api/light/server/1.0/ path, all endpoint names, multipart/form-data + server-side-only rule, createPaymentProcess required params, the mandatory approveTransaction step, and webhook auth via webhookKey field (NOT an X-Grow-Signature header).",
+        "Built evidence.json from scratch (legacy skill). Could not live-test the API (payment endpoint, needs merchant credentials); relied on the official readme docs.",
+        "Minor deferred: webhook payload also exposes statusCode / transactionToken / allPaymentNum fields the skill omits; add if a webhook-field expansion is needed next cycle."
+      ]
+    }
+  ]
+}

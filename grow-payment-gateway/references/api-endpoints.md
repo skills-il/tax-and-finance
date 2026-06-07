@@ -61,16 +61,18 @@ All requests require:
 |----------|------|-------------|
 | Settle Suspended Transaction | `/api/light/server/1.0/settleSuspendedTransaction` | Settle a delayed J4J5 payment |
 
-## Payment Method Codes (transactionTypes)
+## Payment Methods (transactionTypes) -- SDK-wallet pages only
 
-| Code | Method |
-|------|--------|
-| 1 | Credit Card |
-| 5 | Pay Box |
-| 6 | Bit |
-| 13 | Apple Pay |
-| 14 | Google Pay |
-| 15 | Bank Transfer |
+`transactionTypes` is a positional array (SDK-wallet pages only). Each payment method maps to a FIXED index; there are no numeric value-codes. Include a method by setting its index.
+
+| Index | Method |
+|-------|--------|
+| `transactionTypes[0]` | Credit Card |
+| `transactionTypes[1]` | Bit |
+| `transactionTypes[2]` | Apple Pay |
+| `transactionTypes[3]` | Google Pay |
+| `transactionTypes[4]` | Bank transfer |
+| `transactionTypes[5]` | Pay Box |
 
 ## Page Code Types
 

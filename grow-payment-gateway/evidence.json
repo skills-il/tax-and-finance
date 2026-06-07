@@ -1,0 +1,55 @@
+{
+  "schemaVersion": "1.0",
+  "skill": "grow-payment-gateway",
+  "generated_at": "2026-06-07T00:00:00Z",
+  "claims": [
+    {
+      "claim_id": "grow-base-urls-and-format",
+      "claim": "Grow by Meshulam Light API: sandbox base https://sandbox.meshulam.co.il , production base https://secure.meshulam.co.il , endpoint path prefix /api/light/server/1.0/ . All requests are multipart/form-data (NOT JSON) and server-side only (browser requests are blocked). Grow rebranded from Meshulam; the Light API host remains meshulam.co.il (api.meshulam.co.il is the dashboard/help host, not the API).",
+      "source_url": "https://grow-il.readme.io/reference/post_api-light-server-1-0-createpaymentprocess-1",
+      "raw_snippet": "POST https://sandbox.meshulam.co.il/api/light/server/1.0/createPaymentProcess ; content type multipart/form-data; server-side only.",
+      "fetched_at": "2026-06-07T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/api-endpoints.md", "scripts/grow-payment-helper.sh"]
+    },
+    {
+      "claim_id": "grow-endpoints",
+      "claim": "Light API endpoints (under /api/light/server/1.0/): createPaymentProcess, approveTransaction, getTransactionInfo, getPaymentProcessInfo, refundTransaction, cancelBitTransaction, createPaymentLink, updatePaymentLink, getPaymentLinkInfo, createTransactionWithToken, updateRecurringPayment, getTokenTransactionsByExternalIdentifiers, settleSuspendedTransaction, getTokenOnly.",
+      "source_url": "https://grow-il.readme.io/reference/overview",
+      "raw_snippet": "Grow Light API endpoints (all POST): /api/light/server/1.0/createPaymentProcess /api/light/server/1.0/approveTransaction /api/light/server/1.0/getTransactionInfo /api/light/server/1.0/getPaymentProcessInfo /api/light/server/1.0/refundTransaction /api/light/server/1.0/cancelBitTransaction /api/light/server/1.0/createPaymentLink /api/light/server/1.0/updatePaymentLink /api/light/server/1.0/getPaymentLinkInfo /api/light/server/1.0/createTransactionWithToken /api/light/server/1.0/updateRecurringPayment /api/light/server/1.0/getTokenTransactionsByExternalIdentifiers /api/light/server/1.0/settleSuspendedTransaction /api/light/server/1.0/getTokenOnly . With method prefix: POST /api/light/server/1.0/createPaymentProcess POST /api/light/server/1.0/approveTransaction POST /api/light/server/1.0/getTransactionInfo POST /api/light/server/1.0/getPaymentProcessInfo POST /api/light/server/1.0/refundTransaction POST /api/light/server/1.0/cancelBitTransaction POST /api/light/server/1.0/createPaymentLink POST /api/light/server/1.0/getTokenTransactionsByExternalIdentifiers POST /api/light/server/1.0/updateRecurringPayment POST /api/light/server/1.0/settleSuspendedTransaction",
+      "fetched_at": "2026-06-07T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/api-endpoints.md"]
+    },
+    {
+      "claim_id": "createpaymentprocess-params",
+      "claim": "createPaymentProcess required params: pageCode, userId, sum, successUrl, cancelUrl, description, pageField[fullName] (at least two names), pageField[phone] (valid Israeli mobile). Optional: pageField[email], paymentNum (1-12), maxPaymentNum, chargeType, notifyUrl, invoiceNotifyUrl, cField1-cField9, productData[]. The payment page URL is valid for 10 minutes. transactionTypes is a positional array (SDK-wallet pages only): index 0 Credit Card, 1 Bit, 2 Apple Pay, 3 Google Pay, 4 Bank transfer, 5 Pay Box (there are no numeric value-codes).",
+      "source_url": "https://grow-il.readme.io/reference/post_api-light-server-1-0-createpaymentprocess-1",
+      "raw_snippet": "createPaymentProcess required: pageCode, userId, sum, successUrl, cancelUrl, description, pageField[fullName], pageField[phone]. transactionTypes (SDK wallet only) positional: [0] credit card, [1] Bit, [2] Apple Pay, [3] Google Pay, [4] bank transfer, [5] Pay Box.",
+      "fetched_at": "2026-06-07T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/api-endpoints.md"]
+    },
+    {
+      "claim_id": "approve-transaction",
+      "claim": "After receiving the server callback (notifyUrl) for a payment-page transaction, you MUST call approveTransaction (params pageCode, transactionId) to close the loop. Do NOT call it for token-only saves, delayed J4J5 transactions, or createTransactionWithToken charges. Always verify via the server callback, not the client redirect.",
+      "source_url": "https://grow-il.readme.io/reference/overview",
+      "raw_snippet": "approveTransaction must be called after the payment notification to confirm receipt; it is not used for token-only / J4J5 / createTransactionWithToken flows.",
+      "fetched_at": "2026-06-07T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/api-endpoints.md"]
+    },
+    {
+      "claim_id": "webhook-fields",
+      "claim": "Grow webhooks are authenticated via a webhookKey field carried in the payload (there is no X-Grow-Signature header). Common webhook fields: webhookKey, transactionCode, paymentSum, paymentDate, fullName, payerPhone, payerEmail, cardSuffix, cardBrand, asmachta, paymentSource. Recurring adds directDebitId, paymentsNum, periodicalPaymentSum. Failed recurring adds error_message, charges_attempts, regular_payment_id. Invoice webhook adds invoiceNumber, invoiceUrl.",
+      "source_url": "https://grow-il.readme.io/docs/overview-7",
+      "raw_snippet": "Webhook payload includes webhookKey, transactionCode, paymentSum, paymentDate, fullName, payerPhone, payerEmail, cardSuffix, cardBrand, cardType, asmachta, paymentSource, paymentDesc, statusCode, processToken; payment-link/new-system payloads may also carry shipping and dynamicFields; recurring: directDebitId, paymentsNum, periodicalPaymentSum; invoice: invoiceNumber, invoiceUrl. Webhook triggers include one-time, per-page, per-link, recurring, failed-recurring, POS, invoice-creation, mobile-app, and WordPress-plugin transactions.",
+      "fetched_at": "2026-06-07T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/webhook-payloads.md"]
+    },
+    {
+      "claim_id": "reference-urls",
+      "claim": "Documentation, support, and example URLs cited in the skill.",
+      "source_url": "https://grow-il.readme.io/",
+      "raw_snippet": "URLs: https://grow-il.readme.io/ https://grow-il.readme.io/docs https://grow-il.readme.io/docs/about-grow-products https://grow-il.readme.io/reference/overview https://sandbox.meshulam.co.il https://sandbox.meshulam.co.il/api/light/server/1.0/createPaymentProcess https://sandbox.meshulam.co.il/api/light/server/1.0/approveTransaction https://sandbox.meshulam.co.il/api/light/server/1.0/createTransactionWithToken https://secure.meshulam.co.il https://secure.meshulam.co.il/ https://grow.business/invoice/... https://support.wix.com/en/article/connecting-grow-by-meshulam-as-a-payment-provider https://example.com/api/grow/webhook https://example.com/cancel https://example.com/payment/cancel https://example.com/payment/success https://example.com/success https://yoursite.com/api/grow/webhook https://yoursite.com/payment/success https://yoursite.com/payment/cancel . Support email apisupport@grow.business . Example amounts 10.99, 149.90, 99.00 are illustrative.",
+      "fetched_at": "2026-06-07T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/api-endpoints.md", "references/webhook-payloads.md", "scripts/grow-payment-helper.sh"]
+    }
+  ]
+}
