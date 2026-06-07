@@ -3,7 +3,7 @@ name: boi-economic-data
 description: "Fetch and analyze Bank of Israel (BOI) economic data: interest rates, CPI (madad hamchirim), exchange rates (sha'ar yatzig), and CBS statistics. Use when user asks about BOI interest rate, ribit Bank Israel, exchange rates, sha'ar yatzig, CPI index, madad, inflation data, or Israeli economic indicators. Foundation skill for Israeli financial analytics. Provides API access to the BOI SDMX API at edge.boi.gov.il and CBS data. Do NOT use for stock market data (use tase-stock-analysis instead) or for currency conversion (use shekel-currency-converter instead)."
 license: MIT
 compatibility: "Requires network access for Bank of Israel API. Works with Claude Code, Cursor, GitHub Copilot, Windsurf, OpenCode, Codex."
-version: 1.1.0
+version: 1.2.0
 ---
 
 # נתונים כלכליים מבנק ישראל
@@ -16,26 +16,25 @@ version: 1.1.0
 | סוג נתונים | אנגלית | מקור | תדירות עדכון |
 |-------------|---------|------|--------------|
 | ריבית בנק ישראל | Interest rate | הוועדה המוניטרית | ~6 פעמים בשנה |
-| שערי חליפין (שער יציג) | Exchange rates | בנק ישראל | יומי (מתפרסם ~16:00) |
+| שערי חליפין (שער יציג) | Exchange rates | בנק ישראל | יומי (מתפרסם ~15:30) |
 | מדד המחירים לצרכן | CPI | למ"ס (הלשכה המרכזית לסטטיסטיקה) | חודשי (בערך ה-15 לחודש העוקב) |
 | ציפיות אינפלציה | Inflation expectations | בנק ישראל | חודשי |
 | תשואת אג"ח ממשלתי | Government bonds yield | בנק ישראל / בורסה | יומי |
 | אגרגטים מוניטריים | Monetary aggregates | בנק ישראל | חודשי |
 
 ### שלב 2: שליפת נתונים מה-API של בנק ישראל
-בנק ישראל חושף נתונים ציבוריים דרך SDMX REST API ב-`edge.boi.gov.il`. ה-API מחזיר SDMX-XML כברירת מחדל, ולכן הוסיפו כותרת `Accept: application/json` (או השתמשו בסקריפט העזר) כדי לקבל JSON. הערה: נתיבי dataflow עשויים להשתנות, התיעוד הקנוני נמצא ב-`references/boi-api.md`.
+בנק ישראל מגיש נתונים ציבוריים ממאגר הסדרות החדש (Fusion Edge Server) דרך SDMX 2.1 REST API. נתיב ה-data התקין הוא `https://edge.boi.gov.il/FusionEdgeServer/ws/public/sdmxapi/rest/data/{DATAFLOW}/{series}` (הנתיב הישן `sdmx/v2/data/dataflow/BOI/...` מחזיר 404). ה-API מחזיר SDMX-XML, והתצפיות מגיעות כאלמנטים `<Obs TIME_PERIOD="..." OBS_VALUE="..."/>`. השרת דוחה את ה-User-Agent הדיפולטי של urllib, ולכן יש לשלוח User-Agent רגיל של דפדפן. התיעוד הקנוני נמצא ב-`references/boi-api.md`.
 
-**שערי חליפין (שער יציג):**
+**שערי חליפין (שער יציג):** השערים היציגים הם סדרות לפי מטבע בשם `RER_<CUR>_ILS` (למשל `RER_USD_ILS`, `RER_EUR_ILS`) בתוך ה-dataflow בשם `EXR`:
 ```
-GET https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI/EXR/1.0?startperiod={date}&endperiod={date}&c[CURRENCY]=USD
-```
-
-**ריבית:**
-```
-GET https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI/IR_INTEREST/1.0
+GET https://edge.boi.gov.il/FusionEdgeServer/ws/public/sdmxapi/rest/data/EXR/RER_USD_ILS?startPeriod={date}&endPeriod={date}
 ```
 
-השתמשו ב-`scripts/fetch_boi_rates.py` לשליפת נתונים פשוטה.
+**ריבית:** נתוני ריבית בנק ישראל נמצאים ב-dataflow בשם `BIR`:
+```
+GET https://edge.boi.gov.il/FusionEdgeServer/ws/public/sdmxapi/rest/data/BIR/?startPeriod={date}&endPeriod={date}
+```
+לערך ריבית הבסיס הרשמי, המקור האמין ביותר הוא החלטת הוועדה המוניטרית (ראו קישורי הודעות לעיתונות / מדיניות מוניטרית בקישורי עזר). השתמשו ב-`scripts/fetch_boi_rates.py` לשליפת נתונים פשוטה.
 
 ### שלב 3: עיבוד נתוני שערי חליפין
 בנק ישראל מפרסם שערי חליפין יציגים יומית:
@@ -49,7 +48,7 @@ GET https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI/IR_INTERE
 | פרנק שוויצרי | CHF | מטבע מקלט |
 
 דגשים:
-- השער היציג מתפרסם פעם ביום בסביבות 16:00
+- השער היציג מתפרסם פעם ביום בסביבות 15:30
 - זה השער הרשמי לחישובי מס, חוזים ודיווח כספי
 - בסופי שבוע וחגים ממשיכים לפי השער האחרון שפורסם
 - לשערים תוך-יומיים תשתמשו בפלטפורמות מט"ח, השער של בנק ישראל הוא אינדיקטיבי
@@ -99,7 +98,7 @@ GET https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI/IR_INTERE
 פעולות:
 1. תריצו `python scripts/fetch_boi_rates.py --currency USD`
 2. תציגו את השער היציג עם התאריך
-3. שימו לב: השער מתפרסם בסביבות 16:00, לפני כן תקף שער אתמול
+3. שימו לב: השער מתפרסם בסביבות 15:30, לפני כן תקף שער אתמול
 תוצאה: שער יציג USD/NIS נוכחי עם הקשר
 
 ### דוגמה 2: השפעת ריבית
@@ -133,14 +132,14 @@ GET https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI/IR_INTERE
 | מקור | קישור | מה לבדוק |
 |------|-------|---------|
 | מידע סטטיסטי בנק ישראל | https://www.boi.org.il/he/economic-roles/statistical-information/ | פורטל רשמי לריבית, שערי חליפין ואגרגטים מוניטריים |
-| נקודת כניסה ל-BOI SDMX API | https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/ | ה-endpoint החי שבו משתמש `scripts/fetch_boi_rates.py` |
+| נתיב ה-data של BOI SDMX API | https://edge.boi.gov.il/FusionEdgeServer/ws/public/sdmxapi/rest/data/ | נתיב ה-data החי שבו משתמש `scripts/fetch_boi_rates.py` (להוסיף `EXR/RER_USD_ILS`, `BIR/`, `PRI/`) |
 | הודעות בנק ישראל לעיתונות | https://www.boi.org.il/he/communication-and-publications/press-releases/ | החלטות ריבית של הוועדה המוניטרית ופרוטוקולים נלווים |
 | מדד המחירים לצרכן (למ"ס) | https://www.cbs.gov.il/he/subjects/Pages/מדד-המחירים-לצרכן.aspx | לוח פרסום חודשי, מדד היסטורי ומבנה משקלים |
 
 ## מלכודות נפוצות
 - סוכנים שולחים הרבה פעמים שאילתות לשערים בימי שישי-שבת, אבל השער היציג מתפרסם רק בימי עסקים (ראשון-חמישי). תשתמשו בשער האחרון מיום חמישי לסופי שבוע.
 - ה-API של בנק ישראל בפורמט SDMX מחזיר XML כברירת מחדל, לא JSON. צריך לפרסר XML או להוסיף Accept header מתאים ל-JSON.
-- אל תתבלבלו בין השער היציג (אינדיקטיבי, מתפרסם פעם ביום סביב 16:00) לבין שערי מט"ח בזמן אמת. השער היציג לא מתאים להחלטות מסחר תוך-יומיות.
+- אל תתבלבלו בין השער היציג (אינדיקטיבי, מתפרסם פעם ביום סביב 15:30) לבין שערי מט"ח בזמן אמת. השער היציג לא מתאים להחלטות מסחר תוך-יומיות.
 - נתוני המדד מהלמ"ס מגיעים בפיגור של כ-6 שבועות: מדד ינואר מתפרסם סביב 15 בפברואר. אל תנסו למשוך מדד של חודש שעוד לא פורסם.
 
 ## פתרון בעיות
@@ -155,4 +154,4 @@ GET https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI/IR_INTERE
 
 ### שגיאה: "Exchange rate seems stale"
 סיבה: שימוש בשער יציג לפני שעת הפרסום היומית
-פתרון: השער היציג מתפרסם סביב 16:00 שעון ישראל. לפני השעה הזו השער של אתמול הוא הרשמי. לשערים אינדיקטיביים תוך-יומיים תשתמשו בפידים של בנקים או של ספקי מט"ח.
+פתרון: השער היציג מתפרסם סביב 15:30 שעון ישראל. לפני השעה הזו השער של אתמול הוא הרשמי. לשערים אינדיקטיביים תוך-יומיים תשתמשו בפידים של בנקים או של ספקי מט"ח.

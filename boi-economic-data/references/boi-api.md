@@ -2,77 +2,72 @@
 
 ## Overview
 
-The Bank of Israel provides public economic data through a REST API using the SDMX (Statistical Data and Metadata eXchange) format. The API is available at `edge.boi.gov.il`.
+The Bank of Israel provides public economic data through its "new series database" (Fusion Edge Server) using the SDMX 2.1 REST API. The data API is available at `edge.boi.gov.il`.
 
 ## Base URL
 
+Data is served from the SDMX REST `data` path (the older `sdmx/v2/data/dataflow/BOI/...` path returns 404):
+
 ```
-https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI/
+https://edge.boi.gov.il/FusionEdgeServer/ws/public/sdmxapi/rest/data/
 ```
+
+The structure/metadata path (to list available dataflows) is separate:
+```
+https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/structure/dataflow/BOI.STATISTICS
+```
+
+**Notes that apply to every call:** send a normal browser `User-Agent` header (the server rejects the default urllib agent); use `startPeriod` / `endPeriod` (capital P); the response is SDMX-XML with observations as flat `<Obs TIME_PERIOD="..." OBS_VALUE="..."/>` elements.
 
 ## Endpoints
 
 ### Exchange Rates (EXR)
 
-**Dataflow:** `EXR/1.0`
+Representative rates (sha'ar yatzig) are per-currency series named `RER_<CUR>_ILS` inside the `EXR` dataflow.
 
 ```
-GET https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI/EXR/1.0
+GET https://edge.boi.gov.il/FusionEdgeServer/ws/public/sdmxapi/rest/data/EXR/RER_USD_ILS
 ```
 
 **Parameters:**
 | Parameter | Description | Example |
 |-----------|-------------|---------|
-| startperiod | Start date (YYYY-MM-DD) | 2025-01-01 |
-| endperiod | End date (YYYY-MM-DD) | 2025-01-31 |
-| c[CURRENCY] | Currency filter | USD, EUR, GBP |
-| c[DATA_TYPE] | Rate type | OF (official/representative) |
+| startPeriod | Start date (YYYY-MM-DD) | 2026-01-01 |
+| endPeriod | End date (YYYY-MM-DD) | 2026-01-31 |
 
 **Example:**
 ```
-GET .../EXR/1.0?startperiod=2025-01-01&endperiod=2025-01-31&c[CURRENCY]=USD
+GET .../data/EXR/RER_USD_ILS?startPeriod=2026-01-01&endPeriod=2026-01-31
 ```
+Common series: `RER_USD_ILS`, `RER_EUR_ILS`, `RER_GBP_ILS`, `RER_JPY_ILS` (per 100 JPY), `RER_CHF_ILS`. Omit the series segment (`.../data/EXR/`) to get all currencies.
 
-### Interest Rate (IR_INTEREST)
-
-**Dataflow:** `IR_INTEREST/1.0`
+### Interest Rate (BIR)
 
 ```
-GET https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI/IR_INTEREST/1.0
+GET https://edge.boi.gov.il/FusionEdgeServer/ws/public/sdmxapi/rest/data/BIR/?startPeriod=2026-01-01&endPeriod=2026-12-31
 ```
+The `BIR` dataflow contains multiple Bank-of-Israel-rate series. For the single headline policy rate, the authoritative source is the Monetary Committee decision (boi.org.il monetary-policy / press-release pages).
 
-**Parameters:**
-| Parameter | Description | Example |
-|-----------|-------------|---------|
-| startperiod | Start date | 2024-01-01 |
-| endperiod | End date | 2025-12-31 |
+### Price Indices / CPI (PRI)
 
-### Price Indices (Series)
-
-For CPI and other price indices, use the BOI statistical series:
+CPI and other price indices live in the `PRI` dataflow:
 ```
-GET https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI/SERIES/1.0
+GET https://edge.boi.gov.il/FusionEdgeServer/ws/public/sdmxapi/rest/data/PRI/?startPeriod=2026-01&endPeriod=2026-05
 ```
 
 ## Response Format
 
-The API returns SDMX XML by default. Key elements:
+The API returns SDMX XML. Each series carries its metadata as attributes on the `<Series>` element, and each observation is an `<Obs>` element with the date and value as `TIME_PERIOD` / `OBS_VALUE` attributes:
 
 ```xml
-<message:GenericData>
-  <message:DataSet>
-    <generic:Series>
-      <generic:SeriesKey>
-        <generic:Value id="CURRENCY" value="USD"/>
-      </generic:SeriesKey>
-      <generic:Obs>
-        <generic:ObsDimension value="2025-01-15"/>
-        <generic:ObsValue value="3.6120"/>
-      </generic:Obs>
-    </generic:Series>
-  </message:DataSet>
-</message:GenericData>
+<Series SERIES_CODE="RER_USD_ILS" FREQ="D" BASE_CURRENCY="USD"
+        COUNTER_CURRENCY="ILS" UNIT_MEASURE="ILS" DATA_TYPE="OF00">
+  <Obs TIME_PERIOD="2026-06-05" OBS_VALUE="2.908" RELEASE_STATUS="YP"/>
+  <Obs TIME_PERIOD="2026-06-04" OBS_VALUE="2.895" RELEASE_STATUS="YP"/>
+</Series>
 ```
+
+Parse by iterating `<Obs>` elements and reading the `TIME_PERIOD` and `OBS_VALUE` attributes (handle a namespace prefix on the tag). `DATA_TYPE="OF00"` marks the official representative rate.
 
 ## Rate Limits
 

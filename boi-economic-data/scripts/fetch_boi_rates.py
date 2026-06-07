@@ -22,14 +22,17 @@ from urllib.error import URLError
 import xml.etree.ElementTree as ET
 
 
-# BOI API endpoints (SDMX format)
-BOI_API_BASE = "https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI"
+# BOI API endpoints (SDMX 2.1 REST, "new series database" / Fusion Edge Server).
+# Data is served from the ws/public/sdmxapi/rest path, NOT the sdmx/v2/data/dataflow
+# path (which returns 404). Representative exchange rates live in the EXR dataflow as
+# per-currency series RER_<CUR>_ILS; interest data lives in the BIR dataflow.
+BOI_API_BASE = "https://edge.boi.gov.il/FusionEdgeServer/ws/public/sdmxapi/rest/data"
 
-# Exchange rate endpoint
-EXR_ENDPOINT = f"{BOI_API_BASE}/EXR/1.0"
+# Exchange rate dataflow (series: RER_USD_ILS, RER_EUR_ILS, ...)
+EXR_ENDPOINT = f"{BOI_API_BASE}/EXR"
 
-# Interest rate endpoint
-IR_ENDPOINT = f"{BOI_API_BASE}/IR_INTEREST/1.0"
+# Interest rate dataflow (Bank of Israel rate)
+IR_ENDPOINT = f"{BOI_API_BASE}/BIR"
 
 # Supported currencies for exchange rates
 # מטבעות נתמכים לשערי חליפין
@@ -61,8 +64,10 @@ def fetch_url(url: str) -> str:
     """
     req = Request(url)
     req.add_header("Accept", "application/xml")
+    # The BOI edge server rejects the default urllib User-Agent; send a normal one.
+    req.add_header("User-Agent", "Mozilla/5.0 (compatible; boi-economic-data-skill/1.x)")
     try:
-        with urlopen(req, timeout=15) as response:
+        with urlopen(req, timeout=20) as response:
             return response.read().decode("utf-8")
     except URLError:
         print("Error: Could not connect to the BOI API. Please check your network connection.")
@@ -88,9 +93,8 @@ def fetch_exchange_rate(currency: str, days: int = 1) -> list:
     end_date = datetime.now().strftime("%Y-%m-%d")
     start_date = (datetime.now() - timedelta(days=days)).strftime("%Y-%m-%d")
 
-    url = (f"{EXR_ENDPOINT}"
-           f"?startperiod={start_date}&endperiod={end_date}"
-           f"&c[CURRENCY]={currency}")
+    url = (f"{EXR_ENDPOINT}/RER_{currency}_ILS"
+           f"?startPeriod={start_date}&endPeriod={end_date}")
 
     print(f"Fetching {currency} exchange rate from BOI...")
     print()
@@ -117,22 +121,23 @@ def parse_sdmx_rates(xml_data: str) -> list:
     rates = []
     try:
         root = ET.fromstring(xml_data)
-        # SDMX namespaces vary; try common patterns
-        ns = {
-            "message": "http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message",
-            "generic": "http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic",
-        }
+        # The BOI series API returns observations as <Obs> elements carrying the
+        # date and value as ATTRIBUTES: <Obs TIME_PERIOD="2026-06-01"
+        # OBS_VALUE="3.612" RELEASE_STATUS="..."/> . Handle namespaced tags too.
         for obs in root.iter():
-            if "Obs" in obs.tag:
-                date_elem = obs.find(".//{%s}ObsDimension" % ns.get("generic", ""))
-                value_elem = obs.find(".//{%s}ObsValue" % ns.get("generic", ""))
-                if date_elem is not None and value_elem is not None:
-                    rates.append({
-                        "date": date_elem.get("value", ""),
-                        "rate": float(value_elem.get("value", 0)),
-                    })
+            tag = obs.tag.split("}")[-1]
+            if tag == "Obs":
+                date = obs.get("TIME_PERIOD")
+                value = obs.get("OBS_VALUE")
+                if date and value:
+                    try:
+                        rates.append({"date": date, "rate": float(value)})
+                    except ValueError:
+                        continue
     except ET.ParseError:
         pass
+    # Sort most-recent first so callers can take rates[0] as the latest.
+    rates.sort(key=lambda r: r["date"], reverse=True)
     return rates
 
 
@@ -147,11 +152,13 @@ def generate_example_rate(currency: str, days: int) -> list:
         Example rate data.
     """
     # שערים לדוגמה - Example rates (approximate)
+    # Approximate fallback values only (used if the live API is unreachable).
+    # Rough mid-2026 levels; the live API is the source of truth.
     base_rates = {
-        "USD": 3.60, "EUR": 3.95, "GBP": 4.55, "JPY": 2.40,
-        "CHF": 4.10, "AUD": 2.35, "CAD": 2.65, "ZAR": 0.20,
+        "USD": 2.90, "EUR": 3.35, "GBP": 3.90, "JPY": 2.00,
+        "CHF": 3.60, "AUD": 1.90, "CAD": 2.10, "ZAR": 0.16,
     }
-    base = base_rates.get(currency, 3.60)
+    base = base_rates.get(currency, 2.90)
     rates = []
     for i in range(min(days, 30)):
         date = (datetime.now() - timedelta(days=i)).strftime("%Y-%m-%d")
