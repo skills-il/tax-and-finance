@@ -8,7 +8,7 @@
 
 פלאקארד היא PSP (ספק שירותי תשלום) ואחת ממאגדות סליקת הכרטיסים הגדולות בישראל. הסליקה עצמה רצה על רשת שב"א (https://www.shva.co.il/, שירותי בנק אוטומטיים), ופלאקארד מטפלת מעל זה ברישום בית עסק, משטח התשלום ב-iframe, טוקניזציה והתאמות.
 
-האינטגרציה הדומיננטית היא דף תשלום ב-iframe: השרת שלך שולח שלשת אימות (`terminal` + `user` + `password`) יחד עם פרמטרי העסקה לפלאקארד, מקבל בתגובה `URL` ו-`ConfirmationKey`, ומפנה את הלקוח לשם או מטמיע את ה-URL כ-iframe. אחרי שהלקוח משלם, פלאקארד פונה ל-feedback URL בשרת שלך עם `PelecardStatusCode` ו-`ConfirmationKey`. שמרו את ה-`ConfirmationKey` משלב 1 בצד השרת לפי מזהה ההזמנה, ואז ב-callback אתם חייבים: (א) להשוות את ה-`ConfirmationKey` בייט-לבייט לערך השמור, וגם (ב) לקרוא שוב ל-`PaymentGW/GetTransaction` ולוודא ש-`DebitTotal`, `ConfirmationKey` ו-`PelecardTransactionId` תואמים, לפני שהזמנה נחשבת לשולמה.
+האינטגרציה הדומיננטית היא דף תשלום ב-iframe: השרת שלך שולח שלשת אימות (`terminal` + `user` + `password`) יחד עם פרמטרי העסקה לפלאקארד, מקבל בתגובה `URL` ו-`ConfirmationKey`, ומפנה את הלקוח לשם או מטמיע את ה-URL כ-iframe. אחרי שהלקוח משלם, פלאקארד פונה ל-feedback URL בשרת שלך עם `PelecardStatusCode` ו-`ConfirmationKey`. שמרו את ה-`ConfirmationKey` משלב 1 בצד השרת לפי מזהה ההזמנה, ואז ב-callback אתם חייבים: (א) להשוות את ה-`ConfirmationKey` שב-callback בייט-לבייט לערך השמור, וגם (ב) לקרוא שוב ל-`PaymentGW/GetTransaction` ולוודא ש-`DebitTotal` ו-`PelecardTransactionId` תואמים, לפני שהזמנה נחשבת לשולמה.
 
 הכלי הזה מתאים למפתחים, מהנדסי מוצר ובעלי עסקים ישראלים שמחברים פלאקארד בפעם הראשונה. הוא עובר על זרימת ה-iframe, אימות בצד שרת, תשלומים (תשלומי קרדיט), טוקניזציה, חיובים חוזרים על טוקן שמור, החזרים, 3D Secure 2 והמוזרויות של ארנק Bit (אין תשלומים, תקרה נמוכה לעסקה).
 
@@ -49,10 +49,10 @@
 
 **שדות סכום משתמשים ביחידות מינור (אגורות) ב-Gateway21.** שולחים `Total: 9900` עבור 99.00 ₪, `FirstPayment: 5000` עבור תשלום ראשון של 50.00 ₪. ה-wrapper של dofinity מתעד את `FirstPayment` כ-"in agorot/cents", ואותה קונבנציה תקפה ל-`Total`. תוודאו מול ה-sandbox שלכם עם חיוב מבחן של 1 ₪ לפני עלייה לאוויר, כדי לא לחטוף שגיאת פי 100.
 
-נתיב ה-endpoint עצמו נמצא ב-Postman הרשמי של פלאקארד (https://www.postman.com/peleteam/pelecard-public/overview, אוסף "Gateway21"). תיכנסו לחשבון בית העסק שלכם בפלאקארד כדי לגשת ל-workspace, אל תקבעו נתיב מנוחש. צורת גוף הבקשה (שלשת האימות + פרמטרי העסקה) מתועדת למטה.
+נתיב יצירת ה-session הוא `PaymentGW/init` (לפי ה-wrapper של dofinity, `const PAYMENT_INIT_URI = 'PaymentGW/init'`); ב-Gateway21 קיים גם משטח REST תחת `/services`. תאמתו את הנתיב המדויק למסוף שלכם ב-Postman הרשמי של פלאקארד (https://www.postman.com/peleteam/pelecard-public/overview, אוסף "Gateway21") לפני עלייה לאוויר. צורת גוף הבקשה (שלשת האימות + פרמטרי העסקה) מתועדת למטה.
 
 ```
-POST https://gateway21.pelecard.biz/<path-from-Pelecard-Postman>
+POST https://gateway21.pelecard.biz/PaymentGW/init
 Content-Type: application/json
 
 {
@@ -94,11 +94,11 @@ Content-Type: application/json
 
 1. לטעון את ה-`ConfirmationKey` ששמרתם בשלב 1 על ההזמנה הזו, ולהשוות אותו בייט-לבייט לערך ב-callback. אם אין התאמה, לדחות את התשלום.
 2. לקרוא שוב ל-`PaymentGW/GetTransaction` עם `terminal/user/password/TransactionId` (ה-`TransactionId` הוא ה-`PelecardTransactionId` שהגיע ב-callback).
-3. לוודא שבתשובה: `ConfirmationKey` תואם לערך השמור, `DebitTotal` תואם לסכום ההזמנה הצפוי (באגורות), ו-`PelecardTransactionId` תואם ל-callback.
+3. לוודא בתשובת `GetTransaction` ש-`DebitTotal` תואם לסכום ההזמנה הצפוי (באגורות) ו-`PelecardTransactionId` תואם ל-callback. (ה-`ConfirmationKey` מושווה בשלב 1 בין הערך השמור משלב 1 ל-callback; `GetTransaction` מחזיר את רשומת העסקה, לא את ה-ConfirmationKey, ולכן ההתאמה של הסכום והמזהה היא מה שמאמת את ה-lookup.)
 
 **פלאקארד לא חותמת את ה-IPN ב-HMAC.** אסור לסמוך על payload שמגיע עם `ConfirmationKey` שמוכר לכם בלי לקרוא שוב לעסקה בשרת. אפשר לזייף `ConfirmationKey` בצד הדפדפן; המקור היחיד האמין הוא קריאת `GetTransaction` משרת לשרת.
 
-ה-wrapper של dofinity עוטף את כל זה:
+ה-wrapper של dofinity/pelecard עוטף את השלבים האלה (הערה: הספרייה הזו מקובעת ל-host הישן `gateway20` ומאמתת דרך `PaymentGW/ValidateByUniqueKey` ששולח `ConfirmationKey`/`UniqueKey`/`TotalX100`; ב-Gateway21 האימות המקביל הוא `PaymentGW/GetTransaction`, למטה):
 
 ```php
 $PaymentResponse = new \Pelecard\PaymentResponse(

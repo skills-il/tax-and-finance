@@ -1,0 +1,16 @@
+{
+  "cycles": [
+    {
+      "version": "1.0.1",
+      "date": "2026-06-07",
+      "lessons": [
+        "First review of a never-reviewed v1.0.0 unofficial API skill. Host identification correct (gateway21 = production, gateway20 = legacy/sandbox). CRITICAL fix: api-endpoints.md fabricated a dofinity constant `const PAYMENT_VALIDATE_URI = 'PaymentGW/GetTransaction'` - the real dofinity wrapper uses PaymentGW/init (create) and PaymentGW/ValidateByUniqueKey (validation, posting ConfirmationKey/UniqueKey/TotalX100). GetTransaction is a real Gateway21 lookup endpoint but NOT the dofinity constant; corrected the attribution.",
+        "MAJOR: dofinity is pinned to gateway20 (const GATEWAY_BASE_URI = gateway20.pelecard.biz), so it is not the evidence for the gateway21 production host (the WooCommerce plugin + Postman are). Fixed the mis-attribution in SKILL.md + references.",
+        "Resolved the create-path hedge (<path-from-Postman>) to PaymentGW/init (dofinity), keeping the Postman/Gateway21 /services note.",
+        "Fixed the claim that GetTransaction returns ConfirmationKey: ConfirmationKey lives on the PaymentResponse and is matched stored-vs-callback; GetTransaction returns the transaction record (DebitTotal, PelecardTransactionId, etc.), so the amount/id match authenticates the lookup.",
+        "Verified correct: ActionType J2/J4/J5/J5h meanings, agorot money units, Currency 1=ILS, no-HMAC-on-IPN, Bit constraints (single payment, ILS, ~5,000 NIS cap operator-set, 20,000/mo, 10-min), Consumer Protection Law 14-day cancel/refund + fee cap 5% or 100 NIS. Match API docs page genuinely empty (hedge justified).",
+        "Built evidence.json from scratch (legacy skill)."
+      ]
+    }
+  ]
+}

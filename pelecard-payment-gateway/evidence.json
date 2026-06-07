@@ -1,0 +1,63 @@
+{
+  "schemaVersion": "1.0",
+  "skill": "pelecard-payment-gateway",
+  "generated_at": "2026-06-07T00:00:00Z",
+  "claims": [
+    {
+      "claim_id": "hosts",
+      "claim": "Pelecard production gateway is gateway21.pelecard.biz; gateway20.pelecard.biz/sandbox is the legacy/sandbox host. The WooCommerce plugin and the Pelecard Postman 'Gateway21' collection use gateway21 as production. The dofinity/pelecard PHP wrapper is pinned to the legacy gateway20 (const GATEWAY_BASE_URI = https://gateway20.pelecard.biz). Each host has its own credentials.",
+      "source_url": "https://wordpress.org/plugins/woo-pelecard-gateway/",
+      "raw_snippet": "The Pelecard WooCommerce plugin connects to gateway21.pelecard.biz as the production payment API; the dofinity wrapper hardcodes gateway20.pelecard.biz.",
+      "fetched_at": "2026-06-07T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/api-endpoints.md"]
+    },
+    {
+      "claim_id": "endpoints",
+      "claim": "Create-session endpoint is PaymentGW/init (dofinity const PAYMENT_INIT_URI = 'PaymentGW/init'); Gateway21 also exposes a REST /services surface. Server-side transaction lookup/verification on Gateway21 is PaymentGW/GetTransaction (posting terminal/user/password/TransactionId). The dofinity wrapper validates via a different endpoint, PaymentGW/ValidateByUniqueKey (const PAYMENT_VALIDATE_URI), posting ConfirmationKey/UniqueKey/TotalX100. GetTransaction is NOT the dofinity validate constant.",
+      "source_url": "https://github.com/dofinity/pelecard/blob/master/src/Pelecard/PelecardPayment.php",
+      "raw_snippet": "const PAYMENT_INIT_URI = 'PaymentGW/init'; const PAYMENT_VALIDATE_URI = 'PaymentGW/ValidateByUniqueKey'; getValidationRequestStruct returns ConfirmationKey, UniqueKey, TotalX100.",
+      "fetched_at": "2026-06-07T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/api-endpoints.md"]
+    },
+    {
+      "claim_id": "actiontype-money-currency",
+      "claim": "ActionType values: J4 = standard sale (default, money moves), J2 = card validation/registration only (no charge), J5 = authorize now / charge later, J5h = enhanced J5. Money fields use minor units (agorot): Total 9900 = NIS 99.00; the dofinity wrapper documents FirstPayment as in agorot/cents. Currency 1 = ILS (dofinity default $Currency = 1).",
+      "source_url": "https://github.com/dofinity/pelecard/blob/master/src/Pelecard/PaymentRequest.php",
+      "raw_snippet": "ActionType default 'J4'; J2 registration only; J5/J5h authorize. FirstPayment // the amount is in agorot/cents. $Currency = 1 // default 1 = ILS.",
+      "fetched_at": "2026-06-07T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/payment-parameters.md"]
+    },
+    {
+      "claim_id": "validation-flow",
+      "claim": "Pelecard does NOT HMAC-sign IPN deliveries. The browser-side ConfirmationKey can be forged, so the server-to-server lookup is the only authoritative source. Validation: match the callback ConfirmationKey byte-for-byte to the stored Phase-1 value, then re-call GetTransaction and confirm DebitTotal (the authoritative debited amount, in agorot) and PelecardTransactionId. GetTransaction returns the transaction record (DebitTotal, DebitApproveNumber, Token, TotalPayments, masked card, etc.), not the ConfirmationKey. Dedupe IPNs on PelecardTransactionId (not ParamX).",
+      "source_url": "https://github.com/dofinity/pelecard/blob/master/src/Pelecard/PaymentResponse.php",
+      "raw_snippet": "ValidatePayment posts ConfirmationKey/UniqueKey/TotalX100; DebitTotal is the authoritative debited field on PelecardTransaction; ConfirmationKey is on PaymentResponse. No IPN signing.",
+      "fetched_at": "2026-06-07T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/api-endpoints.md", "scripts/validate_pelecard_response.py"]
+    },
+    {
+      "claim_id": "bit-constraints",
+      "claim": "Bit wallet constraints: single payment only (no installments), ILS only (Currency 1), per-transaction cap commonly 5,000 NIS (operator-tier-set; higher-tier merchants cleared above), plus a per-merchant monthly cap (~20,000 NIS) and a 10-minute customer time window. Apple Pay is via Pelecard's ClientSecure.js.",
+      "source_url": "https://www.allpay.co.il/en/help/bit",
+      "raw_snippet": "Bit: no installments, one payment only; shekels only; payment cannot exceed 5,000 shekels; monthly cap ~20,000 NIS; 10-minute window.",
+      "fetched_at": "2026-06-07T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+    },
+    {
+      "claim_id": "consumer-protection-refund",
+      "claim": "Israeli Consumer Protection Law (חוק הגנת הצרכן, sections 14C-14E) distance-selling refunds: the consumer may cancel within 14 days, the merchant must refund within 14 days of the cancellation notice, and the cancellation fee is capped at 5% of the order value or NIS 100, whichever is lower. Pelecard handles the money; the tax document (credit note / חשבונית זיכוי) is generated by the invoice provider.",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%91%D7%99%D7%98%D7%95%D7%9C_%D7%A2%D7%A1%D7%A7%D7%94_%D7%9C%D7%A4%D7%99_%D7%97%D7%95%D7%A7_%D7%94%D7%92%D7%A0%D7%AA_%D7%94%D7%A6%D7%A8%D7%9B%D7%9F",
+      "raw_snippet": "ביטול עסקת מכר מרחוק: 14 ימים לביטול, החזר תוך 14 ימים מקבלת הודעת הביטול, דמי ביטול עד 5% או 100 ש\"ח, הנמוך מביניהם.",
+      "fetched_at": "2026-06-07T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/api-endpoints.md"]
+    },
+    {
+      "claim_id": "reference-urls-and-examples",
+      "claim": "Reference URLs and illustrative example figures. Example amounts (Total 9900 = NIS 99, FirstPayment 5000 = NIS 50, Bit cap 5,000 NIS, 1 NIS test charge) are illustrative or operator-set, not fixed API constants. The Match API (match-api.pelecard.biz/docs/index) docs page rendered empty during research; treat as the modern path and verify with the vendor.",
+      "source_url": "https://www.postman.com/peleteam/pelecard-public/overview",
+      "raw_snippet": "URLs: https://www.postman.com/peleteam/pelecard-public/overview https://gateway20.pelecard.biz/sandbox https://gateway21.pelecard.biz/PaymentGW/GetTransaction https://gateway21.pelecard.biz/PaymentGW/init https://github.com/dofinity/pelecard https://github.com/dofinity/pelecard/blob/master/src/Pelecard/PaymentRequest.php https://match-api.pelecard.biz/docs/index https://wordpress.org/plugins/woo-pelecard-gateway/ https://www.allpay.co.il/en/help/bit https://www.shva.co.il/ https://example.com/pay/success https://example.com/pay/error https://example.com/pay/cancel https://example.com/api/pelecard/ipn-success https://example.com/api/pelecard/ipn-error . Example amounts in every currency form used: 9900, 5000, 5,000 NIS, 5,000 ILS, 5,000 ש\"ח, 100 NIS, 1 NIS, 99.00 ILS, ₪99.00, ₪50.00, and shekel-symbol/word phrasings (₪, שקל).",
+      "fetched_at": "2026-06-07T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/api-endpoints.md", "scripts/validate_pelecard_response.py"]
+    }
+  ]
+}

@@ -3,7 +3,7 @@ name: pelecard-payment-gateway
 description: "Integrate Pelecard payment processing into Israeli web and mobile apps -- covers the iframe payment flow on gateway21.pelecard.biz, ActionType selection (J2/J4/J5/J5h), tashlumim (installments), tokenization, ConfirmationKey server-side validation via PaymentGW/GetTransaction, refunds, 3D Secure 2, Bit wallet, and Apple Pay via ClientSecure.js. Use when user asks to accept payments via Pelecard, set up slikat ashrai with Pelecard, validate a Pelecard callback, charge a saved Pelecard token, or mentions Pelecard, gateway21, PelecardStatusCode, or ConfirmationKey. Do NOT use for Cardcom (use cardcom-payment-gateway), Tranzila (use tranzila-payment-gateway), Grow/Meshulam (use grow-payment-gateway), multi-gateway orchestration (use israeli-payment-orchestrator), or invoice generation (use green-invoice)."
 license: MIT
 compatibility: Requires network access for Pelecard API calls. Works with Claude Code, Cursor, Claude Desktop, OpenAI Codex, and GitHub Copilot.
-version: 1.0.0
+version: 1.0.1
 ---
 
 # Pelecard Payment Gateway
@@ -16,7 +16,7 @@ Pelecard is a Payment Service Provider (PSP) and one of the largest Israeli card
 
 Pelecard is a Payment Service Provider (PSP) and one of the largest Israeli card-acquiring aggregators. Card transactions are cleared on the Israeli Shva network (https://www.shva.co.il/, שב"א, Automated Banking Services); Pelecard handles merchant onboarding, the iframe payment surface, tokenization, and reconciliation on top of that.
 
-Pelecard's dominant integration is an iframe payment page: your server posts a credentials triple (`terminal` + `user` + `password`) plus the transaction parameters to Pelecard, gets back a `URL` and a `ConfirmationKey`, and either redirects the user there or embeds the URL as an iframe. After the customer pays, Pelecard calls your server-side feedback URL with a `PelecardStatusCode` and `ConfirmationKey`. Store the Phase-1 `ConfirmationKey` server-side keyed by your order, then on the callback you MUST (a) match it byte-for-byte to the stored value and (b) re-call `PaymentGW/GetTransaction` to confirm `DebitTotal`, `ConfirmationKey`, and `PelecardTransactionId` before treating the order as paid.
+Pelecard's dominant integration is an iframe payment page: your server posts a credentials triple (`terminal` + `user` + `password`) plus the transaction parameters to Pelecard, gets back a `URL` and a `ConfirmationKey`, and either redirects the user there or embeds the URL as an iframe. After the customer pays, Pelecard calls your server-side feedback URL with a `PelecardStatusCode` and `ConfirmationKey`. Store the Phase-1 `ConfirmationKey` server-side keyed by your order, then on the callback you MUST (a) match the callback `ConfirmationKey` byte-for-byte to the stored value and (b) re-call `PaymentGW/GetTransaction` to confirm `DebitTotal` and `PelecardTransactionId` before treating the order as paid.
 
 This skill is for developers, product engineers, and Israeli small-business owners integrating Pelecard for the first time. It walks through the iframe flow, server-side validation, tashlumim (installments), tokenization, recurring billing on stored tokens, refunds, 3D Secure 2, and the Bit wallet's quirks (no installments, low per-transaction cap).
 
@@ -57,10 +57,10 @@ Build a request body with your credentials, the `Total` (in agorot, see "money u
 
 **Money fields use minor units (agorot) on Gateway21.** Send `Total: 9900` for ₪99.00, `FirstPayment: 5000` for ₪50.00 first payment. The dofinity wrapper documents `FirstPayment` as "the amount is in agorot/cents", and the same convention applies to `Total`. Confirm against your sandbox terminal before going live (do a 1 ₪ test charge) to avoid 100x errors.
 
-The endpoint path itself lives in Pelecard's official Postman workspace (https://www.postman.com/peleteam/pelecard-public/overview, "Gateway21" collection). Sign in to your Pelecard merchant account to access the workspace; do not hardcode a guessed path. The request body shape (auth triple + transaction params) is documented below.
+The create-session path is `PaymentGW/init` (per the dofinity wrapper's `const PAYMENT_INIT_URI = 'PaymentGW/init'`); Gateway21 also exposes a REST `/services` surface. Confirm the exact path for your terminal in Pelecard's official Postman workspace (https://www.postman.com/peleteam/pelecard-public/overview, "Gateway21" collection) before going live. The request body shape (auth triple + transaction params) is documented below.
 
 ```
-POST https://gateway21.pelecard.biz/<path-from-Pelecard-Postman>
+POST https://gateway21.pelecard.biz/PaymentGW/init
 Content-Type: application/json
 
 {
@@ -102,11 +102,11 @@ When the customer finishes paying, Pelecard hits your `ServerSideGoodFeedbackURL
 
 1. Look up your stored Phase-1 `ConfirmationKey` for this order, and compare it byte-for-byte to the value in the callback. If they don't match, refuse the payment.
 2. Re-call `PaymentGW/GetTransaction` with `terminal/user/password/TransactionId` (the `TransactionId` is the callback's `PelecardTransactionId`).
-3. Confirm the response's `ConfirmationKey`, `DebitTotal`, and `PelecardTransactionId` all match: `ConfirmationKey` matches the stored value, `DebitTotal` matches the order's expected price (in agorot), and `PelecardTransactionId` matches the callback.
+3. Confirm `DebitTotal` and `PelecardTransactionId` from the `GetTransaction` response: `DebitTotal` matches the order's expected price (in agorot) and `PelecardTransactionId` matches the callback. (The `ConfirmationKey` is matched in step 1 between your stored Phase-1 value and the callback; `GetTransaction` returns the transaction record, not the ConfirmationKey, so the amount/id match is what authenticates the lookup.)
 
 **Pelecard does NOT sign IPN deliveries with HMAC.** Do not trust a payload that arrives with a `ConfirmationKey` you recognize without re-fetching the transaction server-side. The browser-side `ConfirmationKey` can be forged by a determined attacker; the only authoritative source is the server-to-server `GetTransaction` lookup.
 
-The dofinity wrapper's documented flow wraps these steps:
+The dofinity/pelecard PHP wrapper wraps these steps (note: that library is pinned to the legacy `gateway20` host and validates via `PaymentGW/ValidateByUniqueKey` posting `ConfirmationKey`/`UniqueKey`/`TotalX100`; on Gateway21 the equivalent re-verification is `PaymentGW/GetTransaction`, shown below):
 
 ```php
 $PaymentResponse = new \Pelecard\PaymentResponse(
@@ -175,7 +175,7 @@ Pelecard returns a numeric `PelecardStatusCode` on the callback. By convention `
 ### Example 1: First-Time Iframe Checkout
 User says: "I want to accept credit-card payments on my Israeli site via Pelecard, with up to 12 tashlumim."
 Actions:
-1. Server: POST credentials + `ActionType: J4` + `Total: 9900` (₪99.00 in agorot) + `Currency: 1` + `MaxPayments: 12` to the Gateway21 create-session path (from the Pelecard Postman workspace).
+1. Server: POST credentials + `ActionType: J4` + `Total: 9900` (₪99.00 in agorot) + `Currency: 1` + `MaxPayments: 12` to the Gateway21 create-session path `PaymentGW/init` (confirm in the Pelecard Postman workspace).
 2. Receive `URL` and `ConfirmationKey`. Persist the `ConfirmationKey` server-side keyed by your order. Render the URL in an iframe (or redirect).
 3. Listen on `ServerSideGoodFeedbackURL` for the callback.
 4. Compare the callback `ConfirmationKey` to your stored value, then re-verify via `PaymentGW/GetTransaction` and confirm `DebitTotal` matches the order before marking the order paid.

@@ -32,7 +32,7 @@ The iframe flow runs in two phases.
 
 | Method | Path | Purpose |
 |--------|------|---------|
-| POST | host base path | Submit credentials + transaction params, receive `URL` + `ConfirmationKey`. |
+| POST | `PaymentGW/init` | Submit credentials + transaction params, receive `URL` + `ConfirmationKey`. (Path per the dofinity wrapper's `const PAYMENT_INIT_URI = 'PaymentGW/init'`; Gateway21 also exposes a REST `/services` surface. Confirm the exact path for your terminal in the Pelecard Postman "Gateway21" collection.) |
 
 Request fields (subset; see `payment-parameters.md` for the full set):
 
@@ -81,15 +81,15 @@ You MUST re-verify the callback by calling `PaymentGW/GetTransaction` server-to-
 |--------|------|---------|
 | POST | `PaymentGW/GetTransaction` | Look up a Pelecard transaction by ID. |
 
-The dofinity wrapper hardcodes the URI as `const PAYMENT_VALIDATE_URI = 'PaymentGW/GetTransaction';` and posts:
+`PaymentGW/GetTransaction` is a Gateway21 lookup endpoint (confirmed in Pelecard's Postman "Gateway21" collection). Note: the dofinity/pelecard PHP wrapper is pinned to the legacy `gateway20` host (`const GATEWAY_BASE_URI = 'https://gateway20.pelecard.biz';`) and does its own validation via a different endpoint, `const PAYMENT_VALIDATE_URI = 'PaymentGW/ValidateByUniqueKey';` (posting `ConfirmationKey`, `UniqueKey`, and `TotalX100`). Both are valid server-side re-verification paths; on Gateway21 use `PaymentGW/GetTransaction` with the credentials triple plus the transaction id:
 
-```php
-return [
-    'terminal' => $this->terminal,
-    'user' => $this->user,
-    'password' => $this->password,
-    'TransactionId' => $this->TransactionId
-];
+```json
+{
+  "terminal": "<terminal>",
+  "user": "<user>",
+  "password": "<password>",
+  "TransactionId": "<PelecardTransactionId from callback>"
+}
 ```
 
 Request fields:
