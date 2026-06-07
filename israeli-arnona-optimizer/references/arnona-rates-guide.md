@@ -158,7 +158,7 @@ Beer Sheva uses numbered zones:
 - **Annual assessment**: Arnona is assessed annually, effective January 1
 - **Billing frequency**: Bimonthly (6 bills per year)
 - **Payment dates**: Typically the 15th of every odd month (January, March, May, July, September, November)
-- **Annual update**: Rates increase annually by a government-set percentage (usually 1.5-3%)
+- **Annual update**: Rates increase annually by a government-set coefficient (the "automatic pilot" formula: half the CPI change + half the public-sector wage-index change). For 2026 the national arnona update coefficient is 1.626%. Historically it has run roughly 1.5-3%.
 - **Extraordinary increases**: Municipalities can request above-formula increases with ministerial approval
 
 ## Area Calculation Rules

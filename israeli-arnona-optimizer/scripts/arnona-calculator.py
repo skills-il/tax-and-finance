@@ -7,7 +7,7 @@ property area, zone classification, and usage type. Supports discount
 calculations for eligible populations.
 
 Usage:
-    python arnona-calculator.py --municipality "tel-aviv" --area 80 --zone A --usage residential
+    python arnona-calculator.py --municipality "tel-aviv" --area 80 --zone 2 --usage residential
     python arnona-calculator.py --municipality "jerusalem" --area 70 --zone B --usage residential --discount oleh --discount-months 12
     python arnona-calculator.py --list-municipalities
     python arnona-calculator.py --list-discounts
@@ -367,7 +367,7 @@ DISCOUNTS = {
         "percentage": 90,
         "max_sqm": 100,
         "duration_months": 12,
-        "description": "90% discount for the first 12 months from aliyah date",
+        "description": "90% on up to 100 sqm; 12 discounted months chosen within the first 24 months from the teudat-oleh/registration date",
     },
     "soldier": {
         "name": "Active-Duty Soldier",
@@ -377,37 +377,45 @@ DISCOUNTS = {
         "duration_months": None,
         "description": "Up to 100% for lone soldiers in mandatory service",
     },
-    "elderly-65": {
-        "name": "Elderly (65-69)",
-        "name_he": "קשיש (65-69)",
+    "senior-pension": {
+        "name": "Senior (vatik), pension recipient",
+        "name_he": "אזרח ותיק, מקבל קצבה",
         "percentage": 25,
         "max_sqm": 100,
         "duration_months": None,
-        "description": "25% discount, income threshold applies",
+        "description": "25% discretionary; receives old-age/survivors/work-injury pension; no income test",
     },
-    "elderly-70": {
-        "name": "Elderly (70+)",
-        "name_he": "קשיש (70+)",
+    "senior-income": {
+        "name": "Senior (vatik), income-tested",
+        "name_he": "אזרח ותיק, מבחן הכנסה",
         "percentage": 30,
         "max_sqm": 100,
         "duration_months": None,
-        "description": "30% discount, income threshold applies",
+        "description": "30% mandatory; household income up to the average wage",
     },
-    "disabled-50": {
-        "name": "Disabled (50-74%)",
-        "name_he": "נכה (50-74%)",
+    "senior-supplement": {
+        "name": "Senior (vatik) with income supplement",
+        "name_he": "אזרח ותיק עם השלמת הכנסה",
+        "percentage": 100,
+        "max_sqm": 100,
+        "duration_months": None,
+        "description": "Up to 100%; also receives hashlamat hachnasa within the income limit",
+    },
+    "disabled-medical": {
+        "name": "Disabled, medical disability 90%+",
+        "name_he": "נכה, נכות רפואית 90%+",
         "percentage": 40,
         "max_sqm": 100,
         "duration_months": None,
-        "description": "40% discount with Bituach Leumi disability certificate",
+        "description": "40% with a Bituach Leumi medical-disability certificate of 90%+",
     },
-    "disabled-75": {
-        "name": "Disabled (75-100%)",
-        "name_he": "נכה (75-100%)",
+    "disabled-incapacity": {
+        "name": "Disabled, earning incapacity 75%+",
+        "name_he": "נכה, אי-כושר 75%+",
         "percentage": 80,
         "max_sqm": 100,
         "duration_months": None,
-        "description": "80% discount with Bituach Leumi disability certificate",
+        "description": "Up to 80% for 75%+ loss of earning capacity with a full monthly benefit",
     },
     "low-income": {
         "name": "Low Income",
@@ -436,10 +444,10 @@ DISCOUNTS = {
     "large-family": {
         "name": "Large Family (4+ children)",
         "name_he": "משפחה ברוכת ילדים",
-        "percentage": 20,
+        "percentage": 30,
         "max_sqm": 100,
         "duration_months": None,
-        "description": "20% discount for families with 4+ dependent children",
+        "description": "Income-tested, up to ~30% for families with 4+ dependent children (showing max band)",
     },
     "bereaved": {
         "name": "Bereaved Family",
@@ -758,7 +766,7 @@ Examples:
     parser.add_argument("--usage", "-u", default="residential",
                         choices=["residential", "commercial", "office", "industrial"],
                         help="Property usage type (default: residential)")
-    parser.add_argument("--discount", "-d", help="Discount category (e.g., oleh, soldier, elderly-70)")
+    parser.add_argument("--discount", "-d", help="Discount category (e.g., oleh, soldier, senior-income, disabled-medical)")
     parser.add_argument("--discount-months", type=int, help="Remaining months of discount eligibility")
     parser.add_argument("--json", action="store_true", help="Output in JSON format")
     parser.add_argument("--list-municipalities", action="store_true", help="List all supported municipalities")

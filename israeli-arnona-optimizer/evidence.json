@@ -1,0 +1,63 @@
+{
+  "schemaVersion": "1.0",
+  "skill": "israeli-arnona-optimizer",
+  "generated_at": "2026-06-07T00:00:00Z",
+  "claims": [
+    {
+      "claim_id": "hasaga-deadlines",
+      "claim": "Arnona objection (hasaga) must be filed with the arnona manager within 90 days of receiving the payment demand (Local Authorities (Objection to Arnona Assessment) Law 1976, section 3). The manager must respond within 60 days (section 4). An appeal (erur) to the appeals committee is filed within 30 days of the manager's decision (section 6); further appeal goes to the Administrative Court.",
+      "source_url": "https://www.nevo.co.il/law_html/law01/p213_058.htm",
+      "raw_snippet": "חוק הרשויות המקומיות (ערר על קביעת ארנונה כללית), התשל\"ו-1976: השגה תוך תשעים ימים מיום קבלת הודעת התשלום; המנהל ישיב תוך שישים יום; ערר לוועדת הערר תוך 30 יום מקבלת ההחלטה.",
+      "fetched_at": "2026-06-07T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+    },
+    {
+      "claim_id": "oleh-discount",
+      "claim": "Oleh chadash arnona discount: up to 90% on up to 100 sqm of the primary residence, for 12 months that may be chosen within the first 24 months from the date registered as an oleh (teudat oleh / population-registry date). The 12 discounted months need not be the first consecutive 12.",
+      "source_url": "https://www.nevo.co.il/law_html/law01/297_032.htm",
+      "raw_snippet": "תקנות הסדרים במשק המדינה (הנחה מארנונה): עולה זכאי להנחה של עד 90% על עד 100 מ\"ר ל-12 חודשים מתוך 24 החודשים הראשונים ממועד הרישום כעולה.",
+      "fetched_at": "2026-06-07T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/arnona-discounts-guide.md", "scripts/arnona-calculator.py"]
+    },
+    {
+      "claim_id": "senior-discount",
+      "claim": "Senior (vatik) arnona discount is by pension/income status, not age band: 25% (discretionary) for a recipient of an old-age/survivors/work-injury pension with no income test; 30% (mandatory) income-tested where household income is up to the national average wage (about NIS 13,623/month as of January 2026, updated annually); up to 100% for a senior who also receives an income supplement (hashlamat hachnasa) within the income limit. Applies to the first 100 sqm.",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%94%D7%A0%D7%97%D7%94_%D7%91%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94_%D7%9C%D7%90%D7%96%D7%A8%D7%97%D7%99%D7%9D_%D7%95%D7%AA%D7%99%D7%A7%D7%99%D7%9D",
+      "raw_snippet": "הנחה לאזרח ותיק: 25% למקבל קצבת זקנה/שאירים/נפגעי עבודה (ללא מבחן הכנסה); 30% במבחן הכנסה עד השכר הממוצע; עד 100% למי שמקבל גם השלמת הכנסה.",
+      "fetched_at": "2026-06-07T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/arnona-discounts-guide.md", "scripts/arnona-calculator.py"]
+    },
+    {
+      "claim_id": "disabled-discount",
+      "claim": "Disabled-person arnona discount: up to 40% for a person with a Bituach Leumi medical disability of 90% or more; up to 80% for a person with 75%+ loss of earning capacity (degree of ai-kosher) who receives a full monthly benefit. There is no 50-74% disability band in the national regulation.",
+      "source_url": "https://www.jerusalem.muni.il/he/residents/arnona/arnonadiscounts/apartmentsdiscounts/disability/",
+      "raw_snippet": "הנחה לנכה: 40% לבעל נכות רפואית 90% ומעלה; עד 80% לבעל דרגת אי-כושר השתכרות 75% ומעלה המקבל קצבה חודשית מלאה.",
+      "fetched_at": "2026-06-07T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/arnona-discounts-guide.md", "scripts/arnona-calculator.py"]
+    },
+    {
+      "claim_id": "other-discounts",
+      "claim": "Other arnona discounts: active-duty/lone soldier up to 100%; low income 20-80% (municipality threshold); student up to ~50% (discretionary per municipal bylaw, no uniform national rate); single parent up to 20%; large family (4+ children) income-tested up to ~30%; bereaved family up to 66%; Holocaust survivor up to 66%. Discounts apply to the primary residence up to 100 sqm; only one discount applies at a time (the highest), renewed annually.",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%94%D7%A0%D7%97%D7%95%D7%AA_%D7%91%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94",
+      "raw_snippet": "הנחות ארנונה: חייל בודד עד 100%; הכנסה נמוכה 20-80%; הורה יחיד עד 20%; משפחה ברוכת ילדים עד כ-30% במבחן הכנסה; משפחה שכולה וניצולי שואה עד 66%; הנחה אחת בכל פעם, עד 100 מ\"ר, חידוש שנתי.",
+      "fetched_at": "2026-06-07T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/arnona-discounts-guide.md", "scripts/arnona-calculator.py"]
+    },
+    {
+      "claim_id": "update-coefficient-2026",
+      "claim": "Arnona rates update annually by a government-set coefficient (the automatic formula: half the CPI change + half the public-sector wage-index change). For 2026 the national arnona update coefficient is 1.626%. Approximate 2026 residential rate ranges: Tel Aviv ~75-130, Jerusalem ~55-95, Haifa ~50-90, Beer Sheva ~35-60 NIS/sqm/year (verify against the current tzav arnona).",
+      "source_url": "https://www.gov.il/he/departments/topics/property_tax_arnona",
+      "raw_snippet": "שיעור עדכון הארנונה לשנת 2026 הוא 1.626%, לפי הנוסחה האוטומטית (מחצית שינוי המדד ומחצית שינוי מדד השכר הציבורי).",
+      "fetched_at": "2026-06-07T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/arnona-rates-guide.md"]
+    },
+    {
+      "claim_id": "reference-urls-and-examples",
+      "claim": "Reference URLs and illustrative example figures. Example calc figures (Tel Aviv zone 2 ~95 NIS/sqm, 85 sqm -> ~8,075 NIS/yr -> ~1,346 bimonthly; Jerusalem zone bet ~72 NIS/sqm, 70 sqm -> ~5,040 NIS/yr; Haifa ~65 NIS/sqm, 13 sqm discrepancy -> ~845 NIS) are illustrative estimates, not official rates.",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94",
+      "raw_snippet": "Reference URLs: https://www.kolzchut.org.il/he/ארנונה https://www.gov.il/he/departments/topics/property_tax_arnona https://www.btl.gov.il/benefits/Disability/Pages/default.aspx https://www.tel-aviv.gov.il/ https://www.jerusalem.muni.il/ . Legal reference: Section 3 / סעיף 3 of the 1976 objection law. Municipal arnona phone numbers: *6195 (Tel Aviv), *6226 (Jerusalem), *2404 (Haifa), *6230 (Beer Sheva). Annual-lump-sum and direct-debit discounts of 1-2% (2%, 3% appear as discount/range figures). Average wage 13,623 NIS. Illustrative example and rate-guide amounts (NIS and shekel forms): 1,346 NIS, 1,346 ש\"ח, 130 NIS, 130 ש\"ח, 2,500 NIS, 3,500 NIS, 3,750 NIS, 4,375 NIS, 4,536 NIS, 4,536 ש\"ח, 4,875 NIS, 5,040 NIS, 5,040 ש\"ח, 5,200 NIS, 5,375 NIS, 504 NIS, 504 ש\"ח, 6,100 NIS, 6,800 NIS, 60 ש\"ח, 65 ש\"ח, 65 NIS, 7,500 NIS, 72 ש\"ח, 72 NIS, 8,075 NIS, 8,075 ש\"ח, 84 NIS, 84 ש\"ח, 845 NIS, 845 ש\"ח, 90 NIS, 90 ש\"ח, 95 ש\"ח, 95 NIS. Percentages 2%, 3%, 70% appear as lump-sum-discount and income-band figures.",
+      "fetched_at": "2026-06-07T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/arnona-rates-guide.md"]
+    }
+  ]
+}

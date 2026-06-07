@@ -11,7 +11,7 @@ Arnona discounts in Israel are governed by two layers of regulation:
 
 ### 1. Oleh Chadash (New Immigrant)
 
-**Discount**: Up to 90% for the first 12 months from aliyah date
+**Discount**: Up to 90% on up to 100 sqm, for 12 months that the oleh may choose within the first 24 months from the date registered as an oleh (teudat oleh / population-registry date)
 
 **Eligibility**:
 - Valid teudat oleh (immigrant certificate) from the Ministry of Aliyah and Integration
@@ -26,8 +26,8 @@ Arnona discounts in Israel are governed by two layers of regulation:
 - Arnona account details
 
 **Important notes**:
-- The 12-month period starts from the aliyah date on the teudat oleh, not from the date of moving into the property
-- If the oleh moves to a different municipality within the 12 months, the discount continues in the new municipality for the remaining period
+- The 12 discounted months can be spread across the first 24 months from the aliyah/registration date (they need not be the first 12 consecutive months), which lets the oleh time the discount to higher-rate periods
+- If the oleh moves to a different municipality within the eligibility window, the discount continues in the new municipality for the remaining months
 - Returning residents (toshavim chozrim) with "oleh" status from the Ministry are also eligible
 - Some municipalities extend benefits beyond 12 months at reduced percentages (check locally)
 
@@ -52,20 +52,22 @@ Arnona discounts in Israel are governed by two layers of regulation:
 - Career soldiers (sadir/keva) may receive different rates
 - National service participants (sherut leumi) may also qualify in some municipalities
 
-### 3. Elderly (Ezrachim Vatikkim)
+### 3. Senior Citizen (Ezrach Vatik)
 
-**Ages 65-69**:
-- **Discount**: Up to 25%
-- **Income threshold**: Monthly income below 3,174 NIS for individual, 5,015 NIS for couple (updated annually)
+The senior discount is structured by pension/income status, NOT by age band (65-69 vs 70+):
 
-**Ages 70 and above**:
-- **Discount**: Up to 30%
-- **Income threshold**: Monthly income below 3,174 NIS for individual, 5,015 NIS for couple (updated annually)
+**25% (discretionary)**:
+- Receives an old-age, survivors, or work-injury pension from Bituach Leumi. No income test.
 
-**Eligibility for both tiers**:
-- Israeli resident
+**30% (mandatory)**:
+- Income-tested: household income up to the national average wage (about 13,623 NIS/month as of Jan 2026, updated annually).
+
+**Up to 100%**:
+- Senior who also receives an income supplement (hashlamat hachnasa) within the income limit.
+
+**Eligibility (all tiers)**:
+- Israeli resident at retirement age
 - Property is primary residence
-- Income (including pension, social security, rental income) below threshold
 - Applies to first 100 sqm
 
 **Required documents**:
@@ -81,11 +83,13 @@ Arnona discounts in Israel are governed by two layers of regulation:
 
 ### 4. Disabled Person (Adam Im Mugbalut)
 
-**Disability 50-74%**:
-- **Discount**: Up to 40%
+**Medical disability 90% or more**:
+- **Discount**: Up to 40% (with a Bituach Leumi medical-disability certificate of 90%+)
 
-**Disability 75-100%**:
+**Earning incapacity (degree of אי-כושר) 75% or more, with a full monthly benefit**:
 - **Discount**: Up to 80%
+
+Note: there is no 50-74% disability band in the national regulation; the bands above are the correct ones.
 
 **Eligibility**:
 - Disability determination from the National Insurance Institute (Bituach Leumi) or the Ministry of Defense (for security-related disability)

@@ -4,7 +4,7 @@ description: Calculate municipal property tax (arnona) for Israeli properties, c
 license: MIT
 allowed-tools: Bash(python:*) Read Edit Write WebFetch
 compatibility: Requires Python 3.10+ for calculator script
-version: 1.2.0
+version: 1.2.1
 ---
 
 # Israeli Arnona Optimizer
@@ -26,7 +26,7 @@ Before performing any arnona calculation, collect the following information from
 Use the arnona calculator script to compute the base annual arnona:
 
 ```bash
-python scripts/arnona-calculator.py --municipality "tel-aviv" --area 80 --zone A --usage residential
+python scripts/arnona-calculator.py --municipality "tel-aviv" --area 80 --zone 2 --usage residential
 ```
 
 The calculator applies the correct rate per sqm based on the municipality's published rate tables. Key rate structures:
@@ -44,23 +44,24 @@ After calculating the base arnona, check if the user qualifies for any discounts
 
 | Category | Discount | Key Requirements |
 |----------|----------|-----------------|
-| Oleh Chadash (new immigrant) | Up to 90% for first 12 months | Valid oleh certificate, property is primary residence |
-| Active-duty soldier (chogeret/sadir) | Up to 100% | IDF service confirmation, single soldier living alone |
-| Elderly (65-69) | Up to 25% | Income below threshold |
-| Elderly (70+) | Up to 30% | Income below threshold |
-| Disabled (50-74% disability) | Up to 40% | National Insurance Institute (Bituach Leumi) disability certificate |
-| Disabled (75-100% disability) | Up to 80% | National Insurance Institute disability certificate |
+| Oleh Chadash (new immigrant) | Up to 90% on up to 100 sqm | 12 discounted months chosen within the first 24 months from the teudat-oleh / registration date; primary residence |
+| Active-duty soldier (chayal sadir) | Up to 100% | IDF service confirmation; lone/qualifying soldier |
+| Senior (vatik), pension recipient | Up to 25% (discretionary) | Receives old-age / survivors / work-injury pension; no income test |
+| Senior (vatik), income-tested | 30% (mandatory) | Household income up to the average wage |
+| Senior (vatik) with income supplement | Up to 100% | Also receives hashlamat hachnasa within the income limit |
+| Disabled, medical disability 90%+ | Up to 40% | Bituach Leumi medical-disability certificate (90%+) |
+| Disabled, earning incapacity 75%+ | Up to 80% | 75%+ loss of earning capacity (ai-kosher) with a full monthly benefit |
 | Low income (individual) | 20-80% | Income below municipality threshold (varies by city) |
-| Student | Up to 80% | Full-time student, lives alone, income below threshold |
+| Student | Up to ~50% (municipality-dependent) | Discretionary per municipal bylaw; no uniform national rate |
 | Single parent | Up to 20% | Recognized single parent status |
-| Large family (4+ children) | Up to 20% | Four or more dependent children |
+| Large family (4+ children) | Income-tested, up to ~30% | Four or more dependent children; income bands |
 | Bereaved family | Up to 66% | Ministry of Defense bereaved family recognition |
 | Holocaust survivor | Up to 66% | Recognized Holocaust survivor status |
 
 Run the calculator with discount flags:
 
 ```bash
-python scripts/arnona-calculator.py --municipality "tel-aviv" --area 80 --zone A --usage residential --discount oleh --discount-months 8
+python scripts/arnona-calculator.py --municipality "tel-aviv" --area 80 --zone 2 --usage residential --discount oleh --discount-months 8
 ```
 
 Consult `references/arnona-discounts-guide.md` for the full list of discount categories, required documentation, and municipality-specific variations.
@@ -83,7 +84,7 @@ If the user believes their arnona assessment is incorrect, help them draft an ap
 5. **Empty/vacant property**: The property has been vacant for an extended period (some municipalities offer partial exemptions for vacant properties, typically up to 6 months).
 
 **Appeal process:**
-- File the appeal (hasaga) within 120 days of receiving the arnona bill.
+- File the appeal (hasaga) within 90 days of receiving the arnona bill.
 - The arnona manager (menahel ha-arnona) must respond within 60 days.
 - If dissatisfied with the manager's decision, appeal to the arnona appeals committee (vaada le-erurim) within 30 days.
 - Further appeals go to the Administrative Court (Beit Mishpat le-Inyanim Minhaliyim).
@@ -133,13 +134,13 @@ Result: The estimated annual arnona is approximately 8,075 NIS (about 1,346 NIS 
 User says: "I made aliyah 6 months ago and I'm renting a 70 sqm apartment in Jerusalem, zone bet. What discounts can I get?"
 
 Actions:
-1. Identify the user as an oleh chadash within the first 12 months
+1. Identify the user as an oleh chadash still within the 24-month eligibility window (6 months after aliyah)
 2. Consult `references/arnona-discounts-guide.md` for oleh discount rules
-3. Run the calculator with the oleh discount: `python scripts/arnona-calculator.py --municipality "jerusalem" --area 70 --zone B --usage residential --discount oleh --discount-months 6`
+3. Run the calculator with the oleh discount: `python scripts/arnona-calculator.py --municipality "jerusalem" --area 70 --zone B --usage residential --discount oleh --discount-months 12`
 4. Calculate base arnona: 70 sqm x approximately 72 NIS/sqm = 5,040 NIS/year
-5. Apply 90% discount for months 7-12 (remaining 6 months): savings of approximately 2,268 NIS for the remainder of the first year
+5. Apply 90% on up to 100 sqm: a full 12 discounted months brings the annual charge down to about 504 NIS (saving ~4,536 NIS)
 
-Result: As an oleh chadash, the user is eligible for a 90% arnona discount for the first 12 months from their aliyah date. For a 70 sqm apartment in Jerusalem zone bet, the base annual arnona is approximately 5,040 NIS. With the 90% discount, the user pays only approximately 504 NIS for the year (about 84 NIS bimonthly). The agent provides instructions for applying: bring the oleh certificate (teudat oleh) and lease agreement to the Jerusalem municipality arnona department or apply online at jerusalem.muni.il.
+Result: As an oleh chadash, the user is eligible for a 90% arnona discount on up to 100 sqm for 12 months, which they may use any time within the first 24 months after aliyah (the 12 months need not be the first consecutive 12). For a 70 sqm apartment in Jerusalem zone bet, the base annual arnona is approximately 5,040 NIS; with the 90% discount applied across 12 months the user pays only about 504 NIS (roughly 84 NIS bimonthly). To apply: bring the oleh certificate (teudat oleh) and lease agreement to the Jerusalem municipality arnona department or apply online at jerusalem.muni.il.
 
 ### Example 3: Draft an Appeal for Incorrect Area Measurement
 
@@ -152,7 +153,7 @@ Actions:
 4. Include instructions for obtaining a professional surveyor measurement
 5. Provide the Haifa arnona committee address and filing deadline
 
-Result: The agent drafts a formal appeal letter in Hebrew addressed to the Haifa arnona manager (menahel arnona, iriyat Haifa), stating the discrepancy between the recorded area (95 sqm) and actual area (82 sqm), referencing the relevant regulation, requesting a re-measurement by a municipal surveyor, and asking for retroactive correction and refund. The user is advised to attach a private surveyor's measurement report and send via registered mail within 120 days of the bill date.
+Result: The agent drafts a formal appeal letter in Hebrew addressed to the Haifa arnona manager (menahel arnona, iriyat Haifa), stating the discrepancy between the recorded area (95 sqm) and actual area (82 sqm), referencing the relevant regulation, requesting a re-measurement by a municipal surveyor, and asking for retroactive correction and refund. The user is advised to attach a private surveyor's measurement report and send via registered mail within 90 days of the bill date.
 
 ## Bundled Resources
 
@@ -177,7 +178,7 @@ Result: The agent drafts a formal appeal letter in Hebrew addressed to the Haifa
 - Arnona rates vary dramatically between municipalities. Agents may use Tel Aviv rates for Haifa properties or vice versa. Always verify rates against the specific municipality (iriya or mo'atza).
 - Arnona discounts (hanacha) have strict eligibility windows and require annual renewal. Agents may suggest discounts the user no longer qualifies for or that have expired.
 - Property classification (residential vs. commercial) significantly affects arnona rates. Agents may misclassify home offices, which in Israel are usually still taxed at residential rates unless formally rezoned.
-- Arnona appeal deadlines are typically 120 days from the annual bill date. Agents may draft appeals after the deadline has passed, making them void.
+- Arnona appeal deadlines are typically 90 days from the annual bill date. Agents may draft appeals after the deadline has passed, making them void.
 
 ## Troubleshooting
 
@@ -187,7 +188,7 @@ Solution: Check the municipality name spelling. Use the `--list-municipalities` 
 
 ### Error: "Discount category not recognized"
 Cause: The discount type specified does not match one of the supported discount categories in the calculator.
-Solution: Run `python scripts/arnona-calculator.py --list-discounts` to see all supported discount categories. Common mistakes include using "immigrant" instead of "oleh", or "senior" instead of "elderly". The supported categories are: oleh, soldier, elderly, disabled, low-income, student, single-parent, large-family, bereaved, holocaust-survivor.
+Solution: Run `python scripts/arnona-calculator.py --list-discounts` to see all supported discount categories. Common mistakes include using "immigrant" instead of "oleh". The supported categories are: oleh, soldier, senior-pension, senior-income, senior-supplement, disabled-medical, disabled-incapacity, low-income, student, single-parent, large-family, bereaved, holocaust-survivor.
 
 ### Error: "Zone not valid for this municipality"
 Cause: Each municipality uses its own zone classification system. Tel Aviv uses numbered zones (1-4), Jerusalem uses Hebrew-letter zones alef through heh (א-ה), and other cities have their own systems.
@@ -195,4 +196,4 @@ Solution: Check the zone classification for your specific municipality. If unsur
 
 ### Error: "Cannot determine appeal deadline"
 Cause: The appeal filing deadline depends on when the arnona bill was received, and the system cannot verify the receipt date.
-Solution: The general rule is 120 days from the date of the arnona bill for filing an appeal (hasaga) to the arnona manager. After receiving the manager's decision, the user has 30 days to appeal to the appeals committee (vaada le-erurim). Always recommend filing as early as possible and keeping proof of the filing date (registered mail receipt or online submission confirmation).
+Solution: The general rule is 90 days from the date of the arnona bill for filing an appeal (hasaga) to the arnona manager. After receiving the manager's decision, the user has 30 days to appeal to the appeals committee (vaada le-erurim). Always recommend filing as early as possible and keeping proof of the filing date (registered mail receipt or online submission confirmation).
