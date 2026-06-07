@@ -22,7 +22,7 @@
 | Cardcom | REST JSON | מלא (רגיל, קרדיט, מועדון) | כן | כן (iframe) | לא | 0.6-0.8% |
 | Tranzila | REST/Form POST | רגיל, קרדיט | כן | כן (redirect) | לא | 0.5-0.7% |
 | PayMe | REST JSON | רגיל, קרדיט | כן | כן (iframe) | כן | 0.7-1.0% |
-| Meshulam | REST JSON | רגיל | כן | כן (iframe + redirect) | כן | 0.6-0.9% |
+| Meshulam | multipart/form-data | רגיל | כן | כן (iframe + redirect) | כן | 0.6-0.9% |
 | iCredit | REST JSON | רגיל, קרדיט | כן | כן (redirect) | לא | 0.5-0.8% |
 | Pelecard | REST JSON | רגיל, קרדיט, מועדון | כן | כן (iframe) | לא | 0.5-0.7% |
 
@@ -64,13 +64,13 @@ class PaymentResult:
 | סוג כרטיס | גבוהה | שערים מסוימים מטפלים טוב יותר בכרטיסים ספציפיים | ניתוב דיינרס |
 
 ### שלב 5: טיפול בתשלומים
-לסוגי תשלומים ישראליים כללים ספציפיים ברשת שב"א:
+לסוגי תשלומים ישראליים כללים ספציפיים ברשת שב"א. המספרים למטה הם ערכי **סוג אשראי (CreditType)** של שב"א, שדה נפרד מ"סוג עסקה". הטבלה הקנונית: 1=רגיל/מיידי, 2=ישראקרדיט/30+, 3=חיוב מיידי, 4=קרדיט מועדון, 5=מיוחד לאומי, 6=קרדיט, 8=תשלומים, 9=תשלומי מועדון.
 
-| סוג | אנגלית | קוד שב"א | איך עובד | מי משלם ריבית |
+| סוג | אנגלית | סוג אשראי | איך עובד | מי משלם ריבית |
 |------|---------|-----------|----------|---------------|
 | תשלומים רגילים | Regular | 8 | בית העסק מקבל סכום מלא מראש, הבנק גובה מהלקוח חודשית | לקוח (ללא ריבית כברירת מחדל) |
-| קרדיט | Credit | 2 | הלקוח משלם לבנק בתשלומים עם ריבית, בית העסק מקבל סכום מלא | לקוח משלם ריבית לבנק |
-| מועדון | Club | 3 | תוכנית ספציפית למנפיק (ישראכרט, כאל, מקס) | משתנה לפי תוכנית |
+| קרדיט | Credit | 6 | הלקוח משלם לבנק בתשלומים עם ריבית, בית העסק מקבל סכום מלא | לקוח משלם ריבית לבנק |
+| מועדון | Club | 9 | תוכנית ספציפית למנפיק (ישראכרט, כאל, מקס); קרדיט מועדון הוא 4 | משתנה לפי תוכנית |
 | תשלומים ללא ריבית | Interest-free | 8 | בית העסק מסבסד עלות ריבית | בית העסק סופג עלות |
 
 הערות מימוש:
@@ -173,11 +173,11 @@ async def process_with_fallback(request: PaymentRequest) -> PaymentResult:
 | מקור | קישור | מה לבדוק |
 |------|-------|---------|
 | Cardcom | https://www.cardcom.co.il/ | משטח ה-API הנוכחי, תמחור, סוגי כרטיסים נתמכים |
-| Tranzila — תיעוד | https://docs.tranzila.com/ | פרמטרי API ב-form-encoded, זרימת supplier code (terminalname) |
-| PayMe — תיעוד מפתחים | https://www.payme.io/developers | API REST JSON עם Bearer token, תמיכת Bit/Apple Pay |
-| Meshulam (Grow) — Reference | https://grow-il.readme.io/reference/overview | בסיס פרודקשן secure.meshulam.co.il (אל תשתמשו ב-sandbox.meshulam.co.il בפרודקשן) |
+| Tranzila - תיעוד | https://docs.tranzila.com/ | פרמטרי API ב-form-encoded, זרימת supplier code (terminalname) |
+| PayMe - תיעוד מפתחים | https://www.payme.io/developers | API REST JSON עם Bearer token, תמיכת Bit/Apple Pay |
+| Meshulam (Grow) - Reference | https://grow-il.readme.io/reference/overview | בסיס פרודקשן secure.meshulam.co.il (אל תשתמשו ב-sandbox.meshulam.co.il בפרודקשן) |
 | iCredit | https://icredit.rivhit.co.il/ | סכמת אימות Group private token + credentials |
-| בנק ישראל: מערכות תשלומים | https://www.boi.org.il/he/banking/payment-systems/ | מקור רשמי למסגרת הרגולציה הנוכחית של מערכות תשלום ישראליות |
+| בנק ישראל: פיקוח על מערכות תשלומים | https://www.boi.org.il/he/economic-roles/supervision-and-regulation/payment-systems-oversight/ | פיקוח בנק ישראל על שב"א ומערכות תשלום מבוקרות (בנקים + חברות כרטיסי אשראי). נותני שירותי תשלום שאינם בנק מפוקחים על ידי רשות ניירות ערך לפי חוק הסדרת העיסוק בשירותי תשלום ויוזמה בתשלום, התשפ"ג-2023 |
 
 ## מלכודות נפוצות
 - לכל שער תשלומים בכישור הזה (Cardcom, Tranzila, PayMe, Meshulam, iCredit, Pelecard) פורמט API שונה לחלוטין: Cardcom משתמשת ב-JSON, Tranzila ב-form-encoded, Meshulam ב-multipart/form-data עם פרמטר page-code נפרד, ו-PayMe ב-JSON עם Bearer token. סוכנים עלולים להחיל פורמט של שער אחד על אחר.

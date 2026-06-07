@@ -1,0 +1,15 @@
+{
+  "cycles": [
+    {
+      "version": "1.1.1",
+      "date": "2026-06-07",
+      "lessons": [
+        "CRITICAL: the Shva CreditType (סוג אשראי) codes were wrong and transaction-breaking. Skill had credit (קרדיט)=2 and club (מועדון)=3; correct is credit=6 and club installments=9 (club credit=4). Regular installments (תשלומים)=8 was correct. Fixed Step 5 in SKILL.md + SKILL_HE.md and the gateway-matrix Shva codes table, and clarified that CreditType is a distinct field from transaction type (סוג עסקה).",
+        "MAJOR: Meshulam/Grow API style was listed as REST JSON in three places (SKILL.md + SKILL_HE.md Step 2 tables, gateway-matrix, compare_gateways.py) while the Gotcha correctly said multipart/form-data; fixed all to multipart/form-data and corrected the Meshulam base path + docs URL (grow-il.readme.io).",
+        "Fixed the dead BOI reference link (boi.org.il/en/banking/payment-systems 404) to the payment-systems-oversight path, and sharpened the regulator framing: non-bank PSPs are regulated by the ISA under the Regulation of Payment Services and Payment Initiation Law 5783-2023; the BOI supervises banks/credit-card cos and oversees Shva.",
+        "Built evidence.json from scratch (legacy skill); stripped 3 em-dashes from SKILL_HE.md.",
+        "Deferred MINOR: the 'club installments only on Cardcom/Pelecard' claim likely understates Tranzila (which supports cred_type 9); gateway capability tables are terminal-config-dependent, revisit if a capability refresh is done."
+      ]
+    }
+  ]
+}

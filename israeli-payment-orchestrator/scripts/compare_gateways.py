@@ -83,7 +83,7 @@ GATEWAYS = {
     "meshulam": GatewayInfo(
         name="Meshulam",
         hebrew_name="משולם",
-        api_style="REST JSON",
+        api_style="multipart/form-data",
         installment_types=["regular"],
         recurring=True,
         hosted_page="iframe + redirect",
@@ -91,7 +91,7 @@ GATEWAYS = {
         apple_pay=False,
         fee_range_pct=(0.6, 0.9),
         settlement_days=3,
-        api_docs_url="https://www.meshulam.co.il/developers",
+        api_docs_url="https://grow-il.readme.io/reference/overview",
         notes="Popular with SMBs. Bit support. Limited installment types.",
     ),
     "icredit": GatewayInfo(

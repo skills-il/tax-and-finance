@@ -2,7 +2,7 @@
 name: israeli-payment-orchestrator
 description: Orchestrate Israeli payment gateways (Cardcom, Tranzila, PayMe, Meshulam, iCredit, Pelecard) with unified routing, fallback, and installments (tashlumim). Use when user asks about multi-gateway payment integration, "slikat kartisim", "tashlumim", payment routing, Shva network, BOI payment-services regulation, gateway comparison, or building a payment abstraction layer for Israeli merchants. Provides unified API patterns, installment handling, Shva clearing rules, and regulatory compliance. Do NOT use for single gateway setup (use cardcom-payment-gateway or tranzila-payment-gateway instead).
 license: MIT
-version: 1.1.0
+version: 1.1.1
 compatibility: Works with Claude Code, Cursor, GitHub Copilot, Windsurf, OpenCode, Codex. Python 3.8+ for helper scripts.
 ---
 
@@ -30,7 +30,7 @@ Use `scripts/compare_gateways.py` to generate a comparison matrix, or reference 
 | Cardcom | REST JSON | Full (regular, credit, club) | Yes | Yes (iframe) | No | 0.6-0.8% |
 | Tranzila | REST/Form POST | Regular, credit | Yes | Yes (redirect) | No | 0.5-0.7% |
 | PayMe | REST JSON | Regular, credit | Yes | Yes (iframe) | Yes | 0.7-1.0% |
-| Meshulam | REST JSON | Regular | Yes | Yes (iframe + redirect) | Yes | 0.6-0.9% |
+| Meshulam | multipart/form-data | Regular | Yes | Yes (iframe + redirect) | Yes | 0.6-0.9% |
 | iCredit | REST JSON | Regular, credit | Yes | Yes (redirect) | No | 0.5-0.8% |
 | Pelecard | REST JSON | Regular, credit, club | Yes | Yes (iframe) | No | 0.5-0.7% |
 
@@ -85,13 +85,13 @@ def select_gateway(request: PaymentRequest, gateways: list) -> str:
 ```
 
 ### Step 5: Handle Installments (Tashlumim)
-Israeli installment types have specific Shva network rules:
+Israeli installment types have specific Shva network rules. The numbers below are the Shva **CreditType** (סוג אשראי) values, a field distinct from the transaction type (סוג עסקה). The canonical CreditType enum is: 1=regular/immediate, 2=Isracredit/30+, 3=immediate debit, 4=club credit, 5=Leumi special, 6=credit (קרדיט), 8=installments (תשלומים), 9=club installments.
 
-| Type | Hebrew | Shva Code | How It Works | Who Pays Interest |
+| Type | Hebrew | CreditType | How It Works | Who Pays Interest |
 |------|--------|-----------|--------------|-------------------|
 | Regular installments | תשלומים רגילים | 8 | Merchant gets full amount upfront, bank collects from customer monthly | Customer (no interest by default) |
-| Credit installments | קרדיט | 2 | Customer pays bank in installments with interest, merchant gets full amount | Customer pays interest to bank |
-| Club installments | מועדון | 3 | Issuer-specific program (Isracard, CAL, Max) | Varies by program |
+| Credit installments | קרדיט | 6 | Customer pays bank in installments with interest, merchant gets full amount | Customer pays interest to bank |
+| Club installments | מועדון | 9 | Issuer-specific program (Isracard, CAL, Max); club credit is 4 | Varies by program |
 | "Payments without interest" | תשלומים ללא ריבית | 8 | Merchant subsidizes interest cost | Merchant absorbs cost |
 
 Implementation notes:
@@ -198,7 +198,7 @@ Result: Installment payment configured with cost breakdown for merchant
 | PayMe Developer Docs | https://www.payme.io/developers | Bearer-token REST JSON API, Bit/Apple Pay support |
 | Meshulam (Grow) Reference | https://grow-il.readme.io/reference/overview | Production base = secure.meshulam.co.il (do NOT use sandbox.meshulam.co.il in prod) |
 | iCredit | https://icredit.rivhit.co.il/ | Group private token + credentials auth scheme |
-| Bank of Israel: Payment Systems | https://www.boi.org.il/en/banking/payment-systems/ | Authoritative source for the current Israeli payment-services regulation framework |
+| Bank of Israel: Payment Systems Oversight | https://www.boi.org.il/en/economic-roles/supervision-and-regulation/payment-systems-oversight/ | BOI oversight of Shva and controlled payment systems (banks + credit-card companies). Non-bank payment-service providers are regulated by the ISA under the Regulation of Payment Services and Payment Initiation Law 5783-2023 |
 
 ## Gotchas
 - Each Israeli payment gateway in this skill (Cardcom, Tranzila, PayMe, Meshulam, iCredit, Pelecard) has a completely different API format: Cardcom uses JSON, Tranzila uses form-encoded key-value pairs, Meshulam uses multipart/form-data with a separate page-code parameter, and PayMe uses bearer-token JSON. Agents may apply one gateway's format to another.

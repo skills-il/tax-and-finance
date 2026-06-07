@@ -33,9 +33,9 @@
 - **Documentation:** https://www.payme.io/developers
 
 ### Meshulam (Grow)
-- **Base URL:** `https://secure.meshulam.co.il/api/` (production); `https://sandbox.meshulam.co.il/api/` (sandbox)
-- **Auth:** API key + page code
-- **Format:** REST JSON
+- **Base URL:** `https://secure.meshulam.co.il/api/light/server/1.0/` (production); `https://sandbox.meshulam.co.il/api/light/server/1.0/` (sandbox)
+- **Auth:** userId + page code (apiKey for multi-business)
+- **Format:** multipart/form-data (NOT JSON), server-side only
 - **Tokenization:** Yes
 - **3D Secure:** Supported
 - **Webhook:** POST callback
@@ -84,13 +84,19 @@
 | iCredit | T+2 business days | Available (fee) | NIS |
 | Pelecard | T+2 business days | Available (fee) | NIS |
 
-## Shva Network Codes Reference
+## Shva CreditType (סוג אשראי) Reference
 
-| Code | Type | Hebrew | Description |
+These are Shva CreditType values, a field distinct from the transaction type (סוג עסקה) and from gateway-level refund operations.
+
+| CreditType | Type | Hebrew | Description |
 |------|------|--------|-------------|
-| 1 | Regular charge | חיוב רגיל | Single payment |
-| 2 | Credit installments | קרדיט | Bank-financed installments |
-| 3 | Club installments | מועדון | Issuer club program |
+| 1 | Regular / immediate | רגיל | Single immediate payment |
+| 2 | Isracredit / 30+ | ישראקרדיט / 30+ | Issuer special-credit product |
+| 3 | Immediate debit | חיוב מיידי | Debit cleared immediately |
+| 4 | Club credit | קרדיט מועדון | Issuer club credit program |
+| 5 | Leumi special | מיוחד לאומי | Leumi Card special |
+| 6 | Credit installments | קרדיט | Bank-financed installments (interest to bank) |
 | 8 | Regular installments | תשלומים | Merchant-financed installments |
-| 51 | Refund | זיכוי | Full or partial refund |
-| 52 | Refund installments | זיכוי תשלומים | Refund in installments |
+| 9 | Club installments | תשלומי מועדון | Issuer club installment program |
+
+Refunds are a gateway-level operation (often signalled separately, e.g. operation codes 51 full / 52 installment refund), not a CreditType value.
