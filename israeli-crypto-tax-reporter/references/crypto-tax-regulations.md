@@ -31,7 +31,7 @@ The Income Tax Ordinance is the foundational tax law in Israel. Key sections rel
 
 ### Circular 2018/05 (Chozar 05/2018)
 
-Published by the Israeli Tax Authority on February 19, 2018, this is the primary guidance document for cryptocurrency taxation.
+Published by the Israeli Tax Authority on January 17, 2018 (updated November 14, 2018), this is the primary guidance document for cryptocurrency taxation.
 
 **Key determinations:**
 
@@ -123,11 +123,21 @@ The comprehensive annual return that includes:
 - The advance is credited against the final annual tax liability.
 - The "Form 7002" reference in older guides is outdated for crypto reporting - use Form 1399י.
 
+### Form 909 (Paying Tax When a Bank Refuses Crypto Funds)
+
+A distinct, very common Israeli problem: a commercial bank refuses (in writing) to accept crypto-derived deposits, so the taxpayer cannot fund the tax payment through a normal account. The ITA, jointly with the Bank of Israel and the Anti-Money-Laundering Authority, published a temporary procedure (Hora'at Sha'a, ITA Instruction 06/2024, first issued 31 December 2023) for this case:
+
+- **Who**: an individual (NOT a company) who realised a crypto gain and has no alternative funding source, after at least one Israeli commercial bank refused the funds (including refusing to open an account).
+- **Form**: **Form 909** ("דיווח על פעילות במטבעות וירטואליים ובקשה לתשלום המס המגיע במימוש המטבעות").
+- **Required attachments**: written bank-refusal letter; working paper computing the taxable income and tax; proof of the legal source of the funds used to buy the coins; a money-trail working paper for the coins over the holding period; deposit/account-management confirmations from the financial-service provider.
+- **How**: filed to the assessing officer either online via the ITA CRM together with the annual return, or physically.
+- **Outcome**: after a money-laundering-risk review and a tax assessment under Section 145, the tax is paid in NIS directly into the ITA's account at the Bank of Israel.
+
 ### Reporting Thresholds
 
 - **Any capital gain**: technically reportable regardless of amount.
 - **Advance payment (mikdama)**: required for non-trivial gains. Verify current-year de minimis amounts on the ITA service portal; do not rely on a fixed historical NIS figure.
-- **Annual filing**: required for individuals with income from sources other than salary, or with annual income exceeding the filing threshold. A crypto disposal generally triggers a filing obligation even for salaried taxpayers.
+- **Annual filing**: required for individuals with income from sources other than salary, or with annual income exceeding the filing threshold. A crypto disposal generally creates a filing obligation, but a TY2025 draft amendment to the exemption-from-filing regulations (טיוטת תקנות מס הכנסה (פטור מהגשת דין וחשבון), published for public comment January 2025) would exempt a salaried taxpayer from filing on crypto gains where the crypto was traded through a supervised Israeli platform that withheld the tax at source AND total income stays under the Section 131 ceilings (about NIS 723,000 gross from work/business, or NIS 721,560 total taxable income from all sources). Exceeding either ceiling, incomplete withholding, or trading through an unsupervised/foreign venue restores the full Section 131 filing duty; paying an advance does not by itself remove it. The regulation was still in draft as of mid-2026 - verify the enacted text before relying on the exemption.
 - **Record retention**: all transaction records must be retained for 7 years minimum.
 
 ### Voluntary Disclosure Procedure 2025-2026 (Crypto Track)
@@ -144,7 +154,7 @@ Published 25 August 2025 by the ITA, this procedure expressly covers digital ass
 ### CARF (OECD Crypto-Asset Reporting Framework)
 
 - Israel committed to CARF; Israeli RCASPs (Reporting Crypto-Asset Service Providers - exchanges, wallet providers) **collect customer data from 1 January 2026**.
-- **First international exchange**: September 2027.
+- **First international exchange**: expected 2027-2028. Israel is among the committed jurisdictions, but the exact first-exchange year has shifted between OECD monitoring updates, so verify it against the latest OECD CARF commitments list before relying on it.
 - For taxpayers, this means: any crypto held on an Israeli or foreign-but-CARF-participating exchange will be visible to the ITA from 2027 onwards. Past-year non-compliance is increasingly likely to surface during routine matching.
 
 ## DeFi-Specific Guidance
@@ -184,7 +194,7 @@ The Israeli Tax Authority has not published comprehensive DeFi guidance. The fol
 
 ### Foreign Exchange Controls
 - Israel does not have strict foreign exchange controls
-- However, large crypto transactions (over 50,000 NIS) may trigger anti-money laundering (AML) reporting by exchanges
+- Crypto service providers in Israel operate under the Prohibition on Money Laundering Order for financial-asset-service providers: a NIS 50,000 per-six-months ceiling applies to "casual customer" activity before full identification/recording duties attach, and providers file reports on suspicious or threshold activity. Note this is AML reporting by the provider, which is separate from the taxpayer's own tax-reporting duty
 - Israeli banks may request documentation for large crypto-related deposits
 
 ### Tax Treaties
@@ -193,7 +203,7 @@ The Israeli Tax Authority has not published comprehensive DeFi guidance. The fol
 - Foreign tax credits may be available if tax was paid in another jurisdiction
 
 ### OECD Crypto-Asset Reporting Framework (CARF) - see Reporting Requirements above
-- See the dedicated CARF block under "Reporting Requirements" for current dates: collection from 1 January 2026, first international exchange September 2027.
+- See the dedicated CARF block under "Reporting Requirements" for current dates: collection from 1 January 2026, first international exchange expected 2027-2028.
 
 ## Compliance Best Practices
 

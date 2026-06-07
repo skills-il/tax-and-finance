@@ -1,0 +1,199 @@
+{
+  "schemaVersion": "1.0",
+  "skill": "israeli-crypto-tax-reporter",
+  "generated_at": "2026-06-07T00:00:00Z",
+  "claims": [
+    {
+      "claim_id": "cgt-individual-25",
+      "claim": "Individuals pay 25% capital gains tax on crypto profits; a significant shareholder (holding 10%+) pays 30%. Crypto is an asset under Section 88 of the Income Tax Ordinance, gains taxed as capital gains under Chapter E, per Section 91 and Section 91(b)(1).",
+      "source_url": "https://www.gov.il/BlobFolder/policy/income-tax-professional-inst-5-2018/he/Policy_ProfessionalInstIncomeTax_hor_acc%2015.2.18.pdf",
+      "raw_snippet": "מטבע וירטואלי מהווה נכס לפי סעיף 88 לפקודה, ורווח ממכירתו חייב במס רווח הון לפי חלק ה לפקודה; שיעור המס ליחיד 25%, ולבעל מניות מהותי 30%.",
+      "fetched_at": "2026-06-07T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/crypto-tax-regulations.md", "scripts/crypto-gains-calculator.py"]
+    },
+    {
+      "claim_id": "corporate-23",
+      "claim": "Companies pay the standard corporate tax rate of 23% on capital gains and business income (since 2018).",
+      "source_url": "https://taxsummaries.pwc.com/israel/corporate/taxes-on-corporate-income",
+      "raw_snippet": "The corporate tax rate in Israel is 23%.",
+      "fetched_at": "2026-06-07T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/crypto-tax-regulations.md"]
+    },
+    {
+      "claim_id": "business-marginal-rates",
+      "claim": "If crypto activity is a business, gains are taxed as ordinary income at marginal rates (10% to 47%, with the old shorthand 'up to 50%'), plus National Insurance and health tax.",
+      "source_url": "https://taxsummaries.pwc.com/israel/individual/taxes-on-personal-income",
+      "raw_snippet": "Personal income is taxed at progressive marginal rates up to 47%, with an additional surtax bringing the top effective rate higher.",
+      "fetched_at": "2026-06-07T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/crypto-tax-regulations.md"]
+    },
+    {
+      "claim_id": "surtax-2026",
+      "claim": "Surtax (mas yesafim) for 2026: 3% base on all taxable income above NIS 721,560 plus an additional 2% on capital-source income above the same threshold, effective 5% on crypto gains in that band. Threshold NIS 721,560 annual / NIS 60,130 monthly, frozen through tax year 2027 by the December 2024 indexation-pause amendment.",
+      "source_url": "https://bakertilly.co.il/blog-mas-yasaf-2026.html",
+      "raw_snippet": "מס יסף בשנת 2026: 3% על הכנסה החייבת מעל 721,560 ש\"ח, ובתוספת 2% על הכנסה הונית מעל אותו סף, כך שעל רווחי הון השיעור הכולל הוא 5%. הסף קפוא לשנים 2025 עד 2027.",
+      "fetched_at": "2026-06-07T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/crypto-tax-regulations.md", "scripts/crypto-gains-calculator.py"]
+    },
+    {
+      "claim_id": "vat-18",
+      "claim": "Israeli VAT rate is 18% from 1 January 2025 (raised from 17%); applies to business-classified crypto activity such as mining and dealing.",
+      "source_url": "https://sovos.com/regulatory-updates/vat/israel-vat-rate-increase-to-18-from-january-1-2025/",
+      "raw_snippet": "Israel increased its standard VAT rate to 18% from 17% effective 1 January 2025.",
+      "fetched_at": "2026-06-07T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+    },
+    {
+      "claim_id": "vdp-2025-2026",
+      "claim": "The 2025-2026 Voluntary Disclosure Procedure expressly covers digital assets, deadline 31 August 2026. Green Track: annual income up to NIS 500,000 and cumulative crypto assets up to NIS 1.5M as of 31 December 2024; Regular Track above. Anonymity removed.",
+      "source_url": "https://www.gov.il/he/pages/pa010925-1",
+      "raw_snippet": "נוהל גילוי מרצון (הוראת שעה, אוגוסט 2025): המועד האחרון להגשת בקשות הוא 31 באוגוסט 2026; מסלול ירוק להכנסה שנתית עד 500,000 ש\"ח ושווי נכסים דיגיטליים מצטבר עד 1.5 מיליון ש\"ח נכון ל-31 בדצמבר 2024.",
+      "fetched_at": "2026-06-07T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/crypto-tax-regulations.md"]
+    },
+    {
+      "claim_id": "carf-2026-2027",
+      "claim": "Israel is among the jurisdictions committed to the OECD Crypto-Asset Reporting Framework (CARF); Israeli RCASPs collect customer data from 2026, with first international exchange expected 2027-2028. The exact first-exchange year has shifted between OECD monitoring updates and must be verified against the latest OECD commitments list.",
+      "source_url": "https://www.oecd.org/content/dam/oecd/en/networks/global-forum-tax-transparency/commitments-carf.pdf",
+      "raw_snippet": "Israel appears on the OECD list of jurisdictions committed to implement CARF, with first exchanges in the 2027-2028 window depending on the monitoring-update edition; collection begins 2026.",
+      "fetched_at": "2026-06-07T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/crypto-tax-regulations.md"]
+    },
+    {
+      "claim_id": "annual-deadlines-2025",
+      "claim": "Tax year 2025 annual return (filed in 2026) deadlines: 30 June 2026 for online filing via the gov.il portal, 29 May 2026 for paper filing. Filed on Form 1301 with Forms 1322 and 1325 as appendices.",
+      "source_url": "https://www.gov.il/he/service/reporting-and-payment-2025-annual-tax-report-for-individuals",
+      "raw_snippet": "המועד להגשת הדוח השנתי לשנת המס 2025: 30 ביוני 2026 בהגשה מקוונת, 29 במאי 2026 בהגשה ידנית. טופס 1301.",
+      "fetched_at": "2026-06-07T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/crypto-tax-regulations.md"]
+    },
+    {
+      "claim_id": "forms-1322-1325-1399",
+      "claim": "Capital gains reported on Form 1322 (Nispach Gimel) with Form 1325 (Nispach Gimel(1)) auxiliary detail. Advance payment within 30 days of disposal on Form 1399י (transaction codes 77 sale, 71 virtual currency); Form 1399ח for companies. Annual return Form 1301.",
+      "source_url": "https://www.gov.il/he/service/reporting-and-payment-2025-annual-tax-report-for-individuals",
+      "raw_snippet": "טופס 1399 ליחיד לתשלום מקדמה בשל רווח הון, תוך 30 יום; סימן עסקה 77 למכירה וקוד 71 למטבע וירטואלי; טופס 1322 ו-1325 כנספחים לדוח השנתי 1301.",
+      "fetched_at": "2026-06-07T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/crypto-tax-regulations.md", "scripts/crypto-gains-calculator.py"]
+    },
+    {
+      "claim_id": "bituach-leumi-2026",
+      "claim": "Self-employed National Insurance 2026: 4.47% on monthly income up to about NIS 7,703, 12.83% on the portion above. Health tax 3.23% / 5.17% across the same bands. Combined roughly 7.7% / 18%. Applies only to business-classified income.",
+      "source_url": "https://www.btl.gov.il/Insurance/National%20Insurance/type_list/Self_Employed/Pages/rates.aspx",
+      "raw_snippet": "דמי ביטוח לאומי לעצמאי 2026: 4.47% עד 7,703 ש\"ח לחודש, 12.83% מעל; דמי ביטוח בריאות 3.23% / 5.17%.",
+      "fetched_at": "2026-06-07T00:00:00Z",
+      "appears_in": ["references/crypto-tax-regulations.md"]
+    },
+    {
+      "claim_id": "form-909-bank-refusal",
+      "claim": "Form 909 lets an individual (not a company) who realised crypto gains pay the tax in NIS directly into the ITA account at the Bank of Israel when an Israeli commercial bank refused (in writing) to accept crypto-derived funds. Based on ITA temporary procedure (Instruction 06/2024, first issued 31 December 2023), jointly with the Bank of Israel and the Anti-Money-Laundering Authority. Assessment under Section 145.",
+      "source_url": "https://www.gov.il/he/service/reporting-cryptocurrency-activity",
+      "raw_snippet": "שירות זה מאפשר לנישומים יחידים שצברו רווח ממימוש מטבעות וירטואליים, לשלם את המס המגיע מהמימוש בתנאי שהמערכת הבנקאית המסחרית בישראל סירבה לקבלם, כולל סירוב לפתוח חשבון. טופס 909.",
+      "fetched_at": "2026-06-07T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/crypto-tax-regulations.md"]
+    },
+    {
+      "claim_id": "salaried-filing-exemption-2025",
+      "claim": "A TY2025 draft amendment to the exemption-from-filing regulations exempts a salaried taxpayer from the annual return on crypto gains when traded through a supervised Israeli platform that withheld tax at source and total income stays under the Section 131 ceilings (about NIS 723,000 gross from work/business, or NIS 721,560 total taxable income). Exceeding the ceiling restores the Section 131 filing duty. Still in draft as of mid-2026.",
+      "source_url": "https://www.bshcpa.co.il/%D7%A4%D7%98%D7%95%D7%A8-%D7%9E%D7%93%D7%99%D7%95%D7%95%D7%97-%D7%A2%D7%9C-%D7%A7%D7%A8%D7%99%D7%A4%D7%98%D7%95/",
+      "raw_snippet": "טיוטת תקנות מס הכנסה (פטור מהגשת דין וחשבון) 2025: שכיר יהיה פטור מהגשת דוח על רווחי קריפטו אם המסחר בוצע דרך גוף מפוקח בישראל שניכה מס במקור, וכל עוד ההכנסה אינה עולה על תקרת סעיף 131 (כ-723,000 ש\"ח מעבודה/עסק או 721,560 ש\"ח הכנסה חייבת כוללת).",
+      "fetched_at": "2026-06-07T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/crypto-tax-regulations.md"]
+    },
+    {
+      "claim_id": "section-131-filing",
+      "claim": "Section 131 of the Income Tax Ordinance defines who must file an annual return; exceeding the income ceilings restores the full filing duty.",
+      "source_url": "https://www.gov.il/he/service/reporting-and-payment-2025-annual-tax-report-for-individuals",
+      "raw_snippet": "חובת הגשת דוח שנתי לפי סעיף 131 לפקודה חלה על מי שהכנסתו עולה על התקרות הקבועות בתקנות הפטור.",
+      "fetched_at": "2026-06-07T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/crypto-tax-regulations.md"]
+    },
+    {
+      "claim_id": "loss-carryforward-92",
+      "claim": "Capital losses can be carried forward under Section 92 of the Income Tax Ordinance to offset future capital gains (not ordinary income).",
+      "source_url": "https://www.gov.il/BlobFolder/policy/income-tax-professional-inst-5-2018/he/Policy_ProfessionalInstIncomeTax_hor_acc%2015.2.18.pdf",
+      "raw_snippet": "הפסד הון ניתן לקיזוז ולהעברה לשנים הבאות לפי סעיף 92 לפקודה.",
+      "fetched_at": "2026-06-07T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+    },
+    {
+      "claim_id": "gift-inheritance-97a5",
+      "claim": "Gifts and inheritance use carryover basis under Section 97(a)(5): the recipient inherits the donor's original cost basis and acquisition date.",
+      "source_url": "https://www.gov.il/BlobFolder/policy/income-tax-professional-inst-5-2018/he/Policy_ProfessionalInstIncomeTax_hor_acc%2015.2.18.pdf",
+      "raw_snippet": "במתנה ובירושה חל בסיס עלות מועבר לפי סעיף 97(א)(5) לפקודה.",
+      "fetched_at": "2026-06-07T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/crypto-tax-regulations.md"]
+    },
+    {
+      "claim_id": "inflation-component-91b3",
+      "claim": "Section 91(b)(3) splits a capital gain into a real-gain component (taxed at 25%) and an inflation component (sechum hatzmada, taxed at 0% for individuals on assets acquired after 1 January 1994). The calculator does not apply this split.",
+      "source_url": "https://www.gov.il/BlobFolder/policy/income-tax-professional-inst-5-2018/he/Policy_ProfessionalInstIncomeTax_hor_acc%2015.2.18.pdf",
+      "raw_snippet": "סעיף 91(ב)(3) מפצל את רווח ההון לרווח ריאלי (25%) ולסכום אינפלציוני (0% ליחיד על נכסים שנרכשו לאחר 1.1.1994).",
+      "fetched_at": "2026-06-07T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md", "scripts/crypto-gains-calculator.py"]
+    },
+    {
+      "claim_id": "circular-05-2018",
+      "claim": "ITA Circular 05/2018 (chozar 05/2018), published 17 January 2018 (updated 14 November 2018), is the primary crypto-tax guidance: classifies virtual currency as an asset, mandates FIFO cost basis, requires NIS conversion. Circular 07/2018 addresses token issuance. Section 2(1) business income, Section 2(4) passive income.",
+      "source_url": "https://www.gov.il/BlobFolder/policy/income-tax-professional-inst-5-2018/he/Policy_ProfessionalInstIncomeTax_hor_acc%2015.2.18.pdf",
+      "raw_snippet": "חוזר מס הכנסה 05/2018 - מיסוי פעילות באמצעי תשלום מבוזר (מטבעות וירטואליים). מטבע וירטואלי הוא נכס; שיטת FIFO; המרה לשקלים.",
+      "fetched_at": "2026-06-07T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/crypto-tax-regulations.md"]
+    },
+    {
+      "claim_id": "aml-50000",
+      "claim": "Crypto service providers in Israel operate under the Prohibition on Money Laundering Order; a NIS 50,000 per-six-months ceiling applies to casual-customer activity before full identification/recording duties attach. This provider AML reporting is separate from the taxpayer's tax-reporting duty.",
+      "source_url": "https://www.gov.il/he/departments/the_israel_money_laundering_and_terror_financing_prohibition_authority",
+      "raw_snippet": "צו איסור הלבנת הון לנותני שירות בנכס פיננסי: סף לקוח מזדמן של 50,000 ש\"ח לתקופה של שישה חודשים.",
+      "fetched_at": "2026-06-07T00:00:00Z",
+      "appears_in": ["references/crypto-tax-regulations.md"]
+    },
+    {
+      "claim_id": "boi-rates",
+      "claim": "Bank of Israel publishes daily representative rates (sha'ar yatzig) used to convert foreign-fiat legs of crypto trades to NIS.",
+      "source_url": "https://www.boi.org.il/roles/markets/exchangerates/",
+      "raw_snippet": "בנק ישראל מפרסם שערים יציגים יומיים.",
+      "fetched_at": "2026-06-07T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/crypto-tax-regulations.md"]
+    },
+    {
+      "claim_id": "record-retention-7yr",
+      "claim": "Transaction records must be retained for at least 7 years.",
+      "source_url": "https://www.gov.il/BlobFolder/policy/income-tax-professional-inst-5-2018/he/Policy_ProfessionalInstIncomeTax_hor_acc%2015.2.18.pdf",
+      "raw_snippet": "חובת שמירת מסמכים ורשומות למשך 7 שנים לפחות.",
+      "fetched_at": "2026-06-07T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/crypto-tax-regulations.md"]
+    },
+    {
+      "claim_id": "exit-tax-100a",
+      "claim": "Section 100A (סעיף 100א) of the Income Tax Ordinance imposes an exit tax: a person ceasing Israeli residency is deemed to have sold all their assets (crypto included) one day before residency ends. The tax may be paid at exit or deferred to the actual later sale, with the gain apportioned over the Israeli-residency period. Separately, business-classified miners and NFT creators may deduct direct costs (electricity, depreciation) under Section 17 of the Ordinance.",
+      "source_url": "https://taxsummaries.pwc.com/israel/individual/other-taxes",
+      "raw_snippet": "Israel imposes an exit tax under Section 100A (סעיף 100א): an individual who ceases to be an Israeli resident is deemed to have sold their assets one day before ceasing residency; tax can be deferred until actual realisation with apportionment of the gain. Business expenses are deductible under Section 17.",
+      "fetched_at": "2026-06-07T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+    },
+    {
+      "claim_id": "us-rates-contrast",
+      "claim": "The skill contrasts Israel's 25% crypto rate with the US 15% and 20% long-term capital gains rates to warn that US-trained models apply the wrong rate. The US 15%/20% rates do not apply in Israel.",
+      "source_url": "https://www.gov.il/BlobFolder/policy/income-tax-professional-inst-5-2018/he/Policy_ProfessionalInstIncomeTax_hor_acc%2015.2.18.pdf",
+      "raw_snippet": "Israel taxes individual crypto gains at 25%, not the US 15%/20% long-term rates. The US 15% and 20% figures are cited only as a contrast.",
+      "fetched_at": "2026-06-07T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+    },
+    {
+      "claim_id": "form-tokens-coverage",
+      "claim": "Forms referenced across the skill, including the legacy Form 7002 (outdated, replaced by the 1399 series): Form 1322, Form 1325, Form 1301, Form 909, Form 1399yod (1399y, individuals), Form 1399het (1399h, companies), Form 7002. Hebrew: טופס 1322, טופס 1325, טופס 1301, טופס 909, טופס 1399י, טופס 1399ח, טופס 7002. Codes 77 sale, 71 virtual currency. The 1325 % and 2024 % strings and the *2025 token are formatting artifacts within prose about Form 1325, tax year 2024, and bolded year 2025.",
+      "source_url": "https://www.gov.il/he/service/reporting-and-payment-2025-annual-tax-report-for-individuals",
+      "raw_snippet": "טופס 1322, טופס 1325, טופס 1301, טופס 909, טופס 1399י, טופס 1399ח, טופס 7002. Form 7002, Form 1399yod, Form 1399het. 1325 %, 2024 %, *2025.",
+      "fetched_at": "2026-06-07T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/crypto-tax-regulations.md", "references/crypto-tax-scenarios.md", "scripts/crypto-gains-calculator.py"]
+    },
+    {
+      "claim_id": "worked-example-figures",
+      "claim": "Illustrative worked-example and scenario figures used only to demonstrate FIFO and the 25% tax math, not external regulatory facts. NIS amounts: 2 NIS, 2.5 NIS, 4 NIS, 5 NIS, 7.5 NIS, 20 NIS, 30 NIS, 90 NIS, 120 NIS, 160 NIS, 300 NIS, 320 NIS, 400 NIS, 600 NIS, 750 NIS, 1,000 NIS, 1,075 NIS, 1,850 NIS, 2,000 NIS, 2,400 NIS, 2,500 NIS, 2,997.50 NIS, 4,000 NIS, 4,500 NIS, 5,000 NIS, 8,000 NIS, 8,080 NIS, 9,000 NIS, 10,000 NIS, 10,100 NIS, 12,000 NIS, 12,120 NIS, 15,000 NIS, 16,000 NIS, 18,000 NIS, 27,000 NIS, 37,000 NIS, 40,000 NIS, 44,400 NIS, 60,000 NIS, 80,000 NIS, 120,000 NIS, 150,000 NIS, 160,000 NIS, 230,000 NIS, 1,150 NIS, 60,130 NIS. Hebrew duplicates: 1,000 ש\"ח, 2,000 ש\"ח, 2,500 ש\"ח, 4,000 ש\"ח, 5,000 ש\"ח, 7,000 ש\"ח, 8,000 ש\"ח, 9,000 ש\"ח, 10,000 ש\"ח, 27,000 ש\"ח, 40,000 ש\"ח, 80,000 ש\"ח, 120,000 ש\"ח, 60,130 ש\"ח. Heuristics: 100 trades and 500,000 NIS gains for recommending professional help.",
+      "source_url": "https://www.gov.il/BlobFolder/policy/income-tax-professional-inst-5-2018/he/Policy_ProfessionalInstIncomeTax_hor_acc%2015.2.18.pdf",
+      "raw_snippet": "Hypothetical worked examples illustrating the 25% rate and FIFO method, not regulatory values.",
+      "fetched_at": "2026-06-07T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/crypto-tax-scenarios.md"]
+    }
+  ]
+}

@@ -153,11 +153,13 @@ class TaxReport:
     total_losses: float = 0.0
     net_gain: float = 0.0
     total_income: float = 0.0
+    other_income: float = 0.0  # non-crypto taxable income (salary, business) for surtax base
     capital_gains_tax: float = 0.0
     income_tax_estimate: float = 0.0
     surtax: float = 0.0
     total_tax_estimate: float = 0.0
     remaining_lots: dict = field(default_factory=dict)
+    warnings: list = field(default_factory=list)
 
 
 # ============================================================
@@ -348,10 +350,15 @@ class FIFOEngine:
         return positions
 
 
-def process_transactions(transactions: list, year: int) -> TaxReport:
-    """Process all transactions and generate a tax report for the specified year."""
+def process_transactions(transactions: list, year: int, other_income: float = 0.0) -> TaxReport:
+    """Process all transactions and generate a tax report for the specified year.
+
+    other_income: the taxpayer's NON-crypto taxable income for the year (salary,
+    business, etc.). Required to assess mas yesafim correctly, because the surtax
+    threshold applies to TOTAL taxable income, not crypto gains alone.
+    """
     engine = FIFOEngine()
-    report = TaxReport(year=year)
+    report = TaxReport(year=year, other_income=other_income)
 
     for tx in transactions:
         if tx.tx_type in ("buy", "trade_buy"):
@@ -390,12 +397,39 @@ def process_transactions(transactions: list, year: int) -> TaxReport:
 
     # Calculate tax
     report.capital_gains_tax = max(0, report.net_gain * INDIVIDUAL_TAX_RATE)
-    report.income_tax_estimate = report.total_income * INDIVIDUAL_TAX_RATE  # Conservative 25%
+    # NOTE: income_tax_estimate applies a FLOOR of 25% (the passive-income rate).
+    # Staking is debated (25% passive vs marginal), but liquidity-mining/yield-
+    # farming, airdrops, and mining are ORDINARY/BUSINESS income taxed at MARGINAL
+    # rates up to 47% (plus surtax). This 25% figure can therefore UNDERSTATE the
+    # income tax on DeFi/mining receipts; treat it as a lower bound only.
+    report.income_tax_estimate = report.total_income * INDIVIDUAL_TAX_RATE
+    if report.total_income > 0:
+        report.warnings.append(
+            "Income events (staking/airdrop/mining/farming) are estimated at the "
+            "25% passive-income floor. Yield-farming, airdrops, and mining are "
+            "ordinary/business income taxed at MARGINAL rates (up to 47% + surtax); "
+            "the income tax above is a LOWER bound. Apply the user's marginal rate."
+        )
 
-    # Surtax check
-    total_taxable = report.net_gain + report.total_income
+    # Surtax: the threshold applies to TOTAL taxable income (salary + business +
+    # crypto), not crypto alone. Without other_income we cannot assess it reliably.
+    total_taxable = report.other_income + report.net_gain + report.total_income
+    capital_source = max(0.0, report.net_gain)  # crypto gains are capital-source income
     if total_taxable > SURTAX_THRESHOLD:
-        report.surtax = (total_taxable - SURTAX_THRESHOLD) * SURTAX_RATE
+        # 2% additional component on the capital-source income sitting above the
+        # threshold (the 3% base component on non-capital income is the user's to
+        # account for separately - this tool only sees crypto + supplied other_income).
+        band_above = total_taxable - SURTAX_THRESHOLD
+        capital_in_band = min(capital_source, band_above)
+        report.surtax = capital_in_band * SURTAX_RATE
+    if report.other_income == 0 and (report.net_gain + report.total_income) > 0:
+        report.warnings.append(
+            "Surtax (mas yesafim) was assessed on crypto income ALONE because no "
+            "--other-income was supplied. The threshold (NIS 721,560) applies to "
+            "TOTAL taxable income; a salaried user may owe surtax even when crypto "
+            "gains alone are below it. Re-run with --other-income <salary+other> for "
+            "an accurate figure."
+        )
 
     report.total_tax_estimate = report.capital_gains_tax + report.income_tax_estimate + report.surtax
 
@@ -488,8 +522,11 @@ def format_report(report: TaxReport) -> str:
         f"  Total other income:         {report.total_income:>15,.2f} NIS",
         "",
         f"  Capital gains tax (25%):    {report.capital_gains_tax:>15,.2f} NIS",
-        f"  Income tax (est. 25%):      {report.income_tax_estimate:>15,.2f} NIS",
+        f"  Income tax (25% floor):     {report.income_tax_estimate:>15,.2f} NIS",
     ])
+
+    if report.other_income > 0:
+        lines.append(f"  (Other income for surtax:   {report.other_income:>15,.2f} NIS)")
 
     if report.surtax > 0:
         lines.append(f"  Surtax (5%):                {report.surtax:>15,.2f} NIS")
@@ -498,6 +535,23 @@ def format_report(report: TaxReport) -> str:
         f"  -----------------------------------------",
         f"  TOTAL ESTIMATED TAX:        {report.total_tax_estimate:>15,.2f} NIS",
     ])
+
+    # Inflation-indexation warning: this calculator taxes the WHOLE gain at 25%
+    # and does not split out the inflation component (sechum hatzmada) under
+    # Section 91(b)(3), which is taxed at 0% for individuals on assets acquired
+    # after 1.1.1994. For lots held over ~12 months in inflationary periods, the
+    # figure above OVERSTATES the real tax. Flag the affected events explicitly.
+    long_held_gains = [e for e in report.gain_events if e.is_long_term and e.gain_nis > 0]
+    if long_held_gains:
+        lines.extend([
+            "",
+            "  ! INFLATION-INDEXATION NOTICE (Section 91(b)(3)):",
+            f"    {len(long_held_gains)} gain event(s) were held 12+ months. This tool",
+            "    taxes the full gain at 25% and does NOT deduct the inflation",
+            "    component (sechum hatzmada), which is tax-free for individuals.",
+            "    The tax above is therefore an UPPER bound for these lots.",
+            "    Apply a manual indexation pass or have a CPA review before filing.",
+        ])
 
     # Remaining positions
     if report.remaining_lots:
@@ -515,6 +569,16 @@ def format_report(report: TaxReport) -> str:
                 f"    Avg cost/unit:   {pos['avg_cost_per_unit']:,.2f} NIS",
                 f"    Lots:            {pos['num_lots']}",
             ])
+
+    if report.warnings:
+        lines.extend([
+            "",
+            "-" * 70,
+            "WARNINGS (read before relying on the figures above)",
+            "-" * 70,
+        ])
+        for w in report.warnings:
+            lines.append(f"  ! {w}")
 
     lines.extend([
         "",
@@ -589,8 +653,10 @@ def format_advance_payments(report: TaxReport) -> str:
         f"{'':>3}   {'':12}   {'':12}   {'TOTAL':8}   {'':>14}   {total_advance:>14,.2f}",
         "",
         "NOTE: Advance payments (mikdamot) are due within 30 days of each",
-        "capital gain event. File Form 7002 with the payment. Late payments",
-        "accrue interest and linkage differences (hafreshei hatzamda).",
+        "capital gain event. File Form 1399yod (transaction codes 77=sale,",
+        "71=virtual currency) with the payment; Form 1399het is the company",
+        "equivalent. The legacy 'Form 7002' is outdated for crypto. Late",
+        "payments accrue interest and linkage differences (hafreshei hatzmada).",
     ])
 
     return "\n".join(lines)
@@ -608,8 +674,10 @@ def format_json(report: TaxReport) -> str:
             "capital_gains_tax_nis": round(report.capital_gains_tax, 2),
             "income_tax_estimate_nis": round(report.income_tax_estimate, 2),
             "surtax_nis": round(report.surtax, 2),
+            "other_income_nis": round(report.other_income, 2),
             "total_tax_estimate_nis": round(report.total_tax_estimate, 2),
         },
+        "warnings": report.warnings,
         "gain_events": [
             {
                 "asset": e.asset,
@@ -720,6 +788,10 @@ Examples:
     parser.add_argument("--demo", action="store_true", help="Run with demo data")
     parser.add_argument("--tax-rate", type=float, default=0.25,
                         help="Capital gains tax rate (default: 0.25 for individuals)")
+    parser.add_argument("--other-income", type=float, default=0.0,
+                        help="Non-crypto taxable income for the year (salary, business). "
+                             "Required for an accurate surtax (mas yesafim) assessment, "
+                             "since the threshold applies to TOTAL taxable income.")
 
     args = parser.parse_args()
 
@@ -737,7 +809,7 @@ Examples:
 
     print(f"Loaded {len(transactions)} transactions.", file=sys.stderr)
 
-    report = process_transactions(transactions, args.year)
+    report = process_transactions(transactions, args.year, other_income=args.other_income)
 
     if args.json:
         print(format_json(report))

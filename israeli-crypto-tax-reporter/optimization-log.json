@@ -1,0 +1,17 @@
+{
+  "cycles": [
+    {
+      "version": "1.4.0",
+      "date": "2026-06-07",
+      "lessons": [
+        "Judge caught CARF first-exchange year: OECD commitments PDF (Feb 2026) may list Israel in the 2028 group, while other sources say 2027. Hedged to 2027-2028; next cycle, re-read the latest OECD monitoring update and pin the year if it has stabilized.",
+        "Expert MAJOR deferred: crypto-to-crypto swap requires the user to manually enter two CSV rows (trade_sell + trade_buy) with no validation that the legs reconcile. Consider a swap helper or a CSV linter next cycle.",
+        "Expert MAJOR deferred: foreign-tax-credit / treaty mechanics (Sections 199-210) only punted to 'get professional help', not operationalized. Add a worked FTC example next cycle if scope allows.",
+        "Expert MAJOR deferred: FIFO-queue-exhausted path assumes zero cost basis, contradicting the skill's stated 'earliest available market price' fallback. Reconcile the code with the documented rule next cycle.",
+        "Expert MINOR deferred: SHORT/LONG label invites the US long-term-rate misconception; consider relabel to 'indexation-relevant'. Section 92 carryforward not modelled across years. avg_cost_per_unit display can nudge average-cost thinking.",
+        "salaried-filing-exemption-2025 is still a DRAFT regulation (טיוטת תקנות, Jan 2025). Re-check whether it was enacted and pin the final ceiling next cycle.",
+        "Discretionary edits under the Phase 4.1 batch cap: applied AML-figure tightening; left finer DeFi-classification worked examples for a later cycle."
+      ]
+    }
+  ]
+}
