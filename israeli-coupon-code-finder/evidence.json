@@ -1,0 +1,133 @@
+{
+  "skill_slug": "israeli-coupon-code-finder",
+  "schemaVersion": "1.0",
+  "generated_at": "2026-06-08",
+  "claims": [
+    {
+      "id": "legal-cancel-14-days",
+      "claim": "A consumer can cancel a remote (online or phone) purchase within 14 days of receiving the product or the document with the transaction details.",
+      "claim_type": "law",
+      "source_url": "https://www.kolzchut.org.il/he/ביטול_עסקה_שנעשתה_באינטרנט_או_בטלפון",
+      "source_fetched_at": "2026-06-08T00:00:00Z",
+      "raw_snippet": "בתוך 14 ימים (שבועיים) מיום קבלת המוצר או קבלת מסמך עם פרטי העסקה",
+      "confidence": "high"
+    },
+    {
+      "id": "legal-cancel-fee-cap",
+      "claim": "When cancelling a remote sale not due to a defect, the business may charge a cancellation fee of 5% of the price paid or 100 NIS, whichever is lower.",
+      "claim_type": "percentage",
+      "source_url": "https://www.kolzchut.org.il/he/ביטול_עסקה_שנעשתה_באינטרנט_או_בטלפון",
+      "source_fetched_at": "2026-06-08T00:00:00Z",
+      "raw_snippet": "דמי ביטול בגובה של 5% מהמחיר ששולם או 100 ₪, לפי הנמוך מביניהם",
+      "confidence": "high"
+    },
+    {
+      "id": "legal-cancel-extended-4-months",
+      "claim": "People with disabilities, people aged 65 or older, and new immigrants may cancel a remote sale within 4 months.",
+      "claim_type": "law",
+      "source_url": "https://www.kolzchut.org.il/he/ביטול_עסקה_שנעשתה_באינטרנט_או_בטלפון",
+      "source_fetched_at": "2026-06-08T00:00:00Z",
+      "raw_snippet": "לקוחות שהם אנשים עם מוגבלות או שמלאו להם 65 שנים או שהם עולים חדשים - יכולים לבטל את העסקה בתוך 4 חודשים",
+      "confidence": "high"
+    },
+    {
+      "id": "src-couponim",
+      "claim": "Couponim (couponim.co.il) is an Israeli coupon-aggregator site that lists discount codes, deals, and sales.",
+      "claim_type": "url",
+      "source_url": "https://couponim.co.il",
+      "source_fetched_at": "2026-06-08T00:00:00Z",
+      "raw_snippet": "קופונים סודיים חינם - הנחות, מבצעים, קודי קופון, הטבות, סיילים, דילים",
+      "confidence": "high"
+    },
+    {
+      "id": "src-cashback-il",
+      "claim": "Cashback.co.il is an Israeli cashback platform that refunds part of a purchase made through its links.",
+      "claim_type": "url",
+      "source_url": "https://www.cashback.co.il",
+      "source_fetched_at": "2026-06-08T00:00:00Z",
+      "raw_snippet": "קאשבק - חנויות, הטבות קופונים ומוצרים המזכים אתכם בהחזר כספי",
+      "confidence": "high"
+    },
+    {
+      "id": "src-buyme",
+      "claim": "BuyMe (buyme.co.il) is Israel's largest gift-card and experiences platform, whose gift cards can be used as a payment lever.",
+      "claim_type": "url",
+      "source_url": "https://buyme.co.il",
+      "source_fetched_at": "2026-06-08T00:00:00Z",
+      "raw_snippet": "BUYME אתר המתנות והחוויות הגדול בישראל | Gift Card",
+      "confidence": "high"
+    },
+    {
+      "id": "src-max-benefits",
+      "claim": "Max runs a cardholder benefits and discounts hub at max.co.il/benefits for its credit-card holders.",
+      "claim_type": "url",
+      "source_url": "https://www.max.co.il/benefits/lobby",
+      "source_fetched_at": "2026-06-08T00:00:00Z",
+      "raw_snippet": "הטבות ופינוקים למחזיקי כרטיס אשראי מקס - max הטבות",
+      "confidence": "high"
+    },
+    {
+      "id": "src-chaver",
+      "claim": "Moadon Chaver (hvr.co.il) is an Israeli consumer benefits club for career soldiers and retirees.",
+      "claim_type": "url",
+      "source_url": "https://www.hvr.co.il",
+      "source_fetched_at": "2026-06-08T00:00:00Z",
+      "raw_snippet": "מועדון חבר",
+      "confidence": "high"
+    },
+    {
+      "id": "store-ivory",
+      "claim": "Ivory (ivory.co.il) is a leading Israeli online retailer for computers, cellular, and electrical products.",
+      "claim_type": "url",
+      "source_url": "https://www.ivory.co.il",
+      "source_fetched_at": "2026-06-08T00:00:00Z",
+      "raw_snippet": "אייבורי | הרשת המובילה למחשבים, סלולר ומוצרי חשמל",
+      "confidence": "high"
+    },
+    {
+      "id": "store-bug",
+      "claim": "Bug (bug.co.il) is an Israeli online store for gadgets, computers, and cellular products.",
+      "claim_type": "url",
+      "source_url": "https://www.bug.co.il",
+      "source_fetched_at": "2026-06-08T00:00:00Z",
+      "raw_snippet": "באג! גאדג'טים, מחשבים וסלולר",
+      "confidence": "high"
+    },
+    {
+      "id": "store-terminalx",
+      "claim": "Terminal X (terminalx.com) is an Israeli online fashion store.",
+      "claim_type": "url",
+      "source_url": "https://www.terminalx.com",
+      "source_fetched_at": "2026-06-08T00:00:00Z",
+      "raw_snippet": "כל מותגי האופנה במקום אחד",
+      "confidence": "high"
+    },
+    {
+      "id": "legal-no-fee-on-defect",
+      "claim": "When the cancellation is due to a defect in the product or a mismatch between the product/service and the information the business gave, the business may not charge a cancellation fee.",
+      "claim_type": "law",
+      "source_url": "https://www.kolzchut.org.il/he/ביטול_עסקה_שנעשתה_באינטרנט_או_בטלפון",
+      "source_fetched_at": "2026-06-08T00:00:00Z",
+      "raw_snippet": "אם העסקה בוטלה בגלל אחת מהסיבות הבאות, אסור לבעל העסק לגבות דמי ביטול: פגם במוצר, אי התאמה בין המוצר או השירות למידע שנמסר ללקוח על-ידי בעל העסק",
+      "confidence": "high"
+    },
+    {
+      "id": "legal-4month-precondition",
+      "claim": "The extended (4-month) cancellation period for people with disabilities, seniors 65+, and new immigrants applies when the transaction included a conversation (phone, chat, or email) between the customer and a business representative, and the business may require proof of eligibility.",
+      "claim_type": "law",
+      "source_url": "https://www.kolzchut.org.il/he/ביטול_עסקה_שנעשתה_באינטרנט_או_בטלפון",
+      "source_fetched_at": "2026-06-08T00:00:00Z",
+      "raw_snippet": "אם התקיימה שיחה (בטלפון, בצ'אט או במייל וכו') בין הלקוח לנציג של בית העסק במהלך ביצוע העסקה",
+      "confidence": "high"
+    },
+    {
+      "id": "src-isracard",
+      "claim": "Isracard (isracard.co.il) is an Israeli credit-card and financial-services company that runs cardholder benefit programs.",
+      "claim_type": "url",
+      "source_url": "https://www.isracard.co.il",
+      "source_fetched_at": "2026-06-08T00:00:00Z",
+      "raw_snippet": "ישראכרט | כרטיסי אשראי ושירותים פיננסיים",
+      "confidence": "high"
+    }
+  ]
+}
