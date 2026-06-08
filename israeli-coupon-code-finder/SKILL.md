@@ -2,7 +2,7 @@
 name: israeli-coupon-code-finder
 description: "Hunt for currently-valid discount and coupon codes for an Israeli online-store checkout, verify each candidate, and return one ranked summary instead of asking five chatbots the same question. Runs a fixed Israeli source map (coupon aggregators, cashback platforms, credit-card benefit hubs, gift-card stacking, store-direct levers, seasonal sale windows) plus a Hebrew search playbook, then checks every candidate for expiry, minimum cart, new-customer-only, and stacking rules. Use when a user is about to buy on an Israeli store and asks to find coupon codes, a discount code, kod kupon, kupon hanacha, or 'is this coupon site legit'. Never invents codes: it only reports codes found via live web search, each with source and date. Do NOT use for ongoing savings strategy or cashback-account setup (israeli-smart-saver), cross-store price comparison (israeli-product-price-comparator), or grocery prices (israeli-grocery-price-intelligence)."
 license: MIT
-compatibility: "Needs a live web-search tool to find real codes. With no web access it returns the source map and search playbook only, and says so. Works with Claude Code, Claude.ai, Cursor, ChatGPT, Gemini."
+compatibility: "Needs a live web-search tool to find real codes. With no web access it returns the source map and search playbook only, and says so. If a read-only browser tool is available, it can confirm the top code on the store's own page (never to enter payment details or place an order). Works with Claude Code, Claude.ai, Cursor, ChatGPT, Gemini."
 ---
 
 # Israeli Coupon Code Finder
@@ -68,8 +68,9 @@ For each code the search surfaces, check and record:
 - Category or brand exclusions.
 - Single-use vs reusable, and whether it stacks with sale items. Treat non-stacking as the default: most codes are void on already-discounted items and will not combine with a club price.
 - Source freshness: a code posted this week beats one with no date.
+- If the host has a browser tool, confirm the top candidate on the store's OWN offers or sales page (read-only) before presenting it. The store's own page is the source of truth and beats an aggregator: the official code often differs from the one aggregators push. NEVER use the browser to enter payment or personal details, apply the code at a real checkout, or place an order, that stays with the shopper.
 
-Mark confidence High / Medium / Low based on how recent and well-sourced the code is. A code with no date and no terms is Low at best.
+Mark confidence High / Medium / Low based on how recent and well-sourced the code is. A code confirmed on the store's own page is High; a code with no date and no terms is Low at best.
 
 ### Step 5: Return ONE ranked summary
 
