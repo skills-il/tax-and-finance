@@ -88,7 +88,7 @@ Do not quote the Bank of Israel base rate as the statutory late-payment rate; th
 - **Rate:** Bank of Israel base rate + statutory margin
 - **Linkage (hatzmada):** In addition to interest, the debt amount is linked to the Consumer Price Index (CPI) from the due date
 - **Compound interest:** Israeli law generally applies simple interest, not compound, unless otherwise agreed in the contract. Amendment 9 to the Interest and Linkage Law (effective January 1, 2025) further eliminated compound interest on enforcement debts and split late payment charges into "interest" (ribit) and "late payment fees" (dmei pigurim). Late payment fees now accrue quarterly starting 3 months after the due date, rather than compounding.
-- **Verify current rate:** Check the Bank of Israel website (boi.org.il) for the current base rate. Current rate: 4.00% (held unchanged at the March 30, 2026 decision).
+- **Verify current rate:** Check the Bank of Israel website (boi.org.il) for the current base rate at the time of calculation. Do NOT hard-code the rate here, it changes at each BoI rate decision, so any number written into this file goes stale within months.
 
 ### Contractual vs Statutory Interest
 - If the contract specifies an interest rate, that rate applies (within legal limits)
