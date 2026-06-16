@@ -11,24 +11,21 @@ license: MIT
 ### Step 1: Identify Payment Type and Default Rate
 | Payment Type | Hebrew | Default Rate | Section |
 |-------------|--------|-------------|---------|
-| Services (individuals, no certificate) | shlumim avur sherutim | 30% (up to ~47% for unverified payees) | 164 |
-| Services (companies, no certificate) | shlumim avur sherutim | 20-30% by tax-office classification | 164 |
-| Rent (business/commercial property) | schirut nichsei nadlan | 35% | 170 |
-| Rent (residential property) | schar dira lemegurim | 30% | 170 |
+| Services/assets (payee keeps acceptable books, no certificate) | shlumim avur sherutim o nechasim | 20% | reg. 1977 |
+| Services/assets (payee without acceptable books, no certificate) | shlumim avur sherutim o nechasim | 30% | reg. 1977 |
+| Services (companies, no certificate) | shlumim avur sherutim | 20-30% by tax-office classification | reg. 1977 |
+| Rent (real estate, where the tenant deducts the rent as a business expense) | schar dira | 35% (uniform, no residential/commercial split) | reg. 1998 |
 | Royalties | tamlugim | 23% | 170 |
 | Interest | ribit | 25% | 164 |
 | Dividends | dividendim | 25-30% | 164 |
 | Payments to non-residents | tishlumin letoshvei chutz | 25% | 170 |
 
-The "20% flat" figure that older guidance used for services is wrong: the Income
-Tax Authority (ITA) default for a service payment with no certificate is 30%,
-and the tax office can set it as high as around 47% for an unverified payee. A
-valid certificate is what brings the rate down (often to 0-5%).
+For a service/asset payment with no certificate, the statutory default under the 1977 regulations is **20% where the payee keeps acceptable books** and **30% where the payee does not** (the 30% is the penalty rate for an unverified/no-books payee, not a separate "high" rate, there is no ~47% service-withholding rate). A valid certificate is what brings the rate down further (often to 0-5%). Rent on real estate that the tenant deducts as a business expense is withheld at a uniform **35%** (there is no separate residential vs. commercial rate); a private residential tenant who cannot deduct the rent is generally not a withholding agent at all.
 
 There is a one-time de-minimis floor: a single payment to a payee below roughly
-5,520 NIS (the annually-indexed threshold) does not require withholding, unless
-your cumulative payments to that payee cross the threshold. Always check the
-current-year threshold before relying on it.
+4,920-5,040 NIS including VAT (the annually-indexed threshold, verify the current
+year) does not require withholding, unless your cumulative payments to that payee
+cross the threshold.
 
 ### Step 2: Check for Withholding Certificate
 A valid withholding certificate (ishur nikui mas bemakor) may reduce or eliminate
@@ -67,6 +64,10 @@ VAT (if applicable): calculated separately on the full pre-withholding amount
   compile the per-payee detail file -> submit Form 856 by April 30.
 - Form 856 is separate from the payee's own annual return; it is the payer's
   obligation as the withholding agent.
+- **Form 126** is the salary-side counterpart: the annual report of employee
+  salaries and the tax withheld from them, filed alongside Form 856 (same April
+  30 baseline, commonly extended by ITA notice). A payer with both suppliers and
+  employees files both: 856 for suppliers/service providers, 126 for salaries.
 
 ### Step 6: Certificate Types
 | Certificate | Hebrew | Purpose |
@@ -122,10 +123,10 @@ tax advisor for treaty benefits and the required documentation.
 - **israel-law** -- look up the Income Tax Ordinance sections (164, 170) and the cash-use law text when you need the primary legal source behind a withholding rule.
 
 ## Gotchas
-- Israeli withholding rates are set by the ITA per business, not as a flat rate. The "20% for services" figure from older guidance is wrong; with no certificate the default is 30% and can reach roughly 47% for an unverified payee. An established payee may hold a certificate for 0-5%. Do not hardcode a single rate.
+- Israeli withholding rates are set by the regulations and by the ITA per business, not as one flat rate. With no certificate the service/asset default is **20% where the payee keeps acceptable books and 30% where they do not**; there is no ~47% service-withholding rate (that figure is not in the regulations, do not cite it). An established payee may hold a certificate for 0-5%. Do not hardcode a single rate.
 - Withholding exemption/reduction certificates (ishur nikui mas bemakor) expire annually and must be renewed. Do not rely on a certificate without checking its validity period.
 - When paying a foreign contractor, Israel requires withholding unless a tax treaty provides a reduced rate. Do not apply domestic rates to international payments or skip withholding entirely.
-- Withholding on rent to individuals is 35% for business/commercial property but 30% for residential property. Do not use the lower corporate rate or the zero rate, which only applies with a valid certificate.
+- Withholding on rent that the tenant deducts as a business expense is a uniform **35%**, there is NO separate residential vs. commercial rate, and no "30% residential" rate exists. A private residential tenant who cannot deduct the rent is generally not a withholding agent at all. The reduced/zero rate applies only with a valid certificate.
 - **2026 black-market legislation (Income Tax Circular 3/2026, effective for payments made from 1.1.2026):** an expense or input-VAT deduction is disallowed where the payer failed to withhold tax or to report it as required, or where the payment breached the Law for Reduction of the Use of Cash. The cash-use law caps cash in a business-to-business transaction at 6,000 NIS. Treat a missed withholding or a cash-law breach as a deduction risk, not just a reporting issue.
 
 ## Reference Links
@@ -146,11 +147,11 @@ Cause: withholding certificates are annual and expire December 31.
 Solution: ask the vendor for a renewed certificate for the current tax year.
 
 ### Error: "Wrong withholding rate applied"
-Cause: using the default rate when a certificate exists, or vice versa; or using
-the legacy "20%" services figure instead of the 30% default.
+Cause: using the default rate when a certificate exists, or vice versa; or
+confusing the with-books (20%) and no-books (30%) service defaults.
 Solution: always request the certificate before the first payment, apply the
-certificate rate only during its validity period, and use 30% (not 20%) as the
-no-certificate default for service payments.
+certificate rate only during its validity period, and for a no-certificate
+service payment use 20% if the payee keeps acceptable books, 30% if they do not.
 
 ### Error: "Late reporting penalty"
 Cause: the periodic deductions report (Form 102) was not filed by the 15th.

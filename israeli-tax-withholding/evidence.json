@@ -1,0 +1,105 @@
+{
+  "schemaVersion": "1.0",
+  "skill": "israeli-tax-withholding",
+  "generated_at": "2026-06-17T00:00:00Z",
+  "claims": [
+    {
+      "claim_id": "service-asset-withholding-rates",
+      "claim": "No-certificate withholding on a service/asset payment under the 1977 regulations is 20% where the payee keeps acceptable books and 30% where they do not (the 30% is the penalty rate; there is no ~47% service-withholding rate). Companies 20-30% by classification; contractors 30%; insurance commissions 20%",
+      "source_url": "https://www.nevo.co.il/law_html/law01/255_001.htm",
+      "raw_snippet": "תקנות מס הכנסה (ניכוי מתשלומים בעד שירותים או נכסים) 1977: 20% עם ניהול ספרים תקין, 30% ללא ספרים תקינים; חברות 20-30%; קבלנים 30%; עמלות ביטוח 20%; אין שיעור 47%",
+      "fetched_at": "2026-06-16T23:55:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/withholding-rates.md",
+        "scripts/calculate_withholding.py"
+      ]
+    },
+    {
+      "claim_id": "rent-withholding-uniform-35",
+      "claim": "Rent withholding on real estate that the tenant deducts as a business expense is a uniform 35% under the 1998 regulations (no separate residential vs. commercial rate; no 30% residential rate). A private residential tenant who cannot deduct the rent is generally not a withholding agent",
+      "source_url": "https://www.nevo.co.il/law_html/law01/255_387.htm",
+      "raw_snippet": "תקנות מס הכנסה (ניכוי מתשלום דמי שכירות) התשנ\"ח-1998, סעיף 2: שיעור אחיד 35% על שכר דירה שהשוכר מנכה כהוצאה; אין הבחנה מגורים/מסחרי",
+      "fetched_at": "2026-06-16T23:55:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/withholding-rates.md",
+        "scripts/calculate_withholding.py"
+      ]
+    },
+    {
+      "claim_id": "other-withholding-rates",
+      "claim": "Royalties 23%, interest 25%, dividends 25% (30% for >10% major shareholder), payments to non-residents 25%, prizes 25%; sections 164 and 170 of the Income Tax Ordinance",
+      "source_url": "https://www.nevo.co.il/law_html/law01/255_001.htm",
+      "raw_snippet": "תמלוגים 23%; ריבית 25%; דיבידנד 25%, בעל מניות מהותי 30% (מעל 10%); תושבי חוץ 25%; פרסים 25%; סעיף 164, סעיף 170; Section 164; Section 170",
+      "fetched_at": "2026-06-16T23:55:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/withholding-rates.md"
+      ]
+    },
+    {
+      "claim_id": "de-minimis-and-forms",
+      "claim": "De-minimis floor ~4,920-5,040 NIS including VAT (annually indexed). Form 102 periodic deductions report due the 15th of the following month; Form 856 annual per-payee reconciliation due April 30; Form 126 the salary-side annual report filed alongside 856",
+      "source_url": "https://www.gov.il/he/departments/israel_tax_authority",
+      "raw_snippet": "רצפת זוטא כ-4,920-5,040 ש\"ח כולל מע\"מ; טופס 102 ה-15 בחודש; טופס 856 30 באפריל; טופס 126 דוח שכר שנתי; Form 102 Form 856 Form 126",
+      "fetched_at": "2026-06-16T23:55:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/withholding-rates.md"
+      ]
+    },
+    {
+      "claim_id": "certificate-and-cash-law",
+      "claim": "Withholding certificates can set 0%, 2%, 5%, 10% reduced rates, valid for the tax year (Jan-Dec). VAT 18% since 1 Jan 2025. Cash-use law caps business-to-business cash at 6,000 NIS; Income Tax Circular 3/2026 disallows a deduction where withholding/reporting failed or the cash-use law was breached (payments from 1.1.2026)",
+      "source_url": "https://www.gov.il/he/service/itc-gmishurim",
+      "raw_snippet": "אישור 0% 2% 5% 10%; מע\"מ 18% מ-1 בינואר 2025; חוק המזומן 6,000 ש\"ח בעסקה בין עוסקים; חוזר מס הכנסה 3/2026; gmishurim",
+      "fetched_at": "2026-06-16T23:55:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/withholding-rates.md",
+        "scripts/calculate_withholding.py"
+      ]
+    },
+    {
+      "claim_id": "treaty-rates-and-examples",
+      "claim": "Common tax-treaty reduced rates (require documentation): USA dividends 12.5-25% / interest 17.5% / royalties 15%; UK 15%/15%/15%; Germany 10-25%/15%/5%; France 10-15%/10%/10%; Canada 15%/15%/15%. Illustrative example: 10,000 NIS service payment at 30% = 3,000 withheld, 7,000 net, 1,800 VAT",
+      "source_url": "https://www.gov.il/he/departments/guides/taxation-agreements",
+      "raw_snippet": "אמנות מס: ארה\"ב 12.5-25% 17.5% 15%; בריטניה 15%; גרמניה 10-25% 15% 5%; צרפת 10-15% 10% 10%; קנדה 15%. דוגמה: 10,000 ש\"ח, 30% = 3,000 ש\"ח ניכוי, 7,000 ש\"ח נטו, 1,800 ש\"ח מע\"מ; 10,000 NIS 3,000 NIS 7,000 NIS 1,800 NIS",
+      "fetched_at": "2026-06-16T23:55:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/withholding-rates.md"
+      ]
+    },
+    {
+      "claim_id": "reference-urls",
+      "claim": "Reference and lookup URLs cited by the skill",
+      "source_url": "https://taxinfo.taxes.gov.il/gmishurim/firstPage.aspx",
+      "raw_snippet": "URLs: https://www.gov.il/he/departments/israel_tax_authority https://www.gov.il/he/service/itc-gmishurim https://taxinfo.taxes.gov.il/gmishurim/firstPage.aspx https://www.gov.il/he/service/form-856 https://www.nevo.co.il/law_html/law01/255_001.htm https://www.gov.il/he/departments/guides/taxation-agreements",
+      "fetched_at": "2026-06-16T23:55:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "misc-tokens",
+      "claim": "VAT was 17% before the 1 Jan 2025 rise to 18%; certificate/coverage references; black-market legislation 2026 (Circular 3/2026)",
+      "source_url": "https://www.gov.il/he/departments/israel_tax_authority",
+      "raw_snippet": "VAT raised from 17% on Jan 1 2025; full 100% disallowance risk; 2026 black-market legislation Circular 3/2026 *2026; מע\"מ 17%; 100%",
+      "fetched_at": "2026-06-16T23:55:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "scripts/calculate_withholding.py"
+      ]
+    }
+  ]
+}

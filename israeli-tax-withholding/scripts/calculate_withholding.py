@@ -21,12 +21,16 @@ VAT_RATE = 0.18  # Standard Israeli VAT rate (raised from 17% on Jan 1, 2025)
 # withholding certificate. These are the no-certificate ITA defaults; a valid
 # certificate typically brings the rate down to 0-5%.
 DEFAULT_RATES = {
-    "services": 0.30,          # 30% - Section 164 (individuals, no certificate;
-                               #       can reach ~47% for an unverified payee)
-    "services_company": 0.30,  # up to 30% - Section 164 (companies; tax office
-                               #             may classify lower, 20-30%)
-    "rent": 0.35,              # 35% - Section 170 (business/commercial property)
-    "rent_residential": 0.30,  # 30% - Section 170 (residential property)
+    "services": 0.30,          # 30% - reg. 1977 default for a payee WITHOUT
+                               #       acceptable books (no ~47% rate exists)
+    "services_with_books": 0.20,  # 20% - reg. 1977 base rate where the payee
+                               #          keeps acceptable books
+    "services_company": 0.30,  # up to 30% - companies; tax office may classify
+                               #             lower, 20-30%
+    "rent": 0.35,              # 35% - uniform rate for real estate the tenant
+                               #       deducts as a business expense
+    "rent_residential": 0.35,  # 35% - no separate residential rate exists;
+                               #       alias kept for backward compatibility
     "royalties": 0.23,         # 23% - Section 170
     "interest": 0.25,          # 25% - Section 164
     "dividends": 0.25,         # 25% - Section 164
@@ -119,8 +123,9 @@ def format_result(result: WithholdingResult) -> str:
         f"  Report and pay on Form 102 (periodic deductions report) by the",
         f"  15th of the following month. The annual per-payee reconciliation",
         f"  is Form 856, due April 30 of the following year.",
-        f"  With no certificate the services default is 30% (not 20%); a valid",
-        f"  certificate usually reduces it to 0-5%.",
+        f"  With no certificate the services default is 20% where the payee keeps",
+        f"  acceptable books and 30% where they do not; a valid certificate usually",
+        f"  reduces it to 0-5%.",
     ]
     return "\n".join(lines)
 
