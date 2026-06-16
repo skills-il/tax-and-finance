@@ -25,8 +25,8 @@
     {
       "claim_id": "tobacco-alcohol-exclusion",
       "claim": "The personal-import exemption does NOT apply to tobacco, electronic cigarettes, alcohol, or alcoholic beverages; these are taxed in full regardless of value.",
-      "source_url": "https://www.iclglobal.com/news_update/increase-in-vat-exemption-for-personal-imports-to-israel/",
-      "raw_snippet": "excluding tobacco, alcohol, and certain other goods"
+      "source_url": "https://www.kolzchut.org.il/he/זכותון_בנושא_יבוא_אישי_(חבילות_מחו\"ל)",
+      "raw_snippet": "הפטור לא ניתן על מוצרי טבק ומשקאות אלכוהוליים."
     },
     {
       "claim_id": "vat-rate-18",
@@ -54,9 +54,9 @@
     },
     {
       "claim_id": "tier-1000-commercial",
-      "claim": "Shipments valued above USD 1,000 are treated as commercial regardless of who is buying, requiring a customs broker and a full import declaration (rashimon).",
-      "source_url": "https://www.unitedxp.co.il/import-taxes/",
-      "raw_snippet": "מוצרים שעלו 1,000-500 דולר חייבים בתשלום מע\"מ וחלקם חייבים גם בתשלום מכס ומס קנייה"
+      "claim": "Shipments valued above USD 1,000 are taxed like a commercial import (VAT plus customs duty and purchase tax where applicable), outside the personal-import exemption regime.",
+      "source_url": "https://www.kolzchut.org.il/he/זכותון_בנושא_יבוא_אישי_(חבילות_מחו\"ל)",
+      "raw_snippet": "מוצרים שערכם מעל 1,000 דולר חייבים בתשלום מע\"מ וכן במכס ובמס קנייה (אם חלים) כמו שמשלם יבואן שמייבא בייבוא מסחרי."
     },
     {
       "claim_id": "shaar-olami-portal-url",
@@ -97,8 +97,8 @@
     {
       "claim_id": "eur1-wet-ink-required",
       "claim": "Israeli Customs requires a wet-ink original signature on EUR.1 movement certificates and does not accept electronically signed EUR.1 documents.",
-      "source_url": "https://policy.trade.ec.europa.eu/eu-trade-relationships-country-and-region/countries-and-regions/israel_en",
-      "raw_snippet": "EUR.1 movement certificate"
+      "source_url": "https://www.londonchamber.co.uk/international-trade/trade-documentation/eur1-movement-certificate/",
+      "raw_snippet": "The following countries do not accept electronic signatures: Egypt, Iceland, Lebanon, Israel, Switzerland, Serbia, Norway, Liechtenstein, Tunisia."
     },
     {
       "claim_id": "boi-exchange-rate-source",
@@ -109,8 +109,8 @@
     {
       "claim_id": "threshold-shipping-itemization",
       "claim": "Shipping and insurance are excluded from the personal-import threshold test as long as they are itemized separately on the invoice; if bundled into the product price, the combined figure is tested.",
-      "source_url": "https://www.vatupdate.com/2026/01/01/israel-raises-vat-exemption-for-personal-imports-to-150-implications-and-compliance-issues/",
-      "raw_snippet": "excluding shipping and insurance costs, where calculated separately"
+      "source_url": "https://www.kolzchut.org.il/he/זכותון_בנושא_יבוא_אישי_(חבילות_מחו\"ל)",
+      "raw_snippet": "חישוב ערך המוצרים לא כולל הובלה וביטוח, בתנאי שהם מחושבים בנפרד מערך המוצרים."
     },
     {
       "claim_id": "uk-israel-tpa",
