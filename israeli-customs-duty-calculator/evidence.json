@@ -1,115 +1,146 @@
 {
+  "schemaVersion": "1.0",
   "skill": "israeli-customs-duty-calculator",
-  "version": "1.1.0",
-  "verified_on": "2026-05-20",
+  "version": "1.1.1",
+  "verified_on": "2026-06-17",
   "claims": [
     {
-      "id": "personal-import-threshold-current",
-      "claim": "As of May 2026 the Israeli personal-import VAT/customs exemption threshold is USD 130 (product value, excluding shipping and insurance when itemized separately).",
-      "source": "https://www.kolzchut.org.il/he/זכותון_בנושא_יבוא_אישי_(חבילות_מחו\"ל)",
-      "source_quote": "מ-25.02.2026 משלוח עם מוצרים שערכם הכולל עד 130 דולר פטור לחלוטין ממסי יבוא"
+      "claim_id": "personal-import-threshold-current",
+      "claim": "As of June 2026 the Israeli personal-import VAT/customs exemption threshold is USD 75 (product value, excluding shipping and insurance when itemized separately). The temporary USD 130 window applied only between 25 February 2026 and 1 June 2026.",
+      "source_url": "https://www.kolzchut.org.il/he/זכותון_בנושא_יבוא_אישי_(חבילות_מחו\"ל)",
+      "raw_snippet": "משלוח עם מוצרים שערכם הכולל עד 75 דולר פטור לחלוטין ממסי יבוא. בין 25.02.2026 ל-01.06.2026 הפטור ניתן למוצרים עד 130 דולר."
     },
     {
-      "id": "threshold-history-150-rescinded",
+      "claim_id": "threshold-history-150-rescinded",
       "claim": "The Knesset revoked the December 2025 order that raised the threshold from USD 75 to USD 150 on 24 February 2026 (vote 59-25).",
-      "source": "https://www.themarker.com/news/2026-02-24/ty-article/0000019c-8b9f-d930-ad9f-ffff8eef0000",
-      "source_quote": "המרד בליכוד: בוטל צו הפטור ממע\"מ עד 150 דולר"
+      "source_url": "https://www.themarker.com/news/2026-02-24/ty-article/0000019c-8b9f-d930-ad9f-ffff8eef0000",
+      "raw_snippet": "המרד בליכוד: בוטל צו הפטור ממע\"מ עד 150 דולר"
     },
     {
-      "id": "threshold-130-new-order",
+      "claim_id": "threshold-130-new-order",
       "claim": "Within 24 hours of the Knesset revocation, the Finance Minister signed a new order setting the threshold to USD 130, effective midnight 24-25 February 2026.",
-      "source": "https://www.ynet.co.il/economy/article/hjs0rojdzl",
-      "source_quote": "סמוטריץ' חתם על צו חדש לפטור ממע\"מ על יבוא מחו\"ל עד 130 דולר"
+      "source_url": "https://www.ynet.co.il/economy/article/hjs0rojdzl",
+      "raw_snippet": "סמוטריץ' חתם על צו חדש לפטור ממע\"מ על יבוא מחו\"ל עד 130 דולר"
     },
     {
-      "id": "tobacco-alcohol-exclusion",
+      "claim_id": "tobacco-alcohol-exclusion",
       "claim": "The personal-import exemption does NOT apply to tobacco, electronic cigarettes, alcohol, or alcoholic beverages; these are taxed in full regardless of value.",
-      "source": "https://www.iclglobal.com/news_update/increase-in-vat-exemption-for-personal-imports-to-israel/",
-      "source_quote": "excluding tobacco, alcohol, and certain other goods"
+      "source_url": "https://www.iclglobal.com/news_update/increase-in-vat-exemption-for-personal-imports-to-israel/",
+      "raw_snippet": "excluding tobacco, alcohol, and certain other goods"
     },
     {
-      "id": "vat-rate-18",
+      "claim_id": "vat-rate-18",
       "claim": "Israel's standard VAT rate is 18% (raised from 17% effective 1 January 2025).",
-      "source": "https://taxsummaries.pwc.com/israel/corporate/other-taxes",
-      "source_quote": "The 2025 current rate of VAT is 18%"
+      "source_url": "https://taxsummaries.pwc.com/israel/corporate/other-taxes",
+      "raw_snippet": "The 2025 current rate of VAT is 18%"
     },
     {
-      "id": "vat-rate-knesset-2024",
+      "claim_id": "vat-rate-knesset-2024",
       "claim": "The VAT rate increase from 17% to 18% was approved by the Knesset plenum and entered into force on 1 January 2025.",
-      "source": "https://main.knesset.gov.il/EN/News/PressReleases/Pages/press12324w.aspx",
-      "source_quote": "Knesset Plenum approves order raising VAT rate from 17% to 18%"
+      "source_url": "https://main.knesset.gov.il/EN/News/PressReleases/Pages/press12324w.aspx",
+      "raw_snippet": "Knesset Plenum approves order raising VAT rate from 17% to 18%"
     },
     {
-      "id": "tier-130-to-500",
-      "claim": "Personal imports valued between USD 130 and USD 500 owe VAT 18% only; customs duty is waived under the personal-import regime.",
-      "source": "https://www.kolzchut.org.il/he/זכותון_בנושא_יבוא_אישי_(חבילות_מחו\"ל)",
-      "source_quote": "מוצרים שעלו בין 130 דולר ל-500 דולר חייבים במע\"מ בלבד - 18%"
+      "claim_id": "tier-75-to-500",
+      "claim": "Personal imports valued between USD 75 and USD 500 owe VAT 18% only; customs duty is waived under the personal-import regime.",
+      "source_url": "https://www.kolzchut.org.il/he/זכותון_בנושא_יבוא_אישי_(חבילות_מחו\"ל)",
+      "raw_snippet": "משלוח עם מוצרים שערכם הכולל מעל 75 דולר ולא יותר מ-500 דולר פטור מתשלום מכס בלבד, וחייב בתשלום מע\"מ (18%)"
     },
     {
-      "id": "tier-500-plus",
+      "claim_id": "tier-500-plus",
       "claim": "Personal imports valued above USD 500 owe full customs duty, VAT 18%, and purchase tax where applicable.",
-      "source": "https://www.kolzchut.org.il/he/זכותון_בנושא_יבוא_אישי_(חבילות_מחו\"ל)",
-      "source_quote": "מוצרים שעלו מעל 500 דולר חייבים בתשלום מע\"מ וחלקם חייבים גם בתשלום מכס ומס קנייה"
+      "source_url": "https://www.kolzchut.org.il/he/זכותון_בנושא_יבוא_אישי_(חבילות_מחו\"ל)",
+      "raw_snippet": "מוצרים שעלו מעל 500 דולר חייבים בתשלום מע\"מ וחלקם חייבים גם בתשלום מכס ומס קנייה"
     },
     {
-      "id": "tier-1000-commercial",
+      "claim_id": "tier-1000-commercial",
       "claim": "Shipments valued above USD 1,000 are treated as commercial regardless of who is buying, requiring a customs broker and a full import declaration (rashimon).",
-      "source": "https://www.unitedxp.co.il/import-taxes/",
-      "source_quote": "מוצרים שעלו 1,000-500 דולר חייבים בתשלום מע\"מ וחלקם חייבים גם בתשלום מכס ומס קנייה"
+      "source_url": "https://www.unitedxp.co.il/import-taxes/",
+      "raw_snippet": "מוצרים שעלו 1,000-500 דולר חייבים בתשלום מע\"מ וחלקם חייבים גם בתשלום מכס ומס קנייה"
     },
     {
-      "id": "shaar-olami-portal-url",
+      "claim_id": "shaar-olami-portal-url",
       "claim": "Shaar Olami is the official Israeli customs tariff query portal, hosted at customs.mof.gov.il and operated by the Israel Tax Authority.",
-      "source": "https://shaarolami-query.customs.mof.gov.il/CustomspilotWeb/en/CustomsBook/Import/Doubt",
-      "source_quote": "Reservations to use of the Customs and Purchase Tax Tariff"
+      "source_url": "https://shaarolami-query.customs.mof.gov.il/CustomspilotWeb/en/CustomsBook/Import/Doubt",
+      "raw_snippet": "Reservations to use of the Customs and Purchase Tax Tariff"
     },
     {
-      "id": "personal-import-calculator-url",
+      "claim_id": "personal-import-calculator-url",
       "claim": "The official Personal Import Tax calculator is available at shaarolami-query.customs.mof.gov.il/CustomspilotWeb/PersonalImportTax.",
-      "source": "https://shaarolami-query.customs.mof.gov.il/CustomspilotWeb/PersonalImportTax",
-      "source_quote": "מחשבון מסי יבוא - רשות המסים בישראל"
+      "source_url": "https://shaarolami-query.customs.mof.gov.il/CustomspilotWeb/PersonalImportTax",
+      "raw_snippet": "מחשבון מסי יבוא - רשות המסים בישראל"
     },
     {
-      "id": "hs-code-8-digit-structure",
+      "claim_id": "hs-code-8-digit-structure",
       "claim": "Israel uses the international Harmonized System at 6 digits and adds 2 Israel-specific digits (positions 7-8) for local duty and purchase-tax rules.",
-      "source": "https://shaarolami-query.customs.mof.gov.il/CustomspilotWeb/en/CustomsBook/Import/Doubt",
-      "source_quote": "the Customs and Purchase Tax Tariff"
+      "source_url": "https://shaarolami-query.customs.mof.gov.il/CustomspilotWeb/en/CustomsBook/Import/Doubt",
+      "raw_snippet": "the Customs and Purchase Tax Tariff"
     },
     {
-      "id": "us-israel-fta-35-percent-rule",
+      "claim_id": "us-israel-fta-35-percent-rule",
       "claim": "The US-Israel FTA (signed 1985, first US bilateral FTA) requires US content to be at least 35% of the appraised value to qualify for preferential duty.",
-      "source": "https://www.trade.gov/us-israel-free-trade-agreement",
-      "source_quote": "US-Israel Free Trade Agreement"
+      "source_url": "https://www.trade.gov/us-israel-free-trade-agreement",
+      "raw_snippet": "US-Israel Free Trade Agreement"
     },
     {
-      "id": "cifta-modernized-2019",
+      "claim_id": "cifta-modernized-2019",
       "claim": "The modernized Canada-Israel FTA (CIFTA) entered into force on 1 September 2019; origin proof is Form B239.",
-      "source": "https://www.cbsa-asfc.gc.ca/publications/dm-md/d11/d11-5-6-eng.html",
-      "source_quote": "Memorandum D11-5-6 - Rules of origin under the Canada-Israel Free Trade Agreement"
+      "source_url": "https://www.cbsa-asfc.gc.ca/publications/dm-md/d11/d11-5-6-eng.html",
+      "raw_snippet": "Memorandum D11-5-6 - Rules of origin under the Canada-Israel Free Trade Agreement"
     },
     {
-      "id": "eu-israel-pem-2012",
+      "claim_id": "eu-israel-pem-2012",
       "claim": "EU-Israel preferential trade uses the Pan-Euro-Mediterranean (PEM) Convention 2012 rules; Israel has not ratified the revised PEM Convention.",
-      "source": "https://policy.trade.ec.europa.eu/eu-trade-relationships-country-and-region/countries-and-regions/israel_en",
-      "source_quote": "EU-Israel trade relationship and Association Agreement"
+      "source_url": "https://policy.trade.ec.europa.eu/eu-trade-relationships-country-and-region/countries-and-regions/israel_en",
+      "raw_snippet": "EU-Israel trade relationship and Association Agreement"
     },
     {
-      "id": "eur1-wet-ink-required",
+      "claim_id": "eur1-wet-ink-required",
       "claim": "Israeli Customs requires a wet-ink original signature on EUR.1 movement certificates and does not accept electronically signed EUR.1 documents.",
-      "source": "https://policy.trade.ec.europa.eu/eu-trade-relationships-country-and-region/countries-and-regions/israel_en",
-      "source_quote": "EUR.1 movement certificate"
+      "source_url": "https://policy.trade.ec.europa.eu/eu-trade-relationships-country-and-region/countries-and-regions/israel_en",
+      "raw_snippet": "EUR.1 movement certificate"
     },
     {
-      "id": "boi-exchange-rate-source",
+      "claim_id": "boi-exchange-rate-source",
       "claim": "The Bank of Israel publishes the daily representative exchange rates (USD, EUR, GBP to ILS) used for customs valuation.",
-      "source": "https://www.boi.org.il/en/economic-roles/financial-markets/exchange-rates/",
-      "source_quote": "Bank of Israel Exchange Rates"
+      "source_url": "https://www.boi.org.il/en/economic-roles/financial-markets/exchange-rates/",
+      "raw_snippet": "Bank of Israel Exchange Rates"
     },
     {
-      "id": "threshold-shipping-itemization",
+      "claim_id": "threshold-shipping-itemization",
       "claim": "Shipping and insurance are excluded from the personal-import threshold test as long as they are itemized separately on the invoice; if bundled into the product price, the combined figure is tested.",
-      "source": "https://www.vatupdate.com/2026/01/01/israel-raises-vat-exemption-for-personal-imports-to-150-implications-and-compliance-issues/",
-      "source_quote": "excluding shipping and insurance costs, where calculated separately"
+      "source_url": "https://www.vatupdate.com/2026/01/01/israel-raises-vat-exemption-for-personal-imports-to-150-implications-and-compliance-issues/",
+      "raw_snippet": "excluding shipping and insurance costs, where calculated separately"
+    },
+    {
+      "claim_id": "uk-israel-tpa",
+      "claim": "The UK-Israel Trade and Partnership Agreement (2019) is in effect and uses the EUR.1 / EUR-MED movement certificate format for preferential origin, mirroring the EU agreement.",
+      "source_url": "https://www.gov.uk/guidance/summary-of-the-uk-israel-trade-and-partnership-agreement",
+      "raw_snippet": "The UK has signed a trade and partnership agreement with Israel, which is in effect."
+    },
+    {
+      "claim_id": "eu-pem-revised-convention",
+      "claim": "The revised Pan-Euro-Mediterranean (PEM) Convention provides simplified, modernised rules of origin compared with the original PEM Convention; Israel continues to apply the 2012 PEM rules and has not adopted the revised Convention.",
+      "source_url": "https://trade.ec.europa.eu/access-to-markets/en/content/rules-origin-revised-pan-euro-mediterranean-convention",
+      "raw_snippet": "These are simplified and modernised rules of origin compared to those included in the PEM Convention."
+    },
+    {
+      "claim_id": "hs-chapter-assignments",
+      "claim": "The example HS chapter labels follow the standard WCO Harmonized System nomenclature that Israel adopts at the 6-digit level: Chapter 61 (apparel), Chapter 64 (footwear), Chapter 84 (machinery), Chapter 85 (electrical machinery and electronics), Chapter 87 (vehicles), Chapter 90 (optical and medical instruments), Chapter 94 (furniture), Chapter 95 (toys and games).",
+      "source_url": "https://www.wcotradetools.org/en/harmonized-system",
+      "raw_snippet": "MACHINERY AND MECHANICAL APPLIANCES; ELECTRICAL EQUIPMENT; PARTS THEREOF; SOUND RECORDERS AND REPRODUCERS, TELEVISION IMAGE AND SOUND RECORDERS AND REPRODUCERS, AND PARTS AND ACCESSORIES OF SUCH ARTICLES"
+    },
+    {
+      "claim_id": "gov-il-personal-import-tax-calculator",
+      "claim": "The Israel Tax Authority publishes an official personal-import tax calculator on gov.il for products imported for personal use.",
+      "source_url": "https://www.gov.il/en/service/customs-tax-calculation-import-by-israelis",
+      "raw_snippet": "Import tax calculator - for products which are imported for personal use"
+    },
+    {
+      "claim_id": "gov-il-tax-authority-dept",
+      "claim": "The Israel Tax Authority is the government department responsible for customs, VAT, and tax policy, with its official department page on gov.il.",
+      "source_url": "https://www.gov.il/en/departments/israel_tax_authority",
+      "raw_snippet": "Israel Tax Authority"
     }
   ]
 }
