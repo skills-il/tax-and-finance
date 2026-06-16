@@ -1,0 +1,55 @@
+{
+  "schemaVersion": "1.0",
+  "skill": "israeli-client-payment-chaser",
+  "generated_at": "2026-06-16T23:00:00Z",
+  "claims": [
+    {
+      "claim_id": "payment-ethics-law-terms",
+      "claim": "Payment Ethics to Suppliers Law 5777-2017: default 45-day term (private business from month-end of invoice submission); state bodies within 45 days and not later than shotef+30; engineering/construction up to 85 days from submission or 70 from month-end; a 2024 amendment gives small contractors on sub-75,000 NIS public contracts a 30-day term; late-payment interest at the Accountant General rate",
+      "source_url": "https://www.sba.org.il/hb/PolicyAndInformation/Pages/k4.aspx",
+      "raw_snippet": "חוק מוסר תשלומים לספקים, תשע\"ז-2017: ברירת מחדל 45 יום; גוף מדינה תוך 45 יום ולא יאוחר משוטף+30; תיקון 2024 לקבלנים קטנים בחוזים מתחת 75,000 ש\"ח תנאי 30 יום; שיעור החשב הכללי",
+      "fetched_at": "2026-06-16T22:55:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/legal-escalation.md"]
+    },
+    {
+      "claim_id": "limitation-period-7-years",
+      "claim": "An ordinary debt or unpaid invoice has a 7-year limitation period under sec. 5(a) of the Limitation Law (1958), not 3 years; a money judgment has a 25-year period; a debt in an open enforcement file does not lapse at 7 years",
+      "source_url": "https://www.nevo.co.il/law_html/law01/p182m1_001.htm",
+      "raw_snippet": "חוק ההתיישנות, התשי\"ח-1958, סעיף 5(א): תקופת התיישנות 7 שנים לחוב רגיל; פסק דין 25 שנים",
+      "fetched_at": "2026-06-16T22:55:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+    },
+    {
+      "claim_id": "small-claims-court",
+      "claim": "Small Claims Court ceiling is 39,900 NIS (from 1 Jan 2026); filing fee 1% of the claim, minimum 50 NIS; a filer may bring at most 5 small claims per calendar year; no lawyers; filing-to-hearing typically 30-60 days",
+      "source_url": "https://www.kolzchut.org.il/he/הגשת_תביעה_קטנה",
+      "raw_snippet": "תקרת תביעות קטנות 39,900 ש\"ח מ-1 בינואר 2026; אגרה 1% מינימום 50 ש\"ח; עד 5 תביעות בשנה קלנדרית; ללא עורכי דין; 30-60 יום",
+      "fetched_at": "2026-06-16T22:55:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/legal-escalation.md"]
+    },
+    {
+      "claim_id": "enforcement-and-interest-reform",
+      "claim": "A judgment-enforcement (Hotza'a LaPo'al) file can be opened only 30 days after judgment, with ~1% opening fee + protocol fee; dishonored cheques / promissory notes can be filed directly. Amendment 9 to the Interest and Linkage Law (effective 1 Jan 2025) eliminated compound interest on enforcement debts and split charges into interest (ribit) and late-payment fees (dmei pigurim), the latter accruing quarterly from 3 months after the due date",
+      "source_url": "https://www.nevo.co.il/law_html/law00/232127.htm",
+      "raw_snippet": "תיק הוצאה לפועל לביצוע פסק דין רק 30 יום אחרי פסק הדין, אגרת פתיחה כ-1%; תיקון 9 לחוק פסיקת ריבית והצמדה מ-1 בינואר 2025 ביטל ריבית דריבית על חובות אכיפה ופיצל לריבית ודמי פיגורים רבעוניים מ-3 חודשים",
+      "fetched_at": "2026-06-16T22:55:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/legal-escalation.md"]
+    },
+    {
+      "claim_id": "illustrative-example-figures",
+      "claim": "Hypothetical scenario amounts and percentages used in Examples and reminder templates (not live figures)",
+      "source_url": "internal-illustrative-example",
+      "raw_snippet": "Illustrative figures: total outstanding 47,500 NIS; invoice 22,000 NIS; buckets 18,000 NIS, 12,000 NIS, 8,500 NIS, 15,000 NIS; outstanding 53,500 NIS; forecast 35,000 NIS; collection rate 78%; demand-letter deadline 14 days. Hebrew forms 47,500 ש\"ח, 22,000 ש\"ח, 18,000 ש\"ח, 12,000 ש\"ח, 8,500 ש\"ח, 15,000 ש\"ח, 53,500 ש\"ח, 35,000 ש\"ח",
+      "fetched_at": "2026-06-16T22:55:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/reminder-templates.md"]
+    },
+    {
+      "claim_id": "reference-urls",
+      "claim": "Reference and service URLs cited by the skill",
+      "source_url": "https://www.gov.il/he/service/filing_a_small_claim",
+      "raw_snippet": "URLs: https://www.boi.org.il/information/interestrates/primerates/ https://www.gov.il/he/service/filing_a_small_claim https://www.kolzchut.org.il https://www.nevo.co.il/law_html/law00/75001.htm https://www.nevo.co.il/law_html/law00/144599.htm https://www.gov.il/he/service/claim_for_a_specified_amount_opening_file https://www.gov.il/he/service/opening_promissory_notes_and_checks_file https://www.israelpost.co.il https://www.hebcal.com https://boi.org.il https://www.kolzchut.org.il/he/הגשת_תביעה_קטנה https://www.kolzchut.org.il/he/המועד_האחרון_לתשלום_תמורה_לספקים",
+      "fetched_at": "2026-06-16T22:55:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/legal-escalation.md"]
+    }
+  ]
+}
