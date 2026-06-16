@@ -2,7 +2,7 @@
 
 ## Income Tax Brackets (2026)
 
-These brackets apply to active income (employment, self-employment, business income) for Israeli tax residents. Brackets 3-5 were expanded by the Economic Efficiency Law 2026 (approved March 30, 2026, retroactive to January 1, 2026). Brackets 1-2 and 6 remain frozen at 2025 values.
+These brackets apply to active income (employment, self-employment, business income) for Israeli tax residents. Brackets 3-5 were expanded by the Economic Efficiency Law 2026 (Amendment 288 to the Income Tax Ordinance, approved March 31, 2026, retroactive to January 1, 2026). Brackets 1-2 and 6 remain frozen at 2025 values.
 
 | Bracket | Annual Income Range (NIS) | Monthly Equivalent (NIS) | Marginal Rate |
 |---------|--------------------------|--------------------------|---------------|
@@ -105,7 +105,7 @@ These brackets apply to active income (employment, self-employment, business inc
 
 | Obligation | Deadline | Penalty for Late Filing |
 |------------|----------|------------------------|
-| Form 1301 (individual) | June 30 online filers / May 31 paper filers for the 2025 return (April 30 is the legacy paper baseline); CPA-represented filers get the later quota extension | Interest + linkage differences + potential fines |
+| Form 1301 (individual) | June 30 online filers / 29 May 2026 paper filers for the 2025 return (April 30 is the legacy paper baseline); CPA-represented filers get the later quota extension | Interest + linkage differences + potential fines |
 | Form 1214 (corporate) | May 31 | Interest + linkage differences + potential fines |
 | Form 126 (employer) | April 30 | Administrative fines |
 | Form 106 (to employees) | March 1 | Administrative fines |

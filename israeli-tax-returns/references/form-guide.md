@@ -4,7 +4,7 @@
 
 ### Form 1301 - Annual Individual Tax Return (דוח שנתי ליחיד)
 - **Who files:** Individuals, sole proprietors, freelancers meeting filing criteria
-- **Deadline:** for the 2025 return (filed 2026), June 30 for online filers and May 31 for paper filers. April 30 is the legacy paper baseline from earlier years. CPA-represented filers get the later quota extension (often September 30 or later)
+- **Deadline:** for the 2025 return (filed 2026), June 30 for online filers and 29 May 2026 for paper filers. April 30 is the legacy paper baseline from earlier years. CPA-represented filers get the later quota extension (often September 30 or later)
 - **Key sections:** Personal details, employment income, business income, rental income, capital/investment income, foreign income, deductions, tax credits
 - **Common appendices:** 1320 (P&L for self-employed), 1321 (non-business income), 1322/1325 (capital gains), 1327 (foreign income), 1343 (depreciation), 6111 (financial statements)
 
@@ -78,7 +78,7 @@
 
 | Form | Standard Deadline | Extension Available |
 |------|-------------------|---------------------|
-| 1301 | June 30 online filers / May 31 paper filers (2025 return; April 30 is the legacy paper baseline) | Yes, via CPA quota (often September 30 or later) |
+| 1301 | June 30 online filers / 29 May 2026 paper filers (2025 return; April 30 is the legacy paper baseline) | Yes, via CPA quota (often September 30 or later) |
 | 135 | Within 6 years of the tax year (Section 160 refund window) | Not applicable, the 6-year window is the limit |
 | 1214 | May 31 | Yes, must request before deadline |
 | 126 | April 30 | Limited |

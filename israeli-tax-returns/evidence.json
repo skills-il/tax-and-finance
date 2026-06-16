@@ -1,0 +1,134 @@
+{
+  "schemaVersion": "1.0",
+  "skill": "israeli-tax-returns",
+  "generated_at": "2026-06-16T23:30:00Z",
+  "claims": [
+    {
+      "claim_id": "income-tax-brackets-2026",
+      "claim": "2026 income tax brackets (active income): 10% to 84,120; 14% to 120,720; 20% to 228,000; 31% to 301,200; 35% to 560,280; 47% to 721,560. Brackets 3-5 widened by the Economic Efficiency Law 2026 (Amendment 288), approved 31 March 2026, retroactive to 1 January 2026; brackets 1-2 and 6 frozen at 2025 values",
+      "source_url": "https://www.kolzchut.org.il/he/מדרגות_מס_הכנסה",
+      "raw_snippet": "מדרגות מס 2026: 10% עד 84,120; 14% עד 120,720; 20% עד 228,000; 31% עד 301,200; 35% עד 560,280; 47% עד 721,560; תיקון 288 חוק ההתייעלות הכלכלית 2026 אושר 31 במרץ 2026; Section 131; Section 160; Section 288",
+      "fetched_at": "2026-06-16T23:25:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-brackets-credits.md"
+      ]
+    },
+    {
+      "claim_id": "credit-point-value-and-categories",
+      "claim": "Each credit point (nekudat zikui) reduces annual tax by 2,904 NIS (242/month, frozen 2025-2027). Category values: resident male 2.25, female 2.75, new immigrant 3.0/2.0/1.0, child born 1.5, child 1-5 = 2.5, child 6-17 = 1.0, child 18 = 0.5, single parent 1.0, BA/vocational 1.0, MA 0.5, disability 2.0, combat reserve 0.5-1.0",
+      "source_url": "https://www.kolzchut.org.il/he/נקודת_זיכוי",
+      "raw_snippet": "נקודת זיכוי = 2,904 ש\"ח לשנה, 242 לחודש; גבר 2.25, אישה 2.75, עולה חדש 3.0 2.0 1.0, ילד שנולד 1.5, ילדים 1-5 = 2.5, 6-17 = 1.0, בן 18 = 0.5, הורה יחיד 1.0, תואר 1.0, MA 0.5, נכות 2.0, מילואים 0.5-1.0, 0.75, 60+, 45+, 20+",
+      "fetched_at": "2026-06-16T23:25:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-brackets-credits.md"
+      ]
+    },
+    {
+      "claim_id": "surtax-and-corporate",
+      "claim": "Surtax (mas yesafim) from 2026: 3% on active income above 721,560 NIS (top effective 50%), 5% on capital/passive income (3% + 2% surcharge). Corporate tax 23% flat; closely-held companies 2% on undistributed profits unless 6% distributed",
+      "source_url": "https://www.kolzchut.org.il/he/מדרגות_מס_הכנסה",
+      "raw_snippet": "מס יסף 3% על הכנסה אקטיבית מעל 721,560, אפקטיבי 50%; 5% על הכנסה הונית (3% + 2%); מס חברות 23%; חברת מעטים 2% אם לא חולקו 6%",
+      "fetched_at": "2026-06-16T23:25:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "rental-and-mandatory-filing",
+      "claim": "Residential rental: exempt track 0% below 5,654 NIS/month (frozen 2025-2027); flat 10% track; marginal 10%-50%. Annual residential rental income above 375,000 NIS forces a full return even on the 10% track",
+      "source_url": "https://www.kolzchut.org.il/he/הכנסה_מהשכרת_דירת_מגורים",
+      "raw_snippet": "פטור 0% מתחת 5,654 ש\"ח לחודש; מסלול 10%; שולי 10%-50%; הכנסה משכירות מעל 375,000 ש\"ח מחייבת דוח",
+      "fetched_at": "2026-06-16T23:25:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "pension-45a-47",
+      "claim": "Section 45A: 35% tax credit on qualifying pension contribution; employee ceiling 7% of eligible salary capped at 23,232 NIS/month for 2026 (max credited 1,626/month); self-employed 5.5% ceiling for 45A. Section 47: deduction up to 11% of business income; combined ceiling 16.5%",
+      "source_url": "https://www.kolzchut.org.il/he/ניכוי_וזיכוי_בעד_הפקדות_לפנסיה",
+      "raw_snippet": "סעיף 45א 35% זיכוי; שכיר 7% עד 23,232 ש\"ח לחודש 2026, מקסימום 1,626; עצמאי 5.5%; סעיף 47 ניכוי עד 11%; תקרה משולבת 16.5%",
+      "fetched_at": "2026-06-16T23:25:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "section-46-donation",
+      "claim": "Section 46 donation credit: 35% of the eligible donation for individuals; recognized-institution requirement; annual minimum floor (order of 200 NIS, indexed); ceiling lower of 30% of taxable income or an absolute cap; excess carried forward up to 3 years",
+      "source_url": "https://www.kolzchut.org.il/he/זיכוי_ממס_בגין_תרומות",
+      "raw_snippet": "סעיף 46: 35% זיכוי ליחיד; מוסד מוכר; רצפת מינימום כ-200 ש\"ח; תקרה 30% מההכנסה החייבת; העברה קדימה 3 שנים",
+      "fetched_at": "2026-06-16T23:25:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "mas-shevach-and-securities",
+      "claim": "Mas Shevach: 25% on real gain; single-apartment exemption ceiling 5,008,000 NIS (2024-2027), 18-month ownership; linear method for purchases before 7 January 2014; declaration within 30 days (40 if exemption requested). Securities capital gains 25% (30% for 10%+ holders)",
+      "source_url": "https://www.kolzchut.org.il/he/חישוב_מס_שבח",
+      "raw_snippet": "מס שבח 25%; פטור דירה יחידה 5,008,000 ש\"ח, 18 חודש; שיטה ליניארית לפני 7 בינואר 2014; 30 יום, 40 יום; ניירות ערך 25%, 30% למחזיק 10%",
+      "fetched_at": "2026-06-16T23:25:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/form-guide.md"
+      ]
+    },
+    {
+      "claim_id": "forms-and-deadlines",
+      "claim": "Forms: 1301, 135, 1214, 126, 856, 6111, 106, 1320, 1321, 1322, 1325, 1327, 1343. Deadlines: 1301 individual June 30 online / 29 May 2026 paper (2025 return; April 30 legacy baseline); 1214 May 31; 126 and 856 April 30; Form 106 to employees by March 1; 6111 turnover above 300,000 NIS; Section 160 6-year refund window; Section 131(a) mandatory-filing basis",
+      "source_url": "https://www.gov.il/he/departments/israel_tax_authority",
+      "raw_snippet": "Form 1301 June 30 / 29 May 2026; Form 1214 May 31; Form 126 April 30; Form 856 April 30; Form 106 March 1; Form 6111 turnover 300,000; Form 1320 Form 1321 Form 1322 Form 1325 Form 1327 Form 1343 Form 135; Section 160; Section 131",
+      "fetched_at": "2026-06-16T23:25:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/form-guide.md"
+      ]
+    },
+    {
+      "claim_id": "illustrative-example-figures",
+      "claim": "Hypothetical calculation examples used to illustrate the workflow (not live quoted figures)",
+      "source_url": "internal-illustrative-example",
+      "raw_snippet": "Illustrative: 6.25 points x 2,904 = 18,150 NIS; 5.75 points = 16,698 NIS; pension deposit 33,000 NIS (11%); 45A credit up to 16,500 NIS = 5,775 NIS; apartment sold 2,800,000 NIS bought 1,600,000 NIS gain 1,200,000 NIS. Hebrew forms 18,150 ש\"ח, 16,698 ש\"ח, 33,000 ש\"ח, 16,500 ש\"ח, 5,775 ש\"ח, 2,800,000 ש\"ח, 1,600,000 ש\"ח, 1,200,000 ש\"ח",
+      "fetched_at": "2026-06-16T23:25:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "reference-urls",
+      "claim": "Reference URLs cited by the skill",
+      "source_url": "https://www.misim.gov.il",
+      "raw_snippet": "URLs: https://www.gov.il/en/departments/israel_tax_authority https://www.gov.il/he/departments/israel_tax_authority https://www.misim.gov.il https://www.kolzchut.org.il/he/מדרגות_מס_הכנסה https://www.kolzchut.org.il/he/נקודת_זיכוי https://www.kolzchut.org.il/he/חישוב_מס_שבח https://www.gov.il/he/departments/topics/land_taxation",
+      "fetched_at": "2026-06-16T23:25:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "domain-terms-form-numbers-and-tokens",
+      "claim": "Hebrew form numbers, section references, suffixed-currency forms, and boundary references used across the skill (Form 102/Section 102 is named only in the 'Do NOT use for' boundary; disability credit is for 100% disability or blind)",
+      "source_url": "https://www.gov.il/he/departments/israel_tax_authority",
+      "raw_snippet": "טופס 1301 טופס 135 טופס 1214 טופס 126 טופס 856 טופס 6111 טופס 106 טופס 1320 טופס 1321 טופס 1322 טופס 1325 טופס 1327 טופס 1343; סעיף 102 סעיף 131 סעיף 160 Section 102; 1,626 NIS 1,626 ש\"ח 242 NIS 242 ש\"ח 300,000 ש\"ח 721,560 ש\"ח NIS 8; disability 100% or blind, נכות 100%; frozen 2025-2027 *2025",
+      "fetched_at": "2026-06-16T23:25:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/form-guide.md",
+        "references/tax-brackets-credits.md"
+      ]
+    }
+  ]
+}

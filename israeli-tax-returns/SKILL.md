@@ -16,7 +16,7 @@ Determine which tax return or report the user needs to prepare. Israeli tax law 
 
 | Form | Hebrew Name | Who Files | Deadline | Frequency |
 |------|-------------|-----------|----------|-----------|
-| 1301 | דוח שנתי ליחיד | Individuals, sole proprietors, freelancers | June 30 for online filers; May 31 for paper filers (CPA-represented filers get the later quota extension) | Annual |
+| 1301 | דוח שנתי ליחיד | Individuals, sole proprietors, freelancers | June 30 for online filers; 29 May 2026 for paper filers (CPA-represented filers get the later quota extension) | Annual |
 | 135 | דוח שנתי מקוצר | Salaried individuals filing a short return to claim a refund | Within 6 years of the relevant tax year (Section 160 refund window) | Annual / on demand |
 | 1214 | דוח שנתי לחברה | Companies (Chevra Ba'am, Chevra Pratit) | May 31 (5 months after tax year end), extensions available | Annual |
 | 126 | דוח מעסיק על משכורות | Employers reporting employee salaries and withholdings | April 30 | Annual |
@@ -27,7 +27,7 @@ Determine which tax return or report the user needs to prepare. Israeli tax law 
 | 1322/1325 | דוח רווח הון מניירות ערך | Anyone with capital gains from securities sales | 30 days from sale (or annual with Form 1301) | Per transaction or annual |
 
 The Form 1301 deadline moved later for the 2025 tax year (filed in 2026): online
-filers have until June 30, paper (non-online) filers until May 31. April 30 is
+filers have until June 30, paper (non-online) filers until 29 May 2026. April 30 is
 the legacy paper baseline that older years used; state the online deadline
 explicitly, since most filers submit online. CPA-represented filers receive the
 later extension under the CPA association's quota arrangement with the ITA.
@@ -42,13 +42,13 @@ Ask the user:
 
 Form 1301 is the main annual income tax return for individuals and non-corporate business owners. It covers all income sources for the calendar year (January 1 to December 31).
 
-**Who must file Form 1301:**
+**Who must file Form 1301:** (mandatory-filing triggers are set by the Income Tax Regulations (Exemption from Filing a Return), 1988, under Section 131(a) of the Ordinance, a salaried employee is exempt only if they stay under every threshold below)
 - Self-employed individuals (osek murshe or osek patur)
-- Individuals whose gross salary exceeded 721,560 NIS (surtax threshold, frozen 2025-2027)
+- Individuals whose gross salary exceeded 721,560 NIS (the surtax / high-salary mandatory-filing threshold, frozen 2025-2027)
 - Individuals with income from multiple employers
-- Individuals with foreign income or assets abroad exceeding reporting thresholds
+- Individuals with foreign income or assets abroad exceeding reporting thresholds (including a foreign securities/brokerage account)
 - Anyone who received capital gains during the tax year
-- Individuals who received rental income exceeding the exempt threshold
+- Individuals who received rental income exceeding the exempt threshold, AND in particular anyone whose annual residential rental income exceeds **375,000 NIS** must file a return even when using the 10% track (below that, the 10% track can be settled without a full return)
 
 **Main sections of Form 1301:**
 
@@ -145,9 +145,20 @@ Pension contributions receive two separate tax benefits that must both be claime
 - Section 45A credit: 35 percent of up to 5.5 percent of income = up to 16,500 NIS eligible, so up to 5,775 NIS direct tax reduction
 - Always verify the exact current ceilings at kolzchut.org.il before quoting a number
 
+### Step 3.6: Donation Credit (Section 46)
+
+Donations to a recognized public institution qualify for a tax credit under Section 46 of the Income Tax Ordinance. This is a frequently-missed refund source for salaried filers (often claimed via Form 135).
+
+- **Credit rate:** 35 percent of the eligible donation amount for individuals (companies get the corporate-rate credit). The credit reduces tax liability directly, like nekudot zikui, not taxable income.
+- **Recognized institution requirement:** the recipient must hold a valid Section 46 recognition (mosad tziburi mukar lefi seif 46). A donation to a charity without 46 recognition does NOT qualify. Verify the institution's 46 status (the Tax Authority publishes the approved list).
+- **Minimum floor:** there is an annual minimum donation below which no credit is given (a few hundred NIS, indexed annually, on the order of 200 NIS for recent years). Verify the current-year floor before quoting it.
+- **Ceiling:** the eligible donation in a year is capped at the lower of 30 percent of taxable income or an absolute annual cap. Excess above the ceiling can be carried forward (up to three years).
+- **Documentation:** keep the original donation receipts marked with the institution's 46 recognition; the ITA may require them.
+- Always verify the current floor, ceiling, and the institution's 46 status before quoting figures.
+
 ### Step 4: Income Tax Brackets and Surtax
 
-Apply the progressive income tax rates to taxable income. Brackets for 2026 (brackets 1-2 and 6 frozen at 2025 values; brackets 3-5 expanded by the Economic Efficiency Law 2026, approved March 30, 2026, retroactive to January 1, 2026):
+Apply the progressive income tax rates to taxable income. Brackets for 2026 (brackets 1-2 and 6 frozen at 2025 values; brackets 3-5 expanded by the Economic Efficiency Law 2026 (Amendment 288 to the Income Tax Ordinance), approved March 31, 2026, retroactive to January 1, 2026):
 
 | Bracket | Annual Income Range (NIS) | Rate |
 |---------|--------------------------|------|
@@ -324,7 +335,7 @@ All returns are submitted electronically via the Tax Authority's online system (
 - Authorization is per-client, per-year
 
 **Filing extensions:**
-- Individual returns (Form 1301): the 2025 return (filed 2026) is due June 30 for online filers and May 31 for paper filers. April 30 is the legacy paper baseline from earlier years. CPA clients typically receive automatic extensions through the CPA association's quota agreement with the Tax Authority (often to September 30 or later)
+- Individual returns (Form 1301): the 2025 return (filed 2026) is due June 30 for online filers and 29 May 2026 for paper filers. April 30 is the legacy paper baseline from earlier years. CPA clients typically receive automatic extensions through the CPA association's quota agreement with the Tax Authority (often to September 30 or later)
 - Company returns (Form 1214): standard deadline May 31, extensions available
 - Extension requests must be filed before the original deadline
 
@@ -392,7 +403,7 @@ Actions:
 - `references/tax-brackets-credits.md` - Current income tax brackets (2025, frozen through 2027), nekudot zikui point values and eligibility categories, surtax thresholds, and corporate tax rates. Consult for any income tax calculation or when verifying tax credit point entitlements.
 
 ## Gotchas
-- The Israeli individual return (Form 1301) deadline for the 2025 tax year, filed in 2026, is June 30 for online filers and May 31 for paper filers. April 30 is only the legacy paper baseline from earlier years, not the current online deadline. Self-employed filers with CPA representation get later extensions via the CPA association quota agreement (often September 30 or later). Agents may use the US April 15 deadline or the stale Israeli April 30 figure.
+- The Israeli individual return (Form 1301) deadline for the 2025 tax year, filed in 2026, is June 30 for online filers and 29 May 2026 for paper filers. April 30 is only the legacy paper baseline from earlier years, not the current online deadline. Self-employed filers with CPA representation get later extensions via the CPA association quota agreement (often September 30 or later). Agents may use the US April 15 deadline or the stale Israeli April 30 figure.
 - Israeli tax returns use Form 1301 for individuals, not 1040. Agents may reference US form numbers and fields that do not exist in the Israeli system.
 - Capital gains in Israel are reported on a separate schedule and may have different rates (25% for financial assets, up to 50% for real estate depending on holding period and property count). Agents may apply a single capital gains rate.
 - Tax credit points (neku'dot zikui) must be claimed annually and vary by personal status (marital, children, new oleh, discharged soldier). Agents may use a default value without checking eligibility.
@@ -404,9 +415,9 @@ Actions:
 |--------|-----|---------------|
 | Israel Tax Authority (Reshut HaMisim) | https://www.gov.il/en/departments/israel_tax_authority | Official forms, filing guides, announcements |
 | SHAAM online filing portal | https://www.misim.gov.il | Electronic submission of all returns and declarations |
-| Kol-Zchut income tax brackets | https://www.kolzchut.org.il/he/%D7%9E%D7%93%D7%A8%D7%92%D7%95%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94 | Current-year annual and monthly bracket thresholds |
-| Kol-Zchut tax credit points | https://www.kolzchut.org.il/he/%D7%A0%D7%A7%D7%95%D7%93%D7%AA_%D7%96%D7%99%D7%9B%D7%95%D7%99 | Nekudot zikui value, eligibility categories |
-| Kol-Zchut Mas Shevach calculation | https://www.kolzchut.org.il/he/%D7%97%D7%99%D7%A9%D7%95%D7%91_%D7%9E%D7%A1_%D7%A9%D7%91%D7%97 | Real estate capital gains calculation, exemptions, linear method |
+| Kol-Zchut income tax brackets | https://www.kolzchut.org.il/he/מדרגות_מס_הכנסה | Current-year annual and monthly bracket thresholds |
+| Kol-Zchut tax credit points | https://www.kolzchut.org.il/he/נקודת_זיכוי | Nekudot zikui value, eligibility categories |
+| Kol-Zchut Mas Shevach calculation | https://www.kolzchut.org.il/he/חישוב_מס_שבח | Real estate capital gains calculation, exemptions, linear method |
 | Israel Real Estate Taxation office | https://www.gov.il/he/departments/topics/land_taxation | Mas Shevach and Mas Rechisha forms, declarations, rates |
 
 ## Troubleshooting
