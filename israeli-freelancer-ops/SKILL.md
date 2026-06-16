@@ -13,7 +13,7 @@ Determine the user's business type and tax obligations:
 
 - **Osek Murshe (עוסק מורשה):** Authorized dealer, registered for VAT. Must file VAT returns, issue tax invoices (hashbonit mas), and can deduct input VAT (mas tsumos).
 - **Osek Patur (עוסק פטור):** Exempt dealer, under revenue threshold (122,833 NIS for 2026, CPI-indexed; was 120,000 NIS in both 2024 and 2025). Issues receipts (kabala) only, does not charge or report VAT.
-- **Esek Za'ir (עסק זעיר):** Micro business track introduced in 2024 (Income Tax Ordinance Section 17א). Freelancers under the osek patur threshold can register as esek za'ir to receive a 30% normative expense deduction (no receipts needed) and simplified reporting (exempt from the annual income-tax report in most cases). Eligibility caveats to verify with the user: cannot be a former employee of the client receiving the invoice, and no more than 25% of annual revenue may come from a single related party or former employer. The threshold is shared with osek patur and is CPI-indexed from 2026 (122,833 NIS).
+- **Esek Za'ir (עסק זעיר):** Micro business track introduced in 2024 (Income Tax Ordinance Section 87ב, added by Amendment 277). Freelancers under the osek patur threshold can register as esek za'ir to receive a 30% normative expense deduction (no receipts needed) and simplified reporting (exempt from the annual income-tax report in most cases). Eligibility caveats to verify with the user: cannot be a former employee of the client receiving the invoice, and no more than 25% of annual revenue may come from a single related party or former employer. The threshold is shared with osek patur and is CPI-indexed from 2026 (122,833 NIS).
 
 Key profile details to collect:
 - Business type (osek murshe / osek patur / esek za'ir)
@@ -75,7 +75,7 @@ Configure proactive alerts for Israeli tax deadlines:
 | VAT filing (monthly filers) | Monthly | 15th of each month | For businesses exceeding the monthly threshold |
 | Bituach Leumi (self-employed) | Monthly | 15th of each month | National Insurance advance payments |
 | Annual tax report (doch shnati) | Yearly | Paper: May 31. Online: June 30 | Tax year 2025 filed in 2026. Online filing is mandatory for most filers. Accountant extensions push to July 31 or later. Do not confuse with the osek patur annual turnover declaration (Jan 31). |
-| Advance tax payments (mkdamot) | Monthly or bi-monthly | Monthly filers: 15th. Bi-monthly filers: 19th of the month after the period | Frequency set by Tax Authority assessment letter |
+| Advance tax payments (mkdamot) | Monthly or bi-monthly | 15th of the month after the period (19th if paid online via the Tax Authority website, by 18:30) | Frequency set by Tax Authority assessment letter; bi-monthly requires prior approval |
 | Osek patur annual declaration | Yearly | January 31 | Report previous year's turnover to VAT office |
 | Self-employed pension deposit (Section 45א + 47) | Yearly | **December 31** | Last day to deposit into a pension fund, kupat gemel, or polisat bituach for that tax year's benefits. Section 45א gives a **35 percent tax credit** on contributions up to a combined 5.5 percent of business income (5 percent + an additional 0.5 percent slice; 2026 cap ≈ 11,640 NIS + 1,164 NIS). Section 47 gives an **income deduction** of up to 11 percent of qualifying income (2026 qualifying-income ceiling 232,800 NIS, max deposit ≈ 25,608 NIS for a preferred member). Missing Dec 31 forfeits both benefits for the year. |
 | Mandatory self-employed pension contribution | Yearly | December 31 | Separate from 45א/47 credits. 2026 rates: 4.45 percent on income up to half the average wage and 12.55 percent above it (average wage 13,769 NIS/month). Annual employer-equivalent caps for 2026: 3,676 NIS on the lower bracket, 14,044 NIS on the upper. The mandatory deposit is a legal obligation, not just a tax benefit. |
@@ -91,9 +91,9 @@ If a deadline falls on Shabbat (Saturday), it moves to Sunday. If it falls on a 
 
 Include per-deadline preparation notes:
 - VAT filing: have all sales and purchase invoices ready, calculate net VAT (output minus input)
-- Bituach Leumi: verify monthly advance amount from latest assessment. Direct-debit payers (הוראת קבע) get an automatic extension to the 22nd. 2026 brackets for self-employed: minimum monthly advance 187 NIS, maximum 7,850 NIS, minimum income floor 2,065 NIS per month.
+- Bituach Leumi: verify monthly advance amount from latest assessment. Direct-debit payers (הוראת קבע) get an automatic extension to the 22nd. 2026 brackets for self-employed (BTL circular 1502): minimum monthly advance 265 NIS, maximum 8,550 NIS, minimum income floor 3,442 NIS per month.
 - Annual report: coordinate with accountant, ensure all monthly packages delivered. For tax year 2025 filed in 2026: paper deadline May 31, online deadline June 30. Online filing is mandatory for most filers. Accountant extensions can push later.
-- Mkdamot: check assessment letter for payment coupon amounts. Monthly filers pay by the 15th, bi-monthly filers by the 19th of the month after the period.
+- Mkdamot: check assessment letter for payment coupon amounts. Payments are due by the 15th of the month after the period; paying online via the Tax Authority website extends the deadline to the 19th (until 18:30). Bi-monthly payment requires prior approval in the mkdamot book.
 - Pension deposit (Dec 31): alert by **December 15** with the year's business income to date and current 45א/47 ceilings. Confirm both the **tax-benefit** deposit (5.5 percent combined for the 45א credit; up to 11 percent for the Section 47 deduction) and the **mandatory** deposit (4.45 percent below half-average-wage, 12.55 percent above). Missing Dec 31 forfeits the tax benefits for the whole year; insufficient mandatory deposit is a separate legal exposure.
 
 ### Step 5: Monitor Osek Patur Threshold

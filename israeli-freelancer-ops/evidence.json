@@ -1,0 +1,97 @@
+{
+  "schemaVersion": "1.0",
+  "skill": "israeli-freelancer-ops",
+  "generated_at": "2026-06-16T00:00:00Z",
+  "claims": [
+    {
+      "claim": "Osek patur annual turnover ceiling is 122,833 NIS / 122,833 ש\"ח for 2026 (CPI-indexed) and was 120,000 NIS / 120,000 ש\"ח in 2024 and 2025.",
+      "source_url": "https://www.kolzchut.org.il/he/עוסק_פטור",
+      "raw_snippet": "כדי להיות עוסק פטור אסור שמחזור העסקאות השנתי (ולא הרווח!) בעסק יעבור את הסכום של 122,833 ₪ (נכון לשנת 2026) (120,000 ₪ בשנת 2025)."
+    },
+    {
+      "claim": "Esek za'ir (עסק זעיר) is anchored in Income Tax Ordinance Section 87ב / סעיף 87ב (added by Amendment 277): a 30% normative expense deduction is auto-credited; eligibility is barred if more than 25% of business income comes from a relative or former employer.",
+      "source_url": "https://www.kolzchut.org.il/he/עסק_זעיר",
+      "raw_snippet": "פקודת מס הכנסה - סעיפים 87ב-87ז. בעת הדיווח למס הכנסה, בעל עסק זעיר רשאי לקזז באופן אוטומטי סכום של 30% מהכנסותיו. ... יותר מ־25% מהכנסות העסק התקבלו מקרוב של העוסק או ממי שהיה מעסיקו."
+    },
+    {
+      "claim": "Section 45א (סעיף 45א) gives a 35% income-tax credit on self-employed pension deposits, structured as 5.5% of qualifying income (a base 5% plus an additional 0.5% slice when no disability-insurance deduction is taken). The 2026 qualifying-income ceiling is 232,800 NIS / 232,800 ש\"ח, so the 5% base slice caps the credit-eligible deposit at 5% of 232,800 = 11,640 NIS (11,640 ש\"ח) and the extra 0.5% slice adds 0.5% of 232,800 = 1,164 NIS (1,164 ש\"ח).",
+      "source_url": "https://www.supermarker.themarker.com/Gemel/TaxBenefitsForKupatGemelAndHishtalmut.aspx",
+      "raw_snippet": "בשנת 2026 תקרת ההכנסה השנתית המזכה לעמית מוטב עומדת על 232,800 ש\"ח. סעיף 45א לפקודת מס הכנסה מעניק 35% זיכוי מס הכנסה בהפקדה לקופת גמל. הפקדה של 16.5% מהרובד הראשון לצורך קבלת הטבות מס (11% ניכוי מס ו- 5.5% זיכוי מס)."
+    },
+    {
+      "claim": "The 0.5% additional Section 45א slice (yielding the 5.5% combined credit rate) applies when the self-employed person takes no disability-insurance deduction.",
+      "source_url": "https://pensuni.com/?p=1447",
+      "raw_snippet": "יחיד שלא נוכו לו סכומים בעד רכישת ביטוח מועדף מפני אבדן כושר עבודה... יזוכה ממס בשיעור של 35% מן הסכומים שהפקיד לקופת גמל לקצבה... עד לשיעור של 0.5% מהכנסתו"
+    },
+    {
+      "claim": "Section 47 (סעיף 47 / Section 47) gives an income deduction of 11% of qualifying income; the 2026 ceiling is 232,800 ש\"ח and the maximum deduction-eligible deposit for a preferred member (עמית מוטב) is 25,608 NIS / 25,608 ש\"ח. Combined with the 45א credit the deposit rate reaches 16.5%.",
+      "source_url": "https://pensuni.com/?p=1447",
+      "raw_snippet": "הפקדה המזכה לצורך הטבות מס ... 25,608 ש\"ח ... עמית מוטב ... ניכוי 11% וזיכוי 5.5%, סך הכל 16.5%."
+    },
+    {
+      "claim": "Mandatory self-employed pension 2026 rates: 4.45% on income up to half the average wage and 12.55% on the portion above it; the 2026 average wage is 13,769 NIS / 13,769 ש\"ח per month, giving annual employer-equivalent caps of 3,676 NIS (3,676 ש\"ח) on the lower bracket and 14,044 NIS (14,044 ש\"ח) total on the upper.",
+      "source_url": "https://pensuni.com/?p=2233",
+      "raw_snippet": "שיעור ההפקדה לפנסיית חובה לעצמאים עומד על 4.45% עד חצי מהשכר הממוצע במשק, ועל 12.55% מהחלק מעל מחצית השכר הממוצע במשק. בשנת 2026 השכר הממוצע במשק עומד על 13,769 ש\"ח ... כ-1,170 ש\"ח לחודש או 14,044 ש\"ח בשנה. תקרה למדרגה הנמוכה 3,676 ש\"ח."
+    },
+    {
+      "claim": "Bituach Leumi self-employed 2026 advances (BTL circular 1502): minimum monthly advance 265 NIS / 265 ש\"ח, maximum monthly advance 8,550 NIS / 8,550 ש\"ח.",
+      "source_url": "https://www.efraty.com/מידע-שימושי/ביטוח-לאומי/ביטוח-לאומי-לעצמאי-ת/",
+      "raw_snippet": "מקדמה חודשית מינימלית לעובד עצמאי 265 ₪. מקדמה חודשית מקסימלית לעובד עצמאי 8,550 ₪."
+    },
+    {
+      "claim": "Self-employed national-insurance minimum monthly income floor is 3,442 NIS / 3,442 ש\"ח; direct-debit (הוראת קבע) payers are debited on the 22nd of the month.",
+      "source_url": "https://www.kolzchut.org.il/he/דמי_ביטוח_לאומי_לעצמאי",
+      "raw_snippet": "עצמאים שהכנסתם נמוכה מ-3,442 ₪ בחודש (\"ההכנסה המזערית\") ישלמו כפי שמשלמים על הכנסה בסכום זה. ... התשלום יתבצע ב-22 בחודש עבור החודש הקודם."
+    },
+    {
+      "claim": "Income-tax advances (מקדמות) are due by the 15th of the month following the reporting period; paying online via the Tax Authority website extends the deadline to the 19th (until 18:30).",
+      "source_url": "https://www.kolzchut.org.il/he/תשלום_מקדמות_של_עסק_עצמאי_למס_הכנסה",
+      "raw_snippet": "לפי החוק יש לשלם את המקדמות ולדווח על מחזור העסקאות בכל 15 בחודש עבור הכנסות של החודש הקודם. אם תשלום המקדמות נעשה באמצעות אתר רשות המסים, ניתן לשלם את המקדמות עד ה-19 לחודש בשעה 18:30."
+    },
+    {
+      "claim": "PCN 874 detailed VAT report (דו\"ח מפורט / report 874) is mandatory for osek murshe with annual turnover above 500,000 NIS / 500,000 ש\"ח, filed by the 23rd of the following month.",
+      "source_url": "https://www.invoice4u.co.il/blog/דיווח-מפורט-למעמ-דיווח-874/",
+      "raw_snippet": "מחזור העסקאות לשנה עלה על 500,000 ₪ ... יש להגיש את הדוח עד ה-23 לחודש העוקב לתקופת הדיווח."
+    },
+    {
+      "claim": "Israeli VAT rate is 18% since 01.01.2025 (it was 17% until 31.12.2024).",
+      "source_url": "https://www.kolzchut.org.il/he/מס_ערך_מוסף_(מע%22מ)",
+      "raw_snippet": "סכום המע\"מ מחושב בשיעור קבוע ממחיר העסקה או הסחורה, והחל מיום 01.01.2025 הוא עומד על 18% ממחיר הרכישה או השירות."
+    },
+    {
+      "claim": "Israel Invoice allocation-number threshold: tax invoices above 10,000 NIS / 10,000 ש\"ח (before VAT) require an allocation number in 2026, dropping to above 5,000 NIS / 5,000 ש\"ח from 01.06.2026.",
+      "source_url": "https://www.gov.il/he/service/request-assignment-number-for-tax-invoice",
+      "raw_snippet": "החל מינואר 2026 חשבונית מס בסכום העולה על 10,000 ש\"ח (לפני מע\"מ) תחייב מספר הקצאה ממערכת רשות המסים; החל מ-1 ביוני 2026 הסף יורד ל-5,000 ש\"ח."
+    },
+    {
+      "claim": "Annual income-tax report Form 1301 / טופס 1301 for tax year 2025 filed in 2026 is due 31 May on paper and 30 June online; the separate osek patur annual turnover declaration to the VAT office is due 31 January.",
+      "source_url": "https://www.cpa.co.il/service/accounting-services/individual-taxation/1301-form/",
+      "raw_snippet": "דוח מקוון (טופס 1301) מוגש עד 30 ביוני של השנה העוקבת, ודוח שאינו מקוון עד 31 במאי. עבור שנת המס 2025: הגשה לא מקוונת (נייר) עד 31 במאי 2026, הגשה מקוונת עד 30 ביוני 2026. הצהרת המחזור השנתית של עוסק פטור למע\"מ נדרשת עד 31 בינואר."
+    },
+    {
+      "claim": "Worked Example 2 (osek patur threshold projection): at 85% of the 122,833 ceiling the freelancer has earned 104,400 NIS / 104,400 ש\"ח; an average monthly income of 11,600 NIS / 11,600 ש\"ח projects an annual total of 139,200 NIS / 139,200 ש\"ח, exceeding the threshold by 16,400 NIS / 16,400 ש\"ח. These are illustrative arithmetic figures (11,600 x 12 = 139,200; 139,200 - 122,833 ≈ 16,400; 104,400 ≈ 85% of 122,833), not external statutory values.",
+      "source_url": "https://www.kolzchut.org.il/he/עוסק_פטור",
+      "raw_snippet": "כדי להיות עוסק פטור אסור שמחזור העסקאות השנתי (ולא הרווח!) בעסק יעבור את הסכום של 122,833 ₪ (נכון לשנת 2026)."
+    },
+    {
+      "claim": "Worked Example 3 (year-end accountant package): illustrative cover-sheet figures of annual revenue 185,000 NIS / 185,000 ש\"ח, expenses 42,000 NIS / 42,000 ש\"ח, net 143,000 NIS / 143,000 ש\"ח (185,000 - 42,000 = 143,000). These are sample numbers, not external statutory values.",
+      "source_url": "https://www.kolzchut.org.il/he/עוסק_פטור",
+      "raw_snippet": "סך כל ההכנסות מהעסקאות שבוצעו בשנת המס."
+    },
+    {
+      "claim": "Osek patur threshold alert levels are illustrative percentages of the 122,833 ceiling: 70% ≈ 86,000 NIS / 86,000 ש\"ח (informational), 85% ≈ 104,400 NIS / 104,400 ש\"ח (warning), 95% ≈ 116,700 NIS / 116,700 ש\"ח (urgent). These follow from 0.70/0.85/0.95 x 122,833, not external statutory values.",
+      "source_url": "https://www.kolzchut.org.il/he/עוסק_פטור",
+      "raw_snippet": "אסור שמחזור העסקאות השנתי ... יעבור את הסכום של 122,833 ₪ (נכון לשנת 2026)."
+    },
+    {
+      "claim": "Reference-links table and utility/municipal portal URLs cited in the skill: https://www.gov.il/he/service/reporting-and-payment-2025-annual-tax-report-for-individuals ; https://www.gov.il/he/pages/pa280825-1 ; https://www.gov.il/he/service/request-assignment-number-for-tax-invoice ; https://www.btl.gov.il/Insurance/National%20Insurance/type_list/Self_Employed/Pages/rates.aspx ; https://www.iec.co.il ; https://www.bezeq.co.il ; https://www.partner.co.il ; https://www.hot.net.il ; https://www.tel-aviv.gov.il ; https://www.jerusalem.muni.il ; https://www.haifa.muni.il . These are official Israeli government, Bituach Leumi, and utility-provider portals referenced as verification sources and bill-collection portals. (Regex currency artifacts: \"NIS 6\" and \"NIS,\" are byte fragments of these prose sentences and carry no factual claim.)",
+      "source_url": "https://www.gov.il/he/service/reporting-and-payment-2025-annual-tax-report-for-individuals",
+      "raw_snippet": "Official Israeli portals referenced in the skill: https://www.gov.il/he/service/reporting-and-payment-2025-annual-tax-report-for-individuals https://www.gov.il/he/pages/pa280825-1 https://www.gov.il/he/service/request-assignment-number-for-tax-invoice https://www.btl.gov.il/Insurance/National%20Insurance/type_list/Self_Employed/Pages/rates.aspx https://www.iec.co.il https://www.bezeq.co.il https://www.partner.co.il https://www.hot.net.il https://www.tel-aviv.gov.il https://www.jerusalem.muni.il https://www.haifa.muni.il"
+    },
+    {
+      "claim": "Reference URLs for the kolzchut and esek-za'ir / pension pages cited in the Reference Links table.",
+      "source_url": "https://www.kolzchut.org.il/he/זיכוי_ממס_הכנסה_בגין_הפרשות_לביטוח_פנסיוני",
+      "raw_snippet": "Reference Links sources: https://www.kolzchut.org.il/he/עוסק_פטור https://www.kolzchut.org.il/he/עסק_זעיר https://www.kolzchut.org.il/he/זיכוי_ממס_הכנסה_בגין_הפרשות_לביטוח_פנסיוני"
+    }
+  ]
+}

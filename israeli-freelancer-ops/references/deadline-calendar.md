@@ -29,7 +29,7 @@ VAT reports are filed online via the Tax Authority portal (misim.gov.il) or thro
 
 ## Bituach Leumi (National Insurance), Self-Employed
 
-Self-employed freelancers pay Bituach Leumi monthly in advance (mkdamot). Payment is due on the **15th of each month** for the previous month.
+Self-employed freelancers pay Bituach Leumi monthly in advance (mkdamot). Payment is due on the **15th of each month** for the previous month. Payers on a direct-debit arrangement (horaat keva / הוראת קבע) get an automatic extension to the **22nd**. When setting up reminders for a direct-debit payer, use the 22nd, not the 15th.
 
 | Month | Payment Deadline |
 |-------|-----------------|
@@ -56,20 +56,22 @@ For tax year 2025 filed in 2026 (verify each year on the Tax Authority service p
 
 Freelancers may be required to pay income tax advances (mkdamot) throughout the year. The frequency is set in the Tax Authority assessment letter and determines the deadline:
 
+The standard deadline is the **15th of the month following the reporting period** for both monthly and bi-monthly filers. Paying online via the Tax Authority website extends the deadline to the **19th** (until 18:30). Bi-monthly payment requires prior approval in the mkdamot book.
+
 ### Monthly Filers
-Deadline: **15th of the month following the reporting month** (for example, January advance due February 15).
+Deadline: **15th of the month following the reporting month** (for example, January advance due February 15; the 19th if paid online).
 
 ### Bi-Monthly Filers
-Deadline: **19th of the month following the bi-monthly period.**
+Deadline: **15th of the month following the bi-monthly period** (the 19th if paid online).
 
-| Period | Payment Deadline |
-|--------|-----------------|
-| January-February | March 19 |
-| March-April | May 19 |
-| May-June | July 19 |
-| July-August | September 19 |
-| September-October | November 19 |
-| November-December | January 19 (following year) |
+| Period | Standard Deadline | Online Deadline |
+|--------|-------------------|-----------------|
+| January-February | March 15 | March 19 |
+| March-April | May 15 | May 19 |
+| May-June | July 15 | July 19 |
+| July-August | September 15 | September 19 |
+| September-October | November 15 | November 19 |
+| November-December | January 15 (following year) | January 19 (following year) |
 
 The advance amount is set by the Tax Authority based on the previous year's income. Payment coupons (shoverim) are sent at the beginning of the tax year. If a deadline falls on Shabbat or a holiday, it shifts to the next business day.
 

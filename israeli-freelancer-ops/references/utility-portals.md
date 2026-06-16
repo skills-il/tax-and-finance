@@ -53,7 +53,7 @@ Water billing varies by municipality. Common providers:
 | Haifa | Mei Carmel (מי כרמל) | meicarmel.co.il |
 | Be'er Sheva | Mei Sheva (מי שבע) | meisheva.co.il |
 
-- **Login method:** Varies — typically account number + ID or phone-based OTP
+- **Login method:** Varies, typically account number + ID or phone-based OTP
 - **Bill location:** Account/billing section
 - **Download format:** PDF (most providers)
 - **Automation notes:** Each water corporation has a different portal structure. When setting up automation for a new city, inspect the login flow and bill download path manually first.
@@ -69,7 +69,7 @@ Water billing varies by municipality. Common providers:
 - **Bill location:** Arnona payments section
 - **Download format:** PDF or printable page
 - **2FA:** May require gov.il (Rishui Meukhad) authentication
-- **Automation notes:** Arnona portals are typically simpler but vary significantly between municipalities. Some may not offer direct PDF download — in that case, use browser print-to-PDF.
+- **Automation notes:** Arnona portals are typically simpler but vary significantly between municipalities. Some may not offer direct PDF download, in that case, use browser print-to-PDF.
 
 ## General Automation Tips
 

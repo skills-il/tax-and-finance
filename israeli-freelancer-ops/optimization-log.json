@@ -1,0 +1,15 @@
+{
+  "cycles": [
+    {
+      "version": "1.3.1",
+      "date": "2026-06-16",
+      "lessons": [
+        "Resolved this cycle: esek za'ir governing section was cited as Income Tax Ordinance section 17א; corrected to section 87ב (added by Amendment 277). The surrounding facts (30% normative deduction, 25% related-party cap, shared osek-patur ceiling) were already correct.",
+        "Resolved this cycle: 2026 BL self-employed advance figures were stale (min 187, max 7,850, income floor 2,065); corrected to min 265, max 8,550, floor 3,442 per BTL circular 1502. Note: kolzchut pages still showed the prior-year values during review, so verify BL advance figures against the official annual BTL circular, not kolzchut.",
+        "Resolved this cycle: the mkdamot deadline was mis-stated as 'bi-monthly filers: 19th'. The 19th is actually the online-payment extension (standard due date is the 15th for all filers; paying via the Tax Authority website extends to the 19th, 18:30; bi-monthly requires prior approval). Fixed in SKILL body and deadline-calendar.md table.",
+        "Resolved this cycle: deadline-calendar.md omitted the BL direct-debit (horaat keva) extension to the 22nd that the SKILL body had; added it so the alert-setup reference matches the body.",
+        "Expert MINOR deferred (in scope, informational): osek patur threshold-crossing guidance (Step 5 / Example 2) should add the nuance that crossing the ceiling makes the dealer retroactively liable for VAT on the excess turnover for that year, not only prospectively. Next cycle: add a one-line note to Step 5."
+      ]
+    }
+  ]
+}
