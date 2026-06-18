@@ -1,0 +1,88 @@
+{
+  "skill_slug": "israeli-startup-investment-analyzer",
+  "schemaVersion": "1.0",
+  "generated_at": "2026-06-19",
+  "claims": [
+    {
+      "id": "iia-royalty-rate",
+      "claim": "Israel Innovation Authority conditional grants are repaid through royalties of 3% to 5% of annual revenues, continuing until repayment of the full grant plus annual interest (based on SOFR), and the funded R&D must be done in Israel.",
+      "claim_type": "percentage",
+      "source_url": "https://innovationisrael.org.il/en/royalties-intellectual-property/",
+      "source_fetched_at": "2026-06-19T00:00:00Z",
+      "raw_snippet": "Startups selected by the IIA investment committee receive a non-dilutive conditional grant, which is repaid only once the company generates revenue from the IIA-funded project. Repayment is made through royalties of 3%-5% of annual revenues, continuing until the repayment of the full grant amount, plus annual interest (based on SOFR). The baseline for receiving a grant form IIA is that the funded R&D is done in Israel.",
+      "confidence": "high"
+    },
+    {
+      "id": "iia-knowhow-transfer-approval",
+      "claim": "Selling or transferring IIA-funded know-how outside Israel is subject to repayment and requires the Innovation Authority's approval, with a minimum repayment equal to the total IIA investment plus annual interest minus royalties already paid.",
+      "claim_type": "law",
+      "source_url": "https://innovationisrael.org.il/en/royalties-intellectual-property/",
+      "source_fetched_at": "2026-06-19T00:00:00Z",
+      "raw_snippet": "The sale or transfer of know-how outside of Israel is subject to repayment and IIA's approval. The repayment is determined by a formula that takes into account the grant, the sale price and R&D expenses, minus the royalties paid (see the formula below)*. In any case, the minimum repayment will equal the total amount of the IIA investment + annual interest, minus the royalties paid.",
+      "confidence": "high"
+    },
+    {
+      "id": "iia-redemption-cap",
+      "claim": "The repayment for transferring IIA-funded know-how outside Israel is capped at 6 times the grants plus interest, reduced to 3 times if the acquirer keeps the company's R&D jobs in Israel for at least three years.",
+      "claim_type": "threshold",
+      "source_url": "https://innovationisrael.org.il/en/royalties-intellectual-property/",
+      "source_fetched_at": "2026-06-19T00:00:00Z",
+      "raw_snippet": "Repayment Cap: The repayment for the transfer of know-how outside of Israel is capped and will not exceed x6 the grants + interest. If the acquiring company commits to keep the company's R&D jobs in Israel for at least three years, the repayment amount will not exceed three times (3X) the grants + interest.",
+      "confidence": "high"
+    },
+    {
+      "id": "iia-manufacturing-abroad",
+      "claim": "Relocating manufacturing of IIA-funded know-how abroad still requires IIA approval, and the maximum increased royalty liability is 1.5 times the funding plus interest (reduced from the earlier 3 times); the IIA interest is 12-month Term SOFR plus 0.71513%.",
+      "claim_type": "threshold",
+      "source_url": "https://herzoglaw.co.il/en/news-and-insights/the-israel-innovation-authority-iia-new-rules-regarding-transfer-of-manufacturing-outside-of-israel-and-the-interest-rate-on-iia-funding/",
+      "source_fetched_at": "2026-06-19T00:00:00Z",
+      "raw_snippet": "The maximum increased liability is now 1.5X of the funding and interest instead of 3X. [...] There is no change in the requirement to obtain the approval of the IIA for transfer of manufacturing outside of Israel. [...] 12 months Term SOFR as published in the first trading day of each year by CME Group...with the addition of 0.71513%",
+      "confidence": "high"
+    },
+    {
+      "id": "section-102-capital-gains-track",
+      "claim": "Under the Section 102 (Hebrew: סעיף 102) capital gains track, the gain on the sale of employee shares is taxed at a flat 25% capital gains rate instead of marginal rates that can approach 50%, conditioned on appointment of a trustee and a mandatory 24-month holding period from the grant date.",
+      "claim_type": "percentage",
+      "source_url": "https://www.rnc.co.il/employee-stock-options-israel/",
+      "source_fetched_at": "2026-06-19T00:00:00Z",
+      "raw_snippet": "Its primary benefit is straightforward: the gain realized by an employee upon the sale of shares is taxed as a capital gain at a flat rate of 25%, rather than at their marginal income tax rate, which can approach 50%. [...] Qualifying for the 25% tax rate involves two non-negotiable pillars: the appointment of a trustee and a mandatory holding period. [...] The 24-Month Holding Period: From the date the options are granted, they must be held in trust for a minimum of 24 months.",
+      "confidence": "high"
+    },
+    {
+      "id": "individual-capital-gains-rate",
+      "claim": "Israeli individuals are taxed on a real capital gain at 25%, increased to 30% where the seller was a 10% or more shareholder, plus a 3% surtax on high annual income and an additional 2% surtax on income from capital sources above the threshold.",
+      "claim_type": "percentage",
+      "source_url": "https://taxsummaries.pwc.com/israel/individual/income-determination",
+      "source_fetched_at": "2026-06-19T00:00:00Z",
+      "raw_snippet": "The real gain, if any, realised upon the sale of shares purchased on or after 1 January 2003 is generally taxed at a rate of 25% for individuals. This rate is increased to 30% where the seller was a 10% or more shareholder at the date of sale or during any of the 12 months preceding the sale. [...] the portion of an individual's taxable annual income from capital sources (e.g. capital gains, real estate appreciation, dividends, interest, CPI linkage differentials, rental income, passive royalties) exceeding a certain threshold (ILS 721,560 in 2025) is subject to an additional surtax of 2%. [...] a 3% surtax on an individual's annual taxable income from all sources exceeding a certain threshold (ILS 721,560 in 2025).",
+      "confidence": "high"
+    },
+    {
+      "id": "corporate-tax-rate",
+      "claim": "Israel's standard corporate income tax rate is 23%, and a company's real capital gain is generally taxed at that same corporate tax rate.",
+      "claim_type": "percentage",
+      "source_url": "https://taxsummaries.pwc.com/israel/corporate/income-determination",
+      "source_fetched_at": "2026-06-19T00:00:00Z",
+      "raw_snippet": "The real gain is generally subject to tax at the corporate tax rate applicable in the year of the gain (23% in 2025).",
+      "confidence": "high"
+    },
+    {
+      "id": "preferred-technological-enterprise",
+      "claim": "A Preferred Technological Enterprise pays a reduced corporate tax rate of 7.5% on qualifying income in development area A and 12% elsewhere; a Preferred Enterprise pays 7.5% in development area A and 16% outside it.",
+      "claim_type": "percentage",
+      "source_url": "https://taxsummaries.pwc.com/israel/corporate/tax-credits-and-incentives",
+      "source_fetched_at": "2026-06-19T00:00:00Z",
+      "raw_snippet": "Under the PTE regime, reduced corporate tax rates of 7.5% for operations in development area A or 12% for operations outside of development area A shall apply on qualifying income. [...] The PFE corporate tax rate is 7.5% for operations in 'development area A' and 16% for operations outside development area A.",
+      "confidence": "high"
+    },
+    {
+      "id": "ita-safe-treatment",
+      "claim": "Under Israel Tax Authority guidelines (May 2023, updated 29 January 2025), a SAFE meeting the stated conditions is treated as an advance payment for shares, so the conversion into shares is not a taxable event and the issuing company has no withholding obligation at that time; the tax event arises only on the later sale of the converted shares.",
+      "claim_type": "law",
+      "source_url": "https://meitar.com/en/media/ita-guidelines-regarding-the-tax-implications-of-safe-investments/",
+      "source_fetched_at": "2026-06-19T00:00:00Z",
+      "raw_snippet": "The issuance of shares upon conversion of a SAFE will not be a taxable event, and the Israeli resident issuing company will not be subject to a withholding tax obligation at such time",
+      "confidence": "high"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "author": "skills-il",
+  "version": "1.0.0",
+  "category": "tax-and-finance",
+  "tags": {
+    "he": [
+      "סטארטאפ",
+      "השקעות",
+      "בדיקת-נאותות",
+      "הון-סיכון",
+      "טבלת-הון",
+      "ישראל"
+    ],
+    "en": [
+      "startup",
+      "investment",
+      "due-diligence",
+      "venture-capital",
+      "cap-table",
+      "israel"
+    ]
+  },
+  "display_name": {
+    "he": "מנתח השקעות בסטארטאפים ישראליים",
+    "en": "Israeli Startup Investment Analyzer"
+  },
+  "display_description": {
+    "he": "בונה תזכיר השקעה מסודר לעסקת סטארטאפ ישראלי: שוק ותזמון, הערכת צוות, בדיקת שפיות של המטריקות (ARR, צמיחה, שריפה, מסלול חיים), חישוב שווי ודילול, סיכונים מרכזיים, ורשימת שאלות בדיקת נאותות ממוקדת לשלוח ליזם. נבנה למשקיעי אנג'ל וקרנות הון סיכון שצריכים להעריך מצגת או חדר נתונים נכנס במהירות. החוזק האמיתי: הוא תופס מוקשים ישראליים שכלים גנריים מפספסים, כמו חבות תמלוגים והגבלת הוצאת קניין רוחני של רשות החדשנות שיכולות לכווץ או לחסום אקזיט, ה-Delaware flip, תוכנית אופציות 102 פגומה, והבשלת מייסדים. השתמשו כשמשקיע מבקש להעריך עסקה, לסנן דיל, לקרוא מצגת, לכתוב תזכיר השקעה, או להכין שאלות בדיקת נאותות. אל תשתמשו לצד היזם (israeli-startup-toolkit), למיסוי אופציות עובד (israeli-stock-options-tax), או לניתוח מניות בבורסה (tase-stock-analysis).",
+    "en": "Generate a structured investment memo for an Israeli startup deal: market and timing, team assessment, a sanity check of the metrics (ARR, growth, burn, runway), valuation and dilution math, key risks, and a focused list of diligence questions to send the founder. Built for angel and VC investors who need to evaluate an inbound deck or data room fast. The real edge: it catches Israel-specific landmines generic tools miss, like Innovation Authority royalty and IP-out restrictions that can shrink or block an exit, the Delaware flip, a broken Section 102 option plan, and founder vesting. Use when an investor asks to evaluate a deal, screen a startup, review a pitch deck, write an investment memo, or prepare diligence questions. Do NOT use for founder-side formation and fundraising (israeli-startup-toolkit), employee option taxation (israeli-stock-options-tax), or public-market stock analysis (tase-stock-analysis)."
+  },
+  "supported_agents": [
+    "claude-code",
+    "cursor",
+    "github-copilot",
+    "windsurf",
+    "opencode",
+    "codex",
+    "openclaw",
+    "antigravity",
+    "gemini-cli",
+    "chatgpt",
+    "claude-ai",
+    "claude-desktop",
+    "manus"
+  ],
+  "volatility": "legislative",
+  "authoritative_sources": [
+    { "url": "https://innovationisrael.org.il/en/royalties-intellectual-property/", "type": "regulator", "language": "en" },
+    { "url": "https://taxsummaries.pwc.com/israel/corporate/tax-credits-and-incentives", "type": "reference", "language": "en" },
+    { "url": "https://meitar.com/en/media/ita-guidelines-regarding-the-tax-implications-of-safe-investments/", "type": "firm-guide", "language": "en" }
+  ],
+  "domain_checklist_version": 1
+}
