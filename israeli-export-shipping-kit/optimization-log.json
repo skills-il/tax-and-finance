@@ -1,0 +1,25 @@
+{
+  "cycles": [
+    {
+      "version": "1.1.0",
+      "date": "2026-06-25",
+      "lessons": [
+        "PEM revised convention: re-check ratification status next cycle (de-dated this cycle).",
+        "Deferred MINOR: exporter registration מספר מייצא + 2025 signature-less customs power-of-attorney; EORI note for EU/UK buyers.",
+        "Deferred: HS classification deep guidance."
+      ]
+    },
+    {
+      "version": "1.1.0",
+      "date": "2026-06-26",
+      "round": "judge+expert fix-round (no version bump)",
+      "lessons": [
+        "CRITICAL fixed: EUR.1 validity was self-contradictory (4-10 months / 10-month rejection bullet). Israel applies 2012 PEM => EUR.1 valid 4 months from issue. The 10-month figure is the revised-PEM value Israel has not adopted; now labeled not-applicable-to-Israel. Source: Access2Markets PEM page 'The proof of origin is valid for a period of 4 months from the date of issue.'",
+        "MAJOR fixed: revised PEM date was wrong (said 'fully applies from January 1, 2026'). EU sources: revised PEM entered into force 1 January 2025; 2025 a transition year (2012 + 2023 rules in parallel through 31 Dec 2025); only revised rules apply from 1 Jan 2026 between ratifying parties. Israel stays on 2012. Mirrored in SKILL.md gotcha + SKILL_HE.md + pem-2026-rules.md.",
+        "JUDGE fixed: re-cited eur1-6000-threshold to Access2Markets PEM page ('any exporter, if the total value of the products does not exceed EUR 6,000.') and cifta-2019-4-years to CBSA D11-4-2 (literal in-force date + 'four years after the date on which it is signed') plus Canada Gazette SI/TR-77 corroboration. Both snippets WebFetch-verified literal.",
+        "Evidence-gate lesson: domain-checklist.md tripped verify-evidence.py via bare prose percentages (zero and thirty-five percent) and bare shaarolami + truncated Y864 URLs. Moved it OUT of references/ to /tmp/export-skill-build-artifacts/ as a build-time coverage contract (not shipped), rather than scheme-stripping every link.",
+        "Deferred MINOR (still open): customs-broker power-of-attorney (ייפוי כוח לסוכן מכס, signature-less/digital form); EORI number requirement for EU/UK consignees. Address on next substantive update."
+      ]
+    }
+  ]
+}

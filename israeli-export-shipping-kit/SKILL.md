@@ -52,7 +52,7 @@ Required fields (bilingual HE + EN is recommended for Israeli customs):
 - Declaration of origin (when claiming FTA preference, see Step 4)
 - Exporter signature, stamp, printed name
 
-Israeli exports are zero-rated for VAT: the standard rate is 18 percent, but exports carry a 0 percent rate. The invoice must still show the VAT line explicitly as 0 for the Tax Authority.
+Israeli exports are zero-rated for VAT: the standard rate is 18 percent, but exports carry a 0 percent rate. The invoice must still show the VAT line explicitly as 0 for the Tax Authority. The 0 percent rate under Section 30(a)(1) of the VAT Law is CONDITIONAL on proof that the goods actually left Israel: keep the customs export entry (רשימון יצוא) and the transport documents on file. Without that proof the Tax Authority can deny the 0 percent and assess VAT at 18 percent.
 
 ### Step 3: Build the packing list
 
@@ -66,12 +66,18 @@ Israeli exports are zero-rated for VAT: the standard rate is 18 percent, but exp
 
 | Destination | Document | Who signs | Notes |
 |-------------|----------|-----------|-------|
-| EU (27) | EUR.1 movement certificate | Israeli Customs stamps the form | Wet-ink signature required; for shipments up to 6000 euros an invoice declaration by any exporter is accepted |
+| EU (27) | EUR.1 movement certificate | Israeli Customs stamps the form | Wet-ink signature required; for shipments up to 6000 euros an invoice declaration by any exporter is accepted. Box 7 and every invoice declaration MUST state the place + postal code where origin processing happened (see Gotchas) |
 | EU (27), repeat shipper | Invoice declaration (any value) | Approved exporter | Approved-exporter status granted by Israeli Customs |
-| United Kingdom | EUR.1 movement certificate (or invoice declaration up to 6000 euros) | Israeli Customs / exporter | UK-Israel Trade and Partnership Agreement 2019 |
-| United States | US Origin Invoice Declaration | Exporter or manufacturer | Printed and signed on the commercial invoice; Green Form (Form A) retired January 10, 2018 |
+| United Kingdom | EUR.1 movement certificate (or invoice declaration up to 6000 euros) | Israeli Customs / exporter | UK-Israel Trade and Partnership Agreement, in force 1 January 2021 |
+| United States | US Origin Invoice Declaration | Exporter or manufacturer | Printed and signed on the commercial invoice; Green Form (Form A) retired January 10, 2018 (see `references/origin-declaration-template.md` for Israel-to-US wording) |
 | Canada | Form B239 (CIFTA CO) | Exporter | Modernized CIFTA in force September 1, 2019; certificate valid 4 years |
-| EFTA, Mercosur | EUR.1 movement certificate | Israeli Customs | Same EUR.1 form, different tick-box |
+| EFTA, Mercosur, Turkey, Ukraine | EUR.1 movement certificate | Israeli Customs | Same EUR.1 form, different tick-box |
+| UAE | EUR.1 / origin declaration per the CEPA protocol | Israeli Customs / exporter | UAE-Israel CEPA in force 1 April 2023 |
+| South Korea | Origin declaration per the KIFTA protocol | Exporter | Korea-Israel FTA (KIFTA) in force 1 January 2023 |
+| Vietnam | Origin proof per the VIFTA protocol | Exporter / Israeli Customs | Vietnam-Israel FTA (VIFTA) in force 17 November 2024 |
+| Guatemala, Panama, Colombia, Mexico, Jordan | Origin proof per each bilateral protocol | Per the agreement | Israel also has in-force FTAs with these countries (Guatemala 1 March 2024) |
+
+Israel has free trade agreements in force with the EU, USA, EFTA, Canada (CIFTA), Mercosur, UK, Turkey, Ukraine, Jordan, Mexico, Panama, Colombia, Guatemala, South Korea (KIFTA), the UAE (CEPA) and Vietnam (VIFTA). Check the exact origin-document type and rules of origin in the specific agreement before shipping; the table above lists the most common ones.
 
 See `references/eur1-application-guide.md` for the EUR.1 fields and pitfalls, and `references/origin-declaration-template.md` for invoice declaration wording.
 
@@ -161,8 +167,9 @@ Actions:
 ## Gotchas
 
 - Agents confuse Incoterm letters. FOB is sea-only; use FCA for container shipments. CIF is sea-only; use CIP for air or multimodal.
-- Israel has NOT ratified the revised PEM Convention (in force from 1 January 2026 between the EU and ratifying PEM parties). Israeli exporters and EU importers must continue using the 2012 rules and the same EUR.1 form they used before.
+- Israel has NOT ratified the revised PEM Convention (in force from 1 January 2025 between the EU and ratifying PEM parties; 2025 a transition year, full application 1 January 2026). Israeli exporters and EU importers must continue using the 2012 rules and the same EUR.1 form they used before. This also means an Israeli EUR.1 is valid for 4 months from issuance (the 2012 rule), NOT the revised-PEM 10-month window.
 - EUR-MED certificates are retired under the revised PEM regime and are no longer issued. Never request one.
+- EU-Israel Technical Arrangement: to win EU preference, EUR.1 Box 7 and every invoice declaration MUST state the name of the city, village or industrial zone AND the postal code where the origin-conferring processing took place. Goods produced in Israeli settlements in territories brought under Israeli administration since June 1967 are NOT entitled to preferential treatment. Since 16 May 2023 the EU enforces this with import code Y864. A EUR.1 or invoice declaration missing the place + postal code is rejected at the EU border. See `references/eur1-application-guide.md`.
 - An electronic signature on an EUR.1 is rejected by Israeli Customs. Plan time for the original stamped form to travel with the shipment.
 - The 6000 euros threshold for an invoice declaration applies to the total invoice value, not per line. A 5999 euros shipment can skip EUR.1; a 6001 euros one cannot (unless the exporter is approved).
 - US-Israel FTA requires a SIGNED declaration on the commercial invoice, not a separate certificate. The old hard-copy Green Form (Form A) has not been used since January 10, 2018.
@@ -177,6 +184,8 @@ Actions:
 | US-Israel CBP page | https://www.cbp.gov/trade/free-trade-agreements/israel/certificate-origin-requirements | US importer-side compliance |
 | CIFTA rules of origin | https://www.cbsa-asfc.gc.ca/publications/dm-md/d11/d11-5-6-eng.html | Form B239, 4-year validity, modernized 2019 |
 | EU-Israel trade page | https://policy.trade.ec.europa.eu/eu-trade-relationships-country-and-region/countries-and-regions/israel_en | EU-Israel Association Agreement, PEM status |
+| EU code Y864 (Access2Markets) | https://trade.ec.europa.eu/access-to-markets/en/news/new-code-y864-goods-imported-eu-preferential-origin-israel-16-may-2023 | EU-Israel Technical Arrangement, place + postal code, 1967 territories, code Y864 |
+| Israel FTAs in force (overview) | https://en.wikipedia.org/wiki/Free_trade_agreements_of_Israel | Full list of Israel's FTAs and entry-into-force dates |
 | Revised PEM (Access2Markets) | https://trade.ec.europa.eu/access-to-markets/en/content/rules-origin-revised-pan-euro-mediterranean-convention | Israel-unratified status, EUR-MED retirement |
 | UK-Israel TPA | https://www.gov.uk/guidance/summary-of-the-uk-israel-trade-and-partnership-agreement | Post-Brexit UK preference, EUR.1 acceptance |
 | Israel Tax Authority | https://www.gov.il/en/departments/israel_tax_authority | Zero-rated export VAT rules |
