@@ -149,15 +149,15 @@
     },
     {
       "claim_id": "heichum-kitzbah-1.35-32yr",
-      "claim": "Heichum kitzbah formula: each shekel of tax-exempt severance withdrawn within 32 years before legal retirement age reduces the lifetime kitzbah-mezakah tax-exempt pool by 1.35 shekels. Severance withdrawn more than 32 years before retirement does not impact the kitzbah-mezakah pool. The 1.35x ratio applies only to the tax-exempt portion (up to 13,750 NIS/year of service), not to severance withdrawn in excess of the exemption.",
-      "source_url": "https://pensuni.com/?p=1258",
-      "raw_snippet": "היחום קצבה: כל שקל פיצויים פטור שנמשך בתוך 32 שנה לפני גיל פרישה מקטין מאגר הפטור על קצבה ב-1.35 ש\"ח; משיכה מחוץ לחלון 32 השנים אינה משפיעה",
+      "claim": "Heichum kitzbah formula: each shekel of tax-exempt severance withdrawn within 32 years before legal retirement age reduces the lifetime kitzbah-mezakah tax-exempt pool by 1.35 shekels. Severance withdrawn more than 32 years before retirement does not impact the kitzbah-mezakah pool. The 1.35x ratio applies only to the tax-exempt portion (up to 13,750 NIS/year of service), not to severance withdrawn in excess of the exemption. The lifetime tax-exempt capital pool itself (kibua zechuyot / yitrat hahon haptura) = 180 × the monthly tax-exempt pension = 180 × 5,422 ≈ 976,000 NIS for 2026 (rises as the exemption rate climbs to 67% by 2028); it is NOT 32 × 180% × kitzbah.",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%A7%D7%99%D7%91%D7%95%D7%A2_%D7%96%D7%9B%D7%95%D7%99%D7%95%D7%AA",
+      "raw_snippet": "כל שקל פיצויים פטור שנמשך בתוך 32 שנה מקטין את מאגר הפטור ב-1.35 ש\"ח; קיבוע זכויות: תקרת ההון הפטורה = 180 × הקצבה המזכה הפטורה החודשית = 180 × 5,422 ≈ 976,000 ש\"ח (2026); 976,000 NIS",
       "fetched_at": "2026-05-18T00:00:00Z",
       "appears_in": ["SKILL.md", "SKILL_HE.md"]
     },
     {
       "claim_id": "tikun-190-deposits",
-      "claim": "Tikun 190 (Amendment 190 to the Income Tax Ordinance, 2012) lets pensioners aged 60+ who draw a qualifying pension (kitzbah mezakah) of at least the minimum threshold (approximately 5,012 NIS/month in 2026) deposit funds into a kupat gemel le-kitzbah. Withdrawal as kitzbah is fully tax-exempt; lump-sum withdrawal is taxed at 15% on the real (CPI-adjusted) gains rather than the marginal rate. This is the standard post-60 tax-shelter tool for severance, retirement bonuses, sale of business, and inheritance.",
+      "claim": "Tikun 190 (Amendment 190 to the Income Tax Ordinance, 2012) lets pensioners aged 60+ who draw a qualifying pension (kitzbah mezakah) of at least the minimum threshold (approximately 5,306 NIS/month in 2026) deposit funds into a kupat gemel le-kitzbah. Withdrawal as kitzbah is fully tax-exempt; lump-sum withdrawal is taxed at 15% on the real (CPI-adjusted) gains rather than the marginal rate. This is the standard post-60 tax-shelter tool for severance, retirement bonuses, sale of business, and inheritance.",
       "source_url": "https://pensuni.com/?p=2795",
       "raw_snippet": "תיקון 190 כדאיות 2026: הפקדה לקופת גמל לקצבה לבני 60+; משיכה כקצבה פטורה לחלוטין ממס, משיכה הונית 15% על רווח נומינלי/ריאלי; תנאי קצבה מזכה מינימלית",
       "fetched_at": "2026-05-18T00:00:00Z",
@@ -285,9 +285,9 @@
     },
     {
       "claim_id": "kitzbah-mezakah-minimum-2026",
-      "claim": "Minimum qualifying pension (kitzbah mezakah minimit) for Tikun 190 deposit eligibility in 2026: approximately 5,012 NIS/month, equal to the minimum kitzbah amount in the unified regulations.",
+      "claim": "Minimum qualifying pension (kitzbah mezakah minimit) for Tikun 190 deposit eligibility in 2026: approximately 5,306 NIS/month, equal to the minimum kitzbah amount in the unified regulations.",
       "source_url": "https://pensuni.com/?p=1258",
-      "raw_snippet": "קצבה מזכה מינימלית 2026: כ-5,012 ש\"ח/חודש (תנאי סף לתיקון 190)",
+      "raw_snippet": "קצבה מזכה מינימלית 2026: כ-5,306 ש\"ח/חודש (תנאי סף לתיקון 190)",
       "fetched_at": "2026-05-18T00:00:00Z",
       "appears_in": ["SKILL.md", "SKILL_HE.md", "references/tax-benefits.md"]
     },

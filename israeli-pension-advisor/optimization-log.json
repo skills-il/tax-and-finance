@@ -1,0 +1,15 @@
+{
+  "cycles": [
+    {
+      "version": "2.2.1",
+      "date": "2026-06-29",
+      "lessons": [
+        "STALE fix: Tikun 190 minimum qualifying-pension (kitzbah mezakah) threshold was the ~2024/2025 value 5,012 shekel; the 2026 CPI-bumped value is 5,306 shekel. Updated in 7 spots (SKILL.md Step 7 + Example 4, SKILL_HE mirrors, references/tax-benefits.md, references/pension-fund-types.md, evidence.json). Example 4's conclusion (8,000 > threshold) was unaffected. This threshold CPI-bumps yearly, re-verify each cycle via pensuni 2026 table.",
+        "VERIFIED OK for 2026 (no change, impressively well-maintained): average wage 13,769, mandatory rates 6%/6.5%/6%(8.33%), comprehensive-fund deposit ceiling 5,645.29 (salary base 27,538), kitzbah mezakah ceiling 9,430, pension exemption 57.5% + tax-free 5,422, severance exempt 13,750/yr, keren hishtalmut cap 15,712, self-employed hishtalmut 13,203/20,566, employee pension credit qualifying salary 9,700, self-employed pension benefits 38,412 combined / 232,800 ceiling, self-employed mandatory brackets (4.45%/12.55%, ~14,044 max), IRA cap 83,641. The skill correctly does NOT conflate the several distinct pension ceilings (a real strength).",
+        "CRITICAL fix (expert-found, pre-existing): the lifetime tax-exempt capital pool (kibua zechuyot / yitrat hahon haptura) was given as '32 years × 180% × kitzbah mezakah ≈ 1.5M NIS' in SKILL.md, SKILL_HE.md, references/tax-benefits.md. That mangles the formula (conflates the 32-year heichum lookback window with the fixed coefficient 180, writes 180% instead of 180, drops the exemption rate) AND overstates the pool by ~50%. Correct: pool = 180 × the monthly tax-exempt pension = 180 × (57.5% × 9,430) = 180 × 5,422 ≈ 976,000 NIS for 2026 (grows toward 67% rate by 2028). Fixed in all 3 files. A retiree trusting the inflated 1.5M would over-withdraw tax-exempt severance and erode the exemption.",
+        "CARRY (MINOR, expert): the 5,306 Tikun-190 eligibility threshold is labelled 'kitzbah mezakah minimum' but the legally precise term is 'kitzbah mizirit' (קצבה מזערית / minimum pension), distinct from the 'kitzbah mezakah' qualifying ceiling (9,430). Number and guidance are correct; rename for precision next cycle.",
+        "CARRY (FYI, not cited as numbers so nothing stale): nekudat zikui monthly value (~242 in 2026) and income-tax-bracket/surtax thresholds are referenced only generically; if specific numbers are ever added, they CPI-bump annually and the 2025 expanded surtax on capital income would need noting."
+      ]
+    }
+  ]
+}

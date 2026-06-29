@@ -58,7 +58,7 @@
 ### Tikun 190 Deposits (post-60 tax shelter)
 The other half of Amendment 190: lets pensioners 60+ with a qualifying kitzbah deposit any amount into a kupat gemel le-kitzbah with dramatic tax improvement.
 
-- **Eligibility:** Age 60+ AND already drawing kitzbah of at least the minimum threshold (~5,012 NIS/month in 2026)
+- **Eligibility:** Age 60+ AND already drawing kitzbah of at least the minimum threshold (~5,306 NIS/month in 2026)
 - **No annual or lifetime deposit cap**
 - **Withdrawal as monthly kitzbah:** Fully exempt from income tax for life
 - **Withdrawal as lump sum:** 15% tax on the real (CPI-adjusted) GAIN only; principal not taxed
@@ -70,7 +70,7 @@ The other half of Amendment 190: lets pensioners 60+ with a qualifying kitzbah d
 ### Heichum Kitzbah (the other use of "Tikun 190")
 - The same 2012 amendment introduced the heichum kitzbah mechanism that links severance withdrawal to the future kitzbah-mezakah exemption pool
 - Each shekel of tax-exempt severance withdrawn within 32 years before retirement reduces the lifetime kitzbah-mezakah pool by 1.35 shekels
-- Lifetime kitzbah-mezakah pool ≈ 32 years × 180% × kitzbah mezakah (currently ~1.5M NIS for a 2026 retiree)
+- Lifetime tax-exempt capital pool (kibua zechuyot) = 180 times the monthly tax-exempt pension = 180 × 5,422 ≈ 976,000 NIS for a 2026 retiree (grows with the exemption rate toward 67% by 2028)
 - Withdrawals outside the 32-year window have no impact
 
 ## Section 14 (Severance Arrangement, Severance Pay Law 1963)

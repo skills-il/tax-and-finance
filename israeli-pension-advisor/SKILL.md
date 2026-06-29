@@ -92,7 +92,7 @@ The most popular Israeli savings vehicle:
 - 2026 exemption rate: 57.5%; rising to 62.5% in 2027 and 67% from 2028 (schedule on track as of 2026)
 - Tax-free pension amount: up to 5,422 NIS/month (2026)
 - Qualifying pension threshold (kitzbah mezakah): 9,430 NIS/month
-- Lifetime kitzbah-mezakah tax-exempt pool ≈ 32 years × 180% × kitzbah mezakah, currently roughly 1.5M NIS for a worker retiring in 2026. Eaten by severance withdrawn under heichum kitzbah (see Step 6).
+- Lifetime tax-exempt capital pool (kibua zechuyot / yitrat hahon haptura) = 180 times the monthly tax-exempt pension = 180 × (57.5% × 9,430) = 180 × 5,422 ≈ 976,000 NIS for a worker retiring in 2026 (it grows as the exemption rate climbs toward 67% by 2028). Eaten by severance withdrawn under heichum kitzbah at 1.35x per shekel (see Step 6).
 
 ### Step 5: Withdrawal Rules
 - **Pension:** Men age 67; women in 2026 age 63 years 3 months, rising 3-4 months per year to 65 by 2032 per the Retirement Age Amendment (2021). Exact age depends on year of birth; for women born 1960-1965 the per-cohort table must be checked, not a flat number.
@@ -135,7 +135,7 @@ The 2.33% gap arises only in case 1 if the employer chose to contribute the mini
 3. **Prisat pituyim (spreading)** -- Spread severance taxation across up to 6 tax years to lower the marginal rate. Rule of thumb: 1 spread-year per 4 years of seniority, capped at 6. Only the taxable portion (above the petur ceiling) is spread; backward spreading exists but is rare and requires specific approval.
 
 ### Step 7: Tikun 190 Deposits (the post-60 tax shelter)
-Tikun 190 of the Income Tax Ordinance (2012) lets people aged 60+ who already draw a qualifying pension (kitzbah mezakah) at least the minimum threshold (approximately 5,012 NIS/month in 2026) deposit lump sums into a kupat gemel le-kitzbah with a dramatically improved tax treatment.
+Tikun 190 of the Income Tax Ordinance (2012) lets people aged 60+ who already draw a qualifying pension (kitzbah mezakah) at least the minimum threshold (approximately 5,306 NIS/month in 2026) deposit lump sums into a kupat gemel le-kitzbah with a dramatically improved tax treatment.
 
 **Why it matters:** Tikun 190 deposits are THE standard tax-shelter tool at retirement age for severance, retirement bonuses, sale of a business, inheritance, and surplus liquid savings. A retiree depositing 1M NIS of an inheritance into a kupat gemel le-kitzbah pays 15% real-gain tax on lump-sum withdrawal (vs marginal up to 47% in a regular brokerage account), and pays zero tax if the deposit is drawn down as a monthly kitzbah.
 
@@ -194,7 +194,7 @@ Result: Walk through Form 161 (new 2024 unified form -- the employer files Part 
 
 ### Example 4: Approaching Retirement (Tikun 190)
 User says: "I'm 64, I just sold my business and have 1.5M NIS sitting in the bank. My private pension is 8,000 NIS/month. What should I do with the cash?"
-Result: Confirm 8,000 NIS pension exceeds the kitzbah-mezakah minimum (~5,012 NIS) and the user is over 60, both Tikun 190 prerequisites met. Explain deposit into a kupat gemel le-kitzbah: drawn as kitzbah, the monthly payment is fully exempt from income tax for life; drawn as lump sum, only the real gain is taxed at 15% (vs marginal up to 47% in a brokerage account). Estate-planning effect: funds pass to beneficiaries under fund rules, not probate. Strongly recommend a yoetz pensioni for a deposit at this size, especially if any beneficiary has US tax exposure.
+Result: Confirm 8,000 NIS pension exceeds the kitzbah-mezakah minimum (~5,306 NIS) and the user is over 60, both Tikun 190 prerequisites met. Explain deposit into a kupat gemel le-kitzbah: drawn as kitzbah, the monthly payment is fully exempt from income tax for life; drawn as lump sum, only the real gain is taxed at 15% (vs marginal up to 47% in a brokerage account). Estate-planning effect: funds pass to beneficiaries under fund rules, not probate. Strongly recommend a yoetz pensioni for a deposit at this size, especially if any beneficiary has US tax exposure.
 
 ### Example 5: Divorce
 User says: "We're divorcing. My ex has a much bigger pension than mine. How is it split?"

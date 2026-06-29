@@ -69,7 +69,7 @@
 - Withdrawal: at marginal rate if drawn before age 60; if drawn as kitzbah at 60+ with qualifying pension prerequisite, eligible for the 15% real-gain treatment
 
 ## Kupat Gemel le-Kitzbah (Tikun 190 vehicle)
-- **Eligibility:** Age 60+ and already drawing a kitzbah of at least the minimum threshold (approximately 5,012 NIS/month in 2026)
+- **Eligibility:** Age 60+ and already drawing a kitzbah of at least the minimum threshold (approximately 5,306 NIS/month in 2026)
 - **No deposit cap** (annual or lifetime)
 - **Withdrawal as kitzbah:** Fully exempt from income tax for life
 - **Withdrawal as lump sum:** 15% tax on the real (CPI-adjusted) gain only
