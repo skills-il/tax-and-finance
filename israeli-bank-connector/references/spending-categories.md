@@ -18,7 +18,7 @@ Major Israeli supermarket chains:
 - Yochananof
 - Osher Ad
 - Tiv Taam
-- Mega / Mega Bool
+- Yochananof, Osher Ad, Tiv Taam
 
 ### Transportation (Tahaburah)
 - Rav-Kav (public transit card)

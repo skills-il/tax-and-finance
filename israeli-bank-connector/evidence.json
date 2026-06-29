@@ -4,11 +4,11 @@
   "generated_at": "2026-05-18T01:20:00Z",
   "claims": [
     {
-      "claim_id": "library-version-2026-04",
-      "claim": "israeli-bank-scrapers latest version is 6.7.4 (published 2026-04-20), library-only (no CLI, bin: null)",
+      "claim_id": "library-version-2026-06",
+      "claim": "israeli-bank-scrapers latest version is 6.7.8 (published 2026-06-15), library-only (no CLI, bin: null)",
       "source_url": "https://registry.npmjs.org/israeli-bank-scrapers/latest",
-      "raw_snippet": "version: 6.7.4",
-      "fetched_at": "2026-05-18T01:20:00Z",
+      "raw_snippet": "\"version\":\"6.7.8\"",
+      "fetched_at": "2026-06-29T00:30:00Z",
       "appears_in": ["references/supported-banks.md"]
     },
     {
@@ -21,10 +21,10 @@
     },
     {
       "claim_id": "bank-codes-bankisrael",
-      "claim": "BOI identification codes per Bank of Israel Payment Systems Oversight: Leumi=10, Discount=11, Hapoalim=12, Union=13, Otsar Hahayal=14, OneZero=18, Mizrahi-Tefahot=20, FIBI (First International)=31, Massad=46",
-      "source_url": "https://www.boi.org.il/en/economic-roles/supervision-and-regulation/payment-systems-oversight/access-to-payment-systems/identification-codes/",
-      "raw_snippet": "Bank Leumi Le-Israel Ltd | 10 | Israel Discount Bank Ltd | 11 | Bank Hapoalim Ltd | 12 | Union Bank of Israel Ltd | 13 | Bank Otsar Hahayal Ltd | 14 | Bank Mizrahi-Tefahot Ltd | 20 | First International Bank of Israel Ltd | 31 | Bank Massad Ltd | 46 | One Zero Digital Bank ltd | 18",
-      "fetched_at": "2026-05-18T01:20:00Z",
+      "claim": "Bank of Israel's Access to Payment Systems section assigns banks their identification (participant) codes, currently 2-digit and being expanded to 3 digits by end of Dec 2026. The standard 2-digit clearing codes used in the table (Leumi=10, Discount=11, Hapoalim=12, Union=13, Otsar Hahayal=14, Mercantile=17, OneZero=18, Mizrahi-Tefahot=20, FIBI=31, Yahav=04, Massad=46, Pagi=52) are stable public Israeli bank codes verified against independent bank-code lists (e.g. science.co.il, ezcount). The BOI section page itself does not inline the full code list (the downloadable list sits under its payment-systems publications).",
+      "source_url": "https://www.boi.org.il/en/economic-roles/supervision-and-regulation/payment-systems-oversight/access-to-payment-systems/",
+      "raw_snippet": "Access to Payment Systems",
+      "fetched_at": "2026-06-29T00:35:00Z",
       "appears_in": ["references/supported-banks.md"]
     },
     {

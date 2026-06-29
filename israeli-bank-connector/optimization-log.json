@@ -1,0 +1,14 @@
+{
+  "cycles": [
+    {
+      "version": "1.2.2",
+      "date": "2026-06-29",
+      "lessons": [
+        "STALE pin bumped: israeli-bank-scrapers 6.7.4 (2026-04-20) -> 6.7.8 (2026-06-15). Only point-release bug fixes since review (6.7.5 leumi, 6.7.6 yahav, 6.7.7 visa-cal, 6.7.8 discount), NO breaking change and NO CompanyTypes enum change. The >=6.7.x pin stays valid; just refresh the 'current release' figure each cycle.",
+        "VERIFIED OK (no change): no fabricated CLI (the package is library-only, bin:null) and the prior agorot/OAuth-class traps are absent; the CompanyTypes enum exactly matches the skill's 18 entries (14 banks + 4 card cos), BOI codes consistent, both MCP wrappers live.",
+        "Softened il-bank-mcp (glekner): noted it is less actively maintained (last push mid-2025) and pins an older scraper (6.1.4); israeli-bank-mcp (mottibec) is the more current wrapper.",
+        "Stripped pervasive PRE-EXISTING em-dashes from the touched files (SKILL.md, SKILL_HE.md, references/supported-banks.md): table-cell BOI 'no code' em-dash -> hyphen, prose ' - ' separators -> commas. The em-dash ban applies to every file touched in an update, not just edited lines."
+      ]
+    }
+  ]
+}

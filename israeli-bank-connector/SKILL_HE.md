@@ -59,11 +59,11 @@
 ## משאבים מצורפים
 
 ### סקריפטים
-- `scripts/categorize_transactions.py` — מסווג תנועות בנקאיות ישראליות לפי קטגוריות הוצאה באמצעות התאמת דפוסי בתי עסק ישראליים (שופרסל, רמי לוי, רב-קו ועוד). מקבל JSON של תנועות ומפיק סיכומי הוצאות מסווגים. הרצה: `python scripts/categorize_transactions.py --example` לדוגמה, או `python scripts/categorize_transactions.py --json transactions.json` לנתונים אמיתיים. הוסיפו `--output-json` לפלט בפורמט JSON.
+- `scripts/categorize_transactions.py`, מסווג תנועות בנקאיות ישראליות לפי קטגוריות הוצאה באמצעות התאמת דפוסי בתי עסק ישראליים (שופרסל, רמי לוי, רב-קו ועוד). מקבל JSON של תנועות ומפיק סיכומי הוצאות מסווגים. הרצה: `python scripts/categorize_transactions.py --example` לדוגמה, או `python scripts/categorize_transactions.py --json transactions.json` לנתונים אמיתיים. הוסיפו `--output-json` לפלט בפורמט JSON.
 
 ### חומרי עזר
-- `references/spending-categories.md` — הגדרות קטגוריות הוצאה ישראליות עם מונחים בעברית ודוגמאות לבתי עסק נפוצים בכל קטגוריה (דיור, מזון, תחבורה, שירותים ועוד). היעזרו בקובץ זה בעת התאמת כללי סיווג או הסבר קטגוריות למשתמשים.
-- `references/supported-banks.md` — רשימה מלאה של 14 בנקים (הפועלים, לאומי, דיסקונט, מרכנתיל, מזרחי-טפחות, הבינלאומי, אוצר החייל, פאג"י, איגוד, יהב, מסד, OneZero, בהצדעה, ביחד בשבילה) ו-4 חברות כרטיסי אשראי (ויזה כאל, מקס, ישראכרט, אמקס) על פי ה-`CompanyTypes` של ספריית `israeli-bank-scrapers`, עם קודי בנק (בנק ישראל), מזהי scraper בספרייה, והערות כיסוי של שרתי MCP. היעזרו בקובץ בעת הגדרת חיבורים או טיפול בחשבונות חסרים.
+- `references/spending-categories.md`, הגדרות קטגוריות הוצאה ישראליות עם מונחים בעברית ודוגמאות לבתי עסק נפוצים בכל קטגוריה (דיור, מזון, תחבורה, שירותים ועוד). היעזרו בקובץ זה בעת התאמת כללי סיווג או הסבר קטגוריות למשתמשים.
+- `references/supported-banks.md`, רשימה מלאה של 14 בנקים (הפועלים, לאומי, דיסקונט, מרכנתיל, מזרחי-טפחות, הבינלאומי, אוצר החייל, פאג"י, איגוד, יהב, מסד, OneZero, בהצדעה, ביחד בשבילה) ו-4 חברות כרטיסי אשראי (ויזה כאל, מקס, ישראכרט, אמקס) על פי ה-`CompanyTypes` של ספריית `israeli-bank-scrapers`, עם קודי בנק (בנק ישראל), מזהי scraper בספרייה, והערות כיסוי של שרתי MCP. היעזרו בקובץ בעת הגדרת חיבורים או טיפול בחשבונות חסרים.
 
 ## קישורי עזר
 
@@ -71,9 +71,9 @@
 |------|-------|---------|
 | ספריית israeli-bank-scrapers | https://github.com/eshaham/israeli-bank-scrapers | רשימת הבנקים הנתמכים, שינויי שבירה, מגבלות הסקרייפר |
 | israeli-bank-mcp (Motti Bechhofer) | https://github.com/mottibec/israeli-bank-mcp | עטיפת MCP מקיפה ביותר, התקנה והגדרות |
-| il-bank-mcp (Gilad Lekner) | https://github.com/glekner/il-bank-mcp | MCP מבוסס Docker עם ניתוח הוצאות מובנה ואחסון SQLite |
+| il-bank-mcp (Gilad Lekner) | https://github.com/glekner/il-bank-mcp | MCP מבוסס Docker עם ניתוח הוצאות מובנה ואחסון SQLite (מתוחזק פחות, עודכן לאחרונה באמצע 2025; נעוץ לגרסת scraper ישנה יותר) |
 | בנק ישראל: בנקאות ותשלומים לצרכן | https://www.boi.org.il/information/bank-paymnts/ | מידע צרכני, פניות ותלונות לפיקוח על הבנקים |
-| בנק ישראל: קודי זיהוי בנקים | https://www.boi.org.il/en/economic-roles/supervision-and-regulation/payment-systems-oversight/access-to-payment-systems/identification-codes/ | רשימת קודי הזיהוי הקאנונית של בנק ישראל (באנגלית) |
+| בנק ישראל: גישה למערכות התשלומים | https://www.boi.org.il/en/economic-roles/supervision-and-regulation/payment-systems-oversight/access-to-payment-systems/ | המדור בבנק ישראל שמקצה קודי זיהוי (משתתף) לבנקים; הקודים מורחבים משתי ספרות לשלוש עד סוף 2026 |
 
 ## מלכודות נפוצות
 - רגולציית הבנקאות הפתוחה בישראל מבוססת על מסגרת Berlin Group NextGenPSD2 אך מותאמת לישראל עם לוח זמנים ויישום ייחודיים. הפריסה המלאה בכל הבנקים עדיין בתהליך (נכון ל-2026). סוכנים עלולים להפנות ל-endpoints של UK Open Banking או PSD2 גנרי שלא קיימים בישראל. בפועל, israeli-bank-scrapers משתמש בגרידת דפדפן ולא ב-APIs רשמיים של בנקאות פתוחה.
@@ -86,7 +86,7 @@
 ## פתרון בעיות
 
 ### שגיאה: "2FA required"
-סיבה: בנקים ישראליים דורשים אימות דו-שלבי
+סיבה: כניסת הבנק עשויה לדרוש אימות דו-שלבי
 פתרון: השלימו את האימות הדו-שלבי דרך האפליקציה/SMS של הבנק כששרת ה-MCP מבקש זאת. מדובר בהגדרה חד-פעמית לכל סשן.
 
 ### שגיאה: "Scraper timeout"

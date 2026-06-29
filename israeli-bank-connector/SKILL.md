@@ -66,11 +66,11 @@ Result: Filtered and categorized business transactions with VAT amounts, ready f
 ## Bundled Resources
 
 ### Scripts
-- `scripts/categorize_transactions.py` — Categorizes Israeli bank transactions by spending category using Israeli-specific merchant pattern matching (Shufersal, Rami Levy, Rav-Kav, etc.). Accepts transaction JSON and outputs categorized spending summaries. Run: `python scripts/categorize_transactions.py --example` for a demo, or `python scripts/categorize_transactions.py --json transactions.json` for real data. Add `--output-json` for machine-readable output.
+- `scripts/categorize_transactions.py`, Categorizes Israeli bank transactions by spending category using Israeli-specific merchant pattern matching (Shufersal, Rami Levy, Rav-Kav, etc.). Accepts transaction JSON and outputs categorized spending summaries. Run: `python scripts/categorize_transactions.py --example` for a demo, or `python scripts/categorize_transactions.py --json transactions.json` for real data. Add `--output-json` for machine-readable output.
 
 ### References
-- `references/spending-categories.md` — Israeli spending category definitions with Hebrew terms and common merchant examples for each category (housing/diur, groceries/mazon, transportation/tahaburah, utilities/shartuim, etc.). Consult when customizing categorization rules or explaining categories to users.
-- `references/supported-banks.md` — Full list of 14 banks (Hapoalim, Leumi, Discount, Mercantile, Mizrahi-Tefahot, FIBI, Otsar HaHayal, Pagi, Union, Yahav, Massad, OneZero, Behatsdaa, Beyahad Bishvilha) and 4 credit card companies (Visa Cal, Max, Isracard, Amex) from the `israeli-bank-scrapers` `CompanyTypes` enum, with BOI bank codes, library scraper IDs, and MCP server coverage notes. Consult when setting up bank connections or troubleshooting missing accounts.
+- `references/spending-categories.md`, Israeli spending category definitions with Hebrew terms and common merchant examples for each category (housing/diur, groceries/mazon, transportation/tahaburah, utilities/shartuim, etc.). Consult when customizing categorization rules or explaining categories to users.
+- `references/supported-banks.md`, Full list of 14 banks (Hapoalim, Leumi, Discount, Mercantile, Mizrahi-Tefahot, FIBI, Otsar HaHayal, Pagi, Union, Yahav, Massad, OneZero, Behatsdaa, Beyahad Bishvilha) and 4 credit card companies (Visa Cal, Max, Isracard, Amex) from the `israeli-bank-scrapers` `CompanyTypes` enum, with BOI bank codes, library scraper IDs, and MCP server coverage notes. Consult when setting up bank connections or troubleshooting missing accounts.
 
 ## Reference Links
 
@@ -78,9 +78,9 @@ Result: Filtered and categorized business transactions with VAT amounts, ready f
 |--------|-----|---------------|
 | israeli-bank-scrapers (npm library) | https://github.com/eshaham/israeli-bank-scrapers | Authoritative list of supported banks, breaking changes, scraper limitations |
 | israeli-bank-mcp (Motti Bechhofer) | https://github.com/mottibec/israeli-bank-mcp | Most comprehensive MCP wrapper; install/config and tool reference |
-| il-bank-mcp (Gilad Lekner) | https://github.com/glekner/il-bank-mcp | Docker-based MCP with built-in spending analysis and SQLite storage |
+| il-bank-mcp (Gilad Lekner) | https://github.com/glekner/il-bank-mcp | Docker-based MCP with built-in spending analysis and SQLite storage (less actively maintained, last updated mid-2025; pins an older scraper version) |
 | Bank of Israel: Consumer Enquiries | https://www.boi.org.il/en/information-and-service-to-the-public/consumer-enquiries-and-inspections/ | Official BOI Public Inquiries Unit, banking customer service, complaint workflow |
-| Bank of Israel: Bank identification codes | https://www.boi.org.il/en/economic-roles/supervision-and-regulation/payment-systems-oversight/access-to-payment-systems/identification-codes/ | Canonical BOI bank identification-code list |
+| Bank of Israel: Access to Payment Systems | https://www.boi.org.il/en/economic-roles/supervision-and-regulation/payment-systems-oversight/access-to-payment-systems/ | BOI section that assigns bank identification (participant) codes; codes are being expanded from 2 to 3 digits by end of 2026 |
 
 ## Gotchas
 - Israel's Open Banking regulation is based on the Berlin Group NextGenPSD2 framework but adapted for Israel with its own timeline and implementation. Full rollout across all banks is still ongoing (as of 2026). Agents may reference UK Open Banking or generic PSD2 endpoints that do not exist in Israel. In practice, israeli-bank-scrapers uses headless browser scraping, not official Open Banking APIs.
@@ -93,7 +93,7 @@ Result: Filtered and categorized business transactions with VAT amounts, ready f
 ## Troubleshooting
 
 ### Error: "2FA required"
-Cause: Israeli banks require two-factor authentication
+Cause: the bank login may require two-factor authentication
 Solution: Complete 2FA through your bank's app/SMS when prompted by the MCP server. This is a one-time setup per session.
 
 ### Error: "Scraper timeout"
