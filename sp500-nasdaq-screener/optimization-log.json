@@ -1,0 +1,23 @@
+{
+  "skill": "sp500-nasdaq-screener",
+  "iterations": [
+    {
+      "version": "0.1.0",
+      "date": "2026-07-02",
+      "change": "initial draft ported from repo modules",
+      "trigger_score": 0.82
+    },
+    {
+      "version": "0.9.0",
+      "date": "2026-07-02",
+      "change": "added negative boundaries + cross-skill anti-triggers",
+      "trigger_score": 0.94
+    },
+    {
+      "version": "1.0.0",
+      "date": "2026-07-02",
+      "change": "bilingual HE + evidence.json; description tightened under 1024",
+      "trigger_score": 0.97
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "author": "yonyon-ai",
+  "version": "1.0.0",
+  "category": "tax-and-finance",
+  "license": "MIT",
+  "tags": {
+    "en": [
+      "etf",
+      "holdings",
+      "funds"
+    ],
+    "he": [
+      "קרנות-סל",
+      "ETF",
+      "השקעות"
+    ]
+  },
+  "display_name": {
+    "en": "ETF Analyzer",
+    "he": "מנתח קרנות סל"
+  },
+  "display_description": {
+    "en": "Analyze ETFs — holdings composition, sector and geographic exposure, expense ratio, and index-tracking error. Use when the user asks about an ETF ticker (SPY, QQQ, VTI, etc.), wants to compare two ETFs, check overlap between funds, or understand what an ETF holds and costs. Provides top-holdings breakdown, overlap percentage, cost comparison, and tracking-error context. Do NOT use for individual-stock analysis (use global-stock-analysis) or Israeli mutual funds.",
+    "he": "ניתוח קרנות סל (ETF) — הרכב אחזקות, חשיפה סקטוריאלית וגאוגרפית, דמי ניהול, וסטיית מעקב אחר המדד. לשימוש כשמשתמש שואל על סימול ETF (SPY, QQQ, VTI וכו'), רוצה להשוות שתי קרנות, לבדוק חפיפה בין קרנות, או להבין מה קרן מחזיקה וכמה היא עולה. כולל פירוט אחזקות עיקריות, אחוז חפיפה, השוואת עלויות, והקשר סטיית מעקב. אין להשתמש לניתוח מניה בודדת (השתמש ב-global-stock-analysis) או לקרנות נאמנות ישראליות."
+  },
+  "supported_agents": [
+    "claude-code",
+    "cursor",
+    "github-copilot",
+    "windsurf",
+    "opencode",
+    "codex",
+    "antigravity",
+    "gemini-cli"
+  ]
+}

@@ -1,0 +1,30 @@
+skill: sp500-nasdaq-screener
+version: 1.0.0
+# Trigger evals (bilingual EN+HE): should_trigger true/false + quality assertions
+triggers:
+  - prompt: "screen the S&P 500 for oversold stocks"
+    should_trigger: true
+  - prompt: "which NASDAQ-100 names trade above their 200-day average"
+    should_trigger: true
+  - prompt: "rank S&P 500 tech stocks by RSI"
+    should_trigger: true
+  - prompt: "do a deep single-stock analysis of NVDA"
+    should_trigger: false   # -> global-stock-analysis
+  - prompt: "screen Tel Aviv stocks by dividend yield"
+    should_trigger: false   # -> tase-stock-analysis
+  # Hebrew triggers — the catalog is Hebrew-first; users ask in Hebrew against the EN description
+  - prompt: "אילו מניות ב-S&P 500 נסחרות מעל ממוצע 200 יום?"
+    should_trigger: true    # HE: price>ema200 screen
+  - prompt: "תסנן לי מניות נאסדק במכירת יתר לפי RSI"
+    should_trigger: true    # HE: oversold NASDAQ screen
+  - prompt: "דרג לי מניות טכנולוגיה אמריקאיות לפי RSI"
+    should_trigger: true    # HE: rank US tech by RSI
+  - prompt: "תסנן מניות בבורסה בתל אביב לפי תשואת דיבידנד"
+    should_trigger: false   # HE -> tase-stock-analysis
+  - prompt: "תעשה ניתוח מעמיק על מניית אנבידיה"
+    should_trigger: false   # HE -> global-stock-analysis (cross-skill)
+quality:
+  - prompt: "S&P 500 names oversold on RSI, sorted by market cap"
+    assert: "Returns a ranked table of symbols meeting the filter with the snapshot date noted."
+  - prompt: "אילו מניות S&P 500 מעל ממוצע 200 יום?"
+    assert: "Answers in Hebrew with a ranked list of real symbols, the % gap per symbol, and the snapshot date."

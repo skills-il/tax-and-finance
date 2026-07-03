@@ -1,0 +1,36 @@
+{
+  "author": "yonyon-ai",
+  "version": "1.0.0",
+  "category": "tax-and-finance",
+  "license": "MIT",
+  "tags": {
+    "en": [
+      "screener",
+      "sp500",
+      "nasdaq"
+    ],
+    "he": [
+      "סינון",
+      "מדדים",
+      "שוק-הון"
+    ]
+  },
+  "display_name": {
+    "en": "S&P 500 / NASDAQ Screener",
+    "he": "סורק מניות S&P 500 / נאסד\"ק"
+  },
+  "display_description": {
+    "en": "Screen the S&P 500 and NASDAQ-100 universe by technical and fundamental criteria to surface candidate stocks. Use when the user wants to filter or rank US stocks — 'S&P 500 names with RSI below 30', 'NASDAQ stocks above their 200-day average', oversold/overbought scans, or sector-relative screens. Returns a ranked table with the matched criteria per symbol. Do NOT use for single-symbol deep analysis (use global-stock-analysis) or Israeli TASE screening.",
+    "he": "סינון ודירוג מניות ה-S&P 500 וה-NASDAQ-100 לפי קריטריונים טכניים ופונדמנטליים. לשימוש כשמשתמש רוצה לסנן או לדרג מניות אמריקאיות — \"מניות S&P 500 עם RSI מתחת ל-30\", \"מניות נאסד\"ק מעל הממוצע הנע ל-200 יום\", סריקות oversold/overbought, או סינון סקטוריאלי. מחזיר טבלה מדורגת עם הקריטריונים שהתאימו לכל סימול. אין להשתמש לניתוח מעמיק של נייר בודד (השתמש ב-global-stock-analysis) או לסינון מניות ת\"א."
+  },
+  "supported_agents": [
+    "claude-code",
+    "cursor",
+    "github-copilot",
+    "windsurf",
+    "opencode",
+    "codex",
+    "antigravity",
+    "gemini-cli"
+  ]
+}
