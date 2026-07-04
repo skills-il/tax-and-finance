@@ -1,0 +1,15 @@
+{
+  "cycles": [
+    {
+      "version": "1.6.0",
+      "date": "2026-07-05",
+      "lessons": [
+        "Added Step 3.7 (Section 17(11) CPA/return-prep fee deduction, available to salaried filers too) and Step 2.6 (havraa-day reduction fields 011/012, 2024-2025 sunset) per GitHub issue #12. Fact-check REJECTED the reporter's 'net into field 158' convention (unverifiable; field 158 is gross-salary cross-checked vs Form 106) and instead advised keeping the invoice + attaching an explanation.",
+        "Havraa reduction is a hora'at sha'a scoped to tax years 2024-2025 only. On the NEXT update after tax year 2025 closes, verify whether the law was renewed for 2026; if not, mark Step 2.6 clearly as a closed/historical provision or move it to the reference.",
+        "Body was at the 5,000-word validate ceiling. Trimmed redundant deadline restatements (stated 4x) and reference-grade form-field enumerations (moved Form 126/856 + Form 1301 section detail to references/form-guide.md). Future additions must budget against the word cap or move detail to references.",
+        "Expert review surfaced a pre-existing error the addition contradicted: Step 6 Form 126 listed dmei havra'a as an 'exempt payment' — it is taxable salary. Fixed. If future edits touch Form 126 exempt payments, only severance up to the ptur ceiling is exempt.",
+        "Judge note: the Form 1301 'line 60 / השתתפות זמנית הפחתת דמי הבראה' label is NOT in the cited ITA circular PDF but was independently confirmed via the ITA Form 1301 transmission spec (prog.co.il). Section 17(11) evidence is sourced to a commercial CPA blog (claltax.com) quoting the statute; the body now hedges the salaried-filer position as 'contested, assessor may disallow' rather than asserting it as settled."
+      ]
+    }
+  ]
+}

@@ -129,6 +129,29 @@
         "references/form-guide.md",
         "references/tax-brackets-credits.md"
       ]
+    },
+    {
+      "claim_id": "section-17-11-professional-fee-deduction",
+      "claim": "Section 17(11) of the Income Tax Ordinance allows deduction of expenses for preparing the return(s) and handling the tax matter in all assessment (shuma) and appeal (irur) proceedings, including CPA/tax-advisor fees and representation before the pakid shuma. Available to BOTH salaried employees and self-employed; the only statutory carve-out is business/profession income where no books (pinkasim) were kept, which does not affect salaried filers. Legal expenses on a frivolous objection/appeal are disallowed and awarded costs reduce the claim. Form 1301 has no dedicated field for a salaried filer's 17(11) deduction (field 158 is the gross-salary line, cross-checked against Form 106)",
+      "source_url": "https://claltax.com/%D7%A0%D7%99%D7%9B%D7%95%D7%99%D7%99%D7%9D-%D7%95%D7%94%D7%95%D7%A6%D7%90%D7%95%D7%AA-%D7%9E%D7%95%D7%9B%D7%A8%D7%95%D7%AA/",
+      "raw_snippet": "סעיף 17(11): הוצאות בקשר להכנת הדו\"חות והטיפול בקשר למס בכל הליכי שומה וערעור; לא נוהלו פנקסי חשבונות; Section 17(11); שכיר וגם עצמאי; שדה 158; טופס 106",
+      "fetched_at": "2026-07-05T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "havraa-reduction-2024-2025",
+      "claim": "Temporary Havraa Freeze-and-Reduction Law (חוק הקפאה והפחתה של דמי הבראה), published 27 March 2025, tax years 2024 and 2025 only (hora'at sha'a, temporary Section 247). Per ITA circular 2025-000583 (14 May 2025): full-time employee has one havraa day reduced, not less than 418 NIS and not more than 471.4 NIS; half-day track floor 209 NIS / ceiling 235.7 NIS for employees whose Oct-Dec 2024 average monthly salary was 6,150 NIS or less. Form 106 field 011/012 'מחיר יום ההבראה שהופחת ממשכורת העובד'; Form 1301 line 60. Informational only, already netted from gross salary (field 158), not income to the employee, NOT a Part יב deduction or credit. Home/domestic employers exempt",
+      "source_url": "https://www.gov.il/BlobFolder/dynamiccollectorresultitem/employers-info-140525-1/he/IncomeTax_employers-info-140525-1.pdf",
+      "raw_snippet": "חוזר 2025-000583, 14 במאי 2025; יופחת יום הבראה אחד אך לא פחות מסך של 418 ש\"ח ולא יותר מסך של 471.4 ש\"ח; חצי יום 209 ש\"ח 235.7 ש\"ח; 6,150 ש\"ח; מחיר יום ההבראה שהופחת ממשכורת העובד שדה 011/012; שורה 60; שדה 158; לא יראו את סכום ההשתתפות כהכנסה בידי העובד; הוראת שעה סעיף 247; 2024 2025; Section 247; 471.4 NIS 418 NIS 209 NIS 235.7 NIS 6,150 NIS",
+      "fetched_at": "2026-07-05T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/form-guide.md"
+      ]
     }
   ]
 }

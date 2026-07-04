@@ -17,6 +17,7 @@
 - **Who issues:** Employers to each employee
 - **Deadline:** March 1 of the following year
 - **Purpose:** Summarizes annual salary, benefits, deductions, and withholdings per employee. Used by employees when filing Form 1301.
+- **Temporary field 011/012 (tax years 2024-2025 only):** "מחיר יום ההבראה שהופחת ממשכורת העובד", the havraa-day reduction under the Havraa Freeze-and-Reduction Law (ITA circular 2025-000583). Full-time employee: one day reduced, floor 418 NIS / ceiling 471.4 NIS. A half-day reduction (floor 209 NIS / ceiling 235.7 NIS) applies to employees whose October-December 2024 average monthly salary was 6,150 NIS or less. Informational only, already netted out of gross salary and not income to the employee, so it is NOT a deduction or credit on Form 1301 (line 60). Home/domestic employers are exempt.
 
 ## Corporate Forms
 

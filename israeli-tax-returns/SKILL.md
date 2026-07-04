@@ -26,12 +26,6 @@ Determine which tax return or report the user needs to prepare. Israeli tax law 
 | Mas Shevach | הצהרת מס שבח | Anyone selling real estate in Israel | 30 days from sale date (40 days if requesting exemption) | Per transaction |
 | 1322/1325 | דוח רווח הון מניירות ערך | Anyone with capital gains from securities sales | 30 days from sale (or annual with Form 1301) | Per transaction or annual |
 
-The Form 1301 deadline moved later for the 2025 tax year (filed in 2026): online
-filers have until June 30, paper (non-online) filers until 29 May 2026. April 30 is
-the legacy paper baseline that older years used; state the online deadline
-explicitly, since most filers submit online. CPA-represented filers receive the
-later extension under the CPA association's quota arrangement with the ITA.
-
 Ask the user:
 - Which return type do they need?
 - Tax year (shnat mas) being reported
@@ -48,20 +42,9 @@ Form 1301 is the main annual income tax return for individuals and non-corporate
 - Individuals with income from multiple employers
 - Individuals with foreign income or assets abroad exceeding reporting thresholds (including a foreign securities/brokerage account)
 - Anyone who received capital gains during the tax year
-- Individuals who received rental income exceeding the exempt threshold, AND in particular anyone whose annual residential rental income exceeds **375,000 NIS** must file a return even when using the 10% track (below that, the 10% track can be settled without a full return)
+- Individuals with rental income above the exempt threshold; in particular, annual residential rent above **375,000 NIS** requires a return even on the 10% track (below that, the 10% track can be settled without a full return)
 
-**Main sections of Form 1301:**
-
-| Section | Content |
-|---------|---------|
-| Personal details | Name, ID (teudat zehut), address, marital status, dependents |
-| Income from employment | Salary, bonuses, benefits-in-kind (from Form 106 provided by employer) |
-| Income from business/profession | Revenue, expenses, net profit (from Appendix Aleph / Form 1320) |
-| Income from rentals | Residential and commercial rental income, chosen tax track |
-| Income from capital and investments | Interest, dividends, capital gains |
-| Foreign income | All income sourced outside Israel (Appendix 1327) |
-| Deductions and credits | Pension contributions (Sections 45A and 47), donations (Section 46), life insurance |
-| Nekudot zikui (tax credit points) | See Step 3 for full calculation |
+**Main sections of Form 1301:** personal details; employment income (from Form 106); business/profession income (Appendix Aleph / Form 1320); rental income and chosen track; capital and investment income; foreign income (Appendix 1327); deductions and credits (pension Sections 45A/47, donations Section 46, life insurance); and nekudot zikui (Step 3).
 
 **Key appendices to prepare:**
 - Form 1320 (Appendix Aleph): Profit and loss statement for self-employed
@@ -95,6 +78,16 @@ were never credited.
   refunds for tax years 2020-2025.
 - If the person has business income, foreign income, capital gains, or crosses
   the mandatory-filing thresholds, they must file the full Form 1301 instead.
+
+### Step 2.6: Havraa-Day Reduction on Form 106 (Fields 011/012, tax years 2024-2025 only)
+
+For tax years 2024 and 2025 ONLY, temporary legislation reduced employees' convalescence pay (dmei havra'a) to help fund Iron Swords reserve-duty benefits: a separate 2024 law, then the חוק הקפאה והפחתה של דמי הבראה (Havraa Freeze-and-Reduction Law) published 27 March 2025 for tax year 2025. It produces a value on the Form 106 and Form 1301 of most salaried filers for those two years. Per Reshut HaMisim circular 2025-000583 (14 May 2025):
+
+- **Amount:** for a full-time employee, one havraa day is reduced, not less than 418 NIS and not more than 471.4 NIS. (A reduced half-day track applies to lower earners, see `references/form-guide.md`.)
+- **Where it appears:** Form 106 reports it in field 011/012, "מחיר יום ההבראה שהופחת ממשכורת העובד" (price of the havraa day reduced from the employee's salary). On Form 1301 it appears at line 60, "השתתפות זמנית הפחתת דמי הבראה", printed inside Part יב (the personal-deductions section).
+- **It is informational only, NOT a deduction and NOT a credit.** The reduced amount was already netted out of the gross salary reported in field 158, and the employer's participation amount is not income to the employee (per the circular). Do NOT enter field 011/012 as a Part יב deduction or as a tax credit, even though it is printed inside the deductions section of the form. Treating it as a deduction double-counts the benefit and understates tax.
+- **Exemption:** a home/domestic employer (an individual employing someone outside a business, for example a household employing a caregiver) is exempt from the reduction.
+- **Sunset:** the provision is a temporary order (hora'at sha'a) scoped to tax years 2024 and 2025 only. It should not appear on a Form 106 or Form 1301 for 2026 onward unless the law is renewed.
 
 ### Step 3: Nekudot Zikui (Tax Credit Points) Calculation
 
@@ -156,6 +149,16 @@ Donations to a recognized public institution qualify for a tax credit under Sect
 - **Documentation:** keep the original donation receipts marked with the institution's 46 recognition; the ITA may require them.
 - Always verify the current floor, ceiling, and the institution's 46 status before quoting figures.
 
+### Step 3.7: Return-Preparation and Professional Fee Deduction (Section 17(11))
+
+Fees paid to a CPA (roeh heshbon) or tax advisor for preparing the return and handling the tax matter are deductible under Section 17(11) of the Income Tax Ordinance, and are claimable by salaried employees (sachirim), not only the self-employed.
+
+- **What qualifies:** preparing the annual return(s) and handling the tax matter in all assessment (shuma) and appeal (irur) proceedings: return-preparation and CPA / tax-advisor fees, and representation before the pakid shuma and in tax appeals.
+- **Salaried vs self-employed:** the deduction is well accepted for filers with business income. For a pure salaried filer it is claimable under 17(11) but is a contested area the assessor may disallow, so document it and have a CPA claim it. Do not flatly tell a salaried filer the fee is non-deductible.
+- **Which year:** the fee is deductible in the tax year it was actually paid. A return-preparation fee is usually paid the year AFTER the year the return reports, so it reduces that later year, not the income of the year being filed.
+- **Carve-outs:** disallowed for business or profession income where no books (pinkasim) were kept (does not affect salaried filers); legal costs on an objection or appeal found frivolous are disallowed, and any costs awarded to the taxpayer reduce the claim.
+- **Placement on Form 1301:** there is no dedicated field for a salaried filer's Section 17(11) deduction, and SHAAM online filing has no free-form attachment for a pure salaried 1301/135, so this deduction usually needs a CPA-assisted filing to be captured. Keep the CPA invoice and attach an explanation. Do NOT reduce field 158 (the gross-salary line), which the Tax Authority cross-checks against Form 106; confirm placement with a CPA.
+
 ### Step 4: Income Tax Brackets and Surtax
 
 Apply the progressive income tax rates to taxable income. Brackets for 2026 (brackets 1-2 and 6 frozen at 2025 values; brackets 3-5 expanded by the Economic Efficiency Law 2026 (Amendment 288 to the Income Tax Ordinance), approved March 31, 2026, retroactive to January 1, 2026):
@@ -179,8 +182,7 @@ Apply the progressive income tax rates to taxable income. Brackets for 2026 (bra
 
 **Closely held companies (Chevra Me'atim):** Subject to a 2% annual tax on accumulated undistributed profits unless at least 6% of accumulated profits are distributed as dividends.
 
-**Self-employed additional levies:**
-In addition to income tax, self-employed individuals pay Bituach Leumi (National Insurance) and health tax on their business income. These are calculated separately and are not part of the income tax return itself, but the amounts paid during the year may affect advance payment reconciliation.
+**Self-employed additional levies:** self-employed individuals also pay Bituach Leumi and health tax on business income, calculated separately from the income tax return, though amounts paid during the year may affect advance-payment reconciliation.
 
 ### Step 5: Financial Statements Attachment (Form 6111)
 
@@ -188,21 +190,9 @@ Required for any business (individual or corporate) with annual turnover exceedi
 
 Form 6111 uses standardized codes to report financial data in a uniform format for the Tax Authority's computerized systems. The form has two main sections:
 
-**Section A: Profit and Loss Statement**
-- Revenue by source type (sales, services, other income)
-- Cost of goods sold / cost of services
-- Operating expenses (salaries, rent, utilities, professional services)
-- Financial expenses and income
-- Depreciation and amortization
-- Net profit / loss before tax
-- Tax adjustments (non-deductible expenses, timing differences)
+**Section A (Profit and Loss):** revenue by source, cost of goods/services, operating expenses, financial income and expenses, depreciation, net profit/loss before tax, and tax adjustments (non-deductible expenses, timing differences).
 
-**Section B: Balance Sheet**
-- Current assets (cash, receivables, inventory)
-- Fixed assets (equipment, vehicles, real estate)
-- Current liabilities (payables, short-term loans, accrued expenses)
-- Long-term liabilities (loans, mortgages)
-- Equity (share capital, retained earnings)
+**Section B (Balance Sheet):** current and fixed assets, current and long-term liabilities, and equity (share capital, retained earnings).
 
 **Preparation guidelines:**
 - All amounts must be in NIS
@@ -213,34 +203,11 @@ Form 6111 uses standardized codes to report financial data in a uniform format f
 
 ### Step 6: Employer and Supplier Reports (Forms 126 and 856)
 
-**Form 126 (Annual Employer Salary Report):**
-Employers must file Form 126 summarizing all employee compensation and withholdings for the tax year.
+**Form 126 (Annual Employer Salary Report):** employers file Form 126 by April 30 summarizing each employee's gross salary, tax withheld, Bituach Leumi and health tax, pension and keren hishtalmut contributions, benefits in kind, and exempt payments such as severance up to the exempt ceiling (dmei havra'a / convalescence pay is taxable salary, not an exempt payment). They must also issue Form 106 (annual salary summary) to each employee by March 1.
 
-| Field | Description |
-|-------|-------------|
-| Employee details | ID number (teudat zehut), name, start/end dates |
-| Gross salary (sachar bruto) | Total annual compensation per employee |
-| Tax withheld (mas shenukah) | Income tax deducted at source |
-| Bituach Leumi withheld | Employee's National Insurance contribution |
-| Health tax withheld | Employee's health insurance contribution |
-| Pension contributions | Employee and employer pension contributions |
-| Keren Hishtalmut | Employee and employer training fund contributions |
-| Benefits in kind | Car, phone, meals, other taxable benefits |
-| Exempt payments | Severance (pitzuim), convalescence pay (dmei havra'a) |
+**Form 856 (Annual Supplier Payments Report):** businesses report payments to non-employee recipients (freelancers, contractors, consultants, landlords) by April 30, listing each supplier's ID, gross payments, tax withheld at source, and payment type.
 
-Deadline: April 30 of the following year. Must also issue Form 106 (annual salary summary) to each employee by March 1.
-
-**Form 856 (Annual Supplier Payments Report):**
-Businesses must report payments to suppliers and service providers exceeding the reporting threshold.
-
-| Field | Description |
-|-------|-------------|
-| Supplier details | ID/company number, name, address |
-| Total payments | Gross amount paid during the year |
-| Tax withheld | Amount withheld at source (nikui mas bemakor) |
-| Payment type | Services, goods, rent, commissions, etc. |
-
-Deadline: April 30 of the following year. Required for payments to freelancers, contractors, consultants, landlords, and other non-employee recipients.
+See `references/form-guide.md` for the full per-field breakdown of both forms.
 
 ### Step 7: Capital Gains Reports
 
@@ -305,29 +272,15 @@ When filing the annual return (Form 1301 or 1214), the total advance payments ma
 - If mikdamot paid > actual tax: the taxpayer receives a refund (hechzer mas)
 - If mikdamot paid < actual tax: the taxpayer owes the difference (plus possible interest)
 
-**Adjusting the rate:**
-If the business's income changes significantly, request a rate adjustment (shinui shiur mikdamot) from the Tax Authority. This is common when:
-- Revenue drops substantially compared to prior year
-- A new large contract significantly increases revenue
-- The business type or activity changes
+**Adjusting the rate:** if the business's income changes significantly (revenue drops sharply, a large new contract, or a change in business activity), request a rate adjustment (shinui shiur mikdamot) from the Tax Authority.
 
 ### Step 9: Filing via SHAAM Online Portal
 
 All returns are submitted electronically via the Tax Authority's online system (SHAAM):
 
-**Registration and access:**
-1. Register at the Tax Authority website (misim.gov.il) with ID number (teudat zehut) or company number
-2. Set up digital credentials (username + password + two-factor authentication)
-3. CPAs use their own credentials with authorization (yipui koach) for each client
+**Registration and access:** register at misim.gov.il with a teudat zehut or company number and set up digital credentials (username, password, two-factor). CPAs use their own credentials with per-client authorization (yipui koach).
 
-**Submission workflow:**
-1. Log in to SHAAM portal
-2. Select the relevant form and tax year
-3. Enter data or upload from accounting software
-4. The system validates data and flags errors
-5. Review the calculated tax liability
-6. Submit electronically (receive confirmation number)
-7. Pay any tax owed via the payment portal (bank transfer, credit card, or reference number at post office bank)
+**Submission workflow:** log in, select the form and tax year, enter or upload the data, review the system-calculated liability after validation, submit to receive a confirmation number, and pay any tax owed via the payment portal (bank transfer, credit card, or post-office bank reference).
 
 **CPA authorization (yipui koach):**
 - The taxpayer grants power of attorney to the CPA via the SHAAM portal
@@ -335,7 +288,7 @@ All returns are submitted electronically via the Tax Authority's online system (
 - Authorization is per-client, per-year
 
 **Filing extensions:**
-- Individual returns (Form 1301): the 2025 return (filed 2026) is due June 30 for online filers and 29 May 2026 for paper filers. April 30 is the legacy paper baseline from earlier years. CPA clients typically receive automatic extensions through the CPA association's quota agreement with the Tax Authority (often to September 30 or later)
+- Individual returns (Form 1301): see Step 1 for the 2025-return deadlines (June 30 online, 29 May 2026 paper). CPA clients typically receive automatic extensions through the CPA association's quota agreement (often to September 30 or later)
 - Company returns (Form 1214): standard deadline May 31, extensions available
 - Extension requests must be filed before the original deadline
 
@@ -408,6 +361,8 @@ Actions:
 - Capital gains in Israel are reported on a separate schedule and may have different rates (25% for financial assets, up to 50% for real estate depending on holding period and property count). Agents may apply a single capital gains rate.
 - Tax credit points (neku'dot zikui) must be claimed annually and vary by personal status (marital, children, new oleh, discharged soldier). Agents may use a default value without checking eligibility.
 - From 2026, Mas Shevach on a non-exempt investment property is counted toward the taxpayer's surtax income (5% on active-plus-capital income above 721,560 NIS). Agents may treat Mas Shevach and surtax as fully separate and under-report the combined liability.
+- Fees paid to a CPA or tax advisor for preparing the return are deductible for SALARIED employees too under Section 17(11), not only for the self-employed. Agents may wrongly tell a salaried filer that return-preparation fees are not deductible, or invent a specific Form 1301 field for them (there is none, keep the invoice and attach an explanation).
+- The havraa-reduction figure on Form 106/1301 (field 011/012, "מחיר יום ההבראה שהופחת ממשכורת העובד", tax years 2024-2025 only) is informational: it was already netted out of gross salary and is not income to the employee. Agents reasoning from the form's visual structure may wrongly treat it as a Part יב deduction and mis-state tax.
 
 ## Reference Links
 
@@ -419,6 +374,7 @@ Actions:
 | Kol-Zchut tax credit points | https://www.kolzchut.org.il/he/נקודת_זיכוי | Nekudot zikui value, eligibility categories |
 | Kol-Zchut Mas Shevach calculation | https://www.kolzchut.org.il/he/חישוב_מס_שבח | Real estate capital gains calculation, exemptions, linear method |
 | Israel Real Estate Taxation office | https://www.gov.il/he/departments/topics/land_taxation | Mas Shevach and Mas Rechisha forms, declarations, rates |
+| ITA havraa-reduction circular 2025-000583 | https://www.gov.il/BlobFolder/dynamiccollectorresultitem/employers-info-140525-1/he/IncomeTax_employers-info-140525-1.pdf | Havraa-day reduction amounts (418-471.4 NIS), field 011/012, tax treatment (2024-2025) |
 
 ## Troubleshooting
 
