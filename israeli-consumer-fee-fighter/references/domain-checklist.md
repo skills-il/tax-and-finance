@@ -1,0 +1,53 @@
+# Domain checklist: Israeli Consumer Fee Fighter
+
+Coverage contract for cutting recurring bank and credit-card charges in Israel: choosing a cheaper fee track, cancelling a card or service cleanly, and negotiating fees down. Every row is verified in `evidence.json`.
+
+## Must cover (core)
+
+- **The two fixed-price fee tracks** required by Banking Rules (Customer Service)(Fees), 5768-2008, section 4a, in force since 1.4.14:
+  - **Basic track (maslul basi):** up to 10 direct-channel transactions + up to 1 teller transaction/month. Supervised price, cannot exceed 10 NIS/month.
+  - **Expanded track (maslul murchav):** up to 50 direct-channel transactions + up to 10 teller transactions/month. Not supervised, ranges 20-30 NIS/month.
+- **No-track default:** a customer who does not pick a track is charged per action; can pay up to 2.5x (basic volume) or 5x (expanded volume) at some banks.
+- **How to pick the cheaper option:** count monthly direct-channel vs teller actions, compare against track prices, use the Bank of Israel fee-tracks calculator.
+- **Switching tracks:** notify the bank (site / phone / branch); switch takes effect on the 1st of the month after the notice.
+- **One-click bank switching (niud / maavar beklik):** free, fully online move of the whole account to a cheaper bank; completes within 7 business days; transfers shekel + FX balances, standing orders, current-account authorizations, checks, securities, and bank + non-bank card activity; runs an "akev acharai" auto-forward of old-account charges/credits; effective 22.9.2021. Biggest fee-cut lever for many, and it auto-migrates the horaot keva.
+- **Right to cancel a recurring debit authorization (harshaa lechiyuv):** Payment Services Law 5779-2019, section 34(a) - the payer may cancel at any time by notice to the bank or the beneficiary. The harshaa is set up at the BANK, on the ACCOUNT, so it is not affected by cancelling a card.
+- **Card-billed recurring charge vs harshaa lechiyuv:** a subscription billed to the card number FAILS when the card is cancelled/replaced (fix: update the payment method with each merchant); a harshaa lechiyuv on the account does NOT fail and is stopped separately at the bank. Two distinct mechanisms.
+- **Cancel-debit is not cancel-debt:** stopping the harshaa / card charge stops only the payment instrument; the underlying contract survives (business can still invoice or send to collections), so also cancel the underlying iska mitmasheshet.
+- **Right to cancel an ongoing transaction (iska mitmasheshet):** business must stop charging within 3 business days (6 by registered mail).
+- **Cancelling a credit card:** the process (notify the issuer in writing), distinguishing a bank-issued card (notify the bank) from an externally-issued card (Cal / Max / Isracard: card company holds the card-billed charge list, bank holds the account harshaot), and settling open installments (tashlumim) / kredit balance first so cancellation is not accelerated or blocked.
+- **Overdraft + credit-line + FX + securities fees:** separate negotiation targets outside any track; overdraft interest (chariga mimisgeret) is often the biggest real overpayment and is negotiable.
+- **Ombudsman route:** Public Complaints unit at the Supervisor of Banks (yechidat pniyot hatsibur, Pikuach al HaBankim) at the Bank of Israel - free enforcement lever if a bank refuses a track switch or discount.
+- **Fee-negotiation approach:** grounded in the tracks + the right to leave (niud), not US-style bluffing.
+- **Deliverables:** ready-to-send Hebrew cancellation letter/request, negotiation script, short rights summary.
+
+## Should cover (advanced)
+
+- **Small-business reduced tariff (esek katan / taarifon muzal):** Bank of Israel is widening the small-business group the reduced tariff applies to and changing the default enrollment.
+- **Expanded-plus track (maslul murchav plus):** offered by some banks, adds bank-specific services.
+- **Senior / disability discounts:** seniors and people with 40%+ determined disability are entitled to fee discounts - check whether a track still beats the discount.
+- **Compensation lever:** up to 10,000 NIS compensation without proof of damage if a business keeps charging after the legal cutoff.
+- **General 14-day cancellation right** as a fallback for recent sign-ups.
+- **Postal Bank exemption:** not obligated to offer the tracks.
+- **Standardized tariff (taarifon amlot):** where to read the current per-action fee list before quoting any number.
+
+## Out of scope (explicit)
+
+- Maximizing cashback, deals, or subscription perks in general - use `israeli-smart-saver`.
+- Coupon and promo-code hunting - use `israeli-coupon-code-finder`.
+- Analyzing or categorizing bank transactions - use `israeli-bank-connector`.
+- Household budgeting and cash-flow planning - use `israeli-budget-planner`.
+- Investment fees, pension/gemel management fees, mortgage rates - different domain.
+- Disputing a specific fraudulent charge or chargeback dispute logic (mention the cancellation right only).
+
+## Authoritative sources
+
+- Bank of Israel - fees (`boi.org.il/information/fees/`): the two tracks, transaction counts, expanded-plus, calculator, small-business reduced tariff.
+- Bank of Israel - fee-tracks calculator (`boi.org.il/information/מחשבונים-וכלים/עמלות/`).
+- Kol Zchut - fixed monthly fee tracks: transaction counts, price caps/ranges, senior/disability discounts, switch timing, Postal Bank exemption.
+- Kol Zchut - one-click bank switching / niud (`מעבר_בין_בנקים_באופן_מקוון_(ניוד)`): 7-business-day online move, what transfers, akev acharai, free, effective 22.9.2021.
+- Kol Zchut - overdraft / chariga mimisgeret (`חריגה_ממסגרת_אשראי_בחשבון_עובר_ושב`): higher interest on a current-account overdraft.
+- Kol Zchut - cancelling an ongoing transaction (`ביטול_עסקה_מתמשכת`): 3/6 business-day stop rule, 10,000 NIS compensation, 14-day general right.
+- Payment Services Law, 5779-2019, section 34 (Nevo `502_043.htm`): cancel debit authorization at any time.
+- Banking (Customer Service) Law, 5741-1981 (Nevo `047_016.htm`): parent consumer-banking law.
+- Debit Cards Law, 5746-1986 (Wikisource): governs credit/debit cards.
