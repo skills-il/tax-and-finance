@@ -1,6 +1,6 @@
 {
   "author": "yonyon-ai",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "category": "tax-and-finance",
   "license": "MIT",
   "tags": {
@@ -11,7 +11,7 @@
     ],
     "he": [
       "דואליות",
-      "ארביטראז",
+      "ארביטראז'",
       "בורסה"
     ]
   },
@@ -20,8 +20,8 @@
     "he": "ארביטראז' חברות דואליות"
   },
   "display_description": {
-    "en": "Detect price gaps between TASE and US listings of the same dual-listed company (Check Point, NICE, CyberArk, Teva, and 40+ pairs), converting via the Bank of Israel representative rate and flagging gaps above a threshold. Use when the user asks to compare a dual-listed stock's Tel Aviv vs NASDAQ/NYSE price, spot cross-listing arbitrage, or understand a premium/discount between exchanges. Provides per-pair gap %, trading-hours-overlap confidence, and currency-adjusted comparison. Do NOT use for single-market analysis (use tase-stock-analysis or global-stock-analysis).",
-    "he": "זיהוי פערי מחיר בין רישום בת\"א לרישום בארה\"ב של אותה חברה דואלית (צ'ק פוינט, NICE, CyberArk, טבע ועוד 40+ זוגות), המרה לפי השער היציג של בנק ישראל וסימון פערים מעל סף מוגדר. לשימוש כשמשתמש מבקש להשוות מחיר מניה דואלית בת\"א מול נאסד\"ק/NYSE, לאתר ארביטראז', או להבין פרמיה/דיסקאונט בין הבורסות. כולל אחוז פער לכל זוג, ציון ביטחון לפי חפיפת שעות מסחר, והשוואה מותאמת מטבע. אין להשתמש לניתוח בורסה בודדת (השתמש ב-tase-stock-analysis או global-stock-analysis)."
+    "en": "Detect price gaps between TASE and US listings of the same dual-listed company (Check Point, NICE, CyberArk, Teva, and 40+ pairs), converting via the Bank of Israel representative rate and flagging gaps above a threshold. Use when the user asks to compare a dual-listed stock's Tel Aviv vs NASDAQ/NYSE price, spot cross-listing arbitrage, or understand a premium/discount between exchanges. Provides per-pair gap %, trading-hours-overlap confidence, and currency-adjusted comparison. Do NOT use for single-market analysis (use tase-stock-analysis).",
+    "he": "זיהוי פערי מחיר בין רישום בת\"א לרישום בארה\"ב של אותה חברה דואלית (צ'ק פוינט, NICE, CyberArk, טבע ועוד 40+ זוגות), המרה לפי השער היציג של בנק ישראל וסימון פערים מעל סף מוגדר. לשימוש כשמשתמש מבקש להשוות מחיר מניה דואלית בת\"א מול נאסד\"ק/NYSE, לאתר ארביטראז', או להבין פרמיה/דיסקאונט בין הבורסות. כולל אחוז פער לכל זוג, ציון ביטחון לפי חפיפת שעות מסחר, והשוואה מותאמת מטבע. אין להשתמש לניתוח בורסה בודדת (השתמש ב-tase-stock-analysis)."
   },
   "supported_agents": [
     "claude-code",

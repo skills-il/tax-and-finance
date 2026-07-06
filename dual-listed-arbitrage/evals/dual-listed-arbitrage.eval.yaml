@@ -12,7 +12,7 @@ triggers:
     should_trigger: false   # -> global-stock-analysis
   - prompt: "analyze Bank Hapoalim on the TASE"
     should_trigger: false   # single-market -> tase-stock-analysis
-  # Hebrew triggers — the catalog is Hebrew-first; users ask in Hebrew against the EN description
+  # Hebrew triggers - the catalog is Hebrew-first; users ask in Hebrew against the EN description
   - prompt: "יש ארביטראז' על טבע בין תל אביב לניו יורק?"
     should_trigger: true    # HE: TEVA gap
   - prompt: "תשווה לי את המחיר של NICE בת\"א מול נאסדק"

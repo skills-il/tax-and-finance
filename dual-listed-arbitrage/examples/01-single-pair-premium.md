@@ -1,7 +1,7 @@
 # Example: Is Check Point cheaper in Tel Aviv or New York?
 
 ## User request
-"Check Point is dual-listed — is it trading at a premium or a discount on TASE
+"Check Point is dual-listed - is it trading at a premium or a discount on TASE
 versus NASDAQ right now?"
 
 ## Steps the skill takes
@@ -24,5 +24,5 @@ versus NASDAQ right now?"
 - Gap %, labelled premium (TASE above US) or discount (TASE below US).
 - Whether it clears the 2.0% threshold, plus the overlap-confidence note and the
   settlement (T+1) / FX-cost caveat that the gap is not risk-free profit.
-- No chart for a single pair — the text answer stands alone. A chart is offered
+- No chart for a single pair - the text answer stands alone. A chart is offered
   only if the user then asks to compare several pairs.

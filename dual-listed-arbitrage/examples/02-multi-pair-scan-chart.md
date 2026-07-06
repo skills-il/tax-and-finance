@@ -17,7 +17,7 @@ representative rate of 3.65 and show me a chart."
    each gap %. A pair whose Tel-Aviv leg is unavailable from the free source is
    collected as skipped, never estimated.
 3. `scripts/viz.py` renders a self-contained interactive HTML diverging-bar
-   chart — premium in blue, discount in red, from a neutral zero baseline — with
+   chart - premium in blue, discount in red, from a neutral zero baseline - with
    hover detail, a table view, and a light/dark toggle.
 
 ## Expected output shape
