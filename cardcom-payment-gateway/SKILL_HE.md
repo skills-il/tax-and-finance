@@ -211,9 +211,9 @@ POST https://secure.cardcom.solutions/api/v11/Transactions/RefundByTransactionId
 
 1. תיצרו סשן Low Profile עם `Operation: "SuspendedDeal"`.
 2. ה-`LowProfileResult` מחזיר `SuspendedInfo` עם `SuspendedDealId`.
-3. תחייבו את העסקה המושהית מאוחר יותר דרך לוח הבקרה של קארדקום או דרך Transaction API.
+3. תחייבו את העסקה המושהית מאוחר יותר דרך לוח הבקרה של קארדקום או דרך נקודת הקצה `SuspendedDeals/Charge` (קבוצת `SuspendedDeals` כוללת גם `Cancel` ו-`GetSuspendedDealInfo`).
 
-שימושי להרשאות מראש ולשירותים שמחויבים אחרי אספקה. קריאת החיוב המאוחר המדויקת מתוארת בתיעוד הרשמי.
+שימושי להרשאות מראש ולשירותים שמחויבים אחרי אספקה. ודאו את שדות הבקשה המדויקים של `SuspendedDeals/Charge` מול התיעוד הרשמי לפני חיבור קריאת החיוב המאוחר.
 
 ### שלב 8: טיפול בשגיאות
 

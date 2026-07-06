@@ -1,0 +1,32 @@
+{
+  "skill": "cardcom-payment-gateway",
+  "cycles": [
+    {
+      "date": "2026-07-06",
+      "from_version": "2.1.0",
+      "to_version": "2.1.1",
+      "trigger": "update-oldest-skills batch (least-recently-touched refresh)",
+      "method": "Fresh-context Opus research agent parsed the LIVE Cardcom V11 OpenAPI spec (secure.cardcom.solutions/swagger/v11/swagger.json, version 11.0) directly, verifying every endpoint path, schema property name, and enum value against ground truth rather than a JS-rendered docs SPA.",
+      "buckets": {
+        "fixed": [
+          "Removed fabricated endpoint Documents/CreateTaxInvoice from references/api-endpoints.md (absent from V11 spec); pointed readers to Documents/CreateDocument + DocumentTypeToCreate:TaxInvoice.",
+          "Clarified Languge (misspelled) lives on Document/DocumentTran schemas, not DocumentBase; DocumentLP + the LowProfile/Create request use correctly-spelled Language.",
+          "Named the real SuspendedDeals/Charge endpoint (group also has Cancel, GetSuspendedDealInfo) in Step 7 instead of deferring to 'the official docs'."
+        ],
+        "verified_correct": [
+          "ResponseCode==0 success semantics (700/701 also success for J2/J5) -- spec description matches verbatim; DealResponse appears in ZERO response schemas.",
+          "DocumentTypeToCreate string enum (all 25 values), field spellings TaxId/IsSendByEmail/ISOCoinId(D), RecuringPayments single-r path, ApiPassword required only for CreateDocument + RefundByTransactionId.",
+          "VAT 18% (raised from 17% Jan 2025; 2026 rise to 19% rejected).",
+          "Community libs @tsdiapi/cardcom (npm, active) + CardCom/OpenFields-{FrontEnd-React,Backend-Node} (both HTTP 200)."
+        ],
+        "persistent_fail": [
+          "Test credentials (terminal 1000, card 4580000000000000, CVV 123) are NOT in the OpenAPI spec (test creds never are). Terminal 1000 is the widely-documented demo terminal and the 4580 card appears in community libs, so plausible, but not independently verified against an official Cardcom test-creds page this cycle. Re-verify against a cited Cardcom tutorial on next update or soften the claim."
+        ]
+      },
+      "lessons": [
+        "For API-wrapper skills, download and parse the vendor's raw OpenAPI/swagger JSON directly. A JS-rendered docs SPA (or a web-search summary of it) can invert a subtle correct detail -- one summary this cycle wrongly 'corrected' the real misspelling Languge to Language. The raw schema is ground truth; the rendered page is not.",
+        "A high-fabrication-risk payment API can still be almost entirely accurate -- the single defect here (one invented endpoint) was buried in a reference file, not the SKILL.md body, which used the correct CreateDocument+enum pattern throughout. Diff reference files against the spec's full path list, don't just spot-check the body."
+      ]
+    }
+  ]
+}

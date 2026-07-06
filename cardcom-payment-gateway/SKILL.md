@@ -221,9 +221,9 @@ A suspended deal authorizes a payment intent without an immediate charge:
 
 1. Create a Low Profile session with `Operation: "SuspendedDeal"`.
 2. The `LowProfileResult` returns `SuspendedInfo` with a `SuspendedDealId`.
-3. Charge the suspended deal later through the Cardcom admin panel or the Transaction API.
+3. Charge the suspended deal later through the Cardcom admin panel or the `SuspendedDeals/Charge` endpoint (the `SuspendedDeals` group also exposes `Cancel` and `GetSuspendedDealInfo`).
 
-Useful for pre-authorizations and services billed after delivery. The exact charge-later call is described in the official docs.
+Useful for pre-authorizations and services billed after delivery. Verify the exact `SuspendedDeals/Charge` request fields against the official docs before wiring the charge-later call.
 
 ### Step 8: Handle Errors
 

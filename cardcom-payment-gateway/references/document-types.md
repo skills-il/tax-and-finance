@@ -69,14 +69,18 @@ guessing.
 | `IsVatFree` | bool | No | `true` if every line in the document is VAT-free |
 | `ISOCoinID` | int | No | `1` = ILS (default), `2` = USD, the rest per ISO |
 | `ISOCoinName` | string | No | Alternative to `ISOCoinID` |
-| `Languge` | string | No | `he` (default) or `en`. Note the V11 spelling: `Languge`, missing the second `a` |
+| `Languge` | string | No | Document language, `he` (default) or `en`. Lives on the `Document` and `DocumentTran` schemas (the standalone `CreateDocument` and `Transaction` flows), NOT on `DocumentBase` itself. Note the V11 misspelling: `Languge`, missing the second `a` |
 | `DepartmentId` | int | No | Department id from the admin panel, for reports |
 | `ExternalId` | string | No | Your custom id stored on the document |
 | `Products` | array | Yes (for financial docs) | See the Products fields below |
 
 In the `LowProfile/Create` flow the document object is a `DocumentLP`; in the
 `Transaction` flow it is a `DocumentTran` (which uses `DocumentDateDDMMYYYY` and
-`Languge`). Both extend the same `DocumentBase` shown above.
+`Languge`). Both extend the same `DocumentBase` shown above. One quirk: the
+`DocumentLP` sub-schema uses the correctly-spelled `Language`, while `DocumentTran`
+uses the misspelled `Languge`; for the LowProfile page as a whole, set the
+top-level `Language` field on the `LowProfile/Create` request (see
+api-endpoints.md).
 
 ## Products Array Fields
 

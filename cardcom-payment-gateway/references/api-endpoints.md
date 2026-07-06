@@ -44,13 +44,17 @@ For `Transaction`, J2/J5 validation-only operations return `ResponseCode` `700` 
 | Endpoint | Purpose | Key Request Fields | Key Response Fields |
 |----------|---------|-------------------|-------------------|
 | `Documents/CreateDocument` | Create standalone invoice/receipt | `ApiName`, `ApiPassword`, `Document` (see document-types.md), `Cash`, `Cheques` | `ResponseCode`, `Description`, `DocumentType`, `DocumentNumber`, `AccountId`, `DocumentUrl` |
-| `Documents/CreateTaxInvoice` | Create a tax invoice specifically | `ApiName`, `ApiPassword`, `Document` | `ResponseCode`, `Description`, `DocumentNumber`, `DocumentUrl` |
 | `Documents/CancelDoc` | Cancel/void a document | `ApiName`, `ApiPassword`, document identifier fields | `ResponseCode`, `Description` |
 | `Documents/SendAllDocumentsToEmail` | Email all docs for a deal | account/deal identifier, `Email` | `ResponseCode`, `Description` |
 | `Documents/GetReport` | Download a document report | date range, doc type, format | `ResponseCode`, `Description`, report data |
 | `Documents/CrossDocument` | Link related documents | document identifiers | `ResponseCode`, `Description` |
 | `Documents/CreateDocumentUrl` | Get a URL for a document-creation form | document parameters | `ResponseCode`, `Description`, `Url` |
 | `Documents/ExternalShopCreateDocument` | Create a document for an external shop integration | `Document`, shop fields | `ResponseCode`, `Description` |
+
+There is no dedicated `Documents/CreateTaxInvoice` endpoint in the V11 schema. To
+issue a tax invoice, call `Documents/CreateDocument` with
+`DocumentTypeToCreate: "TaxInvoice"` (or `"TaxInvoiceAndReceipt"`); see
+document-types.md for the full enum.
 
 ## RecuringPayments
 
