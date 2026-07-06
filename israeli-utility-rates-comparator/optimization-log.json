@@ -1,0 +1,14 @@
+{
+  "cycles": [
+    {
+      "version": "1.3.0",
+      "date": "2026-07-06",
+      "lessons": [
+        "Restructured to fit the 5000-word SKILL.md cap: moved provider tables, arnona city table, saving tips, and extended troubleshooting into references/details-2026.md.",
+        "Expert MAJOR deferred (batch cap): prepaid electricity meters (מונה תשלום מראש) note; municipal water-debt/disconnection handling. Add next cycle.",
+        "Fact-research minor deferred: refresh average-wage figure (13,623 ILS Jan 2026) periodically; note electricity now updates semi-annually (added this cycle).",
+        "This cycle ADDED (CRITICAL): central-gas (צובר) supplier-switching right; solar ROI roof-ownership gate for apartment/renter. MAJOR: electricity debt/disconnection/צרכן-מוגן; arnona empty-property + uninhabitable relief. Fact fixes: small-claims 38,500->39,900; supplier count 280k->~360k; solar two-track regime (<=15kW, ~48 agorot +6 urban, old net-metering closed); solar cost 3,500->5,500/kWp; Amerigas->Amisragas/Dorgas; Energean != Delek Drilling; removed non-existent fixed water charge; women's retirement age note; meter-runs-backward->net-metering bidirectional."
+      ]
+    }
+  ]
+}
