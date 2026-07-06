@@ -26,16 +26,16 @@ Official expense categories used by the Israeli Tax Authority (Rashut HaMisim / 
 | Rule / כלל | VAT / מע"מ | Income Tax / מס הכנסה |
 |------------|-----------|---------------------|
 | Commercial vehicle (רכב מסחרי) | 100% deductible / ניכוי מלא | 100% deductible / ניכוי מלא |
-| Non-commercial, business use (רכב פרטי, שימוש עסקי) | 2/3 deductible / 2/3 ניתן לניכוי | Per ceiling rules / לפי תקרה |
+| Non-commercial, business use (רכב פרטי, שימוש עסקי) | 2/3 of VAT on running costs; purchase VAT non-deductible / 2/3 מהמע"מ על הוצאות שוטפות; מע"מ הרכישה אינו ניתן לניכוי | Per ceiling rules / לפי תקרה |
 | Fixed monthly ceiling (תקרת הוצאות קבועה) | N/A | Updated annually by Tax Authority / מתעדכנת מדי שנה |
 
 ### Entertainment and Meals / הוצאות אירוח וכיבוד
 
 | Rule / כלל | VAT / מע"מ | Income Tax / מס הכנסה |
 |------------|-----------|---------------------|
-| Hosting in Israel (אירוח בישראל) | Full deduction / ניכוי מלא | 80% deductible / 80% ניתן לניכוי |
+| Hosting/entertainment (אירוח) | NOT deductible / לא ניתן לניכוי (תקנה 16, except foreign guest / למעט אורח מחו"ל) | Generally not deductible / בדרך כלל אינו מוכר |
 | Hosting abroad (אירוח בחו"ל) | N/A | 80% deductible / 80% ניתן לניכוי |
-| Internal refreshments (כיבוד פנימי) | Full deduction / ניכוי מלא | Full deduction if reasonable / ניכוי מלא אם סביר |
+| Internal light refreshments (כיבוד קל במקום העסק) | Deductible if a genuine business input / ניתן לניכוי אם תשומה עסקית אמיתית | 80% deductible / 80% ניתן לניכוי |
 
 ### Phone and Communications (Category 8) / תקשורת (קטגוריה 8)
 
@@ -91,6 +91,10 @@ The following expenses are generally not deductible for tax purposes:
 - Expenses without proper tax invoice / הוצאות ללא חשבונית מס תקפה
 - Personal portion of mixed expenses / חלק אישי בהוצאות מעורבות
 - Invoices missing business number / חשבוניות ללא מספר עסק
+- Invoices from foreign suppliers (no Israeli VAT; import VAT via רשימון יבוא only) / חשבוניות מספקים זרים (אין מע"מ ישראלי; מע"מ יבוא רק דרך רשימון יבוא)
+- Business hospitality/entertainment (אירוח) under תקנה 16 (except foreign guest) / אירוח עסקי לפי תקנה 16 (למעט אורח מחו"ל)
+- Input VAT on invoices older than 6 months without VAT-office approval (תקנה 23א) / מס תשומות מחשבוניות בנות יותר מ-6 חודשים ללא אישור (תקנה 23א)
+- Invoices not issued in the claiming business's name / חשבוניות שאינן על שם העוסק התובע
 
 ## Notes / הערות
 
@@ -100,7 +104,7 @@ The following expenses are generally not deductible for tax purposes:
 
 3. **Mixed-use expenses / הוצאות לשימוש מעורב:** When an expense serves both business and personal purposes, only the business portion is deductible. Documentation of business use percentage is required.
 
-4. **E-invoice allocation number (Israel Invoice Model) / מספר הקצאה (מודל חשבוניות ישראל):** B2B tax invoices above the SHAAM threshold must carry a Tax Authority allocation number (מספר הקצאה) to be eligible for VAT input deduction. Threshold by issue date: NIS 20,000 in 2025; NIS 10,000 from 1 Jan 2026; NIS 5,000 from 1 Jun 2026 (permanent floor). / סף לפי תאריך הוצאת החשבונית: 20,000 ש"ח ב-2025; 10,000 ש"ח מ-1.1.2026; 5,000 ש"ח מ-1.6.2026 (רצפה קבועה).
+4. **E-invoice allocation number (Israel Invoice Model) / מספר הקצאה (מודל חשבוניות ישראל):** B2B tax invoices above the SHAAM threshold must carry a Tax Authority allocation number (מספר הקצאה) to be eligible for VAT input deduction. Threshold by issue date: NIS 20,000 in 2025; NIS 10,000 from 1 Jan 2026; NIS 5,000 from 1 Jun 2026 (further reductions planned for 2027). / סף לפי תאריך הוצאת החשבונית: 20,000 ש"ח ב-2025; 10,000 ש"ח מ-1.1.2026; 5,000 ש"ח מ-1.6.2026 (הפחתות נוספות מתוכננות ל-2027).
 
 5. **Record retention / שמירת מסמכים:** Business records and invoices must be retained for 7 years per Israeli tax law. Electronic and digital storage is allowed as long as the records reproduce accurately and remain legible.
 
