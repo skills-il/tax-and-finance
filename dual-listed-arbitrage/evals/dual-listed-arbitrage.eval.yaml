@@ -1,0 +1,30 @@
+skill: dual-listed-arbitrage
+version: 1.0.0
+# Trigger evals (bilingual EN+HE): should_trigger true/false + quality assertions
+triggers:
+  - prompt: "compare Check Point price on TASE vs NASDAQ"
+    should_trigger: true
+  - prompt: "is there an arbitrage gap on NICE between Tel Aviv and the US"
+    should_trigger: true
+  - prompt: "what is the dual-listed premium on Teva right now"
+    should_trigger: true
+  - prompt: "analyze Apple stock"
+    should_trigger: false   # -> global-stock-analysis
+  - prompt: "analyze Bank Hapoalim on the TASE"
+    should_trigger: false   # single-market -> tase-stock-analysis
+  # Hebrew triggers — the catalog is Hebrew-first; users ask in Hebrew against the EN description
+  - prompt: "יש ארביטראז' על טבע בין תל אביב לניו יורק?"
+    should_trigger: true    # HE: TEVA gap
+  - prompt: "תשווה לי את המחיר של NICE בת\"א מול נאסדק"
+    should_trigger: true    # HE: NICE cross-listing compare
+  - prompt: "מה הפרמיה על צ'ק פוינט בין הבורסות?"
+    should_trigger: true    # HE: CHKP premium
+  - prompt: "תנתח לי את מניית בנק לאומי"
+    should_trigger: false   # HE: single-market -> tase-stock-analysis
+  - prompt: "מה מצב מניית מיקרוסופט?"
+    should_trigger: false   # HE -> global-stock-analysis (cross-skill)
+quality:
+  - prompt: "compare CHKP on TASE vs NASDAQ"
+    assert: "Converts the US price via the BoI representative rate and reports a gap percent with an overlap-confidence note."
+  - prompt: "יש ארביטראז' על טבע עכשיו?"
+    assert: "Answers in Hebrew with a real gap percent, both leg prices and their as-of dates, and the execution-cost caveat."
