@@ -1,6 +1,6 @@
 {
   "author": "skills-il",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "category": "tax-and-finance",
   "tags": {
     "he": [
@@ -44,17 +44,35 @@
   ],
   "openclaw": {
     "requires": {
-      "bins": ["python3"],
+      "bins": [
+        "python3"
+      ],
       "env": []
     },
     "emoji": "📝"
   },
   "volatility": "legislative",
   "authoritative_sources": [
-    { "url": "https://www.nevo.co.il/law_html/law00/144599.htm", "type": "statute", "language": "he" },
-    { "url": "https://www.nevo.co.il/law_html/law00/71888.htm", "type": "statute", "language": "he" },
-    { "url": "https://www.kolzchut.org.il/he/עוסק_פטור", "type": "regulator", "language": "he" },
-    { "url": "https://taxsummaries.pwc.com/israel/corporate/other-taxes", "type": "industry_summary", "language": "en" }
+    {
+      "url": "https://www.nevo.co.il/law_html/law00/144599.htm",
+      "type": "statute",
+      "language": "he"
+    },
+    {
+      "url": "https://www.nevo.co.il/law_html/law00/71888.htm",
+      "type": "statute",
+      "language": "he"
+    },
+    {
+      "url": "https://www.kolzchut.org.il/he/עוסק_פטור",
+      "type": "regulator",
+      "language": "he"
+    },
+    {
+      "url": "https://taxsummaries.pwc.com/israel/corporate/other-taxes",
+      "type": "industry_summary",
+      "language": "en"
+    }
   ],
   "domain_checklist_version": 1
 }

@@ -230,12 +230,13 @@
     },
     {
       "id": "bit-paybox-fees-2025",
-      "claim": "Bit and PayBox began charging approximately 1% fees from January 2025 on users whose annual aggregate transactions exceed 25,000 NIS",
+      "claim": "Bit and PayBox charge a 0.6% fee (raised to 0.8% for Bit from May 2026) on the portion of receipts exceeding 25,000 NIS per year, effective January 2025. Bit = Bank Hapoalim, PayBox = Discount Group, Pepper Pay = Bank Leumi.",
       "claim_type": "feature",
-      "source_url": "https://en.globes.co.il/en/article-payment-apps-bit-and-paybox-to-charge-fees-from-january-1001483104",
+      "source_url": "https://www.calcalist.co.il/investing/article/rjwfsrxm1x",
       "source_fetched_at": "2026-05-19T00:00:00Z",
-      "raw_snippet": "Israel's Supervisor of Banks announced plans to allow payment apps Bit and Paybox to charge fees from January 2025, with a fee of probably 1% charged only on customers whose total transactions exceed NIS 25,000 annually",
-      "confidence": "medium"
+      "raw_snippet": "עמלה של 0.6% על קבלות מעל 25,000 ש\"ח בשנה, החל מ-1 בינואר 2025",
+      "confidence": "medium",
+      "fetched_at": "2026-07-06T13:00:00Z"
     }
   ]
 }
