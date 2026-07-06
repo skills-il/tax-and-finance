@@ -42,12 +42,15 @@ SHAAM allocation threshold timeline (Israel Tax Authority, accelerated rollout):
 |--------|---------------------|
 | 2025 (full year) | NIS 20,000 |
 | 1 Jan 2026 to 31 May 2026 | NIS 10,000 |
-| From 1 Jun 2026 | NIS 5,000 (permanent floor) |
+| From 1 Jun 2026 | NIS 5,000 (further reductions planned for 2027) |
 
 A B2B tax invoice above the threshold without a valid SHAAM allocation number (מספר הקצאה) is not eligible for VAT input deduction. Always check the threshold for the invoice issue date, not today's date.
 
 ### Step 3: Extract VAT (1/6 Rule)
-Israeli VAT is 18% (raised from 17% effective 1 January 2025). For invoices where only the total (gross) is visible:
+
+**First confirm the supplier is an Israeli VAT-registered dealer.** Foreign suppliers (AWS, Google, OpenAI, Figma, Upwork, and most overseas SaaS) charge NO Israeli VAT. Do NOT apply the 18/118 rule to a foreign-supplier invoice, or you will fabricate a reclaimable input-VAT figure that does not exist. Import VAT on goods is reclaimed only through the customs import entry (רשימון יבוא), not the foreign supplier's invoice. Convert any foreign-currency amount to shekels at the invoice-date exchange rate before booking. For imports and purchases from foreign/unregistered suppliers, self-invoicing / reverse charge (חשבונית עצמית) may apply, route the accountant to that mechanism.
+
+Israeli VAT is 18% (raised from 17% effective 1 January 2025). For an Israeli-supplier invoice where only the total (gross) is visible:
 
 ```python
 # VAT extraction from gross amount (כלל השישית)
@@ -64,8 +67,8 @@ net_amount = gross_amount - vat_amount
 
 Shortcut at 18%: VAT ≈ Total / 6.556 (the divisor is 118/18). The colloquial name "klal hashishit" (the 1/6 rule) predates the rate hike and is now an approximation, not a literal sixth.
 
-### Step 4: Categorize by Tax Authority Standards
-Assign each expense to a Tax Authority category. Codes 1–12 align with `references/expense-categories.md` and the keyword-based auto-categorizer in `scripts/categorize_invoices.py`:
+### Step 4: Categorize by Expense Category
+Assign each expense to a standard bookkeeping category. These 12 working categories align with the Tax Authority income-statement structure (the דוח רווח והפסד / form 6111 groupings), with `references/expense-categories.md`, and with the keyword-based auto-categorizer in `scripts/categorize_invoices.py`:
 
 | Code | Hebrew | English | Common Examples |
 |:----:|--------|---------|-----------------|
@@ -121,8 +124,9 @@ Surface the relevant filing windows so the user knows when the accountant needs 
 
 | Filing | Frequency | Threshold / Trigger | Deadline |
 |--------|-----------|--------------------|----------|
-| VAT return (Doch Tkufati) | Bi-monthly | Annual turnover ≤ NIS 1.51M | 15th of the month after the period |
-| VAT return | Monthly | Annual turnover > NIS 1.51M | 15th of the next month |
+| VAT return (Doch Tkufati) | Bi-monthly | Annual turnover ≤ NIS 1,775,000 | 15th of the month after the period |
+| VAT return | Monthly | Annual turnover > NIS 1,775,000 | 15th of the next month |
+| Detailed VAT report (Doch Meforat) | Per VAT period | Annual turnover > NIS 500,000 (from 1 Jan 2026) | With the periodic VAT return |
 | Income tax annual return (Doch Shnati) | Annual | All self-employed | 30 April (paper) / 31 May (online); via מייצג can extend to Nov–Dec |
 | Bituach Leumi advances | Monthly | All self-employed | 15th of next month |
 
@@ -143,14 +147,14 @@ Actions:
 6. Export: Generate accountant-ready CSV with summary
 Result: Organized expense report with VAT summary ready for accountant
 
-### Example 2: VAT Extraction from Receipts
-User says: "I paid 5,850 NIS total for cloud services. What is the VAT portion?"
+### Example 2: VAT Extraction from a Receipt
+User says: "I paid 5,850 NIS total to an Israeli hosting company (Osek Murshe) for server hosting. What is the VAT portion?"
 Actions:
-1. Apply the 18/118 rule: VAT = 5,850 * (18 / 118) = 892.37 NIS
-2. Net amount: 5,850 - 892.37 = 4,957.63 NIS
-3. Categorize: Communications (code 8) for cloud services
-4. Note: Verify supplier is Osek Murshe and issued a tax invoice
-Result: VAT of 892.37 NIS extractable, net expense 4,957.63 NIS in Communications (8)
+1. Confirm the supplier is Israeli VAT-registered. (A foreign provider such as AWS or Google carries NO Israeli VAT, in that case skip the 18/118 extraction and record the full amount with zero reclaimable VAT.)
+2. Apply the 18/118 rule: VAT = 5,850 * (18 / 118) = 892.37 NIS
+3. Net amount: 5,850 - 892.37 = 4,957.63 NIS
+4. Categorize: Communications (code 8)
+Result: VAT of 892.37 NIS extractable, net expense 4,957.63 NIS in Communications (8). Had the supplier been foreign, reclaimable VAT would be 0.
 
 ### Example 3: Osek Patur Invoice Handling
 User says: "I got an invoice from a freelance designer, but there is no VAT line"
@@ -184,10 +188,14 @@ Result: Total VAT 356.95 NIS, but only 237.97 NIS is deductible. The remaining 1
 - Osek Patur (exempt dealer) invoices have no VAT component. Agents may still try to extract VAT from these invoices, producing incorrect bookkeeping entries.
 - Israeli invoice numbers are not globally unique. Different suppliers can have the same invoice number. Always index by supplier + invoice number combination.
 - Hebrew OCR on scanned invoices frequently misreads the characters vav (ו) and zayin (ז), and confuses final-mem (ם) with samekh (ס). Verify extracted amounts and names.
-- The SHAAM allocation-number threshold is staged (NIS 10,000 from 1 Jan 2026, dropping to NIS 5,000 from 1 Jun 2026). Apply the threshold that was in force on the invoice issue date, not today.
+- The SHAAM allocation-number threshold is staged (NIS 10,000 from 1 Jan 2026, dropping to NIS 5,000 from 1 Jun 2026, with further reductions planned for 2027). Apply the threshold that was in force on the invoice issue date, not today.
 - The Ministry of Finance proposed a VAT rise to 19% for January 2026 during the 2026 budget talks. That proposal was rejected; the rate **remains 18%** through 2026. Do not pre-apply a 19% rate to invoices regardless of how confident the source looks.
 - The Osek Patur turnover ceiling rose from NIS 120,000 to NIS 122,833 starting 2026. Agents that hardcode 120,000 will flag legitimate Osek Patur status as "over threshold" for revenues between 120,001 and 122,833.
 - An invoice dated more than 14 days after the underlying supply or payment can be challenged by the Tax Authority. Flag suspiciously late invoices for the accountant.
+- Input VAT can only be deducted in the invoice's VAT period or within 6 months after it (תקנה 23א). Flag invoices older than 6 months in the batch: their VAT is no longer freely reclaimable and needs VAT-office approval.
+- A tax invoice must be issued in the name of the claiming business (על שם העוסק) to deduct input VAT. Reject invoices addressed to the owner personally, a spouse, or a different entity, this is the most common reason an accountant disallows an invoice.
+- The vehicle 2/3 rule applies to running costs (fuel, maintenance, repairs). VAT on buying or importing a private (non-commercial) vehicle is fully non-deductible, even at 100% business use.
+- Input VAT on business hospitality/entertainment (אירוח) is NOT deductible (תקנה 16, except hosting a guest from abroad). Do not reclaim VAT on restaurant/hosting invoices meant to entertain clients or employees; only genuine business inputs qualify.
 
 ## Reference Links
 

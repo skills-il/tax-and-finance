@@ -2,8 +2,8 @@
 """
 Israeli Invoice Categorizer
 
-Parses invoice data (JSON input), categorizes expenses per Israeli Tax Authority
-(Rashut HaMisim) official categories, calculates VAT amounts, flags compliance
+Parses invoice data (JSON input), categorizes expenses into 12 standard bookkeeping categories aligned with the
+Tax Authority income-statement structure (form 6111), calculates VAT amounts, flags compliance
 issues, and generates summary reports.
 
 Usage:
@@ -30,7 +30,7 @@ VAT_MULTIPLIER = Decimal("18")
 VAT_TOLERANCE_NIS = Decimal("1")
 ROUNDING = ROUND_HALF_UP
 
-# Israeli Tax Authority official expense categories
+# Standard bookkeeping expense categories (aligned with Tax Authority form 6111)
 EXPENSE_CATEGORIES: dict[int, dict[str, str]] = {
     1:  {"he": "חומרי גלם",          "en": "Raw materials"},
     2:  {"he": "קבלני משנה",          "en": "Subcontractors"},
@@ -251,7 +251,8 @@ def categorize_by_keywords(description: str, vendor_name: str = "") -> int:
 def determine_vat_deductibility(invoice: dict[str, Any]) -> dict[str, Any]:
     """
     Determine how much VAT is deductible based on invoice type and category.
-    Applies special rules for vehicles (2/3 deductible) and entertainment.
+    Applies special rules: hospitality/אירוח blocked (Reg 16), vehicle running
+    costs 2/3 and vehicle purchase blocked (Reg 14), otherwise full deduction.
     """
     vat_amount = Decimal(str(invoice.get("vat_amount", 0)))
     category = invoice.get("category_code", 12)
@@ -276,8 +277,39 @@ def determine_vat_deductibility(invoice: dict[str, Any]) -> dict[str, Any]:
         result["rule_applied"] = "Missing business number - VAT not deductible"
         return result
 
-    # Vehicle expenses: only 2/3 deductible for non-commercial vehicles
+    description = invoice.get("description", "").lower()
+
+    # Hospitality / entertainment (אירוח): input VAT NOT deductible per Reg 16
+    hospitality_keywords = [
+        "אירוח", "מסעדה", "restaurant", "entertainment", "catering",
+        "בית קפה", "cafe", "בית מלון", "hotel",
+    ]
+    if any(kw in description for kw in hospitality_keywords):
+        result["deductible_vat"] = Decimal("0")
+        result["non_deductible_vat"] = vat_amount
+        result["deduction_rate"] = Decimal("0")
+        result["rule_applied"] = (
+            "Hospitality/entertainment (אירוח): input VAT not deductible (Reg 16)"
+        )
+        return result
+
+    # Vehicle expenses: 2/3 deductible on RUNNING costs of a non-commercial vehicle.
+    # VAT on buying/importing a private vehicle is fully non-deductible (Reg 14).
     if category == 9 and not invoice.get("commercial_vehicle", False):
+        purchase_keywords = [
+            "רכישת רכב", "קניית רכב", "vehicle purchase", "car purchase",
+            "רכישה", "יבוא רכב",
+        ]
+        if invoice.get("vehicle_purchase", False) or any(
+            kw in description for kw in purchase_keywords
+        ):
+            result["deductible_vat"] = Decimal("0")
+            result["non_deductible_vat"] = vat_amount
+            result["deduction_rate"] = Decimal("0")
+            result["rule_applied"] = (
+                "Private-vehicle purchase/import: input VAT not deductible (Reg 14)"
+            )
+            return result
         deductible = (vat_amount * 2 / 3).quantize(
             Decimal("0.01"), rounding=ROUNDING
         )
@@ -285,7 +317,7 @@ def determine_vat_deductibility(invoice: dict[str, Any]) -> dict[str, Any]:
         result["non_deductible_vat"] = vat_amount - deductible
         result["deduction_rate"] = Decimal("0.6667")
         result["rule_applied"] = (
-            "Vehicle expense: 2/3 VAT deductible (non-commercial vehicle)"
+            "Vehicle running cost: 2/3 VAT deductible (non-commercial vehicle)"
         )
         return result
 
@@ -305,12 +337,9 @@ def determine_income_tax_deductibility(invoice: dict[str, Any]) -> dict[str, Any
     total = Decimal(str(invoice.get("total_with_vat", 0)))
     description = invoice.get("description", "").lower()
 
-    entertainment_keywords = [
-        "אירוח", "ארוחה", "מסעדה", "entertainment", "meal",
-        "restaurant", "catering", "כיבוד",
-    ]
-
-    for kw in entertainment_keywords:
+    # Light in-house refreshments (כיבוד קל) are 80% deductible for income tax.
+    kibud_keywords = ["כיבוד", "refreshment"]
+    for kw in kibud_keywords:
         if kw in description:
             deductible = (total * Decimal("0.80")).quantize(
                 Decimal("0.01"), rounding=ROUNDING
@@ -321,7 +350,25 @@ def determine_income_tax_deductibility(invoice: dict[str, Any]) -> dict[str, Any
                 "non_deductible_amount": total - deductible,
                 "deduction_rate": Decimal("0.80"),
                 "rule_applied": (
-                    "Entertainment/meals: 80% deductible for income tax"
+                    "Light refreshments (כיבוד קל): 80% deductible for income tax"
+                ),
+            }
+
+    # Client hospitality/entertainment (אירוח) is generally NOT income-tax deductible.
+    hospitality_keywords = [
+        "אירוח", "ארוחה", "מסעדה", "entertainment", "meal",
+        "restaurant", "catering",
+    ]
+    for kw in hospitality_keywords:
+        if kw in description:
+            return {
+                "total": total,
+                "deductible_amount": Decimal("0"),
+                "non_deductible_amount": total,
+                "deduction_rate": Decimal("0"),
+                "rule_applied": (
+                    "Hospitality/entertainment (אירוח): generally not income-tax "
+                    "deductible - flag for accountant"
                 ),
             }
 
