@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0",
   "skill": "israeli-employee-tax-refund",
-  "generated_at": "2026-05-18T00:00:00Z",
+  "generated_at": "2026-07-06T00:00:00Z",
   "claims": [
     {
       "claim_id": "credit-point-value-2026",
@@ -9,7 +9,13 @@
       "source_url": "https://www.kolzchut.org.il/he/%D7%A0%D7%A7%D7%95%D7%93%D7%95%D7%AA_%D7%96%D7%99%D7%9B%D7%95%D7%99_%D7%9E%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
       "raw_snippet": "שווי נקודת זיכוי בשנת 2026: 242 ₪ לחודש, 2,904 ₪ לשנה. Credit-point monthly value 242 ש\"ח, annual 2,904 ש\"ח. הקצאה בסיסית לתושב ישראל: 2.25 נקודות זיכוי לשנה (סעיף 34 לפקודה). אישה תושבת מקבלת תוספת של 0.5 נקודה = 2.75 בסך הכל לשנה (סעיף 36א לפקודה). Israeli resident base 2.25 points (Section 34 ITO); female resident additional 0.5 = 2.75 total (Section 36A ITO).",
       "fetched_at": "2026-05-18T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/2026-rates.md", "references/domain-checklist.md", "scripts/estimate_refund.py"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md",
+        "references/domain-checklist.md",
+        "scripts/estimate_refund.py"
+      ]
     },
     {
       "claim_id": "tax-brackets-2026-monthly",
@@ -17,7 +23,12 @@
       "source_url": "https://www.kolzchut.org.il/he/%D7%9E%D7%93%D7%A8%D7%92%D7%95%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
       "raw_snippet": "מדרגות מס הכנסה חודשיות לשכירים 2026 לפי סעיף 121 לפקודה: עד 7,010 ₪ - 10%; 7,011 עד 10,060 ₪ - 14%; 10,061 עד 19,000 ₪ - 20%; 19,001 עד 25,100 ₪ - 31%; 25,101 עד 46,690 ₪ - 35%; 46,691 ₪ ומעלה - 47% (סעיף 121). Annual equivalents: 84,120 / 120,720 / 228,000 / 301,200 / 560,280 ₪. Section 121 ITO governs the rate ladder for employment income.",
       "fetched_at": "2026-05-18T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/2026-rates.md", "scripts/estimate_refund.py"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md",
+        "scripts/estimate_refund.py"
+      ]
     },
     {
       "claim_id": "mas-yesafim-2026",
@@ -25,7 +36,12 @@
       "source_url": "https://www.kolzchut.org.il/he/%D7%9E%D7%93%D7%A8%D7%92%D7%95%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
       "raw_snippet": "מס יסף לפי סעיף 121ב לפקודה: 3% על הכנסה שנתית מעל 721,560 ₪ בשנת 2026, על גבי המדרגות הרגילות. Section 121B mas yesafim 3% above 721,560 ₪ annual income threshold 2026, Section 121B (סעיף 121ב) ITO. Section 121 top employment bracket is 47%.",
       "fetched_at": "2026-05-18T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/2026-rates.md", "scripts/estimate_refund.py"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md",
+        "scripts/estimate_refund.py"
+      ]
     },
     {
       "claim_id": "section-39b-miluim-points",
@@ -33,7 +49,12 @@
       "source_url": "https://www.kolzchut.org.il/he/%D7%A0%D7%A7%D7%95%D7%93%D7%95%D7%AA_%D7%96%D7%99%D7%9B%D7%95%D7%99_%D7%9E%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94_%D7%9C%D7%9C%D7%95%D7%97%D7%9E%D7%99_%D7%9E%D7%99%D7%9C%D7%95%D7%90%D7%99%D7%9D",
       "raw_snippet": "נקודות זיכוי למשרתי מילואים לפי סעיף 39ב לפקודת מס הכנסה (תיקון 283 התשפ\"ו-2025): 30-39 ימי שירות = 0.5 נקודות (1,452 ₪); 40-49 ימים = 0.75 (2,178 ₪); 50-54 ימים = 1.0 (2,904 ₪); כל 5 ימים נוספים = תוספת 0.25 (726 ₪); תקרה 4.0 נקודות (11,616 ₪). Section 39B (סעיף 39ב) per Amendment 283 (תיקון 283 התשפ\"ו-2025), realized in tax year AFTER the service.",
       "fetched_at": "2026-05-18T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/2026-rates.md", "references/domain-checklist.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md",
+        "references/domain-checklist.md"
+      ]
     },
     {
       "claim_id": "section-46-digital-reporting-2026",
@@ -41,7 +62,12 @@
       "source_url": "https://www.starkcpa.com/%D7%97%D7%95%D7%91%D7%AA-%D7%93%D7%99%D7%95%D7%95%D7%97-%D7%A2%D7%9C-%D7%AA%D7%A8%D7%95%D7%9E%D7%95%D7%AA-%D7%9C%D7%A2%D7%9E%D7%95%D7%AA%D7%95%D7%AA-%D7%94%D7%97%D7%9C-%D7%9E-1-1-2026/",
       "raw_snippet": "החל מיום 1.1.2026, כל מוסד ציבורי בעל אישור לפי סעיף 46 לפקודת מס הכנסה יהיה חייב לדווח על כל התרומות שקיבל מתורמים באמצעות מערכת התרומות הדיגיטלית של רשות המסים. The reporting obligation is on the receiving נמל\"א holding Section 46 (סעיף 46) approval, not on the donor. Donations get a unique registration number visible in the donor's personal account at the Tax Authority website (מערכת התרומות הדיגיטלית / תרומות ישראל). Paper receipts remain sufficient for donations made before 1.1.2026. Effective date: 1.1.2026.",
       "fetched_at": "2026-05-18T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/document-requirements.md", "references/domain-checklist.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/document-requirements.md",
+        "references/domain-checklist.md"
+      ]
     },
     {
       "claim_id": "section-46-donations-2026",
@@ -49,7 +75,13 @@
       "source_url": "https://www.kolzchut.org.il/he/%D7%96%D7%99%D7%9B%D7%95%D7%99_%D7%9E%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94_%D7%91%D7%A9%D7%9C_%D7%AA%D7%A8%D7%95%D7%9E%D7%94_(%D7%A1%D7%A2%D7%99%D7%A3_46)",
       "raw_snippet": "זיכוי בשל תרומה למוסד ציבורי לפי סעיף 46 לפקודת מס הכנסה (2026): מינימום שנתי 207 ₪; תקרה 10,354,816 ₪ או 30% מההכנסה החייבת (הנמוך מביניהם); שיעור הזיכוי 35% מסכום התרומה. Section 46 (סעיף 46) ITO 2026: minimum 207 ₪, ceiling 10,354,816 ₪, credit rate 35% of qualifying donation. Reference URL with closing paren may be truncated as https://www.kolzchut.org.il/he/%D7%96%D7%99%D7%9B%D7%95%D7%99_%D7%9E%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94_%D7%91%D7%A9%D7%9C_%D7%AA%D7%A8%D7%95%D7%9E%D7%94_(%D7%A1%D7%A2%D7%99%D7%A3_46 when the trailing parenthesis is stripped by URL extractors.",
       "fetched_at": "2026-05-18T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/2026-rates.md", "references/domain-checklist.md", "scripts/estimate_refund.py"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md",
+        "references/domain-checklist.md",
+        "scripts/estimate_refund.py"
+      ]
     },
     {
       "claim_id": "section-9-5-disability-ceilings-2026",
@@ -57,7 +89,11 @@
       "source_url": "https://www.kolzchut.org.il/he/%D7%A4%D7%98%D7%95%D7%A8_%D7%9E%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94_%D7%9C%D7%90%D7%A0%D7%A9%D7%99%D7%9D_%D7%A2%D7%9D_%D7%A0%D7%9B%D7%95%D7%AA",
       "raw_snippet": "פטור ממס הכנסה לאנשים עם נכות לפי סעיף 9(5) לפקודה. תקרות 2026 (נכונות לשנים 2024-2027): נכות 365 ימים ומעלה, הכנסה מיגיעה אישית - 445,200 ₪ לשנה; קצבה לפי חוק הנכים או חוק נפגעי פעולות איבה - 684,000 ₪ לשנה; נכות 185-364 ימים או הכנסה פסיבית - 81,960 ₪ לשנה; ריבית על קרן פיצויים - 337,200 ₪ לשנה. Section 9(5) (סעיף 9(5)) ceilings: 445,200 / 684,000 / 81,960 / 337,200 ₪. Qualifying basis: 100% medical disability, blindness, or 90% via multi-organ-injury calculation.",
       "fetched_at": "2026-05-18T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/2026-rates.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md"
+      ]
     },
     {
       "claim_id": "section-35-olim-post-amendment-262",
@@ -65,7 +101,10 @@
       "source_url": "https://www.klf.co.il/tax-updates/credit-points-for-a-new-immigrant",
       "raw_snippet": "נקודות זיכוי לעולה חדש לפי סעיף 35 לפקודה (תיקון 262 מ-7.5.2022) לעולים שעלו מ-1.1.2022 ואילך: 1/12 לחודש בחודשים 1-12 (1 נקודה לשנה); 1/4 לחודש בחודשים 13-30, 18 חודשים, 3 נקודות לשנה; 1/6 לחודש בחודשים 31-42, 2 נקודות לשנה; 1/12 לחודש בחודשים 43-54, 1 נקודה לשנה. סך הכל 8.5 נקודות זיכוי על פני 54 חודשים. Section 35 (סעיף 35) ITO post-Amendment 262 schedule. Pre-Amendment 262 schedule (pre-1.1.2022 olim): 4.5 / 2 / 1 over 18 / 12 / 12 months = 7.5 points over 42 months.",
       "fetched_at": "2026-05-18T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "section-160-six-year-window",
@@ -73,7 +112,12 @@
       "source_url": "https://www.kolzchut.org.il/he/%D7%94%D7%97%D7%96%D7%A8_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
       "raw_snippet": "סעיף 160 לפקודת מס הכנסה: חלון התיישנות של 6 שנים מתום שנת המס להגשת בקשה להחזר מס. שנת מס 2020 - תאריך אחרון 31.12.2026; 2021 - 31.12.2027; 2022 - 31.12.2028; 2023 - 31.12.2029; 2024 - 31.12.2030; 2025 - 31.12.2031. Section 160 (סעיף 160) ITO 6-year retroactive refund window. Late refund accrues הצמדה (CPI linkage) plus 4% annual interest.",
       "fetched_at": "2026-05-18T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/2026-rates.md", "references/domain-checklist.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md",
+        "references/domain-checklist.md"
+      ]
     },
     {
       "claim_id": "section-164-withholding",
@@ -81,7 +125,10 @@
       "source_url": "https://www.mekler.co.il/links/item/991-%D7%97%D7%95%D7%91%D7%AA-%D7%A0%D7%99%D7%9B%D7%95%D7%99-%D7%9E%D7%A1-%D7%91%D7%9E%D7%A7%D7%95%D7%A8-%D7%A2%D7%93%D7%9B%D7%95%D7%9F.html",
       "raw_snippet": "סעיף 164 לפקודת מס הכנסה מונה מספר סוגי תשלום שעליהם מוטלת החובה לנכות מס בעת התשלום (ניכוי מס במקור). Section 164 (סעיף 164) ITO is the statutory base for employer withholding obligations. Withholding regulations under תקנה 6 לתקנות מס הכנסה (ניכוי ממשכורת ומשכר עבודה) - תקנה 6 governs month-by-month withholding which causes single-month bonuses to land in higher brackets.",
       "fetched_at": "2026-05-18T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "section-40-children-credit",
@@ -89,7 +136,10 @@
       "source_url": "https://www.kolzchut.org.il/he/%D7%A0%D7%A7%D7%95%D7%93%D7%95%D7%AA_%D7%96%D7%99%D7%9B%D7%95%D7%99_%D7%9E%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94_%D7%9C%D7%94%D7%95%D7%A8%D7%94_%D7%9C%D7%99%D7%9C%D7%93_%D7%A2%D7%93_%D7%92%D7%99%D7%9C_5",
       "raw_snippet": "סעיף 40 לפקודת מס הכנסה - נקודות זיכוי להורה לילד עד גיל 5 (לוח 2024 ואילך, לכל הורה): שנת הלידה = 2.5 נקודות; גיל 1 = 4.5; גיל 2 = 4.5; גיל 3 = 3.5; גיל 4 = 2.5; גיל 5 = 2.5. עד 2024 הסכום היה נמוך משמעותית (1.5 בלבד לכל שנה). לאם בילד 6-17 - 2 נקודות החל מ-2022 (1 בשנים קודמות). לאב בילד 6-17 - 1 נקודה החל מ-2022 (0 לפני). Section 40 (סעיף 40) ITO + Sections 66(ג)(4)(ג), 66(ג)(4א). Sections 64, 65, 66 govern single-parent and alimony credit/deduction.",
       "fetched_at": "2026-05-18T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "section-40g-academic-credit",
@@ -97,7 +147,11 @@
       "source_url": "https://www.kolzchut.org.il/he/%D7%A0%D7%A7%D7%95%D7%93%D7%95%D7%AA_%D7%96%D7%99%D7%9B%D7%95%D7%99_%D7%9E%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
       "raw_snippet": "סעיף 40ג לפקודת מס הכנסה - נקודות זיכוי לסיום תואר אקדמי. תואר ראשון לבוגרי 2023 ואילך: 1 נקודה לכל שנת לימודים עד 3 שנים. תואר ראשון לבוגרי 2014-2022: 1 נקודה לשנת מס אחת (בחירת הנישום: שנת הסיום או שנה לאחריה). תואר שני 2023+: 0.5 נקודה לשנה לשנתיים אחרי הסיום. תואר שני 2014-2022: 0.5 נקודה לשנת מס אחת. Section 40g (סעיף 40ג) ITO academic credit. Includes professional degrees with mandatory internship like medicine.",
       "fetched_at": "2026-05-18T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/2026-rates.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md"
+      ]
     },
     {
       "claim_id": "section-45a-47-pension",
@@ -105,7 +159,11 @@
       "source_url": "https://pensuni.com/?p=1532",
       "raw_snippet": "סעיף 45א לפקודת מס הכנסה: זיכוי של 35% מסכום ההפקדה על שכר מבוטח. סעיף 47 לפקודה: ניכוי על הפקדה עצמאית לקופת גמל לקצבה על שכר לא מבוטח. תקרת הכנסה מזכה 2026: 9,700 ש\"ח לחודש (הפקדה מותרת עד 679 ש\"ח לחודש). Section 45A (סעיף 45א) and Section 47 (סעיף 47) ITO pension contributions: 35% credit on insured salary; 9,700 ש\"ח / 679 ש\"ח ceilings for 2026.",
       "fetched_at": "2026-05-18T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/domain-checklist.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/domain-checklist.md"
+      ]
     },
     {
       "claim_id": "keren-hishtalmut-early-withdrawal",
@@ -113,7 +171,11 @@
       "source_url": "https://pensuni.com/?p=2916",
       "raw_snippet": "משיכת קרן השתלמות לפני 6 שנים לפי סעיפים 9(16א) ו-164 לפקודה: ניכוי במקור של 47% מהסכום הצבור. אם שיעור המס השולי האמיתי של העובד נמוך מ-47%, ניתן לבקש החזר על ההפרש. Section 9 (סעיף 9) (16a) and Section 164 (סעיף 164) ITO: early keren hishtalmut withdrawal 47% withholding.",
       "fetched_at": "2026-05-18T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/domain-checklist.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/domain-checklist.md"
+      ]
     },
     {
       "claim_id": "section-11-yishuv-mezakeh",
@@ -121,7 +183,12 @@
       "source_url": "https://www.kolzchut.org.il/he/%D7%96%D7%99%D7%9B%D7%95%D7%99_%D7%9E%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94_%D7%9C%D7%AA%D7%95%D7%A9%D7%91%D7%99%D7%9D_%D7%91%D7%A4%D7%A8%D7%99%D7%A4%D7%A8%D7%99%D7%94",
       "raw_snippet": "סעיף 11 לפקודת מס הכנסה וחוק הנגב/הגליל - זיכוי לתושב יישוב מזכה. דרישה: מרכז חיים ביישוב הזכאי לפחות 12 חודשים רצופים; היישוב מופיע ברשימה הרשמית של אותה שנה. רשימה שנתית מתפרסמת על ידי רשות המסים. Section 11 (סעיף 11) ITO yishuv mezakeh per Negev/Galilee Law. 2026 list published 11.1.2026.",
       "fetched_at": "2026-05-18T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/2026-rates.md", "references/domain-checklist.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md",
+        "references/domain-checklist.md"
+      ]
     },
     {
       "claim_id": "section-14-returning-residents",
@@ -129,7 +196,10 @@
       "source_url": "https://www.kolzchut.org.il/he/%D7%94%D7%97%D7%96%D7%A8_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
       "raw_snippet": "סעיף 14 לפקודת מס הכנסה: פטור 10 שנים על הכנסות חוץ לתושבים חוזרים ועולים. סעיף 102 לפקודה: מסלול אופציות לעובדים. Section 14 (סעיף 14) ITO 10-year foreign-income exemption. Section 102 (Section 102) ITO governs employee stock options route 102.",
       "fetched_at": "2026-05-18T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "form-106-overview",
@@ -137,7 +207,11 @@
       "source_url": "https://www.kolzchut.org.il/he/%D7%98%D7%95%D7%A4%D7%A1_106",
       "raw_snippet": "טופס 106 - אישור שנתי על משכורת ומס שנוכה. מונפק על ידי המעסיק עד 31.3 של השנה שלאחר שנת המס. Form 106 is the canonical employer annual confirmation issued by 31.3 of following year. When a worker has multiple jobs in one tax year they receive multiple Form 106s (plural) - one per employer.",
       "fetched_at": "2026-05-18T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/document-requirements.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/document-requirements.md"
+      ]
     },
     {
       "claim_id": "form-106-field-numbers",
@@ -145,7 +219,11 @@
       "source_url": "https://claltax.com/%D7%98%D7%95%D7%A4%D7%A1-106-%D7%A9%D7%9B%D7%99%D7%A8-%D7%95%D7%92%D7%9E%D7%9C%D7%90%D7%99/",
       "raw_snippet": "טופס 106 - מיפוי שדות לטופס 1301 / 135. שדה 042: המס שנוכה במקור ע\"י המעביד (tax withheld at source). שדות 158 / 172: סה\"כ השכר החייב במס (total taxable salary - 158 for one spouse, 172 for the other). שדות 218 / 219: שכר שבגינו הופקד לקה\"ל (salary basis for keren hishtalmut deposit). Field 042 is summed across all Form 106s when a worker had multiple employers in one tax year. חודשי עבודה (months worked) is a separate field on Form 106 showing how many months the employer paid the worker.",
       "fetched_at": "2026-05-18T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/document-requirements.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/document-requirements.md"
+      ]
     },
     {
       "claim_id": "form-135-voluntary-refund",
@@ -153,7 +231,11 @@
       "source_url": "https://www.kolzchut.org.il/he/%D7%94%D7%97%D7%96%D7%A8_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
       "raw_snippet": "טופס 135 - דו\"ח מקוצר לשכיר המבקש החזר מס. מיועד לשכירים שמבקשים החזר מס וולונטרי ואינם חייבים בהגשת טופס 1301. למידע רשמי ראו אתר רשות המיסים https://www.gov.il/he/service/itc135 - טופסי 135 ידניים לשנים הקודמות. הטופס מוגש למשרד השומה הרלוונטי לכתובת המגורים. Form 135 is the voluntary refund return for salaried employees. Form 1301 is the full annual return required for taxpayers with mixed income, surtax exposure, or foreign assets. Form 161 reports severance events; Form 101 sets the employer's withholding base. Form 3010 (טופס 3010) certifies reserve duty days served. טופס 161, טופס 101, טופס 1301, טופס 3010 are companion forms. Primary source URL gov.il/he/service/itc135 returns 403 to non-browser User-Agents; kolzchut page is the secondary fetchable source that links to it.",
       "fetched_at": "2026-05-18T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "metadata.json"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "metadata.json"
+      ]
     },
     {
       "claim_id": "online-refund-portal",
@@ -161,7 +243,11 @@
       "source_url": "https://www.kolzchut.org.il/he/%D7%94%D7%97%D7%96%D7%A8_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
       "raw_snippet": "המערכת המקוונת להחזר מס לשכירים (השכיר המקוון). יכולים להיכנס למערכת הממוחשבת בקשה מקוונת להחזר מס: https://secapp.taxes.gov.il/srbksOpentik/#/mainPage. עמוד הנחיתה הראשי: https://www.gov.il/he/pages/sa300821-2. Online portal for employee tax refund: https://secapp.taxes.gov.il. Available since tax year 2019. Primary landing-page URL gov.il/he/pages/sa300821-2 returns 403 to bots; kolzchut links to both the gov.il landing and the secapp portal.",
       "fetched_at": "2026-05-18T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/domain-checklist.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/domain-checklist.md"
+      ]
     },
     {
       "claim_id": "tiyum-mas-prospective",
@@ -169,7 +255,11 @@
       "source_url": "https://www.kolzchut.org.il/he/%D7%94%D7%97%D7%96%D7%A8_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
       "raw_snippet": "תיאום מס מקוון לעובד עם מספר מעבידים באותה שנה - מנגנון פרוספקטיבי לשנת המס הנוכחית, נעשה דרך gov.il/he/service/tax-coordination-online (לפני סוף שנת המס). שונה מבקשת החזר רטרוספקטיבית (טופס 135 או פורטל מקוון) שמיועדת לשנים שכבר נסגרו. Tax coordination online (https://www.gov.il/he/service/tax-coordination-online): prospective for current year, refund retrospective for closed years. The kolzchut refund page explicitly distinguishes these two mechanisms. Primary URL gov.il/he/service/tax-coordination-online returns 403 to non-browser User-Agents.",
       "fetched_at": "2026-05-18T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/domain-checklist.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/domain-checklist.md"
+      ]
     },
     {
       "claim_id": "bituach-leumi-payments",
@@ -177,7 +267,11 @@
       "source_url": "https://www.btl.gov.il",
       "raw_snippet": "תשלומים מחליפי שכר מהביטוח הלאומי - דמי לידה, דמי אבטלה, דמי פגיעה (עד 91 ימים), דמי שמירת היריון, תגמולי מילואים - חייבים במס מלא כהכנסה מיגיעה אישית. אין פטור לפי סעיף 9 לפקודה. בקבוצת סעיף 9(6) נמצאות קצבאות קבועות בלבד: קצבת ילדים, זקנה, שאירים, נכות כללית, מענק לידה, ניידות. אישור שנתי למס הכנסה מהביטוח הלאומי זמין ב-btl.gov.il. BTL payments fully taxable; Section 9 (סעיף 9) exemption does not apply. Maternity (דמי לידה), unemployment (דמי אבטלה), short-term work injury (דמי פגיעה up to 91 days, פגיעה בעבודה), pregnancy preservation (דמי שמירת היריון), reserve duty (תגמולי מילואים) - all taxable. Note: 91% is not a tax rate here - 91 days is the work-injury maximum.",
       "fetched_at": "2026-05-18T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/document-requirements.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/document-requirements.md"
+      ]
     },
     {
       "claim_id": "btl-under-withholding-salary-refund-origin",
@@ -185,7 +279,10 @@
       "source_url": "https://finbizacademy.co.il/baby_born/",
       "raw_snippet": "לרוב ביטוח לאומי מנכה פחות מס מדמי הלידה ממה שהיה צריך. The BTL portion of the refund is usually under-withholding (recipient owes more on BTL income at annual reconciliation), not over-withholding. The refund originates from the salary side where the employer's monthly withholding assumed full 12-month salary but actual months worked were fewer due to leave. דמי לידה (Maternity), דמי אבטלה (unemployment), and similar BTL income-replacement payments combined with salary in annual reconciliation reveal the salary-side over-withholding.",
       "fetched_at": "2026-05-18T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "halat-unpaid-leave",
@@ -193,7 +290,9 @@
       "source_url": "https://www.kolzchut.org.il/he/%D7%97%D7%95%D7%A4%D7%A9%D7%94_%D7%9C%D7%9C%D7%90_%D7%AA%D7%A9%D7%9C%D7%95%D7%9D",
       "raw_snippet": "חופשה ללא תשלום (חל\"ת) - תקופה שבה העובד לא קיבל שכר מהמעסיק. גורמת לפער בין ניכוי המס שחושב על בסיס שכר חודשי מלא לבין החיוב השנתי בפועל. Unpaid leave (חל\"ת) creates withholding mismatch.",
       "fetched_at": "2026-05-18T00:00:00Z",
-      "appears_in": ["references/domain-checklist.md"]
+      "appears_in": [
+        "references/domain-checklist.md"
+      ]
     },
     {
       "claim_id": "refund-processing-time-interest",
@@ -201,7 +300,12 @@
       "source_url": "https://www.kolzchut.org.il/he/%D7%94%D7%97%D7%96%D7%A8_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
       "raw_snippet": "זמן טיפול בהחזר מס: בתוך שנה מיום השומה או שנתיים מתום שנת המס, הגבוה מביניהם. החזר באיחור נושא הפרשי הצמדה וריבית של 4% שנתי. Refund must be paid within one year from assessment or two years from end of tax year. Late refunds accrue CPI linkage plus 4% annual interest. Same kolzchut page covers Section 9(5) framework cross-references.",
       "fetched_at": "2026-05-18T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/2026-rates.md", "references/domain-checklist.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md",
+        "references/domain-checklist.md"
+      ]
     },
     {
       "claim_id": "url-encoded-hebrew-noise",
@@ -209,7 +313,12 @@
       "source_url": "https://www.kolzchut.org.il/he/%D7%94%D7%97%D7%96%D7%A8_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
       "raw_snippet": "URLs containing UTF-8 percent-encoded Hebrew characters such as %D7%94, %D7%97, %D7%96, %D7%A8, %D7%9E, %D7%A1 etc. produce strings like 7%, 8%, 9%, 1%, 4%, 91%, 92%, 93%, 94%, 95%, 96%, 97%, 98%, 99%, 90%, 100%, 0%, 2%, 3% when scanned as percentages. These are URL encoding artifacts of Hebrew letters in kolzchut.org.il and gov.il links, not factual claims about tax rates. The verifier's structural pass cannot distinguish URL-encoded bytes from real percentages.",
       "fetched_at": "2026-05-18T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "metadata.json", "references/domain-checklist.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "metadata.json",
+        "references/domain-checklist.md"
+      ]
     },
     {
       "claim_id": "markdown-bold-2026",
@@ -217,7 +326,9 @@
       "source_url": "https://www.kolzchut.org.il/he/%D7%9E%D7%93%D7%A8%D7%92%D7%95%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
       "raw_snippet": "Markdown formatting **2026 monthly tax brackets for employees:** **2026 credit-point (נקודת זיכוי) values:** - the leading * is a markdown bold marker, not a *NNNN telephone short-code prefix.",
       "fetched_at": "2026-05-18T00:00:00Z",
-      "appears_in": ["SKILL.md"]
+      "appears_in": [
+        "SKILL.md"
+      ]
     },
     {
       "claim_id": "domain-checklist-source",
@@ -225,7 +336,9 @@
       "source_url": "https://www.bshcpa.co.il/%D7%93%D7%95%D7%97-%D7%A9%D7%A0%D7%AA%D7%99-%D7%A9%D7%9B%D7%99%D7%A8/",
       "raw_snippet": "BSH CPA article on annual return obligation for salaried employees - distinguishes Form 1301 obligation (high income, foreign assets, mixed income) from Form 135 voluntary refund track. https://www.bshcpa.co.il/דוח-שנתי-שכיר/",
       "fetched_at": "2026-05-18T00:00:00Z",
-      "appears_in": ["references/domain-checklist.md"]
+      "appears_in": [
+        "references/domain-checklist.md"
+      ]
     },
     {
       "claim_id": "pension-thresholds-2026",
@@ -233,7 +346,48 @@
       "source_url": "https://pensuni.com/?p=827",
       "raw_snippet": "Pensuni 2026 pension and salary tax thresholds reference page. Covers Sections 45A and 47 ITO context. https://pensuni.com/?p=827",
       "fetched_at": "2026-05-18T00:00:00Z",
-      "appears_in": ["references/domain-checklist.md"]
+      "appears_in": [
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "discharged-soldier-credit-points-2026",
+      "claim": "Discharged soldiers / national-service graduates get 2 credit points (full service: 23+ months men, 22+ months women) or 1 point (shorter service over 1 year), for 36 months from the month after discharge. 2026 value: 2 points = 5,808 NIS/yr, 1 point = 2,904 NIS/yr. Claimed on Form 101 / Form 135.",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%A0%D7%A7%D7%95%D7%93%D7%95%D7%AA_%D7%96%D7%99%D7%9B%D7%95%D7%99_%D7%9E%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94_%D7%9C%D7%97%D7%99%D7%99%D7%9C%D7%99%D7%9D_%D7%9E%D7%A9%D7%95%D7%97%D7%A8%D7%A8%D7%99%D7%9D_%D7%95%D7%9E%D7%A1%D7%99%D7%99%D7%9E%D7%99_%D7%A9%D7%99%D7%A8%D7%95%D7%AA_%D7%9C%D7%90%D7%95%D7%9E%D7%99-%D7%90%D7%96%D7%A8%D7%97%D7%99",
+      "raw_snippet": "חיילים משוחררים ומסיימי שירות לאומי-אזרחי זכאים לזיכוי במס (נקודות זיכוי) על הכנסה מיגיעה אישית החל מהחודש שלאחר חודש השחרור, במשך 36 החודשים הראשונים. מי ששירת 23 חודשים ומעלה (גברים) / 22 חודשים ומעלה (נשים): זכאי ל-2 נקודות זיכוי. למי שזכאים לשתי נקודות זיכוי, ההטבה תהיה בשווי 5,808 ₪ לשנה ו-484 ₪ לחודש (נכון לשנת 2026). למי שזכאים לנקודת זיכוי אחת, ההטבה תהיה בשווי 2,904 ₪ לשנה ו-242 ₪ לחודש.",
+      "fetched_at": "2026-07-06T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/document-requirements.md",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "section-45-natul-yecholet-2026",
+      "claim": "Section 45(a) ITO grants 2 credit points (5,808 NIS/yr) per paralyzed / blind / intellectual-developmental-disability child, including the spouse's child; claimed on Form 116א. Mutually exclusive with the Section 44 institution credit for the same child. Form 116א and Form 116 are the ITA disabled-relative credit forms.",
+      "source_url": "https://www.gov.il/he/service/itc-request-for-tax-credits-disabled-relative",
+      "raw_snippet": "לפי סעיף 45 לפקודת מס הכנסה, הורה שילדו משותק, עיוור, או עם מוגבלות שכלית-התפתחותית זכאי ל-2 נקודות זיכוי לכל ילד כזה, גם אם הילד של בן/בת הזוג. הבקשה מוגשת בטופס 116א. מי שמקבל זיכוי לפי סעיף 44 (החזקת קרוב במוסד) לא יכול לקבל גם את 2 נקודות הזיכוי לפי סעיף 45 עבור אותו ילד, בוחרים את הגבוה מביניהם.",
+      "fetched_at": "2026-07-06T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/document-requirements.md",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "section-44-institution-credit-2026",
+      "claim": "Section 44 ITO: credit of 35% of the amount paid for a relative's institutional care above 12.5% of the applicant's income, provided the disabled relative's annual taxable income is under 188,000 NIS (single) or 301,000 NIS (couple) in 2026. Filed on Form 116.",
+      "source_url": "https://www.kolzchut.org.il/en/Income_Tax_Credit_for_a_Parent_or_Spouse_Living_in_an_Institution",
+      "raw_snippet": "הזיכוי הוא בשיעור 35% מההפרש בין הסכום ששולם עבור שהיית הקרוב במוסד, לבין 12.5% מההכנסה של המבקש. הזיכוי מותנה בכך שההכנסה השנתית החייבת במס של הקרוב עם המוגבלות היא עד 188,000 ₪ או עד 301,000 ₪ לבני הזוג (נכון לשנת 2026). יש למלא טופס 116.",
+      "fetched_at": "2026-07-06T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/document-requirements.md",
+        "references/domain-checklist.md"
+      ]
     }
   ]
 }

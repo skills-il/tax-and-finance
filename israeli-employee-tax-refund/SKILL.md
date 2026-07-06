@@ -25,7 +25,7 @@ This skill is for **salaried employees (שכירים) voluntarily seeking a refu
 | Asks about gross-to-net or payslip math (not a closed tax year) | `israeli-payroll-calculator` |
 | Has stock options, RSUs, or Section 102 income | `israeli-stock-options-tax` |
 | Has crypto disposals | `israeli-crypto-tax-reporter` |
-| Has foreign-source income in any year being claimed (US W-2, foreign rental, foreign brokerage) | `israeli-tax-returns`. Foreign income usually triggers a Form 1301 obligation. Olim and returning residents in the 10-year exemption window of Section 14 ITO especially need a specialist — do NOT auto-fold foreign income into a Form 135 refund. |
+| Has foreign-source income in any year being claimed (US W-2, foreign rental, foreign brokerage) | `israeli-tax-returns`. Foreign income usually triggers a Form 1301 obligation; olim and returning residents in the Section 14 10-year window need a specialist. Do not auto-fold foreign income into a Form 135 refund. |
 | Has a פיצויי פיטורים / severance / Form 161 event in any year being claimed | `israeli-tax-returns`. Severance carries Section 9(7A) exemption math, the תקרת פטור, and the רצף קצבה / רצף פיצויים choice. This skill mentions Form 161 only as an OCR target; the actual severance refund track belongs to israeli-tax-returns. |
 | Wants prospective mid-year withholding adjustment | Use the Tax Authority's online תיאום מס at `gov.il/he/service/tax-coordination-online` (handles the current year), NOT this skill |
 
@@ -57,9 +57,9 @@ If the user has multiple Form 106s from the same tax year (job change), sum fiel
 | דמי שמירת היריון (pregnancy preservation) | Fully taxable; no Section 9 exemption | Same: 158/172 + 042 |
 | תגמולי מילואים (reserve duty) | Usually paid via the employer, so already inside Form 106. Direct-from-BTL payments are the exception and produce their own BTL annual confirmation. | Already in 106 fields; only direct-paid portion adds to 158/172 + 042 |
 
-The Section 9(6) family of exemptions (קצבת ילדים, זקנה, שאירים, נכות כללית, מענק לידה, ניידות) covers permanent or family-status BTL allowances — not income-replacement payments while temporarily out of work. Do not assume "BTL paid me, so it must be exempt" for maternity, unemployment, or work-injury per-diem.
+The Section 9(6) family of exemptions (קצבת ילדים, זקנה, שאירים, נכות כללית, מענק לידה, ניידות) covers permanent or family-status BTL allowances, not income-replacement payments while temporarily out of work. Do not assume "BTL paid me, so it must be exempt" for maternity, unemployment, or work-injury per-diem.
 
-A common refund pattern, contrary to a frequent misconception: the refund usually originates from the **salary side**, not the BTL side. BTL typically **under-withholds** tax on דמי לידה / דמי אבטלה (often at a low flat rate or none), so the BTL portion taken alone can leave the recipient owing additional tax. The refund appears because the employer over-withheld during the months actually worked (the employer's monthly withholding assumed a full 12-month salary, but the year ended with fewer paid months because of leave). Once the year is reconciled — salary withholding plus BTL withholding versus the actual annual tax on the combined income — the net is usually a refund, but the **source** of the refund is the salary withholding the employer collected, not BTL over-withholding.
+A common misconception: the refund usually originates from the **salary side**, not the BTL side. BTL typically **under-withholds** on דמי לידה / דמי אבטלה, so the BTL portion alone can leave the recipient owing tax. The refund appears because the employer over-withheld during the months actually worked (monthly withholding assumed a full 12-month salary, but the year ended with fewer paid months). Once the year is reconciled, the net is usually a refund whose **source** is the salary withholding, not BTL.
 
 ### Step 3: Determine the Refund Window
 
@@ -96,21 +96,17 @@ Walk through this trigger list with the user. For each detected trigger, record 
 | 12 | Early keren hishtalmut withdrawal | Withdrew from a keren hishtalmut before 6 years; bank withheld 47% at source but real marginal rate is lower | Section 9(16a) + Section 164 ITO |
 | 13 | Salaried employee paid more child credit points than employer recognized | Custody arrangement changed; employer's 101 form was not updated | Section 40 ITO |
 | 14 | One-time bonus or 13th salary pushed a single month into a higher bracket | Israeli withholding is computed month by month. A December bonus, options exercise, or 13th-salary payment can land that month in the 35% or 47% band even though the annual marginal rate is much lower. Sum the bonus into the annual reconciliation. | Regulation 6 of תקנות מס הכנסה (ניכוי ממשכורת ומשכר עבודה) |
+| 15 | Discharged soldier / national-service graduate credit points | Within 36 months of discharge, the חייל משוחרר box on the employer's Form 101 was not ticked, so the soldier's credit points were never applied at source. Very common for a first job taken soon after release. | Section per הטבת נקודות זיכוי לחיילים משוחררים (הוראת שעה) ITO |
+| 16 | Child or spouse who is נטול יכולת (severely disabled) | The taxpayer (or their spouse) has a child who is paralyzed, blind, or has an intellectual-developmental disability. 2 credit points, never applied at source (needs Form 116א). Distinct from trigger 10 (the taxpayer's OWN disability). | Section 45(a) ITO |
+| 17 | Maintaining a disabled relative in an institution | The taxpayer funds the institutional care (מוסד) of an incapacitated child, spouse, or parent. A 35% credit, claimed on Form 116. Choose EITHER this (trigger 17) OR trigger 16 for the same child, whichever is larger, not both. | Section 44 ITO + תקנות תשנ"ו-1996 |
 
-Trigger 7 clarification (important common misinformation): there is no "Section 35 mortgage interest deduction for olim". Section 35 grants credit points on a declining schedule over the early years of aliyah. The current schedule for olim arriving 1.1.2022 or later (post-Amendment 262, 7.5.2022) is:
+Triggers 16 and 17 are mutually exclusive for the same relative: a taxpayer cannot take both the Section 45(a) 2 credit points and the Section 44 institution credit for the same child. Compute both and keep the larger. Both require Form 116/116א with medical certification, so they are almost never applied at source and are high-yield retroactive claims.
 
-| Period (counted from aliyah date) | Per-month credit points | Annual rate |
-|---|---|---|
-| Months 1-12 | 1/12 | 1 point |
-| Months 13-30 (next 18 months) | 1/4 | 3 points |
-| Months 31-42 (next 12 months) | 1/6 | 2 points |
-| Months 43-54 (next 12 months) | 1/12 | 1 point |
+Separately, if the user is a low-income worker (the two-job, low-wage, reserve-duty persona), also check מענק עבודה (the earned-income / negative-income-tax grant). It is NOT a Form 135 refund; it is a separate claim paid by Bituach Leumi, so route the user to `btl.gov.il` (מענק עבודה) in addition to any Form 135 refund. Do not fold it into the refund estimate.
 
-Total: 8.5 credit points spread over 54 months. For olim who arrived BEFORE 1.1.2022, the pre-Amendment-262 schedule of 4.5 / 2 / 1 over 18 / 12 / 12 months (total 7.5 points over 42 months) applies.
+Trigger 7 clarification (common misinformation): there is no "Section 35 mortgage interest deduction for olim". Section 35 grants credit points on a declining schedule (the per-month rates are in Step 5's allotment table and `references/2026-rates.md`): 8.5 points over 54 months for olim arriving 1.1.2022 or later, or 7.5 points over 42 months for pre-2022 arrivals. Do not promise the user a "mortgage interest refund" under Section 35. Section 35 points are NOT available to ordinary returning residents (תושב חוזר), who instead get the Section 14 foreign-income exemption; route returning residents and veteran returning residents (תושב חוזר ותיק) to `israeli-tax-returns`.
 
-The mortgage interest benefit for olim is delivered indirectly through other olim concessions on the property purchase, not through a discrete deduction in this skill's scope. Do not promise the user a "mortgage interest refund" under Section 35.
 
-Note that Section 35 credit points are NOT available to ordinary returning residents (תושב חוזר). Regular returning residents get the 10-year foreign-income exemption under Section 14 ITO, which is out of scope for this skill (route them to `israeli-tax-returns`). Veteran returning residents (תושב חוזר ותיק) under the Milchan amendment have their own benefit track and should also be routed to `israeli-tax-returns`.
 
 ### Step 5: Estimate the Refund
 
@@ -151,6 +147,10 @@ For prior tax years, look up the brackets that applied to that year (do not extr
 | New immigrant (post-2022 arrival) | 1 point year 1, 3 points years 1.5-2.5, 2 points year 3, 1 point year 4 (per Step 4 trigger 7 table) |
 | Master's graduate (2023+) | 0.5 point per year for 2 years after graduation |
 | Bachelor's graduate (2023+) | 1 point per study year, capped at 3 years |
+| Discharged soldier / national-service graduate | 2 points/year (full service: 23+ months men, 22+ months women) or 1 point/year (shorter service over 1 year), for 36 months from the month after discharge. 2 points = 5,808 ₪/year; 1 point = 2,904 ₪/year at the 2026 value |
+| Parent of a נטול יכולת child (Section 45(a)) | 2 points/year (5,808 ₪) per paralyzed / blind / intellectual-developmental-disability child, including the spouse's child; claimed on Form 116א, not applied at source |
+
+**Section 44 institution credit (not a credit point):** a taxpayer funding a relative's stay in an institution (מוסד) may claim 35% of the amount paid above 12.5% of the taxpayer's income, provided the disabled relative's annual taxable income is under 188,000 ₪ (or 301,000 ₪ for a couple) in 2026. Claimed on Form 116.
 
 **Reserve-duty credit-point bonus (Section 39B, Amendment 283 התשפ"ו-2025):**
 
@@ -193,6 +193,9 @@ Based on the detected triggers, build a personalized document list. Common items
 | Section 9(5) disability | Medical-board determination (ועדה רפואית) + ratification by the Tax Authority's disability committee |
 | Sections 45A / 47 pension and life insurance | Annual deposit certificate (אישור הפקדה שנתי) from the pension/insurance provider |
 | Keren hishtalmut early withdrawal | תלוש משיכה from the keren showing 47% withholding |
+| Discharged soldier (trigger 15) | תעודת שחרור / אישור שירות showing discharge date and service length; the employer's Form 101 for the year |
+| נטול יכולת child/spouse (trigger 16, Section 45(a)) | Form 116א + medical certification of the paralysis / blindness / intellectual-developmental disability |
+| Institution care (trigger 17, Section 44) | Form 116 + institution payment receipts + the disabled relative's income confirmation |
 
 Always remind the user to keep copies; the Tax Authority can request originals later.
 
@@ -205,7 +208,7 @@ There are two main channels for an employee voluntary refund.
 | Online refund portal (השכיר המקוון / מערכת מקוונת להחזר מס לשכירים) | The user is not obligated to file a Form 1301; they have a digital government identity (Government Identity Document or smart-card); they have scanned PDFs of their supporting documents | `secapp.taxes.gov.il` (see Reference Links) |
 | Manual Form 135 | The user prefers paper, the online portal does not support their case, or the user's identity verification cannot be completed online | Fill Form 135 (available at `gov.il/he/service/itc135`) and submit at the appropriate משרד שומה / pekid shuma assigned to the user's address |
 
-If the user is required to file a Form 1301 (e.g., income above the surtax threshold for that year, foreign income, or capital gains in the same year), neither track applies for that year — route them to `israeli-tax-returns` and include the refund calculation inside Form 1301.
+If the user is required to file a Form 1301 (e.g., income above the surtax threshold for that year, foreign income, or capital gains in the same year), neither track applies for that year, route them to `israeli-tax-returns` and include the refund calculation inside Form 1301.
 
 ### Step 7.5: Prospective Fix via Form 101 (Highly Important)
 
@@ -281,7 +284,8 @@ Companion skill: `hebrew-ocr-forms` can extract field 042 / 158 / 172 / 218 from
 - The 6-year window is measured from the **end** of the tax year (Section 160 ITO), not from the date the employer issued Form 106. The 2020 deadline is 31.12.2026, not 31.3.2026.
 - Reserve-duty credit points (Section 39B / Amendment 283) are realized in the year **after** the service. A soldier who served in 2024 claims them on the 2025 refund, not the 2024 refund.
 - Section 35 (oleh credit points) is not "mortgage interest deduction". Do not promise the user a mortgage refund under Section 35.
-- Section 46 receipts come in three valid formats: original, certified copy, or electronic (marked מסמך ממוחשב). Whichever the user supplies, confirm that the receiving institution still holds an active Section 46 approval for the year of the donation, by checking the Tax Authority's approved-institutions list for that year.
+- Section 46 receipts are valid as original, certified copy, or electronic (מסמך ממוחשב). Confirm the receiving institution held an active Section 46 approval for the donation year.
+- Filing a refund request opens the whole tax year to assessment: a marginal case can come back as a **demand to pay**, and any refund is first offset against existing income-tax, Bituach Leumi, מזונות, or הוצאה לפועל debts.
 - If the user is obligated to file a Form 1301 (income above the surtax threshold, foreign assets, mixed income), neither Form 135 nor the online refund portal applies. Route them to `israeli-tax-returns` and integrate the refund computation inside the 1301.
 - Prospective mid-year withholding adjustment (תיאום מס) and retrospective refund (Form 135 / online portal) are different mechanisms. תיאום מס handles the current year before it closes; refund handles years that already closed. Users frequently conflate them.
 - Yishuv mezakeh requires center of life in the locality for 12 consecutive months. Spending part of the year elsewhere can disqualify the year.
@@ -302,6 +306,8 @@ Companion skill: `hebrew-ocr-forms` can extract field 042 / 158 / 172 / 218 from
 | Claltax: Form 106 field map | https://claltax.com/%D7%98%D7%95%D7%A4%D7%A1-106-%D7%A9%D7%9B%D7%99%D7%A8-%D7%95%D7%92%D7%9E%D7%9C%D7%90%D7%99/ | Field 042 / 158 / 172 / 218 / 219 explainer with Hebrew labels |
 | Kol-Zchut: income tax brackets | https://www.kolzchut.org.il/he/%D7%9E%D7%93%D7%A8%D7%92%D7%95%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94 | 2026 monthly and annual bracket table |
 | Kol-Zchut: Section 9(5) disability exemption | https://www.kolzchut.org.il/he/%D7%A4%D7%98%D7%95%D7%A8_%D7%9E%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94_%D7%9C%D7%90%D7%A0%D7%A9%D7%99%D7%9D_%D7%A2%D7%9D_%D7%A0%D7%9B%D7%95%D7%AA | 2026 ceilings: 445,200 / 81,960 / 684,000 ₪ |
+| Kol-Zchut: discharged-soldier credit points | https://www.kolzchut.org.il/he/%D7%A0%D7%A7%D7%95%D7%93%D7%95%D7%AA_%D7%96%D7%99%D7%9B%D7%95%D7%99_%D7%9E%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94_%D7%9C%D7%97%D7%99%D7%99%D7%9C%D7%99%D7%9D_%D7%9E%D7%A9%D7%95%D7%97%D7%A8%D7%A8%D7%99%D7%9D_%D7%95%D7%9E%D7%A1%D7%99%D7%99%D7%9E%D7%99_%D7%A9%D7%99%D7%A8%D7%95%D7%AA_%D7%9C%D7%90%D7%95%D7%9E%D7%99-%D7%90%D7%96%D7%A8%D7%97%D7%99 | 1 vs 2 points, 36-month window, 2026 value |
+| Tax Authority: Form 116א disabled-relative credit | https://www.gov.il/he/service/itc-request-for-tax-credits-disabled-relative | Section 45(a) / Section 44 claim, medical certification, 2026 income caps |
 | Bituach Leumi: annual confirmation for income tax | https://www.btl.gov.il | Order the annual אישור שנתי למס הכנסה for maternity, unemployment, work-injury, pregnancy-preservation payments |
 | FinBiz Academy: maternity tax pattern | https://finbizacademy.co.il/baby_born/ | Why the salary side is the typical refund source after maternity / unpaid leave (BTL typically under-withholds) |
 
@@ -316,10 +322,10 @@ Re-check field 042 totals across all Form 106s and confirm whether the user actu
 ### Error: "Online portal rejects the user"
 Most common cause is missing or expired digital identity. Direct the user to set up a Government Identity Document or smart-card identity at `gov.il`. If that fails, fall back to paper Form 135.
 
-### Error: "Section 46 receipt — institution Section 46 approval expired during the year"
+### Error: "Section 46 receipt, institution Section 46 approval expired during the year"
 Section 46 approvals are issued for a defined period. If the institution's approval expired before the donation was made, the donation does not qualify. Ask the user to obtain a fresh confirmation from the institution stating the approval was active on the donation date.
 
-### Error: "Disability exemption (Section 9(5)) — refund estimate seems off"
+### Error: "Disability exemption (Section 9(5)), refund estimate seems off"
 Confirm three details before computing:
 1. Disability duration. Under 185 days does not qualify. 185-364 days uses the short-term ceiling of 81,960 ₪/year exempt earned income. 365 days and over uses the long-term ceiling of 445,200 ₪/year.
 2. Income source. Pensions paid under חוק הנכים or חוק נפגעי פעולות איבה use the higher 684,000 ₪/year ceiling instead.

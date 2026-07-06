@@ -73,3 +73,25 @@ This is the per-trigger document checklist the skill walks the user through in S
 
 - Updated 101 form for the relevant year showing the correct number of children.
 - Custody documents (court judgment) if relevant.
+
+### 14. One-time bonus / 13th salary bracket spike
+
+- The Form 106 already reflects the bonus; no extra document. The refund surfaces in the annual reconciliation once the bonus month is spread across the year.
+
+### 15. Discharged soldier / national-service graduate credit points
+
+- תעודת שחרור (discharge certificate) or אישור שירות showing discharge date and total service length (to determine 1 vs 2 points).
+- The employer's Form 101 for the year (to show the חייל משוחרר box was not applied).
+- Eligibility runs 36 months from the month after discharge.
+
+### 16. Section 45(a) נטול יכולת child / spouse
+
+- Form 116א (בקשה לזיכוי ממס בגין קרוב עם מוגבלות).
+- Medical certification of the paralysis / blindness / intellectual-developmental disability.
+- Note: cannot be combined with the Section 44 institution credit (trigger 17) for the same child.
+
+### 17. Section 44 maintaining a relative in an institution
+
+- Form 116 (institution credit).
+- Institution payment receipts for the tax year.
+- The disabled relative's income confirmation (to verify the 2026 income cap of 188,000 / 301,000 ₪).

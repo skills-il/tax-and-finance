@@ -1,0 +1,16 @@
+{
+  "cycles": [
+    {
+      "version": "1.2.0",
+      "date": "2026-07-06",
+      "lessons": [
+        "Expert MINOR deferred (Phase 4.1 batch cap): private loss-of-work-capacity insurance premium deduction (Sec 32(14)/47) not named explicitly; overlaps trigger 11.",
+        "Expert MINOR deferred: returning-resident credit-point track (parallel to oleh Sec 35 trigger 7) not surfaced; currently routed to israeli-tax-returns.",
+        "Expert MINOR deferred: spreading back-pay lump sums across years (פריסת הפרשי שכר, Sec 8(3)) absent from trigger list.",
+        "Expert MAJOR deferred: married-couple treatment (חישוב מאוחד/נפרד, spouse income declaration, which spouse claims children's points) and dual-earner point allocation not addressed; estimate_refund.py is single-filer.",
+        "Expert MAJOR deferred: verify whether the cost-of-living additional credit point for parents of children aged 6-12 (הוראת שעה) is in force for each claimed year 2023-2025; if so add it.",
+        "This cycle ADDED (CPA coverage audit, CRITICAL): discharged-soldier credit points (trigger 15), Sec 45(a) natul-yecholet 2 points (trigger 16), Sec 44 institution credit (trigger 17); routed to מענק עבודה (MAJOR); added refund-opens-year-to-assessment risk caveat; fixed stale document-requirements.md (triggers 14-17). Confirmed 2026 widened brackets (20% to 19,000/mo, 31% to 25,100) and credit point 242 already current; dismissed Expert's bracket flag as based on stale 2025 values."
+      ]
+    }
+  ]
+}

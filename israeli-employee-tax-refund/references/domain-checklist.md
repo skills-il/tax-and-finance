@@ -28,6 +28,12 @@ Generated: 2026-05-12 via research on: mas.gov.il, kolzchut.org.il, btl.gov.il, 
 
 - [ ] זמן טיפול וריבית על החזר באיחור — לשכיר: בתוך שנה מיום השומה או שנתיים מתום שנת המס (הגבוה מביניהם); ההחזר משולם בתוספת הפרשי הצמדה וריבית של 4% שנתי — source: https://www.kolzchut.org.il/he/%D7%94%D7%97%D7%96%D7%A8_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94 — why core: users need realistic timeline expectations.
 
+- [ ] נקודות זיכוי לחייל משוחרר / בוגר שירות לאומי-אזרחי — 2 נק' (שירות מלא: 23+ חודשים גברים, 22+ נשים) או נק' אחת (שירות קצר מעל שנה), למשך 36 חודשים מהחודש שאחרי השחרור; שווי 2026: 2 נק' = 5,808 ₪, נק' אחת = 2,904 ₪ — source: https://www.kolzchut.org.il/he/%D7%A0%D7%A7%D7%95%D7%93%D7%95%D7%AA_%D7%96%D7%99%D7%9B%D7%95%D7%99_%D7%9E%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94_%D7%9C%D7%97%D7%99%D7%99%D7%9C%D7%99%D7%9D_%D7%9E%D7%A9%D7%95%D7%97%D7%A8%D7%A8%D7%99%D7%9D_%D7%95%D7%9E%D7%A1%D7%99%D7%99%D7%9E%D7%99_%D7%A9%D7%99%D7%A8%D7%95%D7%AA_%D7%9C%D7%90%D7%95%D7%9E%D7%99-%D7%90%D7%96%D7%A8%D7%97%D7%99 — why core: highest-incidence miss for the young-employee / reservist persona; the חייל משוחרר box on Form 101 is routinely left un-ticked.
+
+- [ ] נקודות זיכוי בגין ילד או בן/בת זוג נטול יכולת לפי סעיף 45(א) — 2 נק' (5,808 ₪/שנה) לכל ילד משותק / עיוור / עם מוגבלות שכלית-התפתחותית, כולל ילד בן/בת הזוג; טופס 116א; אינו מיושם במקור — source: https://www.gov.il/he/service/itc-request-for-tax-credits-disabled-relative — why core: distinct from the taxpayer's own Section 9(5) exemption; hits the special-needs-parent population.
+
+- [ ] זיכוי בשל החזקת קרוב במוסד לפי סעיף 44 — 35% מההפרש בין ששולם לבין 12.5% מהכנסת המבקש; הכנסת הקרוב עד 188,000 ₪ (יחיד) / 301,000 ₪ (זוג) ב-2026; טופס 116; מוציא זה את זה עם סעיף 45(א) — source: https://www.kolzchut.org.il/en/Income_Tax_Credit_for_a_Parent_or_Spouse_Living_in_an_Institution — why core: named standalone credit for the sandwich-generation filer; never applied at source.
+
 ## Should cover (advanced / edge cases)
 
 - [ ] פטור ממס הכנסה לנכה לפי סעיף 9(5) לפקודה — לעיוור, לנכה רפואי 100%, או לנכה 90%+ עקב פגיעה באיברים שונים; תקרת הכנסה מיגיעה אישית פטורה ממס נקבעת שנתית ומשתנה לפי משך הנכות (מעל/מתחת 365 יום) ולפי קצבה חודשית — source: https://www.kolzchut.org.il/he/%D7%94%D7%97%D7%96%D7%A8_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94 — why advanced: requires medical-board determination; skill should detect signal and route to qualified consultant rather than auto-fill.
