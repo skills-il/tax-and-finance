@@ -1,6 +1,15 @@
 {
   "cycles": [
     {
+      "version": "1.2.1",
+      "date": "2026-07-16",
+      "lessons": [
+        "Resolved the deferred CARRY items from the 1.2.0 cycle: (a) dropped the office-hours framing on the CMA car.cma.gov.il calculator (it is an always-on online tool, no Sunday-Thursday 8-17 restriction); (b) corrected the rishayon-shimush line, the annual vehicle-licensing fee (agrat rishuy) is a separate government charge, not an insurance-quote line item; (c) repointed the earthquake evidence URL from the dead gov.il guide to the Kol-Zchut earthquake-home-insurance page; (d) repointed the Wobi/Phoenix evidence URL to TheMarker.",
+        "STALE fixed: Wobi/Phoenix moved. The Competition Authority cleared the Phoenix acquisition of Wobi in May 2026, but the CMA / Insurance Commissioner final sign-off is still pending as of mid-2026, so the deal is not yet closed. Updated the platform note in both languages.",
+        "Confirmed-correct-do-not-relitigate (2026, verified): the bituach-siudi wind-down framing (unenforced MoH draft; ~4.9M still insured; operative pressure date end-2026 Clalit-Harel agreement expiry); the HMO SHABAN tier names and orderings (Maccabi Zahav basic / Sheli premium; Clalit Mushlam Zahav / Platinum; Meuhedet Adif / Shia; Leumit Kesef basic / Zahav premium, note Leumit's Zahav is premium, inverted vs Maccabi/Clalit, and the skill already states this correctly); earthquake default opt-out with ~10% deductible and no central pool and no enacted mandatory reform; hova as a regulated uniform tariff vs market-priced makif; the ADL 4-of-6 siudi trigger effective 1.1.2025."
+      ]
+    },
+    {
       "version": "1.2.0",
       "date": "2026-05-31",
       "lessons": [

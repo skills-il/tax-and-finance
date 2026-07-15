@@ -92,7 +92,7 @@ After getting the government baseline, check private platforms for potentially b
 - Shows coverage differences, not just price
 
 **Wobi (wobi.co.il):**
-- Large Israeli insurance comparison site (agreed to be acquired by The Phoenix Holdings; deal signed Oct 2025 and subject to CMA conditions)
+- Large Israeli insurance comparison site (being acquired by The Phoenix Holdings; the Competition Authority cleared the deal in May 2026, but the CMA / Insurance Commissioner's final sign-off is still pending, so the deal is not yet closed)
 - Covers car, home, health, life, and business insurance
 - Offers phone consultation with licensed agents
 - Can handle the entire purchase process
@@ -280,13 +280,13 @@ When a user asks about "bituach siudi" in 2026, surface this transition explicit
 
 Cause: The CMA calculator requires exact vehicle registration details. Common issues include incorrect license plate format, vehicle not yet registered in the Ministry of Transport database (for very new cars), or the calculator being temporarily down during maintenance hours (usually late night).
 
-Solution: Verify the license plate format (7 or 8 digits, no dashes). For newly purchased vehicles, wait 24-48 hours after registration before trying the calculator. If the site is down, try during business hours (Sunday-Thursday 8:00-17:00). As a fallback, use Hova.co.il which maintains its own insurer API connections.
+Solution: Verify the license plate format (7 or 8 digits, no dashes). For newly purchased vehicles, wait 24-48 hours after registration before trying the calculator. The online CMA calculator is available around the clock, so if it is down, simply retry later. As a fallback, use Hova.co.il which maintains its own insurer API connections.
 
 ### Error: "Insurance quotes vary wildly between platforms for the same details"
 
 Cause: Different platforms may use slightly different underwriting models, have exclusive deals with certain insurers, or apply promotional discounts not available elsewhere. Some platforms also show base price before taxes/fees while others show the final price.
 
-Solution: Always compare the final annual premium including all fees. Note that insurance premiums in Israel are NOT subject to VAT (insurers are taxed as financial institutions, paying profit-and-payroll tax instead of charging VAT), so the quoted premium is the final price and any differences between platforms come from fees and discounts, not tax. Check if the quote includes "rishuyon shimush" (usage fee) which some platforms list separately. Use the CMA government calculator as the baseline since it shows standardized pricing, then check if private platforms offer better deals. When in doubt, call the insurer directly to verify the quoted price.
+Solution: Always compare the final annual premium including all fees. Note that insurance premiums in Israel are NOT subject to VAT (insurers are taxed as financial institutions, paying profit-and-payroll tax instead of charging VAT), so the quoted premium is the final price and any differences between platforms come from fees and discounts, not tax. Do not confuse the insurance premium with the separate annual vehicle-licensing fee (agrat rishuy rechev / "rishayon"), which is a government charge paid separately to the licensing authority and is NOT part of any insurance quote. Use the CMA government calculator as the baseline since it shows standardized pricing, then check if private platforms offer better deals. When in doubt, call the insurer directly to verify the quoted price.
 
 ### Error: "My shin-nun (no-claims) years don't match what the insurer shows"
 

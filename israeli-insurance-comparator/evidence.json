@@ -54,17 +54,17 @@
     {
       "claim_id": "earthquake-optout",
       "claim": "Earthquake coverage is included by default in Israeli home policies on an opt-out basis, provided directly by each insurer (no central pool), with a typical deductible around 10%.",
-      "source_url": "https://www.gov.il/he/departments/guides/earthquake-insurance",
-      "raw_snippet": "רעידת אדמה",
-      "fetched_at": "2026-05-31T00:00:00Z",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%91%D7%99%D7%98%D7%95%D7%97_%D7%93%D7%99%D7%A8%D7%94_%D7%9E%D7%A4%D7%A0%D7%99_%D7%A0%D7%96%D7%A7%D7%99_%D7%A8%D7%A2%D7%99%D7%93%D7%AA_%D7%90%D7%93%D7%9E%D7%94",
+      "raw_snippet": "כיסוי לרעידת אדמה נכלל כברירת מחדל בפוליסה לביטוח דירה ... השתתפות עצמית העומדת על 10%",
+      "fetched_at": "2026-07-16T00:00:00Z",
       "appears_in": ["SKILL.md", "SKILL_HE.md"]
     },
     {
       "claim_id": "wobi-phoenix",
-      "claim": "Wobi agreed to be acquired by The Phoenix Holdings; the deal was signed in October 2025 and is subject to CMA conditions.",
-      "source_url": "https://www.calcalist.co.il/local_news/article/skomfmgbex",
-      "raw_snippet": "Wobi",
-      "fetched_at": "2026-05-31T00:00:00Z",
+      "claim": "Wobi is being acquired by The Phoenix Holdings; the Competition Authority cleared the deal in May 2026, but the CMA / Insurance Commissioner final sign-off is still pending as of mid-2026, so the deal is not yet closed.",
+      "source_url": "https://www.themarker.com/markets/2026-05-10/ty-article/.premium/0000019e-1213-d790-a3ff-fff7f6d00000",
+      "raw_snippet": "וובי ... הפניקס ... רשות התחרות",
+      "fetched_at": "2026-07-16T00:00:00Z",
       "appears_in": ["SKILL.md", "SKILL_HE.md"]
     },
     {
