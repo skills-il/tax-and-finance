@@ -29,7 +29,7 @@
     },
     {
       "claim_id": "allocation-number-schedule",
-      "claim": "The Israel-invoice allocation-number (mispar haktzaa) requirement for input-VAT deduction applies above a pre-VAT transaction threshold that steps down: NIS 25,000 (May 2024), NIS 20,000 (Jan 2025), NIS 10,000 (Jan 2026, in effect now), NIS 5,000 (from 1 June 2026).",
+      "claim": "The Israel-invoice allocation-number (mispar haktzaa) requirement for input-VAT deduction applies above a pre-VAT transaction threshold that steps down: NIS 25,000 (May 2024), NIS 20,000 (Jan 2025), NIS 10,000 (Jan 2026), NIS 5,000 (from 1 June 2026, in effect now, on schedule). From 1 June 2026 a valid allocation number is the condition for the buyer to deduct input VAT on a B2B invoice above NIS 5,000 pre-VAT.",
       "source_url": "https://www.gov.il/he/departments/israel_tax_authority",
       "raw_snippet": "מספר הקצאה",
       "fetched_at": "2026-05-31T00:00:00Z",
@@ -45,9 +45,9 @@
     },
     {
       "claim_id": "late-penalty",
-      "claim": "Late filing of a periodic VAT return carries a penalty of NIS 239 per two-week period of delay, plus CPI linkage and interest (Bank of Israel rate + 4%).",
+      "claim": "Late filing of a periodic VAT return carries a fixed penalty per two-week period of delay that is indexed annually (about NIS 239 as of 2024, up from NIS 219 in 2023), plus CPI linkage and interest (Bank of Israel rate + 4%). Verify the current-year amount with the Tax Authority.",
       "source_url": "https://www.kolzchut.org.il/he/%D7%94%D7%92%D7%A9%D7%AA_%D7%93%D7%95%D7%97%D7%95%D7%AA_%D7%AA%D7%A7%D7%95%D7%A4%D7%AA%D7%99%D7%99%D7%9D_%D7%9C%D7%9E%D7%A2%D7%9E",
-      "raw_snippet": "239",
+      "raw_snippet": "239 ש\"ח ... 219 ש\"ח ... 239 ... 219",
       "fetched_at": "2026-05-31T00:00:00Z",
       "appears_in": ["SKILL.md", "SKILL_HE.md"]
     },

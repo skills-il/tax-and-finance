@@ -62,7 +62,7 @@ The regular periodic VAT return (doch tkufati) is a summary report. Map the calc
 ### Step 5: Validate and Submit
 Before submission, verify:
 1. All sales invoices accounted for (cross-reference with e-invoice allocation numbers)
-2. Input VAT claims supported by valid tax invoices with allocation numbers (mispar haktzaa), required above a pre-VAT transaction threshold that steps down on a schedule: NIS 25,000 (from May 2024), NIS 20,000 (from Jan 2025), NIS 10,000 (from Jan 2026, in effect now), NIS 5,000 (from 1 June 2026). Always check the threshold in force on the invoice date
+2. Input VAT claims supported by valid tax invoices with allocation numbers (mispar haktzaa), required above a pre-VAT transaction threshold that steps down on a schedule: NIS 25,000 (from May 2024), NIS 20,000 (from Jan 2025), NIS 10,000 (from Jan 2026), NIS 5,000 (from 1 June 2026, in effect now). A valid allocation number has been the precondition for the buyer to deduct input VAT on any invoice above the current threshold since the model launched, only the invoice size changes at each step, so from 1 June 2026 it applies to B2B invoices above NIS 5,000 pre-VAT. Always check the threshold in force on the invoice date
 3. Correct reporting period selected
 4. Deadline not passed (see below)
 
@@ -112,7 +112,7 @@ Result: VAT report with zero-rated export handling
 - Israeli VAT reports are filed bi-monthly (every two months), not quarterly as in many European countries. Agents may suggest quarterly filing, which will result in missed deadlines and penalties.
 - Osek Patur businesses (annual revenue approximately 122,833 NIS, subject to annual updates) do not charge or report VAT. Agents may generate VAT reports for businesses that should not be filing them.
 - Input VAT (mas tsumot) from car purchases is only 2/3 deductible in Israel. Agents may claim full VAT deduction on vehicle-related expenses.
-- From 2026, input VAT deduction requires a valid allocation number (mispar haktzaa) on invoices above the threshold (NIS 10,000 from January 2026, NIS 5,000 from June 2026). Agents may ignore this requirement, leading to rejected deductions.
+- From 2026, input VAT deduction requires a valid allocation number (mispar haktzaa) on invoices above the threshold (NIS 5,000 pre-VAT from 1 June 2026, currently in force; it stepped down from NIS 10,000 in January 2026). Agents may ignore this requirement, leading to rejected deductions.
 
 ## Troubleshooting
 
@@ -126,4 +126,4 @@ Solution: Review deduction rules in Step 3. Only business expenses with valid ta
 
 ### Error: "Late filing penalty"
 Cause: Filing after the deadline (15th manual / 19th online) of the following month
-Solution: File immediately. Late penalty is NIS 239 per two-week period of delay, plus linkage differentials and interest (Bank of Israel rate + 4%).
+Solution: File immediately. The late-filing penalty is a fixed amount per two-week period of delay that is indexed annually (about NIS 239 as of 2024, up from NIS 219 in 2023), so verify the current-year figure with the Tax Authority, plus linkage differentials and interest (Bank of Israel rate + 4%).
