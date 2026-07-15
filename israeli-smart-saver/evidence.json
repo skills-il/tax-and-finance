@@ -12,6 +12,22 @@
       "appears_in": ["SKILL.md", "SKILL_HE.md", "references/cashback-platforms-guide.md"]
     },
     {
+      "claim_id": "gift-card-2025-payment-services-reform",
+      "claim": "A 2025 amendment to the Payment Services Regulations (Knesset Economics Committee, 8 July 2025) extended gift-voucher rules: vouchers over 150 NIS (150 ש\"ח) can be extended up to 15 years; issuers must send holders an annual balance reminder and an alert one month before expiry; and remaining balances are refundable to the payment method on cancellation. The reform applies to existing vouchers too.",
+      "source_url": "https://www.calcalist.co.il/local_news/article/bkdjihqrxx",
+      "raw_snippet": "תוקף של 15 שנה ... מעל 150 שקל ... תזכורת שנתית",
+      "fetched_at": "2026-07-16T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+    },
+    {
+      "claim_id": "elal-flycard-isracard",
+      "claim": "The El-Al FLY CARD (El-Al frequent-flyer credit-card co-brand) moved from CAL (Visa Cal) to Isracard. Isracard issues new FLY CARDs from 1 June 2026; existing CAL-issued FLY CARDs stop earning El-Al Matmid points after 31 December 2026, so holders must migrate to an Isracard FLY CARD to keep earning.",
+      "source_url": "https://hakartis.com/blog/flycard-cal-to-isracard-migration-2026",
+      "raw_snippet": "FLY CARD ... ישראכרט ... כאל ... אל על",
+      "fetched_at": "2026-07-16T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+    },
+    {
       "claim_id": "credit-card-companies",
       "claim": "The three major Israeli credit card companies are Cal (Visa Cal), Max (formerly Leumi Card, rebranded 2019 after the Warburg Pincus acquisition), and Isracard (which operates American Express and the Hever club).",
       "source_url": "https://en.globes.co.il/en/article-leumi-card-to-rebrand-as-max-1001269742",

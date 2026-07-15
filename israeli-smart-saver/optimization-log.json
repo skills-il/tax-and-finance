@@ -1,6 +1,15 @@
 {
   "cycles": [
     {
+      "version": "1.3.1",
+      "date": "2026-07-16",
+      "lessons": [
+        "Resolved the deferred CARRY items from 1.3.0: (a) added the missing 'Deals Platforms' section to SKILL_HE.md (EN/HE level-2 parity now 12/12); (b) refreshed the El-Al FLY CARD guidance, the co-brand moved from CAL to Isracard (Isracard issues new FLY CARDs from 1.6.2026; CAL-issued cards stop earning El-Al points after 31.12.2026, migrate to keep earning), added to the Isracard card row and the traveler-profile row in both languages; (c) sharpened the 2025 gift-card reform, it is a Payment Services Regulations amendment (not the Consumer Protection Law), extending vouchers over 150 NIS up to 15 years with an annual balance reminder, a one-month pre-expiry alert, and refund-on-cancellation, applying to existing vouchers.",
+        "REJECTED the prior cycle's carry note that 2026 MVNO unlimited prices lean to 50-60 NIS. Verification shows budget unlimited SIM plans still commonly run ~30-50 NIS (promo prices dip to ~20-28), so the skill's 30-50 range was KEPT. Lesson: a carry-forward hunch about a price range must be re-verified before acting; this one was wrong.",
+        "Confirmed-correct-do-not-relitigate (2026, verified): Cashback.co.il, Cashdo, BuyMe, Zap all still operating; the three credit-card companies are Cal, Max (now owned by Clal, brand unchanged), Isracard; card products CashCal Pro, Max Back Total, Isracard Cashback are current; the gift-card 5-year floor from Amendment 33 (2014) section 14ח. Deferred/minor: no we4G reference exists in the skill to rename to WeCom; the HE credit-card section lacks the by-profile table the EN has (a within-section parity gap, not level-2), revisit if the card guidance is next expanded."
+      ]
+    },
+    {
       "version": "1.3.0",
       "date": "2026-05-31",
       "lessons": [

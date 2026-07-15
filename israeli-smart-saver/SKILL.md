@@ -55,7 +55,7 @@ Maximize savings by combining multiple discount layers on a single purchase:
 |---------|-------------|-----------|
 | Visa Cal (CAL) | Cash Cal Pro, Cal Young | Category-specific cashback, dining discounts |
 | Max (formerly Leumi Card) | Max Back Total | Flat cashback across all purchases |
-| Isracard | Isracard Cashback, American Express (Hever club) | Points / cashback, flight rewards |
+| Isracard | Isracard Cashback, American Express (Hever club), El-Al FLY CARD | Points / cashback, flight rewards |
 
 ### Key Credit Card Benefits to Use
 
@@ -71,7 +71,7 @@ Maximize savings by combining multiple discount layers on a single purchase:
 |-----------------|----------------------|-----|
 | High spender (8K+ NIS/month) | Flat cashback (Max Back) | Percentage-based savings add up |
 | Supermarket-heavy | Category cashback with grocery bonus | Higher cashback rate on groceries |
-| Traveler | Points/miles card (an American Express / Hever travel card) | Accumulate for flights |
+| Traveler | El-Al FLY CARD, the El-Al frequent-flyer co-brand, now issued by Isracard (new cards from 1.6.2026; CAL-issued FLY CARDs stop earning El-Al points after 31.12.2026, so migrate to keep earning). Amex (Hever) also earns miles | Accumulate for flights |
 | Family | Family card with multi-user benefits | Shared points, family discounts |
 
 ## Subscription Audit Workflow
@@ -197,7 +197,7 @@ Result: Recommendation to switch or negotiate, with specific plan comparison.
 Some cashback platforms (Cashback.co.il, Cashdo) do not stack with each other. Using two cashback extensions simultaneously can cause neither to track the purchase. Always use only one cashback platform per transaction.
 
 ### 2. BuyMe Gift Cards Are Not Refundable
-When buying discounted BuyMe gift cards as a savings strategy, remember they are generally non-refundable. Only buy them for stores where you are certain to shop. Expired gift cards are governed by Israeli consumer law (minimum 5-year validity from issuance under the Consumer Protection Law, Amendment 33 of 2014, Sec. 14ח). A 2025 reform added a right to request an extension for higher-value vouchers, so check the current rules before treating a card as expired.
+When buying discounted BuyMe gift cards as a savings strategy, remember they are generally non-refundable. Only buy them for stores where you are certain to shop. Expired gift cards are governed by Israeli consumer law (minimum 5-year validity from issuance under the Consumer Protection Law, Amendment 33 of 2014, Sec. 14ח). A 2025 amendment to the Payment Services Regulations went further: vouchers over 150 NIS can be extended up to 15 years, issuers must send holders an annual balance reminder plus an alert one month before expiry, and remaining balances are refundable to the payment method on cancellation. Check the current rules before treating a card as expired.
 
 ### 3. Installment Payments (Tashlumim) Are Not Always Free
 While most Israeli retailers offer interest-free installments, some charge interest for longer terms (above 12 payments) or for certain product categories. Always verify "tashlumim l'lo ribit" (interest-free installments) before assuming.
