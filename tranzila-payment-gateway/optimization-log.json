@@ -1,6 +1,17 @@
 {
   "cycles": [
     {
+      "version": "1.3.1",
+      "date": "2026-07-16",
+      "lessons": [
+        "STALE fixed: the ITA allocation-number framing lagged. As of mid-July 2026 the threshold in force is NIS 5,000 pre-VAT (the 1 June 2026 step-down is live, cross-confirmed in the sibling israeli-vat-reporting update against two web sources). Updated the schedule line and the Reference Links row so 5,000 reads as current, not '10K now, drops to 5K'.",
+        "Fixed: softened the absolute claim that 'API V2 is the auth name, not a /v2 path'. The core payment/Bit/transaction endpoints are still /v1, but a newer endpoint (standing-order create, /v2/sto/create in tranzilajs) does use a /v2 path, so the blanket statement was no longer universally true.",
+        "Fixed: the Bit doc deep-link (docs.tranzila.com/.../dcljft4y7sgj2-bit) is now an empty un-indexed stub; repointed to the Payments & Billing section via the docs index, with a note that deep Bit slug URLs change.",
+        "Confirmed-correct-do-not-relitigate (verified 2026-07-16 against tranzilajs + active_merchant_tranzila + docs.tranzila.com): the 4-header HMAC-SHA256 auth (request-time in SECONDS), the api.tranzila.com/v1 base + legacy secure5 CGI (tranzila31.cgi/36a.cgi) + direct.tranzila.com iframenew.php, the error codes 000/004/036/037/900 with HTTP-200-on-failure, the dedicated Bit Init/Refund API, cred_type 1/2/3/5/8/9, currency 1/2/3/7 (legacy CGI), tranmode K/VK/AK/C{index}, support 073-222-4444. The 3DS success fields eci/xid/cavv are now POSITIVELY VERIFIED (previously plausible-unverified).",
+        "Deferred (additive, next cycle, not errors): (a) 3ds-flow.md, API V2 nests eci/xid/cavv under a t3ds_data object and reports the result via statusCode (e.g. 'YA') + error_code 900, rather than the flat three_ds_status Y/A/N/U/R table currently shown (which is the legacy/generic-3DS shape); (b) add cred_type 4 (Club Credit) and 6 (Visa credit / the value modern tranzilajs uses for CREDIT); (c) note API V2 uses ISO 4217 numeric currency codes (EUR=978, GBP=826) vs the legacy CGI 3/7; (d) modern refund CGI is tranzila71u.cgi, the 31tk/31pan family is legacy; (e) clarify 036/037 are legacy Tranzila Response codes, distinct from the SHVA hundreds table (expired=015, installment=406 there)."
+      ]
+    },
+    {
       "version": "1.3.0",
       "date": "2026-05-31",
       "lessons": [

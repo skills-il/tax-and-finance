@@ -30,7 +30,7 @@
     {
       "claim_id": "bit-api",
       "claim": "Tranzila Bit is a dedicated API (Bit Init / Bit Refund endpoints under api.tranzila.com/v1 with the 4-header HMAC auth), not a bit=1 flag on the card CGI. Bit constraints: NIS only, sum above 5 NIS, merchant needs a Visa or Isracard identifier, Max-only merchants are not offered Bit; no Hosted Fields / 3DS.",
-      "source_url": "https://docs.tranzila.com/docs/payments-billing/dcljft4y7sgj2-bit",
+      "source_url": "https://docs.tranzila.com/docs/payments-and-billing/bit-api",
       "raw_snippet": "Bit",
       "fetched_at": "2026-05-31T00:00:00Z",
       "appears_in": ["SKILL.md", "SKILL_HE.md"]

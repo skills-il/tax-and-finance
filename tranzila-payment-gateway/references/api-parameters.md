@@ -20,7 +20,7 @@ https://direct.tranzila.com/{supplier}/iframenew.php?sum=100&currency=1&cred_typ
 - **J4 mode**: One-time charge -- card is charged immediately, no token returned.
 
 ### API V2 Authentication
-Base URL is `https://api.tranzila.com/v1` ("API V2" is the auth-generation name, not a `/v2` path). Authentication is a 4-header HMAC-SHA256 handshake; ALL four headers are required:
+Base URL is `https://api.tranzila.com`; core payment endpoints are under `/v1` and "API V2" refers to the auth generation, though some newer endpoints (e.g. standing-order create) use a `/v2` path. Authentication is a 4-header HMAC-SHA256 handshake; ALL four headers are required:
 ```
 POST https://api.tranzila.com/v1/{resource}
 X-tranzila-api-app-key: {public app key}

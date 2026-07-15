@@ -45,7 +45,7 @@ Tranzila uses different credentials depending on the integration:
 - `X-tranzila-api-nonce` -- a random nonce (about 40 bytes)
 - `X-tranzila-api-access-token` -- `hmac_sha256(secret + request_time + nonce, app_key)` (HMAC-SHA256 of the app key, keyed with secret concatenated with the request-time and nonce)
 
-You get both a public app key and a secret key when you enrol in API V2. A request with only `X-tranzila-api-app-key` is rejected. (Base URL is `https://api.tranzila.com/v1`; "API V2" is the auth-generation name, not a `/v2` path.) Confirm the exact concatenation order in the Authentication page at docs.tranzila.com before shipping.
+You get both a public app key and a secret key when you enrol in API V2. A request with only `X-tranzila-api-app-key` is rejected. (Base URL is `https://api.tranzila.com`; core payment endpoints are under `/v1` and "API V2" refers to the auth generation, though some newer endpoints, such as standing-order create, use a `/v2` path.) Confirm the exact concatenation order in the Authentication page at docs.tranzila.com before shipping.
 
 Remind the user to store credentials securely (environment variables, secrets manager) and never commit them to source control.
 
@@ -164,7 +164,7 @@ Tranzila supports Bit (Israel's popular mobile payment app) through a **dedicate
 4. Tranzila sends the result to your `notify_url`
 5. Bit refunds use the dedicated Bit Refund endpoint, not the card refund flow
 
-**Bit constraints (from the docs):** NIS only, transaction sum must be above 5 NIS, and the merchant needs a Visa or Isracard identifier, **Max-only merchants are not offered Bit at this time**. Bit does not support Hosted Fields or 3DS. Do not assume a `bit=1` / `bit_url` parameterization on the legacy CGI; use the dedicated Bit API. Refer to `https://docs.tranzila.com/docs/payments-billing/dcljft4y7sgj2-bit`.
+**Bit constraints (from the docs):** NIS only, transaction sum must be above 5 NIS, and the merchant needs a Visa or Isracard identifier, **Max-only merchants are not offered Bit at this time**. Bit does not support Hosted Fields or 3DS. Do not assume a `bit=1` / `bit_url` parameterization on the legacy CGI; use the dedicated Bit API. For the Bit spec, navigate to the Payments & Billing section from the docs index at `https://docs.tranzila.com/` (deep Bit slug URLs change and may be empty stubs).
 
 ### Step 8: Generate Payment Request Links
 
@@ -198,7 +198,7 @@ Tranzila has an Invoicing API for generating digitally-signed tax documents appr
 3. Supports tax invoices, receipts, and credit notes
 4. Can be auto-generated with PayPal payments
 
-**Israel Tax Authority allocation number (mispar haktza'a), mandatory for B2B invoices over thresholds.** Since 2025-01-01 the ITA requires every B2B tax invoice over a threshold to carry an allocation number obtained from SHAAM via API. Threshold schedule: NIS 20,000 (from Jan 2025), **NIS 10,000 from Jan 2026**, **NIS 5,000 from Jun 2026**. Without the allocation number, the buyer cannot deduct input VAT on the invoice. If you generate invoices through Tranzila's Invoicing API, confirm with Tranzila support that allocation-number requests are wired through SHAAM for invoices at or above the current threshold; if not, fall back to a separate invoicing provider (Green Invoice, Morning, etc.) that does integrate with SHAAM, or request allocation numbers directly via the ITA portal.
+**Israel Tax Authority allocation number (mispar haktza'a), mandatory for B2B invoices over thresholds.** Since 2025-01-01 the ITA requires every B2B tax invoice over a threshold to carry an allocation number obtained from SHAAM via API. Threshold schedule: NIS 20,000 (from Jan 2025), NIS 10,000 from Jan 2026, **NIS 5,000 from 1 June 2026 (now in force)**. Without the allocation number, the buyer cannot deduct input VAT on the invoice. If you generate invoices through Tranzila's Invoicing API, confirm with Tranzila support that allocation-number requests are wired through SHAAM for invoices at or above the current threshold; if not, fall back to a separate invoicing provider (Green Invoice, Morning, etc.) that does integrate with SHAAM, or request allocation numbers directly via the ITA portal.
 
 Refer to Tranzila's invoicing documentation for the complete invoicing API reference.
 
@@ -305,7 +305,7 @@ Result: Payment collected remotely without building a checkout page.
 |--------|-----|---------------|
 | Tranzila developer docs | https://docs.tranzila.com/ | API reference, authentication, supported card networks, 3DS flow, error codes |
 | Hosted Fields integration | https://docs.tranzila.com/ (Payments &amp; Billing → Hosted Fields) | PCI-friendly embedded card capture |
-| Israel Tax Authority allocation numbers | https://www.gov.il/en/service/allocation-number-application-tax-invoice | Mandatory for invoices ≥ NIS 10K (Jan 2026), drops to NIS 5K (Jun 2026) |
+| Israel Tax Authority allocation numbers | https://www.gov.il/en/service/allocation-number-application-tax-invoice | Mandatory for B2B invoices over NIS 5K pre-VAT (in force since Jun 2026; dropped from NIS 10K in Jan 2026) |
 | Tranzila company site | https://www.tranzila.com | Terminal enablement requests, installment permissions, contact, PCI certification |
 | tranzilajs community client | https://github.com/NirTatcher/tranzilajs | Community TypeScript/Node client and usage examples |
 
