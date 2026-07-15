@@ -36,11 +36,11 @@ The capital income surtax applies to: capital gains, dividends, interest, rental
 
 | Component | Reduced Rate | Full Rate | Reduced Bracket | Full Bracket |
 |-----------|-------------|-----------|----------------|-------------|
-| Bituach Leumi | 0.4% | 7.0% | Up to 7,703/month | 7,703 - 51,910/month |
-| Health Insurance | 3.1% | 5.0% | Up to 7,703/month | 7,703 - 51,910/month |
-| **Total** | **3.5%** | **12.0%** | | |
+| Bituach Leumi | 1.04% | 7.0% | Up to 7,703/month | 7,703 - 51,910/month |
+| Health Insurance | 3.23% | 5.17% | Up to 7,703/month | 7,703 - 51,910/month |
+| **Total** | **4.27%** | **12.17%** | | |
 
-Maximum monthly income for BL: 51,910 NIS (income above this is exempt). The reduced-rate ceiling (60 percent of the average wage) rose to 7,703 for 2026.
+Maximum monthly income for BL: 51,910 NIS (income above this is exempt). The reduced-rate ceiling (60 percent of the average wage) rose to 7,703 for 2026. The reduced-tier National Insurance rate (1.04%) and the full-tier health rate (5.17%) reflect the temporary order in force for 2025-2026 (the reduced-tier total rose from 3.5% to 4.27%, the full-tier total from 12.0% to 12.17%); figures apply to a resident employee aged 18 to retirement (column 1 of the Bituach Leumi salaried-worker rate table). These rates apply only to the employment-income portion of stock options (income track, non-trustee, or 3(i)), never to the capital gains track.
 
 ## Bituach Leumi - Employer Portion
 

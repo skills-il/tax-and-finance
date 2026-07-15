@@ -70,6 +70,8 @@ No Bituach Leumi applies on the capital gains track.
 
 **Controlling shareholder exception:** If the employee holds (or held at any point) 10% or more of the company's shares, the capital gains rate is 30% instead of 25%.
 
+**Publicly-traded company exception (Section 102(b)(3)) - critical for RSU holders at public companies:** The "entire gain at 25%" rule holds only when the company is PRIVATE at the date of grant (the typical startup-M&A exit). If the company's shares are LISTED on a stock exchange at grant, OR the shares are registered for trading on an exchange within 90 days AFTER the grant (the classic late-stage-startup-grant-shortly-before-IPO case), the capital gains track still applies but the gain is mandatorily SPLIT even here: the ordinary-income component, equal to the average closing share price over the 30 trading days PRECEDING the grant date minus any exercise price paid, is taxed as employment income at marginal rates (up to 47%) plus Bituach Leumi, health, and surtax; only the gain ABOVE that grant-date average is taxed at 25%. This is the common case for employees at Google, Meta, Nvidia, Microsoft, Intel, any post-IPO company, and anyone granted in the 90 days before an IPO, so do not tell such a holder they pay a flat 25% on the whole amount.
+
 #### Track B: Section 102 Income (Peiroti)
 
 The gain is split into two parts:
@@ -80,7 +82,7 @@ Capital Gain = Sale Price - FMV at exercise date
 
 Tax on Employment Income = Marginal income tax rate (10%-47%)
   + Bituach Leumi (up to 7% employee share)
-  + Health Insurance (up to 5%)
+  + Health Insurance (up to ~5.17%)
 
 Tax on Capital Gain = 25% flat
 
@@ -96,7 +98,7 @@ Entire gain taxed as employment income at marginal rates. No capital gains porti
 Gain = Sale Price - Exercise Price
 Tax = Marginal income tax (10%-47%)
   + Bituach Leumi (up to 7%)
-  + Health Insurance (up to 5%)
+  + Health Insurance (up to ~5.17%)
   + 3% surtax if above threshold
 ```
 
@@ -109,12 +111,20 @@ Gain = Sale Price - 0 = Sale Price (entire value is gain)
 Tax = Gain x 25%
 ```
 
-For RSUs under income track or listed companies, there is a split:
+For RSUs there is a split in two DIFFERENT situations, measured on two DIFFERENT bases:
 
 ```
-Employment Income = FMV at vesting date (or 30-day average for listed shares)
-Capital Gain = Sale Price - FMV at vesting date
+Income (peiroti) track, any company:
+  Employment Income = FMV at exercise/vesting date - Exercise Price
+  Capital Gain      = Sale Price - FMV at exercise/vesting date
+
+Capital gains track, LISTED company (Section 102(b)(3)):
+  Employment Income = avg closing price over the 30 TRADING DAYS
+                      PRECEDING the GRANT date - Exercise Price
+  Capital Gain      = Sale Price - that grant-date average (taxed at 25%)
 ```
+
+Do not use the vesting-date FMV for the listed-company capital-track split, it is the 30-trading-day pre-grant average.
 
 ### Step 4: Income Tax Brackets (2026)
 
@@ -139,11 +149,11 @@ Bituach Leumi (National Insurance) and health tax apply ONLY to the employment i
 
 | Component | Reduced Rate (up to 7,703/month) | Full Rate (7,703-51,910/month) |
 |-----------|----------------------------------|-------------------------------|
-| Bituach Leumi (employee) | 0.4% | 7.0% |
-| Health Insurance (employee) | 3.1% | 5.0% |
-| **Total employee** | **3.5%** | **12.0%** |
+| Bituach Leumi (employee) | 1.04% | 7.0% |
+| Health Insurance (employee) | 3.23% | 5.17% |
+| **Total employee** | **4.27%** | **12.17%** |
 
-Maximum monthly ceiling: 51,910 NIS (2026). Income above this ceiling does not incur additional BL/health contributions. For a lump-sum option exercise, the employment income portion is spread over the vesting period for BL calculation purposes.
+Maximum monthly ceiling: 51,910 NIS (2026). Income above this ceiling does not incur additional BL/health contributions. These employee rates (reduced-tier total 4.27%, full-tier total 12.17%) reflect the temporary order in force for 2025-2026 and apply to a resident employee aged 18 to retirement. For a lump-sum option exercise, the employment income portion is spread over the vesting period for BL calculation purposes.
 
 ### Step 6: Generate the Tax Comparison Report
 
@@ -284,7 +294,7 @@ If the deal is a mix of cash + stock, the cash portion is taxed immediately and 
 
 2. **Surtax is 5% on capital gains, not 3%.** Since 2025, capital income above 721,560 NIS/year is subject to both the 3% general surtax AND an additional 2% surtax on capital income. Agents often cite only the 3% figure. The correct combined surtax on capital gains above the threshold is 5%.
 
-3. **RSU "exercise price" is zero, not the grant-date FMV.** For Section 102 capital gains track, the entire RSU value at sale is the taxable gain (since there was no purchase price). Agents sometimes mistakenly use the grant-date FMV as the cost basis, which understates the tax.
+3. **RSU "exercise price" is zero, not the grant-date FMV.** For a PRIVATE company under the Section 102 capital gains track, the entire RSU value at sale is the taxable gain at 25% (since there was no purchase price). Agents sometimes mistakenly use the grant-date FMV as the cost basis, which understates the tax. But for a LISTED company, the Section 102(b)(3) split applies even on the capital gains track: the 30-day-pre-grant average value is an ordinary-income component taxed at marginal rates, and only the excess is taxed at 25%. Do not apply the flat-25%-on-everything rule to a public-company RSU holder.
 
 4. **The employee cannot choose their track.** The company selects the track (capital gains or income) when filing the 102 plan with the ITA. Agents sometimes present this as an employee decision. The employee can only optimize timing and amounts, not the track itself.
 
@@ -296,6 +306,8 @@ If the deal is a mix of cash + stock, the cash portion is taxed immediately and 
 
 8. **The 30-day clock is the PLAN-FILING clock, not the deposit clock.** Grants under a 102 plan can only be made starting 30 days after the plan is submitted to the ITA. Deposit-with-trustee deadlines are different and both anchor on the DATE OF GRANT (not the board-resolution date): 45 days from the date of grant for the board-resolution copy, and 90 days from the date of grant for the signed option agreement.
 
+9. **A foreign broker does NOT withhold Israeli tax, so the employee must self-report.** When 102/RSU shares are held at a US broker (E*Trade, Schwab, Morgan Stanley, Fidelity) instead of by an Israeli trustee, no one withholds the Israeli capital gains tax at sale, and the trustee's Form 867 does not settle it. The Israeli-resident employee must file an annual income tax return (Form 1301) reporting the gain and, once securities gains cross the reporting threshold, pay semi-annual advance payments (mikdamot) on securities gains. Assuming "the tax was already withheld" is the single most common way public-company RSU holders miss a deadline and incur interest and penalties. This applies to any Israeli resident, not only US citizens.
+
 ## Reference Links
 
 | Source | URL | What to Check |
@@ -304,7 +316,7 @@ If the deal is a mix of cash + stock, the cash portion is taxed immediately and 
 | ITA ESOP circulars | https://www.gov.il/he/departments/israel_tax_authority | Latest professional circulars on Section 102 |
 | PWC Israel Individual Tax | https://taxsummaries.pwc.com/israel/individual/taxes-on-personal-income | Current tax brackets and rates |
 | CWS Israel Tax Guide 2026 | https://www.cwsisrael.com/israeli-tax-changes-2026-complete-guide/ | 2026 bracket changes and surtax thresholds |
-| Bituach Leumi Rates | https://www.btl.gov.il/English%20Homepage/Insurance/Ratesandamount/Pages/forSalaried.aspx | Current BL contribution rates |
+| Bituach Leumi Rates (salaried employees) | https://www.btl.gov.il/Insurance/Rates/Pages/לעובדים%20שכירים.aspx | Current BL + health employee contribution rates by category |
 | RSU Calculator Israel | https://www.rsu-calculator.com/explanation | RSU taxation methodology and examples |
 
 ## Troubleshooting

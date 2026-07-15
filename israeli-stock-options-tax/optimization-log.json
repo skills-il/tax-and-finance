@@ -1,0 +1,15 @@
+{
+  "cycles": [
+    {
+      "version": "1.2.0",
+      "date": "2026-07-15",
+      "lessons": [
+        "Expert MAJOR deferred: in-trust dividends on 102 capital-track shares are taxed at 25% (not marginal) during the trustee holding period; add a short subsection next cycle (relevant to dividend-paying listed-company holders: Nvidia, Microsoft, Intel).",
+        "Expert MINOR deferred: 102 Non-Trustee (102(c)) track lists a marginal rate but not the timing of the tax event (grant vs exercise) which differs from the trustee tracks; add a one-line note.",
+        "Expert MINOR deferred: US dual-citizen section could note that 102 capital-track gains can be re-sourced to Israel by treaty to make the Foreign Tax Credit usable against the US ordinary-income-at-vest mismatch.",
+        "Watch: surtax threshold 721,560 is the indexed figure carried into 2026; confirm the 2026 CPI-indexed amount at the next rate cycle.",
+        "Watch: BL employee rates (reduced NI 1.04% / full health 5.17%) rest on the 2025-2026 temporary order; re-verify against column 1 of the BTL salaried-worker table before it lapses."
+      ]
+    }
+  ]
+}

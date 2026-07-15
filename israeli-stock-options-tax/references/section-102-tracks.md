@@ -60,7 +60,7 @@ The gain is split at the exercise date:
 If shares are sold before the 24-month holding period expires:
 - The ENTIRE gain is reclassified as employment income
 - Taxed at marginal rates (up to 47%)
-- Plus Bituach Leumi (up to 7%) and health insurance (up to 5%)
+- Plus Bituach Leumi (up to 7%) and health insurance (up to ~5.17%)
 - Plus 3% surtax if above threshold
 - The capital gains track election is voided
 
