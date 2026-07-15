@@ -95,20 +95,22 @@ This is the single biggest planning lever for a 2026 returnee with a high Israel
 
 A returnee who structures comp as a dividend out of their Israeli company expecting the 600K shield gets none of it.
 
-**Family-employment sub-cap: 140,000 NIS/year.** When the returnee draws labor income from a business owned by an immediate family member (parent, spouse, sibling, child, in-law), the Hok Iddud exemption is capped at **140,000 NIS per year**, separately and lower than the general 600K/1M annual caps above. A vatik returning to a family business who structures their salary assuming the general cap will massively over-exempt. Verify the family-relationship definition with a CPA, since edge cases (spouse's parent, family member who owns less than 100%) need confirmation against the final regulations.
+**Family-employment sub-cap: 140,000 NIS/year.** When the returnee draws labor income from a business owned by an immediate family member (parent, spouse, sibling, child, in-law), the Hok Iddud exemption is capped at **140,000 NIS per year**, separately and lower than the general 600K/1M annual caps above. A vatik returning to a family business who structures their salary assuming the general cap will massively over-exempt. Verify the family-relationship definition with a CPA, since edge cases (spouse's parent, a family member with only partial ownership of the business) need confirmation against the final regulations. This family sub-cap applies for tax years 2026-2029.
 
-**Residency safeguard (clawback for 2028 and 2029).** Eligibility for the full 5-year exemption is forfeited if the returnee spends **fewer than 75 days in Israel during 2028** OR **fewer than 75 days during 2029**. This is a hard clawback that voids the full Hok Iddud exemption (potentially worth 3.1M NIS over the window). A vatik planning a sabbatical year, an extended overseas project, or a return-to-the-host-country move in 2028-2029 needs to track day counts against the 75-day floor and consult a CPA before committing to a multi-month absence. The 2026 and 2027 cap years carry no such presence test (the standard center-of-life residency rule still applies).
+**Residency safeguard (clawback for 2028 and 2029).** Eligibility for the full 5-year exemption is forfeited if, in 2028 or 2029, the returnee BOTH **ceases to be an Israeli tax resident** (typically a move back to the host country) **AND spends fewer than 75 days in Israel that year**. Both conditions are required, so remaining an Israeli resident is what preserves the benefit, but a returnee who is physically absent most of the year will struggle to argue continued residency. This is a hard clawback that voids the full Hok Iddud exemption retroactively, including the 2026-2027 years already taken (potentially worth 3.1M NIS over the window). A vatik planning a sabbatical year, an extended overseas project, or a return-to-the-host-country move in 2028-2029 needs to track day counts against the 75-day floor and consult a CPA before committing to a multi-month absence. The 2026 and 2027 cap years carry no such presence test (the standard center-of-life residency rule still applies).
 
-### Step 5.5: Stack the tax credit points benefit
+### Step 5.5: Olim credit points (only if the returnee is also an oleh)
 
-Separately from section 14 (foreign income) and Hok Iddud (Israeli labor), vatik returnees and olim are entitled to additional **tax credit points** (nekudot zikui) under the Income Tax Ordinance. The Hok Iddud 2026 article confirms the current scheme:
+**Scope trap first:** the additional immigrant **tax credit points** (nekudot zikui) are an **olim chadashim** benefit under Section 35 of the Income Tax Ordinance. A **toshav chozer vatik who is a returning Israeli citizen (not an oleh) does NOT automatically receive them.** Do not promise a pure returning-citizen vatik these points. A person who holds oleh status AND meets the vatik years-abroad test gets both section 14 and the olim credit points; a returning citizen gets only section 14.
 
-- **1-3 tax credit points per year for approximately 4.5 years from the return / aliyah date.**
-- **Worth roughly 3,000 NIS to 9,000 NIS per year** in reduced Israeli tax, depending on the point allocation by year of residency.
+For an oleh (whether or not they also qualify as vatik):
+
+- **The olim scheme runs about 4.5 years (54 months) from the aliyah date, on a tapering schedule of roughly 1 to 3 points per year (more points in the early residency years, fewer later). Confirm the exact per-year allocation against the current Tax Authority / Kol-Zchut table.**
+- Each point is worth 2,904 NIS/year in 2026 (242 NIS/month), so the benefit is worth roughly **3,000 NIS to 9,000 NIS per year** depending on the year in the taper.
 - Applied AGAINST Israeli-source tax (after the Hok Iddud labor exemption is exhausted).
-- Useful for returnees with modest Israeli salaries that fall under the Hok Iddud cap, the credit points still reduce tax on the portion above the cap or on Israeli interest/dividends/rent.
+- Useful for olim with modest Israeli salaries that fall under the Hok Iddud cap: the credit points still reduce tax on the portion above the cap or on Israeli interest/dividends/rent.
 
-This is a small but real benefit that stacks with everything else. A vatik who earns 800K Israeli salary in 2026 with 600K exempt under Hok Iddud should still claim the credit points against tax on the 200K residual.
+An oleh who earns 800K Israeli salary in 2026 with 600K exempt under Hok Iddud should still claim the olim credit points against tax on the 200K residual. A returning-citizen vatik in the same position claims section 14 and Hok Iddud only, no olim points.
 
 ### Step 6: Special case, US citizens (and other global-taxation citizenships)
 
@@ -257,6 +259,8 @@ None. This skill is text-based planning. No live API integration with Mas Hachna
 | Shivat Zion, Toshav Chozer overview | https://shivatzion-support.freshdesk.com/en/support/solutions/articles/501000348813-returning-resident-toshav-chozer |
 | Shivat Zion, 2026 Tax Reform Benefits for New Olim and Returning Residents | https://shivatzion-support.freshdesk.com/en/support/solutions/articles/501000361627-2026-tax-reform-benefits-for-new-olim-and-returning-residents |
 | Belong, Toshav Chozer rights and benefits | https://belong.co.il/living/returning-residents-toshav-chozer-rights-benefits/ |
+| Nefesh B'Nefesh, Benefits for Toshavim Chozrim (Returning Residents) | https://www.nbn.org.il/life-in-israel/government-services/rights-and-benefits/benefits-for-toshavim-chozrim-returning-residents/ |
+| Nefesh B'Nefesh, Taxation of new immigrants and returnees | https://www.nbn.org.il/life-in-israel/finances/taxes/taxation-of-new-immigrants-rules-in-israel/ |
 
 ## Troubleshooting
 

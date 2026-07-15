@@ -299,16 +299,16 @@
     },
     {
       "id": "hok-iddud-75-day-clawback-2028-2029",
-      "claim": "Eligibility for the Hok Iddud 5-year Israeli-source labor exemption is forfeited if the returnee spends fewer than 75 days in Israel during 2028 or fewer than 75 days during 2029.",
+      "claim": "Eligibility for the Hok Iddud 5-year Israeli-source labor exemption is forfeited (retroactively, including 2026-2027) if, in 2028 or 2029, the returnee BOTH ceases to be an Israeli tax resident AND spends fewer than 75 days in Israel that year. Both conditions are required.",
       "source_url": "https://shivatzion-support.freshdesk.com/en/support/solutions/articles/501000361627-2026-tax-reform-benefits-for-new-olim-and-returning-residents",
-      "raw_snippet": "You spend fewer than 75 days in Israel during 2028 and 2029 respectively",
+      "raw_snippet": "You leave Israel and cease to be an Israeli tax resident in 2028 or 2029 ... You spend fewer than 75 days in Israel during 2028 and 2029 respectively",
       "fetched_on": "2026-05-26"
     },
     {
       "id": "hok-iddud-family-employment-140k-cap",
-      "claim": "Income from labor for an immediate family member (parent, spouse, sibling, child, in-law) is capped at 140,000 NIS per year under Hok Iddud, separately and lower than the general 600K/1M annual caps.",
-      "source_url": "https://shivatzion-support.freshdesk.com/en/support/solutions/articles/501000361627-2026-tax-reform-benefits-for-new-olim-and-returning-residents",
-      "raw_snippet": "Up to 140,000 NIS per year (for all years 2026-2030)",
+      "claim": "Income from labor for an immediate family member (parent, spouse, sibling, child, in-law) is capped at 140,000 NIS per year (140,000 ש\"ח) under Hok Iddud for tax years 2026-2029, separately and lower than the general 600K/1M annual caps.",
+      "source_url": "https://www.bshcpa.co.il/tax-exemption-returning-residents-olim-2026/",
+      "raw_snippet": "140,000 ש\"ח ... 140,000 NIS",
       "fetched_on": "2026-05-26"
     },
     {
@@ -326,11 +326,18 @@
       "fetched_on": "2026-05-26"
     },
     {
-      "id": "tax-credit-points-4-5-years",
-      "claim": "Vatik returnees and olim are entitled to 1-3 additional tax credit points (nekudot zikui) for approximately 4.5 years from return/aliyah, worth approximately 3,000-9,000 NIS per year in reduced Israeli tax.",
-      "source_url": "https://shivatzion-support.freshdesk.com/en/support/solutions/articles/501000361627-2026-tax-reform-benefits-for-new-olim-and-returning-residents",
-      "raw_snippet": "1-3 tax credit points for approximately 4.5 years (Worth approximately 3,000-9,000 NIS per year in tax savings)",
-      "fetched_on": "2026-05-26"
+      "id": "tax-credit-points-olim-section-35",
+      "claim": "Olim chadashim (new immigrants) receive additional tax credit points under Section 35 on a tapering schedule of roughly 1 to 3 points per year over about 54 months (4.5 years) from aliyah; at the 2026 point value the benefit is roughly 3,000 NIS to 9,000 NIS per year (3,000 ש\"ח עד 9,000 ש\"ח). A returning-citizen toshav chozer vatik who is NOT an oleh (only a 'toshav chozer mutav' from the closed 2010-2012 window) does not automatically receive these Section 35 credit points.",
+      "source_url": "https://claltax.com/%D7%A2%D7%95%D7%9C%D7%94-%D7%97%D7%93%D7%A9-%D7%95%D7%AA%D7%95%D7%A9%D7%91-%D7%97%D7%95%D7%96%D7%A8-%D7%9E%D7%95%D7%98%D7%91/",
+      "raw_snippet": "נקודות זיכוי ... סעיף 35 ... עולה חדש ותושב חוזר מוטב",
+      "fetched_on": "2026-07-15"
+    },
+    {
+      "id": "credit-point-value-2026-frozen",
+      "claim": "A single income-tax credit point (nekudat zikui) is worth 2,904 NIS per year (2,904 ש\"ח, 242 NIS per month) in 2026; the value is frozen for 2025-2027.",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%A0%D7%A7%D7%95%D7%93%D7%95%D7%AA_%D7%96%D7%99%D7%9B%D7%95%D7%99_%D7%9E%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
+      "raw_snippet": "נקודת זיכוי ... 242 ש\"ח ... 2,904",
+      "fetched_on": "2026-07-15"
     },
     {
       "id": "section-97-b3-capital-gains-statute",
@@ -352,6 +359,20 @@
       "source_url": "https://belong.co.il/living/returning-residents-toshav-chozer-rights-benefits/",
       "raw_snippet": "Long-Term Toshav Chozer (Vatik): more than 6 years abroad. Substantial benefits comparable to new Olim. 10-year exemption on overseas income/assets reporting.",
       "fetched_on": "2026-05-26"
+    },
+    {
+      "id": "nbn-returning-residents-page",
+      "claim": "Nefesh B'Nefesh publishes a plain-English 'Benefits for Toshavim Chozrim (Returning Residents)' resource page; NBN serves returning residents, not only new olim.",
+      "source_url": "https://www.nbn.org.il/life-in-israel/government-services/rights-and-benefits/benefits-for-toshavim-chozrim-returning-residents/",
+      "raw_snippet": "Benefits for Toshavim Chozrim (Returning Residents)",
+      "fetched_on": "2026-07-15"
+    },
+    {
+      "id": "nbn-taxation-page",
+      "claim": "Nefesh B'Nefesh publishes a taxation-of-new-immigrants resource page covering tax rules for olim and returnees.",
+      "source_url": "https://www.nbn.org.il/life-in-israel/finances/taxes/taxation-of-new-immigrants-rules-in-israel/",
+      "raw_snippet": "Taxation of New Immigrants",
+      "fetched_on": "2026-07-15"
     }
   ]
 }
