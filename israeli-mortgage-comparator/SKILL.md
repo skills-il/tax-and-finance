@@ -11,9 +11,9 @@ allowed-tools: Bash(python:*) WebFetch
 
 | Variable | Value | Source |
 |---|---|---|
-| BoI rate (May 2026) | 3.75% (cut from 4.0% on 2026-05-25; 4.0% was set 2026-01-05 from 4.25% and held Feb/Mar 2026) | bankisrael.gov.il |
-| Prime rate (May 2026) | 5.25% (= BoI + 1.5%) | derived from BoI |
-| BoI forecast | gradual decline to ~3.5% by end-2026 / early-2027 per BoI staff forecast | BoI staff forecasts |
+| BoI rate (July 2026) | 3.50% (cut from 3.75% on 2026-07-06; 3.75% was set 2026-05-25 from 4.0%). The BoI rate is the most drift-prone figure here, re-check bankisrael.gov.il before quoting | bankisrael.gov.il |
+| Prime rate (July 2026) | 5.00% (= BoI + 1.5%) | derived from BoI |
+| BoI forecast | gradual decline toward ~3.0% over roughly the next 12 months per BoI staff forecast | BoI staff forecasts |
 | Purchase tax (mas rechisha) bracket 0% | up to 1,978,745 NIS | mas.gov.il, brackets frozen 2025-2027 |
 | Investment-property purchase tax | 8% up to 6,055,070 NIS, 10% above | mas.gov.il |
 | Foreign-resident max LTV | 50% (regulatory ceiling; banks may offer less, not more) | BoI Banking Supervision |
@@ -52,7 +52,7 @@ Bank of Israel imposes strict regulations on mortgage composition. These are cri
 - These are maximum limits; banks can offer less
 
 **Track composition limits (current rule, in force since the BoI Directive 329 update of December 27, 2020, effective January 2021):**
-- **Fixed-rate tracks must be at least 33.33% (one-third)** of the total mortgage, NIS-denominated
+- **Fixed-rate tracks must be at least 33.33% (one-third)** of the total mortgage (the mandatory third can be fixed-unindexed or fixed-indexed to the Madad; the requirement is that it is a fixed, not variable/Prime, track)
 - Variable + Prime combined can be up to **66.67% (two-thirds)** of the loan
 - The pre-2023 separate cap of "Prime track ≤ 33.33%" was scrapped. Prime can now go up to two-thirds.
 - These limits keep at least one-third of the loan immune to short-term rate spikes.
@@ -279,14 +279,14 @@ Result: User receives the LTV constraint analysis, total acquisition cost (inclu
 
 ## Reservist statutory mortgage protections
 
-A reservist (משרת מילואים) called up under Order 8 for 5 or more consecutive days has statutory rights vis-à-vis the mortgage during the call-up:
+A reservist (משרת מילואים) called up under Order 8 during an active conflict period is generally entitled to defer mortgage and loan payments (commonly up to about 3 months) without interest or fees. The exact terms and eligibility are set largely by the active-period relief framework and reservist-protection legislation:
 
 - Right to defer monthly payments without late fees during active reserve duty
 - Foreclosure freeze for the duration of active duty
 - The bank cannot demand penalty interest or accelerate the loan due to the deferral
 - Spouse / co-borrower may invoke the same protections when the reservist is the primary earner
 
-Beyond the statutory reservist protections, the Bank of Israel periodically activates a temporary bank-relief framework (broader payment deferrals, fee waivers for war-zone evacuees and affected borrowers) during active conflict periods. These frameworks have specific eligibility windows and expiry dates that change as the security situation changes, so agents must **verify the current framework status and dates at boi.org.il before quoting** rather than assuming any particular framework is either active or lapsed. The statutory reservist (Order 8, 5+ days) protections below are permanent and apply independently of any temporary framework.
+Beyond the statutory reservist protections, the Bank of Israel periodically activates a temporary bank-relief framework (broader payment deferrals, fee waivers for war-zone evacuees and affected borrowers) during active conflict periods. These frameworks have specific eligibility windows and expiry dates that change as the security situation changes, so agents must **verify the current framework status and dates at boi.org.il before quoting** rather than assuming any particular framework is either active or lapsed. Reservist payment-deferral terms and eligibility are set largely by the active-period relief framework and periodic reservist legislation, so verify the current terms at boi.org.il or Kol-Zchut before quoting.
 
 War-displaced residents (מפונים) from Tkuma authority programs may have separate evacuee-specific arrangements; verify with the bank's social work / evacuee desk.
 

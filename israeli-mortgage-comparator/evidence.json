@@ -5,10 +5,10 @@
   "claims": [
     {
       "claim_id": "boi-rate",
-      "claim": "The Bank of Israel interest rate was cut to 3.75% on 2026-05-25 (previously 4.0% set 2026-01-05 from 4.25%). The Prime rate = BoI rate + 1.5% = 5.25% (the prior stale quote was Prime 5.5% at BoI 4.0%). BoI staff forecast points to ~3.5% by end-2026/early-2027.",
-      "source_url": "https://www.boi.org.il/en/communication-and-publications/press-releases/25-05-2026/",
-      "raw_snippet": "3.75",
-      "fetched_at": "2026-05-31T00:00:00Z",
+      "claim": "The Bank of Israel interest rate was cut to 3.50% on 2026-07-06 (previously 3.75% set 2026-05-25 from 4.0%). The Prime rate = BoI rate + 1.5% = 5.00%. BoI staff forecast points toward ~3.0% within about 12 months; the next Monetary Committee decision is around late August 2026.",
+      "source_url": "https://en.globes.co.il/en/article-bank-of-israel-cuts-interest-rate-again-1001547993",
+      "raw_snippet": "3.50",
+      "fetched_at": "2026-07-16T00:00:00Z",
       "appears_in": ["SKILL.md", "SKILL_HE.md"]
     },
     {
@@ -81,6 +81,14 @@
       "source_url": "https://www.boi.org.il",
       "raw_snippet": "Illustrative example amounts and ranges (not regulated facts): 1,200,000 ILS 1,200,000 ש\"ח 1,800,000 ILS 1,800,000 ש\"ח 10,000 ILS 10,000 ש\"ח 2,000 ILS 2,000 ש\"ח 2,500,000 ILS 2,500,000 ש\"ח 200 ILS 200 ש\"ח 25,000 ILS 25,000 ש\"ח 3,000 ILS 3,000 ש\"ח 500,000 ILS 500,000 ש\"ח 672,000 ILS 672,000 ש\"ח 700,000 ILS 700,000 ש\"ח 8,000 ILS 8,000 ש\"ח 900,000 ILS 900,000 ש\"ח ILS 3 ILS, 1%",
       "fetched_at": "2026-05-31T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+    },
+    {
+      "claim_id": "reservist-payment-deferral",
+      "claim": "A reservist called up under Order 8 (Tzav 8) during an active conflict period is generally entitled to defer mortgage and loan payments (commonly up to about 3 months) without interest or fees. The exact terms and eligibility are set largely by the active-period relief framework and reservist-protection legislation, so they must be verified before quoting; the '5 or more consecutive days' threshold applies to a separate right (a spouse's work-absence entitlement), not to the mortgage deferral.",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%A9%D7%90%D7%9C%D7%95%D7%AA_%D7%95%D7%AA%D7%A9%D7%95%D7%91%D7%95%D7%AA_%D7%9C%D7%9E%D7%99_%D7%A9%D7%9E%D7%A9%D7%A8%D7%AA%D7%99%D7%9D_%D7%91%D7%9E%D7%99%D7%9C%D7%95%D7%90%D7%99%D7%9D_%D7%91%D7%9E%D7%94%D7%9C%D7%9A_%D7%9E%D7%9C%D7%97%D7%9E%D7%AA_%D7%97%D7%A8%D7%91%D7%95%D7%AA_%D7%91%D7%A8%D7%96%D7%9C",
+      "raw_snippet": "דחיית תשלומי הלוואות ... משרתי מילואים ... בלי ריבית ובלי עמלות",
+      "fetched_at": "2026-07-16T00:00:00Z",
       "appears_in": ["SKILL.md", "SKILL_HE.md"]
     }
   ]
