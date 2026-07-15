@@ -10,11 +10,11 @@ All figures verified against official Israeli Tax Authority publications and Kol
   - Special Preferred Enterprise elsewhere: 8%
   - Preferred Enterprise in Development Area A: 7.5%
   - Preferred Enterprise elsewhere: 16%
-- 2% additional tax on retained corporate profits not distributed as dividends
+- 2% additional tax on excess retained corporate profits of a closely-held company not distributed as dividends (Amendment 277; see the Trapped Profits section below for the protective cushion and the 6% distribution safe harbor that avoids it)
 
 ## Income Tax Brackets (Earned Income, 2026)
 
-Brackets widened in 2026 (retroactive from January 1, 2026).
+The 20% and 31% band ceilings were widened for 2026 by Amendment 288 to the Income Tax Ordinance (enacted 31 March 2026, retroactive to January 1, 2026). The credit-point value and the surtax threshold (721,560) were NOT indexed, they stay frozen 2025-2027 under the Economic Efficiency Law, which is why only the middle rungs move while the top of the ladder holds.
 
 | Annual Income (NIS) | Monthly Income (NIS) | Tax Rate |
 |---------------------|---------------------|----------|
@@ -112,9 +112,9 @@ Liability sits on the individual, not the company. If the shareholder has non-em
 
 Amendment 277 to the Income Tax Ordinance restructured taxation of closely-held companies (chevrot meatim):
 
-- **2% additional corporate-tax surcharge** on excess undistributed retained earnings of a closely-held company. A basic exemption shield (~750,000 NIS) and activity/asset shields apply.
-- **Section 62A tightened.** Controlling-shareholder threshold dropped to 25% (was 10% in the old §62A); single-client test reduced to 22 of the prior 36 months (was 30 of 36); profits above a 25% margin on personal-effort revenue are attributed to the shareholder at marginal rates regardless of distribution.
-- **+2% surtax on non-labor income** above the 721,560 threshold (in addition to the standard 3% Section 121B surtax). Effective for tax year 2025 onward.
+- **2% additional corporate-tax surcharge** on excess undistributed retained earnings of a closely-held company. A protective cushion applies: the higher of a ~750,000 NIS fixed exemption, a deductible-expense shield, or an asset shield. **Safe harbor:** a company that distributes at least 6% of its accumulated profits during the year (reduced to 5% for 2025 only) avoids the surcharge entirely. This distribution lever, not the raw 2%, is the actual planning decision in retain-vs-distribute.
+- **Section 62A tightened.** The material-shareholder trigger stays at 10%+ holding of the closely-held company. What changed: the carve-out for a service provider who also holds a stake in the *client* (recipient) entity was raised from 10% to 25% (you must now hold 25%+ of the recipient to escape attribution, so mid-size 10-25% stakes that used to be safe are now caught); the single-client test was compressed to 22 months within 3 tax years (was 30 months within 4 tax years); and a new limb (Section 62A(a1)) attributes profits above a 25% margin on personal-effort revenue to the shareholder at marginal rates regardless of distribution.
+- **+2% surtax on non-labor income** above the 721,560 threshold (in addition to the standard 3% Section 121B surtax). Note: this 2% was enacted by the Economic Efficiency Law (Freezing of Tax Updates and Surtax) 5785-2024, a separate statute from Amendment 277, effective for tax year 2025 onward.
 
 ## Pension and Keren Hishtalmut Ceilings (2026 reference)
 

@@ -33,7 +33,7 @@ INCOME_TAX_BRACKETS = [
     (301_200, 0.31),
     (560_280, 0.35),
     (721_560, 0.47),
-    (float("inf"), 0.50),
+    (float("inf"), 0.47),  # base rate only; calc_surtax() adds the 3% Section 121B surtax above 721,560 (47% + 3% = 50% combined)
 ]
 
 # Bituach Leumi thresholds (annual, 2026)

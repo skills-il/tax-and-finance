@@ -21,7 +21,7 @@ Before any analysis, collect these details. Each variable significantly affects 
 | Variable | Why It Matters | What to Ask |
 |----------|---------------|-------------|
 | Company type | Tax rates and NI rules differ | "Is this a Chevra Baam (Ltd/baam)? Single-owner or multiple shareholders?" |
-| Ownership percentage | Controlling shareholder (10%+) triggers higher dividend tax (30% vs 25%); 25%+ falls under the tightened Section 62A | "What percentage of the company do you hold?" |
+| Ownership percentage | Controlling shareholder (10%+) triggers higher dividend tax (30% vs 25%) and is the holding level at which Section 62A can catch a personal-services company | "What percentage of the company do you hold?" |
 | Personal-services share | Section 62A (post-Amendment 277) attributes profits above 25% margin to the shareholder at marginal rates when income is primarily personal services to a single substantial client | "Does most company revenue come from your own services to one main client?" |
 | Current salary from company | Determines marginal tax bracket and NI ceiling utilization | "What monthly salary do you currently draw from the company?" |
 | Other income sources | Affects marginal rate and surtax threshold | "Do you have income from other sources (employment, rental, investments)?" |
@@ -37,11 +37,13 @@ Before running any comparison, check whether Section 62A look-through applies. I
 
 Section 62A (tightened by Amendment 277 to the Income Tax Ordinance, effective 2025-01-01) treats a closely-held company as a transparent pass-through when:
 
-1. Revenue comes mainly from personal services performed by a holder of 25%+ (lowered threshold was previously 10%).
-2. The shareholder works for a single substantial client over a meaningful window (22 of the prior 36 months; was 30 of 36).
-3. Profits exceed a 25% margin on personal-effort revenue.
+1. Revenue comes mainly from the personal services of a material shareholder (10%+ of the means of control; this trigger was NOT changed by Amendment 277).
+2. The shareholder works for a single substantial client over a meaningful window (22 months within 3 tax years; Amendment 277 tightened this from the prior 30 months within 4 tax years).
+3. Profits exceed a 25% margin on personal-effort revenue (the new excess-profitability limb, Section 62A(a1)).
 
-When all three apply, profits above the 25% margin are deemed distributed to the shareholder and taxed at marginal rates regardless of the actual extraction method chosen. Salary-vs-dividend optimization saves nothing in this fact pattern, and planning shifts to documenting genuine business activity, expanding the client base, or restructuring.
+When these tests are met, profits above the 25% margin are deemed distributed to the shareholder and taxed at marginal rates regardless of the actual extraction method chosen. Salary-vs-dividend optimization saves nothing in this fact pattern, and planning shifts to documenting genuine business activity, expanding the client base, or restructuring.
+
+**Key exemption:** if the shareholder holds 25%+ of the *client* entity receiving the services, the personal-services attribution does not apply (they are treated as a genuine part-owner of the client, not a wallet company). Amendment 277 raised this exit threshold from the prior 10% to 25%, so mid-size stakes (10-25%) in the client that used to be safe now fall inside §62A.
 
 Common §62A triggers: solo consultants, freelance developers, lawyers/doctors operating through a personal Ltd, and "wallet companies" (chevrot arnak).
 
@@ -61,7 +63,7 @@ Israeli tax law provides four main ways for a controlling shareholder to extract
 | Method | Effective Rate (approximate) | Calculation |
 |--------|------------------------------|-------------|
 | Salary (top bracket) | ~55-60% | 50% income tax + employer NI 7.38% (on amount above ceiling, lower) |
-| Dividend | 46.1% (up to 51.95% with surtax) | 23% corporate + 30% on remainder (+ 5% surtax above 721,560) |
+| Dividend | 46.1% (up to 49.95% with surtax) | 23% corporate + 30% on remainder (+ 5% surtax above 721,560) |
 | Shareholder Loan | 6.53% annual deemed interest (taxed as income) | Not a real extraction, must eventually repay or convert |
 | Management Fees | ~50-55% + 18% VAT on gross | Similar to salary but with VAT and self-employed NI |
 
@@ -159,7 +161,7 @@ When a company lends money to a shareholder (or related party) at below-market i
 
 **Section 3(tet1) automatic-reclassification deadline (Amendment 235, in force 2017):**
 
-A loan or withdrawal from a closely-held company to a controlling shareholder is **automatically deemed withdrawn** (taxed as dividend, salary, or 3(tet) loan-to-related-party per the cascade in Circular 7/2017) if not repaid by **the end of the tax year FOLLOWING the year of withdrawal**.
+A loan or withdrawal from a closely-held company to a controlling shareholder is **automatically deemed withdrawn** if not repaid by **the end of the tax year FOLLOWING the year of withdrawal**. Circular 7/2017 reclassifies the deemed withdrawal in this order: (1) dividend to the extent of distributable profits, (2) salary/work income if an employer-employee relationship exists, (3) otherwise business or professional income under Section 2(1).
 
 Concretely: a loan drawn on 2026-01-15 must be repaid by **2027-12-31** to avoid automatic reclassification. The skill's earlier "90 days" guidance was incorrect.
 
@@ -242,14 +244,14 @@ Use this framework to compare extraction methods for the user's specific situati
 
 | Factor | Salary | Dividend | Loan | Management Fees |
 |--------|--------|----------|------|-----------------|
-| Total effective tax rate | Variable (10%-60%) | 46.1%-51.95% | 6.53% deemed/year | Variable + 18% VAT |
+| Total effective tax rate | Variable (10%-60%) | 46.1%-49.95% | 6.53% deemed/year | Variable + 18% VAT |
 | Bituach Leumi | Yes (capped) | No | No | Yes (higher rates) |
 | Corporate tax deductible | Yes | No | N/A | Yes |
 | Pension benefits | Yes | No | No | Self-funded |
 | Reversible | No | No | Yes (repay loan) | No |
 | Tax Authority scrutiny | Low | Low | High | Medium |
 | Timing flexibility | Monthly | Board resolution | Immediate | Per invoice |
-| Minimum salary requirement | ~6,500 NIS/month for controlling shareholders | None | None | None |
+| Minimum salary requirement | None (no statutory minimum; §32(9) is a reasonableness ceiling, not a floor, see Step 8) | None | None | None |
 
 **Common optimal combinations:**
 
@@ -274,7 +276,7 @@ Before recommending any strategy, verify these compliance requirements:
 | Withholding tax on dividends | Company must withhold 30% and deposit with Tax Authority by the 15th of the following month |
 | Form 856 reporting | Payments to shareholders must be reported |
 | Section 3(tet) reporting | Deemed interest must be reported on Form 126 |
-| Trapped-profits 2% surtax | Closely-held companies with excess undistributed earnings owe an additional 2% corporate tax under Amendment 277 (in force from 2025); factor into retention vs distribution timing |
+| Trapped-profits 2% surtax + safe harbor | Closely-held companies with excess undistributed earnings owe an additional 2% corporate tax under Amendment 277 (in force from 2025). Distributing at least 6% of accumulated profits during the year (5% for 2025 only) is a safe harbor that avoids the surcharge; weigh this modest distribution against the 2% annual drag |
 | Section 77 deemed-distribution risk | Tax Authority may deem unreasonably accumulated retained earnings as distributed (5-year lookback); persistent retention without business purpose triggers this |
 | Transfer pricing for management fees | Fees must reflect arm's length market rates (Section 85A) |
 | VAT invoice for management fees | Must issue tax invoice (heshbonit mas) |
@@ -302,7 +304,7 @@ Before recommending any strategy, verify these compliance requirements:
 
 7. **Mixing up controlling shareholder NI rates.** Controlling shareholder employees (baalei shlita) have slightly different NI rates (employer: 4.46%/7.38%) than regular employees (4.51%/7.60%). Using regular rates for a baal shlita produces incorrect calculations and may trigger audit questions.
 
-8. **Ignoring trapped-profits 2% in the retain-vs-distribute decision.** Amendment 277 introduced an annual 2% corporate-tax surcharge on closely-held companies that accumulate excess retained earnings without distributing. Strategies that lean on long-term retention now carry a measurable annual cost; the headline 46.1% dividend rate must be compared against "retain + 2%/year drag", not against "retain forever for free".
+8. **Ignoring the trapped-profits 2% safe harbor in the retain-vs-distribute decision.** Amendment 277 introduced an annual 2% corporate-tax surcharge on closely-held companies that accumulate excess retained earnings without distributing. Crucially, there is a **safe harbor**: distributing at least 6% of accumulated profits during the year (5% for 2025 only) avoids the surcharge entirely. So the real lever is "distribute 6% and the 2% vanishes", not "pay 2% forever". Agents that mention the surcharge but omit the safe harbor push owners to pay a 2% drag they could have escaped with a modest distribution.
 
 9. **Treating §3(tet1) as a cash-loan-only rule.** Amendment 235 explicitly captures shareholder personal use of company-owned assets (apartment, vehicle beyond limited business use, art, yacht) at deemed annual usage value. A baal shlita living in a company-owned apartment without paying market rent accrues a deemed withdrawal even with zero cash loan. This is the single most-missed §3(tet1) trap in real ITA audits.
 

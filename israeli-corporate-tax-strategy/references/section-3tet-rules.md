@@ -32,7 +32,7 @@ Enacted by Amendment 235 (29 Dec 2016, in force 1 Jan 2017). Detailed in Tax Aut
 
 1. If the company has distributable retained earnings, the withdrawal is reclassified as a dividend (30% + any applicable surtax for controlling shareholders).
 2. If no retained earnings, reclassified as salary (marginal rates + NI + employer NI).
-3. Residual cases reclassified as a loan to a related party (subject to Section 3(tet) deemed-interest accrual).
+3. Residual cases (no distributable profits and no employment relationship) reclassified as business or professional income under Section 2(1) (marginal rates + NI). Note: this is distinct from the ongoing Section 3(tet) deemed-interest charge, which accrues on the loan balance for as long as it is outstanding, before any §3(tet1) reclassification.
 
 **De minimis exemption:** Cumulative withdrawal balance below NIS 100,000 on every day of year N AND every day of year N-1 is outside §3(tet1).
 
@@ -68,6 +68,6 @@ The Tax Authority may reclassify a shareholder loan as a deemed dividend when:
 | Year | Rate |
 |------|------|
 | 2026 | 6.53% |
-| 2025 | 5.83% |
+| 2025 | 6.69% |
 
 The annual rate is set by regulation in December for the following tax year. Practitioners should confirm the current-year rate against the Tax Authority's annual circular before applying historical figures.

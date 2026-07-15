@@ -61,10 +61,10 @@
     },
     {
       "claim_id": "section-62a-amendment-277",
-      "claim": "Section 62A (tightened by Amendment 277, effective 2025-01-01): 25%+ controlling threshold, 22-of-36 months single-client test, 25% margin on personal-effort revenue",
-      "source_url": "https://www.apm.law/he/%D7%A8%D7%95%D7%95%D7%97%D7%99%D7%9D-%D7%9C%D7%90-%D7%9E%D7%97%D7%95%D7%9C%D7%A7%D7%99%D7%9D-%D7%97%D7%91%D7%A8%D7%95%D7%AA-%D7%90%D7%A8%D7%A0%D7%A7-%D7%95%D7%9E%D7%A1-%D7%99%D7%A1%D7%A3-%D7%AA/",
-      "raw_snippet": "Section 62A tightened: 25% controlling threshold, 22 of 36 months, 25% margin",
-      "fetched_at": "2026-05-21T12:30:00Z",
+      "claim": "Section 62A after Amendment 277 (effective 2025-01-01): material-shareholder trigger unchanged at 10%+ of the closely-held company; the exemption for a service provider holding a stake in the client/recipient entity was raised from 10% to 25%; single-client test compressed to 22 months within 3 tax years (was 30 months within 4 tax years); new limb (62A(a1)) attributes profit above a 25% margin on personal-effort revenue",
+      "source_url": "https://www.hashavim.co.il/articles/taxation/amendment-277-wallet-companies-qa/",
+      "raw_snippet": "מחזיק במישרין או בעקיפין ב-25% או יותר באחד מאמצעי השליטה",
+      "fetched_at": "2026-07-15T16:00:00Z",
       "appears_in": ["SKILL.md", "SKILL_HE.md", "references/tax-rates-2026.md"]
     },
     {
@@ -605,26 +605,26 @@
     },
     {
       "claim_id": "section-3tet-rate-2025",
-      "claim": "Section 3(tet) prior-year rate for 2025: 5.83%",
-      "source_url": "https://ahcpa.co.il/%D7%A7%D7%91%D7%99%D7%A2%D7%AA-%D7%A9%D7%99%D7%A2%D7%95%D7%A8%D7%99-%D7%A8%D7%99%D7%91%D7%99%D7%AA-%D7%9C%D7%A4%D7%99-%D7%A1%D7%A2%D7%99%D7%A3-3-%D7%98-%D7%95-3-%D7%99-%D7%9C%D7%A4%D7%A7%D7%95/",
-      "raw_snippet": "2025 ... 5.83%",
-      "fetched_at": "2026-05-21T13:00:00Z",
+      "claim": "Section 3(tet) prior-year rate for 2025: 6.69% (superseded by 6.53% for 2026)",
+      "source_url": "https://britcpa.co.il/hozrim/%D7%A9%D7%99%D7%A2%D7%95%D7%A8%D7%99-%D7%94%D7%A8%D7%99%D7%91%D7%99%D7%AA-%D7%9C%D7%A2%D7%A0%D7%99%D7%99%D7%9F-%D7%A1%D7%A2%D7%99%D7%A4%D7%99%D7%9D-3%D7%98-%D7%95-3%D7%99-%D7%9C%D7%A9%D7%A0%D7%AA-4/",
+      "raw_snippet": "6.69%",
+      "fetched_at": "2026-07-15T16:00:00Z",
       "appears_in": ["references/section-3tet-rules.md"]
     },
     {
       "claim_id": "section-62a-25pct",
-      "claim": "Post-Amendment 277, controlling-shareholder threshold for Section 62A is 25%+ (lowered from 10%)",
-      "source_url": "https://www.apm.law/he/%D7%A8%D7%95%D7%95%D7%97%D7%99%D7%9D-%D7%9C%D7%90-%D7%9E%D7%97%D7%95%D7%9C%D7%A7%D7%99%D7%9D-%D7%97%D7%91%D7%A8%D7%95%D7%AA-%D7%90%D7%A8%D7%A0%D7%A7-%D7%95%D7%9E%D7%A1-%D7%99%D7%A1%D7%A3-%D7%AA/",
-      "raw_snippet": "Section 62A 25%",
-      "fetched_at": "2026-05-21T12:30:00Z",
+      "claim": "Post-Amendment 277: holding 25%+ of the CLIENT/recipient entity exempts a service provider from Section 62A attribution; this exemption threshold was RAISED from 10% to 25% (the material-shareholder trigger itself stays at 10%+)",
+      "source_url": "https://www.hashavim.co.il/articles/taxation/amendment-277-wallet-companies-qa/",
+      "raw_snippet": "מחזיק במישרין או בעקיפין ב-25% או יותר באחד מאמצעי השליטה",
+      "fetched_at": "2026-07-15T16:00:00Z",
       "appears_in": ["SKILL.md", "SKILL_HE.md", "references/tax-rates-2026.md"]
     },
     {
       "claim_id": "section-62a-22-of-36",
-      "claim": "Post-Amendment 277, single-client window under Section 62A is 22 of the prior 36 months (lowered from 30 of 36)",
-      "source_url": "https://www.apm.law/he/%D7%A8%D7%95%D7%95%D7%97%D7%99%D7%9D-%D7%9C%D7%90-%D7%9E%D7%97%D7%95%D7%9C%D7%A7%D7%99%D7%9D-%D7%97%D7%91%D7%A8%D7%95%D7%AA-%D7%90%D7%A8%D7%A0%D7%A7-%D7%95%D7%9E%D7%A1-%D7%99%D7%A1%D7%A3-%D7%AA/",
-      "raw_snippet": "22 of 36 months",
-      "fetched_at": "2026-05-21T12:30:00Z",
+      "claim": "Post-Amendment 277, single-client window under Section 62A is 22 months within 3 tax years (tightened from the prior 30 months within 4 tax years)",
+      "source_url": "https://www.hashavim.co.il/articles/taxation/amendment-277-wallet-companies-qa/",
+      "raw_snippet": "22 חודשים בתוך שלוש שנות מס",
+      "fetched_at": "2026-07-15T16:00:00Z",
       "appears_in": ["SKILL.md", "SKILL_HE.md", "references/tax-rates-2026.md"]
     },
     {
@@ -636,11 +636,27 @@
       "appears_in": ["references/tax-rates-2026.md"]
     },
     {
+      "claim_id": "trapped-profits-safe-harbor-6pct",
+      "claim": "Distributing at least 6% of accumulated profits during the year (reduced to 5% for 2025 only) is a safe harbor that avoids the 2% undistributed-profits surcharge",
+      "source_url": "https://www.bshcpa.co.il/%D7%A8%D7%95%D7%95%D7%97%D7%99%D7%9D-%D7%9C%D7%90-%D7%9E%D7%97%D7%95%D7%9C%D7%A7%D7%99%D7%9D/",
+      "raw_snippet": "6% מהרווחים",
+      "fetched_at": "2026-07-15T16:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/tax-rates-2026.md"]
+    },
+    {
+      "claim_id": "amendment-288-bracket-widening",
+      "claim": "Amendment 288 to the Income Tax Ordinance (enacted 31 March 2026, retroactive to 1 Jan 2026) widened the 20% and 31% bracket ceilings for 2026; the credit-point value and surtax threshold stayed frozen",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%9E%D7%93%D7%A8%D7%92%D7%95%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
+      "raw_snippet": "228,000",
+      "fetched_at": "2026-07-15T16:00:00Z",
+      "appears_in": ["references/tax-rates-2026.md", "SKILL.md", "scripts/tax_comparison.py"]
+    },
+    {
       "claim_id": "circular-7-2017",
-      "claim": "Tax Authority Circular 7/2017 details the Section 3(tet1) reclassification cascade",
+      "claim": "Tax Authority Circular 7/2017 details the Section 3(tet1) reclassification cascade: dividend to extent of profits, else salary/work income, else business or professional income under Section 2(1)",
       "source_url": "https://www.gov.il/he/departments/policies/income-tax-professional-inst-07-2017",
-      "raw_snippet": "Circular 7/2017",
-      "fetched_at": "2026-05-21T12:30:00Z",
+      "raw_snippet": "הכנסה מדיבידנד ... כהכנסת עבודה ... או כהכנסה מעסק או משלח יד לפי סעיף 2(1)",
+      "fetched_at": "2026-07-15T16:00:00Z",
       "appears_in": ["SKILL.md", "SKILL_HE.md", "references/section-3tet-rules.md"]
     },
     {
