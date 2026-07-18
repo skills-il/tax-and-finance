@@ -5,18 +5,18 @@
   "claims": [
     {
       "claim_id": "boi-rate",
-      "claim": "Bank of Israel interest rate is 3.75% as of May 2026 (decided 25 May 2026).",
-      "source_url": "https://www.boi.org.il/en/",
-      "raw_snippet": "The Monetary Committee decides on May 25, 2026 to lower the interest to 3.75 percent.",
-      "fetched_at": "2026-06-04T00:00:00Z",
+      "claim": "Bank of Israel interest rate is 3.50% as of July 2026 (Monetary Committee decision of 6 July 2026, cut 25bps from 3.75%).",
+      "source_url": "https://www.gov.il/en/pages/boi-monetary-committee-decides-to-lower-the-interest-rate-6-jul-2026",
+      "raw_snippet": "BOI Monetary Committee decides to lower the interest to 3.5 percent July 6, 2026",
+      "fetched_at": "2026-07-18T00:00:00Z",
       "appears_in": ["SKILL.md", "SKILL_HE.md", "references/israeli-financial-rates.md"]
     },
     {
       "claim_id": "prime-rate",
-      "claim": "Prime rate = Bank of Israel rate + 1.50%, so with BOI at 3.75% the prime is 5.25% (as of 25 May 2026).",
+      "claim": "Prime rate = Bank of Israel rate + 1.50%, so with BOI at 3.50% the prime is 5.00% (as of 6 July 2026).",
       "source_url": "https://he.wikipedia.org/wiki/ריבית_פריים",
-      "raw_snippet": "All banks set and agree that the prime rate will be composed of Bank of Israel interest rate + 1.5%. As of May 25, 2026, the Bank of Israel rate is 3.75% and the prime rate is 5.25%. Default illustrative annuity rate 0.0525 = 5.25%.",
-      "fetched_at": "2026-06-04T00:00:00Z",
+      "raw_snippet": "All banks set and agree that the prime rate will be composed of Bank of Israel interest rate + 1.5%. With the Bank of Israel rate at 3.5% the prime rate is 5%. Default illustrative annuity rate 0.05 = 5.00%.",
+      "fetched_at": "2026-07-18T00:00:00Z",
       "appears_in": ["SKILL.md", "SKILL_HE.md", "references/israeli-financial-rates.md", "scripts/budget_calculator.py"]
     },
     {
@@ -109,16 +109,16 @@
     },
     {
       "claim_id": "blended-track-rate",
-      "claim": "A blended-track mortgage payment should mix at least 1/3 fixed-unlinked at roughly 5.5% with up to 2/3 prime at 5.25%; a single prime-only run understates the real payment.",
+      "claim": "A blended-track mortgage payment should mix at least 1/3 fixed-unlinked at roughly 5.5% with up to 2/3 prime at 5.00%; a single prime-only run understates the real payment.",
       "source_url": "https://www.kolzchut.org.il/he/מגבלות_על_לקיחת_משכנתא",
-      "raw_snippet": "תמהיל משכנתא: לפחות שליש בריבית קבועה לא צמודה (כ-5.5% בטווח 4.5%-6.5%) ועד שני שליש פריים (5.25%). Blended track: 1/3 fixed at ~5.5% + 2/3 prime at 5.25%.",
-      "fetched_at": "2026-06-04T00:00:00Z",
+      "raw_snippet": "תמהיל משכנתא: לפחות שליש בריבית קבועה לא צמודה (כ-5.5% בטווח 4.5%-6.5%) ועד שני שליש פריים (5.00%). Blended track: 1/3 fixed at ~5.5% + 2/3 prime at 5.00%.",
+      "fetched_at": "2026-07-18T00:00:00Z",
       "appears_in": ["SKILL.md", "SKILL_HE.md", "scripts/budget_calculator.py"]
     },
     {
       "claim_id": "mortgage-track-ranges",
       "claim": "Typical Israeli mortgage track ranges: fixed-unlinked 4.5%-6.5%; CPI-linked fixed 3.0%-5.0% + CPI; CPI-linked variable 2.5%-4.5% + CPI; prime-linked at prime +/- 0.5%.",
-      "source_url": "https://www.kolzchut.org.il/he/מסלולי_משכנתא",
+      "source_url": "https://www.kolzchut.org.il/he/מגבלות_על_לקיחת_משכנתא",
       "raw_snippet": "מסלולי משכנתא נפוצים: קבועה לא צמודה 4.5%-6.5%; קבועה צמודת מדד 3.0%-5.0% + מדד; משתנה צמודת מדד 2.5%-4.5% + מדד; צמודת פריים בריבית פריים +/- 0.5%.",
       "fetched_at": "2026-06-04T00:00:00Z",
       "appears_in": ["SKILL.md", "SKILL_HE.md", "references/israeli-financial-rates.md"]

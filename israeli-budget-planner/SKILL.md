@@ -3,7 +3,7 @@ name: israeli-budget-planner
 description: Plan household and personal budgets with Israeli-specific costs, rates, and financial products. Use when user asks about budgeting in Israel, mortgage (mashkanta) calculations, arnona rates, cost of living, takciv, or monthly expense planning. Covers Bank of Israel prime rate, mashkanta tracks, arnona, household health costs (mas briut / health-tax), and Israeli household benchmarks.
 license: MIT
 compatibility: Works with Claude Code, Cursor, GitHub Copilot, Windsurf, OpenCode, Codex.
-version: 1.3.0
+version: 1.4.0
 ---
 
 # Israeli Budget Planner
@@ -11,8 +11,8 @@ version: 1.3.0
 ## Key Financial Rates
 | Rate | Value (Reference) |
 |------|-------------------|
-| BOI Interest Rate | 3.75% (as of May 2026; verify at boi.org.il) |
-| Prime Rate | BOI + 1.50% = ~5.25% |
+| BOI Interest Rate | 3.50% (as of July 2026; verify at boi.org.il) |
+| Prime Rate | BOI + 1.50% = ~5.00% |
 | VAT (Ma'am) | 18% |
 | Minimum Wage | 6,443.85 NIS/month (35.40 NIS/hr), from 1 Apr 2026 |
 | Average Wage | ~13,566 NIS/month (Jan 2026) |
@@ -34,7 +34,7 @@ Illustrative only: a mid-size Tel Aviv residential property may run roughly 500-
 
 ## Household Health Costs (Mas Briut / Health-Tax)
 Israeli budgets must include the mandatory health-tax (mas briut / dmei briut) deducted from salary, plus optional supplemental insurance:
-- Health-tax (employee, 2026): 3.23% of salary up to the reduced-collection step (7,703 NIS/month), 5.17% above it (deducted with Bituach Leumi).
+- Health-tax (employee, 2026): 3.23% of salary up to the reduced-collection step (7,703 NIS/month), 5.17% above it (deducted with Bituach Leumi). Both Bituach Leumi and health-tax stop at the insurance ceiling of 51,910 NIS/month, salary above that is not charged, so a high earner budgeting by hand should cap these deductions there.
 - Kupat cholim supplemental insurance (bituach mashlim, e.g. Maccabi Zahav / Clalit Mushlam): an optional monthly budget line on top of the basic health basket (sal briut) that taxes already fund.
 The `scripts/budget_calculator.py` script applies the 3.23% / 5.17% health-tax rates automatically.
 
@@ -44,6 +44,12 @@ The `scripts/budget_calculator.py` script applies the 3.23% / 5.17% health-tax r
 - Education: 1,500-3,500 (8-15%)
 - Transportation: 500-1,500 (3-8%)
 - Arnona: 400-800 (3-5%)
+
+## Household Benefits (Income Side)
+A budget must count recurring inflows, not just expenses:
+- **Child allowance (kitzvat yeladim):** Bituach Leumi pays a monthly allowance per child; the total rises with the number of children. It lands automatically in the parent's account and should be added to household income (check btl.gov.il for the current per-child figure).
+- **Subsidized daycare (ma'on / mishpachton):** working parents may qualify for a means-tested ma'on subsidy that sharply cuts the childcare line, one of the largest young-family costs. Check eligibility and the subsidy tier via the Economy Ministry's ma'onot-yom system before budgeting full-price daycare.
+- **Work grant (ma'anak avoda / negative income tax):** lower-income working households (employees and self-employed) may be entitled to an annual work grant paid by the Tax Authority. Check eligibility at the tax authority; it is a recurring income-side inflow like the two above.
 
 ## Savings Vehicles
 - Keren Pensia: Tax-deductible, locked until retirement
@@ -66,7 +72,7 @@ Result: Complete monthly budget with Israeli-specific deductions and savings pla
 User says: "Should I take a fixed or variable rate mortgage in Israel?"
 Actions:
 1. Compare mortgage tracks: Prime-linked, fixed (kvua), CPI-linked (tzamud madad)
-2. Calculate a blended-track payment. A single prime-only run (e.g. the script default 5.25%) is illustrative and understates reality: BOI rules force at least 1/3 fixed-unlinked (4.5-6.5%), so compute 1/3 fixed at ~5.5% plus 2/3 prime at 5.25% and sum, or label the single-rate result "prime-only, blended will be higher"
+2. Calculate a blended-track payment. A single prime-only run (e.g. the script default 5.00%) is illustrative and understates reality: BOI rules force at least 1/3 fixed-unlinked (4.5-6.5%), so compute 1/3 fixed at ~5.5% plus 2/3 prime at 5.00% and sum, or label the single-rate result "prime-only, blended will be higher"
 3. Apply Bank of Israel's PTI cap (max 50% of disposable income; banks usually decline above 40%)
 4. Budget mandatory mortgage life insurance and structural insurance (bituach chaim / bituach mavne) as a recurring required cost (typically ~100-300 NIS/month, varies by loan size, age, and property), not just a one-off
 5. Compare total cost over 15/20/25 year terms

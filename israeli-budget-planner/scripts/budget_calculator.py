@@ -32,6 +32,9 @@ BITUACH_LEUMI_HIGH = Decimal("0.07")
 HEALTH_TAX_LOW = Decimal("0.0323")
 HEALTH_TAX_HIGH = Decimal("0.0517")
 BL_THRESHOLD = Decimal("7703")
+# Maximum monthly income subject to Bituach Leumi + health insurance (from 1 Jan 2026).
+# Salary above this ceiling is NOT charged BL/health, so the high band must be capped here.
+BL_CEILING = Decimal("51910")
 CREDIT_POINTS = Decimal("2.25")
 CREDIT_VALUE = Decimal("242")
 
@@ -53,16 +56,18 @@ def calc_bituach_leumi(monthly_salary):
     sal = Decimal(str(monthly_salary))
     if sal <= BL_THRESHOLD:
         return (sal * BITUACH_LEUMI_LOW).quantize(Decimal("0.01"))
+    capped = min(sal, BL_CEILING)
     low_part = BL_THRESHOLD * BITUACH_LEUMI_LOW
-    high_part = (sal - BL_THRESHOLD) * BITUACH_LEUMI_HIGH
+    high_part = (capped - BL_THRESHOLD) * BITUACH_LEUMI_HIGH
     return (low_part + high_part).quantize(Decimal("0.01"))
 
 def calc_health_tax(monthly_salary):
     sal = Decimal(str(monthly_salary))
     if sal <= BL_THRESHOLD:
         return (sal * HEALTH_TAX_LOW).quantize(Decimal("0.01"))
+    capped = min(sal, BL_CEILING)
     low_part = BL_THRESHOLD * HEALTH_TAX_LOW
-    high_part = (sal - BL_THRESHOLD) * HEALTH_TAX_HIGH
+    high_part = (capped - BL_THRESHOLD) * HEALTH_TAX_HIGH
     return (low_part + high_part).quantize(Decimal("0.01"))
 
 def show_salary_breakdown(salary):
@@ -83,7 +88,7 @@ def show_salary_breakdown(salary):
     print(f"  --------------------------------")
     print(f"  Net salary:          {net:>10,.2f} NIS")
 
-def calc_mortgage(amount, years, rate=0.0525):
+def calc_mortgage(amount, years, rate=0.05):
     monthly_rate = Decimal(str(rate)) / 12
     n_payments = years * 12
     amt = Decimal(str(amount))
@@ -108,8 +113,8 @@ def main():
     parser.add_argument("--mortgage", action="store_true", help="Calculate mortgage")
     parser.add_argument("--amount", type=float, help="Mortgage amount in NIS")
     parser.add_argument("--years", type=int, default=25, help="Mortgage term in years")
-    parser.add_argument("--rate", type=float, default=0.0525,
-                        help="Annual interest rate (default 0.0525 = prime, May 2026). "
+    parser.add_argument("--rate", type=float, default=0.05,
+                        help="Annual interest rate (default 0.05 = prime, July 2026). "
                              "Illustrative, prime-only: BOI mix rules force >=1/3 fixed-unlinked, "
                              "so a real blended-track payment is higher. Override per track.")
     args = parser.parse_args()

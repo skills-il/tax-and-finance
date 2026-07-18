@@ -3,8 +3,8 @@
 ## Bank of Israel Key Rates
 | Rate | Value | Updated |
 |------|-------|---------|
-| BOI Interest Rate | 3.75% (as of May 2026) | Check boi.org.il |
-| Prime Rate | BOI + 1.50% = ~5.25% | Check boi.org.il |
+| BOI Interest Rate | 3.50% (as of July 2026) | Check boi.org.il |
+| Prime Rate | BOI + 1.50% = ~5.00% | Check boi.org.il |
 | CPI (Annual) | ~3.2% (as of early 2026; verify current at cbs.gov.il) | Check cbs.gov.il |
 
 ## Mortgage (Mashkanta) Guidelines
@@ -30,7 +30,7 @@
 These feed the affordability math (net income drives PTI and budget headroom). Rates are the salaried-employee shares, verified against Bituach Leumi (btl.gov.il).
 - Bituach Leumi (employee): 1.04% on the part of salary up to the reduced-collection step, 7% above it. The reduced rate rose to 1.04% under Amendment 252 (effective 2026).
 - Health-tax (dmei bituach briut, employee): 3.23% up to the reduced-collection step, 5.17% above it.
-- Reduced-collection step (60% of average wage): 7,703 NIS/month (from 1 Jan 2026); both BL and health-tax bands split here.
+- Reduced-collection step: 7,703 NIS/month (from 1 Jan 2026); both BL and health-tax bands split here.
 - Maximum income subject to insurance (ceiling): 51,910 NIS/month (from 1 Jan 2026).
 - Income tax: marginal 10%-50% brackets, widened retroactively from 1 Jan 2026 (the 20% step runs to 228,000 NIS/year and the 31% step to 301,200 NIS/year).
 - Tax credit point (nekudat zikui): 242 NIS/month (2026); resident base 2.25, women +0.5.
