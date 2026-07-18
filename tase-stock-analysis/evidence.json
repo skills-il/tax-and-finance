@@ -36,6 +36,22 @@
       "appears_in": ["SKILL.md", "SKILL_HE.md", "references/capital-gains.md"]
     },
     {
+      "claim_id": "dividend-tax",
+      "claim": "Israeli dividend tax on TASE securities: 25% for an individual non-substantial shareholder, 30% for a substantial shareholder (>10%), withheld at source (nikui b'makor). Surtax (mas yesef) also applies to dividend income above the annual threshold. Foreign-brokerage holders self-report on Form 1322 / טופס 1322 (capital gains) and Form 1301 / טופס 1301 (annual return). Israel has no annual tax-free capital-gains allowance.",
+      "source_url": "https://taxsummaries.pwc.com/israel/individual/income-determination",
+      "raw_snippet": "Dividend income 25% 30% substantial shareholder withholding capital gains Form 1322 721,560",
+      "fetched_at": "2026-07-18T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/capital-gains.md"]
+    },
+    {
+      "claim_id": "cgt-advance-foreign-broker",
+      "claim": "For securities gains on which full Israeli tax was NOT withheld at source (a foreign brokerage, or an Israeli company's shares traded on a foreign exchange), an Israeli resident must file a semi-annual report and pay a capital-gains advance (mikdama) by 31 January and 31 July for gains realized in the preceding six months, under Section 91(d) of the Income Tax Ordinance. Late payment accrues interest and CPI linkage.",
+      "source_url": "https://www.bshcpa.co.il/%D7%93%D7%99%D7%95%D7%95%D7%97-%D7%97%D7%A6%D7%99-%D7%A9%D7%A0%D7%AA%D7%99-%D7%A8%D7%95%D7%95%D7%97%D7%99-%D7%94%D7%95%D7%9F/",
+      "raw_snippet": "דיווח חצי שנתי רווחי הון ניירות ערך זרים 31 בינואר 31 ביולי מקדמה סעיף 91",
+      "fetched_at": "2026-07-18T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/capital-gains.md"]
+    },
+    {
       "claim_id": "tase-api",
       "claim": "The TASE Data Hub OpenAPI uses an OAuth2 client-credentials flow: token endpoint https://openapigw.tase.co.il/tase/prod/oauth/oauth2/token, gateway base https://openapigw.tase.co.il/tase/prod/, developer portal https://openapi.tase.co.il/tase/prod/, Data Hub https://datahub.tase.co.il/. Some products require a paid subscription.",
       "source_url": "https://datahub.tase.co.il/",

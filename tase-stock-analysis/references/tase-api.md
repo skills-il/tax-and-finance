@@ -32,7 +32,7 @@ Verify a current ID by opening the index page (e.g. market.tase.co.il/en/market_
 ## Market Hours (effective January 2026)
 - **Pre-open:** Monday-Friday from approximately 09:00
 - **Continuous trading:** Monday-Thursday 09:59-17:14, Friday 09:59-13:50
-- **Closing auction:** Monday-Thursday 17:14-17:25, Friday 13:50-14:00
+- **Closing auction:** Monday-Thursday 17:14-17:25 (close 17:25), Friday closes at 13:50
 - **No trading:** Saturday (Shabbat), Sunday, Jewish holidays
 
 Note: TASE switched from Sunday-Thursday to Monday-Friday trading on January 5, 2026.

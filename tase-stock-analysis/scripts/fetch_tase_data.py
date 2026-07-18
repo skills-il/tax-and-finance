@@ -35,19 +35,19 @@ INDICES = {
     "TATECH": {"id": "169", "name": "TA-Technology", "hebrew": 'ת"א-טכנולוגיה'},
 }
 
-# Well-known dual-listed companies (TASE securities number -> NASDAQ/NYSE ticker).
-# IMPORTANT: TASE security numbers are easy to misattribute. Cross-check at
-# https://market.tase.co.il/en/market_data/security/{number} before using.
-# The numbers below were spot-checked in 2026-04 against market.tase.co.il.
-DUAL_LISTED = {
-    "662577": {"name": "Bank Hapoalim", "us_ticker": None},
-    "1092508": {"name": "CyberArk", "us_ticker": "CYBR"},
-    "1084992": {"name": "Sapiens", "us_ticker": "SPNS"},
-    "1082285": {"name": "Fiverr", "us_ticker": "FVRR"},
+# Well-known dual-listed Israeli companies (TASE + NASDAQ/NYSE), keyed by US ticker.
+# TASE security numbers are deliberately NOT hardcoded here: they are easy to
+# misattribute, they go stale (e.g. CyberArk/CYBR left the dual-listed set after its
+# 2026 merger into Palo Alto Networks), and the skill's own guidance is to never rely
+# on security numbers from memory. Resolve the current TASE number live by company
+# name at https://market.tase.co.il/en/market_data/companies/ before using it.
+DUAL_LISTED_US_TICKERS = {
+    "NICE": "NICE Ltd",
+    "CHKP": "Check Point Software",
+    "TEVA": "Teva Pharmaceutical",
+    "SPNS": "Sapiens International",
+    "ICL": "ICL Group",
 }
-# Removed pre-2026 entries with unverified numbers (Check Point, NICE, Teva, ICL).
-# Look these up directly via market.tase.co.il/en/market_data/security/{number}
-# or by company name at https://market.tase.co.il/en/market_data/companies/
 # 604611 is Bank Leumi (NOT Check Point and NOT Teva, despite earlier mappings).
 
 
@@ -112,18 +112,15 @@ def fetch_stock_data(securities_number: str) -> dict:
     Returns:
         Dictionary with stock information.
     """
-    dual_info = DUAL_LISTED.get(securities_number, {})
     print(f"Looking up securities number: {securities_number}")
-    if dual_info:
-        print(f"  Company: {dual_info['name']}")
-        if dual_info.get("us_ticker"):
-            print(f"  US ticker: {dual_info['us_ticker']} (dual-listed)")
     print(f"  TASE API: {TASE_API_BASE}/security/{securities_number}")
+    print(f"  Resolve the company name and dual-listing status live via the TASE API;")
+    print(f"  do not rely on hardcoded security numbers (they misattribute and go stale).")
+    print(f"  Known dual-listed tickers: {', '.join(sorted(DUAL_LISTED_US_TICKERS))}")
     print()
 
     return {
         "securities_number": securities_number,
-        "dual_listed": dual_info,
         "api_endpoint": f"{TASE_API_BASE}/security/{securities_number}",
     }
 

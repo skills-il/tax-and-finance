@@ -11,6 +11,19 @@
         "Deferred MINOR: openapi.tase.co.il portal now 301-redirects to the Data Hub lobby (still live); refresh the illustrative TA-35 weight (Hapoalim ~6.29% now vs 8.2% placeholder).",
         "Panel round 2: added TA-Technology=169 to the script INDICES dict (it was in the reference + evidence but not the script, so --index could not fetch it; corrected the log's overstated 'fixed in both' wording). Added dual-listed tax note (Israeli-resident gain on USD shares is computed in shekels so FX is part of the taxable gain; US tax is creditable via the Israel-US treaty). Refreshed the example Hapoalim weight 8.2%->6.29%. Fixed a heredoc path bug that wrote domain-checklist.md to the repo root instead of the skill folder."
       ]
+    },
+    {
+      "version": "1.6.0",
+      "date": "2026-07-18",
+      "lessons": [
+        "No fact drift since 2026-05-31: 25%/30%/23% CGT, 5% surtax, 721,560 threshold (frozen 2025-2027), Mon-Fri/T+1 TASE schedule all re-verified current for 2026.",
+        "Added dividend taxation (25%/30% withheld at source), nikui-b'makor vs foreign-broker distinction, tax-advantaged vehicles, and 'no annual CGT allowance' - CPA coverage audit found the stock-analysis skill was silent on dividends entirely.",
+        "CRITICAL (expert): foreign-broker section must state the semi-annual capital-gains advance (mikdama, 31 Jan / 31 Jul, Section 91(d)) with interest+linkage; framing self-report as annual-only was a missed-deadline error. Fixed + evidence-cited to bshcpa.",
+        "Judge caught fabricated script data: fetch_tase_data.py hardcoded 3 DUAL_LISTED TASE numbers (CyberArk 1092508, Fiverr 1082285, Sapiens 1084992) that don't resolve live and were falsely 'spot-checked'. CyberArk delisted after its Feb-2026 Palo Alto merger; Fiverr never TASE-listed. Removed all hardcoded dual-listed numbers (now ticker->name only), per the skill's own no-hardcoded-numbers rule.",
+        "Deferred MAJOR (next cycle): dividend FTC is capped at the Israeli tax on that income (foreign-tax-credit limitation); excess US withholding not refundable in Israel. Add a one-line ceiling note.",
+        "Deferred MINOR: description says '25% on securities' without flagging 30%/surtax; Israel-US treaty portfolio-dividend cap specifics; 91(d)(2) sub-paragraph precision.",
+        "Fixed reference bug: Friday closing time was 14:00 in tase-api.md, corrected to 13:50."
+      ]
     }
   ]
 }

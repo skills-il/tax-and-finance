@@ -51,12 +51,23 @@ net_gain = sale_price - purchase_price - transaction_costs
 tax = net_gain * 0.25  # or 0.30 for substantial shareholder (10%+)
 ```
 
+### Step 4b: Dividend Tax (Mas al Dividend)
+Dividends are taxed separately from capital gains, and every stock analysis should account for them:
+- **25%** for an individual non-substantial shareholder, **30%** for a substantial shareholder (10%+). The same surtax (mas yesef) applies to dividend income above the annual threshold.
+- Dividends are withheld at source (nikui mas bemakor) by the paying company or broker, the investor receives the net amount.
+
+**Tax withheld at source (nikui b'makor):** For securities held through an Israeli broker, BOTH capital-gains tax and dividend tax are auto-withheld at source. A return may still be required to offset losses across different brokers, reclaim over-withholding, or when other mandatory-filing rules apply, so "withheld at source" does not always mean "nothing to file". For a FOREIGN brokerage (e.g. Interactive Brokers), nothing is withheld locally: the investor must pay a semi-annual capital-gains advance (mikdama) by 31 January and 31 July on gains realized in the preceding half-year (Section 91(d)), and report on Form 1322 / Form 1301 in the annual return. Missing the advance accrues interest and CPI linkage. So the practical answer to "what's my tax?" depends on where the securities are held.
+
+**Losses (kizuz hefsedim):** A securities capital loss offsets capital gain from ANY asset in the same year (other securities, and other capital assets such as real-estate betterment), and can also offset dividend and interest income from securities. Unused losses carry forward indefinitely to future years. There is NO annual tax-free capital-gains allowance in Israel (unlike the UK/US), every shekel of net real gain is taxable.
+
+**Tax-advantaged vehicles:** Gains realized inside a keren hishtalmut, kupat gemel, or pension fund are exempt or tax-deferred, versus 25% on a direct brokerage account. When comparing an investment held directly vs. inside such a vehicle, factor this difference in.
+
 ### Step 5: Evaluate Dual-Listed Opportunities
-For dual-listed companies (e.g., Check Point, CyberArk, NICE, Sapiens):
+For dual-listed companies (e.g., Check Point, NICE, Teva, Sapiens):
 1. Compare TASE price (in NIS) vs. US price (in USD) using current exchange rate
 2. Account for ADR ratio (some dual-listed have different share ratios)
 3. Factor in different trading hours (TASE and US markets now overlap on Monday-Friday, but Friday TASE closes early at 13:50)
-4. Note tax treaty implications -- Israeli residents pay Israeli capital gains tax regardless of which exchange. For a share bought or sold in USD, the Israeli taxable gain is computed in shekels, so the shekel/dollar movement between purchase and sale is part of the taxable gain (not a separate FX item). US tax withheld is generally creditable against the Israeli tax under the Israel-US treaty (zikui mas zar) to avoid double taxation
+4. Note tax treaty implications -- Israeli residents pay Israeli capital gains tax regardless of which exchange. For a share bought or sold in USD, the Israeli taxable gain is computed in shekels, so the shekel/dollar movement between purchase and sale is part of the taxable gain (not a separate FX item). US tax withheld is generally creditable against the Israeli tax under the Israel-US treaty (zikui mas zar) to avoid double taxation. The same applies to US dividends on dual-listed shares: US withholding (reduced to the treaty rate by filing a W-8BEN with the broker) is credited against the Israeli 25%/30% dividend tax
 
 ### Step 6: Review Maya Filings
 Check relevant disclosures on the Maya system (TASE disclosure platform):
