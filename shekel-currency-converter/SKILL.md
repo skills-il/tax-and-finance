@@ -2,7 +2,7 @@
 name: shekel-currency-converter
 description: Convert currencies to/from Israeli New Shekel (NIS/ILS) using Bank of Israel official representative rates (shaar yatzig). Use when user asks to convert shekels, NIS, ILS, asks about exchange rates, "shaar yatzig" (representative rate), or needs currency conversion for Israeli tax or business purposes. Covers the official Bank of Israel published currencies (14 currencies) with current and historical (tax-date) rates. Do NOT use for cryptocurrency or unofficial money exchange rates.
 license: MIT
-version: 2.0.0
+version: 2.1.0
 allowed-tools: Bash(python:*) WebFetch
 compatibility: Requires network access for Bank of Israel API. Works with Claude Code, Claude.ai, Cursor.
 ---
@@ -78,7 +78,9 @@ Format the result with:
 - **Foreign income:** representative rate on the income accrual / receipt date.
 - **Foreign expenses:** representative rate on the payment date.
 - **End-of-year revaluation:** the December 31 representative rate for balance-sheet items.
-- **Import VAT (caveat):** import VAT and customs are NOT computed at the bare BOI representative rate. Customs value uses the customs rate (shaar hamekhes), which the Israel Tax Authority sets weekly on the import declaration (rashimon) and is based on the BOI representative rate plus 0.5%. Do not quote the plain shaar yatzig as the import-VAT rate.
+- **Import VAT (caveat, depends on goods vs. services):**
+  - **Imported GOODS** cleared on an import declaration (rashimon): the customs value uses the customs rate (shaar hamekhes) = the BOI representative rate plus 0.5%, set weekly by the Israel Tax Authority (the rate published on the preceding Friday applies Tuesday through the following Monday). Do not quote the plain shaar yatzig as the import-VAT rate for goods.
+  - **Imported SERVICES** (reverse-charge VAT, e.g. foreign SaaS or overseas contractors): VAT is computed at the PLAIN BOI representative rate on the relevant date, do NOT add the 0.5%. The customs rate applies only to goods on a rashimon.
 
 ## Examples
 
@@ -126,7 +128,7 @@ When the `boi-exchange` MCP is available, use its tools for real-time conversion
 - Bank of Israel publishes ONE representative rate per currency per day (no separate buy/sell rates), Monday to Thursday soon after 15:15 and Friday (and holiday eves) soon after 12:15. No rate is set on Saturday, Sunday, or Israeli holidays. Agents may fetch a rate before publication time and get the previous publication's rate without indicating it is stale.
 - Only the official Bank of Israel published currencies have a representative rate (currently 14: USD, GBP, JPY, EUR, AUD, CAD, DKK, NOK, ZAR, SEK, CHF, JOD, LBP, EGP). The skill is not a general FX converter for every world currency.
 - NIS formatting uses the shekel sign before the number, with comma for thousands and period for decimals (e.g., 1,234.56). Agents may use the European convention (1.234,56) or place the symbol after the number.
-- When converting for tax purposes, Israeli law requires using the BOI representative rate (sha'ar yatzig) for the specific transaction date, not a live forex rate. For import VAT use the weekly customs rate, not the bare representative rate. Agents may use real-time rates that are not legally valid for tax reporting.
+- When converting for tax purposes, Israeli law requires using the BOI representative rate (sha'ar yatzig) for the specific transaction date, not a live forex rate. For import VAT on goods use the weekly customs rate (representative rate + 0.5%); imported services (reverse-charge VAT) use the plain representative rate. Agents may use real-time rates that are not legally valid for tax reporting.
 
 ## Troubleshooting
 

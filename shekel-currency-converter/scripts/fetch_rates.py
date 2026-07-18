@@ -269,7 +269,9 @@ def format_result(
         "  Source: Bank of Israel representative rate (shaar yatzig)",
         "",
         "  NOTE: Representative rate for reference. Actual bank rates may differ.",
-        "  NOTE: For import VAT, use the weekly customs rate, not this rate.",
+        "  NOTE: Import VAT on GOODS uses the weekly customs rate (this rate + 0.5%),",
+        "        NOT this plain rate. Imported SERVICES (reverse-charge VAT) DO use",
+        "        this plain representative rate, with no 0.5% addition.",
     ]
     return "\n".join(lines)
 

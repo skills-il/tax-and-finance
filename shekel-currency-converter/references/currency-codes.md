@@ -21,7 +21,7 @@ NOTE: These figures are illustrative snapshots (mid-2026) and move daily. Always
 - **Foreign income:** Report at the representative rate on the income accrual / receipt date.
 - **Foreign expenses:** Deduct at the representative rate on the payment date.
 - **End-of-year revaluation:** Use the December 31 representative rate for balance sheet items.
-- **VAT and customs on imports:** Do NOT use the bare BOI representative rate. Customs value uses the weekly customs rate (shaar hamekhes), set by the Israel Tax Authority on the import declaration (rashimon), based on the BOI representative rate plus 0.5%.
+- **VAT and customs on imported GOODS:** Do NOT use the bare BOI representative rate. Customs value uses the weekly customs rate (shaar hamekhes), set by the Israel Tax Authority on the import declaration (rashimon), based on the BOI representative rate plus 0.5%. Imported SERVICES (reverse-charge VAT) instead use the plain representative rate, with no 0.5% addition.
 
 ## NIS Symbol and Formatting
 - Currency code: ILS (ISO 4217)

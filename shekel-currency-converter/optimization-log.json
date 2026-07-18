@@ -32,6 +32,23 @@
         "references/boi-api-guide.md: publication time 15:15/12:15."
       ],
       "deferrals": []
+    },
+    {
+      "date": "2026-07-18",
+      "from_version": "2.0.0",
+      "to_version": "2.1.0",
+      "type": "minor",
+      "summary": "Zero drift verified live (BOI JSON endpoint + 14-currency set + SDMX host/path + publication schedule + tax-date rules + customs +0.5% all confirmed 2026-07-18). One MAJOR correctness fix: the import-VAT caveat previously routed ALL import VAT to the customs rate (representative + 0.5%); now distinguishes imported GOODS (customs rate on a rashimon, +0.5%) from imported SERVICES (reverse-charge VAT at the PLAIN representative rate, no 0.5%). Added the concrete weekly customs window (rate published the preceding Friday applies Tuesday through the following Monday). Judge confirmed the services rule is factually correct (reverse-charge self-invoice, VAT Regs 6C/6D 1976), not fabricated.",
+      "changes": [
+        "SKILL.md + SKILL_HE.md: import-VAT caveat split into goods vs services; gotcha line clarified; version 2.0.0 -> 2.1.0.",
+        "references/boi-api-guide.md + currency-codes.md + domain-checklist.md: goods/services distinction + weekly customs window added.",
+        "scripts/fetch_rates.py: format_result() note was an unconditional 'use the weekly customs rate' (CRITICAL, re-Expert caught); rewritten goods/services-aware to match the prose (goods = +0.5% customs; services = plain rate)."
+      ],
+      "deferrals": [
+        "MINOR: add a one-line cross-ref to the goods/services nuance in boi-api-guide.md 'Understanding Rates' so a reader stopping early doesn't miss it.",
+        "MINOR: spell out capital-gains FX date rules (cost at purchase-date rate, proceeds at sale-date rate) beyond the generic accrual-date line.",
+        "MINOR: note BOI may skip publication on some chol-hamoed / early-close days beyond the blanket 'holidays' wording (walk-back already handles it)."
+      ]
     }
   ]
 }

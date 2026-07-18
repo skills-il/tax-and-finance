@@ -33,7 +33,9 @@ Used to review the skill for correctness and completeness.
    goods priced in foreign currency, customs value is converted at the weekly
    customs rate (sha'ar ha-mekhes) set by the Israel Tax Authority on the
    rashimon = BOI representative rate + 0.5%. Do not quote the plain
-   representative rate as the import-VAT rate. Source: gov.il/he/service/
+   representative rate as the import-VAT rate for goods. Imported SERVICES
+   (reverse-charge VAT) instead use the PLAIN representative rate, with no 0.5%
+   addition, because there is no rashimon. Source: gov.il/he/service/
    exchange-rate; evidence.json claim 12.
 7. **Single representative rate per currency per day** (no buy/sell split),
    published soon after 15:15 on regular days and soon after 12:15 on Fridays /

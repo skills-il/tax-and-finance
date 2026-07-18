@@ -52,7 +52,9 @@ Parse the CSV: read `OBS_VALUE` (the rate) keyed by `TIME_PERIOD` (the date). Th
   - Financial reporting
 
 ## Import VAT and the customs rate (caveat)
-For import VAT and customs duty, the value of goods priced in foreign currency is NOT converted at the bare BOI representative rate. The Israel Tax Authority sets a weekly customs rate (shaar hamekhes) used on the import declaration (rashimon); it is based on the BOI representative rate plus 0.5%. Use the customs rate for import VAT, not the plain representative rate.
+For import VAT and customs duty on GOODS, the value priced in foreign currency is NOT converted at the bare BOI representative rate. The Israel Tax Authority sets a weekly customs rate (shaar hamekhes) used on the import declaration (rashimon); it is the BOI representative rate plus 0.5% (the rate published on the preceding Friday applies Tuesday through the following Monday). Use the customs rate for import VAT on goods, not the plain representative rate.
+
+For imported SERVICES (reverse-charge VAT, e.g. foreign SaaS or overseas contractors), there is no rashimon and no customs rate: VAT is computed at the PLAIN BOI representative rate on the relevant date, without the 0.5% addition.
 
 ## Published Currencies (14 total)
 USD, GBP, JPY, EUR, AUD, CAD, DKK, NOK, ZAR, SEK, CHF, JOD, LBP, EGP.
