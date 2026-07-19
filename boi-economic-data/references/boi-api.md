@@ -80,7 +80,7 @@ Parse by iterating `<Obs>` elements and reading the `TIME_PERIOD` and `OBS_VALUE
 
 | Data | Publication Time | Frequency | Days |
 |------|-----------------|-----------|------|
-| Exchange rates | ~15:30 Israel time | Business days (Sun-Thu) | No Fri/Sat |
+| Exchange rates | Mon-Thu ~15:30, Fri ~12:30 Israel time | Business days (Mon-Fri) | No Sat/Sun |
 | Interest rate | After committee decision | ~6 times/year | Decision dates |
 | CPI | ~15th of following month | Monthly | CBS publication |
 
@@ -95,7 +95,7 @@ Parse by iterating `<Obs>` elements and reading the `TIME_PERIOD` and `OBS_VALUE
 
 ## Common Issues
 
-- Weekend queries return empty data (no rates published Friday/Saturday)
+- Weekend queries return empty data (no rates published Saturday/Sunday; since Jan 2026 the week is Mon-Fri, Friday is a publication day)
 - Holiday calendar affects publication schedule (Jewish holidays)
 - SDMX XML parsing requires namespace-aware parser
 - Historical data may have different format versions

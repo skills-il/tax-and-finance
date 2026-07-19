@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Fetch Bank of Israel economic data: exchange rates, interest rates, and CPI.
+"""Fetch Bank of Israel economic data: exchange rates and interest-rate source pointers.
 
 Retrieves data from the BOI public API (SDMX format) and displays results
 in a human-readable format.
@@ -162,9 +162,9 @@ def generate_example_rate(currency: str, days: int) -> list:
     rates = []
     for i in range(min(days, 30)):
         date = (datetime.now() - timedelta(days=i)).strftime("%Y-%m-%d")
-        # Skip weekends (BOI doesn't publish on Fri/Sat)
+        # Skip weekends (BOI doesn't publish Sat/Sun; the Israeli week is Mon-Fri since Jan 2026)
         weekday = (datetime.now() - timedelta(days=i)).weekday()
-        if weekday in (4, 5):  # Friday=4, Saturday=5 in Israel context
+        if weekday in (5, 6):  # Saturday=5, Sunday=6 (no BOI rate on the weekend; the Israeli week is Mon-Fri since Jan 2026)
             continue
         # Small random-like variation
         variation = ((i * 7 + 3) % 10 - 5) / 1000
@@ -233,7 +233,7 @@ def main():
     )
     parser.add_argument(
         "--interest-history", action="store_true",
-        help="Show recent interest rate changes"
+        help="Point to the official interest-rate decision source (does not fetch numeric history)"
     )
     parser.add_argument(
         "--list-currencies", action="store_true",

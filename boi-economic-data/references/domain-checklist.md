@@ -4,7 +4,7 @@ Scope: fetch and present Bank of Israel + CBS economic data (interest rate, exch
 
 ## Must cover (core)
 - The CORRECT, working BOI data API path: edge.boi.gov.il/FusionEdgeServer/ws/public/sdmxapi/rest/data/{DATAFLOW}/{series}, with the User-Agent + startPeriod/endPeriod requirements and the flat <Obs TIME_PERIOD OBS_VALUE> response shape.
-- Exchange rates (sha'ar yatzig): EXR dataflow, RER_<CUR>_ILS series, representative rate (DATA_TYPE OF00), published once per business day (~15:30), Sun-Thu only.
+- Exchange rates (sha'ar yatzig): EXR dataflow, RER_<CUR>_ILS series, representative rate (DATA_TYPE OF00), published once per business day (Mon-Thu ~15:30, Fri ~12:30), Mon-Fri only (weekend Sat-Sun, since the Israeli week moved to Mon-Fri in Jan 2026).
 - Interest rate: BIR dataflow + the authoritative Monetary Committee decision for the headline policy rate.
 - CPI: PRI dataflow / CBS, ~15th-of-following-month release, approximate basket weights, CPI-linkage uses (bonds, rent, tax brackets).
 - A working helper script that fetches real data (correct URL, correct parser, browser User-Agent, TLS verification ON).

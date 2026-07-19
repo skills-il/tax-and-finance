@@ -10,6 +10,17 @@
         "Could not run the script end-to-end in the sandbox (intercepting proxy causes SSL CERTIFICATE_VERIFY_FAILED); verified the URL via curl and the parser against the downloaded XML. The script correctly does NOT disable TLS verification.",
         "Next cycle: identify the single headline BOI policy-rate series within BIR (it has ~30 sub-series) so --interest can return the rate programmatically instead of pointing to the website."
       ]
+    },
+    {
+      "version": "1.3.0",
+      "date": "2026-07-18",
+      "lessons": [
+        "CRITICAL STALE fixed: the representative-rate publication schedule was Sunday-Thursday; the Israeli financial week moved to Monday-Friday on 5 Jan 2026. Verified DIRECTLY via the live SDMX API (Fridays 2026-07-03/07-10 have USD/ILS observations; Sundays 07-05/07-12 do not). Fixed to Mon-Fri (Mon-Thu ~15:30, Fri ~12:30; weekend Sat-Sun; fall back to Friday, not Thursday) across SKILL.md, SKILL_HE.md, references/boi-api.md, references/domain-checklist.md, and the script's example-fallback weekday-skip (4,5=Fri,Sat -> 5,6=Sat,Sun).",
+        "Added the Friday 12:30 publication time (was omitted; only 15:30 was stated). Added a BOI representative-rate methodology/schedule reference link (reprate page).",
+        "Expert cleanups: --interest-history overstated a numeric rate-history feature the script does not deliver (fetch_interest_rate returns only source pointers); downgraded the argparse help + SKILL prose to 'points to the official rate-decision source'. Fixed a residual line-165 'Fri/Sat' comment. Trimmed the module docstring's CPI overstatement (no CPI flag exists).",
+        "Verified unchanged: SDMX API base path + EXR/BIR/PRI dataflows all resolve (old sdmx/v2/data/dataflow path 404s); the interest rate is correctly NOT hardcoded anywhere (the 6-Jul-2026 cut to 3.50% is not needed); CPI ~15th of the following month.",
+        "Deferred: identify the headline BIR policy-rate series so --interest can return the rate programmatically; add a CPI (PRI) fetch path to the script; the reprate reference page is Radware-bot-protected to automated fetch (renders in a real browser) - the load-bearing Mon-Fri fact is API-verifiable regardless."
+      ]
     }
   ]
 }

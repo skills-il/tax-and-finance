@@ -3,7 +3,7 @@ name: boi-economic-data
 description: "Fetch and analyze Bank of Israel (BOI) economic data: interest rates, CPI (madad hamchirim), exchange rates (sha'ar yatzig), and CBS statistics. Use when user asks about BOI interest rate, ribit Bank Israel, exchange rates, sha'ar yatzig, CPI index, madad, inflation data, or Israeli economic indicators. Foundation skill for Israeli financial analytics. Provides API access to the BOI SDMX API at edge.boi.gov.il and CBS data. Do NOT use for stock market data (use tase-stock-analysis instead) or for currency conversion (use shekel-currency-converter instead)."
 license: MIT
 compatibility: "Requires network access for Bank of Israel API. Works with Claude Code, Cursor, GitHub Copilot, Windsurf, OpenCode, Codex."
-version: 1.2.0
+version: 1.3.0
 ---
 
 # BOI Economic Data
@@ -16,7 +16,7 @@ Ask the user what economic data they need:
 | Data Type | Hebrew | Source | Update Frequency |
 |-----------|--------|--------|-----------------|
 | Interest rate | ריבית בנק ישראל | BOI Monetary Committee | Announced ~6 times/year |
-| Exchange rates | שערי חליפין (שער יציג) | BOI | Daily (published ~15:30) |
+| Exchange rates | שערי חליפין (שער יציג) | BOI | Business days Mon-Fri (Mon-Thu ~15:30, Fri ~12:30) |
 | CPI (Consumer Price Index) | מדד המחירים לצרכן | CBS (Lishkat HaStatistika) | Monthly (around 15th of following month) |
 | Inflation expectations | ציפיות אינפלציה | BOI | Monthly |
 | Government bonds yield | תשואת אג"ח ממשלתי | BOI / TASE | Daily |
@@ -48,7 +48,7 @@ BOI publishes representative exchange rates (sha'ar yatzig) daily:
 | Swiss Franc | CHF | Safe haven |
 
 Key points:
-- Representative rate published once daily at approximately 15:30
+- Representative rate published once per business day, Monday to Friday: Monday-Thursday at approximately 15:30, Friday at approximately 12:30. No rate is published on Saturday or Sunday (the Israeli financial week moved to Monday-Friday in January 2026, so Sunday is no longer a publication day and Friday now is)
 - Used as official rate for tax calculations, contracts, financial reporting
 - Weekend and holiday rates use last published rate
 - For intraday rates, use forex platforms (BOI rate is indicative)
@@ -82,7 +82,7 @@ BOI Monetary Committee sets the interest rate:
 | Stable | Inflation within target | Predictable borrowing costs |
 | Falling | Low inflation or economic slowdown | Lower mortgage rates, weaker NIS |
 
-Historical context helps interpret current decisions. Use `scripts/fetch_boi_rates.py --interest-history` for recent rate changes.
+Historical context helps interpret current decisions. For the sequence of recent rate changes, read the Monetary Committee decisions on the BOI press-releases / monetary-policy pages (see Reference Links); the script's `--interest` prints pointers to those official sources rather than a fetched numeric history.
 
 ### Step 6: Combine Data for Analysis
 Cross-reference multiple data points for comprehensive analysis:
@@ -98,7 +98,7 @@ User says: "What is today's dollar-shekel exchange rate?"
 Actions:
 1. Run `python scripts/fetch_boi_rates.py --currency USD`
 2. Display representative rate (sha'ar yatzig) with date
-3. Note: Rate published at approximately 15:30, before that yesterday's rate applies
+3. Note: rate published Mon-Thu ~15:30 and Fri ~12:30; before that (or on Sat/Sun), the last published business-day rate applies
 Result: Current USD/NIS representative rate with context
 
 ### Example 2: Interest Rate Impact
@@ -134,19 +134,20 @@ Result: Exact CPI adjustment with new rent calculation
 | BOI Statistical Information | https://www.boi.org.il/en/economic-roles/statistical-information/ | Official portal for interest rates, exchange rates, monetary aggregates |
 | BOI SDMX data API root | https://edge.boi.gov.il/FusionEdgeServer/ws/public/sdmxapi/rest/data/ | Live data path used by `scripts/fetch_boi_rates.py` (append `EXR/RER_USD_ILS`, `BIR/`, `PRI/`) |
 | BOI Press Releases | https://www.boi.org.il/en/communication-and-publications/press-releases/ | Most recent Monetary Committee rate decisions and accompanying minutes |
+| BOI representative-rate methodology & schedule | https://www.boi.org.il/roles/markets/reprate/ | Publication days (Mon-Fri) and times (Mon-Thu ~15:30, Fri ~12:30), sampling window, and holiday non-publication days |
 | CBS Consumer Price Index | https://www.cbs.gov.il/en/subjects/Pages/Consumer-Price-Index.aspx | Current monthly CPI release schedule, historical index, weighting structure |
 
 ## Gotchas
-- Agents often query BOI exchange rates for Friday or Saturday, but the representative rate (sha'ar yatzig) is only published on business days (Sunday-Thursday). Use the last available Thursday rate for weekends.
+- Agents often query BOI exchange rates for Saturday or Sunday, but the representative rate (sha'ar yatzig) is only published on business days (Monday-Friday, since the Israeli financial week moved to Mon-Fri in January 2026). Use the last available Friday rate for the Saturday-Sunday weekend. Agents trained on pre-2026 data may still assume a Sunday-Thursday week and wrongly fall back to Thursday.
 - The BOI SDMX API returns XML by default, not JSON. Agents must either parse XML or add the correct Accept header for JSON format.
-- Agents may confuse the BOI representative rate (indicative, published once daily at approximately 15:30) with real-time forex rates. The BOI rate is not suitable for intraday trading decisions.
+- Agents may confuse the BOI representative rate (indicative, published once per business day, Mon-Thu ~15:30 and Fri ~12:30) with real-time forex rates. The BOI rate is not suitable for intraday trading decisions.
 - CPI data from CBS lags by about 6 weeks: January's CPI is published around February 15th. Agents may try to fetch current-month CPI that does not exist yet.
 
 ## Troubleshooting
 
 ### Error: "BOI API returned empty data"
 Cause: Querying for weekend/holiday date when no rate was published
-Solution: BOI publishes rates on business days only (Sunday-Thursday). For Friday/Saturday, use the last published rate (Thursday). Use the API date range query to get the most recent available rate.
+Solution: BOI publishes rates on business days only (Monday-Friday). For Saturday/Sunday, use the last published rate (Friday). Use the API date range query to get the most recent available rate.
 
 ### Error: "CPI data not yet available"
 Cause: CBS publishes CPI around the 15th of the following month
@@ -154,4 +155,4 @@ Solution: If current month's CPI is not available, use the latest published inde
 
 ### Error: "Exchange rate seems stale"
 Cause: Using representative rate before daily publication time
-Solution: BOI representative rate is published at approximately 15:30 Israel time. Before that, the previous day's rate is the official rate. For intraday indicative rates, use bank or forex feeds.
+Solution: BOI representative rate is published Monday-Thursday at approximately 15:30 and Friday at approximately 12:30 Israel time. Before that (or on Saturday/Sunday), the last published business-day rate is the official rate. For intraday indicative rates, use bank or forex feeds.
