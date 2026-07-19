@@ -6,7 +6,7 @@ Grow (לשעבר משולם) היא אחת מחברות הסליקה המובי�
 
 מדריך זה מנחה אינטגרציה עם Light API של Grow לכל מחזור חיי התשלום: קבלת תשלומים, שמירת טוקנים לחיובים חוזרים, יצירת דרישות תשלום, עיבוד החזרים וטיפול בהתראות webhook בזמן אמת.
 
-**תיעוד רשמי:** `https://grow-il.readme.io/`
+**תיעוד רשמי:** `https://developers.grow.business/`
 
 **תמיכה למפתחים:** `apisupport@grow.business`
 
@@ -125,7 +125,9 @@ curl -X POST https://sandbox.meshulam.co.il/api/light/server/1.0/createPaymentPr
 1. **הפניית לקוח:** הלקוח מופנה ל-`successUrl` עם `response=success`
 2. **callback שרת:** Grow שולחת POST ל-`notifyUrl` עם פרטי העסקה המלאים
 
-**תמיד אמתו דרך callback השרת**, לא דרך ההפניה בצד הלקוח (שניתנת לזיוף).
+**תמיד אמתו דרך callback השרת**, לא דרך ההפניה בצד הלקוח (שניתנת לזיוף). ב-callback, אשרו הצלחה על ידי בדיקת `statusCode` (`2` = שולם), אל תתייחסו לעצם ההגעה של ההפניה ל-`successUrl` כהוכחת תשלום.
+
+**קינון ה-payload (חשוב):** ב-callback שרת-לשרת של `notifyUrl` השדות מקוננים תחת אובייקט `data` (הרמה העליונה היא `{err, status, data}`), ולכן קראו את `data.statusCode`, `data.transactionToken` ו-`data.transactionId` (המזהה שמעבירים ל-`approveTransaction`), ולא את הרמה העליונה. מערכת ה-webhook הנפרדת שמבוססת על webhookKey (שלב 11) מספקת payload שטוח יותר.
 
 ### שלב 5: אישור העסקה (חובה)
 
@@ -202,6 +204,8 @@ curl -X POST https://sandbox.meshulam.co.il/api/light/server/1.0/approveTransact
 
 ### שלב 9: טוקניזציה וחיובים חוזרים
 
+**מאיפה מגיע הטוקן:** טוקן הכרטיס השמור מגיע בשדה `transactionToken` של ה-webhook של התשלום אחרי התשלום הראשון (או מנקודת הקצה `getTokenOnly`, ששומרת כרטיס בלי לחייב). השתמשו בערך הזה כ-`cardToken` בקריאות `createTransactionWithToken` שלמטה.
+
 Grow תומכת בשלושה מודלים לחיובים חוזרים:
 
 #### אפשרות א: מנוהל על ידי Grow דרך Page Code
@@ -212,49 +216,42 @@ Grow תומכת בשלושה מודלים לחיובים חוזרים:
 2. הגדירו `sum` לסכום החיוב החודשי ו-`paymentNum` למספר החיובים הכולל
 3. Grow מטפלת בכל החיובים הבאים אוטומטית
 
-#### אפשרות ב: מנוהל על ידי Grow דרך טוקן
+#### אפשרות ב: חיוב טוקן שמור (שרת-לשרת)
 
-השתמשו ב-`createTransactionWithToken` עם תזמון אוטומטי:
-
-```bash
-curl -X POST https://sandbox.meshulam.co.il/api/light/server/1.0/createTransactionWithToken \
-  -F "pageCode=YOUR_PAGE_CODE" \
-  -F "userId=YOUR_USER_ID" \
-  -F "sum=99.00" \
-  -F "token=SAVED_TOKEN" \
-  -F "paymentType=1" \
-  -F "paymentNum=12"
-```
-
-הגדרת `paymentType=1` עם `paymentNum` אומרת ל-Grow לנהל 12 חיובים חודשיים.
-
-#### אפשרות ג: מנוהל על ידי בית העסק דרך טוקן (שליטה מלאה)
-
-אתם שולטים מתי כל חיוב מתבצע:
-
-**תשלום ראשון (שמירת טוקן):**
+חייבו טוקן כרטיס שמור ישירות. שם הפרמטר לטוקן הוא `cardToken` (ולא `token`), ו-`paymentType=2` הוא חיוב רגיל:
 
 ```bash
 curl -X POST https://sandbox.meshulam.co.il/api/light/server/1.0/createTransactionWithToken \
-  -F "pageCode=YOUR_PAGE_CODE" \
   -F "userId=YOUR_USER_ID" \
   -F "sum=99.00" \
-  -F "token=SAVED_TOKEN" \
-  -F "isRecurringDebitId=1"
+  -F "description=Monthly subscription" \
+  -F "cardToken=SAVED_CARD_TOKEN" \
+  -F "paymentType=2" \
+  -F "pageField[fullName]=Israel Israeli" \
+  -F "pageField[phone]=0501234567" \
+  -F "transactionUniqueIdentifier=UNIQUE_PER_CHARGE"
 ```
 
-התגובה כוללת `recurringDebitId` -- שמרו אותו לקישור חיובים עתידיים.
+`cardToken` הוא טוקן הכרטיס השמור (מגיע בשדה `transactionToken` של ה-webhook של התשלום, או מ-`getTokenOnly`). בדקו את `statusCode` בתגובה (`2` = שולם) כדי לאשר שהחיוב הצליח. נקודת קצה זו משתמשת ב-`userId`, לא ב-`pageCode`.
 
-**חיובים הבאים:**
+#### אפשרות ג: סדרת חיובים חוזרים פרימיום (recurringDebitId)
+
+לסדרת חיובים חוזרים בניהול Grow, כל חיוב נושא `recurringDebitId` שמקשר אותו לסדרה. הערך הזה מוחזר בתגובה של התשלום החוזר-פרימיום הראשון; העבירו אותו בכל קריאת `createTransactionWithToken` הבאה, לצד `cardToken`, `paymentType=2`, והשדות הנדרשים למעלה:
 
 ```bash
 curl -X POST https://sandbox.meshulam.co.il/api/light/server/1.0/createTransactionWithToken \
-  -F "pageCode=YOUR_PAGE_CODE" \
   -F "userId=YOUR_USER_ID" \
   -F "sum=99.00" \
-  -F "token=SAVED_TOKEN" \
-  -F "recurringDebitId=RECURRING_DEBIT_ID"
+  -F "description=Monthly subscription" \
+  -F "cardToken=SAVED_CARD_TOKEN" \
+  -F "paymentType=2" \
+  -F "pageField[fullName]=Israel Israeli" \
+  -F "pageField[phone]=0501234567" \
+  -F "recurringDebitId=RECURRING_DEBIT_ID" \
+  -F "transactionUniqueIdentifier=UNIQUE_PER_CHARGE"
 ```
+
+אמתו את פרמטרי האתחול המדויקים של החיוב-החוזר-פרימיום בעמוד הייחוס של `createTransactionWithToken` (ראו קישורי עזר) במקום להניח שם דגל.
 
 **עדכון חיוב חוזר:**
 
@@ -308,6 +305,8 @@ Grow שולחת התראות בזמן אמת לשרת שלכם לאירועים 
 | שדה | תיאור |
 |-------|-------------|
 | `webhookKey` | מזהה webhook ייחודי |
+| `statusCode` | קוד סטטוס תשלום, `2` = שולם (הצלחה). בדקו את זה בצד השרת כדי לאשר שהתשלום הצליח לפני אספקה; הפניה בצד הלקוח לבדה אינה הוכחה |
+| `transactionToken` | טוקן כרטיס שמור, שמרו אותו כדי לחייב מאוחר יותר דרך `createTransactionWithToken` לחיובים חוזרים |
 | `transactionCode` | מזהה עסקה |
 | `paymentSum` | סכום שחויב |
 | `paymentDate` | חותמת זמן |
@@ -324,6 +323,7 @@ Grow שולחת התראות בזמן אמת לשרת שלכם לאירועים 
 | שדה | תיאור |
 |-------|-------------|
 | `directDebitId` | מזהה סדרת החיובים |
+| `allPaymentNum` | מספר התשלומים הכולל בסדרה (בפורמט PaymentLinks החדש מאויית `allPaymentsNum`) |
 | `paymentsNum` | מספר תשלום בסדרה |
 | `periodicalPaymentSum` | סכום חיוב חוזר |
 
@@ -394,8 +394,8 @@ Grow מציעה סוגי דפי תשלום מוכנים מראש, כל אחד ע
 
 | מקור | קישור | מה לבדוק |
 |------|-------|---------|
-| תיעוד API של Grow | https://grow-il.readme.io/reference/overview | endpoints נוכחיים, אינדקסי transactionTypes, מבני בקשה ותגובה |
-| תיעוד Grow | https://grow-il.readme.io/docs | טוקניזציה, חיובים חוזרים, תשלומי J-code, webhooks |
-| סקירת מוצרי Grow | https://grow-il.readme.io/docs/about-grow-products | אילו מוצרים קיימים ב-Grow ואיך הם ממופים ל-API |
+| תיעוד API של Grow | https://developers.grow.business/reference/overview | endpoints נוכחיים, אינדקסי transactionTypes, מבני בקשה ותגובה |
+| תיעוד Grow | https://developers.grow.business/docs | טוקניזציה, חיובים חוזרים, תשלומי J-code, webhooks |
+| סקירת מוצרי Grow | https://developers.grow.business/docs/about-grow-products | אילו מוצרים קיימים ב-Grow ואיך הם ממופים ל-API |
 | כתובת בסיס פרודקשן (Meshulam) | https://secure.meshulam.co.il/ | אישור שכתובת הפרודקשן נכונה, לא להפנות תעבורה לסביבת sandbox |
 | מדריך אינטגרציית Wix | https://support.wix.com/en/article/connecting-grow-by-meshulam-as-a-payment-provider | הדרכה ברמה גבוהה למרכזי Wix |

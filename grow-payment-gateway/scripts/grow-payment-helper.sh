@@ -109,10 +109,11 @@ case "$command" in
     SUM="${2:?Sum required}"
 
     curl -s -X POST "${API_BASE}/createTransactionWithToken" \
-      -F "pageCode=${GROW_PAGE_CODE}" \
       -F "userId=${GROW_USER_ID}" \
-      -F "token=${TOKEN}" \
-      -F "sum=${SUM}" | python3 -m json.tool
+      -F "cardToken=${TOKEN}" \
+      -F "sum=${SUM}" \
+      -F "description=Token charge" \
+      -F "paymentType=2" | python3 -m json.tool
     ;;
 
   help|*)

@@ -12,7 +12,7 @@ Grow (formerly Meshulam) is one of Israel's leading payment gateways, powering t
 
 This skill guides integration with Grow's Light API for the full payment lifecycle: accepting payments, saving tokens for recurring charges, creating payment links for invoices, processing refunds, and handling real-time webhook notifications.
 
-**Official docs:** `https://grow-il.readme.io/`
+**Official docs:** `https://developers.grow.business/`
 
 **Developer support:** `apisupport@grow.business`
 
@@ -131,7 +131,9 @@ After the customer completes payment, two things happen:
 1. **Client redirect:** Customer is redirected to `successUrl` with `response=success` appended
 2. **Server callback:** Grow sends a POST to your `notifyUrl` with full transaction details
 
-**Always verify via server callback**, not the client redirect (which can be spoofed).
+**Always verify via server callback**, not the client redirect (which can be spoofed). In the callback, confirm success by checking `statusCode` (`2` = paid), do not treat the mere arrival of a redirect to `successUrl` as proof of payment.
+
+**Payload nesting (important):** on the server-to-server `notifyUrl` callback the fields are nested under a `data` object (the top level is `{err, status, data}`), so read `data.statusCode`, `data.transactionToken`, and `data.transactionId` (the id you pass to `approveTransaction`), NOT the top level. The separate webhookKey webhook system (Step 11) delivers a flatter payload.
 
 ### Step 5: Approve the Transaction (MANDATORY)
 
@@ -208,6 +210,8 @@ The response includes a shareable payment URL. You can also update (`updatePayme
 
 ### Step 9: Tokenization and Recurring Billing
 
+**Where the token comes from:** the saved card token arrives in the payment webhook's `transactionToken` field after the first payment (or from the `getTokenOnly` endpoint, which saves a card without charging). Use that value as the `cardToken` in the `createTransactionWithToken` calls below.
+
 Grow supports three recurring payment models:
 
 #### Option A: Grow-Managed via Page Code
@@ -218,49 +222,42 @@ Use a dedicated recurring page code configured in the Grow dashboard:
 2. Set `sum` to the monthly charge amount and `paymentNum` to total iterations
 3. Grow handles all subsequent charges automatically
 
-#### Option B: Grow-Managed via Token
+#### Option B: Charge a Saved Token (server-to-server)
 
-Use `createTransactionWithToken` with automatic scheduling:
-
-```bash
-curl -X POST https://sandbox.meshulam.co.il/api/light/server/1.0/createTransactionWithToken \
-  -F "pageCode=YOUR_PAGE_CODE" \
-  -F "userId=YOUR_USER_ID" \
-  -F "sum=99.00" \
-  -F "token=SAVED_TOKEN" \
-  -F "paymentType=1" \
-  -F "paymentNum=12"
-```
-
-Setting `paymentType=1` with `paymentNum` tells Grow to manage 12 monthly charges.
-
-#### Option C: Merchant-Managed via Token (Full Control)
-
-You control when each charge fires:
-
-**First payment (save token):**
+Charge a saved card token directly. The token parameter is `cardToken` (NOT `token`), and `paymentType=2` is a Regular charge:
 
 ```bash
 curl -X POST https://sandbox.meshulam.co.il/api/light/server/1.0/createTransactionWithToken \
-  -F "pageCode=YOUR_PAGE_CODE" \
   -F "userId=YOUR_USER_ID" \
   -F "sum=99.00" \
-  -F "token=SAVED_TOKEN" \
-  -F "isRecurringDebitId=1"
+  -F "description=Monthly subscription" \
+  -F "cardToken=SAVED_CARD_TOKEN" \
+  -F "paymentType=2" \
+  -F "pageField[fullName]=Israel Israeli" \
+  -F "pageField[phone]=0501234567" \
+  -F "transactionUniqueIdentifier=UNIQUE_PER_CHARGE"
 ```
 
-The response includes `recurringDebitId` -- save this to link future charges.
+`cardToken` is the saved card token (it arrives in the payment webhook's `transactionToken` field, or from `getTokenOnly`). Check `statusCode` in the response (`2` = paid) to confirm the charge succeeded. This endpoint uses `userId`, not `pageCode`.
 
-**Subsequent charges:**
+#### Option C: Premium Recurring Series (recurringDebitId)
+
+For a Grow-managed recurring series, each charge carries a `recurringDebitId` that ties it to the series. That id is returned by the FIRST premium-recurring payment's response; pass it on every subsequent `createTransactionWithToken` call, alongside `cardToken`, `paymentType=2`, and the required fields above:
 
 ```bash
 curl -X POST https://sandbox.meshulam.co.il/api/light/server/1.0/createTransactionWithToken \
-  -F "pageCode=YOUR_PAGE_CODE" \
   -F "userId=YOUR_USER_ID" \
   -F "sum=99.00" \
-  -F "token=SAVED_TOKEN" \
-  -F "recurringDebitId=RECURRING_DEBIT_ID"
+  -F "description=Monthly subscription" \
+  -F "cardToken=SAVED_CARD_TOKEN" \
+  -F "paymentType=2" \
+  -F "pageField[fullName]=Israel Israeli" \
+  -F "pageField[phone]=0501234567" \
+  -F "recurringDebitId=RECURRING_DEBIT_ID" \
+  -F "transactionUniqueIdentifier=UNIQUE_PER_CHARGE"
 ```
+
+Confirm the exact premium-recurring initiation parameters on the `createTransactionWithToken` reference (see Reference Links) rather than assuming a flag name.
 
 **Update recurring payment:**
 
@@ -314,6 +311,8 @@ Grow sends real-time notifications to your server for various events. Contact `a
 | Field | Description |
 |-------|-------------|
 | `webhookKey` | Unique webhook identifier |
+| `statusCode` | Payment status code, `2` = paid (success). Branch on this server-side to confirm the payment succeeded before fulfilling; a client redirect alone is not proof |
+| `transactionToken` | Saved card token, keep it to charge later via `createTransactionWithToken` for recurring/repeat billing |
 | `transactionCode` | Transaction reference |
 | `paymentSum` | Amount charged |
 | `paymentDate` | Transaction timestamp |
@@ -331,6 +330,7 @@ Grow sends real-time notifications to your server for various events. Contact `a
 |-------|-------------|
 | `directDebitId` | Recurring series identifier |
 | `paymentsNum` | Payment number in series |
+| `allPaymentNum` | Total number of payments in the series (newer PaymentLinks payloads spell it `allPaymentsNum`) |
 | `periodicalPaymentSum` | Recurring charge amount |
 
 **Failed recurring webhook (additional fields):**
@@ -400,8 +400,8 @@ Grow offers pre-configured payment page types, each with a different `pageCode`:
 
 | Source | URL | What to Check |
 |--------|-----|---------------|
-| Grow API Reference | https://grow-il.readme.io/reference/overview | Current endpoints, transactionTypes indices, request/response shapes |
-| Grow Documentation | https://grow-il.readme.io/docs | Tokenization, recurring, J-code installments, webhooks |
-| Grow Product Overview | https://grow-il.readme.io/docs/about-grow-products | Which Grow products exist and how they map to API surface |
+| Grow API Reference | https://developers.grow.business/reference/overview | Current endpoints, transactionTypes indices, request/response shapes |
+| Grow Documentation | https://developers.grow.business/docs | Tokenization, recurring, J-code installments, webhooks |
+| Grow Product Overview | https://developers.grow.business/docs/about-grow-products | Which Grow products exist and how they map to API surface |
 | Meshulam (Grow) Production Base | https://secure.meshulam.co.il/ | Confirms production host; do not point production traffic at sandbox.meshulam.co.il |
 | Wix Integration Guide | https://support.wix.com/en/article/connecting-grow-by-meshulam-as-a-payment-provider | High-level integration walkthrough for Wix merchants |

@@ -21,6 +21,8 @@ Contact `apisupport@grow.business` to enable webhooks for your account.
 ```json
 {
   "webhookKey": "unique-webhook-id",
+  "statusCode": "2",
+  "transactionToken": "818bf8333e7a3f0c53ef8e7",
   "transactionCode": "txn-reference",
   "paymentSum": "149.90",
   "paymentDate": "2026-03-17 14:30:00",

@@ -21,5 +21,5 @@ Scope: integrate the Grow by Meshulam Light API (payments, tokens, recurring, li
 - Cardcom (cardcom-payment-gateway), Tranzila (tranzila-payment-gateway), multi-gateway orchestration (israeli-payment-orchestrator).
 
 ## Authoritative sources
-- grow-il.readme.io (reference/overview, createPaymentProcess, webhooks/overview-7).
+- developers.grow.business (reference/overview, createPaymentProcess, webhooks/overview-7).
 - secure.meshulam.co.il (production host).
