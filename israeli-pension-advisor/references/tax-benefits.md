@@ -63,7 +63,7 @@ The other half of Amendment 190: lets pensioners 60+ with a qualifying kitzbah d
 - **Withdrawal as monthly kitzbah:** Fully exempt from income tax for life
 - **Withdrawal as lump sum:** 15% tax on the real (CPI-adjusted) GAIN only; principal not taxed
 - **Standard use cases:** severance at retirement, sale of business proceeds, retirement bonus, inheritance, excess liquid savings
-- **Comparison:** A 1M NIS deposit drawn as lump sum after 10 years (50% real gain = 500K) pays 15% × 500K = 75K NIS tax; the same money in a brokerage account would pay marginal rate (up to 47%) on the gain
+- **Comparison:** the 15% applies to the NOMINAL gain, and the benchmark it is measured against is 25% on the REAL (CPI-adjusted) gain in a regular investment account, not the marginal rate. A 1M NIS deposit drawn as a lump sum after 10 years with a 500K nominal gain pays 15% x 500K = 75K NIS. Compare that against 25% of the real gain over the same period before calling it a saving: when inflation has been high, the real gain is much smaller than the nominal one and the nominal-basis 15% can be the worse of the two.
 - **Estate planning:** Funds pass to designated beneficiaries under fund rules
 - **PFIC caveat:** US persons should consult a tax professional; kupot gemel may be PFICs under US tax law
 

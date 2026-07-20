@@ -29,7 +29,13 @@ SELF_HISHTALMUT_MAX = 20566      # Tax-free profit ceiling (2026)
 SELF_HISHTALMUT_DEDUCT = 13203   # Tax deduction ceiling (2026)
 
 AVG_WAGE = 13769                 # Average wage 2026 (BL §2 definition)
-COMPREHENSIVE_FUND_INSURABLE_SALARY_MAX = 2 * AVG_WAGE  # 27,538: hard cap, not back-calculated
+# NOTE: this is the salary implied by the tax-favoured DEPOSIT ceiling
+# (20.5% x 2 x average wage = 5,645/month). It is NOT the mandatory-pension
+# insurable ceiling, which is the average wage itself (13,769), and NOT the
+# fund's maximum determining salary (about 41,307 = 3 x average wage).
+COMPREHENSIVE_FUND_DEPOSIT_IMPLIED_SALARY = 2 * AVG_WAGE  # 27,538
+MANDATORY_PENSION_INSURABLE_MAX = AVG_WAGE               # 13,769, tzav harchava
+COMPREHENSIVE_FUND_INSURABLE_SALARY_MAX = 2 * AVG_WAGE   # kept for compatibility
 COMPREHENSIVE_FUND_DEPOSIT_MAX = 5645  # Monthly deposit ceiling 2026 (20.5% of 2x avg wage)
 HISHTALMUT_TAX_FREE_SALARY_CAP = 15712  # Monthly salary cap for tax-free employer hishtalmut (2026)
 

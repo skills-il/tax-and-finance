@@ -5,11 +5,18 @@
   "claims": [
     {
       "claim_id": "avg-wage-2026",
-      "claim": "Average wage (sakhar memutza, BL §2 definition) for 2026 is 13,769 NIS/month",
-      "source_url": "https://www.btl.gov.il/About/news/Pages/hadasaidkonkitzva2026.aspx",
-      "raw_snippet": "השכר הממוצע במשק לעניין דמי ביטוח לאומי בשנת 2026: 13,769 ש\"ח לחודש",
-      "fetched_at": "2026-05-18T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "scripts/calculate_pension.py"]
+      "claim": "The average wage under National Insurance Law section 2 is 13,769 NIS (13,769 ש\"ח) per month from 1.1.2026.",
+      "source_url": "https://www.btl.gov.il/Mediniyut/GeneralData/Pages/שכר ממוצע.aspx",
+      "raw_snippet": "13,769 ש\"ח",
+      "fetched_at": "2026-07-21",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "scripts/calculate_pension.py"
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-07-21",
+      "note": "Previous source (btl About/news hadasaidkonkitzva2026) now 404s; re-pointed to the live average-wage page."
     },
     {
       "claim_id": "comprehensive-fund-max-2026",
@@ -17,7 +24,12 @@
       "source_url": "https://pensuni.com/?p=827",
       "raw_snippet": "תקרת ההפקדה לקרן פנסיה מקיפה ב-2026: 5,645 ש\"ח לחודש, 20.5% מכפל השכר הממוצע במשק",
       "fetched_at": "2026-05-18T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "scripts/calculate_pension.py", "references/pension-fund-types.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "scripts/calculate_pension.py",
+        "references/pension-fund-types.md"
+      ]
     },
     {
       "claim_id": "self-employed-pension-brackets-2026",
@@ -25,7 +37,12 @@
       "source_url": "https://www.kolzchut.org.il/he/%D7%91%D7%99%D7%98%D7%95%D7%97_%D7%A4%D7%A0%D7%A1%D7%99%D7%95%D7%A0%D7%99_%D7%9C%D7%A2%D7%95%D7%91%D7%93_%D7%A2%D7%A6%D7%9E%D7%90%D7%99",
       "raw_snippet": "חוק פנסיה חובה לעצמאים תשע\"ז-2016: 4.45% עד מחצית השכר הממוצע; 12.55% ממחצית עד שכר ממוצע מלא; פטור בשנה הראשונה לעסק; חל מגיל 21 עד גיל פרישה",
       "fetched_at": "2026-05-18T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "scripts/calculate_pension.py", "references/tax-benefits.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "scripts/calculate_pension.py",
+        "references/tax-benefits.md"
+      ]
     },
     {
       "claim_id": "self-employed-annual-cap-2026",
@@ -33,31 +50,58 @@
       "source_url": "https://pensuni.com/?p=2233",
       "raw_snippet": "חבות שנתית מקסימלית בפנסיה חובה לעצמאים 2026: כ-14,044 ש\"ח",
       "fetched_at": "2026-05-18T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/tax-benefits.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-benefits.md"
+      ]
     },
     {
       "claim_id": "hishtalmut-employer-tax-free-ceiling-2026",
-      "claim": "Keren hishtalmut: employer contribution is tax-free to the employee only up to a monthly salary of 15,712 NIS (188,544 NIS/year), at 7.5% employer + 2.5% employee",
-      "source_url": "https://www.kolzchut.org.il/he/%D7%A7%D7%A8%D7%9F_%D7%94%D7%A9%D7%AA%D7%9C%D7%9E%D7%95%D7%AA",
-      "raw_snippet": "תקרת השכר להפקדה לקרן השתלמות לעובדים ב-2026: 15,712 ש\"ח לחודש (188,544 ש\"ח לשנה); 7.5% מעסיק + 2.5% עובד",
-      "fetched_at": "2026-05-18T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "scripts/calculate_pension.py", "references/pension-fund-types.md", "references/tax-benefits.md"]
+      "claim": "The 2026 keren hishtalmut salary ceiling for tax-free employer deposits is 15,712 NIS (15,712 ש\"ח) per month and 18,854 NIS (18,854 ש\"ח) per year, at 2.5% employee and 7.5% employer. The employer-side annual tax-free deposit works out to 188,544 NIS (188,544 ש\"ח) of salary over twelve months.",
+      "source_url": "https://media.harel-group.co.il/media/eh3fyryd/",
+      "raw_snippet": "₪ 15,712 לחודש ... ₪ 18,854 לשנה",
+      "fetched_at": "2026-07-21",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "scripts/calculate_pension.py",
+        "references/pension-fund-types.md",
+        "references/tax-benefits.md"
+      ],
+      "verified_via": "pdf",
+      "verified_at": "2026-07-21",
+      "note": "Harel 2026 ceilings PDF, text layer via pdftotext. Percent signs extract as the letter B."
     },
     {
       "claim_id": "hishtalmut-self-deduction-2026",
-      "claim": "Self-employed keren hishtalmut tax deduction ceiling: 13,203 NIS/year (4.5% of qualifying income up to 293,397 NIS)",
-      "source_url": "https://www.kolzchut.org.il/he/%D7%A7%D7%A8%D7%9F_%D7%94%D7%A9%D7%AA%D7%9C%D7%9E%D7%95%D7%AA_%D7%9C%D7%A2%D7%95%D7%91%D7%93_%D7%A2%D7%A6%D7%9E%D7%90%D7%99",
-      "raw_snippet": "תקרת ניכוי בקרן השתלמות לעצמאים 2026: 13,203 ש\"ח/שנה (4.5% מהכנסה עד 293,397 ש\"ח)",
-      "fetched_at": "2026-05-18T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "scripts/calculate_pension.py", "references/tax-benefits.md"]
+      "claim": "For the self-employed the 2026 keren hishtalmut deduction is 4.5% up to 13,203 NIS (13,203 ש\"ח) per year against an income ceiling of 293,397 NIS (293,397 ש\"ח).",
+      "source_url": "https://media.harel-group.co.il/media/eh3fyryd/",
+      "raw_snippet": "₪ 293,397 לשנה ... (ועד ₪ 13,203)",
+      "fetched_at": "2026-07-21",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "scripts/calculate_pension.py",
+        "references/tax-benefits.md"
+      ],
+      "verified_via": "pdf",
+      "verified_at": "2026-07-21"
     },
     {
       "claim_id": "hishtalmut-self-profit-exempt-2026",
-      "claim": "Self-employed keren hishtalmut profit-exempt ceiling: 20,566 NIS/year (gains on deposits up to this amount are capital-gains-tax-free after 6 years)",
-      "source_url": "https://pensuni.com/?p=827",
-      "raw_snippet": "תקרת הפקדה פטורה ממס רווחי הון בקרן השתלמות לעצמאים 2026: 20,566 ש\"ח/שנה",
-      "fetched_at": "2026-05-18T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "scripts/calculate_pension.py", "references/tax-benefits.md"]
+      "claim": "The 2026 tax-favoured hishtalmut deposit ceiling for the self-employed is 20,566 NIS (20,566 ש\"ח).",
+      "source_url": "https://media.harel-group.co.il/media/eh3fyryd/",
+      "raw_snippet": "₪ 20,566 תקרת הפקדה מוטבת",
+      "fetched_at": "2026-07-21",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "scripts/calculate_pension.py",
+        "references/tax-benefits.md"
+      ],
+      "verified_via": "pdf",
+      "verified_at": "2026-07-21"
     },
     {
       "claim_id": "hishtalmut-tax-status-unchanged-2026",
@@ -65,7 +109,10 @@
       "source_url": "https://www.themarker.com/markets/2024-09-23/ty-article/.premium/00000192-1eb8-dc44-affb-3fb904dd0000",
       "raw_snippet": "הצעת האוצר מספטמבר 2024 לשינוי הטבת המס בקרן השתלמות נמשכה מתקציב 2025; לא נחקקה",
       "fetched_at": "2026-05-18T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "employee-tax-credit-2026",
@@ -73,7 +120,11 @@
       "source_url": "https://www.kolzchut.org.il/he/%D7%96%D7%99%D7%9B%D7%95%D7%99_%D7%9E%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94_%D7%91%D7%92%D7%99%D7%9F_%D7%94%D7%A4%D7%A8%D7%A9%D7%95%D7%AA_%D7%9C%D7%91%D7%99%D7%98%D7%95%D7%97_%D7%A4%D7%A0%D7%A1%D7%99%D7%95%D7%A0%D7%99",
       "raw_snippet": "זיכוי מס פנסיה לעובד 2026: 35% על הפקדות עד 679 ש\"ח/חודש (7% משכר מזכה 9,700 ש\"ח); זיכוי מקסימלי כ-2,852 ש\"ח/שנה",
       "fetched_at": "2026-05-18T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/tax-benefits.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-benefits.md"
+      ]
     },
     {
       "claim_id": "self-employed-pension-tax-2026",
@@ -81,7 +132,11 @@
       "source_url": "https://pensuni.com/?p=1447",
       "raw_snippet": "הטבות מס לפנסיית עצמאי 2026: זיכוי 35% עד 12,804 ש\"ח/שנה (5.5%); ניכוי עד 25,608 ש\"ח/שנה (11%); סה\"כ 38,412 ש\"ח/שנה על הכנסה מזכה עד 232,800 ש\"ח",
       "fetched_at": "2026-05-18T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/tax-benefits.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-benefits.md"
+      ]
     },
     {
       "claim_id": "pension-exemption-schedule-2026",
@@ -89,7 +144,11 @@
       "source_url": "https://pensuni.com/?p=1258",
       "raw_snippet": "שיעור הפטור על קצבת פנסיה: 57.5% ב-2026, 62.5% ב-2027, 67% מ-2028 לפי תיקון 190 לפקודת מס הכנסה",
       "fetched_at": "2026-05-18T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/tax-benefits.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-benefits.md"
+      ]
     },
     {
       "claim_id": "tax-free-pension-amount-2026",
@@ -97,15 +156,25 @@
       "source_url": "https://pensuni.com/?p=1258",
       "raw_snippet": "סכום קצבה פטור ב-2026: עד 5,422 ש\"ח/חודש (57.5% מתקרת קצבה מזכה 9,430)",
       "fetched_at": "2026-05-18T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/tax-benefits.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-benefits.md"
+      ]
     },
     {
       "claim_id": "kitzbah-mezakah-2026",
-      "claim": "Qualifying pension threshold (kitzbah mezakah) for 2026: 9,430 NIS/month",
+      "claim": "In 2026 the kitzbah mezakah ceiling is 9,430 NIS (9,430 ש\"ח) per month, the exemption rate is 57.5%, and the exempt amount is 5,422 NIS (5,422 ש\"ח).",
       "source_url": "https://pensuni.com/?p=827",
-      "raw_snippet": "תקרת קצבה מזכה 2026: 9,430 ש\"ח/חודש",
-      "fetched_at": "2026-05-18T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/tax-benefits.md"]
+      "raw_snippet": "תקרת הקצבה המזכה: 9,430 ש\"ח ... אחוז הפטור על קצבה מזכה: 57.5% ... הסכום הפטור: 5,422 ש\"ח",
+      "fetched_at": "2026-07-21",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-benefits.md"
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-07-21"
     },
     {
       "claim_id": "severance-exempt-ceiling-2026",
@@ -113,15 +182,26 @@
       "source_url": "https://pensuni.com/?p=827",
       "raw_snippet": "תקרת פיצויי פיטורים פטורה ממס 2026: 13,750 ש\"ח לכל שנת עבודה",
       "fetched_at": "2026-05-18T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/tax-benefits.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-benefits.md"
+      ]
     },
     {
       "claim_id": "mandatory-pension-rates",
-      "claim": "Mandatory pension contribution rates (unchanged in 2026): Employee 6%, Employer pension 6.5%, Employer severance 6% (or 8.33% under Section 14 to fully cover severance liability). Total minimum 18.5%.",
-      "source_url": "https://www.kolzchut.org.il/he/%D7%97%D7%95%D7%91%D7%AA_%D7%91%D7%99%D7%98%D7%95%D7%97_%D7%A4%D7%A0%D7%A1%D7%99%D7%95%D7%A0%D7%99_%D7%9C%D7%A2%D7%95%D7%91%D7%93%D7%99%D7%9D",
-      "raw_snippet": "שיעורי פנסיה חובה: עובד 6%, מעסיק לתגמולים 6.5%, מעסיק לפיצויים 6% (או 8.33% בסעיף 14 מלא); סה\"כ 18.5% מינימום",
-      "fetched_at": "2026-05-18T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "scripts/calculate_pension.py", "references/tax-benefits.md"]
+      "claim": "Mandatory pension contributions total 18.5% of insurable salary: 6% employee and 12.5% employer (6.5% tagmulim plus 6% pitzuyim), since January 2017.",
+      "source_url": "https://www.kolzchut.org.il/he/חובת_ביטוח_פנסיוני_לעובדים",
+      "raw_snippet": "החל ממשכורת ינואר 2017, שיעור ההפרשות הוא 18.5%, מתוכן 6% על חשבון העובד והיתר (12.5%) על חשבון המעסיק",
+      "fetched_at": "2026-07-21",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "scripts/calculate_pension.py",
+        "references/tax-benefits.md"
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-07-21"
     },
     {
       "claim_id": "section-14-mechanics",
@@ -129,7 +209,11 @@
       "source_url": "https://www.kolzchut.org.il/he/%D7%97%D7%95%D7%91%D7%AA_%D7%91%D7%99%D7%98%D7%95%D7%97_%D7%A4%D7%A0%D7%A1%D7%99%D7%95%D7%A0%D7%99_%D7%9C%D7%A2%D7%95%D7%91%D7%93%D7%99%D7%9D",
       "raw_snippet": "סעיף 14 לחוק פיצויי פיטורים תשכ\"ג-1963; אישור כללי לפי סעיף 14 (משרד העבודה, נוסח 30.6.1998)",
       "fetched_at": "2026-05-18T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/tax-benefits.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-benefits.md"
+      ]
     },
     {
       "claim_id": "retirement-age-women-2026",
@@ -137,15 +221,25 @@
       "source_url": "https://www.gov.il/he/pages/women_retirement_age_news",
       "raw_snippet": "גיל פרישה לנשים ב-2026: 63 שנים ו-3 חודשים; עליה הדרגתית של 3-4 חודשים בשנה עד גיל 65 ב-2032; חוק גיל פרישה (תיקון) התשפ\"א-2021",
       "fetched_at": "2026-05-18T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "scripts/calculate_pension.py"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "scripts/calculate_pension.py"
+      ]
     },
     {
       "claim_id": "default-fund-tender-2024",
-      "claim": "Default pension fund tender: November 2024-October 31, 2028. Four selected funds (Meitav, Altshuler Shaham, Mor, Infinity). Fees: 0.22% of balance + 1% of deposits, locked for 10 years per member from each member's join date. ID-digit auto-assignment for 50+ employee employers in effect from June 1, 2025 (0-1 Meitav, 2-3 Altshuler Shaham, 4-5-6 Mor, 7-8-9 Infinity).",
-      "source_url": "https://pensuni.com/?p=23780",
-      "raw_snippet": "מכרז קרנות ברירת מחדל נובמבר 2024 עד 31.10.2028; מיטב, אלטשולר שחם, מור, אינפיניטי; דמי ניהול 0.22% מהצבירה + 1% מההפקדות, נעולים 10 שנים לכל עמית; שיוך אוטומטי לפי ספרת ביקורת תז ממעסיקים עם 50+ עובדים מ-1.6.2025",
-      "fetched_at": "2026-05-18T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/pension-fund-types.md"]
+      "claim": "The four selected default pension funds are Altshuler Shaham, Meitav, Infinity and More, capped at 0.22% of accumulation and 1% of deposits, under a tender running to 31.10.2028.",
+      "source_url": "https://www.kolzchut.org.il/he/קרנות_פנסיה_נבחרות_(קרנות_ברירת_מחדל)",
+      "raw_snippet": "שיעור דמי הניהול המקסימליים של ארבע קרנות הפנסיה הנבחרות - 0.22% מהצבירה, 1% מההפקדות",
+      "fetched_at": "2026-07-21",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/pension-fund-types.md"
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-07-21"
     },
     {
       "claim_id": "heichum-kitzbah-1.35-32yr",
@@ -153,7 +247,10 @@
       "source_url": "https://www.kolzchut.org.il/he/%D7%A7%D7%99%D7%91%D7%95%D7%A2_%D7%96%D7%9B%D7%95%D7%99%D7%95%D7%AA",
       "raw_snippet": "כל שקל פיצויים פטור שנמשך בתוך 32 שנה מקטין את מאגר הפטור ב-1.35 ש\"ח; קיבוע זכויות: תקרת ההון הפטורה = 180 × הקצבה המזכה הפטורה החודשית = 180 × 5,422 ≈ 976,000 ש\"ח (2026); 976,000 NIS",
       "fetched_at": "2026-05-18T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "tikun-190-deposits",
@@ -161,7 +258,11 @@
       "source_url": "https://pensuni.com/?p=2795",
       "raw_snippet": "תיקון 190 כדאיות 2026: הפקדה לקופת גמל לקצבה לבני 60+; משיכה כקצבה פטורה לחלוטין ממס, משיכה הונית 15% על רווח נומינלי/ריאלי; תנאי קצבה מזכה מינימלית",
       "fetched_at": "2026-05-18T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/tax-benefits.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-benefits.md"
+      ]
     },
     {
       "claim_id": "form-161-new-2024",
@@ -169,7 +270,10 @@
       "source_url": "https://www.gov.il/he/service/notice-of-retirement",
       "raw_snippet": "טופס 161 החדש (ינואר 2024): טופס מאוחד הכולל חלק א' (הודעת מעסיק) שמחליף את 161 הישן, חלק ב' (הודעת עובד) שמחליף את 161א, וחלק ג' (חישוב המעסיק). חלון הגשה ~10 ימי עסקים. ברירת מחדל ללא חלק ב': רצף קצבה. טופס 161ג לביטול רצף פיצויים תוך שנתיים. טופס 161ד בפרישה לקיבוע זכויות.",
       "fetched_at": "2026-05-18T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "survivors-pension-takanon-achid",
@@ -177,7 +281,11 @@
       "source_url": "https://pensuni.com/?p=4825",
       "raw_snippet": "תקנון אחיד - קצבת שאירים: בן/בת זוג 60% מהשכר הקובע; יתומים 40% מהשכר הקובע (סה\"כ לכל הילדים); הורה סמוך 20%; תקרה 100%",
       "fetched_at": "2026-05-18T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/pension-fund-types.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/pension-fund-types.md"
+      ]
     },
     {
       "claim_id": "fund-management-fees",
@@ -185,7 +293,11 @@
       "source_url": "https://www.kolzchut.org.il/he/%D7%93%D7%9E%D7%99_%D7%A0%D7%99%D7%94%D7%95%D7%9C_%D7%97%D7%A9%D7%91%D7%95%D7%9F_%D7%91%D7%99%D7%98%D7%95%D7%97_%D7%A4%D7%A0%D7%A1%D7%99%D7%95%D7%A0%D7%99",
       "raw_snippet": "תקרת דמי ניהול: קרן פנסיה רגילה 0.5% צבירה + 6% הפקדות; ביטוח מנהלים 1.05% צבירה + 4% הפקדות; קרנות ברירת מחדל 0.22% + 1%",
       "fetched_at": "2026-05-18T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/pension-fund-types.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/pension-fund-types.md"
+      ]
     },
     {
       "claim_id": "pension-contribution-timing",
@@ -193,7 +305,10 @@
       "source_url": "https://www.kolzchut.org.il/he/%D7%97%D7%95%D7%91%D7%AA_%D7%91%D7%99%D7%98%D7%95%D7%97_%D7%A4%D7%A0%D7%A1%D7%99%D7%95%D7%A0%D7%99_%D7%9C%D7%A2%D7%95%D7%91%D7%93%D7%99%D7%9D",
       "raw_snippet": "צו ההרחבה לפנסיה חובה: עם ביטוח קודם - הפרשות רטרואקטיביות מיום 1 משולמות אחרי 3 חודשים; ללא ביטוח קודם - הפרשות אחרי 6 חודשים בלבד, לא רטרואקטיביות",
       "fetched_at": "2026-05-18T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "nayadut-10-day-transfer",
@@ -201,7 +316,10 @@
       "source_url": "https://www.kolzchut.org.il/he/%D7%9E%D7%A2%D7%91%D7%A8_%D7%91%D7%99%D7%9F_%D7%92%D7%95%D7%A4%D7%99%D7%9D_%D7%A4%D7%A0%D7%A1%D7%99%D7%95%D7%A0%D7%99%D7%99%D7%9D_%D7%95%D7%91%D7%99%D7%9F_%D7%9E%D7%9B%D7%A9%D7%99%D7%A8%D7%99%D7%9D_%D7%A4%D7%A0%D7%A1%D7%99%D7%95%D7%A0%D7%99%D7%99%D7%9D",
       "raw_snippet": "מעבר בין גופים פנסיוניים: הקרן המקבלת חייבת להעביר את כל היתרה תוך 10 ימי עסקים; אין דמי ניוד; שמירת ותק להשתלמות וכיסוי",
       "fetched_at": "2026-05-18T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "early-withdrawal-tax",
@@ -209,7 +327,10 @@
       "source_url": "https://www.amitim.com/faq/%D7%94%D7%90%D7%9D-%D7%90%D7%97%D7%95%D7%99%D7%91-%D7%91%D7%9E%D7%A1-%D7%91%D7%A9%D7%9C-%D7%9E%D7%A9%D7%99%D7%9B%D7%AA-%D7%94%D7%9B%D7%A1%D7%A4%D7%99%D7%9D/",
       "raw_snippet": "משיכת תגמולים מוקדמת ממוסה ב-35% או שיעור שולי, הגבוה מבניהם; פיצויים מעל תקרת פטור - שולי עד 47%",
       "fetched_at": "2026-05-18T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "divorce-pension-split-2014",
@@ -217,7 +338,10 @@
       "source_url": "https://www.nevo.co.il/law_html/law01/501_070.htm",
       "raw_snippet": "חוק לחלוקת חיסכון פנסיוני בין בני זוג שנפרדו, התשע\"ד-2014 (נבו): רישום פסק דין בקרן הפנסיה לחלוקה ישירה",
       "fetched_at": "2026-05-18T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "pension-while-abroad-9-20",
@@ -225,7 +349,10 @@
       "source_url": "https://www.bshcpa.co.il/%D7%AA%D7%95%D7%A9%D7%91-%D7%97%D7%95%D7%96%D7%A8-%D7%95%D7%AA%D7%99%D7%A7/",
       "raw_snippet": "תושב חוזר ותיק - פטור 10 שנים על הכנסות זרות, כולל פנסיה זרה, לפי סעיף 9(20); אין הסכם טוטליזציה ביטוח לאומי בין ישראל לארה\"ב",
       "fetched_at": "2026-05-18T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "section-47-spousal-attribution",
@@ -233,7 +360,10 @@
       "source_url": "https://www.kolzchut.org.il/he/%D7%96%D7%99%D7%9B%D7%95%D7%99_%D7%9E%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94_%D7%91%D7%92%D7%99%D7%9F_%D7%94%D7%A4%D7%A8%D7%A9%D7%95%D7%AA_%D7%9C%D7%91%D7%99%D7%98%D7%95%D7%97_%D7%A4%D7%A0%D7%A1%D7%99%D7%95%D7%A0%D7%99",
       "raw_snippet": "סעיף 47 לפקודת מס הכנסה: ייחוס הפקדות פנסיוניות בין בני זוג",
       "fetched_at": "2026-05-18T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "section-2-bl-average-wage",
@@ -241,7 +371,10 @@
       "source_url": "https://www.btl.gov.il/About/news/Pages/hadasaidkonkitzva2026.aspx",
       "raw_snippet": "סעיף 2 לחוק הביטוח הלאומי: השכר הממוצע במשק לעניין דמי ביטוח לאומי",
       "fetched_at": "2026-05-18T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "form-161d-retirement-settlement",
@@ -249,7 +382,10 @@
       "source_url": "https://www.kolzchut.org.il/he/%D7%9E%D7%A9%D7%99%D7%9B%D7%AA_%D7%9B%D7%A1%D7%A4%D7%99_%D7%A4%D7%99%D7%A6%D7%95%D7%99%D7%99_%D7%A4%D7%99%D7%98%D7%95%D7%A8%D7%99%D7%9D_%D7%9E%D7%A7%D7%95%D7%A4%D7%AA_%D7%92%D7%9E%D7%9C_%D7%90%D7%95_%D7%9E%D7%94%D7%91%D7%99%D7%98%D7%95%D7%97_%D7%94%D7%A4%D7%A0%D7%A1%D7%99%D7%95%D7%A0%D7%99",
       "raw_snippet": "טופס 161ד: יישוב חישוב פטור על קצבה מזכה בפרישה",
       "fetched_at": "2026-05-18T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "disability-75-percent-takanon-achid",
@@ -257,7 +393,10 @@
       "source_url": "https://www.kolzchut.org.il/he/%D7%A7%D7%A6%D7%91%D7%AA_%D7%A0%D7%9B%D7%95%D7%AA_%D7%9E%D7%A7%D7%A8%D7%9F_%D7%A4%D7%A0%D7%A1%D7%99%D7%94_(%D7%A4%D7%A0%D7%A1%D7%99%D7%99%D7%AA_%D7%A0%D7%9B%D7%95%D7%AA)",
       "raw_snippet": "קצבת נכות מקרן פנסיה (פנסיית נכות): עד 75% מהשכר המבוטח לפי התקנון האחיד",
       "fetched_at": "2026-05-18T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "kupat-gemel-hashkaa-cap-2026",
@@ -265,7 +404,9 @@
       "source_url": "https://www.kolzchut.org.il/he/%D7%A7%D7%95%D7%A4%D7%AA_%D7%92%D7%9E%D7%9C_%D7%9C%D7%94%D7%A9%D7%A7%D7%A2%D7%94",
       "raw_snippet": "תקרת הפקדה שנתית לקופת גמל להשקעה 2026: 83,641 ש\"ח לכל מוטב",
       "fetched_at": "2026-05-18T00:00:00Z",
-      "appears_in": ["references/pension-fund-types.md"]
+      "appears_in": [
+        "references/pension-fund-types.md"
+      ]
     },
     {
       "claim_id": "derived-figures",
@@ -273,7 +414,13 @@
       "source_url": "https://pensuni.com/?p=827",
       "raw_snippet": "כל הנגזרות הללו הן חישוב טריוויאלי מערכי המקור המופיעים בטבלת תקרות הפנסיה 2026 של Pensuni",
       "fetched_at": "2026-05-18T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "scripts/calculate_pension.py", "references/pension-fund-types.md", "references/tax-benefits.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "scripts/calculate_pension.py",
+        "references/pension-fund-types.md",
+        "references/tax-benefits.md"
+      ]
     },
     {
       "claim_id": "illustrative-amounts",
@@ -281,7 +428,11 @@
       "source_url": "https://pensuni.com/?p=1258",
       "raw_snippet": "סכומים אילוסטרטיביים בדוגמאות מעשיות; לא ערכי סף רגולטוריים",
       "fetched_at": "2026-05-18T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "scripts/calculate_pension.py"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "scripts/calculate_pension.py"
+      ]
     },
     {
       "claim_id": "kitzbah-mezakah-minimum-2026",
@@ -289,7 +440,11 @@
       "source_url": "https://pensuni.com/?p=1258",
       "raw_snippet": "קצבה מזכה מינימלית 2026: כ-5,306 ש\"ח/חודש (תנאי סף לתיקון 190)",
       "fetched_at": "2026-05-18T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/tax-benefits.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-benefits.md"
+      ]
     },
     {
       "claim_id": "outdated-30-percent-orphan-misquote",
@@ -297,7 +452,10 @@
       "source_url": "https://pensuni.com/?p=4825",
       "raw_snippet": "תקנון אחיד: בן/בת זוג 60%, יתומים 40% יחד, הורה סמוך 20%, תקרה 100% (לא 30% לכל יתום כפי שמופיע בחומרי שיווק ישנים)",
       "fetched_at": "2026-05-18T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "reference-link-kolzchut-avg-wage",
@@ -305,7 +463,10 @@
       "source_url": "https://www.kolzchut.org.il/he/השכר_הממוצע",
       "raw_snippet": "השכר הממוצע - דף בכל-זכות המסכם את הגדרת השכר הממוצע לעניין ביטוח לאומי",
       "fetched_at": "2026-05-18T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "reference-link-kolzchut-mandatory-pension",
@@ -313,7 +474,10 @@
       "source_url": "https://www.kolzchut.org.il/he/חובת_ביטוח_פנסיוני_לעובדים",
       "raw_snippet": "חובת ביטוח פנסיוני לעובדים - דף סיכום מקיף לחובה, שיעורים, וצו ההרחבה",
       "fetched_at": "2026-05-18T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "reference-link-kolzchut-default-funds",
@@ -321,7 +485,10 @@
       "source_url": "https://www.kolzchut.org.il/he/קרנות_פנסיה_נבחרות_(קרנות_ברירת_מחדל)",
       "raw_snippet": "קרנות פנסיה נבחרות (קרנות ברירת מחדל) - דף סיכום על המכרז וכללי השיוך. https://www.kolzchut.org.il/he/קרנות_פנסיה_נבחרות_(קרנות_ברירת_מחדל https://www.kolzchut.org.il/he/קרנות_פנסיה_נבחרות_(קרנות_ברירת_מחדל)",
       "fetched_at": "2026-05-18T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "reference-link-kolzchut-severance-petur",
@@ -329,7 +496,10 @@
       "source_url": "https://www.kolzchut.org.il/he/פטור_ממס_הכנסה_על_פיצויי_פיטורים",
       "raw_snippet": "פטור ממס הכנסה על פיצויי פיטורים - דף סיכום על תקרת הפטור והיחום קצבה",
       "fetched_at": "2026-05-18T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "reference-link-kolzchut-severance-withdrawal",
@@ -337,7 +507,10 @@
       "source_url": "https://www.kolzchut.org.il/he/משיכת_כספי_פיצויי_פיטורים_מקופת_גמל_או_מהביטוח_הפנסיוני",
       "raw_snippet": "משיכת פיצויי פיטורים - דף סיכום על תהליך טופס 161א, רצף זכויות, וביטול פיצויים",
       "fetched_at": "2026-05-18T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "reference-link-kolzchut-retirement-age",
@@ -345,7 +518,10 @@
       "source_url": "https://www.kolzchut.org.il/he/גיל_פרישה_מעבודה",
       "raw_snippet": "גיל פרישה מעבודה - דף סיכום על גילי הפרישה הנוכחיים ולוח הזמנים ל-2032",
       "fetched_at": "2026-05-18T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "reference-link-kolzchut-pension-divorce",
@@ -353,7 +529,66 @@
       "source_url": "https://www.kolzchut.org.il/he/%D7%97%D7%9C%D7%95%D7%A7%D7%AA_%D7%A4%D7%A0%D7%A1%D7%99%D7%94_%D7%91%D7%99%D7%9F_%D7%91%D7%A0%D7%99_%D7%96%D7%95%D7%92_%D7%A9%D7%A0%D7%A4%D7%A8%D7%93%D7%95",
       "raw_snippet": "חלוקת פנסיה בין בני זוג שנפרדו - דף סיכום בכל-זכות על חוק 2014. https://www.kolzchut.org.il/he/חלוקת_פנסיה_בין_בני_זוג_שנפרדו",
       "fetched_at": "2026-05-18T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "mandatory-pension-insurable-ceiling",
+      "claim": "The mandatory-pension insurable salary ceiling under the extension order is the average wage itself, 13,769 NIS (13,769 ש\"ח) per month in 2026, not twice it.",
+      "source_url": "https://www.kolzchut.org.il/he/חובת_ביטוח_פנסיוני_לעובדים",
+      "raw_snippet": "הנמוך מבין שכרו של העובד או השכר הממוצע במשק",
+      "fetched_at": "2026-07-21",
+      "verified_via": "browser",
+      "verified_at": "2026-07-21",
+      "note": "Corrects a conflation with the tax-favoured deposit ceiling (5,645/month = 20.5% of twice the average wage) and with the fund's maximum determining salary (about 41,307 = 3x average wage)."
+    },
+    {
+      "claim_id": "tikun-190-min-pension-2026",
+      "claim": "The Tikun 190 qualifying-pension threshold is a minimum pension of 5,306 NIS (5,306 ש\"ח) per month in 2026.",
+      "source_url": "https://www.analyst.co.il/articles/190_questions_and_answers/",
+      "raw_snippet": "קבלת קצבה מזערית ממוצר פנסיוני - 5,306 ₪ לחודש נכון ל2026",
+      "fetched_at": "2026-07-21",
+      "verified_via": "browser",
+      "verified_at": "2026-07-21"
+    },
+    {
+      "claim_id": "tikun-190-nominal-tax",
+      "claim": "Tikun 190 lump-sum withdrawals are taxed at 15% on the NOMINAL gain, against 25% on the real gain in comparable investment channels. The base is nominal, not real.",
+      "source_url": "https://www.analyst.co.il/articles/190_questions_and_answers/",
+      "raw_snippet": "תשלום מס רווחי הון מופחת בשיעור של 15% נומינלי (במקום 25% ריאלי הנגבה באפיקי השקעה דומים)",
+      "fetched_at": "2026-07-21",
+      "verified_via": "browser",
+      "verified_at": "2026-07-21",
+      "note": "Corrects a prior claim that the 15% applied to the REAL gain benchmarked against a 47% marginal rate."
+    },
+    {
+      "claim_id": "retirement-age-2026",
+      "claim": "Retirement age is 67 for men. For women it rises by birth cohort: 63 for 1962, 63 and 3 months for 1963, 63 and 6 months for 1964, reaching 65 from the 1970 cohort.",
+      "source_url": "https://www.btl.gov.il/benefits/old_age/Conditions_of_eligibility/gilMezake/Pages/gilPrisha.aspx",
+      "raw_snippet": "גיל הפרישה לגברים הוא 67 שנים ... 1/1963 עד 12/1963 ... 63 ו-3 חודשים",
+      "fetched_at": "2026-07-21",
+      "verified_via": "browser",
+      "verified_at": "2026-07-21"
+    },
+    {
+      "claim_id": "kitzvat-zikna-2026",
+      "claim": "From 1.1.2026 the old-age pension is 1,838 NIS (1,838 ש\"ח) for an individual and 2,762 NIS (2,762 ש\"ח) for a couple, with a seniority increment of 2% per year capped at 50%.",
+      "source_url": "https://www.btl.gov.il/benefits/old_age/Shum/Pages/Shum.aspx",
+      "raw_snippet": "יחיד/ה 1,838 ש\"ח (החל ב- 01.01.2026) ... תוספת בשיעור 2% עבור כל שנה מלאה ... 50% מהקצבה",
+      "fetched_at": "2026-07-21",
+      "verified_via": "browser",
+      "verified_at": "2026-07-21"
+    },
+    {
+      "claim_id": "comprehensive-fund-max-determining-salary",
+      "claim": "The comprehensive pension fund's maximum monthly determining salary is about 41,307 NIS (41,307 ש\"ח), three times the average wage, a distinct ceiling from both the mandatory-pension insurable ceiling and the tax-favoured deposit ceiling.",
+      "source_url": "https://media.harel-group.co.il/media/eh3fyryd/",
+      "raw_snippet": "תקרת שכר קובע חודשית בקרן המקיפה ₪ 41,307",
+      "fetched_at": "2026-07-21",
+      "verified_via": "pdf",
+      "verified_at": "2026-07-21"
     }
   ]
 }

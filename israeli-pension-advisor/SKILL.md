@@ -31,8 +31,8 @@ For unbiased advice ask specifically for a yoetz pensioni.
 | Bituach Menahalim | bituach menahalim | Retirement (insurance-based, declining for new policies since 2013) | Tax credit + deduction |
 | Keren Hishtalmut | keren hishtalmut | Medium-term savings (6 years) | Tax-free gains for employees |
 | Kupat Gemel le-Tagmulim | kupat gemel le-tagmulim | General savings (historical, mostly closed to new deposits since 2008) | Various |
-| Kupat Gemel le-Hashka'a (IRA) | kupat gemel le-hashka'a | Self-directed retirement savings (since 2016 reform) | Tax on withdrawal at marginal rate, or 15% real-gain if drawn as kitzbah at 60+ |
-| Kupat Gemel le-Kitzbah (Tikun 190 vehicle) | kupat gemel le-kitzbah | Post-60 tax-shelter (see Step 7) | Full exemption as kitzbah, 15% real-gain as lump sum |
+| Kupat Gemel le-Hashka'a (IRA) | kupat gemel le-hashka'a | Self-directed retirement savings (since 2016 reform) | Tax on withdrawal at marginal rate, or 15% on the nominal gain if drawn as kitzbah at 60+ |
+| Kupat Gemel le-Kitzbah (Tikun 190 vehicle) | kupat gemel le-kitzbah | Post-60 tax-shelter (see Step 7) | Full exemption as kitzbah, 15% on the nominal gain as lump sum |
 | Kranot Neemanot | kranot neemanot | Mutual funds (not pension) | Capital gains tax |
 
 ### Step 2: Mandatory Pension Contributions
@@ -43,7 +43,18 @@ Since 2008, all employees must have pension insurance. Average wage (BL §2 defi
 - **Employer pension (tagmulim):** 6.5% of salary (includes disability-insurance component up to 2.5%)
 - **Employer severance (pitzuim):** 6% of salary (mandatory minimum); 8.33% under full Section 14 (see Step 6)
 - **Total mandatory minimum:** 18.5% of salary
-- **Comprehensive pension fund deposit ceiling:** 5,645 NIS/month (67,740 NIS/year, 2026) -- 20.5% of 2× average wage. This corresponds to a salary ceiling of 2× avg wage = 27,538 NIS/month. Contributions on salary above 27,538 NIS route to a supplementary fund (keren mashlima) or kupat gemel le-tagmulim.
+- **Three different ceilings, do not merge them.** All three are multiples of the
+  same average wage (13,769 NIS in 2026), which is why they get confused:
+
+| Ceiling | 2026 | Limits |
+|---------|------|--------|
+| Mandatory-pension insurable salary (tzav harchava) | 13,769 (the average wage itself) | The salary the compulsory 18.5% must be paid on |
+| Comprehensive-fund tax-favoured deposit | 5,645/month, being 20.5% of twice the average wage | The favoured monthly deposit; beyond it, route to a keren mashlima or kupat gemel le-tagmulim |
+| Comprehensive-fund maximum determining salary | about 41,307 (three times the average wage) | The cap the fund applies to entitlements |
+
+  "Contributions above 2x the average wage route elsewhere" collapses the first
+  two and states the mandatory ceiling at double its real value. The mandatory
+  ceiling is the average wage, NOT twice it.
 
 **Pension contribution timing for new employees** (Mandatory Pension Expansion Order):
 - Employee with existing pension at intake: contributions begin Day 1, paid retroactively after 3 months of work or end of tax year (whichever first).
@@ -137,7 +148,7 @@ The 2.33% gap arises only in case 1 if the employer chose to contribute the mini
 ### Step 7: Tikun 190 Deposits (the post-60 tax shelter)
 Tikun 190 of the Income Tax Ordinance (2012) lets people aged 60+ who already draw a qualifying pension (kitzbah mezakah) at least the minimum threshold (approximately 5,306 NIS/month in 2026) deposit lump sums into a kupat gemel le-kitzbah with a dramatically improved tax treatment.
 
-**Why it matters:** Tikun 190 deposits are THE standard tax-shelter tool at retirement age for severance, retirement bonuses, sale of a business, inheritance, and surplus liquid savings. A retiree depositing 1M NIS of an inheritance into a kupat gemel le-kitzbah pays 15% real-gain tax on lump-sum withdrawal (vs marginal up to 47% in a regular brokerage account), and pays zero tax if the deposit is drawn down as a monthly kitzbah.
+**Why it matters:** Tikun 190 deposits are THE standard tax-shelter tool at retirement age for severance, retirement bonuses, sale of a business, inheritance, and surplus liquid savings. A retiree depositing 1M NIS of an inheritance into a kupat gemel le-kitzbah pays 15% tax on the NOMINAL gain on lump-sum withdrawal, against 25% on the REAL (CPI-adjusted) gain in a regular investment account, and pays zero tax if the deposit is drawn down as a monthly kitzbah. Get the tax base right: the 15% applies to the nominal gain, not the real one. That is usually still the better deal, but it is not free money, and in a high-inflation stretch a nominal-basis 15% can exceed a real-basis 25%. Run the comparison rather than assuming the shelter always wins.
 
 **Mechanics:**
 - Qualifying pension prerequisite: the depositor must already receive a kitzbah of at least the minimum threshold (BL old-age pension counts; private pension counts; a partial kitzbah from a former employer counts). Without it, the deposit is treated as a normal kupat gemel le-tagmulim and the Tikun 190 benefit does not apply.
@@ -194,7 +205,7 @@ Result: Walk through Form 161 (new 2024 unified form -- the employer files Part 
 
 ### Example 4: Approaching Retirement (Tikun 190)
 User says: "I'm 64, I just sold my business and have 1.5M NIS sitting in the bank. My private pension is 8,000 NIS/month. What should I do with the cash?"
-Result: Confirm 8,000 NIS pension exceeds the kitzbah-mezakah minimum (~5,306 NIS) and the user is over 60, both Tikun 190 prerequisites met. Explain deposit into a kupat gemel le-kitzbah: drawn as kitzbah, the monthly payment is fully exempt from income tax for life; drawn as lump sum, only the real gain is taxed at 15% (vs marginal up to 47% in a brokerage account). Estate-planning effect: funds pass to beneficiaries under fund rules, not probate. Strongly recommend a yoetz pensioni for a deposit at this size, especially if any beneficiary has US tax exposure.
+Result: Confirm 8,000 NIS pension exceeds the kitzbah-mezakah minimum (~5,306 NIS) and the user is over 60, both Tikun 190 prerequisites met. Explain deposit into a kupat gemel le-kitzbah: drawn as kitzbah, the monthly payment is fully exempt from income tax for life; drawn as lump sum, the NOMINAL gain is taxed at 15% (against 25% on the real, CPI-adjusted gain in a regular investment account), so check the inflation assumption before presenting it as a saving. Estate-planning effect: funds pass to beneficiaries under fund rules, not probate. Strongly recommend a yoetz pensioni for a deposit at this size, especially if any beneficiary has US tax exposure.
 
 ### Example 5: Divorce
 User says: "We're divorcing. My ex has a much bigger pension than mine. How is it split?"
@@ -221,7 +232,7 @@ No pension-specific MCP exists today. Pair with general Israeli financial MCPs (
 - Rezef zechuyot needs the new employer's severance contributions to flow into the same continuity arrangement. If the new employer is in a different scheme, or has no pension yet (e.g. the 6-month waiting period applies), rezef may not actualize and the severance sits frozen in the old kupah.
 - Survivors pension under takanon achid is 60% spouse + 40% orphans COMBINED (not per orphan) + 20% dependent parent, capped at 100%. Agents who say "30% per orphan" are quoting an outdated or vendor-specific formula.
 - Israeli pension has three distinct product types: comprehensive pension fund (keren pensia makifa), provident fund (kupat gemel), and managers' insurance (bituach menahalim). Agents may treat them as interchangeable, but they have different fee structures, insurance components, and withdrawal rules.
-- Pension fund management fees in Israel have two components: from deposits (up to 6% for non-default funds) and from accumulated savings (up to 0.5% annually). Agents may quote only one component. Default selected funds cap at 0.22% balance + 1% deposits.
+- Pension fund management fees in Israel have two components: from deposits (up to 6% for non-default funds) and from accumulated savings (up to 0.5% annually). Agents may quote only one component. Default selected funds cap at 0.22% balance + 1% deposits. The four are Altshuler Shaham, Meitav, Infinity and More, under a tender running to 31.10.2028; re-check the winners after that date. Anyone can join one regardless of employer, often the cheapest available fix for a saver paying full fees.
 - Israeli pension funds invest significantly in local government bonds (igrot chov mimshaltiiot), which means returns are partially linked to Israeli economic performance. Agents should not compare Israeli pension returns directly to US 401(k) S&P 500 benchmarks.
 - Self-employed keren hishtalmut has TWO separate ceilings: the tax deduction ceiling (13,203 NIS/year) and the profit-exempt ceiling (20,566 NIS/year). Agents often conflate these into a single figure.
 - Bituach Leumi old-age pension (kitzvat zikna) STACKS on top of private pension fund payouts; it is not an offset. Self-employed users sometimes assume one replaces the other and underestimate retirement income, or skip private pension thinking BL is enough.

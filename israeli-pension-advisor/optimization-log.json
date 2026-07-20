@@ -1,6 +1,20 @@
 {
   "cycles": [
     {
+      "version": "2.3.0",
+      "date": "2026-07-21",
+      "trigger": "Carried the payroll-skill wage/figure audit across; the new --check-sources gate flagged 39 of 44 evidence snippets as absent from their cited URLs.",
+      "lessons": [
+        "KEY FINDING: the 2026 figures were all CORRECT. Every January-indexed ceiling (13,769 average wage, 15,712 / 18,854 hishtalmut, 13,203 / 20,566 / 293,397 self-employed, 9,430 kitzbah mezakah, 57.5% exemption, 5,422 exempt, 5,306 Tikun 190 threshold, 0.22%/1% default fees) verified against source. The unanchored evidence was NOT hiding wrong numbers here.",
+        "CORRECTNESS BUG FIXED: Tikun 190 was described as 15% on the REAL (CPI-adjusted) gain benchmarked against a 47% marginal rate. It is 15% on the NOMINAL gain, benchmarked against 25% real. This both misstated the rule and oversold the benefit; in a high-inflation stretch nominal-basis 15% can exceed real-basis 25%. It had propagated to 7 places across 4 files.",
+        "CORRECTNESS BUG FIXED: three distinct ceilings were merged into one. The mandatory-pension insurable ceiling is the average wage (13,769), NOT twice it (27,538). 27,538 is the salary implied by the tax-favoured deposit ceiling; 41,307 (3x average wage) is the fund's maximum determining salary.",
+        "DEBT (33 entries): the remaining pre-existing snippets are self-authored Hebrew SUMMARIES in a 'label: value' style rather than quotations, e.g. 'תקרת קצבה מזכה 2026: 9,430 ש\"ח/חודש'. Structurally indistinguishable from fabrication. 13 were re-anchored to real verbatim quotes this cycle; the rest remain.",
+        "SOURCE NOTE: btl.gov.il/About/news/…hadasaidkonkitzva2026.aspx now 404s despite still ranking in search. Live amounts are at /benefits/old_age/Shum/Pages/Shum.aspx and /Tosafot.aspx. malam-payroll's 2026 update page carries the ceilings in IMAGES only. The Harel 2026 ceilings PDF is the richest text-layer source, but percent signs extract as the letter B via pdftotext.",
+        "DEFERRED: the investment-track reform (target-date tracks 'יעד לפרישה 2030' through '2070') is not mentioned anywhere in the skill and was not verified to a primary CMA circular. Verify and add next cycle.",
+        "WATCH: exemption rate steps to 62.5% in 2027 and 67% in 2028 (skill states these correctly); women's retirement age advances to 63 and 6 months for the 1964 cohort."
+      ]
+    },
+    {
       "version": "2.2.1",
       "date": "2026-06-29",
       "lessons": [

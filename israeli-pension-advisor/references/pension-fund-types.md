@@ -4,7 +4,7 @@
 - **Type:** Defined contribution (since 1995 reform)
 - **Components:** Retirement savings + disability insurance + survivors insurance
 - **Management fees:** Non-default funds: max 0.5% of balance + up to 6% of deposits. Selected default funds: 0.22% of balance + 1% of deposits, locked for 10 years from each member's join date.
-- **Deposit ceiling:** 5,645 NIS/month (67,740 NIS/year, 2026); 20.5% of 2× average wage. Corresponds to insurable salary cap of 27,538 NIS/month.
+- **Deposit ceiling:** 5,645 NIS/month (67,740 NIS/year, 2026); 20.5% of twice the average wage. This is a DEPOSIT ceiling, not the mandatory-pension insurable-salary ceiling, which is the average wage itself (13,769 NIS/month in 2026). The fund's own maximum determining salary is a third figure, about 41,307 NIS/month. Keep the three apart.
 - **Investment:** Balanced portfolio managed by fund (multiple tracks)
 - **Payout:** Monthly pension at retirement (annuity)
 - **Major fund operators include** Menora Mivtachim, Migdal Makefet, Harel, Clal, Phoenix, Yelin Lapidot, Altshuler Shaham, Meitav, Mor, Infinity; the 4 default funds since Nov 2024 are Meitav, Altshuler Shaham, Mor, Infinity. (List is not exhaustive; check current Capital Markets Authority directory before recommending a specific operator.)
@@ -66,7 +66,7 @@
 - Self-directed retirement savings
 - Annual deposit ceiling: 83,641 NIS per beneficiary for 2026 (updated annually by the Capital Markets Authority)
 - Self-directed investment choice (within the fund's universe)
-- Withdrawal: at marginal rate if drawn before age 60; if drawn as kitzbah at 60+ with qualifying pension prerequisite, eligible for the 15% real-gain treatment
+- Withdrawal: at marginal rate if drawn before age 60; if drawn as kitzbah at 60+ with qualifying pension prerequisite, eligible for the 15% nominal-gain treatment
 
 ## Kupat Gemel le-Kitzbah (Tikun 190 vehicle)
 - **Eligibility:** Age 60+ and already drawing a kitzbah of at least the minimum threshold (approximately 5,306 NIS/month in 2026)
