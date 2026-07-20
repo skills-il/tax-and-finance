@@ -1,6 +1,16 @@
 {
   "cycles": [
     {
+      "version": "1.0.3",
+      "date": "2026-07-20",
+      "lessons": [
+        "All hard facts re-verified current 2026-07-20: gateway21 production host; PaymentGW/init + GetTransaction + ValidateByUniqueKey; ActionType J2/J4/J5/J5h; agorot + Currency 1=ILS; no-HMAC re-verify model; Bit caps 5,000/20,000; consumer-law 14-day / 5%-or-100-NIS. No changes since last update; match-api.pelecard.biz still renders an empty JS shell.",
+        "CORRECTNESS (nuance): softened the 'gateway20 = sandbox, gateway21 = production' split. Gateway21 also exposes its own sandbox environments, so a dev whose test terminal was issued on the Gateway21 stack was mis-steered to gateway20. Kept the description generic (no specific /SandboxServices, /ManualIframe paths) to avoid asserting endpoint paths not verifiable outside a browser session.",
+        "Research-flagged 'missing J5 capture / refund endpoint' gaps were found already covered (Step 6 refund via Gateway21 DebitRegular-cancel + Example 5 J5 capture), correctly hedged to the Postman Gateway21 collection.",
+        "Deferred (MINOR): ClientSecure.js framed Apple-Pay-only but is a broader client-side tokenization lib; Google Pay in payment-parameters.md not in the SKILL method table; WooCommerce plugin now v1.5.3.1 (no cited changelog fact invalidated). Revisit on a capability-refresh cycle."
+      ]
+    },
+    {
       "version": "1.0.1",
       "date": "2026-06-07",
       "lessons": [

@@ -38,7 +38,7 @@
 
 שלושת הערכים האלה פותחים את המסוף שלך לחיובים. הם חייבים לחיות במשתני סביבה בצד השרת. אף פעם לא ב-JavaScript של הדפדפן, לא בחבילה של אפליקציה ניידת ולא בהיסטוריית git. הספרייה dofinity/pelecard מצהירה עליהם כ-`protected $terminal; protected $user; protected $password;` -- הקונבנציה היא "פרטי גישה לא יוצאים מהשרת".
 
-**Sandbox:** `gateway20.pelecard.biz/sandbox` לפיתוח.
+**Sandbox:** `gateway20.pelecard.biz/sandbox` הוא ה-sandbox הישן (iframe-v2, ה-host שאליו ה-wrapper של dofinity מקובע). גם Gateway21 חושף סביבות sandbox משלו (משטח sandbox מסוג iframe וכן שירותי sandbox של Gateway 2.0), ולכן "gateway20 = sandbox" אינו כלל נוקשה: השתמשו ב-host ה-sandbox שתואם לסטאק שבו הונפק מסוף הבדיקה שלכם. בספק, בררו מול Pelecard לאיזה host שייך מסוף ה-sandbox שלכם.
 **פרודקשן:** `gateway21.pelecard.biz` לעסקאות אמיתיות.
 
 לכל סביבה יש פרטי גישה משלה. החלפת host נעשית במשתנה סביבה בזמן deploy, לא ברמת קוד.
