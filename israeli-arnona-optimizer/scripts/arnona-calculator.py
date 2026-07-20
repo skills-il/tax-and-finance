@@ -465,6 +465,22 @@ DISCOUNTS = {
         "duration_months": None,
         "description": "66% discount for recognized Holocaust survivors",
     },
+    "income-support": {
+        "name": "Income Support (havtachat hachnasa) recipient",
+        "name_he": "מקבל הבטחת הכנסה",
+        "percentage": 70,
+        "max_sqm": 100,
+        "duration_months": None,
+        "description": "Up to 70% for a recipient of an income-support benefit from Bituach Leumi (distinct from the senior income-supplement band)",
+    },
+    "nazak": {
+        "name": "Hardship (nazak) committee grant",
+        "name_he": "נזקק (ועדת הנחות)",
+        "percentage": 70,
+        "max_sqm": 100,
+        "duration_months": None,
+        "description": "Up to 70% granted at the local nazak committee's discretion after an unexpected event causing serious income loss (illness, death in family, sudden unemployment); Regulation 7 of the discount regs",
+    },
 }
 
 

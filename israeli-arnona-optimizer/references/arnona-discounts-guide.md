@@ -60,7 +60,7 @@ The senior discount is structured by pension/income status, NOT by age band (65-
 - Receives an old-age, survivors, or work-injury pension from Bituach Leumi. No income test.
 
 **30% (mandatory)**:
-- Income-tested: household income up to the national average wage (about 13,623 NIS/month as of Jan 2026, updated annually).
+- Income-tested: household income up to the national average wage (about 13,566 NIS/month as of Jan 2026, updated annually).
 
 **Up to 100%**:
 - Senior who also receives an income supplement (hashlamat hachnasa) within the income limit.
@@ -110,7 +110,9 @@ Note: there is no 50-74% disability band in the national regulation; the bands a
 
 **Discount**: 20% to 80% depending on income level relative to thresholds
 
-**Income thresholds (approximate, updated annually)**:
+**Reform note for 2026**: effective 1 January 2026 the income test uses the 12-month average income only (the 3-month option was removed) against a per-capita threshold table indexed to the minimum wage and household size, and eligibility widened (roughly 740,000 to 840,000 households). The figures below are indicative pre-reform values; always verify the current-year per-capita table published by the Ministry of Interior and the specific municipality before quoting a cutoff.
+
+**Income thresholds (indicative, verify the current 2026 per-capita table)**:
 
 | Family Size | Maximum Monthly Income for 80% Discount | Maximum for 40% Discount |
 |-------------|----------------------------------------|--------------------------|
@@ -219,10 +221,15 @@ Note: there is no 50-74% disability band in the national regulation; the bands a
 
 ### 11. Additional Municipal Categories
 
-Some municipalities offer additional discounts for:
-- **Reservist soldiers (miluimnikim)**: Particularly after extended reserve duty
+National named categories (in addition to the ones above):
+- **Income support (havtachat hachnasa) recipient**: up to 70% for a recipient of a Bituach Leumi income-support benefit. This is a distinct category from the senior income-supplement band.
+- **Hardship (nazak)**: up to 70% granted at the discretion of the local discounts (nazak) committee under Regulation 7 of the discount regulations, after an unexpected event causing serious income loss (illness, death in the family, sudden unemployment). Apply with documentation of the event and the income drop.
+
+Municipality-administered discounts (amount set per municipal bylaw):
+- **Reservist soldiers (miluimnikim)**: set per municipal bylaw, particularly after extended reserve duty; reservist relief was expanded via national measures since October 2023. Check the specific municipality's current bylaw.
 - **Volunteer organizations**: Recognized non-profits operating in the municipality
-- **Empty properties**: Partial exemption for properties vacant 6+ months (typically 30-50%)
+- **Empty properties**: Partial exemption for a vacant property, usually granted once per ownership period with a capped window; the exact rate and duration are set per municipal ordinance.
+- **Uninhabitable building (mivneh she-eino ra'uy le-shimush)**: a building unfit for use may be exempt under Section 330 of the Municipalities Ordinance, on application and inspection.
 - **New residents**: Some development towns offer introductory discounts
 - **Multi-property discount**: NOT available. Each property is assessed independently.
 

@@ -1,6 +1,18 @@
 {
   "cycles": [
     {
+      "version": "1.3.0",
+      "date": "2026-07-20",
+      "lessons": [
+        "FACT FIX: national average wage used for the senior 30% income-tested band was 13,623; the Jan-2026 BTL basic average wage is 13,566 (13,769 for section 2). Corrected in the discounts guide + evidence.",
+        "COVERAGE (MAJOR): the 2026 income-test reform (effective 1 Jan 2026) was missing. Income-tested discounts now use the 12-month average income only (3-month option removed), a per-capita threshold table indexed to the minimum wage + household size, exclude some BTL benefits, and widened eligibility ~740k->840k households (top band still 90%). Added the reform note to SKILL.md + SKILL_HE.md and flagged the guide's low-income table as indicative pre-reform; deliberately did NOT assert specific 2026 per-capita NIS thresholds (route to the annual Ministry-of-Interior table) to avoid fabrication.",
+        "COVERAGE (MAJOR): added three missing named categories: income-support (havtachat hachnasa) recipient up to 70%, hardship (nazak) committee up to 70% under Regulation 7, and reserve-duty (miluim) municipality-administered relief. income-support + nazak added to the calculator; miluim kept documentation-only (no citable national rate, so no fabricated calculator percentage).",
+        "COVERAGE (MINOR): documented the empty-property once-per-ownership limit and the Section 330 uninhabitable-building exemption in the guide.",
+        "Confirmed current for 2026: arnona update coefficient 1.626%; oleh 90%/100sqm/12-of-24-months; disabled 40%/80% bands; hasaga 90/60/30-day deadlines. All Reference Links resolve (gov.il + jerusalem.muni 403 to curl but live in browser).",
+        "Deferred (MINOR): evacuee/war-affected (mefunim) transient relief not added (time-bound, lowest priority); a per-municipality current per-capita table would need a live scrape each cycle."
+      ]
+    },
+    {
       "version": "1.2.1",
       "date": "2026-06-07",
       "lessons": [

@@ -4,7 +4,7 @@ description: Calculate municipal property tax (arnona) for Israeli properties, c
 license: MIT
 allowed-tools: Bash(python:*) Read Edit Write WebFetch
 compatibility: Requires Python 3.10+ for calculator script
-version: 1.2.1
+version: 1.3.0
 ---
 
 # Israeli Arnona Optimizer
@@ -51,7 +51,10 @@ After calculating the base arnona, check if the user qualifies for any discounts
 | Senior (vatik) with income supplement | Up to 100% | Also receives hashlamat hachnasa within the income limit |
 | Disabled, medical disability 90%+ | Up to 40% | Bituach Leumi medical-disability certificate (90%+) |
 | Disabled, earning incapacity 75%+ | Up to 80% | 75%+ loss of earning capacity (ai-kosher) with a full monthly benefit |
-| Low income (individual) | 20-80% | Income below municipality threshold (varies by city) |
+| Low income (individual) | 20-80% | Income below the per-capita threshold table (see 2026 note below) |
+| Income support (havtachat hachnasa) recipient | Up to 70% | Receives a Bituach Leumi income-support benefit; distinct from the senior income-supplement band |
+| Hardship (nazak) | Up to 70% | Granted by the local discounts (nazak) committee after an unexpected event causing serious income loss (illness, death in family, sudden unemployment); Regulation 7 |
+| Reserve duty (miluim) | Municipality-dependent | Reservists; amount and eligibility set per municipal bylaw, expanded via national measures since Oct 2023 |
 | Student | Up to ~50% (municipality-dependent) | Discretionary per municipal bylaw; no uniform national rate |
 | Single parent | Up to 20% | Recognized single parent status |
 | Large family (4+ children) | Income-tested, up to ~30% | Four or more dependent children; income bands |
@@ -72,6 +75,8 @@ Consult `references/arnona-discounts-guide.md` for the full list of discount cat
 - Only one discount can be applied at a time (the highest applicable discount).
 - Discounts must be renewed annually in most municipalities.
 - The application deadline varies by municipality (typically January-March).
+
+**Income-test reform for 2026 (effective 1 January 2026):** the income-tested discounts (the low-income table, and the income tests behind other bands) were reformed. Eligibility is now computed on the applicant's **12-month average income only** (the earlier 3-month option was removed), against a **per-capita threshold table indexed to the minimum wage and household size**, and certain Bituach Leumi benefits (child allowances, old-age/survivors pensions) are excluded from the counted income. The reform widened eligibility (roughly 740,000 to 840,000 households) while keeping the top band at 90%. Because the exact per-capita thresholds are published annually by the Ministry of Interior and each municipality, always verify the current-year table before quoting a specific income cutoff. The figures in `references/arnona-discounts-guide.md` are indicative and must be checked against the 2026 table.
 
 ### Step 4: Draft Appeal Letters
 
@@ -188,7 +193,7 @@ Solution: Check the municipality name spelling. Use the `--list-municipalities` 
 
 ### Error: "Discount category not recognized"
 Cause: The discount type specified does not match one of the supported discount categories in the calculator.
-Solution: Run `python scripts/arnona-calculator.py --list-discounts` to see all supported discount categories. Common mistakes include using "immigrant" instead of "oleh". The supported categories are: oleh, soldier, senior-pension, senior-income, senior-supplement, disabled-medical, disabled-incapacity, low-income, student, single-parent, large-family, bereaved, holocaust-survivor.
+Solution: Run `python scripts/arnona-calculator.py --list-discounts` to see all supported discount categories. Common mistakes include using "immigrant" instead of "oleh". The supported categories are: oleh, soldier, senior-pension, senior-income, senior-supplement, disabled-medical, disabled-incapacity, low-income, income-support, nazak, student, single-parent, large-family, bereaved, holocaust-survivor. Reserve-duty (miluim) relief is municipality-administered and not a calculator key, check your municipal bylaw.
 
 ### Error: "Zone not valid for this municipality"
 Cause: Each municipality uses its own zone classification system. Tel Aviv uses numbered zones (1-4), Jerusalem uses Hebrew-letter zones alef through heh (א-ה), and other cities have their own systems.
