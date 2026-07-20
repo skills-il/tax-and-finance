@@ -254,7 +254,7 @@ If the situation were reversed (net crypto loss after offsetting crypto gains), 
 ```
 Example: 30,000 loss - 15,000 gain = 15,000 net crypto loss
 This 15,000 loss can offset the 10,000 stock gain
-Remaining loss: 5,000 NIS (cannot be carried forward for individuals)
+Remaining loss: 5,000 NIS (carried forward indefinitely to offset future capital gains under Section 92)
 ```
 
 ## Scenario 11: USD-Denominated Trades Converted to NIS

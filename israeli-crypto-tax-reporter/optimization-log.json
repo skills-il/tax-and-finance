@@ -1,6 +1,16 @@
 {
   "cycles": [
     {
+      "version": "1.4.1",
+      "date": "2026-07-20",
+      "lessons": [
+        "CORRECTNESS: Scenario 10 in crypto-tax-scenarios.md said a residual individual capital loss 'cannot be carried forward' — wrong and self-contradictory (Step 5 + evidence loss-carryforward-92 correctly state Section 92 allows indefinite carry-forward against future capital gains for individuals). Fixed the parenthetical.",
+        "COVERAGE (MAJOR): added an oleh/toshav-chozer-vatik Section 14(a) 10-year foreign-source exemption pointer as a Gotcha (mirrors the existing Section 100A exit-tax pointer). Given the aliyah-heavy audience, foreign-acquired crypto pre-aliyah can be exempt; calculator does not model it.",
+        "2026 figures re-verified current by CPA research: mas yesafim threshold 721,560 (frozen through 2027), 3%+2%=5% capital surtax, 25%/30% CGT, 47% top marginal, FIFO, crypto-to-crypto taxable, VAT 18%. Checker (capital-gains-tax) confirmed accurate — no regeneration needed.",
+        "Carried from prior cycle (still open): CARF first-exchange year 2027-2028 (re-pin when OECD stabilizes); salaried-filing-exemption still DRAFT; swap CSV-leg reconciliation helper; FTC worked example; FIFO-exhausted zero-basis reconciliation."
+      ]
+    },
+    {
       "version": "1.4.0",
       "date": "2026-06-07",
       "lessons": [

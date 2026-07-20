@@ -132,6 +132,14 @@
       "appears_in": ["SKILL.md", "SKILL_HE.md", "scripts/crypto-gains-calculator.py"]
     },
     {
+      "claim_id": "oleh-section-14-exemption",
+      "claim": "A new immigrant (oleh chadash) or veteran returning resident (toshav chozer vatik) is entitled under Section 14(a) of the Income Tax Ordinance to a 10-year exemption, from the date of becoming an Israeli resident, on income and capital gains sourced from assets held abroad; this can reach crypto acquired abroad before aliyah.",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%A4%D7%98%D7%95%D7%A8_%D7%9E%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94_%D7%9C%D7%A2%D7%95%D7%9C%D7%99%D7%9D_%D7%97%D7%93%D7%A9%D7%99%D7%9D_%D7%95%D7%9C%D7%AA%D7%95%D7%A9%D7%91%D7%99%D7%9D_%D7%97%D7%95%D7%96%D7%A8%D7%99%D7%9D_%D7%95%D7%AA%D7%99%D7%A7%D7%99%D7%9D",
+      "raw_snippet": "לפי סעיף 14(א) לפקודת מס הכנסה, עולה חדש ותושב חוזר ותיק זכאים לפטור ממס למשך 10 שנים על הכנסות שהופקו מחוץ לישראל, כולל רווחי הון ממכירת נכסים בחו\"ל.",
+      "fetched_at": "2026-07-20T00:00:00Z",
+      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+    },
+    {
       "claim_id": "circular-05-2018",
       "claim": "ITA Circular 05/2018 (chozar 05/2018), published 17 January 2018 (updated 14 November 2018), is the primary crypto-tax guidance: classifies virtual currency as an asset, mandates FIFO cost basis, requires NIS conversion. Circular 07/2018 addresses token issuance. Section 2(1) business income, Section 2(4) passive income.",
       "source_url": "https://www.gov.il/BlobFolder/policy/income-tax-professional-inst-5-2018/he/Policy_ProfessionalInstIncomeTax_hor_acc%2015.2.18.pdf",
