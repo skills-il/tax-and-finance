@@ -49,7 +49,7 @@ GATEWAYS = {
         apple_pay=False,
         fee_range_pct=(0.6, 0.8),
         settlement_days=2,
-        api_docs_url="https://kb.cardcom.co.il/",
+        api_docs_url="https://secure.cardcom.solutions/Api/v11/Docs",
         notes="Full installment support including club. Good documentation.",
     ),
     "tranzila": GatewayInfo(
@@ -91,7 +91,7 @@ GATEWAYS = {
         apple_pay=False,
         fee_range_pct=(0.6, 0.9),
         settlement_days=3,
-        api_docs_url="https://grow-il.readme.io/reference/overview",
+        api_docs_url="https://developers.grow.business/reference/overview",
         notes="Popular with SMBs. Bit support. Limited installment types.",
     ),
     "icredit": GatewayInfo(
@@ -119,7 +119,7 @@ GATEWAYS = {
         apple_pay=False,
         fee_range_pct=(0.5, 0.7),
         settlement_days=2,
-        api_docs_url="https://www.pelecard.com/support/",
+        api_docs_url="https://pelecard.com/support/",
         notes="Full installment support. Competitive pricing for high volume.",
     ),
 }

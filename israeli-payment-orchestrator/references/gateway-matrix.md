@@ -10,7 +10,7 @@
 - **3D Secure:** Supported (3DS2)
 - **Webhook:** POST callback on transaction completion
 - **Sandbox:** Available with test credentials
-- **Documentation:** https://kb.cardcom.co.il/
+- **Documentation:** https://secure.cardcom.solutions/Api/v11/Docs
 
 ### Tranzila
 - **Base URL:** `https://secure5.tranzila.com/`
@@ -40,7 +40,7 @@
 - **3D Secure:** Supported
 - **Webhook:** POST callback
 - **Sandbox:** Available
-- **Documentation:** https://grow-il.readme.io/reference/overview
+- **Documentation:** https://developers.grow.business/reference/overview
 
 ### iCredit
 - **Base URL:** `https://icredit.rivhit.co.il/api/`
@@ -60,14 +60,14 @@
 - **3D Secure:** Supported (3DS2)
 - **Webhook:** POST callback
 - **Sandbox:** Available
-- **Documentation:** https://www.pelecard.com/support/
+- **Documentation:** https://pelecard.com/support/
 
 ## Installment (Tashlumim) Support
 
 | Gateway | Regular | Credit | Club | Max Installments | Min Amount |
 |---------|---------|--------|------|-----------------|------------|
 | Cardcom | Yes | Yes | Yes | 36 | Per issuer |
-| Tranzila | Yes | Yes | No | 24 | Per issuer |
+| Tranzila | Yes | Yes | Yes | 24 | Per issuer |
 | PayMe | Yes | Yes | No | 36 | Per issuer |
 | Meshulam | Yes | No | No | 12 | Per issuer |
 | iCredit | Yes | Yes | No | 24 | Per issuer |

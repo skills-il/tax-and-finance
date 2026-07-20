@@ -2,7 +2,7 @@
 name: israeli-payment-orchestrator
 description: Orchestrate Israeli payment gateways (Cardcom, Tranzila, PayMe, Meshulam, iCredit, Pelecard) with unified routing, fallback, and installments (tashlumim). Use when user asks about multi-gateway payment integration, "slikat kartisim", "tashlumim", payment routing, Shva network, BOI payment-services regulation, gateway comparison, or building a payment abstraction layer for Israeli merchants. Provides unified API patterns, installment handling, Shva clearing rules, and regulatory compliance. Do NOT use for single gateway setup (use cardcom-payment-gateway or tranzila-payment-gateway instead).
 license: MIT
-version: 1.1.1
+version: 1.2.0
 compatibility: Works with Claude Code, Cursor, GitHub Copilot, Windsurf, OpenCode, Codex. Python 3.8+ for helper scripts.
 ---
 
@@ -28,7 +28,7 @@ Use `scripts/compare_gateways.py` to generate a comparison matrix, or reference 
 | Gateway | API Style | Installments | Recurring | Hosted Page | Bit Support | Typical Fee |
 |---------|-----------|-------------|-----------|-------------|-------------|-------------|
 | Cardcom | REST JSON | Full (regular, credit, club) | Yes | Yes (iframe) | No | 0.6-0.8% |
-| Tranzila | REST/Form POST | Regular, credit | Yes | Yes (redirect) | No | 0.5-0.7% |
+| Tranzila | REST/Form POST | Regular, credit, club | Yes | Yes (redirect) | No | 0.5-0.7% |
 | PayMe | REST JSON | Regular, credit | Yes | Yes (iframe) | Yes | 0.7-1.0% |
 | Meshulam | multipart/form-data | Regular | Yes | Yes (iframe + redirect) | Yes | 0.6-0.9% |
 | iCredit | REST JSON | Regular, credit | Yes | Yes (redirect) | No | 0.5-0.8% |
@@ -66,7 +66,7 @@ Define routing rules for selecting the optimal gateway:
 | Rule | Priority | Logic | Example |
 |------|----------|-------|---------|
 | Cost optimization | Medium | Route to cheapest gateway for transaction type | Small payments to lowest-fee gateway |
-| Feature match | High | Route based on required features | Club installments only to Cardcom/Pelecard |
+| Feature match | High | Route based on required features | Club installments (cred_type 9) to Cardcom, Pelecard, or Tranzila |
 | Availability | Critical | Route away from failed/degraded gateways | If Tranzila is down, failover to Cardcom |
 | Volume balancing | Low | Distribute load across gateways | 60/40 split between primary and secondary |
 | Card type | High | Some gateways handle specific cards better | Diners Club routing |
@@ -196,7 +196,7 @@ Result: Installment payment configured with cost breakdown for merchant
 | Cardcom | https://www.cardcom.co.il/ | Current API surface, pricing, supported card types |
 | Tranzila Documentation | https://docs.tranzila.com/ | Form-encoded API parameters, supplier code (terminalname) flows |
 | PayMe Developer Docs | https://www.payme.io/developers | Bearer-token REST JSON API, Bit/Apple Pay support |
-| Meshulam (Grow) Reference | https://grow-il.readme.io/reference/overview | Production base = secure.meshulam.co.il (do NOT use sandbox.meshulam.co.il in prod) |
+| Meshulam (Grow) Reference | https://developers.grow.business/reference/overview | Production base = secure.meshulam.co.il (do NOT use sandbox.meshulam.co.il in prod) |
 | iCredit | https://icredit.rivhit.co.il/ | Group private token + credentials auth scheme |
 | Bank of Israel: Payment Systems Oversight | https://www.boi.org.il/en/economic-roles/supervision-and-regulation/payment-systems-oversight/ | BOI oversight of Shva and controlled payment systems (banks + credit-card companies). Non-bank payment-service providers are regulated by the ISA under the Regulation of Payment Services and Payment Initiation Law 5783-2023 |
 
@@ -205,12 +205,15 @@ Result: Installment payment configured with cost breakdown for merchant
 - Israeli payment processing requires Israeli business registration (osek murshe/patur). Agents may suggest setting up payment processing before verifying the business has proper registration with the Tax Authority.
 - PCI DSS compliance requirements in Israel follow the same international standard, but Israeli acquirers (Isracard, Visa CAL) may have additional local requirements. Agents may generate PCI-compliant code that misses Israeli acquirer-specific fields.
 - Bit (Israel's dominant mobile payment) refunds use a different API endpoint than credit card refunds on most gateways. Agents may use the credit card refund endpoint for Bit transactions.
+- **Saved-card tokens are NOT portable across gateways.** A Cardcom token, a Tranzila `TranzilaTK`, and a PayMe `buyer_key` are proprietary and mutually incompatible, each usable only on the gateway that issued it. This means the fallback/failover pattern in this skill applies to first-charge and one-time transactions only. A tokenized or recurring charge cannot fail over to a second gateway, recurring billing is pinned to its originating gateway. True cross-gateway resilience for saved cards requires network tokenization or a multi-vault strategy, not this token field. Agents may wrongly assume a stored token works on any gateway in the priority list.
+- **A gateway's client-side "success" is spoofable, always re-verify server-side.** Do not trust the browser redirect or a client-posted status as proof of payment. Confirm every transaction with a server-to-server query to the issuing gateway (for Meshulam/Grow, `getPaymentProcessInfo`/approve; for others, the gateway's transaction-lookup or webhook-signature/notify verification) before fulfilling the order. Webhook/IPN payloads must be authenticated per each gateway's scheme, they are not interchangeable.
+- **3DS2 is an asynchronous challenge flow, not a single call.** A card-not-present charge may return "frictionless" (approved inline) or trigger a challenge that redirects the customer to the issuer and returns via a callback URL. The orchestrator must persist the transaction, resume on the callback, and keep the challenge return on the SAME gateway that started it (the 3DS session is gateway-scoped). Agents may model 3DS as a synchronous boolean and lose challenged transactions.
 
 ## Troubleshooting
 
 ### Error: "Installment type not supported"
 Cause: Requested installment type (credit/club) not available on selected gateway
-Solution: Check gateway capabilities in Step 2 table. Club installments only available on Cardcom and Pelecard. Route to appropriate gateway.
+Solution: Check gateway capabilities in Step 2 table. Club installments (Shva CreditType 9) are supported on Cardcom, Pelecard, and Tranzila (the Visa/Diners card-network restriction on cred_type 9 applies identically across gateways, so it is not a gateway limitation). Route to a gateway whose terminal is configured for the club program.
 
 ### Error: "Shva clearing rejected"
 Cause: Transaction violates Shva network rules (invalid installment count, amount below minimum)
