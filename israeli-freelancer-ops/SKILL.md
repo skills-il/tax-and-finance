@@ -12,8 +12,8 @@ license: MIT
 Determine the user's business type and tax obligations:
 
 - **Osek Murshe (עוסק מורשה):** Authorized dealer, registered for VAT. Must file VAT returns, issue tax invoices (hashbonit mas), and can deduct input VAT (mas tsumos).
-- **Osek Patur (עוסק פטור):** Exempt dealer, under revenue threshold (122,833 NIS for 2026, CPI-indexed; was 120,000 NIS in both 2024 and 2025). Issues receipts (kabala) only, does not charge or report VAT.
-- **Esek Za'ir (עסק זעיר):** Micro business track introduced in 2024 (Income Tax Ordinance Section 87ב, added by Amendment 277). Freelancers under the osek patur threshold can register as esek za'ir to receive a 30% normative expense deduction (no receipts needed) and simplified reporting (exempt from the annual income-tax report in most cases). Eligibility caveats to verify with the user: cannot be a former employee of the client receiving the invoice, and no more than 25% of annual revenue may come from a single related party or former employer. The threshold is shared with osek patur and is CPI-indexed from 2026 (122,833 NIS).
+- **Osek Patur (עוסק פטור):** Exempt dealer, under revenue threshold (122,833 NIS for 2026, updated periodically; was 120,000 NIS in both 2024 and 2025). Issues receipts (kabala) only, does not charge or report VAT.
+- **Esek Za'ir (עסק זעיר):** Micro business track introduced in 2024 (Income Tax Ordinance sections 87ב to 87ז, added by Amendment 277). Freelancers under the osek patur threshold can register as esek za'ir to receive a 30% normative expense deduction (no receipts needed) and simplified reporting (exempt from the annual income-tax report in most cases). Eligibility caveats to verify with the user: cannot be a former employee of the client receiving the invoice, and no more than 25% of annual revenue may come from a single related party or former employer. The threshold is shared with osek patur (122,833 NIS for 2026). The statute sets a base figure and empowers the Finance Minister to raise it, so treat the ceiling as periodically updated rather than automatically CPI-linked, and re-check it each year.
 
 Key profile details to collect:
 - Business type (osek murshe / osek patur / esek za'ir)
@@ -39,7 +39,7 @@ Configure graduated reminder schedule:
 - **Day 60:** Formal email follow-up with invoice copy attached, payment details (bank transfer info), and a clear due date.
 - **Day 90+:** Alert the freelancer for escalation consideration. Suggest using the israeli-client-payment-chaser skill for structured collection (if available).
 
-**Israel Invoice allocation numbers (from 2026):** For osek murshe, tax invoices (hashbonit mas) exceeding 10,000 NIS (before VAT) must include an allocation number (mispar haktza'a) obtained from the Tax Authority system. From June 2026 this threshold drops to 5,000 NIS. Without an allocation number, the recipient cannot deduct input VAT. When tracking invoices, flag any issued invoice above the threshold that is missing an allocation number.
+**Israel Invoice allocation numbers (from 2026):** For osek murshe, tax invoices (hashbonit mas) exceeding **5,000 NIS** (before VAT) must include an allocation number (mispar haktza'a) obtained from the Tax Authority system. From June 2026 this threshold drops to 5,000 NIS. Without an allocation number, the recipient cannot deduct input VAT. When tracking invoices, flag any issued invoice above the threshold that is missing an allocation number.
 
 Additional tracking:
 - Record partial payments and update outstanding balances accordingly
@@ -99,11 +99,13 @@ Include per-deadline preparation notes:
 ### Step 5: Monitor Osek Patur Threshold
 Track cumulative annual revenue against the osek patur threshold:
 
-- **Current threshold (2026):** 122,833 NIS annually (verify at misim.gov.il as this is adjusted periodically for inflation; was 120,000 NIS in 2024-2025)
+- **Current threshold (2026):** 122,833 NIS annually (verify at misim.gov.il as this is updated periodically by order; was 120,000 NIS in 2024-2025)
 - **Alert levels:**
   - **70% (~86,000 NIS):** Informational. "You've reached 70% of the annual threshold. Consider planning for potential transition."
   - **85% (~104,400 NIS):** Warning. "Approaching threshold. Review implications of converting to osek murshe."
   - **95% (~116,700 NIS):** Urgent. "Very close to threshold. Conversion may be required soon."
+
+**The projection governs, not the year-to-date percentage.** Compute the projection first: year-to-date revenue divided by months elapsed, times 12, plus any contracted work already in the pipeline. If the projection exceeds the ceiling, the notification duty is live NOW even when the year-to-date percentage still looks comfortable. A freelancer at 95,000 in July sits in the comfortable-looking band the table below would call informational, yet their projection is well past the ceiling and they must act this week. Conversely someone at 110,000 in late December with nothing in the pipeline needs no action. Use the bands only as secondary context.
 
 When the threshold is reached or projected to be exceeded, explain the implications:
 - Must register as osek murshe with the Tax Authority
@@ -111,14 +113,20 @@ When the threshold is reached or projected to be exceeded, explain the implicati
 - Must issue hashbonit mas (tax invoice) instead of kabala (receipt)
 - Can now deduct input VAT (mas tsumos) on business expenses
 - Must file bi-monthly VAT returns
-- Bituach Leumi payments may increase
+- **Bituach Leumi and mkdamot must be re-estimated, and this is not caused by the VAT change.** Bituach Leumi is driven by income, not by VAT status, so converting does not itself raise it. What raises it is the higher income: advances were set from an assessment on a lower prior year, so a jump creates a year-end debt with linkage unless the user files a revised income declaration with Bituach Leumi now. The same applies to income-tax mkdamot, which are set from the prior year assessment: request an adjustment (בקשה לשינוי מקדמות) rather than underpaying all year.
+
+**The two traps when crossing mid-year, state both explicitly:**
+1. **Notify BEFORE the invoice that crosses the line.** The duty is triggered by the projection, not by the arrival of the money: `ברגע שצופים שההכנסות עד סוף השנה יעברו אות התקרה השנתית של העוסק הפטור, יש להודיע על כך לרשות המסים ולבקש לשנות את סיווג העסק מעוסק פטור לעוסק מורשה`. Once reclassified, the business charges VAT and issues tax invoices going forward.
+2. **Input VAT from the exempt part of the year is lost.** It cannot be reclaimed retroactively: `אי אפשר לדרוש רטרואקטיבית קיזוז מע"מ על הוצאות שהיו לעסק מתחילת השנה כאשר היה מוגדר כעוסק פטור, אלא רק על הוצאות שייווצרו מרגע הפיכתו לעוסק מורשה`. So a freelancer who buys equipment while still an osek patur and converts a month later never recovers that VAT. If a large purchase is planned and the crossing is foreseeable, the timing of the conversion is worth real money.
+
+Do NOT state a specific statutory deadline in days for the notification, or a penalty figure: those are asserted by practitioner sites but are not in the regulations, which only impose the annual January 31 turnover declaration.
 
 **Esek za'ir alternative:** If the user is approaching the threshold but expects income to stay near it, mention the esek za'ir (micro business) track. Esek za'ir offers a 30% normative expense deduction and simplified reporting, but shares the same revenue ceiling as osek patur (122,833 NIS for 2026). It does not defer the obligation to convert to osek murshe if the threshold is exceeded.
 
 Generate a transition checklist:
 1. Register as osek murshe at the local Tax Authority office (misrad mas hachnasa)
 2. Update invoicing system to issue tax invoices with VAT
-3. Register for the Israel Invoice allocation number system (required for invoices over 10,000 NIS)
+3. Register for the Israel Invoice allocation number system (required for invoices over 5,000 NIS (before VAT))
 4. Notify clients of new invoicing format
 5. Set up VAT filing schedule (see Step 4)
 6. Begin tracking input VAT on business expenses for deductions
@@ -196,11 +204,11 @@ Result: Complete accountant package (havila l'roe cheshbon) with 12 monthly fold
 - `references/utility-portals.md`: Login URLs, bill download paths, and automation notes for Israeli utility providers (IEC, Bezeq, HOT, Partner, water corporations, Arnona portals). Includes 2FA/OTP handling guidance per portal. Consult when configuring browser-based bill collection in Step 3.
 
 ## Gotchas
-- Agents may confuse Osek Murshe (licensed dealer, charges VAT) with Osek Patur (exempt dealer, no VAT). The threshold for Osek Patur is 122,833 NIS for 2026 (was 120,000 NIS in 2024-2025, adjusted for inflation). Exceeding it mid-year requires immediate registration upgrade.
+- Agents may confuse Osek Murshe (licensed dealer, charges VAT) with Osek Patur (exempt dealer, no VAT). The threshold for Osek Patur is 122,833 NIS for 2026 (was 120,000 NIS in 2024-2025). Exceeding it mid-year requires immediate registration upgrade.
 - Israeli freelancers must file bi-monthly VAT reports (doch du-chodshi) even in zero-revenue periods. Agents may skip months with no income, but a missing report triggers penalties.
 - Bituach Leumi advance payments (mikdamot) for self-employed are based on projected annual income, not actual monthly revenue. Agents may calculate contributions based on current month earnings.
 - Invoice numbering in Israel must be sequential with no gaps. Agents may suggest starting from an arbitrary number or allowing gaps, which violates Tax Authority requirements.
-- From 2026, osek murshe must obtain an allocation number (mispar haktza'a) for tax invoices exceeding 10,000 NIS (dropping to 5,000 NIS from June 2026). Agents may generate invoices without this number, causing the recipient to lose their input VAT deduction.
+- From 2026, osek murshe must obtain an allocation number (mispar haktza'a) for tax invoices exceeding 5,000 NIS (the threshold was 10,000 NIS from January to May 2026 and dropped to 5,000 on 1 June 2026). Agents may generate invoices without this number, causing the recipient to lose their input VAT deduction.
 - Agents may not distinguish between esek za'ir (micro business) and standard osek patur. Esek za'ir gets a 30% normative expense deduction and simplified reporting, but shares the same revenue ceiling. Recommending esek za'ir benefits to a standard osek patur (or vice versa) causes confusion.
 - Agents may quote the wrong annual-report deadline. **April 30 is NOT the annual income-tax report deadline** -- that date is for the osek patur annual turnover declaration. The income-tax annual report (Form 1301) is due May 31 (paper) or June 30 (online) for tax year 2025 filed in 2026.
 - Agents may treat the 35 percent Section 45א credit and the mandatory self-employed pension contribution as the same obligation. They are separate: 45א/47 are voluntary deposits that earn tax benefits; the mandatory contribution is a legal floor under the Self-Employed Pension Law.
@@ -213,7 +221,7 @@ Use these official sources to verify time-sensitive figures before quoting them 
 |--------|-----|---------------|
 | Tax Authority - Form 1301 / annual income-tax report | https://www.gov.il/he/service/reporting-and-payment-2025-annual-tax-report-for-individuals | Current-year deadlines for paper and online filing |
 | Tax Authority - PCN 874 / detailed VAT reporting | https://www.gov.il/he/pages/pa280825-1 | 500,000 NIS turnover threshold, 23rd-of-month deadline |
-| Tax Authority - Allocation numbers (mispar haktza'a) | https://www.gov.il/he/service/request-assignment-number-for-tax-invoice | Current invoice threshold (10,000 NIS, dropping to 5,000 NIS on June 1, 2026) |
+| Tax Authority - Allocation numbers (mispar haktza'a) | https://www.gov.il/he/service/request-assignment-number-for-tax-invoice | Current allocation-number threshold: 5,000 NIS before VAT since 1.6.2026 |
 | Kol Zchut - Osek Patur | https://www.kolzchut.org.il/he/עוסק_פטור | Current threshold, conversion rules |
 | Kol Zchut - Esek Za'ir | https://www.kolzchut.org.il/he/עסק_זעיר | 30 percent normative deduction, eligibility caveats |
 | Kol Zchut - Pension contribution tax credit (Section 45א) | https://www.kolzchut.org.il/he/זיכוי_ממס_הכנסה_בגין_הפרשות_לביטוח_פנסיוני | Current-year ceilings and 5%+0.5% structure |
@@ -230,8 +238,8 @@ Cause: Using wrong filing frequency (bi-monthly vs monthly) for the business typ
 Solution: Verify filing frequency in the freelancer profile (Step 1). Osek murshe with annual revenue under the monthly-filing threshold files bi-monthly on the 15th of odd months. Businesses above the threshold file monthly. See references/deadline-calendar.md for the complete schedule.
 
 ### Error: "Osek patur threshold outdated"
-Cause: The threshold amount changes periodically (adjusted for inflation by the Tax Authority).
-Solution: Verify the current threshold at the Tax Authority website (misim.gov.il) or the Kol Zchut osek patur page (see Reference Links). For 2026, the threshold is 122,833 NIS (CPI-indexed). Update the threshold in the freelancer profile when a new amount is published.
+Cause: The threshold amount changes periodically (updated periodically).
+Solution: Verify the current threshold at the Tax Authority website (misim.gov.il) or the Kol Zchut osek patur page (see Reference Links). For 2026, the threshold is 122,833 NIS. Update the threshold in the freelancer profile when a new amount is published.
 
 ### Error: "Annual report due April 30"
 Cause: Confusing the income-tax annual report (Form 1301) with the osek patur annual turnover declaration to the VAT office.

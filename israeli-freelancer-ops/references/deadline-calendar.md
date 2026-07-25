@@ -109,4 +109,4 @@ Starting January 2026, osek murshe businesses with annual turnover exceeding 500
 
 ## Israel Invoice Allocation Numbers (From 2026)
 
-Starting January 1, 2026, tax invoices (hashbonit mas) exceeding 10,000 NIS (before VAT) must include an allocation number (mispar haktza'a) from the Tax Authority. From June 2026, the threshold drops to 5,000 NIS. This is required for the recipient to deduct input VAT (mas tsumos).
+Starting January 1, 2026, tax invoices (hashbonit mas) exceeding **5,000 NIS** (before VAT) must include an allocation number (mispar haktza'a) from the Tax Authority. Since 1 June 2026 the threshold is 5,000 NIS (it was 10,000 NIS from January to May 2026). This is required for the recipient to deduct input VAT (mas tsumos).
