@@ -5,11 +5,16 @@
   "claims": [
     {
       "claim_id": "payment-ethics-law-terms",
-      "claim": "Payment Ethics to Suppliers Law 5777-2017: default 45-day term (private business from month-end of invoice submission); state bodies within 45 days and not later than shotef+30; engineering/construction up to 85 days from submission or 70 from month-end; a 2024 amendment gives small contractors on sub-75,000 NIS public contracts a 30-day term; late-payment interest at the Accountant General rate",
-      "source_url": "https://www.sba.org.il/hb/PolicyAndInformation/Pages/k4.aspx",
-      "raw_snippet": "חוק מוסר תשלומים לספקים, תשע\"ז-2017: ברירת מחדל 45 יום; גוף מדינה תוך 45 יום ולא יאוחר משוטף+30; תיקון 2024 לקבלנים קטנים בחוזים מתחת 75,000 ש\"ח תנאי 30 יום; שיעור החשב הכללי",
+      "claim": "Payment Ethics to Suppliers Law 5777-2017: a private business customer pays no later than 45 days from the end of the month in which the invoice was submitted.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/144599.htm",
+      "raw_snippet": "ישלם לספק את התמורה בעד העסקה לא יאוחר מ-45 ימים מתום החודש שבו הומצא לו החשבון",
       "fetched_at": "2026-06-16T22:55:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/legal-escalation.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/legal-escalation.md"
+      ],
+      "source_fetched_at": "2026-07-26T00:00:00Z"
     },
     {
       "claim_id": "limitation-period-7-years",
@@ -17,23 +22,36 @@
       "source_url": "https://www.nevo.co.il/law_html/law01/p182m1_001.htm",
       "raw_snippet": "חוק ההתיישנות, התשי\"ח-1958, סעיף 5(א): תקופת התיישנות 7 שנים לחוב רגיל; פסק דין 25 שנים",
       "fetched_at": "2026-06-16T22:55:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "small-claims-court",
-      "claim": "Small Claims Court ceiling is 39,900 NIS (from 1 Jan 2026); filing fee 1% of the claim, minimum 50 NIS; a filer may bring at most 5 small claims per calendar year; no lawyers; filing-to-hearing typically 30-60 days",
+      "claim": "Small Claims Court: ceiling 39,900 NIS as of January 2026; filing fee 1% of the claim, minimum 50 NIS.",
       "source_url": "https://www.kolzchut.org.il/he/הגשת_תביעה_קטנה",
-      "raw_snippet": "תקרת תביעות קטנות 39,900 ש\"ח מ-1 בינואר 2026; אגרה 1% מינימום 50 ש\"ח; עד 5 תביעות בשנה קלנדרית; ללא עורכי דין; 30-60 יום",
+      "raw_snippet": "תביעה כספית בסכום של עד 39,900 ₪ (נכון לינואר 2026)...אגרה בגובה של 1% מסכום התביעה, ובכל מקרה לא פחות מ-50 ₪",
       "fetched_at": "2026-06-16T22:55:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/legal-escalation.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/legal-escalation.md"
+      ],
+      "source_fetched_at": "2026-07-26T00:00:00Z"
     },
     {
       "claim_id": "enforcement-and-interest-reform",
-      "claim": "A judgment-enforcement (Hotza'a LaPo'al) file can be opened only 30 days after judgment, with ~1% opening fee + protocol fee; dishonored cheques / promissory notes can be filed directly. Amendment 9 to the Interest and Linkage Law (effective 1 Jan 2025) eliminated compound interest on enforcement debts and split charges into interest (ribit) and late-payment fees (dmei pigurim), the latter accruing quarterly from 3 months after the due date",
-      "source_url": "https://www.nevo.co.il/law_html/law00/232127.htm",
-      "raw_snippet": "תיק הוצאה לפועל לביצוע פסק דין רק 30 יום אחרי פסק הדין, אגרת פתיחה כ-1%; תיקון 9 לחוק פסיקת ריבית והצמדה מ-1 בינואר 2025 ביטל ריבית דריבית על חובות אכיפה ופיצל לריבית ודמי פיגורים רבעוניים מ-3 חודשים",
+      "claim": "Under the Adjudication of Interest and Linkage Law as amended, dmei pigurim are not added to the updated principal, so they do not themselves bear interest. The compound-interest provision (section 7, ריבית דריבית) is repealed.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/75001.htm",
+      "raw_snippet": "דמי פיגורים לא יצורפו לקרן העדכנית",
       "fetched_at": "2026-06-16T22:55:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/legal-escalation.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/legal-escalation.md"
+      ],
+      "source_fetched_at": "2026-07-26T00:00:00Z"
     },
     {
       "claim_id": "illustrative-example-figures",
@@ -41,7 +59,11 @@
       "source_url": "internal-illustrative-example",
       "raw_snippet": "Illustrative figures: total outstanding 47,500 NIS; invoice 22,000 NIS; buckets 18,000 NIS, 12,000 NIS, 8,500 NIS, 15,000 NIS; outstanding 53,500 NIS; forecast 35,000 NIS; collection rate 78%; demand-letter deadline 14 days. Hebrew forms 47,500 ש\"ח, 22,000 ש\"ח, 18,000 ש\"ח, 12,000 ש\"ח, 8,500 ש\"ח, 15,000 ש\"ח, 53,500 ש\"ח, 35,000 ש\"ח",
       "fetched_at": "2026-06-16T22:55:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/reminder-templates.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/reminder-templates.md"
+      ]
     },
     {
       "claim_id": "reference-urls",
@@ -49,7 +71,83 @@
       "source_url": "https://www.gov.il/he/service/filing_a_small_claim",
       "raw_snippet": "URLs: https://www.boi.org.il/information/interestrates/primerates/ https://www.gov.il/he/service/filing_a_small_claim https://www.kolzchut.org.il https://www.nevo.co.il/law_html/law00/75001.htm https://www.nevo.co.il/law_html/law00/144599.htm https://www.gov.il/he/service/claim_for_a_specified_amount_opening_file https://www.gov.il/he/service/opening_promissory_notes_and_checks_file https://www.israelpost.co.il https://www.hebcal.com https://boi.org.il https://www.kolzchut.org.il/he/הגשת_תביעה_קטנה https://www.kolzchut.org.il/he/המועד_האחרון_לתשלום_תמורה_לספקים",
       "fetched_at": "2026-06-16T22:55:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/legal-escalation.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/legal-escalation.md"
+      ]
+    },
+    {
+      "id": "small-claims-no-lawyer-required",
+      "claim": "The Small Claims process does not require representation by a lawyer; representation is barred by default and the court may permit it on request.",
+      "claim_type": "law",
+      "source_url": "https://www.kolzchut.org.il/he/הגשת_תביעה_קטנה",
+      "source_fetched_at": "2026-07-26T00:00:00Z",
+      "raw_snippet": "ההליך בבית המשפט לתביעות קטנות אינו דורש ייצוג על-ידי עורך דין",
+      "confidence": "high"
+    },
+    {
+      "id": "small-claims-ceiling-2026",
+      "claim": "The Small Claims Court monetary ceiling is 39,900 NIS as of January 2026.",
+      "claim_type": "threshold",
+      "source_url": "https://www.kolzchut.org.il/he/הגשת_תביעה_קטנה",
+      "source_fetched_at": "2026-07-26T00:00:00Z",
+      "raw_snippet": "תביעה כספית בסכום של עד 39,900 ₪ (נכון לינואר 2026)",
+      "confidence": "high"
+    },
+    {
+      "id": "small-claims-fee",
+      "claim": "The Small Claims filing fee is 1% of the claim amount, and in any case not less than 50 NIS.",
+      "claim_type": "fee",
+      "source_url": "https://www.kolzchut.org.il/he/הגשת_תביעה_קטנה",
+      "source_fetched_at": "2026-07-26T00:00:00Z",
+      "raw_snippet": "אגרה בגובה של 1% מסכום התביעה, ובכל מקרה לא פחות מ-50 ₪",
+      "confidence": "high"
+    },
+    {
+      "id": "moser-tashlumim-section-4",
+      "claim": "Section 4 of the Payment Ethics to Suppliers Law: an unpaid invoice accrues shekel interest (ribit shkalit) from the payment due date, and late-payment fees (dmei pigurim) only after a further 30 days.",
+      "claim_type": "law",
+      "source_url": "https://www.nevo.co.il/law_html/law00/144599.htm",
+      "source_fetched_at": "2026-07-26T00:00:00Z",
+      "raw_snippet": "תשולם לספק בתוספת ריבית שקלית, ובחלוף 30 ימים מהמועד האמור – בתוספת דמי פיגורים",
+      "confidence": "high"
+    },
+    {
+      "id": "moser-tashlumim-private-business",
+      "claim": "A private business customer must pay the supplier no later than 45 days from the end of the month in which the invoice was submitted (shotef+45).",
+      "claim_type": "law",
+      "source_url": "https://www.nevo.co.il/law_html/law00/144599.htm",
+      "source_fetched_at": "2026-07-26T00:00:00Z",
+      "raw_snippet": "ישלם לספק את התמורה בעד העסקה לא יאוחר מ-45 ימים מתום החודש שבו הומצא לו החשבון",
+      "confidence": "high"
+    },
+    {
+      "id": "small-claims-five-per-year",
+      "claim": "A small-claims plaintiff must declare the number of small claims filed in the past year; filing more than five in the same court in a year lets the court transfer the case to Magistrate Court. It is not an absolute cap.",
+      "claim_type": "law",
+      "source_url": "https://www.nevo.co.il/law_html/law00/98563.htm",
+      "source_fetched_at": "2026-07-26T00:00:00Z",
+      "raw_snippet": "מספר התביעות הקטנות שהגיש במהלך השנה האחרונה",
+      "confidence": "high"
+    },
+    {
+      "id": "small-claims-notation",
+      "claim": "Normalized restatement in the skill's own ש\"ח notation of the figures quoted above from kolzchut: the Small Claims ceiling of 39,900 ש\"ח and the minimum filing fee of 50 ש\"ח. No new claim is introduced; kolzchut prints these with the shekel sign.",
+      "claim_type": "threshold",
+      "source_url": "https://www.kolzchut.org.il/he/הגשת_תביעה_קטנה",
+      "source_fetched_at": "2026-07-26T00:00:00Z",
+      "raw_snippet": "תביעה כספית בסכום של עד 39,900 ₪ (נכון לינואר 2026)...לא פחות מ-50 ₪",
+      "confidence": "high"
+    },
+    {
+      "id": "small-claims-individuals-only",
+      "claim": "Only private individuals, including an osek murshe or osek patur, may file a small claim. A company, partnership or amuta may not file in this court.",
+      "claim_type": "law",
+      "source_url": "https://www.kolzchut.org.il/he/הגשת_תביעה_קטנה",
+      "source_fetched_at": "2026-07-26T00:00:00Z",
+      "raw_snippet": "חברה בע\"מ, שותפות או עמותה לא יוכלו להגיש תביעה לבית משפט זה",
+      "confidence": "high"
     }
   ]
 }

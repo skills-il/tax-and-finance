@@ -1,6 +1,6 @@
 # Israeli Legal Framework for Debt Collection
 
-## Demand Letter (Michtav Hitchayvut / מכתב התחייבות)
+## Demand Letter (Michtav Drisha / מכתב דרישה, also מכתב התראה לפני נקיטת הליכים)
 
 ### Legal Requirements
 A proper demand letter under Israeli law should contain:
@@ -25,7 +25,7 @@ A demand letter is not legally required before filing a claim, but Israeli court
 ### Jurisdiction and Threshold
 - **Maximum claim amount:** 39,900 NIS (as of January 1, 2026; updated periodically, verify at the courts administration website)
 - **Court location:** Determined by the debtor's place of residence or business address
-- **Who can file:** Individuals and businesses (osek murshe/patur)
+- **Who can file:** private individuals only, which includes an osek murshe or osek patur. A company, partnership or amuta is barred: `חברה בע"מ, שותפות או עמותה לא יוכלו להגיש תביעה לבית משפט זה`. An incorporated claimant must use Magistrate Court regardless of the amount
 
 ### Filing Process
 1. **Prepare documentation:** Gather original invoice, contract/purchase order, delivery confirmation, demand letters sent (with postal receipts), and communication history
@@ -36,7 +36,7 @@ A demand letter is not legally required before filing a claim, but Israeli court
 6. **Hearing:** Typically scheduled 30-60 days after filing. Both parties present their case
 
 ### Important Rules
-- **No lawyer representation:** In Small Claims Court, parties must represent themselves. Lawyers are not permitted (with rare exceptions for corporations)
+- **Lawyer representation is barred by default, not absolutely.** The process does not require a lawyer (`ההליך בבית המשפט לתביעות קטנות אינו דורש ייצוג על-ידי עורך דין`), and representation is barred unless the court permits it on request under section 63 of the Courts Law. Special cases exist, including where a party is themselves a lawyer. Do not tell a user that lawyers are flatly forbidden or that they may never ask for representation
 - **Evidence:** Bring all original documents. Printed communication logs (WhatsApp, email) are admissible
 - **Judgment:** The judge issues a decision, typically on the same day or within a few days
 - **Appeal:** Limited appeal rights, only to the District Court on points of law
@@ -44,7 +44,7 @@ A demand letter is not legally required before filing a claim, but Israeli court
 ### Multiple Claims to the Same Debtor
 If multiple invoices to the same debtor exceed the Small Claims threshold when combined, you may:
 - File separate claims for each invoice (if each is under the threshold)
-- File a single claim in Magistrate Court (Beit Mishpat Shalom) for the full amount (requires legal representation)
+- File a single claim in Magistrate Court (Beit Mishpat Shalom) for the full amount (representation is not required by law there, but is strongly advisable)
 
 ## Enforcement Office (Hotza'a LaPo'al / הוצאה לפועל)
 
@@ -74,12 +74,12 @@ The Payment Ethics to Suppliers Law (חוק מוסר תשלומים לספקים
   - Engineering and construction contracts: longer caps, up to 85 days from invoice submission or 70 days from the end of the month of submission.
 - An agreed contractual term overrides the default, subject to the caps the law imposes.
 - Once the due date passes, the debt is legally late and linkage plus late-payment interest attach automatically.
-- **Late-payment interest (dmei pigurim)** under this law runs from the due date at the **Accountant General's rate**. This is the rate to reference in a pre-suit demand letter. It is NOT the Bank of Israel monetary-policy rate. Verify the current Accountant General rate (the user's accountant can confirm) before stating a hard percentage.
+- **What attaches to a late invoice, and when.** Section 4 of the law splits this into two components with different start dates: `תמורה הקבועה בחשבון שלא שולמה עד המועד לתשלום החשבון ... תשולם לספק בתוספת ריבית שקלית, ובחלוף 30 ימים מהמועד האמור - בתוספת דמי פיגורים`. So **ribit shkalit (shekel interest) runs from the payment due date**, and **dmei pigurim (late-payment fees) only begin 30 days AFTER that due date**. Do not describe dmei pigurim as running from the due date, and do not call the applicable figure "the Accountant General's rate": since Amendment 9 the rates are the statutory ribit shkalit / ribit tzmuda / dmei pigurim rates published quarterly. Verify the current quarter's rates before stating any percentage.
 
 ## Interest Calculation Rules
 
 ### Two distinct interest regimes
-- **Pre-suit (supplier's claim):** Payment Ethics to Suppliers Law, 5777-2017, Accountant General's rate, accruing from the due date. Used in demand letters.
+- **Pre-suit (supplier's claim):** Payment Ethics to Suppliers Law, 5777-2017. Ribit shkalit accrues from the due date; dmei pigurim only from 30 days after it. Used in demand letters.
 - **On a judgment:** Adjudication of Interest and Linkage Law, set by the court. The agent does not compute this.
 Do not quote the Bank of Israel base rate as the statutory late-payment rate; they are different figures.
 
@@ -105,7 +105,7 @@ Do not quote the Bank of Israel base rate as the statutory late-payment rate; th
 5. Keep the receipt. This is your proof of sending
 
 ### Legal Standing
-- Registered mail is presumed received by the addressee under Israeli law
+- Registered mail with a retained receipt and tracking record is the standard proof of dispatch and is treated as strong evidence the letter was sent. Whether receipt is legally deemed depends on the applicable service rules, so do not promise the user that delivery is conclusively presumed
 - Even if the debtor does not collect the letter, the postal receipt proves it was sent
 - The tracking system shows delivery attempts and whether the letter was collected
 - If returned uncollected, keep the returned envelope as additional evidence
