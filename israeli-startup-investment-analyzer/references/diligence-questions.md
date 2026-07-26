@@ -51,8 +51,18 @@ generic form signals a tourist.
 - Is your Section 102 option plan under a trustee, capital-gains track, and fully compliant?
 - Is the company in good standing with the Companies Registrar (not a "violating company"),
   and are there any registered charges or liens over the company or its IP?
-- Has every founder, employee, and contractor signed an IP-assignment agreement, and are
-  there any open employee service-invention claims?
+- Has every founder, employee, and contractor signed an IP-assignment agreement, and does
+  that agreement contain an express waiver of service-invention compensation under sections
+  132 and 134 of the Patents Law? (Ask for the clause text, not just a yes.)
+- Which IIA programme funded you, in which years, what is the outstanding royalty balance,
+  and has an accelerated royalty rate been triggered by any manufacturing moved abroad?
+- Is any part of the product a controlled defence or dual-use item? What is its
+  classification, who issued it, and do you hold current export and marketing licences for
+  every market you sell into? If you rely on an encryption licence, when does it expire?
+- Is there a registered pledge or floating charge over the company or its IP at the
+  Registrar of Pledges?
+- Is any founder taking secondary in this round, how much, and at what price relative to
+  the primary?
 - What accrued labor liabilities exist (severance, pension, study fund, unused vacation),
   and are any workers engaged as contractors who function as employees?
 - Do you claim Preferred / Preferred Technological Enterprise tax status, and do you meet

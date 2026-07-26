@@ -42,7 +42,11 @@ not paper over a gap with a guess.
   - Growth shown as a rate with no absolute base (a huge percentage on a couple of customers).
   - Burn and runway omitted, or runway quoted before the new raise.
   - Logos shown as customers when they are pilots / design partners.
-- Compute or request: net revenue retention, gross margin, CAC payback, burn multiple.
+- Compute or request: net revenue retention, gross margin, CAC, LTV, LTV-to-CAC,
+  CAC payback, burn multiple, and the Rule of 40 where the stage makes it meaningful.
+- Business model and competition: revenue model, pricing, sales motion (product-led
+  vs enterprise), ACV and sales-cycle length, the competitive landscape, and what
+  actually differentiates this company from the named alternatives.
 
 ## 7. Deal terms and cap-table sanity
 
@@ -78,10 +82,25 @@ Run the checklist in references/israeli-dd-landmines.md. Summarize findings:
 - Innovation Authority (IIA) grant exposure: royalties owed, IP/know-how-out
   restrictions, redemption-fee exposure on a flip or exit.
 - Corporate structure: OpCo/HoldCo flip status, where IP is owned, flip tax exposure.
-- Option 102 plan: trustee track, pool health, any non-compliant grants.
-- Companies Registrar status (active vs "violating company"), founder vesting,
-  cap-table cleanliness.
+  Record the programme name, grant years, outstanding balance, and whether an
+  accelerated royalty rate or a change-of-control consent is in play.
+- Export control: is the product a controlled defence or dual-use item? Record
+  the classification, the issuing authority, and current licences per market
+  (including any encryption licence and its expiry).
+- Option 102 plan: trustee track, pool health, any non-compliant grants, whether
+  the plan was filed for Tax Authority approval (mandatory from 1 January 2025),
+  and who is ineligible for 102 (consultants, contractors, controlling holders).
+- Companies Registrar status (active vs "violating company"), a Registrar of
+  Pledges search for charges over the IP, founder vesting and acceleration,
+  founder secondary, and cap-table cleanliness.
+- IP assignment AND the express service-invention waiver (Patents Law ss.132/134).
 - Tax status (Preferred / Preferred Technological Enterprise) if claimed.
+
+## 8a. Legal diligence taxonomy
+Sweep each heading and record findings or "not reviewed":
+corporate, capitalization, IP, employment, material contracts (customer and
+supplier change-of-control, assignment, exclusivity, MFN, uncapped indemnities),
+regulatory, litigation, tax, privacy.
 
 ## 9. Key risks and red flags
 - Ranked. Separate "diligence can resolve this" from "this is a thesis risk".

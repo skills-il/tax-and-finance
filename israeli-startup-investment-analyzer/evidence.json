@@ -1,7 +1,7 @@
 {
   "skill_slug": "israeli-startup-investment-analyzer",
   "schemaVersion": "1.0",
-  "generated_at": "2026-06-19",
+  "generated_at": "2026-07-26T15:48:13Z",
   "claims": [
     {
       "id": "iia-royalty-rate",
@@ -32,12 +32,13 @@
     },
     {
       "id": "iia-manufacturing-abroad",
-      "claim": "Relocating manufacturing of IIA-funded know-how abroad still requires IIA approval, and the maximum increased royalty liability is 1.5 times the funding plus interest (reduced from the earlier 3 times); the IIA interest is 12-month Term SOFR plus 0.71513%.",
+      "claim": "Relocating manufacturing of IIA-funded know-how abroad requires IIA approval and the maximum increased royalty liability is 1.5X of the funding and interest, reduced from 3X.",
       "claim_type": "threshold",
       "source_url": "https://herzoglaw.co.il/en/news-and-insights/the-israel-innovation-authority-iia-new-rules-regarding-transfer-of-manufacturing-outside-of-israel-and-the-interest-rate-on-iia-funding/",
-      "source_fetched_at": "2026-06-19T00:00:00Z",
-      "raw_snippet": "The maximum increased liability is now 1.5X of the funding and interest instead of 3X. [...] There is no change in the requirement to obtain the approval of the IIA for transfer of manufacturing outside of Israel. [...] 12 months Term SOFR as published in the first trading day of each year by CME Group...with the addition of 0.71513%",
-      "confidence": "high"
+      "source_fetched_at": "2026-07-26T15:48:13Z",
+      "raw_snippet": "The maximum increased liability is now 1.5X of the funding and interest instead of 3X.",
+      "confidence": "high",
+      "note": "Interest is covered separately by iia-interest-formula-2024; the SOFR+0.71513% spread on this page applies only to files approved 1 Jul 2017 to 31 Dec 2023."
     },
     {
       "id": "section-102-capital-gains-track",
@@ -77,12 +78,143 @@
     },
     {
       "id": "ita-safe-treatment",
-      "claim": "Under Israel Tax Authority guidelines (May 2023, updated 29 January 2025), a SAFE meeting the stated conditions is treated as an advance payment for shares, so the conversion into shares is not a taxable event and the issuing company has no withholding obligation at that time; the tax event arises only on the later sale of the converted shares.",
+      "claim": "Under Israel Tax Authority guidelines a SAFE meeting the stated conditions is treated as an advance for shares: issuing shares on conversion is not a taxable event and no withholding applies at that time. The guidelines as published apply to SAFEs signed on or before 31 December 2024 or until the ITA publishes other guidelines, so confirm which version governs a SAFE being diligenced now.",
       "claim_type": "law",
       "source_url": "https://meitar.com/en/media/ita-guidelines-regarding-the-tax-implications-of-safe-investments/",
-      "source_fetched_at": "2026-06-19T00:00:00Z",
+      "source_fetched_at": "2026-07-26T15:48:13Z",
       "raw_snippet": "The issuance of shares upon conversion of a SAFE will not be a taxable event, and the Israeli resident issuing company will not be subject to a withholding tax obligation at such time",
-      "confidence": "high"
+      "confidence": "high",
+      "note": "Page is dated May 2023 and states the guidelines apply to SAFEs signed on or prior to December 31, 2024 (or until other guidelines are published by the ITA).",
+      "verified_via": "browser",
+      "verified_at": "2026-07-26T15:48:13Z"
+    },
+    {
+      "id": "surtax-two-layers-2026",
+      "claim": "Israeli individuals pay a 3% surtax on annual taxable income above NIS 721,560 (ILS 721,560; 721,560 ש\"ח), and as of 2025 an additional 2% surtax on income from capital sources (including capital gains) above the same threshold, so capital gains bear up to 5% surtax in total.",
+      "claim_type": "percentage",
+      "source_url": "https://taxsummaries.pwc.com/israel/individual/taxes-on-personal-income",
+      "source_fetched_at": "2026-07-26T15:33:20Z",
+      "raw_snippet": "a 3% surtax applies on annual taxable income exceeding ILS 721,560, resulting in a 50% maximum income tax rate. ... as of 2025, the portion of an individual's annual income from capital sources (e.g. capital gains, real estate appreciation, dividends, interest, CPI linkage differentials, rental income, passive royalties) exceeding a certain threshold (ILS 721,560 in 2026) is subject to an additional surtax of 2%.",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "note": "Source writes the threshold as \"ILS 721,560\"; NIS and ILS denote the same currency."
+    },
+    {
+      "id": "iia-interest-formula-2024",
+      "claim": "For IIA files approved from 1 January 2024 the interest is the higher of the Annual Interest (12-month Term SOFR) plus 1%, or 4%.",
+      "claim_type": "percentage",
+      "source_url": "https://herzoglaw.co.il/en/news-and-insights/the-israel-innovation-authority-iia-new-rules-regarding-transfer-of-manufacturing-outside-of-israel-and-the-interest-rate-on-iia-funding/",
+      "source_fetched_at": "2026-07-26T15:33:20Z",
+      "raw_snippet": "From Jan 1, 2024 The higher of: (i) “Annual Interest” plus 1%, (ii) 4%. “Annual Interest” = 12 months Term SOFR as published in the first trading day of each year by CME Group",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "id": "iia-manufacturing-thresholds",
+      "claim": "IIA approval is not needed if manufacturing abroad is less than 10% (notification only, deemed agreed if no refusal within 30 days); there is no increase in royalty liability for manufacturing abroad of up to 25%; and the maximum increased liability is 1.5X the funding and interest instead of 3X, for funding applications submitted after 25 October 2023.",
+      "claim_type": "percentage",
+      "source_url": "https://herzoglaw.co.il/en/news-and-insights/the-israel-innovation-authority-iia-new-rules-regarding-transfer-of-manufacturing-outside-of-israel-and-the-interest-rate-on-iia-funding/",
+      "source_fetched_at": "2026-07-26T15:33:20Z",
+      "raw_snippet": "IIA approval is not needed if the manufacturing abroad is less than 10%. In such a case, the company has to inform the IIA, and the IIA is considered as agreeing if it does not notify the company of its refusal within 30 days. ... The new rules provide that there will be no increase in the royalty payments liability for manufacturing outside of Israel of up to 25% of the manufacturing involving IIA-funded knowhow. ... The maximum increased liability is now 1.5X of the funding and interest instead of 3X.",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "id": "deca-export-control",
+      "claim": "Israel's Defense Export Controls Agency (DECA) at the Ministry of Defense administers registration and export/marketing licensing for controlled defence items under the Defense Export Control Law, 2007.",
+      "claim_type": "regulator",
+      "source_url": "https://exportctrl.mod.gov.il/en",
+      "source_fetched_at": "2026-07-26T15:33:20Z",
+      "raw_snippet": "DECA - Israel Defense Export Controls Agency | Ministry of Defense",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "id": "encryption-order-repeal",
+      "claim": "The 1974 Encryption Order was repealed by revocation orders published 20 November 2024 which entered into force on 20 March 2025; non-export encryption activity is now exempt from licensing while export of encryption items and know-how still requires a licence, and existing export licences remain valid until expiry or 19 November 2026, whichever is later.",
+      "claim_type": "regulation",
+      "source_url": "https://www.goldfarb.com/repeal-of-the-encryption-order-reform-of-israels-encryption-export-control-regime/",
+      "source_fetched_at": "2026-07-26T15:33:20Z",
+      "raw_snippet": "On November 20, 2024, two revocation orders were published: one repealing the Encryption Order and the other repealing the related control declaration. Both revocation orders entered into force on March 20, 2025, four months after their publication. ... Existing export licenses will remain valid until their expiration date or until November 19, 2026, whichever is later.",
+      "verified_via": "browser",
+      "verified_at": "2026-07-26T15:33:20Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "id": "patents-service-invention",
+      "claim": "Under the Israeli Patents Law, 5727-1967, a service invention vests in the employer (section 132) and an employee's entitlement to compensation, absent agreement, is decided by the Compensation and Royalties Committee (section 134); the entitlement can be waived by the employee. בעברית: אמצאת שירות לפי סעיף 132 לחוק הפטנטים, והזכות לתמורה נדונה בוועדה לענייני פיצויים ותמלוגים לפי סעיף 134.",
+      "claim_type": "legal-reference",
+      "source_url": "https://www.wipo.int/wipolex/en/legislation/details/15167",
+      "source_fetched_at": "2026-07-26T15:33:20Z",
+      "raw_snippet": "PATENTS LAW 5727-1967 ... Service Invention ... Compensation and Royalties Committee",
+      "verified_via": "browser",
+      "verified_at": "2026-07-26T15:33:20Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "note": "WIPO Lex record for Patents Law 5727-1967; the older /edocs/ PDF path now redirects to this landing page."
+    },
+    {
+      "id": "special-pte-6pct",
+      "claim": "A Special Preferred Technological Enterprise pays a reduced corporate tax rate of 6%, available to a company that is part of a group with aggregate annual revenues of at least ILS 10 billion.",
+      "claim_type": "percentage",
+      "source_url": "https://taxsummaries.pwc.com/israel/corporate/tax-credits-and-incentives",
+      "source_fetched_at": "2026-07-26T15:33:20Z",
+      "raw_snippet": "reduced corporate tax rate of 6% ... part of a group of companies with aggregate annual revenues of at least ILS 10 billion",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "id": "section-102-plan-approval-2025",
+      "claim": "New Section 102 rules governing approval of equity incentive plans and reporting to the Israel Tax Authority come into effect on 1 January 2025, including electronic filing of the plan approval request.",
+      "claim_type": "regulation",
+      "source_url": "https://herzoglaw.co.il/en/news-and-insights/new-and-amended-102-rules/",
+      "source_fetched_at": "2026-07-26T15:48:13Z",
+      "raw_snippet": "The New Rules come into effect on January 1, 2025.",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "id": "pillar-two-rd-credit-2026",
+      "claim": "Israel legislated the Law for the Encouragement and Incentivization of Research and Development, 2026, introducing R&D tax credits in response to the OECD Pillar Two global minimum tax rules, applying to qualifying R&D expenses in tax years commencing on or after 1 January 2026.",
+      "claim_type": "regulation",
+      "source_url": "https://taxsummaries.pwc.com/israel/corporate/tax-credits-and-incentives",
+      "source_fetched_at": "2026-07-26T15:48:13Z",
+      "raw_snippet": "applies to qualifying R&D expenses incurred in tax years commencing on or after 1 January 2026",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "id": "defense-export-control-law",
+      "claim": "Israel's Defense Export Control Law, 2007 governs control of exports of defence equipment, know-how and defence services, and DECA within the Ministry of Defense is responsible for regulating them.",
+      "claim_type": "legal-reference",
+      "source_url": "https://exportctrl.mod.gov.il/en",
+      "source_fetched_at": "2026-07-26T15:48:13Z",
+      "raw_snippet": "Since the enactment of the Defense Export Control Law (2007) it is the Defense Export Control Agency (DECA) within the ministry of defense which is responsible for regulating all aspects of control on exports of defense equipment, know-how and provision of defense related services.",
+      "verified_via": "browser",
+      "verified_at": "2026-07-26T15:48:13Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     }
   ]
 }

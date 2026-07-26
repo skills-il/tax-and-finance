@@ -1,6 +1,6 @@
 {
   "author": "skills-il",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "category": "tax-and-finance",
   "tags": {
     "he": [
@@ -45,9 +45,31 @@
   ],
   "volatility": "legislative",
   "authoritative_sources": [
-    { "url": "https://innovationisrael.org.il/en/royalties-intellectual-property/", "type": "regulator", "language": "en" },
-    { "url": "https://taxsummaries.pwc.com/israel/corporate/tax-credits-and-incentives", "type": "reference", "language": "en" },
-    { "url": "https://meitar.com/en/media/ita-guidelines-regarding-the-tax-implications-of-safe-investments/", "type": "firm-guide", "language": "en" }
+    {
+      "url": "https://innovationisrael.org.il/en/royalties-intellectual-property/",
+      "type": "regulator",
+      "language": "en"
+    },
+    {
+      "url": "https://taxsummaries.pwc.com/israel/corporate/tax-credits-and-incentives",
+      "type": "reference",
+      "language": "en"
+    },
+    {
+      "url": "https://meitar.com/en/media/ita-guidelines-regarding-the-tax-implications-of-safe-investments/",
+      "type": "firm-guide",
+      "language": "en"
+    },
+    {
+      "url": "https://exportctrl.mod.gov.il/en",
+      "type": "regulator",
+      "language": "en"
+    },
+    {
+      "url": "https://taxsummaries.pwc.com/israel/individual/taxes-on-personal-income",
+      "type": "reference",
+      "language": "en"
+    }
   ],
-  "domain_checklist_version": 1
+  "domain_checklist_version": 2
 }

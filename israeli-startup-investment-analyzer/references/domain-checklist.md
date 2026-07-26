@@ -39,8 +39,19 @@ Detailed figures and sources live in evidence.json and references/israeli-dd-lan
 - [ ] Section 102 employee option plan validity (capital-gains trustee track) and pool health.
 - [ ] Companies Registrar standing (active vs "violating company").
 - [ ] Employee-invention / IP-assignment compliance from every founder, employee, and contractor.
+- [ ] Service-invention waiver: an express waiver referencing Patents Law sections 132 and 134, not just a signed IP assignment. Without it the Compensation and Royalties Committee can award an employee compensation on the core patents. *Cite:* Patents Law 5727-1967 ss.132, 134.
+- [ ] IIA royalty rate determinants: which programme/track (R&D Fund, Tnufa, incubator, Magnet, BIRD/EUREKA), which grant years, whether an accelerated rate on manufacturing moved abroad has been triggered. A bare "3% to 5%" is not a coverage answer. *Cite:* IIA royalties page; Herzog IIA rules.
+- [ ] Export control: whether the product is a controlled defence or dual-use item, DECA registration, and current marketing/export licences per market, under the Defense Export Control Law, 2007. Includes the post-repeal encryption regime (repeal in force 20 March 2025, export still licensed, legacy licences to 19 November 2026). *Cite:* DECA; Goldfarb Gross Seligman encryption-order repeal.
+- [ ] Registrar of Pledges (רשם המשכונות) search by company number for floating charges over the IP, distinct from the Companies Registrar extract.
+- [ ] Founder secondary in the round: size, price relative to the primary, and characterisation risk (share sale vs employment income).
+- [ ] Non-compete enforceability: Israeli courts largely will not enforce absent a protectable interest, so non-competes are not key-person protection.
 
 ## Should cover (advanced / edge cases)
+- [ ] Pillar Two global minimum tax interaction with Preferred/Preferred Technological Enterprise rates for a target inside a very large group.
+- [ ] Israeli seed documentation conventions (IVCA-style Israeli-law SPA, Shareholders Agreement, and Articles) versus NVCA/Delaware assumptions, including that protective provisions sit in the public Articles.
+- [ ] FX exposure: raising and reporting in USD while paying salaries in ILS changes the real runway.
+- [ ] VAT leg of a SAFE where the instrument carries debt-like features or attached consideration.
+- [ ] Reserve duty (מילואים) and war-related operational risk on delivery and key personnel.
 - [ ] Preferred / Preferred Technological Enterprise reduced-tax status and its conditions.
 - [ ] Preferred-income dividend withholding to a foreign parent.
 - [ ] IP liens registered at the Israel Patent Office.

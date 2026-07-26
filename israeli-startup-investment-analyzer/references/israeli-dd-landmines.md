@@ -13,8 +13,16 @@ comes with strings that survive into your investment and can tax or block an exi
 
 What to check:
 - **Royalties.** A grant is repaid through royalties of 3% to 5% of annual
-  revenues from the funded product, until the full grant plus annual interest
-  (SOFR-based) is repaid. Ask for the outstanding balance.
+  revenues from the funded product, until the full grant plus annual interest is
+  repaid. The band is a summary, not a rate table: the applicable rate within that band
+  depends on the programme and the company's circumstances, and revenue tied to
+  manufacturing moved abroad carries an increased rate.
+  Programme tracks differ materially (Tnufa, incubator, Magnet consortia, and
+  bi-national funds such as BIRD and EUREKA each run on their own terms). Ask for the programme name, the grant
+  years, and the outstanding balance, not just a percentage.
+- **Change of control.** An IIA-funded company generally must notify or obtain
+  IIA consent on a change of control, and a foreign acquirer must undertake to
+  honour the grant obligations. Confirm this is a closing condition.
 - **R&D must stay in Israel.** The baseline condition for a grant is that the
   funded R&D is performed in Israel.
 - **IP / know-how cannot leave Israel freely.** Selling or transferring the
@@ -24,9 +32,16 @@ What to check:
   the grants plus interest, dropping to 3 times if the acquirer keeps the
   company's R&D jobs in Israel for at least three years.
 - **Manufacturing abroad.** Relocating manufacturing of the funded know-how
-  abroad also requires IIA approval; the maximum increased royalty liability is
-  1.5 times the funding plus interest (reduced from the earlier 3 times). IIA
-  interest accrues at 12-month Term SOFR plus 0.71513%.
+  abroad requires IIA approval, except below 10% of the manufacturing (notify the
+  IIA, which is deemed to agree if it does not refuse within 30 days). Under the
+  rules for funding applications submitted after 25 October 2023 there is no
+  increase in the royalty liability for moving up to 25% of the manufacturing,
+  and the maximum increased liability is 1.5 times the funding plus interest,
+  down from 3 times. Moving manufacturing can also raise the royalty rate itself.
+- **Interest.** For IIA files approved from 1 January 2024 the interest is the
+  higher of the annual SOFR-based rate plus 1%, or a 4% floor. The SOFR spread is
+  reset periodically by the IIA, so read the current rate off the IIA notice
+  rather than assuming last year's figure.
 
 Why it matters to you: a US acquirer that wants the IP moved to Delaware, or a
 buyer that plans to move R&D abroad, walks into an IIA approval process and a
@@ -81,10 +96,33 @@ What to check:
   outstanding SAFE/convertible and its cap. Stacked SAFEs converting at once can
   dilute far more than the deck implies.
 - **IP assignment (PIIAA) and service inventions.** Confirm every founder,
-  employee, and contractor signed an IP-assignment agreement. Unassigned IP, or
-  an unresolved employee "service invention" compensation claim under Israeli
-  patent law, can undermine the very asset the deal is buying. This is a classic
-  Israeli IP-diligence landmine.
+  employee, and contractor signed an IP-assignment agreement. A signed assignment
+  does NOT close the issue: under the Patents Law, 5727-1967 a service invention
+  vests in the employer (section 132), but the employee's right to compensation
+  is decided by the Compensation and Royalties Committee (section 134) unless the
+  agreement contains an express waiver of that right. Test for the waiver clause,
+  not merely for the absence of a filed claim. This is the classic Israeli
+  IP-diligence landmine that a clean-looking PIIAA does not cure.
+- **Export control.** If the product is defence, dual-use, cyber, RF, drone, or
+  surveillance adjacent it may be a controlled item, requiring registration and
+  per-transaction marketing and export licences under the Defense Export Control
+  Law, 2007 (via DECA at the Ministry of Defense) or dual-use licensing via the
+  Ministry of Economy. Unlicensed sales are a criminal offence and make the
+  reported revenue unlicensable, which an acquirer discounts to zero. The 1974
+  Encryption Order was repealed with effect from 20 March 2025: non-export
+  encryption activity no longer needs a licence, but export of encryption items,
+  know-how, or technology still does, now scoped to Wassenaar dual-use items and
+  routed by end user. Pre-existing export licences run until expiry or
+  19 November 2026, whichever is later. Ask for the classification, who issued
+  it, and current licences for every market sold into.
+- **Registrar of Pledges (רשם המשכונות).** Search by the 9-digit company number.
+  This is separate from the Companies Registrar extract and is the only way to
+  surface a floating charge over the IP.
+- **Non-competes.** Do not assume a signed non-compete is key-person
+  protection. Israeli enforceability turns on whether the employer has a
+  protectable interest and is frequently litigated, so treat it as a question for
+  counsel rather than cover you can bank on. The real protection is the
+  IP assignment plus trade-secret law.
 - **Companies Registrar (רשם החברות) standing.** Do not just assert this, pull
   the company's official Registrar of Companies extract (נסח חברה) to verify
   share capital, directors, registered charges, and that it is not flagged as a
