@@ -15,15 +15,15 @@ license: MIT
 | Services/assets (payee without acceptable books, no certificate) | shlumim avur sherutim o nechasim | 30% | reg. 1977 |
 | Services (companies, no certificate) | shlumim avur sherutim | 20-30% by tax-office classification | reg. 1977 |
 | Rent (real estate, where the tenant deducts the rent as a business expense) | schar dira | 35% (uniform, no residential/commercial split) | reg. 1998 |
-| Royalties | tamlugim | 23% | 170 |
+| Royalties | tamlugim | No separate category in the 1977 regulations: a payment to a resident falls under the 20%/30% services-and-assets rule; a payment to a non-resident is withheld under section 170 | 170 |
 | Interest | ribit | 25% | 164 |
 | Dividends | dividendim | 25-30% | 164 |
-| Payments to non-residents | tishlumin letoshvei chutz | 25% | 170 |
+| Payments to non-residents | tishlumin letoshvei chutz | Set under section 170, commonly applied at 25%; requires ITA involvement, see note | 170 |
 
 For a service/asset payment with no certificate, the statutory default under the 1977 regulations is **20% where the payee keeps acceptable books** and **30% where the payee does not** (the 30% is the penalty rate for an unverified/no-books payee, not a separate "high" rate, there is no ~47% service-withholding rate). A valid certificate is what brings the rate down further (often to 0-5%). Rent on real estate that the tenant deducts as a business expense is withheld at a uniform **35%** (there is no separate residential vs. commercial rate); a private residential tenant who cannot deduct the rent is generally not a withholding agent at all.
 
 There is a one-time de-minimis floor: a single payment to a payee below roughly
-4,920-5,040 NIS including VAT (the annually-indexed threshold, verify the current
+5,520 NIS (the indexed threshold for 2024 to 2026; the regulation does not state whether it is VAT-inclusive, so do not assert that. Verify the current
 year) does not require withholding, unless your cumulative payments to that payee
 cross the threshold.
 
@@ -48,7 +48,7 @@ VAT (if applicable): calculated separately on the full pre-withholding amount
 ### Step 4: Periodic Reporting and Payment (Form 102)
 - Amounts withheld must be reported and paid to the ITA periodically, monthly or
   bi-monthly depending on your business size.
-- **Form 102** is the periodic deductions report and payment. It summarises the
+- **Form 102** is the periodic deductions report and payment, due by the **16th** of each month for income-tax deductions. Do not use the 15th: that is the Bituach Leumi date, and BTL has its own separate form also called 102. It summarises the
   wages/payments and the income tax (and, on the National Insurance side, the
   parallel 102) withheld in the period.
 - **Deadline:** the 15th of the month following the reporting period. Late
@@ -61,7 +61,7 @@ VAT (if applicable): calculated separately on the full pre-withholding amount
   Form 102 deposits made through the year.
 - **Deadline:** April 30 of the year following the reporting year.
 - Workflow: deposit withheld amounts periodically via Form 102 -> at year end,
-  compile the per-payee detail file -> submit Form 856 by April 30.
+  compile the per-payee detail file -> submit Form 856 by April 30. **For tax year 2025 the ITA extended the 126 and 856 deadline to 31 May 2026, with reports transmitted and approved online through 30 June 2026 treated as filed on time.** Extensions like this are announced most years, so check the current year before telling a user they are late.
 - Form 856 is separate from the payee's own annual return; it is the payer's
   obligation as the withholding agent.
 - **Form 126** is the salary-side counterpart: the annual report of employee
@@ -106,7 +106,7 @@ the vendor's TIN matches the certificate.
 
 ### Example 3: Cross-border Payment
 User says: "I need to pay a US company for software licenses"
-Result: Default 25% withholding on payments to non-residents. Check if a tax
+Result: Withholding on a payment to a non-resident is set under section 170 and is commonly applied at 25%, but a reduced treaty rate is NOT automatic. Check if a tax
 treaty applies (the US-Israel treaty may reduce the rate). Recommend consulting a
 tax advisor for treaty benefits and the required documentation.
 
@@ -127,7 +127,7 @@ tax advisor for treaty benefits and the required documentation.
 - Withholding exemption/reduction certificates (ishur nikui mas bemakor) expire annually and must be renewed. Do not rely on a certificate without checking its validity period.
 - When paying a foreign contractor, Israel requires withholding unless a tax treaty provides a reduced rate. Do not apply domestic rates to international payments or skip withholding entirely.
 - Withholding on rent that the tenant deducts as a business expense is a uniform **35%**, there is NO separate residential vs. commercial rate, and no "30% residential" rate exists. A private residential tenant who cannot deduct the rent is generally not a withholding agent at all. The reduced/zero rate applies only with a valid certificate.
-- **2026 black-market legislation (Income Tax Circular 3/2026, effective for payments made from 1.1.2026):** an expense or input-VAT deduction is disallowed where the payer failed to withhold tax or to report it as required, or where the payment breached the Law for Reduction of the Use of Cash. The cash-use law caps cash in a business-to-business transaction at 6,000 NIS. Treat a missed withholding or a cash-law breach as a deduction risk, not just a reporting issue.
+- **2026 black-market legislation (Income Tax Circular 3/2026, effective for payments made from 1.1.2026):** an expense or input-VAT deduction is disallowed where the payer failed to withhold tax or to report it as required, or where the payment breached the Law for Reduction of the Use of Cash. The cash-use law caps cash at 6,000 NIS in ANY transaction where a dealer (osek) is a party, on either side (sections 2(א) and 2(ג)), so a dealer taking 10,000 in cash from a private consumer is already in breach. The 15,000 ceiling applies only when NEITHER side is a dealer. **And the ceiling is not the whole rule: permitted cash is the LOWER of the scheduled amount or 10% of the transaction price**, so on a 20,000 NIS deal the real cash limit is 2,000, not 6,000. Treat a missed withholding or a cash-law breach as a deduction risk, not just a reporting issue.
 
 ## Reference Links
 
@@ -154,7 +154,7 @@ certificate rate only during its validity period, and for a no-certificate
 service payment use 20% if the payee keeps acceptable books, 30% if they do not.
 
 ### Error: "Late reporting penalty"
-Cause: the periodic deductions report (Form 102) was not filed by the 15th.
+Cause: the periodic deductions report (Form 102) was not filed by the 16th.
 Solution: file immediately. Penalties and indexation apply for late reporting and
 late payment of withheld amounts. Remember the separate annual Form 856
 reconciliation is due April 30.
@@ -162,6 +162,6 @@ reconciliation is due April 30.
 ### Error: "Deduction disallowed by the tax office"
 Cause: under Circular 3/2026, an expense or input-VAT deduction is disallowed
 when the payer did not withhold or report as required, or breached the cash-use
-law (cash over 6,000 NIS in a business-to-business transaction).
+law (cash over 6,000 NIS, or over 10% of the transaction price if that is lower, in any transaction where a dealer is a party).
 Solution: withhold and report correctly on Form 102, keep the per-payee detail
 for Form 856, and pay above-threshold amounts by non-cash means.

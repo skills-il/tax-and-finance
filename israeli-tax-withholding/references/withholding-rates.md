@@ -13,7 +13,7 @@ typically brings the rate down to 0-5%.
 | Services (company, no certificate) | 20-30% | Varies by tax-office classification |
 | Interest | 25% | Bank and non-bank interest |
 | Dividends | 25% | Standard shareholders |
-| Dividends (major shareholder) | 30% | Shareholders holding > 10% |
+| Dividends (major shareholder) | 30% | Substantial shareholder: holding 10% or more |
 | Prizes and awards | 25% | Competition winnings, etc. |
 
 For a no-certificate service/asset payment, the statutory default is 20% where
@@ -24,15 +24,15 @@ service-withholding rate; that figure does not appear in the regulations.
 | Payment Type | Rate | Notes |
 |-------------|------|-------|
 | Rent (real estate the tenant deducts as a business expense) | 35% | Uniform, no residential/commercial split; a private residential tenant who cannot deduct the rent is generally not a withholding agent |
-| Royalties | 23% | Intellectual property payments |
-| Payments to non-residents | 25% | Subject to tax treaty reduction |
+| Royalties | See note | The 1977 regulations create no separate royalties rate. To a resident, use the 20%/30% services-and-assets default; to a non-resident, section 170 applies. The figure often quoted for royalties is simply the corporate tax rate applied to a non-resident company, not a distinct withholding category |
+| Payments to non-residents | Section 170 rate, commonly 25% | Treaty relief is NOT self-executing: a reduced rate or exemption needs prior approval from the assessing officer |
 | Insurance commissions | 20% | Agent commissions |
 | Construction/service contractors | 30% | Building and renovation, no certificate |
 
 ## Thresholds
 
-- **De-minimis floor:** a single payment to a payee below roughly 4,920-5,040 NIS
-  including VAT (the annually-indexed threshold) does not require withholding,
+- **De-minimis floor:** a single payment to a payee below 5,520 NIS (2024-2026 indexed figure)
+  (the indexed threshold for 2024-2026) does not require withholding. The primary text does not state whether the amount is VAT-inclusive, so do not assert that either way.
   unless cumulative payments to that payee cross the threshold. Verify the
   current-year figure.
 - **Mandatory-withholder turnover threshold:** a business becomes a mandatory
@@ -43,10 +43,10 @@ service-withholding rate; that figure does not appear in the regulations.
 | Country | Dividends | Interest | Royalties |
 |---------|-----------|----------|-----------|
 | USA | 12.5-25% | 17.5% | 15% |
-| UK | 15% | 15% | 15% |
-| Germany | 10-25% | 15% | 5% |
+| UK | 5% (holding 10%+) / 15% | 5% bank / 10% | **0%** |
+| Germany | 5% / 10% | 0% / 5% | 0% |
 | France | 10-15% | 10% | 10% |
-| Canada | 15% | 15% | 15% |
+| Canada | 5% (holding 25%+) / 15% | 10% | 10% |
 
 NOTE: Treaty rates require proper documentation and forms.
 Always verify specific treaty provisions.

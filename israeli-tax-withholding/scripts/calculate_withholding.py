@@ -31,11 +31,18 @@ DEFAULT_RATES = {
                                #       deducts as a business expense
     "rent_residential": 0.35,  # 35% - no separate residential rate exists;
                                #       alias kept for backward compatibility
-    "royalties": 0.23,         # 23% - Section 170
+    # Royalties have no separate rate in the 1977 regulations. To an Israeli
+    # resident, use the services/assets default (20% with acceptable books,
+    # 30% without). To a non-resident, withholding is set under Section 170 and
+    # usually requires the assessing officer's involvement. The value below is
+    # the corporate tax rate that is commonly applied to a non-resident company;
+    # it is NOT a distinct statutory withholding category, so confirm before use.
+    "royalties": 0.23,         # corporate rate, see note above
     "interest": 0.25,          # 25% - Section 164
     "dividends": 0.25,         # 25% - Section 164
-    "dividends_major": 0.30,   # 30% - Major shareholder (>10%)
-    "non_resident": 0.25,      # 25% - Section 170
+    "dividends_major": 0.30,   # 30% - substantial shareholder (10% or more)
+    "non_resident": 0.25,      # Section 170; commonly 25%, but treaty relief is
+                               # NOT automatic and needs prior ITA approval
     "contractor": 0.30,        # 30% - Construction/service contractors,
                                #       no certificate
 }
