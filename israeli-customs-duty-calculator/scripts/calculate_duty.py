@@ -7,13 +7,18 @@ Computes the cascading tax sequence used by Israeli Customs:
 
 Constants:
   - Israel VAT rate: 18% (since January 1, 2025).
-  - Personal import threshold: USD 75 (as of June 2026). The threshold
+  - Personal import threshold: USD 75 (as of July 2026). The threshold
     moved 75 -> 150 in December 2025, was revoked back to 75 by the
     Knesset on 24 February 2026, was reset to 130 by a new Finance
     Ministry order effective 25 February 2026, and reverted to 75 when
-    that temporary order expired on 1 June 2026. It has moved four times
+    the USD 130 window ran to 1 June 2026. It has moved four times
     in seven months; confirm via the official calculator before quoting.
-  - Tobacco, e-cigarettes, alcohol, and alcoholic beverages are EXCLUDED
+  - Two different bases: the exemption THRESHOLD is tested on the goods
+    value alone (excluding shipping and insurance), while the TAX is computed
+    on the CIF value plus any duty and purchase tax.
+  - The USD 75-500 duty waiver is NOT modelled here: pass --duty-rate 0 for a
+    personal import in that band.
+  - Tobacco products and alcoholic beverages are EXCLUDED
     from the personal-import exemption regardless of value. This script
     does NOT model that exclusion automatically; callers must override
     --personal for those product categories.
@@ -38,6 +43,7 @@ from decimal import Decimal, ROUND_HALF_UP
 from typing import Optional
 
 # Constants grounded in evidence.json
+PERSONAL_IMPORT_DUTY_WAIVER_CEILING_USD = Decimal("500")
 VAT_RATE = Decimal("0.18")
 PERSONAL_IMPORT_THRESHOLD_USD = Decimal("75")
 
@@ -57,14 +63,30 @@ def calculate_landed_cost(
     broker_fees_ils: Decimal,
     currency: str,
     personal_import: bool,
+    usd_value: Decimal = None,
+    excluded_goods: bool = False,
 ) -> dict:
     """Compute full landed cost breakdown. All outputs are in ILS."""
-    # Personal-import threshold check (USD basis, excludes shipping and insurance)
-    if personal_import and currency.upper() == "USD":
-        if product_value < PERSONAL_IMPORT_THRESHOLD_USD:
+    # Personal-import threshold check. The threshold is denominated in USD and
+    # tested on the goods value alone, excluding shipping and insurance. For a
+    # non-USD invoice the caller must supply the USD equivalent, otherwise the
+    # exemption cannot be evaluated and the goods would be silently taxed.
+    goods_usd = product_value if currency.upper() == "USD" else usd_value
+    duty_waived = False
+    if personal_import and goods_usd is None:
+        raise ValueError(
+            f"--personal with a {currency.upper()} invoice requires --usd-value: "
+            "the exemption threshold is denominated in USD and cannot be applied "
+            "without the USD equivalent of the goods value."
+        )
+    if personal_import and excluded_goods:
+        pass  # tobacco and alcohol never qualify; fall through to the taxed path
+    elif personal_import and goods_usd is not None:
+        # "up to 75 dollars" is inclusive of 75.
+        if goods_usd <= PERSONAL_IMPORT_THRESHOLD_USD:
             return {
                 "exempt": True,
-                "reason": f"Product value {product_value} USD is below the personal import threshold of {PERSONAL_IMPORT_THRESHOLD_USD} USD.",
+                "reason": f"Goods value {goods_usd} USD is at or below the personal import threshold of {PERSONAL_IMPORT_THRESHOLD_USD} USD.",
                 "cif_ils": money((product_value + shipping + insurance) * fx_rate),
                 "duty_ils": Decimal("0.00"),
                 "purchase_tax_ils": Decimal("0.00"),
@@ -72,6 +94,19 @@ def calculate_landed_cost(
                 "broker_fees_ils": money(broker_fees_ils),
                 "landed_cost_ils": money((product_value + shipping + insurance) * fx_rate + broker_fees_ils),
             }
+
+    # Under the personal-import regime customs duty is waived between the
+    # threshold and USD 500; only VAT (and purchase tax where the goods carry
+    # it) applies. Enforce it rather than trusting the caller to pass 0.
+    if (
+        personal_import
+        and not excluded_goods
+        and goods_usd is not None
+        and goods_usd <= PERSONAL_IMPORT_DUTY_WAIVER_CEILING_USD
+        and duty_rate > 0
+    ):
+        duty_rate = Decimal("0")
+        duty_waived = True
 
     # CIF in ILS
     cif_foreign = product_value + shipping + insurance
@@ -88,6 +123,7 @@ def calculate_landed_cost(
 
     return {
         "exempt": False,
+        "duty_waived_personal_import": duty_waived,
         "cif_ils": money(cif_ils),
         "duty_ils": money(duty),
         "purchase_tax_ils": money(purchase_tax),
@@ -120,23 +156,43 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--purchase-tax-rate", type=Decimal, default=Decimal("0"), help="Purchase tax rate as decimal.")
     p.add_argument("--broker-fees-ils", type=Decimal, default=Decimal("0"), help="Broker and handling fees in ILS.")
     p.add_argument("--personal", action="store_true", help="Personal import (applies the USD threshold exemption).")
+    p.add_argument("--usd-value", type=Decimal, default=None, help="Goods value in USD. Required with --personal when the invoice is not in USD.")
+    p.add_argument("--excluded-goods", action="store_true", help="Tobacco, cigarettes or alcoholic beverages: never exempt, taxed from the first shekel.")
     p.add_argument("--json", action="store_true", help="Output as JSON.")
     return p.parse_args()
 
 
 def main() -> int:
     args = parse_args()
-    result = calculate_landed_cost(
-        product_value=args.value,
-        shipping=args.shipping,
-        insurance=args.insurance,
-        fx_rate=args.fx,
-        duty_rate=args.duty_rate,
-        purchase_tax_rate=args.purchase_tax_rate,
-        broker_fees_ils=args.broker_fees_ils,
-        currency=args.currency,
-        personal_import=args.personal,
-    )
+    if args.fx <= 0:
+        print("Error: --fx must be greater than 0.", file=sys.stderr)
+        return 1
+    for name, val in (("--value", args.value), ("--shipping", args.shipping),
+                      ("--insurance", args.insurance), ("--broker-fees-ils", args.broker_fees_ils)):
+        if val < 0:
+            print(f"Error: {name} cannot be negative.", file=sys.stderr)
+            return 1
+    for name, val in (("--duty-rate", args.duty_rate), ("--purchase-tax-rate", args.purchase_tax_rate)):
+        if val > 1:
+            print(f"Error: {name} is a decimal fraction (0.12 = 12 percent), got {val}.", file=sys.stderr)
+            return 1
+    try:
+        result = calculate_landed_cost(
+            product_value=args.value,
+            shipping=args.shipping,
+            insurance=args.insurance,
+            fx_rate=args.fx,
+            duty_rate=args.duty_rate,
+            purchase_tax_rate=args.purchase_tax_rate,
+            broker_fees_ils=args.broker_fees_ils,
+            currency=args.currency,
+            personal_import=args.personal,
+            usd_value=args.usd_value,
+            excluded_goods=args.excluded_goods,
+        )
+    except ValueError as exc:
+        print(f"Error: {exc}", file=sys.stderr)
+        return 1
 
     if args.json:
         print(json.dumps({k: str(v) if isinstance(v, Decimal) else v for k, v in result.items()}, indent=2, ensure_ascii=False))

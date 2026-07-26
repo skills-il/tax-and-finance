@@ -9,7 +9,7 @@ compatibility: "Works with Claude Code, Cursor, GitHub Copilot, Windsurf, OpenCo
 
 ## Problem
 
-Importing goods into Israel (whether a single Amazon order or a commercial shipment) triggers up to three separate taxes: customs duty, VAT, and purchase tax (mas kniya). Thresholds shift (the personal exemption moved from $75 to $150 in December 2025, was annulled back to $75 by the Knesset on 24 February 2026, and was re-set to $130 by a new Finance Ministry order the next day, and reverted to $75 on 1 June 2026 when that temporary order expired), duty depends on an 8-digit HS code that is not the same as the US or EU code, and free-trade preferences only help when you produce the right origin proof. Buyers constantly over- or under-estimate the landed cost.
+Importing goods into Israel (whether a single Amazon order or a commercial shipment) triggers up to three separate taxes: customs duty, VAT, and purchase tax (mas kniya). Thresholds shift (the personal exemption moved from $75 to $150 in December 2025, was annulled back to $75 by the Knesset on 24 February 2026, and was re-set to $130 by a new Finance Ministry order the next day, and reverted to $75 after that window ran to 1 June 2026), duty depends on an 8-digit HS code that is not the same as the US or EU code, and free-trade preferences only help when you produce the right origin proof. Buyers constantly over- or under-estimate the landed cost.
 
 ## Instructions
 
@@ -18,7 +18,7 @@ Importing goods into Israel (whether a single Amazon order or a commercial shipm
 | Type | Typical user | Tax treatment |
 |------|--------------|---------------|
 | Personal import, small parcel | Consumer ordering online | Exemption threshold applies (see Step 2) |
-| Personal import, high-value | Consumer buying jewelry, electronics | Full duty + VAT + purchase tax |
+| Personal import, high-value | Consumer buying jewelry, electronics | VAT applies; some goods also owe duty and purchase tax depending on the HS code (see Step 2) |
 | Commercial import (B2B) | Osek Murshe importing stock | Full duty + VAT, no threshold exemption; VAT is recoverable |
 | Gift | Individual sending to an Israeli | Treated as personal import, no special exemption |
 | Aliyah / oleh hadash belongings | New immigrant | Separate oleh exemption, consult the Aliyah unit |
@@ -27,13 +27,16 @@ Importing goods into Israel (whether a single Amazon order or a commercial shipm
 
 ### Step 2: Check the personal import threshold
 
-As of June 2026, the personal import exemption is USD 75 (cost of goods, excluding shipping and insurance). This figure is exceptionally unstable: it was raised from USD 75 to USD 150 in late December 2025, the Knesset revoked that order on 24 February 2026 (reverting to USD 75), the Finance Minister signed a new order setting it to USD 130 effective midnight 24-25 February 2026, and that temporary order expired on 1 June 2026, returning the threshold to USD 75. It has moved four times in seven months, so treat any value quoted here as provisional and confirm it against the live official calculator before quoting a number.
+As of July 2026 the personal import exemption is USD 75 (cost of goods, excluding shipping and insurance). This figure is exceptionally unstable. It was raised from USD 75 to USD 150 by a Finance Ministry order in late December 2025; the Knesset revoked that order on 24 February 2026, reverting to USD 75; the Finance Minister signed a fresh order setting it to USD 130 effective midnight 24-25 February 2026; and the USD 130 window ran until 1 June 2026, after which the threshold returned to USD 75. Four moves in seven months, so treat any value quoted here as provisional and confirm it against the live official calculator before quoting a number.
 
 - Below USD 75: no customs, no VAT, no purchase tax (full exemption)
-- USD 75 to USD 500: VAT 18 percent applies on the product value; customs duty is waived under the personal-import regime; purchase tax can still apply on specific items
-- Above USD 500: full duty + VAT + purchase tax. Above USD 1,000 the shipment is treated as commercial and requires a customs broker and a full import declaration (rashimon).
+- USD 75 to USD 500: customs duty is waived under the personal-import regime, but VAT of 18 percent applies, and purchase tax still applies to goods that carry it (televisions and vehicle spare parts are the common examples). Note the two different bases: the THRESHOLD is tested on the goods value alone, excluding shipping and insurance, but the TAX is computed on the CIF value (goods plus insurance plus freight) plus any duty and purchase tax
+- Above USD 500: VAT applies, and SOME goods also owe customs duty and purchase tax. It is not automatic that all three apply: the rate depends on the HS classification, so look the code up rather than assuming the full stack.
+- Above USD 1,000: the shipment is treated as commercial for tax purposes. In practice carriers will usually require a customs broker and a full import declaration (rashimon) at this point, though that is a commercial practice rather than a stated legal threshold, so confirm with the carrier.
 
-**Important carve-out**: the exemption does NOT apply to tobacco products, e-cigarettes, alcohol, or alcoholic beverages. Those are taxed in full from the first shilling, regardless of value.
+**Important carve-out**: the exemption does NOT apply to tobacco products or alcoholic beverages. Those are taxed in full from the first shekel, regardless of value. (The exemption text quoted by the rights guides names tobacco and alcoholic beverages only. E-cigarettes are commonly assumed to be treated the same way, but that is not what the quoted text says, so check the current rule before telling a user their vape shipment is or is not excluded.)
+
+**Anti-splitting rule**: two or more parcels sent from the same supplier to the same customer within 72 hours of each other are treated as one split shipment, and import taxes are computed on their combined value. Ordering below the threshold repeatedly in the same window does not work.
 
 Confirm the current threshold via the official Personal Import Tax calculator at `https://shaarolami-query.customs.mof.gov.il/CustomspilotWeb/PersonalImportTax` or the gov.il service page at `https://www.gov.il/en/service/customs-tax-calculation-import-by-israelis` before quoting a number to the user. The personal-import threshold has changed four times in seven months.
 
@@ -49,6 +52,7 @@ Israel uses the international Harmonized System at the 6-digit level plus 2 Isra
 ### Step 4: Look up the duty rate, VAT rate, and purchase tax
 
 From the Shaar Olami entry for the HS code, read:
+- **Ad-valorem only.** This skill and its script price rates expressed as a percentage of value. The Israeli tariff also uses specific rates (NIS per kg, per litre, per unit) and compound rates of the form "X percent but not less than Y NIS per kg". Those are common on food, beverages, alcohol, tobacco, and some textiles and footwear. Read the rate cell in Shaar Olami literally: if it is not a bare percentage, this calculator cannot price it and the figure has to be worked out by hand.
 - Customs duty rate (typically 0 to 12 percent depending on category; many goods are duty-free due to MFN bindings)
 - VAT rate: 18 percent standard since 1 January 2025
 - Purchase tax: only on specific items (alcohol, tobacco, perfumes, some electronics, passenger cars)
@@ -98,10 +102,10 @@ See `references/fta-preferences.md` for details and pitfalls.
 User says: "I'm ordering a 60 dollar keyboard from Amazon US. Will I pay tax?"
 
 Actions:
-1. Personal import, product value below the USD 75 threshold (as of June 2026).
+1. Personal import, product value below the USD 75 threshold (as of July 2026).
 2. No customs duty, no VAT, no purchase tax.
 3. Warn that shipping charges are NOT counted toward the threshold as long as they are itemized separately on the invoice. If shipping is bundled into the product price, the combined figure is tested.
-4. Note: the same keyboard at 120 dollars would NOT be exempt today. It exceeds the USD 75 threshold and would owe about 18 percent VAT (the USD 130 window that once covered it expired on 1 June 2026). The threshold has changed four times in seven months, so verify via the official calculator before quoting.
+4. Note: the same keyboard at 120 dollars would NOT be exempt today. It exceeds the USD 75 threshold and would owe about 18 percent VAT (the USD 130 window that once covered it ran only to 1 June 2026). The threshold has changed four times in seven months, so verify via the official calculator before quoting.
 
 Result: No import tax at 60 dollars. Landed cost equals the US price plus shipping.
 
@@ -151,14 +155,14 @@ Result: Origin-preferred landed cost is CIF plus 18 percent VAT plus broker fees
 
 ## Gotchas
 
-- The personal-import threshold is exceptionally volatile: USD 75 to USD 150 by a Finance Ministry order in late December 2025, back to USD 75 when the Knesset revoked that order on 24 February 2026, USD 130 by a fresh Finance Ministry order signed less than 24 hours later (effective midnight 24-25 February 2026), and back to USD 75 when that temporary order expired on 1 June 2026. Four moves in seven months. The current standard is USD 75. Always verify the current value via the official calculator before quoting a number.
-- The exemption does NOT cover tobacco, e-cigarettes, alcohol, or alcoholic beverages. Those pay VAT and purchase tax from the first shilling regardless of value.
+- The personal-import threshold is exceptionally volatile: USD 75 to USD 150 by a Finance Ministry order in late December 2025, back to USD 75 when the Knesset revoked that order on 24 February 2026, USD 130 by a fresh order signed less than 24 hours later (effective midnight 24-25 February 2026), and back to USD 75 after that window ran to 1 June 2026. Four moves in seven months. The current value is USD 75. Always verify it against the official calculator before quoting a number.
+- The exemption does NOT cover tobacco products or alcoholic beverages. Those pay VAT and purchase tax from the first shekel regardless of value. E-cigarettes are not named in the exemption text the rights guides quote, so verify rather than asserting.
 - Shipping and insurance are part of CIF for commercial imports but are excluded from the personal-import threshold test as long as they are itemized separately on the invoice. If shipping is bundled into the price, the combined figure is tested.
 - The last two digits of an Israeli 8-digit HS code are Israel-specific. A US HTS code or an EU CN code does not translate directly; confirm the Israeli code in Shaar Olami.
 - FTA preference removes the customs duty only. VAT 18 percent and purchase tax (where applicable) still apply regardless of origin.
 - EUR.1 must carry a wet-ink (original) signature. Israel does not accept electronically signed EUR.1 certificates. Plan courier time for the original to arrive.
 - Purchase tax is NOT a small rounding item. Alcohol and tobacco can carry rates in the hundreds of percent. Do not assume only VAT applies.
-- Packages above USD 1,000 are treated as commercial regardless of who is buying. You will need a customs broker and a full import declaration (rashimon).
+- Packages above USD 1,000 are treated as commercial for tax purposes. Carriers will usually require a customs broker and a full import declaration (rashimon) at that point, but that is commercial practice rather than a stated legal threshold, so confirm with the carrier.
 - Israel Post holds parcels with unpaid customs charges in a bonded warehouse. Storage is free for the first 30 days from arrival notice; daily storage fees apply afterwards. Pick up or pay online via `israelpost.co.il` before the storage window closes.
 
 ## Reference Links

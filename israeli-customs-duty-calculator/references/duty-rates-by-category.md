@@ -32,7 +32,7 @@ These are rough indicative ranges. Always verify the exact rate for your 8-digit
 |----------|------|--------------|
 | Passenger cars | varies | very high, bulk of the landed cost |
 | Electric vehicles | varies | lower than ICE but rising |
-| Spare parts | varies | 0 |
+| Spare parts | varies | applies to many parts, verify the 8-digit code |
 
 ## Cosmetics and luxury
 
@@ -40,7 +40,7 @@ These are rough indicative ranges. Always verify the exact rate for your 8-digit
 |----------|--------------|--------------|
 | Cosmetics, skin care | 0 to moderate | varies |
 | Perfumes | moderate | varies |
-| Jewelry | 0 | 0 |
+| Jewelry | varies, verify in Shaar Olami | varies, verify in Shaar Olami |
 
 ## Industrial goods
 
@@ -58,4 +58,4 @@ vat         = base_for_vat * 0.18
 landed      = CIF + duty + purchase_tax + vat + broker_fees
 ```
 
-For personal imports, if the product value (excluding shipping and insurance, when itemized separately) is below the current threshold (USD 75 as of June 2026, after the temporary USD 130 window expired on 1 June 2026), no taxes apply at all. Between USD 75 and USD 500 only VAT applies, customs duty is waived under the personal-import regime, and purchase tax can still apply on specific items. Above USD 500 the full landed-cost calculation runs. Above USD 1,000 the shipment is treated as commercial and requires a customs broker. Tobacco, e-cigarettes, alcohol, and alcoholic beverages are excluded from the personal-import exemption regardless of value.
+For personal imports, if the product value (excluding shipping and insurance, when itemized separately) is below the current threshold (USD 75 as of July 2026, after the USD 130 window ran to 1 June 2026), no taxes apply at all. Between USD 75 and USD 500 only VAT applies, customs duty is waived under the personal-import regime, and purchase tax can still apply on specific items. Above USD 500 VAT applies and some goods also owe duty and purchase tax, depending on the HS classification. Above USD 1,000 the shipment is treated as commercial for tax purposes, and carriers in practice require a broker. Tobacco products and alcoholic beverages are excluded from the personal-import exemption regardless of value.
