@@ -5,38 +5,44 @@
   "claims": [
     {
       "claim_id": "income-tax-brackets-2026",
-      "claim": "2026 income tax brackets (active income): 10% to 84,120; 14% to 120,720; 20% to 228,000; 31% to 301,200; 35% to 560,280; 47% to 721,560. Brackets 3-5 widened by the Economic Efficiency Law 2026 (Amendment 288), approved 31 March 2026, retroactive to 1 January 2026; brackets 1-2 and 6 frozen at 2025 values",
-      "source_url": "https://www.kolzchut.org.il/he/מדרגות_מס_הכנסה",
-      "raw_snippet": "מדרגות מס 2026: 10% עד 84,120; 14% עד 120,720; 20% עד 228,000; 31% עד 301,200; 35% עד 560,280; 47% עד 721,560; תיקון 288 חוק ההתייעלות הכלכלית 2026 אושר 31 במרץ 2026; Section 131; Section 160; Section 288",
-      "fetched_at": "2026-06-16T23:25:00Z",
+      "claim": "2026 income tax brackets (active income): 10% to 84,120; 14% to 120,720; 20% to 228,000; 31% to 301,200; 35% to 560,280; 47% on every shekel above 560,280 (the 47% band does NOT end at the surtax threshold). Brackets 3-5 widened by the Economic Efficiency Law 2026 (Amendment 288), approved 31 March 2026, retroactive to 1 January 2026.",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf",
+      "raw_snippet": "על כל שקל חדש מ- 120,721 ש\"ח עד 228,000 ש\"ח - יחול שיעור מס 20%",
+      "fetched_at": "2026-07-27T00:00:00Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/tax-brackets-credits.md"
-      ]
+      ],
+      "verified_via": "pdftotext",
+      "verified_at": "2026-07-27T00:00:00Z"
     },
     {
       "claim_id": "credit-point-value-and-categories",
       "claim": "Each credit point (nekudat zikui) reduces annual tax by 2,904 NIS (242/month, frozen 2025-2027). Category values: resident male 2.25, female 2.75, new immigrant 3.0/2.0/1.0, child born 1.5, child 1-5 = 2.5, child 6-17 = 1.0, child 18 = 0.5, single parent 1.0, BA/vocational 1.0, MA 0.5, disability 2.0, combat reserve 0.5-1.0",
-      "source_url": "https://www.kolzchut.org.il/he/נקודת_זיכוי",
-      "raw_snippet": "נקודת זיכוי = 2,904 ש\"ח לשנה, 242 לחודש; גבר 2.25, אישה 2.75, עולה חדש 3.0 2.0 1.0, ילד שנולד 1.5, ילדים 1-5 = 2.5, 6-17 = 1.0, בן 18 = 0.5, הורה יחיד 1.0, תואר 1.0, MA 0.5, נכות 2.0, מילואים 0.5-1.0, 0.75, 60+, 45+, 20+",
-      "fetched_at": "2026-06-16T23:25:00Z",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf",
+      "raw_snippet": "נקודת זיכוי 33א ... 242 ... לחודש (242 x 12 = 2,904 ש\"ח לשנה)",
+      "fetched_at": "2026-07-27T00:00:00Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/tax-brackets-credits.md"
-      ]
+      ],
+      "verified_via": "pdftotext",
+      "verified_at": "2026-07-27T00:00:00Z"
     },
     {
       "claim_id": "surtax-and-corporate",
       "claim": "Surtax (mas yesafim) from 2026: 3% on active income above 721,560 NIS (top effective 50%), 5% on capital/passive income (3% + 2% surcharge). Corporate tax 23% flat; closely-held companies 2% on undistributed profits unless 6% distributed",
-      "source_url": "https://www.kolzchut.org.il/he/מדרגות_מס_הכנסה",
-      "raw_snippet": "מס יסף 3% על הכנסה אקטיבית מעל 721,560, אפקטיבי 50%; 5% על הכנסה הונית (3% + 2%); מס חברות 23%; חברת מעטים 2% אם לא חולקו 6%",
-      "fetched_at": "2026-06-16T23:25:00Z",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf",
+      "raw_snippet": "יחיד אשר הכנסתו החייבת בשנת המס עלתה על 721,560 ₪ ... בשיעור של 3%",
+      "fetched_at": "2026-07-27T00:00:00Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ]
+      ],
+      "verified_via": "pdftotext",
+      "verified_at": "2026-07-27T00:00:00Z"
     },
     {
       "claim_id": "rental-and-mandatory-filing",
@@ -62,7 +68,7 @@
     },
     {
       "claim_id": "section-46-donation",
-      "claim": "Section 46 donation credit: 35% of the eligible donation for individuals; recognized-institution requirement; annual minimum floor (order of 200 NIS, indexed); ceiling lower of 30% of taxable income or an absolute cap; excess carried forward up to 3 years",
+      "claim": "Section 46 donation credit: 35% of the eligible donation for individuals and the corporate rate (23%) for companies; recognized-institution requirement; excess above the ceiling carried forward up to 3 tax years. Exact floor and ceiling figures are carried by section-46-floor-ceiling-2026, which supersedes the vague description previously here.",
       "source_url": "https://www.kolzchut.org.il/he/זיכוי_ממס_בגין_תרומות",
       "raw_snippet": "סעיף 46: 35% זיכוי ליחיד; מוסד מוכר; רצפת מינימום כ-200 ש\"ח; תקרה 30% מההכנסה החייבת; העברה קדימה 3 שנים",
       "fetched_at": "2026-06-16T23:25:00Z",
@@ -81,7 +87,9 @@
         "SKILL.md",
         "SKILL_HE.md",
         "references/form-guide.md"
-      ]
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-07-27T00:00:00Z"
     },
     {
       "claim_id": "forms-and-deadlines",
@@ -139,7 +147,9 @@
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ]
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-07-27T00:00:00Z"
     },
     {
       "claim_id": "havraa-reduction-2024-2025",
@@ -151,6 +161,46 @@
         "SKILL.md",
         "SKILL_HE.md",
         "references/form-guide.md"
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-07-27T00:00:00Z"
+    },
+    {
+      "claim_id": "section-46-floor-ceiling-2026",
+      "claim": "Section 46 donation credit: the minimum qualifying total is 207 NIS (200 NIS in 2023, 190 NIS in 2020-2022) and applies to the combined total of separate donations; the ceiling is the lower of 10,354,816 NIS (2026) or 30 percent of taxable income, with a 3-year carryforward. Individuals get 35 percent; companies get the corporate rate (23 percent).",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%96%D7%99%D7%9B%D7%95%D7%99_%D7%9E%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94_%D7%91%D7%A9%D7%9C_%D7%AA%D7%A8%D7%95%D7%9E%D7%94_(%D7%A1%D7%A2%D7%99%D7%A3_46)",
+      "raw_snippet": "אם הסכום הכולל של התרומות עולה על 207 ₪ (207 ש\"ח) ... בשנים 2022-2020 סכום התרומה המינימלי שזיכה בהטבה היה 190 ₪ (190 ש\"ח) ... תקרה של 10,354,816 ₪ (10,354,816 ש\"ח) (נכון ל-2026) או עד 30% מהכנסתם החייבת",
+      "fetched_at": "2026-07-27T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-07-27T00:00:00Z"
+    },
+    {
+      "claim_id": "havraa-reduction-not-renewed-2026",
+      "claim": "The havraa freeze-and-reduction temporary legislation expired with tax year 2025 and is not in force for 2026; the 2026 private-sector havraa day rate returned to the normal track.",
+      "source_url": "https://zcpa.co.il/Article/dmei-havraa-2026",
+      "raw_snippet": "בשנת 2026 שני החוקים הללו אינם בתוקף עוד",
+      "fetched_at": "2026-07-27T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "brackets-2026-ita-booklet",
+      "claim": "The 2026 income tax brackets and the Section 121B surtax confirmed against the Israel Tax Authority's own monthly deductions booklet (updated April 2026): 20% from 120,721 to 228,000; 31% from 228,001 to 301,200; 35% from 301,201 to 560,280; 47% on every additional shekel; plus 3% surtax on taxable income above 721,560.",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf",
+      "raw_snippet": "על כל שקל חדש מ- 120,721 ש\"ח עד 228,000 ש\"ח - יחול שיעור מס 20% ... יחיד אשר הכנסתו החייבת בשנת המס עלתה על 721,560 ₪ ... בשיעור של 3%",
+      "verified_via": "pdftotext",
+      "verified_at": "2026-07-27T00:00:00Z",
+      "fetched_at": "2026-07-27T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-brackets-credits.md"
       ]
     }
   ]

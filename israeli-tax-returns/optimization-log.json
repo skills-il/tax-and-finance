@@ -7,8 +7,27 @@
         "Added Step 3.7 (Section 17(11) CPA/return-prep fee deduction, available to salaried filers too) and Step 2.6 (havraa-day reduction fields 011/012, 2024-2025 sunset) per GitHub issue #12. Fact-check REJECTED the reporter's 'net into field 158' convention (unverifiable; field 158 is gross-salary cross-checked vs Form 106) and instead advised keeping the invoice + attaching an explanation.",
         "Havraa reduction is a hora'at sha'a scoped to tax years 2024-2025 only. On the NEXT update after tax year 2025 closes, verify whether the law was renewed for 2026; if not, mark Step 2.6 clearly as a closed/historical provision or move it to the reference.",
         "Body was at the 5,000-word validate ceiling. Trimmed redundant deadline restatements (stated 4x) and reference-grade form-field enumerations (moved Form 126/856 + Form 1301 section detail to references/form-guide.md). Future additions must budget against the word cap or move detail to references.",
-        "Expert review surfaced a pre-existing error the addition contradicted: Step 6 Form 126 listed dmei havra'a as an 'exempt payment' — it is taxable salary. Fixed. If future edits touch Form 126 exempt payments, only severance up to the ptur ceiling is exempt.",
+        "Expert review surfaced a pre-existing error the addition contradicted: Step 6 Form 126 listed dmei havra'a as an 'exempt payment' , it is taxable salary. Fixed. If future edits touch Form 126 exempt payments, only severance up to the ptur ceiling is exempt.",
         "Judge note: the Form 1301 'line 60 / השתתפות זמנית הפחתת דמי הבראה' label is NOT in the cited ITA circular PDF but was independently confirmed via the ITA Form 1301 transmission spec (prog.co.il). Section 17(11) evidence is sourced to a commercial CPA blog (claltax.com) quoting the statute; the body now hedges the salaried-filer position as 'contested, assessor may disallow' rather than asserting it as settled."
+      ]
+    },
+    {
+      "version": "1.7.0",
+      "date": "2026-07-27",
+      "lessons": [
+        "CARRY RESOLVED: the havraa freeze-and-reduction hora'at sha'a was NOT renewed. Both laws expired with tax year 2025 and are not in force for 2026. Step 2.6 now states this outright AND notes the step is still live work, because the 2024/2025 returns are exactly what gets filed during 2026. Read the step as scoped to the return's tax YEAR, not the filing year.",
+        "BRACKETS VERIFIED, NOT CHANGED. A secondary source (a tax-advisor blog) gave materially different 2026 brackets (3rd band ending 193,800, surtax threshold 765,390). The ITA's own monthly deductions booklet, extracted with pdftotext, confirms the skill: 20% to 228,000, 31% to 301,200, 35% to 560,280, 3% surtax above 721,560 under s.121B. The 2025 booklet lacks 228,000/301,200, so brackets 3-5 genuinely did widen for 2026, and the 2026 booklet is marked 'updated April 2026', consistent with Amendment 288 approved 31 March 2026. LESSON: do not 'correct' a table against a blog; go to the ITA PDF.",
+        "CRITICAL FIXED: references/tax-brackets-credits.md still showed the 47% band as ENDING at 721,560, contradicting the corrected Step 4. An agent routed to the reference for 'any tax calculation' would have taxed income above the threshold at the surtax rate instead of 47%+3%, under-reporting by 44 points on every shekel above it. Both the table and a warning paragraph are fixed.",
+        "MAJOR FIXED: in SKILL_HE.md the new resolved-sunset text was APPENDED while the old conditional bullet ('unless the law is renewed') was left in place, so the Hebrew file contradicted itself. Same add-without-retiring pattern as the batch's other skills; the old bullet is now rewritten.",
+        "Donation floor and ceiling replaced vague hedges with sourced figures: floor 207 NIS on the COMBINED annual total (200 in 2023, 190 in 2020-2022), ceiling the lower of 10,354,816 NIS (2026) or 30% of taxable income, 3-year carryforward, companies at 23%. NOTE: an earlier search summary offered 190 NIS and 9,350,000 NIS; both were STALE (2020 figures). Verifying against the source is what caught it.",
+        "Added the combined-total trap explicitly: the floor applies to the year's total across Section 46 institutions, not per donation. Four 60 NIS donations qualify; checking them one at a time wrongly disqualifies the claim.",
+        "Body was over the 5,000-word cap after the additions (5,160). Trimmed Step 9, the Gotchas prose and the Bundled Resources descriptions to 4,995. Also fixed a stale reference description that still called the 2026 brackets frozen.",
+        "Evidence hygiene: six pre-existing entries held paraphrased SUMMARIES rather than verbatim page text and failed --check-sources. Re-sourced the brackets, credit-point and surtax entries against the ITA PDF; marked the rest with how they were verified. Also reconciled two entries that still asserted the pre-edit state (47% bounded at 721,560; the vague donation floor)."
+      ],
+      "carry": [
+        "references/tax-brackets-credits.md and references/form-guide.md lag the SKILL bodies by default. Every future cycle should diff the reference files against the body for each changed figure, not just edit the two SKILL files. This cycle that gap produced a CRITICAL.",
+        "Pension ceilings in Step 3.5 (7% of 23,232 NIS/month for salaried, 5.5%/11% limbs for self-employed) were not re-verified this cycle. Check them against the ITA booklet next time; the booklet is fetchable and pdftotext-able.",
+        "Mikdamot rates and the Form 6111 300,000 NIS turnover threshold were not re-verified this cycle."
       ]
     }
   ]

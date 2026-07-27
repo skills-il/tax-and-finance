@@ -87,7 +87,8 @@ For tax years 2024 and 2025 ONLY, temporary legislation reduced employees' conva
 - **Where it appears:** Form 106 reports it in field 011/012, "מחיר יום ההבראה שהופחת ממשכורת העובד" (price of the havraa day reduced from the employee's salary). On Form 1301 it appears at line 60, "השתתפות זמנית הפחתת דמי הבראה", printed inside Part יב (the personal-deductions section).
 - **It is informational only, NOT a deduction and NOT a credit.** The reduced amount was already netted out of the gross salary reported in field 158, and the employer's participation amount is not income to the employee (per the circular). Do NOT enter field 011/012 as a Part יב deduction or as a tax credit, even though it is printed inside the deductions section of the form. Treating it as a deduction double-counts the benefit and understates tax.
 - **Exemption:** a home/domestic employer (an individual employing someone outside a business, for example a household employing a caregiver) is exempt from the reduction.
-- **Sunset:** the provision is a temporary order (hora'at sha'a) scoped to tax years 2024 and 2025 only. It should not appear on a Form 106 or Form 1301 for 2026 onward unless the law is renewed.
+- **Sunset, resolved as of 27 July 2026: the law was NOT renewed.** Both the freeze and the reduction expired with tax year 2025 and are not in force for 2026, so a 2026 Form 106 should carry no field 011/012 value and a 2026 Form 1301 no line 60 value. If one appears, question it rather than transcribing it.
+- **This step is still live work, not history.** Returns for tax years 2024 and 2025 are exactly what is being filed during 2026, so the reduction still has to be handled correctly on the return in front of you. Read the step as scoped to the tax YEAR of the return, not to the year you are filing in.
 
 ### Step 3: Nekudot Zikui (Tax Credit Points) Calculation
 
@@ -144,10 +145,11 @@ Donations to a recognized public institution qualify for a tax credit under Sect
 
 - **Credit rate:** 35 percent of the eligible donation amount for individuals (companies get the corporate-rate credit). The credit reduces tax liability directly, like nekudot zikui, not taxable income.
 - **Recognized institution requirement:** the recipient must hold a valid Section 46 recognition (mosad tziburi mukar lefi seif 46). A donation to a charity without 46 recognition does NOT qualify. Verify the institution's 46 status (the Tax Authority publishes the approved list).
-- **Minimum floor:** there is an annual minimum donation below which no credit is given (a few hundred NIS, indexed annually, on the order of 200 NIS for recent years). Verify the current-year floor before quoting it.
-- **Ceiling:** the eligible donation in a year is capped at the lower of 30 percent of taxable income or an absolute annual cap. Excess above the ceiling can be carried forward (up to three years).
+- **Minimum floor: 207 NIS** of total donations in the year (it was 200 NIS in 2023 and 190 NIS in 2020-2022, so an older figure will wrongly disqualify a claim). The floor applies to the COMBINED total of separate donations to Section 46 institutions, not to each donation individually, which is the point most often got wrong: four 60 NIS donations qualify, and treating them one at a time says none do.
+- **Ceiling: the lower of 10,354,816 NIS (2026) or 30 percent of the donor's taxable income for that year.** In practice the percentage limb binds for almost everyone. Anything above the ceiling carries forward to the next 3 tax years.
+- **Company donors get the credit at the corporate rate (23 percent), not 35 percent.**
 - **Documentation:** keep the original donation receipts marked with the institution's 46 recognition; the ITA may require them.
-- Always verify the current floor, ceiling, and the institution's 46 status before quoting figures.
+- Figures are indexed; re-check them for the return's tax year.
 
 ### Step 3.7: Return-Preparation and Professional Fee Deduction (Section 17(11))
 
@@ -170,8 +172,10 @@ Apply the progressive income tax rates to taxable income. Brackets for 2026 (bra
 | 3 | 120,721 - 228,000 | 20% |
 | 4 | 228,001 - 301,200 | 31% |
 | 5 | 301,201 - 560,280 | 35% |
-| 6 | 560,281 - 721,560 | 47% |
-| Surtax | Above 721,560 | See below |
+| 6 | 560,281 and above | 47% |
+| Surtax | Above 721,560 | 47% + surtax, see below |
+
+Note the last two rows: 47% applies to every shekel above 560,280 and does not stop at 721,560. The surtax is charged ON TOP of the 47%, which is why the effective top rate is 50% and not 3%.
 
 **Surtax (mas yesafim), two-tier system from 2026:**
 - Employment and active income: 3% above 721,560 NIS (effective top rate: 50%)
@@ -278,19 +282,16 @@ When filing the annual return (Form 1301 or 1214), the total advance payments ma
 
 All returns are submitted electronically via the Tax Authority's online system (SHAAM):
 
-**Registration and access:** register at misim.gov.il with a teudat zehut or company number and set up digital credentials (username, password, two-factor). CPAs use their own credentials with per-client authorization (yipui koach).
+**Registration:** register at misim.gov.il with a teudat zehut or company number and set up credentials with two-factor. CPAs use their own credentials plus per-client yipui koach.
 
-**Submission workflow:** log in, select the form and tax year, enter or upload the data, review the system-calculated liability after validation, submit to receive a confirmation number, and pay any tax owed via the payment portal (bank transfer, credit card, or post-office bank reference).
+**Submission:** log in, pick the form and tax year, enter or upload data, review the calculated liability, submit for a confirmation number, then pay via the payment portal (bank transfer, credit card, or post-office reference).
 
-**CPA authorization (yipui koach):**
-- The taxpayer grants power of attorney to the CPA via the SHAAM portal
-- The CPA can then submit returns, view assessments, and communicate with the Tax Authority on behalf of the client
-- Authorization is per-client, per-year
+**CPA authorization (yipui koach):** granted by the taxpayer in the SHAAM portal, per client and per year. It lets the CPA submit returns, view assessments, and correspond with the Tax Authority for that client.
 
 **Filing extensions:**
-- Individual returns (Form 1301): see Step 1 for the 2025-return deadlines (June 30 online, 29 May 2026 paper). CPA clients typically receive automatic extensions through the CPA association's quota agreement (often to September 30 or later)
-- Company returns (Form 1214): standard deadline May 31, extensions available
-- Extension requests must be filed before the original deadline
+- Form 1301: see Step 1 for the 2025-return deadlines. CPA clients usually get automatic extensions under the association quota agreement, often to 30 September or later
+- Form 1214: standard deadline 31 May, extensions available
+- Request any extension BEFORE the original deadline
 
 ## Examples
 
@@ -352,16 +353,16 @@ Actions:
 ## Bundled Resources
 
 ### References
-- `references/form-guide.md` - Overview of all Israeli tax forms covered by this skill, including form numbers, who must file, deadlines, and key fields. Covers Forms 1301, 1214, 126, 856, 6111, 1322, 1325. Consult when the user asks about a specific form or needs to determine which forms apply to their situation.
-- `references/tax-brackets-credits.md` - Current income tax brackets (2025, frozen through 2027), nekudot zikui point values and eligibility categories, surtax thresholds, and corporate tax rates. Consult for any income tax calculation or when verifying tax credit point entitlements.
+- `references/form-guide.md` - Forms 1301, 1214, 126, 856, 6111, 1322, 1325: who files, deadlines, key fields. Consult for a specific form or to decide which forms apply.
+- `references/tax-brackets-credits.md` - 2026 brackets (1-2 and the 47% band frozen at 2025 values, 3-5 widened for 2026), nekudot zikui values and categories, surtax thresholds, corporate rates. Consult for any tax calculation.
 
 ## Gotchas
-- The Israeli individual return (Form 1301) deadline for the 2025 tax year, filed in 2026, is June 30 for online filers and 29 May 2026 for paper filers. April 30 is only the legacy paper baseline from earlier years, not the current online deadline. Self-employed filers with CPA representation get later extensions via the CPA association quota agreement (often September 30 or later). Agents may use the US April 15 deadline or the stale Israeli April 30 figure.
-- Israeli tax returns use Form 1301 for individuals, not 1040. Agents may reference US form numbers and fields that do not exist in the Israeli system.
-- Capital gains in Israel are reported on a separate schedule and may have different rates (25% for financial assets, up to 50% for real estate depending on holding period and property count). Agents may apply a single capital gains rate.
-- Tax credit points (neku'dot zikui) must be claimed annually and vary by personal status (marital, children, new oleh, discharged soldier). Agents may use a default value without checking eligibility.
-- From 2026, Mas Shevach on a non-exempt investment property is counted toward the taxpayer's surtax income (5% on active-plus-capital income above 721,560 NIS). Agents may treat Mas Shevach and surtax as fully separate and under-report the combined liability.
-- Fees paid to a CPA or tax advisor for preparing the return are deductible for SALARIED employees too under Section 17(11), not only for the self-employed. Agents may wrongly tell a salaried filer that return-preparation fees are not deductible, or invent a specific Form 1301 field for them (there is none, keep the invoice and attach an explanation).
+- Form 1301 for tax year 2025, filed in 2026: 30 June online, 29 May on paper. April 30 is a legacy paper baseline, not the online deadline, and April 15 is American. Filers represented by a CPA get later extensions under the CPA-association quota agreement, often 30 September or later.
+- Individuals file Form 1301, not a 1040. US form numbers and fields do not exist here.
+- Capital gains go on a separate schedule with their own rates (25% financial assets, up to 50% on real estate by holding period and property count). Do not apply one blanket rate.
+- Nekudot zikui must be claimed annually and vary by status (marital, children, new oleh, discharged soldier). Do not assume a default count.
+- From 2026 Mas Shevach on a non-exempt investment property counts toward surtax income (5% above 721,560 NIS). Treating the two as separate under-reports the liability.
+- Return-preparation fees are deductible under Section 17(11) for SALARIED filers too, not only the self-employed. There is no dedicated Form 1301 field: keep the invoice and attach an explanation.
 - The havraa-reduction figure on Form 106/1301 (field 011/012, "מחיר יום ההבראה שהופחת ממשכורת העובד", tax years 2024-2025 only) is informational: it was already netted out of gross salary and is not income to the employee. Agents reasoning from the form's visual structure may wrongly treat it as a Part יב deduction and mis-state tax.
 
 ## Reference Links

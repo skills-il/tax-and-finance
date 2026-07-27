@@ -11,8 +11,13 @@ These brackets apply to active income (employment, self-employment, business inc
 | 3 | 120,721 - 228,000 | 10,061 - 19,000 | 20% |
 | 4 | 228,001 - 301,200 | 19,001 - 25,100 | 31% |
 | 5 | 301,201 - 560,280 | 25,101 - 46,690 | 35% |
-| 6 | 560,281 - 721,560 | 46,691 - 60,130 | 47% |
-| Surtax | Above 721,560 | Above 60,130 | See Surtax section |
+| 6 | 560,281 and above | 46,691 and above | 47% |
+| Surtax | Above 721,560 | Above 60,130 | 47% + surtax, see Surtax section |
+
+The 47% band does NOT stop at 721,560. It applies to every shekel above 560,280, and the
+surtax is charged ON TOP of it, which is why the effective top marginal rate is 50% rather
+than the surtax rate on its own. Reading the last two rows as consecutive bands
+under-reports tax on high earners by 44 points on every shekel above the threshold.
 
 **Note:** Brackets 1-2 and 6 are frozen (not inflation-adjusted). This effectively increases the real tax burden as wages rise with inflation.
 
@@ -112,3 +117,17 @@ These brackets apply to active income (employment, self-employment, business inc
 | Mikdamot | 15th of month after period | Interest on late payment |
 | Mas Shevach declaration | 30 days from sale | Interest + linkage + fines |
 | Rental income (10% track) | January 31 | Interest on late payment |
+
+## Section 46 donation credit (2026)
+
+| Item | Value |
+|------|-------|
+| Credit rate, individuals | 35% of the eligible donation |
+| Credit rate, companies | corporate rate, 23% |
+| Minimum floor | 207 NIS of COMBINED donations in the year (200 in 2023; 190 in 2020-2022) |
+| Ceiling | lower of 10,354,816 NIS (2026) or 30% of taxable income |
+| Excess above ceiling | carried forward up to 3 tax years |
+
+The floor applies to the year's combined total across Section 46 institutions, not to each
+donation separately. Checking donations one at a time is the common way a valid claim gets
+wrongly disqualified.
