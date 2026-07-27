@@ -18,7 +18,7 @@ While most EU trade partners are now on the revised PEM rules, Israel (along wit
 - Same EUR.1 form, same fields.
 - Same invoice declaration wording.
 - Same 6000 euros threshold below which any exporter can use an invoice declaration.
-- EUR-MED certificates are NOT used (neither the revised nor the 2012 regime issues them now).
+- EUR-MED certificates are abolished under the REVISED rules only. Because Israel remains on the 2012 rules, EUR-MED is still an issuable instrument on the Israel route: the Access2Markets 2012-PEM page states "Movement certificates EUR.1 or EUR-MED are issued by the customs authorities of the exporting country" (https://trade.ec.europa.eu/access-to-markets/en/content/rules-origin-pan-euro-mediterranean-convention). It is only needed for diagonal cumulation; a plain EUR.1 covers a direct Israel-to-EU shipment.
 - Cumulation options remain limited to PEM parties that share a mutual FTA with Israel and apply compatible rules.
 
 ## When Israel ratifies
@@ -28,7 +28,7 @@ When Israel eventually ratifies the revised PEM Convention, expect:
 - Possible new limits on cumulation.
 - A transition period during which both rule sets may apply depending on the shipment date.
 
-Check the EU Access2Markets page before each shipment (https://trade.ec.europa.eu/access-to-markets/en/content/rules-origin-revised-pan-euro-mediterranean-convention).
+Check the EU Access2Markets page for the rules Israel actually applies before each shipment (https://trade.ec.europa.eu/access-to-markets/en/content/rules-origin-pan-euro-mediterranean-convention).
 
 ## Recommended exporter practice
 

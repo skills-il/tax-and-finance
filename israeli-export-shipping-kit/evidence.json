@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0",
   "skill": "israeli-export-shipping-kit",
-  "generated_at": "2026-06-25T00:00:00Z",
+  "generated_at": "2026-07-27T00:00:00Z",
   "claims": [
     {
       "claim_id": "vat-18-zero-export",
@@ -9,7 +9,10 @@
       "source_url": "https://taxsummaries.pwc.com/israel/corporate/other-taxes",
       "raw_snippet": "The 2025 current rate of VAT is 18%. ... Exports of goods and certain services and various other transactions are zero-rated",
       "fetched_at": "2026-06-25T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "vat-section-30-export-proof",
@@ -17,7 +20,10 @@
       "source_url": "https://taxsummaries.pwc.com/israel/corporate/other-taxes",
       "raw_snippet": "The 2025 current rate of VAT is 18%. ... Exports of goods and certain services and various other transactions are zero-rated",
       "fetched_at": "2026-06-25T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "incoterms-2020-eleven",
@@ -25,7 +31,11 @@
       "source_url": "https://iccwbo.org/business-solutions/incoterms-rules/incoterms-2020/",
       "raw_snippet": "Incoterms® rules are a set of eleven three-letter trade terms, reflecting business-to-business practice in contracts for the sale and purchase of goods.",
       "fetched_at": "2026-06-25T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/incoterms-2020.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/incoterms-2020.md"
+      ]
     },
     {
       "claim_id": "eur1-6000-threshold",
@@ -33,7 +43,13 @@
       "source_url": "https://trade.ec.europa.eu/access-to-markets/en/content/rules-origin-pan-euro-mediterranean-convention",
       "raw_snippet": "any exporter, if the total value of the products does not exceed €6,000.",
       "fetched_at": "2026-06-26T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/eur1-application-guide.md", "references/origin-declaration-template.md", "references/pem-2026-rules.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/eur1-application-guide.md",
+        "references/origin-declaration-template.md",
+        "references/pem-2026-rules.md"
+      ]
     },
     {
       "claim_id": "eur1-4-month-validity",
@@ -41,7 +57,11 @@
       "source_url": "https://trade.ec.europa.eu/access-to-markets/en/content/rules-origin-pan-euro-mediterranean-convention",
       "raw_snippet": "The proof of origin is valid for a period of 4 months from the date of issue.",
       "fetched_at": "2026-06-26T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/eur1-application-guide.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/eur1-application-guide.md"
+      ]
     },
     {
       "claim_id": "pem-revised-2025-in-force",
@@ -49,7 +69,12 @@
       "source_url": "https://taxation-customs.ec.europa.eu/news/pem-convention-joint-committee-decisions-paves-way-simplified-rules-origin-2024-12-19_en",
       "raw_snippet": "marking a significant milestone in the lead-up to the entry into force of the Revised PEM Convention on 1 January 2025",
       "fetched_at": "2026-06-26T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/eur1-application-guide.md", "references/pem-2026-rules.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/eur1-application-guide.md",
+        "references/pem-2026-rules.md"
+      ]
     },
     {
       "claim_id": "eu-technical-arrangement-place-postcode",
@@ -57,7 +82,11 @@
       "source_url": "https://trade.ec.europa.eu/access-to-markets/en/news/new-code-y864-goods-imported-eu-preferential-origin-israel-16-may-2023",
       "raw_snippet": "EUR.1 and invoice declarations issued or made out in Israel should bear the postal code and the name of the city, village, or industrial zone where production conferring originating status has taken place",
       "fetched_at": "2026-06-25T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/eur1-application-guide.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/eur1-application-guide.md"
+      ]
     },
     {
       "claim_id": "eu-1967-territories-not-eligible",
@@ -65,7 +94,11 @@
       "source_url": "https://trade.ec.europa.eu/access-to-markets/en/news/new-code-y864-goods-imported-eu-preferential-origin-israel-16-may-2023",
       "raw_snippet": "products produced in those settlements are not entitled to benefit from preferential tariff treatment under the EU-Israel Association Agreement",
       "fetched_at": "2026-06-25T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/eur1-application-guide.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/eur1-application-guide.md"
+      ]
     },
     {
       "claim_id": "eu-code-y864-2023-05-16",
@@ -73,23 +106,35 @@
       "source_url": "https://trade.ec.europa.eu/access-to-markets/en/news/new-code-y864-goods-imported-eu-preferential-origin-israel-16-may-2023",
       "raw_snippet": "As from 16 May 2023, importers and economic operators involved in imports into the European Union of products originating in Israel, must declare the new code Y864 in box 44 of the import declaration",
       "fetched_at": "2026-06-25T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/eur1-application-guide.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/eur1-application-guide.md"
+      ]
     },
     {
       "claim_id": "us-israel-35-percent",
       "claim": "Under the US-Israel FTA, the cost or value of materials produced in the exporting party plus direct processing costs there must be at least 35 percent of the appraised value of the article; up to 15 percent may come from the other party.",
       "source_url": "https://www.trade.gov/us-israel-free-trade-agreement",
-      "raw_snippet": "the sum of (i) the cost or value of the materials produced in the exporting Party, plus (ii) the direct costs of processing operations performed in the exporting Party is not less than 35 percent of the appraised value of the article ... up to 15 percent of the appraised value of the article",
-      "fetched_at": "2026-06-25T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/origin-declaration-template.md"]
+      "raw_snippet": "not less than 35 percent of the appraised value of the article",
+      "fetched_at": "2026-07-27T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/origin-declaration-template.md"
+      ]
     },
     {
       "claim_id": "us-israel-green-form-2018",
       "claim": "Effective January 10, 2018, the hard-copy Green Form (Form A) is no longer required; exporters complete and sign the US Origin Invoice Declaration instead.",
       "source_url": "https://www.trade.gov/us-israel-free-trade-agreement",
-      "raw_snippet": "Effective January 10, 2018, U.S. exporters to Israel are no longer required to provide Israeli authorities a hard copy Certificate of Origin (commonly referred to as the 'Green Form' or 'Form A').",
-      "fetched_at": "2026-06-25T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/origin-declaration-template.md"]
+      "raw_snippet": "Effective January 10, 2018, U.S. exporters to Israel are no longer required to provide Israeli authorities a hard copy Certificate of Origin",
+      "fetched_at": "2026-07-27T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/origin-declaration-template.md"
+      ]
     },
     {
       "claim_id": "fta-uae-cepa",
@@ -97,7 +142,10 @@
       "source_url": "https://en.wikipedia.org/wiki/Free_trade_agreements_of_Israel",
       "raw_snippet": "UAE ... 1 April 2023",
       "fetched_at": "2026-06-25T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "fta-vietnam-vifta",
@@ -105,15 +153,10 @@
       "source_url": "https://en.wikipedia.org/wiki/Free_trade_agreements_of_Israel",
       "raw_snippet": "Vietnam ... 17 November 2024",
       "fetched_at": "2026-06-25T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
-    },
-    {
-      "claim_id": "fta-korea-kifta",
-      "claim": "The Korea-Israel FTA (KIFTA) entered into force on 1 January 2023.",
-      "source_url": "https://en.wikipedia.org/wiki/Free_trade_agreements_of_Israel",
-      "raw_snippet": "South Korea ... 1 January 2023",
-      "fetched_at": "2026-06-25T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "fta-guatemala",
@@ -121,7 +164,10 @@
       "source_url": "https://en.wikipedia.org/wiki/Free_trade_agreements_of_Israel",
       "raw_snippet": "Guatemala ... 1 March 2024",
       "fetched_at": "2026-06-25T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "fta-uk-2021",
@@ -129,7 +175,10 @@
       "source_url": "https://en.wikipedia.org/wiki/Free_trade_agreements_of_Israel",
       "raw_snippet": "UK ... 1 January 2021",
       "fetched_at": "2026-06-25T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "cifta-2019-4-years",
@@ -137,15 +186,22 @@
       "source_url": "https://www.cbsa-asfc.gc.ca/publications/dm-md/d11/d11-4-2-eng.html",
       "raw_snippet": "This memorandum has also been revised to reflect the amended Canada-Israel Free Trade Agreement (CIFTA) that entered into force on September 1, 2019. ... A certificate of origin completed and signed by an importer, exporter or producer, as the case may be, will be accepted as proof of origin for four years after the date on which it is signed",
       "fetched_at": "2026-06-26T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/origin-declaration-template.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/origin-declaration-template.md"
+      ]
     },
     {
       "claim_id": "cifta-2019-gazette",
       "claim": "An Order in Council fixed September 1, 2019 as the day the modernized Canada-Israel Free Trade Agreement (amended CIFTA Implementation Act) comes into force.",
       "source_url": "https://gazette.gc.ca/rp-pr/p2/2019/2019-08-21/html/si-tr77-eng.html",
-      "raw_snippet": "fixes September 1, 2019 as the day on which that Act comes into force",
-      "fetched_at": "2026-06-26T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "raw_snippet": "Order Fixing September&nbsp;1,&nbsp;2019 as the Day on which that Act Comes into Force",
+      "fetched_at": "2026-07-27T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "url-icc-incoterms",
@@ -153,7 +209,10 @@
       "source_url": "https://iccwbo.org/business-solutions/incoterms-rules/incoterms-2020/",
       "raw_snippet": "Incoterms® rules are a set of eleven three-letter trade terms",
       "fetched_at": "2026-06-25T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "url-trade-gov-us-israel",
@@ -161,15 +220,22 @@
       "source_url": "https://www.trade.gov/us-israel-free-trade-agreement",
       "raw_snippet": "Effective January 10, 2018, U.S. exporters to Israel are no longer required to provide Israeli authorities a hard copy Certificate of Origin",
       "fetched_at": "2026-06-25T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/origin-declaration-template.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/origin-declaration-template.md"
+      ]
     },
     {
       "claim_id": "url-cbp-israel",
       "claim": "US CBP Israel certificate of origin requirements page.",
       "source_url": "https://www.cbp.gov/trade/free-trade-agreements/israel/certificate-origin-requirements",
-      "raw_snippet": "Israel certificate of origin requirements",
-      "fetched_at": "2026-06-25T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "raw_snippet": "Israel FTA Certificate of Origin Requirements",
+      "fetched_at": "2026-07-27T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "url-cbsa-cifta",
@@ -177,7 +243,11 @@
       "source_url": "https://www.cbsa-asfc.gc.ca/publications/dm-md/d11/d11-5-6-eng.html",
       "raw_snippet": "Canada-Israel Free Trade Agreement",
       "fetched_at": "2026-06-25T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/origin-declaration-template.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/origin-declaration-template.md"
+      ]
     },
     {
       "claim_id": "url-eu-israel-trade",
@@ -185,7 +255,10 @@
       "source_url": "https://policy.trade.ec.europa.eu/eu-trade-relationships-country-and-region/countries-and-regions/israel_en",
       "raw_snippet": "EU trade relations with Israel",
       "fetched_at": "2026-06-25T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "url-access2markets-y864",
@@ -193,23 +266,35 @@
       "source_url": "https://trade.ec.europa.eu/access-to-markets/en/news/new-code-y864-goods-imported-eu-preferential-origin-israel-16-may-2023",
       "raw_snippet": "As from 16 May 2023, importers and economic operators involved in imports into the European Union of products originating in Israel, must declare the new code Y864",
       "fetched_at": "2026-06-25T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/eur1-application-guide.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/eur1-application-guide.md"
+      ]
     },
     {
       "claim_id": "url-access2markets-pem",
       "claim": "Access2Markets revised PEM Convention rules of origin page.",
-      "source_url": "https://trade.ec.europa.eu/access-to-markets/en/content/rules-origin-revised-pan-euro-mediterranean-convention",
-      "raw_snippet": "rules of origin revised pan euro mediterranean convention",
-      "fetched_at": "2026-06-25T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/eur1-application-guide.md", "references/pem-2026-rules.md"]
+      "source_url": "https://trade.ec.europa.eu/access-to-markets/en/content/rules-origin-pan-euro-mediterranean-convention",
+      "raw_snippet": "Movement certificates EUR.1 or EUR-MED are issued by the customs authorities of the exporting country.",
+      "fetched_at": "2026-07-27T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/eur1-application-guide.md",
+        "references/pem-2026-rules.md"
+      ]
     },
     {
       "claim_id": "url-uk-israel-tpa",
       "claim": "UK guidance on the UK-Israel Trade and Partnership Agreement.",
       "source_url": "https://www.gov.uk/guidance/summary-of-the-uk-israel-trade-and-partnership-agreement",
-      "raw_snippet": "summary of the UK-Israel trade and partnership agreement",
-      "fetched_at": "2026-06-25T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "raw_snippet": "How you import from and export to Israel",
+      "fetched_at": "2026-07-27T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "url-israel-tax-authority-en",
@@ -217,7 +302,10 @@
       "source_url": "https://www.gov.il/en/departments/israel_tax_authority",
       "raw_snippet": "Israel Tax Authority",
       "fetched_at": "2026-06-25T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "url-israel-tax-authority-he",
@@ -225,7 +313,9 @@
       "source_url": "https://www.gov.il/he/departments/israel_tax_authority",
       "raw_snippet": "Israel Tax Authority",
       "fetched_at": "2026-06-25T00:00:00Z",
-      "appears_in": ["references/pem-2026-rules.md"]
+      "appears_in": [
+        "references/pem-2026-rules.md"
+      ]
     },
     {
       "claim_id": "url-boi-exchange-rates",
@@ -233,7 +323,10 @@
       "source_url": "https://www.boi.org.il/en/economic-roles/financial-markets/exchange-rates/",
       "raw_snippet": "exchange rates",
       "fetched_at": "2026-06-25T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "url-eur1-wikipedia",
@@ -241,7 +334,9 @@
       "source_url": "https://en.wikipedia.org/wiki/EUR.1_movement_certificate",
       "raw_snippet": "EUR.1 movement certificate",
       "fetched_at": "2026-06-25T00:00:00Z",
-      "appears_in": ["references/eur1-application-guide.md"]
+      "appears_in": [
+        "references/eur1-application-guide.md"
+      ]
     },
     {
       "claim_id": "url-fta-wikipedia",
@@ -249,7 +344,149 @@
       "source_url": "https://en.wikipedia.org/wiki/Free_trade_agreements_of_Israel",
       "raw_snippet": "UAE ... 1 April 2023 ... Vietnam ... 17 November 2024 ... South Korea ... 1 January 2023 ... Guatemala ... 1 March 2024",
       "fetched_at": "2026-06-25T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "eurmed-still-issuable-2012-rules",
+      "claim": "Under the 2012 PEM rules that Israel still applies, EUR.1 or EUR-MED movement certificates are issued by the customs authorities of the exporting country, so EUR-MED is not retired on the Israel route.",
+      "source_url": "https://trade.ec.europa.eu/access-to-markets/en/content/rules-origin-pan-euro-mediterranean-convention",
+      "raw_snippet": "Movement certificates EUR.1 or EUR-MED are issued by the customs authorities of the exporting country.",
+      "fetched_at": "2026-07-27T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/pem-2026-rules.md",
+        "references/eur1-application-guide.md"
+      ]
+    },
+    {
+      "claim_id": "pem-2012-validity-and-threshold",
+      "claim": "Under the 2012 PEM rules a proof of origin is valid 4 months from issue, and any exporter may make out an invoice declaration where the total value does not exceed 6,000 euro.",
+      "source_url": "https://trade.ec.europa.eu/access-to-markets/en/content/rules-origin-pan-euro-mediterranean-convention",
+      "raw_snippet": "The proof of origin is valid for a period of 4 months from the date of issue. ... any exporter, if the total value of the products does not exceed €6,000.",
+      "fetched_at": "2026-07-27T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/pem-2026-rules.md"
+      ]
+    },
+    {
+      "claim_id": "kifta-in-force-dec-2022",
+      "claim": "The Korea-Israel Free Trade Agreement (KIFTA) entered into force on 1 December 2022.",
+      "source_url": "https://en.globes.co.il/en/article-israel-s-korea-free-trade-pact-comes-into-force-december-1-1001425644",
+      "raw_snippet": "Israel-S Korea free trade pact comes into force December 1",
+      "fetched_at": "2026-07-27T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "turkey-embargo-eurmed-halt-feb-2026",
+      "claim": "Turkey's trade ban on Israel (May 2024) remains in force and was tightened in February 2026, when Turkey stopped issuing EUR-MED preference certificates for Israel-bound goods, including goods routed through third countries.",
+      "source_url": "https://www.turkiyetoday.com/business/turkiye-tightens-trade-embargo-on-israel-stops-issuing-eur-med-certificates-3214807",
+      "raw_snippet": "Türkiye tightens trade embargo on Israel, stops issuing Eur-Med certificates",
+      "fetched_at": "2026-07-27T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "cifta-low-value-3300-e669",
+      "claim": "For commercial goods imported into Canada on or after July 1, 2020 with a value for duty of CAD 3,300 or less, no proof of origin is required; Form E669 is required in addition to Form B239 where minor processing occurred in a non-Party.",
+      "source_url": "https://www.cbsa-asfc.gc.ca/publications/dm-md/d11/d11-4-2-eng.html",
+      "raw_snippet": "a proof of origin is not required ... CAD$3,300 ... Form E669, Declaration of Minor Processing in the territory of a Non-Party (CIFTA)",
+      "fetched_at": "2026-07-27T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/origin-declaration-template.md"
+      ]
+    },
+    {
+      "claim_id": "allocation-number-thresholds-2026",
+      "claim": "An Israeli tax invoice requires a Tax Authority allocation number (mispar haktzaa) for the buyer to deduct the input VAT; the threshold fell to 10,000 NIS on 1 January 2026 and to 5,000 NIS on 1 June 2026.",
+      "source_url": "https://www.greeninvoice.co.il/magazine/israel-invoice/",
+      "raw_snippet": "ינואר 2026 10,000 ש״ח יוני 2026 ואילך 5,000 ש״ח",
+      "fetched_at": "2026-07-27T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "eu-israel-preferences-not-suspended-2026-07",
+      "claim": "As of 27 July 2026 no suspension of EU-Israel trade preferences is in force: the September 2025 Commission proposal was never adopted by the Council, and subsequent Foreign Affairs Council discussions in April and July 2026 ended without a decision.",
+      "source_url": "https://policy.trade.ec.europa.eu/eu-trade-relationships-country-and-region/countries-and-regions/israel_en",
+      "raw_snippet": "The legal basis for the EU's trade relations with Israel is the EU-Israel Association Agreement, which entered into force in June 2000.",
+      "fetched_at": "2026-07-27T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "export-declaration-statutory-name",
+      "claim": "Section 30(a)(1) of the Israeli VAT Law names the export document hatzharat yetzu (export declaration); reshimon yetzu is the trade's colloquial name for the same document.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%97%D7%95%D7%A7_%D7%9E%D7%A1_%D7%A2%D7%A8%D7%9A_%D7%9E%D7%95%D7%A1%D7%A3",
+      "raw_snippet": "אם הוגשו לגביהם הצהרת ייצוא",
+      "fetched_at": "2026-07-27T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "revised-pem-applies-from-2026-to-ratifying-parties",
+      "claim": "Under the revised PEM regime, two alternative rule sets applied until 31 December 2025 and from 1 January 2026 only the revised PEM Convention applies (to the parties that have adopted it; Israel has not).",
+      "source_url": "https://trade.ec.europa.eu/access-to-markets/en/content/rules-origin-revised-pan-euro-mediterranean-convention",
+      "raw_snippet": "alternative rules of origin apply until 31 December 2025. As of 1 January 2026, only the revised PEM Convention will apply",
+      "fetched_at": "2026-07-27T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/pem-2026-rules.md",
+        "references/eur1-application-guide.md"
+      ]
+    },
+    {
+      "claim_id": "cbp-israel-form-a-1994-importer-affidavit",
+      "claim": "For imports into the United States from Israel, CBP eliminated the Form A certificate of origin on 20 May 1994 and replaced it with a signed affidavit requested from the importer; the 2017 amendment changed nothing for imports into the US. The 10 January 2018 date applies to US exports to Israel.",
+      "source_url": "https://www.cbp.gov/trade/free-trade-agreements/israel/certificate-origin-requirements",
+      "raw_snippet": "Effective May 20, 1994, the U.S. Customs and Border Protection (CBP) eliminated the requirement for importers to submit the certificate of origin",
+      "fetched_at": "2026-07-27T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/origin-declaration-template.md"
+      ]
+    },
+    {
+      "claim_id": "vat-tax-point-goods-s22",
+      "claim": "Under section 22(a) of the Israeli VAT Law the tax point for a sale of goods is delivery to the buyer, regardless of when payment is received; section 22(b) applies a cash basis to a dealer whose turnover does not exceed 2 million NIS and certain other categories.",
+      "source_url": "https://www.riter-cpa.co.il/vat-goods-sale-date/",
+      "raw_snippet": "סעיף 22 לחוק ... בסיס מצטבר = מועד מסירת הטובין לידי הקונה (ללא קשר למועד התשלום)",
+      "fetched_at": "2026-07-27T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "chamber-non-preferential-certificate-of-origin",
+      "claim": "A non-preferential certificate of origin is issued and certified by an Israeli chamber of commerce; only the chamber's examination and signature on the certificate itself give it validity, and certificates are issued only for goods located in Israel.",
+      "source_url": "https://www.jerccom.org.il/%D7%9E%D7%94%D7%99-%D7%AA%D7%A2%D7%95%D7%93%D7%AA-%D7%9E%D7%A7%D7%95%D7%A8-%D7%95%D7%9E%D7%AA%D7%99-%D7%9E%D7%A9%D7%AA%D7%9E%D7%A9%D7%99%D7%9D-%D7%91%D7%94/",
+      "raw_snippet": "היא מסמך המונפק ומאושר על-ידי לשכת המסחר",
+      "fetched_at": "2026-07-27T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     }
   ]
 }

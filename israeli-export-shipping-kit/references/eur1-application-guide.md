@@ -1,6 +1,6 @@
 # EUR.1 Application Guide for Israeli Exporters
 
-The EUR.1 movement certificate proves Israeli origin for preferential trade with the EU, UK, EFTA, Mercosur, and other PEM partners.
+The EUR.1 movement certificate proves Israeli origin for preferential trade with the EU, the UK, EFTA and other PEM partners. It is NOT the Mercosur route: Mercosur is not a PEM party, and the Israel-Mercosur agreement has its own certificate of origin, which you request through Israeli Customs. Do not present a EUR.1 to Brazil, Argentina, Uruguay or Paraguay.
 
 ## Who issues it
 
@@ -55,4 +55,4 @@ For repeated shipments at any value, apply for approved-exporter status with Isr
 
 ## Israel and the revised PEM Convention
 
-Israel has NOT yet ratified the revised PEM Convention. Israeli exporters therefore continue to use the 2012 PEM rules of origin and the same EUR.1 form. EUR-MED certificates (which were used for cross-cumulation under the old regime) are no longer issued anywhere under the revised rules. Source: https://trade.ec.europa.eu/access-to-markets/en/content/rules-origin-revised-pan-euro-mediterranean-convention.
+Israel has NOT yet ratified the revised PEM Convention. Israeli exporters therefore continue to use the 2012 PEM rules of origin and the same EUR.1 form. EUR-MED certificates (used for diagonal cumulation) are abolished under the revised rules, but NOT on the Israel route, because Israel still applies the 2012 rules, under which the EU states that "Movement certificates EUR.1 or EUR-MED are issued by the customs authorities of the exporting country" (https://trade.ec.europa.eu/access-to-markets/en/content/rules-origin-pan-euro-mediterranean-convention). Source: https://trade.ec.europa.eu/access-to-markets/en/content/rules-origin-revised-pan-euro-mediterranean-convention.

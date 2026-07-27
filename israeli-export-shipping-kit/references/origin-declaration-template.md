@@ -16,7 +16,7 @@ Replace the authorization number with your approved-exporter number or omit "(cu
 
 ## US-Israel FTA - Origin Invoice Declaration (Israel to US)
 
-This skill is for ISRAELI exporters shipping TO the United States. Print this declaration on the commercial invoice and sign it manually; there is no separate certificate. The old hard-copy Green Form (Form A) was retired effective 10 January 2018. To qualify, the cost or value of materials produced in Israel plus the direct costs of processing in Israel must be at least 35 percent of the appraised value of the article (up to 15 percent of the appraised value may come from US materials).
+This skill is for ISRAELI exporters shipping TO the United States. Print this declaration on the commercial invoice and sign it manually; there is no separate certificate. Watch the direction on the Form A history, because the two flows have different dates. For imports INTO the United States from Israel, CBP eliminated the "green" Form A on 20 May 1994 and replaced it with a signed affidavit it may request from the importer; CBP states that the 2017 amendment "represents no change in the ILFTA requirements for importations into the United States". The 10 January 2018 retirement date that is usually quoted belongs to the opposite direction, US exporters shipping to Israel. To qualify, the cost or value of materials produced in Israel plus the direct costs of processing in Israel must be at least 35 percent of the appraised value of the article (up to 15 percent of the appraised value may come from US materials).
 
 > I, the undersigned, hereby declare that unless otherwise indicated, the goods covered by this document fully comply with the rules of origin and the other provisions of the Agreement on the Establishment of a Free Trade Area between the Government of Israel and the Government of the United States of America.
 >
@@ -34,11 +34,11 @@ Source wording: https://www.trade.gov/us-israel-free-trade-agreement.
 
 ## Canada-Israel FTA (CIFTA)
 
-For Canadian exports under the modernized CIFTA (in force September 1, 2019), use Form B239 (Canada-Israel Free Trade Agreement Certificate of Origin). Certificate is valid 4 years from signature.
+This skill is for ISRAELI exporters shipping TO Canada. Under the modernized CIFTA (in force September 1, 2019) YOU, the Israeli exporter, complete and sign Form B239 (Canada-Israel Free Trade Agreement Certificate of Origin) and send it with the shipment; it is not the Canadian buyer's paperwork. The certificate is valid 4 years from signature.
 
-A blank invoice declaration does NOT substitute for Form B239 under CIFTA. Always issue the form.
+A blank invoice declaration does NOT substitute for Form B239 under CIFTA. Always issue the form, EXCEPT that for commercial goods imported on or after July 1, 2020 whose value for duty does not exceed CAD 3,300, "a proof of origin is not required" at all. Where the goods underwent minor processing in a non-Party on the way, Form E669 (Declaration of Minor Processing in the territory of a Non-Party) is required in addition to the B239.
 
-Source: https://www.cbsa-asfc.gc.ca/publications/dm-md/d11/d11-5-6-eng.html.
+Source: https://www.cbsa-asfc.gc.ca/publications/dm-md/d11/d11-4-2-eng.html.
 
 ## EFTA-Israel
 
