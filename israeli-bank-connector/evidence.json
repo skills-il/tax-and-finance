@@ -5,19 +5,26 @@
   "claims": [
     {
       "claim_id": "library-version-2026-06",
-      "claim": "israeli-bank-scrapers latest version is 6.7.8 (published 2026-06-15), library-only (no CLI, bin: null)",
+      "claim": "The current published release of israeli-bank-scrapers on npm is 6.9.0 (2026-07-22). The package is library-only (bin is null), so there is no CLI to invoke.",
       "source_url": "https://registry.npmjs.org/israeli-bank-scrapers/latest",
-      "raw_snippet": "\"version\":\"6.7.8\"",
-      "fetched_at": "2026-06-29T00:30:00Z",
-      "appears_in": ["references/supported-banks.md"]
+      "raw_snippet": "\"version\":\"6.9.0\"",
+      "fetched_at": "2026-07-27T00:00:00Z",
+      "appears_in": [
+        "references/supported-banks.md"
+      ]
     },
     {
       "claim_id": "scrapers-all-14",
       "claim": "Upstream israeli-bank-scrapers CompanyTypes enum contains 14 bank scrapers (hapoalim, leumi, mizrahi, discount, mercantile, otsarHahayal, beinleumi, pagi, union, yahav, massad, oneZero, behatsdaa, beyahadBishvilha) and 4 card scrapers (visaCal, max, isracard, amex). Mercantile and Otsar Hahayal are SEPARATE scrapers with their own loginFields, not subsumed under Discount/FIBI.",
       "source_url": "https://raw.githubusercontent.com/eshaham/israeli-bank-scrapers/master/src/definitions.ts",
-      "raw_snippet": "name: 'Bank Hapoalim' name: 'Bank Leumi' name: 'Mizrahi Bank' name: 'Discount Bank' name: 'Mercantile Bank' name: 'Bank Otsar Hahayal' name: 'Beinleumi' name: 'Pagi' name: 'Union' name: 'Bank Yahav' name: 'Massad' name: 'One Zero' name: 'Behatsdaa' name: 'Beyahad Bishvilha' name: 'Visa Cal' name: 'Max' name: 'Isracard' name: 'Amex'",
-      "fetched_at": "2026-05-18T01:20:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/supported-banks.md", "metadata.json"]
+      "raw_snippet": "name: 'Bank Hapoalim'",
+      "fetched_at": "2026-07-27T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/supported-banks.md",
+        "metadata.json"
+      ]
     },
     {
       "claim_id": "bank-codes-bankisrael",
@@ -25,7 +32,9 @@
       "source_url": "https://www.boi.org.il/en/economic-roles/supervision-and-regulation/payment-systems-oversight/access-to-payment-systems/",
       "raw_snippet": "Access to Payment Systems",
       "fetched_at": "2026-06-29T00:35:00Z",
-      "appears_in": ["references/supported-banks.md"]
+      "appears_in": [
+        "references/supported-banks.md"
+      ]
     },
     {
       "claim_id": "boi-en-consumer-enquiries",
@@ -33,7 +42,9 @@
       "source_url": "https://www.boi.org.il/en/information-and-service-to-the-public/consumer-enquiries-and-inspections/",
       "raw_snippet": "Consumer Enquiries and Inspections Unit handles complaints from bank and credit card customers",
       "fetched_at": "2026-05-18T01:20:00Z",
-      "appears_in": ["SKILL.md"]
+      "appears_in": [
+        "SKILL.md"
+      ]
     },
     {
       "claim_id": "boi-he-bank-paymnts",
@@ -41,39 +52,67 @@
       "source_url": "https://www.boi.org.il/information/bank-paymnts/",
       "raw_snippet": "בנקאות ותשלומים - מידע ושירות לצרכן",
       "fetched_at": "2026-05-18T01:20:00Z",
-      "appears_in": ["SKILL_HE.md"]
+      "appears_in": [
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "repo-eshaham-scrapers",
       "claim": "israeli-bank-scrapers GitHub repository (Eshaham), authoritative source of supported banks and scraper definitions",
       "source_url": "https://github.com/eshaham/israeli-bank-scrapers",
-      "raw_snippet": "eshaham/israeli-bank-scrapers GitHub repository",
-      "fetched_at": "2026-05-18T01:20:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/supported-banks.md"]
+      "raw_snippet": "GitHub - eshaham/israeli-bank-scrapers: Provide scrapers for all major Israeli banks and credit card companies",
+      "fetched_at": "2026-07-27T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/supported-banks.md"
+      ]
     },
     {
       "claim_id": "repo-eshaham-definitions-source",
       "claim": "Direct link to definitions.ts source file containing CompanyTypes enum and SCRAPERS map",
       "source_url": "https://github.com/eshaham/israeli-bank-scrapers/blob/master/src/definitions.ts",
-      "raw_snippet": "definitions.ts source file with CompanyTypes enum",
+      "raw_snippet": "export enum CompanyTypes",
       "fetched_at": "2026-05-18T01:20:00Z",
-      "appears_in": ["references/supported-banks.md"]
+      "appears_in": [
+        "references/supported-banks.md"
+      ]
     },
     {
       "claim_id": "repo-mottibec-mcp",
       "claim": "israeli-bank-mcp GitHub repository (Motti Bechhofer), MCP server wrapping israeli-bank-scrapers",
       "source_url": "https://github.com/mottibec/israeli-bank-mcp",
-      "raw_snippet": "mottibec/israeli-bank-mcp GitHub repository",
-      "fetched_at": "2026-05-18T01:20:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/supported-banks.md"]
+      "raw_snippet": "GitHub - mottibec/israeli-bank-mcp",
+      "fetched_at": "2026-07-27T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/supported-banks.md"
+      ]
     },
     {
       "claim_id": "repo-glekner-mcp",
       "claim": "il-bank-mcp GitHub repository (Gilad Lekner), Docker-based MCP with SQLite analysis",
       "source_url": "https://github.com/glekner/il-bank-mcp",
-      "raw_snippet": "glekner/il-bank-mcp GitHub repository",
-      "fetched_at": "2026-05-18T01:20:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/supported-banks.md"]
+      "raw_snippet": "GitHub - glekner/il-bank-mcp: A Model Context Protocol (MCP) server that provides financial data access through automated Israeli bank and credit card data scraping",
+      "fetched_at": "2026-07-27T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/supported-banks.md"
+      ]
+    },
+    {
+      "claim_id": "scrapers-6-9-0-capabilities",
+      "claim": "israeli-bank-scrapers 6.9.0 (2026-07-22) is the current release. It added Leumi savings accounts and Max credit card balances; 6.8.0 completed the Visa Cal frame implementation; 6.7.10 added an Isracard bot-detection workaround and 6.7.9 fixed a Max login-page failure.",
+      "source_url": "https://api.github.com/repos/eshaham/israeli-bank-scrapers/releases/tags/v6.9.0",
+      "raw_snippet": "**leumi:** add savings accounts ... **max:** add credit card balances",
+      "fetched_at": "2026-07-27T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/supported-banks.md"
+      ]
     }
   ]
 }

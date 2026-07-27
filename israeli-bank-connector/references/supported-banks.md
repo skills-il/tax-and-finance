@@ -1,6 +1,14 @@
 # Supported Israeli Banks and Credit Card Companies
 
-Authoritative list reflects the `CompanyTypes` enum in [eshaham/israeli-bank-scrapers](https://github.com/eshaham/israeli-bank-scrapers/blob/master/src/definitions.ts). The library is the foundation for both `israeli-bank-mcp` and `il-bank-mcp`. Library version pin: `israeli-bank-scrapers >=6.7.x` (current release 6.7.8, 2026-06-15).
+Authoritative list reflects the `CompanyTypes` enum in [eshaham/israeli-bank-scrapers](https://github.com/eshaham/israeli-bank-scrapers/blob/master/src/definitions.ts). The library is the foundation for both `israeli-bank-mcp` and `il-bank-mcp`. Library version pin: `israeli-bank-scrapers >=6.9.x` (current release 6.9.0, 2026-07-22).
+
+Two capabilities landed in 6.9.0 that change what you can retrieve, so an older pin will
+silently return less than the user expects: Leumi now exposes **savings accounts**, and Max
+now exposes **credit card balances**. If a user says a Leumi savings account or a Max
+balance is missing, check the installed version before debugging the scrape. 6.8.0
+completed the Visa Cal frame implementation, and 6.7.9/6.7.10 fixed a Max login-page
+failure and an Isracard bot-detection workaround, so anything older than 6.7.10 is likely
+to fail outright on those two providers rather than merely return less.
 
 BOI Code column shows Bank of Israel identification codes from the [BOI identification-code page](https://www.boi.org.il/en/economic-roles/supervision-and-regulation/payment-systems-oversight/access-to-payment-systems/). `-` means no separately-assigned BOI code (the entity shares a parent's code or is not listed as an independent payment-system participant). Note: BOI is expanding identification codes from 2 to 3 digits, with implementation by the end of December 2026, so these 2-digit codes may change format.
 

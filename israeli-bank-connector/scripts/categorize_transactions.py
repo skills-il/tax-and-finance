@@ -32,7 +32,7 @@ MERCHANT_PATTERNS = {
     # Transportation (tahaburah)
     r"(?i)(rav.?kav|רב קו)": "transportation",
     r"(?i)(sonol|סונול)": "transportation",
-    r"(?i)(paz|פז)": "transportation",
+    r"(?i)(paz|פז(?![א-ת]))": "transportation",
     r"(?i)(delek|דלק)": "transportation",
     r"(?i)(gett|גט)": "transportation",
     r"(?i)(yango|יאנגו)": "transportation",
@@ -42,7 +42,7 @@ MERCHANT_PATTERNS = {
     r"(?i)(bezeq|בזק)": "utilities",
     r"(?i)(partner|פרטנר)": "utilities",
     r"(?i)(cellcom|סלקום)": "utilities",
-    r"(?i)(hot|הוט)": "utilities",
+    r"(?i)(hot|הוט(?![א-ת]))": "utilities",
     r"(?i)(pelephone|פלאפון)": "utilities",
     # Healthcare (briut)
     r"(?i)(clalit|כללית)": "healthcare",
@@ -62,15 +62,23 @@ MERCHANT_PATTERNS = {
     r"(?i)(netflix)": "entertainment",
     r"(?i)(spotify)": "entertainment",
     r"(?i)(apple.*music|itunes)": "entertainment",
-    # Insurance (bituach)
+    # Insurance (bituach). NOTE: these are ALSO the names of the companies that manage
+    # pension and gemel funds, so the savings patterns below must be tested FIRST.
     r"(?i)(harel|הראל)": "insurance",
-    r"(?i)(migdal|מגדל)": "insurance",
+    r"(?i)(migdal|מגדל(?![א-ת]))": "insurance",
     r"(?i)(menora|מנורה)": "insurance",
     r"(?i)(clal.?bituach|כלל.?ביטוח)": "insurance",
-    # Savings (chisachon)
+}
+
+# Tested BEFORE MERCHANT_PATTERNS. A line like "הפקדה לקרן פנסיה מגדל" contains both a
+# savings word and an insurance-company name; first-match ordering over a single dict
+# classified it as insurance, which put pension money into Total Spending and defeated the
+# whole savings/spending split. Priority patterns resolve that collision explicitly.
+PRIORITY_PATTERNS = {
     r"(?i)(pension|פנסי)": "savings",
     r"(?i)(hishtalmut|השתלמות)": "savings",
     r"(?i)(gemel|גמל)": "savings",
+    r"(?i)(kupat.?gemel|קופת.?גמל)": "savings",
 }
 
 CATEGORY_NAMES = {
@@ -89,6 +97,20 @@ CATEGORY_NAMES = {
 }
 
 
+def _whole_word(pattern: str) -> str:
+    """Prevent a Hebrew pattern from matching in the MIDDLE of a longer Hebrew word.
+
+    Only a leading guard is applied. A trailing guard cannot be applied blanketly because
+    several patterns are deliberately stems: "פנסי" has to keep matching "פנסיה", and
+    adding a trailing guard silently broke the savings classification. Patterns that must
+    match as a complete token carry their own explicit trailing guard in the tables above.
+    """
+    flags = ""
+    if pattern.startswith("(?i)"):
+        flags, pattern = "(?i)", pattern[4:]
+    return f"{flags}(?<![\u05d0-\u05ea]){pattern}"
+
+
 def categorize_transaction(description: str) -> str:
     """Categorize a transaction based on merchant description.
 
@@ -98,8 +120,16 @@ def categorize_transaction(description: str) -> str:
     Returns:
         Category string.
     """
+    # Hebrew has no word boundaries that \b understands, so a bare substring pattern
+    # matches inside longer words: "פז" (fuel) fires on "פזגז" (cooking gas, a utility),
+    # "מגדל" (insurer) fires on "קניון מגדל שלום" (a mall). Wrapping each pattern in
+    # Hebrew-letter lookarounds makes Hebrew tokens match as whole words. Latin patterns
+    # are unaffected because the lookarounds only exclude Hebrew characters.
+    for pattern, category in PRIORITY_PATTERNS.items():
+        if re.search(_whole_word(pattern), description):
+            return category
     for pattern, category in MERCHANT_PATTERNS.items():
-        if re.search(pattern, description):
+        if re.search(_whole_word(pattern), description):
             return category
     return "other"
 
@@ -116,25 +146,52 @@ def analyze_transactions(transactions: list[dict]) -> dict:
     categories = defaultdict(float)
     category_count = defaultdict(int)
     merchants = defaultdict(float)
+    credits = defaultdict(float)
+    credit_total = 0.0
     categorized = []
 
     for txn in transactions:
         desc = txn.get("description", "Unknown")
-        amount = abs(txn.get("amount", 0))
+        raw_amount = txn.get("amount", 0) or 0
+        amount = abs(raw_amount)
         category = categorize_transaction(desc)
 
-        categories[category] += amount
-        category_count[category] += amount and 1
-        merchants[desc] += amount
-        categorized.append({**txn, "category": category})
+        # A positive amount on a statement line is money coming IN (a refund, a reversal,
+        # salary). Counting its absolute value as spending inflates every total and every
+        # percentage. Track credits separately and net them against the category.
+        if raw_amount > 0:
+            credits[category] += raw_amount
+            credit_total += raw_amount
+        else:
+            categories[category] += amount
+            merchants[desc] += amount
+        category_count[category] += 1
+        categorized.append({**txn, "category": category, "is_credit": raw_amount > 0})
 
-    total = sum(categories.values())
+    # Money moved into a pension, keren hishtalmut or gemel is NOT spending: it is the
+    # user's own money changing pocket. Folding it into "total spending" overstates the
+    # figure and distorts every percentage below it (in the shipped example it inflates
+    # the total by roughly a quarter). Report the two separately.
+    savings = categories.get("savings", 0.0)
+    credits_by_category = {k: round(v, 2) for k, v in sorted(credits.items(), key=lambda x: x[1], reverse=True)}
+    total = sum(v for k, v in categories.items() if k != "savings")
+    total_outflow = total + savings
 
     # Sort merchants by spending
-    top_merchants = sorted(merchants.items(), key=lambda x: x[1], reverse=True)[:10]
+    # Exclude savings from the merchant ranking: both SKILL files promise "top merchants
+    # by spending", and a pension provider topping that list contradicts the split above.
+    savings_descs = {t.get("description", "Unknown") for t in categorized if t.get("category") == "savings"}
+    top_merchants = sorted(
+        ((m, a) for m, a in merchants.items() if m not in savings_descs),
+        key=lambda x: x[1], reverse=True,
+    )[:10]
 
     return {
         "total_spending": round(total, 2),
+        "total_savings": round(savings, 2),
+        "total_outflow": round(total_outflow, 2),
+        "total_credits": round(credit_total, 2),
+        "credits_by_category": credits_by_category,
         "by_category": {k: round(v, 2) for k, v in sorted(categories.items(), key=lambda x: x[1], reverse=True)},
         "category_counts": dict(category_count),
         "top_merchants": [(m, round(a, 2)) for m, a in top_merchants],
@@ -148,13 +205,20 @@ def format_analysis(analysis: dict, period: str = "Current") -> str:
         f"=== Spending Analysis ({period}) ===",
         "",
         f"  Total Spending: {analysis['total_spending']:>10,.2f} NIS",
+        f"  Into Savings:   {analysis['total_savings']:>10,.2f} NIS  (not counted as spending)",
+        f"  Total Outflow:  {analysis['total_outflow']:>10,.2f} NIS",
+        *([f"  Credits In:     {analysis['total_credits']:>10,.2f} NIS  (refunds/reversals, excluded above)"]
+          if analysis.get("total_credits") else []),
         "",
         "  By Category:",
         f"  {'Category':<25} {'Amount':>10}  {'%':>5}",
         f"  {'─' * 45}",
     ]
 
-    total = analysis["total_spending"] or 1
+    # Percentages must divide by the same population the rows come from. The category
+    # rows include savings, so dividing by the spending-only figure made the column sum to
+    # well over one hundred.
+    total = analysis.get("total_outflow") or analysis["total_spending"] or 1
     for category, amount in analysis["by_category"].items():
         en_name, he_name = CATEGORY_NAMES.get(category, (category, ""))
         pct = amount / total * 100
@@ -214,7 +278,13 @@ def main():
     if args.example:
         transactions = generate_example_transactions()
         analysis = analyze_transactions(transactions)
-        print(format_analysis(analysis, "January 2026 (Example)"))
+        # --output-json must be honoured here too. It is documented as a general flag, so
+        # returning the human-readable table for --example --output-json hands an agent
+        # text it cannot parse.
+        if args.output_json:
+            print(json.dumps(analysis, ensure_ascii=False, indent=2))
+        else:
+            print(format_analysis(analysis, "January 2026 (Example)"))
         return
 
     if args.json:
