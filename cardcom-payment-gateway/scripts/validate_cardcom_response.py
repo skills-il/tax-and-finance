@@ -35,7 +35,13 @@ else:
 # ResponseCode values that count as success in Cardcom V11.
 # 0 is the universal success code; 700 and 701 are returned by J2/J5
 # validation-only transactions and also count as success.
-SUCCESS_CODES = {0, 700, 701}
+# 0 is the only unconditional success. 700/701 mean a J2/J5 VALIDATION-ONLY transaction
+# succeeded: the card was checked, NO money moved. Treating them as success on a charge, a
+# document creation or a refund is how goods get shipped without a charge, or a refund is
+# believed complete when nothing was returned. Pass --operation to have them accepted.
+_allow_validation_only = False
+SUCCESS_CODES = {0}
+VALIDATION_ONLY_CODES = {700, 701}
 
 
 def parse_response(raw: str) -> dict:
@@ -69,13 +75,27 @@ def _check_response_code(data: dict, label: str, errors: list, info: list):
     if code is None:
         errors.append(f"{label}: missing required field 'ResponseCode'")
         return None
-    try:
-        code = int(code)
-    except (ValueError, TypeError):
-        errors.append(f"{label}: ResponseCode is not an integer: {code}")
+    if isinstance(code, bool) or not isinstance(code, int):
+        # Do not coerce. A float or a numeric string is a malformed response shape, and
+        # int("0")/int(0.9) would silently report a successful operation.
+        errors.append(
+            f"{label}: ResponseCode must be an integer, got {type(code).__name__}: {code!r}"
+        )
         return None
     if code in SUCCESS_CODES:
         info.append(f"{label}: ResponseCode={code} (success)")
+    elif code in VALIDATION_ONLY_CODES:
+        if _allow_validation_only:
+            info.append(
+                f"{label}: ResponseCode={code} (validation-only success, NO money moved)"
+            )
+        else:
+            errors.append(
+                f"{label}: ResponseCode={code} means a validation-only (J2/J5) check "
+                "succeeded and NO money moved. If this was a charge, a document creation "
+                "or a refund, it did NOT complete. Re-run with --validation-only if you "
+                "genuinely issued a J2/J5 check."
+            )
     else:
         desc = description or "(no Description returned)"
         errors.append(f"{label}: ResponseCode={code} -- {desc}")
@@ -101,7 +121,7 @@ def validate_response(data: dict) -> tuple:
     description = data.get("Description")
     if description:
         info.append(f"Description: {description}")
-    elif top_code is not None and top_code not in SUCCESS_CODES:
+    elif top_code is not None and top_code not in SUCCESS_CODES | VALIDATION_ONLY_CODES:
         warnings.append(
             "Non-zero ResponseCode but no 'Description' string -- "
             "cannot surface the failure reason to the user"
@@ -214,6 +234,12 @@ examples:
     )
     parser.add_argument("--response", help="JSON response string")
     parser.add_argument(
+        "--validation-only",
+        action="store_true",
+        help="Accept ResponseCode 700/701 as success. Use ONLY when the call really was a "
+             "J2/J5 validation-only check, where no money moves.",
+    )
+    parser.add_argument(
         "--file", help="Path to a file containing the JSON response"
     )
     parser.add_argument(
@@ -223,6 +249,10 @@ examples:
     )
 
     args = parser.parse_args()
+
+    global _allow_validation_only
+
+    _allow_validation_only = args.validation_only
 
     if args.example:
         example = generate_example()

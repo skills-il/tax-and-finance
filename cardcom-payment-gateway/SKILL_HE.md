@@ -8,7 +8,7 @@
 
 תיעוד רשמי נמצא בכתובת `https://secure.cardcom.solutions/Api/v11/Docs`, מרכז התמיכה בכתובת `https://support.cardcom.solutions`. V11 הוא ה-API הנוכחי נכון ל-2026, אין V12 פומבי.
 
-קארדקום בנוף הישראלי: מתחרה בטרנזילה, ישראפיי וביט עסקי. תמחור 2026 הוא בערך 1.2%-1.4% לעסקה עם תוכניות חודשיות שמתחילות בסביבות 59 ש"ח לחודש לתוסף החשבוניות. המספרים המדויקים נסגרים מול כל בית עסק. היתרון הייחודי שנשאר לעסקים ישראליים הוא הפקת מסמכי מס מובנית. לאינטגרציה עם טרנזילה, השתמשו ב-`tranzila-payment-gateway` במקום.
+קארדקום בנוף הישראלי: מתחרה בטרנזילה, ישראפיי וביט עסקי. התמחור נסגר מול כל בית עסק ולא אימתנו תעריפים מפורסמים עדכניים, אז אל תנקבו באחוז או בסכום חודשי מול משתמש: תפנו אותו לקארדקום לקבלת הצעה. היתרון הייחודי שנשאר לעסקים ישראליים הוא הפקת מסמכי מס מובנית. לאינטגרציה עם טרנזילה, השתמשו ב-`tranzila-payment-gateway` במקום.
 
 ## הוראות
 
@@ -29,7 +29,7 @@
 - `ApiName` (מחרוזת), שם משתמש API
 - `ApiPassword` (מחרוזת), סיסמת API, נדרשת רק להחזרים ולהפקת מסמכים, לא נשלחת בחיוב רגיל
 
-סביבת בדיקות: מסוף `1000` עם ה-`ApiName` של ה-demo מאפשר בדיקת API בלי חיובים אמיתיים. כרטיס בדיקה: `4580000000000000`, כל תפוגה עתידית, CVV `123`.
+סביבת בדיקות: מסוף `1000` עם ה-`ApiName` של ה-demo מצוטט הרבה בספריות קהילתיות כסביבת הבדיקות, עם כרטיס בדיקה `4580000000000000`, כל תפוגה עתידית ו-CVV `123`. לא הצלחנו לאמת את הפרטים האלה מול עמוד רשמי של קארדקום, אז תתייחסו אליהם כפולקלור קהילתי: תאמתו את פרטי סביבת הבדיקות מול התמיכה של קארדקום לפני שאתם מסתמכים עליהם, ואל תניחו שקריאה מול מסוף 1000 לא יכולה להזיז כסף.
 
 תשמרו פרטי גישה בצורה מאובטחת, אף פעם לא בקוד מקור או ב-JavaScript בצד הלקוח.
 
@@ -117,7 +117,7 @@ POST https://secure.cardcom.solutions/api/v11/LowProfile/GetLpResult
 | `ProformaInvoice` | חשבונית עסקה / פרופורמה | מסמך הצעת מחיר טרום מכירה |
 | `DonationReceipt` | קבלת תרומות | עמותות רשומות |
 
-ה-enum המלא (`DocumentToCreate` במפרט ה-OpenAPI) כולל גם `Quote`, `Order`, `OrderConfirmation`, `DeliveryNote`, `DemandForPayment`, `ProformaDealInvoice`, `ReceiptForTaxInvoice`, `CouponDocumentAndReceipt` והגרסאות `*Refund` שלהם. תאמתו את הערך המדויק שאתם צריכים מול התיעוד הרשמי בכתובת `https://secure.cardcom.solutions/Api/v11/Docs`.
+ל-enum המלא של `DocumentToCreate` יש 25 ערכים, וכולל גם `Quote`, `Order`, `OrderConfirmation`, `DeliveryNote`, `DemandForPayment`, `ProformaDealInvoice`, `ReceiptForTaxInvoice` ו-`CouponDocumentAndReceipt`. לרובם קיימות גרסאות החזר אבל לא לכולם: אין `QuoteRefund` ואין `OrderRefund`. אלה 11 שכן קיימות: `TaxInvoiceAndReceiptRefund`, `ReceiptRefund`, `OrderConfirmationRefund`, `DeliveryNoteRefund`, `DemandForPaymentRefund`, `ProformaDealInvoiceRefund`, `ProformaInvoiceRefund`, `TaxInvoiceRefund`, `DonationReceiptRefund`, `CouponDocumentAndReceiptRefund` ו-`ReceiptForTaxInvoiceRefund`. תאמתו את הערך המדויק שאתם צריכים מול התיעוד הרשמי בכתובת `https://secure.cardcom.solutions/Api/v11/Docs`.
 
 איך לכלול מסמך בתהליך תשלום: תוסיפו את אובייקט `Document` לבקשת `LowProfile/Create` או `Transaction`. קארדקום מפיקה את המסמך אוטומטית כשהתשלום מצליח.
 
@@ -145,7 +145,39 @@ POST https://secure.cardcom.solutions/api/v11/Documents/CreateDocument
 
 התגובה היא `DocumentInfo`: תבדקו `ResponseCode == 0`, ואז תקראו את `DocumentType`, `DocumentNumber`, `AccountId` ו-`DocumentUrl` (קישור ל-PDF).
 
-שימו לב לאיות האמיתי של השדות ב-V11 בתוך אובייקט `Document`: `DocumentTypeToCreate` (enum מחרוזת), `Name` (ה"document To", נדרש, עד 50 תווים), `TaxId` (מספר עוסק או מספר זהות, מחליף את `VAT_Number` הישן), `IsSendByEmail` (מחליף את `SendByEmail`), `Languge` (האיות הרשמי של V11, חסרה ה-`a` השנייה), `ISOCoinID` (מחליף את `CoinID`), `IsVatFree`, ו-`Products[]` עם `Description`, `UnitCost`, `Quantity`, `IsVatFree`. ראו את `references/document-types.md` לרשימת השדות המלאה.
+שימו לב לאיות האמיתי של השדות ב-V11 בתוך אובייקט `Document`: `DocumentTypeToCreate` (enum מחרוזת), `Name` (ה"document To", נדרש, עד 50 תווים), `TaxId` (מספר עוסק או מספר זהות, מחליף את `VAT_Number` הישן), `IsSendByEmail` (מחליף את `SendByEmail`), `Languge` (האיות בסכמה הזו, חסרה ה-`a` השנייה; שימו לב שאובייקט המסמך של Low Profile, `DocumentLP`, משתמש דווקא באיות התקין `Language`), `ISOCoinID` (מחליף את `CoinID`), `IsVatFree`, ו-`Products[]` עם `Description`, `UnitCost`, `Quantity`, `IsVatFree`. ראו את `references/document-types.md` לרשימת השדות המלאה.
+
+### שלב 4.5: מספר הקצאה בחשבוניות מס
+
+**אל תחפשו שדה של מספר הקצאה ב-API. אין כזה, וזו לא השמטה.** קארדקום פיתחה ממשק ישיר מול
+רשות המסים, ולכן כשמפיקים חשבונית מס מעל התקרה בקשת מספר ההקצאה נשלחת אוטומטית בעת הפקת
+המסמך, בצד השרת. בגוף הבקשה של `CreateDocument` אין שדה `AllocationNumber`, ומפתח שיחפש
+אותו במפרט ה-OpenAPI יסיק בטעות שקארדקום לא תומכת בדרישה.
+
+**זה לא פעיל כברירת מחדל. נדרשת הגדרה חד-פעמית, ובלעדיה הלקוח שלכם לא יוכל לקזז מע"מ
+תשומות.** קיום מספר הקצאה על חשבונית מס הוא תנאי לניכוי מס תשומות אצל המקבל, בכל חשבונית
+שסכומה לפני מע"מ עולה על התקרה שנקבעה בחוק. ההגדרה, שמבצע בעל העסק או הדירקטור פעם אחת
+באתר רשות המסים, היא:
+
+1. הזדהות באזור האישי באתר רשות המסים, ורישום אם עוד אין חשבון.
+2. בחברה בע"מ או באיחוד עוסקים צריך גם לבצע רישום פרטי תאגיד.
+3. תחת "הרשאות לפעולות דיגיטליות" נותנים את ההרשאה ובוחרים את שני הנושאים. לבחור רק אחד
+   מהם זו הטעות הנפוצה:
+   - "חשבוניות ישראל - אימות מספר הקצאה בחשבונית ספק"
+   - "חשבוניות ישראל - בקשת מספר הקצאה עבור חשבונית ללקוח"
+4. בוחרים לכמה זמן ניתנת ההרשאה, ומקבל ההרשאה מאשר אותה.
+
+**מתווה התקרות (הסכומים לפני מע"מ):**
+
+| נכון מ | תקרה |
+|---------|------|
+| 2024 | 25,000 ש"ח |
+| 2025 | 20,000 ש"ח |
+| 1.1.2026 | 10,000 ש"ח |
+| 1.6.2026 | **5,000 ש"ח (בתוקף עכשיו)** |
+
+עוסק פטור לא מושפע, כי הוא לא מוציא חשבוניות מס ולא מקזז מע"מ תשומות. אם האינטגרציה נכתבה
+מוקדם יותר ב-2026 מול הסף של 10,000, הטווח שבין 5,000 ל-10,000 הוא מה שצריך לבדוק מחדש.
 
 ### שלב 5: תשלומים חוזרים מבוססי טוקן
 
@@ -300,17 +332,17 @@ else:
 - `references/document-types.md`, ה-enum המחרוזתי `DocumentTypeToCreate`, רשימת השדות של אובייקט `Document`, וטיפול במעמ לפי חוק המס הישראלי. תסתכלו עליו כשאתם מחליטים איזה סוג מסמך להפיק.
 
 ### סקריפטים
-- `scripts/validate_cardcom_response.py`, מאמת תגובת API של קארדקום V11: בודק `ResponseCode`, מציג את `Description`, ומוודא שדות צפויים לפעולות עסקה, טוקן ומסמך. להרצה: `python scripts/validate_cardcom_response.py --help`
+- `scripts/validate_cardcom_response.py`, מאמת תגובת API של קארדקום V11: בודק `ResponseCode`, מציג את `Description`, ומוודא שדות צפויים לפעולות עסקה, טוקן ומסמך. רק `ResponseCode` 0 נחשב הצלחה; הקודים 700/701 נדחים אלא אם מוסיפים `--validation-only`, כי הם אומרים שבדיקת כרטיס מסוג J2/J5 עברה ושום כסף לא זז. להרצה: `python scripts/validate_cardcom_response.py --help`
 
 ## מלכודות נפוצות
 - בדיקת ההצלחה ב-V11 היא `ResponseCode == 0`, לא `DealResponse == 0`. `DealResponse` לא קיים ב-V11, סוכנים שאומנו על דוגמאות קארדקום ישנות ממציאים אותו. כל endpoint ב-V11 מחזיר `ResponseCode` יחד עם מחרוזת `Description`.
 - `DocumentTypeToCreate` הוא enum מסוג מחרוזת (`"TaxInvoiceAndReceipt"`, `"TaxInvoice"`, `"Receipt"`, ...), לא קוד מספרי. קודי מסמך מספריים כמו `101` או `400` שייכים לממשקי `.aspx` ישנים, לא ל-V11.
 - ה-`TerminalNumber` חייב להישלח כמספר שלם, לא כמחרוזת. סוכנים נוטים לעטוף אותו במירכאות.
 - `ApiPassword` נדרשת ל-`RefundByTransactionId` ול-`CreateDocument`, אבל לא נשלחת בחיוב רגיל של `LowProfile/Create` או `Transaction`.
-- שימו לב לאיות האמיתי של השדות ב-V11: `Languge` (חסרה ה-`a` השנייה) בתוך אובייקט `Document`, `ISOCoinID` / `ISOCoinId`, `IsSendByEmail` (לא `SendByEmail`), `TaxId` (לא `VAT_Number`).
+- שימו לב לאיות האמיתי של השדות ב-V11: `ISOCoinID` / `ISOCoinId`, `IsSendByEmail` (לא `SendByEmail`), `TaxId` (לא `VAT_Number`). **שדה השפה מאויית אחרת לפי אובייקט המסמך שבו אתם נמצאים, וכל הסכמות האלה דוחות שדות לא מוכרים, ולכן טעות כאן מפילה את הקריאה:** `Document` (בקריאת `CreateDocument` העצמאית) ו-`DocumentTran` (ב-`Transaction`) משתמשים באיות השגוי `Languge`, בעוד `DocumentLP`, המסמך שמצרפים ל-`LowProfile/Create`, משתמש באיות התקין `Language`. שימוש ב-`Languge` בכל מקום שובר את זרימת ה-Low Profile, שהיא הזרימה שהסקיל ממליץ עליה קודם.
 - שיעור המעמ הנוכחי בישראל הוא 18% (מינואר 2025; ההצעה התקציבית של ינואר 2026 להעלות ל-19% נדחתה). קארדקום מחשבת מעמ בצד השרת, אז סכומי המסמך מטופלים לפי דגל `IsVatFree`.
-- **היקף PCI**: Low Profile מארח שומר אתכם ב-SAQ-A. שרת-לשרת `Transaction` עם `CardNumber`/`CVV2` גולמיים נופל ל-SAQ-D. PCI DSS v4.0 הפך לחובה במרץ 2025, אז עדיף להישאר עם Low Profile או טוקנים אלא אם יש סיבה אמיתית לגעת בנתוני כרטיס גולמיים.
-- **לוח הסליקה הכספית** נקבע ברמת המסוף, לא בכל בקשה. סליקה שבועית מפקידה ביום רביעי שאחרי העסקה. סליקה חודשית מפקידה ב-6 לחודש שאחרי. אל תנסו להגדיר את זה דרך ה-API.
+- **היקף PCI**: Low Profile מארח שומר אתכם ב-SAQ-A. שרת-לשרת `Transaction` עם `CardNumber`/`CVV2` גולמיים נופל ל-SAQ-D. התקן הנוכחי הוא PCI DSS v4.0.1 (עדכון מצומצם שפורסם ביוני 2024), ו-51 הדרישות הדחויות נכנסו לתוקף ב-31 במרץ 2025, כך שכולן בתוקף היום. עדיף להישאר עם Low Profile או טוקנים אלא אם יש סיבה אמיתית לגעת בנתוני כרטיס גולמיים.
+- **לוח הסליקה הכספית** נקבע ברמת המסוף, לא בכל בקשה. קיימות סליקה שבועית וסליקה חודשית, אבל לא אימתנו את ימי ההפקדה המדויקים מול מקור עדכני של קארדקום, אז תבררו את הלוח למסוף הספציפי במקום להבטיח לבית העסק יום מסוים. כך או כך, זה לא נקבע דרך ה-API.
 - **ל-Apple Pay ו-Google Pay אין שדות URL נפרדים** כמו `UrlToBit` / `UrlToPayPal`. הם מופיעים ככפתורי ארנק בתוך דף ה-Low Profile עצמו אחרי שמפעילים אותם במסוף בלוח הבקרה.
 
 ## פתרון בעיות

@@ -16,7 +16,7 @@ This skill guides integration with Cardcom's REST API V11 for payments, tokeniza
 
 **Support center:** `https://support.cardcom.solutions`
 
-**Cardcom in the Israeli landscape:** competes with Tranzila, Israpay, and Bit Business. Cardcom's pricing in 2026 is roughly 1.2-1.4% per transaction with optional monthly plans starting around 59 NIS/month for the invoicing add-on; exact numbers are quoted per merchant. The distinguishing feature for Israeli businesses remains the built-in tax document generation. For Tranzila integration use the `tranzila-payment-gateway` skill instead.
+**Cardcom in the Israeli landscape:** competes with Tranzila, Israpay, and Bit Business. Pricing is quoted per merchant and we have not verified current published rates, so do not quote a percentage or a monthly figure to a user: send them to Cardcom for a quote. The distinguishing feature for Israeli businesses remains the built-in tax document generation. For Tranzila integration use the `tranzila-payment-gateway` skill instead.
 
 ## Instructions
 
@@ -38,7 +38,7 @@ Cardcom API V11 credentials:
 - `ApiPassword` (string) -- API password (required only for refunds and document creation; not sent on a normal charge)
 
 **Test environment:**
-Terminal `1000` with the demo `ApiName` allows API testing without real charges. Test card: `4580000000000000`, any future expiry, CVV `123`.
+Terminal `1000` with the demo `ApiName` is widely cited in community libraries as the sandbox, with test card `4580000000000000`, any future expiry, CVV `123`. We have NOT been able to confirm these against an official Cardcom test-credentials page, so treat them as community folklore: confirm your sandbox credentials with Cardcom support before relying on them, and never assume a call against terminal 1000 cannot move money.
 
 Store credentials securely, never in source code or client-side JavaScript.
 
@@ -126,7 +126,7 @@ The document type is set with the **`DocumentTypeToCreate`** field, a STRING enu
 | `ProformaInvoice` | hashbonit iska / proforma | Proforma Invoice | Pre-sale quote document |
 | `DonationReceipt` | kabalat trumot | Donation Receipt | Registered non-profits |
 
-The full enum (`DocumentToCreate` in the OpenAPI schema) also includes `Quote`, `Order`, `OrderConfirmation`, `DeliveryNote`, `DemandForPayment`, `ProformaDealInvoice`, `ReceiptForTaxInvoice`, `CouponDocumentAndReceipt`, and their `*Refund` variants. Verify the exact value you need against the official docs at `https://secure.cardcom.solutions/Api/v11/Docs`.
+The full `DocumentToCreate` enum has 25 values and also includes `Quote`, `Order`, `OrderConfirmation`, `DeliveryNote`, `DemandForPayment`, `ProformaDealInvoice`, `ReceiptForTaxInvoice` and `CouponDocumentAndReceipt`. Refund variants exist for MOST but not all of these: there is no `QuoteRefund` and no `OrderRefund`. The 11 that do exist are `TaxInvoiceAndReceiptRefund`, `ReceiptRefund`, `OrderConfirmationRefund`, `DeliveryNoteRefund`, `DemandForPaymentRefund`, `ProformaDealInvoiceRefund`, `ProformaInvoiceRefund`, `TaxInvoiceRefund`, `DonationReceiptRefund`, `CouponDocumentAndReceiptRefund` and `ReceiptForTaxInvoiceRefund`. Verify the exact value you need against the official docs at `https://secure.cardcom.solutions/Api/v11/Docs`.
 
 **Include a document in a payment flow:**
 Add the `Document` object to your Low Profile `Create` or `Transaction` request. Cardcom generates the document automatically when the payment succeeds.
@@ -155,7 +155,45 @@ POST https://secure.cardcom.solutions/api/v11/Documents/CreateDocument
 
 The response is a `DocumentInfo`: check `ResponseCode == 0`, then read `DocumentType`, `DocumentNumber`, `AccountId`, and `DocumentUrl` (link to the PDF).
 
-Note the real V11 field spellings inside the `Document` object: `DocumentTypeToCreate` (string enum), `Name` (the "document To", required, max 50 chars), `TaxId` (business registration or ID number, replaces the older `VAT_Number`), `IsSendByEmail` (replaces `SendByEmail`), `Languge` (the official V11 field spelling, missing the second `a`), `ISOCoinID` (replaces `CoinID`), `IsVatFree`, and `Products[]` with `Description`, `UnitCost`, `Quantity`, `IsVatFree`. See `references/document-types.md` for the complete field list.
+Note the real V11 field spellings inside the `Document` object: `DocumentTypeToCreate` (string enum), `Name` (the "document To", required, max 50 chars), `TaxId` (business registration or ID number, replaces the older `VAT_Number`), `IsSendByEmail` (replaces `SendByEmail`), `Languge` (the V11 spelling in THIS schema, missing the second `a`; note that the Low Profile document object `DocumentLP` uses the correctly spelled `Language` instead), `ISOCoinID` (replaces `CoinID`), `IsVatFree`, and `Products[]` with `Description`, `UnitCost`, `Quantity`, `IsVatFree`. See `references/document-types.md` for the complete field list.
+
+### Step 4.5: Allocation Numbers (Mispar Haktzaa) on Tax Invoices
+
+**Do not look for an allocation-number field in the API. There isn't one, and that is not an
+omission.** Cardcom built a direct interface to the Tax Authority, so when you issue a tax
+invoice over the threshold the allocation number is requested automatically at document
+creation, server-side. The `CreateDocument` request body carries no `AllocationNumber`
+field, and a developer hunting for one in the OpenAPI spec will conclude, wrongly, that
+Cardcom does not support the requirement.
+
+**It is not on by default. It needs a one-time setup, and without it your customer cannot
+deduct their input VAT.** An allocation number on a tax invoice is a precondition for the
+recipient to deduct input VAT on any invoice whose pre-VAT amount exceeds the statutory
+threshold. The setup, done once by the business owner or director on the Tax Authority
+site, is:
+
+1. Identify (הזדהות) in the Tax Authority personal area, registering if necessary.
+2. For a company or a VAT-registered group (איחוד עוסקים), complete corporation
+   registration (רישום פרטי תאגיד).
+3. Under "הרשאות לפעולות דיגיטליות", grant the permission and select BOTH subjects. Only
+   one of the two is the common mistake:
+   - "חשבוניות ישראל - אימות מספר הקצאה בחשבונית ספק" (verifying a supplier's number)
+   - "חשבוניות ישראל - בקשת מספר הקצאה עבור חשבונית ללקוח" (requesting a number for your
+     customer's invoice)
+4. Choose the authorization duration, and have the grantee confirm it.
+
+**Threshold schedule (amounts are pre-VAT):**
+
+| Effective from | Threshold |
+|----------------|-----------|
+| 2024 | 25,000 NIS |
+| 2025 | 20,000 NIS |
+| 1 January 2026 | 10,000 NIS |
+| 1 June 2026 | **5,000 NIS (in force now)** |
+
+An osek patur is unaffected, because they do not issue tax invoices and do not deduct input
+VAT. If an integration was written earlier in 2026 against the 10,000 figure, invoices
+between 5,000 and 10,000 are the band to re-check.
 
 ### Step 5: Implement Token-Based Recurring Payments
 
@@ -310,17 +348,17 @@ Result: Customers can choose between credit card, Bit, Apple Pay, and Google Pay
 - `references/document-types.md` -- the `DocumentTypeToCreate` string enum, the `Document` object field list, and VAT handling per Israeli tax law. Consult when determining which document type to generate.
 
 ### Scripts
-- `scripts/validate_cardcom_response.py` -- Validates a Cardcom V11 API response: checks `ResponseCode`, surfaces `Description`, and verifies expected fields for transaction, token, and document operations. Run: `python scripts/validate_cardcom_response.py --help`
+- `scripts/validate_cardcom_response.py` -- Validates a Cardcom V11 API response: checks `ResponseCode`, surfaces `Description`, and verifies expected fields for transaction, token, and document operations. Only `ResponseCode` 0 counts as success; 700/701 are rejected unless you pass `--validation-only`, because they mean a J2/J5 card check passed and NO money moved. Run: `python scripts/validate_cardcom_response.py --help`
 
 ## Gotchas
 - The V11 success check is `ResponseCode == 0`, NOT `DealResponse == 0`. `DealResponse` does not exist in V11; agents trained on older Cardcom examples invent it. Every V11 endpoint returns `ResponseCode` plus a `Description` string.
 - `DocumentTypeToCreate` is a STRING enum (`"TaxInvoiceAndReceipt"`, `"TaxInvoice"`, `"Receipt"`, ...), not an integer code. Integer document codes like `101` or `400` belong to legacy `.aspx` interfaces, not V11.
 - The `TerminalNumber` must be sent as an integer, not a string. Agents commonly wrap it in quotes.
 - `ApiPassword` is required for `RefundByTransactionId` and `CreateDocument`, but is NOT sent on a normal `LowProfile/Create` or `Transaction` charge.
-- Watch the real V11 field spellings: `Languge` (missing the second `a`) inside the `Document` object, `ISOCoinID` / `ISOCoinId`, `IsSendByEmail` (not `SendByEmail`), `TaxId` (not `VAT_Number`).
+- Watch the real V11 field spellings: `ISOCoinID` / `ISOCoinId`, `IsSendByEmail` (not `SendByEmail`), `TaxId` (not `VAT_Number`). **The language field is spelled differently depending on which document object you are in, and every one of these schemas rejects unknown properties, so getting it wrong fails the call outright:** `Document` (standalone `CreateDocument`) and `DocumentTran` (`Transaction`) use the misspelled `Languge`, while `DocumentLP`, the document you attach to `LowProfile/Create`, uses the correctly spelled `Language`. Applying `Languge` everywhere breaks the Low Profile flow, which is the flow this skill recommends first.
 - The current Israeli VAT rate is 18% (effective January 2025; the January 2026 budget proposal to raise it to 19% was rejected). Cardcom calculates VAT server-side, so document amounts are treated per the `IsVatFree` flag.
-- **PCI scope**: hosted Low Profile keeps you in SAQ-A. Server-to-server `Transaction` with raw `CardNumber`/`CVV2` lands in SAQ-D. PCI DSS v4.0 became mandatory March 2025, so prefer Low Profile or tokens unless you have a real reason to touch raw card data.
-- **Settlement timing** is configured on the terminal, not per request. Weekly settlement deposits on the Wednesday following the transaction; monthly settlement deposits on the 6th of the following month. Don't try to set this in the API.
+- **PCI scope**: hosted Low Profile keeps you in SAQ-A. Server-to-server `Transaction` with raw `CardNumber`/`CVV2` lands in SAQ-D. The current standard is PCI DSS v4.0.1 (a limited revision published June 2024), and the 51 future-dated requirements became effective 31 March 2025, so all of them are now in force. Prefer Low Profile or tokens unless you have a real reason to touch raw card data.
+- **Settlement timing** is configured on the terminal, not per request. Weekly and monthly settlement cycles both exist, but we have not verified the exact deposit days against a current Cardcom source, so confirm the schedule for the specific terminal rather than promising a business a particular day. Either way it is not settable via the API.
 - **Apple Pay and Google Pay don't have separate URL fields** like `UrlToBit` / `UrlToPayPal`. They surface as wallet buttons inside the hosted Low Profile page once enabled on the terminal in the admin panel.
 
 ## Troubleshooting

@@ -31,7 +31,7 @@ official Cardcom V11 OpenAPI specification at
 |----------|---------|-------------------|-------------------|
 | `Transactions/Transaction` | Charge a card or a token (server-to-server) | `TerminalNumber`, `ApiName`, `Amount`, `Token` or `CardNumber`, `CardExpirationMMYY`, `CVV2`, `ISOCoinId`, `Document`, `Advanced` | `ResponseCode`, `Description`, `TranzactionId`, `Token`, `ApprovalNumber`, `DocumentNumber`, `DocumentUrl` |
 | `Transactions/RefundByTransactionId` | Refund a transaction | `ApiName`, `ApiPassword`, `TransactionId`, `PartialSum`, `CancelOnly`, `AllowMultipleRefunds` | `ResponseCode`, `Description`, `NewTranzactionId` |
-| `Transactions/GetTransactionInfoById` | Get single transaction details | `TerminalNumber`, `ApiName`, `TransactionId` (the schema uses `InternalDealNumber`) | `ResponseCode`, `Description`, transaction fields |
+| `Transactions/GetTransactionInfoById` | Get single transaction details | `TerminalNumber`, `UserName`, `UserPassword`, `InternalDealNumber` (ALL four required; this endpoint uses `UserName`/`UserPassword`, NOT `ApiName`/`ApiPassword`, and the id field is `InternalDealNumber`, not `TransactionId`. The schema sets `additionalProperties: false`, so a stray `ApiName` is rejected) | `ResponseCode`, `Description`, transaction fields |
 | `Transactions/ListTransactions` | List transactions by date range | `TerminalNumber`, `ApiName`, date range fields | `ResponseCode`, `Description`, transaction list |
 | `Transactions/SpecialTransactions` | Credit, installments, special deals | `TerminalNumber`, `ApiName`, `Amount`, transaction options | `ResponseCode`, `Description` |
 | `Transactions/GetTransactionByExternalUniqTran` | Look up by your external uniq id | `TerminalNumber`, `ApiName`, `ExternalUniqTranId` | `ResponseCode`, `Description`, transaction fields |
@@ -121,3 +121,11 @@ V11 is the current API as of 2026. There is no public V12. Legacy `.aspx` interf
 
 Official documentation: `https://secure.cardcom.solutions/Api/v11/Docs`
 Support center: `https://support.cardcom.solutions`
+
+## Allocation numbers (mispar haktzaa)
+
+There is deliberately no `AllocationNumber` field anywhere in the V11 schema. Do not go
+looking for one. Cardcom holds a direct interface to the Tax Authority and requests the
+number server-side when a tax invoice over the threshold is issued, provided the business
+completed the one-time authorization described in SKILL.md Step 4.5. Absence of the field
+is not a gap in the API.

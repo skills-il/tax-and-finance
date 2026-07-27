@@ -27,6 +27,25 @@
         "For API-wrapper skills, download and parse the vendor's raw OpenAPI/swagger JSON directly. A JS-rendered docs SPA (or a web-search summary of it) can invert a subtle correct detail -- one summary this cycle wrongly 'corrected' the real misspelling Languge to Language. The raw schema is ground truth; the rendered page is not.",
         "A high-fabrication-risk payment API can still be almost entirely accurate -- the single defect here (one invented endpoint) was buried in a reference file, not the SKILL.md body, which used the correct CreateDocument+enum pattern throughout. Diff reference files against the spec's full path list, don't just spot-check the body."
       ]
+    },
+    {
+      "version": "2.2.0",
+      "date": "2026-07-27",
+      "lessons": [
+        "Parsed the live OpenAPI spec (secure.cardcom.solutions/swagger/v11/swagger.json, title 'CardCom API' 11.0, 59 paths) rather than the docs SPA, per last cycle's lesson. Every endpoint the skill cites exists.",
+        "ADDED Step 4.5 on allocation numbers, which the skill was entirely silent on despite Step 4 generating Israeli tax documents. Key points: the API has NO AllocationNumber field and that is not an omission (Cardcom requests it server-side); it requires a ONE-TIME Tax Authority authorization where BOTH permission subjects must be selected (verifying a supplier's number AND requesting one for a customer invoice); thresholds pre-VAT are 25,000 (2024), 20,000 (2025), 10,000 (1 Jan 2026), 5,000 (1 Jun 2026); an osek patur is unaffected.",
+        "MAJOR FIXED: the skill taught 'Languge' (the V11 misspelling) as a blanket rule for the Document object. Verified in the spec: Document and DocumentTran use 'Languge' but DocumentLP, the object attached to LowProfile/Create, uses the correctly spelled 'Language', and ALL of them set additionalProperties:false. The blanket rule breaks the Low Profile flow, which is the flow the skill recommends first. references/document-types.md had it right and the body contradicted it.",
+        "MAJOR FIXED: references/api-endpoints.md gave GetTransactionInfoById the fields TerminalNumber/ApiName/TransactionId. The spec requires TerminalNumber, UserName, UserPassword, InternalDealNumber, all four, with additionalProperties:false. This endpoint uses UserName/UserPassword, NOT ApiName/ApiPassword.",
+        "MAJOR FIXED (script): SUCCESS_CODES was {0,700,701} applied unconditionally, so the validator PASSed a 700 on a charge, a document creation or a refund. 700/701 mean a J2/J5 validation-only check succeeded and NO money moved. Now only 0 passes; 700/701 require an explicit --validation-only flag. Also removed int() coercion, which silently turned 0.9 and \"0\" into a reported success.",
+        "MINOR FIXED: the body claimed the enum includes 'their *Refund variants' for Quote and Order. The 25-value DocumentToCreate enum has no QuoteRefund and no OrderRefund; the 11 real refund variants are now listed explicitly.",
+        "PCI corrected: the current standard is v4.0.1 (limited revision, June 2024); 51 of the 64 new requirements were future-dated and became effective 31 March 2025. The old text said 'v4.0 became mandatory March 2025'.",
+        "PERSISTENT_FAIL RESOLVED BY SOFTENING, per the previous cycle's instruction: the terminal-1000 test credentials, the weekly/monthly settlement days, and the pricing band were all asserted flatly with no real source. Rather than keep asserting them, each now says plainly what is unverified and tells the reader to confirm with Cardcom. The test-creds note additionally warns not to assume terminal 1000 cannot move money."
+      ],
+      "carry": [
+        "The test credentials, settlement days and pricing are now softened rather than verified. If an official Cardcom sandbox/pricing page is ever found, restore the specifics with a citation.",
+        "Several evidence entries still carry prose in source_url instead of a URL (e.g. claims 15, 19, 26) and raw_snippets that restate the claim rather than quote a page. They fail --check-sources as HTTP 000. Clean the schema next cycle.",
+        "scripts/validate_cardcom_response.py does not know which operation produced the response, so --validation-only is a manual assertion by the caller. Passing the operation name would let the script enforce it."
+      ]
     }
   ]
 }

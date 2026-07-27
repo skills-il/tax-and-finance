@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "skill": "cardcom-payment-gateway",
-  "version": "2.1.1",
-  "updated_at": "2026-07-06",
+  "version": "2.2.0",
+  "updated_at": "2026-07-27",
   "audit_basis": "Phase 3 verification against the live authoritative Cardcom V11 OpenAPI spec (https://secure.cardcom.solutions/swagger/v11/swagger.json, self-reported version 11.0), parsed directly for endpoint paths, schema property names, and enum values; plus WebSearch/WebFetch on Israeli VAT sources and npm/GitHub for community libraries. Removed a fabricated Documents/CreateTaxInvoice endpoint that does not exist in the spec.",
   "claims": [
     {
@@ -95,9 +95,9 @@
     },
     {
       "id": 12,
-      "claim": "PCI DSS v4.0 became mandatory March 31, 2025; all future-dated requirements moved from best-practice to mandatory at that date.",
-      "source_url": "https://www.clearlypayments.com/blog/pci-dss-4-0-facts-and-compliance-insights-in-2025/",
-      "raw_snippet": "PCI DSS v4.0 became mandatory March 31, 2025; all future-dated requirements moved from best-practice to mandatory at that date.",
+      "claim": "PCI DSS v4.0.1 is the current standard (limited revision published June 2024); of the 64 new requirements, 51 were future-dated and became effective 31 March 2025.",
+      "source_url": "https://blog.pcisecuritystandards.org/now-is-the-time-for-organizations-to-adopt-the-future-dated-requirements-of-pci-dss-v4-x",
+      "raw_snippet": "Of the 64 new requirements, 51 are future-dated and will be effective as of 31 March 2025. And now, PCI DSS v4.0.1 was released as a limited revision in June 2024",
       "where_in_skill": "SKILL.md Gotchas (PCI scope mention)",
       "confidence": "high"
     },
@@ -212,6 +212,26 @@
       "raw_snippet": "https://example.com/success https://example.com/failed https://example.com/webhook",
       "where_in_skill": "SKILL.md + SKILL_HE.md LowProfile request examples",
       "confidence": "high"
+    },
+    {
+      "id": 27,
+      "claim": "Cardcom built a direct interface to the Tax Authority so the allocation number is requested automatically when the document is issued, after a one-time setup: identify in the ITA personal area, register the corporation for a company or VAT-registered group, and under 'הרשאות לפעולות דיגיטליות' grant BOTH 'אימות מספר הקצאה בחשבונית ספק' and 'בקשת מספר הקצאה עבור חשבונית ללקוח'. Pre-VAT thresholds: 25,000 (2024), 20,000 (2025), 10,000 (from 1 Jan 2026), 5,000 (from 1 Jun 2026). An osek patur is unaffected.",
+      "source_url": "https://www.cardcom.solutions/blog/israel-invoices-complete-guide",
+      "raw_snippet": "קארדקום פיתחה ממשק ישיר מול רשות המיסים, כך שהפעולה תתבצע אוטומטית בעת הפקת המסמך. כדי להפעיל את האוטומציה הזו, יש לבצע הגדרה חד-פעמית ... חובה לבחור בשתי האפשרויות הבאות ... שנת 2024: 25,000 ₪ (25,000 ש\"ח / 25,000 NIS) שנת 2025: 20,000 ₪ (20,000 ש\"ח / 20,000 NIS) החל מה-1 בינואר 2026: 10,000 ₪ (10,000 ש\"ח / 10,000 NIS) החל מה-1 ביוני 2026: 5,000 ₪ (5,000 ש\"ח / 5,000 NIS)",
+      "where_in_skill": "SKILL.md Step 4.5, SKILL_HE.md שלב 4.5",
+      "confidence": "high",
+      "verified_via": "browser",
+      "verified_at": "2026-07-27T00:00:00Z"
+    },
+    {
+      "id": 28,
+      "claim": "The Cardcom OpenAPI spec (title 'CardCom API', version 11.0, 59 paths) contains no allocation-number field: CreateDocumentRequest exposes ApiName, ApiPassword, Document, Cash, Cheques, CustomFields, DealNumbers, IsSendSMS, and DocumentBase's 17 properties include none.",
+      "source_url": "https://secure.cardcom.solutions/swagger/v11/swagger.json",
+      "raw_snippet": "\"title\": \"CardCom API\"",
+      "where_in_skill": "SKILL.md Step 4.5, SKILL_HE.md שלב 4.5",
+      "confidence": "high",
+      "verified_via": "openapi-parse",
+      "verified_at": "2026-07-27T00:00:00Z"
     }
   ]
 }
