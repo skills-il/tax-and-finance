@@ -46,6 +46,29 @@
         "Several evidence entries still carry prose in source_url instead of a URL (e.g. claims 15, 19, 26) and raw_snippets that restate the claim rather than quote a page. They fail --check-sources as HTTP 000. Clean the schema next cycle.",
         "scripts/validate_cardcom_response.py does not know which operation produced the response, so --validation-only is a manual assertion by the caller. Passing the operation name would let the script enforce it."
       ]
+    },
+    {
+      "version": "2.3.0",
+      "date": "2026-07-28",
+      "trigger": "User report: the skill claimed ApiPassword was 'required only for refunds and document creation', but the V11 spec marks it required for ListTransactions; integrators hit an unexplained 604.",
+      "lessons": [
+        "ROOT CAUSE, and the most important lesson in this file: the 2.1.1 cycle logged 'ApiPassword required only for CreateDocument + RefundByTransactionId' under verified_correct. A prior pass parsed this same swagger.json and CONFIRMED the wrong claim. It checked only the endpoints the skill already covered and then generalised to 'only'. Verifying every stated claim is not the same as enumerating the authoritative table. This is the API-shaped instance of the rate-table-completeness gap: for any field whose requirement varies per endpoint, enumerate the FULL required-array across ALL paths and diff, never spot-check the covered subset.",
+        "ApiPassword is required on 19 of the 50 V11 endpoints that take a request body (Documents writes, Financial reports, TapTransactions, Account/GetByAccountId, and Transactions/{ListTransactions,RefundByTransactionId,SpecialTransactions}). Encoded as a rule of thumb (company-wide reads/writes need it, single-card charges do not) so the pattern generalises instead of listing endpoints the reader must memorise.",
+        "CRITICAL FIXED beyond the report: references/api-endpoints.md told readers to send TerminalNumber to ListTransactions and SpecialTransactions. Neither schema HAS that property and both set additionalProperties:false, so the documented call was guaranteed to fail even after adding ApiPassword. Terminal scoping on ListTransactions is LimitForTerminal.",
+        "CRITICAL FIXED: SpecialTransactions was documented as 'Credit, installments, special deals' taking TerminalNumber/ApiName/Amount. It is a READ endpoint ('get other transaction if you use CardCom as acquire') whose only four properties are ApiName, ApiPassword, FromDate, ToDate. The name misleads and the old row invented a write API.",
+        "The reporting endpoints were reference-table-only with no SKILL.md body coverage, which is why three separate errors survived several cycles: the body examples get re-read and re-verified each cycle, lone table rows do not. Added Step 6.5 with a worked ListTransactions call.",
+        "604 is NOT documented in the swagger or the rendered docs (which enumerate only 200/400/401). The existing Troubleshooting entry attributing it to a missing ApiPassword is consistent with field reports but has no citable source. Left as-is rather than expanded. Next cycle: ask Cardcom support for the response-code table.",
+        "CARRY RESOLVED: the 2.2.0 carry asked to restore pricing and settlement specifics if an official page was ever found. https://www.cardcom.solutions/blog/clearing-fees-comparison-guide (reached via the Hebrew pricing URL, which 301s there) publishes all three settlement cycles and a ~1.2% starting fee. Both restored with citations; pricing deliberately recorded as a floor, not a quote.",
+        "CARRY RESOLVED: the evidence-schema debt. All 34 entries now have a bare URL in source_url (prose moved to a new source_note field), and --check-sources is clean: 0 unreachable, 0 failed, was 26 unreachable. Cleaning source_url first EXPOSED 8 genuine snippet failures that HTTP 000 had been masking, including PCI SAQ scope cited to a marketing blog (now the PCI SSC SAQ-A PDF) and VAT 18% cited to a 403 page (now PwC, last reviewed 29 June 2026). Unreachable was hiding wrong, not just unverified.",
+        "@tsdiapi/cardcom last published 0.4.0 on 2025-11-20, so 'actively maintained' was stale; claim softened to a dated fact via registry.npmjs.org (the npmjs.com web page 403s plain fetches).",
+        "Self-review caught my own error before push: I wrote '19 of 50 endpoints' from a script that counted post-or-get, while a stricter recount gave 47. The spec has 59 operations, 50 with a request body, 19 requiring ApiPassword. Wording corrected to '19 of the 50 V11 endpoints that take a request body'. Round-number counts in prose need the denominator stated."
+      ],
+      "carry": [
+        "Response-code semantics (604 and the rest) are undocumented publicly. Ask Cardcom support for the code table; until then Troubleshooting entries about specific codes rest on field reports only.",
+        "Test credentials (terminal 1000, card 4580000000000000) still have no official source. Skill presents them as unverified community folklore. Unchanged from 2.2.0.",
+        "The Financial/* and TapTransactions/* groups all require ApiPassword and have no worked examples or body coverage, exactly the shape that hid the ListTransactions bugs. Consider coverage next cycle.",
+        "scripts/validate_cardcom_response.py still does not know which operation produced the response, so --validation-only remains a manual assertion by the caller."
+      ]
     }
   ]
 }

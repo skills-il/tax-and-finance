@@ -1,97 +1,122 @@
 {
   "schemaVersion": "1.0",
   "skill": "cardcom-payment-gateway",
-  "version": "2.2.0",
-  "updated_at": "2026-07-27",
+  "version": "2.3.0",
+  "updated_at": "2026-07-28T22:13:46Z",
   "audit_basis": "Phase 3 verification against the live authoritative Cardcom V11 OpenAPI spec (https://secure.cardcom.solutions/swagger/v11/swagger.json, self-reported version 11.0), parsed directly for endpoint paths, schema property names, and enum values; plus WebSearch/WebFetch on Israeli VAT sources and npm/GitHub for community libraries. Removed a fabricated Documents/CreateTaxInvoice endpoint that does not exist in the spec.",
   "claims": [
     {
       "id": 1,
       "claim": "Cardcom V11 is the current REST API as of 2026; no public V12 exists.",
-      "source_url": "https://secure.cardcom.solutions/Api/v11/Docs",
-      "raw_snippet": "Cardcom V11 is the current REST API as of 2026; no public V12 exists.",
+      "source_url": "https://secure.cardcom.solutions/swagger/v11/swagger.json",
+      "raw_snippet": "\"info\":{\"title\":\"CardCom API\",\"version\":\"11.0\"}",
       "where_in_skill": "SKILL.md Overview, references/api-endpoints.md API Version section",
-      "confidence": "high"
+      "confidence": "high",
+      "source_note": "Probed 2026-07-28: /swagger/v12/swagger.json returns HTTP 404, /swagger/v11/swagger.json returns 200. No public V12.",
+      "verified_via": "spec",
+      "verified_at": "2026-07-28T22:09:10Z"
     },
     {
       "id": 2,
       "claim": "Production base URL is https://secure.cardcom.solutions/api/v11/",
-      "source_url": "https://secure.cardcom.solutions/Api/v11/Docs",
-      "raw_snippet": "Production base URL is https://secure.cardcom.solutions/api/v11/ Support center: https://support.cardcom.solutions . Currency table row: `1` = ILS, `2` = USD. Sample DocumentUrl in the validator fixture: https://secure.cardcom.solutions/doc/10042 (DocumentNumber 10042, illustrative).",
+      "source_url": "https://secure.cardcom.solutions/swagger/v11/swagger.json",
+      "raw_snippet": "\"servers\":[{\"url\":\"https://secure.cardcom.solutions/\"}] with all paths under /api/v11/",
       "where_in_skill": "SKILL.md Step 3, references/api-endpoints.md",
-      "confidence": "high"
+      "confidence": "high",
+      "verified_via": "spec",
+      "verified_at": "2026-07-28T22:09:10Z"
     },
     {
       "id": 3,
       "claim": "Every V11 endpoint returns ResponseCode (int) and Description (string); ResponseCode == 0 means success.",
-      "source_url": "https://secure.cardcom.solutions/Api/v11/Docs (OpenAPI response schema)",
-      "raw_snippet": "Every V11 endpoint returns ResponseCode (int) and Description (string); ResponseCode == 0 means success.",
+      "source_url": "https://secure.cardcom.solutions/swagger/v11/swagger.json",
+      "raw_snippet": "\"ResponseCode\":{\"description\":\"if equal zero then success , 700 and 701 success for J2 and J5 transaction\"},\"Description\":{...} (present on every V11 response schema)",
       "where_in_skill": "SKILL.md Step 8, Gotchas",
-      "confidence": "high"
+      "confidence": "high",
+      "verified_via": "spec",
+      "verified_at": "2026-07-28T22:05:58Z"
     },
     {
       "id": 4,
       "claim": "Cardcom supports Bit, PayPal, Apple Pay, and Google Pay as alternative payment methods alongside credit cards.",
-      "source_url": "https://www.cardcom.solutions/ (homepage 'one-stop-shop', 'respects all credit brands including Bit and digital wallets')",
-      "raw_snippet": "Cardcom supports Bit, PayPal, Apple Pay, and Google Pay as alternative payment methods alongside credit cards.",
+      "source_url": "https://www.cardcom.solutions/",
+      "raw_snippet": "אנו מכבדים את כל מותגי האשראי, כולל ביט והארנקים הדיגיטליים - הכל במקום אחד",
       "where_in_skill": "SKILL.md Alternative Payment Methods table, Example 5",
-      "confidence": "high"
+      "confidence": "high",
+      "source_note": "Homepage nav also lists 'ביט לעסקים' and 'Apple Pay / Google Pay' as products. PayPal support is evidenced separately by the UrlToPayPal field on CreateLowProfileResponse in the V11 spec (claim 6), not by this page.",
+      "verified_via": "browser",
+      "verified_at": "2026-07-28T22:07:24Z"
     },
     {
       "id": 5,
       "claim": "Bit payments are returned as a separate UrlToBit field on CreateLowProfileResponse.",
-      "source_url": "https://secure.cardcom.solutions/Api/v11/Docs (CreateLowProfileResponse schema)",
-      "raw_snippet": "Bit payments are returned as a separate UrlToBit field on CreateLowProfileResponse.",
+      "source_url": "https://secure.cardcom.solutions/swagger/v11/swagger.json",
+      "raw_snippet": "\"CreateLowProfileResponse\":{\"properties\":{\"ResponseCode\",\"Description\",\"Url\",\"UrlToPayPal\",\"UrlToBit\"}}",
       "where_in_skill": "SKILL.md Step 3a, references/api-endpoints.md",
-      "confidence": "high"
+      "confidence": "high",
+      "verified_via": "spec",
+      "verified_at": "2026-07-28T22:05:58Z"
     },
     {
       "id": 6,
       "claim": "PayPal is returned as a separate UrlToPayPal field on CreateLowProfileResponse.",
-      "source_url": "https://secure.cardcom.solutions/Api/v11/Docs (CreateLowProfileResponse schema)",
-      "raw_snippet": "PayPal is returned as a separate UrlToPayPal field on CreateLowProfileResponse.",
+      "source_url": "https://secure.cardcom.solutions/swagger/v11/swagger.json",
+      "raw_snippet": "\"CreateLowProfileResponse\":{\"properties\":{\"ResponseCode\",\"Description\",\"Url\",\"UrlToPayPal\",\"UrlToBit\"}}",
       "where_in_skill": "SKILL.md Step 3a, references/api-endpoints.md",
-      "confidence": "high"
+      "confidence": "high",
+      "verified_via": "spec",
+      "verified_at": "2026-07-28T22:05:58Z"
     },
     {
       "id": 7,
       "claim": "Apple Pay and Google Pay are rendered as wallet buttons inside the hosted Low Profile page itself once enabled on the terminal; no separate URL field exists in the API response.",
-      "source_url": "Inference: cardcom.solutions confirms wallet support; CreateLowProfileResponse schema in V11 docs exposes only UrlToBit and UrlToPayPal as alternative-method URL fields.",
-      "raw_snippet": "Apple Pay and Google Pay are rendered as wallet buttons inside the hosted Low Profile page itself once enabled on the terminal; no separate URL field exists in the API response.",
+      "source_url": "https://secure.cardcom.solutions/swagger/v11/swagger.json",
+      "raw_snippet": "\"CreateLowProfileResponse\":{\"properties\":{\"ResponseCode\",\"Description\",\"Url\",\"UrlToPayPal\",\"UrlToBit\"}}",
       "where_in_skill": "SKILL.md Alternative Payment Methods table, Gotchas",
-      "confidence": "medium"
+      "confidence": "medium",
+      "source_note": "Only Bit and PayPal get their own URL fields. Apple Pay / Google Pay are wallet buttons rendered inside the hosted page (Url), which is why no separate field exists; Cardcom's homepage lists them as supported products.",
+      "verified_via": "spec",
+      "verified_at": "2026-07-28T22:09:10Z"
     },
     {
       "id": 8,
       "claim": "DocumentTypeToCreate is a string enum (e.g. 'TaxInvoiceAndReceipt'), not an integer code. Integer codes belong to legacy .aspx interfaces.",
-      "source_url": "https://secure.cardcom.solutions/Api/v11/Docs (DocumentToCreate enum)",
-      "raw_snippet": "DocumentTypeToCreate is a string enum (e.g. 'TaxInvoiceAndReceipt'), not an integer code. Integer codes belong to legacy .aspx interfaces.",
+      "source_url": "https://secure.cardcom.solutions/swagger/v11/swagger.json",
+      "raw_snippet": "\"DocumentToCreate\":{\"type\":\"string\",\"x-enumNames\":[\"Auto\",\"TaxInvoiceAndReceipt\",\"TaxInvoiceAndReceiptRefund\",\"Receipt\",...]} referenced by DocumentBase.DocumentTypeToCreate",
       "where_in_skill": "SKILL.md Step 4, Gotchas",
-      "confidence": "high"
+      "confidence": "high",
+      "verified_via": "spec",
+      "verified_at": "2026-07-28T22:05:58Z"
     },
     {
       "id": 9,
       "claim": "V11 Document object field spellings: Languge (missing second 'a', on the Document and DocumentTran schemas), ISOCoinID/ISOCoinId, IsSendByEmail, TaxId. The DocumentLP sub-schema (LowProfile flow) uses the correctly-spelled Language, and the LowProfile/Create request carries a top-level Language field.",
-      "source_url": "https://secure.cardcom.solutions/swagger/v11/swagger.json (Document, DocumentTran, DocumentLP, DocumentBase schemas)",
-      "raw_snippet": "V11 Document object field spellings: Languge (missing second 'a', on the Document and DocumentTran schemas), ISOCoinID/ISOCoinId, IsSendByEmail, TaxId. The DocumentLP sub-schema (LowProfile flow) uses the correctly-spelled Language, and the LowProfile/Create request carries a top-level Language field.",
+      "source_url": "https://secure.cardcom.solutions/swagger/v11/swagger.json",
+      "raw_snippet": "\"Document\":{\"properties\":{...\"Languge\"...}},\"DocumentTran\":{\"properties\":{...\"Languge\"...}},\"DocumentLP\":{\"properties\":{...\"Language\"...}} (Languge on Document+DocumentTran; correctly-spelled Language only on DocumentLP)",
       "where_in_skill": "SKILL.md Step 4, Gotchas, references/document-types.md",
-      "confidence": "high"
+      "confidence": "high",
+      "source_note": "Document, DocumentTran, DocumentLP, DocumentBase schemas",
+      "verified_via": "spec",
+      "verified_at": "2026-07-28T22:05:09Z"
     },
     {
       "id": 10,
-      "claim": "ApiPassword is required for Documents/CreateDocument and Transactions/RefundByTransactionId, but not for normal LowProfile/Create or Transaction charges.",
-      "source_url": "https://secure.cardcom.solutions/Api/v11/Docs (per-endpoint required-fields lists)",
-      "raw_snippet": "ApiPassword is required for Documents/CreateDocument and Transactions/RefundByTransactionId, but not for normal LowProfile/Create or Transaction charges.",
-      "where_in_skill": "SKILL.md Step 2, Step 6, Gotchas",
-      "confidence": "high"
+      "claim": "ApiPassword is required on 19 of the 50 V11 endpoints, including Transactions/ListTransactions and Transactions/SpecialTransactions, not only CreateDocument and RefundByTransactionId. It is not a property at all on LowProfile/Create or Transactions/Transaction.",
+      "source_url": "https://secure.cardcom.solutions/swagger/v11/swagger.json",
+      "raw_snippet": "\"ListTransactionsReq\":{...\"required\":[\"ApiName\",\"ApiPassword\",\"FromDate\",\"ToDate\",\"Page\",\"Page_size\"]}",
+      "where_in_skill": "SKILL.md Step 2, Step 6.5, Gotchas; references/api-endpoints.md Base URL & Authentication",
+      "confidence": "high",
+      "verified_via": "spec",
+      "verified_at": "2026-07-28T22:02:47Z"
     },
     {
       "id": 11,
       "claim": "Israeli VAT rate is 18% as of 2026 (raised from 17% in January 2025; the 2026 budget proposal to raise to 19% was rejected).",
-      "source_url": "https://www.vatcalc.com/vat/israel-vat-rise-to-19-jan-2026-proposal/ ; https://taxsummaries.pwc.com/israel/corporate/other-taxes",
-      "raw_snippet": "Israeli VAT rate is 18% as of 2026 (raised from 17% in January 2025; the 2026 budget proposal to raise to 19% was rejected).",
+      "source_url": "https://taxsummaries.pwc.com/israel/corporate/other-taxes",
+      "raw_snippet": "Value-added tax (VAT) The 2025 current rate of VAT is 18%.",
       "where_in_skill": "SKILL.md Gotchas, SKILL_HE.md Gotchas",
-      "confidence": "high"
+      "confidence": "high",
+      "source_note": "PwC Israel corporate tax summary, page states 'Last reviewed - 29 June 2026'. Replaces vatcalc.com, which returns HTTP 403 to plain fetches."
     },
     {
       "id": 12,
@@ -104,114 +129,151 @@
     {
       "id": 13,
       "claim": "Hosted Low Profile keeps merchants in SAQ-A scope; direct server-to-server Transaction with raw CardNumber/CVV2 falls under SAQ-D.",
-      "source_url": "https://neontri.com/blog/payment-gateway-integration/ ; general PCI tokenization guidance",
-      "raw_snippet": "Hosted Low Profile keeps merchants in SAQ-A scope; direct server-to-server Transaction with raw CardNumber/CVV2 falls under SAQ-D.",
+      "source_url": "https://listings.pcisecuritystandards.org/documents/PCI-DSS-v4-0-SAQ-A.pdf",
+      "raw_snippet": "Self-Assessment Questionnaire (SAQ) A includes only those PCI DSS requirements applicable to merchants with account data functions completely outsourced to PCI DSS validated and compliant third parties, where the merchant retains only paper reports or receipts with account data. ... do not store, process, or transmit any account data in electronic format on their systems or premises.",
       "where_in_skill": "SKILL.md Step 1, Gotchas",
-      "confidence": "high"
+      "confidence": "high",
+      "source_note": "SAQ A eligibility turns on NOT storing/processing/transmitting account data, which is what hosted Low Profile achieves and what server-to-server Transaction with raw CardNumber/CVV2 breaks; a merchant handling account data directly falls to SAQ D.",
+      "verified_via": "pdf",
+      "verified_at": "2026-07-28T22:08:27Z"
     },
     {
       "id": 14,
       "claim": "Cardcom supports two recurring-payment flavours: card-based (charge a stored Token) and MASAV bank standing orders (direct bank debit via RecuringPayments endpoints).",
-      "source_url": "https://www.cardcom.solutions/recurring-payments ('Credit card charges' + 'Bank standing orders via MASAV')",
-      "raw_snippet": "Cardcom supports two recurring-payment flavours: card-based (charge a stored Token) and MASAV bank standing orders (direct bank debit via RecuringPayments endpoints).",
+      "source_url": "https://www.cardcom.solutions/recurring-payments",
+      "raw_snippet": "פתרון מתקדם לגבייה מחזורית באשראי או בהוראת קבע בנקאית ... הפעלת הוראת קבע בנקאית דרך מס\"ב — ישירות מחשבון הבנק של הלקוח",
       "where_in_skill": "SKILL.md Step 5, SKILL_HE.md Step 5",
-      "confidence": "high"
+      "confidence": "high",
+      "source_note": "'Credit card charges' + 'Bank standing orders via MASAV'",
+      "verified_via": "browser",
+      "verified_at": "2026-07-28T22:07:24Z"
     },
     {
       "id": 15,
-      "claim": "Cardcom settlement timing is configured per terminal: weekly settlement deposits on the Wednesday following the transaction; monthly settlement deposits on the 6th of the following month.",
-      "source_url": "Cardcom pricing/fees descriptions surfaced via Israeli comparison pages and Cardcom's own pricing collateral (1st-to-second-to-last credited on 6th of following month)",
-      "raw_snippet": "Cardcom settlement timing is configured per terminal: weekly settlement deposits on the Wednesday following the transaction; monthly settlement deposits on the 6th of the following month.",
+      "claim": "Cardcom publishes three settlement cycles: monthly (1st to day-before-month-end, credited the 6th of the following month), weekly (Sun-Fri, credited the following Wednesday), and bi-monthly (1st-15th credited the 2nd; 16th-month-end credited the 8th). Configured per terminal, not via API.",
+      "source_url": "https://www.cardcom.solutions/blog/clearing-fees-comparison-guide",
+      "raw_snippet": "זיכוי חודשי: עסקאות שבוצעו מה-1 לחודש ועד יום לפני סוף החודש – ב-6 לחודש העוקב זיכוי שבועי: עסקאות שבוצעו מיום ראשון עד יום שישי – ביום רביעי בשבוע שאחרי* זיכוי דו-חודשי: עסקאות מה-1 עד ה-15 לחודש – ב-2 לחודש העוקב; עסקאות מה-16 ועד יום לפני סוף החודש – ב-8",
       "where_in_skill": "SKILL.md Gotchas, SKILL_HE.md Gotchas",
-      "confidence": "medium"
+      "confidence": "medium",
+      "source_note": "Resolves the 2.2.0 carry item that softened settlement days for lack of a source. Reached via https://www.cardcom.solutions/עמלת-סליקה-לעסקים/ which 301s here.",
+      "verified_via": "browser",
+      "verified_at": "2026-07-28T22:11:49Z"
     },
     {
       "id": 16,
-      "claim": "Cardcom 2026 pricing is roughly 1.2%-1.4% per transaction, with optional monthly plans around 59 NIS/month for the invoicing add-on.",
-      "source_url": "Multiple Israeli comparison pages and Cardcom's pricing page (https://www.cardcom.solutions/עמלת-סליקה-לעסקים/)",
-      "raw_snippet": "Cardcom 2026 pricing is roughly 1.2%-1.4% per transaction, with optional monthly plans around 59 NIS/month for the invoicing add-on. Hebrew mirror: כ-59 ש\"ח לחודש. Illustrative example prompts use amounts like 149 NIS / 149 שח monthly (sample figures, not a pricing claim).",
+      "claim": "Cardcom publishes a starting clearing fee of about 1.2% that decreases with transaction volume. This is an advertised floor, not a quote.",
+      "source_url": "https://www.cardcom.solutions/blog/clearing-fees-comparison-guide",
+      "raw_snippet": "העמלה מתחילה בכ-1.2%, ויכולה לרדת בהתאם למחזור הפעילות שלכם",
       "where_in_skill": "SKILL.md Overview (landscape paragraph), SKILL_HE.md Overview",
-      "confidence": "medium"
+      "confidence": "medium",
+      "source_note": "Resolves the 2.2.0 carry item on pricing. Deliberately recorded as a floor; the skill still routes users to Cardcom for an actual quote.",
+      "verified_via": "browser",
+      "verified_at": "2026-07-28T22:11:49Z"
     },
     {
       "id": 17,
-      "claim": "Cardcom's main competitors as Israeli payment gateways are Tranzila, Israpay, and Bit Business.",
-      "source_url": "https://nowpayments.io/blog/payment-gateway-israel and other 2026 Israeli payment-gateway comparison pages",
-      "raw_snippet": "Cardcom's main competitors as Israeli payment gateways are Tranzila, Israpay, and Bit Business.",
+      "claim": "Tranzila, Israpay and Bit Business are Israeli payment gateways operating in the same market as Cardcom. Which of them is any given merchant's realistic alternative is not something this skill asserts.",
+      "source_url": "https://www.tranzila.com/",
+      "raw_snippet": "Tranzila operates a live Israeli payment-gateway service; skills-il additionally ships a dedicated tranzila-payment-gateway skill for it.",
       "where_in_skill": "SKILL.md Overview (landscape paragraph), SKILL_HE.md Overview",
-      "confidence": "high"
+      "confidence": "high",
+      "source_note": "Downgraded from the previous 'main competitors' framing, which was editorial and cited to a crypto-payments marketing blog. The skill only needs the fact that alternatives exist and that Tranzila has its own skill.",
+      "verified_via": "browser",
+      "verified_at": "2026-07-28T22:08:27Z"
     },
     {
       "id": 18,
       "claim": "RecuringPayments path uses single 'r' spelling in the V11 schema (RecuringPayments, not RecurringPayments).",
-      "source_url": "https://secure.cardcom.solutions/Api/v11/Docs ; https://cardcomapi.zendesk.com/hc/he/articles/25405486094226 (URL path /api/v11/RecuringPayments/...)",
-      "raw_snippet": "RecuringPayments path uses single 'r' spelling in the V11 schema (RecuringPayments, not RecurringPayments).",
+      "source_url": "https://secure.cardcom.solutions/swagger/v11/swagger.json",
+      "raw_snippet": "\"paths\":{\"/api/v11/RecuringPayments/GetMuhlafim\",\"/api/v11/RecuringPayments/GetRecurringPayment\",...} (single r in RecuringPayments)",
       "where_in_skill": "references/api-endpoints.md (already documented)",
-      "confidence": "high"
+      "confidence": "high",
+      "verified_via": "spec",
+      "verified_at": "2026-07-28T22:05:58Z"
     },
     {
       "id": 19,
-      "claim": "Test terminal 1000 with the demo ApiName allows API testing without real charges; test card 4580000000000000 with any future expiry and CVV 123.",
-      "source_url": "https://secure.cardcom.solutions/Api/v11/Docs ; @tsdiapi/cardcom and other community libraries that document the same test creds",
-      "raw_snippet": "Test terminal 1000 with the demo ApiName allows API testing without real charges; test card 4580000000000000 with any future expiry and CVV 123.",
+      "claim": "Terminal 1000 and card 4580000000000000 are widely repeated in community libraries as Cardcom test credentials. NOT confirmed against any official Cardcom sandbox page; the skill presents them as unverified community folklore and warns not to assume terminal 1000 cannot move money.",
+      "source_url": "https://registry.npmjs.org/@tsdiapi/cardcom",
+      "raw_snippet": "\"name\":\"@tsdiapi/cardcom\"",
       "where_in_skill": "SKILL.md Step 2",
-      "confidence": "high"
+      "confidence": "high",
+      "source_note": "UNRESOLVED CARRY. The credentials themselves have no official source. This entry records only that a community package exists; the skill body states plainly that the creds are unverified."
     },
     {
       "id": 20,
       "claim": "Operation enum values on LowProfile/Create: ChargeOnly (default), ChargeAndCreateToken, CreateTokenOnly, SuspendedDeal, Do3DSAndSubmit.",
-      "source_url": "https://secure.cardcom.solutions/Api/v11/Docs (Operation enum)",
-      "raw_snippet": "Operation enum values on LowProfile/Create: ChargeOnly (default), ChargeAndCreateToken, CreateTokenOnly, SuspendedDeal, Do3DSAndSubmit.",
+      "source_url": "https://secure.cardcom.solutions/swagger/v11/swagger.json",
+      "raw_snippet": "\"Operation\":{\"type\":\"string\",\"x-enumNames\":[\"ChargeOnly\",\"ChargeAndCreateToken\",\"CreateTokenOnly\",\"SuspendedDeal\",\"Do3DSAndSubmit\"]}; CreateLowProfile.Operation \"default\":\"ChargeOnly\"",
       "where_in_skill": "SKILL.md Step 3a, references/api-endpoints.md",
-      "confidence": "high"
+      "confidence": "high",
+      "verified_via": "spec",
+      "verified_at": "2026-07-28T22:05:58Z"
     },
     {
       "id": 21,
       "claim": "Cardcom's standout differentiator versus other Israeli gateways is automatic generation of Israeli tax documents (חשבונית מס + קבלה) bundled into the payment flow.",
-      "source_url": "https://www.cardcom.solutions/ and https://support.cardcom.solutions/hc/he/articles/4416393115666-Creating-invoice-via-API",
-      "raw_snippet": "Cardcom's standout differentiator versus other Israeli gateways is automatic generation of Israeli tax documents (חשבונית מס + קבלה) bundled into the payment flow.",
+      "source_url": "https://www.cardcom.solutions/",
+      "raw_snippet": "הלקוח משלם בנוחות, החשבונית מתקבלת אוטומטית והכסף נוחת בחשבון הבנק",
       "where_in_skill": "SKILL.md Overview, Step 4",
-      "confidence": "high"
+      "confidence": "high",
+      "source_note": "and https://support.cardcom.solutions/hc/he/articles/4416393115666-Creating-invoice-via-API",
+      "verified_via": "browser",
+      "verified_at": "2026-07-28T22:07:24Z"
     },
     {
       "id": 22,
       "claim": "Transaction endpoint J2/J5 validation-only operations return ResponseCode 700 or 701 which also count as success.",
-      "source_url": "https://secure.cardcom.solutions/Api/v11/Docs (Transaction response codes section)",
-      "raw_snippet": "Transaction endpoint J2/J5 validation-only operations return ResponseCode 700 or 701 which also count as success.",
+      "source_url": "https://secure.cardcom.solutions/swagger/v11/swagger.json",
+      "raw_snippet": "\"ResponseCode\":{\"description\":\"if equal zero then success , 700 and 701 success for J2 and J5 transaction\"} (TransactionInfo)",
       "where_in_skill": "SKILL.md Step 5, references/api-endpoints.md",
-      "confidence": "high"
+      "confidence": "high",
+      "verified_via": "spec",
+      "verified_at": "2026-07-28T22:05:58Z"
     },
     {
       "id": 23,
-      "claim": "@tsdiapi/cardcom is an active community-maintained TypeScript/Node.js client for V11 covering payments, refunds, tokenization, and transaction queries.",
-      "source_url": "https://www.npmjs.com/package/@tsdiapi/cardcom",
-      "raw_snippet": "@tsdiapi/cardcom is an active community-maintained TypeScript/Node.js client for V11 covering payments, refunds, tokenization, and transaction queries. CardCom also publishes official OpenFields example repos: https://github.com/CardCom/OpenFields-FrontEnd-React and https://github.com/CardCom/OpenFields-Backend-Node (both live, HTTP 200).",
+      "claim": "@tsdiapi/cardcom is a community-maintained TypeScript/Node.js client for V11; latest published version is 0.4.0 (2025-11-20). It is third-party and not affiliated with Cardcom.",
+      "source_url": "https://registry.npmjs.org/@tsdiapi/cardcom",
+      "raw_snippet": "\"name\":\"@tsdiapi/cardcom\",\"dist-tags\":{\"latest\":\"0.4.0\"},\"time\":{\"modified\":\"2025-11-20T17:19:45.618Z\"}",
       "where_in_skill": "SKILL.md Community Libraries",
-      "confidence": "high"
+      "confidence": "high",
+      "source_note": "Registry API used because the npmjs.com web page returns 403 to plain fetches. Last publish 2025-11-20, so 'actively maintained' is no longer accurate; claim softened to a dated fact.",
+      "verified_via": "browser",
+      "verified_at": "2026-07-28T22:09:10Z"
     },
     {
       "id": 24,
       "claim": "Suspended deals (Operation SuspendedDeal) return a SuspendedDealId and are charged later via the SuspendedDeals endpoint group, which includes SuspendedDeals/Charge, SuspendedDeals/Cancel, and SuspendedDeals/GetSuspendedDealInfo.",
-      "source_url": "https://secure.cardcom.solutions/swagger/v11/swagger.json (SuspendedDeals paths)",
-      "raw_snippet": "Suspended deals (Operation SuspendedDeal) return a SuspendedDealId and are charged later via the SuspendedDeals endpoint group, which includes SuspendedDeals/Charge, SuspendedDeals/Cancel, and SuspendedDeals/GetSuspendedDealInfo.",
+      "source_url": "https://secure.cardcom.solutions/swagger/v11/swagger.json",
+      "raw_snippet": "\"paths\":{\"/api/v11/SuspendedDeals/GetSuspendedDeals\",\"/api/v11/SuspendedDeals/GetSuspendedDealInfo\",\"/api/v11/SuspendedDeals/Charge\",\"/api/v11/SuspendedDeals/Cancel\",\"/api/v11/SuspendedDeals/UpdateSuspendedDealInfo\"}; \"SuspendedInfo\":{\"properties\":{\"SuspendedDealId\"...}}",
       "where_in_skill": "SKILL.md Step 7, SKILL_HE.md Step 7",
-      "confidence": "high"
+      "confidence": "high",
+      "source_note": "SuspendedDeals paths",
+      "verified_via": "spec",
+      "verified_at": "2026-07-28T22:05:09Z"
     },
     {
       "id": 25,
       "claim": "The production endpoint URLs used in the examples all exist in the live V11 OpenAPI spec: https://secure.cardcom.solutions/api/v11/LowProfile/Create, https://secure.cardcom.solutions/api/v11/LowProfile/GetLpResult, https://secure.cardcom.solutions/api/v11/Documents/CreateDocument, https://secure.cardcom.solutions/api/v11/Transactions/Transaction, https://secure.cardcom.solutions/api/v11/Transactions/RefundByTransactionId.",
-      "source_url": "https://secure.cardcom.solutions/swagger/v11/swagger.json (paths block)",
-      "raw_snippet": "https://secure.cardcom.solutions/api/v11/LowProfile/Create https://secure.cardcom.solutions/api/v11/LowProfile/GetLpResult https://secure.cardcom.solutions/api/v11/Documents/CreateDocument https://secure.cardcom.solutions/api/v11/Transactions/Transaction https://secure.cardcom.solutions/api/v11/Transactions/RefundByTransactionId",
+      "source_url": "https://secure.cardcom.solutions/swagger/v11/swagger.json",
+      "raw_snippet": "https://secure.cardcom.solutions/api/v11/LowProfile/Create https://secure.cardcom.solutions/api/v11/LowProfile/GetLpResult https://secure.cardcom.solutions/api/v11/Documents/CreateDocument https://secure.cardcom.solutions/api/v11/Transactions/Transaction https://secure.cardcom.solutions/api/v11/Transactions/RefundByTransactionId Includes https://secure.cardcom.solutions/api/v11/Transactions/ListTransactions (path /api/v11/Transactions/ListTransactions present in the spec).",
       "where_in_skill": "SKILL.md + SKILL_HE.md request examples, references/api-endpoints.md",
-      "confidence": "high"
+      "confidence": "high",
+      "source_note": "paths block",
+      "verified_via": "spec",
+      "verified_at": "2026-07-28T22:05:09Z"
     },
     {
       "id": 26,
-      "claim": "Redirect/webhook URLs in the code samples are illustrative placeholders on example.com, not live endpoints.",
-      "source_url": "N/A (illustrative placeholders in documentation examples)",
-      "raw_snippet": "https://example.com/success https://example.com/failed https://example.com/webhook",
+      "claim": "Redirect and webhook URLs in the code samples (example.com/success, /failed, /webhook) are illustrative placeholders, not real Cardcom endpoints.",
+      "source_url": "https://www.iana.org/help/example-domains",
+      "raw_snippet": "Placeholders, not live endpoints: https://example.com/success https://example.com/failed https://example.com/webhook and the sample document link https://secure.cardcom.solutions/doc/10042 (a fixture in scripts/validate_cardcom_response.py matching DocumentNumber 10042, so it 404s by design). IANA: 'example.com and example.org are maintained' as IANA-managed Reserved Domains for documentation. Illustrative amounts in the worked examples, including 149 NIS / 149 שח monthly, are sample figures and not a pricing claim.",
       "where_in_skill": "SKILL.md + SKILL_HE.md LowProfile request examples",
-      "confidence": "high"
+      "confidence": "high",
+      "source_note": "example.com is IANA-reserved for documentation, which is exactly why it is used here.",
+      "verified_via": "browser",
+      "verified_at": "2026-07-28T22:13:12Z"
     },
     {
       "id": 27,
@@ -232,6 +294,67 @@
       "confidence": "high",
       "verified_via": "openapi-parse",
       "verified_at": "2026-07-27T00:00:00Z"
+    },
+    {
+      "id": 29,
+      "claim": "ListTransactionsReq has no TerminalNumber property and sets additionalProperties:false, so sending TerminalNumber fails the call; terminal scoping uses the optional LimitForTerminal.",
+      "source_url": "https://secure.cardcom.solutions/swagger/v11/swagger.json",
+      "raw_snippet": "\"ListTransactionsReq\":{\"additionalProperties\":false,\"properties\":{\"ApiName\",\"ApiPassword\",\"FromDate\",\"ToDate\",\"TranStatus\",\"Page\",\"Page_size\",\"LimitForTerminal\"}}",
+      "where_in_skill": "SKILL.md Step 6.5, Gotchas; references/api-endpoints.md Transactions table",
+      "verified_via": "spec",
+      "verified_at": "2026-07-28T22:02:47Z",
+      "confidence": "high"
+    },
+    {
+      "id": 30,
+      "claim": "ListTransactions dates are DDMMYYYY strings; Page starts at 1 and Page_size must be 10-2000.",
+      "source_url": "https://secure.cardcom.solutions/swagger/v11/swagger.json",
+      "raw_snippet": "\"FromDate\":{\"description\":\"Form Date DDMMYYYY\"},\"Page\":{\"description\":\"page from 1\"},\"Page_size\":{\"description\":\"page size 10 - 2000\"}",
+      "where_in_skill": "SKILL.md Step 6.5; references/api-endpoints.md Transactions table",
+      "verified_via": "spec",
+      "verified_at": "2026-07-28T22:02:47Z",
+      "confidence": "high"
+    },
+    {
+      "id": 31,
+      "claim": "Transactions/SpecialTransactions is a read endpoint returning other transactions when Cardcom is the acquirer; its only four properties are ApiName, ApiPassword, FromDate, ToDate, all required. It takes no TerminalNumber and no Amount.",
+      "source_url": "https://secure.cardcom.solutions/swagger/v11/swagger.json",
+      "raw_snippet": "\"summary\":\"Special Transactions\",\"description\":\"get other transaction if you use CardCom as acquire\" ... \"SpecialTransactionsReq\":{\"additionalProperties\":false,\"required\":[\"ApiName\",\"ApiPassword\",\"FromDate\",\"ToDate\"]}",
+      "where_in_skill": "SKILL.md Step 6.5, Gotchas; references/api-endpoints.md Transactions table",
+      "verified_via": "spec",
+      "verified_at": "2026-07-28T22:02:47Z",
+      "confidence": "high"
+    },
+    {
+      "id": 32,
+      "claim": "ListTransactions returns GetTranzactionsResp with ResponseCode, Description, Tranzactions (array of TransactionInfo), Page, Page_size.",
+      "source_url": "https://secure.cardcom.solutions/swagger/v11/swagger.json",
+      "raw_snippet": "\"GetTranzactionsResp\":{\"properties\":{\"ResponseCode\",\"Description\",\"Tranzactions\",\"Page\",\"Page_size\"}}",
+      "where_in_skill": "SKILL.md Step 6.5; references/api-endpoints.md Transactions table",
+      "verified_via": "spec",
+      "verified_at": "2026-07-28T22:02:47Z",
+      "confidence": "high"
+    },
+    {
+      "id": 33,
+      "claim": "Cardcom's official docs, support centre and the two Cardcom-authored OpenFields sample repos all resolve: https://secure.cardcom.solutions/Api/v11/Docs, https://support.cardcom.solutions, https://github.com/CardCom/OpenFields-FrontEnd-React, https://github.com/CardCom/OpenFields-Backend-Node.",
+      "source_url": "https://secure.cardcom.solutions/Api/v11/Docs",
+      "raw_snippet": "https://secure.cardcom.solutions/Api/v11/Docs https://support.cardcom.solutions https://github.com/CardCom/OpenFields-FrontEnd-React https://github.com/CardCom/OpenFields-Backend-Node",
+      "source_note": "Link-validation pass 2026-07-28: docs page renders (title 'CardCom API') and support centre redirects to /hc/he (title 'מרכז התמיכה קארדקום') in a real browser though both refuse plain curl; both GitHub repos return HTTP 200.",
+      "where_in_skill": "SKILL.md Overview + Reference Links, SKILL_HE.md, references/",
+      "verified_via": "browser",
+      "verified_at": "2026-07-28T22:13:12Z",
+      "confidence": "high"
+    },
+    {
+      "id": 34,
+      "claim": "ISOCoinId is an integer where 1 = ILS (the default) and 2 = USD; other values follow ISO 4217.",
+      "source_url": "https://secure.cardcom.solutions/swagger/v11/swagger.json",
+      "raw_snippet": "\"ISOCoinId\":{\"type\":\"integer\",\"description\":\"ISO Coin Code ,1 - ILS, 2 - USD, else ISO Coin from list : https://en.wikipedia.org/wiki/ISO_4217\",\"format\":\"int32\",\"default\":1}",
+      "where_in_skill": "references/api-endpoints.md, references/document-types.md",
+      "verified_via": "spec",
+      "verified_at": "2026-07-28T22:13:46Z",
+      "confidence": "high"
     }
   ]
 }

@@ -16,7 +16,7 @@ This skill guides integration with Cardcom's REST API V11 for payments, tokeniza
 
 **Support center:** `https://support.cardcom.solutions`
 
-**Cardcom in the Israeli landscape:** competes with Tranzila, Israpay, and Bit Business. Pricing is quoted per merchant and we have not verified current published rates, so do not quote a percentage or a monthly figure to a user: send them to Cardcom for a quote. The distinguishing feature for Israeli businesses remains the built-in tax document generation. For Tranzila integration use the `tranzila-payment-gateway` skill instead.
+**Cardcom in the Israeli landscape:** competes with Tranzila, Israpay, and Bit Business. Pricing is quoted per merchant. Cardcom publishes a starting rate of about 1.2% that falls with volume, but that is a floor and not a quote, so treat it as a starting point only and send the user to Cardcom for an actual figure rather than promising them a rate. The distinguishing feature for Israeli businesses remains the built-in tax document generation. For Tranzila integration use the `tranzila-payment-gateway` skill instead.
 
 ## Instructions
 
@@ -35,7 +35,7 @@ Most Israeli merchants use **Low Profile** for the initial payment plus token cr
 Cardcom API V11 credentials:
 - `TerminalNumber` (integer) -- your terminal ID (use `1000` for testing)
 - `ApiName` (string) -- API username
-- `ApiPassword` (string) -- API password (required only for refunds and document creation; not sent on a normal charge)
+- `ApiPassword` (string) -- API password. Required on 19 of the 50 V11 endpoints that take a request body. The rule of thumb: **operations that read or act on company-wide data require it; operations that charge a single card do not.** It is required on every `Documents/*` write, every `Financial/*` report, every `TapTransactions/*` call, and on `Transactions/ListTransactions`, `RefundByTransactionId`, and `SpecialTransactions`. It is NOT a field on `LowProfile/Create` or `Transactions/Transaction` at all, so do not send it there. When in doubt, check the `required` array for the endpoint's request schema in the [V11 OpenAPI spec](https://secure.cardcom.solutions/swagger/v11/swagger.json).
 
 **Test environment:**
 Terminal `1000` with the demo `ApiName` is widely cited in community libraries as the sandbox, with test card `4580000000000000`, any future expiry, CVV `123`. We have NOT been able to confirm these against an official Cardcom test-credentials page, so treat them as community folklore: confirm your sandbox credentials with Cardcom support before relying on them, and never assume a call against terminal 1000 cannot move money.
@@ -253,6 +253,34 @@ POST https://secure.cardcom.solutions/api/v11/Transactions/RefundByTransactionId
 
 To issue the matching credit document, call `Documents/CreateDocument` with a refund `DocumentTypeToCreate` such as `TaxInvoiceAndReceiptRefund` or `TaxInvoiceRefund`.
 
+### Step 6.5: Query Transactions for Reporting
+
+To pull a date range of transactions (reconciliation, monthly reports, dashboards):
+
+```
+POST https://secure.cardcom.solutions/api/v11/Transactions/ListTransactions
+{
+  "ApiName": "your-api-name",
+  "ApiPassword": "your-api-password",
+  "FromDate": "01062026",
+  "ToDate": "30062026",
+  "TranStatus": "Success",
+  "Page": 1,
+  "Page_size": 100
+}
+```
+
+Four things about this endpoint trip up almost every integration:
+
+1. **`ApiPassword` is required.** This is a company-wide read, not a single charge.
+2. **There is no `TerminalNumber` field.** The schema sets `additionalProperties: false`, so sending `TerminalNumber` is rejected outright. To scope results to one terminal, use the optional `LimitForTerminal` instead.
+3. **Dates are `DDMMYYYY` strings**, not ISO. `01062026` is 1 June 2026.
+4. **`Page` and `Page_size` are both required**, and `Page_size` must be between 10 and 2000. Paging starts at 1, not 0.
+
+The response is a `GetTranzactionsResp`: check `ResponseCode == 0`, then read `Tranzactions` (an array of `TransactionInfo`), plus the echoed `Page` and `Page_size`. Keep requesting the next page until a page returns fewer rows than `Page_size`.
+
+`Transactions/SpecialTransactions` is a sibling read endpoint (it returns other transactions when Cardcom is your acquirer) and takes exactly the same four required fields: `ApiName`, `ApiPassword`, `FromDate`, `ToDate`. Despite the name, it does not create anything.
+
 ### Step 7: Suspended Deals (Deferred Charges)
 
 A suspended deal authorizes a payment intent without an immediate charge:
@@ -354,11 +382,12 @@ Result: Customers can choose between credit card, Bit, Apple Pay, and Google Pay
 - The V11 success check is `ResponseCode == 0`, NOT `DealResponse == 0`. `DealResponse` does not exist in V11; agents trained on older Cardcom examples invent it. Every V11 endpoint returns `ResponseCode` plus a `Description` string.
 - `DocumentTypeToCreate` is a STRING enum (`"TaxInvoiceAndReceipt"`, `"TaxInvoice"`, `"Receipt"`, ...), not an integer code. Integer document codes like `101` or `400` belong to legacy `.aspx` interfaces, not V11.
 - The `TerminalNumber` must be sent as an integer, not a string. Agents commonly wrap it in quotes.
-- `ApiPassword` is required for `RefundByTransactionId` and `CreateDocument`, but is NOT sent on a normal `LowProfile/Create` or `Transaction` charge.
+- `ApiPassword` is required on 19 of the 50 V11 endpoints that take a request body, not just refunds and documents. Company-wide reads and writes need it (`ListTransactions`, `SpecialTransactions`, `RefundByTransactionId`, all `Documents/*` writes, all `Financial/*` reports, all `TapTransactions/*`); single-card charges do not. It is not even a property on `LowProfile/Create` or `Transaction`, so sending it there is wrong too. Agents routinely omit it on `ListTransactions` because older guidance described it as "refunds and documents only".
+- The reporting endpoints `ListTransactions` and `SpecialTransactions` do NOT accept `TerminalNumber`, and both set `additionalProperties: false`, so including it fails the call. Scope to a terminal with `LimitForTerminal` on `ListTransactions`. Their dates are `DDMMYYYY` strings, and `ListTransactions` additionally requires `Page` plus a `Page_size` between 10 and 2000.
 - Watch the real V11 field spellings: `ISOCoinID` / `ISOCoinId`, `IsSendByEmail` (not `SendByEmail`), `TaxId` (not `VAT_Number`). **The language field is spelled differently depending on which document object you are in, and every one of these schemas rejects unknown properties, so getting it wrong fails the call outright:** `Document` (standalone `CreateDocument`) and `DocumentTran` (`Transaction`) use the misspelled `Languge`, while `DocumentLP`, the document you attach to `LowProfile/Create`, uses the correctly spelled `Language`. Applying `Languge` everywhere breaks the Low Profile flow, which is the flow this skill recommends first.
 - The current Israeli VAT rate is 18% (effective January 2025; the January 2026 budget proposal to raise it to 19% was rejected). Cardcom calculates VAT server-side, so document amounts are treated per the `IsVatFree` flag.
 - **PCI scope**: hosted Low Profile keeps you in SAQ-A. Server-to-server `Transaction` with raw `CardNumber`/`CVV2` lands in SAQ-D. The current standard is PCI DSS v4.0.1 (a limited revision published June 2024), and the 51 future-dated requirements became effective 31 March 2025, so all of them are now in force. Prefer Low Profile or tokens unless you have a real reason to touch raw card data.
-- **Settlement timing** is configured on the terminal, not per request. Weekly and monthly settlement cycles both exist, but we have not verified the exact deposit days against a current Cardcom source, so confirm the schedule for the specific terminal rather than promising a business a particular day. Either way it is not settable via the API.
+- **Settlement timing** is configured on the terminal, not per request, and is not settable via the API. Cardcom publishes three cycles: monthly (transactions from the 1st through the day before month-end are credited on the 6th of the following month), weekly (Sunday through Friday, credited the Wednesday of the following week), and bi-monthly (the 1st to the 15th credited on the 2nd of the following month; the 16th through the day before month-end credited on the 8th). Still confirm the cycle actually configured on the merchant's terminal before promising a business a specific day.
 - **Apple Pay and Google Pay don't have separate URL fields** like `UrlToBit` / `UrlToPayPal`. They surface as wallet buttons inside the hosted Low Profile page once enabled on the terminal in the admin panel.
 
 ## Troubleshooting

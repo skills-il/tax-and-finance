@@ -7,8 +7,16 @@ official Cardcom V11 OpenAPI specification at
 ## Base URL & Authentication
 
 - **Base:** `https://secure.cardcom.solutions/api/v11/`
-- **Auth fields:** `TerminalNumber` (integer) + `ApiName` (string) on every request.
-  `ApiPassword` (string) is required only for refunds and document creation.
+- **Auth fields:** `ApiName` (string) on every request. `TerminalNumber` (integer) on most,
+  but NOT on the reporting endpoints (`ListTransactions`, `SpecialTransactions`, the
+  `Financial/*` group), whose schemas set `additionalProperties: false` and reject it.
+  `ApiPassword` (string) is required on 19 of the 50 V11 endpoints that take a request body: every `Documents/*`
+  write, every `Financial/*` report, every `TapTransactions/*` call, `Account/GetByAccountId`,
+  and `Transactions/{ListTransactions, RefundByTransactionId, SpecialTransactions}`.
+  The rule of thumb is that company-wide reads and writes need it and single-card charges
+  do not. It is not a property at all on `LowProfile/Create` or `Transactions/Transaction`.
+  Authoritative check: the `required` array of the endpoint's request schema in
+  `https://secure.cardcom.solutions/swagger/v11/swagger.json`.
 - **Test terminal:** `1000` with the demo `ApiName`. Test card: `4580000000000000`.
 - **Method:** All endpoints are `POST` with `Content-Type: application/json`
   (except a few `RecuringPayments` / `CompanyOperations` lookups that are `GET`).
@@ -32,8 +40,8 @@ official Cardcom V11 OpenAPI specification at
 | `Transactions/Transaction` | Charge a card or a token (server-to-server) | `TerminalNumber`, `ApiName`, `Amount`, `Token` or `CardNumber`, `CardExpirationMMYY`, `CVV2`, `ISOCoinId`, `Document`, `Advanced` | `ResponseCode`, `Description`, `TranzactionId`, `Token`, `ApprovalNumber`, `DocumentNumber`, `DocumentUrl` |
 | `Transactions/RefundByTransactionId` | Refund a transaction | `ApiName`, `ApiPassword`, `TransactionId`, `PartialSum`, `CancelOnly`, `AllowMultipleRefunds` | `ResponseCode`, `Description`, `NewTranzactionId` |
 | `Transactions/GetTransactionInfoById` | Get single transaction details | `TerminalNumber`, `UserName`, `UserPassword`, `InternalDealNumber` (ALL four required; this endpoint uses `UserName`/`UserPassword`, NOT `ApiName`/`ApiPassword`, and the id field is `InternalDealNumber`, not `TransactionId`. The schema sets `additionalProperties: false`, so a stray `ApiName` is rejected) | `ResponseCode`, `Description`, transaction fields |
-| `Transactions/ListTransactions` | List transactions by date range | `TerminalNumber`, `ApiName`, date range fields | `ResponseCode`, `Description`, transaction list |
-| `Transactions/SpecialTransactions` | Credit, installments, special deals | `TerminalNumber`, `ApiName`, `Amount`, transaction options | `ResponseCode`, `Description` |
+| `Transactions/ListTransactions` | List transactions by date range | `ApiName`, `ApiPassword`, `FromDate`, `ToDate`, `Page`, `Page_size` (ALL six required; dates are `DDMMYYYY` strings, `Page` starts at 1, `Page_size` is 10-2000). Optional: `TranStatus` (default `Success`), `LimitForTerminal`. There is NO `TerminalNumber` field and the schema sets `additionalProperties: false`, so sending one fails the call; use `LimitForTerminal` to scope to a terminal | `ResponseCode`, `Description`, `Tranzactions` (array of `TransactionInfo`), `Page`, `Page_size` |
+| `Transactions/SpecialTransactions` | READ-only: returns other transactions when Cardcom is your acquirer. Despite the name it does not create or charge anything | `ApiName`, `ApiPassword`, `FromDate`, `ToDate` (ALL four required, and these are the ONLY four properties; dates are `DDMMYYYY`. No `TerminalNumber`, no `Amount`; `additionalProperties: false`) | `ResponseCode`, `Description` |
 | `Transactions/GetTransactionByExternalUniqTran` | Look up by your external uniq id | `TerminalNumber`, `ApiName`, `ExternalUniqTranId` | `ResponseCode`, `Description`, transaction fields |
 
 For `Transaction`, J2/J5 validation-only operations return `ResponseCode` `700` or
