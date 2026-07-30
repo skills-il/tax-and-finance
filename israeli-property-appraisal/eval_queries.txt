@@ -1,0 +1,20 @@
+# Eval queries for israeli-property-appraisal
+# POS = should trigger, NEG = should NOT trigger, EDGE = ambiguous
+
+POS	שמאי הבנק נתן לדירה 90 אלף פחות ממה ששילמתי, מה עושים?
+POS	קיבלתי דרישה להיטל השבחה מהוועדה המקומית, אפשר לערער?
+POS	כמה שווה הדירה שלי לפי עסקאות שנמכרו ברחוב?
+POS	מה הגוש והחלקה של הכתובת הזאת?
+POS	How do I challenge a low mortgage appraisal in Israel?
+POS	I got a betterment levy bill, am I exempt if I added 40 sqm to my house?
+POS	מי זה שמאי מכריע וכמה זה עולה?
+POS	תמצא לי עסקאות השוואה בשכונה לפני שאני קונה
+
+NEG	כמה מס רכישה אשלם על דירה שנייה?
+NEG	איזה מסלול משכנתא הכי משתלם, קבועה צמודה או פריים?
+NEG	אני צריך לנסח חוזה שכירות לדירה
+NEG	איך מוציאים נסח טאבו?
+
+EDGE	כמה מס שבח אשלם על מכירת הדירה?
+EDGE	יש מכרז של רמ"י על מגרש, איך מגישים?
+EDGE	הארנונה שלי מחושבת על שטח גדול מדי
