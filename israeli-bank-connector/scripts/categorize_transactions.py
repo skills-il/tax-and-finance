@@ -17,6 +17,17 @@ from collections import defaultdict
 from dataclasses import dataclass
 from typing import Optional
 
+# On a Hebrew-locale Windows console stdout defaults to cp1255, which cannot
+# encode the box-drawing characters in the report and kills the run with
+# UnicodeEncodeError before a single line is printed. Force UTF-8 so Hebrew
+# merchant names and the table rules both survive; `errors="replace"` keeps a
+# terminal that still refuses a glyph from crashing the analysis.
+try:
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+    sys.stderr.reconfigure(encoding="utf-8", errors="replace")
+except Exception:
+    pass
+
 
 # Israeli merchant patterns mapped to categories
 MERCHANT_PATTERNS = {
@@ -30,14 +41,19 @@ MERCHANT_PATTERNS = {
     r"(?i)(tiv.?taam|טיב טעם)": "groceries",
     r"(?i)(am.?pm|עם:פם)": "groceries",
     # Transportation (tahaburah)
-    r"(?i)(rav.?kav|רב קו)": "transportation",
+    # Hebrew side takes a flexible separator like the English one: statements
+    # write "רב-קו" with a hyphen far more often than with a space. The trailing
+    # guard keeps it off words that merely start with קו, e.g. "רב קומות".
+    r"(?i)(rav.?kav|רב[- ]?קו(?![א-ת]))": "transportation",
     r"(?i)(sonol|סונול)": "transportation",
     r"(?i)(paz|פז(?![א-ת]))": "transportation",
     r"(?i)(delek|דלק)": "transportation",
     r"(?i)(gett|גט)": "transportation",
     r"(?i)(yango|יאנגו)": "transportation",
     # Utilities (shartuim)
-    r"(?i)(israel.?electric|חברת.?חשמל)": "utilities",
+    # `.?` allowed only one character between the words, so the very common
+    # "חברת החשמל" (with the definite article) fell through to Other.
+    r"(?i)(israel.?electric|חברת\s*ה?חשמל)": "utilities",
     r"(?i)(mekorot|מקורות)": "utilities",
     r"(?i)(bezeq|בזק)": "utilities",
     r"(?i)(partner|פרטנר)": "utilities",
@@ -289,7 +305,11 @@ def main():
 
     if args.json:
         try:
-            with open(args.json) as f:
+            # encoding is explicit: bank exports are UTF-8, while open() on a
+            # Hebrew-locale Windows defaults to cp1255 and mangles or rejects
+            # Hebrew merchant names. utf-8-sig also strips the BOM that Israeli
+            # bank and credit-card exports commonly carry.
+            with open(args.json, encoding="utf-8-sig") as f:
                 transactions = json.load(f)
         except FileNotFoundError:
             print(f"Error: File not found: {args.json}")
