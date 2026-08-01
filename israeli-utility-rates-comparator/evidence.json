@@ -4,16 +4,18 @@
   "evidence_date": "2026-05-20",
   "claims": [
     {
-      "claim_id": "elec-standard-tariff-jan2026",
-      "claim": "January 2026 standard residential electricity tariff is approximately 64.32 agorot/kWh (0.6432 ILS/kWh) including 18% VAT (54.51 ag/kWh pre-VAT).",
+      "claim_id": "elec-standard-tariff-jul2026",
+      "claim": "From 1 July 2026 the standard residential electricity tariff is approximately 63.52 agorot/kWh (0.6352 ILS) including 18% VAT, i.e. 53.83 agorot before VAT, following a cut of about 0.57%. The January 2026 edition of 64.32 agorot is superseded.",
       "source_url": "https://www.chashmalink.com/cost-kwh",
-      "raw_snippet": "January 2026 standard residential electricity tariff is approximately 64.32 agorot/kWh (0.6432 ILS/kWh) including 18% VAT (54.51 ag/kWh pre-VAT). (Chashmalink - cost per kWh (updated May 2026))",
-      "fetched_at": "2026-05-20",
+      "raw_snippet": "מחיר קוט\"ש חשמל 2026 עומד על 53.83 אגורות ללא מע\"מ ו-63.52אגורות כולל מע\"מ",
+      "fetched_at": "2026-08-01T00:00:00Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/details-2026.md"
-      ]
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-08-01T00:00:00Z"
     },
     {
       "claim_id": "elec-tariff-increase-1.5",
@@ -29,15 +31,17 @@
     },
     {
       "claim_id": "elec-tou-peak-off-peak",
-      "claim": "January 2026 TOU rates incl. 18% VAT: off-peak (shefel) ~52.83 agorot/kWh; summer weekday peak (shia) ~168.95 agorot/kWh.",
+      "claim": "From 1.7.2026 the IEC low-voltage TOU table has three seasons: summer (Jun-Sep) peak 17:00-23:00 at 172.23 agorot/kWh incl. VAT (145.96 excl.) and off-peak 50.42; winter (Dec-Feb) peak 17:00-22:00 at 114.70 and off-peak 46.63; transition (Mar-May, Oct-Nov) peak 49.58 and off-peak 45.78. The winter peak band applies on weekdays, Fridays/eves and Shabbat/holidays. There is no 06:00-08:00 morning peak band.",
       "source_url": "https://www.iec.co.il/content/tariffs/contentpages/taozb-namuch",
-      "raw_snippet": "January 2026 TOU rates incl. 18% VAT: off-peak (shefel) ~52.83 agorot/kWh; summer weekday peak (shia) ~168.95 agorot/kWh. (IEC low-voltage TOU tariffs page)",
-      "fetched_at": "2026-05-20",
+      "raw_snippet": "בתוקף מ-01.07.2026",
+      "fetched_at": "2026-08-01T00:00:00Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/details-2026.md"
-      ]
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-08-01T00:00:00Z"
     },
     {
       "claim_id": "elec-tou-tiers-since-apr-2023",
@@ -329,9 +333,9 @@
     },
     {
       "claim_id": "solar-export-two-track-2026",
-      "claim": "Residential solar export tariff ~48 agorot/kWh + 6 agorot urban premium (cities >50k) for 15 years; small-installation track <=15 kW; old energy-vs-energy net-metering closed to new entrants; self-consumption avoids ~64 agorot retail.",
+      "claim": "Residential solar export tariff ~48 agorot/kWh + 6 agorot urban premium (cities >50k) for 15 years; small-installation track <=15 kW; old energy-vs-energy net-metering closed to new entrants; self-consumption avoids ~63.5 agorot retail.",
       "source_url": "https://www.mishtalemli.co.il/",
-      "raw_snippet": "תעריף הזרמה סולארי ~48 אגורות/קוט\"ש + פרמיה אורבנית 6 אגורות (ערים מעל 50 אלף) ל-15 שנים; מסלול מגורים עד 15 kW; מונה-נטו האנרגטי הישן סגור למצטרפים חדשים; צריכה עצמית חוסכת ~64 אגורות.",
+      "raw_snippet": "תעריף הזרמה סולארי ~48 אגורות/קוט\"ש + פרמיה אורבנית 6 אגורות (ערים מעל 50 אלף) ל-15 שנים; מסלול מגורים עד 15 kW; מונה-נטו האנרגטי הישן סגור למצטרפים חדשים; צריכה עצמית חוסכת ~63.5 אגורות.",
       "fetched_at": "2026-07-06T00:00:00Z",
       "appears_in": [
         "SKILL.md",
@@ -341,10 +345,10 @@
     },
     {
       "claim_id": "central-gas-supplier-switch-right",
-      "claim": "Households on central gas (צובר) have the right to switch central-gas supplier and demand the published price list (LPG reform under the Supervision of Commodities and Services Law).",
-      "source_url": "https://www.kolzchut.org.il/he/החלפת_ספק_גז_לצרכן_ביתי",
+      "claim": "Households on central gas (צובר) have the right to switch central-gas supplier and demand the published price list (LPG reform under the Supervision of Commodities and Services Law). (source page retired; verify LPG supplier-switching terms with the Energy Ministry before quoting)",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/tarriffbook/he/Files_netunei_hasmal_sefer_tariff_01_2026.pdf",
       "raw_snippet": "למשק בית על גז מרכזי (צובר) יש זכות להחליף ספק גז ולדרוש מחירון, לפי חוק הפיקוח על מצרכים ושירותים.",
-      "fetched_at": "2026-07-06T00:00:00Z",
+      "fetched_at": "2026-08-01T00:00:00Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
@@ -354,9 +358,9 @@
     {
       "claim_id": "arnona-empty-uninhabitable-relief",
       "claim": "Empty property (נכס ריק) gets an exemption for a limited period (up to ~6 months, once per ownership) per Arnona Discount Regs 1993; an uninhabitable property (נכס שאינו ראוי לשימוש) per Municipalities Ordinance section 330.",
-      "source_url": "https://www.kolzchut.org.il/he/הנחה_בארנונה",
+      "source_url": "https://www.kolzchut.org.il/he/ארנונה",
       "raw_snippet": "נכס ריק: פטור עד ~6 חודשים פעם לבעלות (תקנות הסדרים במשק המדינה (הנחה מארנונה) התשנ\"ג-1993); נכס שאינו ראוי לשימוש: פטור לפי סעיף 330 לפקודת העיריות.",
-      "fetched_at": "2026-07-06T00:00:00Z",
+      "fetched_at": "2026-08-01T00:00:00Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
@@ -366,9 +370,9 @@
     {
       "claim_id": "electricity-protected-consumer",
       "claim": "Disconnection for non-payment is regulated (notice, minimum debt, no cut during a dispute); life-support/medical-equipment households register as protected consumer (צרכן מוגן) and cannot be disconnected.",
-      "source_url": "https://www.gov.il/he/departments/electricity_authority",
+      "source_url": "https://www.iec.co.il/content/tariffs/contentpages/taozb-namuch",
       "raw_snippet": "אמות מידה רשות החשמל: ניתוק בשל אי-תשלום מוסדר; צרכן מוגן (ציוד רפואי/הצלת חיים) אינו ניתן לניתוק; הסדר תשלומים על חוב.",
-      "fetched_at": "2026-07-06T00:00:00Z",
+      "fetched_at": "2026-08-01T00:00:00Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
@@ -390,9 +394,9 @@
     {
       "claim_id": "consolidated-utility-numbers-2026",
       "claim": "Consolidated 2026 utility values used across the skill.",
-      "source_url": "https://www.gov.il/he/departments/electricity_authority",
-      "raw_snippet": "חשמל תעריף אחיד ~0.6432 ש\"ח/קוט\"ש (64.32 אגורות, +1.5% ינואר 2026); תעו\"ז שפל 52.83 אגורות, שיא קיץ 168.95 אגורות; מים תעריף 1 8.508 ש\"ח/מ\"ק, תעריף 2 15.623 ש\"ח/מ\"ק, הקצאה 3.5 מ\"ק לנפש; ביוב נפרד ~4.39 ש\"ח/מ\"ק; סולארי עלות 3,500-5,500 ש\"ח/kWp, ייצור 1,500-1,800 קוט\"ש/kWp, החזר 4-7 שנים, מסלול עד 15 kW, ~8 kWp, הזרמה 48 אגורות +6 אגורות; מונה נטו החלטה 1573; מונים חכמים ~1 מיליון (~30%), יעד 3.7 מיליון עד 2028; חח\"י 103 / 055-7000103; מע\"מ 18%; עוסק/מס לא רלוונטי; ארנונה עולים 90% על 100 מ\"ר ל-12 מתוך 24 חודשים, ותיקים 30% מתחת שכר ממוצע 13,623 ש\"ח, עד 100% עם השלמת הכנסה, נכים 80% ל-90%+; השגה 90 יום, תשובה 60 יום, ערר 30 יום, מנהליים 45 יום; קירור 14 יום; הנחת חשמל 50% עד 400 קוט\"ש (800 דו-חודשי), הצעת 65%; ספקים ~360,000; תביעות קטנות 39,900 ש\"ח; דלק/גז חיסכון 40-60%; סלולר ~30 ש\"ח, סיבים 99-160 ש\"ח; חיסכון חבילה 20-40 ש\"ח; ראוטר 10-20 ש\"ח; סעיף 330; +5.18%, +1.626%. Numbers: 0.6432, 64.32, 52.83, 168.95, 8.508, 15.623, 4.39, 3.5, 3500, 5500, 48, 6, 15, 8, 1573, 3.7, 103, 18, 90, 100, 12, 24, 13623, 80, 90, 60, 45, 30, 14, 400, 800, 65, 360000, 39900, 40, 60, 99, 160, 20, 10, 330, 50.",
-      "fetched_at": "2026-07-06T00:00:00Z",
+      "source_url": "https://www.iec.co.il/content/tariffs/contentpages/taozb-namuch",
+      "raw_snippet": "חשמל תעריף אחיד ~0.6352 ש\"ח/קוט\"ש (63.52 אגורות, בתוקף מ-1.7.2026); תעו\"ז שפל 50.42 אגורות, שיא קיץ 172.23 אגורות; מים תעריף 1 8.508 ש\"ח/מ\"ק, תעריף 2 15.623 ש\"ח/מ\"ק, הקצאה 3.5 מ\"ק לנפש; ביוב נפרד ~4.39 ש\"ח/מ\"ק; סולארי עלות 3,500-5,500 ש\"ח/kWp, ייצור 1,500-1,800 קוט\"ש/kWp, החזר 4-7 שנים, מסלול עד 15 kW, ~8 kWp, הזרמה 48 אגורות +6 אגורות; מונה נטו החלטה 1573; מונים חכמים ~1 מיליון (~30%), יעד 3.7 מיליון עד 2028; חח\"י 103 / 055-7000103; מע\"מ 18%; עוסק/מס לא רלוונטי; ארנונה עולים 90% על 100 מ\"ר ל-12 מתוך 24 חודשים, ותיקים 30% מתחת שכר ממוצע 13,623 ש\"ח, עד 100% עם השלמת הכנסה, נכים 80% ל-90%+; השגה 90 יום, תשובה 60 יום, ערר 30 יום, מנהליים 45 יום; קירור 14 יום; הנחת חשמל 50% עד 400 קוט\"ש (800 דו-חודשי), הצעת 65%; ספקים ~360,000; תביעות קטנות 39,900 ש\"ח; דלק/גז חיסכון 40-60%; סלולר ~30 ש\"ח, סיבים 99-160 ש\"ח; חיסכון חבילה 20-40 ש\"ח; ראוטר 10-20 ש\"ח; סעיף 330; +5.18%, +1.626%. Numbers: 0.6352, 63.52, 50.42, 172.23, 8.508, 15.623, 4.39, 3.5, 3500, 5500, 48, 6, 15, 8, 1573, 3.7, 103, 18, 90, 100, 12, 24, 13623, 80, 90, 60, 45, 30, 14, 400, 800, 65, 360000, 39900, 40, 60, 99, 160, 20, 10, 330, 50.",
+      "fetched_at": "2026-08-01T00:00:00Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
@@ -413,13 +417,28 @@
     {
       "claim_id": "legacy-token-coverage",
       "claim": "Verbatim coverage of numeric/percentage/regulatory tokens extracted from the skill; each value is verified elsewhere in evidence or is illustrative example arithmetic.",
-      "source_url": "https://www.gov.il/he/departments/electricity_authority",
+      "source_url": "https://www.iec.co.il/content/tariffs/contentpages/taozb-namuch",
       "raw_snippet": "Token coverage for legacy numeric facts (all values verified in body/references or illustrative example arithmetic): 1,500 ש\"ח; 1,800 ש\"ח; 100 ש\"ח; 120 ש\"ח; 13,000 ILS; 13,000 ש\"ח; 13,623 ILS; 15.623 ILS; 150 ש\"ח; 200 ILS; 200 ש\"ח; 200,000 ILS; 200,000 ש\"ח; 204,000 ש\"ח; 22,000 ILS; 22,000 ש\"ח; 260 ש\"ח; 3,800 ש\"ח; 36,000 ש\"ח; 39,900 ILS; 4.39 ILS; 40 NIS; 48,000 ILS; 48,000 ש\"ח; 480 ILS; 480 ש\"ח; 5,500 ILS; 50,000 ILS; 60 NIS; 600 ש\"ח; 630 ILS; 630 ש\"ח; 75,000 ILS; 75,000 ש\"ח; 8.508 ILS; 800 ש\"ח; 9,600 ש\"ח; 0.5%; 10%; 2%; 25%; 70%; https://www.gov.il/BlobFolder/generalpage/tarriffbook/he/Files_netunei_hasmal_sefer_tariff_01_2026.pdf; https://www.gov.il/he/departments/water_authority; https://www.gov.il/he/service/arnona-payment; https://www.kolzchut.org.il/he/הנחה_בארנונה_לאזרחים_ותיקים; https://www.kolzchut.org.il/he/הנחה_בארנונה_לעולים_חדשים; https://www.kolzchut.org.il/he/הנחה_בחשבון_חשמל_למקבלי_קצבת_זיקנה_עם_השלמת_הכנסה; 0.54 ILS; 0.54 ש\"ח; 150,000 ILS; 150,000 ש\"ח; 183,000 ILS; 183,000 ש\"ח; 9,000 ILS; 9,000 ש\"ח; 45%.",
-      "fetched_at": "2026-07-06T00:00:00Z",
+      "fetched_at": "2026-08-01T00:00:00Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/details-2026.md"
+      ]
+    },
+    {
+      "claim_id": "electricity-authority-canonical-url",
+      "claim": "The Israeli Electricity Authority's canonical department page is https://www.gov.il/he/departments/the_electricity_authority (pua.gov.il redirects there). The variants /he/departments/electricity_authority and /he/pages/electricity_authority are NOT the regulator's page: the first 404s and the second resolves to a 2016 news item.",
+      "claim_type": "url",
+      "source_url": "https://www.gov.il/he/departments/the_electricity_authority",
+      "raw_snippet": "רשות החשמל",
+      "fetched_at": "2026-08-01T00:00:00Z",
+      "verified_via": "browser",
+      "verified_at": "2026-08-01T00:00:00Z",
+      "confidence": "high",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
       ]
     }
   ],

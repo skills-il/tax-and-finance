@@ -51,12 +51,19 @@ The Electricity Authority publishes official tariffs at pua.gov.il. IEC tariffs 
 
 **Time-of-use tariff (tariff TOZ / תעריף תעו"ז):**
 - Requires a smart meter (moné chokhéakh)
-- Two tiers since April 2023: peak (shia / שיא) and off-peak (shefel / שפל). The former shoulder (geva / גבע) tier was eliminated. Older docs may still describe a 3-tier structure.
-- Summer (Jun-Sep) weekday peak: 17:00-23:00; off-peak: all other hours including weekends and Shabbat
-- Winter (Dec-Feb) weekday peak: typically 17:00-22:00 plus a morning band 06:00-08:00; off-peak the rest of the day
-- 2026 indicative rates (incl. 18% VAT): off-peak ~52.83 agorot/kWh; summer peak ~168.95 agorot/kWh
-- Can save 15-25% for households that shift consumption to off-peak hours
-- Tariffs now update semi-annually via Electricity Authority decisions (a mid-year update mechanism exists), so a rate can shift mid-year, verify current numbers at pua.gov.il before quoting
+- Two tiers since April 2023: peak (shia) and off-peak (shefel). The shoulder (geva) tier was eliminated; older docs may still show 3 tiers.
+- THREE seasons, each with its own peak and off-peak rate. Off-peak is not a single national number.
+
+| Season | Peak band | Peak (agorot/kWh, incl. VAT) | Off-peak |
+|---|---|---|---|
+| Summer (Jun-Sep) | 17:00-23:00 | 172.23 (145.96 excl. VAT) | 50.42 |
+| Winter (Dec-Feb) | 17:00-22:00 | 114.70 | 46.63 |
+| Transition (Mar-May, Oct-Nov) | see note | 49.58 | 45.78 |
+
+- In force from 1.7.2026. The winter peak band applies on weekdays, Fri/eves AND Shabbat/holidays; there is no morning peak band.
+- Do not quote transition-season band hours: the IEC page states them in a garbled form. It rarely matters, the spread there is under 4 agorot.
+- Savings are seasonal: shifting load off-peak is worth over 120 agorot/kWh in summer and under 4 in transition. Never quote a flat "15-25% saving"; compute it from the user's own seasonal pattern.
+- Tariffs update semi-annually via Electricity Authority decisions and can shift mid-year; verify before quoting.
 
 **Monthly fixed charges:**
 - Connection fee (agrat chibbur) regardless of consumption
@@ -105,7 +112,7 @@ Solar panels (panelim sola'riyyim) are popular in Israel due to high solar irrad
 **ROI calculation factors:**
 1. **System cost**: in 2026, typically 3,500-5,500 ILS per kWp turnkey installed (small systems cost more per kWp). Common residential sizes: 3 kW ~11,000-13,000 ILS; 5 kW ~18,000-22,000 ILS; 10 kW ~38,000-48,000 ILS basic, up to ~75,000 ILS for premium panels or battery-paired systems.
 2. **Annual production**: Israel averages 1,500-1,800 kWh per installed kWp (Negev gets ~1,800, north gets ~1,400-1,500, central ~1,600)
-3. **Current electricity cost**: multiply production by the current IEC tariff (Jan 2026 standard residential ~0.6432 ILS/kWh inc. 18% VAT)
+3. **Current electricity cost**: multiply production by the current IEC tariff (from 1.7.2026, standard residential ~0.6352 ILS/kWh inc. 18% VAT, 53.83 agorot before VAT)
 4. **Annual savings**: production in kWh multiplied by tariff rate (savings on offset consumption) plus the export tariff (~48 agorot/kWh residential, plus a +6 agorot urban premium for cities >50k) for excess fed to the grid. The old energy-vs-energy net-metering is closed to new entrants; self-consumption saves the most. See `references/details-2026.md` for the full two-track regime (≤15 kW residential track).
 5. **Payback period**: system cost divided by annual savings (typically 4-7 years in Israel, faster in the south)
 6. **System lifetime**: 25+ years with gradual degradation (~0.5% per year)
@@ -211,10 +218,10 @@ The Israeli telecom market is one of the cheapest in the developed world after a
 
 ### Step 7: Arnona Comparison Between Cities
 
-Arnona (municipal property tax) is the largest recurring utility-like cost for Israeli households. Rates vary dramatically between municipalities.
+Arnona is the largest recurring utility-like cost for Israeli households, and rates vary sharply between municipalities.
 
 **How arnona is calculated:**
-- Rate per square meter per month (shekel l'meter ravu'a l'hodesh)
+- Rate per square meter per YEAR (shekel l'meter ravu'a l'shana). Arnona tariffs are published annually per m2; divide by 6 for a bi-monthly bill or 12 for a monthly one. Treating the annual rate as monthly overstates the bill twelvefold.
 - Different rates for different zones within the same municipality
 - Different rates for residential vs. commercial properties
 - Discounts available for eligible populations (olim chadashim, elderly, low income, disabled)
@@ -227,24 +234,11 @@ A city-by-city arnona rate table (80 / 100 sqm monthly estimates for Tel Aviv, J
 3. Find the tariff table (tav tariffim) for your zone
 4. Calculate based on your property size and classification
 
-**Arnona discounts (hanashot):**
-- New immigrants (olim): up to 90% discount on the first 100 sqm for 12 months out of the 24 months following aliyah registration (single benefit, not yearly). Olim recognized by Bituach Leumi for disability or sicud benefits get up to 80% with no time limit. See kolzchut.org.il/he/הנחה_בארנונה_לעולים_חדשים for the exact rules.
-- Senior citizens (men 67; women at the retirement age, which is rising in steps toward 65 under חוק גיל פרישה, so do not assume a flat 62): 30% discount if income is below the average wage (~13,623 ILS single, Jan 2026); up to 100% if also receiving income supplement (השלמת הכנסה).
-- Low income (hakhnasot nemukhot): significant discounts on a sliding scale, apply through the municipal welfare department
-- Disabled (nekhim): discounts based on disability percentage; 80% for 90%+ disability
-- National service / IDF veterans: various discounts, including bereaved families
-- Students: some municipalities offer student discounts
-- Single-person household: some municipalities offer discounts
-- **Empty property (הנחת נכס ריק):** a vacant, unused property gets an exemption for a limited period (typically up to 6 months, once per ownership) under תקנות הסדרים במשק המדינה (הנחה מארנונה) התשנ"ג-1993.
-- **Uninhabitable property (נכס שאינו ראוי לשימוש):** a property unfit for use or under major renovation can be exempted under פקודת העיריות §330.
+**Arnona discounts (hanashot):** olim, seniors, low income, disability, IDF/national-service and bereaved families, students, single-person households, empty property and uninhabitable property each carry a discount with its own eligibility test and time limit. Full list in `references/details-2026.md`. Never quote a percentage without checking the municipality: national regulations set ceilings that municipalities apply differently.
 
 **Discount stacking rule:** Only one discount tier applies per property at a time, per תקנות הסדרים במשק המדינה (הנחה מארנונה), תשנ"ג-1993. A household qualifying for both senior and low-income discounts receives the larger of the two, not the sum. Apply for whichever gives the highest reduction.
 
-**Filing an arnona objection (hassagah):** If you believe the bill is wrong (incorrect property size, wrong zone classification, missing discount, balcony charged at full rate), there is a formal escalation path:
-1. **Hassagah**, file a written objection with the municipal arnona manager within **90 days** of receiving the bill. Cite the specific calculation error and attach evidence (measurement, classification documents, photos of enclosed vs open balcony).
-2. **Response**, the municipality must respond within 60 days. Silence after 60 days is treated as deemed-rejection and the clock for the next step starts.
-3. **Appeal to ועדת ערר**, if rejected, you have **30 days** to appeal to the local arnona objection committee (ועדת ערר לארנונה).
-4. **Administrative court**, if the ועדת ערר ruling is against you, escalate to בית משפט לעניינים מנהליים within 45 days of the decision.
+**Filing an arnona objection (hassagah):** if the bill is wrong (property size, zone classification, a missing discount, a balcony charged at full rate), file a written hassagah with the municipal arnona manager within 90 days of the bill. The municipality must answer within 60 days, and silence counts as rejection. If rejected you have 30 days to appeal to the ועדת ערר לארנונה, and 45 days from its ruling to escalate to בית משפט לעניינים מנהליים. Step-by-step guidance and what evidence to attach at each stage are in `references/details-2026.md`.
 
 For IEC and water-corporation billing disputes (not arnona), the small-claims court (בית משפט לתביעות קטנות, 39,900 ILS cap in 2026) is often a faster path.
 
@@ -279,35 +273,28 @@ Per-utility bill-reduction tips (electricity, water, arnona, cellular & internet
 User says: "We live in a house in Modi'in, pay about 800 ILS per month for electricity, and want to know if solar panels are worth it."
 
 Actions:
-1. Calculate approximate monthly consumption: 800 ILS / ~0.6432 ILS per kWh (Jan 2026 standard residential tariff inc. 18% VAT) = ~1,244 kWh per month
-2. Determine system size needed: 1,244 * 12 / 1,600 (kWh per kWp in central Israel) = ~9.3 kWp; round to a 9-10 kWp system
+1. Calculate approximate monthly consumption: 800 ILS / ~0.6352 ILS per kWh (standard residential tariff from 1.7.2026, inc. 18% VAT) = ~1,259 kWh per month
+2. Determine system size needed: 1,259 * 12 / 1,600 (kWh per kWp in central Israel) = ~9.4 kWp; round to a 9-10 kWp system
 3. Estimate system cost: 9.5 kWp * ~3,800 ILS per kWp = ~36,000 ILS turnkey (mid-range 2026 pricing; basic systems start lower, premium and battery-paired go higher)
-4. Estimate annual savings: full net-metering is closed to new entrants. Self-consumption offsets the ~0.6432 ILS/kWh retail rate; export earns ~0.54 ILS/kWh (48 + 6 urban). On a ~15,000 kWh/year system at ~45% self-consumption: ~8,500-9,000 ILS/year
+4. Estimate annual savings: full net-metering is closed to new entrants. Self-consumption offsets the ~0.6352 ILS/kWh retail rate; export earns ~0.54 ILS/kWh (48 + 6 urban). On a ~15,000 kWh/year system at ~45% self-consumption: ~8,500-9,000 ILS/year
 5. Payback period: ~36,000 / ~8,750 = ~4.1 years (within the 4-7 year band)
 6. 25-year total savings: roughly (8,750 * 25) - 36,000 = ~183,000 ILS (before ~0.5%/year degradation and tariff changes)
-7. Check roof suitability: Modi'in gets good solar irradiance, verify south-facing roof availability and shading
-8. Recommend getting 3 installer quotes; the residential export tariff is ~48 agorot/kWh (+6 urban premium), well below the ~64 agorot retail rate, so self-consumption beats export. Confirm the applicant controls the roof.
-9. Check with the municipality for any heter bniya requirements for roof modifications
+7. Check roof suitability: verify south-facing roof availability and shading.
+8. Get 3 installer quotes. The residential export tariff (~48 agorot/kWh, +6 urban) sits well below the ~63.5 agorot retail rate, so self-consumption beats export. Confirm the applicant controls the roof.
+9. Check municipal heter bniya requirements for roof modifications.
 
-Result: an ROI analysis showing ~4-5 year payback and lifetime savings well over 150,000 ILS (self-consumption and export modeled separately), a strong investment provided the user controls the roof.
+Result: ~4-5 year payback and lifetime savings over 150,000 ILS, modeling self-consumption and export separately. Strong provided the user controls the roof.
 
 ### Example 2: Comparing Utility Costs Between Cities for Relocation
 
 User says: "I'm deciding between moving to Beer Sheva or Haifa. What's the difference in utility costs for a 100 sqm apartment, family of 4?"
 
 Actions:
-1. Compare arnona rates:
-   - Beer Sheva: approximately 350-480 ILS/month for 100 sqm residential
-   - Haifa: approximately 480-630 ILS/month for 100 sqm residential
-   - Difference: approximately 130-150 ILS/month in favor of Beer Sheva
+1. Compare arnona rates: Beer Sheva ~350-480 ILS/month for 100 sqm residential, Haifa ~480-630, a difference of ~130-150 ILS/month favouring Beer Sheva. Read each city's published annual rate per m2 and divide, rather than reusing these bands.
 2. Compare water costs:
-   - Both cities use tiered pricing, rates similar at the national level
-   - Check specific water corporation surcharges (Mei Haifa vs. Beer Sheva water corp)
-   - Family of 4: approximately 14 m3/month Tier 1 allocation
+   - Both use tiered national pricing; check each water corporation's surcharges. Family of 4: ~14 m3/month Tier 1.
 3. Compare electricity:
-   - IEC rates are national (same everywhere)
-   - Beer Sheva: higher AC costs in summer (desert climate), but better solar potential
-   - Haifa: more moderate climate, lower summer cooling costs
+   - IEC rates are national. Beer Sheva has higher summer cooling costs but better solar potential; Haifa is milder.
 4. Compare gas: similar pricing nationally, both cities have balloon gas and some natural gas
 5. Calculate total annual utility difference:
    - Arnona savings in Beer Sheva: ~1,560-1,800 ILS/year
@@ -327,7 +314,7 @@ Actions:
    - Identify high-consumption appliances: AC, water heater (if electric), dryer, oven
    - Estimate what percentage of consumption can shift to off-peak hours
 3. Create an optimization plan:
-   - Run washing machine and dryer after 23:00 or on Shabbat (off-peak)
+   - Run washer and dryer after 23:00 in summer, after 22:00 in winter. Shabbat is NOT automatically off-peak: the winter 17:00-22:00 peak band applies on Shabbat and holidays too.
    - Use dishwasher timer for off-peak operation
    - Pre-cool home before peak hours in summer
    - Switch electric water heater timer to heat during off-peak (if applicable)
@@ -340,14 +327,14 @@ Actions:
 Result: User receives a practical action plan for shifting consumption to off-peak hours, with estimated monthly savings of 80-120 ILS, plus an ongoing monitoring strategy using the IEC app.
 
 ## Gotchas
-- Israel Electric Corporation rates reset quarterly via Electricity Authority decisions; the Jan 2026 update added +1.5% over 2025. Agents may use outdated rates from a previous quarter. Always verify the current tariff at pua.gov.il before quoting per-kWh numbers.
+- Israel Electric Corporation rates are updated by the Electricity Authority on a semi-annual cycle, and a mid-year update can move the rate: the 1.7.2026 update cut the tariff by about 0.57% after the +1.5% January change. Agents routinely quote a superseded rate. Always verify the current tariff before quoting per-kWh numbers.
 - The TOU (tariff TOZ / תעו"ז) schedule has only two tiers since April 2023: peak (שיא) and off-peak (שפל). The former שלב הגבע (shoulder) tier was eliminated. Agents trained on older docs may still describe a 3-tier structure with a middle band.
 - Switching to an alternate electricity supplier (Cellcom Energy, Pazgas, OPC, etc.) only discounts the generation component, which is roughly 60-70% of the bill. The household still pays IEC for distribution, transmission, the public broadcasting fee, and meter charges. Agents may incorrectly imply the entire bill changes.
 - Water Tier 1 covers up to 3.5 m³ per registered nefesh per month at the lower rate; consumption above goes to Tier 2 (~84% higher in Jan 2026: 8.508 vs 15.623 ILS/m³ inc. VAT). Sewage is bundled into the regulated per-m³ tariff in most municipalities, NOT a separate percentage surcharge as some older guides describe.
 - Israeli utility bills include 18% VAT (raised from 17% on 1 Jan 2025; the 2026 increase to 19% was rejected by the cabinet in Dec 2025). Be explicit about whether quoted prices include or exclude VAT, especially when comparing alternate-supplier offers, since some advertise the pre-VAT generation rate.
 - The Olim Hadashim arnona discount is 90% on up to 100 sqm for 12 months out of the 24 months following aliyah registration, NOT yearly. Agents may incorrectly describe it as multi-year (e.g., "90% first year, 10% years 2-5"). Disabled olim recognized by Bituach Leumi get up to 80% indefinitely under a separate provision.
 - The IEC customer-service number is **103** (also 055-7000103 for SMS/WhatsApp). The legacy `*2730` short code is no longer in use; agents that emit it will send users to a dead number.
-- **Solar export tariff.** The old energy-vs-energy net-metering is closed to new entrants. The current residential rooftop export tariff is ~48 agorot/kWh, plus a +6 agorot urban premium (cities >50k) for the first 15 years; the small-installation track is ≤15 kW. Export pays less than the ~64 agorot retail rate, so self-consumption is worth more than export. Quote the contract's actual hesder line, not older ~0.21/~0.60/~0.38 figures.
+- **Solar export tariff.** Energy-vs-energy net-metering is closed to new entrants. The residential rooftop export tariff is ~48 agorot/kWh plus a +6 agorot urban premium (cities >50k) for 15 years; the small-installation track is <=15 kW. Export pays less than the ~63.5 agorot retail rate, so self-consumption is worth more than export. Quote the contract's actual hesder line, not older ~0.21/~0.60/~0.38 figures.
 - **Cellular and internet "promo expiry".** Most plans advertise a low introductory price (often X NIS for 12 months) that doubles or more after the promo period. Agents that quote the intro price as the "real" monthly cost will mislead the user. Always check the תקנון for "מחיר לאחר תום תקופת המבצע".
 - **Number portability is free, fast, and no-paperwork.** Suggesting users "cancel first then sign up new" is wrong, they should sign with the new provider, who handles portability in ~1 business day. Cancelling first creates a service gap.
 
@@ -355,10 +342,10 @@ Result: User receives a practical action plan for shifting consumption to off-pe
 
 | Source | URL | What to Check |
 |--------|-----|---------------|
-| Electricity Authority (PUA) | https://www.gov.il/he/departments/electricity_authority | Current half-yearly electricity tariffs, TOU schedules, regulatory updates |
-| 2026 tariff book (official PDF) | https://www.gov.il/BlobFolder/generalpage/tarriffbook/he/Files_netunei_hasmal_sefer_tariff_01_2026.pdf | Full Jan 2026 tariff tables, all categories |
+| 2026 tariff book (official PDF) | https://www.gov.il/BlobFolder/generalpage/tarriffbook/he/Files_netunei_hasmal_sefer_tariff_01_2026.pdf | Full tariff tables, all categories. This is the 01/2026 edition; check for a newer one before quoting |
 | Israel Electric Corporation | https://www.iec.co.il | Residential tariff plans, smart meter rollout, consumption monitoring |
-| IEC TOU low-voltage tariffs | https://www.iec.co.il/content/tariffs/contentpages/taozb-namuch | Current peak/off-peak schedules for residential customers |
+| IEC TOU low-voltage tariffs | https://www.iec.co.il/content/tariffs/contentpages/taozb-namuch | Per-season peak/off-peak rates and band hours, with the effective date |
+| Electricity Authority | https://www.gov.il/he/departments/the_electricity_authority | Regulator decisions and tariff-update announcements (pua.gov.il redirects here) |
 | Water Authority | https://www.gov.il/he/departments/water_authority | Tiered water rates, household allocation, municipal corporations |
 | Water tariff book (Jan 2026) | https://www.gov.il/he/pages/rates_general1 | Full water + sewage tariff tables and updates |
 | Natural Gas Authority | https://www.gov.il/he/departments/natural_gas_authority | Consumer gas pricing, supplier list, connection rules |
@@ -367,7 +354,22 @@ Result: User receives a practical action plan for shifting consumption to off-pe
 | Kolzchut, senior electricity discount | https://www.kolzchut.org.il/he/הנחה_בחשבון_חשמל_למקבלי_קצבת_זיקנה_עם_השלמת_הכנסה | 50% (proposed 65%) discount up to 400 kWh/month for seniors + income supplement |
 | Arnona property tax rates | https://www.gov.il/he/service/arnona-payment | Municipal arnona tariffs and discount eligibility |
 | Kolzchut, olim arnona discount | https://www.kolzchut.org.il/he/הנחה_בארנונה_לעולים_חדשים | Exact eligibility window (12 months out of 24), 100 sqm cap, special-needs olim rules |
-| Kolzchut, senior arnona discount | https://www.kolzchut.org.il/he/הנחה_בארנונה_לאזרחים_ותיקים | Senior age threshold (women 62 / men 67), income tests, discount tiers |
+| Kolzchut, senior arnona discount | https://www.kolzchut.org.il/he/הנחה_בארנונה_לאזרחים_ותיקים | Senior age threshold (men 67; women at the rising retirement age, do NOT assume a flat 62), income tests, discount tiers |
+
+## Bundled Resources
+
+- `references/details-2026.md`: current electricity, water, LPG, cellular, fiber and arnona figures with effective dates and sources.
+- `references/domain-checklist.md`: coverage contract with sources.
+
+## Recommended MCP Servers
+
+| MCP | What It Adds |
+|-----|-------------|
+| [Israeli CBS MCP](https://agentskills.co.il/he/mcps/tax-and-finance/israeli-cbs) | CPI and price-index series, useful for checking whether a tariff change tracks inflation or exceeds it |
+| [Kolzchut (All-Rights)](https://agentskills.co.il/he/mcps/government-services/kolzchut) | Live text of the arnona, electricity and water discount entitlements this skill routes to |
+| [Israel Statistics](https://agentskills.co.il/he/mcps/tax-and-finance/israel-statistics) | CBS price indices for cross-checking utility cost trends over time |
+
+Utility tariffs move on published schedules. Use these to check whether a figure is current; confirm any rate's effective date before quoting it.
 
 ## Troubleshooting
 

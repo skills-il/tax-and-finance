@@ -4,8 +4,8 @@ Detailed rate tables, provider lists, saving tips, and extended troubleshooting 
 
 ## Electricity rate snapshot (2026, incl. 18% VAT)
 
-- Standard residential tariff: ~0.6432 ILS/kWh (64.32 agorot; +1.5% at Jan 2026). The Electricity Authority now updates the tariff semi-annually (a mid-year update mechanism exists), so a rate can shift in the middle of the year, verify at pua.gov.il.
-- TOU (תעו"ז), 2-tier since Apr 2023: off-peak ~52.83 agorot/kWh; summer weekday peak (Jun-Sep, Sun-Thu 17:00-23:00) ~168.95 agorot/kWh. Winter weekday peak ~17:00-22:00 plus a morning band 06:00-08:00.
+- Standard residential tariff: ~0.6352 ILS/kWh (63.52 agorot inc. 18% VAT; 53.83 agorot before VAT), in force from 1.7.2026 after a cut of about 0.57%. The January 2026 edition was 64.32 agorot (+1.5% over 2025) and is superseded. The Electricity Authority updates the tariff on a semi-annual cycle, so a rate can shift mid-year; verify before quoting.
+- TOU (תעו"ז), 2-tier since Apr 2023, THREE seasons, in force 1.7.2026 (incl. 18% VAT): summer (Jun-Sep) peak 17:00-23:00 = 172.23 (145.96 excl.), off-peak 50.42; winter (Dec-Feb) peak 17:00-22:00 = 114.70, off-peak 46.63; transition (Mar-May, Oct-Nov) peak 49.58, off-peak 45.78. The winter peak band applies on weekdays, Fri/eves AND Shabbat/holidays. There is no 06:00-08:00 morning band. Source: https://www.iec.co.il/content/tariffs/contentpages/taozb-namuch
 - Fixed line items: connection fee, distribution fee, public-broadcasting fee. Apartments also pay a share of common-area electricity (חשמל כללי) via the va'ad bayit, separate from the IEC bill.
 
 ## Private electricity suppliers (residential)
@@ -28,10 +28,10 @@ As of 2026, roughly 360,000 customers have moved to private suppliers (up from ~
 ## Solar net-metering ROI detail
 
 - **Roof-control gate (check FIRST):** only someone who controls the roof/connection point can install. Apartment residents need רכוש-משותף consent (building owners' agreement / roof-rights allocation under חוק המקרקעין / התקנון המצוי); renters generally cannot install at all. A shared-roof / roof-lease arrangement is the alternative for apartments.
-- System cost 2026: ~3,500-5,500 ILS/kWp turnkey (small systems cost more per kWp). Typical 5 kW home system ~42,000-50,000 ILS.
+- System cost 2026: ~3,500-5,500 ILS/kWp turnkey (small systems cost more per kWp). Typical 5 kWp home system ~18,000-22,000 ILS, consistent with the per-kWp band above.
 - Annual production: ~1,500-1,800 kWh/kWp (Negev ~1,800, north ~1,400-1,500, central ~1,600).
 - Metering: it is a מונה נטו (net-metering) credit via a bidirectional meter (מונה דו-כיווני), kWh are credited by netting, not a meter physically spinning backward.
-- Export tariff regime (2025 two-track, adopted): residential rooftop export ~48 agorot/kWh, plus a +6 agorot "urban premium" (cities >50k) for the first 15 years (up to ~54 agorot). The small-installation track is ≤15 kW (a tiny self-consumption track ≤8 kW). The old energy-vs-energy net-metering is CLOSED to new entrants; the biggest saving is now self-consumption (avoids the full ~64 agorot retail rate). Confirm the exact track on the installer's quote.
+- Export tariff regime (2025 two-track, adopted): residential rooftop export ~48 agorot/kWh, plus a +6 agorot "urban premium" (cities >50k) for the first 15 years (up to ~54 agorot). The small-installation track is ≤15 kW (a tiny self-consumption track ≤8 kW). The old energy-vs-energy net-metering is CLOSED to new entrants; the biggest saving is now self-consumption (avoids the full ~63.5 agorot retail rate). Confirm the exact track on the installer's quote.
 - Payback typically 4-7 years (faster in the south); lifetime 25+ years, ~0.5%/yr degradation.
 
 ## Water tariff snapshot (2026, incl. VAT + sewage)
@@ -107,7 +107,7 @@ Rates vary by zone and change annually, verify at the municipality.
 
 ## Bill-reduction tips
 
-**Electricity:** switch to TOU if you have a smart meter; run washer/dryer/dishwasher off-peak (nights, Shabbat); LED lighting; AC at 24-25°C with ceiling fans; maintain the solar water heater (dud shemesh); unplug standby loads (5-10%).
+**Electricity:** switch to TOU if you have a smart meter; run washer/dryer/dishwasher off-peak (after 23:00 in summer, after 22:00 in winter; Shabbat is NOT off-peak in winter, when the 17:00-22:00 peak band applies on Shabbat and holidays too); LED lighting; AC at 24-25°C with ceiling fans; maintain the solar water heater (dud shemesh); unplug standby loads (5-10%).
 
 **Water:** register all nefashot; fix leaking toilets/faucets fast (a running toilet wastes 200+ L/day); low-flow showerheads and aerators; dual-flush; irrigate in the evening.
 
@@ -132,3 +132,24 @@ Rates vary by zone and change annually, verify at the municipality.
 - Arnona: file a השגה (objection) within 90 days → the municipality replies within 60 days → appeal to ועדת ערר לארנונה within 30 days → בית משפט לעניינים מנהליים within 45 days.
 - Before court, use each regulator's public-complaints unit (פניות ציבור of רשות החשמל / רשות המים / רשות הגז, the משרד התקשורת complaints unit) and the הרשות להגנת הצרכן ולסחר הוגן.
 - Utility billing disputes (not arnona) can go to small-claims court (בית משפט לתביעות קטנות), cap 39,900 ILS in 2026.
+
+## Arnona discounts (moved from SKILL.md, 2026-08-01)
+
+**Arnona discounts (hanashot):**
+- New immigrants (olim): up to 90% discount on the first 100 sqm for 12 months out of the 24 months following aliyah registration (single benefit, not yearly). Olim recognized by Bituach Leumi for disability or sicud benefits get up to 80% with no time limit. See kolzchut.org.il/he/הנחה_בארנונה_לעולים_חדשים for the exact rules.
+- Senior citizens (men 67; women at the retirement age, which is rising in steps toward 65 under חוק גיל פרישה, so do not assume a flat 62): 30% discount if income is below the average wage (~13,623 ILS single, Jan 2026); up to 100% if also receiving income supplement (השלמת הכנסה).
+- Low income (hakhnasot nemukhot): significant discounts on a sliding scale, apply through the municipal welfare department
+- Disabled (nekhim): discounts based on disability percentage; 80% for 90%+ disability
+- National service / IDF veterans: various discounts, including bereaved families
+- Students: some municipalities offer student discounts
+- Single-person household: some municipalities offer discounts
+- **Empty property (הנחת נכס ריק):** a vacant, unused property gets an exemption for a limited period (typically up to 6 months, once per ownership) under תקנות הסדרים במשק המדינה (הנחה מארנונה) התשנ"ג-1993.
+- **Uninhabitable property (נכס שאינו ראוי לשימוש):** a property unfit for use or under major renovation can be exempted under פקודת העיריות §330.
+
+## Arnona objection procedure (moved from SKILL.md, 2026-08-01)
+
+**Filing an arnona objection (hassagah):** If you believe the bill is wrong (incorrect property size, wrong zone classification, missing discount, balcony charged at full rate), there is a formal escalation path:
+1. **Hassagah**, file a written objection with the municipal arnona manager within **90 days** of receiving the bill. Cite the specific calculation error and attach evidence (measurement, classification documents, photos of enclosed vs open balcony).
+2. **Response**, the municipality must respond within 60 days. Silence after 60 days is treated as deemed-rejection and the clock for the next step starts.
+3. **Appeal to ועדת ערר**, if rejected, you have **30 days** to appeal to the local arnona objection committee (ועדת ערר לארנונה).
+4. **Administrative court**, if the ועדת ערר ruling is against you, escalate to בית משפט לעניינים מנהליים within 45 days of the decision.
