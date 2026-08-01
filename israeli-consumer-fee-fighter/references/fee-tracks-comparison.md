@@ -6,9 +6,9 @@ All figures verified against the Bank of Israel fees page and Kol Zchut. Fee amo
 
 | Billing method | What it means | Direct-channel actions | Teller actions | Monthly price |
 |---|---|---|---|---|
-| **No track (per action)** | Default. Charged a separate fee for every action. | pay per action | pay per action | varies; can be 2.5x-5x a track |
+| **No track (per action)** | Default. Charged a separate fee for every action. | pay per action | pay per action | varies; compute from the user's own statement |
 | **Basic track (maslul basi)** | Fixed monthly price, supervised. | up to 10 / month | up to 1 / month | supervised, max 10 NIS |
-| **Expanded track (maslul murchav)** | Fixed monthly price, not supervised. | up to 50 / month | up to 10 / month | not supervised, 20-30 NIS |
+| **Expanded track (maslul murchav)** | Fixed monthly price, price-supervised since 1.9.2022. | up to 50 / month | up to 10 / month | supervised; read the bank's current tariff |
 | **Expanded-plus (maslul murchav plus)** | Some banks only. Expanded track + bank-specific extras. | expanded + extras | expanded + extras | bank-specific |
 
 Notes:
@@ -35,8 +35,9 @@ Notes:
 ## Switching banks entirely (niud / maavar beklik)
 
 - If the whole bank is expensive, a track switch is not enough. Since 22.9.2021 you can move the entire account to a cheaper bank through a free, fully online switch that completes within 7 business days.
-- It transfers shekel and foreign-currency balances, standing orders (horaot keva) and current-account authorizations, checks, securities, and bank + non-bank credit-card activity.
-- An "akev acharai" (follow-me) service auto-forwards charges and credits that still reach the old account to the new one.
+- It transfers shekel and foreign-currency balances, standing orders (horaot keva) and current-account authorizations, checks, transferable securities, and bank + non-bank credit-card activity.
+- It does NOT transfer loans and credit including mortgages, deposits and savings plans, non-transferable securities, or safes and products pledged to the old bank. Each needs a separate arrangement with the previous bank.
+- The switch completes within 7 business days of submission, extendable to 30 business days on request. The akev acharai (follow-me) forwarding runs for 3 years. Bank of Jerusalem customers cannot use the online switch.
 - Because niud moves the standing orders for you, you do not re-set-up each authorization by hand; only card-billed subscriptions (which follow the card, not the account) must be updated with each merchant.
 
 ## What this does NOT change

@@ -7,7 +7,7 @@ methods for an Israeli current account (cheshbon over veshav):
   1. No track: pay a separate fee for every action.
   2. Basic track (maslul basi): supervised, up to 10 NIS/month,
      covers up to 10 direct-channel actions + up to 1 teller action.
-  3. Expanded track (maslul murchav): not supervised, 20-30 NIS/month,
+  3. Expanded track (maslul murchav): price-supervised since 1.9.2022, bank-specific price,
      covers up to 50 direct-channel actions + up to 10 teller actions.
 
 Track transaction limits are fixed by Banking Rules (Customer Service)(Fees),

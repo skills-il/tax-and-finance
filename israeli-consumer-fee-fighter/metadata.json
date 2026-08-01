@@ -8,13 +8,41 @@
     "en": "Helps you cut recurring bank and credit-card fees. Use it when you pay per action instead of being on a cheaper fixed-price fee track, when you want to cancel a barely-used credit card, stop a recurring charge or debit authorization, or negotiate a specific commission down. The skill prepares a ready-to-send Hebrew cancellation letter, a rights-grounded negotiation script, and a short summary of your rights, based on Bank of Israel fee rules and Israeli banking law. Why it matters: many Israelis overpay hundreds of shekels a year because they do not know there is a supervised basic track, a right to cancel at any time, and discounts for seniors, people with disabilities, and small businesses. Not for maximizing cashback or deals, coupon hunting, analyzing bank transactions, or household budgeting."
   },
   "tags": {
-    "he": ["עמלות בנק", "ביטול כרטיס אשראי", "זכויות צרכן", "בנקאות", "חיסכון", "ישראל"],
-    "en": ["bank-fees", "credit-card", "consumer-rights", "banking", "savings", "israel"]
+    "he": [
+      "עמלות בנק",
+      "ביטול כרטיס אשראי",
+      "זכויות צרכן",
+      "בנקאות",
+      "חיסכון",
+      "ישראל"
+    ],
+    "en": [
+      "bank-fees",
+      "credit-card",
+      "consumer-rights",
+      "banking",
+      "savings",
+      "israel"
+    ]
   },
   "author": "skills-il",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "category": "tax-and-finance",
-  "supported_agents": ["claude-code", "cursor", "github-copilot", "windsurf", "opencode", "codex", "openclaw", "antigravity", "gemini-cli", "chatgpt", "claude-ai", "claude-desktop", "manus"],
+  "supported_agents": [
+    "claude-code",
+    "cursor",
+    "github-copilot",
+    "windsurf",
+    "opencode",
+    "codex",
+    "openclaw",
+    "antigravity",
+    "gemini-cli",
+    "chatgpt",
+    "claude-ai",
+    "claude-desktop",
+    "manus"
+  ],
   "openclaw": true,
   "volatility": "legislative",
   "authoritative_sources": [

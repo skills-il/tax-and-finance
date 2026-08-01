@@ -388,6 +388,162 @@
         "references/document-requirements.md",
         "references/domain-checklist.md"
       ]
+    },
+    {
+      "id": "credit-point-2021",
+      "claim": "The monthly value of an income-tax credit point for tax year 2021 is 218 NIS (2616 NIS annually).",
+      "claim_type": "rate",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/itc_itc_necuyim2021-1.pdf",
+      "raw_snippet": "נקודת זיכוי 218 לחודש",
+      "source_fetched_at": "2026-08-01T00:00:00Z",
+      "verified_via": "pdf",
+      "verified_at": "2026-08-01T00:00:00Z",
+      "confidence": "high",
+      "appears_in": [
+        "scripts/estimate_refund.py"
+      ]
+    },
+    {
+      "id": "credit-point-2022",
+      "claim": "The monthly value of an income-tax credit point for tax year 2022 is 223 NIS (2676 NIS annually).",
+      "claim_type": "rate",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2022.pdf",
+      "raw_snippet": "נקודת זיכוי 223 לחודש",
+      "source_fetched_at": "2026-08-01T00:00:00Z",
+      "verified_via": "pdf",
+      "verified_at": "2026-08-01T00:00:00Z",
+      "confidence": "high",
+      "appears_in": [
+        "scripts/estimate_refund.py"
+      ]
+    },
+    {
+      "id": "credit-point-2023",
+      "claim": "The monthly value of an income-tax credit point for tax year 2023 is 235 NIS (2820 NIS annually).",
+      "claim_type": "rate",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2023.pdf",
+      "raw_snippet": "נקודת זיכוי 235 לחודש",
+      "source_fetched_at": "2026-08-01T00:00:00Z",
+      "verified_via": "pdf",
+      "verified_at": "2026-08-01T00:00:00Z",
+      "confidence": "high",
+      "appears_in": [
+        "scripts/estimate_refund.py"
+      ]
+    },
+    {
+      "id": "credit-point-2024",
+      "claim": "The monthly value of an income-tax credit point for tax year 2024 is 242 NIS (2904 NIS annually).",
+      "claim_type": "rate",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2024.pdf",
+      "raw_snippet": "נקודת זיכוי 242 לחודש",
+      "source_fetched_at": "2026-08-01T00:00:00Z",
+      "verified_via": "pdf",
+      "verified_at": "2026-08-01T00:00:00Z",
+      "confidence": "high",
+      "appears_in": [
+        "scripts/estimate_refund.py"
+      ]
+    },
+    {
+      "id": "credit-point-2025",
+      "claim": "The monthly value of an income-tax credit point for tax year 2025 is 242 NIS (2904 NIS annually).",
+      "claim_type": "rate",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2025.pdf",
+      "raw_snippet": "נקודת זיכוי 242 לחודש",
+      "source_fetched_at": "2026-08-01T00:00:00Z",
+      "verified_via": "pdf",
+      "verified_at": "2026-08-01T00:00:00Z",
+      "confidence": "high",
+      "appears_in": [
+        "scripts/estimate_refund.py"
+      ]
+    },
+    {
+      "id": "historical-brackets-2020-secondary",
+      "claim": "Monthly tax brackets and the 219 NIS credit point for tax year 2020 come from a secondary source because the Israel Tax Authority no longer serves the 2020 deductions booklet; the estimator flags 2020 results as secondary-sourced.",
+      "claim_type": "rate",
+      "source_url": "https://www.kolzchut.org.il/he/מדרגות_מס_הכנסה_-_נתוני_עבר",
+      "raw_snippet": "מדרגות מס הכנסה",
+      "source_fetched_at": "2026-08-01T00:00:00Z",
+      "confidence": "medium",
+      "appears_in": [
+        "scripts/estimate_refund.py"
+      ]
+    },
+    {
+      "id": "surtax-capital-addon-2025",
+      "claim": "From tax year 2025 a second 2% surtax applies to capital-source income above the Section 121B threshold, in addition to the 3% on earned income. It did not exist for 2020-2024.",
+      "claim_type": "rate",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2025.pdf",
+      "raw_snippet": "בנוסף על המס הקבוע בסעיף 121ב(א) בשיעור של 3%, יחיד יהיה חייב במס נוסף",
+      "source_fetched_at": "2026-08-01T00:00:00Z",
+      "verified_via": "pdf",
+      "verified_at": "2026-08-01T00:00:00Z",
+      "confidence": "high",
+      "appears_in": [
+        "scripts/estimate_refund.py"
+      ]
+    },
+    {
+      "id": "yishuv-mutav-2026-table",
+      "claim": "The 2026 preferred-locality (yishuv mutav) list with each locality's rate and ceiling is published in chapter ח of the ITA 2026 deductions booklet; the credit applies only to earned income under section 11 ITO. Representative 2026 values: Kiryat Shmona 20% up to 259,920 NIS, Sderot 20% up to 267,840 NIS, Safed 12% up to 213,240 NIS, Katzrin 10% up to 180,000 NIS, Rahat 16% up to 226,560 NIS, Rosh Pina 7% up to 146,640 NIS.",
+      "claim_type": "rate",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf",
+      "raw_snippet": "מצורפת בפרק ח רשימת היישובים המוטבים לשנת 2026",
+      "source_fetched_at": "2026-08-01T00:00:00Z",
+      "verified_via": "pdf",
+      "verified_at": "2026-08-01T00:00:00Z",
+      "confidence": "high",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md"
+      ]
+    },
+    {
+      "id": "eilat-credit-2026",
+      "claim": "Eilat and Chevel Eilot residents receive a 10% credit on earned income produced in the area, up to 268,560 NIS, under section 11 of the Eilat Free Trade Zone Law.",
+      "claim_type": "rate",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf",
+      "raw_snippet": "הנחה בשיעור של 10% על הכנסה חייבת מיגיעה אישית שהופקה באזור אילת או חבל אילות עד לסכום של 268,560 ₪",
+      "source_fetched_at": "2026-08-01T00:00:00Z",
+      "verified_via": "pdf",
+      "verified_at": "2026-08-01T00:00:00Z",
+      "confidence": "high",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md"
+      ]
+    },
+    {
+      "id": "security-forces-credit-2026",
+      "claim": "Security forces receive a 5% credit on the special salary up to 178,320 NIS per year under section 11(c) ITO.",
+      "claim_type": "rate",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf",
+      "raw_snippet": "הנחה בשיעור של 5% מהמשכורת המיוחדת עד לסכום של 178,320 ₪ לשנה",
+      "source_fetched_at": "2026-08-01T00:00:00Z",
+      "verified_via": "pdf",
+      "verified_at": "2026-08-01T00:00:00Z",
+      "confidence": "high",
+      "appears_in": [
+        "references/2026-rates.md"
+      ]
+    },
+    {
+      "id": "shift-work-credit-2026",
+      "claim": "The shift-work credit under section 10 ITO is extended to 31.12.2026, capped at 12,540 NIS against annual income up to 143,040 NIS.",
+      "claim_type": "rate",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf",
+      "raw_snippet": "יוענק זיכוי שלא יעלה על 12,540 ₪ עד לתקרת הכנסה שנתית של 143,040 ₪ לכל שנת מס",
+      "source_fetched_at": "2026-08-01T00:00:00Z",
+      "verified_via": "pdf",
+      "verified_at": "2026-08-01T00:00:00Z",
+      "confidence": "high",
+      "appears_in": [
+        "references/2026-rates.md"
+      ]
     }
   ]
 }

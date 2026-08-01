@@ -61,11 +61,7 @@ Points are realized in the tax year AFTER the service.
 
 Refund must be paid within one year from the assessment date, or two years from the end of the tax year, whichever is later. Late refunds accrue הצמדה (CPI linkage) plus 4% annual interest.
 
-## Yishuv mezakeh
-
-Annual list of eligible localities and per-locality percentages is published by the Tax Authority. Residence requirement: 12 consecutive months center of life in the locality. Always check the current year's official list, since localities can be added or removed.
-
-## Section 9(5) — Disability exemption ceilings (2026, in force through 2027)
+## Section 9(5): Disability exemption ceilings (2026, in force through 2027)
 
 | Scenario | 2026 ceiling (NIS/year) |
 |---|---|
@@ -78,7 +74,7 @@ Annual list of eligible localities and per-locality percentages is published by 
 
 Qualifying threshold: 100% medical disability, blindness, OR 90%+ via the multi-organ-injury calculation (פגיעה באיברים שונים). Under 185 days does not qualify. Ceiling-based, not rate-based: income up to the cap is fully exempt; income above is taxed normally.
 
-## Section 35 — Olim chadashim credit-point schedule
+## Section 35: Olim chadashim credit-point schedule
 
 For olim arriving 1.1.2022 or later (post-Amendment 262 of 7.5.2022):
 
@@ -95,7 +91,7 @@ For pre-2022 arrivals: 4.5 / 2 / 1 across 18 / 12 / 12 months (total 7.5 points,
 
 Returning residents (תושב חוזר) generally do NOT qualify for Section 35. Most returnees use the 10-year foreign-income exemption under Section 14 instead. Veteran returning residents (תושב חוזר ותיק, after 10+ years abroad) have a separate Milchan-amendment benefit track that is out of scope here.
 
-## Section 40g — Academic credit-points schedule
+## Section 40g: Academic credit-points schedule
 
 | Degree + graduation cohort | Points |
 |---|---|
@@ -104,3 +100,29 @@ Returning residents (תושב חוזר) generally do NOT qualify for Section 35.
 | Master's, 2014-2022 graduates | 0.5 point for one tax year |
 | Master's, 2023+ graduates | 0.5 point per year for 2 years |
 | Professional degrees with mandatory internship (e.g., medicine) | Same bachelor's points but the claimant may defer the start to the year after internship completion |
+
+## Section 11: Yishuv mutav (preferred-locality) credit, 2026
+
+Eligibility requires the taxpayer's centre of life in the locality for at least 12 continuous months, and the credit applies only to הכנסה חייבת מיגיעה אישית (earned income). The rate and the annual ceiling are set PER LOCALITY, not nationally.
+
+The authoritative table is chapter ח of the Israel Tax Authority deductions booklet for 2026, which lists every eligible locality with its 2026 rate and 2026 ceiling. Localities added, or whose rate or ceiling changed, are printed in bold there. Read the value for the user's specific locality from that table. Do not interpolate from a nearby locality.
+
+The ITA calls this יישוב מוטב (yishuv mutav); older material and parts of this skill say yishuv mezakeh. They are the same benefit under section 11 ITO.
+
+The tiers below are for SANITY-CHECKING a value you have already looked up. The rate does NOT determine the ceiling: the same percentage maps to different ceilings in different localities (14% appears against 180,000, 213,240, 219,960 and 259,920 depending on the locality, and 20% against more than one). Never read this as a lookup ladder, and never infer a ceiling from a rate. Read both values for the user's own locality:
+
+| Rate | Annual ceiling (NIS) | Example localities |
+|------|----------------------|--------------------|
+| 7% | 146,640 | ראש פינה, רגבה, צורית, קדרים |
+| 10% | 180,000 | קצרין, רביבים, פרוד, קליה |
+| 12% | 213,240 | צפת, קריית ארבע, קטורה, צופר |
+| 14% | 213,240 | צאלים |
+| 16% | 226,560 | רהט |
+| 20% | 259,920 - 267,840 | קריית שמונה (259,920), שדרות (267,840), צוחר, פרי גן |
+
+Two separate regimes that are NOT in that table:
+
+- **Eilat and Chevel Eilot**: 10% on earned income produced in the area, up to 268,560 NIS, under section 11 of the Eilat Free Trade Zone Law (not section 11 ITO).
+- **Security forces**: 5% of the special salary, up to 178,320 NIS, under section 11(c) ITO.
+
+Evacuee note: residents of localities evacuated under government decisions following the war keep the benefit while the locality remains defined as evacuated, subject to the Tax Authority's employer guidance. Follow the current ITA guidance rather than assuming the status persists.

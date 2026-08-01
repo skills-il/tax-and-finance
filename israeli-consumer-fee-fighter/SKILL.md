@@ -18,18 +18,20 @@ Work in the tracks below depending on what the user needs. Ask which one applies
 
 ### A. Pick the cheaper bank fee track
 
-Israeli banks (except the Postal Bank) must offer two fixed-price tracks under Banking Rules (Customer Service)(Fees), 5768-2008, section 4a (in force since 1.4.14). A customer who picks no track is charged per action and can pay up to 2.5x (basic-level volume) or 5x (expanded-level volume) at some banks.
+Israeli banks (except the Postal Bank) must offer two fixed-price tracks under Banking Rules (Customer Service)(Fees), 5768-2008, section 4a (in force since 1.4.14). A customer who picks no track is charged per action, which is often more expensive than a track for anyone with steady monthly activity. Do not quote the user a specific multiple: compare their own per-action total against the track price using the calculator in step 3.
 
 | Method | Direct-channel actions/month | Teller actions/month | Monthly price |
 |---|---|---|---|
-| No track (per action) | pay per action | pay per action | varies (can be 2.5x-5x a track) |
+| No track (per action) | pay per action | pay per action | varies, compute from the user's own statement |
 | Basic track (maslul basi) | up to 10 | up to 1 | supervised, max 10 NIS |
-| Expanded track (maslul murchav) | up to 50 | up to 10 | not supervised, 20-30 NIS |
-| Expanded-plus (some banks) | expanded + extras | expanded + extras | bank-specific |
+| Expanded track (maslul murchav) | up to 50 | up to 10 | supervised since Sept 2022, bank-specific price |
+| Expanded-plus (some banks) | expanded + extras | expanded + extras | supervised since Sept 2022, bank-specific |
+
+Both expanded tracks came under price supervision in the Banking Order (Customer Service)(Supervision of teller-action, direct-channel-action, expanded track and expanded-plus track services), 5782-2022, published 1.9.2022: a bank may not raise these tariffs without Bank of Israel approval. Read the current price off the bank's published tariff (taarifon) rather than assuming a range.
 
 Decision steps:
 1. Ask the user for their typical monthly action count, split into direct-channel (internet, app, ATM, standing orders) and teller (peulat pakid). If they do not know, tell them to read it off recent statements or ask the bank.
-2. Check for a cheaper path first: seniors (azrachim vatikim) and people with 40%+ determined disability are entitled to fee discounts; a business may qualify as a small business (esek katan) for the reduced tariff. A discount can beat a track.
+2. Check for a cheaper path first: seniors (azrachim vatikim) and people with 40%+ determined disability are entitled to fee discounts; a business may qualify as a small business (esek katan) for the reduced tariff. A discount can beat a track. **Never state a discount percentage, shekel amount, or age threshold yourself.** This skill does not carry those figures, and inventing one is worse than omitting it. Have the user read the discount terms off their bank's published tariff or ask the bank in writing which discounts their account qualifies for, then compare that answer against the track price.
 3. Run `scripts/fee_track_calculator.py` with the user's action counts and their bank's real per-action and track prices to compare all three methods. It adds estimated overage so an over-limit track is not recommended blindly.
 4. Confirm the result against the Bank of Israel fee-tracks calculator, which compares against every bank.
 5. To switch: notify the bank via site, phone, or branch. The switch takes effect on the 1st of the month after the notice. Use the request template in `references/cancellation-letter-templates.md` (template 4).
@@ -66,23 +68,57 @@ The Israeli approach is not US-style "call and threaten to leave." It is grounde
 
 Do not stop at the account-management fee. The biggest real overpayment is often outside the fee tracks: overdraft interest (when the balance drops below zero or past the credit line, riba al chariga), the interest and setup fees on a credit line, and foreign-currency and securities fees. These are not covered by any track, but they are negotiable, so raise them as separate targets and ask for a lower rate or a waiver on each.
 
-If the bank refuses to switch your track or apply a discount you clearly qualify for, escalate for free to the Public Complaints unit at the Supervisor of Banks (yechidat pniyot hatsibur, Pikuach al HaBankim) at the Bank of Israel. This is the enforcement lever when a bank stonewalls; a written complaint there costs nothing.
+If the bank refuses to switch your track or apply a discount you clearly qualify for, escalate. The route has two steps and users routinely skip the first, which gets the complaint bounced back:
+
+1. **The bank's own ombudsman (natziv tlunot hatsibur) first.** The Bank of Israel requires this step to be exhausted before it will take the complaint. Submit in writing, keep the reference number, and expect a written answer within 45 days; in certain circumstances the ombudsman may extend to 60 days and must notify the complainant in writing. Handling of public complaints is governed by Proper Conduct of Banking Business Directive 308A.
+2. **Then the Supervisor of Banks Public Inquiries unit**, via the online complaint form linked from <https://www.boi.org.il/information/public-enquiries-unit/ihaveaq/>. Filing requires identity verification. Attach the ombudsman's reply and set out the claim. The unit covers current-account management, checks, credit cards, deposits, foreign currency, fees, loans, mortgages, and fraud. It is free. Use the channel published on that page rather than emailing a general address.
+
+Match the regulator to the counterparty. The Supervisor of Banks covers banks and credit-card companies only. A gym, streaming service, or other merchant that keeps charging after a cancellation is a Consumer Protection and Fair Trade Authority matter; sending it to the Bank of Israel loses months.
 
 Produce the letter (from `references/cancellation-letter-templates.md`), the negotiation script (steps 1-4 above, filled with the user's numbers), and a short rights summary (the specific track limits, cancellation rights, and discount eligibility that apply to them).
 
 ### D. Switch banks in one click (niud / maavar beklik)
 
-Since 22 September 2021 every Israeli can move their whole account to a cheaper bank through a free, fully online switch. The customer only opens an account at the new bank and asks it to run the switch; the process completes within 7 business days. It transfers the shekel and foreign-currency balances, the standing orders (horaot keva) and current-account authorizations, checks, securities, and both bank and non-bank credit-card activity. After the move, an "akev acharai" ("follow me") service automatically forwards charges and credits that still land in the old account to the new one, so nothing is lost in transition.
+Since 22 September 2021 every Israeli can move their current account to a cheaper bank through a free, fully online switch. The customer only opens an account at the new bank and asks it to run the switch; the process completes within 7 business days from submission, and the customer may request an extension of up to 30 business days. It transfers the shekel and foreign-currency balances, the standing orders (horaot keva) and current-account authorizations, checks, and both bank and non-bank credit-card activity. After the move, an "akev acharai" ("follow me") service forwards charges and credits that still land in the old account to the new one for 3 years.
+
+Tell the user plainly what does NOT come across, because this is where niud surprises people: loans and credit (including mortgages), deposits and savings plans, non-transferable securities, and safe-deposit boxes or products pledged to the old bank all stay behind and need a separate arrangement with the previous bank. Bank of Jerusalem customers cannot use the online switch at all.
 
 This is the single biggest fee-cut lever for many people: instead of negotiating one commission at a time, they land at the bank the Bank of Israel calculator shows as cheapest for their profile. It also solves the standing-order problem in section B automatically. Because niud moves the horaot keva for you, a user who is switching banks does NOT need to re-set-up each authorization by hand; they only need to update card-billed charges with each merchant (those follow the card, not the account). When a user's real problem is a bank that is simply expensive across the board, route them to niud, not to a track switch.
+
+### E. The 2027 fee reform (coming, not yet in force)
+
+Bank of Israel Supervisor of Banks circular 06-2851 of 21 June 2026 replaces the whole track system described in section A. Do NOT advise the user as though it already applies: the updated fee rules take effect on 1 July 2027, with a staged entry from 1 October 2026, and banks may adopt the new model earlier if they choose. Until a given bank switches, section A is still the operative advice for that customer.
+
+What changes on the effective date:
+
+- The basic / expanded / expanded-plus tracks are abolished and replaced by a single supervised service, "nihul cheshbon tashlum" (payment-account management), bundling the common day-to-day operations.
+- Price caps: up to 10 NIS for the first 100 operations a month; up to 5 NIS if the account ran only 0 to 2 operations that month; up to 1 NIS for each additional operation beyond 100.
+- The default flips: every customer is enrolled automatically and no longer has to actively choose a track. This removes the main trap in section A, where a customer who never picked a track silently paid per action.
+- The teller-versus-direct-channel distinction disappears, because the new service covers both.
+- A separate supervised cap of 7 NIS applies to the immediate-debit (debit) card fee, against a current market average of about 9 NIS. It replaces the 2015 arrangement that waived the fee for 36 months for customers holding a credit card alongside, and it applies to cards issued before the change too.
+- The rules delete the defined terms "azrach vatik" (senior) and "adam im mugbalut" (person with a disability). Check the discounts in section A against the bank's post-reform tariff rather than assuming they carry over unchanged.
+
+To tell which regime applies to a specific user before 1.7.2027, have them check the effective date printed on their bank's published tariff (taarifon), or ask the bank in writing whether it has adopted the payment-account-management service yet. Do not infer it from the date alone: adoption is per-bank until the deadline.
+
+When the user's question is about what they pay today, answer from section A. Raise this section when they ask what is changing, or when a bank tells them their track is being discontinued.
 
 ## Examples
 
 **Cancel a barely-used credit card.** User has a second credit card they rarely use but pay an annual fee on. First tell them to settle any open installments or credit balance so the cancellation is not blocked or accelerated. Produce template 1 addressed to the issuer, request written confirmation, and request the list of recurring charges billed to that card. Warn them to move each card-billed charge (e.g. streaming, gym, insurance) to another payment method before the card dies, or those charges bounce. Note that any harshaa lechiyuv sits on their bank account, not on the card, so it keeps running untouched and is handled separately at the bank.
 
-**Switch a heavy-transaction account to a fixed track.** User does about 40 direct-channel and 3 teller actions a month and pays per action. Run `scripts/fee_track_calculator.py --direct 40 --teller 3` with their tariff numbers; the expanded track (20-30 NIS) beats paying per action. Give them template 4 to join the expanded track from the 1st of next month, and note the switch timing.
+**Switch a heavy-transaction account to a fixed track.** User does about 40 direct-channel and 3 teller actions a month and pays per action. Run `scripts/fee_track_calculator.py --direct 40 --teller 3` with their tariff numbers; the expanded track beats paying per action at that volume. Give them template 4 to join the expanded track from the 1st of next month, and note the switch timing.
 
 **Negotiate down a specific commission.** User is charged a monthly account-management fee higher than the basic track cap. Script: cite that the basic track is supervised at max 10 NIS, ask to be moved to it, and check senior/disability eligibility. Provide the written request and tell them to confirm against the Bank of Israel calculator.
+
+## Recommended MCP Servers
+
+| MCP | What It Adds |
+|-----|-------------|
+| [Kolzchut (All-Rights)](https://agentskills.co.il/he/mcps/government-services/kolzchut) | Looks up the current text of the fee, discount, and cancellation rights this skill cites, so entitlements are read live instead of from a snapshot |
+| [Asher MCP](https://agentskills.co.il/he/mcps/tax-and-finance/asher) | Local-first aggregator for Israeli banks and credit-card issuers; pulls the user's actual fee charges so step 1 uses real action counts rather than an estimate |
+| [Israeli Bank MCP](https://agentskills.co.il/he/mcps/tax-and-finance/israeli-bank) | Fetches transactions from the major banks and card issuers, useful for spotting recurring charges and standing orders the user forgot about |
+
+Use these to source the user's real numbers. The fee amounts and rights in this skill still need to be confirmed against the bank's published tariff and the Bank of Israel rules.
 
 ## Gotchas
 
@@ -91,8 +127,8 @@ This is the single biggest fee-cut lever for many people: instead of negotiating
 - **Card-billed subscriptions fail when the card dies.** A subscription billed to the card number (streaming, gym, insurance) is the opposite case: it is tied to the card, so cancelling or replacing the card makes it FAIL. The fix is to update the payment method with each merchant before the old card stops, not to cancel anything at the bank.
 - **Stopping the debit does not cancel the debt.** Killing the harshaa or the card charge only stops the payment. The contract lives on and the business can still invoice or send you to collections. Always also cancel the underlying transaction (iska mitmasheshet) when the goal is to end the service, not just stop the money.
 - **Settle installments before cancelling a card.** Open tashlumim or a kredit balance can be accelerated into one immediate charge, or block the cancellation entirely, if you cancel the card first.
-- **Do not quote a stale NIS fee.** Fee amounts change and vary by bank. The basic-track cap (10 NIS) and expanded range (20-30 NIS) are cited from the sources, but per-action fees come from each bank's current tariff. Direct the user to the current tariff and the Bank of Israel calculator before acting on any number.
-- **Do not confuse the two tracks.** Basic = up to 10 direct + up to 1 teller, supervised. Expanded = up to 50 direct + up to 10 teller, not supervised. Recommending the wrong one wastes money; check the user's actual action split.
+- **Do not quote a stale NIS fee.** Fee amounts change and vary by bank. The basic-track cap (10 NIS) is set by order, but the expanded-track price and all per-action fees come from each bank's current tariff. Direct the user to the current tariff and the Bank of Israel calculator before acting on any number.
+- **Do not confuse the two tracks.** Basic = up to 10 direct + up to 1 teller. Expanded = up to 50 direct + up to 10 teller. Both are price-supervised, so the difference is the included volume, not whether a cap applies. Recommending the wrong one wastes money; check the user's actual action split.
 - **The Postal Bank is exempt** from offering the tracks, so this analysis may not apply there.
 - **A track only covers the basic current-account actions it lists.** Overdraft interest, foreign-currency, and securities fees stay per the tariff and are not solved by joining a track, but they are often the biggest overpayment and are negotiable on their own (section C).
 
@@ -102,7 +138,7 @@ This is the single biggest fee-cut lever for many people: instead of negotiating
 |---|---|---|
 | Bank fees + the two tracks + small-business tariff | Bank of Israel | https://boi.org.il/information/fees/ |
 | Fee-tracks calculator (compare banks) | Bank of Israel | https://www.boi.org.il/information/מחשבונים-וכלים/עמלות/ |
-| One-click bank switching (niud): 7-day online move, akev acharai | Kol Zchut | https://www.kolzchut.org.il/he/מעבר_בין_בנקים_באופן_מקוון_(ניוד) |
+| One-click bank switching (niud): 7-day online move, akev acharai | Kol Zchut | https://www.kolzchut.org.il/he/מעבר_בין_בנקים_באופן_מקוון_%28ניוד%29 |
 | Overdraft (chariga mimisgeret): higher interest on a current account | Kol Zchut | https://www.kolzchut.org.il/he/חריגה_ממסגרת_אשראי_בחשבון_עובר_ושב |
 | Fixed monthly fee tracks (limits, discounts, switching) | Kol Zchut | https://www.kolzchut.org.il/he/מסלולי_עמלות_במחיר_חודשי_קבוע_בחשבון_עובר_ושב_בבנק |
 | Cancelling an ongoing transaction (3/6-day stop, compensation) | Kol Zchut | https://www.kolzchut.org.il/he/ביטול_עסקה_מתמשכת |
@@ -115,6 +151,10 @@ This is the single biggest fee-cut lever for many people: instead of negotiating
 - `references/fee-tracks-comparison.md` - the three billing methods, decision rule, and switching mechanics.
 - `references/cancellation-letter-templates.md` - four ready-to-fill Hebrew + English letters (cancel card, stop debit, cancel subscription, request track/discount).
 - `scripts/fee_track_calculator.py` - compares no-track vs basic vs expanded using the user's own action counts and bank tariff numbers (`--example` for a worked run).
+
+### Ready-to-send templates (copy and fill the brackets)
+
+The four letters live in `references/cancellation-letter-templates.md`: cancel a credit card, stop a debit authorization, cancel an ongoing subscription, and request a track change or a discount. Send them in Hebrew even when the conversation is in English, since that is the language the bank's service desk processes. The Hebrew companion file reproduces all four inline for direct copying.
 
 ## Troubleshooting
 

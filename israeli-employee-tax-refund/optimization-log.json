@@ -1,15 +1,17 @@
 {
   "cycles": [
     {
-      "version": "1.2.0",
-      "date": "2026-07-06",
+      "version": "1.3.0",
+      "date": "2026-08-01",
       "lessons": [
-        "Expert MINOR deferred (Phase 4.1 batch cap): private loss-of-work-capacity insurance premium deduction (Sec 32(14)/47) not named explicitly; overlaps trigger 11.",
-        "Expert MINOR deferred: returning-resident credit-point track (parallel to oleh Sec 35 trigger 7) not surfaced; currently routed to israeli-tax-returns.",
-        "Expert MINOR deferred: spreading back-pay lump sums across years (פריסת הפרשי שכר, Sec 8(3)) absent from trigger list.",
-        "Expert MAJOR deferred: married-couple treatment (חישוב מאוחד/נפרד, spouse income declaration, which spouse claims children's points) and dual-earner point allocation not addressed; estimate_refund.py is single-filer.",
-        "Expert MAJOR deferred: verify whether the cost-of-living additional credit point for parents of children aged 6-12 (הוראת שעה) is in force for each claimed year 2023-2025; if so add it.",
-        "This cycle ADDED (CPA coverage audit, CRITICAL): discharged-soldier credit points (trigger 15), Sec 45(a) natul-yecholet 2 points (trigger 16), Sec 44 institution credit (trigger 17); routed to מענק עבודה (MAJOR); added refund-opens-year-to-assessment risk caveat; fixed stale document-requirements.md (triggers 14-17). Confirmed 2026 widened brackets (20% to 19,000/mo, 31% to 25,100) and credit point 242 already current; dismissed Expert's bracket flag as based on stale 2025 values."
+        "Expert MAJOR deferred: no fallback path when Form 106 is unobtainable (defunct employer, employer refusing, older years). The standard workaround is the ITA rikuz netunim / ishur nikuyim withholding summary from the taxpayer personal area, which is also what the online refund portal auto-populates from. Note it does NOT reliably carry the 218/219 keren hishtalmut fields, so document what it does and does not replace. Step 6 currently states Form 106 from every employer as an absolute.",
+        "Expert MAJOR deferred: married-couple mechanics absent. Sections 64/65/66 are cited once and never explained. The estimator takes ONE salary and ONE points figure, so a couple running household totals through it gets a materially wrong answer with no warning. Add an explicit one-claim-per-spouse / never-aggregate instruction and the chishuv nifrad default.",
+        "Expert MAJOR deferred: ichud tikim never mentioned. If the spouse is self-employed or already holds a tik, the assessing officer works the file as a couple and the refund can be offset against the spouse's balance. Add a spouse question to the Step 1 gate and to the Gotchas offset bullet.",
+        "Expert MAJOR deferred: Example 1 shows only the no-Form-101-at-all archetype (47% flat at the second employer). The more common real Form 106 shows a 101 filed with the 'not my only income' box ticked, ordinary brackets and zero credit points, which yields roughly 40-41k withheld and a 16-20k refund rather than 37-45k. Show both variants, or state which box on the 101 produces which, so client expectations are not set about 2x too high.",
+        "Expert MINOR deferred: the estimator still applies the 3% earned-income mas yesafim above ~721,560 even though a salaried person at that income is generally 1301-obligated and routed out by Step 7. Harmless but note it in the docstring so surtax support is not read as a claim to cover high earners.",
+        "Expert MINOR deferred: Section 45A self-deposit case can double-count, because the 45A credit and the Section 47 deduction share a ceiling with the employer deposit leg.",
+        "Expert MINOR deferred: nothing tells the filer a refund can be claimed in a year with income below the tax threshold, or that no accountant or representative is required to file Form 135.",
+        "Process lesson: the per-year refactor renamed CREDIT_POINT_VALUE_ANNUAL_2026 to CREDIT_POINT_ANNUAL_BY_YEAR but missed one call site in the miluim print path, so every --miluim-days run crashed with NameError. The smoke test exercised --year across all years but never passed --miluim-days. Exercise EVERY declared flag after a constant rename, not just the ones in the changed code path."
       ]
     }
   ]
