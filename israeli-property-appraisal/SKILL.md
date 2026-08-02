@@ -25,6 +25,17 @@ Three different jobs arrive worded almost identically. Separate them before doin
 
 ### Step 2: Pull the comparables
 
+**First check which route is available to you.** The government feed is reachable two ways, and picking the wrong one is the most common failure of this skill:
+
+| Your environment | Route |
+|---|---|
+| You can run shell commands (Claude Code, Cursor, Codex, Windsurf, CLI agents) | Step 2a, the bundled script |
+| You cannot run shell commands (Claude Desktop, claude.ai, ChatGPT, Manus) | Step 2b, the nadlan.gov.il site |
+
+The script talks to the Govmap and Nadlan endpoints directly. Called from a hosted assistant those endpoints have been observed to refuse the request at the network edge, before it reaches the application, and reshaping the request does not help. The refusal has been reproduced only as a symptom, not traced to a published rule, so treat non-Israeli or datacentre egress as the likeliest explanation rather than an established one. Either way the practical consequence is the same: do not try to substitute a plain web fetch for the script.
+
+#### Step 2a: The bundled script
+
 Run the bundled script. It resolves the address to a parcel and pulls the recorded transactions for the surrounding polygon:
 
 ```bash
@@ -43,6 +54,41 @@ It prints the gush and helka, the neighbourhood, how many deals exist versus how
 **Read the filtering line before you read the median.** A typical central-Tel-Aviv polygon holds 1,500 recorded deals of which roughly 70 are residential sales inside a two-year window. The rest are shops, offices, land and older transactions. If the script kept very few deals, say so rather than presenting a median computed from four rows as if it were a market rate.
 
 **Never state a value the script did not return.** If the address is in a coverage gap the script exits with an error, and the correct response is that the government data does not cover this address, not an estimate assembled from general knowledge of the neighbourhood.
+
+#### Step 2b: No shell available
+
+Do not attempt the endpoints directly, and do not present the failure as a temporary outage.
+
+**Send the user to the source. This is the only route on this path that produces comparables.** Nadlan publishes the same records at <https://www.nadlan.gov.il>: they enter the address, open the deals list for the surrounding polygon, and paste the rows back. You then apply the whole of Steps 3 to 7 to what they pasted, which is where most of this skill's value sits anyway. The same page shows the gush and helka, which is how the parcel-lookup job in Step 1 gets answered here.
+
+**The `nadlan` MCP is context only, never a comparables source.** Its `get_deals_by_radius` tool returns an empty array, and its remaining tools return neighbourhood and address aggregates rather than deal rows, so it cannot feed Steps 3 to 7 and its aggregate figures must never be presented as comparables. It also only bypasses the edge refusal when it runs as a local process on the user's own machine; a remotely hosted MCP sits on the same address ranges that were refused, so if it fails, that is the same refusal and not an MCP fault. Fall through to the paste route.
+
+**Ask what the list said before you use what was pasted.** The site paginates and shows the newest deals first, which is why the script pages through to the declared total. Ask the user how many deals the list declared and how many rows they actually copied. If they pasted only the first page, say so and label the result recency-skewed, because the newest rows already trail the real market.
+
+**Apply the script's filters by hand to anything the user pastes.** The safeguards that make a median defensible live in the script, not in the data, so on this path you have to run them yourself before computing anything:
+
+- **Keep only residential rows.** The feed mixes shops, offices, land and storage into the same list. Keep `דירה בבית קומות`, `דירה`, `דירת גן`, `דירת גג`, `פנטהאוז`, `בית בודד`, `דו משפחתי`, `קוטג' חד משפחתי`, `קוטג' דו משפחתי`, and drop the rest. Averaging across natures is the classic wrong answer.
+- **Band to the subject property.** Without a size and room filter you are describing the price of the street, not the value of the flat. Restrict to plus or minus 25 percent of the subject area and to within one room of the subject, which is what the script's own defaults do, before you call anything a comparable. Where a row does not state a room count the script keeps it on area alone, so do the same rather than dropping it and thinning the sample further.
+- **Cut the window.** Anything older than the window the user asked for belongs out of the sample, and you should say which window you used.
+- **Flag the outliers rather than averaging them in.** Gifts between relatives, partial-share sales and combination deals publish as ordinary rows at a small fraction of the surrounding rate. Pull them out, show them separately, and never let them move the median.
+- **Drop new-build and subsidised rows, or mark them.** The nature list above admits developer sales, which are recorded inclusive of VAT and carry a new-build premium, and subsidised-programme units recorded below market. Neither is a comparable for an ordinary second-hand flat. This is a filtering step here, not just a caveat.
+- **Keep leasehold and freehold apart.** A unit held on a lease from Rashut Mekarkein Yisrael is not directly comparable to full ownership. If the rows do not say which, say that you could not tell.
+- **Count what survived.** Say how many rows the user pasted and how many you actually used. A median over four rows is not a market rate, and a thin sample has to be labelled as one.
+
+Then do the arithmetic the way the script does it, and say that this is what you did:
+
+- **Price per square metre is the deal amount divided by that row's own area field.** Never divide a total by a summed area, and never carry a figure across rows.
+- **Report the median, not the mean.** The mean is what non-arm's-length rows distort most.
+- **Use a defined outlier rule, not judgement.** Take the interquartile range of the price-per-square-metre values, and treat anything below Q1 minus 1.5 times the IQR or above Q3 plus 1.5 times the IQR as an outlier. Show those rows, exclude them from the median and range, and never delete them.
+- **Below four rows, do not flag at all.** The script does not, because an IQR on three values is meaningless. Present the rows themselves and say a median would not be reliable.
+
+**State nothing the pasted rows do not support.** This is the Step 2a rule about never inventing a value, and it binds harder here, because the dangerous case on this path is partial data rather than none: a handful of pasted rows topped up from what you remember about the neighbourhood. Do not supplement a thin paste from general knowledge, and do not present a hand-assembled table as if it had the script's coverage.
+
+Every caveat in Step 3 and in Gotchas still applies, in particular that the feed's area field has no consistent basis and that recent rows trail the real market. Step 7 also binds on this path: state the subject's area and room count alongside the selection so the letter is auditable.
+
+Everything in this skill except the data pull works without the feed. The Standard 19 explanation, the betterment-levy exemption check, the objection routing and the letter are all reachable, so say what you cannot do and continue with what you can.
+
+**Say plainly that you have no figures.** With no deals in hand you have no median and no range. Do not fill the gap with remembered neighbourhood prices, and do not describe a number as approximate when it has no source at all.
 
 ### Step 3: Turn deals into a defensible range
 
@@ -130,6 +176,7 @@ The declared deal count can exceed the number of distinct records the endpoint s
 - **Treating new-build and subsidised sales as ordinary comparables.** The residential deal natures cover both developer sales and second-hand resales. Developer prices are recorded inclusive of VAT and carry a new-build premium, and subsidised-programme units are recorded at the subsidised price rather than market. The script cannot separate them from the nature field alone, so scan the rows before leaning on the median.
 - **Reading the newest rows as today's market.** Deals appear only after they are reported to the Tax Authority, so the recent end of any window trails real time. In a moving market the median is a rear-view figure, and saying so matters more than the figure itself.
 - **Treating the area figure as a defined basis.** The feed's area field is not consistently net, gross, or inclusive of balconies and common property, which is exactly the axis a professional valuation pins down. Shekels per square metre computed from it is indicative, not directly comparable to an appraiser's figure.
+- **Explaining a 403 as a broken government API.** A blanket 403 across every address, including one that worked before, points at your own environment being refused at the edge, not at the service being down and not at an expired token. Reporting it as a server-side fault sends the user off to wait for a fix that is not coming, when the answer is the Step 2b route. Diagnose the environment before blaming the source.
 - **Assuming the levy follows the seller automatically.** Liability attaches to whoever held the rights at the time of the betterment, which is why it must be settled at closing.
 
 ## Recommended MCP Servers
@@ -156,8 +203,9 @@ The declared deal count can exceed the number of distinct records the endpoint s
 | Symptom | Cause | Fix |
 |---|---|---|
 | `No address match` | Street or city misspelled, or the city is missing | Add the city, try the official street spelling |
-| `no transaction data for polygon (HTTP 500)` | Coverage gap | Report that the data is unavailable here. Do not estimate |
+| `no transaction data for polygon (HTTP 500)` | Coverage gap | Report that the data is unavailable here. Do not estimate. The user can confirm the gap is real rather than transient by checking the same address on nadlan.gov.il |
 | `did not return JSON` | A WAF or maintenance page was served | Retry later. Do not treat it as an empty result |
-| `returned HTTP 403` | The public token was rotated or the required headers were dropped | Re-check the chain against `evidence.json`. Do not fabricate figures |
+| `HTTP 403`, on every address including one known to work | The request was refused at the network edge before reaching the API. Verified not to be the token and not the headers; non-Israeli or datacentre egress is the likeliest cause but is not confirmed | Go to Step 2b. Do not retry, do not report a rotated token, and do not fabricate figures |
+| `HTTP 500` on the search endpoint only | The `Origin` and `Referer` headers were dropped. That endpoint requires them; the deals endpoint does not | Send the headers the script sends. This is a malformed request, not an outage. If you have no shell you should not be calling this endpoint at all, go to Step 2b |
 | Very few comparables kept | Narrow window or a quiet street | Widen with `--years`, and say the sample is thin |
 | All deals flagged as outliers | Contaminated or tiny sample | Review the rows by hand, do not derive a range |

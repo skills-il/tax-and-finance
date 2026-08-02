@@ -74,9 +74,17 @@ def _request(url, payload=None, timeout=30):
         with urllib.request.urlopen(req, timeout=timeout) as resp:
             body = resp.read()
     except urllib.error.HTTPError as exc:
+        if exc.code == 403:
+            raise PipelineError(
+                f"{method} {url} returned HTTP 403. The request was refused at the "
+                f"network edge before reaching the API. This is not the token and not "
+                f"the headers, so retrying will not help; non-Israeli or datacentre "
+                f"egress is the likeliest cause but is not confirmed. Do not guess a "
+                f"value and do not report a rotated token."
+            ) from exc
         raise PipelineError(
-            f"{method} {url} returned HTTP {exc.code}. The public API token may have "
-            f"rotated or the endpoint moved. Do not guess a value, re-check the chain."
+            f"{method} {url} returned HTTP {exc.code}. The endpoint may have moved or "
+            f"changed shape. Do not guess a value, re-check the chain."
         ) from exc
     except urllib.error.URLError as exc:
         raise PipelineError(f"{method} {url} failed: {exc.reason}") from exc
@@ -190,7 +198,11 @@ def fetch_deals(polygon_id, page_size=2000):
 
 
 def filter_deals(rows, years):
-    """Keep arm's-length residential rows with a usable area, within the window."""
+    """Keep residential rows with a usable area, within the window.
+
+    This does NOT test for arm's length. Gifts, partial-share and combination
+    deals pass straight through here and are only flagged later by _flag_outliers.
+    """
     cutoff = datetime.now() - timedelta(days=365 * years)
     kept, dropped = [], {"non_residential": 0, "no_area": 0, "too_old": 0}
     for r in rows:

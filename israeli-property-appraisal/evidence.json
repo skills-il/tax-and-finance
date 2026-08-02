@@ -453,6 +453,17 @@
       "confidence": "high",
       "verified_via": "browser",
       "verified_at": "2026-07-30"
+    },
+    {
+      "id": "govmap-403-is-edge-block",
+      "claim": "A blanket HTTP 403 across every address on the Govmap/Nadlan chain is reproducibly NOT a rotated token and NOT dropped headers; the search endpoint returns 500, not 403, when Origin/Referer are missing. The refusal is consistent with a network-edge block on non-Israeli or datacentre egress, but that mechanism was not observed directly (the probe ran from an Israeli IP only) and is stated as the likeliest explanation rather than an established one.",
+      "claim_type": "api_behaviour",
+      "source_url": "https://www.govmap.gov.il/api/search-service/api-search",
+      "source_fetched_at": "2026-08-02T12:55:02+00:00",
+      "raw_snippet": "Live probe 2026-08-02 from an Israeli egress (CloudFront POP TLV55): search 200, layer-features-by-location 200, api.nadlan.gov.il/deal-info 200, street-deals 200, all with the embedded apiKey. Omitting Origin and Referer on api-search returns HTTP 500 {\"message\":\"Internal server error\"}; the street-deals endpoint returns 200 without them. User-agent variation (python-urllib, curl, empty, Mozilla) returns 200 in every case. No request shape produced a 403.",
+      "confidence": "high for the negative findings, medium for the geo/ASN mechanism",
+      "verified_via": "live_probe",
+      "verified_at": "2026-08-02T12:55:02+00:00"
     }
   ]
 }
