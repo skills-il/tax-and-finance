@@ -1,0 +1,86 @@
+{
+  "author": "skills-il",
+  "version": "1.0.0",
+  "category": "tax-and-finance",
+  "volatility": "legislative",
+  "domain_checklist_version": 1,
+  "tags": {
+    "he": [
+      "הערכת-שווי",
+      "שווי-חברה",
+      "היוון-תזרים-מזומנים",
+      "מכפילים",
+      "שיעור-היוון",
+      "סעיף-104",
+      "מפעל-מועדף",
+      "ישראל"
+    ],
+    "en": [
+      "company-valuation",
+      "dcf",
+      "wacc",
+      "market-multiples",
+      "business-valuation",
+      "section-104",
+      "preferred-enterprise",
+      "israel"
+    ]
+  },
+  "display_name": {
+    "he": "הערכת שווי חברה פרטית",
+    "en": "Israeli Company Valuation"
+  },
+  "display_description": {
+    "he": "בונה טווח שווי אינדיקטיבי לחברה פרטית ישראלית בשלוש גישות: היוון תזרים מזומנים, מכפילי שוק וגישת הנכס. בונה את שיעור ההיוון שלב אחר שלב, עם ריבית חסרת סיכון עדכנית מבנק ישראל, פרמיית סיכון המדינה של ישראל, ושיעור המס האפקטיבי האמיתי של החברה במקום 23% אוטומטי. השתמשו בו כששואלים כמה שווה העסק, כשקונים או מוכרים חברה פרטית, כשצריך הערכת שווי להעברת מניות או לשינוי מבנה לפי סעיף 104, כשקובעים יחס הקצאת מניות, או כשרוצים לבדוק הערכה שמישהו אחר הכין. זה חשוב כי הערכה ישראלית שנבנתה לפי ספר לימוד אמריקאי טועה בשלושה דברים בבת אחת: היא מפספסת את פרמיית סיכון המדינה שעלתה אחרי הורדות הדירוג, היא מחילה את שיעור המס הרגיל על חברה שבפועל משלמת מס מופחת כמפעל מועדף, והיא מחזירה מספר אחד במקום טווח. התוצאה היא הערכה אינדיקטיבית בלבד. חברות בשלב מוקדם ולפני הכנסות נכללות בהערכה, בשיטות מבוססות סבב וחלוקה לפי מפל בין סוגי מניות ולא בהיוון תזרים. לא לשימוש לשמאות מקרקעין, שהיא מקצוע מורשה נפרד, לניתוח מניות בבורסה (tase-stock-analysis), לכתיבת מזכר השקעה בעסקת סטארטאפ (israeli-startup-investment-analyzer), לתכנון משיכת רווחים בין משכורת לדיבידנד (israeli-corporate-tax-strategy), למס שעובד משלם על אופציות ו-RSU (israeli-stock-options-tax), או להפקת הערכת שווי חתומה להגשה, שדורשת רואה חשבון או מעריך שווי מוסמך.",
+    "en": "Builds an indicative valuation range for an Israeli private company using DCF, market multiples, and the asset approach, with a transparent WACC build-up that uses a live Israeli risk-free rate, the current Israel country risk premium, and the company's own effective Israeli tax rate rather than a generic 23%. Use when someone asks what their company is worth, is buying or selling a private Israeli business, needs a valuation to support a share transfer or a Section 104 reorganization, is setting a share allocation ratio, or wants to sanity-check a valuation someone else produced. It matters because an Israeli valuation built from a US textbook gets three things wrong at once: it misses the country risk premium that rose after the sovereign downgrades, it applies the statutory tax rate to a company that actually pays a reduced preferred-enterprise rate, and it presents a single point estimate where a range is the honest answer. The output is indicative only. Early-stage and pre-revenue companies are in scope for valuation, using round-based methods and a share-class allocation waterfall rather than a DCF. Do NOT use for real estate appraisal (a separate licensed profession), for listed-share analysis (use tase-stock-analysis), for writing a VC-style investment memo on a startup deal (use israeli-startup-investment-analyzer), for owner profit-extraction planning between salary and dividends (use israeli-corporate-tax-strategy), for the tax an employee owes on options or RSUs (use israeli-stock-options-tax), or to produce a signed valuation opinion for filing, which requires an engaged accountant or valuer."
+  },
+  "authoritative_sources": [
+    {
+      "url": "https://www.gov.il/he/departments/israel_tax_authority",
+      "type": "regulator",
+      "language": "he"
+    },
+    {
+      "url": "https://www.boi.org.il/roles/statistics/makamandbonds/yield/",
+      "type": "regulator",
+      "language": "he"
+    },
+    {
+      "url": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ctryprem.html",
+      "type": "dataset",
+      "language": "en"
+    },
+    {
+      "url": "https://taxsummaries.pwc.com/israel/corporate/tax-credits-and-incentives",
+      "type": "reference",
+      "language": "en"
+    },
+    {
+      "url": "https://market.tase.co.il/he/market_data",
+      "type": "exchange",
+      "language": "he"
+    }
+  ],
+  "supported_agents": [
+    "claude-code",
+    "cursor",
+    "github-copilot",
+    "windsurf",
+    "opencode",
+    "codex",
+    "openclaw",
+    "antigravity",
+    "gemini-cli",
+    "chatgpt",
+    "claude-ai",
+    "claude-desktop",
+    "manus"
+  ],
+  "openclaw": {
+    "requires": {
+      "bins": [],
+      "env": []
+    },
+    "emoji": "📈"
+  }
+}
