@@ -464,6 +464,28 @@
       "confidence": "high for the negative findings, medium for the geo/ASN mechanism",
       "verified_via": "live_probe",
       "verified_at": "2026-08-02T12:55:02+00:00"
+    },
+    {
+      "id": "nadlan-mcp-returns-deal-rows",
+      "claim": "The nadlan MCP's get_valuation_comparables returns individual deal rows (with gushNum/parcelNum, area, amount, date, rooms, floor, dealNatureDescription), not only aggregates, and accepts address/years_back/min_area/max_area/min_rooms/max_rooms/min_floor/max_floor/radius_meters/deal_type.",
+      "claim_type": "tool_behaviour",
+      "source_url": "https://github.com/nitzpo/nadlan-mcp/blob/master/API_REFERENCE.md",
+      "source_fetched_at": "2026-08-02T15:48:54+00:00",
+      "raw_snippet": "#### `get_valuation_comparables`\n\nGet comparable properties for valuation analysis.\n\n**Parameters:**\n- `address` (string, required): Address to find comparables for\n- `years_back` (int, default: 2): Years to look back\n- `property_type` (string, optional): Filter by property type\n- `min_rooms` (float, optional): Minimum rooms\n- `max_area` (float, optional): Maximum area\n- `radius_meters` (int, default: 100): Search radius\n\n**Returns:** JSON with filtered comparable deals and statistics",
+      "confidence": "high",
+      "verified_via": "live_probe",
+      "verified_at": "2026-08-02T15:48:54+00:00"
+    },
+    {
+      "id": "nadlan-mcp-not-residential-filtered",
+      "claim": "get_valuation_comparables does NOT restrict results to residential deal natures, and non-residential rows enter its own market_statistics block, so its statistics must not be quoted directly.",
+      "claim_type": "tool_behaviour",
+      "source_url": "https://github.com/nitzpo/nadlan-mcp",
+      "source_fetched_at": "2026-08-02T15:48:54+00:00",
+      "raw_snippet": "Live run 2026-08-02, get_valuation_comparables(address='הרצל 10 חיפה', years_back=5, radius_meters=300): 3 deals returned, one of which is {\"deal_amount\": 708000.0, \"asset_area\": 100.0, \"property_type_description\": \"בנין\", \"dealNatureDescription\": \"מלאכה\"}. Resulting price_per_sqm_statistics = {\"mean\": 15439.73, \"median\": 16981.13, \"min\": 7080.0, \"p25\": 7080.0}: the 7080.0 min and p25 are that workshop row (708000/100). Server log also shows: Tool get_deals_by_radius is DISABLED; Tool get_street_deals is DISABLED. Rendered in the skill body as: שורת מלאכה בשטח 100 מ\"ר ב-708,000 שקל (708,000 שקל = deal_amount 708000.0).",
+      "confidence": "high",
+      "verified_via": "live_probe",
+      "verified_at": "2026-08-02T15:48:54+00:00"
     }
   ]
 }
