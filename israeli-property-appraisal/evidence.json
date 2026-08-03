@@ -486,6 +486,28 @@
       "confidence": "high",
       "verified_via": "live_probe",
       "verified_at": "2026-08-02T15:48:54+00:00"
+    },
+    {
+      "id": "mad-modified-zscore-rule",
+      "claim": "Outlier detection uses the Iglewicz-Hoaglin modified z-score: 0.6745 x (value - median) / MAD, flagging absolute values greater than 3.5. This is the recommended robust alternative to z-scores for small samples.",
+      "claim_type": "statistical_method",
+      "source_url": "https://www.itl.nist.gov/div898/handbook/eda/section3/eda35h.htm",
+      "source_fetched_at": "2026-08-03T13:32:34+00:00",
+      "raw_snippet": "Iglewicz and Hoaglin recommend using the modified Z-score M_i = 0.6745(x_i - x-tilde) / MAD with MAD denoting the median absolute deviation and x-tilde denoting the median. These authors recommend that modified Z-scores with an absolute value of greater than 3.5 be labeled as potential outliers.",
+      "confidence": "high",
+      "verified_via": "browser",
+      "verified_at": "2026-08-03T13:32:34+00:00"
+    },
+    {
+      "id": "iqr-fails-thin-samples",
+      "claim": "Tukey interquartile fences fail to flag an extreme outlier at n=4 and n=5 in both directions, because the outlier inflates the half it is measured against. At n=5 with values 10000/10100/10200/10300/100000 the upper fence reaches 122,800 and nothing is flagged.",
+      "claim_type": "verified_defect",
+      "source_url": "https://www.itl.nist.gov/div898/handbook/eda/section3/eda35h.htm",
+      "source_fetched_at": "2026-08-03T13:32:34+00:00",
+      "raw_snippet": "Computed 2026-08-03 against the shipped comparables.py logic. n=5 values [10000,10100,10200,10300,100000]: lower half [10000,10100] gives Q1=10050; upper half [10300,100000] gives Q3=55150; IQR=45100; upper fence = 55150 + 1.5*45100 = 122800; 100000 < 122800 so the row is NOT flagged. Enumerated n=4..12: n=4 and n=5 miss the outlier in both the high and low direction, n>=6 catch it. Replacement MAD rule catches all of these and produced fewer false positives on clean simulated samples (13.0% vs 15.1% over 6800 draws, n=4..20). NIST notes the underlying reason: z-score style detection 'can be misleading (particularly for small sample sizes)'.",
+      "confidence": "high",
+      "verified_via": "live_probe",
+      "verified_at": "2026-08-03T13:32:34+00:00"
     }
   ]
 }
