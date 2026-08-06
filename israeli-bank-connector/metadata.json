@@ -1,6 +1,6 @@
 {
   "author": "skills-il",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "category": "tax-and-finance",
   "tags": {
     "he": [
@@ -18,7 +18,11 @@
       "israel"
     ]
   },
-  "mcp-server": "israeli-bank-mcp",
+  "mcp-servers": [
+    "israeli-bank-mcp",
+    "il-bank-mcp"
+  ],
+  "mcp-required": false,
   "display_name": {
     "he": "מחבר בנקאות ישראלי",
     "en": "Israeli Bank Connector"

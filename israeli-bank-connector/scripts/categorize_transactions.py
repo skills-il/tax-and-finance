@@ -166,7 +166,13 @@ def analyze_transactions(transactions: list[dict]) -> dict:
             categories[category] += amount
             merchants[desc] += amount
         category_count[category] += 1
-        categorized.append({**txn, "category": category, "is_credit": raw_amount > 0})
+        categorized.append({
+            "date": txn.get("date"),
+            "description": desc,
+            "amount": raw_amount,
+            "category": category,
+            "is_credit": raw_amount > 0,
+        })
 
     # Money moved into a pension, keren hishtalmut or gemel is NOT spending: it is the
     # user's own money changing pocket. Folding it into "total spending" overstates the

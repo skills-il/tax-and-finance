@@ -113,6 +113,28 @@
         "SKILL_HE.md",
         "references/supported-banks.md"
       ]
+    },
+    {
+      "claim_id": "il-bank-mcp-lockfile-pin-6-1-4",
+      "claim": "il-bank-mcp declares israeli-bank-scrapers ^6.1.4 in packages/scraper/package.json, but its committed yarn.lock resolves it to exactly 6.1.4 (published 2025-06-09). That predates v6.7.9 (max: scrape fails on login page), v6.7.10 (isracard: workaround for bot detection) and v6.8.0 (visa-cal: complete unfinished frame implementation), so Max, Isracard and Visa Cal do not work on it. Verified by cloning the repo and reading yarn.lock, and against the upstream release notes.",
+      "source_url": "https://github.com/glekner/il-bank-mcp/blob/main/yarn.lock",
+      "raw_snippet": "\"israeli-bank-scrapers@npm:^6.1.4\": version: 6.1.4",
+      "fetched_at": "2026-08-06T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "boi-consumer-enquiries-tos-pointer",
+      "claim": "The Bank of Israel Consumer Enquiries and Inspections Unit handles complaints from bank and credit card customers. Used as the pointer for the terms-of-service and fraud-liability caution. The caution itself is stated qualitatively: no specific BOI directive number is asserted.",
+      "source_url": "https://www.boi.org.il/en/information-and-service-to-the-public/consumer-enquiries-and-inspections/",
+      "raw_snippet": "Consumer Enquiries and Inspections Unit handles complaints from bank and credit card customers",
+      "fetched_at": "2026-08-06T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     }
   ]
 }

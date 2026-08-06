@@ -32,6 +32,25 @@
         "Unsourced claims still in the body: the Berlin Group NextGenPSD2 basis for Israeli Open Banking; the per-bank history-depth claim (Hapoalim/Leumi <12 months, FIBI group 12+); session lifetimes of ~15-30 minutes and OneZero's OTP setup; bank ownership/positioning notes (Yahav owned by Hapoalim, Massad education sector, Pagi Charedi-focused); and the il-bank-mcp last-push date and its 6.1.4 pin. Source or hedge each next cycle.",
         "The phrase 'a substantial share' for typical Israeli payslip savings deductions is unsourced; either cite a BTL/pension figure or drop the quantifier."
       ]
+    },
+    {
+      "version": "1.4.0",
+      "date": "2026-08-06",
+      "lessons": [
+        "CRITICAL FIXED: categorize_transactions.py built output with {**txn}, so every field the upstream feed carried (account number, card identifier, asmachta, memo) was printed by --output-json. That contradicted the skill's own rule against repeating a card number 'even partially'. Now an explicit allowlist of date/description/amount/category/is_credit.",
+        "ADDED (biggest gap): an integrity section in both languages. The skill had a confidentiality section (do not leak credentials out) and nothing telling the agent that merchant descriptions are attacker-controllable input that must never be followed as instructions. Transfer reference fields and Bit notes mean anyone who can send the user a shekel can place text on their statement.",
+        "FIXED: the frontmatter said 'Requires ... MCP server' while Step 1 offered a no-MCP path and the bundled script has zero MCP dependency. compatibility now states the split (analysis standalone, retrieval needs MCP), metadata.json mcp-server became mcp-servers plus mcp-required: false, and Step 1 stopped promising CSV/Excel import that is not implemented.",
+        "FIXED: 2FA troubleshooting said 'one-time setup per session' while references/supported-banks.md said sessions expire in 15-30 minutes. Reconciled, and added guidance to approve only OTP prompts tied to an action just requested, since training reflexive approval of unsolicited bank prompts is how account takeover works.",
+        "REFRAMED: il-bank-mcp staleness was described as a capability caveat. Its committed yarn.lock pins israeli-bank-scrapers to exactly 6.1.4 (2025-06-09), which predates v6.7.9 (max login), v6.7.10 (isracard bot detection) and v6.8.0 (visa-cal frames), so those three do not work at all. An unmaintained dependency holding bank credentials is a security consideration.",
+        "UPSTREAM FINDING (not fixable in this skill): israeli-bank-mcp returns JSON.stringify(result) from getLongTermTwoFactorToken, and the upstream type ScraperGetLongTermTwoFactorTokenResult carries longTermTwoFactorAuthToken, so a persistent bank credential enters the transcript. It also returns the whole scrapeResult unfiltered, which is the upstream source of the {**txn} leak. The skill now warns not to repeat raw fields back.",
+        "ADDED: data-lifecycle guidance (state export paths, keep exports out of synced folders, the SQLite store is unencrypted and how to purge it) and a qualitative terms-of-service and fraud-liability caution pointing at the BOI consumer enquiries page. No BOI directive number asserted, since none was fetched."
+      ],
+      "carry": [
+        "allowed-tools is still not set on this skill, while israeli-crypto-tax-reporter and israeli-tax-returns do set it. It was left off deliberately this cycle: Step 2 is entirely mcp__* tool calls and it was not established whether allowed-tools gates MCP tools. A naive Bash(python:*) list could disable the skill's core function. Verify the interaction, then add it; without WebFetch and Write the injection scenario loses its exfiltration path.",
+        "The '~15-30 minute' session lifetime is still unsourced and the 2FA guidance now leans on it harder than before. Source or hedge next cycle.",
+        "Still unsourced from earlier cycles: the Berlin Group NextGenPSD2 basis for Israeli Open Banking; the per-bank history-depth claim; bank ownership and positioning notes.",
+        "No CSV or Excel ingest exists. Step 1 now tells the user to convert to JSON rather than promising an import that is not implemented. Implementing a converter would make the credential-free path genuinely usable and would also serve as a fallback when a scraper breaks, which happens roughly monthly."
+      ]
     }
   ]
 }
