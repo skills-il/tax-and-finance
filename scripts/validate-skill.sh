@@ -45,9 +45,11 @@ for file in "$@"; do
     ERRORS="$ERRORS\n- $file: name cannot contain 'claude' or 'anthropic' (reserved)"
   fi
 
-  # 5. description field: present, <1024 chars, no XML, includes WHEN trigger
+  # 5. description field: present, within the length cap, no XML, includes WHEN trigger
   # Handle multi-line YAML descriptions (>- or | or plain multi-line)
-  DESC=$(awk '
+  # DESC_RAW keeps the YAML quoting; DESC is the parsed value used for the
+  # content checks below.
+  DESC_RAW=$(awk '
     /^description:/ {
       sub(/^description:[[:space:]]*/, "")
       if ($0 ~ /^[>|]-?[[:space:]]*$/) { getline; sub(/^[[:space:]]+/, ""); desc = $0 }
@@ -56,17 +58,21 @@ for file in "$@"; do
         if (/^[a-zA-Z_-]+:/ || /^---$/) break
         sub(/^[[:space:]]+/, ""); desc = desc " " $0
       }
-      gsub(/^["'"'"']|["'"'"']$/, "", desc)
       print desc
       exit
     }
   ' <<< "$FRONTMATTER")
+  DESC=$(sed -E 's/^["'"'"']//; s/["'"'"']$//' <<< "$DESC_RAW")
   if [ -z "$DESC" ]; then
     ERRORS="$ERRORS\n- $file: Missing required 'description' field"
   else
-    DESC_LEN=${#DESC}
-    if [ "$DESC_LEN" -gt 1024 ]; then
-      ERRORS="$ERRORS\n- $file: description exceeds 1024 characters ($DESC_LEN)"
+    # The spec cap is 1024, but Gemini Spark REJECTS a skill at exactly 1024 and
+    # may count the surrounding YAML quotes, so the gate is on the raw quoted
+    # value at 1023. Aim for =< 950 when authoring; long descriptions also blunt
+    # agent routing. See CLAUDE.md "Gemini Spark".
+    DESC_LEN=${#DESC_RAW}
+    if [ "$DESC_LEN" -gt 1023 ]; then
+      ERRORS="$ERRORS\n- $file: description too long ($DESC_LEN incl. YAML quotes, max 1023; Gemini Spark rejects at the 1024 boundary)"
     fi
     if echo "$DESC" | grep -qE '[<>]'; then
       ERRORS="$ERRORS\n- $file: description contains forbidden XML angle brackets"
