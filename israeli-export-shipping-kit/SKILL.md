@@ -7,6 +7,13 @@ compatibility: "Works with Claude Code, Cursor, GitHub Copilot, Windsurf, OpenCo
 
 # Israeli Export Shipping Kit
 
+## Legal notice
+
+This is a free information tool operated by an AI model. It explains customs and import rules and helps you organise your own figures. All of its outputs are produced automatically by an AI model, with no involvement, review, or approval by a customs agent or tax adviser. The output is not a filed customs declaration and not a professional opinion, but an explanation and a draft only. An AI model may err, omit data, or present a wrong conclusion.
+
+A declaration to the customs authority is a legal document, and a false declaration carries liability. Any text this tool produces is therefore an automatic draft for your personal preparation only, to be checked with a customs agent or with the Tax Authority before filing. This tool is not a substitute for advice that takes account of the particular circumstances and needs of each person, and all use of its output is the user's sole responsibility.
+
+
 ## Problem
 
 Shipping a product out of Israel triggers a paperwork chain: commercial invoice, packing list, transport document (B/L, AWB or CMR), and an origin proof matched to the destination's FTA (EUR.1 for EU/UK, US Origin Invoice Declaration for the USA, Form B239 for Canada). Getting any of these wrong delays clearance or denies preferential duty. Exporters also routinely pick the wrong Incoterm and end up absorbing freight or insurance they meant the buyer to pay.

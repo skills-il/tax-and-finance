@@ -1,6 +1,6 @@
 {
   "author": "skills-il",
-  "version": "1.4.1",
+  "version": "1.5.0",
   "category": "tax-and-finance",
   "tags": {
     "he": [
@@ -25,8 +25,8 @@
     "en": "Israeli VAT Reporting"
   },
   "display_description": {
-    "he": "הכנה, אימות והנחיה להגשת דוחות מע\"מ (דו\"ח מעמ) בהתאם לדרישות רשות המסים. תומך בדיווח חודשי, דו-חודשי ושנתי, כולל ייצוא בשיעור אפס, עסקאות פטורות, כללי אזור אילת ודרישות מספר הקצאה. לא מיועד למס הכנסה, מס חברות או מערכות מע\"מ שאינן ישראליות.",
-    "en": "Prepare, validate, and guide submission of Israeli VAT reports (Doch Maam) per Tax Authority standards. Use when user asks about VAT reporting, VAT calculation, \"doch maam\", \"maam\", Israeli VAT filing, VAT deadlines, or input/output VAT reconciliation. Supports monthly, bi-monthly, and annual reporting. Handles zero-rated exports, exempt transactions, and Eilat zone rules. Do NOT use for income tax, corporate tax, or non-Israeli VAT systems."
+    "he": "אינו ייעוץ מס ואינו דוח שהוגש. הכנה, אימות והנחיה להגשת דוחות מע\"מ (דו\"ח מעמ) בהתאם לדרישות רשות המסים. תומך בדיווח חודשי, דו-חודשי ושנתי, כולל ייצוא בשיעור אפס, עסקאות פטורות, כללי אזור אילת ודרישות מספר הקצאה. לא מיועד למס הכנסה, מס חברות או מערכות מע\"מ שאינן ישראליות.",
+    "en": "Not tax advice and not a filed return. Prepare, validate, and guide submission of Israeli VAT reports (Doch Maam) per Tax Authority standards. Use when user asks about VAT reporting, VAT calculation, \"doch maam\", \"maam\", Israeli VAT filing, VAT deadlines, or input/output VAT reconciliation. Supports monthly, bi-monthly, and annual reporting. Handles zero-rated exports, exempt transactions, and Eilat zone rules. Do NOT use for income tax, corporate tax, or non-Israeli VAT systems."
   },
   "supported_agents": [
     "claude-code",

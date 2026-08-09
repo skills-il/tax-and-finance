@@ -8,6 +8,13 @@ compatibility: Works with Claude Code, OpenClaw, Cursor, Windsurf, Codex, GitHub
 
 # Israeli Employee Tax Refund
 
+## Legal notice
+
+This is a free information tool operated by an AI model. It explains the tax rules and helps you organise your own figures. All of its outputs are produced automatically by an AI model, with no involvement, review, or approval by a tax adviser or accountant. The output is not a tax opinion, not a return prepared by a licensed representative, and not professional advice, but a general calculation and explanation only: it does not examine the full extent of your income or your complete documents. An AI model may err, omit data, or present a wrong conclusion.
+
+Any form or text this tool produces is an automatic draft for your personal preparation only, and is not a filed return. Responsibility for reporting and for paying the tax is yours, the binding computation is the Tax Authority's, and representation before the Tax Authority is reserved to those permitted by law. This tool is not a substitute for advice that takes account of the particular circumstances and needs of each person. Consult a tax adviser or accountant before filing or paying. All use of its output is the user's sole responsibility.
+
+
 ## Problem
 
 Hundreds of thousands of salaried Israelis overpay income tax every year and never claim the refund they are entitled to. Mid-year job changes, periods of unemployment, maternity leave, reserve duty, donations, residency in a settled area, and missed credit points all create gaps between what the employer withheld and what the employee actually owed. The voluntary refund track (Form 135 or the online portal at the Tax Authority) is the way to recover that money, but the rules, forms, and 6-year retroactive window are opaque. This skill detects refund triggers from the employee's Form 106, estimates the refund using current-year brackets and credit-point values, generates a per-trigger document checklist, and produces a filled Form 135 or guides the user through the online portal.

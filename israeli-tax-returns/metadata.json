@@ -1,6 +1,6 @@
 {
   "author": "skills-il",
-  "version": "1.7.2",
+  "version": "1.8.0",
   "category": "tax-and-finance",
   "tags": {
     "he": [
@@ -27,8 +27,8 @@
     "en": "Israeli Tax Returns"
   },
   "display_description": {
-    "he": "הכנה והגשה של דוחות מס לרשות המסים בישראל, כולל דוח שנתי ליחיד (טופס 1301), דוח מקוצר לשכיר (טופס 135), דוח שנתי לחברה (טופס 1214), דוח מעסיק (טופס 126), דוח תשלומים לספקים (טופס 856), דוח כספי (טופס 6111), מקדמות מס, הצהרת מס שבח מקרקעין, ורווח הון מניירות ערך. לא לשימוש עבור דיווח מע\"מ (השתמשו ב-israeli-vat-reporting), ניכוי מס במקור (israeli-tax-withholding), מס קריפטו (israeli-crypto-tax-reporter), שכר (israeli-payroll-calculator), חשבוניות (israeli-e-invoice), או אופציות עובדים לפי סעיף 102 (israeli-stock-options-tax).",
-    "en": "Prepare and file Israeli tax returns with Reshut HaMisim. Covers Form 1301 (individual), Form 135 (short return for salaried refund-seekers), Form 1214 (corporate), Form 126 (employer salary), Form 856 (supplier payments), Form 6111 (financial statements), mikdamot (advance payments), Mas Shevach (real estate capital gains), and securities capital gains (Forms 1322/1325). Guides income classification, deductions, tax credits, surtax, deadlines, and SHAAM submission. Do NOT use for VAT reporting (use israeli-vat-reporting), withholding tax (use israeli-tax-withholding), crypto tax (use israeli-crypto-tax-reporter), payroll (use israeli-payroll-calculator), invoicing (use israeli-e-invoice), or Section 102 employee stock options (use israeli-stock-options-tax)."
+    "he": "אינו ייעוץ מס ואינו דוח שהוגש. הכנה והגשה של דוחות מס לרשות המסים בישראל, כולל דוח שנתי ליחיד (טופס 1301), דוח מקוצר לשכיר (טופס 135), דוח שנתי לחברה (טופס 1214), דוח מעסיק (טופס 126), דוח תשלומים לספקים (טופס 856), דוח כספי (טופס 6111), מקדמות מס, הצהרת מס שבח מקרקעין, ורווח הון מניירות ערך. לא לשימוש עבור דיווח מע\"מ (השתמשו ב-israeli-vat-reporting), ניכוי מס במקור (israeli-tax-withholding), מס קריפטו (israeli-crypto-tax-reporter), שכר (israeli-payroll-calculator), חשבוניות (israeli-e-invoice), או אופציות עובדים לפי סעיף 102 (israeli-stock-options-tax).",
+    "en": "Not tax advice and not a filed return. Prepare and file Israeli tax returns with Reshut HaMisim. Covers Form 1301 (individual), Form 135 (short return for salaried refund-seekers), Form 1214 (corporate), Form 126 (employer salary), Form 856 (supplier payments), Form 6111 (financial statements), mikdamot (advance payments), Mas Shevach (real estate capital gains), and securities capital gains (Forms 1322/1325). Guides income classification, deductions, tax credits, surtax, deadlines, and SHAAM submission. Do NOT use for VAT reporting (use israeli-vat-reporting), withholding tax (use israeli-tax-withholding), crypto tax (use israeli-crypto-tax-reporter), payroll (use israeli-payroll-calculator), invoicing (use israeli-e-invoice), or Section 102 employee stock options (use israeli-stock-options-tax)."
   },
   "supported_agents": [
     "claude-code",

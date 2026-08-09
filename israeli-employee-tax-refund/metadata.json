@@ -1,6 +1,6 @@
 {
   "author": "skills-il",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "category": "tax-and-finance",
   "tags": {
     "he": [
@@ -33,8 +33,8 @@
     "en": "Israeli Employee Tax Refund"
   },
   "display_description": {
-    "he": "ליווי שכירים בהליך החזר מס וולונטרי מרשות המסים. הסקיל קורא את טופס 106, מזהה טריגרים להחזר (החלפת עבודה, אבטלה, חופשת לידה, מילואים, תרומות לפי סעיף 46, יישוב מזכה, נקודות זיכוי שלא נדרשו, נכות, מזונות, משיכת קרן השתלמות), מעריך את גובה ההחזר לפי מדרגות 2026 ושווי נקודה (242 ₪/חודש), מייצר רשימת מסמכים לכל טריגר, וממלא טופס 135 או מפנה לפורטל המקוון של רשות המסים. מכיר את חלון 6 השנים אחורה לפי סעיף 160 לפקודה. השתמשו בו כשמשתמש שואל על החזר מס לשכירים, טופס 135, החזר על שנים קודמות, מילואים, תרומות, או נקודות זיכוי שלא נוצלו. אל תשתמשו בסקיל הזה לעצמאים, טופס 1301, אופציות, קריפטו, או מע\"מ.",
-    "en": "Guide salaried Israeli employees through the voluntary tax-refund process with Reshut HaMisim. Reads Form 106, detects refund triggers (mid-year job change, unemployment, maternity leave, military reserve duty, Section 46 donations, yishuv mezakeh, undeclared credit points, disability, alimony, early keren hishtalmut withdrawal), estimates the refund using 2026 brackets and the 242 ₪/month credit-point value, generates a per-trigger document checklist, and fills Form 135 or routes the user to the online refund portal. Knows the 6-year retroactive window (Section 160 ITO). Use when a salaried employee asks about Israeli tax refund, החזר מס לשכירים, Form 135, missed credit points, miluim refund, or refunds for previous tax years. Do NOT use for self-employed Form 1301 filers (use israeli-tax-returns), payroll math (use israeli-payroll-calculator), stock options (use israeli-stock-options-tax), crypto (use israeli-crypto-tax-reporter), or VAT (use israeli-vat-reporting)."
+    "he": "אינו ייעוץ מס ואינו דוח שהוגש. ליווי שכירים בהליך החזר מס וולונטרי מרשות המסים. הסקיל קורא את טופס 106, מזהה טריגרים להחזר (החלפת עבודה, אבטלה, חופשת לידה, מילואים, תרומות לפי סעיף 46, יישוב מזכה, נקודות זיכוי שלא נדרשו, נכות, מזונות, משיכת קרן השתלמות), מעריך את גובה ההחזר לפי מדרגות 2026 ושווי נקודה (242 ₪/חודש), מייצר רשימת מסמכים לכל טריגר, וממלא טופס 135 או מפנה לפורטל המקוון של רשות המסים. מכיר את חלון 6 השנים אחורה לפי סעיף 160 לפקודה. השתמשו בו כשמשתמש שואל על החזר מס לשכירים, טופס 135, החזר על שנים קודמות, מילואים, תרומות, או נקודות זיכוי שלא נוצלו. אל תשתמשו בסקיל הזה לעצמאים, טופס 1301, אופציות, קריפטו, או מע\"מ.",
+    "en": "Not tax advice and not a filed return. Guide salaried Israeli employees through the voluntary tax-refund process with Reshut HaMisim. Reads Form 106, detects refund triggers (mid-year job change, unemployment, maternity leave, military reserve duty, Section 46 donations, yishuv mezakeh, undeclared credit points, disability, alimony, early keren hishtalmut withdrawal), estimates the refund using 2026 brackets and the 242 ₪/month credit-point value, generates a per-trigger document checklist, and fills Form 135 or routes the user to the online refund portal. Knows the 6-year retroactive window (Section 160 ITO). Use when a salaried employee asks about Israeli tax refund, החזר מס לשכירים, Form 135, missed credit points, miluim refund, or refunds for previous tax years. Do NOT use for self-employed Form 1301 filers (use israeli-tax-returns), payroll math (use israeli-payroll-calculator), stock options (use israeli-stock-options-tax), crypto (use israeli-crypto-tax-reporter), or VAT (use israeli-vat-reporting)."
   },
   "supported_agents": [
     "claude-code",
