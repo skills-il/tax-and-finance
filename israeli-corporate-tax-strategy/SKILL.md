@@ -330,7 +330,7 @@ Official sources for verifying and updating the tax figures in this skill:
 | Israeli Tax Authority (Reshut HaMisim) | https://www.gov.il/he/departments/israel_tax_authority | Official tax rates, forms, circulars |
 | Income Tax Ordinance | https://www.nevo.co.il/law/70264 | Legal text for Section 3(tet), Section 121B (surtax), Section 32(9) |
 | Bituach Leumi -- Contribution Rates | https://www.btl.gov.il/Insurance/National%20Insurance/Pages/default.aspx | Current NI and health insurance rates |
-| Section 3(tet) Annual Rate | https://www.capitax.co.il | Published annually, usually in December for the following year |
+| Section 3(tet) Annual Rate | https://britcpa.co.il/hozrim/שיעורי-הריבית-לעניין-סעיפים-3ט-ו-3י-לשנת-4/ | Published annually, usually in December for the following year |
 | Kolzchut -- Tax Rights | https://www.kolzchut.org.il/he/%D7%9E%D7%93%D7%A8%D7%92%D7%95%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94 | Income tax brackets, credit points, updated annually |
 | CWS Israel -- Tax Guide | https://www.cwsisrael.com/israeli-tax-changes-2026-complete-guide/ | English-language summary of annual tax changes |
 

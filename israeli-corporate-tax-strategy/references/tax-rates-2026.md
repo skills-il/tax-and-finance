@@ -123,9 +123,6 @@ Amendment 277 to the Income Tax Ordinance restructured taxation of closely-held 
 | Keren Hishtalmut, self-employed deductible ceiling | 13,203 NIS/year |
 | Keren Hishtalmut, exempt annual deposit ceiling | 20,566 NIS |
 | Keren Hishtalmut, salaried max qualifying monthly salary | 15,751 NIS/month |
-| Pension qualifying income ceiling (hakhnasa mezakeh) | 232,800 NIS/year |
-| Pension deduction ceiling (hakhnasa mukeret) | 25,608 NIS/year |
-| Pension credit ceiling | 12,804 NIS/year |
 
 ## Key Thresholds
 

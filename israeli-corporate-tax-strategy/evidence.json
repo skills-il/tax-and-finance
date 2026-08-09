@@ -9,7 +9,13 @@
       "source_url": "https://www.kolzchut.org.il/he/%D7%9E%D7%93%D7%A8%D7%92%D7%95%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
       "raw_snippet": "Standard rate: 23%",
       "fetched_at": "2026-05-21T12:30:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/tax-rates-2026.md", "references/extraction-methods.md", "scripts/tax_comparison.py"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-rates-2026.md",
+        "references/extraction-methods.md",
+        "scripts/tax_comparison.py"
+      ]
     },
     {
       "claim_id": "preferred-special-area-a-5",
@@ -17,7 +23,9 @@
       "source_url": "https://www.gov.il/he/departments/israel_tax_authority",
       "raw_snippet": "Special Preferred Enterprise in Development Area A: 5%",
       "fetched_at": "2026-05-21T12:30:00Z",
-      "appears_in": ["references/tax-rates-2026.md"]
+      "appears_in": [
+        "references/tax-rates-2026.md"
+      ]
     },
     {
       "claim_id": "preferred-special-elsewhere-8",
@@ -25,7 +33,9 @@
       "source_url": "https://www.gov.il/he/departments/israel_tax_authority",
       "raw_snippet": "Special Preferred Enterprise elsewhere: 8%",
       "fetched_at": "2026-05-21T12:30:00Z",
-      "appears_in": ["references/tax-rates-2026.md"]
+      "appears_in": [
+        "references/tax-rates-2026.md"
+      ]
     },
     {
       "claim_id": "preferred-area-a-7-5",
@@ -33,7 +43,9 @@
       "source_url": "https://www.gov.il/he/departments/israel_tax_authority",
       "raw_snippet": "Preferred Enterprise in Development Area A: 7.5%",
       "fetched_at": "2026-05-21T12:30:00Z",
-      "appears_in": ["references/tax-rates-2026.md"]
+      "appears_in": [
+        "references/tax-rates-2026.md"
+      ]
     },
     {
       "claim_id": "preferred-elsewhere-16",
@@ -41,7 +53,9 @@
       "source_url": "https://www.gov.il/he/departments/israel_tax_authority",
       "raw_snippet": "Preferred Enterprise elsewhere: 16%",
       "fetched_at": "2026-05-21T12:30:00Z",
-      "appears_in": ["references/tax-rates-2026.md"]
+      "appears_in": [
+        "references/tax-rates-2026.md"
+      ]
     },
     {
       "claim_id": "preferred-dividend-20",
@@ -49,7 +63,10 @@
       "source_url": "https://www.gov.il/he/departments/israel_tax_authority",
       "raw_snippet": "Preferred Enterprise dividend rate of 20%",
       "fetched_at": "2026-05-21T12:30:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "trapped-profits-2pct",
@@ -57,7 +74,11 @@
       "source_url": "https://www.grantthornton.co.il/insights1/tax-insignths/2025/Undistributed_profits/",
       "raw_snippet": "2% additional tax on retained corporate profits not distributed as dividends",
       "fetched_at": "2026-05-21T12:30:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/tax-rates-2026.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-rates-2026.md"
+      ]
     },
     {
       "claim_id": "section-62a-amendment-277",
@@ -65,63 +86,112 @@
       "source_url": "https://www.hashavim.co.il/articles/taxation/amendment-277-wallet-companies-qa/",
       "raw_snippet": "מחזיק במישרין או בעקיפין ב-25% או יותר באחד מאמצעי השליטה",
       "fetched_at": "2026-07-15T16:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/tax-rates-2026.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-rates-2026.md"
+      ]
     },
     {
       "claim_id": "bracket-84120-10",
       "claim": "2026 first income-tax bracket: up to 84,120 NIS annual @ 10%",
       "source_url": "https://www.kolzchut.org.il/he/%D7%9E%D7%93%D7%A8%D7%92%D7%95%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
-      "raw_snippet": "0 - 84,120 ... 10%",
-      "fetched_at": "2026-05-21T12:30:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/tax-rates-2026.md", "references/extraction-methods.md", "scripts/tax_comparison.py"]
+      "raw_snippet": "עד 84,120 ₪ עד 7,010 ₪ 10%",
+      "fetched_at": "2026-08-09T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-rates-2026.md",
+        "references/extraction-methods.md",
+        "scripts/tax_comparison.py"
+      ],
+      "verified_via": "fetched and read the cited page on 2026-08-09"
     },
     {
       "claim_id": "bracket-120720-14",
       "claim": "2026 second income-tax bracket: 84,121-120,720 NIS @ 14%",
       "source_url": "https://www.kolzchut.org.il/he/%D7%9E%D7%93%D7%A8%D7%92%D7%95%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
-      "raw_snippet": "84,121 - 120,720 ... 14%",
-      "fetched_at": "2026-05-21T12:30:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/tax-rates-2026.md", "scripts/tax_comparison.py"]
+      "raw_snippet": "84,121- 120,720 ₪ 7,011- 10,060 ₪ 14%",
+      "fetched_at": "2026-08-09T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-rates-2026.md",
+        "scripts/tax_comparison.py"
+      ],
+      "verified_via": "fetched and read the cited page on 2026-08-09"
     },
     {
       "claim_id": "bracket-228000-20",
       "claim": "2026 third income-tax bracket: 120,721-228,000 NIS @ 20%",
       "source_url": "https://www.kolzchut.org.il/he/%D7%9E%D7%93%D7%A8%D7%92%D7%95%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
-      "raw_snippet": "120,721 - 228,000 ... 20%",
-      "fetched_at": "2026-05-21T12:30:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/tax-rates-2026.md", "references/extraction-methods.md", "scripts/tax_comparison.py"]
+      "raw_snippet": "120,721- 228,000 ₪ 10,061- 19,000 ₪ 20%",
+      "fetched_at": "2026-08-09T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-rates-2026.md",
+        "references/extraction-methods.md",
+        "scripts/tax_comparison.py"
+      ],
+      "verified_via": "fetched and read the cited page on 2026-08-09"
     },
     {
       "claim_id": "bracket-301200-31",
       "claim": "2026 fourth income-tax bracket: 228,001-301,200 NIS @ 31%",
       "source_url": "https://www.kolzchut.org.il/he/%D7%9E%D7%93%D7%A8%D7%92%D7%95%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
-      "raw_snippet": "228,001 - 301,200 ... 31%",
-      "fetched_at": "2026-05-21T12:30:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/tax-rates-2026.md", "scripts/tax_comparison.py"]
+      "raw_snippet": "228,001- 301,200 ₪ 19,001- 25,100 ₪ 31%",
+      "fetched_at": "2026-08-09T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-rates-2026.md",
+        "scripts/tax_comparison.py"
+      ],
+      "verified_via": "fetched and read the cited page on 2026-08-09"
     },
     {
       "claim_id": "bracket-560280-35",
       "claim": "2026 fifth income-tax bracket: 301,201-560,280 NIS @ 35%",
       "source_url": "https://www.kolzchut.org.il/he/%D7%9E%D7%93%D7%A8%D7%92%D7%95%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
-      "raw_snippet": "301,201 - 560,280 ... 35%",
-      "fetched_at": "2026-05-21T12:30:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/tax-rates-2026.md", "references/extraction-methods.md", "scripts/tax_comparison.py"]
+      "raw_snippet": "301,201- 560,280 ₪ 25,101- 46,690 ₪ 35%",
+      "fetched_at": "2026-08-09T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-rates-2026.md",
+        "references/extraction-methods.md",
+        "scripts/tax_comparison.py"
+      ],
+      "verified_via": "fetched and read the cited page on 2026-08-09"
     },
     {
       "claim_id": "bracket-721560-47",
       "claim": "2026 sixth income-tax bracket: 560,281-721,560 NIS @ 47%",
       "source_url": "https://www.kolzchut.org.il/he/%D7%9E%D7%93%D7%A8%D7%92%D7%95%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
-      "raw_snippet": "560,281 - 721,560 ... 47%",
-      "fetched_at": "2026-05-21T12:30:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/tax-rates-2026.md", "scripts/tax_comparison.py"]
+      "raw_snippet": "560,281- 721,560 ₪ 46,691- 60,130 ₪ 47%",
+      "fetched_at": "2026-08-09T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-rates-2026.md",
+        "scripts/tax_comparison.py"
+      ],
+      "verified_via": "fetched and read the cited page on 2026-08-09"
     },
     {
       "claim_id": "bracket-top-50",
       "claim": "2026 top income-tax rate: above 721,560 NIS @ 50% (47% base + 3% surtax)",
       "source_url": "https://www.kolzchut.org.il/he/%D7%9E%D7%93%D7%A8%D7%92%D7%95%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
-      "raw_snippet": "Above 721,560 ... 50%",
-      "fetched_at": "2026-05-21T12:30:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/tax-rates-2026.md", "scripts/tax_comparison.py"]
+      "raw_snippet": "אדם שהכנסתו השנתית גבוהה מ-721,560 ₪ (60,130 ₪ לחודש) חייב גם במס של 3%, בנוסף למדרגת המס הרגילה (47%). לכן שיעור המס במדרגה הנוספת יהיה 50%.",
+      "fetched_at": "2026-08-09T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-rates-2026.md",
+        "scripts/tax_comparison.py"
+      ],
+      "verified_via": "fetched and read the cited page on 2026-08-09"
     },
     {
       "claim_id": "monthly-bracket-7010",
@@ -129,7 +199,9 @@
       "source_url": "https://www.kolzchut.org.il/he/%D7%9E%D7%93%D7%A8%D7%92%D7%95%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
       "raw_snippet": "0 - 7,010",
       "fetched_at": "2026-05-21T12:30:00Z",
-      "appears_in": ["references/tax-rates-2026.md"]
+      "appears_in": [
+        "references/tax-rates-2026.md"
+      ]
     },
     {
       "claim_id": "monthly-bracket-10060",
@@ -137,7 +209,9 @@
       "source_url": "https://www.kolzchut.org.il/he/%D7%9E%D7%93%D7%A8%D7%92%D7%95%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
       "raw_snippet": "7,011 - 10,060",
       "fetched_at": "2026-05-21T12:30:00Z",
-      "appears_in": ["references/tax-rates-2026.md"]
+      "appears_in": [
+        "references/tax-rates-2026.md"
+      ]
     },
     {
       "claim_id": "monthly-bracket-19000",
@@ -145,7 +219,9 @@
       "source_url": "https://www.kolzchut.org.il/he/%D7%9E%D7%93%D7%A8%D7%92%D7%95%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
       "raw_snippet": "10,061 - 19,000",
       "fetched_at": "2026-05-21T12:30:00Z",
-      "appears_in": ["references/tax-rates-2026.md"]
+      "appears_in": [
+        "references/tax-rates-2026.md"
+      ]
     },
     {
       "claim_id": "monthly-bracket-25100",
@@ -153,7 +229,9 @@
       "source_url": "https://www.kolzchut.org.il/he/%D7%9E%D7%93%D7%A8%D7%92%D7%95%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
       "raw_snippet": "19,001 - 25,100",
       "fetched_at": "2026-05-21T12:30:00Z",
-      "appears_in": ["references/tax-rates-2026.md"]
+      "appears_in": [
+        "references/tax-rates-2026.md"
+      ]
     },
     {
       "claim_id": "monthly-bracket-46690",
@@ -161,7 +239,9 @@
       "source_url": "https://www.kolzchut.org.il/he/%D7%9E%D7%93%D7%A8%D7%92%D7%95%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
       "raw_snippet": "25,101 - 46,690",
       "fetched_at": "2026-05-21T12:30:00Z",
-      "appears_in": ["references/tax-rates-2026.md"]
+      "appears_in": [
+        "references/tax-rates-2026.md"
+      ]
     },
     {
       "claim_id": "monthly-bracket-60130",
@@ -169,15 +249,20 @@
       "source_url": "https://www.kolzchut.org.il/he/%D7%9E%D7%93%D7%A8%D7%92%D7%95%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
       "raw_snippet": "46,691 - 60,130",
       "fetched_at": "2026-05-21T12:30:00Z",
-      "appears_in": ["references/tax-rates-2026.md"]
+      "appears_in": [
+        "references/tax-rates-2026.md"
+      ]
     },
     {
       "claim_id": "non-labor-top-52",
       "claim": "2026 non-labor income top rate: 52% (47% base + 3% surtax + 2% non-labor surtax)",
-      "source_url": "https://www.efraty.com/%D7%97%D7%95%D7%A7-%D7%94%D7%94%D7%AA%D7%99%D7%99%D7%A2%D7%9C%D7%95%D7%AA-%D7%94%D7%9B%D7%9C%D7%9B%D7%9C%D7%99%D7%AA-%D7%AA%D7%99%D7%A7%D7%95%D7%A0%D7%99-%D7%97%D7%A7%D7%99%D7%A7%D7%94-%D7%9C%D7%94/",
-      "raw_snippet": "Above 721,560 ... 52%",
-      "fetched_at": "2026-05-21T12:30:00Z",
-      "appears_in": ["references/tax-rates-2026.md"]
+      "source_url": "https://www.kolzchut.org.il/he/%D7%9E%D7%93%D7%A8%D7%92%D7%95%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
+      "raw_snippet": "מי שהכנסתם שלא מעבודה או מעסק עלתה על 721,560 ₪  יחויבו גם במס בשיעור 2%. לכן שיעור המס במדרגה הנוספת על הכנסה שאינה מיגיעה אישית יהיה 52%.",
+      "fetched_at": "2026-08-09T00:00:00Z",
+      "appears_in": [
+        "references/tax-rates-2026.md"
+      ],
+      "verified_via": "fetched and read the cited page on 2026-08-09"
     },
     {
       "claim_id": "surtax-threshold-721560",
@@ -185,7 +270,13 @@
       "source_url": "https://www.prisha.co.il/Article/%D7%9E%D7%A1-%D7%94%D7%9B%D7%A0%D7%A1%D7%95%D7%AA-%D7%92%D7%91%D7%95%D7%94%D7%95%D7%AA",
       "raw_snippet": "Surtax threshold 721,560 NIS",
       "fetched_at": "2026-05-21T12:30:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/tax-rates-2026.md", "references/extraction-methods.md", "scripts/tax_comparison.py"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-rates-2026.md",
+        "references/extraction-methods.md",
+        "scripts/tax_comparison.py"
+      ]
     },
     {
       "claim_id": "surtax-rate-3pct",
@@ -193,7 +284,12 @@
       "source_url": "https://www.nevo.co.il/law/70264",
       "raw_snippet": "Section 121B surtax 3%",
       "fetched_at": "2026-05-21T12:30:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/tax-rates-2026.md", "scripts/tax_comparison.py"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-rates-2026.md",
+        "scripts/tax_comparison.py"
+      ]
     },
     {
       "claim_id": "surtax-non-labor-2pct",
@@ -201,7 +297,12 @@
       "source_url": "https://www.efraty.com/%D7%97%D7%95%D7%A7-%D7%94%D7%94%D7%AA%D7%99%D7%99%D7%A2%D7%9C%D7%95%D7%AA-%D7%94%D7%9B%D7%9C%D7%9B%D7%9C%D7%99%D7%AA-%D7%AA%D7%99%D7%A7%D7%95%D7%A0%D7%99-%D7%97%D7%A7%D7%99%D7%A7%D7%94-%D7%9C%D7%94/",
       "raw_snippet": "Additional 2% on non-labor income (dividends, interest, capital gains, rental) above threshold",
       "fetched_at": "2026-05-21T12:30:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/tax-rates-2026.md", "scripts/tax_comparison.py"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-rates-2026.md",
+        "scripts/tax_comparison.py"
+      ]
     },
     {
       "claim_id": "surtax-combined-non-labor-5",
@@ -209,7 +310,11 @@
       "source_url": "https://www.efraty.com/%D7%97%D7%95%D7%A7-%D7%94%D7%94%D7%AA%D7%99%D7%99%D7%A2%D7%9C%D7%95%D7%AA-%D7%94%D7%9B%D7%9C%D7%9B%D7%9C%D7%99%D7%AA-%D7%AA%D7%99%D7%A7%D7%95%D7%A0%D7%99-%D7%97%D7%A7%D7%99%D7%A7%D7%94-%D7%9C%D7%94/",
       "raw_snippet": "Total surtax on non-labor income above threshold: 5%",
       "fetched_at": "2026-05-21T12:30:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/tax-rates-2026.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-rates-2026.md"
+      ]
     },
     {
       "claim_id": "dividend-non-controlling-25",
@@ -217,7 +322,11 @@
       "source_url": "https://vuz.co.il/knowledge-center/%D7%9E%D7%A1-%D7%A2%D7%9C-%D7%93%D7%99%D7%91%D7%99%D7%93%D7%A0%D7%93%D7%99%D7%9D-%D7%91%D7%99%D7%A9%D7%A8%D7%90%D7%9C-%D7%A9%D7%99%D7%A2%D7%95%D7%A8%D7%99%D7%9D-%D7%97%D7%99%D7%A9%D7%95%D7%91/",
       "raw_snippet": "Non-controlling (under 10% holding) | 25%",
       "fetched_at": "2026-05-21T12:30:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/tax-rates-2026.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-rates-2026.md"
+      ]
     },
     {
       "claim_id": "dividend-controlling-30",
@@ -225,7 +334,13 @@
       "source_url": "https://vuz.co.il/knowledge-center/%D7%9E%D7%A1-%D7%A2%D7%9C-%D7%93%D7%99%D7%91%D7%99%D7%93%D7%A0%D7%93%D7%99%D7%9D-%D7%91%D7%99%D7%A9%D7%A8%D7%90%D7%9C-%D7%A9%D7%99%D7%A2%D7%95%D7%A8%D7%99%D7%9D-%D7%97%D7%99%D7%A9%D7%95%D7%91/",
       "raw_snippet": "Controlling shareholder (10%+ holding, baal shlita) | 30%",
       "fetched_at": "2026-05-21T12:30:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/tax-rates-2026.md", "references/extraction-methods.md", "scripts/tax_comparison.py"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-rates-2026.md",
+        "references/extraction-methods.md",
+        "scripts/tax_comparison.py"
+      ]
     },
     {
       "claim_id": "dividend-effective-46-1",
@@ -233,7 +348,11 @@
       "source_url": "https://vuz.co.il/knowledge-center/%D7%9E%D7%A1-%D7%A2%D7%9C-%D7%93%D7%99%D7%91%D7%99%D7%93%D7%A0%D7%93%D7%99%D7%9D-%D7%91%D7%99%D7%A9%D7%A8%D7%90%D7%9C-%D7%A9%D7%99%D7%A2%D7%95%D7%A8%D7%99%D7%9D-%D7%97%D7%99%D7%A9%D7%95%D7%91/",
       "raw_snippet": "Effective total tax rate: 46.1%",
       "fetched_at": "2026-05-21T12:30:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/extraction-methods.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/extraction-methods.md"
+      ]
     },
     {
       "claim_id": "section-3tet-6-53",
@@ -241,7 +360,13 @@
       "source_url": "https://www.grantthornton.co.il/insights1/tax-insignths/2026/Income_Tax_Interest_Rates_2026/",
       "raw_snippet": "Section 3(tet): 6.53%",
       "fetched_at": "2026-05-21T12:30:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/tax-rates-2026.md", "references/section-3tet-rules.md", "scripts/tax_comparison.py"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-rates-2026.md",
+        "references/section-3tet-rules.md",
+        "scripts/tax_comparison.py"
+      ]
     },
     {
       "claim_id": "section-3yod-4-9",
@@ -249,7 +374,12 @@
       "source_url": "https://www.grantthornton.co.il/insights1/tax-insignths/2026/Income_Tax_Interest_Rates_2026/",
       "raw_snippet": "Section 3(yod): 4.9%",
       "fetched_at": "2026-05-21T12:30:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/tax-rates-2026.md", "references/section-3tet-rules.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-rates-2026.md",
+        "references/section-3tet-rules.md"
+      ]
     },
     {
       "claim_id": "section-3tet1-deadline",
@@ -257,15 +387,24 @@
       "source_url": "https://www.gov.il/he/departments/policies/income-tax-professional-inst-07-2017",
       "raw_snippet": "תום שנת המס שלאחר שנת המס שבה נמשכו הכספים",
       "fetched_at": "2026-05-21T12:30:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/section-3tet-rules.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/section-3tet-rules.md"
+      ]
     },
     {
       "claim_id": "section-3tet1-de-minimis",
       "claim": "Section 3(tet1) de minimis exemption: cumulative withdrawal under 100,000 NIS",
-      "source_url": "https://www.gov.il/he/departments/policies/income-tax-professional-inst-07-2017",
-      "raw_snippet": "100,000",
-      "fetched_at": "2026-05-21T12:30:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/section-3tet-rules.md"]
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "raw_snippet": "ובלבד שלא יראו כמשיכה של כספים מחברה סכום משיכות מצטבר, שלא עלה ביום כלשהו בשנת המס וביום כלשהו בשנת המס שלפניה, על מאה אלף שקלים חדשים",
+      "fetched_at": "2026-08-09T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/section-3tet-rules.md"
+      ],
+      "verified_via": "fetched and read the cited page on 2026-08-09"
     },
     {
       "claim_id": "ni-ceiling-51910",
@@ -273,15 +412,26 @@
       "source_url": "https://www.btl.gov.il/Insurance/HozrimBituah/Hozrim/_%D7%A9%D7%99%D7%A0%D7%95%D7%99_%D7%91%D7%AA%D7%A9%D7%9C%D7%95%D7%9D_%D7%93%D7%9E%D7%99_%D7%91%D7%99%D7%98%D7%95%D7%97_%D7%9C%D7%90%D7%95%D7%9E%D7%99_%D7%95%D7%93%D7%9E%D7%99_%D7%91%D7%99%D7%98%D7%95%D7%97_%D7%91%D7%A8%D7%99%D7%90%D7%95%D7%AA_%D7%9C%D7%A9%D7%A0%D7%AA_2026.pdf",
       "raw_snippet": "NI maximum insurable income 51,910",
       "fetched_at": "2026-05-21T12:30:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/tax-rates-2026.md", "scripts/tax_comparison.py"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-rates-2026.md",
+        "scripts/tax_comparison.py"
+      ]
     },
     {
       "claim_id": "ni-lower-7703",
       "claim": "Bituach Leumi lower-band threshold for 2026: 7,703 NIS/month",
-      "source_url": "https://www.btl.gov.il/Insurance/HozrimBituah/Hozrim/_%D7%A9%D7%99%D7%A0%D7%95%D7%99_%D7%91%D7%AA%D7%A9%D7%9C%D7%95%D7%9D_%D7%93%D7%9E%D7%99_%D7%91%D7%99%D7%98%D7%95%D7%97_%D7%9C%D7%90%D7%95%D7%9E%D7%99_%D7%95%D7%93%D7%9E%D7%99_%D7%91%D7%99%D7%98%D7%95%D7%97_%D7%91%D7%A8%D7%99%D7%90%D7%95%D7%AA_%D7%9C%D7%A9%D7%A0%D7%AA_2026.pdf",
-      "raw_snippet": "7,703",
-      "fetched_at": "2026-05-21T12:30:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/tax-rates-2026.md", "scripts/tax_comparison.py"]
+      "source_url": "https://www.btl.gov.il/Insurance/Rates/Pages/%D7%9C%D7%A2%D7%95%D7%91%D7%93%D7%99%D7%9D%20%D7%A9%D7%9B%D7%99%D7%A8%D7%99%D7%9D.aspx",
+      "raw_snippet": "מחלק השכר שעד מדרגת גביה מופחתת (שיעור מופחת) - 7,703 ש\"ח (החל ב- 01.01.2026)",
+      "fetched_at": "2026-08-09T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-rates-2026.md",
+        "scripts/tax_comparison.py"
+      ],
+      "verified_via": "fetched and read the cited page on 2026-08-09"
     },
     {
       "claim_id": "employee-ni-low-1-04",
@@ -289,31 +439,54 @@
       "source_url": "https://www.btl.gov.il/Insurance/HozrimBituah/Hozrim/_%D7%A9%D7%99%D7%A0%D7%95%D7%99_%D7%91%D7%AA%D7%A9%D7%9C%D7%95%D7%9D_%D7%93%D7%9E%D7%99_%D7%91%D7%99%D7%98%D7%95%D7%97_%D7%9C%D7%90%D7%95%D7%9E%D7%99_%D7%95%D7%93%D7%9E%D7%99_%D7%91%D7%99%D7%98%D7%95%D7%97_%D7%91%D7%A8%D7%99%D7%90%D7%95%D7%AA_%D7%9C%D7%A9%D7%A0%D7%AA_2026.pdf",
       "raw_snippet": "Employee NI 1.04%",
       "fetched_at": "2026-05-21T12:30:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/tax-rates-2026.md", "scripts/tax_comparison.py"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-rates-2026.md",
+        "scripts/tax_comparison.py"
+      ]
     },
     {
       "claim_id": "employee-ni-high-7-0",
       "claim": "2026 employee Bituach Leumi rate above lower threshold: 7.0%",
-      "source_url": "https://www.btl.gov.il/Insurance/HozrimBituah/Hozrim/_%D7%A9%D7%99%D7%A0%D7%95%D7%99_%D7%91%D7%AA%D7%A9%D7%9C%D7%95%D7%9D_%D7%93%D7%9E%D7%99_%D7%91%D7%99%D7%98%D7%95%D7%97_%D7%9C%D7%90%D7%95%D7%9E%D7%99_%D7%95%D7%93%D7%9E%D7%99_%D7%91%D7%99%D7%98%D7%95%D7%97_%D7%91%D7%A8%D7%99%D7%90%D7%95%D7%AA_%D7%9C%D7%A9%D7%A0%D7%AA_2026.pdf",
-      "raw_snippet": "7.0%",
-      "fetched_at": "2026-05-21T12:30:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/tax-rates-2026.md", "scripts/tax_comparison.py"]
+      "source_url": "https://www.btl.gov.il/Insurance/Rates/Pages/%D7%9C%D7%A2%D7%95%D7%91%D7%93%D7%99%D7%9D%20%D7%A9%D7%9B%D7%99%D7%A8%D7%99%D7%9D.aspx",
+      "raw_snippet": "דמי ביטוח לאומי 4.51% (החל ב- 01.01.2025) 1.04% (החל ב- 01.01.2025) 5.55% (החל ב- 01.01.2025) 7.6% (החל ב- 01.01.2019) 7% (החל ב- 01.01.2006) 14.6% (החל ב- 01.02.2025)",
+      "fetched_at": "2026-08-09T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-rates-2026.md",
+        "scripts/tax_comparison.py"
+      ],
+      "verified_via": "fetched and read the cited page on 2026-08-09"
     },
     {
       "claim_id": "employee-health-low-3-23",
       "claim": "2026 employee health insurance rate below threshold: 3.23%",
-      "source_url": "https://www.btl.gov.il/Insurance/HozrimBituah/Hozrim/_%D7%A9%D7%99%D7%A0%D7%95%D7%99_%D7%91%D7%AA%D7%A9%D7%9C%D7%95%D7%9D_%D7%93%D7%9E%D7%99_%D7%91%D7%99%D7%98%D7%95%D7%97_%D7%9C%D7%90%D7%95%D7%9E%D7%99_%D7%95%D7%93%D7%9E%D7%99_%D7%91%D7%99%D7%98%D7%95%D7%97_%D7%91%D7%A8%D7%99%D7%90%D7%95%D7%AA_%D7%9C%D7%A9%D7%A0%D7%AA_2026.pdf",
-      "raw_snippet": "3.23%",
-      "fetched_at": "2026-05-21T12:30:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/tax-rates-2026.md", "scripts/tax_comparison.py"]
+      "source_url": "https://www.btl.gov.il/Insurance/Rates/Pages/%D7%9C%D7%A2%D7%95%D7%91%D7%93%D7%99%D7%9D%20%D7%A9%D7%9B%D7%99%D7%A8%D7%99%D7%9D.aspx",
+      "raw_snippet": "דמי ביטוח בריאות - 3.23% (החל ב- 01.01.2025) 3.23% (החל ב- 01.01.2025) - 5.17% (החל ב- 01.02.2025) 5.17% (החל ב- 01.02.2025)",
+      "fetched_at": "2026-08-09T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-rates-2026.md",
+        "scripts/tax_comparison.py"
+      ],
+      "verified_via": "fetched and read the cited page on 2026-08-09"
     },
     {
       "claim_id": "employee-health-high-5-17",
       "claim": "2026 employee health insurance rate above lower threshold: 5.17%",
-      "source_url": "https://www.btl.gov.il/Insurance/HozrimBituah/Hozrim/_%D7%A9%D7%99%D7%A0%D7%95%D7%99_%D7%91%D7%AA%D7%A9%D7%9C%D7%95%D7%9D_%D7%93%D7%9E%D7%99_%D7%91%D7%99%D7%98%D7%95%D7%97_%D7%9C%D7%90%D7%95%D7%9E%D7%99_%D7%95%D7%93%D7%9E%D7%99_%D7%91%D7%99%D7%98%D7%95%D7%97_%D7%91%D7%A8%D7%99%D7%90%D7%95%D7%AA_%D7%9C%D7%A9%D7%A0%D7%AA_2026.pdf",
-      "raw_snippet": "5.17%",
-      "fetched_at": "2026-05-21T12:30:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/tax-rates-2026.md", "scripts/tax_comparison.py"]
+      "source_url": "https://www.btl.gov.il/Insurance/Rates/Pages/%D7%9C%D7%A2%D7%95%D7%91%D7%93%D7%99%D7%9D%20%D7%A9%D7%9B%D7%99%D7%A8%D7%99%D7%9D.aspx",
+      "raw_snippet": "דמי ביטוח בריאות - 3.23% (החל ב- 01.01.2025) 3.23% (החל ב- 01.01.2025) - 5.17% (החל ב- 01.02.2025) 5.17% (החל ב- 01.02.2025)",
+      "fetched_at": "2026-08-09T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-rates-2026.md",
+        "scripts/tax_comparison.py"
+      ],
+      "verified_via": "fetched and read the cited page on 2026-08-09"
     },
     {
       "claim_id": "controlling-employer-ni-low-4-46",
@@ -321,7 +494,12 @@
       "source_url": "https://www.btl.gov.il/Insurance/Rates/Pages/default.aspx",
       "raw_snippet": "Controlling shareholder employer NI 4.46%",
       "fetched_at": "2026-05-21T12:30:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/tax-rates-2026.md", "scripts/tax_comparison.py"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-rates-2026.md",
+        "scripts/tax_comparison.py"
+      ]
     },
     {
       "claim_id": "controlling-employer-ni-high-7-38",
@@ -329,7 +507,12 @@
       "source_url": "https://www.btl.gov.il/Insurance/Rates/Pages/default.aspx",
       "raw_snippet": "Controlling shareholder employer NI 7.38%",
       "fetched_at": "2026-05-21T12:30:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/tax-rates-2026.md", "scripts/tax_comparison.py"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-rates-2026.md",
+        "scripts/tax_comparison.py"
+      ]
     },
     {
       "claim_id": "regular-employer-ni-low-4-51",
@@ -337,7 +520,11 @@
       "source_url": "https://www.btl.gov.il/Insurance/Rates/Pages/default.aspx",
       "raw_snippet": "Regular employee employer NI 4.51%",
       "fetched_at": "2026-05-21T12:30:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/tax-rates-2026.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-rates-2026.md"
+      ]
     },
     {
       "claim_id": "regular-employer-ni-high-7-60",
@@ -345,15 +532,24 @@
       "source_url": "https://www.btl.gov.il/Insurance/Rates/Pages/default.aspx",
       "raw_snippet": "Regular employee employer NI 7.60%",
       "fetched_at": "2026-05-21T12:30:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/tax-rates-2026.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-rates-2026.md"
+      ]
     },
     {
       "claim_id": "self-employed-ni-low-4-47",
       "claim": "2026 self-employed Bituach Leumi rate below lower threshold: 4.47% (combined 7.70% with health)",
       "source_url": "https://www.btl.gov.il/Insurance/National%20Insurance/type_list/Self_Employed/Pages/rates.aspx",
-      "raw_snippet": "דמי ביטוח לאומי 4.47% ... דמי ביטוח בריאות 3.23% ... סך הכול 7.70%",
-      "fetched_at": "2026-05-21T13:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/tax-rates-2026.md"]
+      "raw_snippet": "דמי ביטוח לאומי 4.47% 12.83% דמי ביטוח בריאות 3.23% 5.17% סך הכול 7.7% 18%",
+      "fetched_at": "2026-08-09T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-rates-2026.md"
+      ],
+      "verified_via": "fetched and read the cited page on 2026-08-09"
     },
     {
       "claim_id": "self-employed-ni-high-12-83",
@@ -361,7 +557,11 @@
       "source_url": "https://www.btl.gov.il/Insurance/National%20Insurance/type_list/Self_Employed/Pages/rates.aspx",
       "raw_snippet": "Self-employed NI 12.83%",
       "fetched_at": "2026-05-21T12:30:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/tax-rates-2026.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-rates-2026.md"
+      ]
     },
     {
       "claim_id": "ni-deductible-52",
@@ -369,7 +569,11 @@
       "source_url": "https://www.btl.gov.il/Insurance/National%20Insurance/type_list/Self_Employed/Pages/rates.aspx",
       "raw_snippet": "52% of NI amount is tax-deductible",
       "fetched_at": "2026-05-21T12:30:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/tax-rates-2026.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-rates-2026.md"
+      ]
     },
     {
       "claim_id": "no-salary-bl-minimum-266",
@@ -377,7 +581,11 @@
       "source_url": "https://www.btl.gov.il/Insurance/Rates/Pages/%D7%9E%D7%99%20%D7%A9%D7%90%D7%99%D7%A0%D7%9D%20%D7%A2%D7%95%D7%91%D7%93%D7%99%D7%9D%20%D7%95%D7%91%D7%A2%D7%9C%D7%99%20%D7%94%D7%9B%D7%A0%D7%A1%D7%94%20%D7%A9%D7%9C%D7%90%20%D7%9E%D7%A2%D7%91%D7%95%D7%93%D7%94.aspx",
       "raw_snippet": "מי שאינם עובדים ובעלי הכנסה שלא מעבודה",
       "fetched_at": "2026-05-21T12:30:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/tax-rates-2026.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-rates-2026.md"
+      ]
     },
     {
       "claim_id": "credit-point-242",
@@ -385,7 +593,12 @@
       "source_url": "https://www.kolzchut.org.il/he/%D7%A0%D7%A7%D7%95%D7%93%D7%AA_%D7%96%D7%99%D7%9B%D7%95%D7%99",
       "raw_snippet": "Value per point: 242 NIS/month (2,904 NIS/year)",
       "fetched_at": "2026-05-21T12:30:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/tax-rates-2026.md", "scripts/tax_comparison.py"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-rates-2026.md",
+        "scripts/tax_comparison.py"
+      ]
     },
     {
       "claim_id": "credit-point-base-2-25",
@@ -393,7 +606,13 @@
       "source_url": "https://www.kolzchut.org.il/he/%D7%A0%D7%A7%D7%95%D7%93%D7%AA_%D7%96%D7%99%D7%9B%D7%95%D7%99",
       "raw_snippet": "2.25 points for residents",
       "fetched_at": "2026-05-21T12:30:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/tax-rates-2026.md", "references/extraction-methods.md", "scripts/tax_comparison.py"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-rates-2026.md",
+        "references/extraction-methods.md",
+        "scripts/tax_comparison.py"
+      ]
     },
     {
       "claim_id": "credit-point-women-0-5",
@@ -401,7 +620,9 @@
       "source_url": "https://www.kolzchut.org.il/he/%D7%A0%D7%A7%D7%95%D7%93%D7%AA_%D7%96%D7%99%D7%9B%D7%95%D7%99",
       "raw_snippet": "Additional 0.5 points for women",
       "fetched_at": "2026-05-21T12:30:00Z",
-      "appears_in": ["references/tax-rates-2026.md"]
+      "appears_in": [
+        "references/tax-rates-2026.md"
+      ]
     },
     {
       "claim_id": "vat-18",
@@ -409,7 +630,11 @@
       "source_url": "https://www.gov.il/he/pages/dec1270-2024",
       "raw_snippet": "Standard rate: 18%",
       "fetched_at": "2026-05-21T12:30:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/tax-rates-2026.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-rates-2026.md"
+      ]
     },
     {
       "claim_id": "rental-exempt-5654",
@@ -417,7 +642,9 @@
       "source_url": "https://www.gov.il/he/departments/israel_tax_authority",
       "raw_snippet": "Rental income exempt ceiling: 5,654 NIS/month",
       "fetched_at": "2026-05-21T13:00:00Z",
-      "appears_in": ["references/tax-rates-2026.md"]
+      "appears_in": [
+        "references/tax-rates-2026.md"
+      ]
     },
     {
       "claim_id": "baal-shlita-unemployment-exclusion",
@@ -425,7 +652,10 @@
       "source_url": "https://www.btl.gov.il/Insurance/Rates/Pages/default.aspx",
       "raw_snippet": "בעל שליטה אינו זכאי לדמי אבטלה",
       "fetched_at": "2026-05-21T13:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "section-3tet1-use-of-asset",
@@ -433,7 +663,11 @@
       "source_url": "https://www.gov.il/he/departments/policies/income-tax-professional-inst-07-2017",
       "raw_snippet": "שימוש בנכס: דירה, רכב, אמנות",
       "fetched_at": "2026-05-21T13:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/section-3tet-rules.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/section-3tet-rules.md"
+      ]
     },
     {
       "claim_id": "section-126b-intercompany",
@@ -441,7 +675,10 @@
       "source_url": "https://www.nevo.co.il/law/70264",
       "raw_snippet": "סעיף 126(b) inter-company dividend exemption",
       "fetched_at": "2026-05-21T13:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "section-32-9-disallowance",
@@ -449,55 +686,43 @@
       "source_url": "https://www.nevo.co.il/law/70264",
       "raw_snippet": "Section 32(9): disallowance of unreasonable payments",
       "fetched_at": "2026-05-21T13:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "keren-hishtalmut-self-deductible-13203",
       "claim": "2026 Keren Hishtalmut self-employed deductible ceiling: 13,203 NIS/year",
       "source_url": "https://www.analyst.co.il/articles/deposit-amount/",
-      "raw_snippet": "13,203",
-      "fetched_at": "2026-05-21T12:30:00Z",
-      "appears_in": ["references/tax-rates-2026.md"]
+      "raw_snippet": "תקרת ההפקדה לקרן השתלמות לעצמאים המזכה בהטבת מס הכנסה (בהפקדה) היא 13,203 ₪ בשנה ותקרת ההפקדה לעצמאים המזכה בהטבת מס (במשיכה) היא 20,566 ₪ בשנה (הנתונים מעודכנים ל-2026).",
+      "fetched_at": "2026-08-09T00:00:00Z",
+      "appears_in": [
+        "references/tax-rates-2026.md"
+      ],
+      "verified_via": "fetched and read the cited page on 2026-08-09"
     },
     {
       "claim_id": "keren-hishtalmut-exempt-20566",
       "claim": "2026 Keren Hishtalmut exempt annual deposit ceiling: 20,566 NIS",
       "source_url": "https://www.analyst.co.il/articles/deposit-amount/",
-      "raw_snippet": "20,566",
-      "fetched_at": "2026-05-21T12:30:00Z",
-      "appears_in": ["references/tax-rates-2026.md"]
+      "raw_snippet": "בנוסף, עצמאים זכאים לפטור ממס בעת משיכת הכספים, עד לתקרת הפקדה של 20,566 ₪ בשנה.",
+      "fetched_at": "2026-08-09T00:00:00Z",
+      "appears_in": [
+        "references/tax-rates-2026.md"
+      ],
+      "verified_via": "fetched and read the cited page on 2026-08-09"
     },
     {
       "claim_id": "keren-hishtalmut-salary-15751",
       "claim": "2026 Keren Hishtalmut salaried max qualifying monthly salary: 15,751 NIS/month",
       "source_url": "https://www.analyst.co.il/articles/deposit-amount/",
-      "raw_snippet": "15,751",
-      "fetched_at": "2026-05-21T13:00:00Z",
-      "appears_in": ["references/tax-rates-2026.md"]
-    },
-    {
-      "claim_id": "pension-qualifying-232800",
-      "claim": "2026 pension qualifying income ceiling (hakhnasa mezakeh): 232,800 NIS/year",
-      "source_url": "https://pensuni.com/?p=1281",
-      "raw_snippet": "232,800",
-      "fetched_at": "2026-05-21T12:30:00Z",
-      "appears_in": ["references/tax-rates-2026.md"]
-    },
-    {
-      "claim_id": "pension-deduction-25608",
-      "claim": "2026 pension deduction ceiling (hakhnasa mukeret): 25,608 NIS/year",
-      "source_url": "https://pensuni.com/?p=1281",
-      "raw_snippet": "25,608",
-      "fetched_at": "2026-05-21T12:30:00Z",
-      "appears_in": ["references/tax-rates-2026.md"]
-    },
-    {
-      "claim_id": "pension-credit-12804",
-      "claim": "2026 pension credit ceiling: 12,804 NIS/year",
-      "source_url": "https://pensuni.com/?p=1281",
-      "raw_snippet": "12,804",
-      "fetched_at": "2026-05-21T12:30:00Z",
-      "appears_in": ["references/tax-rates-2026.md"]
+      "raw_snippet": "שכירים זכאים להטבות מס על הפקדה של עד 10% משכרם ועד לתקרת שכר חודשי של 15,751 ₪.",
+      "fetched_at": "2026-08-09T00:00:00Z",
+      "appears_in": [
+        "references/tax-rates-2026.md"
+      ],
+      "verified_via": "fetched and read the cited page on 2026-08-09"
     },
     {
       "claim_id": "section-3tet1-amendment-235",
@@ -505,7 +730,11 @@
       "source_url": "https://www.gov.il/he/departments/policies/income-tax-professional-inst-07-2017",
       "raw_snippet": "Amendment 235",
       "fetched_at": "2026-05-21T12:30:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/section-3tet-rules.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/section-3tet-rules.md"
+      ]
     },
     {
       "claim_id": "form-126",
@@ -513,7 +742,11 @@
       "source_url": "https://www.gov.il/he/departments/israel_tax_authority",
       "raw_snippet": "Form 126",
       "fetched_at": "2026-05-21T12:30:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/section-3tet-rules.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/section-3tet-rules.md"
+      ]
     },
     {
       "claim_id": "form-856",
@@ -521,7 +754,10 @@
       "source_url": "https://www.gov.il/he/departments/israel_tax_authority",
       "raw_snippet": "Form 856",
       "fetched_at": "2026-05-21T12:30:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "section-32-9",
@@ -529,7 +765,10 @@
       "source_url": "https://www.nevo.co.il/law/70264",
       "raw_snippet": "Section 32(9)",
       "fetched_at": "2026-05-21T12:30:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "section-85a",
@@ -537,7 +776,10 @@
       "source_url": "https://www.nevo.co.il/law/70264",
       "raw_snippet": "Section 85A",
       "fetched_at": "2026-05-21T12:30:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "section-77",
@@ -545,7 +787,10 @@
       "source_url": "https://www.nevo.co.il/law/70264",
       "raw_snippet": "Section 77",
       "fetched_at": "2026-05-21T12:30:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "section-64a-family",
@@ -553,7 +798,10 @@
       "source_url": "https://www.nevo.co.il/law/70264",
       "raw_snippet": "Section 64A",
       "fetched_at": "2026-05-21T12:30:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "section-47a-ni-deduction",
@@ -561,7 +809,11 @@
       "source_url": "https://www.nevo.co.il/law/70264",
       "raw_snippet": "Section 47A",
       "fetched_at": "2026-05-21T12:30:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/tax-rates-2026.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-rates-2026.md"
+      ]
     },
     {
       "claim_id": "section-121b-surtax",
@@ -569,7 +821,11 @@
       "source_url": "https://www.nevo.co.il/law/70264",
       "raw_snippet": "Section 121B",
       "fetched_at": "2026-05-21T12:30:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/tax-rates-2026.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-rates-2026.md"
+      ]
     },
     {
       "claim_id": "companies-law-301-303",
@@ -577,7 +833,10 @@
       "source_url": "https://www.nevo.co.il/law_html/law01/p214m1_001.htm",
       "raw_snippet": "Companies Law Sections 301-303",
       "fetched_at": "2026-05-21T12:30:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "section-3i1-nonresident",
@@ -585,7 +844,10 @@
       "source_url": "https://www.nevo.co.il/law/70264",
       "raw_snippet": "Section 3(i)(1)",
       "fetched_at": "2026-05-21T12:30:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "min-salary-reasonable-6500",
@@ -593,7 +855,10 @@
       "source_url": "https://www.gov.il/he/departments/israel_tax_authority",
       "raw_snippet": "Tax Authority expects reasonable salary",
       "fetched_at": "2026-05-21T12:30:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "section-3tet1-rate-context",
@@ -601,15 +866,20 @@
       "source_url": "https://www.gov.il/he/departments/policies/income-tax-professional-inst-07-2017",
       "raw_snippet": "30% + potential surtax",
       "fetched_at": "2026-05-21T12:30:00Z",
-      "appears_in": ["references/section-3tet-rules.md"]
+      "appears_in": [
+        "references/section-3tet-rules.md"
+      ]
     },
     {
       "claim_id": "section-3tet-rate-2025",
       "claim": "Section 3(tet) prior-year rate for 2025: 6.69% (superseded by 6.53% for 2026)",
       "source_url": "https://britcpa.co.il/hozrim/%D7%A9%D7%99%D7%A2%D7%95%D7%A8%D7%99-%D7%94%D7%A8%D7%99%D7%91%D7%99%D7%AA-%D7%9C%D7%A2%D7%A0%D7%99%D7%99%D7%9F-%D7%A1%D7%A2%D7%99%D7%A4%D7%99%D7%9D-3%D7%98-%D7%95-3%D7%99-%D7%9C%D7%A9%D7%A0%D7%AA-4/",
-      "raw_snippet": "6.69%",
-      "fetched_at": "2026-07-15T16:00:00Z",
-      "appears_in": ["references/section-3tet-rules.md"]
+      "raw_snippet": "3 (ט) 6.53% 6.69%",
+      "fetched_at": "2026-08-09T00:00:00Z",
+      "appears_in": [
+        "references/section-3tet-rules.md"
+      ],
+      "verified_via": "fetched and read the cited page on 2026-08-09"
     },
     {
       "claim_id": "section-62a-25pct",
@@ -617,7 +887,11 @@
       "source_url": "https://www.hashavim.co.il/articles/taxation/amendment-277-wallet-companies-qa/",
       "raw_snippet": "מחזיק במישרין או בעקיפין ב-25% או יותר באחד מאמצעי השליטה",
       "fetched_at": "2026-07-15T16:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/tax-rates-2026.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-rates-2026.md"
+      ]
     },
     {
       "claim_id": "section-62a-22-of-36",
@@ -625,15 +899,22 @@
       "source_url": "https://www.hashavim.co.il/articles/taxation/amendment-277-wallet-companies-qa/",
       "raw_snippet": "22 חודשים בתוך שלוש שנות מס",
       "fetched_at": "2026-07-15T16:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/tax-rates-2026.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-rates-2026.md"
+      ]
     },
     {
       "claim_id": "trapped-profits-exemption-750000",
       "claim": "Trapped-profits 2% surcharge has a basic exemption shield of ~750,000 NIS plus activity/asset shields",
       "source_url": "https://www.grantthornton.co.il/insights1/tax-insignths/2025/Undistributed_profits/",
-      "raw_snippet": "750,000",
-      "fetched_at": "2026-05-21T12:30:00Z",
-      "appears_in": ["references/tax-rates-2026.md"]
+      "raw_snippet": "החוק החדש (סעיפים 81א-81ו לפקודה) קובע כי חברת מעטים עם רווחים נצברים מעל 750,000 ש\"ח חייבת לבחור באחד משני מסלולים החל משנת המס 2025.",
+      "fetched_at": "2026-08-09T00:00:00Z",
+      "appears_in": [
+        "references/tax-rates-2026.md"
+      ],
+      "verified_via": "fetched and read the cited page on 2026-08-09"
     },
     {
       "claim_id": "trapped-profits-safe-harbor-6pct",
@@ -641,23 +922,37 @@
       "source_url": "https://www.bshcpa.co.il/%D7%A8%D7%95%D7%95%D7%97%D7%99%D7%9D-%D7%9C%D7%90-%D7%9E%D7%97%D7%95%D7%9C%D7%A7%D7%99%D7%9D/",
       "raw_snippet": "6% מהרווחים",
       "fetched_at": "2026-07-15T16:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/tax-rates-2026.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-rates-2026.md"
+      ]
     },
     {
       "claim_id": "amendment-288-bracket-widening",
       "claim": "Amendment 288 to the Income Tax Ordinance (enacted 31 March 2026, retroactive to 1 Jan 2026) widened the 20% and 31% bracket ceilings for 2026; the credit-point value and surtax threshold stayed frozen",
       "source_url": "https://www.kolzchut.org.il/he/%D7%9E%D7%93%D7%A8%D7%92%D7%95%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
-      "raw_snippet": "228,000",
-      "fetched_at": "2026-07-15T16:00:00Z",
-      "appears_in": ["references/tax-rates-2026.md", "SKILL.md", "scripts/tax_comparison.py"]
+      "raw_snippet": "מדרגות המס בשנת 2025 זהות לאלה של שנת 2024, ובשנת 2026 הורחבו חלק ממדרגות המס",
+      "fetched_at": "2026-08-09T00:00:00Z",
+      "appears_in": [
+        "references/tax-rates-2026.md",
+        "SKILL.md",
+        "scripts/tax_comparison.py"
+      ],
+      "verified_via": "fetched and read the cited page on 2026-08-09"
     },
     {
       "claim_id": "circular-7-2017",
-      "claim": "Tax Authority Circular 7/2017 details the Section 3(tet1) reclassification cascade: dividend to extent of profits, else salary/work income, else business or professional income under Section 2(1)",
-      "source_url": "https://www.gov.il/he/departments/policies/income-tax-professional-inst-07-2017",
-      "raw_snippet": "הכנסה מדיבידנד ... כהכנסת עבודה ... או כהכנסה מעסק או משלח יד לפי סעיף 2(1)",
-      "fetched_at": "2026-07-15T16:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/section-3tet-rules.md"]
+      "claim": "Tax Authority Circular 7/2017 (section 2.4) sets out the Section 3(tet1) reclassification cascade: the withdrawal is first classified as a dividend where the company has profits, then as work income where an employer-employee relationship exists, and otherwise as business or professional income",
+      "source_url": "https://www.gov.il/BlobFolder/policy/income-tax-professional-inst-07-2017/he/Policy_IncomeTaxProfessionalInst_hoz_07_2017_acc.pdf",
+      "raw_snippet": "ראשית, תסווג ההכנסה כדיבידנד על פי סעיף 2(4) לפקודה, ובלבד שבחברה ממנה בוצעה המשיכה היו רווחים כהגדרתם בסעיף 302(ב) לחוק החברות.",
+      "fetched_at": "2026-08-09T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/section-3tet-rules.md"
+      ],
+      "verified_via": "fetched and read the cited page on 2026-08-09"
     },
     {
       "claim_id": "withholding-deposit-15th",
@@ -665,7 +960,10 @@
       "source_url": "https://www.gov.il/he/departments/israel_tax_authority",
       "raw_snippet": "by the 15th of the following month",
       "fetched_at": "2026-05-21T12:30:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "btl-self-employed-page",
@@ -673,15 +971,23 @@
       "source_url": "https://www.btl.gov.il/Insurance/National%20Insurance/Pages/default.aspx",
       "raw_snippet": "https://www.btl.gov.il/Insurance/National%20Insurance/Pages/default.aspx",
       "fetched_at": "2026-05-21T12:30:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/tax-rates-2026.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-rates-2026.md"
+      ]
     },
     {
       "claim_id": "capitax-section-3tet",
-      "claim": "Capitax publishes the annual Section 3(tet) rate update",
-      "source_url": "https://www.capitax.co.il",
-      "raw_snippet": "https://www.capitax.co.il",
-      "fetched_at": "2026-05-21T12:30:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "claim": "The annual Section 3(tet) / 3(yod) interest rates are published each year in a professional circular (2026: 6.53% for 3(tet), 4.90% for 3(yod))",
+      "source_url": "https://britcpa.co.il/hozrim/%D7%A9%D7%99%D7%A2%D7%95%D7%A8%D7%99-%D7%94%D7%A8%D7%99%D7%91%D7%99%D7%AA-%D7%9C%D7%A2%D7%A0%D7%99%D7%99%D7%9F-%D7%A1%D7%A2%D7%99%D7%A4%D7%99%D7%9D-3%D7%98-%D7%95-3%D7%99-%D7%9C%D7%A9%D7%A0%D7%AA-4/",
+      "raw_snippet": "שיעורי הריבית לעניין סעיפים 3(ט) ו-3(י) לשנת 2026",
+      "fetched_at": "2026-08-09T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "verified_via": "fetched and read the cited page on 2026-08-09"
     },
     {
       "claim_id": "cws-israel-tax-guide-2026",
@@ -689,7 +995,10 @@
       "source_url": "https://www.cwsisrael.com/israeli-tax-changes-2026-complete-guide/",
       "raw_snippet": "https://www.cwsisrael.com/israeli-tax-changes-2026-complete-guide/",
       "fetched_at": "2026-05-21T12:30:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "section-121b-he",
@@ -697,23 +1006,33 @@
       "source_url": "https://www.nevo.co.il/law/70264",
       "raw_snippet": "סעיף 121ב",
       "fetched_at": "2026-05-21T12:30:00Z",
-      "appears_in": ["SKILL_HE.md"]
+      "appears_in": [
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "section-3-he",
       "claim": "Section 3 (Hebrew: סעיף 3) general reference for §3(tet), §3(yod), §3(tet1), §3(i)(1)",
-      "source_url": "https://www.nevo.co.il/law/70264",
-      "raw_snippet": "סעיף 3",
-      "fetched_at": "2026-05-21T12:30:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/section-3tet-rules.md"]
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "raw_snippet": "הכנסות אחרות 3. (א) סכום שהגיע לידי אדם על פי ביטוח מפני הפסד רווחים או על פי ביטוח מפני אבדן כושר עבודה, יבוא בחשבון לקביעת רווחיו או הכנסתו",
+      "fetched_at": "2026-08-09T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/section-3tet-rules.md"
+      ],
+      "verified_via": "fetched and read the cited page on 2026-08-09"
     },
     {
       "claim_id": "section-32-he",
       "claim": "Section 32 (Hebrew: סעיף 32) reasonableness rules for controlling-shareholder salary",
-      "source_url": "https://www.nevo.co.il/law/70264",
-      "raw_snippet": "סעיף 32",
-      "fetched_at": "2026-05-21T12:30:00Z",
-      "appears_in": ["SKILL_HE.md"]
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "raw_snippet": "ניכויים שאין להתירם 32. בבירור הכנסתו החייבת של אדם לא יותרו ניכויים בשל –",
+      "fetched_at": "2026-08-09T00:00:00Z",
+      "appears_in": [
+        "SKILL_HE.md"
+      ],
+      "verified_via": "fetched and read the cited page on 2026-08-09"
     },
     {
       "claim_id": "section-47a-he",
@@ -721,7 +1040,10 @@
       "source_url": "https://www.nevo.co.il/law/70264",
       "raw_snippet": "סעיף 47א",
       "fetched_at": "2026-05-21T12:30:00Z",
-      "appears_in": ["SKILL_HE.md", "references/tax-rates-2026.md"]
+      "appears_in": [
+        "SKILL_HE.md",
+        "references/tax-rates-2026.md"
+      ]
     },
     {
       "claim_id": "section-62a-he",
@@ -729,7 +1051,10 @@
       "source_url": "https://www.nevo.co.il/law/70264",
       "raw_snippet": "סעיף 62א",
       "fetched_at": "2026-05-21T12:30:00Z",
-      "appears_in": ["SKILL_HE.md", "references/tax-rates-2026.md"]
+      "appears_in": [
+        "SKILL_HE.md",
+        "references/tax-rates-2026.md"
+      ]
     },
     {
       "claim_id": "section-64a-he",
@@ -737,15 +1062,20 @@
       "source_url": "https://www.nevo.co.il/law/70264",
       "raw_snippet": "סעיף 64א",
       "fetched_at": "2026-05-21T12:30:00Z",
-      "appears_in": ["SKILL_HE.md"]
+      "appears_in": [
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "section-77-he",
       "claim": "Section 77 (Hebrew: סעיף 77) deemed-distribution power",
-      "source_url": "https://www.nevo.co.il/law/70264",
-      "raw_snippet": "סעיף 77",
-      "fetched_at": "2026-05-21T12:30:00Z",
-      "appears_in": ["SKILL_HE.md"]
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "raw_snippet": "רווחים לא מחולקים שרואים אותם כמחולקים 77. (א) ראה המנהל, כי חברת מעטים לא חילקה דיבידנד בשיעור של 50% לפחות מתוך רווחיה לשנת מס פלונית",
+      "fetched_at": "2026-08-09T00:00:00Z",
+      "appears_in": [
+        "SKILL_HE.md"
+      ],
+      "verified_via": "fetched and read the cited page on 2026-08-09"
     },
     {
       "claim_id": "section-85a-he",
@@ -753,7 +1083,9 @@
       "source_url": "https://www.nevo.co.il/law/70264",
       "raw_snippet": "סעיף 85א",
       "fetched_at": "2026-05-21T12:30:00Z",
-      "appears_in": ["SKILL_HE.md"]
+      "appears_in": [
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "form-126-he",
@@ -761,23 +1093,33 @@
       "source_url": "https://www.gov.il/he/departments/israel_tax_authority",
       "raw_snippet": "טופס 126",
       "fetched_at": "2026-05-21T12:30:00Z",
-      "appears_in": ["SKILL_HE.md", "references/section-3tet-rules.md"]
+      "appears_in": [
+        "SKILL_HE.md",
+        "references/section-3tet-rules.md"
+      ]
     },
     {
       "claim_id": "tax-year-2026-reference",
       "claim": "Tax year 2026 reference appears in section headings throughout the skill (e.g., '**2026** Income Tax Brackets')",
       "source_url": "https://www.kolzchut.org.il/he/%D7%9E%D7%93%D7%A8%D7%92%D7%95%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
-      "raw_snippet": "*2026",
-      "fetched_at": "2026-05-21T12:30:00Z",
-      "appears_in": ["SKILL.md", "references/section-3tet-rules.md"]
+      "raw_snippet": "שיעורי מדרגות המס לשנת 2026",
+      "fetched_at": "2026-08-09T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "references/section-3tet-rules.md"
+      ],
+      "verified_via": "fetched and read the cited page on 2026-08-09"
     },
     {
       "claim_id": "tax-year-2027-reference",
-      "claim": "Tax year 2027 deadline reference (e.g., loan drawn 2026 must be repaid by **2027-12-31**)",
-      "source_url": "https://www.gov.il/he/departments/policies/income-tax-professional-inst-07-2017",
-      "raw_snippet": "**2027",
-      "fetched_at": "2026-05-21T12:30:00Z",
-      "appears_in": ["SKILL.md"]
+      "claim": "SKILL.md states the Section 3(tet1) repayment deadline in bold as **2027-12-31** for a 2026 withdrawal, because the statutory charge date for a cash withdrawal is the end of the tax year following the year of withdrawal",
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "raw_snippet": "במשיכת כספים מחברה – בתום שנת המס שלאחר שנת המס שבה נמשכו",
+      "fetched_at": "2026-08-09T00:00:00Z",
+      "appears_in": [
+        "SKILL.md"
+      ],
+      "verified_via": "fetched and read the cited page on 2026-08-09"
     },
     {
       "claim_id": "hebrew-currency-variants",
@@ -785,7 +1127,9 @@
       "source_url": "https://www.kolzchut.org.il/he/%D7%9E%D7%93%D7%A8%D7%92%D7%95%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
       "raw_snippet": "51,910 ש\"ח, 7,703 ש\"ח, 721,560 ש\"ח, 228,000 ש\"ח, 200,000 ש\"ח, 500,000 ש\"ח, 230,500 ש\"ח, 19,250 ש\"ח, 100,000 ש\"ח, 2,904 ש\"ח, 242 ש\"ח, 266 ש\"ח",
       "fetched_at": "2026-05-21T12:30:00Z",
-      "appears_in": ["SKILL_HE.md"]
+      "appears_in": [
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "example-extraction-calculations",
@@ -793,7 +1137,12 @@
       "source_url": "https://www.kolzchut.org.il/he/%D7%9E%D7%93%D7%A8%D7%92%D7%95%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
       "raw_snippet": "107,800 NIS, 12,920 NIS, 137,533 NIS, 154,000 NIS, 155,194 NIS, 18,156 NIS, 18,960 NIS, 183,275 NIS, 186,270 NIS, 196,476 NIS, 19,250 NIS, 200,000 NIS, 230,500 NIS, 24,690 NIS, 25,765 NIS, 255,163 NIS, 266 NIS, 320,808 NIS, 46,000 NIS, 46,200 NIS, 47,394 NIS, 48,767 NIS, 500,000 NIS, 58,687 NIS, 58,943 NIS, 6,534 NIS, 123 NIS, 143 NIS, NIS 100,000",
       "fetched_at": "2026-05-21T12:30:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/extraction-methods.md", "references/tax-rates-2026.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/extraction-methods.md",
+        "references/tax-rates-2026.md"
+      ]
     },
     {
       "claim_id": "example-effective-rates",
@@ -801,7 +1150,12 @@
       "source_url": "https://www.kolzchut.org.il/he/%D7%9E%D7%93%D7%A8%D7%92%D7%95%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
       "raw_snippet": "Effective rate: approximately",
       "fetched_at": "2026-05-21T12:30:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/extraction-methods.md", "scripts/tax_comparison.py"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/extraction-methods.md",
+        "scripts/tax_comparison.py"
+      ]
     },
     {
       "claim_id": "min-salary-6500-he",
@@ -809,7 +1163,10 @@
       "source_url": "https://www.gov.il/he/departments/israel_tax_authority",
       "raw_snippet": "~6,500 NIS/month",
       "fetched_at": "2026-05-21T12:30:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "rounding-and-derived-percentages",
@@ -817,7 +1174,10 @@
       "source_url": "https://www.btl.gov.il/Insurance/Rates/Pages/default.aspx",
       "raw_snippet": "~12% employee NI+health; ~55-60% combined",
       "fetched_at": "2026-05-21T12:30:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "url-encoded-percent-tokens",
@@ -825,23 +1185,34 @@
       "source_url": "https://www.kolzchut.org.il/he/%D7%9E%D7%93%D7%A8%D7%92%D7%95%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
       "raw_snippet": "kolzchut URL %-encoding: 92%, 93%, 94%",
       "fetched_at": "2026-05-21T12:30:00Z",
-      "appears_in": ["scripts/tax_comparison.py"]
+      "appears_in": [
+        "scripts/tax_comparison.py"
+      ]
     },
     {
-      "claim_id": "deprecated-ni-health-3-1",
-      "claim": "Pre-2025 employee health rate (deprecated, referenced in changelog-style note): 3.1%",
-      "source_url": "https://www.btl.gov.il/Insurance/Rates/Pages/default.aspx",
-      "raw_snippet": "3.1%",
-      "fetched_at": "2026-05-21T12:30:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/tax-rates-2026.md"]
+      "claim_id": "section-2-1-residual",
+      "claim": "Circular 7/2017 section 2.4.3: where no employer-employee relationship exists the withdrawal is classified as business or professional income under Section 2(1) of the Ordinance",
+      "source_url": "https://www.gov.il/BlobFolder/policy/income-tax-professional-inst-07-2017/he/Policy_IncomeTaxProfessionalInst_hoz_07_2017_acc.pdf",
+      "raw_snippet": "כאשר לא מתקיימים יחסי עובד מעביד כאמור לעיל, תסווג המשיכה בידי בעל המניות כהכנסה מעסק או משלח יד על פי סעיף 2(1) לפקודה.",
+      "fetched_at": "2026-08-09T00:00:00Z",
+      "verified_via": "downloaded and read the circular PDF on 2026-08-09",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/section-3tet-rules.md"
+      ]
     },
     {
-      "claim_id": "deprecated-ni-health-5-0",
-      "claim": "Pre-2025 employee health rate above threshold (deprecated, referenced in changelog-style note): 5.0%",
-      "source_url": "https://www.btl.gov.il/Insurance/Rates/Pages/default.aspx",
-      "raw_snippet": "5.0%",
-      "fetched_at": "2026-05-21T12:30:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/tax-rates-2026.md"]
+      "claim_id": "britcpa-annual-3tet-circular",
+      "claim": "BritCPA publishes the annual Section 3(tet)/3(yod) interest-rate circular, cited in the skill as the place to check next year's rate",
+      "source_url": "https://britcpa.co.il/hozrim/שיעורי-הריבית-לעניין-סעיפים-3ט-ו-3י-לשנת-4/",
+      "raw_snippet": "שיעורי הריבית לעניין סעיפים 3(ט) ו-3(י) לשנת 2026",
+      "fetched_at": "2026-08-09T00:00:00Z",
+      "verified_via": "fetched and read the page on 2026-08-09",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     }
   ]
 }

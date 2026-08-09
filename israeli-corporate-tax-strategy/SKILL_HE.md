@@ -264,7 +264,7 @@ compatibility: Works with Claude Code, OpenClaw, Cursor, Windsurf, Codex, GitHub
 | רשות המסים בישראל | https://www.gov.il/he/departments/israel_tax_authority | שיעורי מס, טפסים, חוזרים |
 | פקודת מס הכנסה | https://www.nevo.co.il/law/70264 | נוסח חוק סעיפים 3(ט), 121ב, 32(9) |
 | ביטוח לאומי -- שיעורי דמי ביטוח | https://www.btl.gov.il/Insurance/National%20Insurance/Pages/default.aspx | שיעורי ביטוח לאומי ובריאות עדכניים |
-| שיעור סעיף 3(ט) השנתי | https://www.capitax.co.il | מתפרסם מדי שנה, בדרך כלל בדצמבר |
+| שיעור סעיף 3(ט) השנתי | https://britcpa.co.il/hozrim/שיעורי-הריבית-לעניין-סעיפים-3ט-ו-3י-לשנת-4/ | מתפרסם מדי שנה, בדרך כלל בדצמבר |
 | כל-זכות -- זכויות מס | https://www.kolzchut.org.il/he/%D7%9E%D7%93%D7%A8%D7%92%D7%95%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94 | מדרגות מס, נקודות זיכוי |
 | CWS Israel -- מדריך מס | https://www.cwsisrael.com/israeli-tax-changes-2026-complete-guide/ | סיכום שינויי מס שנתיים |
 
