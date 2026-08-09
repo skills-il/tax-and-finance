@@ -43,20 +43,20 @@
       "raw_snippet": "Income above 7,703 ₪ up to 51,910 ₪ is subject to the full National Insurance contribution rate (2026)"
     },
     {
-      "claim": "For a resident salaried employee aged 18 to retirement (column 1 of the BL rate table), the 2026 employee contribution is: reduced tier (up to 7,703/month) National Insurance 1.04% + health 3.23% = 4.27% total; full tier (7,703-51,910/month) National Insurance 7.0% + health 5.17% = 12.17% total. The reduced-tier NI rate (1.04%) and full-tier health rate (5.17%) reflect the temporary order in force for 2025-2026.",
+      "claim": "For a resident salaried employee aged 18 to retirement (column 1 of the BL rate table), the 2026 employee contribution is: reduced tier (up to 7,703/month) National Insurance 1.04% + health 3.23% = 4.27% total; full tier (7,703-51,910/month) National Insurance 7.0% + health 5.17% = 12.17% total. The reduced-tier NI rate (1.04%) and full-tier health rate (5.17%) reflect the temporary order in force for 2025-2026. Employer contribution on the full tier is 7.6%. Before the temporary order the employee reduced-tier total was 3.5% and the full-tier total was 12.0%.",
       "source_name": "Bituach Leumi official rate table for salaried employees",
       "verified_2026": true,
       "note": "Confirmed by rendering the official BL salaried-worker rate table (column 1). Corrects the prior pre-2025 figures (0.4%/3.1%/7.0%/5.0%) that survived in the v1.1.0 reference file.",
       "source_url": "https://www.btl.gov.il/Insurance/Rates/Pages/לעובדים%20שכירים.aspx",
-      "raw_snippet": "מחלק השכר שעד מדרגת גביה מופחתת (שיעור מופחת) - 7,703 ... סך הכול עובד 4.27% ... שיעור מלא ... סך הכול עובד 12.17% Employer contribution: reduced 4.51%, full 7.6%. Ceiling 51,910 ש\"ח/חודש, reduced-rate ceiling 7,703 ש\"ח. Prior (pre-2025) employee rates were 0.4% / 3.1% / 7.0% / 5.0% with totals 3.5% and 12.0%."
+      "raw_snippet": "7,703 ש\"ח (החל ב- 01.01.2026)"
     },
     {
       "claim": "Section 102(b)(3): for a company whose shares are LISTED on a stock exchange at the grant date, or registered for trading within 90 days after the grant,, the capital-gains track still applies but the gain is mandatorily bifurcated. The ordinary-income component equals the average closing share value over the 30 trading days preceding the grant date (less any exercise price) and is taxed at marginal rates + Bituach Leumi + health + surtax; only the excess over that grant-date average is taxed at 25%. Private companies at grant are taxed at a flat 25% on the whole gain.",
       "source_name": "Baker McKenzie Global Equity Matrix - Israel RS/RSU (Section 102(b)(3))",
       "verified_2026": true,
       "note": "The 30-day-preceding-grant ordinary-income component under the capital-gains track for listed companies is the §102(b)(3) rule; the income-track 30-day-preceding-settlement average is the separate Baker McKenzie RSU claim already in this file. 90-day-after-grant arm added per expert review.",
-      "source_url": "https://resourcehub.bakermckenzie.com/en/resources/global-equity-matrix/emea/israel/topics/rsrsu",
-      "raw_snippet": "the average value of the Stock for the 30 trading days preceding ... is taxable to the employee as ordinary income The statute also captures shares registered for trading on an exchange within 90 days after the date of grant (שנרשמו למסחר בבורסה בתוך 90 יום ממועד ההקצאה)."
+      "source_url": "https://www.nevo.co.il/law_html/law01/255_001.htm",
+      "raw_snippet": "היתה המניה המוקצית מניה הרשומה למסחר בבורסה, או מניה בחברה שמניותיה נרשמו למסחר בתוך 90 ימים ממועד ההקצאה, יראו את חלק שווי ההטבה בגובה ממוצע שוויין של מניות החברה בבורסה בתום שלושים ימי המסחר שקדמו להקצאה, או בתום שלושים ימי המסחר שלאחר הרישום למסחר כאמור, לפי הענין, בניכוי ההוצאות, כהכנסה לפי סעיף 2(1) או (2) לפי הענין, ואת יתרת שווי ההטבה כרווח הון החייב במס בשיעור של 25%"
     },
     {
       "claim": "Capital gains track does NOT apply Bituach Leumi or health insurance to the gain. Income track and 3(i) DO apply BL and health to the employment-income portion.",
@@ -178,6 +178,30 @@
       "source_name": "Israel Tax Authority - securities capital-gains self-reporting and advance payments",
       "raw_snippet": "foreign broker does not withhold; annual return Form 1301; semi-annual advance payments (mikdamot) on securities gains; מקדמות על רווחי ניירות ערך",
       "verified_2026": true
+    },
+    {
+      "claim": "The maximum income liable for national insurance contributions is 51,910 NIS (51,910 ש\"ח) per month from 01.01.2026.",
+      "source_name": "Bituach Leumi official rate table for salaried employees",
+      "verified_2026": true,
+      "note": "Confirmed by rendering the official BL salaried-worker rate table (column 1). Corrects the prior pre-2025 figures (0.4%/3.1%/7.0%/5.0%) that survived in the v1.1.0 reference file.",
+      "source_url": "https://www.btl.gov.il/Insurance/Rates/Pages/לעובדים%20שכירים.aspx",
+      "raw_snippet": "51,910 ש\"ח (החל ב- 01.01.2026)"
+    },
+    {
+      "claim": "The total employee contribution on the reduced tier is 4.27%.",
+      "source_name": "Bituach Leumi official rate table for salaried employees",
+      "verified_2026": true,
+      "note": "Confirmed by rendering the official BL salaried-worker rate table (column 1). Corrects the prior pre-2025 figures (0.4%/3.1%/7.0%/5.0%) that survived in the v1.1.0 reference file.",
+      "source_url": "https://www.btl.gov.il/Insurance/Rates/Pages/לעובדים%20שכירים.aspx",
+      "raw_snippet": "4.27% (החל ב- 01.01.2025)"
+    },
+    {
+      "claim": "The total employee contribution on the full tier is 12.17%.",
+      "source_name": "Bituach Leumi official rate table for salaried employees",
+      "verified_2026": true,
+      "note": "Confirmed by rendering the official BL salaried-worker rate table (column 1). Corrects the prior pre-2025 figures (0.4%/3.1%/7.0%/5.0%) that survived in the v1.1.0 reference file.",
+      "source_url": "https://www.btl.gov.il/Insurance/Rates/Pages/לעובדים%20שכירים.aspx",
+      "raw_snippet": "12.17% (החל ב- 01.02.2025)"
     }
   ]
 }
