@@ -136,15 +136,28 @@
       "verified_at": "2026-07-30"
     },
     {
-      "id": "shamai-machria-appointed-by-chair",
-      "claim": "The request to appoint a deciding appraiser is submitted to the chair of the Land Appraisers Council, who names the appraiser from a closed list within 15 days",
+      "id": "shamai-machria-appointed-by-chair-a",
+      "claim": "A request to appoint a deciding appraiser (shamai machria) is submitted to the chair of the Land Appraisers Council.",
       "claim_type": "law",
       "source_url": "https://www.kolzchut.org.il/he/השגה_על_היטל_השבחה",
-      "source_fetched_at": "2026-07-30T13:08:13Z",
-      "raw_snippet": "בקשה למינוי שמאי מכריע מוגשת ליו\"ר מועצת שמאי המקרקעין. ... השמאי המכריע ממונה מתוך רשימה סגורה שאושרה על ידי שר המשפטים, ויו\"ר מועצת שמאי המקרקעין יודיע בתוך 15 יום ממועד קבלת הפנייה על זהותו של השמאי המכריע שמינה.",
+      "source_fetched_at": "2026-08-10T00:00:00Z",
+      "raw_snippet": "בקשה למינוי שמאי מכריע מוגשת ליו\"ר מועצת שמאי המקרקעין.",
       "confidence": "high",
       "verified_via": "browser",
-      "verified_at": "2026-07-30"
+      "verified_at": "2026-07-30",
+      "source_note": "Split 2026-08-10 from a single ellipsis-stitched snippet into contiguous verbatim quotes; both passages re-fetched and confirmed present on the page."
+    },
+    {
+      "id": "shamai-machria-appointed-by-chair-b",
+      "claim": "The deciding appraiser is appointed from a closed list approved by the Minister of Justice, and the chair of the Land Appraisers Council notifies the applicant of the appointee's identity within 15 days of receiving the request.",
+      "claim_type": "law",
+      "source_url": "https://www.kolzchut.org.il/he/השגה_על_היטל_השבחה",
+      "source_fetched_at": "2026-08-10T00:00:00Z",
+      "raw_snippet": "השמאי המכריע ממונה מתוך רשימה סגורה שאושרה על ידי שר המשפטים, ויו\"ר מועצת שמאי המקרקעין יודיע בתוך 15 יום ממועד קבלת הפנייה על זהותו של השמאי המכריע שמינה.",
+      "confidence": "high",
+      "verified_via": "browser",
+      "verified_at": "2026-07-30",
+      "source_note": "Split 2026-08-10 from a single ellipsis-stitched snippet into contiguous verbatim quotes; both passages re-fetched and confirmed present on the page."
     },
     {
       "id": "appeal-chain-after-shamai-machria",
@@ -268,15 +281,28 @@
       "verified_at": "2026-07-30"
     },
     {
-      "id": "takan-19-conservative",
-      "claim": "Standard 19 requires a conservative approach in setting the collateral value, both for factual data and in the analysis stages, leading to a cautious valuation result, and where data is missing the appraiser assumes stringent assumptions",
+      "id": "takan-19-conservative-a",
+      "claim": "Standard 19: a valuation for collateral purposes differs from an open-market valuation because of the need for a conservative approach in setting the 'value for collateral purposes', both for the factual data and in the appraisal analysis stages.",
       "claim_type": "law",
       "source_url": "https://www.gov.il/BlobFolder/dynamiccollectorresultitem/assessor-standardization-db_19/he/land_assessor_shameim_19.pdf",
-      "source_fetched_at": "2026-07-30T13:06:00Z",
-      "raw_snippet": "התייחסות שמרנית בשומה ... בהתייחסות שמרנית בקביעת \"ערך למטרת בטוחה\", הן לנתונים העובדתיים והן בשלבי הניתוח השמאי ... לתוצאת שומה זהירה ובמקרים שבהם חסרים נתונים יניח השמאי הנחות מחמירות.",
+      "source_fetched_at": "2026-08-10T00:00:00Z",
+      "raw_snippet": "שומה למטרת בטחוה נבדלת משומת שווי שוק בין קונה מרצון לבין מוכר מרצון, בין היתר, בשל הצורך בהתייחסות שמרנית בקביעת \"ערך למטרת בטוחה\", הן לנתונים העובדתיים והן בשלבי הניתוח השמאי.",
       "confidence": "high",
       "verified_via": "pdf",
-      "verified_at": "2026-07-30"
+      "verified_at": "2026-07-30",
+      "source_note": "Split 2026-08-10 from a single ellipsis-stitched snippet into contiguous verbatim quotes; both passages re-fetched and confirmed present on the page. Read from the PDF via pdftotext -layout; the source contains the typo 'בטחוה' for 'בטוחה', reproduced verbatim."
+    },
+    {
+      "id": "takan-19-conservative-b",
+      "claim": "Where the appraiser lacks some of the required details or documents, the value for collateral purposes is assessed on the basis of stringent assumptions, provided the missing data is not material.",
+      "claim_type": "law",
+      "source_url": "https://www.gov.il/BlobFolder/dynamiccollectorresultitem/assessor-standardization-db_19/he/land_assessor_shameim_19.pdf",
+      "source_fetched_at": "2026-08-10T00:00:00Z",
+      "raw_snippet": "במקרה שבו לא יהיו בפני השמאי כל הפרטים/מסמכים הדרושים, יעריך את הערך למטרת בטוחה על בסיס הנחות מחמירות, בתנאי שהנתונים החסרים אינם מהותיים.",
+      "confidence": "high",
+      "verified_via": "pdf",
+      "verified_at": "2026-07-30",
+      "source_note": "Split 2026-08-10 from a single ellipsis-stitched snippet into contiguous verbatim quotes; both passages re-fetched and confirmed present on the page. The prior snippet also asserted 'לתוצאת שומה זהירה'; that phrase was not located in the PDF and has been dropped rather than restated."
     },
     {
       "id": "takan-19-no-shuma-without-material-data",
@@ -389,15 +415,28 @@
       "verified_at": "2026-07-30"
     },
     {
-      "id": "council-licenses-appraisers",
-      "claim": "The land appraisal profession is regulated under the Land Appraisers Law 2001, and the Land Appraisers Council is responsible for licensing and certifying appraisers and publishes a register of active or suspended appraisers",
+      "id": "council-licenses-appraisers-a",
+      "claim": "The land appraisal profession in Israel is regulated by the Land Appraisers Law 5761-2001; the Land Appraisers Council established by that law is responsible for licensing and certifying appraisers, runs qualification exams, registers and supervises trainees, and grants licences.",
       "claim_type": "law",
       "source_url": "https://www.gov.il/he/departments/topics/land_assessor/govil-landing-page",
-      "source_fetched_at": "2026-07-30T13:38:28Z",
-      "raw_snippet": "מקצוע שמאות המקרקעין בישראל מוסדר בחוק שמאי המקרקעין, התשס\"א-2001. מועצת שמאי המקרקעין שהוקמה בחוק זה אחראית לרישוי והסמכת שמאי המקרקעין. ... שמאים פעילים או מותלים",
+      "source_fetched_at": "2026-08-10T00:00:00Z",
+      "raw_snippet": "מקצוע שמאות המקרקעין בישראל מוסדר בחוק שמאי המקרקעין, התשס\"א-2001. מועצת שמאי המקרקעין שהוקמה בחוק זה אחראית לרישוי והסמכת שמאי המקרקעין. המועצה עורכת בחינות הסמכה, רושמת מתמחים ומפקחת על התמחותם ומעניקה רישיונות.",
       "confidence": "high",
       "verified_via": "browser",
-      "verified_at": "2026-07-30"
+      "verified_at": "2026-07-30",
+      "source_note": "Split 2026-08-10 from a single ellipsis-stitched snippet into contiguous verbatim quotes; both passages re-fetched and confirmed present on the page. Read via a headless browser; gov.il returns 403 to plain HTTP clients."
+    },
+    {
+      "id": "council-licenses-appraisers-b",
+      "claim": "The Justice Ministry's land-appraiser topic page publishes a register of active or suspended appraisers.",
+      "claim_type": "law",
+      "source_url": "https://www.gov.il/he/departments/topics/land_assessor/govil-landing-page",
+      "source_fetched_at": "2026-08-10T00:00:00Z",
+      "raw_snippet": "שמאים פעילים או מותלים",
+      "confidence": "high",
+      "verified_via": "browser",
+      "verified_at": "2026-07-30",
+      "source_note": "Split 2026-08-10 from an ellipsis-stitched snippet; this is the verbatim label of the register link in the page's own section navigation. Read via a headless browser."
     },
     {
       "id": "nadlan-origin-header",
