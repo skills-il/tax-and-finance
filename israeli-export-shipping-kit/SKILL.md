@@ -92,11 +92,11 @@ gain or loss is an income-tax item and does not retroactively change the VAT fig
 | Turkey | **Do not plan a shipment here without checking first** | n/a | The Israel-Turkey FTA has not been terminated, but Turkey's trade ban on Israel (May 2024) is still in force and was tightened in February 2026, when Turkey stopped issuing EUR-MED certificates for Israel-bound goods even when routed through a third country. Treat Turkey as blocked in practice and confirm with your forwarder before quoting a customer |
 | Mercosur (Brazil, Argentina, Uruguay, Paraguay) | Mercosur-Israel certificate of origin | Israeli Customs | NOT the EUR.1 form and NOT an invoice declaration: this agreement has its own certificate. Request it through Israeli Customs before shipping |
 | UAE | EUR.1 / origin declaration per the CEPA protocol | Israeli Customs / exporter | UAE-Israel CEPA in force 1 April 2023 |
-| South Korea | Origin declaration per the KIFTA protocol | Exporter | Korea-Israel FTA (KIFTA) in force 1 December 2022 |
+| South Korea | Origin declaration per the KIFTA protocol | Exporter | Korea-Israel FTA (KIFTA) in force 1 January 2023 |
 | Vietnam | Origin proof per the VIFTA protocol | Exporter / Israeli Customs | Vietnam-Israel FTA (VIFTA) in force 17 November 2024 |
 | Guatemala, Panama, Colombia, Mexico, Jordan | Origin proof per each bilateral protocol | Per the agreement | Israel also has in-force FTAs with these countries (Guatemala 1 March 2024) |
 
-Israel has free trade agreements in force with the EU, USA, EFTA, Canada (CIFTA), Mercosur, UK, Turkey, Ukraine, Jordan, Mexico, Panama, Colombia, Guatemala, South Korea (KIFTA, in force 1 December 2022), the UAE (CEPA) and Vietnam (VIFTA). Check the exact origin-document type and rules of origin in the specific agreement before shipping; the table above lists the most common ones.
+Israel has free trade agreements in force with the EU, USA, EFTA, Canada (CIFTA), Mercosur, UK, Turkey, Ukraine, Jordan, Mexico, Panama, Colombia, Guatemala, South Korea (KIFTA, in force 1 January 2023), the UAE (CEPA) and Vietnam (VIFTA). Check the exact origin-document type and rules of origin in the specific agreement before shipping; the table above lists the most common ones.
 
 **A note on the EU route, current as of 27 July 2026: preferential access is fully in
 force and nothing has been suspended.** The Commission proposed suspending certain trade

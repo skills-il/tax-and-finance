@@ -7,7 +7,7 @@
       "claim_id": "vat-18-zero-export",
       "claim": "The standard Israeli VAT rate is 18 percent and exports of goods are zero-rated (0 percent).",
       "source_url": "https://taxsummaries.pwc.com/israel/corporate/other-taxes",
-      "raw_snippet": "The 2025 current rate of VAT is 18%. ... Exports of goods and certain services and various other transactions are zero-rated",
+      "raw_snippet": "The 2025 current rate of VAT is 18%. Exports of goods and certain services and various other transactions are zero-rated, and certain transactions are exempt.",
       "fetched_at": "2026-06-25T00:00:00Z",
       "appears_in": [
         "SKILL.md",
@@ -17,8 +17,8 @@
     {
       "claim_id": "vat-section-30-export-proof",
       "claim": "Zero VAT on exports is governed by Section 30 (סעיף 30) of the VAT Law; the rate is conditional on documentation. If proof is missing the Tax Authority can deny the zero rate and assess at 18 percent.",
-      "source_url": "https://taxsummaries.pwc.com/israel/corporate/other-taxes",
-      "raw_snippet": "The 2025 current rate of VAT is 18%. ... Exports of goods and certain services and various other transactions are zero-rated",
+      "source_url": "https://www.nevo.co.il/law_html/law01/271_001.htm",
+      "raw_snippet": "מכירת טובין – למעט טובין כאמור בסעיף 33 – אם הוגשו לגביהם הצהרת ייצוא או מסמך אחר שאישר לעניין זה המנהל, וניתנה לגביהם התרה;",
       "fetched_at": "2026-06-25T00:00:00Z",
       "appears_in": [
         "SKILL.md",
@@ -140,7 +140,7 @@
       "claim_id": "fta-uae-cepa",
       "claim": "The UAE-Israel CEPA entered into force on 1 April 2023.",
       "source_url": "https://en.wikipedia.org/wiki/Free_trade_agreements_of_Israel",
-      "raw_snippet": "UAE ... 1 April 2023",
+      "raw_snippet": "The free trade agreement went into effect on 1 April 2023.",
       "fetched_at": "2026-06-25T00:00:00Z",
       "appears_in": [
         "SKILL.md",
@@ -151,7 +151,7 @@
       "claim_id": "fta-vietnam-vifta",
       "claim": "The Vietnam-Israel FTA (VIFTA) entered into force on 17 November 2024.",
       "source_url": "https://en.wikipedia.org/wiki/Free_trade_agreements_of_Israel",
-      "raw_snippet": "Vietnam ... 17 November 2024",
+      "raw_snippet": "Israel and Vietnam signed the free trade agreement on 24. July 2023 and the agreement came into force on 17 November 2024.",
       "fetched_at": "2026-06-25T00:00:00Z",
       "appears_in": [
         "SKILL.md",
@@ -162,7 +162,7 @@
       "claim_id": "fta-guatemala",
       "claim": "The Guatemala-Israel FTA entered into force on 1 March 2024.",
       "source_url": "https://en.wikipedia.org/wiki/Free_trade_agreements_of_Israel",
-      "raw_snippet": "Guatemala ... 1 March 2024",
+      "raw_snippet": "The agreement between Guatemala and Israel which was signed on 8 September 2022 and came into force on the first of March 2024",
       "fetched_at": "2026-06-25T00:00:00Z",
       "appears_in": [
         "SKILL.md",
@@ -173,7 +173,7 @@
       "claim_id": "fta-uk-2021",
       "claim": "The UK-Israel Trade and Partnership Agreement entered into force on 1 January 2021.",
       "source_url": "https://en.wikipedia.org/wiki/Free_trade_agreements_of_Israel",
-      "raw_snippet": "UK ... 1 January 2021",
+      "raw_snippet": "The free trade agreement came into force on 1 January 2021 and replaced the Israel-EU free trade agreement.",
       "fetched_at": "2026-06-25T00:00:00Z",
       "appears_in": [
         "SKILL.md",
@@ -182,9 +182,9 @@
     },
     {
       "claim_id": "cifta-2019-4-years",
-      "claim": "The modernized CIFTA entered into force September 1, 2019; the Form B239 certificate of origin is valid 4 years.",
+      "claim": "The modernized CIFTA entered into force September 1, 2019.",
       "source_url": "https://www.cbsa-asfc.gc.ca/publications/dm-md/d11/d11-4-2-eng.html",
-      "raw_snippet": "This memorandum has also been revised to reflect the amended Canada-Israel Free Trade Agreement (CIFTA) that entered into force on September 1, 2019. ... A certificate of origin completed and signed by an importer, exporter or producer, as the case may be, will be accepted as proof of origin for four years after the date on which it is signed",
+      "raw_snippet": "This memorandum has also been revised to reflect the amended Canada-Israel Free Trade Agreement (CIFTA) that entered into force on September 1, 2019.",
       "fetched_at": "2026-06-26T00:00:00Z",
       "appears_in": [
         "SKILL.md",
@@ -340,9 +340,9 @@
     },
     {
       "claim_id": "url-fta-wikipedia",
-      "claim": "List of Israel's free trade agreements with entry-into-force dates.",
+      "claim": "Wikipedia's overview of Israel's free trade agreements, used as the entry-into-force reference for the UAE, Vietnam, Guatemala, UK and South Korea agreements.",
       "source_url": "https://en.wikipedia.org/wiki/Free_trade_agreements_of_Israel",
-      "raw_snippet": "UAE ... 1 April 2023 ... Vietnam ... 17 November 2024 ... South Korea ... 1 January 2023 ... Guatemala ... 1 March 2024",
+      "raw_snippet": "Israel and South Korea have signed a free trade agreement on 12 May 2021 to improve investments, removing barriers, and other topics.",
       "fetched_at": "2026-06-25T00:00:00Z",
       "appears_in": [
         "SKILL.md",
@@ -364,9 +364,9 @@
     },
     {
       "claim_id": "pem-2012-validity-and-threshold",
-      "claim": "Under the 2012 PEM rules a proof of origin is valid 4 months from issue, and any exporter may make out an invoice declaration where the total value does not exceed 6,000 euro.",
+      "claim": "Under the PEM Convention any exporter may make out an origin declaration where the total value of the products does not exceed EUR 6,000.",
       "source_url": "https://trade.ec.europa.eu/access-to-markets/en/content/rules-origin-pan-euro-mediterranean-convention",
-      "raw_snippet": "The proof of origin is valid for a period of 4 months from the date of issue. ... any exporter, if the total value of the products does not exceed €6,000.",
+      "raw_snippet": "any exporter, if the total value of the products does not exceed €6,000.",
       "fetched_at": "2026-07-27T00:00:00Z",
       "appears_in": [
         "SKILL.md",
@@ -398,9 +398,9 @@
     },
     {
       "claim_id": "cifta-low-value-3300-e669",
-      "claim": "For commercial goods imported into Canada on or after July 1, 2020 with a value for duty of CAD 3,300 or less, no proof of origin is required; Form E669 is required in addition to Form B239 where minor processing occurred in a non-Party.",
+      "claim": "For all commercial goods imported into Canada on or after July 1, 2020 with an estimated value for duty not exceeding CAD 3,300, no proof of origin is required.",
       "source_url": "https://www.cbsa-asfc.gc.ca/publications/dm-md/d11/d11-4-2-eng.html",
-      "raw_snippet": "a proof of origin is not required ... CAD$3,300 ... Form E669, Declaration of Minor Processing in the territory of a Non-Party (CIFTA)",
+      "raw_snippet": "for all commercial goods imported on or after July 1, 2020 with an estimated value for duty not exceeding CAD$3,300, and for which the benefit of preferential tariff treatment is claimed under any of Canada’s free trade agreements currently in force , a proof of origin is not required.",
       "fetched_at": "2026-07-27T00:00:00Z",
       "appears_in": [
         "SKILL.md",
@@ -468,9 +468,9 @@
     },
     {
       "claim_id": "vat-tax-point-goods-s22",
-      "claim": "Under section 22(a) of the Israeli VAT Law the tax point for a sale of goods is delivery to the buyer, regardless of when payment is received; section 22(b) applies a cash basis to a dealer whose turnover does not exceed 2 million NIS and certain other categories.",
-      "source_url": "https://www.riter-cpa.co.il/vat-goods-sale-date/",
-      "raw_snippet": "סעיף 22 לחוק ... בסיס מצטבר = מועד מסירת הטובין לידי הקונה (ללא קשר למועד התשלום)",
+      "claim": "Under section 22(a) of the Israeli VAT Law the tax point for a sale of goods is delivery to the buyer, regardless of when payment is received; section 22(b) applies a cash basis to a dealer whose turnover does not exceed 2 million NIS and certain other categories. (סעיף 22 לחוק מס ערך מוסף; סעיף 22(ב) מחיל בסיס מזומן על עוסק שמחזורו אינו עולה על שני מיליון שקלים חדשים.)",
+      "source_url": "https://www.nevo.co.il/law_html/law01/271_001.htm",
+      "raw_snippet": "במכר טובין חל החיוב במס עם מסירתם לקונה; נמסרו הטובין חלקים חלקים – חל החיוב על כל חלק שנמסר.",
       "fetched_at": "2026-07-27T00:00:00Z",
       "appears_in": [
         "SKILL.md",
@@ -483,6 +483,53 @@
       "source_url": "https://www.jerccom.org.il/%D7%9E%D7%94%D7%99-%D7%AA%D7%A2%D7%95%D7%93%D7%AA-%D7%9E%D7%A7%D7%95%D7%A8-%D7%95%D7%9E%D7%AA%D7%99-%D7%9E%D7%A9%D7%AA%D7%9E%D7%A9%D7%99%D7%9D-%D7%91%D7%94/",
       "raw_snippet": "היא מסמך המונפק ומאושר על-ידי לשכת המסחר",
       "fetched_at": "2026-07-27T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "cifta-certificate-validity-4-years",
+      "claim": "A CIFTA certificate of origin is accepted as proof of origin for four years after the date on which it is signed.",
+      "source_url": "https://www.cbsa-asfc.gc.ca/publications/dm-md/d11/d11-4-2-eng.html",
+      "raw_snippet": "will be accepted as proof of origin for four years after the date on which it is signed",
+      "fetched_at": "2026-06-26T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/origin-declaration-template.md"
+      ]
+    },
+    {
+      "claim_id": "pem-proof-validity-4-months",
+      "claim": "Under the PEM Convention a proof of origin is valid for 4 months from the date of issue.",
+      "source_url": "https://trade.ec.europa.eu/access-to-markets/en/content/rules-origin-pan-euro-mediterranean-convention",
+      "raw_snippet": "The proof of origin is valid for a period of 4 months from the date of issue.",
+      "fetched_at": "2026-07-27T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/pem-2026-rules.md"
+      ]
+    },
+    {
+      "claim_id": "cifta-form-e669",
+      "claim": "Form E669 is the Declaration of Minor Processing in the Territory of a Non-Party under CIFTA.",
+      "source_url": "https://www.cbsa-asfc.gc.ca/publications/dm-md/d11/d11-4-2-eng.html",
+      "raw_snippet": "the Declaration of Minor Processing in the Territory of a Non-Party (Form E669)",
+      "fetched_at": "2026-07-27T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/origin-declaration-template.md"
+      ]
+    },
+    {
+      "claim_id": "fta-korea-kifta",
+      "claim": "The Korea-Israel FTA (KIFTA) entered into force on 1 January 2023.",
+      "source_url": "https://en.wikipedia.org/wiki/Free_trade_agreements_of_Israel",
+      "raw_snippet": "Date of entry is the 01.01.2023.",
+      "fetched_at": "2026-06-25T00:00:00Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
