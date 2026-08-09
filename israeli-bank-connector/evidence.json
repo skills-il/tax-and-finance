@@ -5,9 +5,9 @@
   "claims": [
     {
       "claim_id": "library-version-2026-06",
-      "claim": "The current published release of israeli-bank-scrapers on npm is 6.9.0 (2026-07-22). The package is library-only (bin is null), so there is no CLI to invoke.",
-      "source_url": "https://registry.npmjs.org/israeli-bank-scrapers/latest",
-      "raw_snippet": "\"version\":\"6.9.0\"",
+      "claim": "The current published release of israeli-bank-scrapers is 6.9.0 (2026-07-22). The npm package declares only a main entry point (lib/index.js) and no bin, so it is library-only with no CLI to invoke.",
+      "source_url": "https://api.github.com/repos/eshaham/israeli-bank-scrapers/releases/tags/v6.9.0",
+      "raw_snippet": "# [6.9.0](https://github.com/eshaham/israeli-bank-scrapers/compare/v6.8.0...v6.9.0) (2026-07-22)",
       "fetched_at": "2026-07-27T00:00:00Z",
       "appears_in": [
         "references/supported-banks.md"
@@ -104,9 +104,21 @@
     },
     {
       "claim_id": "scrapers-6-9-0-capabilities",
-      "claim": "israeli-bank-scrapers 6.9.0 (2026-07-22) is the current release. It added Leumi savings accounts and Max credit card balances; 6.8.0 completed the Visa Cal frame implementation; 6.7.10 added an Isracard bot-detection workaround and 6.7.9 fixed a Max login-page failure.",
+      "claim": "israeli-bank-scrapers 6.9.0 was released 2026-07-22 and added Leumi savings accounts.",
       "source_url": "https://api.github.com/repos/eshaham/israeli-bank-scrapers/releases/tags/v6.9.0",
-      "raw_snippet": "**leumi:** add savings accounts ... **max:** add credit card balances",
+      "raw_snippet": "* **leumi:** add savings accounts",
+      "fetched_at": "2026-07-27T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/supported-banks.md"
+      ]
+    },
+    {
+      "claim_id": "scrapers-6-9-0-max-balances",
+      "claim": "israeli-bank-scrapers 6.9.0 added Max credit card balances.",
+      "source_url": "https://api.github.com/repos/eshaham/israeli-bank-scrapers/releases/tags/v6.9.0",
+      "raw_snippet": "* **max:** add credit card balances",
       "fetched_at": "2026-07-27T00:00:00Z",
       "appears_in": [
         "SKILL.md",
