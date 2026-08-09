@@ -90,11 +90,11 @@
     },
     {
       "id": "surtax-two-layers-2026",
-      "claim": "Israeli individuals pay a 3% surtax on annual taxable income above NIS 721,560 (ILS 721,560; 721,560 ש\"ח), and as of 2025 an additional 2% surtax on income from capital sources (including capital gains) above the same threshold, so capital gains bear up to 5% surtax in total.",
+      "claim": "Israeli individuals pay a 3% surtax on annual taxable income above NIS 721,560 (ILS 721,560; 721,560 ש\"ח), resulting in a 50% maximum income tax rate.",
       "claim_type": "percentage",
       "source_url": "https://taxsummaries.pwc.com/israel/individual/taxes-on-personal-income",
       "source_fetched_at": "2026-07-26T15:33:20Z",
-      "raw_snippet": "a 3% surtax applies on annual taxable income exceeding ILS 721,560, resulting in a 50% maximum income tax rate. ... as of 2025, the portion of an individual's annual income from capital sources (e.g. capital gains, real estate appreciation, dividends, interest, CPI linkage differentials, rental income, passive royalties) exceeding a certain threshold (ILS 721,560 in 2026) is subject to an additional surtax of 2%.",
+      "raw_snippet": "a 3% surtax applies on annual taxable income exceeding ILS 721,560, resulting in a 50% maximum income tax rate.",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
@@ -115,11 +115,11 @@
     },
     {
       "id": "iia-manufacturing-thresholds",
-      "claim": "IIA approval is not needed if manufacturing abroad is less than 10% (notification only, deemed agreed if no refusal within 30 days); there is no increase in royalty liability for manufacturing abroad of up to 25%; and the maximum increased liability is 1.5X the funding and interest instead of 3X, for funding applications submitted after 25 October 2023.",
+      "claim": "IIA approval is not needed if manufacturing abroad is less than 10%: the company notifies the IIA and the IIA is deemed to agree if it does not refuse within 30 days.",
       "claim_type": "percentage",
       "source_url": "https://herzoglaw.co.il/en/news-and-insights/the-israel-innovation-authority-iia-new-rules-regarding-transfer-of-manufacturing-outside-of-israel-and-the-interest-rate-on-iia-funding/",
       "source_fetched_at": "2026-07-26T15:33:20Z",
-      "raw_snippet": "IIA approval is not needed if the manufacturing abroad is less than 10%. In such a case, the company has to inform the IIA, and the IIA is considered as agreeing if it does not notify the company of its refusal within 30 days. ... The new rules provide that there will be no increase in the royalty payments liability for manufacturing outside of Israel of up to 25% of the manufacturing involving IIA-funded knowhow. ... The maximum increased liability is now 1.5X of the funding and interest instead of 3X.",
+      "raw_snippet": "IIA approval is not needed if the manufacturing abroad is less than 10%. In such a case, the company has to inform the IIA, and the IIA is considered as agreeing if it does not notify the company of its refusal within 30 days.",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
@@ -139,11 +139,11 @@
     },
     {
       "id": "encryption-order-repeal",
-      "claim": "The 1974 Encryption Order was repealed by revocation orders published 20 November 2024 which entered into force on 20 March 2025; non-export encryption activity is now exempt from licensing while export of encryption items and know-how still requires a licence, and existing export licences remain valid until expiry or 19 November 2026, whichever is later.",
+      "claim": "The Encryption Order was repealed by two revocation orders published 20 November 2024, which entered into force on 20 March 2025.",
       "claim_type": "regulation",
       "source_url": "https://www.goldfarb.com/repeal-of-the-encryption-order-reform-of-israels-encryption-export-control-regime/",
       "source_fetched_at": "2026-07-26T15:33:20Z",
-      "raw_snippet": "On November 20, 2024, two revocation orders were published: one repealing the Encryption Order and the other repealing the related control declaration. Both revocation orders entered into force on March 20, 2025, four months after their publication. ... Existing export licenses will remain valid until their expiration date or until November 19, 2026, whichever is later.",
+      "raw_snippet": "On November 20, 2024, two revocation orders were published: one repealing the Encryption Order and the other repealing the related control declaration. Both revocation orders entered into force on March 20, 2025, four months after their publication.",
       "verified_via": "browser",
       "verified_at": "2026-07-26T15:33:20Z",
       "appears_in": [
@@ -153,11 +153,11 @@
     },
     {
       "id": "patents-service-invention",
-      "claim": "Under the Israeli Patents Law, 5727-1967, a service invention vests in the employer (section 132) and an employee's entitlement to compensation, absent agreement, is decided by the Compensation and Royalties Committee (section 134); the entitlement can be waived by the employee. בעברית: אמצאת שירות לפי סעיף 132 לחוק הפטנטים, והזכות לתמורה נדונה בוועדה לענייני פיצויים ותמלוגים לפי סעיף 134.",
+      "claim": "Under the Israeli Patents Law, 5727-1967, a service invention becomes the employer's property absent an agreement to the contrary (section 132). (סעיף 132 לחוק הפטנטים, תשכ\"ז-1967)",
       "claim_type": "legal-reference",
       "source_url": "https://www.wipo.int/wipolex/en/legislation/details/15167",
       "source_fetched_at": "2026-07-26T15:33:20Z",
-      "raw_snippet": "PATENTS LAW 5727-1967 ... Service Invention ... Compensation and Royalties Committee",
+      "raw_snippet": "An invention by an employee, arrived at in consequence of his service and during the period of his service (hereafter: service invention) shall, in the absence of an agreement to the contrary between him and his employer, become the employer's property",
       "verified_via": "browser",
       "verified_at": "2026-07-26T15:33:20Z",
       "appears_in": [
@@ -168,11 +168,11 @@
     },
     {
       "id": "special-pte-6pct",
-      "claim": "A Special Preferred Technological Enterprise pays a reduced corporate tax rate of 6%, available to a company that is part of a group with aggregate annual revenues of at least ILS 10 billion.",
+      "claim": "A Special Preferred Technological Enterprise pays a reduced corporate tax rate of 6% on qualifying income.",
       "claim_type": "percentage",
       "source_url": "https://taxsummaries.pwc.com/israel/corporate/tax-credits-and-incentives",
       "source_fetched_at": "2026-07-26T15:33:20Z",
-      "raw_snippet": "reduced corporate tax rate of 6% ... part of a group of companies with aggregate annual revenues of at least ILS 10 billion",
+      "raw_snippet": "Under the SPTE regime, a reduced corporate tax rate of 6% shall apply on qualifying income, subject to detailed qualifying rules.",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
@@ -211,6 +211,72 @@
       "raw_snippet": "Since the enactment of the Defense Export Control Law (2007) it is the Defense Export Control Agency (DECA) within the ministry of defense which is responsible for regulating all aspects of control on exports of defense equipment, know-how and provision of defense related services.",
       "verified_via": "browser",
       "verified_at": "2026-07-26T15:48:13Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "id": "surtax-capital-2pct",
+      "claim": "As of 2025 an additional 2% surtax applies to an individual's income from capital sources above a threshold (ILS 721,560 in 2026).",
+      "claim_type": "percentage",
+      "source_url": "https://taxsummaries.pwc.com/israel/individual/taxes-on-personal-income",
+      "source_fetched_at": "2026-07-26T15:33:20Z",
+      "raw_snippet": "exceeding a certain threshold (ILS 721,560 in 2026) is subject to an additional surtax of 2%.",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "note": "Source writes the threshold as \"ILS 721,560\"; NIS and ILS denote the same currency."
+    },
+    {
+      "id": "iia-royalty-no-increase-25pct",
+      "claim": "There is no increase in the royalty payments liability for manufacturing outside Israel of up to 25% of the manufacturing involving IIA-funded knowhow.",
+      "claim_type": "percentage",
+      "source_url": "https://herzoglaw.co.il/en/news-and-insights/the-israel-innovation-authority-iia-new-rules-regarding-transfer-of-manufacturing-outside-of-israel-and-the-interest-rate-on-iia-funding/",
+      "source_fetched_at": "2026-07-26T15:33:20Z",
+      "raw_snippet": "The new rules provide that there will be no increase in the royalty payments liability for manufacturing outside of Israel of up to 25% of the manufacturing involving IIA-funded knowhow.",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "id": "encryption-existing-licenses",
+      "claim": "Existing export licenses remain valid until their expiration date or until November 19, 2026, whichever is later; non-export encryption activity is exempt from licensing as of March 20, 2025.",
+      "claim_type": "regulation",
+      "source_url": "https://www.goldfarb.com/repeal-of-the-encryption-order-reform-of-israels-encryption-export-control-regime/",
+      "source_fetched_at": "2026-07-26T15:33:20Z",
+      "raw_snippet": "Existing export licenses will remain valid until their expiration date or until November 19, 2026, whichever is later.",
+      "verified_via": "browser",
+      "verified_at": "2026-07-26T15:33:20Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "id": "patents-remuneration-committee",
+      "claim": "Absent an agreement on employee remuneration for a service invention, the matter is decided by the compensation and royalties committee (section 134). (סעיף 134 לחוק הפטנטים)",
+      "claim_type": "legal-reference",
+      "source_url": "https://www.wipo.int/wipolex/en/legislation/details/15167",
+      "source_fetched_at": "2026-07-26T15:33:20Z",
+      "raw_snippet": "If there is no agreement that prescribes whether, to what extent and on what conditions the employee is entitled to remuneration for a service invention, then the matter shall be decided by the compensation and royalties committee established under Chapter Six.",
+      "verified_via": "browser",
+      "verified_at": "2026-07-26T15:33:20Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "note": "WIPO Lex record for Patents Law 5727-1967; the older /edocs/ PDF path now redirects to this landing page."
+    },
+    {
+      "id": "spte-group-10bn",
+      "claim": "The SPTE regime requires the company to be part of a group of companies with aggregate annual revenues of at least ILS 10 billion.",
+      "claim_type": "percentage",
+      "source_url": "https://taxsummaries.pwc.com/israel/corporate/tax-credits-and-incentives",
+      "source_fetched_at": "2026-07-26T15:33:20Z",
+      "raw_snippet": "be part of a group of companies with aggregate annual revenues of at least ILS 10 billion",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
