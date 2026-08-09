@@ -298,18 +298,31 @@
       "fetched_on": "2026-05-24"
     },
     {
-      "id": "hok-iddud-75-day-clawback-2028-2029",
-      "claim": "Eligibility for the Hok Iddud 5-year Israeli-source labor exemption is forfeited (retroactively, including 2026-2027) if, in 2028 or 2029, the returnee BOTH ceases to be an Israeli tax resident AND spends fewer than 75 days in Israel that year. Both conditions are required.",
+      "id": "hok-iddud-75-day-clawback-2028-2029-a",
+      "claim": "The source lists, as a safeguard against making aliyah purely to exploit the benefit, that eligibility for the 2026 reform provisions is lost if the individual leaves Israel and ceases to be an Israeli tax resident in 2028 or 2029.",
       "source_url": "https://shivatzion-support.freshdesk.com/en/support/solutions/articles/501000361627-2026-tax-reform-benefits-for-new-olim-and-returning-residents",
-      "raw_snippet": "You leave Israel and cease to be an Israeli tax resident in 2028 or 2029 ... You spend fewer than 75 days in Israel during 2028 and 2029 respectively",
-      "fetched_on": "2026-05-26"
+      "raw_snippet": "You leave Israel and cease to be an Israeli tax resident in 2028 or 2029",
+      "fetched_on": "2026-05-26",
+      "source_note": "Split 2026-08-10 from an ellipsis-stitched snippet into the two contiguous bullet lines, both re-fetched and confirmed. CAVEAT: the source presents these as two bullets under 'You will lose eligibility for the reform provisions if:', which on a plain reading is a disjunctive list. The skill body states that BOTH conditions are required; that conjunction is NOT supported by this source and should be settled against the Hok Iddud text itself before being relied on.",
+      "fetched_at": "2026-08-10T00:00:00Z"
+    },
+    {
+      "id": "hok-iddud-75-day-clawback-2028-2029-b",
+      "claim": "The second listed safeguard condition is spending fewer than 75 days in Israel during 2028 and 2029 respectively.",
+      "source_url": "https://shivatzion-support.freshdesk.com/en/support/solutions/articles/501000361627-2026-tax-reform-benefits-for-new-olim-and-returning-residents",
+      "raw_snippet": "You spend fewer than 75 days in Israel during 2028 and 2029 respectively",
+      "fetched_on": "2026-05-26",
+      "source_note": "Split 2026-08-10 from an ellipsis-stitched snippet; see the -a entry for the AND/OR caveat.",
+      "fetched_at": "2026-08-10T00:00:00Z"
     },
     {
       "id": "hok-iddud-family-employment-140k-cap",
-      "claim": "Income from labor for an immediate family member (parent, spouse, sibling, child, in-law) is capped at 140,000 NIS per year (140,000 ש\"ח) under Hok Iddud for tax years 2026-2029, separately and lower than the general 600K/1M annual caps.",
+      "claim": "Where the qualifying income is received from a relative, the Hok Iddud exemption is limited to a reduced ceiling of 140,000 NIS for the years 2026 to 2029, and in any case cannot exceed the general ceiling for that tax year.",
       "source_url": "https://www.bshcpa.co.il/tax-exemption-returning-residents-olim-2026/",
-      "raw_snippet": "140,000 ש\"ח ... 140,000 NIS",
-      "fetched_on": "2026-05-26"
+      "raw_snippet": "כאשר ההכנסה המזכה מתקבלת מקרוב, הפטור מוגבל לתקרה מופחתת של 140,000 ש\"ח בשנים 2026 עד 2029, ובכל מקרה אינו יכול לחרוג מהתקרה הכללית לאותה שנת מס.",
+      "fetched_on": "2026-05-26",
+      "source_note": "Replaced 2026-08-10: the prior snippet was the ellipsis-stitched stub '140,000 ש\"ח ... 140,000 NIS'. The passage above is a single contiguous sentence re-fetched and confirmed on the page.",
+      "fetched_at": "2026-08-10T00:00:00Z"
     },
     {
       "id": "hok-iddud-excluded-income-types",
@@ -327,17 +340,21 @@
     },
     {
       "id": "tax-credit-points-olim-section-35",
-      "claim": "Olim chadashim (new immigrants) receive additional tax credit points under Section 35 on a tapering schedule of roughly 1 to 3 points per year over about 54 months (4.5 years) from aliyah; at the 2026 point value the benefit is roughly 3,000 NIS to 9,000 NIS per year (3,000 ש\"ח עד 9,000 ש\"ח). A returning-citizen toshav chozer vatik who is NOT an oleh (only a 'toshav chozer mutav' from the closed 2010-2012 window) does not automatically receive these Section 35 credit points.",
+      "claim": "Amendment 262 to the Income Tax Ordinance amended Section 35 to add one credit point and one further year to the new-immigrant benefit period, so an oleh chadash is entitled to 8.5 credit points spread over 54 months instead of 7.5 points spread over 42 months. Derived from the 2026 point value of 2,904 NIS/year, the annual benefit runs from roughly 3,000 NIS (3,000 ש\"ח) at about one point per year to roughly 9,000 NIS (9,000 ש\"ח) at about three points per year; those two round figures are arithmetic on the point value, not quoted amounts.",
       "source_url": "https://claltax.com/%D7%A2%D7%95%D7%9C%D7%94-%D7%97%D7%93%D7%A9-%D7%95%D7%AA%D7%95%D7%A9%D7%91-%D7%97%D7%95%D7%96%D7%A8-%D7%9E%D7%95%D7%98%D7%91/",
-      "raw_snippet": "נקודות זיכוי ... סעיף 35 ... עולה חדש ותושב חוזר מוטב",
-      "fetched_on": "2026-07-15"
+      "raw_snippet": "תוקן סעיף 35 לפקודה שמהותו הוספת נקודת זיכוי ועוד שנה לתקופת ההטבות לעולה חדש. כך שעולה חדש יהיה זכאי ל8.5 נקודות זיכוי שייפרסו על פני 54 חודש במקום 7.5 נקודות זיכוי שנפרסו על פני 42 חודשים.",
+      "fetched_on": "2026-07-15",
+      "source_note": "Replaced 2026-08-10: the prior snippet was the ellipsis-stitched keyword stub 'נקודות זיכוי ... סעיף 35 ... עולה חדש ותושב חוזר מוטב'. The passage above is contiguous and re-fetched. It fixes the benefit at 8.5 points over 54 months, which is the source's own figure.",
+      "fetched_at": "2026-08-10T00:00:00Z"
     },
     {
       "id": "credit-point-value-2026-frozen",
-      "claim": "A single income-tax credit point (nekudat zikui) is worth 2,904 NIS per year (2,904 ש\"ח, 242 NIS per month) in 2026; the value is frozen for 2025-2027.",
+      "claim": "As of 2026 an income-tax credit point is worth 242 NIS per month, i.e. 2,904 NIS for a full year. That is 242 NIS per month (242 ש\"ח) and 2,904 NIS per year (2,904 ש\"ח).",
       "source_url": "https://www.kolzchut.org.il/he/%D7%A0%D7%A7%D7%95%D7%93%D7%95%D7%AA_%D7%96%D7%99%D7%9B%D7%95%D7%99_%D7%9E%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
-      "raw_snippet": "נקודת זיכוי ... 242 ש\"ח ... 2,904",
-      "fetched_on": "2026-07-15"
+      "raw_snippet": "שווי נקודה, נכון ל-2026 הוא 242 ₪ לחודש, שהם 2,904 ₪ לשנה שלמה",
+      "fetched_on": "2026-07-15",
+      "source_note": "Replaced 2026-08-10: the prior snippet was the ellipsis-stitched stub 'נקודת זיכוי ... 242 ש\"ח ... 2,904'. Contiguous quote re-fetched and confirmed; note the page writes ₪, not ש\"ח. The freeze for 2025-2027 is not stated on this page and is not carried by this quote.",
+      "fetched_at": "2026-08-10T00:00:00Z"
     },
     {
       "id": "section-97-b3-capital-gains-statute",
