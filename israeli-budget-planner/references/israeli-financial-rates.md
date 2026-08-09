@@ -5,7 +5,7 @@
 |------|-------|---------|
 | BOI Interest Rate | 3.50% (as of July 2026) | Check boi.org.il |
 | Prime Rate | BOI + 1.50% = ~5.00% | Check boi.org.il |
-| CPI (Annual) | ~3.2% (as of early 2026; verify current at cbs.gov.il) | Check cbs.gov.il |
+| CPI (Annual) | 1.6% over the 12 months to June 2026 (CBS index 120010; verify current at cbs.gov.il) | Check cbs.gov.il |
 
 ## Mortgage (Mashkanta) Guidelines
 ### BOI Regulations
