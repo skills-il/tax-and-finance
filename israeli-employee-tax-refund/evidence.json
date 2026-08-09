@@ -263,9 +263,9 @@
     },
     {
       "claim_id": "bituach-leumi-payments",
-      "claim": "Bituach Leumi income-replacement payments (דמי לידה, דמי אבטלה, דמי פגיעה, דמי שמירת היריון, תגמולי מילואים) are fully taxable as personal-exertion income; no Section 9 exemption applies to these payments",
-      "source_url": "https://www.btl.gov.il",
-      "raw_snippet": "תשלומים מחליפי שכר מהביטוח הלאומי - דמי לידה, דמי אבטלה, דמי פגיעה (עד 91 ימים), דמי שמירת היריון, תגמולי מילואים - חייבים במס מלא כהכנסה מיגיעה אישית. אין פטור לפי סעיף 9 לפקודה. בקבוצת סעיף 9(6) נמצאות קצבאות קבועות בלבד: קצבת ילדים, זקנה, שאירים, נכות כללית, מענק לידה, ניידות. אישור שנתי למס הכנסה מהביטוח הלאומי זמין ב-btl.gov.il. BTL payments fully taxable; Section 9 (סעיף 9) exemption does not apply. Maternity (דמי לידה), unemployment (דמי אבטלה), short-term work injury (דמי פגיעה up to 91 days, פגיעה בעבודה), pregnancy preservation (דמי שמירת היריון), reserve duty (תגמולי מילואים) - all taxable. Note: 91% is not a tax rate here - 91 days is the work-injury maximum.",
+      "claim": "Bituach Leumi income-replacement payments are taxable: income tax is withheld from unemployment benefit (dmei avtala) at source, alongside national insurance and health contributions. Someone entitled to an exemption or reduction submits the relevant certificate, or can claim an income-tax refund from the assessing officer.",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%93%D7%9E%D7%99_%D7%90%D7%91%D7%98%D7%9C%D7%94",
+      "raw_snippet": "מדמי האבטלה מנוכים מס הכנסה, דמי ביטוח לאומי בסך 32 ₪ (נכון ל-2026) ודמי ביטוח בריאות לפי סכום דמי האבטלה.",
       "fetched_at": "2026-05-18T00:00:00Z",
       "appears_in": [
         "SKILL.md",
@@ -464,7 +464,7 @@
       "claim": "Monthly tax brackets and the 219 NIS credit point for tax year 2020 come from a secondary source because the Israel Tax Authority no longer serves the 2020 deductions booklet; the estimator flags 2020 results as secondary-sourced.",
       "claim_type": "rate",
       "source_url": "https://www.kolzchut.org.il/he/מדרגות_מס_הכנסה_-_נתוני_עבר",
-      "raw_snippet": "מדרגות מס הכנסה",
+      "raw_snippet": "מדרגות המס להכנסה מיגיעה אישית לשנת 2020",
       "source_fetched_at": "2026-08-01T00:00:00Z",
       "confidence": "medium",
       "appears_in": [
@@ -543,6 +543,30 @@
       "confidence": "high",
       "appears_in": [
         "references/2026-rates.md"
+      ]
+    },
+    {
+      "claim_id": "btl-annual-certificate",
+      "claim": "The Bituach Leumi site (https://www.btl.gov.il) hosts the unemployment-benefit section with forms and certificate ordering.",
+      "source_url": "https://www.btl.gov.il/benefits/Unemployment/Pages/default.aspx",
+      "raw_snippet": "אם חזרת לעבוד או הפסקת לעבוד שלח לנו תלוש שכר או אישור",
+      "fetched_at": "2026-05-18T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/document-requirements.md"
+      ]
+    },
+    {
+      "claim_id": "btl-site-root",
+      "claim": "The Bituach Leumi site at https://www.btl.gov.il is the National Insurance Institute's portal, referenced in this skill for ordering annual certificates and for the earned-income grant.",
+      "source_url": "https://www.btl.gov.il",
+      "raw_snippet": "הביטוח הלאומי מלווה אותך במהלך חייך, מלידה ועד שיבה טובה, ומעניק לך מגוון זכויות סוציאליות המותאמות למצבים המשתנים במהלך החיים.",
+      "fetched_at": "2026-05-18T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/document-requirements.md"
       ]
     }
   ]
