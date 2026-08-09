@@ -4,7 +4,18 @@ description: "Build a comparable-transactions analysis for an Israeli property f
 license: MIT
 ---
 
-# Israeli Property Appraisal
+# Israeli Property Comparable-Sales Analysis
+
+## Legal notice
+
+The Hebrew text below is the authoritative version of this notice.
+
+כלי זה הוא כלי מידע חינמי, הפועל באמצעות מודל בינה מלאכותית. הוא מאתר עסקאות מקרקעין שדווחו לרשות המסים ופורסמו לציבור, מסנן אותן ומציג חציון וטווח מחירים למ"ר, לצד הסבר כללי על הדין החל. כל תוצריו מופקים באופן אוטומטי על ידי מודל בינה מלאכותית, ללא מעורבות, בדיקה או אישור של שמאי מקרקעין. הפלט שיוצר הכלי אינו שומת מקרקעין ואינו חוות דעת מקצועית, אלא אינדיקציה סטטיסטית גולמית בלבד: הוא אינו כולל ביקור בנכס, אינו מבצע את ההתאמות השמאיות הנדרשות בגישת ההשוואה, ונשען על נתונים ציבוריים שאינם אחידים ואינם שלמים. מודל בינה מלאכותית עלול לשגות, להשמיט נתונים או להציג מסקנה שגויה.
+
+אין להציג את הפלט כשומה מוסמכת שנערכה על ידי שמאי, אין להסתמך עליו כראיה, ואין להגישו לבית משפט או לכל גורם אחר המוסמך לגבות ראיה בעניין מקרקעין. לשם כך נדרשת שומה שנערכה בידי שמאי מקרקעין מוסמך. כל נוסח שהכלי מנסח הוא טיוטה אוטומטית לצורכי התארגנות אישית בלבד, ואינו השגה שמאית. הכלי אינו מחליף ייעוץ של שמאי מקרקעין מוסמך או איש מקצוע אחר, וכל שימוש בפלט ובתוצריו הוא באחריותו הבלעדית של המשתמש.
+
+In English, for convenience only: this is a free, AI-operated information tool. It locates property transactions reported to the Tax Authority and published to the public, filters them, and presents a median and a price range per square metre alongside a general explanation of the applicable law. All of its outputs are produced automatically by an AI model, with no involvement, review, or approval by a licensed real estate appraiser (shamai mekarkein). The output is not a property appraisal (shuma) and not a professional opinion, but a raw statistical indication only: it involves no site visit, it does not perform the appraisal adjustments required by the comparison approach, and it relies on public data that is neither uniform nor complete. An AI model may err, omit data, or present a wrong conclusion. The output must not be presented as a certified appraisal, must not be relied on as evidence, and must not be submitted to a court or any other body empowered to take evidence in a property matter. Any text this tool drafts is an automatic draft for the user's personal preparation only, and is not an appraiser's objection. This tool does not replace advice from a licensed appraiser or other professional, and all use of its output is the user's sole responsibility.
+
 
 ## Problem
 
@@ -155,7 +166,7 @@ If the problem is a factual error in the gush, helka, area, or rights, raise it 
 
 ### Step 7: Draft the letter
 
-Produce the objection or counter-appraisal letter with the comparables table embedded, each row traceable to a returned deal. Use a banded run, never the unbanded polygon indicator, and state the subject's area and room count so the selection is auditable. A table of unmatched comparables is worse than none, because the other side will dismantle it. State the subject property's details, the adjustments claimed and why, and the resulting range. Never present the output as a שומה. Say plainly that it is a comparables analysis prepared to inform a discussion, and that a binding position in a mortgage dispute, a levy objection, or a court matter needs a licensed שמאי מקרקעין, whose opinion is the only thing the forums treat as evidence.
+Produce an automatic draft of the objection letter, for the user's personal preparation only, with the comparables table embedded. It is not a counter-appraisal and not an appraiser's objection, each row traceable to a returned deal. Use a banded run, never the unbanded polygon indicator, and state the subject's area and room count so the selection is auditable. A table of unmatched comparables is worse than none, because the other side will dismantle it. State the subject property's details, the adjustments claimed and why, and the resulting range. Never present the output as a שומה. Say plainly that it is a comparables analysis prepared to inform a discussion, and that a binding position in a mortgage dispute, a levy objection, or a court matter needs a licensed שמאי מקרקעין, whose opinion is the only thing the forums treat as evidence.
 
 ## Coverage
 

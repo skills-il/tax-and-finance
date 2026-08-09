@@ -1,18 +1,36 @@
 {
   "display_name": {
-    "he": "שמאות מקרקעין",
-    "en": "Israeli Property Appraisal"
+    "he": "ניתוח עסקאות השוואה בנדל\"ן",
+    "en": "Israeli Property Comparable-Sales Analysis"
   },
   "display_description": {
-    "he": "בונה ניתוח עסקאות השוואה לנכס בישראל מנתוני הממשלה: מאתר גוש וחלקה לכתובת, מושך עסקאות שדווחו בפועל, ומחשב חציון וטווח בשקלים למ\"ר. מתאים כששומת הבנק למשכנתא יצאה נמוכה ותקעה את העסקה, כשהגיע חיוב בהיטל השבחה מהוועדה המקומית, או כשפשוט רוצים לדעת כמה שווה נכס לפי מה שבאמת נמכר בסביבה. מסביר למה שומת בנק אמורה להיות שמרנית לפי תקן 19, בודק פטורים מהיטל השבחה כמו הפטור עד 140 מ\"ר, מנתב את ההשגה לוועדת ערר או לשמאי מכריע לפי סוג המחלוקת, ומנסח את מכתב ההשגה. חשוב: זו אינה שומה מוסמכת. לעמדה מחייבת מול בנק, בהשגה או בבית משפט צריך שמאי מקרקעין מוסמך. לא מתאים למס רכישה ומס שבח, נסח טאבו, חוזי שכירות או השוואת מסלולי משכנתא.",
-    "en": "Builds a comparable-transactions analysis for an Israeli property from official government data: resolves an address to its gush and helka, pulls the deals actually recorded nearby, and computes a median and range in shekels per square metre. Use it when a bank's mortgage appraisal came in low and stalled the deal, when a betterment levy (heitel hashbacha) bill arrives from the local planning committee, or simply to find out what a property is worth based on what really sold around it. Explains why a bank appraisal is deliberately conservative under Standard 19, checks the levy exemptions such as the 140 sqm residential exemption, routes an objection to either the appeals committee or a deciding appraiser depending on the dispute, and drafts the objection letter. Important: this is not a licensed appraisal. A binding position against a bank, in an objection, or in court needs a licensed shamai mekarkein. Do NOT use for purchase or betterment tax, Tabu extracts, rental agreements, or mortgage track comparison."
+    "he": "אינו שומת מקרקעין ואינו חוות דעת שמאית. בונה ניתוח עסקאות השוואה לנכס בישראל מנתוני הממשלה: מאתר גוש וחלקה לכתובת, מושך עסקאות שדווחו בפועל, ומחשב חציון וטווח בשקלים למ\"ר. מתאים כששומת הבנק למשכנתא יצאה נמוכה ותקעה את העסקה, כשהגיע חיוב בהיטל השבחה מהוועדה המקומית, או כשפשוט רוצים לדעת כמה שווה נכס לפי מה שבאמת נמכר בסביבה. מסביר למה שומת בנק אמורה להיות שמרנית לפי תקן 19, בודק פטורים מהיטל השבחה כמו הפטור עד 140 מ\"ר, מנתב את ההשגה לוועדת ערר או לשמאי מכריע לפי סוג המחלוקת, ומנסח טיוטה אוטומטית של מכתב ההשגה לצורכי התארגנות אישית. לעמדה מחייבת מול בנק, בהשגה או בבית משפט צריך שמאי מקרקעין מוסמך. לא מתאים למס רכישה ומס שבח, נסח טאבו, חוזי שכירות או השוואת מסלולי משכנתא.",
+    "en": "Not a property appraisal (shuma) and not an appraiser's opinion. Builds a comparable-transactions analysis for an Israeli property from official government data: resolves an address to its gush and helka, pulls the deals actually recorded nearby, and computes a median and range in shekels per square metre. Use it when a bank's mortgage appraisal came in low and stalled the deal, when a betterment levy (heitel hashbacha) bill arrives from the local planning committee, or simply to find out what a property is worth based on what really sold around it. Explains why a bank appraisal is deliberately conservative under Standard 19, checks the levy exemptions such as the 140 sqm residential exemption, routes an objection to either the appeals committee or a deciding appraiser depending on the dispute, and drafts an automatic objection-letter draft for personal preparation. A binding position against a bank, in an objection, or in court needs a licensed shamai mekarkein. Do NOT use for purchase or betterment tax, Tabu extracts, rental agreements, or mortgage track comparison."
   },
   "tags": {
-    "he": ["שמאות מקרקעין", "היטל השבחה", "נדל\"ן", "משכנתא", "גוש וחלקה", "עסקאות השוואה", "שמאי מכריע", "תקן 19"],
-    "en": ["property-appraisal", "betterment-levy", "real-estate", "mortgage", "gush-helka", "comparables", "valuation", "govmap"]
+    "he": [
+      "ניתוח נדל\"ן",
+      "היטל השבחה",
+      "נדל\"ן",
+      "משכנתא",
+      "גוש וחלקה",
+      "עסקאות השוואה",
+      "שמאי מכריע",
+      "תקן 19"
+    ],
+    "en": [
+      "comparable-sales",
+      "betterment-levy",
+      "real-estate",
+      "mortgage",
+      "gush-helka",
+      "comparables",
+      "valuation",
+      "govmap"
+    ]
   },
   "author": "skills-il",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "category": "tax-and-finance",
   "supported_agents": [
     "claude-code",
@@ -32,12 +50,36 @@
   "openclaw": true,
   "volatility": "legislative",
   "authoritative_sources": [
-    { "url": "https://www.kolzchut.org.il/he/היטל_השבחה", "type": "regulator", "language": "he" },
-    { "url": "https://www.kolzchut.org.il/he/פטור_מהיטל_השבחה", "type": "regulator", "language": "he" },
-    { "url": "https://www.kolzchut.org.il/he/השגה_על_היטל_השבחה", "type": "regulator", "language": "he" },
-    { "url": "https://www.nevo.co.il/law_html/law01/500_077.htm", "type": "statute", "language": "he" },
-    { "url": "https://www.boi.org.il/media/brep4lzt/329_12.pdf", "type": "regulator", "language": "he" },
-    { "url": "https://www.gov.il/BlobFolder/dynamiccollectorresultitem/assessor-standardization-db_19/he/land_assessor_shameim_19.pdf", "type": "regulator", "language": "he" }
+    {
+      "url": "https://www.kolzchut.org.il/he/היטל_השבחה",
+      "type": "regulator",
+      "language": "he"
+    },
+    {
+      "url": "https://www.kolzchut.org.il/he/פטור_מהיטל_השבחה",
+      "type": "regulator",
+      "language": "he"
+    },
+    {
+      "url": "https://www.kolzchut.org.il/he/השגה_על_היטל_השבחה",
+      "type": "regulator",
+      "language": "he"
+    },
+    {
+      "url": "https://www.nevo.co.il/law_html/law01/500_077.htm",
+      "type": "statute",
+      "language": "he"
+    },
+    {
+      "url": "https://www.boi.org.il/media/brep4lzt/329_12.pdf",
+      "type": "regulator",
+      "language": "he"
+    },
+    {
+      "url": "https://www.gov.il/BlobFolder/dynamiccollectorresultitem/assessor-standardization-db_19/he/land_assessor_shameim_19.pdf",
+      "type": "regulator",
+      "language": "he"
+    }
   ],
   "domain_checklist_version": 1
 }
