@@ -5,7 +5,14 @@ license: MIT
 compatibility: No network required.
 ---
 
-# Israeli Pension Advisor
+# Israeli Pension and Savings Navigator
+
+## Legal notice
+
+This is a free information tool operated by an AI model. It explains the Israeli pension and long-term savings system and presents rules and data that have been published to the public. All of its outputs are produced automatically by an AI model, with no involvement, review, or approval by a licensed pension adviser. The output is not pension advice, not pension marketing, and not a personal recommendation about the merits of your savings, but a general explanation only: it does not examine your personal circumstances, the full set of pension products you hold, or your particular needs. An AI model may err, omit data, or present a wrong conclusion.
+
+The output must not be relied on to transfer funds, change an investment track, withdraw severance money, or make any other pension decision. This tool is not a substitute for advice that takes account of the particular circumstances and needs of each person. Before any such decision, consult a licensed pension adviser and verify every figure with the managing institution. All use of its output is the user's sole responsibility.
+
 
 ## Critical Note
 This skill provides general pension INFORMATION. It does not replace consultation

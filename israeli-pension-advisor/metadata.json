@@ -1,6 +1,6 @@
 {
   "author": "skills-il",
-  "version": "2.3.0",
+  "version": "2.4.0",
   "category": "tax-and-finance",
   "tags": {
     "he": [
@@ -35,12 +35,12 @@
     ]
   },
   "display_name": {
-    "he": "יועץ פנסיה ישראלי",
-    "en": "Israeli Pension Advisor"
+    "he": "ניווט פנסיה וחיסכון בישראל",
+    "en": "Israeli Pension and Savings Navigator"
   },
   "display_description": {
-    "he": "ניווט במערכת הפנסיה והחיסכון הישראלית, כולל קרנות פנסיה, ביטוח מנהלים, קרנות השתלמות, טיפול בפיצויים בטופס 161, הפקדות תיקון 190 לבני 60+, וחלוקת פנסיה בגירושין או מעבר לחו\"ל. הפעילו כשמשתמש שואל על פנסיה, קרן השתלמות, חיסכון לפרישה, הפרשות מעסיק, דמי ניהול, הטבות מס, רצף זכויות, או תיקון 190. החלטות פנסיוניות לא מושכלות עולות מאות אלפי שקלים לאורך החיים. אל תשתמשו להמלצות השקעה ספציפיות או השוואת ביצועי קרנות.",
-    "en": "Navigate the Israeli pension and savings system including pension funds (keren pensia), manager's insurance (bituach menahalim), training funds (keren hishtalmut), severance at Form 161, Tikun 190 post-60 deposits, and pension division at divorce or relocation. Use when user asks about Israeli pension, \"pensia\", \"keren hishtalmut\", retirement savings, \"bituach menahalim\", pension contributions, tax benefits, severance continuity (rezef zechuyot), or Tikun 190. Covers mandatory pension, voluntary savings, withdrawal rules, and life events. Uninformed pension decisions cost hundreds of thousands of NIS over a lifetime. Do NOT provide specific investment recommendations or fund performance comparisons."
+    "he": "אינו ייעוץ פנסיוני ואינו שיווק פנסיוני. ניווט במערכת הפנסיה והחיסכון הישראלית, כולל קרנות פנסיה, ביטוח מנהלים, קרנות השתלמות, טיפול בפיצויים בטופס 161, הפקדות תיקון 190 לבני 60+, וחלוקת פנסיה בגירושין או מעבר לחו\"ל. הפעילו כשמשתמש שואל על פנסיה, קרן השתלמות, חיסכון לפרישה, הפרשות מעסיק, דמי ניהול, הטבות מס, רצף זכויות, או תיקון 190. החלטות פנסיוניות לא מושכלות עולות מאות אלפי שקלים לאורך החיים. אל תשתמשו להמלצות השקעה ספציפיות או השוואת ביצועי קרנות.",
+    "en": "Not pension advice and not pension marketing. Navigate the Israeli pension and savings system including pension funds (keren pensia), manager's insurance (bituach menahalim), training funds (keren hishtalmut), severance at Form 161, Tikun 190 post-60 deposits, and pension division at divorce or relocation. Use when user asks about Israeli pension, \"pensia\", \"keren hishtalmut\", retirement savings, \"bituach menahalim\", pension contributions, tax benefits, severance continuity (rezef zechuyot), or Tikun 190. Covers mandatory pension, voluntary savings, withdrawal rules, and life events. Uninformed pension decisions cost hundreds of thousands of NIS over a lifetime. Do NOT provide specific investment recommendations or fund performance comparisons."
   },
   "supported_agents": [
     "claude-code",
