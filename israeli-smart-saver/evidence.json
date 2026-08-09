@@ -9,31 +9,47 @@
       "source_url": "https://www.nevo.co.il/law_html/law00/70305.htm",
       "raw_snippet": "חוק הגנת הצרכן סעיף 14 סעיף 14ג סעיף 14ח",
       "fetched_at": "2026-05-31T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/cashback-platforms-guide.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/cashback-platforms-guide.md"
+      ]
     },
     {
       "claim_id": "gift-card-2025-payment-services-reform",
-      "claim": "A 2025 amendment to the Payment Services Regulations (Knesset Economics Committee, 8 July 2025) extended gift-voucher rules: vouchers over 150 NIS (150 ש\"ח) can be extended up to 15 years; issuers must send holders an annual balance reminder and an alert one month before expiry; and remaining balances are refundable to the payment method on cancellation. The reform applies to existing vouchers too.",
+      "claim": "On 8 July 2025 the Knesset Economics Committee approved regulations for digital gift vouchers: vouchers worth over 150 NIS (150 שקל) may stay valid for up to 15 years instead of the current ten, issuers must send consumers an annual reminder and received a temporary exemption from the Payment Services Law, and the regulations apply to previously issued vouchers as well, taking effect about six months later. The 150 NIS threshold is written 150 ש\"ח elsewhere in the skill; the article writes it 150 שקל.",
       "source_url": "https://www.calcalist.co.il/local_news/article/bkdjihqrxx",
-      "raw_snippet": "תוקף של 15 שנה ... מעל 150 שקל ... תזכורת שנתית",
-      "fetched_at": "2026-07-16T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "raw_snippet": "שוברי מתנה בשווי מעל 150 שקל יוכלו להישאר בתוקף עד 15 שנה במקום עשר שנים כיום. החברות יחויבו לשלוח תזכורת שנתית לצרכנים וקיבלו פטור זמני מחוק שירותי תשלום. התקנות יחולו גם על שוברים שהונפקו בעבר וייכנסו לתוקף בעוד כחצי שנה",
+      "fetched_at": "2026-08-10T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "source_note": "Replaced 2026-08-10: the prior snippet was the ellipsis-stitched stub 'תוקף של 15 שנה ... מעל 150 שקל ... תזכורת שנתית'. Contiguous standfirst re-fetched via a headless browser (calcalist returns a JS shell to plain HTTP clients). Two prior assertions are NOT in this article and have been dropped from the claim: an alert one month before expiry, and refundability of remaining balances to the payment method on cancellation. Note the article says issuers received a temporary EXEMPTION from the Payment Services Law, which is the opposite of the prior framing of the reform as an extension of the Payment Services Regulations."
     },
     {
       "claim_id": "elal-flycard-isracard",
-      "claim": "The El-Al FLY CARD (El-Al frequent-flyer credit-card co-brand) moved from CAL (Visa Cal) to Isracard. Isracard issues new FLY CARDs from 1 June 2026; existing CAL-issued FLY CARDs stop earning El-Al Matmid points after 31 December 2026, so holders must migrate to an Isracard FLY CARD to keep earning.",
+      "claim": "The El-Al FLY CARD club moves from CAL to Isracard. The existing CAL-issued card keeps working and keeps accruing Matmid points until 31 December 2026; from 1 January 2027 it becomes an ordinary credit card that no longer accrues FLY CARD points, and migration to an Isracard card requires an active application (it is not automatic).",
       "source_url": "https://hakartis.com/blog/flycard-cal-to-isracard-migration-2026",
-      "raw_snippet": "FLY CARD ... ישראכרט ... כאל ... אל על",
-      "fetched_at": "2026-07-16T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "raw_snippet": "עד 31 בדצמבר 2026: הכרטיס הנוכחי של כאל ממשיך לעבוד ולצבור נקודות הנוסע המתמיד כרגיל. אין צורך לעשות דבר בינתיים.",
+      "fetched_at": "2026-08-10T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "source_note": "Replaced 2026-08-10: the prior snippet was the ellipsis-stitched keyword stub 'FLY CARD ... ישראכרט ... כאל ... אל על'. Re-fetched via a headless browser. The prior claim's '1 June 2026' Isracard issuance date does NOT appear on the page and has been removed. A second contiguous quote from the same page: 'החל מ-1 בינואר 2027: הכרטיס הופך לכרטיס אשראי רגיל.'"
     },
     {
       "claim_id": "credit-card-companies",
       "claim": "The three major Israeli credit card companies are Cal (Visa Cal), Max (formerly Leumi Card, rebranded 2019 after the Warburg Pincus acquisition), and Isracard (which operates American Express and the Hever club).",
       "source_url": "https://en.globes.co.il/en/article-leumi-card-to-rebrand-as-max-1001269742",
-      "raw_snippet": "Max",
-      "fetched_at": "2026-05-31T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "raw_snippet": "Leumi Card to rebrand as Max",
+      "fetched_at": "2026-08-10T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "source_note": "Replaced 2026-08-10: the prior snippet was the bare token 'Max'. The text above is the article's own headline, present verbatim in the served page. This source supports only the Leumi Card to Max rebrand; the Cal and Isracard details in the claim are not carried by it."
     },
     {
       "claim_id": "gov-consumer-authority",
@@ -41,7 +57,10 @@
       "source_url": "https://www.gov.il/he/departments/consumer_protection_and_fair_trade_authority",
       "raw_snippet": "https://www.gov.il/he/departments/consumer_protection_and_fair_trade_authority",
       "fetched_at": "2026-05-31T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "gov-complaint-filing",
@@ -49,7 +68,10 @@
       "source_url": "https://www.gov.il/he/service/filing_a_complaint_to_fair_trade_authority",
       "raw_snippet": "https://www.gov.il/he/service/filing_a_complaint_to_fair_trade_authority",
       "fetched_at": "2026-05-31T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "consumer-council",
@@ -57,7 +79,10 @@
       "source_url": "https://www.consumers.org.il",
       "raw_snippet": "consumers",
       "fetched_at": "2026-05-31T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "boi-public-info",
@@ -65,7 +90,10 @@
       "source_url": "https://www.boi.org.il/en/information-and-service-to-the-public/",
       "raw_snippet": "Bank of Israel https://www.boi.org.il/en/information-and-service-to-the-public/banking-customer-service-information/",
       "fetched_at": "2026-05-31T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "zap-price-comparison",
@@ -73,15 +101,22 @@
       "source_url": "https://www.zap.co.il",
       "raw_snippet": "zap",
       "fetched_at": "2026-05-31T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "illustrative-figures",
       "claim": "Illustrative example amounts, discount rates and typical ranges (not regulated facts), used in worked examples and guidance: cashback rates 2-8% / 2-10% / 5-15%; example 1,000 NIS purchase with 3% card + 5% platform + 10% gift-card stacking saving ~172 NIS (~17%); example monthly savings 200 NIS = 2,400 NIS/year, 300-800 NIS/month; subscription costs 10-500 NIS; seasonal discounts 10-70%; telecom plans 30-150 NIS/month; interest-free tashlumim up to 12 months; gift-card discounts 5-15%; example phone 120 NIS vs MVNO ~40-45 NIS saving 80 NIS/month = 960 NIS/year.",
-      "source_url": "https://www.zap.co.il",
+      "source_url": "https://www.gov.il/he/departments/consumer_protection_authority",
       "raw_snippet": "Illustrative ranges (not regulated): 20% 30% 40% 50% 60% 80% 1,000 שקל 100 שקל 120 שקל 150 שקל 172 ש\"ח 2,400 שקל 200 שקל 27 ש\"ח 30 שקל 27 NIS 30 NIS 35 NIS 35 שקל 40 NIS 40 שקל 100 NIS 400 שקל 45 ש\"ח 45 שקל 50 שקל 500 שקל 80 שקל 800 שקל 960 שקל",
-      "fetched_at": "2026-05-31T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "fetched_at": "2026-08-10T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "source_note": "Deep link substituted 2026-08-10 for the bare zap.co.il homepage. This entry is not a quotation: it records example amounts, discount rates and typical ranges used inside the skill's worked examples. They are illustrative arithmetic, not published figures, and no URL can substantiate them; the Consumer Protection and Fair Trade Authority page is given as the topical anchor."
     }
   ]
 }
