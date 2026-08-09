@@ -42,10 +42,11 @@ Osek Patur (exempt dealers) file an annual summary.
 - Deadline: March 31 of the following year
 
 ## Late Filing Penalties
-- NIS 239 per two-week period of delay (as of July 2024)
-- Linkage differentials (hatzamada) to CPI
-- Interest at Bank of Israel rate + 4%
+- A late-payment fine (kenas pigurim) and a debt fine (kenas hov)
+- Linkage differentials (hatzamada) to CPI plus interest
+- An administrative fine under the Administrative Offences Law may also be imposed
 - Persistent late filers may face additional sanctions
+- Verify current-year amounts with the Tax Authority
 
 ## Payment Methods
 - SHAAM online portal (bank transfer)

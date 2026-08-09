@@ -64,7 +64,7 @@ The regular periodic VAT return (doch tkufati) is a summary report. Map the calc
 - Field 8: Adjustments (if any)
 - Field 9: Amount to pay / refund
 
-**Detailed report (PCN874 / doch mefurat) is a SEPARATE filing.** Do not confuse the summary return above with PCN874, the line-by-line structured file (one row per invoice: number, date, pre-VAT amount, VAT, counterparty business number, allocation number) that businesses above the detailed-report threshold must submit IN ADDITION. From 01.01.2026 the detailed-report obligation expanded to sole proprietors (osek) with annual turnover above NIS 500,000, who then also move to monthly filing.
+**Detailed report (PCN874 / doch mefurat) is a SEPARATE filing.** Do not confuse the summary return above with PCN874, the line-by-line structured file (one row per invoice: number, date, pre-VAT amount, VAT, counterparty business number, allocation number) that businesses above the detailed-report threshold must submit IN ADDITION. Per the Tax Authority new-dealer guide, from reporting period 9/2025 the detailed-report obligation applies to all businesses (self-employed and companies) with annual turnover above NIS 5,000,000 (NPOs above 20 million, financial institutions above 4 million).
 
 ### Step 5: Validate and Submit
 Before submission, verify:
@@ -133,4 +133,4 @@ Solution: Review deduction rules in Step 3. Only business expenses with valid ta
 
 ### Error: "Late filing penalty"
 Cause: Filing after the deadline (15th manual / 19th online) of the following month
-Solution: File immediately. The late-filing penalty is a fixed amount per two-week period of delay that is indexed annually (about NIS 239 as of 2024, up from NIS 219 in 2023), so verify the current-year figure with the Tax Authority, plus linkage differentials and interest (Bank of Israel rate + 4%).
+Solution: File immediately. Late filing triggers late-payment fines, a debt fine, and linkage differentials and interest, and may also draw an administrative fine. Verify the current-year amounts with the Tax Authority.

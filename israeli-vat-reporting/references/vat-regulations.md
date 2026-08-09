@@ -2,7 +2,7 @@
 
 ## VAT Rate
 - Standard rate: **18%** (effective since January 1, 2025, per the 2025 Budget/Arrangements Law; unchanged for 2026-2027)
-- Previous rates: 17% (Oct 2015 to Dec 2024), 18% (Jun 2013 to Sep 2015), 17% (Sep 2012 to Jun 2013), 16% (Jan 2010 to Sep 2012), 16.5% (Jul 2009 to Dec 2009)
+- Previous rate: 17%, in force until 31 December 2024
 - Rate changes require Knesset legislation
 
 ## Registration Types
