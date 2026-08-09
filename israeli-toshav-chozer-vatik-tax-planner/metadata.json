@@ -4,8 +4,8 @@
     "en": "Israeli Toshav Chozer Vatik Tax Planner"
   },
   "display_description": {
-    "he": "מתכנן את הפטור ממס בסעיף 14 לתושב חוזר ותיק (10+ שנים בחו\"ל): מבדיל בין מסלול ותיק למסלול רגיל, מסביר מתי הקלוק של 10 השנים מתחיל, מציג מה משתנה ב-2026 בגלל ביטול הפטור מדיווח, ובונה תחזית של 10 שנים שמסווגת כל הכנסה כפטורה או חייבת. כלי תכנון בלבד, לא ייעוץ מס מחייב.",
-    "en": "Plans the Section 14 tax exemption for a toshav chozer vatik (10+ years abroad): distinguishes the vatik track from the regular track, explains when the 10-year clock starts, surfaces the 2026 reporting-obligation change (Amendment 272), and builds a 10-year cash-flow projection that classifies each income stream as exempt or taxable. Planning aid only, not binding tax advice."
+    "he": "אינו ייעוץ מס ואינו דוח שהוגש. מתכנן את הפטור ממס בסעיף 14 לתושב חוזר ותיק (10+ שנים בחו\"ל): מבדיל בין מסלול ותיק למסלול רגיל, מסביר מתי הקלוק של 10 השנים מתחיל, מציג מה משתנה ב-2026 בגלל ביטול הפטור מדיווח, ובונה תחזית של 10 שנים שמסווגת כל הכנסה כפטורה או חייבת. כלי תכנון בלבד, לא ייעוץ מס מחייב.",
+    "en": "Not tax advice and not a filed return. Plans the Section 14 tax exemption for a toshav chozer vatik (10+ years abroad): distinguishes the vatik track from the regular track, explains when the 10-year clock starts, surfaces the 2026 reporting-obligation change (Amendment 272), and builds a 10-year cash-flow projection that classifies each income stream as exempt or taxable. Planning aid only, not binding tax advice."
   },
   "tags": [
     "section-14",
@@ -21,7 +21,7 @@
     "israel"
   ],
   "author": "skills-il",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "category": "tax-and-finance",
   "supported_agents": [
     "claude-code",

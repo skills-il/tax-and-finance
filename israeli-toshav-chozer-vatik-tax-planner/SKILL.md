@@ -6,6 +6,13 @@ license: MIT
 
 # Israeli Toshav Chozer Vatik Tax Planner
 
+## Legal notice
+
+This is a free information tool operated by an AI model. It explains the tax rules and helps you organise your own figures. All of its outputs are produced automatically by an AI model, with no involvement, review, or approval by a tax adviser or accountant. The output is not a tax opinion, not a return prepared by a licensed representative, and not professional advice, but a general calculation and explanation only: it does not examine the full extent of your income or your complete documents. An AI model may err, omit data, or present a wrong conclusion.
+
+Any form or text this tool produces is an automatic draft for your personal preparation only, and is not a filed return. Responsibility for reporting and for paying the tax is yours, the binding computation is the Tax Authority's, and representation before the Tax Authority is reserved to those permitted by law. This tool is not a substitute for advice that takes account of the particular circumstances and needs of each person. Consult a tax adviser or accountant before filing or paying. All use of its output is the user's sole responsibility.
+
+
 ## Problem
 
 Returning Israelis with 10+ years abroad are entitled to the Section 14 exemption, but the rules are confusing in several ways that keep tripping people up. First, the difference between vatik (10+ years, full exemption) and regular toshav chozer (6-10 years, only passive income for 5 years) is misread on most blogs. Second, the 10-year clock starts on the date the user becomes an Israeli tax resident again, NOT on the date they land at Ben Gurion, and these dates can be months apart. Third, Amendment 272 took effect on 1.1.2026: the TAX exemption stays, but the REPORTING exemption was canceled. Vatikim who settled on or after 1.1.2026 must now disclose foreign income and assets to Mas Hachnasa even though no tax is owed. Fourth, US citizens (the largest single returnee cohort, from CA and NY) still owe US tax on the same income Israel exempts; the US-Israel treaty saving clause blocks treaty relief and there is no foreign tax credit because no Israeli tax was paid.

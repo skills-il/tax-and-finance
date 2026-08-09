@@ -6,6 +6,13 @@ license: MIT
 
 # Israeli Stock Options Tax Calculator
 
+## Legal notice
+
+This is a free information tool operated by an AI model. It explains the tax rules and helps you organise your own figures. All of its outputs are produced automatically by an AI model, with no involvement, review, or approval by a tax adviser or accountant. The output is not a tax opinion, not a return prepared by a licensed representative, and not professional advice, but a general calculation and explanation only: it does not examine the full extent of your income or your complete documents. An AI model may err, omit data, or present a wrong conclusion.
+
+Any form or text this tool produces is an automatic draft for your personal preparation only, and is not a filed return. Responsibility for reporting and for paying the tax is yours, the binding computation is the Tax Authority's, and representation before the Tax Authority is reserved to those permitted by law. This tool is not a substitute for advice that takes account of the particular circumstances and needs of each person. Consult a tax adviser or accountant before filing or paying. All use of its output is the user's sole responsibility.
+
+
 ## Problem
 
 Israeli tech employees receive stock options or RSUs as a significant part of their compensation, but most have no idea how much tax they will actually pay when they exercise or sell. The rules under Section 102 are complex: different tracks (capital gains vs income), a 24-month trustee holding period, surtax thresholds, and Bituach Leumi interactions all affect the final number. Getting it wrong can mean paying tens of thousands of shekels more than necessary, or worse, facing unexpected tax bills at exit.

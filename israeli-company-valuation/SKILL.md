@@ -6,6 +6,13 @@ license: MIT
 
 # Israeli Company Valuation
 
+## Legal notice
+
+This is a free information tool operated by an AI model. It explains the tax rules and helps you organise your own figures. All of its outputs are produced automatically by an AI model, with no involvement, review, or approval by a tax adviser or accountant. The output is not a tax opinion, not a return prepared by a licensed representative, and not professional advice, but a general calculation and explanation only: it does not examine the full extent of your income or your complete documents. An AI model may err, omit data, or present a wrong conclusion.
+
+Any form or text this tool produces is an automatic draft for your personal preparation only, and is not a filed return. Responsibility for reporting and for paying the tax is yours, the binding computation is the Tax Authority's, and representation before the Tax Authority is reserved to those permitted by law. This tool is not a substitute for advice that takes account of the particular circumstances and needs of each person. Consult a tax adviser or accountant before filing or paying. All use of its output is the user's sole responsibility.
+
+
 ## Problem
 
 Ask what a private Israeli company is worth and you get either a number with no working behind it or a spreadsheet built from a US textbook. Both are wrong in the same specific ways: the discount rate carries no Israel country premium, the tax line uses the statutory rate for a company that may actually pay far less under the Encouragement of Capital Investments Law, and the answer arrives as a single confident number when the honest output is a range. This skill builds the valuation the way an Israeli practitioner builds it, shows every input and where it came from, and refuses to hand back false precision.
