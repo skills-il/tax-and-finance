@@ -7,6 +7,11 @@ compatibility: "Works with Claude Code, Cursor, GitHub Copilot, Windsurf, OpenCo
 
 # Israeli Customs Duty Calculator
 
+## Legal notice
+
+This is a free information tool operated by an AI model. It explains the rules and calculates from the figures you enter, but it does not examine your full circumstances and does not constitute customs or tax advice. All of its outputs are produced automatically, with no involvement, review, or approval by a customs agent or tax adviser, and an AI model may err, omit data, or present a wrong conclusion. The binding classification and charge are determined by the Tax Authority at import. This tool is not a substitute for advice that takes account of the particular circumstances and needs of each person, and all use of its output is the user's sole responsibility.
+
+
 ## Problem
 
 Importing goods into Israel (whether a single Amazon order or a commercial shipment) triggers up to three separate taxes: customs duty, VAT, and purchase tax (mas kniya). Thresholds shift (the personal exemption moved from $75 to $150 in December 2025, was annulled back to $75 by the Knesset on 24 February 2026, and was re-set to $130 by a new Finance Ministry order the next day, and reverted to $75 after that window ran to 1 June 2026), duty depends on an 8-digit HS code that is not the same as the US or EU code, and free-trade preferences only help when you produce the right origin proof. Buyers constantly over- or under-estimate the landed cost.
