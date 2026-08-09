@@ -47,7 +47,7 @@ guessing.
   buyer needs it to claim an input-VAT deduction, and above the statutory threshold that
   deduction ALSO requires an allocation number (mispar haktzaa) on the invoice. The
   threshold is 5,000 NIS pre-VAT from 1 June 2026 (10,000 from 1 January 2026, 20,000 in
-  2025, 25,000 in 2024). Cardcom requests the number automatically at document creation,
+  2025). Cardcom requests the number automatically at document creation,
   but only after a one-time Tax Authority authorization; see SKILL.md Step 4.5. Issuing the
   document is not the whole of compliance. Issue at the time of supply or
   payment, whichever is earlier.

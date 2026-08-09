@@ -175,18 +175,22 @@ site, is:
 1. Identify (הזדהות) in the Tax Authority personal area, registering if necessary.
 2. For a company or a VAT-registered group (איחוד עוסקים), complete corporation
    registration (רישום פרטי תאגיד).
-3. Under "הרשאות לפעולות דיגיטליות", grant the permission and select BOTH subjects. Only
-   one of the two is the common mistake:
-   - "חשבוניות ישראל - אימות מספר הקצאה בחשבונית ספק" (verifying a supplier's number)
-   - "חשבוניות ישראל - בקשת מספר הקצאה עבור חשבונית ללקוח" (requesting a number for your
-     customer's invoice)
+3. In the Tax Authority digital-actions authorization system (מערכת הרשאה לפעולות
+   דיגיטליות, linked from the ITA allocation-number service page), grant the authorization
+   and select BOTH Israel-Invoice subjects, not one of them. One covers verifying the
+   allocation number on a supplier's invoice; the other covers requesting an allocation
+   number for an invoice you issue to a customer. Granting only the first is the common
+   mistake, and it leaves your own invoices without a number. The exact wording of the two
+   subjects is only visible inside that system, which is behind a login, so match them by
+   meaning rather than by a string quoted here.
 4. Choose the authorization duration, and have the grantee confirm it.
 
 **Threshold schedule (amounts are pre-VAT):**
 
+The model itself took effect on 1 January 2024.
+
 | Effective from | Threshold |
 |----------------|-----------|
-| 2024 | 25,000 NIS |
 | 2025 | 20,000 NIS |
 | 1 January 2026 | 10,000 NIS |
 | 1 June 2026 | **5,000 NIS (in force now)** |

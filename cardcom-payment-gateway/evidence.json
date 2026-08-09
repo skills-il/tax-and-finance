@@ -103,11 +103,12 @@
       "id": 10,
       "claim": "ApiPassword is required on 19 of the 50 V11 endpoints, including Transactions/ListTransactions and Transactions/SpecialTransactions, not only CreateDocument and RefundByTransactionId. It is not a property at all on LowProfile/Create or Transactions/Transaction.",
       "source_url": "https://secure.cardcom.solutions/swagger/v11/swagger.json",
-      "raw_snippet": "\"ListTransactionsReq\":{...\"required\":[\"ApiName\",\"ApiPassword\",\"FromDate\",\"ToDate\",\"Page\",\"Page_size\"]}",
+      "raw_snippet": "\"ListTransactionsReq\": {\n        \"type\": \"object\",\n        \"description\": \"list transactions request\",\n        \"additionalProperties\": false,\n        \"required\": [\n          \"ApiName\",\n          \"ApiPassword\",\n          \"FromDate\",\n          \"ToDate\",\n          \"Page\",\n          \"Page_size\"\n        ]",
       "where_in_skill": "SKILL.md Step 2, Step 6.5, Gotchas; references/api-endpoints.md Base URL & Authentication",
       "confidence": "high",
       "verified_via": "spec",
-      "verified_at": "2026-07-28T22:02:47Z"
+      "verified_at": "2026-08-10T00:00:00Z",
+      "source_note": "Re-fetched from the live pretty-printed V11 spec 2026-08-10. Counted programmatically against the same file: 50 paths carry a requestBody and exactly 19 of their request schemas list ApiPassword in \"required\". ApiPassword is absent from the properties of CreateLowProfile and TransactionInfo (the LowProfile/Create and Transactions/Transaction bodies)."
     },
     {
       "id": 11,
@@ -130,18 +131,29 @@
       "id": 13,
       "claim": "Hosted Low Profile keeps merchants in SAQ-A scope; direct server-to-server Transaction with raw CardNumber/CVV2 falls under SAQ-D.",
       "source_url": "https://listings.pcisecuritystandards.org/documents/PCI-DSS-v4-0-SAQ-A.pdf",
-      "raw_snippet": "Self-Assessment Questionnaire (SAQ) A includes only those PCI DSS requirements applicable to merchants with account data functions completely outsourced to PCI DSS validated and compliant third parties, where the merchant retains only paper reports or receipts with account data. ... do not store, process, or transmit any account data in electronic format on their systems or premises.",
+      "raw_snippet": "Self-Assessment Questionnaire (SAQ) A includes only those PCI DSS requirements applicable to merchants with account data functions completely outsourced to PCI DSS validated and compliant third parties, where the merchant retains only paper reports or receipts with account data.",
       "where_in_skill": "SKILL.md Step 1, Gotchas",
       "confidence": "high",
-      "source_note": "SAQ A eligibility turns on NOT storing/processing/transmitting account data, which is what hosted Low Profile achieves and what server-to-server Transaction with raw CardNumber/CVV2 breaks; a merchant handling account data directly falls to SAQ D.",
+      "source_note": "SAQ A eligibility turns on complete outsourcing of account-data functions, which is what hosted Low Profile achieves. Split from a previously stitched quote; the second half is now claim 13.1.",
       "verified_via": "pdf",
-      "verified_at": "2026-07-28T22:08:27Z"
+      "verified_at": "2026-08-10T00:00:00Z"
+    },
+    {
+      "id": "13.1",
+      "claim": "SAQ A merchants must not store, process, or transmit account data in electronic format on their own systems, which is what a server-to-server Transaction call carrying raw CardNumber/CVV2 does.",
+      "source_url": "https://listings.pcisecuritystandards.org/documents/PCI-DSS-v4-0-SAQ-A.pdf",
+      "raw_snippet": "SAQ A merchants may be either e-commerce or mail/telephone-order merchants (card-not-present) and do not store, process, or transmit any account data in electronic format on their systems or premises.",
+      "where_in_skill": "SKILL.md Step 1, Gotchas",
+      "confidence": "high",
+      "source_note": "Second contiguous paragraph of the SAQ A eligibility criteria, split out of the former stitched quote on claim 13.",
+      "verified_via": "pdf",
+      "verified_at": "2026-08-10T00:00:00Z"
     },
     {
       "id": 14,
       "claim": "Cardcom supports two recurring-payment flavours: card-based (charge a stored Token) and MASAV bank standing orders (direct bank debit via RecuringPayments endpoints).",
       "source_url": "https://www.cardcom.solutions/recurring-payments",
-      "raw_snippet": "פתרון מתקדם לגבייה מחזורית באשראי או בהוראת קבע בנקאית ... הפעלת הוראת קבע בנקאית דרך מס\"ב — ישירות מחשבון הבנק של הלקוח",
+      "raw_snippet": "פתרון מתקדם לגבייה מחזורית באשראי או בהוראת קבע בנקאית ... הפעלת הוראת קבע בנקאית דרך מס\"ב - ישירות מחשבון הבנק של הלקוח",
       "where_in_skill": "SKILL.md Step 5, SKILL_HE.md Step 5",
       "confidence": "high",
       "source_note": "'Credit card charges' + 'Bank standing orders via MASAV'",
@@ -152,7 +164,7 @@
       "id": 15,
       "claim": "Cardcom publishes three settlement cycles: monthly (1st to day-before-month-end, credited the 6th of the following month), weekly (Sun-Fri, credited the following Wednesday), and bi-monthly (1st-15th credited the 2nd; 16th-month-end credited the 8th). Configured per terminal, not via API.",
       "source_url": "https://www.cardcom.solutions/blog/clearing-fees-comparison-guide",
-      "raw_snippet": "זיכוי חודשי: עסקאות שבוצעו מה-1 לחודש ועד יום לפני סוף החודש – ב-6 לחודש העוקב זיכוי שבועי: עסקאות שבוצעו מיום ראשון עד יום שישי – ביום רביעי בשבוע שאחרי* זיכוי דו-חודשי: עסקאות מה-1 עד ה-15 לחודש – ב-2 לחודש העוקב; עסקאות מה-16 ועד יום לפני סוף החודש – ב-8",
+      "raw_snippet": "זיכוי חודשי: עסקאות שבוצעו מה-1 לחודש ועד יום לפני סוף החודש - ב-6 לחודש העוקב זיכוי שבועי: עסקאות שבוצעו מיום ראשון עד יום שישי - ביום רביעי בשבוע שאחרי* זיכוי דו-חודשי: עסקאות מה-1 עד ה-15 לחודש - ב-2 לחודש העוקב; עסקאות מה-16 ועד יום לפני סוף החודש - ב-8",
       "where_in_skill": "SKILL.md Gotchas, SKILL_HE.md Gotchas",
       "confidence": "medium",
       "source_note": "Resolves the 2.2.0 carry item that softened settlement days for lack of a source. Reached via https://www.cardcom.solutions/עמלת-סליקה-לעסקים/ which 301s here.",
@@ -193,12 +205,14 @@
     },
     {
       "id": 19,
-      "claim": "Terminal 1000 and card 4580000000000000 are widely repeated in community libraries as Cardcom test credentials. NOT confirmed against any official Cardcom sandbox page; the skill presents them as unverified community folklore and warns not to assume terminal 1000 cannot move money.",
-      "source_url": "https://registry.npmjs.org/@tsdiapi/cardcom",
-      "raw_snippet": "\"name\":\"@tsdiapi/cardcom\"",
+      "claim": "Terminal 1000 (with demo ApiName barak9611) and card 4580000000000000 appear together as the test setup in a third-party community Cardcom library. NOT confirmed against any official Cardcom sandbox page; the skill presents them as unverified community folklore and warns not to assume terminal 1000 cannot move money.",
+      "source_url": "https://raw.githubusercontent.com/yadahan/laravel-cardcom/master/README.md",
+      "raw_snippet": "Cardcom::setConfig(['terminal' => '1000', 'username' => 'barak9611'])->card('4580000000000000', '01', '2020')->charge(10, 'ILS');",
       "where_in_skill": "SKILL.md Step 2",
       "confidence": "high",
-      "source_note": "UNRESOLVED CARRY. The credentials themselves have no official source. This entry records only that a community package exists; the skill body states plainly that the creds are unverified."
+      "source_note": "UNRESOLVED CARRY, narrowed. The former source (an npm registry JSON document for an unrelated package) could not substantiate the credentials at all. This one at least shows the exact pair in a real community library README. Cardcom publishes no official sandbox-credentials page that we could find, so the skill body still labels these as folklore.",
+      "verified_via": "browser",
+      "verified_at": "2026-08-10T00:00:00Z"
     },
     {
       "id": 20,
@@ -233,14 +247,14 @@
     },
     {
       "id": 23,
-      "claim": "@tsdiapi/cardcom is a community-maintained TypeScript/Node.js client for V11; latest published version is 0.4.0 (2025-11-20). It is third-party and not affiliated with Cardcom.",
-      "source_url": "https://registry.npmjs.org/@tsdiapi/cardcom",
-      "raw_snippet": "\"name\":\"@tsdiapi/cardcom\",\"dist-tags\":{\"latest\":\"0.4.0\"},\"time\":{\"modified\":\"2025-11-20T17:19:45.618Z\"}",
+      "claim": "@tsdiapi/cardcom is a community-maintained TypeScript/Node.js client for Cardcom V11; the latest published version is 0.4.0. It is third-party (author \"unbywyd\", repo unbywyd/tsdiapi-cardcom) and not affiliated with Cardcom. It ships no bin entry, so it is a library, not a CLI.",
+      "source_url": "https://unpkg.com/@tsdiapi/cardcom@0.4.0/package.json",
+      "raw_snippet": "\"name\": \"@tsdiapi/cardcom\",\n  \"description\": \"A TSDIAPI plugin to extend API functionality with cardcom.\",\n  \"version\": \"0.4.0\",",
       "where_in_skill": "SKILL.md Community Libraries",
       "confidence": "high",
-      "source_note": "Registry API used because the npmjs.com web page returns 403 to plain fetches. Last publish 2025-11-20, so 'actively maintained' is no longer accurate; claim softened to a dated fact.",
+      "source_note": "Sourced from the package.json inside the published 0.4.0 tarball as served pretty-printed by unpkg, replacing a minified npm-registry JSON stub. The same file confirms there is no \"bin\" field. npm registry metadata dates the 0.4.0 publish to 2025-11-20 and the repo has no GitHub release tags at all (its master package.json still reads 0.3.0), so \"actively maintained\" is not claimed.",
       "verified_via": "browser",
-      "verified_at": "2026-07-28T22:09:10Z"
+      "verified_at": "2026-08-10T00:00:00Z"
     },
     {
       "id": 24,
@@ -277,13 +291,36 @@
     },
     {
       "id": 27,
-      "claim": "Cardcom built a direct interface to the Tax Authority so the allocation number is requested automatically when the document is issued, after a one-time setup: identify in the ITA personal area, register the corporation for a company or VAT-registered group, and under 'הרשאות לפעולות דיגיטליות' grant BOTH 'אימות מספר הקצאה בחשבונית ספק' and 'בקשת מספר הקצאה עבור חשבונית ללקוח'. Pre-VAT thresholds: 25,000 (2024), 20,000 (2025), 10,000 (from 1 Jan 2026), 5,000 (from 1 Jun 2026). An osek patur is unaffected.",
-      "source_url": "https://www.cardcom.solutions/blog/israel-invoices-complete-guide",
-      "raw_snippet": "קארדקום פיתחה ממשק ישיר מול רשות המיסים, כך שהפעולה תתבצע אוטומטית בעת הפקת המסמך. כדי להפעיל את האוטומציה הזו, יש לבצע הגדרה חד-פעמית ... חובה לבחור בשתי האפשרויות הבאות ... שנת 2024: 25,000 ₪ (25,000 ש\"ח / 25,000 NIS) שנת 2025: 20,000 ₪ (20,000 ש\"ח / 20,000 NIS) החל מה-1 בינואר 2026: 10,000 ₪ (10,000 ש\"ח / 10,000 NIS) החל מה-1 ביוני 2026: 5,000 ₪ (5,000 ש\"ח / 5,000 NIS)",
+      "claim": "Cardcom's invoicing system is connected directly by API to the Tax Authority computers, so when a document is issued at an amount that requires an allocation number the system requests it automatically and stamps it on the invoice.",
+      "source_url": "https://www.cardcom.solutions/blog/complete-guide-to-digital-invoices",
+      "raw_snippet": "מערכת החשבוניות של קארדקום מחוברת ישירות (ב-API) למחשבי רשות המיסים. ברגע שאתם מפיקים חשבונית בסכום שדורש הקצאה, המערכת שלנו פונה אוטומטית לרשות המיסים, מקבלת את מספר ההקצאה בתוך שבריר שנייה, ושותלת אותו על גבי החשבונית הדיגיטלית.",
       "where_in_skill": "SKILL.md Step 4.5, SKILL_HE.md שלב 4.5",
       "confidence": "high",
       "verified_via": "browser",
-      "verified_at": "2026-07-27T00:00:00Z"
+      "verified_at": "2026-08-10T00:00:00Z",
+      "source_note": "SOURCE REPLACED 2026-08-10. The former URL (cardcom.solutions/blog/israel-invoices-complete-guide) still returns HTTP 200 but its body is now the SPA's \"המאמר לא נמצא\" article-not-found state, and both Wayback captures are the same empty SPA shell, so the old quote is unrecoverable. The claim was also over-broad: the setup steps and the pre-2025 threshold rows were never on a page we can still read, so they were split off (claims 27.1, 27.2) or removed from the body."
+    },
+    {
+      "id": "27.1",
+      "claim": "Allocation-number thresholds, on the pre-VAT transaction amount, per the Israel Tax Authority: 20,000 NIS / 20,000 ש\"ח for 2025; 10,000 NIS / 10,000 ש\"ח from 1 January 2026; 5,000 NIS / 5,000 ש\"ח from 1 June 2026. The allocation number is a precondition for the buyer to deduct input VAT.",
+      "source_url": "https://www.gov.il/he/service/request-assignment-number-for-tax-invoice",
+      "raw_snippet": "מספרי הקצאה אלה יידרשו כתנאי לניכוי מס התשומות בעסקאות שמעל לתקרה שנקבעה בחוק (20,000 ₪ לשנת 2025) 10,000 החל מה-1 בינואר 2026 ו-5,000 ₪ החל מה-1 ביוני 2026.",
+      "where_in_skill": "SKILL.md Step 4.5, SKILL_HE.md שלב 4.5",
+      "confidence": "high",
+      "source_note": "Israel Tax Authority service page, footer states דף זה עודכן לאחרונה בתאריך 01.06.2026. The page also states the model applies from 1.1.2024 but gives no figure for 2024, so the former 25,000 (2024) table row was dropped from the skill body rather than left uncited.",
+      "verified_via": "browser",
+      "verified_at": "2026-08-10T00:00:00Z"
+    },
+    {
+      "id": "27.2",
+      "claim": "Requesting an allocation number is done by the osek murshe (individual or corporation) or by anyone they authorised in the Tax Authority digital-actions authorisation system, so the permission has to be granted there once before the automated flow works.",
+      "source_url": "https://www.gov.il/he/service/request-assignment-number-for-tax-invoice",
+      "raw_snippet": "עוסקים מורשים (יחידים ותאגידים) וכל מי שקיבלו מהם הרשאה במערכת למתן הרשאה לביצוע פעולות דיגיטליות.",
+      "where_in_skill": "SKILL.md Step 4.5, SKILL_HE.md שלב 4.5",
+      "confidence": "medium",
+      "source_note": "NARROWED. The skill previously quoted two exact Hebrew UI subject labels inside הרשאות לפעולות דיגיטליות. That screen lives behind a login at secapp.taxes.gov.il/SrHasmacha, so the exact strings cannot be verified from any public page; the body now describes the two permissions functionally instead of quoting them as verified UI text.",
+      "verified_via": "browser",
+      "verified_at": "2026-08-10T00:00:00Z"
     },
     {
       "id": 28,
@@ -356,5 +393,6 @@
       "verified_at": "2026-07-28T22:13:46Z",
       "confidence": "high"
     }
-  ]
+  ],
+  "generated_at": "2026-08-10T00:00:00Z"
 }
