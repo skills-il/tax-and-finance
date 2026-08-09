@@ -9,23 +9,35 @@
       "source_url": "https://www.tase.co.il/en",
       "raw_snippet": "TASE",
       "fetched_at": "2026-05-31T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/tase-api.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tase-api.md"
+      ]
     },
     {
       "claim_id": "tase-index-ids",
       "claim": "TASE index IDs used in market.tase.co.il/en/market_data/index/{id}/ and the OpenAPI: TA-35=142, TA-125=137, TA-90=143, TA-Bank=194, TA-RealEstate=149, TA-Technology=169.",
       "source_url": "https://market.tase.co.il/en/market_data/index/137/about",
-      "raw_snippet": "TA-125",
-      "fetched_at": "2026-05-31T00:00:00Z",
-      "appears_in": ["references/tase-api.md", "scripts/fetch_tase_data.py"]
+      "raw_snippet": "Index Name TA-125 Index Short Name TA-125 TASE Index Code 137 ISIN IL00BIDX1378 Blomberg Code TA-125 Reuters RIC .TA125",
+      "fetched_at": "2026-08-10T00:00:00Z",
+      "appears_in": [
+        "references/tase-api.md",
+        "scripts/fetch_tase_data.py"
+      ],
+      "source_note": "Replaced 2026-08-10: the prior snippet was the bare token 'TA-125'. The passage above is the contiguous 'General' block of the index page, read via a headless browser (market.tase.co.il is a client-rendered SPA and returns only a shell to plain HTTP clients). It confirms TASE index code 137 = TA-125; the other five index-ID mappings in this claim are NOT carried by this page and each needs its own /index/{id}/about check."
     },
     {
       "claim_id": "security-numbers",
       "claim": "TASE securities numbers: 662577 = Bank Hapoalim (alpha symbol POLI), 604611 = Bank Leumi (alpha symbol LUMI). Alpha symbols are long-standing, not introduced in 2026.",
-      "source_url": "https://market.tase.co.il/en/market_data/security/662577",
-      "raw_snippet": "POLI",
-      "fetched_at": "2026-05-31T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "source_url": "https://market.tase.co.il/en/market_data/security/662577/major_data",
+      "raw_snippet": "More About POALIM 662577 Add To Portfolio Ordinary Share Symbol : POLIMM",
+      "fetched_at": "2026-08-10T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "source_note": "Replaced 2026-08-10: the prior snippet was the bare token 'POLI'. Read via a headless browser; the page title is 'Shares:POALIM 00662577 Major Data'. DISCREPANCY: the page renders the symbol as POLIMM, not POLI as this claim states, so the alpha symbol should be re-checked before being emitted to users. The 604611 = Bank Leumi / LUMI mapping is not covered by this page and needs its own check."
     },
     {
       "claim_id": "capital-gains-rates",
@@ -33,7 +45,11 @@
       "source_url": "https://taxsummaries.pwc.com/israel/individual/income-determination",
       "raw_snippet": "capital gains Form 1322 Section 102 Section 20 15% 721,560 ש\"ח 721,560 NIS https://taxsummaries.pwc.com/israel",
       "fetched_at": "2026-05-31T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/capital-gains.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/capital-gains.md"
+      ]
     },
     {
       "claim_id": "dividend-tax",
@@ -41,7 +57,11 @@
       "source_url": "https://taxsummaries.pwc.com/israel/individual/income-determination",
       "raw_snippet": "Dividend income 25% 30% substantial shareholder withholding capital gains Form 1322 721,560",
       "fetched_at": "2026-07-18T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/capital-gains.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/capital-gains.md"
+      ]
     },
     {
       "claim_id": "cgt-advance-foreign-broker",
@@ -49,7 +69,11 @@
       "source_url": "https://www.bshcpa.co.il/%D7%93%D7%99%D7%95%D7%95%D7%97-%D7%97%D7%A6%D7%99-%D7%A9%D7%A0%D7%AA%D7%99-%D7%A8%D7%95%D7%95%D7%97%D7%99-%D7%94%D7%95%D7%9F/",
       "raw_snippet": "דיווח חצי שנתי רווחי הון ניירות ערך זרים 31 בינואר 31 ביולי מקדמה סעיף 91",
       "fetched_at": "2026-07-18T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/capital-gains.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/capital-gains.md"
+      ]
     },
     {
       "claim_id": "tase-api",
@@ -57,7 +81,10 @@
       "source_url": "https://datahub.tase.co.il/",
       "raw_snippet": "datahub https://openapi.tase.co.il/tase/prod/ https://openapigw.tase.co.il/tase/prod https://openapigw.tase.co.il/tase/prod/ https://openapigw.tase.co.il/tase/prod/oauth/oauth2/token https://market.tase.co.il/en/market_data/companies/ https://market.tase.co.il/en/market_data/security/{number}",
       "fetched_at": "2026-05-31T00:00:00Z",
-      "appears_in": ["references/tase-api.md", "SKILL.md"]
+      "appears_in": [
+        "references/tase-api.md",
+        "SKILL.md"
+      ]
     },
     {
       "claim_id": "maya-system",
@@ -65,7 +92,10 @@
       "source_url": "https://maya.tase.co.il",
       "raw_snippet": "maya",
       "fetched_at": "2026-05-31T00:00:00Z",
-      "appears_in": ["SKILL.md", "references/tase-api.md"]
+      "appears_in": [
+        "SKILL.md",
+        "references/tase-api.md"
+      ]
     },
     {
       "claim_id": "illustrative-figures",
@@ -73,7 +103,10 @@
       "source_url": "https://market.tase.co.il/en/market_data",
       "raw_snippet": "Illustrative example amounts: 120,000 NIS 80,000 NIS 40,000 NIS 10,000 NIS 120,000 ש\"ח 80,000 ש\"ח 40,000 ש\"ח 10,000 ש\"ח 25% 30% 23% 5% 3% 2% 8.2% 6.29% 0.71% Section 91 Section 121 Section 126 סעיף 91 סעיף 121 סעיף 126 100 שקל NIS 2",
       "fetched_at": "2026-05-31T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     }
   ]
 }
