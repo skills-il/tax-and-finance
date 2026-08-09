@@ -59,10 +59,10 @@
     },
     {
       "claim_id": "capital-gains-rates",
-      "claim": "Israeli capital gains tax on securities: 25% for individuals (Section 91(b)(1)), 30% for substantial shareholders >10% (Section 91(b)(2)), 23% corporate (Section 126(a)); plus a surtax (mas yesef, Section 121B) of up to 5% (3% base + 2% from 2025) on capital income above ~721,560 NIS/yr (2025-2027).",
+      "claim": "Israeli capital gains tax on securities: 25% for individuals (Section 91(b)(1)), 30% where the seller is a 10%-or-more (substantial) shareholder (Section 91(b)(2)), corporate rate (23%) for Israeli companies (Section 126(a)); plus a separate surtax (mas yesef, Section 121B) of up to 5% (3% on all-source income, plus a further 2% from 2025 on capital-source income) above an annually indexed threshold of ILS 721,560 in 2026.",
       "source_url": "https://taxsummaries.pwc.com/israel/individual/income-determination",
-      "raw_snippet": "capital gains Form 1322 Section 102 Section 20 15% 721,560 ש\"ח 721,560 NIS https://taxsummaries.pwc.com/israel",
-      "fetched_at": "2026-05-31T00:00:00Z",
+      "raw_snippet": "The real gain, if any, realised upon the sale of shares purchased on or after 1 January 2003 is generally taxed at a rate of 25% for individuals. This rate is increased to 30% where the seller was a 10% or more shareholder at the date of sale or during any of the 12 months preceding the sale",
+      "fetched_at": "2026-08-10T00:00:00Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
@@ -71,10 +71,10 @@
     },
     {
       "claim_id": "dividend-tax",
-      "claim": "Israeli dividend tax on TASE securities: 25% for an individual non-substantial shareholder, 30% for a substantial shareholder (>10%), withheld at source (nikui b'makor). Surtax (mas yesef) also applies to dividend income above the annual threshold. Foreign-brokerage holders self-report on Form 1322 / טופס 1322 (capital gains) and Form 1301 / טופס 1301 (annual return). Israel has no annual tax-free capital-gains allowance.",
+      "claim": "Israeli dividend tax: 25% generally, 30% in the case of a 10%-or-more (substantial) shareholder, withheld at source (nikui b'makor). The surtax (mas yesef) applies separately to income above the annual threshold. Foreign-brokerage holders self-report on Form 1322 (capital gains) and Form 1301 (annual return). Israel has no annual tax-free capital-gains allowance.",
       "source_url": "https://taxsummaries.pwc.com/israel/individual/income-determination",
-      "raw_snippet": "Dividend income 25% 30% substantial shareholder withholding capital gains Form 1322 721,560",
-      "fetched_at": "2026-07-18T00:00:00Z",
+      "raw_snippet": "Dividends shall generally be subject to tax at the rate of 25% (or 30% in the case of a 10% or more shareholder).",
+      "fetched_at": "2026-08-10T00:00:00Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
@@ -83,10 +83,10 @@
     },
     {
       "claim_id": "cgt-advance-foreign-broker",
-      "claim": "For securities gains on which full Israeli tax was NOT withheld at source (a foreign brokerage, or an Israeli company's shares traded on a foreign exchange), an Israeli resident must file a semi-annual report and pay a capital-gains advance (mikdama) by 31 January and 31 July for gains realized in the preceding six months, under Section 91(d) of the Income Tax Ordinance. Late payment accrues interest and CPI linkage.",
+      "claim": "For securities gains on which full Israeli tax was NOT withheld at source (a foreign brokerage, or an approved withholding exemption), an Israeli resident must file a semi-annual report and pay a capital-gains advance (mikdama) by 31 July and 31 January for gains realized in the preceding six months. Late payment accrues CPI linkage and interest.",
       "source_url": "https://www.bshcpa.co.il/%D7%93%D7%99%D7%95%D7%95%D7%97-%D7%97%D7%A6%D7%99-%D7%A9%D7%A0%D7%AA%D7%99-%D7%A8%D7%95%D7%95%D7%97%D7%99-%D7%94%D7%95%D7%9F/",
-      "raw_snippet": "דיווח חצי שנתי רווחי הון ניירות ערך זרים 31 בינואר 31 ביולי מקדמה סעיף 91",
-      "fetched_at": "2026-07-18T00:00:00Z",
+      "raw_snippet": "נקבעה למועדים 31 ביולי ו-31 בינואר של כל שנת מס, בשל מימוש ניירות ערך ב- 6 החודשים שקדמו לחודש שבו חל יום הדיווח.",
+      "fetched_at": "2026-08-10T00:00:00Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
@@ -160,6 +160,18 @@
         "references/tase-api.md",
         "references/domain-checklist.md",
         "scripts/fetch_tase_data.py"
+      ]
+    },
+    {
+      "claim_id": "surtax-threshold",
+      "claim": "The Israeli surtax (mas yesef) threshold is ILS 721,560 in 2026, and is indexed annually. A 3% surtax applies to total taxable income above the threshold; from 2025 a further 2% applies to the capital-source part above it.",
+      "source_url": "https://taxsummaries.pwc.com/israel/individual/income-determination",
+      "raw_snippet": "As of 2025, the portion of an individual's taxable annual income from capital sources (e.g. capital gains, real estate appreciation, dividends, interest, CPI linkage differentials, rental income, passive royalties) exceeding a certain threshold (ILS 721,560 in 2026) is subject to an additional surtax of 2%. This is in addition to 3% surtax on an individual's annual taxable income from all sources exceeding a certain threshold (ILS 721,560 in 2026).",
+      "fetched_at": "2026-08-10T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/capital-gains.md"
       ]
     }
   ]

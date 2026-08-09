@@ -45,7 +45,8 @@ INDICES = {
 # on security numbers from memory. Resolve the current TASE number live by company
 # name on the TASE market-data site before using it. Note that
 # market.tase.co.il/en/market_data/companies/ no longer resolves; the working shape is
-# https://market.tase.co.il/en/market_data/security/{number} (e.g. .../security/662577
+# https://market.tase.co.il/en/market_data/security/662577 with the security code in
+# the final path segment (that example
 # renders "Shares:POALIM 00662577"), so confirm a candidate number by opening that page
 # and reading back the company name.
 DUAL_LISTED_US_TICKERS = {
@@ -123,7 +124,7 @@ def fetch_stock_data(securities_number: str) -> dict:
     print(f"Looking up securities number: {securities_number}")
     base = TASE_API_BASE or "<set TASE_API_BASE from your product page>"
     print(f"  TASE API: {base}/security/{securities_number}")
-    print(f"  Web check: https://market.tase.co.il/en/market_data/security/{securities_number}")
+    print(f"  Web check: https://market.tase.co.il/en/market_data/security/662577 -- same path, swap in {securities_number}")
     print(f"  Resolve the company name and dual-listing status live via the TASE API;")
     print(f"  do not rely on hardcoded security numbers (they misattribute and go stale).")
     print(f"  Known dual-listed tickers: {', '.join(sorted(DUAL_LISTED_US_TICKERS))}")
@@ -140,8 +141,9 @@ def generate_example() -> dict:
 
     NOTE: Constituent weights and security numbers below are illustrative only
     and may be stale. Always verify against the live TASE OpenAPI before
-    presenting to users. To verify a security number, hit
-    https://market.tase.co.il/en/market_data/security/{number}.
+    presenting to users. To verify a security number, open
+    https://market.tase.co.il/en/market_data/security/662577 and swap the final
+    path segment for the code you want.
     """
     return {
         "index": "TA-35",
@@ -153,8 +155,8 @@ def generate_example() -> dict:
             # The following weights/security numbers are approximate placeholders;
             # verify before quoting. Several legacy entries here had wrong
             # security numbers (Check Point/Teva/NICE/ICL). Look up by name at
-            # https://market.tase.co.il/en/market_data/security/{number} instead of
-            # trusting hardcoded numbers.
+            # https://market.tase.co.il/en/market_data/security/662577 (swap the final
+            # path segment) instead of trusting hardcoded numbers.
             {"name": "Bank Discount", "hebrew": "בנק דיסקונט", "weight_pct": 4.0, "securities_no": "691212"},
         ],
         "note": "Example data for demonstration only. Use the live TASE OpenAPI for production.",
