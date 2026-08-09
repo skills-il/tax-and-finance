@@ -6,6 +6,13 @@ license: MIT
 
 # TASE Stock Analysis
 
+## Legal notice
+
+This is a free information tool operated by an AI model. It gathers data that has been published to the public and presents it in an organised form. The operators of this tool hold no personal interest in the securities or financial assets it mentions, and receive no consideration, commission, or benefit of any kind for presenting them. All of its outputs are produced automatically by an AI model, with no involvement, review, or approval by a licensed investment adviser.
+
+The output is not investment advice, not investment marketing, and not a recommendation to buy, sell, or hold any security or financial asset. It is not a substitute for advice that takes account of the particular circumstances and needs of each person, and it does not consider your financial position, your investment objectives, or the risk you are able to bear. Market data may be partial, delayed, or wrong, and an AI model may err, omit data, or present a wrong conclusion. Consult a licensed adviser before any investment decision and verify every figure against the official source. All use of its output is the user's sole responsibility.
+
+
 ## Instructions
 
 ### Step 1: Identify the Analysis Type

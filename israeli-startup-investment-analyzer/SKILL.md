@@ -7,6 +7,13 @@ compatibility: No network required. The Israeli figures are embedded; the option
 
 # Israeli Startup Investment Analyzer
 
+## Legal notice
+
+This is a free information tool operated by an AI model. It gathers data that has been published to the public and presents it in an organised form. The operators of this tool hold no personal interest in the securities or financial assets it mentions, and receive no consideration, commission, or benefit of any kind for presenting them. All of its outputs are produced automatically by an AI model, with no involvement, review, or approval by a licensed investment adviser.
+
+The output is not investment advice, not investment marketing, and not a recommendation to buy, sell, or hold any security or financial asset. It is not a substitute for advice that takes account of the particular circumstances and needs of each person, and it does not consider your financial position, your investment objectives, or the risk you are able to bear. Market data may be partial, delayed, or wrong, and an AI model may err, omit data, or present a wrong conclusion. Consult a licensed adviser before any investment decision and verify every figure against the official source. All use of its output is the user's sole responsibility.
+
+
 ## Problem
 Angel and VC investors get a flood of inbound decks and have minutes to decide which deals deserve a call. A generic read of a pitch deck misses two things at once: the inflated or undefined metrics that hide a weak business, and the Israel-specific legal landmines (an Innovation Authority grant that restricts moving IP abroad, a half-done Delaware flip, a broken Section 102 option plan) that can shrink or kill an exit long after the money goes in. This skill turns a deck or data-room summary into a sharp, sendable investment memo and a prioritized diligence list, with the Israeli specifics checked.
 
