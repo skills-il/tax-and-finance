@@ -58,9 +58,9 @@
     },
     {
       "claim_id": "hishtalmut-employer-tax-free-ceiling-2026",
-      "claim": "The 2026 keren hishtalmut salary ceiling for tax-free employer deposits is 15,712 NIS (15,712 ש\"ח) per month and 18,854 NIS (18,854 ש\"ח) per year, at 2.5% employee and 7.5% employer. The employer-side annual tax-free deposit works out to 188,544 NIS (188,544 ש\"ח) of salary over twelve months.",
-      "source_url": "https://media.harel-group.co.il/media/eh3fyryd/",
-      "raw_snippet": "₪ 15,712 לחודש ... ₪ 18,854 לשנה",
+      "claim": "The 2026 keren hishtalmut salary ceiling for tax-free employer deposits is 15,712 NIS (15,712 ש\"ח) per month, i.e. 188,544 NIS a year (188,544 ש\"ח), at 2.5% employee and 7.5% employer.",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%A7%D7%A8%D7%9F_%D7%94%D7%A9%D7%AA%D7%9C%D7%9E%D7%95%D7%AA",
+      "raw_snippet": "וזאת עד לתקרת שכר שנתי של 188,544 ₪ (שכר חודשי ממוצע של 15,712 ₪), נכון ל-2026.",
       "fetched_at": "2026-07-21",
       "appears_in": [
         "SKILL.md",
@@ -75,9 +75,9 @@
     },
     {
       "claim_id": "hishtalmut-self-deduction-2026",
-      "claim": "For the self-employed the 2026 keren hishtalmut deduction is 4.5% up to 13,203 NIS (13,203 ש\"ח) per year against an income ceiling of 293,397 NIS (293,397 ש\"ח).",
-      "source_url": "https://media.harel-group.co.il/media/eh3fyryd/",
-      "raw_snippet": "₪ 293,397 לשנה ... (ועד ₪ 13,203)",
+      "claim": "For the self-employed the 2026 keren hishtalmut deduction is 4.5% of an income ceiling of 293,397 NIS (293,397 ש\"ח), i.e. up to 13,203 NIS (13,203 ש\"ח) a year.",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%A7%D7%A8%D7%9F_%D7%94%D7%A9%D7%AA%D7%9C%D7%9E%D7%95%D7%AA",
+      "raw_snippet": "ההפרש בין 293,397 ₪ לבין",
       "fetched_at": "2026-07-21",
       "appears_in": [
         "SKILL.md",
@@ -164,9 +164,9 @@
     },
     {
       "claim_id": "kitzbah-mezakah-2026",
-      "claim": "In 2026 the kitzbah mezakah ceiling is 9,430 NIS (9,430 ש\"ח) per month, the exemption rate is 57.5%, and the exempt amount is 5,422 NIS (5,422 ש\"ח).",
-      "source_url": "https://pensuni.com/?p=827",
-      "raw_snippet": "תקרת הקצבה המזכה: 9,430 ש\"ח ... אחוז הפטור על קצבה מזכה: 57.5% ... הסכום הפטור: 5,422 ש\"ח",
+      "claim": "Per the Israel Tax Authority guidance on section 9a(b), the kitzbah mezakah ceiling is 9,430 NIS (9,430 ש\"ח) per month (figure stated for tax year 2025; re-verify the indexed 2026 ceiling), the maximum exemption rate was 57% in 2025 and is 57.5% in 2026 per the schedule table in the same document, giving an exempt amount of 5,422 NIS (5,422 ש\"ח).",
+      "source_url": "https://www.gov.il/BlobFolder/policy/procedures-270125/he/IncomeTax_procedures-270125.pdf",
+      "raw_snippet": "57% מתקרת הקצבה המזכה בסך",
       "fetched_at": "2026-07-21",
       "appears_in": [
         "SKILL.md",
@@ -565,18 +565,18 @@
     },
     {
       "claim_id": "retirement-age-2026",
-      "claim": "Retirement age is 67 for men. For women it rises by birth cohort: 63 for 1962, 63 and 3 months for 1963, 63 and 6 months for 1964, reaching 65 from the 1970 cohort.",
+      "claim": "Retirement age is 67 for men.",
       "source_url": "https://www.btl.gov.il/benefits/old_age/Conditions_of_eligibility/gilMezake/Pages/gilPrisha.aspx",
-      "raw_snippet": "גיל הפרישה לגברים הוא 67 שנים ... 1/1963 עד 12/1963 ... 63 ו-3 חודשים",
+      "raw_snippet": "גיל הפרישה לגברים הוא 67 שנים.",
       "fetched_at": "2026-07-21",
       "verified_via": "browser",
       "verified_at": "2026-07-21"
     },
     {
       "claim_id": "kitzvat-zikna-2026",
-      "claim": "From 1.1.2026 the old-age pension is 1,838 NIS (1,838 ש\"ח) for an individual and 2,762 NIS (2,762 ש\"ח) for a couple, with a seniority increment of 2% per year capped at 50%.",
+      "claim": "From 1.1.2026 the old-age pension is 1,838 NIS (1,838 ש\"ח) for an individual and 2,762 NIS (2,762 ש\"ח) for a couple.",
       "source_url": "https://www.btl.gov.il/benefits/old_age/Shum/Pages/Shum.aspx",
-      "raw_snippet": "יחיד/ה 1,838 ש\"ח (החל ב- 01.01.2026) ... תוספת בשיעור 2% עבור כל שנה מלאה ... 50% מהקצבה",
+      "raw_snippet": "1,838 ש\"ח (החל ב- 01.01.2026)",
       "fetched_at": "2026-07-21",
       "verified_via": "browser",
       "verified_at": "2026-07-21"
@@ -588,6 +588,33 @@
       "raw_snippet": "תקרת שכר קובע חודשית בקרן המקיפה ₪ 41,307",
       "fetched_at": "2026-07-21",
       "verified_via": "pdf",
+      "verified_at": "2026-07-21"
+    },
+    {
+      "claim_id": "retirement-age-women-table",
+      "claim": "For women retirement age is 60 to 65 by birth cohort: 63 for the 1962 cohort, 63 and 3 months for 1963, 63 and 6 months for 1964, 63 and 9 months for 1965, rising to 65 from 1/1970 onward.",
+      "source_url": "https://www.btl.gov.il/benefits/old_age/Conditions_of_eligibility/gilMezake/Pages/gilPrisha.aspx",
+      "raw_snippet": "גיל הפרישה לנשים הוא 60 עד 65 שנים ונקבע לפי תאריך הלידה, כפי שמופיע בטבלה:",
+      "fetched_at": "2026-07-21",
+      "verified_via": "browser",
+      "verified_at": "2026-07-21"
+    },
+    {
+      "claim_id": "kitzvat-zikna-vatik-increment",
+      "claim": "The seniority increment to the old-age pension is 2% per full year of insurance and does not exceed 50% of the pension, i.e. it is paid for up to 25 years of insurance.",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%AA%D7%95%D7%A1%D7%A4%D7%AA_%D7%95%D7%AA%D7%A7_%D7%9C%D7%A7%D7%A6%D7%91%D7%AA_%D7%96%D7%99%D7%A7%D7%A0%D7%94",
+      "raw_snippet": "תוספת הוותק לא תעלה על 50% מהקצבה, כלומר היא תשולם עבור עד 25 שנות ביטוח (25X2%).",
+      "fetched_at": "2026-07-21",
+      "verified_via": "browser",
+      "verified_at": "2026-07-21"
+    },
+    {
+      "claim_id": "kitzvat-zikna-couple",
+      "claim": "The old-age pension for a couple from 1.1.2026.",
+      "source_url": "https://www.btl.gov.il/benefits/old_age/Shum/Pages/Shum.aspx",
+      "raw_snippet": "2,762 ש\"ח (החל ב- 01.01.2026)",
+      "fetched_at": "2026-07-21",
+      "verified_via": "browser",
       "verified_at": "2026-07-21"
     }
   ]
