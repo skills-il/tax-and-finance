@@ -184,7 +184,7 @@ Create a summary comparison:
 
 **Discounted housing lottery (Dira BeHanacha / דירה בהנחה umbrella):**
 - Government subsidized housing lottery for eligible buyers. The program runs under the "Dira BeHanacha" (דירה בהנחה) umbrella; "Mechir LaMishtaken" (מחיר למשתכן) is the original track and "Mechir Matara" (מחיר מטרה) is the current flagship lottery variant, check gov.il for the active lottery
-- Discounted property prices (typically 15-30% below market, national average around 22%)
+- Discounted property prices; the size of the discount varies by project and is published per tender, so read it off the specific project rather than assuming a national figure
 - Eligibility based on housing history and marital status
 - Special mortgage terms may apply for these properties
 
@@ -303,7 +303,7 @@ War-displaced residents (מפונים) from Tkuma authority programs may have se
 | Bank of Israel (BOI) | https://www.boi.org.il | Current BOI interest rate, Prime rate decisions, announcements |
 | BOI banking supervision | https://www.boi.org.il/en/economic-roles/supervision-and-regulation/supervision-of-the-banking-system/ | LTV limits, multi-track requirement, supervisory caps |
 | Bank of Israel credit data | https://www.creditdata.org.il | Free annual credit report lookup at the BOI credit bureau (BDI) |
-| Mechir LaMishtaken | https://www.gov.il/he/departments/topics/mehirlmishtaken | Reduced-price apartment eligibility and entitlement rules |
+| Dira BeHanacha (umbrella: Mechir Matara, Mechir Mufhat, Mechir LaMishtaken, Dira LeHaskir) | https://www.gov.il/he/Departments/Topics/dira | Reduced-price apartment eligibility and entitlement rules |
 | Ministry of Construction mortgage calculator | https://www.gov.il/he/pages/mashkanta-calculator | Multi-track payment calculator that accounts for CPI linkage |
 
 ## Troubleshooting

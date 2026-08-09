@@ -7,9 +7,13 @@
       "claim_id": "boi-rate",
       "claim": "The Bank of Israel interest rate was cut to 3.50% on 2026-07-06 (previously 3.75% set 2026-05-25 from 4.0%). The Prime rate = BoI rate + 1.5% = 5.00%. BoI staff forecast points toward ~3.0% within about 12 months; the next Monetary Committee decision is around late August 2026.",
       "source_url": "https://en.globes.co.il/en/article-bank-of-israel-cuts-interest-rate-again-1001547993",
-      "raw_snippet": "3.50",
-      "fetched_at": "2026-07-16T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "raw_snippet": "The Bank of Israel Monetary Committee, headed by Governor Prof. Amir Yaron, has cut the interest rate 0.25% to 3.5%, as most economists had expected, due to the strength of the shekel, stable prices with inflation well below the annual target range upper limit of 3%, and the fall in the risk premium for Israel",
+      "fetched_at": "2026-08-10T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "source_note": "Replaced 2026-08-10: the prior snippet was the bare token '3.50'. Contiguous quote re-fetched and confirmed on the article. The same article carries the forecast sentence 'sees the interest rate at 3% in 12 months time'. The Prime = BoI + 1.5% = 5.00% derivation and the late-August 2026 next-decision date are not stated in this article."
     },
     {
       "claim_id": "purchase-tax-brackets",
@@ -17,7 +21,10 @@
       "source_url": "https://www.gov.il/he/departments/guides/mas_rechisha",
       "raw_snippet": "מס רכישה 1,978,745 ש\"ח 6,055,070 ש\"ח 1,978,745 NIS 6,055,070 NIS",
       "fetched_at": "2026-05-31T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "ltv-limits",
@@ -25,7 +32,10 @@
       "source_url": "https://www.boi.org.il/en/economic-roles/supervision-and-regulation/supervision-of-the-banking-system/",
       "raw_snippet": "Directive 329",
       "fetched_at": "2026-05-31T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "track-composition-rule",
@@ -33,7 +43,10 @@
       "source_url": "https://www.boi.org.il/en/economic-roles/supervision-and-regulation/supervision-of-the-banking-system/",
       "raw_snippet": "Directive 329",
       "fetched_at": "2026-05-31T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "pti-stress-test",
@@ -41,7 +54,10 @@
       "source_url": "https://www.boi.org.il/en/economic-roles/supervision-and-regulation/supervision-of-the-banking-system/",
       "raw_snippet": "Directive 329",
       "fetched_at": "2026-05-31T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "boi-main-site",
@@ -49,7 +65,10 @@
       "source_url": "https://www.boi.org.il",
       "raw_snippet": "Bank of Israel",
       "fetched_at": "2026-05-31T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "boi-creditdata",
@@ -57,15 +76,22 @@
       "source_url": "https://www.creditdata.org.il",
       "raw_snippet": "creditdata",
       "fetched_at": "2026-05-31T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "dira-behanacha",
-      "claim": "The discounted-housing lottery runs under the Dira BeHanacha umbrella (gov.il); Mechir LaMishtaken is the original track and Mechir Matara the current flagship lottery; discounts typically 15-30% below market (national average around 22%).",
-      "source_url": "https://www.gov.il/he/departments/topics/mehirlmishtaken",
-      "raw_snippet": "מחיר למשתכן",
-      "fetched_at": "2026-05-31T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "claim": "Dira BeHanacha is the umbrella name for the Ministry of Construction and Housing / Israel Land Authority discounted-housing programmes, covering Mechir Matara, Mechir Mufhat, Mechir LaMishtaken and Dira LeHaskir.",
+      "source_url": "https://www.gov.il/he/Departments/Topics/dira",
+      "raw_snippet": "\"דירה בהנחה\" היא שם כולל למגוון תוכניות הדיור של משרד הבינוי והשיכון ורשות מקרקעי ישראל: מחיר מטרה, מחיר מופחת, מחיר למשתכן ודירה להשכיר.",
+      "fetched_at": "2026-08-10T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "source_note": "Re-sourced and narrowed 2026-08-10. The prior source_url https://www.gov.il/he/departments/topics/mehirlmishtaken is DEAD (it 404s to gov.il/he/error) and the snippet was the two-word stub 'מחיר למשתכן'. The live umbrella page names four tracks, not two. NOT supported by this page and therefore dropped from the claim: the '15-30% below market, national average around 22%' discount figures, and the characterisation of Mechir Matara as the current flagship."
     },
     {
       "claim_id": "mof-mortgage-calculator",
@@ -73,23 +99,34 @@
       "source_url": "https://www.gov.il/he/pages/mashkanta-calculator",
       "raw_snippet": "משכנתא",
       "fetched_at": "2026-05-31T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "illustrative-figures",
       "claim": "Illustrative example figures and typical ranges (not regulated constants), used in worked examples and guidance: example loan/property/income amounts 2,500,000 / 1,800,000 / 1,200,000 / 700,000 / 900,000 / 1,050,000 / 500,000 / 672,000 / 25,000 / 10,000 NIS; closing-cost ballparks attorney ~0.5% + VAT, appraiser 1,500-3,000 NIS, registration ~200 NIS, advisor fee 3,000-8,000 NIS; example track-mix splits 34% / 33% / 40% / 27% / 50% / 17% / 30% / 25%; example bank spreads and rates Prime-0.2% / 0.3% / 0.5% / 0.65% / 0.7%, fixed 3.8% / 4.0% / 4.25% / 4.5%; inflation scenarios 2% / 3% / 4%; example 72% LTV; refinancing rule-of-thumb save 0.3-0.5%; early-repayment penalty 0.5-2%; max term 30 years, age+term <= 75.",
-      "source_url": "https://www.boi.org.il",
+      "source_url": "https://www.boi.org.il/roles/monetarypolicy/interest/",
       "raw_snippet": "Illustrative example amounts and ranges (not regulated facts): 1,200,000 ILS 1,200,000 ש\"ח 1,800,000 ILS 1,800,000 ש\"ח 10,000 ILS 10,000 ש\"ח 2,000 ILS 2,000 ש\"ח 2,500,000 ILS 2,500,000 ש\"ח 200 ILS 200 ש\"ח 25,000 ILS 25,000 ש\"ח 3,000 ILS 3,000 ש\"ח 500,000 ILS 500,000 ש\"ח 672,000 ILS 672,000 ש\"ח 700,000 ILS 700,000 ש\"ח 8,000 ILS 8,000 ש\"ח 900,000 ILS 900,000 ש\"ח ILS 3 ILS, 1%",
-      "fetched_at": "2026-05-31T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "fetched_at": "2026-08-10T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "source_note": "Deep link substituted 2026-08-10 for the bare boi.org.il homepage. This entry is not a quotation: it records example amounts and typical ranges that are derived arithmetic inside the skill's worked examples, not published figures. The URL is the Bank of Israel monetary-policy interest-rate page, given as the topical anchor for the rate inputs those examples use."
     },
     {
       "claim_id": "reservist-payment-deferral",
-      "claim": "A reservist called up under Order 8 (Tzav 8) during an active conflict period is generally entitled to defer mortgage and loan payments (commonly up to about 3 months) without interest or fees. The exact terms and eligibility are set largely by the active-period relief framework and reservist-protection legislation, so they must be verified before quoting; the '5 or more consecutive days' threshold applies to a separate right (a spouse's work-absence entitlement), not to the mortgage deferral.",
+      "claim": "For reservists during the Swords of Iron war, Kol Zchut reports that some banks announced an exemption from a number of mortgage repayments and recommends checking with the bank directly, and that a payment falling due between 01.01.2024 and 29.02.2024 could be deferred by 31 days. There is no general published entitlement to a three-month interest-free and fee-free deferral.",
       "source_url": "https://www.kolzchut.org.il/he/%D7%A9%D7%90%D7%9C%D7%95%D7%AA_%D7%95%D7%AA%D7%A9%D7%95%D7%91%D7%95%D7%AA_%D7%9C%D7%9E%D7%99_%D7%A9%D7%9E%D7%A9%D7%A8%D7%AA%D7%99%D7%9D_%D7%91%D7%9E%D7%99%D7%9C%D7%95%D7%90%D7%99%D7%9D_%D7%91%D7%9E%D7%94%D7%9C%D7%9A_%D7%9E%D7%9C%D7%97%D7%9E%D7%AA_%D7%97%D7%A8%D7%91%D7%95%D7%AA_%D7%91%D7%A8%D7%96%D7%9C",
-      "raw_snippet": "דחיית תשלומי הלוואות ... משרתי מילואים ... בלי ריבית ובלי עמלות",
-      "fetched_at": "2026-07-16T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "raw_snippet": "חלק מהבנקים הודיעו כי יעניקו פטור מהחזרים של מספר תשלומי משכנתא. מומלץ לבדוק מול הבנק. אם מדובר על תשלום שעליהם לשלם בתקופה שבין 01.01.2024 ל-29.02.2024 הם רשאים לדחות אותו ב-31 ימים.",
+      "fetched_at": "2026-08-10T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "source_note": "Rewritten 2026-08-10. The prior snippet was the ellipsis-stitched stub 'דחיית תשלומי הלוואות ... משרתי מילואים ... בלי ריבית ובלי עמלות'. On re-fetch the page does NOT contain 'בלי ריבית' at all and does not support a blanket interest-free, fee-free deferral of about three months. The page also states that no special arrangements have been set for other bank or credit-card loans. The claim has been narrowed to what the source says; any deferral terms quoted to a user must come from the bank."
     }
   ]
 }
