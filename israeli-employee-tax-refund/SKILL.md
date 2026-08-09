@@ -185,26 +185,9 @@ Present the estimate as a range, not a single number, and remind the user that t
 
 ### Step 6: Generate the Document Checklist
 
-Based on the detected triggers, build a personalized document list. Common items by trigger:
+Build a personalised list from the triggers detected in Step 4. Three items are always required: Form 106 from every employer for each year claimed, teudat zehut plus ספח, and a bank account confirmation (אישור ניהול חשבון) for the payout.
 
-| Trigger | Required documents |
-|---------|-------------------|
-| All claims | Form 106 from every employer for the year; teudat zehut + ספח; bank account confirmation (אישור ניהול חשבון) for the refund payout |
-| Multiple employers | Sum field 042 across all 106s; show pay-by-pay reconciliation if the gap is large |
-| Partial year / unemployment | Bituach Leumi annual confirmation (אישור על קצבאות) listing months and amounts of unemployment / חל"ת |
-| Maternity/paternity leave | Bituach Leumi דמי לידה annual confirmation |
-| Reserve duty | טופס 3010 (אישור על ימי מילואים) from the IDF reserve unit |
-| Section 46 donations | Original signed receipts from each Section-46-approved institution; confirm the institution's number appears on the Tax Authority's approved list for that year |
-| Yishuv mezakeh | אישור תושבות from the local authority for each year claimed (12+ months residence) |
-| New immigrant | Teudat oleh + date of aliyah |
-| Section 40g (academic) | Diploma + transcript (verifies completion year) |
-| Single parent / alimony | Court judgment + bank transfer records for alimony payments |
-| Section 9(5) disability | Medical-board determination (ועדה רפואית) + ratification by the Tax Authority's disability committee |
-| Sections 45A / 47 pension and life insurance | Annual deposit certificate (אישור הפקדה שנתי) from the pension/insurance provider |
-| Keren hishtalmut early withdrawal | תלוש משיכה from the keren showing 47% withholding |
-| Discharged soldier (trigger 15) | תעודת שחרור / אישור שירות showing discharge date and service length; the employer's Form 101 for the year |
-| נטול יכולת child/spouse (trigger 16, Section 45(a)) | Form 116א + medical certification of the paralysis / blindness / intellectual-developmental disability |
-| Institution care (trigger 17, Section 44) | Form 116 + institution payment receipts + the disabled relative's income confirmation |
+The full per-trigger checklist lives in `references/document-requirements.md`. Read it and emit only the rows matching the user's detected triggers. It covers all 17 triggers, including the Bituach Leumi annual confirmations, טופס 3010 for reserve duty, Section 46 receipts and the approved-institution check, אישור תושבות for yishuv mezakeh, Forms 116 and 116א, and the keren hishtalmut תלוש משיכה.
 
 Always remind the user to keep copies; the Tax Authority can request originals later.
 
