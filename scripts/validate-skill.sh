@@ -6,6 +6,25 @@
 set -euo pipefail
 
 ERRORS=""
+
+# Frontmatter YAML parsing needs python3 + PyYAML. Probe once; if either is
+# missing, skip the check with a notice rather than failing the build.
+YAML_CHECK=1
+if ! python3 -c 'import yaml' >/dev/null 2>&1; then
+  YAML_CHECK=0
+  echo "NOTICE: python3 with PyYAML unavailable - skipping frontmatter YAML parse check"
+fi
+
+# Echoes the YAML parser error for a file's frontmatter, or nothing if it parses.
+yaml_frontmatter_error() {
+  awk 'NR==1{next} /^---$/{exit} {print}' "$1" | python3 -c '
+import sys, yaml
+try:
+    yaml.safe_load(sys.stdin.read())
+except Exception as e:
+    print(str(e).replace("\n", " ")[:200])
+' 2>&1
+}
 SECRET_PATTERNS='(sk-[a-zA-Z0-9]{20,}|AKIA[A-Z0-9]{16}|ghp_[a-zA-Z0-9]{36}|password:\s*[^\s]+|secret_key|api_key\s*=\s*["'"'"'][^\s]+)'
 
 for file in "$@"; do
@@ -29,6 +48,24 @@ for file in "$@"; do
 
   # Extract frontmatter (between first and second ---)
   FRONTMATTER=$(awk 'NR==1{next} /^---$/{exit} {print}' "$file")
+
+  # 2b. Frontmatter must parse as YAML. An unquoted description containing a
+  # colon-space passes every other check here and then hard-fails the sync
+  # pipeline with "incomplete explicit mapping pair". Also checks a sibling
+  # SKILL_HE.md, but only when it actually has frontmatter (some do not).
+  if [ "$YAML_CHECK" = "1" ]; then
+    YAML_ERR=$(yaml_frontmatter_error "$file")
+    if [ -n "$YAML_ERR" ]; then
+      ERRORS="$ERRORS\n- $file: frontmatter is not valid YAML ($YAML_ERR). Most often an unquoted description containing ': ' - wrap the value in single quotes."
+    fi
+    HE_FILE="$DIR/SKILL_HE.md"
+    if [ -f "$HE_FILE" ] && [ "$(head -1 "$HE_FILE")" = "---" ]; then
+      HE_YAML_ERR=$(yaml_frontmatter_error "$HE_FILE")
+      if [ -n "$HE_YAML_ERR" ]; then
+        ERRORS="$ERRORS\n- $HE_FILE: frontmatter is not valid YAML ($HE_YAML_ERR). Most often an unquoted description containing ': ' - wrap the value in single quotes."
+      fi
+    fi
+  fi
 
   # 3. name field: kebab-case, matches folder
   NAME=$(echo "$FRONTMATTER" | grep '^name:' | sed 's/name: *//' | tr -d "'\"\r" | xargs)
