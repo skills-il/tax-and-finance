@@ -369,13 +369,13 @@ Actions:
 
 | Source | URL | What to Check |
 |--------|-----|---------------|
-| Israel Tax Authority (Reshut HaMisim) | https://www.gov.il/en/departments/israel_tax_authority | Official forms, filing guides, announcements |
-| SHAAM online filing portal | https://www.misim.gov.il | Electronic submission of all returns and declarations |
-| Kol-Zchut income tax brackets | https://www.kolzchut.org.il/he/מדרגות_מס_הכנסה | Current-year annual and monthly bracket thresholds |
-| Kol-Zchut tax credit points | https://www.kolzchut.org.il/he/נקודת_זיכוי | Nekudot zikui value, eligibility categories |
-| Kol-Zchut Mas Shevach calculation | https://www.kolzchut.org.il/he/חישוב_מס_שבח | Real estate capital gains calculation, exemptions, linear method |
-| Israel Real Estate Taxation office | https://www.gov.il/he/departments/topics/land_taxation | Mas Shevach and Mas Rechisha forms, declarations, rates |
-| ITA havraa-reduction circular 2025-000583 | https://www.gov.il/BlobFolder/dynamiccollectorresultitem/employers-info-140525-1/he/IncomeTax_employers-info-140525-1.pdf | Havraa-day reduction amounts (418-471.4 NIS), field 011/012, tax treatment (2024-2025) |
+| Israel Tax Authority (Reshut HaMisim) | https://www.gov.il/en/departments/israel_tax_authority | Forms, filing guides, announcements |
+| SHAAM online filing portal | https://www.misim.gov.il | Electronic submission of returns |
+| Kol-Zchut income tax brackets | https://www.kolzchut.org.il/he/מדרגות_מס_הכנסה | Current-year bracket thresholds |
+| Kol-Zchut tax credit points | https://www.kolzchut.org.il/he/נקודת_זיכוי | Nekudot zikui value and eligibility |
+| Kol-Zchut Mas Shevach calculation | https://www.kolzchut.org.il/he/חישוב_מס_שבח | Capital gains, exemptions, linear method |
+| Israel Real Estate Taxation office | https://www.gov.il/he/departments/topics/land_taxation | Mas Shevach and Rechisha forms and rates |
+| ITA havraa-reduction circular 2025-000583 | https://www.gov.il/BlobFolder/dynamiccollectorresultitem/employers-info-140525-1/he/IncomeTax_employers-info-140525-1.pdf | Havraa reduction (418-471.4 NIS), field 011/012 |
 
 ## Troubleshooting
 
