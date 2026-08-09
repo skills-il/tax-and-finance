@@ -1,7 +1,7 @@
 {
   "skill": "israeli-utility-rates-comparator",
-  "version": "1.2.0",
-  "evidence_date": "2026-05-20",
+  "version": "1.4.1",
+  "evidence_date": "2026-08-10",
   "claims": [
     {
       "claim_id": "elec-standard-tariff-jul2026",
@@ -165,15 +165,16 @@
     },
     {
       "claim_id": "cellular-rami-levy-pricing",
-      "claim": "Rami Levy Mobile (MVNO on Pelephone network) offers unlimited calls + 50GB+ data plans starting around 20 NIS/month with no commitment.",
-      "source_url": "https://israeliphoneplans.com/",
-      "raw_snippet": "Rami Levy Mobile (MVNO on Pelephone network) offers unlimited calls + 50GB+ data plans starting around 20 NIS/month with no commitment. (Israeli Phone Plans 2026 comparator)",
-      "fetched_at": "2026-05-20",
+      "claim": "Rami Levy Mobile is an MVNO operating on the Hot Mobile network (not Pelephone). As of August 2026 it lists 9 plans ranging from 14.90 to 55 NIS/month; the cheapest plan with a large data allowance is 25.90 NIS/month for 200GB and 4,000 minutes.",
+      "source_url": "https://israeliphoneplans.com/carriers/rami-levy.html",
+      "raw_snippet": "Rami Levy is a mobile virtual network operator (MVNO) in Israel, operating on the Hot Mobile network.",
+      "fetched_at": "2026-08-10T00:00:00Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/details-2026.md"
-      ]
+      ],
+      "source_note": "Corrected 2026-08-10: the previous record said Pelephone network and 'unlimited calls + 50GB+ from ~20 NIS'; the carrier page states Hot Mobile network and a 14.90-55 NIS range with minute bundles (not unlimited minutes). Price range verbatim on the same page: 'Price range: ₪14.90 – ₪55/month'."
     },
     {
       "claim_id": "cellular-golan-019-tiers",
@@ -201,15 +202,16 @@
     },
     {
       "claim_id": "internet-ibc-unlimited-coverage",
-      "claim": "IBC/Unlimited fiber network covers ~260 localities in Israel as of 2026 with symmetric speeds 100Mbps-5Gbps.",
-      "source_url": "https://www.unlimited.net.il/",
-      "raw_snippet": "IBC/Unlimited fiber network covers ~260 localities in Israel as of 2026 with symmetric speeds 100Mbps-5Gbps. (Unlimited (IBC) homepage)",
-      "fetched_at": "2026-05-20",
+      "claim": "The IBC/Unlimited fiber network is deployed across Israel and offers real speeds of up to 5,000 Mbps.",
+      "source_url": "https://www.unlimited.net.il/%d7%a4%d7%a8%d7%99%d7%a1%d7%aa-%d7%a1%d7%99%d7%91%d7%99%d7%9d-%d7%90%d7%95%d7%a4%d7%98%d7%99%d7%99%d7%9d/",
+      "raw_snippet": "תשתית הסיבים הינה תשתית האינטרנט המאפשרת מגוון מהירויות אמיתיות של עד 5,000 מגה!",
+      "fetched_at": "2026-08-10T00:00:00Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/details-2026.md"
-      ]
+      ],
+      "source_note": "Narrowed 2026-08-10. The previous record claimed '~260 localities as of 2026' against the bare homepage; the site's own homepage now states 399 localities ('399 יישובים ברחבי הארץ נהנים מתשתית אינטרנט מתקדמת של סיבים אופטיים'), so the 260 figure was wrong and the locality count has been dropped from this claim rather than restated from a marketing counter."
     },
     {
       "claim_id": "arnona-annual-update-1.626",
@@ -285,15 +287,16 @@
     },
     {
       "claim_id": "iec-customer-service-103",
-      "claim": "IEC customer service phone number is 103 (also reachable as 055-7000103 for SMS/WhatsApp). Legacy *2730 short code is no longer in use.",
-      "source_url": "https://www.iec.co.il",
-      "raw_snippet": "IEC customer service phone number is 103 (also reachable as 055-7000103 for SMS/WhatsApp). Legacy *2730 short code is no longer in use. (IEC homepage / contact page)",
-      "fetched_at": "2026-05-20",
+      "claim": "The Israel Electric Corporation customer service call centre number is 103; calls from a Bezeq or HOT landline are free.",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%97%D7%91%D7%A8%D7%AA_%D7%94%D7%97%D7%A9%D7%9E%D7%9C",
+      "raw_snippet": "לבירורים שונים, ניתן להתקשר למוקד 103 (מומלץ להצטייד לפני השיחה במספר החוזה, המופיע בחזית חשבון החשמל בחלק העליון). השיחות למוקד מטלפון קווי של בזק או הוט הן ללא תשלום.",
+      "fetched_at": "2026-08-10T00:00:00Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/details-2026.md"
-      ]
+      ],
+      "source_note": "Re-sourced 2026-08-10 from the bare iec.co.il homepage to the Kol Zchut IEC page. iec.co.il is a client-rendered SPA that returns only the homepage shell to any non-browser fetch, so it cannot serve as a checkable evidence source. NOT confirmed by this source: the 055-7000103 SMS/WhatsApp line and the assertion that the legacy *2730 short code has been retired."
     },
     {
       "claim_id": "small-claims-court-cap",
@@ -333,15 +336,16 @@
     },
     {
       "claim_id": "solar-export-two-track-2026",
-      "claim": "Residential solar export tariff ~48 agorot/kWh + 6 agorot urban premium (cities >50k) for 15 years; small-installation track <=15 kW; old energy-vs-energy net-metering closed to new entrants; self-consumption avoids ~63.5 agorot retail.",
-      "source_url": "https://www.mishtalemli.co.il/",
-      "raw_snippet": "תעריף הזרמה סולארי ~48 אגורות/קוט\"ש + פרמיה אורבנית 6 אגורות (ערים מעל 50 אלף) ל-15 שנים; מסלול מגורים עד 15 kW; מונה-נטו האנרגטי הישן סגור למצטרפים חדשים; צריכה עצמית חוסכת ~63.5 אגורות.",
-      "fetched_at": "2026-07-06T00:00:00Z",
+      "claim": "The Electricity Authority tariff book (January 2026 edition) sets the recognised price for self-generation plus surplus export from photovoltaic installations of up to 15 kW at 48 agorot/kWh (table 6.7-5, Authority decision 70103), and a separate urban premium of 6 agorot/kWh for generation and storage installations (table 6.7-27, decision 66406). Above 15 kW the rate steps down (37.31 agorot/kWh for 15-100 kW for connection requests filed during 2026, 34.37 for 100-300 kW, 28.44 for 300-630 kW).",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/tarriffbook/he/Files_netunei_hasmal_sefer_tariff_01_2026.pdf",
+      "raw_snippet": "T15kw – תעריף למיתקנים בהספק עד 15 KW, השווה ל- 48 אג' לקוט\"ש.",
+      "fetched_at": "2026-08-10T00:00:00Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/details-2026.md"
-      ]
+      ],
+      "source_note": "Re-sourced 2026-08-10. The previous record cited the bare homepage of mishtalemli.co.il, a consumer price-comparison portal that carries no solar content at all, for a self-written paraphrase. Verified instead against the Electricity Authority tariff book PDF (172 pages, 'פורסם בינואר 2026'), read with pdftotext -layout. Second contiguous quote from table 6.7-27 on the urban premium: 'פרמיה אורבנית בעד אנרגיה המיוצרת במיתקן הייצור או בעד פריקת אנרגיה ממיתקן האגירה' with the tariff column value 6. Note: the tariff book does not condition the urban premium on a >50,000-resident city, and does not state a 15-year term; those two qualifiers in the skill body remain unverified."
     },
     {
       "claim_id": "central-gas-supplier-switch-right",
@@ -407,7 +411,7 @@
       "claim_id": "illustrative-example-figures-util",
       "claim": "Illustrative computed figures in the worked examples (derived, not sourced).",
       "source_url": "https://www.iec.co.il",
-      "raw_snippet": "Worked examples use derived amounts: 800 ILS/month, 1,244 kWh, 9.3 kWp, 9.5 kWp, 3,800 ILS, 36,000 ILS, 9,600 ILS, 3.75 years, 204,000 ILS, 14 m3, 1,560-1,800 ILS, 1,000-1,500 ILS, 600 ILS, 40%, 15-20%, 80-120 ILS, 100 ILS, 130-150 ILS, 350-480, 480-630, 550-700, 700-880 ILS. Structural: 260 ILS expedited meter, 200 liters leak, 24-25 degrees.",
+      "raw_snippet": "Worked examples use derived amounts: 800 ILS/month, 1,244 kWh, 9.3 kWp, 9.5 kWp, 3,800 ILS, 36,000 ILS, 9,600 ILS, 3.75 years, 204,000 ILS, 14 m3, 1,560-1,800 ILS, 1,000-1,500 ILS, 600 ILS, 40%, 15-20%, 80-120 ILS, 100 ILS, 130-150 ILS, 350-480, 480-630, 550-700, 700-880 ILS. Structural: 260 ILS expedited meter, 200 liters leak, 24-25 degrees. Router rental 10-20 NIS/month and legacy-bundle consolidation savings of 20-40 NIS/month are illustrative market ranges, not a published tariff.",
       "fetched_at": "2026-07-06T00:00:00Z",
       "appears_in": [
         "SKILL.md",
@@ -431,15 +435,16 @@
       "claim": "The Israeli Electricity Authority's canonical department page is https://www.gov.il/he/departments/the_electricity_authority (pua.gov.il redirects there). The variants /he/departments/electricity_authority and /he/pages/electricity_authority are NOT the regulator's page: the first 404s and the second resolves to a 2016 news item.",
       "claim_type": "url",
       "source_url": "https://www.gov.il/he/departments/the_electricity_authority",
-      "raw_snippet": "רשות החשמל",
-      "fetched_at": "2026-08-01T00:00:00Z",
+      "raw_snippet": "רשות החשמל מעדכנת את התעריפים בהתאם למדדים השונים",
+      "fetched_at": "2026-08-10T00:00:00Z",
       "verified_via": "browser",
       "verified_at": "2026-08-01T00:00:00Z",
       "confidence": "high",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ]
+      ],
+      "source_note": "Snippet replaced 2026-08-10: the prior value was the two-word stub 'רשות החשמל'. The quote above is a contiguous line from the news list on the Authority's canonical department page (item dated 14/06/26, 'הודעה בדבר עדכון תעריפי החשמל החצי שנתיים'). Page title is 'רשות החשמל'. Read via a headless browser; gov.il returns 403 to plain HTTP clients."
     }
   ],
   "schemaVersion": "1.0",
