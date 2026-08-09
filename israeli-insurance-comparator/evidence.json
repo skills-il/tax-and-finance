@@ -9,7 +9,10 @@
       "source_url": "https://harb.cma.gov.il/",
       "raw_snippet": "הר הביטוח",
       "fetched_at": "2026-05-31T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "gov-calculators",
@@ -17,7 +20,11 @@
       "source_url": "https://car.cma.gov.il/",
       "raw_snippet": "https://car.cma.gov.il/ https://govcarins.mof.gov.il/",
       "fetched_at": "2026-05-31T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/domain-checklist.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/domain-checklist.md"
+      ]
     },
     {
       "claim_id": "maccabi-tier-order",
@@ -25,7 +32,10 @@
       "source_url": "https://www.financecheck.co.il/insurance/maccabi-health-insurance",
       "raw_snippet": "מכבי זהב",
       "fetched_at": "2026-05-31T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "insurance-no-vat",
@@ -33,39 +43,54 @@
       "source_url": "https://www.kalir.co.il/",
       "raw_snippet": "מע\"מ",
       "fetched_at": "2026-05-31T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "siudi-timeline",
       "claim": "The Ministry of Health's proposed July 2025 order to stop kupot-channel bituach siudi sales was never finalized; sales continued and the operative wind-down horizon slipped to end-2026 (handoff) and 2027 (run-off clause removed).",
       "source_url": "https://www.calcalist.co.il/local_news/article/r11b7psr1x",
-      "raw_snippet": "סיעודי",
+      "raw_snippet": "השתיים הודיעו לפני כשבוע וחצי על הארכת ההסכם ביניהן לתקופה של שנתיים נוספות, עד לסוף 2026, בהינתן פרסום ההוראות הסופיות של הרשות.",
       "fetched_at": "2026-05-31T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "siudi-adl",
-      "claim": "The CMA tightened long-term-care patient eligibility to 4-of-6 ADLs effective January 1, 2025 (was 3-of-6).",
-      "source_url": "https://www.kolzchut.org.il/he/%D7%91%D7%99%D7%98%D7%95%D7%97_%D7%A1%D7%99%D7%A2%D7%95%D7%93%D7%99",
-      "raw_snippet": "סיעודי",
+      "claim": "In the December 2024 CMA long-term-care regulations, a nursing (siudi) patient is defined as someone unable to perform four of the six ADLs, or three, as long as sphincter control is one of them. Previously three actions sufficed regardless of which.",
+      "source_url": "https://www.calcalist.co.il/local_news/article/r11b7psr1x",
+      "raw_snippet": "הרשות קבעה שאדם סיעודי יוגדר כמי שאינו יכול לבצע ארבע מתוך שש פעולות, או שלוש פעולות, כל עוד שליטה בסוגרים היא אחת מהן. כיום אדם מוגדר כסיעודי אם אינו יכול לבצע שלוש פעולות, לא משנה אילו מהן.",
       "fetched_at": "2026-05-31T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "earthquake-optout",
-      "claim": "Earthquake coverage is included by default in Israeli home policies on an opt-out basis, provided directly by each insurer (no central pool), with a typical deductible around 10%.",
+      "claim": "Earthquake coverage is included by default in an Israeli home policy, and the insured can opt out.",
       "source_url": "https://www.kolzchut.org.il/he/%D7%91%D7%99%D7%98%D7%95%D7%97_%D7%93%D7%99%D7%A8%D7%94_%D7%9E%D7%A4%D7%A0%D7%99_%D7%A0%D7%96%D7%A7%D7%99_%D7%A8%D7%A2%D7%99%D7%93%D7%AA_%D7%90%D7%93%D7%9E%D7%94",
-      "raw_snippet": "כיסוי לרעידת אדמה נכלל כברירת מחדל בפוליסה לביטוח דירה ... השתתפות עצמית העומדת על 10%",
+      "raw_snippet": "כיסוי לרעידת אדמה נכלל כברירת מחדל בפוליסה לביטוח דירה, אך המבוטח יכול לוותר עליו באופן יזום.",
       "fetched_at": "2026-07-16T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "wobi-phoenix",
-      "claim": "Wobi is being acquired by The Phoenix Holdings; the Competition Authority cleared the deal in May 2026, but the CMA / Insurance Commissioner final sign-off is still pending as of mid-2026, so the deal is not yet closed.",
+      "claim": "The Competition Authority cleared The Phoenix's acquisition of the Wobi insurance price-comparison site (via the Oren Mizrach agency) for NIS 150 million; final approval rests with the Insurance Commissioner and had not been given.",
       "source_url": "https://www.themarker.com/markets/2026-05-10/ty-article/.premium/0000019e-1213-d790-a3ff-fff7f6d00000",
-      "raw_snippet": "וובי ... הפניקס ... רשות התחרות",
+      "raw_snippet": "רשות התחרות אישרה לחברת הפניקס לרכוש את אתר השוואת מחירי הביטוח וואבי באמצעות סוכנות אורן מזרח שבבעלות חברת הביטוח תמורת 150 מיליון שקל. ואולם, האישור הסופי לעסקה נתון בידי המפקח על הביטוח, עמית גל, שאינו שש להעניקו.",
       "fetched_at": "2026-07-16T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "shaban-regulated",
@@ -73,15 +98,32 @@
       "source_url": "https://www.kolzchut.org.il/he/%D7%91%D7%99%D7%98%D7%95%D7%97_%D7%91%D7%A8%D7%99%D7%90%D7%95%D7%AA_%D7%9E%D7%A9%D7%9C%D7%99%D7%9D_(%D7%A9%D7%91%22%D7%9F)",
       "raw_snippet": "שב\"ן",
       "fetched_at": "2026-05-31T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "illustrative-figures",
       "claim": "Illustrative/typical ranges used as guidance, not fixed regulated figures: a 10% earthquake deductible is typical; paying annually instead of monthly often saves about 5-8%; correcting shin-nun no-claims years can move premiums by roughly 10-20%; standard-construction rebuild value is roughly 6,000-8,000 ILS (6,000-8,000 ש\"ח) per square meter.",
-      "source_url": "https://harb.cma.gov.il/",
-      "raw_snippet": "הר הביטוח",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%91%D7%99%D7%98%D7%95%D7%97_%D7%93%D7%99%D7%A8%D7%94_%D7%9E%D7%A4%D7%A0%D7%99_%D7%A0%D7%96%D7%A7%D7%99_%D7%A8%D7%A2%D7%99%D7%93%D7%AA_%D7%90%D7%93%D7%9E%D7%94",
+      "raw_snippet": "כיסוי רעידת אדמה כולל ברירת מחדל של השתתפות עצמית העומדת על 10%. המבוטח יכול, באמצעות רכישת פרמיה נוספת להוריד את גובה ההשתתפות העצמית לשיעור נמוך יותר של 5% או 2% מסכום הביטוח.",
       "fetched_at": "2026-05-31T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "siudi-runoff-2027",
+      "claim": "The CMA regulations cancel the self-liquidation clause in the kupot long-term-care policies in two years, from 2027.",
+      "source_url": "https://www.calcalist.co.il/local_news/article/r11b7psr1x",
+      "raw_snippet": "ביטול סעיף \"החיסול העצמי\" בפוליסות הסיעוד בעוד שנתיים, החל מ-2027.",
+      "fetched_at": "2026-05-31T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     }
   ]
 }
