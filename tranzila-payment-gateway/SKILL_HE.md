@@ -288,7 +288,7 @@ supplier={terminal}&TranzilaPW={password}&TranzilaTK={token}&expdate={MMYY}&sum=
 |------|-------|----------|
 | תיעוד מפתחים של טרנזילה | https://docs.tranzila.com/ | מסמכי API, אימות, רשתות כרטיסים, תהליך 3DS, קודי שגיאה |
 | Hosted Fields | https://docs.tranzila.com/ (Payments &amp; Billing → Hosted Fields) | שילוב שדות מוטמעים תואמי PCI |
-| מספרי הקצאה רשות המסים | https://www.gov.il/he/service/allocation-number-application-tax-invoice | חובה לחשבוניות B2B מעל 5,000 ש"ח לפני מע"מ (בתוקף מיוני 2026; ירד מ-10,000 ש"ח בינואר 2026) |
+| מספרי הקצאה רשות המסים | https://www.gov.il/he/service/request-assignment-number-for-tax-invoice | חובה לחשבוניות B2B מעל 5,000 ש"ח לפני מע"מ (בתוקף מיוני 2026; ירד מ-10,000 ש"ח בינואר 2026) |
 | אתר טרנזילה | https://www.tranzila.com | הפעלת טרמינל, הרשאות תשלומים, פרטי קשר, אישור PCI |
 | ספריית tranzilajs קהילתית | https://github.com/NirTatcher/tranzilajs | לקוח TypeScript/Node קהילתי ודוגמאות שימוש |
 

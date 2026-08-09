@@ -305,7 +305,7 @@ Result: Payment collected remotely without building a checkout page.
 |--------|-----|---------------|
 | Tranzila developer docs | https://docs.tranzila.com/ | API reference, authentication, supported card networks, 3DS flow, error codes |
 | Hosted Fields integration | https://docs.tranzila.com/ (Payments &amp; Billing → Hosted Fields) | PCI-friendly embedded card capture |
-| Israel Tax Authority allocation numbers | https://www.gov.il/en/service/allocation-number-application-tax-invoice | Mandatory for B2B invoices over NIS 5K pre-VAT (in force since Jun 2026; dropped from NIS 10K in Jan 2026) |
+| Israel Tax Authority allocation numbers | https://www.gov.il/he/service/request-assignment-number-for-tax-invoice | Mandatory for B2B invoices over NIS 5K pre-VAT (in force since Jun 2026; dropped from NIS 10K in Jan 2026) |
 | Tranzila company site | https://www.tranzila.com | Terminal enablement requests, installment permissions, contact, PCI certification |
 | tranzilajs community client | https://github.com/NirTatcher/tranzilajs | Community TypeScript/Node client and usage examples |
 
