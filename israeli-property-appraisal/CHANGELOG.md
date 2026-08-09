@@ -8,8 +8,6 @@ All notable changes to this skill are documented here.
 
 - הסקיל אינו מפיק עוד מכתב השגה ערוך. במקומו הוא מרכז עקרונות וטיעונים מנוסחים היטב, לצד טבלת עסקאות ההשוואה, שישמשו את המשתמש כבסיס לכתיבת מכתב ההשגה שלו. הניסוח הסופי וההגשה הם של המשתמש או של בעל מקצוע מטעמו.
 
-All notable changes to this skill are documented here.
-
 ## [1.2.0] - 2026-08-09
 
 ### Changed
