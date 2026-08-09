@@ -9,15 +9,23 @@
       "source_url": "https://github.com/astrails/active_merchant_tranzila",
       "raw_snippet": "cred_type: 1 Regular, 2 Isracredit/30+, 3 Immediate debit, 4 Club Credit, 5 Leumi special, 6 Credit (קרדיט), 8 Installments (תשלומים), 9 Club installments (מועדון).",
       "fetched_at": "2026-06-07T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/gateway-matrix.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/gateway-matrix.md"
+      ]
     },
     {
       "claim_id": "installment-types",
-      "claim": "Installment type semantics: regular installments (תשלומים) - merchant gets the full amount upfront, the bank collects from the customer monthly, no interest by default; credit installments (קרדיט) - the customer pays the bank in installments with interest, merchant gets full amount; club installments (מועדון) - issuer-specific program (Isracard, CAL, Max). Maximum installments typically 36 (some gateways cap at 12 or 24); Shva may enforce a minimum per-installment amount.",
-      "source_url": "https://docs.tranzila.com/",
-      "raw_snippet": "תשלומים רגילים: בית העסק מקבל את מלוא הסכום, הבנק גובה מהלקוח חודשית ללא ריבית; קרדיט: הלקוח משלם לבנק עם ריבית; מועדון: תוכנית מנפיק. עד 36 תשלומים (חלק מהשערים עד 12/24).",
+      "claim": "Installment type semantics as encoded in this skill's Shva CreditType table: regular installments (תשלומים, CreditType 8) are merchant-financed so the merchant receives the full amount and the customer is billed monthly without interest; credit installments (קרדיט, CreditType 6) are bank-financed with interest to the bank; club installments (תשלומי מועדון, CreditType 9) are an issuer program. These semantics could NOT be confirmed against current Tranzila vendor documentation, which does not enumerate cred_type values.",
+      "source_url": "https://raw.githubusercontent.com/skills-il/tax-and-finance/master/israeli-payment-orchestrator/references/gateway-matrix.md",
+      "raw_snippet": "| 6 | Credit installments | קרדיט | Bank-financed installments (interest to bank) |",
       "fetched_at": "2026-06-07T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/gateway-matrix.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/gateway-matrix.md"
+      ]
     },
     {
       "claim_id": "gateway-api-styles",
@@ -25,7 +33,12 @@
       "source_url": "https://developers.grow.business/reference/overview",
       "raw_snippet": "Grow (Meshulam) Light API requires multipart/form-data, not JSON, server-side only; Cardcom uses JSON; Tranzila uses form-encoded params; PayMe uses bearer-token JSON.",
       "fetched_at": "2026-06-07T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/gateway-matrix.md", "scripts/compare_gateways.py"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/gateway-matrix.md",
+        "scripts/compare_gateways.py"
+      ]
     },
     {
       "claim_id": "regulation",
@@ -33,7 +46,10 @@
       "source_url": "https://www.boi.org.il/en/economic-roles/supervision-and-regulation/payment-systems-oversight/",
       "raw_snippet": "חוק הסדרת העיסוק בשירותי תשלום ויוזמה בתשלום, התשפ\"ג-2023: רשות ניירות ערך מפקחת על נותני שירותי תשלום שאינם בנק; בנק ישראל מפקח על הבנקים וחברות כרטיסי האשראי ומפקח על שב\"א.",
       "fetched_at": "2026-06-07T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "reference-urls-and-figures",
@@ -41,7 +57,12 @@
       "source_url": "https://www.boi.org.il/en/economic-roles/supervision-and-regulation/payment-systems-oversight/",
       "raw_snippet": "URLs: https://www.cardcom.co.il/ https://docs.tranzila.com/ https://www.payme.io/developers https://developers.grow.business/reference/overview https://icredit.rivhit.co.il/ https://www.boi.org.il/en/economic-roles/supervision-and-regulation/payment-systems-oversight/ https://www.boi.org.il/he/economic-roles/supervision-and-regulation/payment-systems-oversight/ . Gateway base URLs (gateway-matrix): https://secure.cardcom.solutions/api/ https://secure.cardcom.solutions/Api/v11/Docs https://secure5.tranzila.com/ https://ng.paymeservice.com/api/ https://secure.meshulam.co.il/api/light/server/1.0/ https://sandbox.meshulam.co.il/api/light/server/1.0/ https://icredit.rivhit.co.il/api/ https://gateway20.pelecard.biz/ https://pelecard.com/support/ . Indicative fee percentages: 0.5%, 0.6%, 0.7%, 0.8%, 0.9%, 1.0%. Illustrative amounts: 60/40 split, 3,000,000 NIS, 3,000,000 ש\"ח, 5,000 NIS, 5,000 ש\"ח, 500 NIS, 500 ש\"ח, 200 NIS, 200 ש\"ח, 1-3%, 1,000 transactions/day, T+2/T+3.",
       "fetched_at": "2026-06-07T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/gateway-matrix.md", "scripts/compare_gateways.py"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/gateway-matrix.md",
+        "scripts/compare_gateways.py"
+      ]
     }
   ]
 }
