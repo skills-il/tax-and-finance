@@ -1,14 +1,32 @@
 {
   "schemaVersion": "1.0",
   "skill": "tase-stock-analysis",
-  "generated_at": "2026-05-31T00:00:00Z",
+  "generated_at": "2026-08-10T00:00:00Z",
   "claims": [
     {
       "claim_id": "tase-mon-fri",
-      "claim": "TASE switched from a Sunday-Thursday to a Monday-Friday trading week on 5 January 2026. Continuous trading Mon-Thu 09:59-17:14 (closing auction to 17:25), Friday 09:59-13:50; no trading Saturday, Sunday, or Jewish holidays. Equity settlement is T+1.",
-      "source_url": "https://www.tase.co.il/en",
-      "raw_snippet": "TASE",
-      "fetched_at": "2026-05-31T00:00:00Z",
+      "claim": "TASE moved from a Sunday-Thursday to a Monday-Friday trading week, approved by the TASE Board on 18 June 2025 and by the Israel Securities Authority on 30 July 2025, taking effect 5 January 2026.",
+      "source_url": "https://www.tase.co.il/en/content/about/tradingdays_change",
+      "raw_snippet": "TASE is aligning itself with the world's leading exchanges and changing its trading days from Sunday-Thursday to Monday-Friday.",
+      "fetched_at": "2026-08-10T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tase-api.md"
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-08-10T00:00:00Z",
+      "source_note": "SOURCE REPLACED 2026-08-10. The former entry cited the TASE homepage with the one-word snippet 'TASE', which could not substantiate anything. Verified in a real browser with location.href asserted as https://www.tase.co.il/en/content/about/tradingdays_change before reading. The same page states 'The transition to Monday-to-Friday trading will officially take effect on January 5, 2026.'"
+    },
+    {
+      "claim_id": "tase-hours",
+      "claim": "Monday-Thursday schedule (Group A shares): opening phase 09:59-10:00, pre-closing 17:14-17:15, closing auction 17:24-17:25, end of Trading-at-Last 17:30. Friday is a shortened session: opening 09:59-10:00, pre-close 13:34-13:35, closing auction 13:44-13:45, end of trading 13:50. Trading is Monday to Friday only; clearing runs Sunday to Friday.",
+      "source_url": "https://www.tase.co.il/en/content/knowledge_center/trading_vacation_schedule",
+      "raw_snippet": "Trading hours on the Tel Aviv Stock Exchange are Monday through Friday as specified below (start of each trading phase).",
+      "fetched_at": "2026-08-10T00:00:00Z",
+      "verified_via": "browser",
+      "verified_at": "2026-08-10T00:00:00Z",
+      "source_note": "Read in a browser with location.href asserted. The Monday-to-Thursday accordion on this page gives Pre-closing 17:14-17:15, Closing trading phase 17:24-17:25, End of TAL trading phase 17:30; the Friday table on tradingdays_change gives End of Trading 13:50. The page also states 'The trading on TASE takes place Monday to Friday. Clearing takes place Sunday to Friday'.",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
@@ -77,14 +95,17 @@
     },
     {
       "claim_id": "tase-api",
-      "claim": "The TASE Data Hub OpenAPI uses an OAuth2 client-credentials flow: token endpoint https://openapigw.tase.co.il/tase/prod/oauth/oauth2/token, gateway base https://openapigw.tase.co.il/tase/prod/, developer portal https://openapi.tase.co.il/tase/prod/, Data Hub https://datahub.tase.co.il/. Some products require a paid subscription.",
-      "source_url": "https://datahub.tase.co.il/",
-      "raw_snippet": "datahub https://openapi.tase.co.il/tase/prod/ https://openapigw.tase.co.il/tase/prod https://openapigw.tase.co.il/tase/prod/ https://openapigw.tase.co.il/tase/prod/oauth/oauth2/token https://market.tase.co.il/en/market_data/companies/ https://market.tase.co.il/en/market_data/security/{number}",
-      "fetched_at": "2026-05-31T00:00:00Z",
+      "claim": "TASE Data Hub access is by API Key issued in the TASE Developers' Portal: register, create an App, then '+Generate Credential' to be assigned an API Key, which you supply via 'Authorize' on the product page. Rate limit 10 requests per 2 seconds with HTTP 429 on excess. Some data products are paid and need commercial approval before activation. Entry point https://www.tase.co.il/he/content/products_lobby/data_services; the older https://openapi.tase.co.il/tase/prod/ and https://datahub.tase.co.il/ addresses redirect to it, and https://openapigw.tase.co.il/tase/prod is bot-filtered.",
+      "source_url": "https://content.tase.co.il/media/l5xjhjmz/2000_api_guide_eng.pdf",
+      "raw_snippet": "Once the app has been set up, a screen will pop up with the app's details. To create an API Key, click on '+Generate Credential' then assign a name of your choice to the credential and click on 'Generate'.",
+      "fetched_at": "2026-08-10T00:00:00Z",
       "appears_in": [
         "references/tase-api.md",
         "SKILL.md"
-      ]
+      ],
+      "verified_via": "pdf",
+      "verified_at": "2026-08-10T00:00:00Z",
+      "source_note": "SOURCE REPLACED AND CLAIM NARROWED 2026-08-10. The former entry cited the bare homepage https://datahub.tase.co.il/ (which now 302-redirects to the TASE data-services lobby) for an OAuth2 client-credentials flow. This official TASE Data Hub API guide, linked from https://www.tase.co.il/he/content/products_lobby/data_services, documents API-Key authentication and does not mention OAuth2 or a token endpoint anywhere. The old developer-portal URL https://openapi.tase.co.il/tase/prod/ also now redirects to that lobby, and openapigw.tase.co.il is behind Incapsula (503 to both curl and a real browser), so the previously documented token endpoint could not be confirmed either way. The skill body now documents the API-Key flow and flags the OAuth2 endpoint as legacy and unverified."
     },
     {
       "claim_id": "maya-system",
@@ -106,6 +127,39 @@
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "tase-security-lookup",
+      "claim": "A TASE security number resolves at https://market.tase.co.il/en/market_data/security/{number}: 662577 renders as POALIM 00662577 (Bank Hapoalim). The sibling path https://market.tase.co.il/en/market_data/companies/ no longer resolves and returns the site's page-does-not-exist response, so it must not be given as a lookup route.",
+      "source_url": "https://market.tase.co.il/en/market_data/security/662577",
+      "raw_snippet": "Shares:POALIM 00662577 Major Data",
+      "fetched_at": "2026-08-10T00:00:00Z",
+      "verified_via": "browser",
+      "verified_at": "2026-08-10T00:00:00Z",
+      "source_note": "Read in a browser with location.href asserted (it redirects to /security/662577/major_data). Quote is the page title. The /market_data/companies/ path was checked the same way and returned HTTP 403 with the 'The page does not exist' title.",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tase-api.md",
+        "scripts/fetch_tase_data.py"
+      ]
+    },
+    {
+      "claim_id": "tase-data-services",
+      "claim": "TASE sells capital-market data through TASE Data Hub (API) and TASE Data Store (files); the data-services lobby at https://www.tase.co.il/he/content/products_lobby/data_services is the current entry point and links the official API guide.",
+      "source_url": "https://www.tase.co.il/he/content/products_lobby/data_services",
+      "raw_snippet": "מערכת TASE Data Hub מאפשרת גישה ישירה בקלות ובמהירות למאגרי המידע של הבורסה לניירות ערך בתל אביב באמצעות API.",
+      "fetched_at": "2026-08-10T00:00:00Z",
+      "verified_via": "browser",
+      "verified_at": "2026-08-10T00:00:00Z",
+      "source_note": "Reached by navigating to https://openapi.tase.co.il/tase/prod/, which redirects here; location.href asserted after load. This page also carries the link to the official API guide PDF (content.tase.co.il/media/l5xjhjmz/2000_api_guide_eng.pdf).",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tase-api.md",
+        "references/domain-checklist.md",
+        "scripts/fetch_tase_data.py"
       ]
     }
   ]

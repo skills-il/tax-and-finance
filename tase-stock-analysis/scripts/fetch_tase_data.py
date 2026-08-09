@@ -22,8 +22,11 @@ from urllib.request import urlopen, Request
 from urllib.error import URLError
 
 
-# TASE API base URL (Data Hub gateway)
-TASE_API_BASE = "https://openapigw.tase.co.il/tase/prod"
+# TASE Data Hub gateway base URL. Deliberately NOT hardcoded: the gateway host has
+# moved before and is bot-filtered, so a stale constant here silently sends every
+# call to a dead origin. Read the base URL off the product page in the TASE
+# Developers' Portal and pass it in via TASE_API_BASE.
+TASE_API_BASE = os.environ.get("TASE_API_BASE", "").rstrip("/")
 
 # Index identifiers
 INDICES = {
@@ -40,7 +43,11 @@ INDICES = {
 # misattribute, they go stale (e.g. CyberArk/CYBR left the dual-listed set after its
 # 2026 merger into Palo Alto Networks), and the skill's own guidance is to never rely
 # on security numbers from memory. Resolve the current TASE number live by company
-# name at https://market.tase.co.il/en/market_data/companies/ before using it.
+# name on the TASE market-data site before using it. Note that
+# market.tase.co.il/en/market_data/companies/ no longer resolves; the working shape is
+# https://market.tase.co.il/en/market_data/security/{number} (e.g. .../security/662577
+# renders "Shares:POALIM 00662577"), so confirm a candidate number by opening that page
+# and reading back the company name.
 DUAL_LISTED_US_TICKERS = {
     "NICE": "NICE Ltd",
     "CHKP": "Check Point Software",
@@ -88,17 +95,18 @@ def fetch_index_data(index_key: str) -> dict:
 
     index_info = INDICES[index_key]
     print(f"Fetching {index_info['name']} ({index_info['hebrew']}) data...")
-    print(f"TASE API endpoint: {TASE_API_BASE}/index/{index_info['id']}/components")
+    base = TASE_API_BASE or "<set TASE_API_BASE from your product page>"
+    print(f"TASE API endpoint: {base}/index/{index_info['id']}/components")
     print()
-    print("Note: TASE API requires OAuth2 authentication token.")
+    print("Note: TASE Data Hub requires an API Key issued in the Developers' Portal.")
     print("For development, use the example data below or register at:")
-    print("  https://openapi.tase.co.il/tase/prod/")
+    print("  https://www.tase.co.il/he/content/products_lobby/data_services")
     print()
 
     return {
         "index": index_info["name"],
         "hebrew_name": index_info["hebrew"],
-        "api_endpoint": f"{TASE_API_BASE}/index/{index_info['id']}/components",
+        "api_endpoint": f"{base}/index/{index_info['id']}/components",
         "note": "Authenticate at tase.co.il for live data",
     }
 
@@ -113,7 +121,9 @@ def fetch_stock_data(securities_number: str) -> dict:
         Dictionary with stock information.
     """
     print(f"Looking up securities number: {securities_number}")
-    print(f"  TASE API: {TASE_API_BASE}/security/{securities_number}")
+    base = TASE_API_BASE or "<set TASE_API_BASE from your product page>"
+    print(f"  TASE API: {base}/security/{securities_number}")
+    print(f"  Web check: https://market.tase.co.il/en/market_data/security/{securities_number}")
     print(f"  Resolve the company name and dual-listing status live via the TASE API;")
     print(f"  do not rely on hardcoded security numbers (they misattribute and go stale).")
     print(f"  Known dual-listed tickers: {', '.join(sorted(DUAL_LISTED_US_TICKERS))}")
@@ -121,7 +131,7 @@ def fetch_stock_data(securities_number: str) -> dict:
 
     return {
         "securities_number": securities_number,
-        "api_endpoint": f"{TASE_API_BASE}/security/{securities_number}",
+        "api_endpoint": f"{base}/security/{securities_number}",
     }
 
 
@@ -143,7 +153,7 @@ def generate_example() -> dict:
             # The following weights/security numbers are approximate placeholders;
             # verify before quoting. Several legacy entries here had wrong
             # security numbers (Check Point/Teva/NICE/ICL). Look up by name at
-            # https://market.tase.co.il/en/market_data/companies/ instead of
+            # https://market.tase.co.il/en/market_data/security/{number} instead of
             # trusting hardcoded numbers.
             {"name": "Bank Discount", "hebrew": "בנק דיסקונט", "weight_pct": 4.0, "securities_no": "691212"},
         ],

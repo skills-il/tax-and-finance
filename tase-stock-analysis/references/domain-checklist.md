@@ -15,6 +15,6 @@ Anchor for expert review. Scope: analyzing Israeli equities on TASE, indices, du
 
 ## Authoritative sources
 - TASE market data: https://market.tase.co.il/en/market_data
-- TASE OpenAPI / Data Hub: https://datahub.tase.co.il/
+- TASE Data Hub / Data Services: https://www.tase.co.il/he/content/products_lobby/data_services
 - Maya: https://maya.tase.co.il
 - Israeli capital gains (PwC summary / ITA): https://taxsummaries.pwc.com/israel

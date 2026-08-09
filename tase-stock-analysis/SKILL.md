@@ -90,7 +90,7 @@ Summarize key findings and flag any material items.
 For live market data, use the **TASE MCP Server** ([skills-il/tase-mcp](https://github.com/skills-il/tase-mcp)).
 
 **Prerequisites:**
-- TASE Data Hub API key (register at https://openapi.tase.co.il/tase/prod/, some products are paid)
+- TASE Data Hub API key (register through https://www.tase.co.il/he/content/products_lobby/data_services, some products are paid)
 - MCP server installed: `npx github:skills-il/tase-mcp`
 
 **Setup:**

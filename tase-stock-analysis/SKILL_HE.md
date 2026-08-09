@@ -84,7 +84,7 @@ tax = net_gain * 0.25  # או 0.30 לבעל מניות מהותי (10%+)
 לנתוני שוק עדכניים, השתמשו ב-**שרת MCP לבורסת ת"א** ([skills-il/tase-mcp](https://github.com/skills-il/tase-mcp)).
 
 **דרישות מוקדמות:**
-- מפתח API של הבורסה (הרשמה ב-https://openapi.tase.co.il/tase/prod/, חלק מהמוצרים בתשלום)
+- מפתח API של הבורסה (הרשמה דרך https://www.tase.co.il/he/content/products_lobby/data_services, חלק מהמוצרים בתשלום)
 - התקנת שרת MCP: `npx github:skills-il/tase-mcp`
 
 **הגדרה:**
