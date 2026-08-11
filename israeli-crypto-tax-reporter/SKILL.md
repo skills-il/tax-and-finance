@@ -34,7 +34,7 @@ Before performing any calculations, ensure you understand the key regulatory pri
 - **Surtax (mas yesafim)**: the 2025 budget reform restructured the surtax from a flat 3% on labor income into a two-component charge that explicitly reaches passive and capital income, including crypto capital gains. For 2026 the structure is **3% base on all taxable income above NIS 721,560 PLUS an additional 2% on capital-source income (capital gains, dividends, interest, rentals) above the same threshold** - effective **5% on crypto gains in the band above the threshold**. The threshold (NIS 721,560 / monthly NIS 60,130) is **frozen through tax year 2027** by the December 2024 indexation-pause amendment, so do not apply CPI uplifts. The pre-2025 framing of "3% surtax on labor income only" is obsolete; **crypto capital gains are now within the surtax base**, materially raising the effective rate on large realizations.
 
 **Cost basis method:**
-- Israel mandates **FIFO** (First In, First Out) for calculating cost basis unless the taxpayer can demonstrate a different method was consistently applied.
+- **FIFO** (First In, First Out) is the customary default for cost basis. ITA Circular 05/2018 does not prescribe a cost-basis method, so another method may be used where it is applied consistently and documented. The 25% individual rate and the 30% rate for a significant shareholder (as defined in Section 88) come from Section 91(b) of the Income Tax Ordinance, not from the circular.
 
 **Currency conversion:**
 - All transactions must be converted to **New Israeli Shekel (NIS)** at the exchange rate on the transaction date.

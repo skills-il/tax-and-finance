@@ -8,7 +8,7 @@ Audience: Israeli-resident individual crypto investors (and the borderline busin
 
 - **Crypto = "asset" (neches), not currency.** Capital-gains regime under Chapter E, anchored in Section 88 of the Income Tax Ordinance and ITA Circular 05/2018.
 - **25% individual capital-gains rate; 30% for a significant shareholder (10%+).** Section 91(b)(1) (25% for assets acquired post-1.1.2012).
-- **FIFO cost basis as the Israeli default.** Per Circular 05/2018 (other methods only if consistently applied and documented).
+- **FIFO cost basis as the customary Israeli default.** NOT prescribed by Circular 05/2018, which sets no cost-basis method; other methods are usable if consistently applied and documented.
 - **Crypto-to-crypto swap is a taxable disposal.** Each swap = disposal of leg A + acquisition of leg B, both valued in NIS at swap time.
 - **Stablecoin disposals are taxable.** USDT/USDC/DAI are "asset" under Section 88, not foreign currency.
 - **NIS conversion using Bank of Israel representative rate (sha'ar yatzig).** Required by Circular 05/2018.
@@ -45,7 +45,7 @@ Audience: Israeli-resident individual crypto investors (and the borderline busin
 ## Authoritative sources
 
 - Income Tax Ordinance [New Version] 5721-1961, Sections 2(1), 2(4), 88, 91, 91(b)(1), 91(b)(3), 92, 97(a)(5), 100A, 121B, 131, 159A, 199-210.
-- ITA Circular 05/2018 (virtual-currency classification, FIFO, conversion, business factors); Circular 07/2018 (token issuance).
+- ITA Circular 05/2018 (virtual-currency classification and business factors; it does NOT cover FIFO, conversion or tax rates); Circular 07/2018 (token issuance).
 - 2025 Budget Law (surtax restructuring) + Dec-2024 indexation-pause amendment (threshold freeze through TY2027).
 - ITA Instruction (Hora'at Sha'a) 06/2024 (Form 909 bank-refusal procedure).
 - ITA Voluntary Disclosure Procedure 2025-2026 (crypto track), deadline 31 Aug 2026.

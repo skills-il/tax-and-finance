@@ -279,7 +279,7 @@ python scripts/crypto-gains-calculator.py --input transactions.csv --year 2025 -
 |------|------|---------|
 | רשות המסים - שירות הדוח השנתי (טופס 1301) | https://www.gov.il/he/service/reporting-and-payment-2025-annual-tax-report-for-individuals | מועדי הגשה לשנה הנוכחית, קישורים לטפסים 1322 ו-1325, פורטל הגשה מקוון |
 | בנק ישראל - שערים יציגים | https://www.boi.org.il/roles/markets/exchangerates/ | שערי ייחוס יומיים בש"ח להמרת רגלי פיאט זרות בעסקאות קריפטו |
-| חוזר רשות המסים 05/2018 (סיווג קריפטו, FIFO, הגדרת מטבע וירטואלי) | https://www.gov.il/BlobFolder/policy/income-tax-professional-inst-5-2018/he/Policy_ProfessionalInstIncomeTax_hor_acc%2015.2.18.pdf | הנחיות יסוד לטיפול במטבעות וירטואליים |
+| חוזר רשות המסים 05/2018 (סיווג קריפטו והגדרת מטבע וירטואלי; אינו קובע שיטת עלות או שיעורי מס) | https://www.gov.il/BlobFolder/policy/income-tax-professional-inst-5-2018/he/Policy_ProfessionalInstIncomeTax_hor_acc%2015.2.18.pdf | הנחיות יסוד לטיפול במטבעות וירטואליים |
 | נוהל גילוי מרצון 2025-2026 (מסלול קריפטו) | https://www.gov.il/he/pages/pa010925-1 | תנאי זכאות, מסלול ירוק לעומת רגיל, מועד 31 באוגוסט 2026, מסמכים נדרשים |
 | טופס 909 - תשלום מס קריפטו כשהבנק מסרב לקבל את הכספים | https://www.gov.il/he/service/reporting-cryptocurrency-activity | נוהל סירוב בנק, מסמכים נדרשים, ליחידים בלבד |
 | ביטוח לאומי - שיעורי דמי ביטוח לעצמאיים (2026) | https://www.btl.gov.il/Insurance/National%20Insurance/type_list/Self_Employed/Pages/rates.aspx | שיעורי ביטוח לאומי + דמי ביטוח בריאות עדכניים לסוחרי קריפטו עסקיים |
