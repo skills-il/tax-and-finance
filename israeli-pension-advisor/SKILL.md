@@ -113,7 +113,10 @@ The most popular Israeli savings vehicle:
 - Lifetime tax-exempt capital pool (kibua zechuyot / yitrat hahon haptura) = 180 times the monthly tax-exempt pension = 180 × (57.5% × 9,430) = 180 × 5,422 ≈ 976,000 NIS for a worker retiring in 2026 (it grows as the exemption rate climbs toward 67% by 2028). Eaten by severance withdrawn under heichum kitzbah at 1.35x per shekel (see Step 6).
 
 ### Step 5: Withdrawal Rules
-- **Pension:** Men age 67; women in 2026 age 63 years 3 months, rising 3-4 months per year to 65 by 2032 per the Retirement Age Amendment (2021). Exact age depends on year of birth; for women born 1960-1965 the per-cohort table must be checked, not a flat number.
+- **Pension:** Men age 67; women in 2026 age 63 years 3 months, rising 3-4 months per cohort to 65 for women born 1970 or later, under the Retirement Age Law 5764-2004 as amended (in force from January 2022, phased over 11 years). The age is set by DATE OF BIRTH, not by calendar year; check the per-cohort table below, never a flat number.
+
+The per-cohort table is in `references/retirement-age-by-cohort.md`.
+
 - **Three distinct retirement ages in Israeli law:** gil zakaut le-kitzbah (60+, early access with conditions); gil prishah (67/63+); gil prishah chovah (67 for both genders, the maximum age at which an employer can require retirement). Do not conflate.
 - **Early pension withdrawal:** 35% withholding on tagmulim or marginal rate, whichever higher. Early withdrawal of severance beyond the exempt ceiling is taxed at the marginal rate (up to 47%, plus surtax). Exceptions for disability, low household income, or terminal illness can reduce or remove the tax.
 - **Keren hishtalmut:** After 6 years (tax-free on gains), or 3 years (accredited training only, with documentation). Early withdrawal taxes the GAINS at the marginal rate, not the full balance.
@@ -233,7 +236,7 @@ No pension-specific MCP exists today. Pair with general Israeli financial MCPs (
 
 ## Gotchas
 - "Tikun 190" means TWO different things. One: the 60+ deposit benefit into kupat gemel le-kitzbah (Step 7). Two: the 2012 amendment that introduced heichum kitzbah and the kitzbah-mezakah exemption schedule (Step 6). Always clarify which when a client uses the term.
-- Women's retirement age is 63 years 3 months in 2026, not flat 63. The 2021 amendment schedule raises it by 3-4 months per year (not a constant 4) until 65 in 2032; the exact age depends on year of birth. Use the gov.il women's retirement age lookup, not a single number.
+- Women's retirement age is 63 years 3 months in 2026, not flat 63. The amendment raises it by 3-4 months per birth cohort (not a constant 4) up to 65 for women born 1970 or later; the exact age is set by date of birth. Use the per-cohort table, not a single number.
 - Heichum kitzbah's 1.35x penalty only applies WITHIN 32 years of retirement. Workers under ~35 withdrawing severance pay zero kitzbah-pool penalty. Agents who blanket-discourage severance withdrawal for young workers are leaving liquidity on the table.
 - Section 14 is not all-or-nothing. Four sub-cases exist (full, partial-salary, delayed-start, collective-agreement) and three of them leave residual שלמת פיצויים liability at final salary. Don't tell a terminating employee "Section 14 = nothing extra owed" without verifying which sub-case applies.
 - Rezef zechuyot needs the new employer's severance contributions to flow into the same continuity arrangement. If the new employer is in a different scheme, or has no pension yet (e.g. the 6-month waiting period applies), rezef may not actualize and the severance sits frozen in the old kupah.
@@ -264,18 +267,4 @@ No pension-specific MCP exists today. Pair with general Israeli financial MCPs (
 
 ## Troubleshooting
 
-### Error: "Pension fund not transferring"
-Cause: Switching pension funds requires a specific signed transfer request to the receiving fund.
-Solution: Contact the new fund to initiate. Once they have the signed request, transfer must complete within 10 business days. No fees. If transferring from pre-2013 bituach menahalim, verify whether you forfeit the guaranteed annuity factor before signing.
-
-### Error: "Employer not contributing"
-Cause: Employer legally required to contribute pension after 6 months (no prior pension) or 3 months retroactive (with prior pension)
-Solution: Employer must contribute retroactively from the applicable start date. Contact Ministry of Labor (Misrad HaAvoda) or the pension fund for enforcement.
-
-### Error: "Cannot withdraw keren hishtalmut"
-Cause: Lock-in period not completed
-Solution: Standard lock-in is 6 years from first deposit. Early withdrawal (3 years) only for accredited training with documentation. Withdrawal before maturity is taxed at the marginal income tax rate on the GAINS (not the full balance); can reach up to 50% including mas yesafim for high earners.
-
-### Error: "I withdrew severance and now regret it -- can I restore rezef-pitzuyim?"
-Cause: Severance was paid out (either by explicit Part B election, or by following a pre-2024 procedure that defaulted to payout). The rezef-pitzuyim option has lapsed.
-Solution: Within 2 years of the payout, bittul pituyim may restore the option via Form 161ג -- the funds must be returned to the kupah with interest and indexation, and pakid shuma must approve. The original termination tax assessment is then re-opened.
+See `references/troubleshooting.md`.

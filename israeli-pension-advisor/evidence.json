@@ -626,6 +626,19 @@
       "raw_snippet": "הודעה על חזרה מרצף פיצויים/ קצבה (טופס 161ג')",
       "fetched_at": "2026-08-11",
       "claim": "Form 161ג (טופס 161ג) is the notice of retraction from a previously elected retzef pitzuim and/or retzef kitzba, filed with the Tax Authority outside a retirement event with a new employer."
+    },
+    {
+      "claim_id": "women-retirement-age-by-birth-year",
+      "claim": "Under the Retirement Age Law 5764-2004 as amended (in force from January 2022) women's retirement age rises from 62 to 65 by DATE OF BIRTH over 11 years: 1960 = 62+4 months through 1969 = 64+9 months, and 65 for women born 1970 or later.",
+      "source_url": "https://www.gov.il/he/pages/women_retirement_age_news",
+      "raw_snippet": "בהתאם לתיקון חוק גיל פרישה, תשס\"ד-2004 החל מ - 1.2022 גיל הפרישה לנשים עולה בהדרגה מגיל 62 לגיל 65. גיל הפרישה לנשים שנולדו מינואר 1960 ואילך יעלה על פני 11 שנים, וזאת בהדרגה, מ - 62 שנים ל - 65 שנים, וייקבע בהתאם לתאריך הלידה של האישה.",
+      "fetched_at": "2026-08-11",
+      "verified_via": "gov.il content API",
+      "verified_at": "2026-08-11",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     }
   ]
 }
