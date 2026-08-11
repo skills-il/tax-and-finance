@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.2.1 - 2026-08-11
+
+Removed the unsourced "(typically 10-15%)" treaty-rate range. Replaced nevo.co.il/law/70264, a JS shell that resolves to no document, with the real Income Tax Ordinance text.
+
 All notable changes to this skill are documented here.
 
 ## [1.2.0] - 2026-08-09

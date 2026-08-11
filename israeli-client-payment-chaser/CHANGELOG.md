@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.6.1 - 2026-08-11
+
+Replaced two dead gov.il enforcement service URLs with the live Enforcement and Collection Authority portal.
+
 All notable changes to this skill are documented here.
 
 ## [1.6.0] - 2026-08-09

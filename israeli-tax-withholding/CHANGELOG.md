@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.4.1 - 2026-08-11
+
+Sourced the 18% VAT rate to ITA Interpretation Directive 01/2025. Reworded a script docstring whose "(0-100%)" parameter range read as an unsourced factual claim.
+
 All notable changes to this skill are documented here.
 
 ## [1.4.0] - 2026-08-09
