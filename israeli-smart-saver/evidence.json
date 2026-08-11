@@ -53,25 +53,27 @@
     },
     {
       "claim_id": "gov-consumer-authority",
-      "claim": "The Israeli consumer regulator is the Consumer Protection and Fair Trade Authority (gov.il), which handles cancellation rules and consumer complaints.",
+      "claim": "The Israeli consumer regulator is the Consumer Protection and Fair Trade Authority (הרשות להגנת הצרכן ולסחר הוגן), which receives consumer complaints about breaches of the Consumer Protection Law.",
       "source_url": "https://www.gov.il/he/departments/consumer_protection_and_fair_trade_authority",
-      "raw_snippet": "https://www.gov.il/he/departments/consumer_protection_and_fair_trade_authority",
-      "fetched_at": "2026-05-31T00:00:00Z",
+      "raw_snippet": "צרכנים רבים התלוננו בפני הרשות אודות הפרות של חוק הגנת הצרכן",
+      "fetched_at": "2026-08-11",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ]
+      ],
+      "verified_at": "2026-08-11"
     },
     {
       "claim_id": "gov-complaint-filing",
       "claim": "Consumer complaints are filed via the gov.il fair-trade complaint service.",
       "source_url": "https://www.gov.il/he/service/filing_a_complaint_to_fair_trade_authority",
-      "raw_snippet": "https://www.gov.il/he/service/filing_a_complaint_to_fair_trade_authority",
-      "fetched_at": "2026-05-31T00:00:00Z",
+      "raw_snippet": "שירות זה מאפשר להגיש פנייה למחלקת פניות הציבור של הרשות להגנת הצרכן ולסחר הוגן",
+      "fetched_at": "2026-08-11",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ]
+      ],
+      "verified_at": "2026-08-11"
     },
     {
       "claim_id": "consumer-council",

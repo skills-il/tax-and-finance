@@ -206,8 +206,8 @@
 | נבו, חוק פסיקת ריבית והצמדה | https://www.nevo.co.il/law_html/law00/75001.htm | נוסח מלא של החוק על ריבית והצמדה שבית משפט פוסק |
 | נבו, חוק מוסר תשלומים לספקים, תשע"ז-2017 | https://www.nevo.co.il/law_html/law00/144599.htm | מועד תשלום ברירת מחדל של 45 יום וריבית פיגורים חוקית |
 | כל-זכות, המועד האחרון לתשלום תמורה לספקים | https://www.kolzchut.org.il/he/המועד_האחרון_לתשלום_תמורה_לספקים | מדריך נגיש לכלל 45 הימים לפי סוג הרוכש |
-| רשות האכיפה והגבייה, תיק ביצוע פסק דין | https://www.gov.il/he/service/claim_for_a_specified_amount_opening_file | פתיחת תיק הוצאה לפועל, אגרות, מסמכים נדרשים |
-| רשות האכיפה והגבייה, תיק שטרות והמחאות | https://www.gov.il/he/service/opening_promissory_notes_and_checks_file | הגשת שיק חוזר או שטר חוב ישירות |
+| רשות האכיפה והגבייה, תיק ביצוע פסק דין | https://www.gov.il/he/departments/law_enforcement_and_collection_system_authority | פתיחת תיק הוצאה לפועל, אגרות, מסמכים נדרשים |
+| רשות האכיפה והגבייה, תיק שטרות והמחאות | https://www.gov.il/he/departments/law_enforcement_and_collection_system_authority | הגשת שיק חוזר או שטר חוב ישירות |
 | דואר ישראל, דואר רשום | https://www.israelpost.co.il | שירות דואר רשום ותעריפים |
 | HebCal, לוח עברי | https://www.hebcal.com | זמני שבת ותאריכי חגים לתזמון תזכורות |
 

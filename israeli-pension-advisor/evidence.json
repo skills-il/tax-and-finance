@@ -217,15 +217,16 @@
     },
     {
       "claim_id": "retirement-age-women-2026",
-      "claim": "Women's retirement age in 2026: 63 years and 3 months (not flat 63). Schedule rises by 3-4 months/year per the Retirement Age Amendment of 2021, reaching 65 by 2032. Men's retirement age remains 67. Exact age depends on year of birth.",
+      "claim": "Under the amendment to the Retirement Age Law 5764-2004, from January 2022 women's retirement age rises gradually from 62 to 65 over 11 years for women born from January 1960 onward, and is set by the woman's date of birth (not by calendar year).",
       "source_url": "https://www.gov.il/he/pages/women_retirement_age_news",
-      "raw_snippet": "גיל פרישה לנשים ב-2026: 63 שנים ו-3 חודשים; עליה הדרגתית של 3-4 חודשים בשנה עד גיל 65 ב-2032; חוק גיל פרישה (תיקון) התשפ\"א-2021",
-      "fetched_at": "2026-05-18T00:00:00Z",
+      "raw_snippet": "בהתאם לתיקון חוק גיל פרישה, תשס\"ד-2004 החל מ - 1.2022 גיל הפרישה לנשים עולה בהדרגה מגיל 62 לגיל 65. גיל הפרישה לנשים שנולדו מינואר 1960 ואילך יעלה על פני 11 שנים, וזאת בהדרגה, מ - 62 שנים ל - 65 שנים, וייקבע בהתאם לתאריך הלידה של האישה.",
+      "fetched_at": "2026-08-11",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "scripts/calculate_pension.py"
-      ]
+      ],
+      "source_label": "gov.il, אגף בכיר אזרחים ותיקים - העלאת גיל פרישה נשים מגיל 62 לגיל 65"
     },
     {
       "claim_id": "default-fund-tender-2024",
@@ -266,14 +267,15 @@
     },
     {
       "claim_id": "form-161-new-2024",
-      "claim": "Form 161 was redesigned in January 2024 as a single unified form with three parts: Part A (Employer Notice, replacing the old standalone Form 161), Part B (Employee Notice, replacing the old standalone Form 161א), and Part C (Employer calculation worksheet and instructions to the fund). The employee must submit Part B within ~10 business days of receiving Form 161 from the employer. Default if Part B is not returned: rezef-kitzbah (pension continuity), with the Tax Authority treating the non-responding employee as having elected pension continuity if all severance funds are in annuity-eligible accounts. This is the OPPOSITE of the pre-2024 rule, where missing the filing window triggered auto-payout. Form 161ג (161C) is filed to REVOKE a prior rezef-pitzuyim election within 2 years of termination (bittul pituyim). Form 161ד (161D) is filed at retirement to settle the lifetime kitzbah-mezakah exemption calculation (kibu'a zechuyot).",
+      "claim": "From 1 January 2024 employers must report an employee's retirement from work using the new Form 161.",
       "source_url": "https://www.gov.il/he/service/notice-of-retirement",
-      "raw_snippet": "טופס 161 החדש (ינואר 2024): טופס מאוחד הכולל חלק א' (הודעת מעסיק) שמחליף את 161 הישן, חלק ב' (הודעת עובד) שמחליף את 161א, וחלק ג' (חישוב המעסיק). חלון הגשה ~10 ימי עסקים. ברירת מחדל ללא חלק ב': רצף קצבה. טופס 161ג לביטול רצף פיצויים תוך שנתיים. טופס 161ד בפרישה לקיבוע זכויות.",
-      "fetched_at": "2026-05-18T00:00:00Z",
+      "raw_snippet": "החל מתאריך ה-1 בינואר 2024 (\"מועד התחולה\"), מעסיקים מחויבים להודיע על פרישה מעבודה של עובדיהם באמצעות טופס 161 החדש.",
+      "fetched_at": "2026-08-11",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ]
+      ],
+      "source_label": "רשות המסים - הודעה על פרישה מעבודה (טופס 161 חדש)"
     },
     {
       "claim_id": "survivors-pension-takanon-achid",
@@ -616,6 +618,14 @@
       "fetched_at": "2026-07-21",
       "verified_via": "browser",
       "verified_at": "2026-07-21"
+    },
+    {
+      "claim_id": "form-161c-retract-retzef",
+      "source_url": "https://www.gov.il/he/service/itc161c",
+      "source_label": "רשות המסים - הודעה על חזרה מרצף פיצויים/קצבה (טופס 161ג)",
+      "raw_snippet": "הודעה על חזרה מרצף פיצויים/ קצבה (טופס 161ג')",
+      "fetched_at": "2026-08-11",
+      "claim": "Form 161ג (טופס 161ג) is the notice of retraction from a previously elected retzef pitzuim and/or retzef kitzba, filed with the Tax Authority outside a retirement event with a new employer."
     }
   ]
 }

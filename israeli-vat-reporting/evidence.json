@@ -75,14 +75,17 @@
     },
     {
       "claim_id": "shaam-portal",
-      "claim": "The Israeli Tax Authority (SHAAM) online portal for VAT filing and payment is at misim.gov.il.",
+      "claim": "misim.gov.il now redirects to the Israel Tax Authority gov.il department page (רשות המסים בישראל); it is no longer a standalone SHAAM portal.",
       "source_url": "https://www.misim.gov.il",
-      "raw_snippet": "misim",
-      "fetched_at": "2026-05-31T00:00:00Z",
+      "raw_snippet": "רשות המסים בישראל",
+      "fetched_at": "2026-08-11",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ]
+      ],
+      "source_label": "רשות המסים בישראל - עמוד המשרד ב-gov.il",
+      "verified_via": "browser",
+      "verified_at": "2026-08-11"
     },
     {
       "claim_id": "illustrative-figures",

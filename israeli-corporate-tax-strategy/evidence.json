@@ -20,53 +20,63 @@
     {
       "claim_id": "preferred-special-area-a-5",
       "claim": "Special Preferred Enterprise in Development Area A: 5% corporate tax",
-      "source_url": "https://www.gov.il/he/departments/israel_tax_authority",
-      "raw_snippet": "Special Preferred Enterprise in Development Area A: 5%",
-      "fetched_at": "2026-05-21T12:30:00Z",
+      "source_url": "https://www.nevo.co.il/law_html/law01/p181_001.htm",
+      "raw_snippet": "על אף האמור בסעיף 126(א) לפקודה, חברה מועדפת זכאית כי לגבי הכנסתה המועדפת מהמפעל המועדף המיוחד, יוטל מס חברות בשיעורים כמפורט להלן, לגבי כל שנת מס בתקופת הזכאות להטבות, ובלבד שהתקיימו בה, בכל שנת מס כאמור, כל התנאים האמורים בסעיף קטן (ג) – (1) נמצא המפעל המועדף המיוחד באזור פיתוח א' – 5%; (2) נמצא המפעל המועדף המיוחד באזור שאינו אזור פיתוח א' – 8%.",
+      "fetched_at": "2026-08-11",
       "appears_in": [
         "references/tax-rates-2026.md"
-      ]
+      ],
+      "verified_via": "curl",
+      "verified_at": "2026-08-11"
     },
     {
       "claim_id": "preferred-special-elsewhere-8",
       "claim": "Special Preferred Enterprise elsewhere: 8% corporate tax",
-      "source_url": "https://www.gov.il/he/departments/israel_tax_authority",
-      "raw_snippet": "Special Preferred Enterprise elsewhere: 8%",
-      "fetched_at": "2026-05-21T12:30:00Z",
+      "source_url": "https://www.nevo.co.il/law_html/law01/p181_001.htm",
+      "raw_snippet": "על אף האמור בסעיף 126(א) לפקודה, חברה מועדפת זכאית כי לגבי הכנסתה המועדפת מהמפעל המועדף המיוחד, יוטל מס חברות בשיעורים כמפורט להלן, לגבי כל שנת מס בתקופת הזכאות להטבות, ובלבד שהתקיימו בה, בכל שנת מס כאמור, כל התנאים האמורים בסעיף קטן (ג) – (1) נמצא המפעל המועדף המיוחד באזור פיתוח א' – 5%; (2) נמצא המפעל המועדף המיוחד באזור שאינו אזור פיתוח א' – 8%.",
+      "fetched_at": "2026-08-11",
       "appears_in": [
         "references/tax-rates-2026.md"
-      ]
+      ],
+      "verified_via": "curl",
+      "verified_at": "2026-08-11"
     },
     {
       "claim_id": "preferred-area-a-7-5",
       "claim": "Preferred Enterprise in Development Area A: 7.5%",
-      "source_url": "https://www.gov.il/he/departments/israel_tax_authority",
-      "raw_snippet": "Preferred Enterprise in Development Area A: 7.5%",
-      "fetched_at": "2026-05-21T12:30:00Z",
+      "source_url": "https://www.nevo.co.il/law_html/law01/p181_001.htm",
+      "raw_snippet": "על אף האמור בסעיף 126(א) לפקודה, חברה מועדפת זכאית כי לגבי הכנסתה המועדפת יוטל מס חברות בשיעורים כמפורט להלן: (1) נמצא המפעל המועדף באזור פיתוח א' – 7.5%; (2) נמצא המפעל המועדף באזור שאינו אזור פיתוח א' – 16%.",
+      "fetched_at": "2026-08-11",
       "appears_in": [
         "references/tax-rates-2026.md"
-      ]
+      ],
+      "verified_via": "curl",
+      "verified_at": "2026-08-11"
     },
     {
       "claim_id": "preferred-elsewhere-16",
       "claim": "Preferred Enterprise elsewhere: 16%",
-      "source_url": "https://www.gov.il/he/departments/israel_tax_authority",
-      "raw_snippet": "Preferred Enterprise elsewhere: 16%",
-      "fetched_at": "2026-05-21T12:30:00Z",
+      "source_url": "https://www.nevo.co.il/law_html/law01/p181_001.htm",
+      "raw_snippet": "על אף האמור בסעיף 126(א) לפקודה, חברה מועדפת זכאית כי לגבי הכנסתה המועדפת יוטל מס חברות בשיעורים כמפורט להלן: (1) נמצא המפעל המועדף באזור פיתוח א' – 7.5%; (2) נמצא המפעל המועדף באזור שאינו אזור פיתוח א' – 16%.",
+      "fetched_at": "2026-08-11",
       "appears_in": [
         "references/tax-rates-2026.md"
-      ]
+      ],
+      "verified_via": "curl",
+      "verified_at": "2026-08-11"
     },
     {
       "claim_id": "preferred-dividend-20",
-      "claim": "Dividend extraction from Preferred Enterprise profits uses a reduced 20% rate",
-      "source_url": "https://www.gov.il/he/departments/israel_tax_authority",
-      "raw_snippet": "Preferred Enterprise dividend rate of 20%",
-      "fetched_at": "2026-05-21T12:30:00Z",
+      "claim": "Dividend paid out of Preferred Enterprise chargeable preferred income is taxed at 20% (Encouragement of Capital Investments Law, s.51יח)",
+      "source_url": "https://www.nevo.co.il/law_html/law01/p181_001.htm",
+      "raw_snippet": "על אף האמור בסעיף 125ב לפקודה, על דיבידנד ששולם שמקורו בהכנסה חייבת מועדפת, בניכוי המס החל עליה, יחול שיעור מס של 20%.",
+      "fetched_at": "2026-08-11",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ]
+      ],
+      "verified_via": "curl",
+      "verified_at": "2026-08-11"
     },
     {
       "claim_id": "trapped-profits-2pct",
@@ -281,15 +291,17 @@
     {
       "claim_id": "surtax-rate-3pct",
       "claim": "Section 121B surtax rate: 3% on income above threshold",
-      "source_url": "https://www.nevo.co.il/law/70264",
-      "raw_snippet": "Section 121B surtax 3%",
-      "fetched_at": "2026-05-21T12:30:00Z",
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "raw_snippet": "יחיד אשר הכנסתו החייבת בשנת המס עלתה על 640,000 שקלים חדשים, יהיה חייב במס נוסף על חלק הכנסתו החייבת העולה על 640,000 שקלים חדשים בשיעור של 3%.",
+      "fetched_at": "2026-08-11",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/tax-rates-2026.md",
         "scripts/tax_comparison.py"
-      ]
+      ],
+      "verified_via": "curl",
+      "verified_at": "2026-08-11"
     },
     {
       "claim_id": "surtax-non-labor-2pct",
@@ -383,15 +395,17 @@
     },
     {
       "claim_id": "section-3tet1-deadline",
-      "claim": "Section 3(tet1) automatic reclassification: loan deemed withdrawn if not repaid by end of tax year following the year of withdrawal (Amendment 235, in force 2017; Circular 7/2017)",
-      "source_url": "https://www.gov.il/he/departments/policies/income-tax-professional-inst-07-2017",
-      "raw_snippet": "תום שנת המס שלאחר שנת המס שבה נמשכו הכספים",
-      "fetched_at": "2026-05-21T12:30:00Z",
+      "claim": "Circular 7/2017 section 2.3: for a withdrawal of funds from a company the charging date falls at the end of the tax year following the tax year in which the funds were withdrawn",
+      "source_url": "https://www.gov.il/BlobFolder/policy/income-tax-professional-inst-07-2017/he/Policy_IncomeTaxProfessionalInst_hoz_07_2017_acc.pdf",
+      "raw_snippet": "מועד אירוע המס בידי בעל המניות. לגבי משיכה של כספים מחברה יחול מועד החיוב בתום שנת המס שלאחר שנת המס בה נמשכו הכספים. כך לדוגמא משיכה של 800,000 ₪ בתאריך 1.4.2017 שלא הושבה לחברה עד לתאריך 31.12.2018, מועד החיוב המס יהיה בתאריך 31.12.2018.",
+      "fetched_at": "2026-08-11",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/section-3tet-rules.md"
-      ]
+      ],
+      "verified_via": "pdf",
+      "verified_at": "2026-08-11"
     },
     {
       "claim_id": "section-3tet1-de-minimis",
@@ -626,25 +640,29 @@
     },
     {
       "claim_id": "vat-18",
-      "claim": "VAT standard rate in 2026: 18% (increased from 17% effective 2025-01-01)",
+      "claim": "Government Decision 1270 of 14.01.2024 records the Finance Minister's intention to raise VAT on transactions and on imports of goods by one percentage point, to 18% instead of 17%, effective 1 January 2025",
       "source_url": "https://www.gov.il/he/pages/dec1270-2024",
-      "raw_snippet": "Standard rate: 18%",
-      "fetched_at": "2026-05-21T12:30:00Z",
+      "raw_snippet": "לרשום את הודעת שר האוצר כי בכוונתו לתקן את צו מס ערך מוסף (שיעור המס על עסקה ועל יבוא טובין), התשס\"ה-2005 ולקבוע כי שיעור המס על עסקה ועל יבוא טובין יעלה באחוז אחד, כך שיעמוד על 18% במקום 17% החל מיום 1 בינואר 2025.",
+      "fetched_at": "2026-08-11",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/tax-rates-2026.md"
-      ]
+      ],
+      "verified_via": "gov.il content API",
+      "verified_at": "2026-08-11"
     },
     {
       "claim_id": "rental-exempt-5654",
-      "claim": "Rental income exempt ceiling for 2026: 5,654 NIS/month (frozen 2025-2027)",
-      "source_url": "https://www.gov.il/he/departments/israel_tax_authority",
-      "raw_snippet": "Rental income exempt ceiling: 5,654 NIS/month",
-      "fetched_at": "2026-05-21T13:00:00Z",
+      "claim": "Israel Tax Authority guide: full exemption on residential rental income applies where monthly rental income from all the owner's apartments does not exceed the exemption ceiling of 5,654 NIS (figure stated for tax year 2025)",
+      "source_url": "https://www.gov.il/he/pages/detail-tracks-payment-tax-relief-rental-apartments",
+      "raw_snippet": "פטור מלא יחול אם: סכום ההכנסה החודשית משכר דירה מכל הדירות שבבעלותו, אינו עולה בכל חודש במהלך השנה על סכום של 5,654 ₪ בשנת 2025 (להלן: \"תקרת הפטור\"), יחול פטור מלא על הכנסה מהשכרת דירה למגורים העומדת בתנאים שצויינו לעיל.",
+      "fetched_at": "2026-08-11",
       "appears_in": [
         "references/tax-rates-2026.md"
-      ]
+      ],
+      "verified_via": "gov.il content API",
+      "verified_at": "2026-08-11"
     },
     {
       "claim_id": "baal-shlita-unemployment-exclusion",
@@ -659,37 +677,43 @@
     },
     {
       "claim_id": "section-3tet1-use-of-asset",
-      "claim": "Section 3(tet1) covers shareholder personal use of company-owned assets (apartment, vehicle beyond limited business use, art, yacht) at deemed annual usage value, not only cash loans",
-      "source_url": "https://www.gov.il/he/departments/policies/income-tax-professional-inst-07-2017",
-      "raw_snippet": "שימוש בנכס: דירה, רכב, אמנות",
-      "fetched_at": "2026-05-21T13:00:00Z",
+      "claim": "Section 3(tet1) also covers a company asset put at the shareholder's disposal; the statutory definition of 'asset' is an apartment used mainly for the substantial shareholder's private needs (including its contents), works of art or jewellery, aircraft and vessels used mainly for his private needs, and any other asset prescribed by the Finance Minister by order",
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "raw_snippet": "\"נכס\" – כל אחד מאלה: (1) דירה שעיקר השימוש בה הוא לצרכיו הפרטיים של בעל המניות המהותי, ולרבות תכולתה; (2) חפצי אמנות או תכשיטים; (3) כלי טיס וכלי שיט שעיקר השימוש בהם הוא לצרכיו הפרטיים של בעל המניות המהותי; (4) נכס אחר שקבע שר האוצר לעניין זה, בצו, באישור ועדת הכספים של הכנסת;",
+      "fetched_at": "2026-08-11",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/section-3tet-rules.md"
-      ]
+      ],
+      "verified_via": "curl",
+      "verified_at": "2026-08-11"
     },
     {
       "claim_id": "section-126b-intercompany",
       "claim": "Section 126(b) exempts dividends paid between Israeli companies from corporate tax",
-      "source_url": "https://www.nevo.co.il/law/70264",
-      "raw_snippet": "סעיף 126(b) inter-company dividend exemption",
-      "fetched_at": "2026-05-21T13:00:00Z",
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "raw_snippet": "בחישוב ההכנסה החייבת לפי סעיף קטן (א) לא תיכלל הכנסה מחלוקת רווחים או מדיבידנד שמקורם בהכנסות שהופקו או שנצמחו בישראל שנתקבלו במישרין או בעקיפין מחבר בני-אדם אחר החייב במס חברות, וכן לא תיכלל הכנסה שנקבע לגביה שיעור מס מיוחד.",
+      "fetched_at": "2026-08-11",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ]
+      ],
+      "verified_via": "curl",
+      "verified_at": "2026-08-11"
     },
     {
       "claim_id": "section-32-9-disallowance",
-      "claim": "Section 32(9) ITO disallows the company's deduction of unreasonable amounts paid to controlling shareholders (a deduction cap, not a minimum-salary rule)",
-      "source_url": "https://www.nevo.co.il/law/70264",
-      "raw_snippet": "Section 32(9): disallowance of unreasonable payments",
-      "fetched_at": "2026-05-21T13:00:00Z",
+      "claim": "Section 32(9) of the Income Tax Ordinance disallows deduction of specified payments by a closely held company to a controlling shareholder, including pension-fund severance-component contributions above 11,950 NIS and study-fund contributions above 4.5% of his determining salary",
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "raw_snippet": "(9) (א) (1) תשלום סכומי מענק עקב פרישה או עקב מוות הפטורים ממס לפי סעיף 9(7א) ששילמה חברה שהיא בשליטתם של לא יותר מחמישה בני אדם, כמשמעותה בסעיף 76, לבעל שליטה שהוא חבר בה או לאחר במקומו, בשל שנות עבודה עד שנת 1975; (2) תשלומים לקופת גמל לקצבה, בעד מרכיב הפיצויים כהגדרתו בחוק הפיקוח על קופות גמל, ששילמה חברה כאמור בפסקת משנה (1) בשל חבר, בסכום העולה על 11,950 שקלים חדשים, ותשלומים לקרן השתלמות בסכום העולה על 4.5% ממשכורתו הקובעת של החבר;",
+      "fetched_at": "2026-08-11",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ]
+      ],
+      "verified_via": "curl",
+      "verified_at": "2026-08-11"
     },
     {
       "claim_id": "keren-hishtalmut-self-deductible-13203",
@@ -726,106 +750,124 @@
     },
     {
       "claim_id": "section-3tet1-amendment-235",
-      "claim": "Section 3(tet1) was enacted by Amendment 235 to the Income Tax Ordinance, 29 Dec 2016, in force 1 Jan 2017",
-      "source_url": "https://www.gov.il/he/departments/policies/income-tax-professional-inst-07-2017",
-      "raw_snippet": "Amendment 235",
-      "fetched_at": "2026-05-21T12:30:00Z",
+      "claim": "Section 3(tet1) was enacted by Amendment 235 to the Income Tax Ordinance (part of the Economic Efficiency Law published 29 Dec 2016) and came into force on 1 January 2017",
+      "source_url": "https://www.gov.il/BlobFolder/policy/income-tax-professional-inst-07-2017/he/Policy_IncomeTaxProfessionalInst_hoz_07_2017_acc.pdf",
+      "raw_snippet": "תיקון מספר 235 לפקודת מס הכנסה (נוסח חדש) התשכ\"א-1961 (להלן – \"חוק ההתייעלות\", \"התיקון\" או \"תיקון 235\", \"הפקודה\" הכל בהתאמה). התיקון נכנס לתוקף ביום 1 בינואר 2017 (להלן – \"יום התחילה\"), ובו גם הוראות מעבר (להלן – \"הוראות המעבר\").",
+      "fetched_at": "2026-08-11",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/section-3tet-rules.md"
-      ]
+      ],
+      "verified_via": "pdf",
+      "verified_at": "2026-08-11"
     },
     {
       "claim_id": "form-126",
-      "claim": "Section 3(tet) deemed interest must be reported on Form 126",
-      "source_url": "https://www.gov.il/he/departments/israel_tax_authority",
-      "raw_snippet": "Form 126",
-      "fetched_at": "2026-05-21T12:30:00Z",
+      "claim": "Form 126 is the employer's/withholder's annual online return for employment income paid to employees, filed by 30 April following the tax year (Income Tax Ordinance s.166(b))",
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "raw_snippet": "מעביד או מנכה יגיש דוח כאמור בסעיף קטן (א) לגבי תשלום הכנסת עבודה לעובד (טופס 0126) ולגבי תשלום הכנסה חבת ניכוי (טופס 0856), באופן מקוון, כפי שיורה המנהל, עד יום 30 באפריל שלאחר שנת המס שלגביה מוגש הדוח",
+      "fetched_at": "2026-08-11",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/section-3tet-rules.md"
-      ]
+      ],
+      "verified_via": "curl",
+      "verified_at": "2026-08-11"
     },
     {
       "claim_id": "form-856",
-      "claim": "Form 856 reports payments to shareholders",
-      "source_url": "https://www.gov.il/he/departments/israel_tax_authority",
-      "raw_snippet": "Form 856",
-      "fetched_at": "2026-05-21T12:30:00Z",
+      "claim": "Form 856 is the annual online return for payments subject to withholding that are not salary or wages (Income Tax Ordinance s.166(b))",
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "raw_snippet": "מעביד או מנכה יגיש דוח כאמור בסעיף קטן (א) לגבי תשלום הכנסת עבודה לעובד (טופס 0126) ולגבי תשלום הכנסה חבת ניכוי (טופס 0856), באופן מקוון, כפי שיורה המנהל, עד יום 30 באפריל שלאחר שנת המס שלגביה מוגש הדוח",
+      "fetched_at": "2026-08-11",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ]
+      ],
+      "verified_via": "curl",
+      "verified_at": "2026-08-11"
     },
     {
       "claim_id": "section-32-9",
-      "claim": "Section 32(9) ITO governs reasonable-salary doctrine for controlling shareholders",
-      "source_url": "https://www.nevo.co.il/law/70264",
-      "raw_snippet": "Section 32(9)",
-      "fetched_at": "2026-05-21T12:30:00Z",
+      "claim": "Section 32(9) of the Income Tax Ordinance caps deductible company payments to a controlling shareholder",
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "raw_snippet": "(9) (א) (1) תשלום סכומי מענק עקב פרישה או עקב מוות הפטורים ממס לפי סעיף 9(7א) ששילמה חברה שהיא בשליטתם של לא יותר מחמישה בני אדם, כמשמעותה בסעיף 76, לבעל שליטה שהוא חבר בה או לאחר במקומו, בשל שנות עבודה עד שנת 1975; (2) תשלומים לקופת גמל לקצבה, בעד מרכיב הפיצויים כהגדרתו בחוק הפיקוח על קופות גמל, ששילמה חברה כאמור בפסקת משנה (1) בשל חבר, בסכום העולה על 11,950 שקלים חדשים, ותשלומים לקרן השתלמות בסכום העולה על 4.5% ממשכורתו הקובעת של החבר;",
+      "fetched_at": "2026-08-11",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ]
+      ],
+      "verified_via": "curl",
+      "verified_at": "2026-08-11"
     },
     {
       "claim_id": "section-85a",
       "claim": "Section 85A requires transfer pricing on management fees to reflect arm's-length market rates",
-      "source_url": "https://www.nevo.co.il/law/70264",
-      "raw_snippet": "Section 85A",
-      "fetched_at": "2026-05-21T12:30:00Z",
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "raw_snippet": "בעסקה בין-לאומית שבה מתקיימים בין הצדדים לעסקה יחסים מיוחדים שבשלהם נקבע מחיר לנכס, לזכות, לשירות או לאשראי, או שנקבעו תנאים אחרים לעסקה, באופן שהופקו ממנה פחות רווחים מאשר היו מופקים בנסיבות הענין, אילו נקבעו המחיר או התנאים בין צדדים שאין ביניהם יחסים מיוחדים (להלן – תנאי השוק), תדווח העסקה בהתאם לתנאי השוק ותחויב במס בהתאם.",
+      "fetched_at": "2026-08-11",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ]
+      ],
+      "verified_via": "curl",
+      "verified_at": "2026-08-11"
     },
     {
       "claim_id": "section-77",
       "claim": "Section 77 allows Tax Authority to deem retained earnings as distributed when unreasonably accumulated",
-      "source_url": "https://www.nevo.co.il/law/70264",
-      "raw_snippet": "Section 77",
-      "fetched_at": "2026-05-21T12:30:00Z",
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "raw_snippet": "ראה המנהל, כי חברת מעטים לא חילקה דיבידנד בשיעור של 50% לפחות מתוך רווחיה לשנת מס פלונית, לבעלי מניותיה, עד תום חמש שנים לאחר שנת המס הפלונית, וכי רווחיה הנצברים עולים על עשרה מיליון שקלים חדשים, ויש בידה לחלק רווחיה או חלק מהם בלי להזיק לקיומו ולפיתוחו של עסקה, וכי תוצאת אי-החלוקה היא הימנעות ממס או הפחתת מס – רשאי הוא, לאחר התייעצות עם הוועדה שיש עליה הוראה להלן, ולאחר שניתנה לחברה הזדמנות סבירה להשמיע דבריה, לתת הוראה לפקיד השומה לנהוג בחלק של עד 50% מרווחיה לשנת המס, לאחר שהופחת מהם סכום הדיבידנד שחילקה מרווחי אותה שנת מס, כאילו חולקו בתור דיבידנדים",
+      "fetched_at": "2026-08-11",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ]
+      ],
+      "verified_via": "curl",
+      "verified_at": "2026-08-11"
     },
     {
       "claim_id": "section-64a-family",
       "claim": "Section 64A Family Company election attributes profits to representative shareholder at marginal rates; election deadline November 30 or within 3 months of incorporation",
-      "source_url": "https://www.nevo.co.il/law/70264",
-      "raw_snippet": "Section 64A",
-      "fetched_at": "2026-05-21T12:30:00Z",
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "raw_snippet": "הכנסה חייבת, לרבות שבח כמשמעותו בחוק מיסוי מקרקעין (בסעיף זה – הכנסה חייבת) והפסדים של חברה שחבריה הם קרובים לפי פסקאות (1) או (2) להגדרה \"קרוב\" בסעיף 88 (להלן – חברה משפחתית) ייחשבו מיום התאגדותה, לפי בקשתה שתומצא לפקיד השומה בתוך שלושה חודשים לאחר התאגדותה, כהכנסתו או הפסדו של החבר שהוא בעל הזכות לחלק הגדול ביותר ברווחים בחברה",
+      "fetched_at": "2026-08-11",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ]
+      ],
+      "verified_via": "curl",
+      "verified_at": "2026-08-11"
     },
     {
       "claim_id": "section-47a-ni-deduction",
       "claim": "Section 47A provides 52% deductibility of self-employed Bituach Leumi",
-      "source_url": "https://www.nevo.co.il/law/70264",
-      "raw_snippet": "Section 47A",
-      "fetched_at": "2026-05-21T12:30:00Z",
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "raw_snippet": "יחיד שבשנת מס שילם דמי ביטוח לפי חוק הביטוח הלאומי [נוסח משולב], התשכ\"ח-1968 (להלן – חוק הביטוח), ומס מקביל לפי חוק מס מקביל, התשל\"ג-1973 (להלן – מס מקביל), בשל הכנסה שאינה הכנסת עבודה, יותר לו ניכוי של 52% מהסכום ששילם",
+      "fetched_at": "2026-08-11",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/tax-rates-2026.md"
-      ]
+      ],
+      "verified_via": "curl",
+      "verified_at": "2026-08-11"
     },
     {
       "claim_id": "section-121b-surtax",
       "claim": "Section 121B is the surtax (mas yesafim) provision",
-      "source_url": "https://www.nevo.co.il/law/70264",
-      "raw_snippet": "Section 121B",
-      "fetched_at": "2026-05-21T12:30:00Z",
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "raw_snippet": "יחיד אשר הכנסתו החייבת בשנת המס עלתה על 640,000 שקלים חדשים, יהיה חייב במס נוסף על חלק הכנסתו החייבת העולה על 640,000 שקלים חדשים בשיעור של 3%.",
+      "fetched_at": "2026-08-11",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/tax-rates-2026.md"
-      ]
+      ],
+      "verified_via": "curl",
+      "verified_at": "2026-08-11"
     },
     {
       "claim_id": "companies-law-301-303",
@@ -840,35 +882,28 @@
     },
     {
       "claim_id": "section-3i1-nonresident",
-      "claim": "Section 3(i)(1) governs withholding on dividends paid to non-resident shareholders; treaty rates (typically 10-15%) override domestic 25%/30%",
-      "source_url": "https://www.nevo.co.il/law/70264",
-      "raw_snippet": "Section 3(i)(1)",
-      "fetched_at": "2026-05-21T12:30:00Z",
+      "claim": "Section 3(i)(1) of the Income Tax Ordinance deems the interest differential on an interest-free or low-interest loan given between parties with special relations to be income of the lender under Section 2(4)",
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "raw_snippet": "אדם שנתן הלוואה שנרשמה בפנקסי חשבונות שנוהלו לגבי הכנסה שלגביה היו חייבים לנהל פנקסים לפי שיטת החשבונאות הכפולה או חבר בני אדם שנתן הלוואה, וההלוואה היא ללא ריבית או בריבית נמוכה משיעור שקבע לעניין זה שר האוצר, באישור ועדת הכספים של הכנסת, יראו את הפרש הריבית כהכנסה לפי סעיף 2(4) בידי נותן ההלוואה, ובלבד שמתקיימים יחסים מיוחדים בין נותן ההלוואה לבין מקבל ההלוואה",
+      "fetched_at": "2026-08-11",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ]
-    },
-    {
-      "claim_id": "min-salary-reasonable-6500",
-      "claim": "Tax Authority expects reasonable salary (~6,500+ NIS/month) before dividends for baalei shlita; no fixed statutory minimum, governed by Section 32(9) reasonableness doctrine",
-      "source_url": "https://www.gov.il/he/departments/israel_tax_authority",
-      "raw_snippet": "Tax Authority expects reasonable salary",
-      "fetched_at": "2026-05-21T12:30:00Z",
-      "appears_in": [
-        "SKILL.md",
-        "SKILL_HE.md"
-      ]
+      ],
+      "verified_via": "curl",
+      "verified_at": "2026-08-11"
     },
     {
       "claim_id": "section-3tet1-rate-context",
-      "claim": "Loan still outstanding past end of year N+1 triggers automatic reclassification (typically as dividend at 30%)",
-      "source_url": "https://www.gov.il/he/departments/policies/income-tax-professional-inst-07-2017",
-      "raw_snippet": "30% + potential surtax",
-      "fetched_at": "2026-05-21T12:30:00Z",
+      "claim": "A withdrawal reclassified as a dividend in the hands of a substantial shareholder is taxed at 30% under Section 125B(2) of the Income Tax Ordinance",
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "raw_snippet": "על אף האמור בפסקה (1), דיבידנד בידי יחיד שהיה במועד קבלת הדיבידנד או במועד כלשהו בשנים עשר החודשים שקדמו לו, בעל מניות מהותי כהגדרתו בסעיף 88 בחבר-בני-אדם ששילם את הדיבידנד – 30%.",
+      "fetched_at": "2026-08-11",
       "appears_in": [
         "references/section-3tet-rules.md"
-      ]
+      ],
+      "verified_via": "curl",
+      "verified_at": "2026-08-11"
     },
     {
       "claim_id": "section-3tet-rate-2025",
@@ -945,25 +980,28 @@
       "claim_id": "circular-7-2017",
       "claim": "Tax Authority Circular 7/2017 (section 2.4) sets out the Section 3(tet1) reclassification cascade: the withdrawal is first classified as a dividend where the company has profits, then as work income where an employer-employee relationship exists, and otherwise as business or professional income",
       "source_url": "https://www.gov.il/BlobFolder/policy/income-tax-professional-inst-07-2017/he/Policy_IncomeTaxProfessionalInst_hoz_07_2017_acc.pdf",
-      "raw_snippet": "ראשית, תסווג ההכנסה כדיבידנד על פי סעיף 2(4) לפקודה, ובלבד שבחברה ממנה בוצעה המשיכה היו רווחים כהגדרתם בסעיף 302(ב) לחוק החברות.",
-      "fetched_at": "2026-08-09T00:00:00Z",
+      "raw_snippet": "2.4.1 ראשית, תסווג ההכנסה כדיבידנד על פי סעיף 2(4) לפקודה, ובלבד שבחברה ממנה בוצעה המשיכה היו רווחים כהגדרתם בסעיף 302(ב) לחוק החברות.",
+      "fetched_at": "2026-08-11",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/section-3tet-rules.md"
       ],
-      "verified_via": "fetched and read the cited page on 2026-08-09"
+      "verified_via": "pdf",
+      "verified_at": "2026-08-11"
     },
     {
       "claim_id": "withholding-deposit-15th",
-      "claim": "Company must withhold 30% dividend tax and deposit by the 15th of the following month",
-      "source_url": "https://www.gov.il/he/departments/israel_tax_authority",
-      "raw_snippet": "by the 15th of the following month",
-      "fetched_at": "2026-05-21T12:30:00Z",
+      "claim": "Withheld tax is reported on Form 102 and paid to the assessing officer by the 16th of each month, covering the period from the 14th of the previous month to the 13th of the reporting month (Income Tax (Deduction from Salary and Wages) Regulations 1993, reg. 11(a), as amended in 2017)",
+      "source_url": "https://www.nevo.co.il/law_html/law01/255_163.htm",
+      "raw_snippet": "מעביד יגיש לפקיד השומה עד ה-16 בכל חודש דין וחשבון בטופס 0102, על מספר העובדים ששילם להם משכורת חודש, משכורת חלקית, משכורת בלתי קבועה, קיצבה, תשלום לפי תקנה 6, שכר עבודה, או מענק פרישה בתקופה שבין ה-14 בחודש הקודם עד ל-13 בחודש הדיווח, על סכום המשכורת ששילם, בתקופה האמורה, בין אם נוכה ממנה מס ובין אם לאו, ועל סכום המס שניכה לפי תקנות 3, 4, 5, 6 או 7 באותה תקופה, וישלם באותו מועד את סכום המס שניכה כאמור.",
+      "fetched_at": "2026-08-11",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ]
+      ],
+      "verified_via": "curl",
+      "verified_at": "2026-08-11"
     },
     {
       "claim_id": "btl-self-employed-page",
@@ -1003,12 +1041,14 @@
     {
       "claim_id": "section-121b-he",
       "claim": "Section 121B (Hebrew: סעיף 121ב) surtax provision",
-      "source_url": "https://www.nevo.co.il/law/70264",
-      "raw_snippet": "סעיף 121ב",
-      "fetched_at": "2026-05-21T12:30:00Z",
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "raw_snippet": "יחיד אשר הכנסתו החייבת בשנת המס עלתה על 640,000 שקלים חדשים, יהיה חייב במס נוסף על חלק הכנסתו החייבת העולה על 640,000 שקלים חדשים בשיעור של 3%.",
+      "fetched_at": "2026-08-11",
       "appears_in": [
         "SKILL_HE.md"
-      ]
+      ],
+      "verified_via": "curl",
+      "verified_at": "2026-08-11"
     },
     {
       "claim_id": "section-3-he",
@@ -1037,34 +1077,40 @@
     {
       "claim_id": "section-47a-he",
       "claim": "Section 47A (Hebrew: סעיף 47א) self-employed BL deductibility",
-      "source_url": "https://www.nevo.co.il/law/70264",
-      "raw_snippet": "סעיף 47א",
-      "fetched_at": "2026-05-21T12:30:00Z",
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "raw_snippet": "יחיד שבשנת מס שילם דמי ביטוח לפי חוק הביטוח הלאומי [נוסח משולב], התשכ\"ח-1968 (להלן – חוק הביטוח), ומס מקביל לפי חוק מס מקביל, התשל\"ג-1973 (להלן – מס מקביל), בשל הכנסה שאינה הכנסת עבודה, יותר לו ניכוי של 52% מהסכום ששילם",
+      "fetched_at": "2026-08-11",
       "appears_in": [
         "SKILL_HE.md",
         "references/tax-rates-2026.md"
-      ]
+      ],
+      "verified_via": "curl",
+      "verified_at": "2026-08-11"
     },
     {
       "claim_id": "section-62a-he",
       "claim": "Section 62A (Hebrew: סעיף 62א) closely-held companies look-through",
-      "source_url": "https://www.nevo.co.il/law/70264",
-      "raw_snippet": "סעיף 62א",
-      "fetched_at": "2026-05-21T12:30:00Z",
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "raw_snippet": "הכנסה חייבת של חברת מעטים, למעט הכנסה חייבת שיוחסה לחברת המעטים מהכנסת שותפות שהיא שותפה בה, שאינה חברת משלח יד זרה כהגדרתה בסעיף 75ב1, הנובעת מפעילות של יחיד שהוא בעל שליטה בה, תיחשב כהכנסתו של היחיד",
+      "fetched_at": "2026-08-11",
       "appears_in": [
         "SKILL_HE.md",
         "references/tax-rates-2026.md"
-      ]
+      ],
+      "verified_via": "curl",
+      "verified_at": "2026-08-11"
     },
     {
       "claim_id": "section-64a-he",
       "claim": "Section 64A (Hebrew: סעיף 64א) Family Company election",
-      "source_url": "https://www.nevo.co.il/law/70264",
-      "raw_snippet": "סעיף 64א",
-      "fetched_at": "2026-05-21T12:30:00Z",
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "raw_snippet": "הכנסה חייבת, לרבות שבח כמשמעותו בחוק מיסוי מקרקעין (בסעיף זה – הכנסה חייבת) והפסדים של חברה שחבריה הם קרובים לפי פסקאות (1) או (2) להגדרה \"קרוב\" בסעיף 88 (להלן – חברה משפחתית) ייחשבו מיום התאגדותה, לפי בקשתה שתומצא לפקיד השומה בתוך שלושה חודשים לאחר התאגדותה, כהכנסתו או הפסדו של החבר שהוא בעל הזכות לחלק הגדול ביותר ברווחים בחברה",
+      "fetched_at": "2026-08-11",
       "appears_in": [
         "SKILL_HE.md"
-      ]
+      ],
+      "verified_via": "curl",
+      "verified_at": "2026-08-11"
     },
     {
       "claim_id": "section-77-he",
@@ -1080,23 +1126,27 @@
     {
       "claim_id": "section-85a-he",
       "claim": "Section 85A (Hebrew: סעיף 85א) transfer pricing",
-      "source_url": "https://www.nevo.co.il/law/70264",
-      "raw_snippet": "סעיף 85א",
-      "fetched_at": "2026-05-21T12:30:00Z",
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "raw_snippet": "בעסקה בין-לאומית שבה מתקיימים בין הצדדים לעסקה יחסים מיוחדים שבשלהם נקבע מחיר לנכס, לזכות, לשירות או לאשראי, או שנקבעו תנאים אחרים לעסקה, באופן שהופקו ממנה פחות רווחים מאשר היו מופקים בנסיבות הענין, אילו נקבעו המחיר או התנאים בין צדדים שאין ביניהם יחסים מיוחדים (להלן – תנאי השוק), תדווח העסקה בהתאם לתנאי השוק ותחויב במס בהתאם.",
+      "fetched_at": "2026-08-11",
       "appears_in": [
         "SKILL_HE.md"
-      ]
+      ],
+      "verified_via": "curl",
+      "verified_at": "2026-08-11"
     },
     {
       "claim_id": "form-126-he",
-      "claim": "Form 126 (Hebrew: טופס 126) for reporting §3(tet) deemed interest",
-      "source_url": "https://www.gov.il/he/departments/israel_tax_authority",
-      "raw_snippet": "טופס 126",
-      "fetched_at": "2026-05-21T12:30:00Z",
+      "claim": "Form 126 (Hebrew: טופס 0126) is the annual return for employment income paid to employees under Section 166(b) of the Income Tax Ordinance",
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "raw_snippet": "מעביד או מנכה יגיש דוח כאמור בסעיף קטן (א) לגבי תשלום הכנסת עבודה לעובד (טופס 0126) ולגבי תשלום הכנסה חבת ניכוי (טופס 0856), באופן מקוון, כפי שיורה המנהל, עד יום 30 באפריל שלאחר שנת המס שלגביה מוגש הדוח",
+      "fetched_at": "2026-08-11",
       "appears_in": [
         "SKILL_HE.md",
         "references/section-3tet-rules.md"
-      ]
+      ],
+      "verified_via": "curl",
+      "verified_at": "2026-08-11"
     },
     {
       "claim_id": "tax-year-2026-reference",
@@ -1158,17 +1208,6 @@
       ]
     },
     {
-      "claim_id": "min-salary-6500-he",
-      "claim": "Tax Authority practitioner heuristic of ~6,500 NIS/month minimum baal shlita salary",
-      "source_url": "https://www.gov.il/he/departments/israel_tax_authority",
-      "raw_snippet": "~6,500 NIS/month",
-      "fetched_at": "2026-05-21T12:30:00Z",
-      "appears_in": [
-        "SKILL.md",
-        "SKILL_HE.md"
-      ]
-    },
-    {
       "claim_id": "rounding-and-derived-percentages",
       "claim": "Rounded headline percentages used in summary text (12%, 55%, 100%) refer to summed/rounded values of justified component rates",
       "source_url": "https://www.btl.gov.il/Insurance/Rates/Pages/default.aspx",
@@ -1193,14 +1232,15 @@
       "claim_id": "section-2-1-residual",
       "claim": "Circular 7/2017 section 2.4.3: where no employer-employee relationship exists the withdrawal is classified as business or professional income under Section 2(1) of the Ordinance",
       "source_url": "https://www.gov.il/BlobFolder/policy/income-tax-professional-inst-07-2017/he/Policy_IncomeTaxProfessionalInst_hoz_07_2017_acc.pdf",
-      "raw_snippet": "כאשר לא מתקיימים יחסי עובד מעביד כאמור לעיל, תסווג המשיכה בידי בעל המניות כהכנסה מעסק או משלח יד על פי סעיף 2(1) לפקודה.",
-      "fetched_at": "2026-08-09T00:00:00Z",
-      "verified_via": "downloaded and read the circular PDF on 2026-08-09",
+      "raw_snippet": "2.4.3 כאשר לא מתקיימים יחסי עובד מעביד כאמור לעיל, תסווג המשיכה בידי בעל המניות כהכנסה מעסק או משלח יד על פי סעיף 2(1) לפקודה.",
+      "fetched_at": "2026-08-11",
+      "verified_via": "pdf",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/section-3tet-rules.md"
-      ]
+      ],
+      "verified_at": "2026-08-11"
     },
     {
       "claim_id": "britcpa-annual-3tet-circular",
@@ -1213,6 +1253,32 @@
         "SKILL.md",
         "SKILL_HE.md"
       ]
+    },
+    {
+      "claim_id": "ita-portal-url",
+      "claim": "Israel Tax Authority (רשות המסים בישראל) departmental landing page on gov.il is the official portal covering income tax, real-estate taxation, VAT, purchase tax, customs and stamp duty, with information for employers, representatives and the public",
+      "source_url": "https://www.gov.il/he/departments/israel_tax_authority",
+      "raw_snippet": "רשות המסים בישראל מאחדת את אגפי המס השונים: מס הכנסה, מיסוי מקרקעין, מס ערך מוסף, מס קנייה, מכס ומס בולים. הרשות מספקת שירותים בנושאי רפורמות, מוסדות ללא כוונת רווח וכן מידע למעסיקים, למייצגים ולציבור.",
+      "fetched_at": "2026-08-11",
+      "verified_via": "gov.il content API",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "verified_at": "2026-08-11"
+    },
+    {
+      "claim_id": "form-126-856-transmission",
+      "claim": "The Israel Tax Authority operates an online submission-confirmation system for Form 126/856 annual withholding returns",
+      "source_url": "https://www.gov.il/he/service/report126",
+      "raw_snippet": "החל מדוחות לשנת מס 2019 אישור הגשת הדוחות יתאפשר באופן מקוון בלבד באמצעות מערכת אישור הגשה טופס 126/856, לאחר שידורם במערכת האינטרנטית או בפורטל המייצגים המחוברים למחשב שע\"מ.",
+      "fetched_at": "2026-08-11",
+      "verified_via": "gov.il content API",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "verified_at": "2026-08-11"
     }
   ]
 }

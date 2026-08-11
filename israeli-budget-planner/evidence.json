@@ -187,11 +187,14 @@
       "claim_id": "cpi-annual",
       "claim": "Annual CPI in Israel was 1.6% over the 12 months to June 2026, per the Central Bureau of Statistics consumer price index series (id 120010).",
       "source_url": "https://api.cbs.gov.il/index/data/price?id=120010&format=json&download=false&last=13",
-      "raw_snippet": "{\"code\":120010,\"name\":\"מדד המחירים לצרכן - כללי\",\"date\":[{\"year\":2026,\"percent\":0.0,\"percentYear\":1.6",
-      "fetched_at": "2026-06-04T00:00:00Z",
+      "raw_snippet": "{\"month\":[{\"code\":120010,\"name\":\"מדד המחירים לצרכן - כללי\",\"date\":[{\"year\":2026,\"percent\":0.0,\"percentYear\":1.6,\"currBase\":{\"baseDesc\":\"2024 ממוצע\",\"value\":104.8},\"prevBase\":null,\"month\":6,\"monthDesc\":\"יוני\"}",
+      "fetched_at": "2026-08-11",
       "appears_in": [
         "references/israeli-financial-rates.md"
-      ]
+      ],
+      "verified_via": "browser-playwright",
+      "verified_at": "2026-08-11T00:00:00Z",
+      "source_fetched_at": "2026-08-11T00:00:00Z"
     },
     {
       "claim_id": "budget-benchmarks",

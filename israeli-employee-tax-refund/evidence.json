@@ -391,13 +391,11 @@
     },
     {
       "id": "credit-point-2021",
-      "claim": "The monthly value of an income-tax credit point for tax year 2021 is 218 NIS (2616 NIS annually).",
+      "claim": "The Israel Tax Authority monthly deductions booklet for tax year 2021 sets the value of an income-tax credit point at 218 NIS per month (2,616 NIS a year, i.e. 12 x 218).",
       "claim_type": "rate",
       "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/itc_itc_necuyim2021-1.pdf",
-      "raw_snippet": "נקודת זיכוי 218 לחודש",
-      "source_fetched_at": "2026-08-01T00:00:00Z",
-      "verified_via": "pdf",
-      "verified_at": "2026-08-01T00:00:00Z",
+      "raw_snippet": "לחודש 218 נקודת זיכוי",
+      "source_fetched_at": "2026-08-11T00:00:00Z",
       "confidence": "high",
       "appears_in": [
         "scripts/estimate_refund.py"
@@ -405,13 +403,11 @@
     },
     {
       "id": "credit-point-2022",
-      "claim": "The monthly value of an income-tax credit point for tax year 2022 is 223 NIS (2676 NIS annually).",
+      "claim": "The Israel Tax Authority monthly deductions booklet for tax year 2022 sets the value of an income-tax credit point at 223 NIS per month (2,676 NIS a year, i.e. 12 x 223).",
       "claim_type": "rate",
       "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2022.pdf",
-      "raw_snippet": "נקודת זיכוי 223 לחודש",
-      "source_fetched_at": "2026-08-01T00:00:00Z",
-      "verified_via": "pdf",
-      "verified_at": "2026-08-01T00:00:00Z",
+      "raw_snippet": "לחודש 223 נקודת זיכוי",
+      "source_fetched_at": "2026-08-11T00:00:00Z",
       "confidence": "high",
       "appears_in": [
         "scripts/estimate_refund.py"
@@ -419,13 +415,11 @@
     },
     {
       "id": "credit-point-2023",
-      "claim": "The monthly value of an income-tax credit point for tax year 2023 is 235 NIS (2820 NIS annually).",
+      "claim": "The Israel Tax Authority monthly deductions booklet for tax year 2023 sets the value of an income-tax credit point at 235 NIS per month (2,820 NIS a year, i.e. 12 x 235).",
       "claim_type": "rate",
       "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2023.pdf",
-      "raw_snippet": "נקודת זיכוי 235 לחודש",
-      "source_fetched_at": "2026-08-01T00:00:00Z",
-      "verified_via": "pdf",
-      "verified_at": "2026-08-01T00:00:00Z",
+      "raw_snippet": "לחודש 235 נקודת זיכוי 33א",
+      "source_fetched_at": "2026-08-11T00:00:00Z",
       "confidence": "high",
       "appears_in": [
         "scripts/estimate_refund.py"
@@ -433,13 +427,11 @@
     },
     {
       "id": "credit-point-2024",
-      "claim": "The monthly value of an income-tax credit point for tax year 2024 is 242 NIS (2904 NIS annually).",
+      "claim": "The Israel Tax Authority monthly deductions booklet for tax year 2024 sets the value of an income-tax credit point at 242 NIS per month (2,904 NIS a year, i.e. 12 x 242).",
       "claim_type": "rate",
       "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2024.pdf",
-      "raw_snippet": "נקודת זיכוי 242 לחודש",
-      "source_fetched_at": "2026-08-01T00:00:00Z",
-      "verified_via": "pdf",
-      "verified_at": "2026-08-01T00:00:00Z",
+      "raw_snippet": "לחודש 242 נקודת זיכוי 33א",
+      "source_fetched_at": "2026-08-11T00:00:00Z",
       "confidence": "high",
       "appears_in": [
         "scripts/estimate_refund.py"
@@ -447,13 +439,11 @@
     },
     {
       "id": "credit-point-2025",
-      "claim": "The monthly value of an income-tax credit point for tax year 2025 is 242 NIS (2904 NIS annually).",
+      "claim": "The Israel Tax Authority monthly deductions booklet for tax year 2025 sets the value of an income-tax credit point at 242 NIS per month (2,904 NIS a year, i.e. 12 x 242).",
       "claim_type": "rate",
       "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2025.pdf",
-      "raw_snippet": "נקודת זיכוי 242 לחודש",
-      "source_fetched_at": "2026-08-01T00:00:00Z",
-      "verified_via": "pdf",
-      "verified_at": "2026-08-01T00:00:00Z",
+      "raw_snippet": "לחודש 242 נקודת זיכוי 33א",
+      "source_fetched_at": "2026-08-11T00:00:00Z",
       "confidence": "high",
       "appears_in": [
         "scripts/estimate_refund.py"
@@ -473,13 +463,11 @@
     },
     {
       "id": "surtax-capital-addon-2025",
-      "claim": "From tax year 2025 a second 2% surtax applies to capital-source income above the Section 121B threshold, in addition to the 3% on earned income. It did not exist for 2020-2024.",
+      "claim": "From tax year 2025 the Economic Efficiency Law published on 26 December 2024 adds a further 2% surtax, on top of the tax fixed in Section 121B(a), on taxable income from capital sources above the amount fixed in that section. Section 121B(a) itself charges 3% above 721,560 NIS. No such capital-source addition existed for 2020-2024.",
       "claim_type": "rate",
       "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2025.pdf",
-      "raw_snippet": "בנוסף על המס הקבוע בסעיף 121ב(א) בשיעור של 3%, יחיד יהיה חייב במס נוסף",
-      "source_fetched_at": "2026-08-01T00:00:00Z",
-      "verified_via": "pdf",
-      "verified_at": "2026-08-01T00:00:00Z",
+      "raw_snippet": "בחוק נקבע כי בנוסף על המס הקבוע בסעיף 121ב(א), יחיד יהיה חייב במס נוסף בשיעור של 2%\nעל הכנסה חייבת ממקורות הוניים העולה על הסכום הקבוע בסעיף.",
+      "source_fetched_at": "2026-08-11T00:00:00Z",
       "confidence": "high",
       "appears_in": [
         "scripts/estimate_refund.py"
@@ -490,9 +478,9 @@
       "claim": "The 2026 preferred-locality (yishuv mutav) list with each locality's rate and ceiling is published in chapter ח of the ITA 2026 deductions booklet; the credit applies only to earned income under section 11 ITO. Representative 2026 values: Kiryat Shmona 20% up to 259,920 NIS, Sderot 20% up to 267,840 NIS, Safed 12% up to 213,240 NIS, Katzrin 10% up to 180,000 NIS, Rahat 16% up to 226,560 NIS, Rosh Pina 7% up to 146,640 NIS.",
       "claim_type": "rate",
       "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf",
-      "raw_snippet": "מצורפת בפרק ח רשימת היישובים המוטבים לשנת 2026",
+      "raw_snippet": "‫מצורפת בפרק ח רשימת היישובים המוטבים לשנת ‪.2026‬‬",
       "source_fetched_at": "2026-08-01T00:00:00Z",
-      "verified_via": "pdf",
+      "verified_via": "gov.il content API (programmatic re-extraction)",
       "verified_at": "2026-08-01T00:00:00Z",
       "confidence": "high",
       "appears_in": [
@@ -522,9 +510,9 @@
       "claim": "Security forces receive a 5% credit on the special salary up to 178,320 NIS per year under section 11(c) ITO.",
       "claim_type": "rate",
       "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf",
-      "raw_snippet": "הנחה בשיעור של 5% מהמשכורת המיוחדת עד לסכום של 178,320 ₪ לשנה",
+      "raw_snippet": "‫הנחה בשיעור של ‪ 5%‬מהמשכורת המיוחדת עד לסכום של ‪ ₪ 178,320‬לשנה‪.‬‬",
       "source_fetched_at": "2026-08-01T00:00:00Z",
-      "verified_via": "pdf",
+      "verified_via": "gov.il content API (programmatic re-extraction)",
       "verified_at": "2026-08-01T00:00:00Z",
       "confidence": "high",
       "appears_in": [
@@ -536,9 +524,9 @@
       "claim": "The shift-work credit under section 10 ITO is extended to 31.12.2026, capped at 12,540 NIS against annual income up to 143,040 NIS.",
       "claim_type": "rate",
       "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf",
-      "raw_snippet": "יוענק זיכוי שלא יעלה על 12,540 ₪ עד לתקרת הכנסה שנתית של 143,040 ₪ לכל שנת מס",
+      "raw_snippet": "‫לשנה‬ ‫‪143,040‬‬ ‫עבודה במשמרות ‪(10‬ג) ‪ -‬תקרת הכנסה‬",
       "source_fetched_at": "2026-08-01T00:00:00Z",
-      "verified_via": "pdf",
+      "verified_via": "gov.il content API (programmatic re-extraction)",
       "verified_at": "2026-08-01T00:00:00Z",
       "confidence": "high",
       "appears_in": [

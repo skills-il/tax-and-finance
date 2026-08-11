@@ -131,12 +131,13 @@
     },
     {
       "id": "esek-zair-30-percent-deduction",
-      "claim": "The esek za'ir track (מסלול מקוצר, Tax Authority, introduced 2024) grants a 30% normative expense deduction as an income-tax election, orthogonal to VAT status",
+      "claim": "The 'bal esek za'ir' (בעל עסק זעיר) model lets a self-employed person whose 2026 annual turnover does not exceed 122,833 NIS deduct normative expenses of 30% of turnover instead of claiming actual expenses; it applies to an osek patur or an osek murshe alike, so it is orthogonal to VAT status.",
       "claim_type": "percentage",
       "source_url": "https://www.gov.il/he/pages/small-business-owner-income-tax",
-      "source_fetched_at": "2026-05-19T00:00:00Z",
-      "raw_snippet": "Esek za'ir track grants 30% normative expense deduction as an income-tax election (Tax Authority route, 2024)",
-      "confidence": "medium"
+      "source_fetched_at": "2026-08-11",
+      "raw_snippet": "עצמאי המוגדר כ-\"בעל עסק זעיר\" (עוסק פטור או עוסק מורשה שמחזור הכנסותיו השנתי בשנת 2026 אינו עולה על 122,833 ₪), זכאי לנכות מהכנסותיו הוצאות בשיעור של 30% מהמחזור במקום לדרוש הוצאות שהוצאו בפועל.",
+      "confidence": "medium",
+      "fetched_at": "2026-08-11"
     },
     {
       "id": "vat-law-section-30-export",

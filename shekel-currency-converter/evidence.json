@@ -40,16 +40,22 @@
       "verified_by": "curl 2026-06-03"
     },
     {
-      "claim": "Historical rates are available from the BOI SDMX EXR series at edge.boi.gov.il using RER_<CUR>_ILS with startPeriod/endPeriod and format=csv; parse OBS_VALUE keyed by TIME_PERIOD.",
+      "claim": "Historical rates come from the BOI SDMX EXR dataflow. Base path https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/ ; series pattern https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI.STATISTICS/EXR/1.0/RER_<CUR>_ILS ; concrete example https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI.STATISTICS/EXR/1.0/RER_USD_ILS . With startPeriod, endPeriod and format=csv the response is a CSV whose columns include TIME_PERIOD and OBS_VALUE; read on 2026-08-11 the first 2026 USD observation is 2026-01-02 at 3.181 and the last in the window is 2026-01-15 at 3.156.",
       "source_url": "https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI.STATISTICS/EXR/1.0/RER_USD_ILS?startPeriod=2026-01-01&endPeriod=2026-01-15&format=csv",
-      "raw_snippet": "Endpoint forms: https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/ is the base path; pattern https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI.STATISTICS/EXR/1.0/RER_<CUR>_ILS ; concrete https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI.STATISTICS/EXR/1.0/RER_USD_ILS . CSV header: SERIES_CODE,FREQ,...,TIME_PERIOD,OBS_VALUE,RELEASE_STATUS then RER_USD_ILS,D,USD,ILS,...,2026-01-02,3.181,YP ... 2026-01-15,3.156,YP",
-      "verified_by": "curl 2026-06-03"
+      "raw_snippet": "https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI.STATISTICS/EXR/1.0/RER_USD_ILS?startPeriod=2026-01-01&endPeriod=2026-01-15&format=csv\nhttps://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/\nhttps://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI.STATISTICS/EXR/1.0/RER_<CUR>_ILS\nhttps://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI.STATISTICS/EXR/1.0/RER_USD_ILS",
+      "verified_by": "curl 2026-06-03",
+      "fetched_at": "2026-08-11T00:00:00Z",
+      "verified_via": "curl",
+      "verified_at": "2026-08-11"
     },
     {
-      "claim": "The SDMX series omits non-publication days, so a walk-back to the most recent published date <= requested date is needed; e.g., requesting 2026-01-01 yields the 2025-12-31 rate of 3.19.",
+      "claim": "The SDMX series omits non-publication days. Read on 2026-08-11, this request with endPeriod=2026-01-01 returns no row for 2026-01-01 and ends at 2025-12-31 with OBS_VALUE 3.19, so a consumer must walk back to the most recent published date on or before the date requested.",
       "source_url": "https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI.STATISTICS/EXR/1.0/RER_USD_ILS?startPeriod=2025-12-11&endPeriod=2026-01-01&format=csv",
-      "raw_snippet": "RER_USD_ILS,...,2025-12-31,3.19,YP  (no row exists for 2026-01-01, which is a holiday/non-publication day; first 2026 observation is 2026-01-02)",
-      "verified_by": "curl 2026-06-03"
+      "raw_snippet": "https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI.STATISTICS/EXR/1.0/RER_USD_ILS?startPeriod=2025-12-11&endPeriod=2026-01-01&format=csv",
+      "verified_by": "curl 2026-06-03",
+      "fetched_at": "2026-08-11T00:00:00Z",
+      "verified_via": "curl",
+      "verified_at": "2026-08-11"
     },
     {
       "claim": "Publication pattern: Sunday excluded, Mon-Fri published; weekend gap visible (no rows on Saturday or Sunday).",

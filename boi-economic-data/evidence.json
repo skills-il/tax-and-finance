@@ -18,16 +18,18 @@
     },
     {
       "claim_id": "exr-series",
-      "claim": "Representative exchange rates (sha'ar yatzig) are per-currency series named RER_<CUR>_ILS (e.g. RER_USD_ILS, RER_EUR_ILS, RER_GBP_ILS, RER_JPY_ILS per 100 JPY, RER_CHF_ILS) inside the EXR dataflow. DATA_TYPE OF00 marks the official representative rate. Verified live: USD/ILS was about 2.81 (1 Jun 2026) to 2.91 (5 Jun 2026).",
-      "source_url": "https://edge.boi.gov.il/FusionEdgeServer/ws/public/sdmxapi/rest/data/EXR/RER_USD_ILS?startPeriod=2026-06-01&endPeriod=2026-06-05",
-      "raw_snippet": "<Series SERIES_CODE=\"RER_USD_ILS\" ...><Obs TIME_PERIOD=\"2026-06-05\" OBS_VALUE=\"2.908\"/><Obs TIME_PERIOD=\"2026-06-01\" OBS_VALUE=\"2.813\"/></Series>",
-      "fetched_at": "2026-06-07T00:00:00Z",
+      "claim": "Representative exchange rates (sha'ar yatzig) are per-currency series named RER_<CUR>_ILS inside the BOI.STATISTICS EXR dataflow, and DATA_TYPE OF00 marks the official representative rate. Verified live on 2026-08-11: RER_USD_ILS ran 3.059 (3 Aug 2026) to 2.998 (10 Aug 2026); RER_EUR_ILS and RER_JPY_ILS (UNIT_MULT 2, i.e. per 100 JPY) resolve on the same endpoint.",
+      "source_url": "https://edge.boi.gov.il/FusionEdgeServer/ws/public/sdmxapi/rest/data/EXR/RER_USD_ILS?startPeriod=2026-08-03&endPeriod=2026-08-10",
+      "raw_snippet": "<Series SERIES_CODE=\"RER_USD_ILS\" FREQ=\"D\" BASE_CURRENCY=\"USD\" COUNTER_CURRENCY=\"ILS\" UNIT_MEASURE=\"ILS\" DATA_TYPE=\"OF00\" TIME_COLLECT=\"V\" DATA_SOURCE=\"BOI_MRKT\" UNIT_MULT=\"0\" CONF_STATUS=\"F\" PUB_WEBSITE=\"Y\"><Obs TIME_PERIOD=\"2026-08-03\" OBS_VALUE=\"3.059\" RELEASE_STATUS=\"YP\"></Obs><Obs TIME_PERIOD=\"2026-08-04\" OBS_VALUE=\"3.03\" RELEASE_STATUS=\"YP\"></Obs><Obs TIME_PERIOD=\"2026-08-05\" OBS_VALUE=\"3.001\" RELEASE_STATUS=\"YP\"></Obs><Obs TIME_PERIOD=\"2026-08-06\" OBS_VALUE=\"3.013\" RELEASE_STATUS=\"YP\"></Obs><Obs TIME_PERIOD=\"2026-08-07\" OBS_VALUE=\"3.006\" RELEASE_STATUS=\"YP\"></Obs><Obs TIME_PERIOD=\"2026-08-10\" OBS_VALUE=\"2.998\" RELEASE_STATUS=\"YP\"></Obs></Series>",
+      "fetched_at": "2026-08-11",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/boi-api.md",
         "scripts/fetch_boi_rates.py"
-      ]
+      ],
+      "verified_at": "2026-08-11",
+      "verified_via": "curl"
     },
     {
       "claim_id": "interest-cpi-flows",
@@ -40,17 +42,6 @@
         "SKILL_HE.md",
         "references/boi-api.md",
         "scripts/fetch_boi_rates.py"
-      ]
-    },
-    {
-      "claim_id": "cpi-weights",
-      "claim": "Approximate CBS Consumer Price Index basket weights: housing (rent component) ~25%, food ~17%, transportation ~17%, education and culture ~11%, health ~6%, clothing ~3%. These are approximate and the CBS reweights the basket periodically.",
-      "source_url": "https://www.cbs.gov.il/en/subjects/Pages/Consumer-Price-Index.aspx",
-      "raw_snippet": "The CBS Consumer Price Index is built from weighted expenditure groups (housing, food, transport, education and culture, health, clothing, etc.) with weights updated periodically; housing carries roughly a quarter of the basket.",
-      "fetched_at": "2026-06-07T00:00:00Z",
-      "appears_in": [
-        "SKILL.md",
-        "SKILL_HE.md"
       ]
     },
     {

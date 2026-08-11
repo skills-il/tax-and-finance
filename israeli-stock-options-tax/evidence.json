@@ -131,11 +131,11 @@
       "raw_snippet": "the average value of the Stock for the 30 trading days preceding the settlement of the RSUs is taxable to the employee as ordinary income"
     },
     {
-      "claim": "Tax forms referenced: Form 867 (annual trustee withholding certificate), Form 146 (quarterly Section 102 trustee report), Form 156 (annual Section 102 trustee report, due March 31 of the following year), Form 1301 (Israeli individual annual income tax return), Form 1116 (US Foreign Tax Credit).",
+      "claim": "The Israel Tax Authority gov.il department page front-links the individual annual income tax return, Form 1301 (\"הגשת דוח שנתי מקוון טופס 1301\"). The other form identifiers used by this skill are Form 867 / טופס 867 (annual trustee withholding certificate), Form 146 / טופס 146 (quarterly Section 102 trustee report), Form 156 / טופס 156 (annual Section 102 trustee report) and US IRS Form 1116 / טופס 1116 (Foreign Tax Credit); those are named here as identifiers, and are NOT evidenced by this page.",
       "source_url": "https://www.gov.il/he/departments/israel_tax_authority",
       "source_name": "Israel Tax Authority forms + IRS Form 1116",
-      "raw_snippet": "Form 867, Form 146, Form 156, Form 1301, Form 1116, טופס 867, טופס 1116, טופס 1301, טופס 146, טופס 156",
-      "verified_2026": true
+      "raw_snippet": "הגשת דוח שנתי מקוון טופס 1301",
+      "verified_2026": "2026-08-11T00:00:00Z"
     },
     {
       "claim": "Illustrative worked figures, computed from the evidenced rates (not independent facts): 30,000 NIS/month salary plus a 500,000 NIS gain = 860,000 NIS annual income; a 500,000 NIS gain at 25% = 125,000 NIS; a 2,000,000 NIS gain at 25% plus 5% surtax on the excess over 721,560 = 500,000 + 63,922 = 563,922 NIS; a 480,000 NIS gain at 25% = 120,000 NIS; example strike/sale prices of 1, 2, 21 and 50 NIS per share. Roughly 90% of Israeli ESOPs use the capital-gains track.",
@@ -173,11 +173,11 @@
       "verified_2026": true
     },
     {
-      "claim": "When 102/RSU shares are held at a foreign broker rather than by an Israeli trustee, no Israeli tax is withheld at sale; the Israeli-resident employee must self-report the capital gain on an annual income tax return (Form 1301) and, above the securities-gains reporting threshold, pay semi-annual advance payments (mikdamot) on securities gains.",
+      "claim": "Where 102/RSU shares are held at a foreign broker rather than by an Israeli trustee, no Israeli tax is withheld at sale and the Israeli-resident employee self-reports the capital gain on the annual income tax return, Form 1301, which the Israel Tax Authority publishes as \"דוח מס שנתי ליחיד ובעל עסק שאינו חברה (1301)\". The semi-annual advance payments (mikdamot) on securities gains are asserted separately in the skill and are NOT evidenced by this page.",
       "source_url": "https://www.gov.il/he/departments/israel_tax_authority",
       "source_name": "Israel Tax Authority - securities capital-gains self-reporting and advance payments",
-      "raw_snippet": "foreign broker does not withhold; annual return Form 1301; semi-annual advance payments (mikdamot) on securities gains; מקדמות על רווחי ניירות ערך",
-      "verified_2026": true
+      "raw_snippet": "דוח מס שנתי ליחיד ובעל עסק שאינו חברה (1301)",
+      "verified_2026": "2026-08-11T00:00:00Z"
     },
     {
       "claim": "The maximum income liable for national insurance contributions is 51,910 NIS (51,910 ש\"ח) per month from 01.01.2026.",

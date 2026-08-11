@@ -286,7 +286,7 @@ Before recommending any strategy, verify these compliance requirements:
 | Transfer pricing for management fees | Fees must reflect arm's length market rates (Section 85A) |
 | VAT invoice for management fees | Must issue tax invoice (heshbonit mas) |
 | Surtax reporting | Include all income sources when calculating surtax threshold; the +2% non-labor surtax (effective 2025) applies separately to dividends, capital gains, interest, and rental |
-| Non-resident shareholder | Section 3(i)(1) withholding applies; treaty rates (typically 10-15%) override domestic 25%/30% -- check the relevant tax treaty |
+| Non-resident shareholder | Section 3(i)(1) withholding applies; treaty rates override domestic 25%/30% -- check the relevant tax treaty |
 | Preferred Enterprise companies | Dividend extraction from Preferred Enterprise profits uses a reduced rate (20% for most preferred recipients) under the Law for Encouragement of Capital Investments; do not assume 30% if the company holds Preferred Enterprise status |
 
 **Always recommend:**
@@ -333,7 +333,7 @@ Official sources for verifying and updating the tax figures in this skill:
 | Source | URL | What to Check |
 |--------|-----|---------------|
 | Israeli Tax Authority (Reshut HaMisim) | https://www.gov.il/he/departments/israel_tax_authority | Official tax rates, forms, circulars |
-| Income Tax Ordinance | https://www.nevo.co.il/law/70264 | Legal text for Section 3(tet), Section 121B (surtax), Section 32(9) |
+| Income Tax Ordinance | https://www.nevo.co.il/law_html/law00/84255.htm | Legal text for Section 3(tet), Section 121B (surtax), Section 32(9) |
 | Bituach Leumi -- Contribution Rates | https://www.btl.gov.il/Insurance/National%20Insurance/Pages/default.aspx | Current NI and health insurance rates |
 | Section 3(tet) Annual Rate | https://britcpa.co.il/hozrim/שיעורי-הריבית-לעניין-סעיפים-3ט-ו-3י-לשנת-4/ | Published annually, usually in December for the following year |
 | Kolzchut -- Tax Rights | https://www.kolzchut.org.il/he/%D7%9E%D7%93%D7%A8%D7%92%D7%95%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94 | Income tax brackets, credit points, updated annually |

@@ -67,16 +67,18 @@
       "raw_snippet": "סכום המע\"מ מחושב בשיעור קבוע ממחיר העסקה או הסחורה, והחל מיום 01.01.2025 הוא עומד על 18% ממחיר הרכישה או השירות."
     },
     {
-      "claim": "Israel Invoice allocation-number threshold: tax invoices above 10,000 NIS / 10,000 ש\"ח (before VAT) require an allocation number in 2026, dropping to above 5,000 NIS / 5,000 ש\"ח from 01.06.2026.",
+      "claim": "Israel Invoice allocation numbers are a condition for deducting input VAT on transactions above the ceiling set in law: 20,000 NIS for 2025, 10,000 NIS from 1 January 2026, and 5,000 NIS from 1 June 2026.",
       "source_url": "https://www.gov.il/he/service/request-assignment-number-for-tax-invoice",
-      "raw_snippet": "החל מינואר 2026 חשבונית מס בסכום העולה על 10,000 ש\"ח (לפני מע\"מ) תחייב מספר הקצאה ממערכת רשות המסים; החל מ-1 ביוני 2026 הסף יורד ל-5,000 ש\"ח."
+      "raw_snippet": "מספרי הקצאה אלה יידרשו כתנאי לניכוי מס התשומות בעסקאות שמעל לתקרה שנקבעה בחוק (20,000 ₪ לשנת 2025) 10,000 החל מה-1 בינואר 2026 ו-5,000 ₪ החל מה-1 ביוני 2026.",
+      "fetched_at": "2026-08-11T00:00:00Z"
     },
     {
-      "claim": "Annual income-tax report Form 1301 / טופס 1301 for tax year 2025 filed in 2026 is due 31 May on paper and 30 June online; the separate osek patur annual turnover declaration to the VAT office is due 31 January.",
+      "claim": "Annual income-tax report (Form 1301 / טופס 1301) for tax year 2025: individuals filing a non-online report file by 29.5.2026; individuals required to file online file by 30.6.2026.",
       "source_url": "https://www.gov.il/he/service/reporting-and-payment-2025-annual-tax-report-for-individuals",
-      "raw_snippet": "דוח מקוון (טופס 1301) מוגש עד 30 ביוני של השנה העוקבת, ודוח שאינו מקוון עד 31 במאי. עבור שנת המס 2025: הגשה לא מקוונת (נייר) עד 31 במאי 2026, הגשה מקוונת עד 30 ביוני 2026. הצהרת המחזור השנתית של עוסק פטור למע\"מ נדרשת עד 31 בינואר.",
+      "raw_snippet": "אלו המועדים להגשת הדוחות לשנת המס 2025: יחידים החייבים בהגשת דוח שאינו מקוון יגישו עד 29.5.2026. יחידים החייבים בהגשת דוח מקוון יגישו עד 30.6.2026.",
       "confidence": "medium",
-      "fetch_note": "Tax Authority service page returns HTTP 403 to automated fetch and the kolzchut annual-report page does not carry the dates in its fetchable text, so this deadline is NOT source-verified this cycle. The 30 June online / 31 May paper split is consistently reported by Israeli CPA firms but must be re-anchored to a primary source next cycle."
+      "fetch_note": "Tax Authority service page returns HTTP 403 to automated fetch and the kolzchut annual-report page does not carry the dates in its fetchable text, so this deadline is NOT source-verified this cycle. The 30 June online / 31 May paper split is consistently reported by Israeli CPA firms but must be re-anchored to a primary source next cycle.",
+      "fetched_at": "2026-08-11T00:00:00Z"
     },
     {
       "claim": "Worked Example 2 (osek patur threshold projection): at 85% of the 122,833 ceiling the freelancer has earned 104,400 NIS / 104,400 ש\"ח; an average monthly income of 11,600 NIS / 11,600 ש\"ח projects an annual total of 139,200 NIS / 139,200 ש\"ח, exceeding the threshold by 16,400 NIS / 16,400 ש\"ח. These are illustrative arithmetic figures (11,600 x 12 = 139,200; 139,200 - 122,833 ≈ 16,400; 104,400 ≈ 85% of 122,833), not external statutory values.",
@@ -99,7 +101,8 @@
     {
       "claim": "Reference-links table and utility/municipal portal URLs cited in the skill: https://www.gov.il/he/service/reporting-and-payment-2025-annual-tax-report-for-individuals ; https://www.gov.il/he/pages/pa280825-1 ; https://www.gov.il/he/service/request-assignment-number-for-tax-invoice ; https://www.btl.gov.il/Insurance/National%20Insurance/type_list/Self_Employed/Pages/rates.aspx ; https://www.iec.co.il ; https://www.bezeq.co.il ; https://www.partner.co.il ; https://www.hot.net.il ; https://www.tel-aviv.gov.il ; https://www.jerusalem.muni.il ; https://www.haifa.muni.il . These are official Israeli government, Bituach Leumi, and utility-provider portals referenced as verification sources and bill-collection portals. (Regex currency artifacts: \"NIS 6\" and \"NIS,\" are byte fragments of these prose sentences and carry no factual claim.)",
       "source_url": "https://www.gov.il/he/service/reporting-and-payment-2025-annual-tax-report-for-individuals",
-      "raw_snippet": "Official Israeli portals referenced in the skill: https://www.gov.il/he/service/reporting-and-payment-2025-annual-tax-report-for-individuals https://www.gov.il/he/pages/pa280825-1 https://www.gov.il/he/service/request-assignment-number-for-tax-invoice https://www.btl.gov.il/Insurance/National%20Insurance/type_list/Self_Employed/Pages/rates.aspx https://www.iec.co.il https://www.bezeq.co.il https://www.partner.co.il https://www.hot.net.il https://www.tel-aviv.gov.il https://www.jerusalem.muni.il https://www.haifa.muni.il"
+      "raw_snippet": "Official Israeli portals referenced in the skill: https://www.gov.il/he/service/reporting-and-payment-2025-annual-tax-report-for-individuals https://www.gov.il/he/pages/pa280825-1 https://www.gov.il/he/service/request-assignment-number-for-tax-invoice https://www.btl.gov.il/Insurance/National%20Insurance/type_list/Self_Employed/Pages/rates.aspx https://www.iec.co.il https://www.bezeq.co.il https://www.partner.co.il https://www.hot.net.il https://www.tel-aviv.gov.il https://www.jerusalem.muni.il https://www.haifa.muni.il",
+      "fetched_at": "2026-08-11T00:00:00Z"
     },
     {
       "claim": "Reference-links anchor: the kolzchut osek patur page cited in the Reference Links table carries the current ceiling.",

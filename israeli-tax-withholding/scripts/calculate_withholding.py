@@ -72,7 +72,7 @@ def calculate_withholding(
     Args:
         payment_type: Type of payment (services, rent, royalties, etc.).
         amount: Payment amount before VAT in NIS.
-        certificate_rate: Reduced rate from withholding certificate (0-100%).
+        certificate_rate: Reduced rate from withholding certificate, as a percentage.
             None means use default rate.
         include_vat: Whether to calculate VAT on the payment.
 

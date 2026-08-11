@@ -309,10 +309,10 @@
     },
     {
       "claim_id": "url-israel-tax-authority-he",
-      "claim": "Israel Tax Authority department page (Hebrew) for the customs tariff book / HS code lookup.",
+      "claim": "Customs (mechess) is one of the branches unified under the Israel Tax Authority; its Hebrew gov.il department page is the entry point used in this skill for the customs tariff book / HS code lookup.",
       "source_url": "https://www.gov.il/he/departments/israel_tax_authority",
-      "raw_snippet": "Israel Tax Authority",
-      "fetched_at": "2026-06-25T00:00:00Z",
+      "raw_snippet": "רשות המסים בישראל מאחדת את אגפי המס השונים: מס הכנסה, מיסוי מקרקעין, מס ערך מוסף, מס קנייה, מכס ומס בולים.",
+      "fetched_at": "2026-08-11T00:00:00Z",
       "appears_in": [
         "references/pem-2026-rules.md"
       ]

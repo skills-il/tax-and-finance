@@ -96,18 +96,6 @@
       "source_fetched_at": "2026-07-26T00:00:00Z"
     },
     {
-      "claim_id": "misc-tokens",
-      "claim": "VAT was 17% before the 1 Jan 2025 rise to 18%; certificate/coverage references; black-market legislation 2026 (Circular 3/2026)",
-      "source_url": "https://www.gov.il/he/departments/israel_tax_authority",
-      "raw_snippet": "VAT raised from 17% on Jan 1 2025; full 100% disallowance risk; 2026 black-market legislation Circular 3/2026 *2026; מע\"מ 17%; 100%",
-      "fetched_at": "2026-06-16T23:55:00Z",
-      "appears_in": [
-        "SKILL.md",
-        "SKILL_HE.md",
-        "scripts/calculate_withholding.py"
-      ]
-    },
-    {
       "id": "cash-law-osek-party-6000",
       "claim": "The 6,000 NIS cash limit applies to any transaction in which a dealer (osek) is a party, giving or receiving. The 15,000 limit applies only where neither side is a dealer.",
       "claim_type": "law",
@@ -164,6 +152,30 @@
       "raw_snippet": "אישורי ניכוי מס במקור",
       "confidence": "medium",
       "fetch_note": "gov.il returns 403 to automated fetch; this records the citation rather than a verified quotation."
+    },
+    {
+      "claim_id": "israel-tax-authority-department-page",
+      "claim": "https://www.gov.il/he/departments/israel_tax_authority is the official Israel Tax Authority department page on gov.il.",
+      "source_url": "https://www.gov.il/he/departments/israel_tax_authority",
+      "raw_snippet": "אזהרת הונאה בשם רשות המסים",
+      "fetched_at": "2026-08-11T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "scripts/calculate_withholding.py"
+      ]
+    },
+    {
+      "claim_id": "vat-rate-18-from-2025",
+      "claim": "Israel's standard VAT rate rose from 17% to 18% effective 1 January 2025 (ITA Tax Interpretation Directive 01/2025).",
+      "source_url": "https://www.gov.il/BlobFolder/dynamiccollectorresultitem/represent-info-051224-2/he/vat_represent-info-051224-2.pdf",
+      "raw_snippet": "הוראת פרשנות מס' - 01/2025העלאת שיעור המע\"מ מ 17%ל 18%",
+      "fetched_at": "2026-08-11",
+      "verified_via": "pdf",
+      "verified_at": "2026-08-11",
+      "appears_in": [
+        "scripts/calculate_withholding.py"
+      ]
     }
   ]
 }

@@ -55,13 +55,13 @@ A judgment does not collect itself. To enforce a debt the creditor opens a file 
 - Submit the judgment bearing the court stamp plus documents supporting the debt.
 - **Opening fee:** roughly 1% of the debt at the date the file is opened, plus a protocol fee.
 - Once open, the enforcement registrar can impose liens, garnish bank accounts and wages, and order asset seizure.
-- Service page: https://www.gov.il/he/service/claim_for_a_specified_amount_opening_file
+- Service page: https://www.gov.il/he/departments/law_enforcement_and_collection_system_authority
 
 ### Cheques and promissory notes file (tik shtarot ve'hamcha'ot), skips court
 - A dishonored cheque (with the bank's Notice of Dishonor) or a signed promissory note can be filed **directly** at the Enforcement Office, with no prior court judgment.
 - The debtor then has a short window to file an objection; if they object, the matter is referred to court.
 - Required: the cheque printout or signed promissory note, plus identification of the debtor.
-- Service page: https://www.gov.il/he/service/opening_promissory_notes_and_checks_file
+- Service page: https://www.gov.il/he/departments/law_enforcement_and_collection_system_authority
 
 ## Statutory Payment Deadline (Payment Ethics to Suppliers Law, 5777-2017)
 

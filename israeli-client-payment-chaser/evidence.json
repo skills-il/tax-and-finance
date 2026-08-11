@@ -67,15 +67,17 @@
     },
     {
       "claim_id": "reference-urls",
-      "claim": "Reference and service URLs cited by the skill",
+      "claim": "The gov.il small-claims filing service states a small claim may be for up to 39,900 NIS (as at 1.1.2026) and may be a monetary claim or a claim to replace or repair a product or cancel a transaction",
       "source_url": "https://www.gov.il/he/service/filing_a_small_claim",
-      "raw_snippet": "URLs: https://www.boi.org.il/information/interestrates/primerates/ https://www.gov.il/he/service/filing_a_small_claim https://www.kolzchut.org.il https://www.nevo.co.il/law_html/law00/75001.htm https://www.nevo.co.il/law_html/law00/144599.htm https://www.gov.il/he/service/claim_for_a_specified_amount_opening_file https://www.gov.il/he/service/opening_promissory_notes_and_checks_file https://www.israelpost.co.il https://www.hebcal.com https://boi.org.il https://www.kolzchut.org.il/he/הגשת_תביעה_קטנה https://www.kolzchut.org.il/he/המועד_האחרון_לתשלום_תמורה_לספקים",
-      "fetched_at": "2026-06-16T22:55:00Z",
+      "raw_snippet": "סכום תביעה קטנה יכול להיות עד 39,900 ₪ (נכון ל-1.1.2026). אפשר להגיש תביעה כספית ותביעה להחלפת מוצר, לתיקון מוצר או לביטול עסקה.",
+      "fetched_at": "2026-08-11",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/legal-escalation.md"
-      ]
+      ],
+      "verified_via": "gov.il content API",
+      "verified_at": "2026-08-11"
     },
     {
       "id": "small-claims-no-lawyer-required",
@@ -148,6 +150,33 @@
       "source_fetched_at": "2026-07-26T00:00:00Z",
       "raw_snippet": "חברה בע\"מ, שותפות או עמותה לא יוכלו להגיש תביעה לבית משפט זה",
       "confidence": "high"
+    },
+    {
+      "claim_id": "url-hebcal",
+      "claim": "hebcal.com is a Jewish calendar and Hebrew date converter, used for business-day arithmetic around holidays",
+      "source_url": "https://www.hebcal.com",
+      "raw_snippet": "Jewish Calendar, Hebrew Date Converter, Holidays - hebcal.com Holidays Date Converter Shabbat Torah Yahrzeit About Help",
+      "fetched_at": "2026-08-11",
+      "verified_at": "2026-08-11",
+      "verified_via": "curl",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "source_fetched_at": "2026-08-11"
+    },
+    {
+      "claim_id": "eca-authority-page",
+      "claim": "The Enforcement and Collection Authority portal (replaces the retired enforcement_and_collection_authority slug, which now serves gov.il's 404 page).",
+      "source_url": "https://www.gov.il/he/departments/law_enforcement_and_collection_system_authority",
+      "raw_snippet": "רישום לניוזלטר-רשות האכיפה והגבייה",
+      "fetched_at": "2026-08-11",
+      "verified_via": "gov.il content API",
+      "verified_at": "2026-08-11",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     }
   ]
 }

@@ -375,11 +375,11 @@
       "claim": "The govmap real-estate street-deals endpoint returns transaction rows including dealDate, dealAmount, assetArea, assetRoomNum and dealNatureDescription for a polygon id",
       "claim_type": "api-field",
       "source_url": "https://www.govmap.gov.il/api/real-estate/street-deals/53292326",
-      "source_fetched_at": "2026-07-30T12:55:00Z",
-      "raw_snippet": "{\"totalCount\":\"373\",\"data\":[{\"objectid\":2350080,\"settlementNameHeb\":\"תל אביב-יפו\",\"streetNameHeb\":\"רוטשילד\",\"houseNum\":1,\"floorNo\":\"אחת עשרה\",\"assetArea\":486,\"dealAmount\":42713000,\"propertyTypeDescription\":\"דירה\",\"dealNatureDescription\":\"דירה בבית קומות\",\"assetRoomNum\":7,\"neighborhood\":\"לב העיר\",\"dealDate\":\"2015-02-15T00:00:0",
+      "source_fetched_at": "2026-08-11",
+      "raw_snippet": "{\"totalCount\":\"373\",\"data\":[{\"objectid\":2350080,\"settlementId\":5000,\"settlementNameHeb\":\"תל אביב-יפו\",\"settlementNameEng\":\"Tel Aviv-Yafo\",\"streetCode\":50001103,\"streetNameHeb\":\"רוטשילד\",\"streetNameEng\":\"Rothschild\",\"houseNum\":1,\"floorNo\":\"אחת עשרה\",\"assetArea\":486,\"dealAmount\":42713000,\"dealId\":5752626600,\"propertyTypeDescription\":\"דירה\",\"dealNatureDescription\":\"דירה בבית קומות\",\"assetRoomNum\":7,\"neighborhood\":\"לב העיר\",",
       "confidence": "high",
-      "verified_via": "browser",
-      "verified_at": "2026-07-30"
+      "verified_via": "curl",
+      "verified_at": "2026-08-11"
     },
     {
       "id": "fee-band-500k-nis",
@@ -440,25 +440,25 @@
     },
     {
       "id": "nadlan-origin-header",
-      "claim": "The govmap spatial-analysis and search-service endpoints require an Origin header of https://www.nadlan.gov.il and reject the request without it. The real-estate street-deals endpoint does not enforce it, but the bundled script sends it on every call for consistency.",
+      "claim": "A POST to the govmap spatial-analysis layer-features-by-location endpoint without an Origin header is rejected with {\"message\":\"Missing Origin header in request\"}",
       "claim_type": "api-endpoint",
-      "source_url": "https://www.nadlan.gov.il/",
-      "source_fetched_at": "2026-07-30T11:26:00Z",
-      "raw_snippet": "POST layer-features-by-location with no Origin returns {\"message\":\"Missing Origin header in request\"}; with Origin: https://www.govmap.gov.il it returns {\"message\":\"Invalid API token or unauthorized domain\"}. GET street-deals/52374205?offset=0&limit=1 returns a full 200 payload with or without the header.",
+      "source_url": "https://www.govmap.gov.il/api/spatial-analysis/layer-features-by-location",
+      "source_fetched_at": "2026-08-11",
+      "raw_snippet": "{\"message\":\"Missing Origin header in request\"}",
       "confidence": "high",
-      "verified_via": "browser",
-      "verified_at": "2026-07-30"
+      "verified_via": "curl",
+      "verified_at": "2026-08-11"
     },
     {
       "id": "street-deals-url-template",
-      "claim": "Deal rows are fetched from https://www.govmap.gov.il/api/real-estate/street-deals/{polygon_id} with offset and limit query parameters for pagination",
+      "claim": "Deal rows are fetched from https://www.govmap.gov.il/api/real-estate/street-deals/{polygon_id} and the endpoint accepts offset and limit query parameters for pagination",
       "claim_type": "api-endpoint",
-      "source_url": "https://www.govmap.gov.il/api/real-estate/street-deals/52374205",
-      "source_fetched_at": "2026-07-30T12:58:00Z",
-      "raw_snippet": "{\"totalCount\":\"1500\",\"data\":[{\"objectid\":2147612,\"dealDate\":\"2026-06-28T00:00:00\"",
+      "source_url": "https://www.govmap.gov.il/api/real-estate/street-deals/52374205?offset=0&limit=1",
+      "source_fetched_at": "2026-08-11",
+      "raw_snippet": "{\"totalCount\":\"1500\",\"data\":[{\"objectid\":2147612,\"settlementId\":5000,\"settlementNameHeb\":\"תל אביב-יפו\",\"settlementNameEng\":\"Tel Aviv-Yafo\",\"streetCode\":50000404,\"streetNameHeb\":\"דיזנגוף\",\"streetNameEng\":\"Dizengoff\",\"houseNum\":320,\"floorNo\":\"ראשונה\",\"assetArea\":75,\"dealAmount\":3",
       "confidence": "high",
-      "verified_via": "browser",
-      "verified_at": "2026-07-30"
+      "verified_via": "curl",
+      "verified_at": "2026-08-11"
     },
     {
       "id": "deals-url-pattern-constant",
@@ -473,25 +473,14 @@
     },
     {
       "id": "origin-header-value",
-      "claim": "The Origin header value the govmap endpoints accept is https://www.nadlan.gov.il",
+      "claim": "The Origin header value the govmap spatial-analysis endpoint accepts is https://www.nadlan.gov.il; with that Origin the request returns the requested layer features",
       "claim_type": "api-endpoint",
-      "source_url": "https://www.nadlan.gov.il",
-      "source_fetched_at": "2026-07-30T11:26:00Z",
-      "raw_snippet": "Requests sent with Origin: https://www.nadlan.gov.il succeed; omitting the header returns {\"message\":\"Missing Origin header in request\"} and sending Origin: https://www.govmap.gov.il returns {\"message\":\"Invalid API token or unauthorized domain\"}.",
+      "source_url": "https://www.govmap.gov.il/api/spatial-analysis/layer-features-by-location",
+      "source_fetched_at": "2026-08-11",
+      "raw_snippet": "{\"location\":{\"input\":{\"geometry\":\"POINT(178339.45 663391.35)\"},\"radius\":0.1},\"layers\":{\"parcel_all\":[{\"id\":\"88768\",\"idFieldName\":\"objectid\",\"attributes\":{\"gush_num\":7422,\"parcel\":116}}]}}",
       "confidence": "high",
-      "verified_via": "browser",
-      "verified_at": "2026-07-30"
-    },
-    {
-      "id": "nadlan-mcp-radius-tool-empty",
-      "claim": "The nadlan MCP server's get_deals_by_radius tool returns an empty array, observed at radii 0.1, 0.5, 1 and 2",
-      "claim_type": "feature",
-      "source_url": "https://www.govmap.gov.il/api/real-estate/deals/178339.45,663391.35/0.5",
-      "source_fetched_at": "2026-07-30T12:50:00Z",
-      "raw_snippet": "GET /api/real-estate/deals/178339.45,663391.35/{radius} returned [] for radius 0.1, 0.5, 1 and 2 on 2026-07-30. The nadlan-mcp source itself notes on this endpoint: 'This endpoint returns polygon metadata, NOT actual deal transactions!'",
-      "confidence": "high",
-      "verified_via": "browser",
-      "verified_at": "2026-07-30"
+      "verified_via": "curl",
+      "verified_at": "2026-08-11"
     },
     {
       "id": "govmap-403-is-edge-block",
@@ -547,6 +536,28 @@
       "confidence": "high",
       "verified_via": "live_probe",
       "verified_at": "2026-08-03T13:32:34+00:00"
+    },
+    {
+      "id": "nadlan-site-url",
+      "claim": "nadlan.gov.il is the Israeli government real-estate site (אתר הנדל\"ן הממשלתי, Gov נדל\"ן), the front end whose origin the govmap deal APIs are scoped to",
+      "claim_type": "url",
+      "source_url": "https://www.nadlan.gov.il",
+      "source_fetched_at": "2026-08-11",
+      "raw_snippet": "<meta property=\"og:title\" content=\"Gov נדל&quot;ן\" /> <meta property=\"og:description\" content=\"אתר הנדל&quot;ן הממשלתי\" />",
+      "confidence": "high",
+      "verified_via": "curl",
+      "verified_at": "2026-08-11"
+    },
+    {
+      "id": "nadlan-site-url-slash",
+      "claim": "nadlan.gov.il is the Israeli government real-estate site (אתר הנדל\"ן הממשלתי, Gov נדל\"ן), the front end whose origin the govmap deal APIs are scoped to",
+      "claim_type": "url",
+      "source_url": "https://www.nadlan.gov.il/",
+      "source_fetched_at": "2026-08-11",
+      "raw_snippet": "<meta property=\"og:title\" content=\"Gov נדל&quot;ן\" /> <meta property=\"og:description\" content=\"אתר הנדל&quot;ן הממשלתי\" />",
+      "confidence": "high",
+      "verified_via": "curl",
+      "verified_at": "2026-08-11"
     }
   ]
 }

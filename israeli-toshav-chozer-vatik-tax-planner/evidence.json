@@ -103,10 +103,12 @@
     },
     {
       "id": "ita-circular-1-2011-acclimation",
-      "claim": "ITA Circular 1/2011 (חוזר מס הכנסה 1/2011) provides official guidance on the year-of-acclimation election under Section 14(b), confirming the 90-day deadline and the discretionary late-filing path.",
+      "claim": "ITA Circular 1/2011 explains the section 14(b) acclimation-year mechanism: an oleh chadash or vatik returning resident may continue to be treated as a foreign resident for one year from arrival, on notice to the absorption ministry within 90 days of arrival in Israel.",
       "source_url": "https://www.gov.il/BlobFolder/policy/income-tax-professional-inst-01-2011/he/Policy_IncomeTaxInst_hoz1-2011.pdf",
-      "raw_snippet": "Official ITA publication: חוזר מס הכנסה 1/2011 dated 18.01.2011 on the year-of-acclimation mechanism under Section 14(b) of the Income Tax Ordinance.",
-      "fetched_on": "2026-05-23"
+      "raw_snippet": "המנגנון מעניק אפשרות לעולה חדש או לתושב חוזר ותיק (להלן בסעיף זה: \"יחיד מוטב\"), להמשיך ולהיחשב תושב חוץ במשך שנה אחת מהמועד שבו עלה או שב לישראל, לפי העניין, על פי הודעתו (להלן: \"שנת ההסתגלות\").\n.3.5.1 מתן הודעה\nמי שבוחר בחלופה זו יודיע למשרד הקליטה תוך 90 ימים מיום הגעתו לישראל, בטופס המיועד לכך, כי מתקיימים בו התנאים על פיהם נחשב תושב ישראל וכי הוא מבקש את שנת ההסתגלות כאמור.",
+      "fetched_on": "2026-08-11",
+      "verified_via": "pdf",
+      "source_fetched_at": "2026-08-11T00:00:00Z"
     },
     {
       "id": "ita-circular-amendment-272",
@@ -124,10 +126,12 @@
     },
     {
       "id": "ita-form-1348-pdf",
-      "claim": "Form 1348 is officially published by the Israeli Tax Authority as a residency-declaration annex.",
+      "claim": "Form 1348 is the ITA residency declaration (הצהרת תושבות) filed as an annex to the individual annual report Form 1301, under section 131(a)(5e) of the Income Tax Ordinance.",
       "source_url": "https://www.gov.il/blobFolder/service/annual-tax-report/he/Service_Pages_Income_tax_itc1348_18.pdf",
-      "raw_snippet": "official ITA publication of Form 1348 residency declaration annex to annual report Form 1301.",
-      "fetched_on": "2026-05-23"
+      "raw_snippet": "נספח לדוח השנתי ליחיד )טופס (1301\n\n1348\n\nהצהרת תושבות לשנת המס\n\nדוח המפרט את העובדות בשל טענתי כי אינני תושב ישראל\n\nכאמור בסעיף )131א()5ה( לפקודת מס הכנסה )נוסח חדש( התשכ״א 1961 -",
+      "fetched_on": "2026-08-11",
+      "verified_via": "pdf",
+      "source_fetched_at": "2026-08-11T00:00:00Z"
     },
     {
       "id": "bshcpa-form-1348",
@@ -208,10 +212,12 @@
     },
     {
       "id": "ita-circular-10-2025",
-      "claim": "ITA Circular 10/2025 (חוזר מס הכנסה 10/2025), published 27 November 2025, clarifies the rules for offsetting capital losses under section 92, including treatment during the vatik and oleh exemption periods.",
+      "claim": "ITA Circular 10/2025, dated 27 November 2025, deals with the offsetting of capital losses under סעיף 92 of the Income Tax Ordinance.",
       "source_url": "https://www.gov.il/BlobFolder/policy/professional-directives-271125-1/he/IncomeTax_professional-directives-271125-1.pdf",
-      "raw_snippet": "חוזר מס הכנסה מס' 10/2025 בנושא קיזוז הפסדי הון לפי סעיף 92 לפקודת מס הכנסה, פורסם 27 בנובמבר 2025.",
-      "fetched_on": "2026-05-23"
+      "raw_snippet": "27 נובמבר 2025\nחוזר מס הכנסה מס' - 10/2025 רשות המסים\nבנושא: קיזוז הפסדי הון",
+      "fetched_on": "2026-08-11",
+      "verified_via": "pdf",
+      "source_fetched_at": "2026-08-11T00:00:00Z"
     },
     {
       "id": "continuous-foreign-residency-required",

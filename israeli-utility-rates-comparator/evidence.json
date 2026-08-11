@@ -44,16 +44,46 @@
       "verified_at": "2026-08-01T00:00:00Z"
     },
     {
-      "claim_id": "elec-tou-tiers-since-apr-2023",
-      "claim": "TOU has had only two tiers (peak / off-peak) since April 2023; the middle 'geva' shoulder tier was eliminated.",
-      "source_url": "https://he.wikipedia.org/wiki/%D7%AA%D7%A2%D7%A8%D7%99%D7%A3_%D7%A2%D7%95%D7%9E%D7%A1_%D7%95%D7%96%D7%9E%D7%9F_%D7%91%D7%99%D7%A9%D7%A8%D7%90%D7%9C",
-      "raw_snippet": "TOU has had only two tiers (peak / off-peak) since April 2023; the middle 'geva' shoulder tier was eliminated. (Wikipedia Hebrew - TOU electricity tariff)",
-      "fetched_at": "2026-05-20",
+      "claim_id": "elec-tou-scope-40000kwh",
+      "claim": "TOU (תעו\"ז) tariffs apply to upper- and high-voltage consumers, low-voltage consumers connected at 3*200A or more, low-voltage consumers whose consumption in the last calendar year exceeded 40,000 kWh, and consumers who opt into TOU voluntarily.",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/tarriffbook/he/Files_netunei_hasmal_sefer_tariff_01_2026.pdf",
+      "raw_snippet": "על צרכנים במתח נמוך שצריכתם במשך השנה הקלנדרית האחרונה עלתה על 40,000 קוט\"ש ועל צרכנים הבוחרים וולנטרית בתעו\"ז",
+      "fetched_at": "2026-08-11",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/details-2026.md"
-      ]
+      ],
+      "verified_via": "pdf",
+      "verified_at": "2026-08-11"
+    },
+    {
+      "claim_id": "elec-uniform-tariff-for-everyone-else",
+      "claim": "All other electricity consumers, including ordinary households, pay a uniform tariff that is a weighted average of the TOU tariffs, not a TOU tariff.",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/tarriffbook/he/Files_netunei_hasmal_sefer_tariff_01_2026.pdf",
+      "raw_snippet": "ככלל ,כל הצרכנים האחרים משלמים תעריף אחיד",
+      "fetched_at": "2026-08-11",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/details-2026.md"
+      ],
+      "verified_via": "pdf",
+      "verified_at": "2026-08-11"
+    },
+    {
+      "claim_id": "elec-tou-two-bands-only",
+      "claim": "The TOU tariff table (Electricity Authority tariff book, table 5.2-1, effective 01/01/2026) has only two time bands per season, שפל and פסגה; there is no גבע (shoulder) band for TOU consumers.",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/tarriffbook/he/Files_netunei_hasmal_sefer_tariff_01_2026.pdf",
+      "raw_snippet": "עונה חורף רכיב משתנה: אגורות לקווט\"ש מעבר קיץ מש\"ב שפל פסגה שפל פסגה שפל פסגה",
+      "fetched_at": "2026-08-11",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/details-2026.md"
+      ],
+      "verified_via": "pdf",
+      "verified_at": "2026-08-11"
     },
     {
       "claim_id": "elec-private-suppliers-count",
@@ -129,15 +159,29 @@
     },
     {
       "claim_id": "water-tier1-tariff-jan2026",
-      "claim": "January 2026 residential water Tier 1 tariff is ~8.51 ILS/m³ including VAT and sewage; allocation 7 m³/person per bi-monthly billing period (3.5 m³/person/month), minimum 14 m³ per dwelling per bi-monthly period.",
+      "claim": "From 1 January 2026 the residential water tariff in municipal water-and-sewage corporations is 8.51 ILS/m3 at the low tier and 15.62 ILS/m3 at the high tier, including VAT and sewage.",
       "source_url": "https://www.gov.il/he/pages/rates_general1",
-      "raw_snippet": "January 2026 residential water Tier 1 tariff is ~8.51 ILS/m³ including VAT and sewage; allocation 7 m³/person per bi-monthly billing period (3.5 m³/person/month), minimum 14 m³ per dwelling per bi-monthly period. (Water Authority - water and sewage tariffs page)",
-      "fetched_at": "2026-05-20",
+      "raw_snippet": "מתאריך תעריף נמוך (ש\"ח למ\"ק, כולל מע\"מ) תעריף גבוה (ש\"ח למ\"ק, כולל מע\"מ) 1 בינואר 2026 8.51 15.62",
+      "fetched_at": "2026-08-11",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/details-2026.md"
-      ]
+      ],
+      "verified_at": "2026-08-11"
+    },
+    {
+      "claim_id": "water-tier1-allocation",
+      "claim": "The low water tier covers up to 3.5 m3 per person per month and not less than 7 m3 per housing unit per month (equivalently 7 m3 per person and a 14 m3 dwelling minimum over a two-month billing period); every additional quantity is billed at the higher tariff.",
+      "source_url": "https://www.gov.il/he/pages/rates_general1",
+      "raw_snippet": "מדרגה ראשונה לכמות מים בסיסית – עד 3.5 מ\"ק לכל נפש בכל חודש ולא פחות מ- 7 מ\"ק ליחידת דיור – בתעריף נמוך יחסית, וכל כמות נוספת בתעריף גבוה יותר",
+      "fetched_at": "2026-08-11",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/details-2026.md"
+      ],
+      "verified_at": "2026-08-11"
     },
     {
       "claim_id": "water-tier2-tariff-jan2026",
@@ -262,18 +306,6 @@
       ]
     },
     {
-      "claim_id": "cellular-portability-fast",
-      "claim": "Mobile number portability in Israel is free, handled by the new supplier, and typically completes in ~1 business day. No customer-side paperwork required.",
-      "source_url": "https://www.gov.il/he/departments/ministry_of_communications",
-      "raw_snippet": "Mobile number portability in Israel is free, handled by the new supplier, and typically completes in ~1 business day. No customer-side paperwork required. (Ministry of Communications - consumer rights)",
-      "fetched_at": "2026-05-20",
-      "appears_in": [
-        "SKILL.md",
-        "SKILL_HE.md",
-        "references/details-2026.md"
-      ]
-    },
-    {
       "claim_id": "supplier-switching-window-shortening",
       "claim": "Energy Ministry plans to shorten the electricity supplier switching window from 14 days to 7 days during 2026; January 2026 tender expanded to 500 MW.",
       "source_url": "https://en.globes.co.il/en/article-discounted-electricity-to-expand-but-base-tariff-will-rise-1001522809",
@@ -349,15 +381,29 @@
     },
     {
       "claim_id": "central-gas-supplier-switch-right",
-      "claim": "Households on central gas (צובר) have the right to switch central-gas supplier and demand the published price list (LPG reform under the Supervision of Commodities and Services Law). (source page retired; verify LPG supplier-switching terms with the Energy Ministry before quoting)",
-      "source_url": "https://www.gov.il/BlobFolder/generalpage/tarriffbook/he/Files_netunei_hasmal_sefer_tariff_01_2026.pdf",
-      "raw_snippet": "למשק בית על גז מרכזי (צובר) יש זכות להחליף ספק גז ולדרוש מחירון, לפי חוק הפיקוח על מצרכים ושירותים.",
-      "fetched_at": "2026-08-01T00:00:00Z",
+      "claim": "Switching the gas supplier of a central-gas (צובר) system in an apartment building is governed by חוק המקרקעין (החלפת ספק גז המספק גז באמצעות מערכת גז מרכזית), התשנ\"א-1991.",
+      "source_url": "https://www.gov.il/he/pages/gas_suppliers",
+      "raw_snippet": "וחוק המקרקעין (החלפת ספק גז המספק גז באמצעות מערכת גז מרכזית)",
+      "fetched_at": "2026-08-11",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/details-2026.md"
-      ]
+      ],
+      "verified_at": "2026-08-11"
+    },
+    {
+      "claim_id": "central-gas-supplier-sanctions",
+      "claim": "The head of the Fuel Administration (מינהל הדלק) may impose a financial sanction on a gas supplier that breaches those laws.",
+      "source_url": "https://www.gov.il/he/pages/gas_suppliers",
+      "raw_snippet": "א-1991, מנהל מינהל הדלק מוסמך להטיל עיצום כספי על ספק גז המפר הוראות חקיקה שונות לפי החוקים האמורים",
+      "fetched_at": "2026-08-11",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/details-2026.md"
+      ],
+      "verified_at": "2026-08-11"
     },
     {
       "claim_id": "arnona-empty-uninhabitable-relief",
@@ -377,18 +423,6 @@
       "source_url": "https://www.iec.co.il/content/tariffs/contentpages/taozb-namuch",
       "raw_snippet": "אמות מידה רשות החשמל: ניתוק בשל אי-תשלום מוסדר; צרכן מוגן (ציוד רפואי/הצלת חיים) אינו ניתן לניתוק; הסדר תשלומים על חוב.",
       "fetched_at": "2026-08-01T00:00:00Z",
-      "appears_in": [
-        "SKILL.md",
-        "SKILL_HE.md",
-        "references/details-2026.md"
-      ]
-    },
-    {
-      "claim_id": "lpg-suppliers-israel",
-      "claim": "Israeli LPG suppliers are Supergas, Pazgas, Amisragas, Dorgas (not Amerigas, a US company). Energean (Karish/Tanin) is separate from NewMed Energy / ex-Delek Drilling.",
-      "source_url": "https://www.gov.il/he/departments/natural_gas_authority",
-      "raw_snippet": "ספקי גפ\"מ ישראליים: סופרגז, פזגז, אמישגז, דורגז. אנרג'יאן (כריש/תנין) נפרדת מ-ניומד אנרג'י (לשעבר דלק קידוחים).",
-      "fetched_at": "2026-07-06T00:00:00Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
@@ -445,6 +479,32 @@
         "SKILL_HE.md"
       ],
       "source_note": "Snippet replaced 2026-08-10: the prior value was the two-word stub 'רשות החשמל'. The quote above is a contiguous line from the news list on the Authority's canonical department page (item dated 14/06/26, 'הודעה בדבר עדכון תעריפי החשמל החצי שנתיים'). Page title is 'רשות החשמל'. Read via a headless browser; gov.il returns 403 to plain HTTP clients."
+    },
+    {
+      "claim_id": "moc-regulator-role",
+      "claim": "The Ministry of Communications sets telecom policy, opens the telecom market to competition, and supervises and licenses communications providers.",
+      "source_url": "https://www.gov.il/he/departments/ministry_of_communications",
+      "raw_snippet": "משרד התקשורת אחראי לקביעת המדיניות, פתיחת שוק התקשורת לתחרות ופיתוח תשתיות התקשורת. המשרד מופקד על פיקוח ורישוי ספקי תקשורת",
+      "fetched_at": "2026-08-11",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/details-2026.md"
+      ],
+      "verified_at": "2026-08-11"
+    },
+    {
+      "claim_id": "natural-gas-authority-role",
+      "claim": "The Natural Gas Authority supervises licence holders and sets the tariffs charged by licence holders under the Natural Gas Economy Law and the Gas Law. (It regulates natural gas; LPG/גפ\"מ is regulated separately by מינהל הדלק והגז.)",
+      "source_url": "https://www.gov.il/he/departments/natural_gas_authority",
+      "raw_snippet": "תפקידיה העיקריים של הרשות הם פיקוח על בעלי רישיונות; פרסום מכרזים למתן רישיונות; הכנת רישיונות בהתאם לחוק משק הגז הטבעי ולחוק הגז",
+      "fetched_at": "2026-08-11",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/details-2026.md"
+      ],
+      "verified_at": "2026-08-11"
     }
   ],
   "schemaVersion": "1.0",

@@ -5,31 +5,31 @@
   "claims": [
     {
       "claim_id": "income-tax-brackets-2026",
-      "claim": "2026 income tax brackets (active income): 10% to 84,120; 14% to 120,720; 20% to 228,000; 31% to 301,200; 35% to 560,280; 47% on every shekel above 560,280 (the 47% band does NOT end at the surtax threshold). Brackets 3-5 widened by the Economic Efficiency Law 2026 (Amendment 288), approved 31 March 2026, retroactive to 1 January 2026.",
+      "claim": "2026 income tax brackets on active income (מיגיעה אישית), per the ITA monthly deductions booklet: 10% to 84,120; 14% to 120,720; 20% to 228,000; 31% to 301,200; 35% to 560,280; 47% on every additional shekel. The 47% band does not end at the surtax threshold. Brackets 3-5 were widened by the Economic Efficiency Law 2026, chapter C, effective 1 January 2026.",
       "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf",
-      "raw_snippet": "על כל שקל חדש מ- 120,721 ש\"ח עד 228,000 ש\"ח - יחול שיעור מס 20%",
-      "fetched_at": "2026-07-27T00:00:00Z",
+      "raw_snippet": "הכנסה שנתית עד- 84,121עד- מ- 120,721עד- מ- 228,001עד- מ- 301,201עד- מ- מכל שקל נוסף 84,120 120,720 228,000 301,200 560,280 שיעור המס 10% 14% 20% 31% 35% 47%",
+      "fetched_at": "2026-08-11",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/tax-brackets-credits.md"
       ],
-      "verified_via": "pdftotext",
-      "verified_at": "2026-07-27T00:00:00Z"
+      "verified_via": "pdf",
+      "verified_at": "2026-08-11"
     },
     {
       "claim_id": "credit-point-value-and-categories",
-      "claim": "Each credit point (nekudat zikui) reduces annual tax by 2,904 NIS (242/month, frozen 2025-2027). Category values: resident male 2.25, female 2.75, new immigrant 3.0/2.0/1.0, child born 1.5, child 1-5 = 2.5, child 6-17 = 1.0, child 18 = 0.5, single parent 1.0, BA/vocational 1.0, MA 0.5, disability 2.0, combat reserve 0.5-1.0 The annual value 2,904 ש\"ח is 242 x 12, arithmetic on the booklet figure rather than a quoted amount.",
+      "claim": "Each credit point (nekudat zikui) reduces annual tax by 2,904 NIS (242/month, frozen 2025-2027). Category values: resident male 2.25, female 2.75, new immigrant 3.0/2.0/1.0, child born 1.5, child 1-5 = 2.5, child 6-17 = 1.0, child 18 = 0.5, single parent 1.0, BA/vocational 1.0, MA 0.5, disability 2.0, combat reserve 0.5-1.0 The booklet states only the monthly credit-point value (242 per month, section 33A); the annual 2,904 figure is 242 x 12 and the per-category counts come from the Income Tax Ordinance, not from this booklet.",
       "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf",
-      "raw_snippet": "נקודת זיכוי 33א 242 לחודש",
-      "fetched_at": "2026-08-10T00:00:00Z",
+      "raw_snippet": "242 נקודת זיכוי 33א לחודש",
+      "fetched_at": "2026-08-11",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/tax-brackets-credits.md"
       ],
-      "verified_via": "pdftotext",
-      "verified_at": "2026-07-27T00:00:00Z",
+      "verified_via": "pdf",
+      "verified_at": "2026-08-11",
       "source_note": "Replaced 2026-08-10: prior snippet was ellipsis-stitched. Quote re-read from the Israel Tax Authority 2026 monthly-deductions booklet PDF via pdftotext -layout and confirmed present; Hebrew restored to reading order from the layout-extracted text. This is the verbatim row from the booklet's chapter 'פרק ג - סכומים מתואמים לשנת המס 2026', section 'א. נקודת זיכוי'. The booklet gives the monthly value only; the 2,904 NIS annual figure is 242 x 12, i.e. arithmetic, and the per-category point counts in the claim are not in this row."
     },
     {
@@ -222,12 +222,12 @@
     },
     {
       "claim_id": "brackets-2026-ita-booklet",
-      "claim": "The 2026 income tax brackets and the Section 121B surtax confirmed against the Israel Tax Authority's own monthly deductions booklet (updated April 2026): 20% from 120,721 to 228,000; 31% from 228,001 to 301,200; 35% from 301,201 to 560,280; 47% on every additional shekel; plus 3% surtax on taxable income above 721,560.",
+      "claim": "Section 121 of the Income Tax Ordinance was amended on 31.3.2026 so that from 1 January 2026 the brackets are: 20% on every shekel from 120,721 to 228,000; 31% from 228,001 to 301,200; 35% from 301,201 to 560,280 (Economic Efficiency Law 2026, chapter C, \"ריווח מדרגות מס הכנסה\").",
       "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf",
-      "raw_snippet": "על כל שקל חדש מ-120,721 ש\"ח עד 228,000 ש\"ח – יחול שיעור מס 20%.",
-      "verified_via": "pdftotext",
-      "verified_at": "2026-07-27T00:00:00Z",
-      "fetched_at": "2026-08-10T00:00:00Z",
+      "raw_snippet": "ביום 31.3.2026תוקן סעיף 121לפקודת מס הכנסה ונקבע כי החל ביום 1בינואר 2026ישתנו מדרגות מס הכנסה כדלהלן: .1על כל שקל חדש מ 120,721 -ש\"ח עד 228,000ש\"ח – יחול שיעור מס . 20% .2על כל שקל חדש מ 228,001 -ש\"ח עד 301,200ש\"ח – יחול שיעור מס . 31% .3על כל שקל חדש מ 301,201 -ש\"ח עד 560,280ש\"ח – יחול שיעור מס .35%",
+      "verified_via": "pdf",
+      "verified_at": "2026-08-11",
+      "fetched_at": "2026-08-11",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",

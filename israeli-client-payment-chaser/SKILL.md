@@ -214,8 +214,8 @@ Result: Comprehensive aging report with client risk scores. Cash flow forecast s
 | Nevo - Adjudication of Interest and Linkage Law (text) | https://www.nevo.co.il/law_html/law00/75001.htm | Full statutory text on court-adjudicated interest and linkage |
 | Nevo - Payment Ethics to Suppliers Law, 5777-2017 | https://www.nevo.co.il/law_html/law00/144599.htm | Statutory 45-day default payment term and late-payment interest |
 | Kol-Zchut - Payment deadline to suppliers | https://www.kolzchut.org.il/he/המועד_האחרון_לתשלום_תמורה_לספקים | Plain-language guide to the 45-day rule by purchaser type |
-| Enforcement Authority - judgment enforcement file | https://www.gov.il/he/service/claim_for_a_specified_amount_opening_file | Opening a Hotza'a LaPo'al file, fees, required documents |
-| Enforcement Authority - cheques and notes file | https://www.gov.il/he/service/opening_promissory_notes_and_checks_file | Filing a dishonored cheque or promissory note directly |
+| Enforcement Authority - judgment enforcement file | https://www.gov.il/he/departments/law_enforcement_and_collection_system_authority | Opening a Hotza'a LaPo'al file, fees, required documents |
+| Enforcement Authority - cheques and notes file | https://www.gov.il/he/departments/law_enforcement_and_collection_system_authority | Filing a dishonored cheque or promissory note directly |
 | Israel Post - Registered mail service | https://www.israelpost.co.il | Registered mail (doar rashum) service and pricing |
 | HebCal - Jewish calendar | https://www.hebcal.com | Shabbat times and holiday dates for reminder scheduling |
 

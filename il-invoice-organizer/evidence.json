@@ -303,10 +303,10 @@
     },
     {
       "claim_id": "vehicle-purchase-vat-nondeductible",
-      "claim": "The 2/3 vehicle input-VAT rate applies to running costs (fuel, maintenance). VAT on buying or importing a private (non-commercial) vehicle is fully non-deductible even at 100% business use (Regulation 14).",
+      "claim": "Regulation 14(a) of the VAT Regulations 1976 forbids a dealer from deducting input VAT on the purchase or import of a 'private vehicle', even where the vehicle is used solely for business transactions (100% business use), except for the exceptions listed in Regulation 14(b).",
       "source_url": "https://www.gov.il/he/pages/instructions-for-deduction-of-input-tax-for-vehicles-and-motorcycles",
-      "raw_snippet": "The 2/3 vehicle input-VAT rate applies to running costs (fuel, maintenance). VAT on buying or importing a private (non-commercial) vehicle is fully non-deductible even at 100% business use (Regulation 14). תקנה 14 לתקנות מע\"מ.",
-      "fetched_at": "2026-07-06T00:00:00Z",
+      "raw_snippet": "תקנה 14(א) לתקנות מס ערך מוסף, התשל\"ו - 1976 שתוקנה מכוח סעיף 44(1) לחוק, אוסרת על עוסק לנכות את מס התשומות עבור רכישה או יבוא של \"רכב פרטי\", גם אם הרכב משמש או נועד לשמש את העוסקים אך ורק לצורכי העסקאות לשימוש בעסק למעט החריגים המנויים בתקנה 14(ב) לתקנות.",
+      "fetched_at": "2026-08-11",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
@@ -337,10 +337,10 @@
     },
     {
       "claim_id": "illustrative-worked-example-figures",
-      "claim": "Illustrative computed figures in the worked examples (not sourced facts; derived arithmetic).",
-      "source_url": "https://www.gov.il/he/departments/israel_tax_authority",
-      "raw_snippet": "Worked examples use illustrative amounts computed from the 18/118 rule and 2/3 vehicle rule: 5,850 NIS / 5,850 ש\"ח total; VAT 892.37 NIS / 892.37 ש\"ח; net 4,957.63 NIS / 4,957.63 ש\"ח; fuel 2,340 NIS / 2,340 ש\"ח; VAT 356.95 NIS / 356.95 ש\"ח; deductible 237.97 NIS / 237.97 ש\"ח; non-deductible 118.98 NIS / 118.98 ש\"ח. Rounding tolerance 1 NIS / 1 ש\"ח. Structural fragments NIS 3, NIS 4 (dates/codes) are not monetary facts.",
-      "fetched_at": "2026-07-06T00:00:00Z",
+      "claim": "Illustrative computed figures in the worked examples are derived arithmetic, not sourced facts: they follow from the statutory 18% VAT rate (the 18/118 extraction) and the 2/3 mixed-use deduction rate. Amounts: 5,850 NIS / 5,850 ש\"ח total; VAT 892.37 NIS / 892.37 ש\"ח; net 4,957.63 NIS / 4,957.63 ש\"ח; fuel 2,340 NIS / 2,340 ש\"ח; VAT 356.95 NIS / 356.95 ש\"ח; deductible 237.97 NIS / 237.97 ש\"ח; non-deductible 118.98 NIS / 118.98 ש\"ח. Rounding tolerance 1 NIS / 1 ש\"ח. Structural fragments NIS 3, NIS 4 (dates/codes) are not monetary facts.",
+      "source_url": "https://www.gov.il/he/pages/vat-to-the-new-dealer",
+      "raw_snippet": "סכום המע״מ מחושב בשיעור קבוע ממחיר העסקה (נכון לינואר 2026 שיעור המע״מ הוא 18%).",
+      "fetched_at": "2026-08-11",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
@@ -356,6 +356,17 @@
         "SKILL.md",
         "SKILL_HE.md",
         "references/expense-categories.md"
+      ]
+    },
+    {
+      "claim_id": "mixed-use-two-thirds-rule",
+      "claim": "The 2/3 input-VAT deduction rate comes from Regulation 18 on mixed use: where the Director has not fixed the relative share and the asset or service is used mainly for business, the dealer may deduct two thirds of the input VAT (and only a quarter where the main use is non-business).",
+      "source_url": "https://www.gov.il/he/pages/instructions-for-deduction-of-input-tax-for-vehicles-and-motorcycles",
+      "raw_snippet": "לא קבע המנהל את החלק היחסי, ועיקר השימוש בנכס או השירות הוא לצרכי עסק, רשאי העוסק לנכות שני שלישים ממס התשומות. לא קבע המנהל את החלק היחסי, ועיקר השימוש בנכס או בשירות הוא שלא לצרכי עסק, רשאי העוסק לנכות רבע ממס התשומות.",
+      "fetched_at": "2026-08-11",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
       ]
     }
   ],

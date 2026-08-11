@@ -14,7 +14,7 @@ version: 1.3.0
 Ask the user what economic data they need:
 
 | Data Type | Hebrew | Source | Update Frequency |
-|-----------|--------|--------|-----------------|
+|-----------|--------|--------|--------|
 | Interest rate | ריבית בנק ישראל | BOI Monetary Committee | Announced ~6 times/year |
 | Exchange rates | שערי חליפין (שער יציג) | BOI | Business days Mon-Fri (Mon-Thu ~15:30, Fri ~12:30) |
 | CPI (Consumer Price Index) | מדד המחירים לצרכן | CBS (Lishkat HaStatistika) | Monthly (around 15th of following month) |
@@ -56,14 +56,14 @@ Key points:
 ### Step 4: Analyze CPI Data
 The Consumer Price Index (Madad HaMchirim LaTzarchan) from CBS:
 
-| CPI Component | Hebrew | Weight (approx) | Notes |
-|---------------|--------|-----------------|-------|
-| Housing | דיור | ~25% | Rent component (not home prices) |
-| Food | מזון | ~17% | Including dining out |
-| Transportation | תחבורה | ~17% | Fuel, public transit, vehicles |
-| Education & culture | חינוך ותרבות | ~11% | Tuition, books, entertainment |
-| Health | בריאות | ~6% | Medical services, medications |
-| Clothing | הלבשה והנעלה | ~3% | Seasonal adjustments |
+| CPI Component | Hebrew | Weight | Notes |
+|---------------|--------|--------|-------|
+| Housing | דיור | n/a | Rent component (not home prices) |
+| Food | מזון | n/a | Including dining out |
+| Transportation | תחבורה | n/a | Fuel, public transit, vehicles |
+| Education & culture | חינוך ותרבות | n/a | Tuition, books, entertainment |
+| Health | בריאות | n/a | Medical services, medications |
+| Clothing | הלבשה והנעלה | n/a | Seasonal adjustments |
 
 CPI uses:
 - **CPI-linked bonds (Galil):** Index-linked government bonds adjust by CPI
