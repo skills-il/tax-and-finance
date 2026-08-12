@@ -368,6 +368,19 @@
         "SKILL.md",
         "SKILL_HE.md"
       ]
+    },
+    {
+      "claim_id": "reg18-quarter-limb",
+      "claim": "Regulation 18 sets the input-VAT split on mixed-use vehicle running costs. If the Director has fixed the non-business proportion, that stands. If not, a dealer whose MAIN use is for business may deduct two thirds; a dealer whose main use is NOT for business may deduct only a quarter.",
+      "source_url": "https://www.gov.il/he/pages/instructions-for-deduction-of-input-tax-for-vehicles-and-motorcycles",
+      "raw_snippet": "לא קבע המנהל את החלק היחסי, ועיקר השימוש בנכס או השירות הוא לצרכי עסק, רשאי העוסק לנכות שני שלישים ממס התשומות. לא קבע המנהל את החלק היחסי, ועיקר השימוש בנכס או בשירות הוא שלא לצרכי עסק, רשאי העוסק לנכות רבע ממס התשומות.",
+      "fetched_at": "2026-08-12",
+      "verified_via": "gov.il content API",
+      "verified_at": "2026-08-12",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     }
   ],
   "schemaVersion": "1.0",

@@ -201,7 +201,7 @@ Result: Total VAT 356.95 NIS, but only 237.97 NIS is deductible. The remaining 1
 - An invoice dated more than 14 days after the underlying supply or payment can be challenged by the Tax Authority. Flag suspiciously late invoices for the accountant.
 - Input VAT can only be deducted in the invoice's VAT period or within 6 months after it (תקנה 23א). Flag invoices older than 6 months in the batch: their VAT is no longer freely reclaimable and needs VAT-office approval.
 - A tax invoice must be issued in the name of the claiming business (על שם העוסק) to deduct input VAT. Reject invoices addressed to the owner personally, a spouse, or a different entity, this is the most common reason an accountant disallows an invoice.
-- The vehicle 2/3 rule applies to running costs (fuel, maintenance, repairs). VAT on buying or importing a private (non-commercial) vehicle is fully non-deductible, even at 100% business use.
+- The vehicle 2/3 rule applies to running costs (fuel, maintenance, repairs) under Regulation 18, and it is a DEFAULT, not a flat rate. Where the Director has set the proportional non-business use, that determination governs. Where he has not: if the MAIN use is for business the dealer may deduct two thirds; if the main use is NOT for business the dealer may deduct only a QUARTER. Applying 2/3 to a mainly-private vehicle over-deducts. VAT on buying or importing a private (non-commercial) vehicle is fully non-deductible under Regulation 14(a), even at 100% business use.
 - Input VAT on business hospitality/entertainment (אירוח) is NOT deductible (תקנה 16, except hosting a guest from abroad). Do not reclaim VAT on restaurant/hosting invoices meant to entertain clients or employees; only genuine business inputs qualify.
 
 ## Reference Links
