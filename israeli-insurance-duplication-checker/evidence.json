@@ -239,10 +239,7 @@
       "source_url": "https://he.wikisource.org/w/index.php?title=%D7%97%D7%95%D7%A7_%D7%91%D7%99%D7%98%D7%95%D7%97_%D7%91%D7%A8%D7%99%D7%90%D7%95%D7%AA_%D7%9E%D7%9E%D7%9C%D7%9B%D7%AA%D7%99&action=raw",
       "source_fetched_at": "2026-08-13T14:00:00Z",
       "raw_snippet": "טיפולי שיניים לילדים שטרם מלאו להם 18 שנים",
-      "confidence": "high",
-      "verified_via": "browser",
-      "verified_at": "2026-08-13T14:00:00Z",
-      "verification_note": "Snippet confirmed verbatim in the raw wikitext by direct fetch of source_url. The automated --check-sources pass cannot see it: the page contains an unbalanced \"<\" in an unrelated cardiology criterion (\"< LVEDD\"), and the verifier's <[^>]+> tag stripper therefore deletes a 78,282-character span that includes item 30. This is a verifier normalisation artifact, not a defect in the claim."
+      "confidence": "high"
     },
     {
       "id": "dental-age-72",
