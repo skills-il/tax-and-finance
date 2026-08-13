@@ -21,7 +21,7 @@
     "israel"
   ],
   "author": "skills-il",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "category": "tax-and-finance",
   "supported_agents": [
     "claude-code",
@@ -41,7 +41,7 @@
   "openclaw": false,
   "volatility": "legislative",
   "authoritative_sources": [
-    "https://www.nevo.co.il/law/84255",
+    "https://www.nevo.co.il/law_html/law01/255_001.htm",
     "https://www.kolzchut.org.il/he/הטבות_במס_לתושבים_חוזרים_ששהו_בחו%22ל_מעל_10_שנים",
     "https://www.kolzchut.org.il/he/הטבות_במס_לתושבים_חוזרים_ששהו_בחו%22ל_בין_6_ל-10_שנים",
     "https://www.bshcpa.co.il/תושב-חוזר-ותיק/",

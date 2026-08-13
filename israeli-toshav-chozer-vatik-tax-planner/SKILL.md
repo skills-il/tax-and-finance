@@ -44,7 +44,7 @@ Ask the user, in this order:
 |---|---|---|---|---|
 | Active (employment, business) | Foreign | Exempt 10 years (Section 14) | Taxable from day 1 | Taxable |
 | Passive (dividend, interest, rent, royalty) | Foreign | Exempt 10 years (Section 14) | Exempt 5 years (only if asset acquired during the period abroad) | Taxable |
-| Capital gain | Foreign | Exempt 10 years (Section 97(b3)) | Exempt 10 years (only if asset acquired during the period abroad and not Israeli-property-linked) | Taxable |
+| Capital gain | Foreign | Exempt 10 years (Section 97(b)(1)) | Exempt 10 years (only if asset acquired during the period abroad and not Israeli-property-linked) | Taxable |
 | Any | Israeli | Taxable | Taxable | Taxable |
 
 This matrix is ISRAELI tax only. US citizens see Step 6.
@@ -246,7 +246,7 @@ None. This skill is text-based planning. No live API integration with Mas Hachna
 
 | Topic | URL |
 |---|---|
-| Income Tax Ordinance (Nevo) | https://www.nevo.co.il/law/84255 |
+| Income Tax Ordinance (Nevo) | https://www.nevo.co.il/law_html/law01/255_001.htm |
 | Hok Iddud Aliyah 2026 (Nevo) | https://www.nevo.co.il/law_html/law00/241397.htm |
 | Kol-Zchut, vatik (10+) | https://www.kolzchut.org.il/he/הטבות_במס_לתושבים_חוזרים_ששהו_בחו%22ל_מעל_10_שנים |
 | Kol-Zchut, regular (6-10) | https://www.kolzchut.org.il/he/הטבות_במס_לתושבים_חוזרים_ששהו_בחו%22ל_בין_6_ל-10_שנים |

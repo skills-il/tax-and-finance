@@ -103,7 +103,7 @@ This is the single biggest planning lever for a 2026 returnee with a high Israel
 
 ## Sources
 
-- Nevo, Income Tax Ordinance: https://www.nevo.co.il/law/84255
+- Nevo, Income Tax Ordinance: https://www.nevo.co.il/law_html/law01/255_001.htm
 - Nevo, חוק עידוד עלייה לישראל וחזרה אליה (הוראת שעה), התשפ"ו-2026: https://www.nevo.co.il/law_html/law00/241397.htm
 - Kol-Zchut (vatik): https://www.kolzchut.org.il/he/הטבות_במס_לתושבים_חוזרים_ששהו_בחו%22ל_מעל_10_שנים
 - BSH CPA: https://www.bshcpa.co.il/תושב-חוזר-ותיק/

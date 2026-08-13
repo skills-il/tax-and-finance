@@ -7,7 +7,7 @@ Volatility: legislative (statute + 2026 Amendment 272)
 ## Must (covered in this skill)
 
 1. **Definition of toshav chozer vatik**: 10+ consecutive years as foreign tax resident before returning. Source: [kolzchut](https://www.kolzchut.org.il/he/הטבות_במס_לתושבים_חוזרים_ששהו_בחו%22ל_מעל_10_שנים).
-2. **Section 14(a) 10-year exemption** on foreign-source income (active + passive + capital gains). Source: [bshcpa](https://www.bshcpa.co.il/תושב-חוזר-ותיק/), [nevo (Ordinance)](https://www.nevo.co.il/law/84255).
+2. **Section 14(a) 10-year exemption** on foreign-source income (active + passive + capital gains). Source: [bshcpa](https://www.bshcpa.co.il/תושב-חוזר-ותיק/), [nevo (Ordinance)](https://www.nevo.co.il/law_html/law01/255_001.htm).
 3. **10-year clock starts from date of Israeli tax residency** (not date of physical return). Source: [bshcpa](https://www.bshcpa.co.il/תושב-חוזר-ותיק/).
 4. **Vatik vs. regular toshav chozer** distinction (10 years vs. 6 years; full exemption vs. 5-year passive + 10-year capital gains only). Source: [kolzchut regular](https://www.kolzchut.org.il/he/הטבות_במס_לתושבים_חוזרים_ששהו_בחו%22ל_בין_6_ל-10_שנים).
 5. **Reporting-obligation change in 2026**: Amendment 272 cancels sections 134b and 135(b); reporting exemption gone from 1.1.2026; tax exemption remains. Applies only to those becoming residents on/after 1.1.2026. Source: [bshcpa reporting](https://www.bshcpa.co.il/ביטול-פטור-מדיווח-לתושבים-חוזרים/), [Arnon Tadmor-Levy](https://arnontl.com/he/news/ביטול-הפטור-מדיווח-על-הכנסות-פטורות-לע/), [Shibolet (EN)](https://www.shibolet.com/en/cancellation-of-reporting-exemption-for-new-immigrants-and-long-term-returning-residents-regarding-foreign-income-and-new-reporting-obligation-for-israeli-resident-trustees-regarding-trusts-not-requir/).
@@ -46,7 +46,7 @@ Volatility: legislative (statute + 2026 Amendment 272)
 
 | Source | URL | What it gives |
 |---|---|---|
-| Nevo - Income Tax Ordinance | https://www.nevo.co.il/law/84255 | Statute text of section 14 + sections 134b, 135 |
+| Nevo - Income Tax Ordinance | https://www.nevo.co.il/law_html/law01/255_001.htm | Statute text of section 14 + sections 134b, 135 |
 | Mas Hachnasa (ITA) - Section 14 page | https://www.gov.il/he/departments/targetaudience/taxes-audience-returning-citizen | Official ITA reference |
 | Kol-Zchut - vatik (10+ years) | https://www.kolzchut.org.il/he/הטבות_במס_לתושבים_חוזרים_ששהו_בחו%22ל_מעל_10_שנים | Plain-Hebrew explanation of vatik benefits |
 | Kol-Zchut - regular (6-10 years) | https://www.kolzchut.org.il/he/הטבות_במס_לתושבים_חוזרים_ששהו_בחו%22ל_בין_6_ל-10_שנים | Regular track explanation |

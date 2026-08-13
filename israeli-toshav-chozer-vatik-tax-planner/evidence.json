@@ -19,10 +19,13 @@
     },
     {
       "id": "section-14-ordinance-reference",
-      "claim": "Section 14 of the Income Tax Ordinance defines the substantive exemption; the definition of toshav chozer vatik appears in Section 1 of the Ordinance.",
-      "source_url": "https://www.nevo.co.il/law/84255",
-      "raw_snippet": "פקודת מס הכנסה (נוסח חדש), הגדרת תושב חוזר ותיק מופיעה בסעיף 1, וההסדר המהותי של הפטור הוא בסעיף 14 לפקודה.",
-      "fetched_on": "2026-05-23"
+      "claim": "Section 14(a) of the Income Tax Ordinance grants a 10-year exemption on foreign-source income to a new immigrant and a toshav chozer vatik, and Section 14(a) itself defines toshav chozer vatik as an individual who became an Israeli resident again after being a foreign resident for at least ten consecutive years.",
+      "source_url": "https://www.nevo.co.il/law_html/law01/255_001.htm",
+      "raw_snippet": "14. (א) יחיד שהיה לתושב ישראל לראשונה ותושב חוזר ותיק יהיו פטורים ממס במשך עשר שנים מהמועד שהיו לתושבי ישראל כאמור, על הכנסותיהם מכל המקורות המנויים בסעיפים 2, 2א ו-3, שהופקו או שנצמחו מחוץ לישראל או שמקורן בנכסים מחוץ לישראל",
+      "fetched_on": "2026-05-23",
+      "fetched_at": "2026-08-13T00:00:00Z",
+      "verified_via": "playwright",
+      "verified_at": "2026-08-13T00:00:00Z"
     },
     {
       "id": "10-year-clock-residency-not-arrival",
@@ -363,11 +366,14 @@
       "fetched_at": "2026-08-10T00:00:00Z"
     },
     {
-      "id": "section-97-b3-capital-gains-statute",
-      "claim": "The 10-year foreign capital gains exemption for vatik and oleh lives in Section 97(b3) of the Income Tax Ordinance, distinct from Section 14 which covers ordinary foreign income.",
-      "source_url": "https://www.nevo.co.il/law/84255",
-      "raw_snippet": "סעיף 97(ב3) לפקודת מס הכנסה קובע פטור מרווח הון לעולה חדש או לתושב חוזר ותיק על מכירת נכס בחו\"ל שנרכש לפני שהפך לתושב ישראל, וזאת למשך עשר שנים מהיום בו הפך לתושב.",
-      "fetched_on": "2026-05-26"
+      "id": "section-97-b1-capital-gains-statute",
+      "claim": "The 10-year foreign capital gains exemption for a toshav chozer vatik and a new immigrant lives in Section 97(b)(1) of the Income Tax Ordinance, distinct from Section 14 which covers ordinary foreign income.",
+      "source_url": "https://www.nevo.co.il/law_html/law01/255_001.htm",
+      "raw_snippet": "(ב) (1) יחיד שהיה לתושב ישראל לראשונה ותושב חוזר ותיק, כאמור בסעיף 14(א), פטור ממס על רווח הון ממכירת נכס שהיה לו מחוץ לישראל, אם מכרו בתוך עשר שנים מהיום שהיה לתושב ישראל | התקופה האמורה בסעיף 97(ב)(1)",
+      "fetched_on": "2026-05-26",
+      "fetched_at": "2026-08-13T00:00:00Z",
+      "verified_via": "playwright",
+      "verified_at": "2026-08-13T00:00:00Z"
     },
     {
       "id": "amendment-272-trustee-reporting",
