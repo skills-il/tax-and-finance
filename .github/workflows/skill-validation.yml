@@ -1,6 +1,22 @@
 name: Skill Validation
 
 on:
+  # Pushes are validated too, not just PRs. The admin pipeline pushes straight
+  # to master with branch-protection bypass, so a PR-only trigger meant the
+  # validator never ran on the path that produces most changes: eight skills
+  # were found live and over the 5,000-word cap, and this workflow had no runs
+  # at all while master kept receiving commits.
+  push:
+    branches: [master]
+    paths:
+      - '**/SKILL.md'
+      - '**/SKILL_HE.md'
+      - '**/metadata.json'
+      - '**/evidence.json'
+      - '**/*.py'
+      - '**/*.sh'
+      - '**/*.js'
+      - '**/*.ts'
   pull_request:
     branches: [master]
     paths:
@@ -22,11 +38,27 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
 
       - name: Find changed skill files
         id: changed
         run: |
-          FILES=$(gh pr diff ${{ github.event.pull_request.number }} --name-only | grep 'SKILL.md$' || true)
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            FILES=$(gh pr diff ${{ github.event.pull_request.number }} --name-only | grep 'SKILL.md$' || true)
+          else
+            BEFORE="${{ github.event.before }}"
+            # A new branch or a force-push reports an all-zero "before" sha;
+            # fall back to the previous commit so the step still validates.
+            if [ -z "$BEFORE" ] || [ "$BEFORE" = "0000000000000000000000000000000000000000" ]; then
+              BEFORE=$(git rev-parse HEAD~1 2>/dev/null || echo "")
+            fi
+            if [ -n "$BEFORE" ]; then
+              FILES=$(git diff --name-only "$BEFORE" "${{ github.sha }}" | grep 'SKILL.md$' || true)
+            else
+              FILES=""
+            fi
+          fi
           echo "files<<EOF" >> $GITHUB_OUTPUT
           echo "$FILES" >> $GITHUB_OUTPUT
           echo "EOF" >> $GITHUB_OUTPUT
