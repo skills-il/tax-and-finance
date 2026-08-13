@@ -154,7 +154,7 @@ Important notes:
 
 Israeli health supplementary insurance (SHABAN) operates in tiers from each kupat cholim. Two facts shape the whole comparison:
 
-- **SHABAN price is regulated and uniform, not shoppable.** The Ministry of Health sets SHABAN premiums per age band, so everyone the same age in the same kupa pays the same price, you cannot negotiate it. And you can only buy the SHABAN of YOUR kupat cholim, you cannot mix-and-match. So the real decision is (a) which kupa to belong to, (b) basic vs premium tier within it, and (c) whether to add a private commercial health policy on top. Switching SHABAN means first switching kupa (free, via Bituach Leumi, up to a couple of times a year).
+- **SHABAN price is regulated and uniform, not shoppable.** SHABAN pricing is uniform for everyone in the same age band and the same plan within a kupa, so you cannot negotiate it. And you can only buy the SHABAN of YOUR kupat cholim, you cannot mix-and-match. So the real decision is (a) which kupa to belong to, (b) basic vs premium tier within it, and (c) whether to add a private commercial health policy on top. Switching SHABAN means first switching kupa (free, via Bituach Leumi, up to a couple of times a year).
 - **SHABAN has guaranteed acceptance, private insurance does not.** By law SHABAN has no medical underwriting and no pre-existing-condition exclusions, anyone can join regardless of health. Private commercial health policies (Harel, Migdal, Clal) DO underwrite and can decline, load, or exclude a known condition. This is decisive when someone already has a diagnosis (see Example 3): a private policy bought now would likely exclude that condition, while SHABAN and its premium add-on cannot.
 
 **Clalit (Clalit Mushlam Zahav / Mushlam Platinum):**

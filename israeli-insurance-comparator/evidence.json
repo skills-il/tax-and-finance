@@ -94,14 +94,16 @@
     },
     {
       "claim_id": "shaban-regulated",
-      "claim": "SHABAN (kupot supplementary insurance) premiums are set by the Ministry of Health, uniform per age band within a kupa and non-negotiable; a member can only hold the SHABAN of their own kupa; SHABAN has guaranteed acceptance with no medical underwriting and no pre-existing-condition exclusions, unlike private commercial health policies which underwrite.",
-      "source_url": "https://www.kolzchut.org.il/he/%D7%91%D7%99%D7%98%D7%95%D7%97_%D7%91%D7%A8%D7%99%D7%90%D7%95%D7%AA_%D7%9E%D7%A9%D7%9C%D7%99%D7%9D_(%D7%A9%D7%91%22%D7%9F)",
-      "raw_snippet": "שב\"ן",
-      "fetched_at": "2026-05-31T00:00:00Z",
+      "claim": "SHABAN (kupot supplementary insurance) pricing is uniform for everyone in the same age band and the same plan within a kupa; a member cannot join the SHABAN of a kupa they are not insured with; SHABAN has guaranteed acceptance with no prior medical screening regardless of health status, age or income, unlike private commercial health policies which underwrite and can decline.",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%A9%D7%99%D7%A8%D7%95%D7%AA%D7%99_%D7%91%D7%A8%D7%99%D7%90%D7%95%D7%AA_%D7%A0%D7%95%D7%A1%D7%A4%D7%99%D7%9D_(%D7%91%D7%99%D7%98%D7%95%D7%97_%D7%9E%D7%A9%D7%9C%D7%99%D7%9D)",
+      "raw_snippet": "התשלום עבור הצטרפות לתוכנית השב\"ן הוא אחיד לכל המבוטחים באותה קבוצת גיל ובאותה תוכנית | מבוטח אינו יכול להצטרף לתוכנית שב\"ן בקופת חולים שאינו מבוטח בה | לקופות החולים אסור לסרב לבקשת מבוטח להצטרף לתוכנית השב\"ן שלהן והן לא מבצעות בדיקה מקדימה של מצב רפואי לצורך ההצטרפות לשירות. זאת בניגוד לתוכניות ביטוח פרטי בחברות ביטוח, שמבצעות הליך חיתום ורשאיות לסרב לבטח אדם בשל מצבו הרפואי או גילו | כל מבוטח בקופת חולים זכאי להצטרף, תמורת תשלום, לתוכנית שירותי הבריאות המשלימים של קופת החולים שלו, ולקבל את מלוא השירותים הכלולים בה, ללא קשר למצבו הרפואי, לגילו ולמצבו הכלכלי",
+      "fetched_at": "2026-08-13T00:00:00Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ]
+      ],
+      "verified_via": "playwright",
+      "verified_at": "2026-08-13T00:00:00Z"
     },
     {
       "claim_id": "illustrative-figures",
