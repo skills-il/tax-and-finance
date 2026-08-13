@@ -76,18 +76,6 @@ The mechanics behind the table, which the agent should be able to state when cha
 - ס' 54(א) routes fixed-sum cover to פרק ב', which contains no כפל provision and no indemnity ceiling. So a standalone ריסק, a mortgage life policy and the שאירים cover inside the pension all pay on the same death. Say so plainly. A user who cancels one of them because an agent called it "duplication" has lost cover for nothing.
 
 
-## The שקל ראשון reform, in detail (behind Step C)
-
-Handle the reform correctly, because most secondary sources do not.
-
-- The שקל ראשון reform took effect in June 2024, "שמטרתה לצמצם את תופעת כפל הביטוחים". February 2016 is only the purchase-date cutoff defining which policies were caught. Never call the reform a 2016 event.
-- The reform applied to פוליסות פרט only, and the window to reverse the automatic transfer closed on 1.6.2025. It is no longer a live choice.
-- GROUP policies were never auto-converted, and most group surgery cover is still מהשקל הראשון. Everyone whose surgery cover comes through an employer or a professional organisation was left duplicating, untouched by the reform.
-- Anyone who bought their individual policy BEFORE February 2016 was never caught by the reform either.
-
-Those last two populations are this skill's core audience. Ask explicitly: is the policy individual or group, and when was it bought? Do not write the health section of the report as though the reform solved the problem.
-
-
 ## ותק, אכשרה and cancellation mechanics (behind Steps G and H)
 
 ### Step G. The ותק and אכשרה trap, before anyone cancels anything
@@ -121,7 +109,7 @@ Those last two populations are this skill's core audience. Ask explicitly: is th
    | Verdict | One of the six below |
 
 
-## The שקל ראשון reform, corrected detail (behind Step C)
+## The שקל ראשון reform (behind Step C)
 
 Handle the reform correctly, because most secondary sources do not. It took effect in **June 2024**; February 2016 is only the purchase-date cutoff defining which policies were caught, so never call it a 2016 event. It applied to פוליסות פרט only, and the reversal window ran to 31 May 2025, a year from the transfer, though some insurers extended their own, so check rather than assume it is closed. **The GROUP market was affected far less and with delay**, because group policies update only every few years under the policyholder-insurer agreement, so much group surgery cover is still מהשקל הראשון. Do NOT say group policies were never converted; have the user check their own. Anyone who bought individually before February 2016 was not caught either. Those two populations are this skill's core audience, so ask explicitly whether the policy is individual or group and when it was bought, and never write the health section as though the reform solved the problem. Group cover also has a five-year structural limit and a conversion right on leaving, at a much higher individual premium. Detail in `references/line-by-line-detail.md`.
 
