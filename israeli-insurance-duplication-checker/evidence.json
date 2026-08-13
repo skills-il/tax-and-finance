@@ -635,6 +635,16 @@
       "source_fetched_at": "2026-08-13T16:00:00Z",
       "raw_snippet": "חשוב לדעת כי ההתראה אינה מחייבת תמיד כי נרכש כיסוי מיותר",
       "confidence": "high"
+    },
+    {
+      "id": "mislaka-fee-contradiction-14",
+      "claim": "The pension clearing house operator's own FAQ also states 14 NIS for a one-off request covering all pension products at all managing bodies, contradicting the 20 NIS figure given elsewhere on the same page",
+      "claim_type": "amount",
+      "source_url": "https://www.swiftness.co.il/savers/qa/",
+      "source_fetched_at": "2026-08-13T16:30:00Z",
+      "raw_snippet": "14 ש\"ח לקבלת מידע מלא אודות כל המוצרים והחסכונות הפנסיונים בכל הגופים המנהלים באופן חד פעמי",
+      "confidence": "high",
+      "verification_note": "Recorded deliberately alongside mislaka-fee-20. The SAME page gives two different amounts for the same one-off all-products request. The skill therefore quotes neither as settled and tells the agent to read the tariff at the point of request."
     }
   ]
 }
