@@ -8,11 +8,19 @@
     "en": "Not insurance advice and not insurance marketing. Audits the insurance you already pay for and shows where you are charged twice for cover you can only collect once, and where two policies legitimately stack."
   },
   "tags": {
-    "he": ["ביטוח", "כפל ביטוחי", "חיסכון"],
-    "en": ["insurance", "double-insurance", "savings"]
+    "he": [
+      "ביטוח",
+      "כפל ביטוחי",
+      "חיסכון"
+    ],
+    "en": [
+      "insurance",
+      "double-insurance",
+      "savings"
+    ]
   },
   "author": "skills-il",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "category": "tax-and-finance",
   "supported_agents": [
     "claude-code",
