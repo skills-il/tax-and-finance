@@ -9,7 +9,10 @@
       "source_url": "https://www.nevo.co.il/law_html/law01/p213_058.htm",
       "raw_snippet": "חוק הרשויות המקומיות (ערר על קביעת ארנונה כללית), התשל\"ו-1976: השגה תוך תשעים ימים מיום קבלת הודעת התשלום; המנהל ישיב תוך שישים יום; ערר לוועדת הערר תוך 30 יום מקבלת ההחלטה.",
       "fetched_at": "2026-06-07T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "oleh-discount",
@@ -17,7 +20,12 @@
       "source_url": "https://www.nevo.co.il/law_html/law01/297_032.htm",
       "raw_snippet": "תקנות הסדרים במשק המדינה (הנחה מארנונה): עולה זכאי להנחה של עד 90% על עד 100 מ\"ר ל-12 חודשים מתוך 24 החודשים הראשונים ממועד הרישום כעולה.",
       "fetched_at": "2026-06-07T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/arnona-discounts-guide.md", "scripts/arnona-calculator.py"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md",
+        "scripts/arnona-calculator.py"
+      ]
     },
     {
       "claim_id": "senior-discount",
@@ -25,7 +33,12 @@
       "source_url": "https://www.kolzchut.org.il/he/%D7%94%D7%A0%D7%97%D7%94_%D7%91%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94_%D7%9C%D7%90%D7%96%D7%A8%D7%97%D7%99%D7%9D_%D7%95%D7%AA%D7%99%D7%A7%D7%99%D7%9D",
       "raw_snippet": "הנחה לאזרח ותיק: 25% למקבל קצבת זקנה/שאירים/נפגעי עבודה (ללא מבחן הכנסה); 30% במבחן הכנסה עד השכר הממוצע; עד 100% למי שמקבל גם השלמת הכנסה.",
       "fetched_at": "2026-06-07T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/arnona-discounts-guide.md", "scripts/arnona-calculator.py"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md",
+        "scripts/arnona-calculator.py"
+      ]
     },
     {
       "claim_id": "disabled-discount",
@@ -33,23 +46,12 @@
       "source_url": "https://www.jerusalem.muni.il/he/residents/arnona/arnonadiscounts/apartmentsdiscounts/disability/",
       "raw_snippet": "הנחה לנכה: 40% לבעל נכות רפואית 90% ומעלה; עד 80% לבעל דרגת אי-כושר השתכרות 75% ומעלה המקבל קצבה חודשית מלאה.",
       "fetched_at": "2026-06-07T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/arnona-discounts-guide.md", "scripts/arnona-calculator.py"]
-    },
-    {
-      "claim_id": "other-discounts",
-      "claim": "Other arnona discounts: active-duty/lone soldier up to 100%; low income 20-80% (municipality threshold); student up to ~50% (discretionary per municipal bylaw, no uniform national rate); single parent up to 20%; large family (4+ children) income-tested up to ~30%; bereaved family up to 66%; Holocaust survivor up to 66%. Discounts apply to the primary residence up to 100 sqm; only one discount applies at a time (the highest), renewed annually.",
-      "source_url": "https://www.kolzchut.org.il/he/%D7%94%D7%A0%D7%97%D7%95%D7%AA_%D7%91%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94",
-      "raw_snippet": "הנחות ארנונה: חייל בודד עד 100%; הכנסה נמוכה 20-80%; הורה יחיד עד 20%; משפחה ברוכת ילדים עד כ-30% במבחן הכנסה; משפחה שכולה וניצולי שואה עד 66%; הנחה אחת בכל פעם, עד 100 מ\"ר, חידוש שנתי.",
-      "fetched_at": "2026-06-07T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/arnona-discounts-guide.md", "scripts/arnona-calculator.py"]
-    },
-    {
-      "claim_id": "nazak-and-income-support-discounts",
-      "claim": "Two additional named arnona discount categories: (a) a recipient of a Bituach Leumi income-support benefit (havtachat hachnasa) is entitled to up to 70% (distinct from the senior income-supplement band); (b) a person in hardship may be granted up to 70% at the discretion of the local discounts (nazak) committee under Regulation 7 of the arnona discount regulations, after an unexpected event causing serious income loss.",
-      "source_url": "https://www.kolzchut.org.il/he/%D7%94%D7%A0%D7%97%D7%95%D7%AA_%D7%91%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94",
-      "raw_snippet": "הנחה בארנונה למקבלי הבטחת הכנסה: עד 70%. הנחה לנזקק: ועדת ההנחות (נזקק) רשאית להעניק עד 70% לפי תקנה 7 לתקנות ההנחה, בעקבות אירוע בלתי צפוי שגרם לאובדן הכנסה משמעותי.",
-      "fetched_at": "2026-07-20T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/arnona-discounts-guide.md", "scripts/arnona-calculator.py"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md",
+        "scripts/arnona-calculator.py"
+      ]
     },
     {
       "claim_id": "arnona-2026-income-test-reform",
@@ -57,15 +59,10 @@
       "source_url": "https://www.gov.il/he/departments/topics/property_tax_arnona",
       "raw_snippet": "רפורמת ההנחות בארנונה לשנת 2026: מבחן ההכנסה מחושב לפי ממוצע 12 חודשים, טבלת סף לנפש הצמודה לשכר המינימום ולגודל משק הבית, הרחבת הזכאות מכ-740,000 לכ-840,000 משקי בית, סף עליון 90%.",
       "fetched_at": "2026-07-20T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
-    },
-    {
-      "claim_id": "miluim-municipal-discount",
-      "claim": "Reserve-duty (miluim) arnona relief is municipality-administered: the amount and eligibility are set by each municipal bylaw rather than a uniform national rate, and reservist relief was expanded via national measures since October 2023. Separately, a building unfit for use may be exempt under Section 330 of the Municipalities Ordinance on application and inspection.",
-      "source_url": "https://www.kolzchut.org.il/he/%D7%94%D7%A0%D7%97%D7%95%D7%AA_%D7%91%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94",
-      "raw_snippet": "הנחת ארנונה למשרתי מילואים נקבעת בחוק העזר של כל רשות מקומית; ההטבות למשרתי מילואים הורחבו במסגרת צעדים ארציים מאז אוקטובר 2023. מבנה שאינו ראוי לשימוש עשוי להיות פטור לפי סעיף 330 לפקודת העיריות, בכפוף לבקשה וביקורת.",
-      "fetched_at": "2026-07-20T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "update-coefficient-2026",
@@ -73,7 +70,11 @@
       "source_url": "https://www.gov.il/he/departments/topics/property_tax_arnona",
       "raw_snippet": "שיעור עדכון הארנונה לשנת 2026 הוא 1.626%, לפי הנוסחה האוטומטית (מחצית שינוי המדד ומחצית שינוי מדד השכר הציבורי).",
       "fetched_at": "2026-06-07T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/arnona-rates-guide.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-rates-guide.md"
+      ]
     },
     {
       "claim_id": "reference-urls-and-examples",
@@ -81,7 +82,130 @@
       "source_url": "https://www.kolzchut.org.il/he/%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94",
       "raw_snippet": "Reference URLs: https://www.kolzchut.org.il/he/ארנונה https://www.gov.il/he/departments/topics/property_tax_arnona https://www.btl.gov.il/benefits/Disability/Pages/default.aspx https://www.tel-aviv.gov.il/ https://www.jerusalem.muni.il/ . Legal reference: Section 3 / סעיף 3 of the 1976 objection law. Municipal arnona phone numbers: *6195 (Tel Aviv), *6226 (Jerusalem), *2404 (Haifa), *6230 (Beer Sheva). Annual-lump-sum and direct-debit discounts of 1-2% (2%, 3% appear as discount/range figures). Average wage 13,566 NIS. Illustrative example and rate-guide amounts (NIS and shekel forms): 1,346 NIS, 1,346 ש\"ח, 130 NIS, 130 ש\"ח, 2,500 NIS, 3,500 NIS, 3,750 NIS, 4,375 NIS, 4,536 NIS, 4,536 ש\"ח, 4,875 NIS, 5,040 NIS, 5,040 ש\"ח, 5,200 NIS, 5,375 NIS, 504 NIS, 504 ש\"ח, 6,100 NIS, 6,800 NIS, 60 ש\"ח, 65 ש\"ח, 65 NIS, 7,500 NIS, 72 ש\"ח, 72 NIS, 8,075 NIS, 8,075 ש\"ח, 84 NIS, 84 ש\"ח, 845 NIS, 845 ש\"ח, 90 NIS, 90 ש\"ח, 95 ש\"ח, 95 NIS. Percentages 2%, 3%, 70% appear as lump-sum-discount and income-band figures.",
       "fetched_at": "2026-06-07T00:00:00Z",
-      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/arnona-rates-guide.md"]
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-rates-guide.md"
+      ]
+    },
+    {
+      "claim_id": "arnona-soldier-exemption",
+      "claim": "A conscript soldier is 100% exempt from arnona on 70 sqm of the apartment they own or rent (90 sqm if 5 or more people live there), and for up to 4 months after discharge. A soldier living in a parent's home is not eligible.",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%A4%D7%98%D7%95%D7%A8_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94_%D7%9C%D7%97%D7%99%D7%99%D7%9C%D7%99%D7%9D_%D7%91%D7%A9%D7%99%D7%A8%D7%95%D7%AA_%D7%97%D7%95%D7%91%D7%94_%D7%95%D7%97%D7%99%D7%99%D7%9C%D7%99%D7%9D_%D7%9E%D7%A9%D7%95%D7%97%D7%A8%D7%A8%D7%99%D7%9D",
+      "raw_snippet": "חיילים בשירות חובה פטורים מתשלום ארנונה על 70 מ\"ר משטח הדירה שבה הם מתגוררים כבעלים או כשוכרים (הנחה בשיעור 100%) | אם מתגוררים בדירה 5 אנשים ומעלה הפטור ניתן על 90 מ\"ר | חיילים משוחררים זכאים לפטור מארנונה עד 4 חודשים מיום שחרורם משירות חובה | חיילים שמתגוררים בבית הוריהם לא זכאים לפטור",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md",
+        "scripts/arnona-calculator.py"
+      ],
+      "fetched_at": "2026-08-13T00:00:00Z",
+      "verified_via": "playwright",
+      "verified_at": "2026-08-13T00:00:00Z"
+    },
+    {
+      "claim_id": "arnona-income-support-pre-2003",
+      "claim": "Income-support (havtachat hachnasa) recipients may get an arnona discount of up to 70%, at the municipality's decision, but only those whose benefit started before 2003 with no 6-month continuous break in eligibility.",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%94%D7%A0%D7%97%D7%94_%D7%91%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94_%D7%9C%D7%9E%D7%A7%D7%91%D7%9C%D7%99_%D7%92%D7%9E%D7%9C%D7%AA_%D7%94%D7%91%D7%98%D7%97%D7%AA_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
+      "raw_snippet": "מקבלי הבטחת הכנסה שהתחילו לקבל את הגמלה לפני 2003 עשויים לקבל הנחה בארנונה בשיעור של עד 70% | ההנחה תינתן בהתאם להחלטת הרשות המקומית | מקבלי הבטחת הכנסה שהתחילו לקבל את הגמלה לפני 2003 ולא הייתה הפסקה של 6 חודשים רצופים בזכאותם לגמלה",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md",
+        "scripts/arnona-calculator.py"
+      ],
+      "fetched_at": "2026-08-13T00:00:00Z",
+      "verified_via": "playwright",
+      "verified_at": "2026-08-13T00:00:00Z"
+    },
+    {
+      "claim_id": "arnona-nazak-70",
+      "claim": "A resident with exceptionally high medical-treatment expenses (their own or a family member's) can apply to the municipality as a nazak, and the local discounts committee may grant a discount of up to 70% at its discretion.",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%94%D7%A0%D7%97%D7%94_%D7%91%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94_%D7%91%D7%92%D7%99%D7%9F_%D7%94%D7%95%D7%A6%D7%90%D7%95%D7%AA_%D7%92%D7%91%D7%95%D7%94%D7%95%D7%AA_%D7%A2%D7%9C_%D7%98%D7%99%D7%A4%D7%95%D7%9C%D7%99%D7%9D_%D7%A8%D7%A4%D7%95%D7%90%D7%99%D7%99%D7%9D",
+      "raw_snippet": "מי שנגרמו להם הוצאות גבוהות במיוחד בשל טיפולים רפואיים, שלהם או של בן משפחתם, יכולים להגיש בקשה להנחה בארנונה מהרשות המקומית (\"בקשה למחזיק שהוא נזקק\") | ועדת ההנחות ברשות המקומית רשאית לאשר, בהתאם לשיקול דעתה, הנחה עד לשיעור של 70%",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md",
+        "scripts/arnona-calculator.py"
+      ],
+      "fetched_at": "2026-08-13T00:00:00Z",
+      "verified_via": "playwright",
+      "verified_at": "2026-08-13T00:00:00Z"
+    },
+    {
+      "claim_id": "arnona-miluim-5",
+      "claim": "Holders of a teudat mesharet miluim pa'il may be entitled to an arnona discount of up to 5%. It is a discretionary (hanachat reshut) discount, so a municipality may decline it or set its own rules.",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%94%D7%A0%D7%97%D7%94_%D7%91%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94_%D7%9C%D7%97%D7%99%D7%99%D7%9C%D7%99_%D7%9E%D7%99%D7%9C%D7%95%D7%90%D7%99%D7%9D",
+      "raw_snippet": "בעלי תעודת משרת מילואים פעיל עשויים להיות זכאים להנחה בשיעור של עד 5% בתשלום הארנונה | הנחה זו אינה הנחת חובה ותלויה בשיקולי הרשות המקומית | הם רשומים כשוכרי הדירה או כבעליה",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md",
+        "scripts/arnona-calculator.py"
+      ],
+      "fetched_at": "2026-08-13T00:00:00Z",
+      "verified_via": "playwright",
+      "verified_at": "2026-08-13T00:00:00Z"
+    },
+    {
+      "claim_id": "arnona-bereaved-6666",
+      "claim": "Bereaved families of fallen IDF and security-forces members are entitled by law to a 66.66% arnona discount, on up to 70 sqm of the apartment (90 sqm if 5 or more people live there).",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%94%D7%A0%D7%97%D7%94_%D7%91%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94_%D7%9C%D7%91%D7%A0%D7%99_%D7%9E%D7%A9%D7%A4%D7%97%D7%94_%D7%A9%D7%9C_%D7%97%D7%9C%D7%9C%D7%99_%D7%A6%D7%94%22%D7%9C_%D7%95%D7%9B%D7%95%D7%97%D7%95%D7%AA_%D7%94%D7%91%D7%99%D7%98%D7%97%D7%95%D7%9F",
+      "raw_snippet": "בני משפחה של חללי צה\"ל וכוחות הביטחון זכאים להנחה של 66.66% בתשלומי הארנונה עבור דירת מגורים וגם עבור עסק | הרשויות המקומיות מחויבות לתת הנחה זו על-פי דין | בדירה שמתגוררים בה עד 4 אנשים, ההנחה בשיעור 66.66% תינתן עבור עד 70 מ\"ר משטח הדירה. בדירה שמתגוררים בה 5 אנשים ומעלה ההנחה בשיעור 66.66% תינתן עבור עד 90 מ\"ר משטח הדירה",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md",
+        "scripts/arnona-calculator.py"
+      ],
+      "fetched_at": "2026-08-13T00:00:00Z",
+      "verified_via": "playwright",
+      "verified_at": "2026-08-13T00:00:00Z"
+    },
+    {
+      "claim_id": "arnona-holocaust-66",
+      "claim": "Holocaust survivors may be entitled to an arnona discount of up to 66% at the municipality's discretion; nechei ha-milchama ba-Nazim are entitled to a mandatory 2/3 discount. The discount applies to 70 sqm of the apartment, or 90 sqm if 5 or more family members live there.",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%94%D7%A0%D7%97%D7%94_%D7%91%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94_%D7%9C%D7%A0%D7%99%D7%A6%D7%95%D7%9C%D7%99_%D7%A9%D7%95%D7%90%D7%94",
+      "raw_snippet": "ניצולי שואה עשויים להיות זכאים להנחה בארנונה בשיעור של עד 66% בהתאם למדיניות הרשות המקומית | נכי המלחמה בנאצים זכאים להנחה של 2/3 מחשבון הארנונה (הזכאות להנחה זו מוחלטת ואינה נתונה לשיקול דעת הרשות המקומית) | ההנחה ניתנת עבור 70 מ\"ר משטח הדירה. אם מתגוררים בדירה 5 בני משפחה או יותר, ההנחה תחול על 90 מ\"ר משטח הדירה",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md",
+        "scripts/arnona-calculator.py"
+      ],
+      "fetched_at": "2026-08-13T00:00:00Z",
+      "verified_via": "playwright",
+      "verified_at": "2026-08-13T00:00:00Z"
+    },
+    {
+      "claim_id": "arnona-disabled-bands",
+      "claim": "Arnona discounts for people with disabilities: 100% (mandatory, up to 100 sqm) for recipients of an old-age pension for a disabled person and for work-disability pension recipients with income supplement who reached retirement age; up to 80% for recipients of a general disability pension of 75% or more; up to 40% for a medical disability of 90% or more.",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%94%D7%A0%D7%97%D7%94_%D7%91%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94_%D7%9C%D7%A0%D7%9B%D7%99%D7%9D",
+      "raw_snippet": "מקבלי קצבת זיקנה לנכה (למידע נוסף) מקבלי קצבת נכות מעבודה עם השלמת הכנסה שהגיעו לגיל פרישה 100% הנחת חובה ההנחה ניתנת לשטח של עד 100 מ\"ר | מקבלי קצבת נכות כללית בשיעור 75% ומעלה עד 80% | בעלי נכות רפואית בשיעור 90% ומעלה עד 40%",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md",
+        "scripts/arnona-calculator.py"
+      ],
+      "fetched_at": "2026-08-13T00:00:00Z",
+      "verified_via": "playwright",
+      "verified_at": "2026-08-13T00:00:00Z"
+    },
+    {
+      "claim_id": "arnona-low-income-bands",
+      "claim": "The income-test arnona discount is discretionary (not mandatory) and runs in bands of up to 30%, 50%, 70% and 90%, determined by the household's average gross monthly income in the preceding year and the number of people in the household.",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%94%D7%A0%D7%97%D7%94_%D7%91%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94_%D7%9C%D7%91%D7%A2%D7%9C%D7%99_%D7%94%D7%9B%D7%A0%D7%A1%D7%94_%D7%A0%D7%9E%D7%95%D7%9B%D7%94",
+      "raw_snippet": "בעלי הכנסה נמוכה עשויים לקבל הנחה בארנונה בהתאם לגובה הכנסותיהם ולמספר הנפשות במשפחה | הרשות המקומית לא מחויבת לתת הנחה לפי מבחן הכנסות | הנחה לפי מבחן הכנסה אינה הנחת חובה | מס' נפשות הכנסה חודשית ממוצעת למשפחה ב-₪ (ברוטו) בשנת הכספים 2025 שיעור הנחה 1 מעל 5,076 ועד 5,857 עד 30% מעל 4,295 ועד 5,076 עד 50% מעל 3,513 ועד 4,295 עד 70% עד 3,513 עד 90%",
+      "fetched_at": "2026-08-13T00:00:00Z",
+      "verified_via": "playwright",
+      "verified_at": "2026-08-13T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md"
+      ]
     }
   ]
 }

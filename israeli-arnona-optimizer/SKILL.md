@@ -52,21 +52,21 @@ After calculating the base arnona, check if the user qualifies for any discounts
 | Category | Discount | Key Requirements |
 |----------|----------|-----------------|
 | Oleh Chadash (new immigrant) | Up to 90% on up to 100 sqm | 12 discounted months chosen within the first 24 months from the teudat-oleh / registration date; primary residence |
-| Active-duty soldier (chayal sadir) | Up to 100% | IDF service confirmation; lone/qualifying soldier |
+| Active-duty soldier (chayal sadir) | 100% on 70 sqm (90 sqm if 5+ people live in the apartment) | Any conscript, and for up to 4 months after discharge; must be the owner or the tenant. A soldier living in a parent's home is not eligible, though the parents may be exempt if they show the soldier supported them |
 | Senior (vatik), pension recipient | Up to 25% (discretionary) | Receives old-age / survivors / work-injury pension; no income test |
 | Senior (vatik), income-tested | 30% (mandatory) | Household income up to the average wage |
 | Senior (vatik) with income supplement | Up to 100% | Also receives hashlamat hachnasa within the income limit |
 | Disabled, medical disability 90%+ | Up to 40% | Bituach Leumi medical-disability certificate (90%+) |
 | Disabled, earning incapacity 75%+ | Up to 80% | 75%+ loss of earning capacity (ai-kosher) with a full monthly benefit |
-| Low income (individual) | 20-80% | Income below the per-capita threshold table (see 2026 note below) |
-| Income support (havtachat hachnasa) recipient | Up to 70% | Receives a Bituach Leumi income-support benefit; distinct from the senior income-supplement band |
-| Hardship (nazak) | Up to 70% | Granted by the local discounts (nazak) committee after an unexpected event causing serious income loss (illness, death in family, sudden unemployment); Regulation 7 |
-| Reserve duty (miluim) | Municipality-dependent | Reservists; amount and eligibility set per municipal bylaw, expanded via national measures since Oct 2023 |
-| Student | Up to ~50% (municipality-dependent) | Discretionary per municipal bylaw; no uniform national rate |
-| Single parent | Up to 20% | Recognized single parent status |
-| Large family (4+ children) | Income-tested, up to ~30% | Four or more dependent children; income bands |
-| Bereaved family | Up to 66% | Ministry of Defense bereaved family recognition |
-| Holocaust survivor | Up to 66% | Recognized Holocaust survivor status |
+| Low income (income test) | Up to 30% / 50% / 70% / 90% by income band | Discretionary, not a mandatory discount. Band depends on average gross monthly household income in the preceding year and the number of people in the household |
+| Income support (havtachat hachnasa) recipient | Up to 70%, at the municipality's decision | Only recipients whose benefit started before 2003 with no 6-month continuous break in eligibility; distinct from the senior income-supplement band |
+| Hardship (nazak) | Up to 70% | Granted by the local discounts (nazak) committee after an unexpected event causing serious income loss (illness, death in family, sudden unemployment), or exceptionally high medical-treatment expenses |
+| Reserve duty (miluim) | Up to 5%, discretionary | Holders of a teudat mesharet miluim pa'il (or an equivalent valid IDF confirmation) registered as the owner or the tenant. This is a discretionary discount, so a municipality may decline it or set its own rules |
+| Student | Municipality-dependent | Discretionary per municipal bylaw; we could not verify a uniform national rate, so check your municipality's own discount table |
+| Single parent | Municipality-dependent | Set by municipal bylaw; we could not verify a uniform national rate, so check your municipality's own discount table |
+| Large family (4+ children) | Municipality-dependent, income-tested | We could not verify a uniform national rate, so check your municipality's own discount table |
+| Bereaved family | 66.66% (mandatory) on 70 sqm (90 sqm if 5+ people live in the apartment) | Receives a monthly benefit as a bereaved family member of a fallen IDF or security-forces member: parents, widows and widowers (including common-law), orphans, and in some cases a fallen soldier's ex-wife |
+| Holocaust survivor | Up to 66%, at the municipality's discretion (2/3 mandatory for nechei ha-milchama ba-Nazim) | Discount applies to 70 sqm of the apartment, or 90 sqm if 5 or more family members live there |
 
 Run the calculator with discount flags:
 

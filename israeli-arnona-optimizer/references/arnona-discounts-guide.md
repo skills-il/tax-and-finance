@@ -108,7 +108,7 @@ Note: there is no 50-74% disability band in the national regulation; the bands a
 
 ### 5. Low Income (Hachnasa Nemukha)
 
-**Discount**: 20% to 80% depending on income level relative to thresholds
+**Discount**: up to 30%, 50%, 70% or 90% depending on average gross monthly household income in the preceding year and the number of people in the household
 
 **Reform note for 2026**: effective 1 January 2026 the income test uses the 12-month average income only (the 3-month option was removed) against a per-capita threshold table indexed to the minimum wage and household size, and eligibility widened (roughly 740,000 to 840,000 households). The figures below are indicative pre-reform values; always verify the current-year per-capita table published by the Ministry of Interior and the specific municipality before quoting a cutoff.
 
@@ -137,7 +137,7 @@ Note: there is no 50-74% disability band in the national regulation; the bands a
 
 ### 6. Student (Student)
 
-**Discount**: Up to 50% (varies significantly by municipality)
+**Discount**: Set by each municipality; we could not verify a uniform national rate
 
 **Eligibility**:
 - Full-time student at a recognized institution of higher education
@@ -159,7 +159,7 @@ Note: there is no 50-74% disability band in the national regulation; the bands a
 
 ### 7. Single Parent (Horeh Yachid)
 
-**Discount**: Up to 20%
+**Discount**: Set by each municipality; we could not verify a uniform national rate
 
 **Eligibility**:
 - Recognized single parent status
@@ -175,7 +175,7 @@ Note: there is no 50-74% disability band in the national regulation; the bands a
 
 ### 8. Large Family (Mishpacha Brukat Yeladim)
 
-**Discount**: Up to 20%
+**Discount**: Set by each municipality; we could not verify a uniform national rate
 
 **Eligibility**:
 - Four or more dependent children under 18
@@ -223,13 +223,13 @@ Note: there is no 50-74% disability band in the national regulation; the bands a
 
 National named categories (in addition to the ones above):
 - **Income support (havtachat hachnasa) recipient**: up to 70% for a recipient of a Bituach Leumi income-support benefit. This is a distinct category from the senior income-supplement band.
-- **Hardship (nazak)**: up to 70% granted at the discretion of the local discounts (nazak) committee under Regulation 7 of the discount regulations, after an unexpected event causing serious income loss (illness, death in the family, sudden unemployment). Apply with documentation of the event and the income drop.
+- **Hardship (nazak)**: up to 70% granted at the discretion of the local discounts (nazak) committee after an unexpected event causing serious income loss (illness, death in the family, sudden unemployment), or exceptionally high medical-treatment expenses. Apply with documentation of the event and the income drop.
 
 Municipality-administered discounts (amount set per municipal bylaw):
 - **Reservist soldiers (miluimnikim)**: set per municipal bylaw, particularly after extended reserve duty; reservist relief was expanded via national measures since October 2023. Check the specific municipality's current bylaw.
 - **Volunteer organizations**: Recognized non-profits operating in the municipality
 - **Empty properties**: Partial exemption for a vacant property, usually granted once per ownership period with a capped window; the exact rate and duration are set per municipal ordinance.
-- **Uninhabitable building (mivneh she-eino ra'uy le-shimush)**: a building unfit for use may be exempt under Section 330 of the Municipalities Ordinance, on application and inspection.
+- **Uninhabitable building (mivneh she-eino ra'uy le-shimush)**: a building unfit for use may be exempt under the Municipalities Ordinance, on application and inspection. Check the exact provision and procedure with your municipality.
 - **New residents**: Some development towns offer introductory discounts
 - **Multi-property discount**: NOT available. Each property is assessed independently.
 

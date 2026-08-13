@@ -164,8 +164,8 @@ Beer Sheva uses numbered zones:
 ## Area Calculation Rules
 
 1. **Main area**: All roofed and enclosed living space, measured by external walls (gross area)
-2. **Balconies**: Open balconies are typically charged at 50% of the main rate. Enclosed balconies (sealed with windows) are charged at 100%.
-3. **Storage rooms (machsan)**: Usually charged at 30-50% of the main rate
+2. **Balconies**: Open balconies are commonly charged at a reduced rate and enclosed balconies (sealed with windows) at the full rate, but the exact treatment is set by each municipality's own tariff, so check the local tariff rather than assuming a fixed fraction.
+3. **Storage rooms (machsan)**: Usually charged at a reduced rate, set by each municipality's own tariff
 4. **Parking spaces**: Some municipalities charge for covered parking spaces
 5. **Common areas**: Not charged individually (covered by the building's commercial classification if applicable)
 6. **Rounding**: Most municipalities round up to the nearest whole sqm

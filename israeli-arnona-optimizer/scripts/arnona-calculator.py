@@ -431,7 +431,7 @@ DISCOUNTS = {
         "percentage": 50,
         "max_sqm": 100,
         "duration_months": None,
-        "description": "Up to 50%, full-time student living alone",
+        "description": "Set by each municipality; check your local discount table",
     },
     "single-parent": {
         "name": "Single Parent",
@@ -439,7 +439,7 @@ DISCOUNTS = {
         "percentage": 20,
         "max_sqm": 100,
         "duration_months": None,
-        "description": "20% discount for recognized single parents",
+        "description": "Set by each municipality; check your local discount table",
     },
     "large-family": {
         "name": "Large Family (4+ children)",
@@ -479,7 +479,7 @@ DISCOUNTS = {
         "percentage": 70,
         "max_sqm": 100,
         "duration_months": None,
-        "description": "Up to 70% granted at the local nazak committee's discretion after an unexpected event causing serious income loss (illness, death in family, sudden unemployment); Regulation 7 of the discount regs",
+        "description": "Up to 70% granted at the local nazak committee's discretion after an unexpected event causing serious income loss (illness, death in family, sudden unemployment), or exceptionally high medical-treatment expenses",
     },
 }
 
