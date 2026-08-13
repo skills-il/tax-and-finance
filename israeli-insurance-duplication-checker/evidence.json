@@ -1,0 +1,170 @@
+{
+  "skill_slug": "israeli-insurance-duplication-checker",
+  "schemaVersion": "1.0",
+  "generated_at": "2026-08-13",
+  "notes": "Statutory snippets were sliced from the source text programmatically, not retyped. Sections 54(a)/(b) cite Nevo because the wikitext source wraps cross-references in templates, which drops the section numbers from the plain-text layer. PDF-sourced entries carry verified_via=pdf: the PDFs were downloaded, converted with pdftotext, and stripped of Unicode bidi controls (U+202A/B/C) before the snippet was located. Without that strip no Hebrew snippet matches.",
+  "claims": [
+    {
+      "id": "sec59-property-only",
+      "claim": "Double insurance (ביטוח כפל) is section 59 of the Insurance Contract Law, and it applies to an insured ASSET, not to insurance generally",
+      "claim_type": "law",
+      "source_url": "https://he.wikisource.org/w/index.php?title=%D7%97%D7%95%D7%A7_%D7%97%D7%95%D7%96%D7%94_%D7%94%D7%91%D7%99%D7%98%D7%95%D7%97&action=raw",
+      "source_fetched_at": "2026-08-13T00:30:00Z",
+      "raw_snippet": "בוטח נכס בפני סיכון אחד אצל יותר ממבטח אחד לתקופות חופפות, על המבוטח להודיע על כך למבטחים בכתב מיד לאחר שנעשה ביטוח הכפל או לאחר שנודע לו עליו.",
+      "confidence": "high"
+    },
+    {
+      "id": "sec59c-joint-several",
+      "claim": "In double insurance the insurers are jointly and severally liable toward the insured for the overlapping sum",
+      "claim_type": "law",
+      "source_url": "https://he.wikisource.org/w/index.php?title=%D7%97%D7%95%D7%A7_%D7%97%D7%95%D7%96%D7%94_%D7%94%D7%91%D7%99%D7%98%D7%95%D7%97&action=raw",
+      "source_fetched_at": "2026-08-13T00:30:00Z",
+      "raw_snippet": "בביטוח כפל אחראים המבטחים כלפי המבוטח יחד ולחוד לגבי סכום הביטוח החופף.",
+      "confidence": "high"
+    },
+    {
+      "id": "sec59d-apportionment",
+      "claim": "Insurers apportion the burden between themselves in proportion to the sums insured",
+      "claim_type": "law",
+      "source_url": "https://he.wikisource.org/w/index.php?title=%D7%97%D7%95%D7%A7_%D7%97%D7%95%D7%96%D7%94_%D7%94%D7%91%D7%99%D7%98%D7%95%D7%97&action=raw",
+      "source_fetched_at": "2026-08-13T00:30:00Z",
+      "raw_snippet": "המבטחים ישאו בנטל החיוב בינם לבין עצמם לפי היחס שבין סכומי הביטוח.",
+      "confidence": "high"
+    },
+    {
+      "id": "sec54a-fixed-sum-routes-to-life",
+      "claim": "Accident, illness and disability cover paying a pre-agreed sum regardless of actual loss is governed by Chapter B (life insurance), which contains no double-insurance provision, so such cover stacks",
+      "claim_type": "law",
+      "source_url": "https://www.nevo.co.il/law_html/law00/71902.htm",
+      "source_fetched_at": "2026-08-13T00:32:00Z",
+      "raw_snippet": "על ביטוח תאונה, מחלה ונכות שבו חייב המבטח לשלם תגמולי ביטוח לפי שיעור מוסכם מראש, ללא תלות בשיעור הנזק שנגרם, יחולו הוראות פרק ב', בשינויים המחוייבים.",
+      "verified_via": "browser",
+      "verified_at": "2026-08-13T00:32:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "sec54b-indemnity-import-list",
+      "claim": "Loss-based accident, illness and disability cover imports only sections 42, 49, 52, 56, 61, 62 and 64. Section 59 is absent from that list, so the double-insurance rule does not reach reimbursement health cover",
+      "claim_type": "law",
+      "source_url": "https://www.nevo.co.il/law_html/law00/71902.htm",
+      "source_fetched_at": "2026-08-13T00:32:00Z",
+      "raw_snippet": "על ביטוח תאונה, מחלה ונכות שבו חייב המבטח לשלם תגמולי ביטוח לפי שיעור הנזק שנגרם, יחולו הוראות סעיפים 42, 49, 52, 56, 61, 62 ו-64, בשינויים המחוייבים.",
+      "verified_via": "browser",
+      "verified_at": "2026-08-13T00:32:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "sec56a-indemnity-cap",
+      "claim": "The insurer's indemnity duty is limited to the extent of the loss actually caused, capped at the sum insured. This is what prevents double recovery on reimbursement cover",
+      "claim_type": "law",
+      "source_url": "https://he.wikisource.org/w/index.php?title=%D7%97%D7%95%D7%A7_%D7%97%D7%95%D7%96%D7%94_%D7%94%D7%91%D7%99%D7%98%D7%95%D7%97&action=raw",
+      "source_fetched_at": "2026-08-13T00:30:00Z",
+      "raw_snippet": "חובת השיפוי של המבטח תהיה כשיעור הנזק שנגרם ובלבד שלא תעלה על הסכום שנתחייב בו בחוזה (להלן – סכום הביטוח)",
+      "confidence": "high"
+    },
+    {
+      "id": "sec10b-insured-cancellation-3-days",
+      "claim": "Cancellation by the INSURED takes effect three days after notice reaches the insurer (the 15 days in 10(a) is the insurer's side)",
+      "claim_type": "law",
+      "source_url": "https://he.wikisource.org/w/index.php?title=%D7%97%D7%95%D7%A7_%D7%97%D7%95%D7%96%D7%94_%D7%94%D7%91%D7%99%D7%98%D7%95%D7%97&action=raw",
+      "source_fetched_at": "2026-08-13T00:30:00Z",
+      "raw_snippet": "הודיע המבוטח על ביטול החוזה על פי תנאיו או על פי חוק זה, מתבטל החוזה כעבור שלושה ימים מהיום שבו נמסרה הודעת הביטול למבטח.",
+      "confidence": "high"
+    },
+    {
+      "id": "sec45a-life-cancel-anytime",
+      "claim": "A life insurance policy may be cancelled at any time by written notice to the insurer",
+      "claim_type": "law",
+      "source_url": "https://he.wikisource.org/w/index.php?title=%D7%97%D7%95%D7%A7_%D7%97%D7%95%D7%96%D7%94_%D7%94%D7%91%D7%99%D7%98%D7%95%D7%97&action=raw",
+      "source_fetched_at": "2026-08-13T00:30:00Z",
+      "raw_snippet": "המבוטח רשאי בכל עת לבטל את החוזה בהודעה בכתב למבטח.",
+      "confidence": "high"
+    },
+    {
+      "id": "gemel-disability-75-of-insured-salary",
+      "claim": "Disability pension inside a provident/pension fund may not exceed 75% of the salary insured in that fund, with a carve-out up to 100% for someone entitled to long-term-care payments",
+      "claim_type": "percentage",
+      "source_url": "https://he.wikisource.org/w/index.php?title=%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A4%D7%99%D7%A7%D7%95%D7%97_%D7%A2%D7%9C_%D7%A9%D7%99%D7%A8%D7%95%D7%AA%D7%99%D7%9D_%D7%A4%D7%99%D7%A0%D7%A0%D7%A1%D7%99%D7%99%D7%9D_(%D7%A7%D7%95%D7%A4%D7%95%D7%AA_%D7%92%D7%9E%D7%9C)_(%D7%9B%D7%99%D7%A1%D7%95%D7%99%D7%99%D7%9D_%D7%91%D7%99%D7%98%D7%95%D7%97%D7%99%D7%99%D7%9D_%D7%91%D7%A7%D7%95%D7%A4%D7%95%D7%AA_%D7%92%D7%9E%D7%9C)&action=raw",
+      "source_fetched_at": "2026-08-13T00:35:00Z",
+      "raw_snippet": "סכום קצבת הנכות לא יעלה על 75% מן השכר המבוטח בקופת הגמל, אלא אם כן נקבע בהסדר הביטוחי שיעור העולה על השיעור האמור למי שהיה זכאי לקבל תשלומים בשל ביטוח סיעודי, ובלבד שהשיעור האמור אינו עולה על 100% מן השכר המבוטח בקופת הגמל",
+      "confidence": "high"
+    },
+    {
+      "id": "akaa-offset-triggers-at-100pct",
+      "claim": "The cross-insurer offset in the uniform disability policy triggers only when total benefits from all insurers exceed 100% of the insured's average salary from every income source, not at 75%",
+      "claim_type": "percentage",
+      "source_url": "https://media.harel-group.co.il/media/x3nejvgj/%D7%AA%D7%A0%D7%90%D7%99-%D7%A4%D7%95%D7%9C%D7%99%D7%A1%D7%AA-%D7%91%D7%99%D7%98%D7%95%D7%97-%D7%90%D7%95%D7%91%D7%93%D7%9F-%D7%9B%D7%95%D7%A9%D7%A8-%D7%A2%D7%91%D7%95%D7%93%D7%94-%D7%94%D7%A8%D7%90%D7%9C-%D7%9C%D7%A2%D7%AA%D7%99%D7%93-%D7%97%D7%93%D7%A9.pdf",
+      "source_fetched_at": "2026-08-13T00:35:00Z",
+      "raw_snippet": "ביטח המבוטח את עצמו כנגד אבדן כושר העבודה גם אצל מבטחים אחרים וכתוצאה מכך סך הפיצוי החודשי המגיע לו בגין אותו מקרה הביטוח ממבטחים אחרים ומהתכנית עולה על 100% ממוצע השכר של המבוטח מכל מקור הכנסה",
+      "verified_via": "pdf",
+      "verified_at": "2026-08-13T00:40:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "akaa-30pct-floor",
+      "claim": "However much offset applies, the policy still pays at least 30% of the monthly benefit the insured is entitled to under its terms",
+      "claim_type": "percentage",
+      "source_url": "https://media.harel-group.co.il/media/x3nejvgj/%D7%AA%D7%A0%D7%90%D7%99-%D7%A4%D7%95%D7%9C%D7%99%D7%A1%D7%AA-%D7%91%D7%99%D7%98%D7%95%D7%97-%D7%90%D7%95%D7%91%D7%93%D7%9F-%D7%9B%D7%95%D7%A9%D7%A8-%D7%A2%D7%91%D7%95%D7%93%D7%94-%D7%94%D7%A8%D7%90%D7%9C-%D7%9C%D7%A2%D7%AA%D7%99%D7%93-%D7%97%D7%93%D7%A9.pdf",
+      "source_fetched_at": "2026-08-13T00:35:00Z",
+      "raw_snippet": "הפיצוי החודשי שישולם למבוטח לא יפחת, בכל מקרה, משיעור של 30% מסכום הפיצוי החודשי לו הוא זכאי על פי תנאי התכנית.",
+      "verified_via": "pdf",
+      "verified_at": "2026-08-13T00:40:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "akaa-refund-only-if-claim",
+      "claim": "The refund of excess premiums for redundant disability cover is contingent on the insured event occurring. No claim, no refund",
+      "claim_type": "feature",
+      "source_url": "https://media.harel-group.co.il/media/x3nejvgj/%D7%AA%D7%A0%D7%90%D7%99-%D7%A4%D7%95%D7%9C%D7%99%D7%A1%D7%AA-%D7%91%D7%99%D7%98%D7%95%D7%97-%D7%90%D7%95%D7%91%D7%93%D7%9F-%D7%9B%D7%95%D7%A9%D7%A8-%D7%A2%D7%91%D7%95%D7%93%D7%94-%D7%94%D7%A8%D7%90%D7%9C-%D7%9C%D7%A2%D7%AA%D7%99%D7%93-%D7%97%D7%93%D7%A9.pdf",
+      "source_fetched_at": "2026-08-13T00:35:00Z",
+      "raw_snippet": "לא קרה מקרה הביטוח, המבוטח לא יהיה זכאי להחזר פרמיה",
+      "verified_via": "pdf",
+      "verified_at": "2026-08-13T00:40:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "harb-holds-no-shaban-data",
+      "claim": "Har HaBituach does not contain any supplementary-health-plan (שב\"ן) data, so the overlap between commercial policies and שב\"ן is not made accessible to the public",
+      "claim_type": "feature",
+      "source_url": "https://library.mevaker.gov.il/sites/DigitalLibrary/Documents/2020/71A/2020-71A-201-Health-insurance.pdf",
+      "source_fetched_at": "2026-08-13T00:35:00Z",
+      "raw_snippet": "עוד נמצא, כי הנתונים האישיים המופיעים בהר הביטוח אינם כוללים את המידע בדבר התוכניות בשב\"ן ולכן המידע בדבר החפיפה בין הביטוחים המסחריים לתוכניות השב\"ן, של המבוטח גם אינו מונגש לציבור.",
+      "verified_via": "pdf",
+      "verified_at": "2026-08-13T00:40:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "overpayment-hundreds-of-millions",
+      "claim": "The State Comptroller estimates the public's excess payment for overlapping cover at a floor of hundreds of millions of shekels a year, deliberately giving no point estimate",
+      "claim_type": "currency",
+      "source_url": "https://library.mevaker.gov.il/sites/DigitalLibrary/Documents/2020/71A/2020-71A-201-Health-insurance.pdf",
+      "source_fetched_at": "2026-08-13T00:35:00Z",
+      "raw_snippet": "מאות מיליוני שקלים בשנה",
+      "verified_via": "pdf",
+      "verified_at": "2026-08-13T00:40:00Z",
+      "confidence": "medium"
+    },
+    {
+      "id": "duplication-37pct-3-4-million",
+      "claim": "37% of the statutorily insured public, about 3.4 million people, hold commercial health cover alongside שב\"ן, which is the state of double insurance (2020 data, published 2023)",
+      "claim_type": "percentage",
+      "source_url": "https://fs.knesset.gov.il/globaldocs/MMM/38209512-c6ce-ed11-815a-005056aa4246/2_38209512-c6ce-ed11-815a-005056aa4246_11_20077.pdf",
+      "source_fetched_at": "2026-08-13T00:35:00Z",
+      "raw_snippet": "37% מציבור המבוטחים על פי החוק (כ 3.4- מיליון) מחזיק בביטוח מסחרי במקביל לשב\"ן, מצב המכונה כפל ביטוחי",
+      "verified_via": "pdf",
+      "verified_at": "2026-08-13T00:40:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "reform-effective-june-2024",
+      "claim": "The first-shekel reform took effect in June 2024, with the aim of reducing double insurance",
+      "claim_type": "date",
+      "source_url": "https://www.gov.il/BlobFolder/reports/insurances-surgeons-2025/he/files_publications_digital_health_insurances-surgeons-2025.pdf",
+      "source_fetched_at": "2026-08-13T00:35:00Z",
+      "raw_snippet": "עם כניסתה לתוקף של רפורמת \"שקל ראשון\" ביוני 2024, שמטרתה לצמצם את תופעת כפל הביטוחים",
+      "verified_via": "pdf",
+      "verified_at": "2026-08-13T00:40:00Z",
+      "confidence": "high"
+    }
+  ]
+}
