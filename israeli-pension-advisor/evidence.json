@@ -244,14 +244,16 @@
     },
     {
       "claim_id": "heichum-kitzbah-1.35-32yr",
-      "claim": "Heichum kitzbah formula: each shekel of tax-exempt severance withdrawn within 32 years before legal retirement age reduces the lifetime kitzbah-mezakah tax-exempt pool by 1.35 shekels. Severance withdrawn more than 32 years before retirement does not impact the kitzbah-mezakah pool. The 1.35x ratio applies only to the tax-exempt portion (up to 13,750 NIS/year of service), not to severance withdrawn in excess of the exemption. The lifetime tax-exempt capital pool itself (kibua zechuyot / yitrat hahon haptura) = 180 × the monthly tax-exempt pension = 180 × 5,422 ≈ 976,000 NIS for 2026 (rises as the exemption rate climbs to 67% by 2028); it is NOT 32 × 180% × kitzbah.",
+      "claim": "NOT VERIFIED: the Kol Zchut page for קיבוע זכויות now returns 404 and no gov.il equivalent could be reached (every ITA service slug tried returns 403). The heichum kitzbah formula below is retained as previously written and needs re-sourcing to the ITA before it is relied on. Heichum kitzbah formula: each shekel of tax-exempt severance withdrawn within 32 years before legal retirement age reduces the lifetime kitzbah-mezakah tax-exempt pool by",
       "source_url": "https://www.kolzchut.org.il/he/%D7%A7%D7%99%D7%91%D7%95%D7%A2_%D7%96%D7%9B%D7%95%D7%99%D7%95%D7%AA",
       "raw_snippet": "כל שקל פיצויים פטור שנמשך בתוך 32 שנה מקטין את מאגר הפטור ב-1.35 ש\"ח; קיבוע זכויות: תקרת ההון הפטורה = 180 × הקצבה המזכה הפטורה החודשית = 180 × 5,422 ≈ 976,000 ש\"ח (2026); 976,000 NIS",
       "fetched_at": "2026-05-18T00:00:00Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ]
+      ],
+      "verified_via": "",
+      "verified_at": ""
     },
     {
       "claim_id": "tikun-190-deposits",
