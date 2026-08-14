@@ -36,7 +36,7 @@ As of 2026, roughly 360,000 customers have moved to private suppliers (up from ~
 
 ## Water tariff snapshot (2026, incl. VAT + sewage)
 
-- Ascending block: Tier 1 (כמות מוכרת) ~8.508 ILS/m³; Tier 2 ~15.623 ILS/m³ (~84% higher). Tier-1 allocation ~3.5 m³ per registered nefesh/month.
+- Ascending block: Tier 1 (כמות מוכרת) ~8.51 ILS/m³; Tier 2 ~15.62 ILS/m³ (~84% higher). Tier-1 allocation ~3.5 m³ per registered nefesh/month.
 - Residential water is purely volumetric, there is NO fixed household water service charge; sewage is bundled into the per-m³ tariff in most municipalities. Where billed separately, standalone sewer ~4.39 ILS/m³.
 - Register all nefashot to maximize the Tier-1 allocation. Confirmed-leak credit (often 50-100%) under תקנות תאגידי מים וביוב with a plumber certificate filed within 60 days.
 - Municipal corporations: Mei Avivim (Tel Aviv), Hagihon (Jerusalem), Mei Haifa, Mei Raanana, Mekorot (some localities).

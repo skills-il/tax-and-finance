@@ -89,7 +89,7 @@ The residential electricity market is open to private suppliers. As of 2026, app
 **Cooling-off period:** Under the Consumer Protection Law (חוק הגנת הצרכן), residential customers have a 14-day right to cancel after signing with an alternate supplier. Always read the cancellation clauses before signing, and keep a copy of the contract. The Energy Ministry is also working to shorten the supplier-switching window from 14 days to 7 days during 2026.
 
 **Discounts on the electricity bill (separate from supplier choice):**
-- **Seniors with income supplement (השלמת הכנסה):** 50% discount on consumption up to 400 kWh/month (or 800 kWh per bi-monthly bill). The Energy Minister is advancing a plan to deepen this to 65% for old-age + income-supplement, old-age-disability, and Holocaust survivors, verify status at gov.il before quoting 65% as fact.
+- **Seniors with income supplement (השלמת הכנסה):** 50% discount on consumption up to 400 kWh/month (or 800 kWh per bi-monthly bill). The 50% rate covers 11 eligible groups. Three of them (above retirement age with old-age pension plus income supplement, old-age pension for the disabled, and Holocaust survivors) are set to move to 65%; verify status at gov.il before quoting 65% as fact.
 - **Holocaust survivors (ניצולי שואה):** 50% discount on up to 400 kWh/month
 - **Disabled (נכים) with high disability percentage:** discount tiers per Bituach Leumi recognition
 - The discount is applied automatically once Bituach Leumi shares eligibility with IEC; nothing to file each month, but verify the discount line appears on your bill.
@@ -138,13 +138,13 @@ Israeli residential water uses an ascending block tariff (tiered pricing):
 
 **Tier 2 (consumption above basic allocation):**
 - Higher rate per cubic meter
-- Approximately 84% more expensive than Tier 1 (Jan 2026: Tier 1 ~8.508 ILS/m³ inc. VAT vs Tier 2 ~15.623 ILS/m³ inc. VAT, both include sewage)
+- Approximately 84% more expensive than Tier 1 (Jan 2026: Tier 1 ~8.51 ILS/m³ inc. VAT vs Tier 2 ~15.62 ILS/m³ inc. VAT, both include sewage)
 - Applies to all consumption beyond the basic allocation
 
 **Important factors:**
 - **Nefashot registration**: register all household members at your water corporation to maximize Tier 1 allocation. Unregistered members mean a lower threshold before Tier 2 kicks in. Registration is forward-looking; back-credit is generally limited to the current billing period.
 - **Garden/pool allocation**: additional allocation available for documented garden irrigation or swimming pool
-- **Sewage charge (biuv)**: in most municipalities sewage is bundled into the regulated per-m³ water tariff (the 8.508 / 15.623 ILS/m³ figures already include sewer). Where the local authority bills sewer separately, the standalone sewer rate is ~4.39 ILS/m³ on a volume basis (typically 70-90% of metered water).
+- **Sewage charge (biuv)**: in most municipalities sewage is bundled into the regulated per-m³ water tariff (the 8.51 / 15.62 ILS/m³ figures already include sewer). Where the local authority bills sewer separately, the standalone sewer rate is ~4.39 ILS/m³ on a volume basis (typically 70-90% of metered water).
 - **Confirmed-leak credit**: water corporations grant a partial credit (often 50-100%) for documented hidden leaks under תקנות תאגידי מים וביוב. Requires a plumber certificate filed within 60 days of detection.
 
 **Municipal water corporations (examples):**
@@ -205,7 +205,7 @@ To determine if switching to natural gas is worthwhile:
 The Israeli telecom market is one of the cheapest in the developed world after a decade of post-2012 MVNO entry and a fiber-optic rollout that finished covering most of the country between 2022 and 2025. Most households can save 50-200 ILS/month by switching providers, but the comparison has to look at the **total** bill (line + roaming + add-ons) and at lock-in / introductory pricing carefully.
 
 **Provider tables and price ranges** (cellular MNO/MVNO plans, fiber infrastructure operators, speed tiers) are in `references/details-2026.md`. Key points for the body:
-- Cheapest cellular clusters ~30 NIS/month for unlimited domestic calls + 50GB+ data, no setup fee, no commitment ("ללא התחייבות"). Number portability is free and takes ~1 business day, sign with the NEW provider first (never cancel first, that creates a gap). eSIM is widely supported.
+- Cheapest cellular clusters ~33-35 NIS/month for 150-400GB with several thousand minutes (genuinely unlimited domestic calls sits at the top of that band); cheaper tiers exist but are data-only or low-data. No setup fee, no commitment ("ללא התחייבות"). Number portability is free and takes ~1 business day, sign with the NEW provider first (never cancel first, that creates a gap). eSIM is widely supported.
 - Home internet splits into infrastructure (Bezeq BFiber, HOT, IBC/Unlimited, Cellcom/Partner fiber) and ISP; a single wholesale-market bundle usually beats a legacy split bill by 20-40 NIS/month. Fiber covers >90% of households; ADSL is being retired.
 - Introductory prices commonly jump 50-100% after 12 months, set a reminder and re-shop. Triple-play (cellular+internet+TV) discounts vanish if you cancel one leg.
 
@@ -330,11 +330,11 @@ Result: User receives a practical action plan for shifting consumption to off-pe
 - Israel Electric Corporation rates are updated by the Electricity Authority on a semi-annual cycle, and a mid-year update can move the rate: the 1.7.2026 update cut the tariff by about 0.57% after the +1.5% January change. Agents routinely quote a superseded rate. Always verify the current tariff before quoting per-kWh numbers.
 - The TOU (tariff TOZ / תעו"ז) schedule has only two tiers since April 2023: peak (שיא) and off-peak (שפל). The former שלב הגבע (shoulder) tier was eliminated. Agents trained on older docs may still describe a 3-tier structure with a middle band.
 - Switching to an alternate electricity supplier (Cellcom Energy, Pazgas, OPC, etc.) only discounts the generation component, which is roughly 60-70% of the bill. The household still pays IEC for distribution, transmission, the public broadcasting fee, and meter charges. Agents may incorrectly imply the entire bill changes.
-- Water Tier 1 covers up to 3.5 m³ per registered nefesh per month at the lower rate; consumption above goes to Tier 2 (~84% higher in Jan 2026: 8.508 vs 15.623 ILS/m³ inc. VAT). Sewage is bundled into the regulated per-m³ tariff in most municipalities, NOT a separate percentage surcharge as some older guides describe.
-- Israeli utility bills include 18% VAT (raised from 17% on 1 Jan 2025; the 2026 increase to 19% was rejected by the cabinet in Dec 2025). Be explicit about whether quoted prices include or exclude VAT, especially when comparing alternate-supplier offers, since some advertise the pre-VAT generation rate.
+- Water Tier 1 covers up to 3.5 m³ per registered nefesh per month at the lower rate, with a floor: the recognized quantity per housing unit is never less than 7 m³ per month, so a single-occupant household gets 7 rather than 3.5; consumption above goes to Tier 2 (~84% higher in Jan 2026: 8.51 vs 15.62 ILS/m³ inc. VAT). Sewage is bundled into the regulated per-m³ tariff in most municipalities, NOT a separate percentage surcharge as some older guides describe.
+- Israeli utility bills include 18% VAT (raised from 17% on 1 Jan 2025). A rise to 19% was floated at the Finance Ministry but was not enacted: the 2026 state budget contains no such increase, so quote 18%. Be explicit about whether quoted prices include or exclude VAT, especially when comparing alternate-supplier offers, since some advertise the pre-VAT generation rate.
 - The Olim Hadashim arnona discount is 90% on up to 100 sqm for 12 months out of the 24 months following aliyah registration, NOT yearly. Agents may incorrectly describe it as multi-year (e.g., "90% first year, 10% years 2-5"). Disabled olim recognized by Bituach Leumi get up to 80% indefinitely under a separate provision.
 - The IEC customer-service number is **103**; calls from a Bezeq or HOT landline are free. Do not emit older short codes from memory, they may point at a dead number.
-- **Solar export tariff.** Energy-vs-energy net-metering is closed to new entrants. The residential rooftop export tariff is ~48 agorot/kWh plus a +6 agorot urban premium (cities >50k) for 15 years; the small-installation track is <=15 kW. Export pays less than the ~63.5 agorot retail rate, so self-consumption is worth more than export. Quote the contract's actual hesder line, not older ~0.21/~0.60/~0.38 figures.
+- **Solar export tariff.** Energy-vs-energy net-metering is closed to new entrants. The residential rooftop export tariff is ~48 agorot/kWh plus a +6 agorot urban premium (cities >50k); the small-installation track is <=15 kW. Confirm the contract DURATION against the current tariff book before quoting it: published sources differ (25 years under the older net-metering rule, 15 years in later material), and the difference changes a payback calculation materially. Export pays less than the ~63.5 agorot retail rate, so self-consumption is worth more than export. Quote the contract's actual hesder line, not older ~0.21/~0.60/~0.38 figures.
 - **Cellular and internet "promo expiry".** Most plans advertise a low introductory price (often X NIS for 12 months) that doubles or more after the promo period. Agents that quote the intro price as the "real" monthly cost will mislead the user. Always check the תקנון for "מחיר לאחר תום תקופת המבצע".
 - **Number portability is free, fast, and no-paperwork.** Suggesting users "cancel first then sign up new" is wrong, they should sign with the new provider, who handles portability in ~1 business day. Cancelling first creates a service gap.
 

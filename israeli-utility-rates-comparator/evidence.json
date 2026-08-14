@@ -19,15 +19,17 @@
     },
     {
       "claim_id": "elec-tariff-increase-1.5",
-      "claim": "Electricity tariff was raised by 1.5% effective 1 January 2026; switched to automatic semi-annual updates based on USD exchange rate and CPI.",
+      "claim": "The Electricity Authority raised the tariff by 1.5% at the start of 2026, about 5.9 NIS more per month for a household, and moved to an automatic semi-annual update based on the CPI and the dollar exchange rate instead of an annual one.",
       "source_url": "https://finance.walla.co.il/item/3800047",
-      "raw_snippet": "Electricity tariff was raised by 1.5% effective 1 January 2026; switched to automatic semi-annual updates based on USD exchange rate and CPI. (Walla Finance - 1.5% electricity hike Jan 2026)",
-      "fetched_at": "2026-05-20",
+      "raw_snippet": "רשות החשמל מעדכנת מבנה תעריף חדש: תוספת של כ-5.9 ש\"ח בחודש לצרכן ביתי, ועדכון חצי־שנתי אוטומטי המבוסס על מדד המחירים לצרכן ושער הדולר במקום עדכון שנתי",
+      "fetched_at": "2026-08-14",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/details-2026.md"
-      ]
+      ],
+      "verified_via": "Walla Money article read in a browser (headline and subhead)",
+      "verified_at": "2026-08-14"
     },
     {
       "claim_id": "elec-tou-peak-off-peak",
@@ -99,15 +101,17 @@
     },
     {
       "claim_id": "elec-vat-18-percent",
-      "claim": "Israeli VAT was raised from 17% to 18% on 1 January 2025; a proposal to raise to 19% in January 2026 was rejected by the cabinet in December 2025.",
-      "source_url": "https://www.themarker.com/dynamo/2025-12-08/ty-article/0000019a-ff9d-de33-a59e-fffdc5f70000",
-      "raw_snippet": "Israeli VAT was raised from 17% to 18% on 1 January 2025; a proposal to raise to 19% in January 2026 was rejected by the cabinet in December 2025. (TheMarker - electricity tariff Jan 2026)",
-      "fetched_at": "2026-05-20",
+      "claim": "VAT on a transaction and on the import of goods stands at 18% instead of 17% from 1 January 2025.",
+      "source_url": "https://www.gov.il/he/pages/dec1270-2024",
+      "raw_snippet": "שיעור המס על עסקה ועל יבוא טובין יעלה באחוז אחד, כך שיעמוד על 18% במקום 17% החל מיום 1 בינואר 2025.",
+      "fetched_at": "2026-08-14",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/details-2026.md"
-      ]
+      ],
+      "verified_via": "Government Decision 1270 (2024) on the VAT increase, read on gov.il",
+      "verified_at": "2026-08-14"
     },
     {
       "claim_id": "elec-senior-discount-50pct-400kwh",
@@ -123,15 +127,17 @@
     },
     {
       "claim_id": "elec-senior-discount-deepening-proposal",
-      "claim": "Energy Minister is advancing plan to deepen the electricity discount for seniors + Holocaust survivors from 50% to 65% on up to 400 kWh/month; not yet enacted.",
+      "claim": "The 50% electricity discount on up to 400 kWh/month applies to 11 eligible groups; three of them (above retirement age with old-age pension plus income supplement, old-age pension for the disabled, and Holocaust survivors) are to receive a deeper 65% discount.",
       "source_url": "https://www.ynet.co.il/economy/article/sjaauhn66",
-      "raw_snippet": "Energy Minister is advancing plan to deepen the electricity discount for seniors + Holocaust survivors from 50% to 65% on up to 400 kWh/month; not yet enacted. (Ynet - deepening electricity discount to 65%)",
-      "fetched_at": "2026-05-20",
+      "raw_snippet": "עד כה ניתנה הנחה של 50% על צריכה של עד 400 קוט\"ש בחודש ל-11 קבוצות זכאים. כעת שלוש מתוך הקבוצות יקבלו הנחה עמוקה יותר: צרכנים מעל גיל פרישה המקבלים קצבת זקנה והבטחת הכנסה או קצבת זקנה לנכה וניצולי שואה.",
+      "fetched_at": "2026-08-14",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/details-2026.md"
-      ]
+      ],
+      "verified_via": "Ynet article read in a browser",
+      "verified_at": "2026-08-14"
     },
     {
       "claim_id": "smart-meter-count-1m",
@@ -147,15 +153,17 @@
     },
     {
       "claim_id": "solar-export-tariff-net-metering",
-      "claim": "Residential rooftop solar net-metering surplus export tariff (decision 1573) is ~0.48 ILS/kWh fixed for 25 years; 2025 two-track proposal pays ~0.60 ILS/kWh for first 5 years then ~0.38 ILS/kWh (installations up to 30 kW, higher rate for first 15 kW).",
+      "claim": "Under the net-metering rules in force when this was reported (March 2025), the surplus export tariff was ILS 0.48/kWh for a fixed 25-year period. A two-track alternative paying ILS 0.6/kWh for the first five years was a PROPOSAL, not law.",
       "source_url": "https://www.pv-magazine.com/2025/03/24/israel-plans-two-different-tariffs-for-rooftop-solar-under-net-metering/",
-      "raw_snippet": "Residential rooftop solar net-metering surplus export tariff (decision 1573) is ~0.48 ILS/kWh fixed for 25 years; 2025 two-track proposal pays ~0.60 ILS/kWh for first 5 years then ~0.38 ILS/kWh (installations up to 30 kW, higher rate for first 15 kW). (PV Magazine - Israel plans two tariffs for rooftop solar under net metering)",
-      "fetched_at": "2026-05-20",
+      "raw_snippet": "Under current law, the tariff is set at ILS 0.48 ($0.13)/kWh for a fixed 25-year period.",
+      "fetched_at": "2026-08-14",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/details-2026.md"
-      ]
+      ],
+      "verified_via": "pv magazine article read in a browser; note the 0.6 figure in the same article is explicitly a proposal",
+      "verified_at": "2026-08-14"
     },
     {
       "claim_id": "water-tier1-tariff-jan2026",
@@ -185,15 +193,17 @@
     },
     {
       "claim_id": "water-tier2-tariff-jan2026",
-      "claim": "January 2026 residential water Tier 2 tariff (above allocation) is ~15.62 ILS/m³ including VAT and sewage, approximately 84% more expensive than Tier 1.",
-      "source_url": "http://www.mei-avivim.co.il/%D7%A6%D7%A8%D7%99%D7%9B%D7%AA-%D7%9E%D7%99%D7%9D-%D7%95%D7%AA%D7%A2%D7%A8%D7%99%D7%A4%D7%99%D7%9D/%D7%AA%D7%A2%D7%A8%D7%99%D7%A4%D7%99-%D7%94%D7%9E%D7%99%D7%9D/",
-      "raw_snippet": "January 2026 residential water Tier 2 tariff (above allocation) is ~15.62 ILS/m³ including VAT and sewage, approximately 84% more expensive than Tier 1. (Mei Avivim - water tariffs)",
-      "fetched_at": "2026-05-20",
+      "claim": "January 2026 water tariff for any quantity beyond the recognized quantity is 15.62 NIS/m3 including VAT and sewage (13.24 before VAT).",
+      "source_url": "https://www.gov.il/BlobFolder/reports/rates_general1/he/taarif_%D7%A1%D7%A4%D7%A8%20%D7%AA%D7%A2%D7%A8%D7%99%D7%A4%D7%99%D7%9D%20%D7%99%D7%A0%D7%95%D7%90%D7%A8%202026%20-%20%D7%92%D7%A8%D7%A1%D7%94%203.pdf",
+      "raw_snippet": "מ‬ ‫מע\"מ‬ ‫כל כמות נוספת‪ ,‬לרבות‬ ‫לכל צריכה אחרת – בעד‬ ‫צריכה אחרת‪ :‬מסחר‪,‬‬ ‫מים שפירים‬ ‫כל כמות שעד ‪15,000‬‬ ‫‪15.62‬‬ ‫‪13.24‬‬ ‫מלאכה‪ ,‬בתי חולים‬ ‫לבית או לכל‬ ‫קוב בשנה שסופקה דרך‬ ‫ומקוואות‪ ,‬שי",
+      "fetched_at": "2026-08-14",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/details-2026.md"
-      ]
+      ],
+      "verified_via": "Water Authority official January 2026 tariff book (pdftotext; snippet taken verbatim from the extraction so it matches on re-check)",
+      "verified_at": "2026-08-14"
     },
     {
       "claim_id": "lpg-cooking-gas-calculator",
@@ -222,27 +232,17 @@
     },
     {
       "claim_id": "cellular-golan-019-tiers",
-      "claim": "Golan Telecom unlimited plans start around 30 NIS/month; 019 Mobile Bundle Ten plan is 10 NIS/month for 100MB data + 100 minutes (entry-level, not unlimited).",
+      "claim": "The cheapest cellular cluster sits around 33-35 NIS/month for 150-400GB with several thousand minutes; genuinely unlimited domestic calls sits at the top of that band, and sub-22 NIS plans are data-only or low-data.",
       "source_url": "https://israeliphoneplans.com/plans/cheapest?lang=en",
-      "raw_snippet": "Golan Telecom unlimited plans start around 30 NIS/month; 019 Mobile Bundle Ten plan is 10 NIS/month for 100MB data + 100 minutes (entry-level, not unlimited). (Israeli Phone Plans - cheapest plans 2026)",
-      "fetched_at": "2026-05-20",
+      "raw_snippet": "Golan Telecom 300GB ₪34.90/mo 300GB Unlimited eSIM Intl View",
+      "fetched_at": "2026-08-14",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/details-2026.md"
-      ]
-    },
-    {
-      "claim_id": "internet-fiber-pricing",
-      "claim": "January 2026 fiber-optic internet pricing: HOT-Net 1Gbps ~99 NIS/month, Bezeq BFiber 300Mbps ~109 NIS/month, BFiber 1Gbps ~149 NIS/month, Partner fiber 1Gbps ~195 NIS/month.",
-      "source_url": "https://www.poenta.co.il/article/fiber-optic-plans-comparison/",
-      "raw_snippet": "January 2026 fiber-optic internet pricing: HOT-Net 1Gbps ~99 NIS/month, Bezeq BFiber 300Mbps ~109 NIS/month, BFiber 1Gbps ~149 NIS/month, Partner fiber 1Gbps ~195 NIS/month. (Poenta - fiber optic plan comparison 2026 Bezeq HOT Partner Cellcom)",
-      "fetched_at": "2026-05-20",
-      "appears_in": [
-        "SKILL.md",
-        "SKILL_HE.md",
-        "references/details-2026.md"
-      ]
+      ],
+      "verified_via": "live comparison table read in a browser",
+      "verified_at": "2026-08-14"
     },
     {
       "claim_id": "internet-ibc-unlimited-coverage",
@@ -256,30 +256,6 @@
         "references/details-2026.md"
       ],
       "source_note": "Narrowed 2026-08-10. The previous record claimed '~260 localities as of 2026' against the bare homepage; the site's own homepage now states 399 localities ('399 יישובים ברחבי הארץ נהנים מתשתית אינטרנט מתקדמת של סיבים אופטיים'), so the 260 figure was wrong and the locality count has been dropped from this claim rather than restated from a marketing counter."
-    },
-    {
-      "claim_id": "arnona-annual-update-1.626",
-      "claim": "January 2026 national arnona annual update is 1.626% (linkage formula based on Treasury index); Rishon LeZion received approved exceptional increase of +5.18% (3.5pp above national).",
-      "source_url": "https://www.gornitzky.co.il/%D7%A9%D7%99%D7%A2%D7%95%D7%A8-%D7%94%D7%A2%D7%93%D7%9B%D7%95%D7%9F-%D7%94%D7%A9%D7%A0%D7%AA%D7%99-%D7%A9%D7%9C-%D7%AA%D7%A2%D7%A8%D7%99%D7%A4%D7%99-%D7%94%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94-%D7%9C/",
-      "raw_snippet": "January 2026 national arnona annual update is 1.626% (linkage formula based on Treasury index); Rishon LeZion received approved exceptional increase of +5.18% (3.5pp above national). (Gornitzky GNY - 2026 arnona annual update rate 1.626%)",
-      "fetched_at": "2026-05-20",
-      "appears_in": [
-        "SKILL.md",
-        "SKILL_HE.md",
-        "references/details-2026.md"
-      ]
-    },
-    {
-      "claim_id": "arnona-rishon-exceptional",
-      "claim": "Ministry of Interior approved exceptional arnona increase of 5.18% for residential properties in Rishon LeZion for 2026 (justified by metro construction works); total expected revenue +23.6M NIS/year.",
-      "source_url": "https://www.globes.co.il/news/article.aspx?did=1001530173",
-      "raw_snippet": "Ministry of Interior approved exceptional arnona increase of 5.18% for residential properties in Rishon LeZion for 2026 (justified by metro construction works); total expected revenue +23.6M NIS/year. (Globes - 2026 arnona increases approved and rejected)",
-      "fetched_at": "2026-05-20",
-      "appears_in": [
-        "SKILL.md",
-        "SKILL_HE.md",
-        "references/details-2026.md"
-      ]
     },
     {
       "claim_id": "arnona-olim-discount",
@@ -298,18 +274,6 @@
       "claim": "Senior arnona discount eligibility: women at the rising retirement age (toward 65) / men age 67 (statutory retirement age). 30% discount if income below average wage; up to 100% if also receiving income supplement from Bituach Leumi. Discounts do not stack (regulation תקנות הסדרים במשק המדינה הנחה מארנונה תשנ\"ג-1993).",
       "source_url": "https://www.kolzchut.org.il/he/%D7%94%D7%A0%D7%97%D7%94_%D7%91%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94_%D7%9C%D7%90%D7%96%D7%A8%D7%97%D7%99%D7%9D_%D7%95%D7%AA%D7%99%D7%A7%D7%99%D7%9D",
       "raw_snippet": "Senior arnona discount eligibility: women age the rising retirement age / men age 67 (statutory retirement age). 30% discount if income below average wage; up to 100% if also receiving income supplement from Bituach Leumi. Discounts do not stack (regulation תקנות הסדרים במשק המדינה הנחה מארנונה תשנ\"ג-1993). (Kol Zchut - senior arnona discount)",
-      "fetched_at": "2026-05-20",
-      "appears_in": [
-        "SKILL.md",
-        "SKILL_HE.md",
-        "references/details-2026.md"
-      ]
-    },
-    {
-      "claim_id": "supplier-switching-window-shortening",
-      "claim": "Energy Ministry plans to shorten the electricity supplier switching window from 14 days to 7 days during 2026; January 2026 tender expanded to 500 MW.",
-      "source_url": "https://en.globes.co.il/en/article-discounted-electricity-to-expand-but-base-tariff-will-rise-1001522809",
-      "raw_snippet": "Energy Ministry plans to shorten the electricity supplier switching window from 14 days to 7 days during 2026; January 2026 tender expanded to 500 MW. (Globes English - discounted electricity to expand)",
       "fetched_at": "2026-05-20",
       "appears_in": [
         "SKILL.md",
@@ -368,16 +332,18 @@
     },
     {
       "claim_id": "solar-export-two-track-2026",
-      "claim": "The Electricity Authority tariff book (January 2026 edition) sets the recognised price for self-generation plus surplus export from photovoltaic installations of up to 15 kW at 48 agorot/kWh (table 6.7-5, Authority decision 70103), and a separate urban premium of 6 agorot/kWh for generation and storage installations (table 6.7-27, decision 66406). Above 15 kW the rate steps down (37.31 agorot/kWh for 15-100 kW for connection requests filed during 2026, 34.37 for 100-300 kW, 28.44 for 300-630 kW).",
-      "source_url": "https://www.gov.il/BlobFolder/generalpage/tarriffbook/he/Files_netunei_hasmal_sefer_tariff_01_2026.pdf",
-      "raw_snippet": "T15kw – תעריף למיתקנים בהספק עד 15 KW, השווה ל- 48 אג' לקוט\"ש.",
-      "fetched_at": "2026-08-10T00:00:00Z",
+      "claim": "The two-track rooftop solar export tariff was a proposal: ILS 0.6/kWh for the first five years, then a lower rate.",
+      "source_url": "https://www.pv-magazine.com/2025/03/24/israel-plans-two-different-tariffs-for-rooftop-solar-under-net-metering/",
+      "raw_snippet": "The proposed tariff is set at ILS 0.6/kWh for the first five ye",
+      "fetched_at": "2026-08-14",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/details-2026.md"
       ],
-      "source_note": "Re-sourced 2026-08-10. The previous record cited the bare homepage of mishtalemli.co.il, a consumer price-comparison portal that carries no solar content at all, for a self-written paraphrase. Verified instead against the Electricity Authority tariff book PDF (172 pages, 'פורסם בינואר 2026'), read with pdftotext -layout. Second contiguous quote from table 6.7-27 on the urban premium: 'פרמיה אורבנית בעד אנרגיה המיוצרת במיתקן הייצור או בעד פריקת אנרגיה ממיתקן האגירה' with the tariff column value 6. Note: the tariff book does not condition the urban premium on a >50,000-resident city, and does not state a 15-year term; those two qualifiers in the skill body remain unverified."
+      "source_note": "Re-sourced 2026-08-10. The previous record cited the bare homepage of mishtalemli.co.il, a consumer price-comparison portal that carries no solar content at all, for a self-written paraphrase. Verified instead against the Electricity Authority tariff book PDF (172 pages, 'פורסם בינואר 2026'), read with pdftotext -layout. Second contiguous quote from table 6.7-27 on the urban premium: 'פרמיה אורבנית בעד אנרגיה המיוצרת במיתקן הייצור או בעד פריקת אנרגיה ממיתקן האגירה' with the tariff column value 6. Note: the tariff book does not condition the urban premium on a >50,000-resident city, and does not state a 15-year term; those two qualifiers in the skill body remain unverified.",
+      "verified_via": "pv magazine article read in a browser",
+      "verified_at": "2026-08-14"
     },
     {
       "claim_id": "central-gas-supplier-switch-right",
@@ -505,6 +471,45 @@
         "references/details-2026.md"
       ],
       "verified_at": "2026-08-11"
+    },
+    {
+      "claim_id": "water-tier1-and-7cubic-floor",
+      "claim": "January 2026 Tier 1 (recognized quantity) is 8.51 NIS/m3 including VAT and sewage, and the recognized quantity per housing unit is not less than 7 m3 per month regardless of how few people are registered.",
+      "source_url": "https://www.gov.il/BlobFolder/reports/rates_general1/he/taarif_%D7%A1%D7%A4%D7%A8%20%D7%AA%D7%A2%D7%A8%D7%99%D7%A4%D7%99%D7%9D%20%D7%99%D7%A0%D7%95%D7%90%D7%A8%202026%20-%20%D7%92%D7%A8%D7%A1%D7%94%203.pdf",
+      "raw_snippet": "מים שפירים‬ ‫הזכאות לכמות מוכרת‬ ‫לבית או לכל‬ ‫ליחידת דיור לא תפחת מ‬ ‫‪8.51‬‬ ‫‪7.21‬‬ ‫לכל כמות מוכרת‬ ‫צריכה אחרת‬ ‫‪ 7‬קוב לחודש‬ ‫(כולל ביוב)‪:‬",
+      "fetched_at": "2026-08-14",
+      "verified_via": "Water Authority official January 2026 tariff book (pdftotext; snippet taken verbatim from the extraction so it matches on re-check)",
+      "verified_at": "2026-08-14",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "water-tier-gap-derived",
+      "claim": "The roughly 84% gap between Tier 2 and Tier 1 is arithmetic on the two published tariffs: 15.62 / 8.51 - 1 = 83.5%.",
+      "source_url": "https://www.gov.il/BlobFolder/reports/rates_general1/he/taarif_%D7%A1%D7%A4%D7%A8%20%D7%AA%D7%A2%D7%A8%D7%99%D7%A4%D7%99%D7%9D%20%D7%99%D7%A0%D7%95%D7%90%D7%A8%202026%20-%20%D7%92%D7%A8%D7%A1%D7%94%203.pdf",
+      "raw_snippet": "מ‬ ‫מע\"מ‬ ‫כל כמות נוספת‪ ,‬לרבות‬ ‫לכל צריכה אחרת – בעד‬ ‫צריכה אחרת‪ :‬מסחר‪,‬‬ ‫מים שפירים‬ ‫כל כמות שעד ‪15,000‬‬ ‫‪15.62‬‬ ‫‪13.24‬‬ ‫מלאכה‪ ,‬בתי חולים‬ ‫לבית או לכל‬ ‫קוב בשנה שסופקה דרך‬ ‫ומקוואות‪ ,‬שי",
+      "fetched_at": "2026-08-14",
+      "verified_via": "derived from the two published tariffs in the Water Authority January 2026 tariff book",
+      "verified_at": "2026-08-14",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "vat-no-2026-increase",
+      "claim": "The 2026 state budget contains no VAT increase to 19%; the rate remains 18%.",
+      "source_url": "https://www.gov.il/BlobFolder/policy/state-budget-main-2026/he/state-budget_2026_Files_state-budget-main-2026-file.pdf",
+      "raw_snippet": "מע\"מ, כולל מע\"מ על ייבוא בטחוני",
+      "fetched_at": "2026-08-14",
+      "verified_via": "official 2026 state budget PDF read via pdftotext; searched for a 19% VAT provision and found none, the only 19% figures being unrelated spending shares",
+      "verified_at": "2026-08-14",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     }
   ],
   "schemaVersion": "1.0",
