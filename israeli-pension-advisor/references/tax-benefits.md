@@ -69,8 +69,8 @@ The other half of Amendment 190: lets pensioners 60+ with a qualifying kitzbah d
 
 ### Heichum Kitzbah (the other use of "Tikun 190")
 - The same 2012 amendment introduced the heichum kitzbah mechanism that links severance withdrawal to the future kitzbah-mezakah exemption pool
-- Each shekel of tax-exempt severance withdrawn within 32 years before retirement reduces the lifetime kitzbah-mezakah pool by 1.35 shekels
-- Lifetime tax-exempt capital pool (kibua zechuyot) = 180 times the monthly tax-exempt pension = 180 × 5,422 ≈ 976,000 NIS for a 2026 retiree (grows with the exemption rate toward 67% by 2028)
+- Each shekel of tax-exempt severance withdrawn within 32 years before retirement reduces the lifetime kitzbah-mezakah pool by the same amount multiplied by a coefficient of 1.35
+- Lifetime tax-exempt capital pool (kibua zechuyot) = 180 × 57.5% × 9,430 = 976,005 NIS for a 2026 retiree (grows with the exemption rate toward 67% by 2028)
 - Withdrawals outside the 32-year window have no impact
 
 ## Section 14 (Severance Arrangement, Severance Pay Law 1963)

@@ -244,16 +244,16 @@
     },
     {
       "claim_id": "heichum-kitzbah-1.35-32yr",
-      "claim": "NOT VERIFIED: the Kol Zchut page for קיבוע זכויות now returns 404 and no gov.il equivalent could be reached (every ITA service slug tried returns 403). The heichum kitzbah formula below is retained as previously written and needs re-sourcing to the ITA before it is relied on. Heichum kitzbah formula: each shekel of tax-exempt severance withdrawn within 32 years before legal retirement age reduces the lifetime kitzbah-mezakah tax-exempt pool by",
-      "source_url": "https://www.kolzchut.org.il/he/%D7%A7%D7%99%D7%91%D7%95%D7%A2_%D7%96%D7%9B%D7%95%D7%99%D7%95%D7%AA",
-      "raw_snippet": "כל שקל פיצויים פטור שנמשך בתוך 32 שנה מקטין את מאגר הפטור ב-1.35 ש\"ח; קיבוע זכויות: תקרת ההון הפטורה = 180 × הקצבה המזכה הפטורה החודשית = 180 × 5,422 ≈ 976,000 ש\"ח (2026); 976,000 NIS",
-      "fetched_at": "2026-05-18T00:00:00Z",
+      "claim": "Exempt severance taken for the 32 working years preceding gil hazakaut reduces the exempt capital pool, indexed and multiplied by a coefficient of 1.35.",
+      "source_url": "https://www.gov.il/he/pages/2026-filling-out-form-161d",
+      "raw_snippet": "במקרה בו עמדו לרשותך מענקי פרישה פטורים ממס בגין 32 שנות עבודתך שקדמו לגיל הזכאות, יוקטן סכום ההון הפטור, בסכום המענקים הפטורים כשהם ממודדים ומוכפלים במקדם 1.35.",
+      "fetched_at": "2026-08-14",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
       ],
-      "verified_via": "",
-      "verified_at": ""
+      "verified_via": "Israel Tax Authority 2026 guide to Form 161ד (official gov.il page)",
+      "verified_at": "2026-08-14"
     },
     {
       "claim_id": "tikun-190-deposits",
@@ -338,25 +338,29 @@
     },
     {
       "claim_id": "divorce-pension-split-2014",
-      "claim": "The Pension Savings Division between Separated Spouses Law (2014) lets ex-spouses register a divorce decree directly with the pension fund/insurer. Upon registration, the fund administers the agreed split (typically up to 50% of the marital-period accumulation) and pays each ex-spouse separately when they reach retirement. No need for repeated court enforcement.",
+      "claim": "The Pension Savings Division between Separated Spouses Law, 5774-2014 implements a court-ordered split through the paying body (the pension fund or insurer) via registration of the judgment, rather than by repeated court enforcement.",
       "source_url": "https://www.nevo.co.il/law_html/law01/501_070.htm",
-      "raw_snippet": "חוק לחלוקת חיסכון פנסיוני בין בני זוג שנפרדו, התשע\"ד-2014 (נבו): רישום פסק דין בקרן הפנסיה לחלוקה ישירה",
-      "fetched_at": "2026-05-18T00:00:00Z",
+      "raw_snippet": "מטרתו של חוק זה לקבוע הסדרים בעניין חלוקה של חיסכון פנסיוני בין חוסך ובין בן זוגו לשעבר כפי שנקבעה בפסק דין לחלוקת חיסכון פנסיוני, באמצעות גוף משלם",
+      "fetched_at": "2026-08-14",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ]
+      ],
+      "verified_via": "statute text read directly on nevo (title confirmed as the correct law)",
+      "verified_at": "2026-08-14"
     },
     {
       "claim_id": "pension-while-abroad-9-20",
-      "claim": "Section 9(20) of the Income Tax Ordinance grants olim chadashim and toshavim chozrim vatikim a 10-year exemption from Israeli tax on certain foreign-sourced income, including foreign pensions. Israeli pensions paid to a non-resident are taxed under the source rule of Section 4א / סעיף 4א and the relevant tax treaty. Bituach Leumi has bilateral social-security agreements with most European countries (UK, Germany, France, Netherlands, Austria, Belgium, Bulgaria, Czech Republic, Denmark, Finland, Norway, Sweden, Switzerland and several others) that coordinate insurance periods. There is NO totalization (social-security) agreement between Israel and the United States as of May 2026.",
-      "source_url": "https://www.bshcpa.co.il/%D7%AA%D7%95%D7%A9%D7%91-%D7%97%D7%95%D7%96%D7%A8-%D7%95%D7%AA%D7%99%D7%A7/",
-      "raw_snippet": "תושב חוזר ותיק - פטור 10 שנים על הכנסות זרות, כולל פנסיה זרה, לפי סעיף 9(20); אין הסכם טוטליזציה ביטוח לאומי בין ישראל לארה\"ב",
-      "fetched_at": "2026-05-18T00:00:00Z",
+      "claim": "Section 14(a) of the Income Tax Ordinance, not section 9(20), grants a new or veteran returning resident a ten-year exemption on income produced abroad from the sources in sections 2, 2A and 3, which covers a foreign pension. Section 9(20) is the exemption for employer-organised transport to work.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "raw_snippet": "יחיד שהיה לתושב ישראל לראשונה ותושב חוזר ותיק יהיו פטורים ממס במשך עשר שנים מהמועד שהיו לתושבי ישראל כאמור, על הכנסותיהם מכל המקורות המנויים בסעיפים 2, 2א ו-3, שהופקו או שנצמחו מחוץ לישראל",
+      "fetched_at": "2026-08-14",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ]
+      ],
+      "verified_via": "Income Tax Ordinance section 14(a) read directly; section 9(20) read and found to be unrelated",
+      "verified_at": "2026-08-14"
     },
     {
       "claim_id": "section-47-spousal-attribution",
@@ -640,6 +644,125 @@
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "kitzbah-mezakah-ceiling-2026-ita",
+      "claim": "For 2026 the kitzbah mezakah ceiling is 9,430 NIS/month and the exemption rate is 57.5%, giving a maximum exempt pension of 5,422 NIS/month.",
+      "source_url": "https://www.gov.il/he/pages/2026-filling-out-form-161d",
+      "raw_snippet": "נכון לשנת 2026 - תקרת הקצבה המזכה עומדת על 9,430 ₪ לחודש ומכאן שסכום הפטור המרבי לקצבה מזכה עומד על 5,422 ₪ לחודש.",
+      "fetched_at": "2026-08-14",
+      "verified_via": "Israel Tax Authority 2026 guide to Form 161ד (official gov.il page)",
+      "verified_at": "2026-08-14",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "exempt-pool-180-formula-ita",
+      "claim": "The exempt capital pool is the kitzbah mezakah ceiling times the total exemption rate times the capital conversion multiplier of 180, which is 976,005 NIS for 2026.",
+      "source_url": "https://www.gov.il/he/pages/2026-filling-out-form-161d",
+      "raw_snippet": "סך התקרה המזכה (9,430 ₪ נכון לשנת 2026) כפול (*) אחוז הפטור הכולל (57.5% נכון לשנת 2026) כפול (*) מכפיל ההמרה להון (180).",
+      "fetched_at": "2026-08-14",
+      "verified_via": "Israel Tax Authority 2026 guide to Form 161ד (official gov.il page)",
+      "verified_at": "2026-08-14",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "ita-2026-ceilings-booklet",
+      "claim": "The Tax Authority's 2026 monthly-deductions booklet lists the kitzbah mezakah ceiling at 9,430/month, its exemption ceiling at 5,422/month at 57.5%, and 13,750/year for the severance component.",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf",
+      "raw_snippet": "תקרת \"קיצבה מזכה\" 9א(א) 9,430 לחודש; תקרת הפטור ל\"קיצבה מזכה\" 9א(ב) בשיעור 57.5% 5,422 לחודש; 13,750 לשנה",
+      "fetched_at": "2026-08-14",
+      "verified_via": "pdftotext of the official ITA 2026 booklet; figures cross-checked against the derivation below because the PDF's bidi layout separates labels from values",
+      "verified_at": "2026-08-14",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-benefits.md"
+      ]
+    },
+    {
+      "claim_id": "severance-ceiling-cross-check",
+      "claim": "13,750 is confirmed independently as the section 9(7a)(a)(2) per-year exempt severance ceiling: the statutory coefficient is 35% of the kitzbah ceiling times 180, divided by that ceiling times 32. Solving with the ITA's published 1.35 and 9,430 gives 13,752, and 13,750 reproduces the coefficient as 1.3502.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "raw_snippet": "סכום השווה ל-35% מתקרת הקצבה המזכה כשהוא מוכפל במכפיל ההמרה להון ומחולק בסכום המתקבל מהכפלת הסכום הפטור המרבי לכל שנת עבודה כאמור בסעיף 9(7א)(א)(2) ב-32",
+      "fetched_at": "2026-08-14",
+      "verified_via": "Income Tax Ordinance section 9a(c)(1) read directly, then solved against the ITA's own published coefficient",
+      "verified_at": "2026-08-14",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-benefits.md"
+      ]
+    },
+    {
+      "claim_id": "exemption-phase-in-schedule",
+      "claim": "The 57.5% figure is the 2026 step of a statutory phase-in, not a permanent rate: section 9a(g) substitutes 57% for 2025, 57.5% for 2026 and 62.5% for 2027, reaching the underlying 67% from 2028.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "raw_snippet": "לגבי שנת המס 2025 – בכל מקום, במקום \"67%\" יקראו \"57%\"; (5) לגבי שנת המס 2026 – בכל מקום, במקום \"67%\" יקראו \"57.5%\"; (6) לגבי שנת המס 2027 – בכל מקום, במקום \"67%\" יקראו \"62.5%\"",
+      "fetched_at": "2026-08-14",
+      "verified_via": "Income Tax Ordinance section 9a(g) read directly",
+      "verified_at": "2026-08-14",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-benefits.md"
+      ]
+    },
+    {
+      "claim_id": "ito-9c-foreign-pension-cap",
+      "claim": "סעיף 9ג לפקודת מס הכנסה מגביל את המס על קצבה שמקורה מחוץ לישראל, שמקבל עולה חדש או תושב חוזר ותיק, לסכום שהיה משולם במדינה שבה משולמת הקצבה.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "raw_snippet": "הנחה לקצבה של תושב ישראל לראשונה ושל תושב חוזר ותיק 9ג. על אף האמור בסעיפים 9א, 9ב ו-121, לפי הענין, ובכפוף לאמור בסעיף 14(א), סכום המס על קצבה שמקורה מחוץ לישראל",
+      "fetched_at": "2026-08-14",
+      "verified_via": "Income Tax Ordinance section 9c read directly",
+      "verified_at": "2026-08-14",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "ito-4a-heading",
+      "claim": "סעיף 4א לפקודת מס הכנסה קובע את מקום הפקת ההכנסה לכל מקור הכנסה.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "raw_snippet": "מקום הפקת ההכנסה 4א. (א) המקום שבו הופקה או נצמחה הכנסה, השתכרות או רווח מכל אחד מהמקורות המפורטים להלן יהיה –",
+      "fetched_at": "2026-08-14",
+      "verified_via": "Income Tax Ordinance section 4a read directly",
+      "verified_at": "2026-08-14",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "ito-4a-pension-payer-residence",
+      "claim": "For a pension the place of production is the payer's residence, so an Israeli pension paid to a non-resident is Israeli-source income.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "raw_snippet": "(8) לגבי קצבה, מלוג ואנונה – מקום מושבו של המשלם",
+      "fetched_at": "2026-08-14",
+      "verified_via": "Income Tax Ordinance section 4a(a)(8) read directly",
+      "verified_at": "2026-08-14",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "ito-9c-english-ref",
+      "claim": "Section 9c of the Income Tax Ordinance caps the tax on a foreign-source pension received by a new immigrant or veteran returning resident at the amount that would have been paid in the country paying the pension.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "raw_snippet": "סכום המס על קצבה שמקורה מחוץ לישראל שמקבל יחיד שהיה לתושב ישראל לראשונה או לתושב חוזר ותיק, כאמור בסעיף 14(א), בשל עבודתו במדינת חוץ, לא יעלה על סכום המס שהיה משלם על אותה קצבה במדינה שבה משולמת הקצבה",
+      "fetched_at": "2026-08-14",
+      "verified_via": "Income Tax Ordinance section 9c read directly",
+      "verified_at": "2026-08-14",
+      "appears_in": [
+        "SKILL.md"
       ]
     }
   ]
