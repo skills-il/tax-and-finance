@@ -58,16 +58,18 @@
     },
     {
       "claim_id": "section-46-digital-reporting-2026",
-      "claim": "From 1.1.2026, every Section-46-approved institution must report donations through the Tax Authority's digital donations system (מערכת התרומות הדיגיטלית / תרומות ישראל). The reporting obligation falls on the receiving non-profit, not the donor. Each donation gets a unique registration number and appears in the donor's personal account. For pre-2026 donations, paper receipts remain sufficient.",
-      "source_url": "https://www.starkcpa.com/%D7%97%D7%95%D7%91%D7%AA-%D7%93%D7%99%D7%95%D7%95%D7%97-%D7%A2%D7%9C-%D7%AA%D7%A8%D7%95%D7%9E%D7%95%D7%AA-%D7%9C%D7%A2%D7%9E%D7%95%D7%AA%D7%95%D7%AA-%D7%94%D7%97%D7%9C-%D7%9E-1-1-2026/",
-      "raw_snippet": "החל מיום 1.1.2026, כל מוסד ציבורי בעל אישור לפי סעיף 46 לפקודת מס הכנסה יהיה חייב לדווח על כל התרומות שקיבל מתורמים באמצעות מערכת התרומות הדיגיטלית של רשות המסים. The reporting obligation is on the receiving נמל\"א holding Section 46 (סעיף 46) approval, not on the donor. Donations get a unique registration number visible in the donor's personal account at the Tax Authority website (מערכת התרומות הדיגיטלית / תרומות ישראל). Paper receipts remain sufficient for donations made before 1.1.2026. Effective date: 1.1.2026.",
-      "fetched_at": "2026-05-18T00:00:00Z",
+      "claim": "החל מ-1 בינואר 2026 כל עמותה בעלת אישור לפי סעיף 46 לפקודה חייבת לדווח על כל תרומה וביטול תרומה למערכת התרומות הדיגיטלית של רשות המסים.",
+      "source_url": "https://www.starkcpa.com/%d7%97%d7%95%d7%91%d7%aa-%d7%93%d7%99%d7%95%d7%95%d7%97-%d7%a2%d7%9c-%d7%aa%d7%a8%d7%95%d7%9e%d7%95%d7%aa-%d7%9c%d7%a2%d7%9e%d7%95%d7%aa%d7%95%d7%aa-%d7%94%d7%97%d7%9c-%d7%9e-1-1-2026/",
+      "raw_snippet": "החל מיום 1 בינואר 2026, כל עמותה בעלת אישור לפי סעיף 46 לפקודה (המאפשר לתורמים לקבל זיכוי במס בגין תרומותיהם), תחויב לדווח על כל תרומה וביטול תרומה למערכת התרומות הדיגיטלית של רשות המסים.",
+      "fetched_at": "2026-08-15",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/document-requirements.md",
         "references/domain-checklist.md"
-      ]
+      ],
+      "verified_via": "source article read in a browser (canonical URL after redirect)",
+      "verified_at": "2026-08-15"
     },
     {
       "claim_id": "section-46-donations-2026",
@@ -97,14 +99,16 @@
     },
     {
       "claim_id": "section-35-olim-post-amendment-262",
-      "claim": "Section 35 ITO credit points for olim chadashim arriving 1.1.2022 or later (post-Amendment 262 of 7.5.2022): months 1-12 = 1/12 monthly (1 point/year), months 13-30 = 1/4 monthly (3 points/year), months 31-42 = 1/6 monthly (2 points/year), months 43-54 = 1/12 monthly (1 point/year); total 8.5 points across 54 months",
-      "source_url": "https://www.klf.co.il/tax-updates/credit-points-for-a-new-immigrant",
-      "raw_snippet": "נקודות זיכוי לעולה חדש לפי סעיף 35 לפקודה (תיקון 262 מ-7.5.2022) לעולים שעלו מ-1.1.2022 ואילך: 1/12 לחודש בחודשים 1-12 (1 נקודה לשנה); 1/4 לחודש בחודשים 13-30, 18 חודשים, 3 נקודות לשנה; 1/6 לחודש בחודשים 31-42, 2 נקודות לשנה; 1/12 לחודש בחודשים 43-54, 1 נקודה לשנה. סך הכל 8.5 נקודות זיכוי על פני 54 חודשים. Section 35 (סעיף 35) ITO post-Amendment 262 schedule. Pre-Amendment 262 schedule (pre-1.1.2022 olim): 4.5 / 2 / 1 over 18 / 12 / 12 months = 7.5 points over 42 months.",
-      "fetched_at": "2026-05-18T00:00:00Z",
+      "claim": "סעיף 35 לפקודה מעניק לעולה 1/12 נקודת זיכוי לחודש ב-12 החודשים הראשונים, 1/4 ב-18 שלאחריהם, 1/6 ב-12 שלאחריהם ו-1/12 ב-12 שלאחריהם, ובסך הכול 8.5 נקודות על פני 54 חודשים.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "raw_snippet": "זיכוי לעולה 35. (א) בחישוב המס של עולה יובאו בחשבון – (1) 1/12 נקודת זיכוי לכל חודש משנים-עשר החודשים הראשונים מעלייתו לישראל; (1א) 1/4 נקודת זיכוי לכל חודש משמונה-עשר החודשים שלאחריהם; (2) 1/6 נקודת זיכוי לכל חודש משנים עשר החדשים שלאחריהם; (3) 1/12 נקודת זיכוי לכל חודש משנים עשר החדשים שלאחריהם. (ב) בחישוב מס של בן זוג רשום שה",
+      "fetched_at": "2026-08-15",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ]
+      ],
+      "verified_via": "Income Tax Ordinance read directly on nevo",
+      "verified_at": "2026-08-15"
     },
     {
       "claim_id": "section-160-six-year-window",
@@ -121,14 +125,16 @@
     },
     {
       "claim_id": "section-164-withholding",
-      "claim": "Section 164 ITO governs employer withholding mechanics from salary; the legal basis for the mid-year job change refund pattern when each employer withholds independently",
-      "source_url": "https://www.mekler.co.il/links/item/991-%D7%97%D7%95%D7%91%D7%AA-%D7%A0%D7%99%D7%9B%D7%95%D7%99-%D7%9E%D7%A1-%D7%91%D7%9E%D7%A7%D7%95%D7%A8-%D7%A2%D7%93%D7%9B%D7%95%D7%9F.html",
-      "raw_snippet": "סעיף 164 לפקודת מס הכנסה מונה מספר סוגי תשלום שעליהם מוטלת החובה לנכות מס בעת התשלום (ניכוי מס במקור). Section 164 (סעיף 164) ITO is the statutory base for employer withholding obligations. Withholding regulations under תקנה 6 לתקנות מס הכנסה (ניכוי ממשכורת ומשכר עבודה) - תקנה 6 governs month-by-month withholding which causes single-month bonuses to land in higher brackets.",
-      "fetched_at": "2026-05-18T00:00:00Z",
+      "claim": "סעיף 164 לפקודת מס הכנסה הוא הבסיס החוקי לניכוי מס במקור על ידי מי שמשלם הכנסת עבודה. Section 164 ITO is the statutory basis for employer withholding at source.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "raw_snippet": "חובת ניכוי במקור 164. כל המשלם או האחראי לתשלומה של הכנסת עבודה, לרבות חלק ממענק שנתקבל עקב פרישה או מוות, שאינו פטור על פי סעיף 9(7א), של השתכרות או רווח שמקורם בהימורים, בהגרלות או בפעילות נושאת פרסים, כאמור בסעיף 2א, של סכום המתקבל עקב היוון קיצבה שאינו פטור על פי סעיפים 9א או 9ב, או של סכומים ות",
+      "fetched_at": "2026-08-15",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ]
+      ],
+      "verified_via": "Income Tax Ordinance read directly on nevo",
+      "verified_at": "2026-08-15"
     },
     {
       "claim_id": "section-40-children-credit",
@@ -155,27 +161,31 @@
     },
     {
       "claim_id": "section-45a-47-pension",
-      "claim": "Section 45A ITO grants 35% credit on qualifying pension/life insurance deposit (insured salary). Section 47 ITO allows deduction on self-deposit to pension fund for non-insured salary, with 2026 qualifying income ceiling 9,700 ש\"ח/month (max allowed deposit 679 ש\"ח/month)",
-      "source_url": "https://pensuni.com/?p=1532",
-      "raw_snippet": "סעיף 45א לפקודת מס הכנסה: זיכוי של 35% מסכום ההפקדה על שכר מבוטח. סעיף 47 לפקודה: ניכוי על הפקדה עצמאית לקופת גמל לקצבה על שכר לא מבוטח. תקרת הכנסה מזכה 2026: 9,700 ש\"ח לחודש (הפקדה מותרת עד 679 ש\"ח לחודש). Section 45A (סעיף 45א) and Section 47 (סעיף 47) ITO pension contributions: 35% credit on insured salary; 9,700 ש\"ח / 679 ש\"ח ceilings for 2026.",
-      "fetched_at": "2026-05-18T00:00:00Z",
+      "claim": "סעיף 45א לפקודה מקנה זיכוי של 35% מסכומים ששולמו לקופת גמל לקצבה; סעיף 47 עוסק בניכוי בעד הפקדה על הכנסה לא מבוטחת, וסעיף 44 בזיכוי בעד החזקת קרוב במוסד.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "raw_snippet": "45א. (א) יחיד יזוכה ממס ב-25% מן הסכומים ששילמו הוא או בן זוגו בשנת המס – (1) לביטוח חייו או חיי בן זוגו בחברת ביטוח אם הוא תושב ישראל; (2) (נמחקה) (ב) יחיד יזוכה ממס ב-35% מן הסכומים ששילמו הוא או בן זוגו בשנת המס לקופת גמל לקיצבה, או ששילמו כאמור למדינה, לרשות מקומית או לגוף אחר שקבע שר האוצר, לשם שמירת זכות הפנסיה שלו או של בן זוגו, או שישולמו כאמור לביטוח קצבת שאירים. (ב1) עמית מוטב יזוכה ממס כאמור בסעיפים קטנים (א) ו-(ב)",
+      "fetched_at": "2026-08-15",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/domain-checklist.md"
-      ]
+      ],
+      "verified_via": "Income Tax Ordinance read directly on nevo",
+      "verified_at": "2026-08-15"
     },
     {
       "claim_id": "keren-hishtalmut-early-withdrawal",
-      "claim": "Section 9(16a) and Section 164 ITO: early keren hishtalmut withdrawal (before 6 years) carries 47% maximum withholding at source; if true marginal rate is lower, the difference is refundable",
+      "claim": "משיכה מקרן השתלמות לפני שש שנים היא משיכה שלא כדין החייבת במס של 47%, למעט סכומים פטורים (חלק העובד וחלק המעסיק שנזקף כהכנסה). מי ששילם את המס עשוי להיות זכאי להחזר. סעיפים 9(16א) ו-164 לפקודה.",
       "source_url": "https://pensuni.com/?p=2916",
-      "raw_snippet": "משיכת קרן השתלמות לפני 6 שנים לפי סעיפים 9(16א) ו-164 לפקודה: ניכוי במקור של 47% מהסכום הצבור. אם שיעור המס השולי האמיתי של העובד נמוך מ-47%, ניתן לבקש החזר על ההפרש. Section 9 (סעיף 9) (16a) and Section 164 (סעיף 164) ITO: early keren hishtalmut withdrawal 47% withholding.",
-      "fetched_at": "2026-05-18T00:00:00Z",
+      "raw_snippet": "משיכת כספים מקרן ההשתלמות לפני שחלפו שש שנים ממועד ההפקדה הראשון תחשב כמשיכה שלא כדין. משיכה זו חייבת במס של 47% למעט הסכומים המצויינים בהמשך.",
+      "fetched_at": "2026-08-15",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/domain-checklist.md"
-      ]
+      ],
+      "verified_via": "source article read in a browser",
+      "verified_at": "2026-08-15"
     },
     {
       "claim_id": "section-11-yishuv-mezakeh",
@@ -215,15 +225,17 @@
     },
     {
       "claim_id": "form-106-field-numbers",
-      "claim": "Form 106 field numbers: 042 (תוכ\"כ מס שנוכה במקור / tax withheld at source by employer), 158/172 (משכורת חייבת / total salary subject to tax; 158 for one spouse, 172 for other), 218/219 (הפקדה לקרן השתלמות / keren hishtalmut deposit)",
+      "claim": "בטופס 106, שדה 042 הוא המס שנוכה במקור על ידי המעביד, ושדה 158/172 הוא סך השכר החייב במס, כאשר בן הזוג הרשום קולט את הסכום בשדה 158 ובן/בת הזוג בשדה 172 בטופס 1301/135.",
       "source_url": "https://claltax.com/%D7%98%D7%95%D7%A4%D7%A1-106-%D7%A9%D7%9B%D7%99%D7%A8-%D7%95%D7%92%D7%9E%D7%9C%D7%90%D7%99/",
-      "raw_snippet": "טופס 106 - מיפוי שדות לטופס 1301 / 135. שדה 042: המס שנוכה במקור ע\"י המעביד (tax withheld at source). שדות 158 / 172: סה\"כ השכר החייב במס (total taxable salary - 158 for one spouse, 172 for the other). שדות 218 / 219: שכר שבגינו הופקד לקה\"ל (salary basis for keren hishtalmut deposit). Field 042 is summed across all Form 106s when a worker had multiple employers in one tax year. חודשי עבודה (months worked) is a separate field on Form 106 showing how many months the employer paid the worker.",
-      "fetched_at": "2026-05-18T00:00:00Z",
+      "raw_snippet": "בטופס 106 רשום סה\"כ השכר החייב במס ולידו רשום שדה 158/172 והסכום 380,450 ש\"ח את הסכום 380,450 יש להעתיק לשדה 158 בטופס 1301/135. אצל זוג נשוי בן הזוג הרשום קולט את הסכום בשדה 158 ובן/בת הזוג בשדה 172.",
+      "fetched_at": "2026-08-15",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/document-requirements.md"
-      ]
+      ],
+      "verified_via": "source guide read in a browser",
+      "verified_at": "2026-08-15"
     },
     {
       "claim_id": "form-135-voluntary-refund",
@@ -275,14 +287,16 @@
     },
     {
       "claim_id": "btl-under-withholding-salary-refund-origin",
-      "claim": "Bituach Leumi typically UNDER-withholds tax on דמי לידה / דמי אבטלה. The salaried-employee refund originates from the salary side: the employer over-withheld during paid months by assuming a full 12-month salary, but the year ended with fewer paid months because of the leave",
+      "claim": "ביטוח לאומי מנכה לרוב פחות מס מדמי הלידה ממה שהיה צריך, ולכן חלק זה עלול להותיר את המקבלת בחבות מס; ההחזר מגיע בדרך כלל מצד המשכורת ולא מצד הביטוח הלאומי.",
       "source_url": "https://finbizacademy.co.il/baby_born/",
-      "raw_snippet": "לרוב ביטוח לאומי מנכה פחות מס מדמי הלידה ממה שהיה צריך. The BTL portion of the refund is usually under-withholding (recipient owes more on BTL income at annual reconciliation), not over-withholding. The refund originates from the salary side where the employer's monthly withholding assumed full 12-month salary but actual months worked were fewer due to leave. דמי לידה (Maternity), דמי אבטלה (unemployment), and similar BTL income-replacement payments combined with salary in annual reconciliation reveal the salary-side over-withholding.",
-      "fetched_at": "2026-05-18T00:00:00Z",
+      "raw_snippet": "כדאי לדעת שלרוב ביטוח לאומי מנכה פחות מס מדמי הלידה ממה שהיה צריך",
+      "fetched_at": "2026-08-15",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ]
+      ],
+      "verified_via": "source article read in a browser",
+      "verified_at": "2026-08-15"
     },
     {
       "claim_id": "halat-unpaid-leave",
@@ -331,26 +345,6 @@
       ]
     },
     {
-      "claim_id": "domain-checklist-source",
-      "claim": "Domain-checklist references the bshcpa article on when salaried employees must file annual return (Form 1301) vs Form 135",
-      "source_url": "https://www.bshcpa.co.il/%D7%93%D7%95%D7%97-%D7%A9%D7%A0%D7%AA%D7%99-%D7%A9%D7%9B%D7%99%D7%A8/",
-      "raw_snippet": "BSH CPA article on annual return obligation for salaried employees - distinguishes Form 1301 obligation (high income, foreign assets, mixed income) from Form 135 voluntary refund track. https://www.bshcpa.co.il/דוח-שנתי-שכיר/",
-      "fetched_at": "2026-05-18T00:00:00Z",
-      "appears_in": [
-        "references/domain-checklist.md"
-      ]
-    },
-    {
-      "claim_id": "pension-thresholds-2026",
-      "claim": "2026 pension/salary tax thresholds reference (pensuni.com/?p=827)",
-      "source_url": "https://pensuni.com/?p=827",
-      "raw_snippet": "Pensuni 2026 pension and salary tax thresholds reference page. Covers Sections 45A and 47 ITO context. https://pensuni.com/?p=827",
-      "fetched_at": "2026-05-18T00:00:00Z",
-      "appears_in": [
-        "references/domain-checklist.md"
-      ]
-    },
-    {
       "claim_id": "discharged-soldier-credit-points-2026",
       "claim": "Discharged soldiers / national-service graduates get 2 credit points (full service: 23+ months men, 22+ months women) or 1 point (shorter service over 1 year), for 36 months from the month after discharge. 2026 value: 2 points = 5,808 NIS/yr, 1 point = 2,904 NIS/yr. Claimed on Form 101 / Form 135.",
       "source_url": "https://www.kolzchut.org.il/he/%D7%A0%D7%A7%D7%95%D7%93%D7%95%D7%AA_%D7%96%D7%99%D7%9B%D7%95%D7%99_%D7%9E%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94_%D7%9C%D7%97%D7%99%D7%99%D7%9C%D7%99%D7%9D_%D7%9E%D7%A9%D7%95%D7%97%D7%A8%D7%A8%D7%99%D7%9D_%D7%95%D7%9E%D7%A1%D7%99%D7%99%D7%9E%D7%99_%D7%A9%D7%99%D7%A8%D7%95%D7%AA_%D7%9C%D7%90%D7%95%D7%9E%D7%99-%D7%90%D7%96%D7%A8%D7%97%D7%99",
@@ -365,16 +359,18 @@
     },
     {
       "claim_id": "section-45-natul-yecholet-2026",
-      "claim": "Section 45(a) ITO grants 2 credit points (5,808 NIS/yr) per paralyzed / blind / intellectual-developmental-disability child, including the spouse's child; claimed on Form 116א. Mutually exclusive with the Section 44 institution credit for the same child. Form 116א and Form 116 are the ITA disabled-relative credit forms.",
-      "source_url": "https://www.gov.il/he/service/itc-request-for-tax-credits-disabled-relative",
-      "raw_snippet": "לפי סעיף 45 לפקודת מס הכנסה, הורה שילדו משותק, עיוור, או עם מוגבלות שכלית-התפתחותית זכאי ל-2 נקודות זיכוי לכל ילד כזה, גם אם הילד של בן/בת הזוג. הבקשה מוגשת בטופס 116א. מי שמקבל זיכוי לפי סעיף 44 (החזקת קרוב במוסד) לא יכול לקבל גם את 2 נקודות הזיכוי לפי סעיף 45 עבור אותו ילד, בוחרים את הגבוה מביניהם.",
-      "fetched_at": "2026-07-06T00:00:00Z",
+      "claim": "סעיף 45 לפקודה (זיכוי בעד נטולי יכולת) מקנה שתי נקודות זיכוי בשל כל ילד משותק, עיוור או עם מוגבלות שכלית-התפתחותית, לרבות ילדו של בן הזוג.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "raw_snippet": "זיכוי בעד נטולי יכולת 45. (א) יחיד תושב ישראל שהיה לו בשנת המס ילד משותק, ילד עיוור או ילד עם מוגבלות שכלית-התפתחותית או שהיה לבן זוגו ילד כאמור, יובאו בחשבון בחישוב המס שלו או של בן זוגו שתי נקודות זיכוי בשל כל ילד כאמור. (ב) (בוטל) (ג) יחיד יהיה זכאי לנקודות הזיכוי על פי סעיף קטן (א) רק אם לא קיבל זיכוי ממס עבור אותו ילד על פי",
+      "fetched_at": "2026-08-15",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/document-requirements.md",
         "references/domain-checklist.md"
-      ]
+      ],
+      "verified_via": "Income Tax Ordinance read directly on nevo",
+      "verified_at": "2026-08-15"
     },
     {
       "claim_id": "section-44-institution-credit-2026",
@@ -555,6 +551,106 @@
         "SKILL.md",
         "SKILL_HE.md",
         "references/document-requirements.md"
+      ]
+    },
+    {
+      "claim_id": "section-47-employment-5-percent",
+      "claim": "סעיף 47(ב)(2)(א) לפקודה מגביל את הניכוי בעד הפקדה על הכנסת עבודה שאינה מבוטחת ל-5%, ולא ל-7%. עם תקרת הכנסה מזכה של 9,700 ש\"ח לחודש מדובר בעד 485 ש\"ח לחודש.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "raw_snippet": "(2) הסכום הנמוך מבין אלה: (א) 5% מהכנסתו המזכה שהיא הכנסת עבודה שאינה הכנסה מבוטחת; (ב) 5% מהכנסתו החייבת שהיא הכנסת עבודה עד לסכום השווה לשתי פעמים ו",
+      "fetched_at": "2026-08-15",
+      "verified_via": "Income Tax Ordinance section 47(b)(2)(a) read directly on nevo",
+      "verified_at": "2026-08-15",
+      "appears_in": [
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "pension-ceiling-9700-ita",
+      "claim": "תקרת ההכנסה המזכה לפי סעיף 47(א)(1)(1), להכנסת עבודה בלבד, עומדת על 9,700 ש\"ח לחודש לשנת 2026 לפי לוח הניכויים של רשות המסים.",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf",
+      "raw_snippet": "תקרת הכנסה מזכה 47(א)(1)(1) - רק מהכנסת עבודה",
+      "fetched_at": "2026-08-15",
+      "verified_via": "Israel Tax Authority 2026 monthly deductions booklet (pdftotext)",
+      "verified_at": "2026-08-15",
+      "appears_in": [
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "withholding-regulations-1993",
+      "claim": "תקנה 6 לתקנות מס הכנסה (ניכוי ממשכורת ומשכר עבודה), תשנ\"ג-1993 היא ההסדר שלפיו המעסיק מנכה מס מדי חודש. Regulation 6 of these regulations governs the monthly employer withholding computation.",
+      "source_url": "https://www.nevo.co.il/law_html/law01/255_163.htm",
+      "raw_snippet": "תקנות מס הכנסה (ניכוי ממשכורת ומשכר עבודה), תשנ\"ג-1993",
+      "fetched_at": "2026-08-15",
+      "verified_via": "regulations located on nevo and their title confirmed verbatim",
+      "verified_at": "2026-08-15",
+      "appears_in": [
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "form-116a-service-page",
+      "claim": "Form 116א (טופס 116א) is the Tax Authority request for a tax credit for a relative with a disability, claimed under Section 45 and Section 35 credit rules; the service page lists the documents to attach.",
+      "source_url": "https://www.gov.il/he/service/itc-request-for-tax-credits-disabled-relative",
+      "raw_snippet": "טופס 116א - בקשה לזיכוי ממס עבור נטול יכולת",
+      "fetched_at": "2026-08-15",
+      "verified_via": "playwright navigation, snippet read from the raw page HTML",
+      "verified_at": "2026-08-15",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "ref-link-bshcpa-annual-return",
+      "claim": "Further-reading pointer on the annual-return obligation for salaried employees.",
+      "source_url": "https://www.bshcpa.co.il/%D7%93%D7%95%D7%97-%D7%A9%D7%A0%D7%AA%D7%99-%D7%A9%D7%9B%D7%99%D7%A8/",
+      "raw_snippet": "דוח שנתי לשכיר 2025: המדריך המלא לחובות דיווח והחזרי מס",
+      "fetched_at": "2026-08-15",
+      "verified_via": "playwright navigation (page title read); cited only as a further-reading pointer, not as the source of any figure",
+      "verified_at": "2026-08-15",
+      "appears_in": [
+        "SKILL.md",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "ref-link-pensuni-2026-thresholds",
+      "claim": "Further-reading pointer to a 2026 tax-ceilings summary. The ceilings this skill relies on are sourced separately to the Tax Authority's own deductions booklet.",
+      "source_url": "https://pensuni.com/?p=827",
+      "raw_snippet": "תקרות מס וסכומים עיקרים לשנת 2026",
+      "fetched_at": "2026-08-15",
+      "verified_via": "playwright navigation (page title read); cited only as a further-reading pointer, not as the source of any figure",
+      "verified_at": "2026-08-15",
+      "appears_in": [
+        "SKILL.md",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "keren-hishtalmut-refund-possible",
+      "claim": "Someone who withdrew early and paid the tax may be entitled to a refund.",
+      "source_url": "https://pensuni.com/?p=2916",
+      "raw_snippet": "משכתם כספים לפני הזמן ושילמתם מס? יתכן ואתם זכאים לקבלת החזר מס.",
+      "fetched_at": "2026-08-15",
+      "verified_via": "source article read in a browser",
+      "verified_at": "2026-08-15",
+      "appears_in": [
+        "references/domain-checklist.md",
+        "SKILL.md"
+      ]
+    },
+    {
+      "claim_id": "maternity-refund-can-backfire",
+      "claim": "Filing for a refund after maternity leave can produce a liability instead: the full computation shows the mother received 13.5 salaries in one year.",
+      "source_url": "https://finbizacademy.co.il/baby_born/",
+      "raw_snippet": "יתכן והגשת בקשה להחזר מס לא תמלא את יעודה, שכן יחד עם ההטבות שמגיעות, יערך גם חישוב מס מלא שיגלה כי היולדת קיבלה 13.5 משכורות במהלך השנה ועל כן תיווצר חבות למס הכנסה.",
+      "fetched_at": "2026-08-15",
+      "verified_via": "source article read in a browser",
+      "verified_at": "2026-08-15",
+      "appears_in": [
+        "SKILL.md"
       ]
     }
   ]
