@@ -50,54 +50,54 @@
       "claim_id": "rental-and-mandatory-filing",
       "claim": "Residential rental: exempt track 0% below 5,654 NIS/month (frozen 2025-2027); flat 10% track; marginal 10%-50%. Annual residential rental income above 375,000 NIS forces a full return even on the 10% track",
       "source_url": "https://www.kolzchut.org.il/he/%D7%A4%D7%98%D7%95%D7%A8_%D7%9E%D7%9E%D7%A1_%D7%A2%D7%9C_%D7%94%D7%9B%D7%A0%D7%A1%D7%94_%D7%9E%D7%94%D7%A9%D7%9B%D7%A8%D7%AA_%D7%93%D7%99%D7%A8%D7%94_%D7%9C%D7%9E%D7%92%D7%95%D7%A8%D7%99%D7%9D",
-      "raw_snippet": "פטור 0% מתחת 5,654 ש\"ח לחודש; מסלול 10%; שולי 10%-50%; הכנסה משכירות מעל 375,000 ש\"ח מחייבת דוח",
+      "raw_snippet": "משכירי דירות למגורים עשויים לקבל פטור ממס על הכנסותיהם משכר הדירה בחודש שבו הכנסות אלה לא עולות על 5,654 ₪ (נכון ל-2026)",
       "fetched_at": "2026-06-16T23:25:00Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
       ],
-      "verified_via": "redirected from a Kol Zchut page that no longer exists (הכנסה מהשכרת דירת מגורים); successor located via the site search API",
+      "verified_via": "kolzchut page text read through the site MediaWiki API in a browser; snippet replaced with verbatim page text (the previous value was a generated summary)",
       "verified_at": "2026-08-15"
     },
     {
       "claim_id": "pension-45a-47",
-      "claim": "Section 45A: 35% tax credit on qualifying pension contribution; employee ceiling 7% of eligible salary capped at 23,232 NIS/month for 2026 (max credited 1,626/month); self-employed 5.5% ceiling for 45A. Section 47: deduction up to 11% of business income; combined ceiling 16.5%",
+      "claim": "הטבת המס על הפקדה עצמאית לביטוח פנסיוני לפי סעיף 45א ולפי סעיף 47 לפקודה: זיכוי של 35% מהסכום שהופקד.",
       "source_url": "https://www.kolzchut.org.il/he/%D7%94%D7%98%D7%91%D7%95%D7%AA_%D7%91%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94_%D7%91%D7%92%D7%99%D7%9F_%D7%94%D7%A4%D7%A7%D7%93%D7%95%D7%AA_%D7%A2%D7%A6%D7%9E%D7%90%D7%99%D7%95%D7%AA_%D7%9C%D7%91%D7%99%D7%98%D7%95%D7%97_%D7%A4%D7%A0%D7%A1%D7%99%D7%95%D7%A0%D7%99",
-      "raw_snippet": "סעיף 45א 35% זיכוי; שכיר 7% עד 23,232 ש\"ח לחודש 2026, מקסימום 1,626; עצמאי 5.5%; סעיף 47 ניכוי עד 11%; תקרה משולבת 16.5%",
+      "raw_snippet": "לאחר חישוב המס, מפחיתים ממנו 35% מהסכום שהופקד באופן עצמאי לביטוח הפנסיוני",
       "fetched_at": "2026-06-16T23:25:00Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
       ],
-      "verified_via": "redirected from a Kol Zchut page that no longer exists (ניכוי וזיכוי בעד הפקדות לפנסיה); successor located via the site search API",
+      "verified_via": "kolzchut page text read through the site MediaWiki API in a browser; snippet replaced with verbatim page text (the previous value was a generated summary)",
       "verified_at": "2026-08-15"
     },
     {
       "claim_id": "section-46-donation",
-      "claim": "Section 46 donation credit: 35% of the eligible donation for individuals and the corporate rate (23%) for companies; recognized-institution requirement; excess above the ceiling carried forward up to 3 tax years. Exact floor and ceiling figures are carried by section-46-floor-ceiling-2026, which supersedes the vague description previously here.",
+      "claim": "Section 46 donation credit (סעיף 46): 35% of the donation to a recognised public institution. Kol Zchut states the 2026 minimum donation threshold as 207 NIS.",
       "source_url": "https://www.kolzchut.org.il/he/%D7%96%D7%99%D7%9B%D7%95%D7%99_%D7%9E%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94_%D7%91%D7%A9%D7%9C_%D7%AA%D7%A8%D7%95%D7%9E%D7%94_%28%D7%A1%D7%A2%D7%99%D7%A3_46%29",
-      "raw_snippet": "סעיף 46: 35% זיכוי ליחיד; מוסד מוכר; רצפת מינימום כ-200 ש\"ח; תקרה 30% מההכנסה החייבת; העברה קדימה 3 שנים",
+      "raw_snippet": "הזיכוי הוא בגובה 35% מסך התרומה (מי שתרם 1,000 ₪ יקבל זיכוי של 350 ₪)",
       "fetched_at": "2026-06-16T23:25:00Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
       ],
-      "verified_via": "redirected from a Kol Zchut page that no longer exists (זיכוי ממס בגין תרומות); successor located via the site search API",
+      "verified_via": "kolzchut page text read through the site MediaWiki API in a browser; snippet replaced with verbatim page text (the previous value was a generated summary)",
       "verified_at": "2026-08-15"
     },
     {
       "claim_id": "mas-shevach-and-securities",
       "claim": "Mas Shevach: 25% on real gain; single-apartment exemption ceiling 5,008,000 NIS (2024-2027), 18-month ownership; linear method for purchases before 7 January 2014; declaration within 30 days (40 if exemption requested). Securities capital gains 25% (30% for 10%+ holders)",
       "source_url": "https://www.kolzchut.org.il/he/חישוב_מס_שבח",
-      "raw_snippet": "מס שבח 25%; פטור דירה יחידה 5,008,000 ש\"ח, 18 חודש; שיטה ליניארית לפני 7 בינואר 2014; 30 יום, 40 יום; ניירות ערך 25%, 30% למחזיק 10%",
+      "raw_snippet": "גובה המס עומד על 25% מתוך השבח הריאלי נטו",
       "fetched_at": "2026-06-16T23:25:00Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/form-guide.md"
       ],
-      "verified_via": "browser",
-      "verified_at": "2026-07-27T00:00:00Z"
+      "verified_via": "kolzchut page text read through the site MediaWiki API in a browser; snippet replaced with verbatim page text (the previous value was a generated summary)",
+      "verified_at": "2026-08-15"
     },
     {
       "claim_id": "forms-and-deadlines",
@@ -243,7 +243,7 @@
     },
     {
       "claim_id": "section-45a-employee-7-percent",
-      "claim": "Section 45a(d)(2)(b)(2): for an individual with employment income the credited amount is capped at 7% of his hachnasa mezaka.",
+      "claim": "סעיף 45א(ד)(2)(ב)(2) לפקודה: לגבי יחיד שהיתה לו הכנסת עבודה, הסכום המזכה מוגבל ל-7% מההכנסה המזכה. סעיף 47 קובע את תקרת ההכנסה המזכה.",
       "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
       "raw_snippet": "(2) לעניין יחיד שהיתה לו בשנת המס הכנסת עבודה – 7% מהכנסתו המזכה, ובלבד שהסכום הכולל שבשלו יינתן זיכוי בעד סכומים ששולמו",
       "fetched_at": "2026-08-15",

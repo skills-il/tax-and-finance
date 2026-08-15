@@ -31,14 +31,16 @@
       "claim_id": "senior-discount",
       "claim": "Senior (vatik) arnona discount is by pension/income status, not age band: 25% (discretionary) for a recipient of an old-age/survivors/work-injury pension with no income test; 30% (mandatory) income-tested where household income is up to the national average wage (about NIS 13,566/month as of January 2026, updated annually); up to 100% for a senior who also receives an income supplement (hashlamat hachnasa) within the income limit. Applies to the first 100 sqm.",
       "source_url": "https://www.kolzchut.org.il/he/%D7%94%D7%A0%D7%97%D7%94_%D7%91%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94_%D7%9C%D7%90%D7%96%D7%A8%D7%97%D7%99%D7%9D_%D7%95%D7%AA%D7%99%D7%A7%D7%99%D7%9D",
-      "raw_snippet": "הנחה לאזרח ותיק: 25% למקבל קצבת זקנה/שאירים/נפגעי עבודה (ללא מבחן הכנסה); 30% במבחן הכנסה עד השכר הממוצע; עד 100% למי שמקבל גם השלמת הכנסה.",
+      "raw_snippet": "הנחה בשיעור של עד 25% עשויה להינתן לאזרחים ותי",
       "fetched_at": "2026-06-07T00:00:00Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/arnona-discounts-guide.md",
         "scripts/arnona-calculator.py"
-      ]
+      ],
+      "verified_via": "kolzchut page text read through the site MediaWiki API in a browser; snippet replaced with verbatim page text (the previous value was a generated summary)",
+      "verified_at": "2026-08-15"
     },
     {
       "claim_id": "disabled-discount",

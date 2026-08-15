@@ -35,14 +35,16 @@
       "claim_id": "self-employed-pension-brackets-2026",
       "claim": "Self-employed mandatory pension: 4.45% on net taxable income up to half average wage (6,884.50 NIS/month); 12.55% on income from half to full average wage (6,884.50 to 13,769 NIS/month); no obligation above full average wage; first year of business exempt; obligation applies age 21 to retirement age",
       "source_url": "https://www.kolzchut.org.il/he/%D7%91%D7%99%D7%98%D7%95%D7%97_%D7%A4%D7%A0%D7%A1%D7%99%D7%95%D7%A0%D7%99_%D7%9C%D7%A2%D7%95%D7%91%D7%93_%D7%A2%D7%A6%D7%9E%D7%90%D7%99",
-      "raw_snippet": "חוק פנסיה חובה לעצמאים תשע\"ז-2016: 4.45% עד מחצית השכר הממוצע; 12.55% ממחצית עד שכר ממוצע מלא; פטור בשנה הראשונה לעסק; חל מגיל 21 עד גיל פרישה",
+      "raw_snippet": "עבור חלק מההכנסה שעד חצי מ השכר הממוצע השנתי במשק (כלומר עבור 82,614 ₪ הראשונים בשנת המס, נכון ל-2026) יש להפקיד 4.45% מההכנסה.",
       "fetched_at": "2026-05-18T00:00:00Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "scripts/calculate_pension.py",
         "references/tax-benefits.md"
-      ]
+      ],
+      "verified_via": "kolzchut page text read through the site MediaWiki API in a browser; snippet replaced with verbatim page text (the previous value was a generated summary)",
+      "verified_at": "2026-08-15"
     },
     {
       "claim_id": "self-employed-annual-cap-2026",
@@ -295,13 +297,15 @@
       "claim_id": "fund-management-fees",
       "claim": "Pension fund management fee caps: comprehensive non-default funds up to 0.5% of balance + 6% of deposits; managers' insurance (bituach menahalim) up to 1.05% of balance + 4% of deposits. Default funds capped at 0.22% balance + 1% deposits.",
       "source_url": "https://www.kolzchut.org.il/he/%D7%93%D7%9E%D7%99_%D7%A0%D7%99%D7%94%D7%95%D7%9C_%D7%97%D7%A9%D7%91%D7%95%D7%9F_%D7%91%D7%99%D7%98%D7%95%D7%97_%D7%A4%D7%A0%D7%A1%D7%99%D7%95%D7%A0%D7%99",
-      "raw_snippet": "תקרת דמי ניהול: קרן פנסיה רגילה 0.5% צבירה + 6% הפקדות; ביטוח מנהלים 1.05% צבירה + 4% הפקדות; קרנות ברירת מחדל 0.22% + 1%",
+      "raw_snippet": "ב קרן פנסיה מקיפה ניתן לגבות עד 0.5% מהסכום הכולל שנצבר ועד 6% מההפקדות החודשיות.",
       "fetched_at": "2026-05-18T00:00:00Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/pension-fund-types.md"
-      ]
+      ],
+      "verified_via": "kolzchut page text read through the site MediaWiki API in a browser; snippet replaced with verbatim page text (the previous value was a generated summary)",
+      "verified_at": "2026-08-15"
     },
     {
       "claim_id": "pension-contribution-timing",
@@ -318,12 +322,14 @@
       "claim_id": "nayadut-10-day-transfer",
       "claim": "Pension fund nayadut (transfer): once the new fund receives a complete signed transfer request, the entire balance must be transferred within 10 business days. No transfer fees. The employee retains seniority (vetek) for purposes of the 6-year keren hishtalmut lock and pension fund insurance coverage; transferring between pension fund and managers' insurance does not preserve guaranteed annuity factors from pre-2013 policies.",
       "source_url": "https://www.kolzchut.org.il/he/%D7%9E%D7%A2%D7%91%D7%A8_%D7%91%D7%99%D7%9F_%D7%92%D7%95%D7%A4%D7%99%D7%9D_%D7%A4%D7%A0%D7%A1%D7%99%D7%95%D7%A0%D7%99%D7%99%D7%9D_%D7%95%D7%91%D7%99%D7%9F_%D7%9E%D7%9B%D7%A9%D7%99%D7%A8%D7%99%D7%9D_%D7%A4%D7%A0%D7%A1%D7%99%D7%95%D7%A0%D7%99%D7%99%D7%9D",
-      "raw_snippet": "מעבר בין גופים פנסיוניים: הקרן המקבלת חייבת להעביר את כל היתרה תוך 10 ימי עסקים; אין דמי ניוד; שמירת ותק להשתלמות וכיסוי",
+      "raw_snippet": "יש לוודא כי הבקשה לניוד הכספים מהקרן הישנה לקרן החדשה תועבר אל הקרן הישנה רק לאחר שהמבוטח כבר החל להפקיד כספים לקרן החדשה.",
       "fetched_at": "2026-05-18T00:00:00Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ]
+      ],
+      "verified_via": "kolzchut page text read through the site MediaWiki API in a browser; snippet replaced with verbatim page text (the previous value was a generated summary)",
+      "verified_at": "2026-08-15"
     },
     {
       "claim_id": "early-withdrawal-tax",

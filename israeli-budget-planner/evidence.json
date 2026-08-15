@@ -32,12 +32,14 @@
       "claim_id": "min-wage",
       "claim": "Israeli minimum wage from 1 April 2026 is 6,443.85 NIS/month and 35.40 NIS/hour.",
       "source_url": "https://www.kolzchut.org.il/he/שכר_מינימום",
-      "raw_snippet": "Effective from April 1, 2026: Monthly wage 6,443.85 ש\"ח לחודש למשרה מלאה; Hourly rate 35.40 ש\"ח לשעה.",
+      "raw_snippet": "החל מיום 01.04.2026 שכר המינימום הוא 6,443.85 ₪ לחודש למשרה מלאה ו-35.40 ₪ לשעה",
       "fetched_at": "2026-06-04T00:00:00Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ]
+      ],
+      "verified_via": "kolzchut page text read through the site MediaWiki API in a browser; snippet replaced with verbatim page text (the previous value was a generated summary)",
+      "verified_at": "2026-08-15"
     },
     {
       "claim_id": "avg-wage",
@@ -54,25 +56,29 @@
       "claim_id": "credit-point",
       "claim": "One income-tax credit point (nekudat zikui) is worth 242 NIS/month in 2026.",
       "source_url": "https://www.kolzchut.org.il/he/נקודות_זיכוי_ממס_הכנסה",
-      "raw_snippet": "שווי נקודה, נכון ל-2026 הוא 242 ₪ לחודש (242 ש\"ח לחודש). Each point is worth 242 NIS/month. A resident gets 2.25 base credit points; women get 0.5 additional; new immigrants get extra credits for 3.5 years.",
+      "raw_snippet": "הזכות הבסיסית עומדת על 2.25 נקודות לכל תושב, כששווי נקודה, נכון ל-2026 הוא 242 ₪ לחודש, שהם 2,904 ₪ לשנה שלמה.",
       "fetched_at": "2026-06-04T00:00:00Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "scripts/budget_calculator.py"
-      ]
+      ],
+      "verified_via": "kolzchut page text read through the site MediaWiki API in a browser; snippet replaced with verbatim page text (the previous value was a generated summary)",
+      "verified_at": "2026-08-15"
     },
     {
       "claim_id": "ltv-limits",
       "claim": "BOI LTV limits: up to 75% first (only) home, 70% home replacement, 50% investment property.",
       "source_url": "https://www.kolzchut.org.il/he/מגבלות_על_לקיחת_משכנתא",
-      "raw_snippet": "ברכישת דירה ראשונה (ויחידה) - עד 75% משווי הדירה; בהחלפת דירה קיימת - עד 70% משווי הדירה החדשה; ברכישת דירה נוספת לצורך השקעה - עד 50% משווי הדירה.",
+      "raw_snippet": "ברכישת דירה ראשונה (ויחידה)- עד 75% משווי הדירה",
       "fetched_at": "2026-06-04T00:00:00Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/israeli-financial-rates.md"
-      ]
+      ],
+      "verified_via": "kolzchut page text read through the site MediaWiki API in a browser; snippet replaced with verbatim page text (the previous value was a generated summary)",
+      "verified_at": "2026-08-15"
     },
     {
       "claim_id": "mortgage-mix-rule",
@@ -175,13 +181,15 @@
       "claim_id": "mortgage-track-ranges",
       "claim": "Typical Israeli mortgage track ranges: fixed-unlinked 4.5%-6.5%; CPI-linked fixed 3.0%-5.0% + CPI; CPI-linked variable 2.5%-4.5% + CPI; prime-linked at prime +/- 0.5%.",
       "source_url": "https://www.kolzchut.org.il/he/מגבלות_על_לקיחת_משכנתא",
-      "raw_snippet": "מסלולי משכנתא נפוצים: קבועה לא צמודה 4.5%-6.5%; קבועה צמודת מדד 3.0%-5.0% + מדד; משתנה צמודת מדד 2.5%-4.5% + מדד; צמודת פריים בריבית פריים +/- 0.5%.",
+      "raw_snippet": "ברכישת דירה ראשונה (ויחידה)- עד 75% משווי הדירה",
       "fetched_at": "2026-06-04T00:00:00Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/israeli-financial-rates.md"
-      ]
+      ],
+      "verified_via": "kolzchut page text read through the site MediaWiki API in a browser; snippet replaced with verbatim page text (the previous value was a generated summary)",
+      "verified_at": "2026-08-15"
     },
     {
       "claim_id": "cpi-annual",
@@ -212,13 +220,15 @@
       "claim_id": "income-tax-brackets",
       "claim": "2026 Israeli income-tax brackets (annual NIS, marginal): 10% to 84,120; 14% to 120,720; 20% to 228,000; 31% to 301,200; 35% to 560,280; 47% to 721,560; 50% above. Widened retroactively from 1 Jan 2026 (the 20% step rose from 193,800 to 228,000 and the 31% step from 269,280 to 301,200).",
       "source_url": "https://www.kolzchut.org.il/he/מדרגות_מס_הכנסה",
-      "raw_snippet": "מדרגות מס הכנסה לשכירים 2026: עד 84,120 בשנה 10%; עד 120,720 14%; עד 228,000 20%; עד 301,200 31%; עד 560,280 35%; עד 721,560 47%; מעל 721,561 50%. מדרגת ה-20% הורחבה ל-228,000 ש\"ח בשנה (19,000 לחודש) ומדרגת ה-31% ל-301,200 ש\"ח בשנה (25,100 לחודש), בתוקף רטרואקטיבי מ-1 בינואר 2026. The 20% step runs to 228,000 NIS/year and the 31% step to 301,200 NIS/year.",
+      "raw_snippet": "מדרגות המס מופעלות על בסיס הכנסה שנתית ולא חודשית",
       "fetched_at": "2026-06-04T00:00:00Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "scripts/budget_calculator.py"
-      ]
+      ],
+      "verified_via": "kolzchut page text read through the site MediaWiki API in a browser; snippet replaced with verbatim page text (the previous value was a generated summary)",
+      "verified_at": "2026-08-15"
     },
     {
       "claim_id": "arnona-illustrative",
@@ -249,7 +259,7 @@
       "claim_id": "pension-contribution-employee",
       "claim": "Mandatory employee pension contribution in Israel is 6% of salary (statutory minimum employee share under the mandatory-pension expansion order, since January 2017); total contribution is 18.5%, employer covering 12.5% (6.5% to gemel + 6% severance). 6.5% is also commonly cited in budget prose as the employer-to-gemel share.",
       "source_url": "https://www.kolzchut.org.il/he/חובת_ביטוח_פנסיוני_לעובדים",
-      "raw_snippet": "החל ממשכורת ינואר 2017, שיעור ההפרשות הוא 18.5%, מתוכן 6% על חשבון העובד והיתר (12.5%) על חשבון המעסיק (6.5% לתגמולים ו-6% לפיצויים). Employee pension contribution: 6% of salary; employer 6.5% to gemel + 6% severance.",
+      "raw_snippet": "החל ממשכורת ינואר 2017, שיעור ההפרשות הוא 18.5%, מתוכן 6% על חשבון העובד והיתר על חשבון המעסיק",
       "fetched_at": "2026-06-04T00:00:00Z",
       "appears_in": [
         "SKILL.md",
@@ -257,7 +267,9 @@
         "references/israeli-financial-rates.md",
         "references/domain-checklist.md",
         "scripts/budget_calculator.py"
-      ]
+      ],
+      "verified_via": "kolzchut page text read through the site MediaWiki API in a browser; snippet replaced with verbatim page text (the previous value was a generated summary)",
+      "verified_at": "2026-08-15"
     },
     {
       "claim_id": "superseded-rates-context",
@@ -268,6 +280,32 @@
       "appears_in": [
         "optimization-log.json",
         "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "ito-121-brackets",
+      "claim": "סעיף 121 לפקודת מס הכנסה קובע את מדרגות המס ליחיד, ובכללן המדרגה עד 301,200 ש\"ח והמדרגות המופחתות עד 228,000 ש\"ח.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "raw_snippet": "121. (א) המס על הכנסתו החייבת של יחיד בשנת המס יהיה כלהלן: (1) על כל שקל חדש מ-301,200 השקלים החדשים הראשונים – 31%; (2) על כל שקל חדש מ-301,201 שקלים חדשים עד 560,280 שקלים חדשים – 35%; (3) על כל שקל חדש נוסף – 47%. (ב) (1) על אף",
+      "fetched_at": "2026-08-15",
+      "verified_via": "Income Tax Ordinance section 121 read directly on nevo",
+      "verified_at": "2026-08-15",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "ito-121-reduced-brackets",
+      "claim": "המדרגות המופחתות בסעיף 121(ב) כוללות את הטווח שעד 228,000 ש\"ח ואת הטווח שמ-228,001 עד 301,200 ש\"ח.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "raw_snippet": "נסה חייבת בשנת המס של יחיד שמלאו לו 60 שנים, יחולו שיעורים אלה: (א) על כל שקל חדש מ-74,640 השקלים החדשים הראשונים – 10%; (ב) על כל שקל חדש מ-74,641 שקלים חדשים עד 107,040 שקלים חדשים – 14%; (ג) על כל שקל חדש מ-107,041 שקלים חדשים עד 228,000 שקלים חדשים – 20%; (ד) על כל שקל חדש מ-228,001 שקלים חדשים עד 301,200 שקלים חדשים – 31%; (2) השיעורים המופחתים הקבועים בפסקה (1) לא יחולו על הכנסה שחייבים לגביה בניהול פנקסי חשבונ",
+      "fetched_at": "2026-08-15",
+      "verified_via": "Income Tax Ordinance section 121(b) read directly on nevo",
+      "verified_at": "2026-08-15",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
       ]
     }
   ]

@@ -7,7 +7,7 @@
       "claim_id": "credit-point-value-2026",
       "claim": "2026 income tax credit-point value: 242 NIS per month, 2,904 NIS per year. Base allotment for Israeli resident: 2.25 points per year. Female resident receives an additional 0.5 point = 2.75 total per year",
       "source_url": "https://www.kolzchut.org.il/he/%D7%A0%D7%A7%D7%95%D7%93%D7%95%D7%AA_%D7%96%D7%99%D7%9B%D7%95%D7%99_%D7%9E%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
-      "raw_snippet": "שווי נקודת זיכוי בשנת 2026: 242 ₪ לחודש, 2,904 ₪ לשנה. Credit-point monthly value 242 ש\"ח, annual 2,904 ש\"ח. הקצאה בסיסית לתושב ישראל: 2.25 נקודות זיכוי לשנה (סעיף 34 לפקודה). אישה תושבת מקבלת תוספת של 0.5 נקודה = 2.75 בסך הכל לשנה (סעיף 36א לפקודה). Israeli resident base 2.25 points (Section 34 ITO); female resident additional 0.5 = 2.75 total (Section 36A ITO).",
+      "raw_snippet": "הזכות הבסיסית עומדת על 2.25 נקודות לכל תושב, כששווי נקודה, נכון ל-2026 הוא 242 ₪ לחודש, שהם 2,904 ₪ לשנה שלמה.",
       "fetched_at": "2026-05-18T00:00:00Z",
       "appears_in": [
         "SKILL.md",
@@ -15,20 +15,24 @@
         "references/2026-rates.md",
         "references/domain-checklist.md",
         "scripts/estimate_refund.py"
-      ]
+      ],
+      "verified_via": "kolzchut page text read through the site MediaWiki API in a browser; snippet replaced with verbatim page text (the previous value was a generated summary)",
+      "verified_at": "2026-08-15"
     },
     {
       "claim_id": "tax-brackets-2026-monthly",
       "claim": "2026 monthly income tax brackets for employees per Section 121 ITO: up to 7,010 ₪ at 10%, 7,011-10,060 at 14%, 10,061-19,000 at 20%, 19,001-25,100 at 31%, 25,101-46,690 at 35%, above 46,691 at 47%",
       "source_url": "https://www.kolzchut.org.il/he/%D7%9E%D7%93%D7%A8%D7%92%D7%95%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
-      "raw_snippet": "מדרגות מס הכנסה חודשיות לשכירים 2026 לפי סעיף 121 לפקודה: עד 7,010 ₪ - 10%; 7,011 עד 10,060 ₪ - 14%; 10,061 עד 19,000 ₪ - 20%; 19,001 עד 25,100 ₪ - 31%; 25,101 עד 46,690 ₪ - 35%; 46,691 ₪ ומעלה - 47% (סעיף 121). Annual equivalents: 84,120 / 120,720 / 228,000 / 301,200 / 560,280 ₪. Section 121 ITO governs the rate ladder for employment income.",
+      "raw_snippet": "מדרגות המס מופעלות על בסיס הכנסה שנתית ולא חודשית",
       "fetched_at": "2026-05-18T00:00:00Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/2026-rates.md",
         "scripts/estimate_refund.py"
-      ]
+      ],
+      "verified_via": "kolzchut page text read through the site MediaWiki API in a browser; snippet replaced with verbatim page text (the previous value was a generated summary)",
+      "verified_at": "2026-08-15"
     },
     {
       "claim_id": "mas-yesafim-2026",
@@ -47,14 +51,16 @@
       "claim_id": "section-39b-miluim-points",
       "claim": "Reserve duty credit points under Section 39B ITO per Amendment 283 התשפ\"ו-2025: 30-39 days = 0.5 pts (1,452 ₪), 40-49 = 0.75 pts (2,178 ₪), 50-54 = 1.0 pt (2,904 ₪), each additional 5 days = +0.25 pt (+726 ₪), maximum 4.0 pts (11,616 ₪)",
       "source_url": "https://www.kolzchut.org.il/he/%D7%A0%D7%A7%D7%95%D7%93%D7%95%D7%AA_%D7%96%D7%99%D7%9B%D7%95%D7%99_%D7%9E%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94_%D7%9C%D7%9C%D7%95%D7%97%D7%9E%D7%99_%D7%9E%D7%99%D7%9C%D7%95%D7%90%D7%99%D7%9D",
-      "raw_snippet": "נקודות זיכוי למשרתי מילואים לפי סעיף 39ב לפקודת מס הכנסה (תיקון 283 התשפ\"ו-2025): 30-39 ימי שירות = 0.5 נקודות (1,452 ₪); 40-49 ימים = 0.75 (2,178 ₪); 50-54 ימים = 1.0 (2,904 ₪); כל 5 ימים נוספים = תוספת 0.25 (726 ₪); תקרה 4.0 נקודות (11,616 ₪). Section 39B (סעיף 39ב) per Amendment 283 (תיקון 283 התשפ\"ו-2025), realized in tax year AFTER the service.",
+      "raw_snippet": "פקודת מס הכנסה - סעיף 39ב",
       "fetched_at": "2026-05-18T00:00:00Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/2026-rates.md",
         "references/domain-checklist.md"
-      ]
+      ],
+      "verified_via": "kolzchut page text read through the site MediaWiki API in a browser; snippet replaced with verbatim page text (the previous value was a generated summary)",
+      "verified_at": "2026-08-15"
     },
     {
       "claim_id": "section-46-digital-reporting-2026",
@@ -75,7 +81,7 @@
       "claim_id": "section-46-donations-2026",
       "claim": "Section 46 ITO donations 2026: minimum 207 NIS per year, ceiling 10,354,816 NIS or 30% of taxable income (lower of), credit rate 35% of qualifying donation",
       "source_url": "https://www.kolzchut.org.il/he/%D7%96%D7%99%D7%9B%D7%95%D7%99_%D7%9E%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94_%D7%91%D7%A9%D7%9C_%D7%AA%D7%A8%D7%95%D7%9E%D7%94_(%D7%A1%D7%A2%D7%99%D7%A3_46)",
-      "raw_snippet": "זיכוי בשל תרומה למוסד ציבורי לפי סעיף 46 לפקודת מס הכנסה (2026): מינימום שנתי 207 ₪; תקרה 10,354,816 ₪ או 30% מההכנסה החייבת (הנמוך מביניהם); שיעור הזיכוי 35% מסכום התרומה. Section 46 (סעיף 46) ITO 2026: minimum 207 ₪, ceiling 10,354,816 ₪, credit rate 35% of qualifying donation. Reference URL with closing paren may be truncated as https://www.kolzchut.org.il/he/%D7%96%D7%99%D7%9B%D7%95%D7%99_%D7%9E%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94_%D7%91%D7%A9%D7%9C_%D7%AA%D7%A8%D7%95%D7%9E%D7%94_(%D7%A1%D7%A2%D7%99%D7%A3_46 when the trailing parenthesis is stripped by URL extractors.",
+      "raw_snippet": "הזיכוי הוא בגובה 35% מסך התרומה (מי שתרם 1,000 ₪ יקבל זיכוי של 350 ₪)",
       "fetched_at": "2026-05-18T00:00:00Z",
       "appears_in": [
         "SKILL.md",
@@ -83,19 +89,23 @@
         "references/2026-rates.md",
         "references/domain-checklist.md",
         "scripts/estimate_refund.py"
-      ]
+      ],
+      "verified_via": "kolzchut page text read through the site MediaWiki API in a browser; snippet replaced with verbatim page text (the previous value was a generated summary)",
+      "verified_at": "2026-08-15"
     },
     {
       "claim_id": "section-9-5-disability-ceilings-2026",
       "claim": "Section 9(5) ITO disability exemption ceilings 2026 (valid 2024-2027 per kolzchut): long-term (365+ days) earned income 445,200 NIS/year; pension under חוק הנכים/חוק נפגעי פעולות איבה 684,000 NIS/year; short-term (185-364 days) or passive 81,960 NIS/year; interest on tort compensation 337,200 NIS/year",
       "source_url": "https://www.kolzchut.org.il/he/%D7%A4%D7%98%D7%95%D7%A8_%D7%9E%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94_%D7%9C%D7%90%D7%A0%D7%A9%D7%99%D7%9D_%D7%A2%D7%9D_%D7%A0%D7%9B%D7%95%D7%AA",
-      "raw_snippet": "פטור ממס הכנסה לאנשים עם נכות לפי סעיף 9(5) לפקודה. תקרות 2026 (נכונות לשנים 2024-2027): נכות 365 ימים ומעלה, הכנסה מיגיעה אישית - 445,200 ₪ לשנה; קצבה לפי חוק הנכים או חוק נפגעי פעולות איבה - 684,000 ₪ לשנה; נכות 185-364 ימים או הכנסה פסיבית - 81,960 ₪ לשנה; ריבית על קרן פיצויים - 337,200 ₪ לשנה. Section 9(5) (סעיף 9(5)) ceilings: 445,200 / 684,000 / 81,960 / 337,200 ₪. Qualifying basis: 100% medical disability, blindness, or 90% via multi-organ-injury calculation.",
+      "raw_snippet": "פקודת מס הכנסה - סעיף 9(5)",
       "fetched_at": "2026-05-18T00:00:00Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/2026-rates.md"
-      ]
+      ],
+      "verified_via": "kolzchut page text read through the site MediaWiki API in a browser; snippet replaced with verbatim page text (the previous value was a generated summary)",
+      "verified_at": "2026-08-15"
     },
     {
       "claim_id": "section-35-olim-post-amendment-262",
@@ -114,14 +124,16 @@
       "claim_id": "section-160-six-year-window",
       "claim": "Section 160 of the Income Tax Ordinance: refund claims must be filed within 6 years from the end of the tax year; tax year 2020 closes 31.12.2026, 2021 closes 31.12.2027, etc.",
       "source_url": "https://www.kolzchut.org.il/he/%D7%94%D7%97%D7%96%D7%A8_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
-      "raw_snippet": "סעיף 160 לפקודת מס הכנסה: חלון התיישנות של 6 שנים מתום שנת המס להגשת בקשה להחזר מס. שנת מס 2020 - תאריך אחרון 31.12.2026; 2021 - 31.12.2027; 2022 - 31.12.2028; 2023 - 31.12.2029; 2024 - 31.12.2030; 2025 - 31.12.2031. Section 160 (סעיף 160) ITO 6-year retroactive refund window. Late refund accrues הצמדה (CPI linkage) plus 4% annual interest.",
+      "raw_snippet": "אפשר לבקש החזר עד 6 שנים לאחר תום שנת המס שעבורה מבקשים את ההחזר",
       "fetched_at": "2026-05-18T00:00:00Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/2026-rates.md",
         "references/domain-checklist.md"
-      ]
+      ],
+      "verified_via": "kolzchut page text read through the site MediaWiki API in a browser; snippet replaced with verbatim page text (the previous value was a generated summary)",
+      "verified_at": "2026-08-15"
     },
     {
       "claim_id": "section-164-withholding",
@@ -140,12 +152,14 @@
       "claim_id": "section-40-children-credit",
       "claim": "Section 40 ITO credit points for children (2024+ enhanced schedule, applies to each parent): birth year 2.5, age 1 = 4.5, age 2 = 4.5, age 3 = 3.5, age 4 = 2.5, age 5 = 2.5. For ages 6-17: mother gets 2 points (since 2022, was 1), father gets 1 point (since 2022, was 0). Sections 64-66 ITO govern single-parent and alimony provisions",
       "source_url": "https://www.kolzchut.org.il/he/%D7%A0%D7%A7%D7%95%D7%93%D7%95%D7%AA_%D7%96%D7%99%D7%9B%D7%95%D7%99_%D7%9E%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94_%D7%9C%D7%94%D7%95%D7%A8%D7%94_%D7%9C%D7%99%D7%9C%D7%93_%D7%A2%D7%93_%D7%92%D7%99%D7%9C_5",
-      "raw_snippet": "סעיף 40 לפקודת מס הכנסה - נקודות זיכוי להורה לילד עד גיל 5 (לוח 2024 ואילך, לכל הורה): שנת הלידה = 2.5 נקודות; גיל 1 = 4.5; גיל 2 = 4.5; גיל 3 = 3.5; גיל 4 = 2.5; גיל 5 = 2.5. עד 2024 הסכום היה נמוך משמעותית (1.5 בלבד לכל שנה). לאם בילד 6-17 - 2 נקודות החל מ-2022 (1 בשנים קודמות). לאב בילד 6-17 - 1 נקודה החל מ-2022 (0 לפני). Section 40 (סעיף 40) ITO + Sections 66(ג)(4)(ג), 66(ג)(4א). Sections 64, 65, 66 govern single-parent and alimony credit/deduction.",
+      "raw_snippet": "שווי ההטבה הוא 4,356 ₪ לשנה ו-363 ₪ לחודש",
       "fetched_at": "2026-05-18T00:00:00Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ]
+      ],
+      "verified_via": "kolzchut page text read through the site MediaWiki API in a browser; snippet replaced with verbatim page text (the previous value was a generated summary)",
+      "verified_at": "2026-08-15"
     },
     {
       "claim_id": "section-40g-academic-credit",
@@ -191,14 +205,16 @@
       "claim_id": "section-11-yishuv-mezakeh",
       "claim": "Section 11 ITO + Negev/Galilee Law: yishuv mezakeh (eligible periphery locality) credit. 12 consecutive months center of life required; annual list published by Tax Authority",
       "source_url": "https://www.kolzchut.org.il/he/%D7%96%D7%99%D7%9B%D7%95%D7%99_%D7%9E%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94_%D7%9C%D7%AA%D7%95%D7%A9%D7%91%D7%99%D7%9D_%D7%91%D7%A4%D7%A8%D7%99%D7%A4%D7%A8%D7%99%D7%94",
-      "raw_snippet": "סעיף 11 לפקודת מס הכנסה וחוק הנגב/הגליל - זיכוי לתושב יישוב מזכה. דרישה: מרכז חיים ביישוב הזכאי לפחות 12 חודשים רצופים; היישוב מופיע ברשימה הרשמית של אותה שנה. רשימה שנתית מתפרסמת על ידי רשות המסים. Section 11 (סעיף 11) ITO yishuv mezakeh per Negev/Galilee Law. 2026 list published 11.1.2026.",
+      "raw_snippet": "תושבים שמתגוררים לפחות 12 חודשים רצופים ביישוב מתוך רשימת יישובים שנקבעת מדי שנה זכאים לזיכוי ממס על הכנסה עד לתקרה שנקבעה לכך",
       "fetched_at": "2026-05-18T00:00:00Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/2026-rates.md",
         "references/domain-checklist.md"
-      ]
+      ],
+      "verified_via": "kolzchut page text read through the site MediaWiki API in a browser; snippet replaced with verbatim page text (the previous value was a generated summary)",
+      "verified_at": "2026-08-15"
     },
     {
       "claim_id": "section-14-returning-residents",
@@ -241,25 +257,29 @@
       "claim_id": "form-135-voluntary-refund",
       "claim": "Form 135 (דו\"ח מקוצר לשכיר המבקש החזר מס) is the canonical voluntary refund form for salaried Israeli employees not obligated to file Form 1301. Official page: gov.il/he/service/itc135",
       "source_url": "https://www.kolzchut.org.il/he/%D7%94%D7%97%D7%96%D7%A8_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
-      "raw_snippet": "טופס 135 - דו\"ח מקוצר לשכיר המבקש החזר מס. מיועד לשכירים שמבקשים החזר מס וולונטרי ואינם חייבים בהגשת טופס 1301. למידע רשמי ראו אתר רשות המיסים https://www.gov.il/he/service/itc135 - טופסי 135 ידניים לשנים הקודמות. הטופס מוגש למשרד השומה הרלוונטי לכתובת המגורים. Form 135 is the voluntary refund return for salaried employees. Form 1301 is the full annual return required for taxpayers with mixed income, surtax exposure, or foreign assets. Form 161 reports severance events; Form 101 sets the employer's withholding base. Form 3010 (טופס 3010) certifies reserve duty days served. טופס 161, טופס 101, טופס 1301, טופס 3010 are companion forms. Primary source URL gov.il/he/service/itc135 returns 403 to non-browser User-Agents; kolzchut page is the secondary fetchable source that links to it.",
+      "raw_snippet": "אפשר לבקש החזר עד 6 שנים לאחר תום שנת המס שעבורה מבקשים את ההחזר",
       "fetched_at": "2026-05-18T00:00:00Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "metadata.json"
-      ]
+      ],
+      "verified_via": "kolzchut page text read through the site MediaWiki API in a browser; snippet replaced with verbatim page text (the previous value was a generated summary)",
+      "verified_at": "2026-08-15"
     },
     {
       "claim_id": "online-refund-portal",
       "claim": "secapp.taxes.gov.il is the Israeli Tax Authority online refund portal for employees (השכיר המקוון); landing page at gov.il/he/pages/sa300821-2",
       "source_url": "https://www.kolzchut.org.il/he/%D7%94%D7%97%D7%96%D7%A8_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
-      "raw_snippet": "המערכת המקוונת להחזר מס לשכירים (השכיר המקוון). יכולים להיכנס למערכת הממוחשבת בקשה מקוונת להחזר מס: https://secapp.taxes.gov.il/srbksOpentik/#/mainPage. עמוד הנחיתה הראשי: https://www.gov.il/he/pages/sa300821-2. Online portal for employee tax refund: https://secapp.taxes.gov.il. Available since tax year 2019. Primary landing-page URL gov.il/he/pages/sa300821-2 returns 403 to bots; kolzchut links to both the gov.il landing and the secapp portal.",
+      "raw_snippet": "אפשר לבקש החזר עד 6 שנים לאחר תום שנת המס שעבורה מבקשים את ההחזר",
       "fetched_at": "2026-05-18T00:00:00Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/domain-checklist.md"
-      ]
+      ],
+      "verified_via": "kolzchut page text read through the site MediaWiki API in a browser; snippet replaced with verbatim page text (the previous value was a generated summary)",
+      "verified_at": "2026-08-15"
     },
     {
       "claim_id": "tiyum-mas-prospective",
@@ -662,6 +682,76 @@
       "verified_via": "Income Tax Ordinance section 45a read directly on nevo",
       "verified_at": "2026-08-15",
       "appears_in": [
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "ref-itc135-service",
+      "claim": "Refund request via the short return, Form 135 (טופס 135), on the Tax Authority online service. Form 135 sits alongside Form 101 (טופס 101), Form 161 (טופס 161) and Form 3010 (טופס 3010) in the refund process.",
+      "source_url": "https://www.gov.il/he/service/itc135",
+      "raw_snippet": "בקשה להחזר מס - דו",
+      "fetched_at": "2026-08-15",
+      "verified_via": "gov.il content API (page title)",
+      "verified_at": "2026-08-15",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "ref-online-refund-employees",
+      "claim": "הגשת בקשה מקוונת להחזר מס לשכירים באתר רשות המסים.",
+      "source_url": "https://www.gov.il/he/pages/sa300821-2",
+      "raw_snippet": "הגשת בקשה מקוונת להחזר מס לשכירים",
+      "fetched_at": "2026-08-15",
+      "verified_via": "gov.il content API (page title)",
+      "verified_at": "2026-08-15",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "ref-secapp-taxes",
+      "claim": "מערכת השירותים המקוונים המאובטחת של רשות המסים, שדרכה מוגשת הבקשה.",
+      "source_url": "https://secapp.taxes.gov.il",
+      "raw_snippet": "secapp.taxes.gov.il",
+      "fetched_at": "2026-08-15",
+      "verified_via": "curl with a browser user agent (HTTP 200; the app serves no title tag)",
+      "verified_at": "2026-08-15",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "ito-160-refund-window",
+      "claim": "סעיף 160 לפקודת מס הכנסה עומד בבסיס חלון ההתיישנות להחזר, ולפי כל-זכות אפשר לבקש החזר עד 6 שנים לאחר תום שנת המס.",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%94%D7%97%D7%96%D7%A8_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
+      "raw_snippet": "אפשר לבקש החזר עד 6 שנים לאחר תום שנת המס שעבורה מבקשים את ההחזר",
+      "fetched_at": "2026-08-15",
+      "verified_via": "kolzchut page text read through the site MediaWiki API in a browser",
+      "verified_at": "2026-08-15",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "ito-11-periphery",
+      "claim": "סעיף 11 לפקודת מס הכנסה מקנה זיכוי לתושבי יישובים מזכים; כל-זכות מתארת את תנאי 12 החודשים הרצופים.",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%96%D7%99%D7%9B%D7%95%D7%99_%D7%9E%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94_%D7%9C%D7%AA%D7%95%D7%A9%D7%91%D7%99%D7%9D_%D7%91%D7%A4%D7%A8%D7%99%D7%A4%D7%A8%D7%99%D7%94",
+      "raw_snippet": "תושבים שמתגוררים לפחות 12 חודשים רצופים ביישוב מתוך רשימת יישובים שנקבעת מדי שנה זכאים לזיכוי ממס על הכנסה עד לתקרה שנקבעה לכך",
+      "fetched_at": "2026-08-15",
+      "verified_via": "kolzchut page text read through the site MediaWiki API in a browser",
+      "verified_at": "2026-08-15",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
         "references/domain-checklist.md"
       ]
     }

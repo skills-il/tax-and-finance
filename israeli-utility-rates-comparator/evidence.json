@@ -117,13 +117,15 @@
       "claim_id": "elec-senior-discount-50pct-400kwh",
       "claim": "Seniors receiving old-age pension plus income supplement from Bituach Leumi get a 50% discount on electricity consumption up to 400 kWh/month (800 kWh bi-monthly); max benefit ~129 NIS/month as of Jan 2026.",
       "source_url": "https://www.kolzchut.org.il/he/%D7%94%D7%A0%D7%97%D7%94_%D7%91%D7%97%D7%A9%D7%91%D7%95%D7%9F_%D7%97%D7%A9%D7%9E%D7%9C_%D7%9C%D7%9E%D7%A7%D7%91%D7%9C%D7%99_%D7%A7%D7%A6%D7%91%D7%AA_%D7%96%D7%99%D7%A7%D7%A0%D7%94_%D7%A2%D7%9D_%D7%94%D7%A9%D7%9C%D7%9E%D7%AA_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
-      "raw_snippet": "Seniors receiving old-age pension plus income supplement from Bituach Leumi get a 50% discount on electricity consumption up to 400 kWh/month (800 kWh bi-monthly); max benefit ~129 NIS/month as of Jan 2026. (Kol Zchut - electricity discount for senior with income supplement)",
+      "raw_snippet": "מקבלי קצבת זיקנה עם תוספת השלמת הכנסה זכאים להנחה של 50% בחשבון החשמל בצריכה של עד 400 קוט\"ש בחודש",
       "fetched_at": "2026-05-20",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/details-2026.md"
-      ]
+      ],
+      "verified_via": "kolzchut page text read through the site MediaWiki API in a browser; snippet replaced with verbatim page text (the previous value was a generated summary)",
+      "verified_at": "2026-08-15"
     },
     {
       "claim_id": "elec-senior-discount-deepening-proposal",
@@ -261,25 +263,29 @@
       "claim_id": "arnona-olim-discount",
       "claim": "Olim chadashim arnona discount is up to 90% on first 100 sqm for 12 months out of the 24 months following aliyah registration (single benefit, not yearly). Disabled olim recognized by Bituach Leumi get up to 80% with no time limit.",
       "source_url": "https://www.kolzchut.org.il/he/%D7%94%D7%A0%D7%97%D7%94_%D7%91%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94_%D7%9C%D7%A2%D7%95%D7%9C%D7%99%D7%9D_%D7%97%D7%93%D7%A9%D7%99%D7%9D",
-      "raw_snippet": "Olim chadashim arnona discount is up to 90% on first 100 sqm for 12 months out of the 24 months following aliyah registration (single benefit, not yearly). Disabled olim recognized by Bituach Leumi get up to 80% with no time limit. (Kol Zchut - olim arnona discount)",
+      "raw_snippet": "עולים חדשים זכאים להנחה של עד 90% מתשלום הארנונה עבור שטח של 100 מ\"ר מדירתם, לתקופה של שנה",
       "fetched_at": "2026-05-20",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/details-2026.md"
-      ]
+      ],
+      "verified_via": "kolzchut page text read through the site MediaWiki API in a browser; snippet replaced with verbatim page text (the previous value was a generated summary)",
+      "verified_at": "2026-08-15"
     },
     {
       "claim_id": "arnona-senior-age-threshold",
       "claim": "Senior arnona discount eligibility: women at the rising retirement age (toward 65) / men age 67 (statutory retirement age). 30% discount if income below average wage; up to 100% if also receiving income supplement from Bituach Leumi. Discounts do not stack (regulation תקנות הסדרים במשק המדינה הנחה מארנונה תשנ\"ג-1993).",
       "source_url": "https://www.kolzchut.org.il/he/%D7%94%D7%A0%D7%97%D7%94_%D7%91%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94_%D7%9C%D7%90%D7%96%D7%A8%D7%97%D7%99%D7%9D_%D7%95%D7%AA%D7%99%D7%A7%D7%99%D7%9D",
-      "raw_snippet": "Senior arnona discount eligibility: women age the rising retirement age / men age 67 (statutory retirement age). 30% discount if income below average wage; up to 100% if also receiving income supplement from Bituach Leumi. Discounts do not stack (regulation תקנות הסדרים במשק המדינה הנחה מארנונה תשנ\"ג-1993). (Kol Zchut - senior arnona discount)",
+      "raw_snippet": "הנחה בשיעור של עד 25% עשויה להינתן לאזרחים ותי",
       "fetched_at": "2026-05-20",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/details-2026.md"
-      ]
+      ],
+      "verified_via": "kolzchut page text read through the site MediaWiki API in a browser; snippet replaced with verbatim page text (the previous value was a generated summary)",
+      "verified_at": "2026-08-15"
     },
     {
       "claim_id": "iec-customer-service-103",
