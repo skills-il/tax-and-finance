@@ -128,7 +128,7 @@ Pension contributions receive two separate tax benefits that must both be claime
 **Section 45A: 35 percent income tax credit (zikui)**
 - Reduces tax liability directly by 35 percent of the qualifying pension contribution
 - Applies to both employees and self-employed who deposit into a pension fund, insurance policy with a pension component, or kupat gemel l-kitzba
-- Employee (sachir) ceiling: qualifying contribution up to 7 percent of eligible salary (capped at 23,232 NIS/month for 2026, so maximum monthly credited deposit is 1,626 NIS).
+- Employee (sachir) ceiling: qualifying contribution up to 7 percent of hachnasa mezaka under Section 45a(d)(2)(b)(2). Hachnasa mezaka from employment income is capped at 9,700 NIS/month for 2026 under Section 47(a)(1)(1), so the maximum monthly credited deposit is 679 NIS. An amit mutav has a separate track whose 2026 ceiling the Tax Authority publishes as 19,400 NIS/month, which is exactly twice the 9,700 figure, matching the statute's 'pa'amayim' wording.
 - Self-employed (atzmai) eligibility: 5.5 percent of business income is the ceiling used for the 45A credit (verify the exact annual figure each year on kolzchut.org.il or pensuni.com before applying to a return)
 - Claim on Form 1301 in the credits section, separate line from nekudot zikui
 

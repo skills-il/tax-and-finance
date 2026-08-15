@@ -652,6 +652,18 @@
       "appears_in": [
         "SKILL.md"
       ]
+    },
+    {
+      "claim_id": "section-45a-credit-7-percent-employee",
+      "claim": "סעיף 45א(ד)(2)(ב)(2) קובע שלגבי יחיד שהיתה לו הכנסת עבודה, הסכום המזכה מוגבל ל-7% מההכנסה המזכה. בתקרת הכנסה מזכה של 9,700 ש\"ח לחודש מדובר ב-679 ש\"ח לחודש.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "raw_snippet": "(2) לעניין יחיד שהיתה לו בשנת המס הכנסת עבודה – 7% מהכנסתו המזכה, ובלבד שהסכום הכולל שבשלו יינתן זיכוי בעד סכומים ששולמו",
+      "fetched_at": "2026-08-15",
+      "verified_via": "Income Tax Ordinance section 45a read directly on nevo",
+      "verified_at": "2026-08-15",
+      "appears_in": [
+        "references/domain-checklist.md"
+      ]
     }
   ]
 }

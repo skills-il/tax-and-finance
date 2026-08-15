@@ -49,35 +49,41 @@
     {
       "claim_id": "rental-and-mandatory-filing",
       "claim": "Residential rental: exempt track 0% below 5,654 NIS/month (frozen 2025-2027); flat 10% track; marginal 10%-50%. Annual residential rental income above 375,000 NIS forces a full return even on the 10% track",
-      "source_url": "https://www.kolzchut.org.il/he/הכנסה_מהשכרת_דירת_מגורים",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%A4%D7%98%D7%95%D7%A8_%D7%9E%D7%9E%D7%A1_%D7%A2%D7%9C_%D7%94%D7%9B%D7%A0%D7%A1%D7%94_%D7%9E%D7%94%D7%A9%D7%9B%D7%A8%D7%AA_%D7%93%D7%99%D7%A8%D7%94_%D7%9C%D7%9E%D7%92%D7%95%D7%A8%D7%99%D7%9D",
       "raw_snippet": "פטור 0% מתחת 5,654 ש\"ח לחודש; מסלול 10%; שולי 10%-50%; הכנסה משכירות מעל 375,000 ש\"ח מחייבת דוח",
       "fetched_at": "2026-06-16T23:25:00Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ]
+      ],
+      "verified_via": "redirected from a Kol Zchut page that no longer exists (הכנסה מהשכרת דירת מגורים); successor located via the site search API",
+      "verified_at": "2026-08-15"
     },
     {
       "claim_id": "pension-45a-47",
       "claim": "Section 45A: 35% tax credit on qualifying pension contribution; employee ceiling 7% of eligible salary capped at 23,232 NIS/month for 2026 (max credited 1,626/month); self-employed 5.5% ceiling for 45A. Section 47: deduction up to 11% of business income; combined ceiling 16.5%",
-      "source_url": "https://www.kolzchut.org.il/he/ניכוי_וזיכוי_בעד_הפקדות_לפנסיה",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%94%D7%98%D7%91%D7%95%D7%AA_%D7%91%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94_%D7%91%D7%92%D7%99%D7%9F_%D7%94%D7%A4%D7%A7%D7%93%D7%95%D7%AA_%D7%A2%D7%A6%D7%9E%D7%90%D7%99%D7%95%D7%AA_%D7%9C%D7%91%D7%99%D7%98%D7%95%D7%97_%D7%A4%D7%A0%D7%A1%D7%99%D7%95%D7%A0%D7%99",
       "raw_snippet": "סעיף 45א 35% זיכוי; שכיר 7% עד 23,232 ש\"ח לחודש 2026, מקסימום 1,626; עצמאי 5.5%; סעיף 47 ניכוי עד 11%; תקרה משולבת 16.5%",
       "fetched_at": "2026-06-16T23:25:00Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ]
+      ],
+      "verified_via": "redirected from a Kol Zchut page that no longer exists (ניכוי וזיכוי בעד הפקדות לפנסיה); successor located via the site search API",
+      "verified_at": "2026-08-15"
     },
     {
       "claim_id": "section-46-donation",
       "claim": "Section 46 donation credit: 35% of the eligible donation for individuals and the corporate rate (23%) for companies; recognized-institution requirement; excess above the ceiling carried forward up to 3 tax years. Exact floor and ceiling figures are carried by section-46-floor-ceiling-2026, which supersedes the vague description previously here.",
-      "source_url": "https://www.kolzchut.org.il/he/זיכוי_ממס_בגין_תרומות",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%96%D7%99%D7%9B%D7%95%D7%99_%D7%9E%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94_%D7%91%D7%A9%D7%9C_%D7%AA%D7%A8%D7%95%D7%9E%D7%94_%28%D7%A1%D7%A2%D7%99%D7%A3_46%29",
       "raw_snippet": "סעיף 46: 35% זיכוי ליחיד; מוסד מוכר; רצפת מינימום כ-200 ש\"ח; תקרה 30% מההכנסה החייבת; העברה קדימה 3 שנים",
       "fetched_at": "2026-06-16T23:25:00Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ]
+      ],
+      "verified_via": "redirected from a Kol Zchut page that no longer exists (זיכוי ממס בגין תרומות); successor located via the site search API",
+      "verified_at": "2026-08-15"
     },
     {
       "claim_id": "mas-shevach-and-securities",
@@ -234,6 +240,45 @@
         "references/tax-brackets-credits.md"
       ],
       "source_note": "Replaced 2026-08-10: prior snippet was ellipsis-stitched. Quote re-read from the Israel Tax Authority 2026 monthly-deductions booklet PDF via pdftotext -layout and confirmed present; Hebrew restored to reading order from the layout-extracted text. The same numbered list continues: '2. על כל שקל חדש מ-228,001 ש\"ח עד 301,200 ש\"ח – יחול שיעור מס 31%.' and '3. על כל שקל חדש מ-301,201 ש\"ח עד 560,280 ש\"ח – יחול שיעור מס 35%.' The surtax half of the old stitched snippet now lives in its own entry, surtax-and-corporate."
+    },
+    {
+      "claim_id": "section-45a-employee-7-percent",
+      "claim": "Section 45a(d)(2)(b)(2): for an individual with employment income the credited amount is capped at 7% of his hachnasa mezaka.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "raw_snippet": "(2) לעניין יחיד שהיתה לו בשנת המס הכנסת עבודה – 7% מהכנסתו המזכה, ובלבד שהסכום הכולל שבשלו יינתן זיכוי בעד סכומים ששולמו",
+      "fetched_at": "2026-08-15",
+      "verified_via": "Income Tax Ordinance section 45a read directly on nevo",
+      "verified_at": "2026-08-15",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "ita-2026-pension-ceilings",
+      "claim": "The Tax Authority's 2026 deductions booklet publishes the hachnasa mezaka ceiling for employment income at 9,700 NIS/month under Section 47(a)(1)(1), and the Section 45a(e)(2) ceiling at 19,400 NIS/month. 7% of 9,700 is 679, the maximum monthly credited deposit for an employee.",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf",
+      "raw_snippet": "תקרת הכנסה מזכה 47(א)(1)(1) - רק מהכנסת עבודה",
+      "fetched_at": "2026-08-15",
+      "verified_via": "Israel Tax Authority 2026 monthly deductions booklet (pdftotext); the 679 figure is arithmetic on the published ceiling",
+      "verified_at": "2026-08-15",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "employee-credited-deposit-679-derived",
+      "claim": "679 NIS a month is arithmetic, not a separately published figure: 7% of the 9,700 monthly hachnasa mezaka ceiling for employment income.",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf",
+      "raw_snippet": "תקרת הכנסה מזכה 47(א)(1)(1) - רק מהכנסת עבודה",
+      "fetched_at": "2026-08-15",
+      "verified_via": "derived from the published ceiling in the Tax Authority 2026 deductions booklet",
+      "verified_at": "2026-08-15",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     }
   ]
 }
