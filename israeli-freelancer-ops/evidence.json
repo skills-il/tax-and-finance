@@ -99,12 +99,6 @@
       "source_fetched_at": "2026-07-26T00:00:00Z"
     },
     {
-      "claim": "Reference-links table and utility/municipal portal URLs cited in the skill: https://www.gov.il/he/service/reporting-and-payment-2025-annual-tax-report-for-individuals ; https://www.gov.il/he/pages/pa280825-1 ; https://www.gov.il/he/service/request-assignment-number-for-tax-invoice ; https://www.btl.gov.il/Insurance/National%20Insurance/type_list/Self_Employed/Pages/rates.aspx ; https://www.iec.co.il ; https://www.bezeq.co.il ; https://www.partner.co.il ; https://www.hot.net.il ; https://www.tel-aviv.gov.il ; https://www.jerusalem.muni.il ; https://www.haifa.muni.il . These are official Israeli government, Bituach Leumi, and utility-provider portals referenced as verification sources and bill-collection portals. (Regex currency artifacts: \"NIS 6\" and \"NIS,\" are byte fragments of these prose sentences and carry no factual claim.)",
-      "source_url": "https://www.gov.il/he/service/reporting-and-payment-2025-annual-tax-report-for-individuals",
-      "raw_snippet": "Official Israeli portals referenced in the skill: https://www.gov.il/he/service/reporting-and-payment-2025-annual-tax-report-for-individuals https://www.gov.il/he/pages/pa280825-1 https://www.gov.il/he/service/request-assignment-number-for-tax-invoice https://www.btl.gov.il/Insurance/National%20Insurance/type_list/Self_Employed/Pages/rates.aspx https://www.iec.co.il https://www.bezeq.co.il https://www.partner.co.il https://www.hot.net.il https://www.tel-aviv.gov.il https://www.jerusalem.muni.il https://www.haifa.muni.il",
-      "fetched_at": "2026-08-11T00:00:00Z"
-    },
-    {
       "claim": "Reference-links anchor: the kolzchut osek patur page cited in the Reference Links table carries the current ceiling.",
       "source_url": "https://www.kolzchut.org.il/he/עוסק_פטור",
       "raw_snippet": "122,833 ₪ (נכון לשנת 2026)",
@@ -145,6 +139,149 @@
       "source_fetched_at": "2026-07-26T00:00:00Z",
       "raw_snippet": "זיכוי ממס הכנסה בגין הפרשות לביטוח פנסיוני (זכות) – כל-זכות",
       "confidence": "medium"
+    },
+    {
+      "claim_id": "portal-annual-tax-report",
+      "claim": "The page at https://www.gov.il/he/service/reporting-and-payment-2025-annual-tax-report-for-individuals is served under the title 'דיווח ותשלום - דוח מס שנתי 2025 ליחידים ובעלי עסקים'. Cited only as a navigational pointer, not as the source of any figure.",
+      "source_url": "https://www.gov.il/he/service/reporting-and-payment-2025-annual-tax-report-for-individuals",
+      "raw_snippet": "דיווח ותשלום - דוח מס שנתי 2025 ליחידים ובעלי עסקים",
+      "fetched_at": "2026-08-15",
+      "verified_via": "gov.il content API",
+      "verified_at": "2026-08-15",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "portal-vat-periodic-report",
+      "claim": "The page at https://www.gov.il/he/pages/pa280825-1 is served under the title 'חובת הגשת דוח תקופתי מפורט למע'. Cited only as a navigational pointer, not as the source of any figure.",
+      "source_url": "https://www.gov.il/he/pages/pa280825-1",
+      "raw_snippet": "חובת הגשת דוח תקופתי מפורט למע",
+      "fetched_at": "2026-08-15",
+      "verified_via": "gov.il content API",
+      "verified_at": "2026-08-15",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "portal-invoice-allocation-number",
+      "claim": "The page at https://www.gov.il/he/service/request-assignment-number-for-tax-invoice is served under the title 'בקשה למספר הקצאה לחשבונית מס'. Cited only as a navigational pointer, not as the source of any figure.",
+      "source_url": "https://www.gov.il/he/service/request-assignment-number-for-tax-invoice",
+      "raw_snippet": "בקשה למספר הקצאה לחשבונית מס",
+      "fetched_at": "2026-08-15",
+      "verified_via": "gov.il content API",
+      "verified_at": "2026-08-15",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "portal-btl-self-employed-rates",
+      "claim": "The page at https://www.btl.gov.il/Insurance/National%20Insurance/type_list/Self_Employed/Pages/rates.aspx is served under the title 'שיעורי דמי הביטוח - עובד עצמאי'. Cited only as a navigational pointer, not as the source of any figure.",
+      "source_url": "https://www.btl.gov.il/Insurance/National%20Insurance/type_list/Self_Employed/Pages/rates.aspx",
+      "raw_snippet": "שיעורי דמי הביטוח - עובד עצמאי",
+      "fetched_at": "2026-08-15",
+      "verified_via": "playwright navigation; a plain fetch of this URL returns a different page because BTL blocks non-browser agents",
+      "verified_at": "2026-08-15",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "portal-iec",
+      "claim": "The page at https://www.iec.co.il is served under the title 'חברת החשמל לישראל - עמוד הבית'. Cited only as a navigational pointer, not as the source of any figure.",
+      "source_url": "https://www.iec.co.il",
+      "raw_snippet": "חברת החשמל לישראל - עמוד הבית",
+      "fetched_at": "2026-08-15",
+      "verified_via": "curl with a browser user agent",
+      "verified_at": "2026-08-15",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "portal-bezeq",
+      "claim": "The page at https://www.bezeq.co.il is served under the title 'אינטרנט מהיר לבית ולעסק, שירותי תקשורת וחשמל ביתי-בזק'. Cited only as a navigational pointer, not as the source of any figure.",
+      "source_url": "https://www.bezeq.co.il",
+      "raw_snippet": "אינטרנט מהיר לבית ולעסק, שירותי תקשורת וחשמל ביתי-בזק",
+      "fetched_at": "2026-08-15",
+      "verified_via": "curl with a browser user agent",
+      "verified_at": "2026-08-15",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "portal-partner",
+      "claim": "The page at https://www.partner.co.il is served under the title 'Homepage'. Cited only as a navigational pointer, not as the source of any figure.",
+      "source_url": "https://www.partner.co.il",
+      "raw_snippet": "Homepage",
+      "fetched_at": "2026-08-15",
+      "verified_via": "curl with a browser user agent",
+      "verified_at": "2026-08-15",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "portal-hot",
+      "claim": "The page at https://www.hot.net.il is served under the title 'חברת HOT הוט'. Cited only as a navigational pointer, not as the source of any figure.",
+      "source_url": "https://www.hot.net.il",
+      "raw_snippet": "חברת HOT הוט",
+      "fetched_at": "2026-08-15",
+      "verified_via": "curl with a browser user agent; the page serves its Hebrew title as HTML entities, decoded here",
+      "verified_at": "2026-08-15",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "portal-tel-aviv",
+      "claim": "The page at https://www.tel-aviv.gov.il is served under the title 'עיריית תל-אביב-יפו'. Cited only as a navigational pointer, not as the source of any figure.",
+      "source_url": "https://www.tel-aviv.gov.il",
+      "raw_snippet": "עיריית תל-אביב-יפו",
+      "fetched_at": "2026-08-15",
+      "verified_via": "curl with a browser user agent",
+      "verified_at": "2026-08-15",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "portal-jerusalem",
+      "claim": "The page at https://www.jerusalem.muni.il is served under the title 'האתר הרשמי של עיריית ירושלים'. Cited only as a navigational pointer, not as the source of any figure.",
+      "source_url": "https://www.jerusalem.muni.il",
+      "raw_snippet": "האתר הרשמי של עיריית ירושלים",
+      "fetched_at": "2026-08-15",
+      "verified_via": "playwright navigation; a plain fetch returns 403",
+      "verified_at": "2026-08-15",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "portal-haifa",
+      "claim": "The page at https://www.haifa.muni.il is served under the title 'עיריית חיפה - האתר הראשי של עיריית חיפה'. Cited only as a navigational pointer, not as the source of any figure.",
+      "source_url": "https://www.haifa.muni.il",
+      "raw_snippet": "עיריית חיפה - האתר הראשי של עיריית חיפה",
+      "fetched_at": "2026-08-15",
+      "verified_via": "curl with a browser user agent",
+      "verified_at": "2026-08-15",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     }
   ]
 }
