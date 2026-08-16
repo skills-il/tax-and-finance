@@ -181,7 +181,7 @@ Result: The agent drafts a formal appeal letter in Hebrew addressed to the Haifa
 | Source | URL | What to Check |
 |--------|-----|---------------|
 | Kolzchut: Arnona | https://www.kolzchut.org.il/he/ארנונה | Plain-language guide to arnona obligations, discounts, and appeal rights |
-| gov.il: Property Tax (Arnona) | https://www.gov.il/he/departments/topics/property_tax_arnona | Official ministry topic page covering legislation and discount eligibility |
+| gov.il: Property Tax (Arnona) | (link removed, this gov.il page now returns 404) | Official ministry topic page covering legislation and discount eligibility |
 | Bituach Leumi: Disability Benefits | https://www.btl.gov.il/benefits/Disability/Pages/default.aspx | Source documents for the disability percentages used in arnona discount eligibility |
 | Tel Aviv Municipality | https://www.tel-aviv.gov.il/ | Tel Aviv tzav arnona, current rates, online payment, appeals |
 | Jerusalem Municipality | https://www.jerusalem.muni.il/ | Jerusalem alef-heh zone rates, payment, discount applications |

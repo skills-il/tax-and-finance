@@ -220,9 +220,9 @@ python scripts/categorize_invoices.py --input invoices.json --output categorized
 | מקור | כתובת | מה לבדוק |
 |------|-------|----------|
 | רשות המסים | https://www.gov.il/he/departments/israel_tax_authority | שיעור מע"מ עדכני, תקנות חשבונית דיגיטלית, קטגוריות הוצאה |
-| מערכת שע"ם להקצאת חשבוניות | https://www.gov.il/he/service/digital-invoices-service | סף הקצאת מספר, אימות הקצאה של ספק |
+| מערכת שע"ם להקצאת חשבוניות | (link removed, this gov.il page now returns 404) | סף הקצאת מספר, אימות הקצאה של ספק |
 | דרישות פורמט חשבונית | https://www.gov.il/he/pages/invoices-format | שדות חובה ופורמט של חשבונית מס |
-| חיפוש עוסק | https://www.gov.il/he/service/business-id-search | אימות מספר עוסק וסטטוס (מורשה/פטור) |
+| חיפוש עוסק | (link removed, this gov.il page now returns 404) | אימות מספר עוסק וסטטוס (מורשה/פטור) |
 | כללי ניכוי הוצאות | https://www.gov.il/he/departments/guides/income-tax-allowed-expenses | כלל הרכב 2/3, כלל האירוח 80%, שימוש מעורב |
 
 ## פתרון בעיות

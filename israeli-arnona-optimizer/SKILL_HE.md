@@ -217,7 +217,7 @@ python scripts/arnona-calculator.py --municipality "tel-aviv" --area 80 --zone 2
 | מקור | קישור | מה לבדוק |
 |------|-------|---------|
 | כל זכות: ארנונה | https://www.kolzchut.org.il/he/ארנונה | מדריך פשוט לחובות ארנונה, הנחות וזכויות ערעור |
-| gov.il: ארנונה (מס נכסים) | https://www.gov.il/he/departments/topics/property_tax_arnona | עמוד נושא רשמי במשרד הפנים: חקיקה ותנאי זכאות להנחות |
+| gov.il: ארנונה (מס נכסים) | (link removed, this gov.il page now returns 404) | עמוד נושא רשמי במשרד הפנים: חקיקה ותנאי זכאות להנחות |
 | ביטוח לאומי: נכות | https://www.btl.gov.il/benefits/Disability/Pages/default.aspx | מקור לאחוזי הנכות שמשמשים לזכאות להנחת ארנונה |
 | עיריית תל אביב | https://www.tel-aviv.gov.il/ | צו ארנונה, תעריפים נוכחיים, תשלום מקוון, ערעורים |
 | עיריית ירושלים | https://www.jerusalem.muni.il/ | תעריפים לאזורי א-ה בירושלים, תשלום, בקשות הנחה |

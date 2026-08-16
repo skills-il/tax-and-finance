@@ -47,6 +47,6 @@ Generated: 2026-07-06 via CPA coverage audit + fact research on gov.il/taxes, ko
 ## Authoritative sources
 
 - Value Added Tax Law (חוק מס ערך מוסף), תשל"ו-1975, and VAT Regulations (תקנות מע"מ), תשל"ו-1976 (nevo.co.il).
-- Israel Tax Authority: https://www.gov.il/he/departments/israel_tax_authority ; digital invoices: https://www.gov.il/he/service/digital-invoices-service
+- Israel Tax Authority: https://www.gov.il/he/departments/israel_tax_authority ; digital invoices: (link removed, this gov.il page now returns 404)
 - Income Tax Ordinance (פקודת מס הכנסה [נוסח חדש]).
 - CPA-firm publications (bshcpa, tax-advisor, greeninvoice) for 2026 thresholds.

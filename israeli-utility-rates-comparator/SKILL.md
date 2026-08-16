@@ -352,7 +352,7 @@ Result: User receives a practical action plan for shifting consumption to off-pe
 | LPG cooking gas comparator (Energy Ministry) | https://migdal-webpages.energy-apps.org/gpmCalculator | Compare LPG cooking-gas tariffs by locality and supplier |
 | Ministry of Communications | https://www.gov.il/he/departments/ministry_of_communications | Cellular and internet regulation, complaints, supplier list |
 | Kolzchut, senior electricity discount | https://www.kolzchut.org.il/he/הנחה_בחשבון_חשמל_למקבלי_קצבת_זיקנה_עם_השלמת_הכנסה | 50% (proposed 65%) discount up to 400 kWh/month for seniors + income supplement |
-| Arnona property tax rates | https://www.gov.il/he/service/arnona-payment | Municipal arnona tariffs and discount eligibility |
+| Arnona property tax rates | (link removed, this gov.il page now returns 404) | Municipal arnona tariffs and discount eligibility |
 | Kolzchut, olim arnona discount | https://www.kolzchut.org.il/he/הנחה_בארנונה_לעולים_חדשים | Exact eligibility window (12 months out of 24), 100 sqm cap, special-needs olim rules |
 | Kolzchut, senior arnona discount | https://www.kolzchut.org.il/he/הנחה_בארנונה_לאזרחים_ותיקים | Senior age threshold (men 67; women at the rising retirement age, do NOT assume a flat 62), income tests, discount tiers |
 

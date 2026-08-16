@@ -349,14 +349,16 @@
     {
       "claim_id": "ita-reference-portals",
       "claim": "Official Israeli Tax Authority portals referenced for VAT rate, allocation numbers, business lookup, and invoice format.",
-      "source_url": "https://www.gov.il/he/service/digital-invoices-service",
+      "source_url": "https://www.gov.il/he/departments/israel_tax_authority",
       "raw_snippet": "Israel Tax Authority portals: https://www.gov.il/he/departments/israel_tax_authority (VAT rate, e-invoice), https://www.gov.il/he/service/digital-invoices-service (allocation number / SHAAM), https://www.gov.il/he/service/business-id-search (business/osek lookup), https://www.taxes.gov.il (Tax Authority home).",
       "fetched_at": "2026-07-06T00:00:00Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/expense-categories.md"
-      ]
+      ],
+      "verified_via": "re-pointed: the previously cited gov.il page now returns /he/error",
+      "verified_at": "2026-08-16"
     },
     {
       "claim_id": "mixed-use-two-thirds-rule",

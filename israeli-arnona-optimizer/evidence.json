@@ -58,25 +58,29 @@
     {
       "claim_id": "arnona-2026-income-test-reform",
       "claim": "Effective 1 January 2026 the income-tested arnona discounts were reformed: eligibility is computed on the 12-month average income only (the 3-month option removed), against a per-capita threshold table indexed to the minimum wage and household size, with certain Bituach Leumi benefits (child allowances, old-age/survivors pensions) excluded from counted income; eligibility widened from roughly 740,000 to 840,000 households while the top band stays 90%. Exact per-capita thresholds are published annually by the Ministry of Interior; verify the current table.",
-      "source_url": "https://www.gov.il/he/departments/topics/property_tax_arnona",
-      "raw_snippet": "רפורמת ההנחות בארנונה לשנת 2026: מבחן ההכנסה מחושב לפי ממוצע 12 חודשים, טבלת סף לנפש הצמודה לשכר המינימום ולגודל משק הבית, הרחבת הזכאות מכ-740,000 לכ-840,000 משקי בית, סף עליון 90%.",
-      "fetched_at": "2026-07-20T00:00:00Z",
+      "source_url": "https://www.gov.il/he/pages/news-30-04-26",
+      "raw_snippet": "משרד הפנים פרסם את תקנות ההנחות בארנונה לפי מבחן הכנסה לשנת 2026, לאחר השלמת הליך הערות הציבור ובחינת ההתייחסויות שהתקבלו, לצד עדכונים מקצועיים נוספים.",
+      "fetched_at": "2026-08-16",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ]
+      ],
+      "verified_via": "Ministry of Interior news page (official gov.il); re-pointed after the previous topic page began returning /he/error",
+      "verified_at": "2026-08-16"
     },
     {
       "claim_id": "update-coefficient-2026",
-      "claim": "Arnona rates update annually by a government-set coefficient (the automatic formula: half the CPI change + half the public-sector wage-index change). For 2026 the national arnona update coefficient is 1.626%. Approximate 2026 residential rate ranges: Tel Aviv ~75-130, Jerusalem ~55-95, Haifa ~50-90, Beer Sheva ~35-60 NIS/sqm/year (verify against the current tzav arnona).",
-      "source_url": "https://www.gov.il/he/departments/topics/property_tax_arnona",
-      "raw_snippet": "שיעור עדכון הארנונה לשנת 2026 הוא 1.626%, לפי הנוסחה האוטומטית (מחצית שינוי המדד ומחצית שינוי מדד השכר הציבורי).",
-      "fetched_at": "2026-06-07T00:00:00Z",
+      "claim": "שיעור עדכון הארנונה לשנת 2026 הוא 1.626%, לפי טבלת שיעורי העדכון שמפרסם משרד הפנים. באותה טבלה כבר פורסם שיעור העדכון לשנת 2027: 3.05%.",
+      "source_url": "https://www.gov.il/he/pages/tax",
+      "raw_snippet": "שיעורי העדכון בשנים 2007-2027 שנה שיעור העדכון 2027 3.05% 2026 1.626% 2025 5.29% 2024 2.68% 2023 1.37% 2022 1.92% 2021 1",
+      "fetched_at": "2026-08-16",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/arnona-rates-guide.md"
-      ]
+      ],
+      "verified_via": "Ministry of Interior arnona page (official gov.il), 2007-2027 coefficient table",
+      "verified_at": "2026-08-16"
     },
     {
       "claim_id": "reference-urls-and-examples",

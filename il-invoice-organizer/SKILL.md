@@ -209,9 +209,9 @@ Result: Total VAT 356.95 NIS, but only 237.97 NIS is deductible. The remaining 1
 | Source | URL | What to Check |
 |--------|-----|---------------|
 | Israel Tax Authority | https://www.gov.il/he/departments/israel_tax_authority | Current VAT rate (18%), e-invoice regulations, expense categories |
-| SHAAM e-invoice portal | https://www.gov.il/he/service/digital-invoices-service | Allocation number threshold, how to verify a supplier's allocation |
+| SHAAM e-invoice portal | (link removed, this gov.il page now returns 404) | Allocation number threshold, how to verify a supplier's allocation |
 | Invoice compliance rules | https://www.gov.il/he/pages/invoices-format | Required fields and formats for a tax invoice |
-| Business lookup | https://www.gov.il/he/service/business-id-search | Verify a supplier's TIN and status (Osek Murshe / Osek Patur) |
+| Business lookup | (link removed, this gov.il page now returns 404) | Verify a supplier's TIN and status (Osek Murshe / Osek Patur) |
 | Expense deduction rules | https://www.gov.il/he/departments/guides/income-tax-allowed-expenses | Vehicle 2/3 rule, entertainment 80% rule, mixed-use deductions |
 
 ## Troubleshooting
