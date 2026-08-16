@@ -44,8 +44,14 @@ jobs:
       - name: Find changed skill files
         id: changed
         run: |
+          # ALL is every changed path this event touched; FILES narrows it to
+          # SKILL.md. Both are derived from the same diff so the evidence gate
+          # below works on push as well as on pull_request -- it used to call
+          # `gh pr diff` unconditionally, which on a push to master resolved to
+          # "no pull requests found", swallowed the error via `|| true`, and
+          # silently enforced nothing on the branch that gets most commits.
           if [ "${{ github.event_name }}" = "pull_request" ]; then
-            FILES=$(gh pr diff ${{ github.event.pull_request.number }} --name-only | grep 'SKILL.md$' || true)
+            ALL=$(gh pr diff ${{ github.event.pull_request.number }} --name-only)
           else
             BEFORE="${{ github.event.before }}"
             # A new branch or a force-push reports an all-zero "before" sha;
@@ -54,13 +60,22 @@ jobs:
               BEFORE=$(git rev-parse HEAD~1 2>/dev/null || echo "")
             fi
             if [ -n "$BEFORE" ]; then
-              FILES=$(git diff --name-only "$BEFORE" "${{ github.sha }}" | grep 'SKILL.md$' || true)
+              ALL=$(git diff --name-only "$BEFORE" "${{ github.sha }}")
             else
-              FILES=""
+              ALL=""
             fi
           fi
+          FILES=$(printf '%s\n' "$ALL" | grep 'SKILL.md$' || true)
+          DIRS=$(printf '%s\n' "$ALL" \
+            | grep -oE '^[^/]+/' \
+            | sort -u \
+            | sed 's:/$::' \
+            | grep -vE '^(\.github|scripts|\.|docs)$' || true)
           echo "files<<EOF" >> $GITHUB_OUTPUT
           echo "$FILES" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+          echo "dirs<<EOF" >> $GITHUB_OUTPUT
+          echo "$DIRS" >> $GITHUB_OUTPUT
           echo "EOF" >> $GITHUB_OUTPUT
         env:
           GH_TOKEN: ${{ github.token }}
@@ -74,21 +89,14 @@ jobs:
 
       - name: Check evidence.json present for touched skill folders
         if: steps.changed.outputs.files != ''
-        env:
-          GH_TOKEN: ${{ github.token }}
         run: |
-          # Forward-only enforcement: any skill folder touched in this PR must
-          # contain evidence.json. Skills not touched in this PR are exempt
+          # Forward-only enforcement: any skill folder touched in this change must
+          # contain evidence.json. Skills not touched here are exempt
           # (lazy backfill: they pick up the gate on their next update).
           # See /he/guides/how-we-validate Layer 2 + .claude/skills/update-skill/SKILL.md.
           set -e
-          TOUCHED_DIRS=$(gh pr diff ${{ github.event.pull_request.number }} --name-only \
-            | grep -oE '^[^/]+/' \
-            | sort -u \
-            | sed 's:/$::' \
-            | grep -vE '^(\.github|scripts|\.|docs)$' || true)
           MISSING=""
-          for dir in $TOUCHED_DIRS; do
+          for dir in ${{ steps.changed.outputs.dirs }}; do
             if [ -f "$dir/SKILL.md" ] && [ ! -f "$dir/evidence.json" ]; then
               MISSING="$MISSING\n  - $dir/evidence.json"
             fi
@@ -97,16 +105,20 @@ jobs:
             echo "::error::Touched skill folders are missing evidence.json:"
             printf "%b\n" "$MISSING"
             echo ""
-            echo "Every PR that touches a skill folder must include evidence.json."
+            echo "Every change that touches a skill folder must include evidence.json."
             echo "Build it via the update-skill or skills-il-admin-creator admin workflow."
             echo "See: https://agentskills.co.il/he/guides/how-we-validate"
             exit 1
           fi
 
       - name: Post validation results
-        if: always() && steps.changed.outputs.files != ''
+        # Only pull_request events have somewhere to post a comment. On a push
+        # to master `gh pr comment` gets an empty PR number, resolves the branch,
+        # and exits 1 with "no pull requests found for branch master" -- which
+        # failed the whole job even though validation itself had passed.
+        if: always() && github.event_name == 'pull_request' && steps.changed.outputs.files != ''
         run: |
-          if [ "${{ steps.changed.conclusion || 'success' }}" = "success" ]; then
+          if [ "${{ job.status }}" = "success" ]; then
             gh pr comment ${{ github.event.pull_request.number }} --body "## Skill Validation Passed
 
           All SKILL.md files are valid and touched skill folders carry evidence.json."
