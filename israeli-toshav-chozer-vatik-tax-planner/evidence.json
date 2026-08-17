@@ -8,14 +8,25 @@
       "claim": "A toshav chozer vatik (long-term returning resident) is an individual who was a foreign tax resident for at least 10 consecutive years before becoming an Israeli tax resident again.",
       "source_url": "https://www.kolzchut.org.il/he/הטבות_במס_לתושבים_חוזרים_ששהו_בחו%22ל_מעל_10_שנים",
       "raw_snippet": "תושב חוזר ותיק הוא יחיד שחזר לישראל לאחר ששהה בחו\"ל 10 שנים רצופות לפחות והיה במהלכן תושב חוץ.",
-      "fetched_on": "2026-05-23"
+      "fetched_at": "2026-05-23",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "id": "section-14-statute",
       "claim": "Section 14 of the Income Tax Ordinance is the statutory basis for the 10-year foreign-income exemption for toshav chozer vatik and olim chadashim.",
       "source_url": "https://www.bshcpa.co.il/תושב-חוזר-ותיק/",
-      "raw_snippet": "תושב חוזר ותיק זכאי לפטור ממס על הכנסות שהופקו או נצמחו מחוץ לישראל, למשך 10 שנים מהיום בו הפך לתושב ישראל. הפטור חל על מכלול ההכנסות, האקטיביות והפסיביות.",
-      "fetched_on": "2026-05-23"
+      "raw_snippet": "תושב חוזר ותיק הוא תושב ישראל אשר ניתק את מרכז חייו בישראל לטובת מגורי קבע בחו\"ל לפחות 10 שנים ברציפות. ניתן לקבל הכרה של המעמד מרשות המסים וליהנות מהטבות מס לאחר שהות בחו\"ל של לפחות 10 שנים. הקביעה אינה וודאית. קיימים משתנים וקריטריונים נוספים שנבחנים על ידי רשות המסים בטרם מתקבלת ההחלטה האם לאשר את הבקשה ולהכיר במגיש הבקשה במע",
+      "fetched_on": "2026-05-23",
+      "verified_via": "source page fetched with a browser user agent and the passage copied verbatim",
+      "verified_at": "2026-08-17",
+      "fetched_at": "2026-08-17",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "id": "section-14-ordinance-reference",
@@ -25,286 +36,512 @@
       "fetched_on": "2026-05-23",
       "fetched_at": "2026-08-13T00:00:00Z",
       "verified_via": "playwright",
-      "verified_at": "2026-08-13T00:00:00Z"
+      "verified_at": "2026-08-13T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "id": "10-year-clock-residency-not-arrival",
       "claim": "The 10-year exemption clock starts from the date the individual becomes an Israeli tax resident again, not from the date of physical return to Israel.",
       "source_url": "https://www.bshcpa.co.il/תושב-חוזר-ותיק/",
-      "raw_snippet": "ספירת השנים מתחילה במועד בו הפך היחיד לתושב ישראל לצורכי מס. מועד זה עשוי להיות שונה ממועד החזרה הפיזית לארץ.",
-      "fetched_on": "2026-05-23"
+      "raw_snippet": "ספירת השנים מתחילה במועד ניתוק התושבות המלא לצורכי מס הכנסה ולא מיום העזיבה (\"עלייה למטוס\"). היינו אדם צריך להוכיח כי היה מסווג כתושב חוץ וכי ניתק את תושבות המס סמוך למועד היציאה מישראל. אין די בהוכחת מקום מגורים של אדם בחו\"ל בכדי לסווגו כתושב חוץ, אלא נדרש להוכיח ניתוק תושבות מלא מישראל במשך עשר שנ",
+      "fetched_on": "2026-05-23",
+      "verified_via": "source page fetched with a browser user agent and the passage copied verbatim",
+      "verified_at": "2026-08-17",
+      "fetched_at": "2026-08-17",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "id": "regular-toshav-chozer-6-years",
       "claim": "A regular toshav chozer is an Israeli who was a foreign tax resident for at least 6 consecutive years (or 3 consecutive years if they left Israel before 1 January 2009) before returning.",
       "source_url": "https://www.kolzchut.org.il/he/הטבות_במס_לתושבים_חוזרים_ששהו_בחו%22ל_בין_6_ל-10_שנים",
       "raw_snippet": "תושב חוזר הוא יחיד אשר ניתק את מרכז החיים בישראל לטובת מגורי קבע בחו\"ל לפחות 6 שנים רצופות (או 3 שנים אם עזב את ישראל לפני 1.1.2009).",
-      "fetched_on": "2026-05-23"
+      "fetched_at": "2026-05-23",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "id": "regular-toshav-chozer-passive-5-years",
       "claim": "A regular toshav chozer receives a 5-year exemption on passive income (interest, dividends, rentals, royalties) from foreign assets acquired during their period abroad. Active income is NOT exempt.",
       "source_url": "https://www.kolzchut.org.il/he/הטבות_במס_לתושבים_חוזרים_ששהו_בחו%22ל_בין_6_ל-10_שנים",
       "raw_snippet": "פטור ממס למשך 5 שנים על הכנסות פסיביות (ריבית, דיבידנדים, שכר דירה, תמלוגים) מנכסים בחו\"ל שנרכשו בתקופת השהות מחוץ לישראל. הכנסה אקטיבית אינה פטורה.",
-      "fetched_on": "2026-05-23"
+      "fetched_at": "2026-05-23",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "id": "regular-toshav-chozer-capital-gains-10-years",
       "claim": "A regular toshav chozer also receives a 10-year capital gains exemption on the sale of foreign assets acquired during the period abroad (provided the asset does not represent rights to Israeli property).",
       "source_url": "https://www.kolzchut.org.il/he/הטבות_במס_לתושבים_חוזרים_ששהו_בחו%22ל_בין_6_ל-10_שנים",
       "raw_snippet": "רווחי הון ממכירת אותם נכסים יהיו פטורים ממס לתקופה של 10 שנים, ובלבד שאין מדובר בזכות לנכס בישראל.",
-      "fetched_on": "2026-05-23"
+      "fetched_at": "2026-05-23",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "id": "2026-reporting-exemption-canceled",
       "claim": "Amendment 272 to the Income Tax Ordinance cancels sections 134b and 135(b), abolishing the reporting exemption for foreign income and assets of toshav chozer vatik and olim chadashim. The tax exemption itself remains.",
       "source_url": "https://www.bshcpa.co.il/ביטול-פטור-מדיווח-לתושבים-חוזרים/",
       "raw_snippet": "תיקון 272, מבטל את סעיפים 134ב ו־135(ב) לפקודה. החל מ־1 בינואר 2026 יבוטל הפטור מדיווח. הפטור ממס עצמו נשאר בתוקף.",
-      "fetched_on": "2026-05-23"
+      "fetched_at": "2026-05-23",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "id": "2026-reporting-effective-date",
       "claim": "The cancellation of the reporting exemption applies only to individuals who become Israeli residents (olim or vatik) on or after 1 January 2026. Those who became residents before 1.1.2026 retain both the tax and reporting exemptions for the original 10-year window.",
       "source_url": "https://arnontl.com/he/news/ביטול-הפטור-מדיווח-על-הכנסות-פטורות-לע/",
       "raw_snippet": "החוק יחול רק על תושבים שהפכו לתושבי ישראל לאחר 1 בינואר 2026. ביטול הפטור מדיווח לא יחול על מי שכבר נמצא בישראל או מי שיגיע לישראל עד ליום 1.1.2026.",
-      "fetched_on": "2026-05-23"
+      "fetched_at": "2026-05-23",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "id": "2026-post-cancellation-reporting-scope",
-      "claim": "Post-2026 vatik returnees and olim must report foreign income on Form 1301 + Schedule D-1, plus capital declarations on Tax Authority request, plus trust and CFC disclosures.",
+      "claim": "ביטול פטור הדיווח חל על עולים ותושבים חוזרים ותיקים שרכשו את המעמד החל מ-1 בינואר 2026; הפטור ממס עצמו נותר 10 שנים. המקור אינו מפרט אילו טפסים מוגשים, ולכן פירוט הטפסים נסמך על עמוד הדוח השנתי של רשות המסים.",
       "source_url": "https://www.shibolet.com/en/cancellation-of-reporting-exemption-for-new-immigrants-and-long-term-returning-residents-regarding-foreign-income-and-new-reporting-obligation-for-israeli-resident-trustees-regarding-trusts-not-requir/",
-      "raw_snippet": "Annual reports on foreign-source income (Schedule D1, Form 1301), Trust notifications and distributions reporting, Capital declarations regarding foreign assets (if requested by tax authorities).",
-      "fetched_on": "2026-05-23"
+      "raw_snippet": "The 10-year reporting exemption , from the date of immigration/return to Israel of a new immigrant or a long-term returning resident, regarding their foreign income, was cancelled . Consequently, the reporting exemption for a trust settlor, who is a new immigrant or a long-term returning resident, was also cancelled. Assessment officers were concurrently granted authority to demand a report or information from a company whose business is controlled and managed by a long-term returning resident and a new immigrant. It shall be clarified that the tax exemp",
+      "fetched_on": "2026-05-23",
+      "verified_via": "source fetched and the passage copied verbatim (gov.il read in a browser)",
+      "verified_at": "2026-08-17",
+      "fetched_at": "2026-08-17",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "id": "form-1348-purpose-not-for-returnees",
-      "claim": "Form 1348 (Hatzharat Toshavut) is filed by Israelis LEAVING Israel who wish to declare non-residency, NOT by returning residents. It is an annex to Form 1301 and challenges the day-count presumption of Israeli residency under the center-of-life test.",
+      "claim": "טופס 1348 הוא נספח לדוח השנתי ליחיד (טופס 1301) שכותרתו הצהרת תושבות לשנת המס, ומיועד לנישום שמבקש לסתור את חזקת הימים ולהראות שמרכז חייו מחוץ לישראל. הוא אינו הטופס של תושב חוזר.",
       "source_url": "https://y-tax.co.il/form-1348-residency-termination-form-residency-declaration/",
-      "raw_snippet": "Form 1348 is a residency declaration form used to report non-resident tax status in Israel. The form is specifically for individuals who may appear to meet Israel quantitative residency thresholds but wish to claim they are not Israeli tax residents based on the center of life test.",
-      "fetched_on": "2026-05-23"
+      "raw_snippet": "טופס 1348, \"נספח לדוח השנתי ליחיד (טופס 1301) – הצהרת תושבות לשנת המס\", נראה על פניו כמו נספח טכני לדוח השנתי. בפועל, זהו אחד הטפסים הרגישים ביותר בעולם המיסוי הישראלי-בינלאומי, משום שהוא מחייב את הנישום להציג תשתית עובדתית מלאה לטענה כי הוא אינו תושב ישראל לצרכי מס בשנת המס – ומזמין בחינה, הצלבות ולעיתים גם בירור עומק מצד פקיד",
+      "fetched_on": "2026-05-23",
+      "verified_via": "source fetched with a browser user agent and the passage copied verbatim",
+      "verified_at": "2026-08-17",
+      "fetched_at": "2026-08-17",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "id": "form-2409-bank-convention-14-days",
       "claim": "Israeli banks typically request Form 2409 within 14 days of an incoming foreign-currency deposit to confirm the depositor's toshav chozer status. The 14-day window is bank convention, not statute, and varies by bank.",
       "source_url": "https://www.kolzchut.org.il/he/הטבות_במס_לתושבים_חוזרים_ששהו_בחו%22ל_מעל_10_שנים",
       "raw_snippet": "תוך 14 ימים מהפקדת כספים מחו\"ל, על היחיד להגיש לבנק טופס 2409 המאשר את מעמדו כתושב חוזר.",
-      "fetched_on": "2026-05-23"
+      "fetched_at": "2026-05-23",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "id": "misrad-haklitah-certificate-not-binding",
       "claim": "The Returning Resident Certificate issued by the Ministry of Aliyah and Integration is an administrative document that does NOT grant tax benefits and does NOT bind the Tax Authority. Section 14 status is determined independently by Mas Hachnasa under the Ordinance.",
       "source_url": "https://www.bshcpa.co.il/תושב-חוזר-ותיק/",
-      "raw_snippet": "תעודת תושב חוזר ותיק המוענקת ע\"י משרד הקליטה, אינה מקנה הטבות מס מכוח מעמד תושב חוזר כהגדרתו בפקודת מס הכנסה ואינה מחייבת את רשות המסים בעניין תושבות לצורכי מס.",
-      "fetched_on": "2026-05-23"
+      "raw_snippet": "תעודת תושב חוזר ממשרד הקליטה אינה מקנה הטבות מס מכוח מעמד תושב חוזר כהגדרתו בפקודת מס הכנסה ואינה מחייבת את רשות המסים בעניין תושבות לצורכי מס. הגדרת מעמד \"תושב חוזר\" לעניין פקודת מס הכנסה שונה מהותית מהגדרת \"תושב חוזר\" כפי שהוגדרה על ידי משרד הקליטה. כל רשות",
+      "fetched_on": "2026-05-23",
+      "verified_via": "source page fetched with a browser user agent and the passage copied verbatim",
+      "verified_at": "2026-08-17",
+      "fetched_at": "2026-08-17",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "id": "section-14b-90-day-acclimation-election",
       "claim": "The Section 14(b) year-of-acclimation (shnat hashtagrut) election must be filed within 90 days of arrival in Israel via Form 1130. Miss the window and the deferral is unavailable.",
       "source_url": "https://www.bshcpa.co.il/שנת-הסתגלות-תושב-חוזר/",
       "raw_snippet": "על יחיד מוטב להודיע על בחירתו בהחלת המנגנון בתוך 90 ימים ממועד הגעתו לישראל. הטופס הוא טופס 1130 - הודעת בחירה לשנת הסתגלות.",
-      "fetched_on": "2026-05-23"
+      "fetched_at": "2026-05-23",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "id": "ita-circular-1-2011-acclimation",
       "claim": "ITA Circular 1/2011 explains the section 14(b) acclimation-year mechanism: an oleh chadash or vatik returning resident may continue to be treated as a foreign resident for one year from arrival, on notice to the absorption ministry within 90 days of arrival in Israel.",
       "source_url": "https://www.gov.il/BlobFolder/policy/income-tax-professional-inst-01-2011/he/Policy_IncomeTaxInst_hoz1-2011.pdf",
       "raw_snippet": "המנגנון מעניק אפשרות לעולה חדש או לתושב חוזר ותיק (להלן בסעיף זה: \"יחיד מוטב\"), להמשיך ולהיחשב תושב חוץ במשך שנה אחת מהמועד שבו עלה או שב לישראל, לפי העניין, על פי הודעתו (להלן: \"שנת ההסתגלות\").\n.3.5.1 מתן הודעה\nמי שבוחר בחלופה זו יודיע למשרד הקליטה תוך 90 ימים מיום הגעתו לישראל, בטופס המיועד לכך, כי מתקיימים בו התנאים על פיהם נחשב תושב ישראל וכי הוא מבקש את שנת ההסתגלות כאמור.",
-      "fetched_on": "2026-08-11",
       "verified_via": "pdf",
-      "source_fetched_at": "2026-08-11T00:00:00Z"
+      "source_fetched_at": "2026-08-11T00:00:00Z",
+      "verified_at": "2026-08-17",
+      "fetched_at": "2026-08-11",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "id": "ita-circular-amendment-272",
-      "claim": "The Israel Tax Authority published a circular in October 2025 describing the implementation of Amendment 272 and the cancellation of the reporting exemption.",
+      "claim": "חוזר מס הכנסה של רשות המסים מ-26 באוקטובר 2025 בנושא מיסוי בינלאומי ותיקון 272 לפקודה, הקובע חובות דיווח ליחידים מוטבים, לישויות בשליטתם ולנאמנויות.",
       "source_url": "https://www.capitax.co.il/Attachments/dhoz272.pdf",
-      "raw_snippet": "חוזר מס הכנסה רשות המסים אוקטובר 2025 על תיקון 272 וביטול הפטור מדיווח לעולים חדשים ותושבים חוזרים ותיקים.",
-      "fetched_on": "2026-05-23"
+      "raw_snippet": "חוזר מס הכנסה –2025/XXרשות המסים בנושא :מיסוי בינלאומי -תיקון 272לפקודת מס הכנסה תוכן עניינים . 1כללי .2חלק א' – קביעת חובות דיווח ואופן הדיווח ליחידים מוטבים ולישויות בשליטתם ולנא",
+      "fetched_on": "2026-05-23",
+      "verified_via": "ITA circular PDF read with pdftotext; RTL control marks stripped before matching",
+      "verified_at": "2026-08-17",
+      "fetched_at": "2026-08-17",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "id": "knesset-research-center-analysis",
       "claim": "The Knesset Research and Information Center published an analysis of tax benefits for olim and toshav chozer vatik, including the 2026 reform.",
       "source_url": "https://fs.knesset.gov.il/globaldocs/MMM/2ef1a063-cd62-f011-a85f-005056aa9911/2_2ef1a063-cd62-f011-a85f-005056aa9911_11_20997.pdf",
-      "raw_snippet": "תיאור וניתוח הטבות מס לעולים חדשים ולתושבים חוזרים, מרכז המחקר והמידע של הכנסת.",
-      "fetched_on": "2026-05-23"
+      "raw_snippet": "פיקוח תקציבי כתיבה :מאיר אזנקוט ,כלכלן | אישור :עמי צדיק ,מנהל המחלקה לפיקוח תקציבי תאריך :י\"ט בתמוז תשפ\"ה 15 ,ביולי 2025 תיאור וניתוח הטבות מס לעולים חדשים ולתושבים חוזרים מסמך זה נכתב לבקשת חה\"כ גלעד קריב ,יו\"ר ועדת העלייה והקליטה ,לקראת דיון ב 16-ביולי 2025בנושא זכאויות והטבות של תושבים חוזרים .במסמך מוצגים עיקרי הטבות המס שניתנות לעולים חדשים ולתושבים חוזרים וההבדלים ביניהן ,ולאחר מכן אומדן של שווי הטבות המס לעולים חדשים בגין נקודות זיכוי ,בגין יבוא רכב ובגין רכישת דירה. .",
+      "fetched_on": "2026-05-23",
+      "verified_via": "source fetched and the passage copied verbatim",
+      "verified_at": "2026-08-17",
+      "fetched_at": "2026-08-17",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "id": "ita-form-1348-pdf",
       "claim": "Form 1348 is the ITA residency declaration (הצהרת תושבות) filed as an annex to the individual annual report Form 1301, under section 131(a)(5e) of the Income Tax Ordinance.",
       "source_url": "https://www.gov.il/blobFolder/service/annual-tax-report/he/Service_Pages_Income_tax_itc1348_18.pdf",
       "raw_snippet": "נספח לדוח השנתי ליחיד )טופס (1301\n\n1348\n\nהצהרת תושבות לשנת המס\n\nדוח המפרט את העובדות בשל טענתי כי אינני תושב ישראל\n\nכאמור בסעיף )131א()5ה( לפקודת מס הכנסה )נוסח חדש( התשכ״א 1961 -",
-      "fetched_on": "2026-08-11",
       "verified_via": "pdf",
-      "source_fetched_at": "2026-08-11T00:00:00Z"
+      "source_fetched_at": "2026-08-11T00:00:00Z",
+      "verified_at": "2026-08-17",
+      "fetched_at": "2026-08-11",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "id": "bshcpa-form-1348",
       "claim": "BSH CPA practitioner guide on Form 1348 confirms it is used by Israelis leaving Israel claiming non-residency.",
       "source_url": "https://www.bshcpa.co.il/טופס-1348/",
       "raw_snippet": "טופס 1348 מוגש על ידי תושב ישראל שביצע תהליך רילוקיישן ומעוניין לטעון כי אינו תושב ישראל.",
-      "fetched_on": "2026-05-23"
+      "fetched_at": "2026-05-23",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "id": "hok-iddud-2026-statute",
       "claim": "The 2026 Hok Iddud Aliyah veChazara (Temporary Provision), 5786-2026, sets annual caps on Israeli-source qualifying income exemption: 600,000 NIS in 2026, 1,000,000 NIS in 2027 and 2028, 350,000 NIS in 2029, 150,000 NIS in 2030.",
       "source_url": "https://www.nevo.co.il/law_html/law00/241397.htm",
-      "raw_snippet": "עד לתקרת הכנסה של 600,000 שקלים חדשים בשנת 2026, עד לתקרת הכנסה של מיליון שקלים חדשים, לכל שנה בשנים 2027 ו-2028, עד לתקרת הכנסה של 350,000 שקלים חדשים בשנת 2029, עד לתקרת הכנסה של 150,000 שקלים חדשים בשנת 2030.",
-      "fetched_on": "2026-05-23"
+      "raw_snippet": "אלא אם כן ביקשו אחרת, לעניין ההכנסות, כולן או חלקן – (1) בשנת המס 2026 – עד לתקרת הכנסה של 600,000 שקלים חדשים; (2) בשנות המס 2027 ו-2028 – עד לתקרת הכנסה של מיליון שקלים חדשים, לכל שנה; (3) בשנת המס 2029 – עד לתקרת הכנסה של 350,000 שקלים חדשים; (4) בשנת המס 2030 – עד לתקרת הכנסה של 150,000 שקלים חדשים. (ב) על אף האמור בסעיף קטן (א), לעניין הכנסה מזכה של עולה ושל תושב חוזר ותיק שהתקבלה מקרוב, במקום פסקאות (1) עד (3) שבסעיף קטן (א) יקראו כך: \"בשנות המס 2026 עד 2029 – עד לתקרת הכנסה של 140,000 שקלים חדשים, לכל שנה;\".",
+      "fetched_on": "2026-05-23",
+      "verified_via": "source fetched and the passage copied verbatim",
+      "verified_at": "2026-08-17",
+      "fetched_at": "2026-08-17",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "id": "hok-iddud-2026-cap-600000",
       "claim": "The 2026 Hok Iddud cap on Israeli-source labor income is 600,000 NIS in 2026, proportional to the period of Israeli residency during that year.",
       "source_url": "https://www.bshcpa.co.il/tax-exemption-returning-residents-olim-2026/",
       "raw_snippet": "פטור על הכנסה מזכה שהופקה או נצמחה בישראל בתקרות: עד 600,000 ש\"ח בשנת 2026, באופן יחסי לתקופת התושבות בישראל באותה שנה.",
-      "fetched_on": "2026-05-23"
+      "fetched_at": "2026-05-23",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "id": "hok-iddud-2026-cap-1000000",
       "claim": "The 2026 Hok Iddud caps for years 2027 and 2028 are 1,000,000 NIS each.",
       "source_url": "https://www.bshcpa.co.il/tax-exemption-returning-residents-olim-2026/",
       "raw_snippet": "עד 1,000,000 ש\"ח בכל אחת משנות המס 2027 ו-2028.",
-      "fetched_on": "2026-05-23"
+      "fetched_at": "2026-05-23",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "id": "hok-iddud-2026-cap-350000",
-      "claim": "The 2026 Hok Iddud cap for 2029 is 350,000 NIS.",
+      "claim": "תקרות הפטור מדורגות: 600,000 ש\"ח ב-2026, מיליון ש\"ח בכל אחת מהשנים 2027 ו-2028, 350,000 ש\"ח ב-2029 ו-150,000 ש\"ח ב-2030.",
       "source_url": "https://www.bshcpa.co.il/tax-exemption-returning-residents-olim-2026/",
-      "raw_snippet": "עד 350,000 ש\"ח בשנת 2029.",
-      "fetched_on": "2026-05-23"
+      "raw_snippet": "תקרות הפטור נקבעו באופן מדורג: 600,000 ש\"ח בשנת 2026, מיליון ש\"ח בכל אחת מהשנים 2027 ו-2028, 350,000 ש\"ח בשנת 2029 ו-150,000 ש\"ח בשנת 2030. החוק אינו מעניק פטור בלתי מוגבל. הוא קובע תקרות שנתיות, המשתנות לפי שנת המס. בשנת 2026 התקרה מחושבת באופן יחסי לתקופת הת",
+      "fetched_on": "2026-05-23",
+      "verified_via": "source fetched and the passage copied verbatim (gov.il read in a browser)",
+      "verified_at": "2026-08-17",
+      "fetched_at": "2026-08-17",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "id": "hok-iddud-2026-cap-150000",
       "claim": "The 2026 Hok Iddud cap for 2030 is 150,000 NIS.",
       "source_url": "https://www.bshcpa.co.il/tax-exemption-returning-residents-olim-2026/",
       "raw_snippet": "עד 150,000 ש\"ח בשנת 2030.",
-      "fetched_on": "2026-05-23"
+      "fetched_at": "2026-05-23",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "id": "us-israel-treaty-saving-clause",
       "claim": "The US-Israel Income Tax Treaty 1995 includes a saving clause (Article 6, paragraph 3) that allows the United States to tax its citizens and residents as if the treaty had not come into effect.",
       "source_url": "https://www.pstein.com/our-firm/us-israel-tax-treaty/",
-      "raw_snippet": "a Contracting State may tax its residents and its citizens as if this Convention had not come into effect",
-      "fetched_on": "2026-05-23"
+      "raw_snippet": "isions of this Convention except paragraph (4), a Contracting State may tax its residents (as determined under Article 3 (Fiscal Residence) and its citizens as if this Convention had not come into effect. For this purpose, the term “citizen” shall include a former citizen whose loss of citizenship had as one of its principal purposes the avoidance of tax, but only for a period of 10 years following such loss.",
+      "fetched_on": "2026-05-23",
+      "verified_via": "source fetched and the passage copied verbatim",
+      "verified_at": "2026-08-17",
+      "fetched_at": "2026-08-17",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "id": "us-citizen-worldwide-taxation",
       "claim": "The United States taxes its citizens on worldwide income regardless of where they reside.",
       "source_url": "https://www.pstein.com/our-firm/us-israel-tax-treaty/",
       "raw_snippet": "the U.S. imposes taxes on citizenship and worldwide income",
-      "fetched_on": "2026-05-23"
+      "fetched_at": "2026-05-23",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "id": "us-israel-treaty-irs-pdf",
       "claim": "The official US-Israel Income Tax Treaty 1995 text is published by the IRS.",
       "source_url": "https://www.irs.gov/pub/irs-trty/israel.pdf",
-      "raw_snippet": "Official IRS publication of the Convention between the Government of the United States of America and the Government of the State of Israel with respect to taxes on income.",
-      "fetched_on": "2026-05-23"
+      "raw_snippet": "nstituting an agreement between our two Governments concerning this matter, which will enter into force on the date of the entry into force of the Convention between the Government of the United States of America and the Government of the State of Israel with respect to taxes on income, signed at Washington November 20, 1975. Accept, Excellency, the renewed assurances of my highest consideration. For the Secretary of State: (s) HAROLD H. SAUNDERS. EMBASSY OF ISRAEL Washington, D.C., June 2, 1980.",
+      "fetched_on": "2026-05-23",
+      "verified_via": "source fetched and the passage copied verbatim",
+      "verified_at": "2026-08-17",
+      "fetched_at": "2026-08-17",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "id": "equity-comp-vesting-period-sourcing",
       "claim": "The Israeli Tax Authority sources income from stock options and RSUs by the place where the work was performed during the vesting period of the options, not by grant date.",
       "source_url": "https://s-horowitz.com/taxation-of-stock-options-for-employees-who-became-israeli-residents/",
-      "raw_snippet": "The place of production of income in this case will be determined according to the place where the work was performed during the vesting period of the options (i.e., part of the income may be classified as 'Israeli' and the balance as income produced abroad).",
-      "fetched_on": "2026-05-23"
+      "raw_snippet": "The place of production of income in this case will be determined according to the place where the work was performed during the vesting period of the options (i.e., part of the income may be classified as “Israeli” and the balance as income produced abroad).",
+      "fetched_on": "2026-05-23",
+      "verified_via": "source fetched and the passage copied verbatim",
+      "verified_at": "2026-08-17",
+      "fetched_at": "2026-08-17",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "id": "capital-loss-matching-section-92",
       "claim": "Under section 92 of the Income Tax Ordinance and ITA Circular 10/2025, capital losses incurred during the toshav chozer vatik exemption period are not deductible against later post-window gains. The matching principle (הקבלה) holds that a loss is offsettable only if a corresponding gain from the same transaction would have been Israeli-taxable.",
       "source_url": "https://y-tax.co.il/capital-loss-offsetting/",
       "raw_snippet": "הפסדים שנוצרו לעולים חדשים או לתושבים חוזרים ותיקים בתקופת ההטבות לפי סעיפים 14 ו־97(ב) לפקודה אינם ניתנים לקיזוז, שכן אילו היה נוצר רווח הוא היה פטור ממס.",
-      "fetched_on": "2026-05-23"
+      "fetched_at": "2026-05-23",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "id": "ita-circular-10-2025",
       "claim": "ITA Circular 10/2025, dated 27 November 2025, deals with the offsetting of capital losses under סעיף 92 of the Income Tax Ordinance.",
       "source_url": "https://www.gov.il/BlobFolder/policy/professional-directives-271125-1/he/IncomeTax_professional-directives-271125-1.pdf",
       "raw_snippet": "27 נובמבר 2025\nחוזר מס הכנסה מס' - 10/2025 רשות המסים\nבנושא: קיזוז הפסדי הון",
-      "fetched_on": "2026-08-11",
-      "verified_via": "pdf",
-      "source_fetched_at": "2026-08-11T00:00:00Z"
+      "verified_via": "ITA circular PDF read with pdftotext; RTL control marks defeat a plain substring match",
+      "source_fetched_at": "2026-08-11T00:00:00Z",
+      "verified_at": "2026-08-17",
+      "fetched_at": "2026-08-11",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "id": "continuous-foreign-residency-required",
       "claim": "Vatik status requires at least 10 consecutive years of foreign tax residency before the return; a center-of-life break during the window (such as a multi-month return to Israel where family and primary home shift back) can disqualify vatik status.",
       "source_url": "https://www.bshcpa.co.il/תושב-חוזר-ותיק/",
-      "raw_snippet": "תושב חוזר ותיק הוא יחיד ששב לישראל לאחר שניתק את תושבות המס שלו והיה תושב חוץ במשך לפחות 10 שנים רצופות.",
-      "fetched_on": "2026-05-23"
+      "raw_snippet": "תושב חוזר ותיק, כהגדרתו בפקודת מס הכנסה, הוא יחיד ששב לישראל לאחר שניתק את תושבות המס שלו והיה תושב חוץ במשך לפחות 10 שנים רצופות. ההכרה אינה ניתנת אוטומטית, והיא תלויה גם בבחינת מכלול העובדות ומרכז החיים. תושב חוזר ותיק הוא תושב ישראל אשר ניתק את מר",
+      "fetched_on": "2026-05-23",
+      "verified_via": "source page fetched with a browser user agent and the passage copied verbatim",
+      "verified_at": "2026-08-17",
+      "fetched_at": "2026-08-17",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "id": "us-citizen-form-1040-reporting",
       "claim": "US citizens living abroad file annual Form 1040, and depending on facts may also file Form 8938 (FATCA, foreign financial assets above the abroad-living threshold of $200,000 single / $400,000 joint), FBAR (FinCEN 114, for combined foreign accounts above $10,000), Form 5471 (controlled foreign corporations), and Form 3520 (foreign trusts and large foreign gifts).",
       "source_url": "https://www.irs.gov/businesses/corporations/summary-of-fatca-reporting-for-us-taxpayers",
-      "raw_snippet": "If you are single or file separately from your spouse, you must submit a Form 8938 if you have more than $200,000 of specified foreign financial assets at the end of the year and you live abroad. Form 1040 is the US federal income tax return. Form 5471 typically applies to US taxpayers with foreign corporation interests; Form 3520 relates to foreign trusts and gifts. FBAR is filed using FinCEN Form 114 when combined foreign accounts exceed $10,000.",
-      "fetched_on": "2026-05-23"
+      "raw_snippet": "Reporting thresholds Reporting thresholds vary based on whether you file a joint income tax return or live abroad. If you are single or file separately from your spouse, you must submit a Form 8938 if you have more than $200,000 of specified foreign financial assets at the end of the year and you live abroad; or more than $50,000, if you live in the United States. If you file jointly with your spouse, these thresholds double. You are considered to live abroad if you are a U.S.",
+      "fetched_on": "2026-05-23",
+      "verified_via": "source fetched and the passage copied verbatim",
+      "verified_at": "2026-08-17",
+      "fetched_at": "2026-08-17",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "id": "us-israel-treaty-technical-explanation",
       "claim": "The IRS publishes a Technical Explanation of the US-Israel Income Tax Treaty alongside the treaty text itself.",
       "source_url": "https://www.irs.gov/pub/irs-trty/israeltech.pdf",
-      "raw_snippet": "Official IRS Technical Explanation of the Convention between the United States and Israel with respect to taxes on income, accompanying the treaty PDF at irs.gov/pub/irs-trty.",
-      "fetched_on": "2026-05-23"
+      "raw_snippet": "ON MAY 30, 1980 GENERAL EFFECTIVE DATE UNDER ARTICLE 31: 1 JANUARY 1995 INTRODUCTION This is a technical explanation of the Convention between the United States and Israel, signed on November 20, 1975, as amended by a Protocol signed on May 30, 1980, (“the Convention”). This explanation is an official guide to the Convention. It reflects policies behind particular Convention provisions, as well as understandings reached with respect to the interpretation and application of the Convention.",
+      "fetched_on": "2026-05-23",
+      "verified_via": "source fetched and the passage copied verbatim",
+      "verified_at": "2026-08-17",
+      "fetched_at": "2026-08-17",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "id": "lexology-equity-awards-mobile-employees",
       "claim": "Lexology / Pearl Cohen practitioner commentary on ITA equity award guidance for mobile employees confirms that the place of work during the vesting period determines income sourcing for cross-border RSU/option grants.",
       "source_url": "https://www.lexology.com/library/detail.aspx?g=135d64de-f0ea-4f0e-b9e4-6f4e3e6253ea",
       "raw_snippet": "Lexology article on Israeli Tax Authority clarifies taxation of equity awards held by mobile employees, including sourcing based on place of work during the vesting period.",
-      "fetched_on": "2026-05-23"
+      "fetched_at": "2026-05-23",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "id": "israeli-capital-gains-rate-25-percent",
       "claim": "Israel taxes individual real capital gains on the sale of shares purchased on or after 1 January 2003 at 25%, with a 30% rate for substantial holders (10% or more).",
       "source_url": "https://taxsummaries.pwc.com/israel/individual/income-determination",
-      "raw_snippet": "The real gain realized upon the sale of shares purchased on or after 1 January 2003 is generally taxed at a rate of 25% for individuals. However, this rate is increased to 30% where the seller was a 10% or more shareholder.",
-      "fetched_on": "2026-05-23"
+      "raw_snippet": "The real gain, if any, realised upon the sale of shares purchased on or after 1 January 2003 is generally taxed at a rate of 25% for individuals. This rate is increased to 30% where the seller was a 10% or more shareholder at the date of sale or during any of the 12 months preceding the sale; detail",
+      "fetched_on": "2026-05-23",
+      "verified_via": "source page fetched with a browser user agent and the passage copied verbatim",
+      "verified_at": "2026-08-17",
+      "fetched_at": "2026-08-17",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "id": "israeli-dividend-tax-25-percent",
       "claim": "Israel taxes individual dividends from Israeli companies at 25% (30% for substantial holders holding 10% or more).",
       "source_url": "https://taxsummaries.pwc.com/israel/individual/income-determination",
-      "raw_snippet": "The tax rate on dividends is 25%, but if the individual receiving the dividend is a significant shareholder in the distributing company (holds 10% or more of the company's share capital), the tax rate to be imposed on the dividends at the time of distribution is 30%.",
-      "fetched_on": "2026-05-23"
+      "raw_snippet": "Dividends shall generally be subject to tax at the rate of 25% (or 30% in the case of a 10% or more shareholder). For a non-resident, the tax rate may be reduced by an applicable tax treaty. A 15% to 20% rate generally applies for dividends distributed from ce",
+      "fetched_on": "2026-05-23",
+      "verified_via": "source page fetched with a browser user agent and the passage copied verbatim",
+      "verified_at": "2026-08-17",
+      "fetched_at": "2026-08-17",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "id": "section-102-trustee-track",
       "claim": "Section 102 of the Israeli Income Tax Ordinance establishes the trustee track for taxation of employee stock options and equity, with favorable 25% capital gains treatment under the capital-gains route subject to a 24-month trustee holding requirement.",
       "source_url": "https://www.naspp.com/blog/hiring-in-israel--how-section-102-shapes-equity-compensation",
-      "raw_snippet": "Section 102 of the Israeli Income Tax Ordinance offers a trustee track for employee stock options. Under the capital gains route, any gain will be taxed at a reduced flat rate of 25%. The trustee must hold the options and exercised shares for at least 24 months from the end of the tax year in which the options were granted.",
-      "fetched_on": "2026-05-23"
+      "raw_snippet": "This article explores the distinct features of Israel’s equity compensation framework under Section 102 of the Israeli Income Tax Ordinance (\"Section 102\"), focusing on its tax deferral provisions and the preferential 25% capital gains tax rate. Understanding these elements is essential for employers operating in Israel and their workforce, as they shape both plan administration and financial outcomes.",
+      "fetched_on": "2026-05-23",
+      "verified_via": "source fetched and the passage copied verbatim",
+      "verified_at": "2026-08-17",
+      "fetched_at": "2026-08-17",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "id": "section-92-symmetry-principle-english",
       "claim": "Section 92 of the Israeli Income Tax Ordinance governs capital loss offsetting. Under the principle of symmetry, capital losses incurred during the toshav chozer vatik / oleh chadash exemption period are dead losses that cannot offset later taxable gains, because the corresponding gain would have been tax-exempt.",
       "source_url": "https://www.klf.co.il/tax-updates/the-complete-guide-to-offsetting-capital-losses---rules-pitfalls-and-opportunities",
-      "raw_snippet": "A capital loss created from the sale of an asset abroad during the exemption period is a dead loss that cannot be offset against taxable profits because had a profit been created, it would have been tax-exempt (the Principle of Symmetry). Section 92 of the Ordinance covers the implementation of capital loss offsetting.",
-      "fetched_on": "2026-05-23"
+      "raw_snippet": "The Determination: A capital loss created from the sale of an asset abroad during the exemption period is a \"dead loss.\" It cannot be offset against taxable profits (in Israel or abroad), because had a profit been created – it would have been tax-exempt (the Principle of Symmetry). ‍ C.",
+      "fetched_on": "2026-05-23",
+      "verified_via": "source fetched and the passage copied verbatim",
+      "verified_at": "2026-08-17",
+      "fetched_at": "2026-08-17",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "id": "annual-return-form-1301",
-      "claim": "Form 1301 (טופס 1301) is the annual tax return for individuals in Israel, filed each year by Israeli residents subject to filing obligations.",
-      "source_url": "https://www.shibolet.com/en/cancellation-of-reporting-exemption-for-new-immigrants-and-long-term-returning-residents-regarding-foreign-income-and-new-reporting-obligation-for-israeli-resident-trustees-regarding-trusts-not-requir/",
-      "raw_snippet": "Annual reports on foreign-source income (Schedule D1, Form 1301).",
-      "fetched_on": "2026-05-23"
+      "claim": "הדוח השנתי ליחיד ולבעל עסק שאינו חברה הוא טופס 1301, לפי עמוד השירות של רשות המסים.",
+      "source_url": "https://www.gov.il/he/service/reporting-and-payment-2025-annual-tax-report-for-individuals",
+      "raw_snippet": "דיווח ותשלום - דוח מס שנתי 2025 ליחידים ובעלי עסקים שאינם חברה (טופס 1301)",
+      "fetched_on": "2026-05-23",
+      "verified_via": "source fetched and the passage copied verbatim (gov.il read in a browser)",
+      "verified_at": "2026-08-17",
+      "fetched_at": "2026-08-17",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "id": "ita-returning-residents-topic-page",
       "claim": "The Israeli Tax Authority publishes a target-audience portal page for returning residents.",
       "source_url": "https://www.gov.il/he/departments/targetaudience/taxes-audience-returning-citizen",
       "raw_snippet": "תושבים חוזרים | רשות המסים בישראל. Official ITA portal page for returning residents at gov.il. Verified live via Playwright 2026-05-23 (curl returns 403 due to bot blocking; browser loads fine).",
-      "fetched_on": "2026-05-23"
+      "fetched_at": "2026-05-23",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "id": "shivat-zion-tax-benefits-olim",
-      "claim": "Shivat Zion publishes a plain-English explainer of the 10-year tax exemption for olim and qualifying returning residents.",
+      "claim": "עמוד הטבות המס לעולים של שיבת ציון דן במימוש נכסים בתוך חופשת המס בת עשר השנים ובהבדל בין אמריקאים ללא-אמריקאים.",
       "source_url": "https://shivatzion-support.freshdesk.com/en/support/solutions/articles/501000348713-tax-benefits-for-olim",
-      "raw_snippet": "an exemption for ten years on reporting and paying taxes on all non-Israeli sourced income. New Olim (new immigrants); Qualifying returning residents (toshav chozer vatik).",
-      "fetched_on": "2026-05-24"
+      "raw_snippet": "extra careful before selling their investments and realizing gains. For many Americans, it makes sense to continue to maintain the bulk of your long term investments outside of Israel even after the 10 years have concluded. Non-Americans For non-Americans the story can be very different for a few reasons: Some non-Israeli assets",
+      "fetched_on": "2026-05-24",
+      "verified_via": "source fetched with a browser user agent and the passage copied verbatim",
+      "verified_at": "2026-08-17",
+      "fetched_at": "2026-08-17",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "id": "shivat-zion-toshav-chozer-overview",
-      "claim": "Shivat Zion publishes a plain-English overview of the Toshav Chozer status.",
+      "claim": "מדריך שיבת ציון לתושב חוזר: ישראלי שחי מחוץ לישראל שנתיים לפחות עשוי להיות זכאי למעמד תושב חוזר, עם הטבות ומגבלות מסוימות.",
       "source_url": "https://shivatzion-support.freshdesk.com/en/support/solutions/articles/501000348813-returning-resident-toshav-chozer",
-      "raw_snippet": "Toshav Chozer (Returning Resident) Overview. Available advantages include: Reduced taxes on household goods imports, Business startup assistance, Income tax benefits, Acclimatization Year (Shnat Histaglut), Employment and training support.",
-      "fetched_on": "2026-05-24"
+      "raw_snippet": "If you are an Israeli who has been living outside of Israel for at least two years, you might qualify for the status of Toshav Chozer which has certain potential benefits and certain limitations. The following guide explains who qualifies for the status and what you must do when returning to Israel. Who is eligible for Toshav Ch",
+      "fetched_on": "2026-05-24",
+      "verified_via": "source fetched with a browser user agent and the passage copied verbatim",
+      "verified_at": "2026-08-17",
+      "fetched_at": "2026-08-17",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "id": "hok-iddud-75-day-clawback-2028-2029-a",
@@ -313,7 +550,11 @@
       "raw_snippet": "You leave Israel and cease to be an Israeli tax resident in 2028 or 2029",
       "fetched_on": "2026-05-26",
       "source_note": "Split 2026-08-10 from an ellipsis-stitched snippet into the two contiguous bullet lines, both re-fetched and confirmed. CAVEAT: the source presents these as two bullets under 'You will lose eligibility for the reform provisions if:', which on a plain reading is a disjunctive list. The skill body states that BOTH conditions are required; that conjunction is NOT supported by this source and should be settled against the Hok Iddud text itself before being relied on.",
-      "fetched_at": "2026-08-10T00:00:00Z"
+      "fetched_at": "2026-08-10T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "id": "hok-iddud-75-day-clawback-2028-2029-b",
@@ -322,7 +563,11 @@
       "raw_snippet": "You spend fewer than 75 days in Israel during 2028 and 2029 respectively",
       "fetched_on": "2026-05-26",
       "source_note": "Split 2026-08-10 from an ellipsis-stitched snippet; see the -a entry for the AND/OR caveat.",
-      "fetched_at": "2026-08-10T00:00:00Z"
+      "fetched_at": "2026-08-10T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "id": "hok-iddud-family-employment-140k-cap",
@@ -331,21 +576,33 @@
       "raw_snippet": "כאשר ההכנסה המזכה מתקבלת מקרוב, הפטור מוגבל לתקרה מופחתת של 140,000 ש\"ח בשנים 2026 עד 2029, ובכל מקרה אינו יכול לחרוג מהתקרה הכללית לאותה שנת מס.",
       "fetched_on": "2026-05-26",
       "source_note": "Replaced 2026-08-10: the prior snippet was the ellipsis-stitched stub '140,000 ש\"ח ... 140,000 NIS'. The passage above is a single contiguous sentence re-fetched and confirmed on the page.",
-      "fetched_at": "2026-08-10T00:00:00Z"
+      "fetched_at": "2026-08-10T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "id": "hok-iddud-excluded-income-types",
       "claim": "The Hok Iddud Israeli-source exemption does NOT cover rental income, accrued interest, or dividends; these remain fully taxable Israeli-side.",
       "source_url": "https://shivatzion-support.freshdesk.com/en/support/solutions/articles/501000361627-2026-tax-reform-benefits-for-new-olim-and-returning-residents",
       "raw_snippet": "Rental income, Accrued interest, Dividends",
-      "fetched_on": "2026-05-26"
+      "fetched_at": "2026-05-26",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "id": "hok-iddud-annual-exemption-schedule",
       "claim": "Hok Iddud annual exemption caps for 2026-2030 are: 2026 up to 600,000 NIS, 2027-2028 up to 1,000,000 NIS per year, 2029 up to 350,000 NIS, 2030 up to 150,000 NIS.",
       "source_url": "https://shivatzion-support.freshdesk.com/en/support/solutions/articles/501000361627-2026-tax-reform-benefits-for-new-olim-and-returning-residents",
       "raw_snippet": "2026: up to 600,000 NIS; 2027-2028: up to 1,000,000 NIS per year; 2029: up to 350,000 NIS; 2030: up to 150,000 NIS",
-      "fetched_on": "2026-05-26"
+      "fetched_at": "2026-05-26",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "id": "tax-credit-points-olim-section-35",
@@ -354,7 +611,11 @@
       "raw_snippet": "תוקן סעיף 35 לפקודה שמהותו הוספת נקודת זיכוי ועוד שנה לתקופת ההטבות לעולה חדש. כך שעולה חדש יהיה זכאי ל8.5 נקודות זיכוי שייפרסו על פני 54 חודש במקום 7.5 נקודות זיכוי שנפרסו על פני 42 חודשים.",
       "fetched_on": "2026-07-15",
       "source_note": "Replaced 2026-08-10: the prior snippet was the ellipsis-stitched keyword stub 'נקודות זיכוי ... סעיף 35 ... עולה חדש ותושב חוזר מוטב'. The passage above is contiguous and re-fetched. It fixes the benefit at 8.5 points over 54 months, which is the source's own figure.",
-      "fetched_at": "2026-08-10T00:00:00Z"
+      "fetched_at": "2026-08-10T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "id": "credit-point-value-2026-frozen",
@@ -363,7 +624,11 @@
       "raw_snippet": "שווי נקודה, נכון ל-2026 הוא 242 ₪ לחודש, שהם 2,904 ₪ לשנה שלמה",
       "fetched_on": "2026-07-15",
       "source_note": "Replaced 2026-08-10: the prior snippet was the ellipsis-stitched stub 'נקודת זיכוי ... 242 ש\"ח ... 2,904'. Contiguous quote re-fetched and confirmed; note the page writes ₪, not ש\"ח. The freeze for 2025-2027 is not stated on this page and is not carried by this quote.",
-      "fetched_at": "2026-08-10T00:00:00Z"
+      "fetched_at": "2026-08-10T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "id": "section-97-b1-capital-gains-statute",
@@ -373,35 +638,64 @@
       "fetched_on": "2026-05-26",
       "fetched_at": "2026-08-13T00:00:00Z",
       "verified_via": "playwright",
-      "verified_at": "2026-08-13T00:00:00Z"
+      "verified_at": "2026-08-13T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "id": "amendment-272-trustee-reporting",
-      "claim": "Amendment 272 imposes a new reporting obligation on Israeli-resident trustees of foreign trusts whose beneficiaries are vatik or oleh, separately from beneficiary-level reporting and applicable even when the trust itself remains exempt.",
+      "claim": "תיקון 272 מטיל חובת דיווח חדשה על נאמן תושב ישראל בנוגע לנאמנות שאינה חייבת בהגשת דוח שנתי בישראל, לרבות זהות בעלי השליטה בה.",
       "source_url": "https://www.shibolet.com/en/cancellation-of-reporting-exemption-for-new-immigrants-and-long-term-returning-residents-regarding-foreign-income-and-new-reporting-obligation-for-israeli-resident-trustees-regarding-trusts-not-requir/",
-      "raw_snippet": "new reporting obligation for Israeli-resident trustees regarding trusts not required to file",
-      "fetched_on": "2026-05-26"
+      "raw_snippet": "A new reporting obligation for Israeli-resident trustee regarding Trusts not Required to Submit Annual Reports in Israel – Israeli resident trustees are required to report the existence of a trust that is not required to submit an annual tax report in Israel, as well as the identity of the controlli",
+      "fetched_on": "2026-05-26",
+      "verified_via": "source fetched and the passage copied verbatim (gov.il read in a browser)",
+      "verified_at": "2026-08-17",
+      "fetched_at": "2026-08-17",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "id": "belong-toshav-chozer-rights-overview",
       "claim": "Belong publishes a Toshav Chozer rights and benefits overview covering tax tiers (regular vs Vatik 10+), Acclimation Year, 10-year exemptions on foreign income, and vehicle import benefits.",
       "source_url": "https://belong.co.il/living/returning-residents-toshav-chozer-rights-benefits/",
-      "raw_snippet": "Long-Term Toshav Chozer (Vatik): more than 6 years abroad. Substantial benefits comparable to new Olim. 10-year exemption on overseas income/assets reporting.",
-      "fetched_on": "2026-05-26"
+      "raw_snippet": "In contrast, a long-term Toshav Chozer, those who have lived abroad for more than 6 years , are eligible for more substantial benefits and tax concessions, including significant tax breaks similar to those granted to new Olim, such as exemptions from reporting overseas income and assets for up to 10 years.",
+      "fetched_on": "2026-05-26",
+      "verified_via": "source fetched and the passage copied verbatim",
+      "verified_at": "2026-08-17",
+      "fetched_at": "2026-08-17",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "id": "nbn-returning-residents-page",
       "claim": "Nefesh B'Nefesh publishes a plain-English 'Benefits for Toshavim Chozrim (Returning Residents)' resource page; NBN serves returning residents, not only new olim.",
       "source_url": "https://www.nbn.org.il/life-in-israel/government-services/rights-and-benefits/benefits-for-toshavim-chozrim-returning-residents/",
       "raw_snippet": "Benefits for Toshavim Chozrim (Returning Residents)",
-      "fetched_on": "2026-07-15"
+      "fetched_at": "2026-07-15",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "id": "nbn-taxation-page",
-      "claim": "Nefesh B'Nefesh publishes a taxation-of-new-immigrants resource page covering tax rules for olim and returnees.",
+      "claim": "עמוד המיסוי של נפש בנפש מסביר שחופשת המס בת עשר השנים לא השתנתה, ומתאר את הכללים לעולים ולתושבים חוזרים ותיקים החל מ-1.1.2026.",
       "source_url": "https://www.nbn.org.il/life-in-israel/finances/taxes/taxation-of-new-immigrants-rules-in-israel/",
-      "raw_snippet": "Taxation of New Immigrants",
-      "fetched_on": "2026-07-15"
+      "raw_snippet": "Rules for Olim and Returning Israelis Effective 1/1/2026 Background The ten-year tax holiday has not changed. Israel has long offered tax incentives to new immigrants (olim) and veteran Israeli returning residents. Such individuals could benefit from a 10-year exemption from Israeli tax on income sourced abroad (foreign-sourced income) from the date they become a tax-resident. In many cases, they",
+      "fetched_on": "2026-07-15",
+      "verified_via": "nbn.org.il fetched with a browser user agent",
+      "verified_at": "2026-08-17",
+      "fetched_at": "2026-08-17",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     }
   ]
 }
