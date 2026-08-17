@@ -265,14 +265,15 @@
     },
     {
       "claim_id": "non-labor-top-52",
-      "claim": "2026 non-labor income top rate: 52% (47% base + 3% surtax + 2% non-labor surtax)",
-      "source_url": "https://www.kolzchut.org.il/he/%D7%9E%D7%93%D7%A8%D7%92%D7%95%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
-      "raw_snippet": "מי שהכנסתם שלא מעבודה או מעסק עלתה על 721,560 ₪  יחויבו גם במס בשיעור 2%. לכן שיעור המס במדרגה הנוספת על הכנסה שאינה מיגיעה אישית יהיה 52%.",
-      "fetched_at": "2026-08-09T00:00:00Z",
+      "claim": "שיעור המס השולי העליון ליחיד לפי סעיף 121(א)(3) הוא 47%. בתוספת 3% לפי סעיף 121ב(א) ועוד 2% לפי סעיף 121ב(א1) על הכנסה ממקורות הוניים, מגיע השיעור הכולל על הכנסה שאינה מיגיעה אישית ל-52%.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "raw_snippet": "121. (א) המס על הכנסתו החייבת של יחיד בשנת המס יהיה כלהלן: (1) על כל שקל חדש מ-301,200 השקלים החדשים הראשונים – 31%; (2) על כל שקל חדש מ-301,201 שקלים חדשים עד 560,280 שקלים חדשים – 35%; (3) על כל שקל חדש נוסף – 47%. (ב) (1) על אף",
+      "fetched_at": "2026-08-17",
       "appears_in": [
         "references/tax-rates-2026.md"
       ],
-      "verified_via": "fetched and read the cited page on 2026-08-09"
+      "verified_via": "Income Tax Ordinance read directly on nevo",
+      "verified_at": "2026-08-17"
     },
     {
       "claim_id": "surtax-threshold-721560",
@@ -305,72 +306,82 @@
     },
     {
       "claim_id": "surtax-non-labor-2pct",
-      "claim": "Additional 2% surtax on non-labor income above 721,560 threshold, effective 2025+",
-      "source_url": "https://www.efraty.com/%D7%97%D7%95%D7%A7-%D7%94%D7%94%D7%AA%D7%99%D7%99%D7%A2%D7%9C%D7%95%D7%AA-%D7%94%D7%9B%D7%9C%D7%9B%D7%9C%D7%99%D7%AA-%D7%AA%D7%99%D7%A7%D7%95%D7%A0%D7%99-%D7%97%D7%A7%D7%99%D7%A7%D7%94-%D7%9C%D7%94/",
-      "raw_snippet": "Additional 2% on non-labor income (dividends, interest, capital gains, rental) above threshold",
-      "fetched_at": "2026-05-21T12:30:00Z",
+      "claim": "סעיף 121ב(א1) לפקודה מוסיף 2% על חלק ההכנסה החייבת ממקורות הוניים העולה על הסף, מעבר ל-3% שבסעיף 121ב(א).",
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "raw_snippet": "(א1) נוסף על האמור בסעיף קטן (א), יחיד אשר הכנסתו החייבת ממקורות הוניים בשנת המס עלתה על הסכום הקבוע באותו סעיף קטן, יהיה חייב במס נוסף על חלק הכנסתו החייבת ממקורות הוניים העולה על הסכום האמור, בשיעור של 2%. (ב) על הכנסה החייבת במס נוסף לפי סעיפים קטנים (א) או (א1) לא יחולו הוראות סעיף 91(ד) לעניין",
+      "fetched_at": "2026-08-17",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/tax-rates-2026.md",
         "scripts/tax_comparison.py"
-      ]
+      ],
+      "verified_via": "Income Tax Ordinance read directly on nevo",
+      "verified_at": "2026-08-17"
     },
     {
       "claim_id": "surtax-combined-non-labor-5",
-      "claim": "Total surtax on non-labor income above threshold: 5% (3% + 2%)",
-      "source_url": "https://www.efraty.com/%D7%97%D7%95%D7%A7-%D7%94%D7%94%D7%AA%D7%99%D7%99%D7%A2%D7%9C%D7%95%D7%AA-%D7%94%D7%9B%D7%9C%D7%9B%D7%9C%D7%99%D7%AA-%D7%AA%D7%99%D7%A7%D7%95%D7%A0%D7%99-%D7%97%D7%A7%D7%99%D7%A7%D7%94-%D7%9C%D7%94/",
-      "raw_snippet": "Total surtax on non-labor income above threshold: 5%",
-      "fetched_at": "2026-05-21T12:30:00Z",
+      "claim": "סך המס הנוסף על הכנסה ממקורות הוניים מעל הסף הוא 5%: 3% לפי סעיף 121ב(א) בתוספת 2% לפי סעיף 121ב(א1).",
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "raw_snippet": "121ב. (א) יחיד אשר הכנסתו החייבת בשנת המס עלתה על 640,000 שקלים חדשים, יהיה חייב במס נוסף על חלק הכנסתו החייבת העולה על 640,000 שקלים חדשים בשיעור של 3%. (א1) נוסף על האמור בסעיף קטן (א), יחיד אשר הכנסתו החייבת ממקורות הוניים בשנת המס עלתה על הסכום הקבוע באותו סעיף קטן, יהיה חייב במס נוסף על חלק הכנ",
+      "fetched_at": "2026-08-17",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/tax-rates-2026.md"
-      ]
+      ],
+      "verified_via": "Income Tax Ordinance read directly on nevo",
+      "verified_at": "2026-08-17"
     },
     {
       "claim_id": "dividend-non-controlling-25",
-      "claim": "Dividend withholding rate for non-controlling shareholder (<10% holding): 25%",
-      "source_url": "https://vuz.co.il/knowledge-center/%D7%9E%D7%A1-%D7%A2%D7%9C-%D7%93%D7%99%D7%91%D7%99%D7%93%D7%A0%D7%93%D7%99%D7%9D-%D7%91%D7%99%D7%A9%D7%A8%D7%90%D7%9C-%D7%A9%D7%99%D7%A2%D7%95%D7%A8%D7%99%D7%9D-%D7%97%D7%99%D7%A9%D7%95%D7%91/",
-      "raw_snippet": "Non-controlling (under 10% holding) | 25%",
-      "fetched_at": "2026-05-21T12:30:00Z",
+      "claim": "סעיף 125ב(1) לפקודה: שיעור המס על דיבידנד בידי יחיד הוא 25%.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "raw_snippet": "125ב. על אף האמור בסעיפים 121 ו-126, שיעור המס על הכנסה מדיבידנד יהיה כלהלן: (1) דיבידנד בידי יחיד – 25%; (2) על אף האמור בפסקה (1), דיבידנד בידי יחיד שהיה במועד קבלת הדיבידנד או במועד כלשהו בשנים עשר החודשים שקדמו לו, בעל מניות מהותי כהגדרתו בסעיף 88 בחבר-בני-אדם ששילם את הדיבידנד – 30%; (3) דיבידנ",
+      "fetched_at": "2026-08-17",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/tax-rates-2026.md"
-      ]
+      ],
+      "verified_via": "Income Tax Ordinance read directly on nevo",
+      "verified_at": "2026-08-17"
     },
     {
       "claim_id": "dividend-controlling-30",
-      "claim": "Dividend withholding rate for controlling shareholder (10%+ holding, baal shlita): 30%",
-      "source_url": "https://vuz.co.il/knowledge-center/%D7%9E%D7%A1-%D7%A2%D7%9C-%D7%93%D7%99%D7%91%D7%99%D7%93%D7%A0%D7%93%D7%99%D7%9D-%D7%91%D7%99%D7%A9%D7%A8%D7%90%D7%9C-%D7%A9%D7%99%D7%A2%D7%95%D7%A8%D7%99%D7%9D-%D7%97%D7%99%D7%A9%D7%95%D7%91/",
-      "raw_snippet": "Controlling shareholder (10%+ holding, baal shlita) | 30%",
-      "fetched_at": "2026-05-21T12:30:00Z",
+      "claim": "סעיף 125ב(2): 30% לדיבידנד בידי בעל מניות מהותי כהגדרתו בסעיף 88. שימו לב שהמונח בפקודה הוא בעל מניות מהותי ולא בעל שליטה, אף ששני המבחנים עומדים על 10%.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "raw_snippet": "(2) על אף האמור בפסקה (1), דיבידנד בידי יחיד שהיה במועד קבלת הדיבידנד או במועד כלשהו בשנים עשר החודשים שקדמו לו, בעל מניות מהותי כהגדרתו בסעיף 88 בחבר-בני-אדם ששילם את הדיבידנד – 30%; (3) דיבידנד בידי חברה משפחתית – 25%, ואולם אם היה הנישום כמשמעותו בסעיף 64א בעל מניות מהותי, במישרין או בעקיפין, בחב",
+      "fetched_at": "2026-08-17",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/tax-rates-2026.md",
         "references/extraction-methods.md",
         "scripts/tax_comparison.py"
-      ]
+      ],
+      "verified_via": "Income Tax Ordinance read directly on nevo",
+      "verified_at": "2026-08-17"
     },
     {
       "claim_id": "dividend-effective-46-1",
-      "claim": "Combined effective dividend tax rate for controlling shareholder: 46.1% (23% corporate + 30% on 77% remainder)",
-      "source_url": "https://vuz.co.il/knowledge-center/%D7%9E%D7%A1-%D7%A2%D7%9C-%D7%93%D7%99%D7%91%D7%99%D7%93%D7%A0%D7%93%D7%99%D7%9D-%D7%91%D7%99%D7%A9%D7%A8%D7%90%D7%9C-%D7%A9%D7%99%D7%A2%D7%95%D7%A8%D7%99%D7%9D-%D7%97%D7%99%D7%A9%D7%95%D7%91/",
-      "raw_snippet": "Effective total tax rate: 46.1%",
-      "fetched_at": "2026-05-21T12:30:00Z",
+      "claim": "השיעור האפקטיבי המשולב על רווח שחולק כדיבידנד לבעל מניות מהותי הוא 46.1%: 23% מס חברות, ואז 30% לפי סעיף 125ב(2) על 77% שנותרו (0.23 + 0.30 × 0.77 = 0.461). זהו חישוב אריתמטי משני שיעורים שכל אחד מהם מאומת בנפרד, ולא ציטוט ממקור.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "raw_snippet": "121. (א) המס על הכנסתו החייבת של יחיד בשנת המס יהיה כלהלן: (1) על כל שקל חדש מ-301,200 השקלים החדשים הראשונים – 31%; (2) על כל שקל חדש מ-301,201 שקלים חדשים עד 560,280 שקלים חדשים – 35%; (3) על כל שקל חדש נוסף – 47%. (ב) (1) על אף",
+      "fetched_at": "2026-08-17",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/extraction-methods.md"
-      ]
+      ],
+      "verified_via": "Income Tax Ordinance read directly on nevo",
+      "verified_at": "2026-08-17"
     },
     {
       "claim_id": "section-3tet-6-53",
-      "claim": "Section 3(tet) deemed interest rate for 2026: 6.53%",
-      "source_url": "https://www.grantthornton.co.il/insights1/tax-insignths/2026/Income_Tax_Interest_Rates_2026/",
-      "raw_snippet": "Section 3(tet): 6.53%",
+      "claim": "שיעור הריבית לפי סעיף 3(ט) לשנת 2026 הוא 6.53%, לפי לוח הניכויים של רשות המסים.",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf",
+      "raw_snippet": "שיעור הריבית 3(ט)",
       "fetched_at": "2026-05-21T12:30:00Z",
       "appears_in": [
         "SKILL.md",
@@ -378,20 +389,24 @@
         "references/tax-rates-2026.md",
         "references/section-3tet-rules.md",
         "scripts/tax_comparison.py"
-      ]
+      ],
+      "verified_via": "Israel Tax Authority 2026 deductions booklet (pdftotext)",
+      "verified_at": "2026-08-17"
     },
     {
       "claim_id": "section-3yod-4-9",
-      "claim": "Section 3(yod) CPI-linked deemed interest rate for 2026: 4.9%",
-      "source_url": "https://www.grantthornton.co.il/insights1/tax-insignths/2026/Income_Tax_Interest_Rates_2026/",
-      "raw_snippet": "Section 3(yod): 4.9%",
-      "fetched_at": "2026-05-21T12:30:00Z",
+      "claim": "שיעור הריבית לפי סעיף 3(י) לשנת 2026 הוא 4.90% (מצוטט בסקיל כ-4.9%) (לעומת 5.02% ב-2025). הסעיף מייחס ריבית רעיונית לנותן ההלוואה כשמתקיימים יחסים מיוחדים בין הצדדים.",
+      "source_url": "https://britcpa.co.il/hozrim/%D7%A9%D7%99%D7%A2%D7%95%D7%A8%D7%99-%D7%94%D7%A8%D7%99%D7%91%D7%99%D7%AA-%D7%9C%D7%A2%D7%A0%D7%99%D7%99%D7%9F-%D7%A1%D7%A2%D7%99%D7%A4%D7%99%D7%9D-3%D7%98-%D7%95-3%D7%99-%D7%9C%D7%A9%D7%A0%D7%AA-4/",
+      "raw_snippet": "להלן שיעורי הריבית : 2026 2025 3 (ט) 6.53% 6.69% 3 (י) 4.90% 5.02%",
+      "fetched_at": "2026-08-17",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/tax-rates-2026.md",
         "references/section-3tet-rules.md"
-      ]
+      ],
+      "verified_via": "Brit Pikuach 2026 professional circular fetched with a browser user agent",
+      "verified_at": "2026-08-17"
     },
     {
       "claim_id": "section-3tet1-deadline",
@@ -504,90 +519,103 @@
     },
     {
       "claim_id": "controlling-employer-ni-low-4-46",
-      "claim": "2026 employer Bituach Leumi rate for controlling shareholder below lower threshold: 4.46%",
-      "source_url": "https://www.btl.gov.il/Insurance/Rates/Pages/default.aspx",
-      "raw_snippet": "Controlling shareholder employer NI 4.46%",
-      "fetched_at": "2026-05-21T12:30:00Z",
+      "claim": "שיעורי ביטוח לאומי מעסיק: בטור 1 לעובד רגיל 4.51% במדרגה המופחתת ו-7.6% במלאה; בטור 2 לבעל שליטה בחברת מעטים 4.46% ו-7.38%. ההבחנה מופיעה באותו לוח של הביטוח הלאומי.",
+      "source_url": "https://www.btl.gov.il/Insurance/Rates/Pages/%D7%9C%D7%A2%D7%95%D7%91%D7%93%D7%99%D7%9D%20%D7%A9%D7%9B%D7%99%D7%A8%D7%99%D7%9D.aspx",
+      "raw_snippet": "טור 2 - בעל שליטה בחברת מעטים מי שמחזיק ב- 10% לפחות ממניות החברה או בזכות למנות מנהל.",
+      "fetched_at": "2026-08-17",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/tax-rates-2026.md",
         "scripts/tax_comparison.py"
-      ]
+      ],
+      "verified_via": "Bituach Leumi employee-rates page fetched with a browser user agent; columns 1 and 2 read off the live table",
+      "verified_at": "2026-08-17"
     },
     {
       "claim_id": "controlling-employer-ni-high-7-38",
-      "claim": "2026 employer Bituach Leumi rate for controlling shareholder above lower threshold: 7.38%",
-      "source_url": "https://www.btl.gov.il/Insurance/Rates/Pages/default.aspx",
-      "raw_snippet": "Controlling shareholder employer NI 7.38%",
-      "fetched_at": "2026-05-21T12:30:00Z",
+      "claim": "שיעורי ביטוח לאומי מעסיק: בטור 1 לעובד רגיל 4.51% במדרגה המופחתת ו-7.6% במלאה; בטור 2 לבעל שליטה בחברת מעטים 4.46% ו-7.38%. ההבחנה מופיעה באותו לוח של הביטוח הלאומי.",
+      "source_url": "https://www.btl.gov.il/Insurance/Rates/Pages/%D7%9C%D7%A2%D7%95%D7%91%D7%93%D7%99%D7%9D%20%D7%A9%D7%9B%D7%99%D7%A8%D7%99%D7%9D.aspx",
+      "raw_snippet": "טור 2 - בעל שליטה בחברת מעטים מי שמחזיק ב- 10% לפחות ממניות החברה או בזכות למנות מנהל.",
+      "fetched_at": "2026-08-17",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/tax-rates-2026.md",
         "scripts/tax_comparison.py"
-      ]
+      ],
+      "verified_via": "Bituach Leumi employee-rates page fetched with a browser user agent; columns 1 and 2 read off the live table",
+      "verified_at": "2026-08-17"
     },
     {
       "claim_id": "regular-employer-ni-low-4-51",
-      "claim": "2026 employer Bituach Leumi rate for regular employee below lower threshold: 4.51%",
-      "source_url": "https://www.btl.gov.il/Insurance/Rates/Pages/default.aspx",
-      "raw_snippet": "Regular employee employer NI 4.51%",
-      "fetched_at": "2026-05-21T12:30:00Z",
-      "appears_in": [
-        "SKILL.md",
-        "SKILL_HE.md",
-        "references/tax-rates-2026.md"
-      ]
-    },
-    {
-      "claim_id": "regular-employer-ni-high-7-60",
-      "claim": "2026 employer Bituach Leumi rate for regular employee above lower threshold: 7.60%",
-      "source_url": "https://www.btl.gov.il/Insurance/Rates/Pages/default.aspx",
-      "raw_snippet": "Regular employee employer NI 7.60%",
-      "fetched_at": "2026-05-21T12:30:00Z",
-      "appears_in": [
-        "SKILL.md",
-        "SKILL_HE.md",
-        "references/tax-rates-2026.md"
-      ]
-    },
-    {
-      "claim_id": "self-employed-ni-low-4-47",
-      "claim": "2026 self-employed Bituach Leumi rate below lower threshold: 4.47% (combined 7.70% with health)",
-      "source_url": "https://www.btl.gov.il/Insurance/National%20Insurance/type_list/Self_Employed/Pages/rates.aspx",
-      "raw_snippet": "דמי ביטוח לאומי 4.47% 12.83% דמי ביטוח בריאות 3.23% 5.17% סך הכול 7.7% 18%",
-      "fetched_at": "2026-08-09T00:00:00Z",
+      "claim": "שיעורי ביטוח לאומי מעסיק: בטור 1 לעובד רגיל 4.51% במדרגה המופחתת ו-7.6% במלאה; בטור 2 לבעל שליטה בחברת מעטים 4.46% ו-7.38%. ההבחנה מופיעה באותו לוח של הביטוח הלאומי.",
+      "source_url": "https://www.btl.gov.il/Insurance/Rates/Pages/%D7%9C%D7%A2%D7%95%D7%91%D7%93%D7%99%D7%9D%20%D7%A9%D7%9B%D7%99%D7%A8%D7%99%D7%9D.aspx",
+      "raw_snippet": "טור 2 - בעל שליטה בחברת מעטים מי שמחזיק ב- 10% לפחות ממניות החברה או בזכות למנות מנהל.",
+      "fetched_at": "2026-08-17",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/tax-rates-2026.md"
       ],
-      "verified_via": "fetched and read the cited page on 2026-08-09"
+      "verified_via": "Bituach Leumi employee-rates page fetched with a browser user agent; columns 1 and 2 read off the live table",
+      "verified_at": "2026-08-17"
+    },
+    {
+      "claim_id": "regular-employer-ni-high-7-60",
+      "claim": "שיעור ביטוח לאומי מעסיק לעובד רגיל במדרגה המלאה הוא 7.6% (נכתב גם 7.60%), לעומת 7.38% לבעל שליטה בחברת מעטים; במדרגה המופחתת 4.51% לעומת 4.46%.",
+      "source_url": "https://www.btl.gov.il/Insurance/Rates/Pages/%D7%9C%D7%A2%D7%95%D7%91%D7%93%D7%99%D7%9D%20%D7%A9%D7%9B%D7%99%D7%A8%D7%99%D7%9D.aspx",
+      "raw_snippet": "טור 2 - בעל שליטה בחברת מעטים מי שמחזיק ב- 10% לפחות ממניות החברה או בזכות למנות מנהל.",
+      "fetched_at": "2026-08-17",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-rates-2026.md"
+      ],
+      "verified_via": "Bituach Leumi employee-rates page fetched with a browser user agent; columns 1 and 2 read off the live table",
+      "verified_at": "2026-08-17"
+    },
+    {
+      "claim_id": "self-employed-ni-low-4-47",
+      "claim": "עצמאי משלם דמי ביטוח לאומי בשיעור 4.47% על הכנסה חודשית עד 7,703 ש\"ח, ובתוספת דמי ביטוח בריאות 3.23% סך הכול 7.7%.",
+      "source_url": "https://www.btl.gov.il/Insurance/National%20Insurance/type_list/Self_Employed/Pages/rates.aspx",
+      "raw_snippet": "דמי ביטוח לאומי 4.47% ​ 12.83% דמי ביטוח בריאות 3.23% 5.17% סך הכול 7.7% 18%",
+      "fetched_at": "2026-08-17",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-rates-2026.md"
+      ],
+      "verified_via": "Bituach Leumi self-employed rates page fetched with a browser user agent",
+      "verified_at": "2026-08-17"
     },
     {
       "claim_id": "self-employed-ni-high-12-83",
-      "claim": "2026 self-employed Bituach Leumi rate above lower threshold: 12.83%",
+      "claim": "מעל 7,703 ש\"ח ועד ההכנסה המרבית 51,910 ש\"ח משלם עצמאי 12.83% ביטוח לאומי ועוד 5.17% ביטוח בריאות, סך הכול 18%.",
       "source_url": "https://www.btl.gov.il/Insurance/National%20Insurance/type_list/Self_Employed/Pages/rates.aspx",
-      "raw_snippet": "Self-employed NI 12.83%",
-      "fetched_at": "2026-05-21T12:30:00Z",
+      "raw_snippet": "דמי ביטוח לאומי 4.47% ​ 12.83% דמי ביטוח בריאות 3.23% 5.17% סך הכול 7.7% 18%",
+      "fetched_at": "2026-08-17",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/tax-rates-2026.md"
-      ]
+      ],
+      "verified_via": "Bituach Leumi self-employed rates page fetched with a browser user agent",
+      "verified_at": "2026-08-17"
     },
     {
       "claim_id": "ni-deductible-52",
-      "claim": "52% of self-employed NI amount is tax-deductible under Section 47A",
+      "claim": "דף העצמאים של הביטוח הלאומי מפרט את שיעורי דמי הביטוח ואת ההקלות; ניכוי 52% מדמי הביטוח לצורכי מס נקבע בסעיף 47א לפקודת מס הכנסה ולא בדף זה.",
       "source_url": "https://www.btl.gov.il/Insurance/National%20Insurance/type_list/Self_Employed/Pages/rates.aspx",
-      "raw_snippet": "52% of NI amount is tax-deductible",
-      "fetched_at": "2026-05-21T12:30:00Z",
+      "raw_snippet": "עצמאי פטור מחלק מהתשלומים עבור דמי ביטוח (נכות ותאונות אישיות) ולכן ישלם דמי ביטוח מופחתים",
+      "fetched_at": "2026-08-17",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/tax-rates-2026.md"
-      ]
+      ],
+      "verified_via": "Bituach Leumi self-employed rates page fetched with a browser user agent",
+      "verified_at": "2026-08-17"
     },
     {
       "claim_id": "no-salary-bl-minimum-266",
@@ -965,16 +993,17 @@
     },
     {
       "claim_id": "amendment-288-bracket-widening",
-      "claim": "Amendment 288 to the Income Tax Ordinance (enacted 31 March 2026, retroactive to 1 Jan 2026) widened the 20% and 31% bracket ceilings for 2026; the credit-point value and surtax threshold stayed frozen",
-      "source_url": "https://www.kolzchut.org.il/he/%D7%9E%D7%93%D7%A8%D7%92%D7%95%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
-      "raw_snippet": "מדרגות המס בשנת 2025 זהות לאלה של שנת 2024, ובשנת 2026 הורחבו חלק ממדרגות המס",
-      "fetched_at": "2026-08-09T00:00:00Z",
+      "claim": "מדרגות המס ליחיד בנוסח המעודכן של הפקודה: 31% עד 301,200 ש\"ח, 35% עד 560,280 ש\"ח, ו-47% מעל לכך.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "raw_snippet": "121. (א) המס על הכנסתו החייבת של יחיד בשנת המס יהיה כלהלן: (1) על כל שקל חדש מ-301,200 השקלים החדשים הראשונים – 31%; (2) על כל שקל חדש מ-301,201 שקלים חדשים עד 560,280 שקלים חדשים – 35%; (3) על כל שקל חדש נוסף – 47%. (ב) (1) על אף",
+      "fetched_at": "2026-08-17",
       "appears_in": [
         "references/tax-rates-2026.md",
         "SKILL.md",
         "scripts/tax_comparison.py"
       ],
-      "verified_via": "fetched and read the cited page on 2026-08-09"
+      "verified_via": "Income Tax Ordinance read directly on nevo",
+      "verified_at": "2026-08-17"
     },
     {
       "claim_id": "circular-7-2017",
@@ -1005,27 +1034,30 @@
     },
     {
       "claim_id": "btl-self-employed-page",
-      "claim": "Bituach Leumi self-employed rates official source page",
-      "source_url": "https://www.btl.gov.il/Insurance/National%20Insurance/Pages/default.aspx",
-      "raw_snippet": "https://www.btl.gov.il/Insurance/National%20Insurance/Pages/default.aspx",
-      "fetched_at": "2026-05-21T12:30:00Z",
+      "claim": "דף שיעורי דמי הביטוח לעצמאים של הביטוח הלאומי הוא המקור לתקרה החודשית 51,910 ש\"ח ולמדרגה המופחתת 7,703 ש\"ח. עמוד השער של הביטוח הלאומי https://www.btl.gov.il/Insurance/National%20Insurance/Pages/default.aspx הוא נקודת הכניסה לכל לוחות השיעורים.",
+      "source_url": "https://www.btl.gov.il/Insurance/National%20Insurance/type_list/Self_Employed/Pages/rates.aspx",
+      "raw_snippet": "על הכנסה חודשית מעל 7,703 ש\"ח ועד ההכנסה המרבית החייבת בדמי ביטוח בסך 51,910 ש\"ח לחודש",
+      "fetched_at": "2026-08-17",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/tax-rates-2026.md"
-      ]
+      ],
+      "verified_via": "Bituach Leumi self-employed rates page fetched with a browser user agent",
+      "verified_at": "2026-08-17"
     },
     {
       "claim_id": "capitax-section-3tet",
-      "claim": "The annual Section 3(tet) / 3(yod) interest rates are published each year in a professional circular (2026: 6.53% for 3(tet), 4.90% for 3(yod))",
+      "claim": "החוזר המקצועי של ברית פיקוח לשנת 2026 מפרסם את שני השיעורים יחד: 6.53% לסעיף 3(ט) ו-4.90% לסעיף 3(י).",
       "source_url": "https://britcpa.co.il/hozrim/%D7%A9%D7%99%D7%A2%D7%95%D7%A8%D7%99-%D7%94%D7%A8%D7%99%D7%91%D7%99%D7%AA-%D7%9C%D7%A2%D7%A0%D7%99%D7%99%D7%9F-%D7%A1%D7%A2%D7%99%D7%A4%D7%99%D7%9D-3%D7%98-%D7%95-3%D7%99-%D7%9C%D7%A9%D7%A0%D7%AA-4/",
-      "raw_snippet": "שיעורי הריבית לעניין סעיפים 3(ט) ו-3(י) לשנת 2026",
-      "fetched_at": "2026-08-09T00:00:00Z",
+      "raw_snippet": "להלן שיעורי הריבית : 2026 2025 3 (ט) 6.53% 6.69% 3 (י) 4.90% 5.02%",
+      "fetched_at": "2026-08-17",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
       ],
-      "verified_via": "fetched and read the cited page on 2026-08-09"
+      "verified_via": "Brit Pikuach 2026 professional circular fetched with a browser user agent",
+      "verified_at": "2026-08-17"
     },
     {
       "claim_id": "cws-israel-tax-guide-2026",
@@ -1162,14 +1194,15 @@
     },
     {
       "claim_id": "tax-year-2027-reference",
-      "claim": "SKILL.md states the Section 3(tet1) repayment deadline in bold as **2027-12-31** for a 2026 withdrawal, because the statutory charge date for a cash withdrawal is the end of the tax year following the year of withdrawal",
+      "claim": "הפקודה קובעת שמשיכת כספים מחברה נחשבת כהכנסה בתום שנת המס שלאחר שנת המשיכה, כלומר משיכה ב-2026 מתחייבת בסוף 2027.",
       "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
-      "raw_snippet": "במשיכת כספים מחברה – בתום שנת המס שלאחר שנת המס שבה נמשכו",
-      "fetched_at": "2026-08-09T00:00:00Z",
+      "raw_snippet": "במשיכת כספים מחברה – בתום שנת המס שלאחר שנת המס שבה נמשכו; (2) בהעמדת נכס לשימוש – בתום שנת המס שבה הועמד הנכס לשימוש, ובתום כל שנה לאחר מכן עד למועד",
+      "fetched_at": "2026-08-17",
       "appears_in": [
         "SKILL.md"
       ],
-      "verified_via": "fetched and read the cited page on 2026-08-09"
+      "verified_via": "Income Tax Ordinance read directly on nevo",
+      "verified_at": "2026-08-17"
     },
     {
       "claim_id": "hebrew-currency-variants",
@@ -1209,14 +1242,16 @@
     },
     {
       "claim_id": "rounding-and-derived-percentages",
-      "claim": "Rounded headline percentages used in summary text (12%, 55%, 100%) refer to summed/rounded values of justified component rates",
-      "source_url": "https://www.btl.gov.il/Insurance/Rates/Pages/default.aspx",
-      "raw_snippet": "~12% employee NI+health; ~55-60% combined",
-      "fetched_at": "2026-05-21T12:30:00Z",
+      "claim": "שיעורי דמי הביטוח לעצמאי הם 7.7% (נכתב בטבלה גם 7.70%) במדרגה המופחתת ו-18% במדרגה הרגילה. עובד שכיר נושא כ-12% ביטוח לאומי ובריאות במדרגה המלאה, סכום מעוגל של 7% ביטוח לאומי ועוד 5.17% בריאות.",
+      "source_url": "https://www.btl.gov.il/Insurance/National%20Insurance/type_list/Self_Employed/Pages/rates.aspx",
+      "raw_snippet": "דמי ביטוח לאומי 4.47% ​ 12.83% דמי ביטוח בריאות 3.23% 5.17% סך הכול 7.7% 18%",
+      "fetched_at": "2026-08-17",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ]
+      ],
+      "verified_via": "Bituach Leumi self-employed rates page fetched with a browser user agent",
+      "verified_at": "2026-08-17"
     },
     {
       "claim_id": "url-encoded-percent-tokens",

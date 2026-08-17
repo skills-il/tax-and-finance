@@ -162,7 +162,7 @@ When a company lends money to a shareholder (or related party) at below-market i
 - For controlling shareholders: deemed interest is classified as **salary income** and taxed at marginal rates
 - The company must report the deemed interest on Form 126
 
-**Section 3(yod) rate:** 4.9% (applies to CPI-linked loans between related parties)
+**Section 3(yod) rate:** 4.9% (deemed interest income for the lender where special relations exist between the parties)
 
 **Section 3(tet1) automatic-reclassification deadline (Amendment 235, in force 2017):**
 

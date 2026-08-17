@@ -5,7 +5,7 @@ Worked examples for each extraction method from an Israeli limited company (Chev
 ## Assumptions for All Examples
 
 - Company: Israeli Ltd (Chevra Baam)
-- Shareholder: Single controlling shareholder (100% ownership, baal shlita)
+- Shareholder: Single controlling shareholder owning the whole company (baal shlita)
 - Tax year: 2026
 - Shareholder has 2.25 base credit points (resident male)
 - No other income sources (for simplicity)
