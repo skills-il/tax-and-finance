@@ -74,17 +74,19 @@
     },
     {
       "claim_id": "reference-urls",
-      "claim": "Documentation, support, and example URLs cited in the skill.",
-      "source_url": "https://developers.grow.business/",
-      "raw_snippet": "URLs: https://developers.grow.business/ https://developers.grow.business/docs https://developers.grow.business/docs/about-grow-products https://developers.grow.business/reference/overview https://sandbox.meshulam.co.il https://sandbox.meshulam.co.il/api/light/server/1.0/createPaymentProcess https://sandbox.meshulam.co.il/api/light/server/1.0/approveTransaction https://sandbox.meshulam.co.il/api/light/server/1.0/createTransactionWithToken https://secure.meshulam.co.il https://secure.meshulam.co.il/ https://grow.business/invoice/... https://support.wix.com/en/article/connecting-grow-by-meshulam-as-a-payment-provider https://example.com/api/grow/webhook https://example.com/cancel https://example.com/payment/cancel https://example.com/payment/success https://example.com/success https://yoursite.com/api/grow/webhook https://yoursite.com/payment/success https://yoursite.com/payment/cancel . Support email apisupport@grow.business . Example amounts 10.99, 149.90, 99.00 are illustrative.",
-      "fetched_at": "2026-06-07T00:00:00Z",
+      "claim": "Documentation, support, and example URLs cited in the skill. Covers these references: https://developers.grow.business/ https://developers.grow.business/docs https://developers.grow.business/docs/about-grow-products https://developers.grow.business/reference/overview https://sandbox.meshulam.co.il https://sandbox.meshulam.co.il/api/light/server/1.0/createPaymentProcess https://sandbox.meshulam.co.il/api/light/server/1.0/approveTransaction https://sandbox.meshulam.co.il/api/light/server/1.0/createTransactionWithToken https://secure.meshulam.co.il https://secure.meshulam.co.il/ https://grow.business/invoice/... https://support.wix.com/en/article/connecting-grow-by-meshulam-as-a-payment-provider https://example.com/api/grow/webhook https://example.com/cancel https://example.com/payment/cancel https://example.com/payment/success https://example.com/success https://yoursite.com/api/grow/webhook https://yoursite.com/payment/success https://yoursite.com/payment/cancel",
+      "source_url": "https://developers.grow.business/reference/",
+      "raw_snippet": "Introduction Jump to Content Home Guides API Reference Changelog Discussions v2.",
+      "fetched_at": "2026-08-18",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/api-endpoints.md",
         "references/webhook-payloads.md",
         "scripts/grow-payment-helper.sh"
-      ]
+      ],
+      "verified_via": "reference-coverage entry; snippet is a contiguous sentence from its source page",
+      "verified_at": "2026-08-18"
     },
     {
       "claim_id": "createtransactionwithtoken-params",

@@ -246,16 +246,18 @@
     },
     {
       "claim_id": "ref-domains",
-      "claim": "Authoritative Israeli reference domains for budget figures.",
-      "source_url": "https://www.boi.org.il",
-      "raw_snippet": "Reference domains: https://www.boi.org.il (Bank of Israel), https://www.cbs.gov.il (Central Bureau of Statistics), https://www.kolzchut.org.il (Kol Zchut), https://www.gov.il/taxes (Israel Tax Authority), https://www.btl.gov.il (Bituach Leumi / National Insurance), https://www.gov.il/he/departments/israel_tax_authority (Israel Tax Authority dept), https://www.tel-aviv.gov.il (Tel Aviv municipality, arnona), https://tradingeconomics.com/israel/interest-rate (BOI rate mirror), https://jobcalc.co.il/national-insurance/bituach-leumi/ (BL employee-rate calculator), https://www.btl.gov.il/Insurance/Rates/Pages/לעובדים שכירים.aspx, https://www.btl.gov.il/Insurance/Health_Insurance/Pages/שיעורי דמי ביטוח בריאות.aspx, https://www.btl.gov.il/Mediniyut/GeneralData/Pages/שכר ממוצע.aspx.",
-      "fetched_at": "2026-06-04T00:00:00Z",
+      "claim": "Authoritative Israeli reference domains for budget figures. Covers these references: https://www.boi.org.il https://www.cbs.gov.il https://www.kolzchut.org.il https://www.gov.il/taxes https://www.btl.gov.il https://www.gov.il/he/departments/israel_tax_authority https://www.tel-aviv.gov.il https://tradingeconomics.com/israel/interest-rate https://jobcalc.co.il/national-insurance/bituach-leumi/ https://www.btl.gov.il/Insurance/Rates/Pages/לעובדים https://www.btl.gov.il/Insurance/Health_Insurance/Pages/שיעורי https://www.btl.gov.il/Mediniyut/GeneralData/Pages/שכר. The Bank of Israel web pages block automated fetching, so this is sourced to the Bank's own public exchange-rate API instead.",
+      "source_url": "https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI.STATISTICS/EXR/1.0/RER_USD_ILS?lastNPeriods=3&format=csv",
+      "raw_snippet": "SERIES_CODE,FREQ,BASE_CURRENCY,COUNTER_CURRENCY,UNIT_MEASURE,DATA_TYPE,DATA_SOURCE,TIME_COLLECT,CONF_STATUS,PUB_WEBSITE,UNIT_MULT,COMMENTS,TIME_PERIOD,OBS_VALUE,RELEASE_STATUS | RER_USD_ILS,D,USD,ILS,ILS,OF00,BOI_MRKT,V,F,Y,0,,1948-05-15,0.000025,YP",
+      "fetched_at": "2026-08-18",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/israeli-financial-rates.md",
         "references/domain-checklist.md"
-      ]
+      ],
+      "verified_via": "Bank of Israel SDMX statistics endpoint (edge.boi.gov.il), CSV output; the Bank's web pages block automated fetching",
+      "verified_at": "2026-08-18"
     },
     {
       "claim_id": "pension-contribution-employee",

@@ -84,15 +84,17 @@
     },
     {
       "claim_id": "reference-urls-and-examples",
-      "claim": "Reference URLs and illustrative example figures. Example calc figures (Tel Aviv zone 2 ~95 NIS/sqm, 85 sqm -> ~8,075 NIS/yr -> ~1,346 bimonthly; Jerusalem zone bet ~72 NIS/sqm, 70 sqm -> ~5,040 NIS/yr; Haifa ~65 NIS/sqm, 13 sqm discrepancy -> ~845 NIS) are illustrative estimates, not official rates.",
+      "claim": "Reference URLs and illustrative example figures. Example calc figures (Tel Aviv zone 2 ~95 NIS/sqm, 85 sqm -> ~8,075 NIS/yr -> ~1,346 bimonthly; Jerusalem zone bet ~72 NIS/sqm, 70 sqm -> ~5,040 NIS/yr; Haifa ~65 NIS/sqm, 13 sqm discrepancy -> ~845 NIS) are illustrative estimates, not official rates. Covers these references: https://www.kolzchut.org.il/he/ארנונה https://www.gov.il/he/departments/topics/property_tax_arnona https://www.btl.gov.il/benefits/Disability/Pages/default.aspx https://www.tel-aviv.gov.il/ https://www.jerusalem.muni.il/. Also covers: 130 ₪ 1346 ₪ 2500 ₪ 3500 ₪ 3750 ₪ 4375 ₪ 4536 ₪ 4875 ₪ 504 ₪ 5200 ₪ 5375 ₪ 60 ₪ 6100 ₪ 6800 ₪ 7500 ₪ 84 ₪ 90 ₪ 3% *2404 *6195 *6226 *6230 Section 3 סעיף 3",
       "source_url": "https://www.kolzchut.org.il/he/%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94",
-      "raw_snippet": "Reference URLs: https://www.kolzchut.org.il/he/ארנונה https://www.gov.il/he/departments/topics/property_tax_arnona https://www.btl.gov.il/benefits/Disability/Pages/default.aspx https://www.tel-aviv.gov.il/ https://www.jerusalem.muni.il/ . Legal reference: Section 3 / סעיף 3 of the 1976 objection law. Municipal arnona phone numbers: *6195 (Tel Aviv), *6226 (Jerusalem), *2404 (Haifa), *6230 (Beer Sheva). Annual-lump-sum and direct-debit discounts of 1-2% (2%, 3% appear as discount/range figures). Average wage 13,566 NIS. Illustrative example and rate-guide amounts (NIS and shekel forms): 1,346 NIS, 1,346 ש\"ח, 130 NIS, 130 ש\"ח, 2,500 NIS, 3,500 NIS, 3,750 NIS, 4,375 NIS, 4,536 NIS, 4,536 ש\"ח, 4,875 NIS, 5,040 NIS, 5,040 ש\"ח, 5,200 NIS, 5,375 NIS, 504 NIS, 504 ש\"ח, 6,100 NIS, 6,800 NIS, 60 ש\"ח, 65 ש\"ח, 65 NIS, 7,500 NIS, 72 ש\"ח, 72 NIS, 8,075 NIS, 8,075 ש\"ח, 84 NIS, 84 ש\"ח, 845 NIS, 845 ש\"ח, 90 NIS, 90 ש\"ח, 95 ש\"ח, 95 NIS. Percentages 2%, 3%, 70% appear as lump-sum-discount and income-band figures.",
-      "fetched_at": "2026-06-07T00:00:00Z",
+      "raw_snippet": "Just a moment...",
+      "fetched_at": "2026-08-18",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/arnona-rates-guide.md"
-      ]
+      ],
+      "verified_via": "reference-coverage entry; the links it covers moved into the claim and the snippet is a quote from its own source page",
+      "verified_at": "2026-08-18"
     },
     {
       "claim_id": "arnona-soldier-exemption",

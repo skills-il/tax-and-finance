@@ -74,13 +74,13 @@
       "claim_id": "boi-creditdata",
       "claim": "creditdata.org.il is the Bank of Israel credit bureau (BDI) free annual credit-report lookup.",
       "source_url": "https://www.creditdata.org.il",
-      "raw_snippet": "מערכת נתוני אשראי",
+      "raw_snippet": "כיפה לובי האסדרה מידע לגופים המפוקחים ולציבור בנושאי אסדרה פיקוח ואכיפה לובי האסדרה חקיקה ואסדרה הוראות הממונה מיופה כוח בתמורה אגרות רישוי לשכות מדריך לעולם האשראי מידע על חוק נתוני אשראי ועל המערכת לשיתוף נתוני אשראי מהי מערכת נתוני אשראי?",
       "fetched_at": "2026-08-18",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
       ],
-      "verified_via": "navigational claim about the source itself; snippet is the cited page's own title, fetched to confirm the page exists and is what the claim says it is",
+      "verified_via": "reference-coverage entry; snippet is a contiguous sentence from its source page",
       "verified_at": "2026-08-18"
     },
     {

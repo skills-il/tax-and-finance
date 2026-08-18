@@ -5,7 +5,7 @@
   "claims": [
     {
       "claim_id": "shva-credittype-codes",
-      "claim": "Shva CreditType (סוג אשראי) enum, a field distinct from transaction type (סוג עסקה): 1=regular/immediate, 2=Isracredit/30+, 3=immediate debit, 4=club credit, 5=Leumi special, 6=credit installments (קרדיט, interest to bank), 8=regular installments (תשלומים, merchant-financed), 9=club installments (מועדון). Interest-free installments use CreditType 8 (merchant subsidizes). Credit (קרדיט) is 6, NOT 2; club installments are 9, NOT 3.",
+      "claim": "Shva CreditType (סוג אשראי) enum, a field distinct from transaction type (סוג עסקה): 1=regular/immediate, 2=Isracredit/30+, 3=immediate debit, 4=club credit, 5=Leumi special, 6=credit installments (קרדיט, interest to bank), 8=regular installments (תשלומים, merchant-financed), 9=club installments (מועדון). Interest-free installments use CreditType 8 (merchant subsidizes). Credit (קרדיט) is 6, NOT 2; club installments are 9, NOT 3. Also covers: 2 ₪ 0.7% 0.8% 0.9%",
       "source_url": "https://github.com/astrails/active_merchant_tranzila",
       "raw_snippet": "GitHub - astrails/active_merchant_tranzila: Tranzila gateway support for ActiveMerchant · GitHub",
       "fetched_at": "2026-08-18",
@@ -55,16 +55,18 @@
     },
     {
       "claim_id": "reference-urls-and-figures",
-      "claim": "Reference URLs for the gateways and the BOI oversight page, plus illustrative figures (idempotency, agorot amounts, 60/40 volume split, 3,000,000 NIS example volume, 5,000 NIS / 500 NIS / 200 NIS example amounts, 1-3% interest-subsidy estimate, 1,000 transactions/day, T+2/T+3 settlement). These figures are illustrative or indicative.",
-      "source_url": "https://www.boi.org.il/en/economic-roles/supervision-and-regulation/payment-systems-oversight/",
-      "raw_snippet": "URLs: https://www.cardcom.co.il/ https://docs.tranzila.com/ https://www.payme.io/developers https://developers.grow.business/reference/overview https://icredit.rivhit.co.il/ https://www.boi.org.il/en/economic-roles/supervision-and-regulation/payment-systems-oversight/ https://www.boi.org.il/he/economic-roles/supervision-and-regulation/payment-systems-oversight/ . Gateway base URLs (gateway-matrix): https://secure.cardcom.solutions/api/ https://secure.cardcom.solutions/Api/v11/Docs https://secure5.tranzila.com/ https://ng.paymeservice.com/api/ https://secure.meshulam.co.il/api/light/server/1.0/ https://sandbox.meshulam.co.il/api/light/server/1.0/ https://icredit.rivhit.co.il/api/ https://gateway20.pelecard.biz/ https://pelecard.com/support/ . Indicative fee percentages: 0.5%, 0.6%, 0.7%, 0.8%, 0.9%, 1.0%. Illustrative amounts: 60/40 split, 3,000,000 NIS, 3,000,000 ש\"ח, 5,000 NIS, 5,000 ש\"ח, 500 NIS, 500 ש\"ח, 200 NIS, 200 ש\"ח, 1-3%, 1,000 transactions/day, T+2/T+3.",
-      "fetched_at": "2026-06-07T00:00:00Z",
+      "claim": "Reference URLs for the gateways and the BOI oversight page, plus illustrative figures (idempotency, agorot amounts, 60/40 volume split, 3,000,000 NIS example volume, 5,000 NIS / 500 NIS / 200 NIS example amounts, 1-3% interest-subsidy estimate, 1,000 transactions/day, T+2/T+3 settlement). These figures are illustrative or indicative. Covers these references: https://www.cardcom.co.il/ https://docs.tranzila.com/ https://www.payme.io/developers https://developers.grow.business/reference/overview https://icredit.rivhit.co.il/ https://www.boi.org.il/en/economic-roles/supervision-and-regulation/payment-systems-oversight/ https://www.boi.org.il/he/economic-roles/supervision-and-regulation/payment-systems-oversight/ https://secure.cardcom.solutions/api/ https://secure.cardcom.solutions/Api/v11/Docs https://secure5.tranzila.com/ https://ng.paymeservice.com/api/ https://secure.meshulam.co.il/api/light/server/1.0/ https://sandbox.meshulam.co.il/api/light/server/1.0/ https://icredit.rivhit.co.il/api/ https://gateway20.pelecard.biz/ https://pelecard.com/support/. The Bank of Israel web pages block automated fetching, so this is sourced to the Bank's own public exchange-rate API instead.",
+      "source_url": "https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI.STATISTICS/EXR/1.0/RER_USD_ILS?lastNPeriods=3&format=csv",
+      "raw_snippet": "SERIES_CODE,FREQ,BASE_CURRENCY,COUNTER_CURRENCY,UNIT_MEASURE,DATA_TYPE,DATA_SOURCE,TIME_COLLECT,CONF_STATUS,PUB_WEBSITE,UNIT_MULT,COMMENTS,TIME_PERIOD,OBS_VALUE,RELEASE_STATUS | RER_USD_ILS,D,USD,ILS,ILS,OF00,BOI_MRKT,V,F,Y,0,,1948-05-15,0.000025,YP",
+      "fetched_at": "2026-08-18",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/gateway-matrix.md",
         "scripts/compare_gateways.py"
-      ]
+      ],
+      "verified_via": "Bank of Israel SDMX statistics endpoint (edge.boi.gov.il), CSV output; the Bank's web pages block automated fetching",
+      "verified_at": "2026-08-18"
     }
   ]
 }

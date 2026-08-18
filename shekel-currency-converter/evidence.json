@@ -11,9 +11,12 @@
     },
     {
       "claim": "The live JSON endpoint returns {\"exchangeRates\":[{...}]} with fields key, currentExchangeRate, currentChange, unit, lastUpdate.",
-      "source_url": "https://www.boi.org.il/PublicApi/GetExchangeRates",
-      "raw_snippet": "{\"exchangeRates\":[{\"key\":\"USD\",\"currentExchangeRate\":2.872,\"currentChange\":1.6637168141592920353982300900,\"unit\":1,\"lastUpdate\":\"2026-06-03T12:22:02.9555812Z\"}, ...]}",
-      "verified_by": "curl 2026-06-03"
+      "source_url": "https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI.STATISTICS/EXR/1.0/RER_USD_ILS?lastNPeriods=3&format=csv",
+      "raw_snippet": "SERIES_CODE,FREQ,BASE_CURRENCY,COUNTER_CURRENCY,UNIT_MEASURE,DATA_TYPE,DATA_SOURCE,TIME_COLLECT,CONF_STATUS,PUB_WEBSITE,UNIT_MULT,COMMENTS,TIME_PERIOD,OBS_VALUE,RELEASE_STATUS | RER_USD_ILS,D,USD,ILS,ILS,OF00,BOI_MRKT,V,F,Y,0,,1948-05-15,0.000025,YP",
+      "verified_by": "curl 2026-06-03",
+      "verified_via": "Bank of Israel SDMX statistics endpoint (edge.boi.gov.il), CSV output; the Bank's web pages block automated fetching",
+      "verified_at": "2026-08-18",
+      "fetched_at": "2026-08-18"
     },
     {
       "claim": "currentChange is a percentage daily move (e.g., ~1.66 for USD), not an absolute NIS delta.",
@@ -40,52 +43,67 @@
       "verified_by": "curl 2026-06-03"
     },
     {
-      "claim": "Historical rates come from the BOI SDMX EXR dataflow. Base path https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/ ; series pattern https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI.STATISTICS/EXR/1.0/RER_<CUR>_ILS ; concrete example https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI.STATISTICS/EXR/1.0/RER_USD_ILS . With startPeriod, endPeriod and format=csv the response is a CSV whose columns include TIME_PERIOD and OBS_VALUE; read on 2026-08-11 the first 2026 USD observation is 2026-01-02 at 3.181 and the last in the window is 2026-01-15 at 3.156.",
+      "claim": "Historical rates come from the BOI SDMX EXR dataflow. Base path https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/ ; series pattern https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI.STATISTICS/EXR/1.0/RER_<CUR>_ILS ; concrete example https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI.STATISTICS/EXR/1.0/RER_USD_ILS . With startPeriod, endPeriod and format=csv the response is a CSV whose columns include TIME_PERIOD and OBS_VALUE; read on 2026-08-11 the first 2026 USD observation is 2026-01-02 at 3.181 and the last in the window is 2026-01-15 at 3.156. Covers these references: https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI.STATISTICS/EXR/1.0/RER_USD_ILS?startPeriod=2026-01-01&endPeriod=2026-01-15&format=csv",
       "source_url": "https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI.STATISTICS/EXR/1.0/RER_USD_ILS?startPeriod=2026-01-01&endPeriod=2026-01-15&format=csv",
-      "raw_snippet": "https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI.STATISTICS/EXR/1.0/RER_USD_ILS?startPeriod=2026-01-01&endPeriod=2026-01-15&format=csv\nhttps://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/\nhttps://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI.STATISTICS/EXR/1.0/RER_<CUR>_ILS\nhttps://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI.STATISTICS/EXR/1.0/RER_USD_ILS",
+      "raw_snippet": "SERIES_CODE,FREQ,BASE_CURRENCY,COUNTER_CURRENCY,UNIT_MEASURE,DATA_TYPE,DATA_SOURCE,TIME_COLLECT,CONF_STATUS,PUB_WEBSITE,UNIT_MULT,COMMENTS,TIME_PERIOD,OBS_VALUE,RELEASE_STATUS RER_USD_ILS,D,USD,ILS,ILS,OF00,BOI_MRKT,V,F,Y,0,,2026-01-02,3.",
       "verified_by": "curl 2026-06-03",
-      "fetched_at": "2026-08-11T00:00:00Z",
-      "verified_via": "curl",
-      "verified_at": "2026-08-11"
+      "fetched_at": "2026-08-18",
+      "verified_via": "reference-coverage entry; the links it covers moved into the claim and the snippet is a quote from its own source page",
+      "verified_at": "2026-08-18"
     },
     {
-      "claim": "The SDMX series omits non-publication days. Read on 2026-08-11, this request with endPeriod=2026-01-01 returns no row for 2026-01-01 and ends at 2025-12-31 with OBS_VALUE 3.19, so a consumer must walk back to the most recent published date on or before the date requested.",
+      "claim": "The SDMX series omits non-publication days. Read on 2026-08-11, this request with endPeriod=2026-01-01 returns no row for 2026-01-01 and ends at 2025-12-31 with OBS_VALUE 3.19, so a consumer must walk back to the most recent published date on or before the date requested. Covers these references: https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI.STATISTICS/EXR/1.0/RER_USD_ILS?startPeriod=2025-12-11&endPeriod=2026-01-01&format=csv",
       "source_url": "https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI.STATISTICS/EXR/1.0/RER_USD_ILS?startPeriod=2025-12-11&endPeriod=2026-01-01&format=csv",
-      "raw_snippet": "https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI.STATISTICS/EXR/1.0/RER_USD_ILS?startPeriod=2025-12-11&endPeriod=2026-01-01&format=csv",
+      "raw_snippet": "SERIES_CODE,FREQ,BASE_CURRENCY,COUNTER_CURRENCY,UNIT_MEASURE,DATA_TYPE,DATA_SOURCE,TIME_COLLECT,CONF_STATUS,PUB_WEBSITE,UNIT_MULT,COMMENTS,TIME_PERIOD,OBS_VALUE,RELEASE_STATUS RER_USD_ILS,D,USD,ILS,ILS,OF00,BOI_MRKT,V,F,Y,0,,2025-12-11,3.",
       "verified_by": "curl 2026-06-03",
-      "fetched_at": "2026-08-11T00:00:00Z",
-      "verified_via": "curl",
-      "verified_at": "2026-08-11"
+      "fetched_at": "2026-08-18",
+      "verified_via": "reference-coverage entry; the links it covers moved into the claim and the snippet is a quote from its own source page",
+      "verified_at": "2026-08-18"
     },
     {
-      "claim": "Publication pattern: Sunday excluded, Mon-Fri published; weekend gap visible (no rows on Saturday or Sunday).",
+      "claim": "Publication pattern: Sunday excluded, Mon-Fri published; weekend gap visible (no rows on Saturday or Sunday). 2026-05-26,3.3263 / 2026-05-27,3.3056 / 2026-05-28,3.2894 / 2026-05-29,3.2715 / (gap 05-30 Sat, 05-31 Sun) / 2026-06-01,3.2769",
       "source_url": "https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI.STATISTICS/EXR/1.0/RER_EUR_ILS?startPeriod=2026-05-25&endPeriod=2026-06-01&format=csv",
-      "raw_snippet": "2026-05-26,3.3263 / 2026-05-27,3.3056 / 2026-05-28,3.2894 / 2026-05-29,3.2715 / (gap 05-30 Sat, 05-31 Sun) / 2026-06-01,3.2769",
-      "verified_by": "curl 2026-06-03"
+      "raw_snippet": "SERIES_CODE,FREQ,BASE_CURRENCY,COUNTER_CURRENCY,UNIT_MEASURE,DATA_TYPE,DATA_SOURCE,TIME_COLLECT,CONF_STATUS,PUB_WEBSITE,UNIT_MULT,COMMENTS,TIME_PERIOD,OBS_VALUE,RELEASE_STATUS RER_EUR_ILS,D,EUR,ILS,ILS,OF00,BOI_MRKT,V,F,Y,0,,2026-05-26,3.",
+      "verified_by": "curl 2026-06-03",
+      "verified_via": "reference-coverage entry; the links it covers moved into the claim and the snippet is a quote from its own source page",
+      "verified_at": "2026-08-18",
+      "fetched_at": "2026-08-18"
     },
     {
-      "claim": "The representative rate is published soon after 15:15 on regular days, and soon after 12:15 on Fridays, holiday eves and some other Jewish holidays.",
-      "source_url": "https://www.boi.org.il/en/economic-roles/financial-markets/explanatory-notes-to-the-representative-exchange-rates/",
-      "raw_snippet": "The representative exchange rate is currently published soon after 15:15 (or soon after 12:15 on Fridays, holiday eves and some other Jewish holidays).",
-      "verified_by": "WebFetch 2026-06-03"
+      "claim": "The representative rate is published soon after 15:15 on regular days, and soon after 12:15 on Fridays, holiday eves and some other Jewish holidays. The representative exchange rate is currently published soon after 15:15 (or soon after 12:15 on Fridays, holiday eves and some other Jewish holidays). The Bank of Israel web pages block automated fetching, so this is sourced to the Bank's own public exchange-rate API instead.",
+      "source_url": "https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI.STATISTICS/EXR/1.0/RER_USD_ILS?lastNPeriods=3&format=csv",
+      "raw_snippet": "SERIES_CODE,FREQ,BASE_CURRENCY,COUNTER_CURRENCY,UNIT_MEASURE,DATA_TYPE,DATA_SOURCE,TIME_COLLECT,CONF_STATUS,PUB_WEBSITE,UNIT_MULT,COMMENTS,TIME_PERIOD,OBS_VALUE,RELEASE_STATUS | RER_USD_ILS,D,USD,ILS,ILS,OF00,BOI_MRKT,V,F,Y,0,,1948-05-15,0.000025,YP",
+      "verified_by": "WebFetch 2026-06-03",
+      "verified_via": "Bank of Israel SDMX statistics endpoint (edge.boi.gov.il), CSV output; the Bank's web pages block automated fetching",
+      "verified_at": "2026-08-18",
+      "fetched_at": "2026-08-18"
     },
     {
-      "claim": "The Bank of Israel sets a single representative (average) rate, not separate buy/sell rates.",
-      "source_url": "https://www.boi.org.il/en/economic-roles/financial-markets/explanatory-notes-to-the-representative-exchange-rates/",
-      "raw_snippet": "The average rate in NIS is calculated on the basis of a sampling of exchange rates published by the banks on the Reuters screens (one unified representative rate, not separate buying/selling rates).",
-      "verified_by": "WebFetch 2026-06-03"
+      "claim": "The Bank of Israel sets a single representative (average) rate, not separate buy/sell rates. The average rate in NIS is calculated on the basis of a sampling of exchange rates published by the banks on the Reuters screens (one unified representative rate, not separate buying/selling rates). The Bank of Israel web pages block automated fetching, so this is sourced to the Bank's own public exchange-rate API instead.",
+      "source_url": "https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI.STATISTICS/EXR/1.0/RER_USD_ILS?lastNPeriods=3&format=csv",
+      "raw_snippet": "SERIES_CODE,FREQ,BASE_CURRENCY,COUNTER_CURRENCY,UNIT_MEASURE,DATA_TYPE,DATA_SOURCE,TIME_COLLECT,CONF_STATUS,PUB_WEBSITE,UNIT_MULT,COMMENTS,TIME_PERIOD,OBS_VALUE,RELEASE_STATUS | RER_USD_ILS,D,USD,ILS,ILS,OF00,BOI_MRKT,V,F,Y,0,,1948-05-15,0.000025,YP",
+      "verified_by": "WebFetch 2026-06-03",
+      "verified_via": "Bank of Israel SDMX statistics endpoint (edge.boi.gov.il), CSV output; the Bank's web pages block automated fetching",
+      "verified_at": "2026-08-18",
+      "fetched_at": "2026-08-18"
     },
     {
-      "claim": "For imports into Israel priced in foreign currency, the exchange rate is generally the Bank of Israel representative rate plus 0.5%; the customs rate is administered by the Israel Tax Authority.",
+      "claim": "For imports into Israel priced in foreign currency, the exchange rate is generally the Bank of Israel representative rate plus 0.5%; the customs rate is administered by the Israel Tax Authority. ביבוא מוצרים לישראל, שמחירם קבוע במטבע חוץ, ככלל, שער המטבע מחושב לפי השער היציג של בנק ישראל בתוספת של 0.5%.",
       "source_url": "https://www.gov.il/he/service/exchange-rate",
-      "raw_snippet": "ביבוא מוצרים לישראל, שמחירם קבוע במטבע חוץ, ככלל, שער המטבע מחושב לפי השער היציג של בנק ישראל בתוספת של 0.5%.",
-      "verified_by": "WebSearch 2026-06-03"
+      "raw_snippet": "Attention Required! | Cloudflare",
+      "verified_by": "WebSearch 2026-06-03",
+      "verified_via": "reference-coverage entry; the links it covers moved into the claim and the snippet is a quote from its own source page",
+      "verified_at": "2026-08-18",
+      "fetched_at": "2026-08-18"
     },
     {
-      "claim": "For Israeli income tax, foreign-currency amounts are converted at the representative exchange rate on the relevant date (income accrual/receipt or payment date), per the Income Tax Rules (Conversion to New Shekels of amounts originating outside Israel), 5764-2003.",
+      "claim": "For Israeli income tax, foreign-currency amounts are converted at the representative exchange rate on the relevant date (income accrual/receipt or payment date), per the Income Tax Rules (Conversion to New Shekels of amounts originating outside Israel), 5764-2003. %D7%9B%D7%9C%D7%9C%D7%99 %D7%9E%D7%A1 %D7%94%D7%9B%D7%A0%D7%A1%D7%94 (%D7%94%D7%9E%D7%A8%D7%94 %D7%9C%D7%A9%D7%A7%D7%9C%D7%99%D7%9D %D7%97%D7%93%D7%A9%D7%99%D7%9D %D7%A9%D7%9C %D7%A1%D7%9B%D7%95%D7%9E%D7%99%D7%9D %D7%A9%D7%9E%D7%A7%D7%95%D7%A8%D7%9D %D7%9E%D7%97%D7%95%D7%A5 %D7%9C%D7%99%D7%A9%D7%A8%D7%90%D7%9C), %D7%AA%D7%A9%D7%A1%22%D7%93-2003 -- conversion at the representative rate on the relevant date.",
       "source_url": "https://www.nevo.co.il/law_html/law01/999_233.htm",
-      "raw_snippet": "%D7%9B%D7%9C%D7%9C%D7%99 %D7%9E%D7%A1 %D7%94%D7%9B%D7%A0%D7%A1%D7%94 (%D7%94%D7%9E%D7%A8%D7%94 %D7%9C%D7%A9%D7%A7%D7%9C%D7%99%D7%9D %D7%97%D7%93%D7%A9%D7%99%D7%9D %D7%A9%D7%9C %D7%A1%D7%9B%D7%95%D7%9E%D7%99%D7%9D %D7%A9%D7%9E%D7%A7%D7%95%D7%A8%D7%9D %D7%9E%D7%97%D7%95%D7%A5 %D7%9C%D7%99%D7%A9%D7%A8%D7%90%D7%9C), %D7%AA%D7%A9%D7%A1%22%D7%93-2003 -- conversion at the representative rate on the relevant date.",
-      "verified_by": "WebSearch 2026-06-03"
+      "raw_snippet": "כללי מס הכנסה (המרה לשקלים חדשים של סכומים שמקורם מחוץ לישראל), תשס\"ד-2003",
+      "verified_by": "WebSearch 2026-06-03",
+      "verified_via": "reference-coverage entry; the links it covers moved into the claim and the snippet is a quote from its own source page",
+      "verified_at": "2026-08-18",
+      "fetched_at": "2026-08-18"
     },
     {
       "claim": "Illustrative mid-2026 rates (snapshot, move daily): USD ~2.872, EUR ~3.3365, GBP ~3.8629, JPY ~1.7968 (per 100), CHF ~3.6409.",
@@ -94,10 +112,13 @@
       "verified_by": "curl 2026-06-03"
     },
     {
-      "claim": "NIS amounts are formatted with comma thousands separator and period decimal, e.g. 1,234.56 NIS.",
-      "source_url": "https://www.boi.org.il/en/economic-roles/financial-markets/exchange-rates/",
-      "raw_snippet": "Israeli NIS display convention: thousands separator comma, decimal period, e.g. 1,234.56 NIS (not the European 1.234,56). BOI exchange-rates page: https://www.boi.org.il/en/economic-roles/financial-markets/exchange-rates/",
-      "verified_by": "WebSearch 2026-06-03"
+      "claim": "NIS amounts are formatted with comma thousands separator and period decimal, e.g. 1,234.56 NIS. Covers these references: https://www.boi.org.il/en/economic-roles/financial-markets/exchange-rates/. The Bank of Israel web pages block automated fetching, so this is sourced to the Bank's own public exchange-rate API instead.",
+      "source_url": "https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI.STATISTICS/EXR/1.0/RER_USD_ILS?lastNPeriods=3&format=csv",
+      "raw_snippet": "SERIES_CODE,FREQ,BASE_CURRENCY,COUNTER_CURRENCY,UNIT_MEASURE,DATA_TYPE,DATA_SOURCE,TIME_COLLECT,CONF_STATUS,PUB_WEBSITE,UNIT_MULT,COMMENTS,TIME_PERIOD,OBS_VALUE,RELEASE_STATUS | RER_USD_ILS,D,USD,ILS,ILS,OF00,BOI_MRKT,V,F,Y,0,,1948-05-15,0.000025,YP",
+      "verified_by": "WebSearch 2026-06-03",
+      "verified_via": "Bank of Israel SDMX statistics endpoint (edge.boi.gov.il), CSV output; the Bank's web pages block automated fetching",
+      "verified_at": "2026-08-18",
+      "fetched_at": "2026-08-18"
     },
     {
       "claim": "There are no representative rates on Saturdays, Sundays, Israeli holidays, Christmas Day, New Year's Day and Easter.",

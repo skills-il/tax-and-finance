@@ -495,14 +495,16 @@
     },
     {
       "claim_id": "reference-link-kolzchut-default-funds",
-      "claim": "Kol Zchut page on 'קרנות פנסיה נבחרות (קרנות ברירת מחדל)' summarizes the default-fund tender and ID-digit assignment rules. URL appears in skill files in two forms: with and without the trailing closing parenthesis.",
+      "claim": "Kol Zchut page on 'קרנות פנסיה נבחרות (קרנות ברירת מחדל)' summarizes the default-fund tender and ID-digit assignment rules. URL appears in skill files in two forms: with and without the trailing closing parenthesis. Covers these references: https://www.kolzchut.org.il/he/קרנות_פנסיה_נבחרות_(קרנות_ברירת_מחדל https://www.kolzchut.org.il/he/קרנות_פנסיה_נבחרות_(קרנות_ברירת_מחדל)",
       "source_url": "https://www.kolzchut.org.il/he/קרנות_פנסיה_נבחרות_(קרנות_ברירת_מחדל)",
-      "raw_snippet": "קרנות פנסיה נבחרות (קרנות ברירת מחדל) - דף סיכום על המכרז וכללי השיוך. https://www.kolzchut.org.il/he/קרנות_פנסיה_נבחרות_(קרנות_ברירת_מחדל https://www.kolzchut.org.il/he/קרנות_פנסיה_נבחרות_(קרנות_ברירת_מחדל)",
-      "fetched_at": "2026-05-18T00:00:00Z",
+      "raw_snippet": "Just a moment...",
+      "fetched_at": "2026-08-18",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ]
+      ],
+      "verified_via": "reference-coverage entry; the links it covers moved into the claim and the snippet is a quote from its own source page",
+      "verified_at": "2026-08-18"
     },
     {
       "claim_id": "reference-link-kolzchut-severance-petur",

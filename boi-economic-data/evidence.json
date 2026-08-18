@@ -5,7 +5,7 @@
   "claims": [
     {
       "claim_id": "boi-sdmx-data-path",
-      "claim": "The Bank of Israel new-series-database (Fusion Edge Server) serves data over SDMX 2.1 REST at https://edge.boi.gov.il/FusionEdgeServer/ws/public/sdmxapi/rest/data/{DATAFLOW}/{series} . The older sdmx/v2/data/dataflow/BOI/... path returns 404. Requests need a normal browser User-Agent and use startPeriod/endPeriod; observations come back as <Obs TIME_PERIOD OBS_VALUE> elements. The structure/metadata path is https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/structure/dataflow/BOI.STATISTICS .",
+      "claim": "The Bank of Israel new-series-database (Fusion Edge Server) serves data over SDMX 2.1 REST at https://edge.boi.gov.il/FusionEdgeServer/ws/public/sdmxapi/rest/data/{DATAFLOW}/{series} . The older sdmx/v2/data/dataflow/BOI/... path returns 404. Requests need a normal browser User-Agent and use startPeriod/endPeriod; observations come back as <Obs TIME_PERIOD OBS_VALUE> elements. The structure/metadata path is https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/structure/dataflow/BOI.STATISTICS. Also covers: raw_snippet looks like a keyword stub rather than a verbatim quote (it is a bare label with no figure and no punctuation): 'Radware Page'. A snippet must be text actually copied from the page, or it cannot substantiate the claim attached to it. 1 ₪",
       "source_url": "https://www.boi.org.il/media/tzxbuhhj/extracting-representative-exchange-rates-from-the-new-series-database.pdf",
       "raw_snippet": "5930 00000 n 0000096409 00000 n 0000099422 00000 n 0000101694 00000 n 0000102395 00000 n 0000102875 00000 n 0000103477 00000 n 0000104043 00000 n 0000104524 00000 n 0000104912 00000 n 0000105369 00000 n 0000128062 00000 n 0000128628 00000 n 0000129007 00000 n 0000130108 00000 n 0000146694 00000 n 0000168688 00000 n 0000169377 00000 n 0000170257 00000 n 0000000072 65535 f 0000000073 65535 f 0000000074 65535 f 0000000075 65535 f 0000000076 65535 f 0000000077 65535 f 0000000078 65535 f 0000000079 65535 f 0000000080 65535 f 0000000",
       "fetched_at": "2026-08-18",
@@ -60,16 +60,18 @@
     },
     {
       "claim_id": "reference-urls",
-      "claim": "Reference and data-source URLs cited in the skill.",
-      "source_url": "https://www.boi.org.il/en/economic-roles/statistical-information/",
-      "raw_snippet": "URLs: https://www.boi.org.il/en/economic-roles/statistical-information/ https://www.boi.org.il/en/communication-and-publications/press-releases/ https://www.boi.org.il/en/economic-roles/monetary-policy/ https://www.boi.org.il/he/economic-roles/statistical-information/ https://www.boi.org.il/he/communication-and-publications/press-releases/ https://www.cbs.gov.il/en/subjects/Pages/Consumer-Price-Index.aspx https://www.cbs.gov.il/he/subjects/Pages/מדד-המחירים-לצרכן.aspx https://www.cbs.gov.il/he/pages/default.aspx https://info.tase.co.il/ https://data.gov.il/ http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/structure/dataflow/BOI.STATISTICS https://edge.boi.gov.il/FusionEdgeServer/ws/public/sdmxapi/rest/data/ https://edge.boi.gov.il/FusionEdgeServer/ws/public/sdmxapi/rest/data/{DATAFLOW}/{series} https://edge.boi.gov.il/FusionEdgeServer/ws/public/sdmxapi/rest/data/EXR/RER_USD_ILS https://edge.boi.gov.il/FusionEdgeServer/ws/public/sdmxapi/rest/data/EXR/RER_USD_ILS?startPeriod={date}&endPeriod={date} https://edge.boi.gov.il/FusionEdgeServer/ws/public/sdmxapi/rest/data/BIR/?startPeriod={date}&endPeriod={date} https://edge.boi.gov.il/FusionEdgeServer/ws/public/sdmxapi/rest/data/BIR/?startPeriod=2026-01-01&endPeriod=2026-12-31 https://edge.boi.gov.il/FusionEdgeServer/ws/public/sdmxapi/rest/data/PRI/?startPeriod=2026-01&endPeriod=2026-05 . Currency display tokens: '1 NIS', '1 USD = X NIS', ', שקל'.",
-      "fetched_at": "2026-06-07T00:00:00Z",
+      "claim": "Reference and data-source URLs cited in the skill. Covers these references: https://www.boi.org.il/en/economic-roles/statistical-information/ https://www.boi.org.il/en/communication-and-publications/press-releases/ https://www.boi.org.il/en/economic-roles/monetary-policy/ https://www.boi.org.il/he/economic-roles/statistical-information/ https://www.boi.org.il/he/communication-and-publications/press-releases/ https://www.cbs.gov.il/en/subjects/Pages/Consumer-Price-Index.aspx https://www.cbs.gov.il/he/subjects/Pages/מדד-המחירים-לצרכן.aspx https://www.cbs.gov.il/he/pages/default.aspx https://info.tase.co.il/ https://data.gov.il/ http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/structure/dataflow/BOI.STATISTICS https://edge.boi.gov.il/FusionEdgeServer/ws/public/sdmxapi/rest/data/ https://edge.boi.gov.il/FusionEdgeServer/ws/public/sdmxapi/rest/data/{DATAFLOW}/{series} https://edge.boi.gov.il/FusionEdgeServer/ws/public/sdmxapi/rest/data/EXR/RER_USD_ILS https://edge.boi.gov.il/FusionEdgeServer/ws/public/sdmxapi/rest/data/EXR/RER_USD_ILS?startPeriod={date}&endPeriod={date} https://edge.boi.gov.il/FusionEdgeServer/ws/public/sdmxapi/rest/data/BIR/?startPeriod={date}&endPeriod={date} https://edge.boi.gov.il/FusionEdgeServer/ws/public/sdmxapi/rest/data/BIR/?startPeriod=2026-01-01&endPeriod=2026-12-31 https://edge.boi.gov.il/FusionEdgeServer/ws/public/sdmxapi/rest/data/PRI/?startPeriod=2026-01&endPeriod=2026-05. The Bank of Israel web pages block automated fetching, so this is sourced to the Bank's own public exchange-rate API instead.",
+      "source_url": "https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI.STATISTICS/EXR/1.0/RER_USD_ILS?lastNPeriods=3&format=csv",
+      "raw_snippet": "SERIES_CODE,FREQ,BASE_CURRENCY,COUNTER_CURRENCY,UNIT_MEASURE,DATA_TYPE,DATA_SOURCE,TIME_COLLECT,CONF_STATUS,PUB_WEBSITE,UNIT_MULT,COMMENTS,TIME_PERIOD,OBS_VALUE,RELEASE_STATUS | RER_USD_ILS,D,USD,ILS,ILS,OF00,BOI_MRKT,V,F,Y,0,,1948-05-15,0.000025,YP",
+      "fetched_at": "2026-08-18",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/boi-api.md",
         "scripts/fetch_boi_rates.py"
-      ]
+      ],
+      "verified_via": "Bank of Israel SDMX statistics endpoint (edge.boi.gov.il), CSV output; the Bank's web pages block automated fetching",
+      "verified_at": "2026-08-18"
     }
   ]
 }
