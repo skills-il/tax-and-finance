@@ -86,14 +86,14 @@
       "claim_id": "reference-urls-and-examples",
       "claim": "Reference URLs and illustrative example figures. Example calc figures (Tel Aviv zone 2 ~95 NIS/sqm, 85 sqm -> ~8,075 NIS/yr -> ~1,346 bimonthly; Jerusalem zone bet ~72 NIS/sqm, 70 sqm -> ~5,040 NIS/yr; Haifa ~65 NIS/sqm, 13 sqm discrepancy -> ~845 NIS) are illustrative estimates, not official rates. Covers these references: https://www.kolzchut.org.il/he/ארנונה https://www.gov.il/he/departments/topics/property_tax_arnona https://www.btl.gov.il/benefits/Disability/Pages/default.aspx https://www.tel-aviv.gov.il/ https://www.jerusalem.muni.il/. Also covers: 130 ₪ 1346 ₪ 2500 ₪ 3500 ₪ 3750 ₪ 4375 ₪ 4536 ₪ 4875 ₪ 504 ₪ 5200 ₪ 5375 ₪ 60 ₪ 6100 ₪ 6800 ₪ 7500 ₪ 84 ₪ 90 ₪ 3% *2404 *6195 *6226 *6230 Section 3 סעיף 3",
       "source_url": "https://www.kolzchut.org.il/he/%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94",
-      "raw_snippet": "Just a moment...",
+      "raw_snippet": "הפורטל מרכז מידע לגבי הקלות שונות בתשלום ארנונה, בהתאם לסוגי הזכאויות.",
       "fetched_at": "2026-08-18",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/arnona-rates-guide.md"
       ],
-      "verified_via": "reference-coverage entry; the links it covers moved into the claim and the snippet is a quote from its own source page",
+      "verified_via": "Kol Zchut page read through the site's MediaWiki API from inside a loaded page, which passes the WAF a plain fetch does not",
       "verified_at": "2026-08-18"
     },
     {

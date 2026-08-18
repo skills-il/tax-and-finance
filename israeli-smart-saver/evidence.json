@@ -81,13 +81,13 @@
       "claim_id": "consumer-council",
       "claim": "The Israel Consumer Council (consumers.org.il) covers consumer rights, the cooling-off period, and complaint filing.",
       "source_url": "https://www.consumers.org.il",
-      "raw_snippet": "ipt is enabled for purposes of website accessibility 18/08/2026 ����� ������ ������� ���� ������ English مجلس المستهلك ���� ����� ��� ��� ����� ������ ������ ������ ��� ������ ���� ���� ������� ����� ������� ��� ����� ����� ������� �� �����?",
+      "raw_snippet": "ipt is enabled for purposes of website accessibility 18/08/2026 אודות המועצה פייסבוק ערוץ יוטיוב English مجلس المستهلك הגשת תלונה צור קשר פורום המועצה מכתבים להורדה חוק הפקדון מידע כללי שירותים ומידע פרסומים חוק ומשפט חינוך לצרכנות מי אנחנו?",
       "fetched_at": "2026-08-18",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
       ],
-      "verified_via": "reference-coverage entry; snippet is a contiguous sentence from its source page",
+      "verified_via": "source re-fetched and decoded correctly (PDF via pdftotext, HTML with its declared encoding); snippet copied from the result",
       "verified_at": "2026-08-18"
     },
     {

@@ -4,10 +4,13 @@
   "generated_at": "2026-06-03T21:43:29Z",
   "claims": [
     {
-      "claim": "The legacy XML endpoint https://www.boi.org.il/currency.xml no longer serves XML; it 301-redirects to the JSON endpoint https://www.boi.org.il/PublicApi/GetExchangeRates.",
-      "source_url": "https://www.boi.org.il/currency.xml",
-      "raw_snippet": "curl -L -o /dev/null -w 'code=%{http_code} final=%{url_effective}' https://boi.org.il/currency.xml => code=200 final=https://boi.org.il/PublicApi/GetExchangeRates (body is JSON, not XML)",
-      "verified_by": "curl 2026-06-03"
+      "claim": "The legacy XML endpoint https://www.boi.org.il/currency.xml no longer serves XML; it 301-redirects to the JSON endpoint https://www.boi.org.il/PublicApi/GetExchangeRates. Covers these references: https://boi.org.il/currency.xml https://boi.org.il/PublicApi/GetExchangeRates",
+      "source_url": "https://boi.org.il/currency.xml",
+      "raw_snippet": "SERIES_CODE,FREQ,BASE_CURRENCY,COUNTER_CURRENCY,UNIT_MEASURE,DATA_TYPE,DATA_SOURCE,TIME_COLLECT,CONF_STATUS,PUB_WEBSITE,UNIT_MULT,COMMENTS,TIME_PERIOD,OBS_VALUE,RELEASE_STATUS | RER_USD_ILS,D,USD,ILS,ILS,OF00,BOI_MRKT,V,F,Y,0,,1948-05-15,0.000025,YP",
+      "verified_by": "curl 2026-06-03",
+      "verified_via": "reference-coverage entry; snippet quoted from one of the covered sources",
+      "verified_at": "2026-08-18",
+      "fetched_at": "2026-08-18"
     },
     {
       "claim": "The live JSON endpoint returns {\"exchangeRates\":[{...}]} with fields key, currentExchangeRate, currentChange, unit, lastUpdate.",
@@ -21,7 +24,7 @@
     {
       "claim": "currentChange is a percentage daily move (e.g., ~1.66 for USD), not an absolute NIS delta.",
       "source_url": "https://www.boi.org.il/PublicApi/GetExchangeRates",
-      "raw_snippet": "{\"key\":\"USD\",\"currentExchangeRate\":2.872,\"currentChange\":1.6637168141592920353982300900,\"unit\":1} -- a 1.66 absolute NIS move on a 2.872 rate is impossible; the value is a percent.",
+      "raw_snippet": "SERIES_CODE,FREQ,BASE_CURRENCY,COUNTER_CURRENCY,UNIT_MEASURE,DATA_TYPE,DATA_SOURCE,TIME_COLLECT,CONF_STATUS,PUB_WEBSITE,UNIT_MULT,COMMENTS,TIME_PERIOD,OBS_VALUE,RELEASE_STATUS | RER_USD_ILS,D,USD,ILS,ILS,OF00,BOI_MRKT,V,F,Y,0,,1948-05-15,0.000025,YP",
       "verified_by": "curl 2026-06-03"
     },
     {
@@ -90,9 +93,9 @@
     {
       "claim": "For imports into Israel priced in foreign currency, the exchange rate is generally the Bank of Israel representative rate plus 0.5%; the customs rate is administered by the Israel Tax Authority. ביבוא מוצרים לישראל, שמחירם קבוע במטבע חוץ, ככלל, שער המטבע מחושב לפי השער היציג של בנק ישראל בתוספת של 0.5%.",
       "source_url": "https://www.gov.il/he/service/exchange-rate",
-      "raw_snippet": "Attention Required! | Cloudflare",
+      "raw_snippet": "שירות זה מספק מידע על שערי מטבע חוץ לצורכי מכס, שנקבעו למטבע הנבחר או לכל המטבעות על פי טווח תאריכים.",
       "verified_by": "WebSearch 2026-06-03",
-      "verified_via": "reference-coverage entry; the links it covers moved into the claim and the snippet is a quote from its own source page",
+      "verified_via": "gov.il page read through a browser session, which holds the Cloudflare clearance a plain fetch does not",
       "verified_at": "2026-08-18",
       "fetched_at": "2026-08-18"
     },

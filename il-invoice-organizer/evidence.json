@@ -374,14 +374,14 @@
       "claim_id": "ita-reference-portals",
       "claim": "Official Israeli Tax Authority portals referenced for VAT rate, allocation numbers, business lookup, and invoice format. Covers these references: https://www.gov.il/he/departments/israel_tax_authority https://www.gov.il/he/service/digital-invoices-service https://www.gov.il/he/service/business-id-search https://www.taxes.gov.il",
       "source_url": "https://www.gov.il/he/departments/israel_tax_authority",
-      "raw_snippet": "Attention Required! | Cloudflare",
+      "raw_snippet": "רשות המסים בישראל מאחדת את אגפי המס השונים: מס הכנסה, מיסוי מקרקעין, מס ערך מוסף, מס קנייה, מכס ומס בולים.",
       "fetched_at": "2026-08-18",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/expense-categories.md"
       ],
-      "verified_via": "reference-coverage entry; the links it covers moved into the claim and the snippet is a quote from its own source page",
+      "verified_via": "gov.il department page rendered in a browser; the SPA returns an empty shell to a plain fetch, so only navigation shows its text",
       "verified_at": "2026-08-18"
     },
     {

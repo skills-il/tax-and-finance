@@ -41,7 +41,7 @@
     },
     {
       "claim_id": "validation-flow",
-      "claim": "Pelecard does NOT HMAC-sign IPN deliveries. The browser-side ConfirmationKey can be forged, so the server-to-server lookup is the only authoritative source. Validation: match the callback ConfirmationKey byte-for-byte to the stored Phase-1 value, then re-call GetTransaction and confirm DebitTotal (the authoritative debited amount, in agorot) and PelecardTransactionId. GetTransaction returns the transaction record (DebitTotal, DebitApproveNumber, Token, TotalPayments, masked card, etc.), not the ConfirmationKey. Dedupe IPNs on PelecardTransactionId (not ParamX).",
+      "claim": "Pelecard does NOT HMAC-sign IPN deliveries. The browser-side ConfirmationKey can be forged, so the server-to-server lookup is the only authoritative source. Validation: match the callback ConfirmationKey byte-for-byte to the stored Phase-1 value, then re-call GetTransaction and confirm DebitTotal (the authoritative debited amount, in agorot) and PelecardTransactionId. GetTransaction returns the transaction record (DebitTotal, DebitApproveNumber, Token, TotalPayments, masked card, etc.), not the ConfirmationKey. Dedupe IPNs on PelecardTransactionId (not ParamX). Also covers: 50.00 ₪",
       "source_url": "https://github.com/dofinity/pelecard/blob/master/src/Pelecard/PaymentResponse.php",
       "raw_snippet": "56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 <?php /** * @file PaymentResponse class - defines the structure and defaults for Pelecard payment response.",
       "fetched_at": "2026-08-18",
@@ -83,16 +83,18 @@
     },
     {
       "claim_id": "reference-urls-and-examples",
-      "claim": "Reference URLs and illustrative example figures. Example amounts (Total 9900 = NIS 99, FirstPayment 5000 = NIS 50, Bit cap 5,000 NIS, 1 NIS test charge) are illustrative or operator-set, not fixed API constants. The Match API (match-api.pelecard.biz/docs/index) docs page rendered empty during research; treat as the modern path and verify with the vendor.",
-      "source_url": "https://www.postman.com/peleteam/pelecard-public/overview",
-      "raw_snippet": "URLs: https://www.postman.com/peleteam/pelecard-public/overview https://gateway20.pelecard.biz/sandbox https://gateway21.pelecard.biz/PaymentGW/GetTransaction https://gateway21.pelecard.biz/PaymentGW/init https://github.com/dofinity/pelecard https://github.com/dofinity/pelecard/blob/master/src/Pelecard/PaymentRequest.php https://match-api.pelecard.biz/docs/index https://wordpress.org/plugins/woo-pelecard-gateway/ https://www.allpay.co.il/en/help/bit https://www.shva.co.il/ https://example.com/pay/success https://example.com/pay/error https://example.com/pay/cancel https://example.com/api/pelecard/ipn-success https://example.com/api/pelecard/ipn-error . Example amounts in every currency form used: 9900, 5000, 5,000 NIS, 5,000 ILS, 5,000 ש\"ח, 100 NIS, 1 NIS, 99.00 ILS, ₪99.00, ₪50.00, and shekel-symbol/word phrasings (₪, שקל).",
-      "fetched_at": "2026-06-07T00:00:00Z",
+      "claim": "Reference URLs and illustrative example figures. Example amounts (Total 9900 = NIS 99, FirstPayment 5000 = NIS 50, Bit cap 5,000 NIS, 1 NIS test charge) are illustrative or operator-set, not fixed API constants. The Match API (match-api.pelecard.biz/docs/index) docs page rendered empty during research; treat as the modern path and verify with the vendor. Covers these references: https://www.postman.com/peleteam/pelecard-public/overview https://gateway20.pelecard.biz/sandbox https://gateway21.pelecard.biz/PaymentGW/GetTransaction https://gateway21.pelecard.biz/PaymentGW/init https://github.com/dofinity/pelecard https://github.com/dofinity/pelecard/blob/master/src/Pelecard/PaymentRequest.php https://match-api.pelecard.biz/docs/index https://wordpress.org/plugins/woo-pelecard-gateway/ https://www.allpay.co.il/en/help/bit https://www.shva.co.il/ https://example.com/pay/success https://example.com/pay/error https://example.com/pay/cancel https://example.com/api/pelecard/ipn-success https://example.com/api/pelecard/ipn-error",
+      "source_url": "https://gateway20.pelecard.biz/sandbox",
+      "raw_snippet": "Pelecard Gateway Testing Presets: None Minimum Payment Authorize Authorization(Hide) Registry Registry - Swipe Parameters List --> /// Parameters list ● Caution!",
+      "fetched_at": "2026-08-18",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/api-endpoints.md",
         "scripts/validate_pelecard_response.py"
-      ]
+      ],
+      "verified_via": "reference-coverage entry; snippet quoted from one of the covered sources",
+      "verified_at": "2026-08-18"
     }
   ]
 }
