@@ -126,14 +126,16 @@
     },
     {
       "claim_id": "reference-urls",
-      "claim": "Reference URLs cited by the skill",
-      "source_url": "https://www.misim.gov.il",
-      "raw_snippet": "URLs: https://www.gov.il/en/departments/israel_tax_authority https://www.gov.il/he/departments/israel_tax_authority https://www.misim.gov.il https://www.kolzchut.org.il/he/מדרגות_מס_הכנסה https://www.kolzchut.org.il/he/נקודת_זיכוי https://www.kolzchut.org.il/he/חישוב_מס_שבח https://www.gov.il/he/departments/topics/land_taxation",
-      "fetched_at": "2026-06-16T23:25:00Z",
+      "claim": "Reference URLs cited by the skill. Covers these references: https://www.gov.il/en/departments/israel_tax_authority https://www.gov.il/he/departments/israel_tax_authority https://www.misim.gov.il https://www.kolzchut.org.il/he/מדרגות_מס_הכנסה https://www.kolzchut.org.il/he/נקודת_זיכוי https://www.kolzchut.org.il/he/חישוב_מס_שבח https://www.gov.il/he/departments/topics/land_taxation. misim.gov.il redirects to this Tax Authority landing page.",
+      "source_url": "https://www.gov.il/he/departments/israel_tax_authority/govil-landing-page",
+      "raw_snippet": "רשות המסים בישראל מאחדת את אגפי המס השונים: מס הכנסה, מיסוי מקרקעין, מס ערך מוסף, מס קנייה, מכס ומס בולים.",
+      "fetched_at": "2026-08-19",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ]
+      ],
+      "verified_via": "misim.gov.il followed in a browser to the Tax Authority landing page",
+      "verified_at": "2026-08-19"
     },
     {
       "claim_id": "domain-terms-form-numbers-and-tokens",

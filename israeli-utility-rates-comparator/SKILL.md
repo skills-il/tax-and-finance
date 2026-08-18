@@ -79,7 +79,7 @@ To compare electricity costs:
 
 **Independent electricity producers (residential market):**
 
-The residential electricity market is open to private suppliers. As of 2026, approximately 360,000 customers had switched to alternate suppliers (up from ~280,000 at end-2025), with typical discounts of 5-21% off the IEC tariff for the generation portion. Active residential suppliers in 2026 include:
+The residential electricity market is open to private suppliers. As of 2026, approximately 360,000 customers had switched to alternate suppliers (up from ~280,000 at end-2025), with discounts of 7% to 20% off the IEC tariff for the generation portion. Active residential suppliers in 2026 include:
 - **Cellcom Energy**, **Partner**, **Bezeq**, **HOT Energy** (telecom-bundled offers)
 - **Pazgas Electricity**, **Amisragas**, **Electra Power** (energy and gas group offers)
 - **OPC Energy**, **Dalia Energy**, **Enlight Renewable Energy** (independent generators, historically large-customer focused, also signing residential customers)
@@ -249,11 +249,11 @@ Per-utility bill-reduction tips (electricity, water, arnona, cellular & internet
 ### Step 9: Smart Meter Adoption and Monitoring
 
 **Smart meters (monéi chokhéakh):**
-- IEC has installed approximately 1 million smart meters as of 2026 (~30% of households); the announced target is **3.7 million smart meters by end-2028**, prioritizing high-consumption households and dense urban areas
+- IEC passed 1 million smart meters in August 2024, about 30% of all meters at that point, and brought its rollout target forward by eight years: **3.7 million smart meters by end-2028**. The installed base has grown since, so treat the million as a dated milestone rather than a current count
 - Allow real-time consumption monitoring
 - Enable TOU pricing and accurate readings for private suppliers (the supplier needs interval data, not a monthly estimate)
 - Check eligibility at iec.co.il, call **103** (also reachable as 055-7000103 for SMS / WhatsApp), or use the IEC app
-- Self-paid expedited installation (~260 ILS) is available where IEC has not yet deployed in the area, with typical wait of 2-12 weeks
+- Self-paid expedited installation is available where IEC has not yet deployed in the area. IEC publishes the current fee and the waiting time; ask when you apply rather than budgeting from a figure quoted elsewhere
 
 **Monitoring tools:**
 - IEC app (available on iOS and Android): view real-time consumption, billing history, and payment options

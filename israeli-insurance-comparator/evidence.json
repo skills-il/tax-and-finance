@@ -16,15 +16,17 @@
     },
     {
       "claim_id": "gov-calculators",
-      "claim": "Official government insurance tools: car.cma.gov.il is the CMA mandatory-car (hova) standardized-tariff calculator; govcarins.mof.gov.il is the Ministry of Finance comprehensive (makif) cost-estimation simulator.",
+      "claim": "Official government insurance tools: car.cma.gov.il is the CMA mandatory-car (hova) standardized-tariff calculator; govcarins.mof.gov.il is the Ministry of Finance comprehensive (makif) cost-estimation simulator. Covers these references: https://car.cma.gov.il/ https://govcarins.mof.gov.il/",
       "source_url": "https://car.cma.gov.il/",
-      "raw_snippet": "https://car.cma.gov.il/ https://govcarins.mof.gov.il/",
-      "fetched_at": "2026-05-31T00:00:00Z",
+      "raw_snippet": "פרטי הרכב סוג רכב רכב פרטי אופנוע אוטובוס/טיולית מונית רכב מסחרי רכב מיוחד סוג בעלות בעלות פרטית בעלות אחרת",
+      "fetched_at": "2026-08-19",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/domain-checklist.md"
-      ]
+      ],
+      "verified_via": "Capital Market Authority car-insurance calculator rendered in a browser",
+      "verified_at": "2026-08-19"
     },
     {
       "claim_id": "maccabi-tier-order",

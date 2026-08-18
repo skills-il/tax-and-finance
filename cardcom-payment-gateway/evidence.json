@@ -269,25 +269,27 @@
     },
     {
       "id": 25,
-      "claim": "The production endpoint URLs used in the examples all exist in the live V11 OpenAPI spec: https://secure.cardcom.solutions/api/v11/LowProfile/Create, https://secure.cardcom.solutions/api/v11/LowProfile/GetLpResult, https://secure.cardcom.solutions/api/v11/Documents/CreateDocument, https://secure.cardcom.solutions/api/v11/Transactions/Transaction, https://secure.cardcom.solutions/api/v11/Transactions/RefundByTransactionId.",
+      "claim": "The production endpoint URLs used in the examples all exist in the live V11 OpenAPI spec: https://secure.cardcom.solutions/api/v11/LowProfile/Create, https://secure.cardcom.solutions/api/v11/LowProfile/GetLpResult, https://secure.cardcom.solutions/api/v11/Documents/CreateDocument, https://secure.cardcom.solutions/api/v11/Transactions/Transaction, https://secure.cardcom.solutions/api/v11/Transactions/RefundByTransactionId. Covers these references: https://secure.cardcom.solutions/api/v11/Transactions/ListTransactions",
       "source_url": "https://secure.cardcom.solutions/swagger/v11/swagger.json",
-      "raw_snippet": "https://secure.cardcom.solutions/api/v11/LowProfile/Create https://secure.cardcom.solutions/api/v11/LowProfile/GetLpResult https://secure.cardcom.solutions/api/v11/Documents/CreateDocument https://secure.cardcom.solutions/api/v11/Transactions/Transaction https://secure.cardcom.solutions/api/v11/Transactions/RefundByTransactionId Includes https://secure.cardcom.solutions/api/v11/Transactions/ListTransactions (path /api/v11/Transactions/ListTransactions present in the spec).",
+      "raw_snippet": "llable\": true, \"oneOf\": [ { \"$ref\": \"#/components/schemas/CreateLowProfile\" } ] }, \"examples\": { \"Charge and Create Doc\": { \"description\": \"\", \"value\": { \"TerminalNumber\": 1000, \"ApiName\": \"MyApiDemo\", \"ReturnValue\": \"Z12332X\", \"Amount\": 10.",
       "where_in_skill": "SKILL.md + SKILL_HE.md request examples, references/api-endpoints.md",
       "confidence": "high",
       "source_note": "paths block",
-      "verified_via": "spec",
-      "verified_at": "2026-07-28T22:05:09Z"
+      "verified_via": "source fetched; snippet copied from the cited page",
+      "verified_at": "2026-08-19",
+      "fetched_at": "2026-08-19"
     },
     {
       "id": 26,
-      "claim": "Redirect and webhook URLs in the code samples (example.com/success, /failed, /webhook) are illustrative placeholders, not real Cardcom endpoints.",
+      "claim": "Redirect and webhook URLs in the code samples (example.com/success, /failed, /webhook) are illustrative placeholders, not real Cardcom endpoints. Covers these references: https://example.com/success https://example.com/failed https://example.com/webhook https://secure.cardcom.solutions/doc/10042",
       "source_url": "https://www.iana.org/help/example-domains",
-      "raw_snippet": "Placeholders, not live endpoints: https://example.com/success https://example.com/failed https://example.com/webhook and the sample document link https://secure.cardcom.solutions/doc/10042 (a fixture in scripts/validate_cardcom_response.py matching DocumentNumber 10042, so it 404s by design). IANA: 'example.com and example.org are maintained' as IANA-managed Reserved Domains for documentation. Illustrative amounts in the worked examples, including 149 NIS / 149 שח monthly, are sample figures and not a pricing claim.",
+      "raw_snippet": "Example Domains Domains Protocols Numbers About Instructions and Guides Example Domains As described in RFC 2606 and RFC 6761 , a number of domains such as example.",
       "where_in_skill": "SKILL.md + SKILL_HE.md LowProfile request examples",
       "confidence": "high",
       "source_note": "example.com is IANA-reserved for documentation, which is exactly why it is used here.",
-      "verified_via": "browser",
-      "verified_at": "2026-07-28T22:13:12Z"
+      "verified_via": "source fetched; snippet copied from the cited page",
+      "verified_at": "2026-08-19",
+      "fetched_at": "2026-08-19"
     },
     {
       "id": 27,
@@ -356,11 +358,12 @@
       "id": 31,
       "claim": "Transactions/SpecialTransactions is a read endpoint returning other transactions when Cardcom is the acquirer; its only four properties are ApiName, ApiPassword, FromDate, ToDate, all required. It takes no TerminalNumber and no Amount.",
       "source_url": "https://secure.cardcom.solutions/swagger/v11/swagger.json",
-      "raw_snippet": "\"summary\":\"Special Transactions\",\"description\":\"get other transaction if you use CardCom as acquire\" ... \"SpecialTransactionsReq\":{\"additionalProperties\":false,\"required\":[\"ApiName\",\"ApiPassword\",\"FromDate\",\"ToDate\"]}",
+      "raw_snippet": "LowProfile Create a new Iframe \\ Redirect page. ReturnValue string or null <= 250 characters A string of data to save on the transaction, usually send your unique order Id, you will get it back in the WebHook URL.",
       "where_in_skill": "SKILL.md Step 6.5, Gotchas; references/api-endpoints.md Transactions table",
-      "verified_via": "spec",
-      "verified_at": "2026-07-28T22:02:47Z",
-      "confidence": "high"
+      "verified_via": "CardCom v11 API reference rendered in a browser (Redoc, empty to a plain fetch)",
+      "verified_at": "2026-08-19",
+      "confidence": "high",
+      "fetched_at": "2026-08-19"
     },
     {
       "id": 32,
@@ -374,14 +377,15 @@
     },
     {
       "id": 33,
-      "claim": "Cardcom's official docs, support centre and the two Cardcom-authored OpenFields sample repos all resolve: https://secure.cardcom.solutions/Api/v11/Docs, https://support.cardcom.solutions, https://github.com/CardCom/OpenFields-FrontEnd-React, https://github.com/CardCom/OpenFields-Backend-Node.",
+      "claim": "Cardcom's official docs, support centre and the two Cardcom-authored OpenFields sample repos all resolve: https://secure.cardcom.solutions/Api/v11/Docs, https://support.cardcom.solutions, https://github.com/CardCom/OpenFields-FrontEnd-React, https://github.com/CardCom/OpenFields-Backend-Node The worked example in the skill uses an amount of 149 ₪.",
       "source_url": "https://secure.cardcom.solutions/Api/v11/Docs",
-      "raw_snippet": "https://secure.cardcom.solutions/Api/v11/Docs https://support.cardcom.solutions https://github.com/CardCom/OpenFields-FrontEnd-React https://github.com/CardCom/OpenFields-Backend-Node",
+      "raw_snippet": "LowProfile Create a new Iframe \\ Redirect page. ReturnValue string or null <= 250 characters A string of data to save on the transaction, usually send your unique order Id, you will get it back in the WebHook URL.",
       "source_note": "Link-validation pass 2026-07-28: docs page renders (title 'CardCom API') and support centre redirects to /hc/he (title 'מרכז התמיכה קארדקום') in a real browser though both refuse plain curl; both GitHub repos return HTTP 200.",
       "where_in_skill": "SKILL.md Overview + Reference Links, SKILL_HE.md, references/",
-      "verified_via": "browser",
-      "verified_at": "2026-07-28T22:13:12Z",
-      "confidence": "high"
+      "verified_via": "CardCom v11 API reference rendered in a browser (Redoc, empty to a plain fetch)",
+      "verified_at": "2026-08-19",
+      "confidence": "high",
+      "fetched_at": "2026-08-19"
     },
     {
       "id": 34,

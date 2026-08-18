@@ -89,15 +89,17 @@
     },
     {
       "claim_id": "elec-private-suppliers-count",
-      "claim": "By end of 2025, approximately 280,000 (some sources 300,000+) Israeli households had switched to private electricity suppliers, with typical discounts of 5-20% off IEC generation portion.",
+      "claim": "כלכליסט, ינואר 2026: רפורמת החשמל החלה ביולי 2024, ובמהלך 2025 כ-279,500 לקוחות עברו לספקים פרטיים, שמציעים תעריפים זולים ב-7% עד 20%. מאז תחילת הרפורמה עברו מעל 360 אלף צרכנים. הסקיל ציין קודם טווח של 5-21%, שאינו מה שהמקור אומר.",
       "source_url": "https://www.calcalist.co.il/local_news/article/bjw8rlvh11l",
-      "raw_snippet": "By end of 2025, approximately 280,000 (some sources 300,000+) Israeli households had switched to private electricity suppliers, with typical discounts of 5-20% off IEC generation portion. (Calcalist - 280,000 customers moved to private suppliers in 2025)",
-      "fetched_at": "2026-05-20",
+      "raw_snippet": "רפורמת החשמל החלה ביולי 2024, ובמהלך שנת 2025 כ-279,500 לקוחות עברו מחברת החשמל לספקים פרטיים, שמציעים תעריפי חשמל זולים יותר ב-7% עד 20%",
+      "fetched_at": "2026-08-19",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/details-2026.md"
-      ]
+      ],
+      "verified_via": "Calcalist article read in a browser; the site blocks automated fetching",
+      "verified_at": "2026-08-19"
     },
     {
       "claim_id": "elec-vat-18-percent",
@@ -143,15 +145,17 @@
     },
     {
       "claim_id": "smart-meter-count-1m",
-      "claim": "IEC has completed installation of approximately 1 million smart meters (~30% of households) as of 2026; announced target of 3.7 million by end-2028. Self-paid installation ~260 ILS, 2-12 week wait.",
+      "claim": "כלכליסט, 19 באוגוסט 2024: חברת החשמל השלימה התקנת מיליון מונים חכמים, כ-30% מסך המונים, והקדימה את יעד הפריסה לכ-3.7 מיליון מונים עד סוף 2028. הסקיל תיארך קודם את אבן הדרך ל-2026, בעוד שהמקור הוא מ-2024.",
       "source_url": "https://www.calcalist.co.il/local_news/article/rjkwehbsgsa",
-      "raw_snippet": "IEC has completed installation of approximately 1 million smart meters (~30% of households) as of 2026; announced target of 3.7 million by end-2028. Self-paid installation ~260 ILS, 2-12 week wait. (Calcalist - IEC completed 1M smart meter installations)",
-      "fetched_at": "2026-05-20",
+      "raw_snippet": "חברת החשמל השלימה התקנה של מיליון מונים חכמים ברחבי הארץ. מדובר ב-30% מסך המונים. עד סוף 2028 צפויה החברה להתקין 3.7 מיליון מונים חכמים.",
+      "fetched_at": "2026-08-19",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/details-2026.md"
-      ]
+      ],
+      "verified_via": "Calcalist article read in a browser; the site blocks automated fetching",
+      "verified_at": "2026-08-19"
     },
     {
       "claim_id": "solar-export-tariff-net-metering",
@@ -209,15 +213,17 @@
     },
     {
       "claim_id": "lpg-cooking-gas-calculator",
-      "claim": "Energy Ministry publishes locality-specific LPG cooking-gas comparison calculator; price variance between suppliers for a 12kg balloon can be up to 92 NIS per balloon in the same city.",
+      "claim": "משרד האנרגיה והתשתיות מפעיל מחשבון להשוואת מחירי גז בישול (גפ\"מ) לפי מיקום ולפי סוג חיבור, בית פרטי או בניין משותף. פער המחירים בין ספקים באותה עיר אינו מספר שהמשרד מפרסם בעמוד, אלא תוצאה של הרצת המחשבון, ולכן אינו נטען כאן כעובדה.",
       "source_url": "https://migdal-webpages.energy-apps.org/gpmCalculator",
-      "raw_snippet": "Energy Ministry publishes locality-specific LPG cooking-gas comparison calculator; price variance between suppliers for a 12kg balloon can be up to 92 NIS per balloon in the same city. (Energy Ministry - GPM (LPG) price comparison calculator)",
-      "fetched_at": "2026-05-20",
+      "raw_snippet": "מחשבון השוואת מחירי גז בישול (גפ״מ) בחירת מיקום סוג חיבור הגז בית פרטי בניין משותף הצג השוואת מחירים",
+      "fetched_at": "2026-08-19",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/details-2026.md"
-      ]
+      ],
+      "verified_via": "Energy Ministry LPG calculator opened in a browser; it is an app with no published variance figure",
+      "verified_at": "2026-08-19"
     },
     {
       "claim_id": "cellular-rami-levy-pricing",
@@ -302,15 +308,17 @@
     },
     {
       "claim_id": "small-claims-court-cap",
-      "claim": "Israeli small claims court (בית משפט לתביעות קטנות) has a 39,900 NIS cap in 2026; often used for IEC and water-corporation billing disputes (not arnona, which uses a separate hassagah/ועדת ערר track).",
-      "source_url": "https://www.gov.il/he/service/small_claims_court",
-      "raw_snippet": "Israeli small claims court (בית משפט לתביעות קטנות) has a 39,900 NIS cap in 2026; often used for IEC and water-corporation billing disputes (not arnona, which uses a separate hassagah/ועדת ערר track). (Gov.il - small claims court service page)",
-      "fetched_at": "2026-05-20",
+      "claim": "סעיף 60(א)(1) לחוק בתי המשפט: בית משפט לתביעות קטנות דן בתביעה אזרחית של יחיד לתשלום סכום שאינו עולה על 39,900 שקלים חדשים. המסלול משמש לעיתים קרובות למחלוקות חיוב מול חברת החשמל ותאגידי מים, אך לא לארנונה, שלה מסלול השגה נפרד.",
+      "source_url": "https://www.nevo.co.il/law_html/law01/055_002.htm",
+      "raw_snippet": "בית משפט לתביעות קטנות ידון בתביעה אזרחית שהגיש יחיד – (1) לתשלום סכום שאינו עולה על 39,900 שקלים חדשים",
+      "fetched_at": "2026-08-19",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/details-2026.md"
-      ]
+      ],
+      "verified_via": "Courts Law read on nevo; the cap is set by statute, not by the gov.il service page",
+      "verified_at": "2026-08-19"
     },
     {
       "claim_id": "small-claims-cap-2026",

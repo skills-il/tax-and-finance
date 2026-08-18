@@ -344,7 +344,7 @@
     },
     {
       "id": "equity-comp-vesting-period-sourcing",
-      "claim": "The Israeli Tax Authority sources income from stock options and RSUs by the place where the work was performed during the vesting period of the options, not by grant date.",
+      "claim": "The Israeli Tax Authority sources income from stock options and RSUs by the place where the work was performed during the vesting period of the options, not by grant date The blocked write-up is https://www.lexology.com/library/detail.aspx?g=135d64de-f0ea-4f0e-b9e4-6f4e3e6253ea.",
       "source_url": "https://s-horowitz.com/taxation-of-stock-options-for-employees-who-became-israeli-residents/",
       "raw_snippet": "The place of production of income in this case will be determined according to the place where the work was performed during the vesting period of the options (i.e., part of the income may be classified as “Israeli” and the balance as income produced abroad).",
       "fetched_on": "2026-05-23",
@@ -425,14 +425,16 @@
     },
     {
       "id": "lexology-equity-awards-mobile-employees",
-      "claim": "Lexology / Pearl Cohen practitioner commentary on ITA equity award guidance for mobile employees confirms that the place of work during the vesting period determines income sourcing for cross-border RSU/option grants.",
-      "source_url": "https://www.lexology.com/library/detail.aspx?g=135d64de-f0ea-4f0e-b9e4-6f4e3e6253ea",
-      "raw_snippet": "Lexology article on Israeli Tax Authority clarifies taxation of equity awards held by mobile employees, including sourcing based on place of work during the vesting period.",
-      "fetched_at": "2026-05-23",
+      "claim": "Israeli practitioner commentary confirming that, for equity awards held by mobile employees, income sourcing follows the place of work during the vesting period. The Lexology write-up of the same point is behind a Cloudflare challenge that blocks any automated read, so an accessible firm publication is cited instead The blocked write-up is https://www.lexology.com/library/detail.aspx?g=135d64de-f0ea-4f0e-b9e4-6f4e3e6253ea.",
+      "source_url": "https://s-horowitz.com/taxation-of-stock-options-for-employees-who-became-israeli-residents/",
+      "raw_snippet": "The place of production of income in this case will be determined according to the place where the work was performed during the vesting period of the options (i.e., part of the income may be classified as “Israeli” and the balance as income produced abroad).",
+      "fetched_at": "2026-08-19",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ]
+      ],
+      "verified_via": "S. Horowitz & Co publication fetched; Lexology returns a 403 challenge page",
+      "verified_at": "2026-08-19"
     },
     {
       "id": "israeli-capital-gains-rate-25-percent",
