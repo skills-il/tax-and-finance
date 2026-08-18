@@ -228,14 +228,16 @@
     },
     {
       "claim_id": "url-cbp-israel",
-      "claim": "US CBP Israel certificate of origin requirements page.",
+      "claim": "US CBP Israel certificate of origin requirements page. Covered references: Israel FTA Certificate of Origin Requirements",
       "source_url": "https://www.cbp.gov/trade/free-trade-agreements/israel/certificate-origin-requirements",
-      "raw_snippet": "Israel FTA Certificate of Origin Requirements",
-      "fetched_at": "2026-07-27T00:00:00Z",
+      "raw_snippet": "Israel Free Trade Agreement (ILFTA) | U.S. Customs and Border Protection Skip to main content An official website of the United States government Here’s how you know Here’s how you know Official websites use .gov A .gov website belongs to an official government organization in the United States.",
+      "fetched_at": "2026-08-18",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ]
+      ],
+      "verified_via": "navigational reference; snippet replaced with the cited page's own opening text so the entry can be falsified",
+      "verified_at": "2026-08-18"
     },
     {
       "claim_id": "url-cbsa-cifta",

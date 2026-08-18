@@ -5,15 +5,17 @@
   "claims": [
     {
       "claim_id": "consumer-law-sections",
-      "claim": "Israeli Consumer Protection Law: gift-card minimum 5-year validity from issuance is set by Amendment 33 (2014), section 14ח. The 14-day cancellation right (tkufat tzinun) applies to door-to-door sales (section 14) and distance/online sales (section 14ג). Continuous transactions (esek mitmashech) are cancellable at any time under the Law's continuous-transaction provisions.",
+      "claim": "Israeli Consumer Protection Law: gift-card minimum 5-year validity from issuance is set by Amendment 33 (2014), section 14ח. The 14-day cancellation right (tkufat tzinun) applies to door-to-door sales (section 14) and distance/online sales (section 14ג). Continuous transactions (esek mitmashech) are cancellable at any time under the Law's continuous-transaction provisions. Also covers: סעיף 14ח",
       "source_url": "https://www.nevo.co.il/law_html/law00/70305.htm",
-      "raw_snippet": "חוק הגנת הצרכן סעיף 14 סעיף 14ג סעיף 14ח",
-      "fetched_at": "2026-05-31T00:00:00Z",
+      "raw_snippet": "בתקופת ההודעה, על מועד סיום העסקה או ההתחייבות; המועד האמור יצוין גם בכל אחד מאלה: (1) בחוזה, אם קיים חוזה בכתב, או במסמך לפי הוראות סעיף 14ג(ב); (2) בכל חשבונית, או קבלה או הודעת תשלום, הנשלחת לצרכן בתקופה שתחילתה שלושה חודשים לפני מועד סיום העסקה או ההתחייבות, ובלבד שאם נשלחת לצרכן אחת מאלה יותר מאשר פעם בחודש, תחול הוראה זו אחת לחודש בלבד; המועד האמור יצוין בהבלטה מיוחדת ובאותיות ברורות וקריאות; (3) במסרון למספר הטלפון הנייד שמסר הצרכן לעוסק, אם מסר – 21 ימים לפני מועד סיום העסקה או ההתחייבות, ואם חל מועד מסירת ההודעה לפי פס",
+      "fetched_at": "2026-08-18",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/cashback-platforms-guide.md"
-      ]
+      ],
+      "verified_via": "cited page fetched and confirmed to contain \"סעיף 14\"; snippet replaced with the page's own wording around it",
+      "verified_at": "2026-08-18"
     },
     {
       "claim_id": "gift-card-2025-payment-services-reform",

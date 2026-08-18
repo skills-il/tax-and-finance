@@ -19,14 +19,16 @@
       "claim_id": "prime-rate",
       "claim": "Prime rate = Bank of Israel rate + 1.50%, so with BOI at 3.50% the prime is 5.00% (as of 6 July 2026).",
       "source_url": "https://he.wikipedia.org/wiki/ריבית_פריים",
-      "raw_snippet": "All banks set and agree that the prime rate will be composed of Bank of Israel interest rate + 1.5%. With the Bank of Israel rate at 3.5% the prime rate is 5%. Default illustrative annuity rate 0.05 = 5.00%.",
-      "fetched_at": "2026-07-18T00:00:00Z",
+      "raw_snippet": "כל בנק מסחרי רשאי לקבוע מרווח שונה מבנקים אחרים ובכך לקבוע ריבית פריים שונה, נכון לשנת 2024 בישראל, המרווח אצל כל הבנקים זהה ושווה ל-1.5% מעל ריבית בנק ישראל. ב-6 ביולי 2026 הוריד בנק ישראל את הריבית ל-3.5%. בהתאם, ריבית הפריים עומדת על 5%. [ 2 ] פרסום הריבית ושינוי ריבית הפריים בישראל [ עריכת קוד מקור | עריכה ] בהיעדר אירועים כלכליים הדורשים התערבות מיידית, פרסום הריבית של בנק ישראל מתבצע מידי כחודש וחצי [ 3 ] . על סמך ריבית זו נקבעת ריבית הפריים שנכנסת לתוקפה אחרי שלושה ימי עסקים .",
+      "fetched_at": "2026-08-18",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/israeli-financial-rates.md",
         "scripts/budget_calculator.py"
-      ]
+      ],
+      "verified_via": "cited page fetched and confirmed to contain \"1.5%\"; snippet replaced with the page's own wording around it",
+      "verified_at": "2026-08-18"
     },
     {
       "claim_id": "min-wage",

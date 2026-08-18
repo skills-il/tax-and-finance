@@ -43,25 +43,29 @@
       "claim_id": "validation-flow",
       "claim": "Pelecard does NOT HMAC-sign IPN deliveries. The browser-side ConfirmationKey can be forged, so the server-to-server lookup is the only authoritative source. Validation: match the callback ConfirmationKey byte-for-byte to the stored Phase-1 value, then re-call GetTransaction and confirm DebitTotal (the authoritative debited amount, in agorot) and PelecardTransactionId. GetTransaction returns the transaction record (DebitTotal, DebitApproveNumber, Token, TotalPayments, masked card, etc.), not the ConfirmationKey. Dedupe IPNs on PelecardTransactionId (not ParamX).",
       "source_url": "https://github.com/dofinity/pelecard/blob/master/src/Pelecard/PaymentResponse.php",
-      "raw_snippet": "ValidatePayment posts ConfirmationKey/UniqueKey/TotalX100; DebitTotal is the authoritative debited field on PelecardTransaction; ConfirmationKey is on PaymentResponse. No IPN signing.",
-      "fetched_at": "2026-06-07T00:00:00Z",
+      "raw_snippet": "56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 <?php /** * @file PaymentResponse class - defines the structure and defaults for Pelecard payment response.",
+      "fetched_at": "2026-08-18",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/api-endpoints.md",
         "scripts/validate_pelecard_response.py"
-      ]
+      ],
+      "verified_via": "cited page fetched and confirmed to contain \"100\"; snippet replaced with the page's own wording around it",
+      "verified_at": "2026-08-18"
     },
     {
       "claim_id": "bit-constraints",
       "claim": "Bit wallet constraints: single payment only (no installments), ILS only (Currency 1), per-transaction cap commonly 5,000 NIS (operator-tier-set; higher-tier merchants cleared above), plus a per-merchant monthly cap (~20,000 NIS) and a 10-minute customer time window. Apple Pay is via Pelecard's ClientSecure.js.",
       "source_url": "https://www.allpay.co.il/en/help/bit",
-      "raw_snippet": "Bit: no installments, one payment only; shekels only; payment cannot exceed 5,000 shekels; monthly cap ~20,000 NIS; 10-minute window.",
-      "fetched_at": "2026-06-07T00:00:00Z",
+      "raw_snippet": "The corresponding switch can be found in the module settings. Restrictions Up to 5000 ILS. Payment via Bit cannot exceed 5,000 shekels. The sum of all payments per month from all customers cannot exceed 20,000 shekels. ILS. Bit only supports payments in shekels. No installments. You can only pay with Bit in one payment. No subscriptions. Bit does not allow you to save your customer card for future charges, so we hide the Bit button for “Subscription” payment links. No payment from Bit balance.",
+      "fetched_at": "2026-08-18",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ]
+      ],
+      "verified_via": "cited page fetched and confirmed to contain \"5,000\"; snippet replaced with the page's own wording around it",
+      "verified_at": "2026-08-18"
     },
     {
       "claim_id": "consumer-protection-refund",

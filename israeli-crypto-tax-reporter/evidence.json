@@ -20,25 +20,29 @@
       "claim_id": "corporate-23",
       "claim": "Companies pay the standard corporate tax rate of 23% on capital gains and business income (since 2018).",
       "source_url": "https://taxsummaries.pwc.com/israel/corporate/taxes-on-corporate-income",
-      "raw_snippet": "The corporate tax rate in Israel is 23%.",
-      "fetched_at": "2026-06-07T00:00:00Z",
+      "raw_snippet": "Income sourcing rules determine when income is to be considered from an Israeli source. The corporate tax rate is 23% in 2026 (same rate as in 2025). Business operations qualifying under the Encouragement of Capital Investments Law are entitled to reduced rates of tax depending upon their location and other conditions ( see the Tax credits and incentives section ), although a QDMTT shall apply for relevant groups for tax years beginning after 31 December 2025 ( see below ).",
+      "fetched_at": "2026-08-18",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/crypto-tax-regulations.md"
-      ]
+      ],
+      "verified_via": "cited page fetched and confirmed to contain \"23%\"; snippet replaced with the page's own wording around it",
+      "verified_at": "2026-08-18"
     },
     {
       "claim_id": "business-marginal-rates",
       "claim": "If crypto activity is a business, gains are taxed as ordinary income at marginal rates (10% to 47%, with the old shorthand 'up to 50%'), plus National Insurance and health tax.",
       "source_url": "https://taxsummaries.pwc.com/israel/individual/taxes-on-personal-income",
-      "raw_snippet": "Personal income is taxed at progressive marginal rates up to 47%, with an additional surtax bringing the top effective rate higher.",
-      "fetched_at": "2026-06-07T00:00:00Z",
+      "raw_snippet": "Personal income tax rates Taxation of individuals is imposed in graduated rates ranging up to 47%. Additionally, a 3% surtax applies on annual taxable income exceeding ILS 721,560, resulting in a 50% maximum income tax rate. Non-residents are taxed at the same rates as Israeli residents. The annual tax brackets are an aggregation of the monthly brackets in force during the year, which are periodically updated for inflation.",
+      "fetched_at": "2026-08-18",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/crypto-tax-regulations.md"
-      ]
+      ],
+      "verified_via": "cited page fetched and confirmed to contain \"47%\"; snippet replaced with the page's own wording around it",
+      "verified_at": "2026-08-18"
     },
     {
       "claim_id": "surtax-2026",

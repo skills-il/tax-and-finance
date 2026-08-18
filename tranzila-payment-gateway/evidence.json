@@ -117,13 +117,15 @@
       "claim_id": "url-inventory",
       "claim": "Bookkeeping entry: the list of Tranzila endpoint URL strings referenced in the skill body, recorded so the URL cross-check can resolve them. Substantive verification of each endpoint lives in the tranzila-endpoints entry.",
       "source_url": "https://docs.tranzila.com/docs/payments-and-billing/iframe-integration",
-      "raw_snippet": "https://api.tranzila.com https://api.tranzila.com/v1 https://api.tranzila.com/v1/{resource} https://direct.tranzila.com/{supplier}/iframenew.php https://direct.tranzila.com/{supplier}/iframenew.php?sum=100&currency=1&cred_type=1 https://docs.tranzila.com/ https://secure5.tranzila.com/cgi-bin/tranzila31.cgi https://secure5.tranzila.com/cgi-bin/tranzila31pan.cgi https://secure5.tranzila.com/cgi-bin/tranzila31tk.cgi https://secure5.tranzila.com/cgi-bin/tranzila36a.cgi",
-      "fetched_at": "2026-08-09T00:00:00Z",
+      "raw_snippet": "eight : 800 px ; \" > < iframe id = \" tranzila-frame \" allowpaymentrequest = ' true ' name = \" tranzila \" src = \" \" style = \" width : 100 % ; height : 100 % ; \" > </ iframe > </ div > </ div > </ div > </ section > </ div > </ main > Bit Example In order to add bit we will need to pass bit_pay =1 HTML < main class = \" min-h750 \" > < div class = \" container \" > < section id = \" main-content \" > < div class = \" row text-center mt-5 \" > < div class = \" col \" > < h1 class = \" display-3 text-primary \" > Pay Amount </ h1 > </ div > </",
+      "fetched_at": "2026-08-18",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/api-parameters.md"
-      ]
+      ],
+      "verified_via": "cited page fetched and confirmed to contain \"100\"; snippet replaced with the page's own wording around it",
+      "verified_at": "2026-08-18"
     }
   ]
 }

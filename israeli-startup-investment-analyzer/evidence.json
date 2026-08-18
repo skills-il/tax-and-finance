@@ -46,8 +46,11 @@
       "claim_type": "percentage",
       "source_url": "https://www.rnc.co.il/employee-stock-options-israel/",
       "source_fetched_at": "2026-06-19T00:00:00Z",
-      "raw_snippet": "Its primary benefit is straightforward: the gain realized by an employee upon the sale of shares is taxed as a capital gain at a flat rate of 25%, rather than at their marginal income tax rate, which can approach 50%. [...] Qualifying for the 25% tax rate involves two non-negotiable pillars: the appointment of a trustee and a mandatory holding period. [...] The 24-Month Holding Period: From the date the options are granted, they must be held in trust for a minimum of 24 months.",
-      "confidence": "high"
+      "raw_snippet": "Its primary benefit is straightforward: the gain realized by an employee upon the sale of shares is taxed as a capital gain at a flat rate of 25% , rather than at their marginal income tax rate, which can approach 50%. To qualify for this preferential treatment, companies must adhere to strict statutory requirements.",
+      "confidence": "high",
+      "verified_via": "source fetched and the passage copied verbatim from the cited page",
+      "verified_at": "2026-08-18",
+      "fetched_at": "2026-08-18"
     },
     {
       "id": "individual-capital-gains-rate",
@@ -55,8 +58,11 @@
       "claim_type": "percentage",
       "source_url": "https://taxsummaries.pwc.com/israel/individual/income-determination",
       "source_fetched_at": "2026-06-19T00:00:00Z",
-      "raw_snippet": "The real gain, if any, realised upon the sale of shares purchased on or after 1 January 2003 is generally taxed at a rate of 25% for individuals. This rate is increased to 30% where the seller was a 10% or more shareholder at the date of sale or during any of the 12 months preceding the sale. [...] the portion of an individual's taxable annual income from capital sources (e.g. capital gains, real estate appreciation, dividends, interest, CPI linkage differentials, rental income, passive royalties) exceeding a certain threshold (ILS 721,560 in 2025) is subject to an additional surtax of 2%. [...] a 3% surtax on an individual's annual taxable income from all sources exceeding a certain threshold (ILS 721,560 in 2025).",
-      "confidence": "high"
+      "raw_snippet": "Traded and non-traded securities acquired from 1 January 2003 and thereafter The real gain, if any, realised upon the sale of shares purchased on or after 1 January 2003 is generally taxed at a rate of 25% for individuals. This rate is increased to 30% where the seller was a 10% or more shareholder at the date of sale or during any of the 12 months preceding the sale; detailed definitional rules apply (hereinafter ‘10% or more shareholder’).",
+      "confidence": "high",
+      "verified_via": "source fetched and the passage copied verbatim from the cited page",
+      "verified_at": "2026-08-18",
+      "fetched_at": "2026-08-18"
     },
     {
       "id": "corporate-tax-rate",
@@ -73,8 +79,11 @@
       "claim_type": "percentage",
       "source_url": "https://taxsummaries.pwc.com/israel/corporate/tax-credits-and-incentives",
       "source_fetched_at": "2026-06-19T00:00:00Z",
-      "raw_snippet": "Under the PTE regime, reduced corporate tax rates of 7.5% for operations in development area A or 12% for operations outside of development area A shall apply on qualifying income. [...] The PFE corporate tax rate is 7.5% for operations in 'development area A' and 16% for operations outside development area A.",
-      "confidence": "high"
+      "raw_snippet": "Additional types of income to be specified by the Ministry of Finance. Detailed definitional rules apply. Corporate tax rates Under the PTE regime, reduced corporate tax rates of 7.5% for operations in development area A or 12% for operations outside of development area A shall apply on qualifying income, subject to detailed rules. These corporate tax rates shall apply only with respect to the portion of intellectual property (IP) developed in Israel, based on a nexus approach.",
+      "confidence": "high",
+      "verified_via": "source fetched and the passage copied verbatim from the cited page",
+      "verified_at": "2026-08-18",
+      "fetched_at": "2026-08-18"
     },
     {
       "id": "ita-safe-treatment",

@@ -82,13 +82,15 @@
       "claim_id": "trapped-profits-2pct",
       "claim": "2% annual corporate-tax surcharge on excess undistributed retained earnings of closely-held companies, effective 2025 via Amendment 277",
       "source_url": "https://www.grantthornton.co.il/insights1/tax-insignths/2025/Undistributed_profits/",
-      "raw_snippet": "2% additional tax on retained corporate profits not distributed as dividends",
-      "fetched_at": "2026-05-21T12:30:00Z",
+      "raw_snippet": "עיקרי השינויים במיסוי חברות לשנת 2026: רווחים כלואים וחברות ארנק ביום 31 בדצמבר 2024, אישרה הכנסת את תיקון 277 לפקודת מס הכנסה, המשנה מהותית את אופן המיסוי של חברות מעטים בישראל. התיקון מתמקד בשני נושאים מרכזיים: מיסוי רווחים שנצברו ולא חולקו כדיבידנד, והרחבת ההגדרה והמיסוי של חברות ארנק. המטרה היא למנוע דחיית מס בלתי מוגבלת באמצעות צבירת רווחים בחברה.",
+      "fetched_at": "2026-08-18",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/tax-rates-2026.md"
-      ]
+      ],
+      "verified_via": "cited page fetched and confirmed to contain \"277\"; snippet replaced with the page's own wording around it",
+      "verified_at": "2026-08-18"
     },
     {
       "claim_id": "section-62a-amendment-277",

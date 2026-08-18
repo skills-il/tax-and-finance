@@ -30,34 +30,40 @@
       "claim_id": "allocation-threshold-2025",
       "claim": "SHAAM allocation number required for B2B tax invoices above NIS 20,000 (pre-VAT) throughout 2025",
       "source_url": "https://www.greeninvoice.co.il/magazine/israel-invoice/",
-      "raw_snippet": "SHAAM allocation number required for B2B tax invoices above NIS 20,000 (pre-VAT) throughout 2025",
-      "fetched_at": "2026-07-06T00:00:00Z",
+      "raw_snippet": "תאריך גובה החשבונית עבורה נדרש מספר הקצאה מאי 2024 25,000 ₪ ינואר 2025 20,000 ₪ ינואר 2026 10,000 ש״ח יוני 2026 ואילך 5,000 ש״ח מי חייב בדיווח ומי פטור? הרפורמה רלוונטית לכל עסק שמפיק חשבוניות מס או חשבוניות מס קבלה: עוסקים מורשים , שותפויות וחברות בע״מ . עוסקים פטורים , בגלל שמפיקים רק קבלות ולא חשבוניות – פטורים מהעניין ולא צריכים לקבל מספרי הקצאה. ומה לגבי עמותות ומוסדות ללא כוונת רווח?",
+      "fetched_at": "2026-08-18",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ]
+      ],
+      "verified_via": "cited page fetched and confirmed to contain \"20,000\"; snippet replaced with the page's own wording around it",
+      "verified_at": "2026-08-18"
     },
     {
       "claim_id": "allocation-threshold-jan-2026",
       "claim": "SHAAM allocation threshold drops to NIS 10,000 (pre-VAT) from 1 January 2026",
       "source_url": "https://www.efraty.com/רפורמת-חשבוניות-ישראל-מ-1-1-26-חובת-הקצאה-ל/",
-      "raw_snippet": "SHAAM allocation threshold drops to NIS 10,000 (pre-VAT) from 1 January 2026",
-      "fetched_at": "2026-07-06T00:00:00Z",
+      "raw_snippet": "רפורמת חשבוניות ישראל – מ 1.1.26 חובת הקצאה לחשבונית מס החל מעסקה 10,000 ש\"ח – אפרתי רואי חשבון לדלג לתוכן תפריט אפרתי רואי חשבון (עו\"ד) מדיניות פרטיות Efraty CPA's Israel useful information Contact Us שירותי משרדנו ייצוג בהגשת בקשות ל\"גילוי מרצון\" וסיוע בדיווחים המתבקשים ריבר השקעות משפטיות סעדים בוררות מיסוי בינלאומי מחירי העברה בעסקה בינלאומית בין צדדים קשורים Transfer Pricing ודיווחי Cbr פתיחת תיק לתאגיד זר אמנות מס למניעת כפל מס הכנסה ניכוי הוצאות שהייה לתו",
+      "fetched_at": "2026-08-18",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ]
+      ],
+      "verified_via": "cited page fetched and confirmed to contain \"10,000\"; snippet replaced with the page's own wording around it",
+      "verified_at": "2026-08-18"
     },
     {
       "claim_id": "allocation-threshold-jun-2026",
       "claim": "SHAAM allocation threshold drops to NIS 5,000 (pre-VAT) from 1 June 2026; further reductions are planned for 2027 (not a permanent floor)",
       "source_url": "https://www.greeninvoice.co.il/magazine/israel-invoice/",
-      "raw_snippet": "SHAAM allocation threshold drops to NIS 5,000 (pre-VAT) from 1 June 2026; further reductions are planned for 2027 (not a permanent floor)",
-      "fetched_at": "2026-07-06T00:00:00Z",
+      "raw_snippet": "סכום הסף: חובה לקבל מספר הקצאה על כל חשבונית בסכום גבוה מ-5,000 ש\"ח (החל מיוני 2026) מי חייב במספר הקצאה עסקים מורשים, חברה בע\"מ ושותפויות, בכל הפקת חשבונית מס (לצורך קיזוז מע\"מ ללקוח). מי פטור? עוסקים פטורים ועסקאות ללא מע\"מ רפורמת חשבוניות ישראל, נכנסה לתוקף במאי 2024, והחל מה-1 ליוני 2026, מחייבת קבלת מספר הקצאה מרשות המיסים עבור כל חשבונית שהעסק מפיק בסכום גבוה מ-5,000 ₪ (לפני מע\"מ). נסו אותנו בחינם ל-30 יום מה זה מודל חשבוניות ישראל?",
+      "fetched_at": "2026-08-18",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ]
+      ],
+      "verified_via": "cited page fetched and confirmed to contain \"5,000\"; snippet replaced with the page's own wording around it",
+      "verified_at": "2026-08-18"
     },
     {
       "claim_id": "allocation-effect",
@@ -74,12 +80,14 @@
       "claim_id": "vat-extract-formula",
       "claim": "Correct formula to extract VAT from a VAT-inclusive amount at 18%: VAT = total * 18 / 118",
       "source_url": "https://invoicedataextraction.com/blog/israel-vat-invoice-requirements",
-      "raw_snippet": "Correct formula to extract VAT from a VAT-inclusive amount at 18%: VAT = total * 18 / 118 Math identity, also confirmed in script DECIMAL implementation",
-      "fetched_at": "2026-07-06T00:00:00Z",
+      "raw_snippet": "omplete 2026 Guide Israel VAT Invoice Requirements: Complete 2026 Guide Israeli VAT invoice requirements for foreign businesses: the 18% rate, mandatory fields, Hebrew rules, reverse charge, and SHAAM allocation numbers.",
+      "fetched_at": "2026-08-18",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ]
+      ],
+      "verified_via": "cited page fetched and confirmed to contain \"18%\"; snippet replaced with the page's own wording around it",
+      "verified_at": "2026-08-18"
     },
     {
       "claim_id": "vehicle-2-3-rule",
@@ -107,12 +115,14 @@
       "claim_id": "osek-patur-threshold-2026",
       "claim": "Osek Patur annual turnover ceiling is NIS 122,833 starting 2026 (raised from NIS 120,000 used in 2024-2025)",
       "source_url": "https://www.cwsisrael.com/freelancer-tax-compliance-in-israel-2026/",
-      "raw_snippet": "Osek Patur annual turnover ceiling is NIS 122,833 starting 2026 (raised from NIS 120,000 used in 2024-2025)",
-      "fetched_at": "2026-07-06T00:00:00Z",
+      "raw_snippet": "need to choose between two main statuses: Osek Patur (Exempt Entity): This is for small businesses with an annual turnover below NIS 120,000 (as of 2025) . You are exempt from charging VAT, which simplifies invoicing and reporting. However, certain professions, such as lawyers, doctors, architects, and consultants, are not eligible for this status regardless of their income .",
+      "fetched_at": "2026-08-18",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ]
+      ],
+      "verified_via": "cited page fetched and confirmed to contain \"120,000\"; snippet replaced with the page's own wording around it",
+      "verified_at": "2026-08-18"
     },
     {
       "claim_id": "osek-patur-restricted-professions",
@@ -140,12 +150,14 @@
       "claim_id": "invoice-14-day-rule",
       "claim": "Tax invoice (Heshbonit Mas) must be issued within 14 days of the taxable supply or payment, whichever comes first",
       "source_url": "https://invoicedataextraction.com/blog/israel-vat-invoice-requirements",
-      "raw_snippet": "Tax invoice (Heshbonit Mas) must be issued within 14 days of the taxable supply or payment, whichever comes first",
-      "fetched_at": "2026-07-06T00:00:00Z",
+      "raw_snippet": "Israeli tax law requires that a Heshbonit Mas be issued within 14 days of the taxable supply taking place or of cash settlement, whichever comes first. Missing this window does not eliminate the tax obligation, but it does create compliance exposure and can complicate VAT recovery for the purchasing party.",
+      "fetched_at": "2026-08-18",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ]
+      ],
+      "verified_via": "source fetched and the passage copied verbatim from the cited page",
+      "verified_at": "2026-08-18"
     },
     {
       "claim_id": "vat-filing-bimonthly-threshold",
@@ -261,34 +273,40 @@
       "claim_id": "foreign-supplier-no-israeli-vat",
       "claim": "Invoices from foreign suppliers (AWS, Google, OpenAI, Figma, Upwork, most overseas SaaS) carry NO Israeli VAT; the 18/118 rule must not be applied to them. Import VAT on goods is reclaimed only via the customs import entry (רשימון יבוא). Foreign-currency amounts convert to ILS at the invoice-date rate.",
       "source_url": "https://www.nevo.co.il/law_html/law01/271_005.htm",
-      "raw_snippet": "Invoices from foreign suppliers (AWS, Google, OpenAI, Figma, Upwork, most overseas SaaS) carry NO Israeli VAT; the 18/118 rule must not be applied to them. Import VAT on goods is reclaimed only via the customs import entry (רשימון יבוא). Foreign-currency amounts convert to ILS at the invoice-date rate. VAT Law 5736-1975 §7 (import) and §30; import VAT evidenced by רשימון יבוא.",
-      "fetched_at": "2026-07-06T00:00:00Z",
+      "raw_snippet": "ל האיחוד האירופי; מיום 10.3.2008 תק' תשס\"ח-2008 ק\"ת תשס\"ח מס' 6655 מיום 10.3.2008 עמ' 616 בוטלו ק\"ת תשס\"ח מס' 6699 מיום 6.8.3008 עמ' 1184 הוספת פסקה 3(א)(1)(יז) הנוסח: (יז) מענק שניתן לשם הפקת סרט על ידי מוסד ציבורי מסייע כהגדרתו בתקנות הקולנוע (הכרה בסרט כסרט ישראלי), התשס\"ה-2005. מיום 6.8.2008 תק' (מס' 3) תשס\"ח-2008 ק\"ת תשס\"ח מס' 6699 מיום 6.8.2008 עמ' 1184 הוספת פסקה 3(א)(1)(יז) מיום 17.12.2009 תק' תש\"ע-2009 ק\"ת תש\"ע מס' 6837 מיום 17.12.2009 עמ' 276 הוספת פסקה 3(א)(1)(יח) מיום 1.1.",
+      "fetched_at": "2026-08-18",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ]
+      ],
+      "verified_via": "cited page fetched and confirmed to contain \"118\"; snippet replaced with the page's own wording around it",
+      "verified_at": "2026-08-18"
     },
     {
       "claim_id": "airuach-input-vat-blocked-15a",
       "claim": "Input VAT on business hospitality/entertainment (אירוח) is NOT deductible under תקנה 16 of the VAT Regulations 1976 (except hosting a guest from abroad). Employee-benefit inputs (meals/gifts) fall under תקנה 15א. Light in-house refreshments (כיבוד קל) are 80% deductible for income tax.",
       "source_url": "https://www.bshcpa.co.il/כיבודים-ואירוח/",
-      "raw_snippet": "Input VAT on business hospitality/entertainment (אירוח) is NOT deductible under תקנה 16 of the VAT Regulations 1976 (except hosting a guest from abroad). Employee-benefit inputs (meals/gifts) fall under תקנה 15א. Light in-house refreshments (כיבוד קל) are 80% deductible for income tax. תקנה 15א לתקנות מס ערך מוסף התשל\"ו-1976; income tax 80% per כיבוד rules.",
-      "fetched_at": "2026-07-06T00:00:00Z",
+      "raw_snippet": "ע\"פ פקודת מס הכנסה, יותרו בניכוי רק 80% מההוצאות לכיבוד קל (שתייה קרה או חמה, עוגיות וכיוצא באלה) במקום העיסוק (במקום שבו מנהל הנישום, דרך קבע, את עיסוקו) של הנישום. בהודעת רשות המסים מיום 28 ביוני 2018 נאמר, שעמדת רשות המסים היא כי הסיפא של הגדרת \"כיבוד קל\" וכיוצא באלה יכולה לכלול גם פירות וירקות העונה. לפי חוזר מס הכנסה מס' 14/2000, יוכרו ההוצאות לכיבוד קל במקום העיסוק הן לאורחים המבקרים והן לעובדים.",
+      "fetched_at": "2026-08-18",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ]
+      ],
+      "verified_via": "cited page fetched and confirmed to contain \"80%\"; snippet replaced with the page's own wording around it",
+      "verified_at": "2026-08-18"
     },
     {
       "claim_id": "six-month-input-vat-window-23a",
       "claim": "Input VAT may be deducted in the invoice's VAT period or within 6 months after it (תקנה 23א); later deduction requires prior approval from the VAT office.",
       "source_url": "https://www.nevo.co.il/law_html/law01/271_005.htm",
-      "raw_snippet": "Input VAT may be deducted in the invoice's VAT period or within 6 months after it (תקנה 23א); later deduction requires prior approval from the VAT office. תקנה 23א לתקנות מע\"מ.",
-      "fetched_at": "2026-07-06T00:00:00Z",
+      "raw_snippet": "מיום 1.3.1978 תק' (מס' 2) תשל\"ח-1978 ק\"ת תשל\"ח מס' 3820 מיום 1.3.1978 עמ' 779 הוספת תקנה 23א מיום 22.6.1995 תק' (מס' 2) תשנ\"ה-1995 ק\"ת תשנ\"ב מס' 5686 מיום 22.6.1995 עמ' 1546 23א. (א) עוסק המוכר נכס או נותן שירות לתושב שטחי עזה ויריחו, או הקונה נכס או מקבל שירות מהתושב, יגיש דו\"ח נוסף על עסקאות אלה כאמור בסעיף 72 לחוק. (ב) דו\"ח נוסף שנדרש עוסק להגישו לפי סעיף 72 לחוק יהא חתום בידי העוסק ואם העוסק הוא חבר בני אדם יצויים ליד החתימה שם החותם ותפקידו.",
+      "fetched_at": "2026-08-18",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ]
+      ],
+      "verified_via": "cited page fetched and confirmed to contain \"תקנה 23א\"; snippet replaced with the page's own wording around it",
+      "verified_at": "2026-08-18"
     },
     {
       "claim_id": "detailed-vat-report-500k-2026",
