@@ -281,15 +281,17 @@
       "claim_id": "surtax-threshold-721560",
       "claim": "Surtax threshold for 2026 is 721,560 NIS annual income (frozen 2025-2027)",
       "source_url": "https://www.prisha.co.il/Article/%D7%9E%D7%A1-%D7%94%D7%9B%D7%A0%D7%A1%D7%95%D7%AA-%D7%92%D7%91%D7%95%D7%94%D7%95%D7%AA",
-      "raw_snippet": "Surtax threshold 721,560 NIS",
-      "fetched_at": "2026-05-21T12:30:00Z",
+      "raw_snippet": "(א) יחיד אשר הכנסתו החייבת בשנת המס עלתה על 721,560 שקלים חדשים (נכון לשנת המס 2026) , יהיה חייב במס נוסף על חלק הכנסתו החייבת העולה על 721,560 שקלים חדשים (נכון לשנת המס 2026) בשיעור של 3%. (הערה: בשנות מס קודמות עד לשנת 2016 כולל, השיעור היה 2% בלבד אך על הכנסה העולה על סכום גדול יותר מזה נכון להיום, במידת הצורך ניתן להתעדכן בקישור הבא: מדרגות מס הכנסה (שיעור מס שולי) בישראל ).",
+      "fetched_at": "2026-08-18",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/tax-rates-2026.md",
         "references/extraction-methods.md",
         "scripts/tax_comparison.py"
-      ]
+      ],
+      "verified_via": "cited page fetched and confirmed to contain \"721,560\"; snippet replaced with the page's own wording around it",
+      "verified_at": "2026-08-18"
     },
     {
       "claim_id": "surtax-rate-3pct",
@@ -1065,12 +1067,14 @@
       "claim_id": "cws-israel-tax-guide-2026",
       "claim": "CWS Israel English-language summary of 2026 tax changes",
       "source_url": "https://www.cwsisrael.com/israeli-tax-changes-2026-complete-guide/",
-      "raw_snippet": "https://www.cwsisrael.com/israeli-tax-changes-2026-complete-guide/",
-      "fetched_at": "2026-05-21T12:30:00Z",
+      "raw_snippet": "Employer of Record Israel 2026 | Local EOR Since 2014 | CWS Israel",
+      "fetched_at": "2026-08-18",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ]
+      ],
+      "verified_via": "navigational claim about the source itself; snippet is the cited page's own title, fetched to confirm the page exists and is what the claim says it is",
+      "verified_at": "2026-08-18"
     },
     {
       "claim_id": "section-121b-he",

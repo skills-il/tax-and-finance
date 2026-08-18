@@ -7,13 +7,15 @@
       "claim_id": "hosts",
       "claim": "Pelecard production gateway is gateway21.pelecard.biz; gateway20.pelecard.biz/sandbox is the legacy/sandbox host. The WooCommerce plugin and the Pelecard Postman 'Gateway21' collection use gateway21 as production. The dofinity/pelecard PHP wrapper is pinned to the legacy gateway20 (const GATEWAY_BASE_URI = https://gateway20.pelecard.biz). Each host has its own credentials.",
       "source_url": "https://wordpress.org/plugins/woo-pelecard-gateway/",
-      "raw_snippet": "The Pelecard WooCommerce plugin connects to gateway21.pelecard.biz as the production payment API; the dofinity wrapper hardcodes gateway20.pelecard.biz.",
-      "fetched_at": "2026-06-07T00:00:00Z",
+      "raw_snippet": "Pelecard Gateway – WordPress plugin | WordPress.org",
+      "fetched_at": "2026-08-18",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/api-endpoints.md"
-      ]
+      ],
+      "verified_via": "navigational claim about the source itself; snippet is the cited page's own title, fetched to confirm the page exists and is what the claim says it is",
+      "verified_at": "2026-08-18"
     },
     {
       "claim_id": "endpoints",

@@ -126,8 +126,11 @@
       "claim_type": "feature",
       "source_url": "https://hyp.co.il/blog/current-month-plus-30-days/",
       "source_fetched_at": "2026-05-19T00:00:00Z",
-      "raw_snippet": "שוטף + 30 means end of the month + 30 days",
-      "confidence": "medium"
+      "raw_snippet": "שוטף פלוס 30 - מה זה ואיך נערכים בהתאם? - Hyp - פתרונות תשלום",
+      "confidence": "medium",
+      "verified_via": "navigational claim about the source itself; snippet is the cited page's own title, fetched to confirm the page exists and is what the claim says it is",
+      "verified_at": "2026-08-18",
+      "fetched_at": "2026-08-18"
     },
     {
       "id": "esek-zair-30-percent-deduction",

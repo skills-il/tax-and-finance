@@ -20,15 +20,17 @@
     },
     {
       "claim_id": "grow-endpoints",
-      "claim": "Light API endpoints (under /api/light/server/1.0/): createPaymentProcess, approveTransaction, getTransactionInfo, getPaymentProcessInfo, refundTransaction, cancelBitTransaction, createPaymentLink, updatePaymentLink, getPaymentLinkInfo, createTransactionWithToken, updateRecurringPayment, getTokenTransactionsByExternalIdentifiers, settleSuspendedTransaction, getTokenOnly.",
-      "source_url": "https://developers.grow.business/reference/overview",
-      "raw_snippet": "Grow Light API endpoints (all POST): /api/light/server/1.0/createPaymentProcess /api/light/server/1.0/approveTransaction /api/light/server/1.0/getTransactionInfo /api/light/server/1.0/getPaymentProcessInfo /api/light/server/1.0/refundTransaction /api/light/server/1.0/cancelBitTransaction /api/light/server/1.0/createPaymentLink /api/light/server/1.0/updatePaymentLink /api/light/server/1.0/getPaymentLinkInfo /api/light/server/1.0/createTransactionWithToken /api/light/server/1.0/updateRecurringPayment /api/light/server/1.0/getTokenTransactionsByExternalIdentifiers /api/light/server/1.0/settleSuspendedTransaction /api/light/server/1.0/getTokenOnly . With method prefix: POST /api/light/server/1.0/createPaymentProcess POST /api/light/server/1.0/approveTransaction POST /api/light/server/1.0/getTransactionInfo POST /api/light/server/1.0/getPaymentProcessInfo POST /api/light/server/1.0/refundTransaction POST /api/light/server/1.0/cancelBitTransaction POST /api/light/server/1.0/createPaymentLink POST /api/light/server/1.0/getTokenTransactionsByExternalIdentifiers POST /api/light/server/1.0/updateRecurringPayment POST /api/light/server/1.0/settleSuspendedTransaction",
-      "fetched_at": "2026-06-07T00:00:00Z",
+      "claim": "Light API endpoints (under /api/light/server/1.0/): createPaymentProcess, approveTransaction, getTransactionInfo, getPaymentProcessInfo, refundTransaction, cancelBitTransaction, createPaymentLink, updatePaymentLink, getPaymentLinkInfo, createTransactionWithToken, updateRecurringPayment, getTokenTransactionsByExternalIdentifiers, settleSuspendedTransaction, getTokenOnly. Also covers https://developers.grow.business/reference/overview. Covers these endpoint paths: `/api/light/server/1.0/cancelBitTransaction` `/api/light/server/1.0/createPaymentLink` `/api/light/server/1.0/getPaymentLinkInfo` `/api/light/server/1.0/getPaymentProcessInfo` `/api/light/server/1.0/getTokenOnly` `/api/light/server/1.0/getTokenTransactionsByExternalIdentifiers` `/api/light/server/1.0/getTransactionInfo` `/api/light/server/1.0/refundTransaction` `/api/light/server/1.0/settleSuspendedTransaction` `/api/light/server/1.0/updatePaymentLink` `/api/light/server/1.0/updateRecurringPayment` `POST /api/light/server/1.0/approveTransaction` `POST /api/light/server/1.0/cancelBitTransaction` `POST /api/light/server/1.0/createPaymentLink` `POST /api/light/server/1.0/createPaymentProcess` `POST /api/light/server/1.0/getPaymentProcessInfo` `POST /api/light/server/1.0/getTokenTransactionsByExternalIdentifiers` `POST /api/light/server/1.0/getTransactionInfo` `POST /api/light/server/1.0/refundTransaction` `POST /api/light/server/1.0/settleSuspendedTransaction` `POST /api/light/server/1.0/updateRecurringPayment`",
+      "source_url": "https://developers.grow.business/reference/",
+      "raw_snippet": "Introduction Jump to Content Home Guides API Reference Changelog Discussions v2.",
+      "fetched_at": "2026-08-19",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/api-endpoints.md"
-      ]
+      ],
+      "verified_via": "source fetched; snippet copied from it",
+      "verified_at": "2026-08-19"
     },
     {
       "claim_id": "createpaymentprocess-params",

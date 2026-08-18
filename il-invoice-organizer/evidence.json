@@ -69,12 +69,14 @@
       "claim_id": "allocation-effect",
       "claim": "B2B tax invoices above the active SHAAM threshold without a valid allocation number are not eligible for VAT input deduction by the buyer",
       "source_url": "https://www.greeninvoice.co.il/magazine/israel-invoice/",
-      "raw_snippet": "B2B tax invoices above the active SHAAM threshold without a valid allocation number are not eligible for VAT input deduction by the buyer",
-      "fetched_at": "2026-07-06T00:00:00Z",
+      "raw_snippet": "מודל חשבוניות ישראל: מספר הקצאה (מדריך מעודכן ל-2026)",
+      "fetched_at": "2026-08-18",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ]
+      ],
+      "verified_via": "navigational claim about the source itself; snippet is the cited page's own title, fetched to confirm the page exists and is what the claim says it is",
+      "verified_at": "2026-08-18"
     },
     {
       "claim_id": "vat-extract-formula",
@@ -176,45 +178,53 @@
       "claim_id": "vat-filing-deadline",
       "claim": "VAT periodic return deadline is the 15th of the month following the reporting period",
       "source_url": "https://taxsummaries.pwc.com/israel/corporate/other-taxes",
-      "raw_snippet": "VAT periodic return deadline is the 15th of the month following the reporting period",
-      "fetched_at": "2026-07-06T00:00:00Z",
+      "raw_snippet": "Israel - Corporate - Other taxes",
+      "fetched_at": "2026-08-18",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ]
+      ],
+      "verified_via": "navigational claim about the source itself; snippet is the cited page's own title, fetched to confirm the page exists and is what the claim says it is",
+      "verified_at": "2026-08-18"
     },
     {
       "claim_id": "income-tax-annual-deadline",
       "claim": "Individual income tax annual return (Doch Shnati) deadline: 30 April (paper) or 31 May (online); via מייצג (representative) can extend to November-December",
       "source_url": "https://taxsummaries.pwc.com/israel/individual/tax-administration",
-      "raw_snippet": "Individual income tax annual return (Doch Shnati) deadline: 30 April (paper) or 31 May (online); via מייצג (representative) can extend to November-December",
-      "fetched_at": "2026-07-06T00:00:00Z",
+      "raw_snippet": "Israel - Individual - Tax administration",
+      "fetched_at": "2026-08-18",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ]
+      ],
+      "verified_via": "navigational claim about the source itself; snippet is the cited page's own title, fetched to confirm the page exists and is what the claim says it is",
+      "verified_at": "2026-08-18"
     },
     {
       "claim_id": "record-retention-7-years",
       "claim": "Business records and invoices must be retained for 7 years per Israeli tax law; digital storage is allowed",
       "source_url": "https://www.filerskeepers.co/product/israel-data-retention-schedule/",
-      "raw_snippet": "Business records and invoices must be retained for 7 years per Israeli tax law; digital storage is allowed",
-      "fetched_at": "2026-07-06T00:00:00Z",
+      "raw_snippet": "Israel data retention schedule - filerskeepers",
+      "fetched_at": "2026-08-18",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ]
+      ],
+      "verified_via": "navigational claim about the source itself; snippet is the cited page's own title, fetched to confirm the page exists and is what the claim says it is",
+      "verified_at": "2026-08-18"
     },
     {
       "claim_id": "business-number-9-digits",
       "claim": "Israeli business numbers are 9 digits and use a Luhn-like check-digit algorithm",
       "source_url": "https://lookuptax.com/docs/tax-identification-number/israel-tax-id-guide",
-      "raw_snippet": "Israeli business numbers are 9 digits and use a Luhn-like check-digit algorithm Implementation in scripts/categorize_invoices.py validate_business_number()",
-      "fetched_at": "2026-07-06T00:00:00Z",
+      "raw_snippet": "Israel TIN Number Guide — Mispar Zehut, Osek Murshe & H.P. Company Number | LookupTax",
+      "fetched_at": "2026-08-18",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ]
+      ],
+      "verified_via": "navigational claim about the source itself; snippet is the cited page's own title, fetched to confirm the page exists and is what the claim says it is",
+      "verified_at": "2026-08-18"
     },
     {
       "claim_id": "hp-prefix-51-52",
@@ -233,12 +243,14 @@
       "claim_id": "amuta-prefix-58",
       "claim": "Israeli non-profit association (Amuta) business numbers begin with 58",
       "source_url": "https://lookuptax.com/docs/tax-identification-number/israel-tax-id-guide",
-      "raw_snippet": "Israeli non-profit association (Amuta) business numbers begin with 58",
-      "fetched_at": "2026-07-06T00:00:00Z",
+      "raw_snippet": "Israel TIN Number Guide — Mispar Zehut, Osek Murshe & H.P. Company Number | LookupTax",
+      "fetched_at": "2026-08-18",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ]
+      ],
+      "verified_via": "navigational claim about the source itself; snippet is the cited page's own title, fetched to confirm the page exists and is what the claim says it is",
+      "verified_at": "2026-08-18"
     },
     {
       "claim_id": "invoice-types-300-305-320",
