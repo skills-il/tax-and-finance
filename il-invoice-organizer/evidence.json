@@ -115,7 +115,7 @@
       "claim_id": "osek-patur-threshold-2026",
       "claim": "Osek Patur annual turnover ceiling is NIS 122,833 starting 2026 (raised from NIS 120,000 used in 2024-2025)",
       "source_url": "https://www.cwsisrael.com/freelancer-tax-compliance-in-israel-2026/",
-      "raw_snippet": "need to choose between two main statuses: Osek Patur (Exempt Entity): This is for small businesses with an annual turnover below NIS 120,000 (as of 2025) . You are exempt from charging VAT, which simplifies invoicing and reporting. However, certain professions, such as lawyers, doctors, architects, and consultants, are not eligible for this status regardless of their income .",
+      "raw_snippet": "to choose between two main statuses: Osek Patur (Exempt Entity): This is for small businesses with an annual turnover below NIS 120,000 (as of 2025) . You are exempt from charging VAT, which simplifies invoicing and reporting. However, certain professions, such as lawyers, doctors, architects, and consultants, are not eligible for this status regardless of their income .",
       "fetched_at": "2026-08-18",
       "appears_in": [
         "SKILL.md",
