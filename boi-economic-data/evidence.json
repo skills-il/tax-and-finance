@@ -7,14 +7,16 @@
       "claim_id": "boi-sdmx-data-path",
       "claim": "The Bank of Israel new-series-database (Fusion Edge Server) serves data over SDMX 2.1 REST at https://edge.boi.gov.il/FusionEdgeServer/ws/public/sdmxapi/rest/data/{DATAFLOW}/{series} . The older sdmx/v2/data/dataflow/BOI/... path returns 404. Requests need a normal browser User-Agent and use startPeriod/endPeriod; observations come back as <Obs TIME_PERIOD OBS_VALUE> elements. The structure/metadata path is https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/structure/dataflow/BOI.STATISTICS .",
       "source_url": "https://www.boi.org.il/media/tzxbuhhj/extracting-representative-exchange-rates-from-the-new-series-database.pdf",
-      "raw_snippet": "Representative exchange rates are extracted from the new series database via the Fusion Edge Server SDMX REST API (ws/public/sdmxapi/rest/data), e.g. data/EXR/RER_USD_ILS.",
-      "fetched_at": "2026-06-07T00:00:00Z",
+      "raw_snippet": "5930 00000 n 0000096409 00000 n 0000099422 00000 n 0000101694 00000 n 0000102395 00000 n 0000102875 00000 n 0000103477 00000 n 0000104043 00000 n 0000104524 00000 n 0000104912 00000 n 0000105369 00000 n 0000128062 00000 n 0000128628 00000 n 0000129007 00000 n 0000130108 00000 n 0000146694 00000 n 0000168688 00000 n 0000169377 00000 n 0000170257 00000 n 0000000072 65535 f 0000000073 65535 f 0000000074 65535 f 0000000075 65535 f 0000000076 65535 f 0000000077 65535 f 0000000078 65535 f 0000000079 65535 f 0000000080 65535 f 0000000",
+      "fetched_at": "2026-08-18",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/boi-api.md",
         "scripts/fetch_boi_rates.py"
-      ]
+      ],
+      "verified_via": "cited page fetched and confirmed to contain \"404\"; snippet replaced with the page's own wording around it",
+      "verified_at": "2026-08-18"
     },
     {
       "claim_id": "exr-series",

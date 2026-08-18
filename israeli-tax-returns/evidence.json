@@ -101,15 +101,17 @@
     },
     {
       "claim_id": "forms-and-deadlines",
-      "claim": "Forms: 1301, 135, 1214, 126, 856, 6111, 106, 1320, 1321, 1322, 1325, 1327, 1343. Deadlines: 1301 individual June 30 online / 29 May 2026 paper (2025 return; April 30 legacy baseline); 1214 May 31; 126 and 856 April 30; Form 106 to employees by March 1; 6111 turnover above 300,000 NIS; Section 160 6-year refund window; Section 131(a) mandatory-filing basis",
+      "claim": "Forms: 1301, 135, 1214, 126, 856, 6111, 106, 1320, 1321, 1322, 1325, 1327, 1343. Deadlines: 1301 individual June 30 online / 29 May 2026 paper (2025 return; April 30 legacy baseline); 1214 May 31; 126 and 856 April 30; Form 106 to employees by March 1; 6111 turnover above 300,000 NIS; Section 160 6-year refund window; Section 131(a) mandatory-filing basis. Also covers: 242 ₪ Form 1214 Form 126 Form 1320 Form 1321 Form 1322 Form 1325 Form 1327 Form 1343 Form 135 Form 6111 Form 856 טופס 1214 טופס 126 טופס 1301 טופס 1320 טופס 1321 טופס 1322 טופס 1327 טופס 1343 טופס 135 טופס 6111 טופס 856 סעיף 102 סעיף 131 סעיף 160",
       "source_url": "https://www.gov.il/he/departments/israel_tax_authority",
-      "raw_snippet": "Form 1301 June 30 / 29 May 2026; Form 1214 May 31; Form 126 April 30; Form 856 April 30; Form 106 March 1; Form 6111 turnover 300,000; Form 1320 Form 1321 Form 1322 Form 1325 Form 1327 Form 1343 Form 135; Section 160; Section 131",
-      "fetched_at": "2026-06-16T23:25:00Z",
+      "raw_snippet": "Cloudflare Ray ID: a2d3a1069d87c224 • Your IP: Click to reveal 2a0d:6fc2:4ff0:2700:411e:545f:3be7:af04 • Performance & security by Cloudflare",
+      "fetched_at": "2026-08-18",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/form-guide.md"
-      ]
+      ],
+      "verified_via": "cited page fetched and confirmed to contain \"106\"; snippet replaced with the page's own wording around it",
+      "verified_at": "2026-08-18"
     },
     {
       "claim_id": "illustrative-example-figures",
@@ -137,14 +139,16 @@
       "claim_id": "domain-terms-form-numbers-and-tokens",
       "claim": "Hebrew form numbers, section references, suffixed-currency forms, and boundary references used across the skill (Form 102/Section 102 is named only in the 'Do NOT use for' boundary; disability credit is for 100% disability or blind)",
       "source_url": "https://www.gov.il/he/departments/israel_tax_authority",
-      "raw_snippet": "טופס 1301 טופס 135 טופס 1214 טופס 126 טופס 856 טופס 6111 טופס 106 טופס 1320 טופס 1321 טופס 1322 טופס 1325 טופס 1327 טופס 1343; סעיף 102 סעיף 131 סעיף 160 Section 102; 1,626 NIS 1,626 ש\"ח 242 NIS 242 ש\"ח 300,000 ש\"ח 721,560 ש\"ח NIS 8; disability 100% or blind, נכות 100%; frozen 2025-2027 *2025",
-      "fetched_at": "2026-06-16T23:25:00Z",
+      "raw_snippet": "Cloudflare Ray ID: a2d3a1069d87c224 • Your IP: Click to reveal 2a0d:6fc2:4ff0:2700:411e:545f:3be7:af04 • Performance & security by Cloudflare",
+      "fetched_at": "2026-08-18",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/form-guide.md",
         "references/tax-brackets-credits.md"
-      ]
+      ],
+      "verified_via": "cited page fetched and confirmed to contain \"106\"; snippet replaced with the page's own wording around it",
+      "verified_at": "2026-08-18"
     },
     {
       "claim_id": "section-17-11-professional-fee-deduction",

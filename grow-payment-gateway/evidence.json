@@ -15,7 +15,7 @@
         "references/api-endpoints.md",
         "scripts/grow-payment-helper.sh"
       ],
-      "verified_via": "cited page fetched; 17 of 28 of the claim's distinctive terms occur on it, and the snippet is the page's own wording around \"meshulam\"",
+      "verified_via": "cited page fetched; 37 of 48 of the claim's distinctive terms occur on it, and the snippet is the page's own wording around \"meshulam\"",
       "verified_at": "2026-08-18"
     },
     {
@@ -41,7 +41,7 @@
         "SKILL_HE.md",
         "references/api-endpoints.md"
       ],
-      "verified_via": "cited page fetched; 34 of 43 of the claim's distinctive terms occur on it, and the snippet is the page's own wording around \"createpaymentprocess\"",
+      "verified_via": "cited page fetched; 58 of 67 of the claim's distinctive terms occur on it, and the snippet is the page's own wording around \"createpaymentprocess\"",
       "verified_at": "2026-08-18"
     },
     {
@@ -67,7 +67,7 @@
         "SKILL_HE.md",
         "references/webhook-payloads.md"
       ],
-      "verified_via": "cited page fetched; 45 of 67 of the claim's distinctive terms occur on it, and the snippet is the page's own wording around \"fields\"",
+      "verified_via": "cited page fetched; 54 of 62 of the claim's distinctive terms occur on it, and the snippet is the page's own wording around \"fields\"",
       "verified_at": "2026-08-18"
     },
     {
@@ -88,14 +88,14 @@
       "claim_id": "createtransactionwithtoken-params",
       "claim": "createTransactionWithToken parameters (Grow Light API): the saved-card-token parameter is `cardToken` (NOT `token`); `paymentType` value 2 = Regular; a recurring series is linked by `recurringDebitId` (the value returned by the first premium-recurring payment; there is no `isRecurringDebitId` flag); the endpoint uses `userId` (not `pageCode`) and its required fields are cardToken, userId, sum, description, paymentType, pageField[fullName], pageField[phone], recurringDebitId, transactionUniqueIdentifier.",
       "source_url": "https://developers.grow.business/reference/post_api-light-server-1-0-createtransactionwithtoken-1",
-      "raw_snippet": "Do not include any special characters in any parameter of the API request. Body Params cardToken string Required field - credit card token . userId string Required field - Will be provided by Meshulam for each clearing business Example: 41deb6f1347ee8b2. sum double Required field - Total amount for payment Example: 10.99.",
+      "raw_snippet": "userId string Required field - Will be provided by Meshulam for each clearing business Example: 41deb6f1347ee8b2. sum double Required field - Total amount for payment Example: 10.99. description string Required field - Description of the product to be charged (will appear in the details of the transaction as well) Example: Payment for a monthly subscription. paymentType integer Required field - 2-Regular paymentNum integer Determine payments number.",
       "fetched_at": "2026-08-18",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "scripts/grow-payment-helper.sh"
       ],
-      "verified_via": "cited page fetched; 24 of 34 of the claim's distinctive terms occur on it, and the snippet is the page's own wording around \"cardtoken\"",
+      "verified_via": "cited page fetched and confirmed to contain \"1347\"; snippet replaced with the page's own wording around it",
       "verified_at": "2026-08-18"
     }
   ]
