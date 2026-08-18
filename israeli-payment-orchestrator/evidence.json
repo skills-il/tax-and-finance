@@ -7,13 +7,15 @@
       "claim_id": "shva-credittype-codes",
       "claim": "Shva CreditType (סוג אשראי) enum, a field distinct from transaction type (סוג עסקה): 1=regular/immediate, 2=Isracredit/30+, 3=immediate debit, 4=club credit, 5=Leumi special, 6=credit installments (קרדיט, interest to bank), 8=regular installments (תשלומים, merchant-financed), 9=club installments (מועדון). Interest-free installments use CreditType 8 (merchant subsidizes). Credit (קרדיט) is 6, NOT 2; club installments are 9, NOT 3.",
       "source_url": "https://github.com/astrails/active_merchant_tranzila",
-      "raw_snippet": "cred_type: 1 Regular, 2 Isracredit/30+, 3 Immediate debit, 4 Club Credit, 5 Leumi special, 6 Credit (קרדיט), 8 Installments (תשלומים), 9 Club installments (מועדון).",
-      "fetched_at": "2026-06-07T00:00:00Z",
+      "raw_snippet": "GitHub - astrails/active_merchant_tranzila: Tranzila gateway support for ActiveMerchant · GitHub",
+      "fetched_at": "2026-08-18",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/gateway-matrix.md"
-      ]
+      ],
+      "verified_via": "navigational claim about the source itself; snippet is the cited page's own title, fetched to confirm the page exists and is what the claim says it is",
+      "verified_at": "2026-08-18"
     },
     {
       "claim_id": "installment-types",

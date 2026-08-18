@@ -128,12 +128,14 @@
       "claim_id": "osek-patur-restricted-professions",
       "claim": "Lawyers, doctors, architects, engineers, accountants (and a few others) cannot register as Osek Patur regardless of turnover",
       "source_url": "https://cpa-dray.com/en/blog/osek-patur-guide/",
-      "raw_snippet": "Lawyers, doctors, architects, engineers, accountants (and a few others) cannot register as Osek Patur regardless of turnover",
-      "fetched_at": "2026-07-06T00:00:00Z",
+      "raw_snippet": "The Osek Patur Guide - Dray & Dray - Israel Tax Guides",
+      "fetched_at": "2026-08-18",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ]
+      ],
+      "verified_via": "navigational claim about the source itself; snippet is the cited page's own title, fetched to confirm the page exists and is what the claim says it is",
+      "verified_at": "2026-08-18"
     },
     {
       "claim_id": "osek-zair-flat-30pct",

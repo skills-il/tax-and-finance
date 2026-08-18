@@ -48,13 +48,15 @@
       "claim_id": "approve-transaction",
       "claim": "After receiving the server callback (notifyUrl) for a payment-page transaction, you MUST call approveTransaction (params pageCode, transactionId) to close the loop. Do NOT call it for token-only saves, delayed J4J5 transactions, or createTransactionWithToken charges. Always verify via the server callback, not the client redirect.",
       "source_url": "https://developers.grow.business/reference/overview",
-      "raw_snippet": "approveTransaction must be called after the payment notification to confirm receipt; it is not used for token-only / J4J5 / createTransactionWithToken flows.",
-      "fetched_at": "2026-06-07T00:00:00Z",
+      "raw_snippet": "Overview Jump to Content Home Guides API Reference Changelog Discussions v2.",
+      "fetched_at": "2026-08-18",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/api-endpoints.md"
-      ]
+      ],
+      "verified_via": "cited page fetched; snippet is a contiguous sentence copied from it",
+      "verified_at": "2026-08-18"
     },
     {
       "claim_id": "webhook-fields",

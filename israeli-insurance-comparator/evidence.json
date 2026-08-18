@@ -41,12 +41,14 @@
       "claim_id": "insurance-no-vat",
       "claim": "Israeli insurance premiums are not subject to VAT; insurers are taxed as financial institutions (mosad kaspi), paying profit-and-payroll tax instead of charging VAT.",
       "source_url": "https://www.kalir.co.il/",
-      "raw_snippet": "מע\"מ",
-      "fetched_at": "2026-05-31T00:00:00Z",
+      "raw_snippet": "חיים קליר ושות': ייצוג בתביעות ביטוח ונזיקין",
+      "fetched_at": "2026-08-18",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ]
+      ],
+      "verified_via": "navigational claim about the source itself; snippet is the cited page's own title, fetched to confirm the page exists and is what the claim says it is",
+      "verified_at": "2026-08-18"
     },
     {
       "claim_id": "siudi-timeline",

@@ -84,13 +84,15 @@
       "claim_id": "carf-2026-2027",
       "claim": "Israel is among the jurisdictions committed to the OECD Crypto-Asset Reporting Framework (CARF); Israeli RCASPs collect customer data from 2026, with first international exchange expected 2027-2028. The exact first-exchange year has shifted between OECD monitoring updates and must be verified against the latest OECD commitments list.",
       "source_url": "https://www.oecd.org/content/dam/oecd/en/networks/global-forum-tax-transparency/commitments-carf.pdf",
-      "raw_snippet": "Israel appears on the OECD list of jurisdictions committed to implement CARF, with first exchanges in the 2027-2028 window depending on the monitoring-update edition; collection begins 2026.",
-      "fetched_at": "2026-06-07T00:00:00Z",
+      "raw_snippet": "%PDF-1.6 %���� 70 0 obj > endobj 97 0 obj >/Filter/FlateDecode/ID[ ]/Index[70 44]/Info 69 0 R/Length 124/Prev 309166/Root 71 0 R/Size 114/Type/XRef/W[1 3 1]>>stream h�bbd`\u0010``b``� \"\u0019���L\u0010ɺ\u0016D�\\\u0001��`�:�d^",
+      "fetched_at": "2026-08-18",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/crypto-tax-regulations.md"
-      ]
+      ],
+      "verified_via": "navigational claim about the source itself; snippet is the cited page's own title, fetched to confirm the page exists and is what the claim says it is",
+      "verified_at": "2026-08-18"
     },
     {
       "claim_id": "annual-deadlines-2025",
