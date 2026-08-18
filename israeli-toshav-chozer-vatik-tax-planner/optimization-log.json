@@ -1,0 +1,15 @@
+{
+  "cycles": [
+    {
+      "version": "1.1.1",
+      "date": "2026-07-15",
+      "lessons": [
+        "Fixed this cycle (scope bug): the immigrant tax credit points are an OLIM benefit under Section 35, not automatically granted to a toshav chozer vatik who is a returning Israeli citizen. Step 5.5 previously mis-attributed the 1-3 points / 4.5-year scheme to 'vatik returnees and olim'; it is now scoped to olim, with an explicit note that a pure returning-citizen vatik does not receive them. The point-value numbers were correct; only the eligibility scope was wrong.",
+        "75-day clawback (2028/2029): the correct rule is COUPLED, forfeiture requires BOTH ceasing Israeli residency in 2028 or 2029 AND spending under 75 days that year (confirmed by two independent web sources, Shivat Zion and Nevo/Stark). This cycle the body was made to state the coupling clearly and the evidence.json snippet was corrected to match (it had been paraphrased as a pure day-count). Framing keeps the strong warning without under-warning: remaining an Israeli resident preserves the benefit, but a returnee physically absent most of the year will struggle to argue continued residency, so the clawback still bites in practice. Lesson: reconcile body and evidence to the authoritative coupled rule rather than dumbing the body down to the imprecise snippet.",
+        "Folded in this cycle: Nefesh B'Nefesh returning-resident and taxation resource pages added to Reference Links (per the standing memory note to add an NBN reference on the next substantive update).",
+        "Confirmed-correct-do-not-relitigate (2026, verified): the Hok Iddud Israeli-source labor caps and eligibility window, the family-employment sub-cap, Amendment 272 (cancels the reporting exemption while preserving the tax exemption, effective for residency starting on/after 1 January 2026, plus the new Israeli-resident-trustee reporting), the vatik-versus-regular Section 14 distinction, and the year-of-acclimation 90-day election via Form 1130 are all correct and well-grounded.",
+        "Deferred: the family-employment sub-cap runs for tax years 2026-2029 (not 2030); this year-range detail is now noted inline. Family-relationship edge cases (in-law of a spouse, partial ownership) remain flagged for CPA confirmation against the final regulations."
+      ]
+    }
+  ]
+}

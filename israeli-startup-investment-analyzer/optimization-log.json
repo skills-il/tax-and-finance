@@ -1,0 +1,15 @@
+{
+  "cycles": [
+    {
+      "version": "1.1.0",
+      "date": "2026-07-26",
+      "lessons": [
+        "Expert MAJOR deferred: IVCA-vs-NVCA Israeli seed documentation conventions noted in domain-checklist Should-cover but not yet written into SKILL.md.",
+        "Expert MAJOR deferred: VAT leg of SAFE treatment (income-tax leg is covered, VAT is not).",
+        "Expert MINOR deferred: FX/shekel runway exposure, reserve-duty operational risk, OFAC/sanctions customer screening.",
+        "Fetched-summary trap: a WebFetch summary of the Herzog IIA page invented 100%/120%/150% manufacturing-abroad tiers that do not appear in the page text. The real rules are: no approval under 10%, no liability increase up to 25%, max 1.5X (was 3X). Always read the raw page text for rate tables.",
+        "Subagent date error caught at verification: Encryption Order repeal took force 20 March 2025, not 21 March 2026."
+      ]
+    }
+  ]
+}

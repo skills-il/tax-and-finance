@@ -1,0 +1,38 @@
+{
+  "author": "skills-il",
+  "version": "1.5.1",
+  "category": "tax-and-finance",
+  "tags": {
+    "he": [
+      "מס-קריפטו",
+      "מטבעות-דיגיטליים",
+      "רווחי-הון",
+      "דיווח-מס",
+      "בלוקצ'יין"
+    ],
+    "en": [
+      "crypto-tax",
+      "cryptocurrency",
+      "capital-gains",
+      "tax-reporting",
+      "blockchain"
+    ]
+  },
+  "display_name": {
+    "he": "דיווח מס קריפטו ישראלי",
+    "en": "Israeli Crypto Tax Reporter"
+  },
+  "display_description": {
+    "he": "אינו ייעוץ מס ואינו דוח שהוגש. חישוב מס רווחי הון על מטבעות דיגיטליים לפי רגולציית רשות המסים, והפקת נתונים לטופס 1322/1325 ולמקדמה בטופס 1399י (תוך 30 יום ממימוש). השתמשו כשמשתמש זקוק לחישוב חבות מס בשיטת FIFO, סיווג הכנסות DeFi (staking, liquidity mining, airdrops), הכנת נתונים לדוח השנתי 1301, או הבנת הליך הגילוי מרצון לקריפטו (פתוח עד 31 באוגוסט 2026). מכסה את סעיף 88 לפקודת מס הכנסה, חוזר 05/2018, שיעור 25% רווח הון ליחיד, ומס יסף 5% על רווחי הון מעל 721,560 ש\"ח (סף קפוא עד 2027). אל תשתמשו לתחומי מס לא ישראליים, חישובי מס הכנסה רגיל, או מע\"מ על פעילות עסקית בקריפטו, שדורשים ייעוץ מקצועי נפרד.",
+    "en": "Not tax advice and not a filed return. Calculate cryptocurrency capital gains tax per Israeli Tax Authority (Reshut HaMisim) regulations and generate Form 1322/1325 reporting data and Form 1399י advance-payment data (within 30 days of disposal). Use when a user needs to compute crypto tax obligations using FIFO cost basis, classify DeFi income (staking, liquidity mining, airdrops) for Israeli tax purposes, prepare annual tax filing data, understand reporting thresholds and advance payment (mikdamot) requirements, or evaluate the 2025-2026 Voluntary Disclosure Procedure (open until 31 Aug 2026). Covers Section 88 of the Income Tax Ordinance, Circular 2018/05, the 25% capital gains rate for individuals, and the 5% surtax on capital income above NIS 721,560 (threshold frozen through 2027). Do NOT use for non-Israeli tax jurisdictions, general income tax calculations, or VAT (maam) on crypto business activities, which require separate professional consultation."
+  },
+  "supported_agents": [
+    "claude-code",
+    "cursor",
+    "github-copilot",
+    "windsurf",
+    "opencode",
+    "codex",
+    "gemini-cli"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "cycles": [
+    {
+      "version": "1.3.0",
+      "date": "2026-07-20",
+      "lessons": [
+        "FACT FIX: national average wage used for the senior 30% income-tested band was 13,623; the Jan-2026 BTL basic average wage is 13,566 (13,769 for section 2). Corrected in the discounts guide + evidence.",
+        "COVERAGE (MAJOR): the 2026 income-test reform (effective 1 Jan 2026) was missing. Income-tested discounts now use the 12-month average income only (3-month option removed), a per-capita threshold table indexed to the minimum wage + household size, exclude some BTL benefits, and widened eligibility ~740k->840k households (top band still 90%). Added the reform note to SKILL.md + SKILL_HE.md and flagged the guide's low-income table as indicative pre-reform; deliberately did NOT assert specific 2026 per-capita NIS thresholds (route to the annual Ministry-of-Interior table) to avoid fabrication.",
+        "COVERAGE (MAJOR): added three missing named categories: income-support (havtachat hachnasa) recipient up to 70%, hardship (nazak) committee up to 70% under Regulation 7, and reserve-duty (miluim) municipality-administered relief. income-support + nazak added to the calculator; miluim kept documentation-only (no citable national rate, so no fabricated calculator percentage).",
+        "COVERAGE (MINOR): documented the empty-property once-per-ownership limit and the Section 330 uninhabitable-building exemption in the guide.",
+        "Confirmed current for 2026: arnona update coefficient 1.626%; oleh 90%/100sqm/12-of-24-months; disabled 40%/80% bands; hasaga 90/60/30-day deadlines. All Reference Links resolve (gov.il + jerusalem.muni 403 to curl but live in browser).",
+        "Deferred (MINOR): evacuee/war-affected (mefunim) transient relief not added (time-bound, lowest priority); a per-municipality current per-capita table would need a live scrape each cycle."
+      ]
+    },
+    {
+      "version": "1.2.1",
+      "date": "2026-06-07",
+      "lessons": [
+        "CRITICAL legal-deadline fix: the EN SKILL.md said the arnona objection (hasaga) deadline is 120 days; the correct figure is 90 days per the 1976 objection law (the HE file was already correct at 90, so this was an EN/HE inconsistency). Fixed 4 EN occurrences.",
+        "Three MAJOR eligibility-band errors, all duplicated in the calculator script: (1) disabled bands were 50-74%/75-100% but the real regulation is medical-disability 90%+ -> 40% and earning-incapacity 75%+ -> up to 80% (no 50-74% band); (2) senior/elderly was framed by age (65-69/70+) but is actually by pension/income status (25% pension recipient, 30% income-tested <= avg wage, 100% with income supplement); (3) oleh discount is 12 months chosen within the first 24 months, not the first 12. Renamed the script discount keys to senior-pension/senior-income/senior-supplement/disabled-medical/disabled-incapacity.",
+        "Fixed invalid example commands: SKILL.md used --zone A for Tel Aviv, but TA uses numeric zones 1-4; changed to --zone 2.",
+        "Added the 2026 national arnona update coefficient (1.626%) to the rates guide; large-family discount reframed as income-tested up to ~30%; student noted as municipality-dependent (~50%).",
+        "Built evidence.json from scratch (legacy skill)."
+      ]
+    }
+  ]
+}

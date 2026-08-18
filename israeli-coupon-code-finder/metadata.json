@@ -1,0 +1,55 @@
+{
+  "author": "skills-il",
+  "version": "1.1.0",
+  "category": "tax-and-finance",
+  "volatility": "annual",
+  "authoritative_sources": [
+    {
+      "url": "https://www.kolzchut.org.il/he/ביטול_עסקה_שנעשתה_באינטרנט_או_בטלפון",
+      "type": "consumer-rights",
+      "language": "he"
+    }
+  ],
+  "domain_checklist_version": 1,
+  "tags": {
+    "he": [
+      "קופונים",
+      "קודי-קופון",
+      "הנחות",
+      "קניות-אונליין",
+      "חיסכון",
+      "ישראל"
+    ],
+    "en": [
+      "coupons",
+      "coupon-codes",
+      "discounts",
+      "online-shopping",
+      "savings",
+      "israel"
+    ]
+  },
+  "display_name": {
+    "he": "מאתר קודי קופון לחנויות בישראל",
+    "en": "Israeli Coupon Code Finder"
+  },
+  "display_description": {
+    "he": "מוצא קודי קופון והנחה שעובדים לרכישה בחנות אונליין ישראלית, בודק כל קוד, ומחזיר סיכום אחד מדורג, במקום לשאול חמישה צ'אטבוטים את אותה שאלה. עובר בסריקה אחת על המקורות הישראליים (אתרי קופונים, פלטפורמות קאשבק, מועדוני הטבות של כרטיסי אשראי, כרטיסי מתנה, הטבות ישירות של החנות, ומבצעים עונתיים), ובודק לכל קוד תוקף, סכום מינימום, האם הוא רק ללקוח חדש, ותנאי שילוב. מתי להשתמש: כשעומדים לקנות בחנות ישראלית ורוצים קוד קופון או הנחה, או כששואלים אם אתר קופונים אמין. הסקיל לעולם לא ממציא קודים: הוא מציג רק קודים שנמצאו בחיפוש חי, עם קישור ותאריך. לא מיועד לאסטרטגיית חיסכון שוטפת (israeli-smart-saver), להשוואת מחירים בין חנויות (israeli-product-price-comparator), או למחירי סופר (israeli-grocery-price-intelligence).",
+    "en": "Finds working discount and coupon codes for an Israeli online-store checkout, verifies each code, and returns one ranked summary instead of asking five chatbots the same thing. Runs the Israeli source map in a single pass (coupon aggregators, cashback platforms, credit-card benefit hubs, gift-card stacking, store-direct levers, and seasonal sales) and checks every candidate for expiry, minimum cart, new-customer-only, and stacking rules. Use when a shopper is about to buy on an Israeli store and asks to find a coupon or discount code, or whether a coupon site is legit. Never invents codes: it reports only codes found via live web search, each with source and date. Do NOT use for ongoing savings strategy (israeli-smart-saver), cross-store price comparison (israeli-product-price-comparator), or grocery prices (israeli-grocery-price-intelligence)."
+  },
+  "supported_agents": [
+    "claude-code",
+    "cursor",
+    "github-copilot",
+    "windsurf",
+    "opencode",
+    "codex",
+    "openclaw",
+    "antigravity",
+    "gemini-cli",
+    "claude-ai",
+    "claude-desktop",
+    "chatgpt",
+    "manus"
+  ]
+}

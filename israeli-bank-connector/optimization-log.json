@@ -1,0 +1,37 @@
+{
+  "cycles": [
+    {
+      "version": "1.2.2",
+      "date": "2026-06-29",
+      "lessons": [
+        "STALE pin bumped: israeli-bank-scrapers 6.7.4 (2026-04-20) -> 6.7.8 (2026-06-15). Only point-release bug fixes since review (6.7.5 leumi, 6.7.6 yahav, 6.7.7 visa-cal, 6.7.8 discount), NO breaking change and NO CompanyTypes enum change. The >=6.7.x pin stays valid; just refresh the 'current release' figure each cycle.",
+        "VERIFIED OK (no change): no fabricated CLI (the package is library-only, bin:null) and the prior agorot/OAuth-class traps are absent; the CompanyTypes enum exactly matches the skill's 18 entries (14 banks + 4 card cos), BOI codes consistent, both MCP wrappers live.",
+        "Softened il-bank-mcp (glekner): noted it is less actively maintained (last push mid-2025) and pins an older scraper (6.1.4); israeli-bank-mcp (mottibec) is the more current wrapper.",
+        "Stripped pervasive PRE-EXISTING em-dashes from the touched files (SKILL.md, SKILL_HE.md, references/supported-banks.md): table-cell BOI 'no code' em-dash -> hyphen, prose ' - ' separators -> commas. The em-dash ban applies to every file touched in an update, not just edited lines."
+      ]
+    },
+    {
+      "version": "1.3.0",
+      "date": "2026-07-27",
+      "lessons": [
+        "PIN BUMPED 6.7.8 -> 6.9.0 (2026-07-22). 6.9.0 added Leumi savings accounts and Max credit-card balances, so an older pin silently returns LESS rather than failing. 6.8.0 completed the Visa Cal frame work; 6.7.9 fixed a Max login-page failure and 6.7.10 added an Isracard bot-detection workaround, so anything below 6.7.10 fails outright on those two providers.",
+        "CRITICAL FIXED: the categoriser counted pension/hishtalmut/gemel deposits as SPENDING. Total Spending, Into Savings and Total Outflow are now reported separately.",
+        "CRITICAL FIXED (my own fix was defeated by pattern order): the insurance patterns (harel/migdal/menora) sat BEFORE the savings patterns in a single first-match dict, so 'הפקדה לקרן פנסיה מגדל' classified as insurance and pension money went straight back into Total Spending. Savings now live in a PRIORITY_PATTERNS table tested first. Lesson: when a fix depends on which of two overlapping rules wins, test the collision case explicitly, not just the happy path.",
+        "CRITICAL FIXED: abs(amount) meant refunds, reversals and any incoming credit were counted as spending. Positive amounts are now tracked as credits and excluded from spending, with a Credits In line.",
+        "FIXED: percentages divided by the spending-only total while the category rows still included savings, so the column summed to well over one hundred. Now divides by Total Outflow and sums to ~100.",
+        "FIXED: Hebrew substring patterns matched inside longer words (פז fired on פזגז, הוט on מלון הוט, מגדל on קניון מגדל שלום). Added a leading Hebrew-letter guard plus explicit trailing guards on the whole-word tokens. NOTE: a blanket trailing guard broke the פנסי stem (it must still match פנסיה) - the guard is deliberately leading-only, with per-pattern trailing guards.",
+        "FIXED: category_count used `+= amount and 1`, so a zero-amount transaction was never counted and the counter became a float.",
+        "FIXED: top_merchants included savings, contradicting the documented 'top merchants by spending'.",
+        "FIXED: --example ignored --output-json, returning an unparseable table to any agent following the documented flag.",
+        "ADDED: a credentials and transaction-data handling section in both languages. This skill drives a scraper over live bank usernames, passwords and OTPs and had no handling rule at all.",
+        "FIXED: the frontmatter/metadata 'Supports ...' list named 12 banks while the reference said 14 (Behatsdaa and Beyahad Bishvilha were missing).",
+        "VERIFIED: CompanyTypes enum is 18 entries and references/supported-banks.md matches it exactly, including pagi."
+      ],
+      "carry": [
+        "Keyword categorisation still mis-assigns genuinely ambiguous Hebrew names: קניון מגדל שלום (a mall) hits the insurer מגדל, and מלון הוט (a hotel) hits the cable company הוט. Documented as a limitation in both languages; a merchant-ID or MCC-based approach would be the real fix.",
+        "Unsourced claims still in the body: the Berlin Group NextGenPSD2 basis for Israeli Open Banking; the per-bank history-depth claim (Hapoalim/Leumi <12 months, FIBI group 12+); session lifetimes of ~15-30 minutes and OneZero's OTP setup; bank ownership/positioning notes (Yahav owned by Hapoalim, Massad education sector, Pagi Charedi-focused); and the il-bank-mcp last-push date and its 6.1.4 pin. Source or hedge each next cycle.",
+        "The phrase 'a substantial share' for typical Israeli payslip savings deductions is unsourced; either cite a BTL/pension figure or drop the quantifier."
+      ]
+    }
+  ]
+}

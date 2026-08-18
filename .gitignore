@@ -1,0 +1,16 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Node (if skills include scripts with dependencies)
+node_modules/
+__pycache__/
+
+# Python bytecode
+*.py[cod]

@@ -1,0 +1,647 @@
+{
+  "skill_slug": "israeli-insurance-duplication-checker",
+  "schemaVersion": "1.0",
+  "generated_at": "2026-08-13T16:00:00Z",
+  "notes": "Statutory snippets were sliced from the source text programmatically, not retyped. Sections 54(a)/(b) cite Nevo because the wikitext source wraps cross-references in templates, which drops the section numbers from the plain-text layer. PDF-sourced entries carry verified_via=pdf: the PDFs were downloaded, converted with pdftotext, and stripped of Unicode bidi controls (U+202A/B/C) before the snippet was located. Without that strip no Hebrew snippet matches.",
+  "claims": [
+    {
+      "id": "sec59-property-only",
+      "claim": "Double insurance (ביטוח כפל) is section 59 of the Insurance Contract Law, and it applies to an insured ASSET, not to insurance generally",
+      "claim_type": "law",
+      "source_url": "https://he.wikisource.org/w/index.php?title=%D7%97%D7%95%D7%A7_%D7%97%D7%95%D7%96%D7%94_%D7%94%D7%91%D7%99%D7%98%D7%95%D7%97&action=raw",
+      "source_fetched_at": "2026-08-13T00:30:00Z",
+      "raw_snippet": "בוטח נכס בפני סיכון אחד אצל יותר ממבטח אחד לתקופות חופפות, על המבוטח להודיע על כך למבטחים בכתב מיד לאחר שנעשה ביטוח הכפל או לאחר שנודע לו עליו.",
+      "confidence": "high"
+    },
+    {
+      "id": "sec59c-joint-several",
+      "claim": "In double insurance the insurers are jointly and severally liable toward the insured for the overlapping sum",
+      "claim_type": "law",
+      "source_url": "https://he.wikisource.org/w/index.php?title=%D7%97%D7%95%D7%A7_%D7%97%D7%95%D7%96%D7%94_%D7%94%D7%91%D7%99%D7%98%D7%95%D7%97&action=raw",
+      "source_fetched_at": "2026-08-13T00:30:00Z",
+      "raw_snippet": "בביטוח כפל אחראים המבטחים כלפי המבוטח יחד ולחוד לגבי סכום הביטוח החופף.",
+      "confidence": "high"
+    },
+    {
+      "id": "sec59d-apportionment",
+      "claim": "Insurers apportion the burden between themselves in proportion to the sums insured",
+      "claim_type": "law",
+      "source_url": "https://he.wikisource.org/w/index.php?title=%D7%97%D7%95%D7%A7_%D7%97%D7%95%D7%96%D7%94_%D7%94%D7%91%D7%99%D7%98%D7%95%D7%97&action=raw",
+      "source_fetched_at": "2026-08-13T00:30:00Z",
+      "raw_snippet": "המבטחים ישאו בנטל החיוב בינם לבין עצמם לפי היחס שבין סכומי הביטוח.",
+      "confidence": "high"
+    },
+    {
+      "id": "sec54a-fixed-sum-routes-to-life",
+      "claim": "Accident, illness and disability cover paying a pre-agreed sum regardless of actual loss is governed by Chapter B (life insurance), which contains no double-insurance provision, so such cover stacks",
+      "claim_type": "law",
+      "source_url": "https://www.nevo.co.il/law_html/law00/71902.htm",
+      "source_fetched_at": "2026-08-13T00:32:00Z",
+      "raw_snippet": "על ביטוח תאונה, מחלה ונכות שבו חייב המבטח לשלם תגמולי ביטוח לפי שיעור מוסכם מראש, ללא תלות בשיעור הנזק שנגרם, יחולו הוראות פרק ב', בשינויים המחוייבים.",
+      "verified_via": "browser",
+      "verified_at": "2026-08-13T00:32:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "sec54b-indemnity-import-list",
+      "claim": "Loss-based accident, illness and disability cover imports only sections 42, 49, 52, 56, 61, 62 and 64. Section 59 is absent from that list, so the double-insurance rule does not reach reimbursement health cover",
+      "claim_type": "law",
+      "source_url": "https://www.nevo.co.il/law_html/law00/71902.htm",
+      "source_fetched_at": "2026-08-13T00:32:00Z",
+      "raw_snippet": "על ביטוח תאונה, מחלה ונכות שבו חייב המבטח לשלם תגמולי ביטוח לפי שיעור הנזק שנגרם, יחולו הוראות סעיפים 42, 49, 52, 56, 61, 62 ו-64, בשינויים המחוייבים.",
+      "verified_via": "browser",
+      "verified_at": "2026-08-13T00:32:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "sec56a-indemnity-cap",
+      "claim": "The insurer's indemnity duty is limited to the extent of the loss actually caused, capped at the sum insured. This is what prevents double recovery on reimbursement cover",
+      "claim_type": "law",
+      "source_url": "https://he.wikisource.org/w/index.php?title=%D7%97%D7%95%D7%A7_%D7%97%D7%95%D7%96%D7%94_%D7%94%D7%91%D7%99%D7%98%D7%95%D7%97&action=raw",
+      "source_fetched_at": "2026-08-13T00:30:00Z",
+      "raw_snippet": "חובת השיפוי של המבטח תהיה כשיעור הנזק שנגרם ובלבד שלא תעלה על הסכום שנתחייב בו בחוזה (להלן – סכום הביטוח)",
+      "confidence": "high"
+    },
+    {
+      "id": "sec10b-insured-cancellation-3-days",
+      "claim": "Cancellation by the INSURED takes effect three days after notice reaches the insurer (the 15 days in 10(a) is the insurer's side)",
+      "claim_type": "law",
+      "source_url": "https://he.wikisource.org/w/index.php?title=%D7%97%D7%95%D7%A7_%D7%97%D7%95%D7%96%D7%94_%D7%94%D7%91%D7%99%D7%98%D7%95%D7%97&action=raw",
+      "source_fetched_at": "2026-08-13T00:30:00Z",
+      "raw_snippet": "הודיע המבוטח על ביטול החוזה על פי תנאיו או על פי חוק זה, מתבטל החוזה כעבור שלושה ימים מהיום שבו נמסרה הודעת הביטול למבטח.",
+      "confidence": "high"
+    },
+    {
+      "id": "sec45a-life-cancel-anytime",
+      "claim": "A life insurance policy may be cancelled at any time by written notice to the insurer",
+      "claim_type": "law",
+      "source_url": "https://he.wikisource.org/w/index.php?title=%D7%97%D7%95%D7%A7_%D7%97%D7%95%D7%96%D7%94_%D7%94%D7%91%D7%99%D7%98%D7%95%D7%97&action=raw",
+      "source_fetched_at": "2026-08-13T00:30:00Z",
+      "raw_snippet": "המבוטח רשאי בכל עת לבטל את החוזה בהודעה בכתב למבטח.",
+      "confidence": "high"
+    },
+    {
+      "id": "gemel-disability-75-of-insured-salary",
+      "claim": "Disability pension inside a provident/pension fund may not exceed 75% of the salary insured in that fund, with a carve-out up to 100% for someone entitled to long-term-care payments",
+      "claim_type": "percentage",
+      "source_url": "https://he.wikisource.org/w/index.php?title=%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A4%D7%99%D7%A7%D7%95%D7%97_%D7%A2%D7%9C_%D7%A9%D7%99%D7%A8%D7%95%D7%AA%D7%99%D7%9D_%D7%A4%D7%99%D7%A0%D7%A0%D7%A1%D7%99%D7%99%D7%9D_(%D7%A7%D7%95%D7%A4%D7%95%D7%AA_%D7%92%D7%9E%D7%9C)_(%D7%9B%D7%99%D7%A1%D7%95%D7%99%D7%99%D7%9D_%D7%91%D7%99%D7%98%D7%95%D7%97%D7%99%D7%99%D7%9D_%D7%91%D7%A7%D7%95%D7%A4%D7%95%D7%AA_%D7%92%D7%9E%D7%9C)&action=raw",
+      "source_fetched_at": "2026-08-13T00:35:00Z",
+      "raw_snippet": "סכום קצבת הנכות לא יעלה על 75% מן השכר המבוטח בקופת הגמל, אלא אם כן נקבע בהסדר הביטוחי שיעור העולה על השיעור האמור למי שהיה זכאי לקבל תשלומים בשל ביטוח סיעודי, ובלבד שהשיעור האמור אינו עולה על 100% מן השכר המבוטח בקופת הגמל",
+      "confidence": "high"
+    },
+    {
+      "id": "akaa-offset-triggers-at-100pct",
+      "claim": "The cross-insurer offset in the uniform disability policy triggers only when total benefits from all insurers exceed 100% of the insured's average salary from every income source, not at 75%",
+      "claim_type": "percentage",
+      "source_url": "https://media.harel-group.co.il/media/x3nejvgj/%D7%AA%D7%A0%D7%90%D7%99-%D7%A4%D7%95%D7%9C%D7%99%D7%A1%D7%AA-%D7%91%D7%99%D7%98%D7%95%D7%97-%D7%90%D7%95%D7%91%D7%93%D7%9F-%D7%9B%D7%95%D7%A9%D7%A8-%D7%A2%D7%91%D7%95%D7%93%D7%94-%D7%94%D7%A8%D7%90%D7%9C-%D7%9C%D7%A2%D7%AA%D7%99%D7%93-%D7%97%D7%93%D7%A9.pdf",
+      "source_fetched_at": "2026-08-13T00:35:00Z",
+      "raw_snippet": "ביטח המבוטח את עצמו כנגד אבדן כושר העבודה גם אצל מבטחים אחרים וכתוצאה מכך סך הפיצוי החודשי המגיע לו בגין אותו מקרה הביטוח ממבטחים אחרים ומהתכנית עולה על 100% ממוצע השכר של המבוטח מכל מקור הכנסה",
+      "verified_via": "pdf",
+      "verified_at": "2026-08-13T00:40:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "akaa-30pct-floor",
+      "claim": "However much offset applies, the policy still pays at least 30% of the monthly benefit the insured is entitled to under its terms",
+      "claim_type": "percentage",
+      "source_url": "https://media.harel-group.co.il/media/x3nejvgj/%D7%AA%D7%A0%D7%90%D7%99-%D7%A4%D7%95%D7%9C%D7%99%D7%A1%D7%AA-%D7%91%D7%99%D7%98%D7%95%D7%97-%D7%90%D7%95%D7%91%D7%93%D7%9F-%D7%9B%D7%95%D7%A9%D7%A8-%D7%A2%D7%91%D7%95%D7%93%D7%94-%D7%94%D7%A8%D7%90%D7%9C-%D7%9C%D7%A2%D7%AA%D7%99%D7%93-%D7%97%D7%93%D7%A9.pdf",
+      "source_fetched_at": "2026-08-13T00:35:00Z",
+      "raw_snippet": "הפיצוי החודשי שישולם למבוטח לא יפחת, בכל מקרה, משיעור של 30% מסכום הפיצוי החודשי לו הוא זכאי על פי תנאי התכנית.",
+      "verified_via": "pdf",
+      "verified_at": "2026-08-13T00:40:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "akaa-refund-only-if-claim",
+      "claim": "The refund of excess premiums for redundant disability cover is contingent on the insured event occurring. No claim, no refund",
+      "claim_type": "feature",
+      "source_url": "https://media.harel-group.co.il/media/x3nejvgj/%D7%AA%D7%A0%D7%90%D7%99-%D7%A4%D7%95%D7%9C%D7%99%D7%A1%D7%AA-%D7%91%D7%99%D7%98%D7%95%D7%97-%D7%90%D7%95%D7%91%D7%93%D7%9F-%D7%9B%D7%95%D7%A9%D7%A8-%D7%A2%D7%91%D7%95%D7%93%D7%94-%D7%94%D7%A8%D7%90%D7%9C-%D7%9C%D7%A2%D7%AA%D7%99%D7%93-%D7%97%D7%93%D7%A9.pdf",
+      "source_fetched_at": "2026-08-13T00:35:00Z",
+      "raw_snippet": "לא קרה מקרה הביטוח, המבוטח לא יהיה זכאי להחזר פרמיה",
+      "verified_via": "pdf",
+      "verified_at": "2026-08-13T00:40:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "harb-holds-no-shaban-data",
+      "claim": "Har HaBituach does not contain any supplementary-health-plan (שב\"ן) data, so the overlap between commercial policies and שב\"ן is not made accessible to the public",
+      "claim_type": "feature",
+      "source_url": "https://library.mevaker.gov.il/sites/DigitalLibrary/Documents/2020/71A/2020-71A-201-Health-insurance.pdf",
+      "source_fetched_at": "2026-08-13T00:35:00Z",
+      "raw_snippet": "עוד נמצא, כי הנתונים האישיים המופיעים בהר הביטוח אינם כוללים את המידע בדבר התוכניות בשב\"ן ולכן המידע בדבר החפיפה בין הביטוחים המסחריים לתוכניות השב\"ן, של המבוטח גם אינו מונגש לציבור.",
+      "verified_via": "pdf",
+      "verified_at": "2026-08-13T00:40:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "overpayment-hundreds-of-millions",
+      "claim": "The State Comptroller estimates the public's excess payment for overlapping cover at a floor of hundreds of millions of shekels a year, deliberately giving no point estimate",
+      "claim_type": "currency",
+      "source_url": "https://library.mevaker.gov.il/sites/DigitalLibrary/Documents/2020/71A/2020-71A-201-Health-insurance.pdf",
+      "source_fetched_at": "2026-08-13T00:35:00Z",
+      "raw_snippet": "מאות מיליוני שקלים בשנה",
+      "verified_via": "pdf",
+      "verified_at": "2026-08-13T00:40:00Z",
+      "confidence": "medium"
+    },
+    {
+      "id": "duplication-37pct-3-4-million",
+      "claim": "37% of the statutorily insured public, about 3.4 million people, hold commercial health cover alongside שב\"ן, which is the state of double insurance (2020 data, published 2023)",
+      "claim_type": "percentage",
+      "source_url": "https://fs.knesset.gov.il/globaldocs/MMM/38209512-c6ce-ed11-815a-005056aa4246/2_38209512-c6ce-ed11-815a-005056aa4246_11_20077.pdf",
+      "source_fetched_at": "2026-08-13T00:35:00Z",
+      "raw_snippet": "37% מציבור המבוטחים על פי החוק (כ 3.4- מיליון) מחזיק בביטוח מסחרי במקביל לשב\"ן, מצב המכונה כפל ביטוחי",
+      "verified_via": "pdf",
+      "verified_at": "2026-08-13T00:40:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "reform-effective-june-2024",
+      "claim": "The first-shekel reform took effect in June 2024, with the aim of reducing double insurance",
+      "claim_type": "date",
+      "source_url": "https://www.gov.il/BlobFolder/reports/insurances-surgeons-2025/he/files_publications_digital_health_insurances-surgeons-2025.pdf",
+      "source_fetched_at": "2026-08-13T00:35:00Z",
+      "raw_snippet": "עם כניסתה לתוקף של רפורמת \"שקל ראשון\" ביוני 2024, שמטרתה לצמצם את תופעת כפל הביטוחים",
+      "verified_via": "pdf",
+      "verified_at": "2026-08-13T00:40:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "ltc-group-five-million",
+      "claim": "About 5 million Israelis, roughly half the population, hold group long-term-care insurance through the kupot cholim",
+      "claim_type": "statistic",
+      "source_url": "https://library.mevaker.gov.il/sites/DigitalLibrary/Documents/2026/Population-Aging/2026-Population-Aging-102.pdf",
+      "source_fetched_at": "2026-08-13T14:00:00Z",
+      "raw_snippet": "שוק הביטוח הסיעודי בישראל כולל כ-5 מיליון מבוטחים בביטוח סיעודי-קבוצתי דרך קופות החולים",
+      "verified_via": "pdf",
+      "verified_at": "2026-08-13T14:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "ltc-private-no-longer-sold",
+      "claim": "About one million Israelis hold legacy individual LTC policies, and such policies are no longer sold on the market",
+      "claim_type": "statistic",
+      "source_url": "https://library.mevaker.gov.il/sites/DigitalLibrary/Documents/2026/Population-Aging/2026-Population-Aging-102.pdf",
+      "source_fetched_at": "2026-08-13T14:00:00Z",
+      "raw_snippet": "כמיליון מבוטחים נוספים בביטוחי סיעוד פרטיים אשר נרכשו בעבר ואינם נמכרים יותר בשוק",
+      "verified_via": "pdf",
+      "verified_at": "2026-08-13T14:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "ltc-two-tier-benefit",
+      "claim": "The kupot group LTC policy pays a fixed sum at home and indemnity in an institution, so one policy sits in two tiers",
+      "claim_type": "policy-term",
+      "source_url": "https://library.mevaker.gov.il/sites/DigitalLibrary/Documents/2026/Population-Aging/2026-Population-Aging-102.pdf",
+      "source_fetched_at": "2026-08-13T14:00:00Z",
+      "raw_snippet": "מבוטח שנמצא זכאי ועומד בתנאי הביטוח יקבל פיצוי כספי של 5,000 ש\"ח לחודש למשך 60 חודשים אם הוא שוהה בביתו, ושיפוי כספי בסך 10,000 ש\"ח לחודש למשך 60 חודשים אם שוהה במוסד סיעודי",
+      "verified_via": "pdf",
+      "verified_at": "2026-08-13T14:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "ltc-group-legal-basis",
+      "claim": "The kupot group LTC arrangement rests on the 2015 group-LTC regulations and Insurance Circular 2016-1-3",
+      "claim_type": "law",
+      "source_url": "https://library.mevaker.gov.il/sites/DigitalLibrary/Documents/2026/Population-Aging/2026-Population-Aging-102.pdf",
+      "source_fetched_at": "2026-08-13T14:00:00Z",
+      "raw_snippet": "תקנות הפיקוח על שירותים פיננסיים (ביטוח) (ביטוח סיעודי קבוצתי לחברי קופת חולים), התשע\"ו-2015, חוזר ביטוח 2016-1-3",
+      "verified_via": "pdf",
+      "verified_at": "2026-08-13T14:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "ltc-additional-to-btl",
+      "claim": "The kupot LTC policies are bought in addition to the statutory BTL long-term-care benefit, not instead of it",
+      "claim_type": "policy-term",
+      "source_url": "https://library.mevaker.gov.il/sites/DigitalLibrary/Documents/2026/Population-Aging/2026-Population-Aging-102.pdf",
+      "source_fetched_at": "2026-08-13T14:00:00Z",
+      "raw_snippet": "ביטוחי הסיעוד בקופות החולים הם ביטוחים אשר ניתן לרכוש אותם נוסף על גמלת הסיעוד של בט\"ל",
+      "verified_via": "pdf",
+      "verified_at": "2026-08-13T14:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "ltc-btl-household-income-test",
+      "claim": "BTL long-term-care benefit is income-tested at household level; above about 30,000 a month neither spouse is entitled",
+      "claim_type": "threshold",
+      "source_url": "https://library.mevaker.gov.il/sites/DigitalLibrary/Documents/2026/Population-Aging/2026-Population-Aging-102.pdf",
+      "source_fetched_at": "2026-08-13T14:00:00Z",
+      "raw_snippet": "כאשר משק הבית מרוויח מעל כ-30,000 ש\"ח בחודש, שני בני הזוג במשק הבית אינם זכאים כלל לגמלת סיעוד",
+      "verified_via": "pdf",
+      "verified_at": "2026-08-13T14:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "dental-children-under-18",
+      "claim": "The public health basket covers general dental care for children who have not yet reached 18",
+      "claim_type": "law",
+      "source_url": "https://he.wikisource.org/w/index.php?title=%D7%97%D7%95%D7%A7_%D7%91%D7%99%D7%98%D7%95%D7%97_%D7%91%D7%A8%D7%99%D7%90%D7%95%D7%AA_%D7%9E%D7%9E%D7%9C%D7%9B%D7%AA%D7%99&action=raw",
+      "source_fetched_at": "2026-08-13T14:00:00Z",
+      "raw_snippet": "טיפולי שיניים לילדים שטרם מלאו להם 18 שנים",
+      "confidence": "high"
+    },
+    {
+      "id": "dental-age-72",
+      "claim": "The basket covers preventive and conservative dental care for insured persons aged 72 and over",
+      "claim_type": "law",
+      "source_url": "https://he.wikisource.org/w/index.php?title=%D7%97%D7%95%D7%A7_%D7%91%D7%99%D7%98%D7%95%D7%97_%D7%91%D7%A8%D7%99%D7%90%D7%95%D7%AA_%D7%9E%D7%9E%D7%9C%D7%9B%D7%AA%D7%99&action=raw",
+      "source_fetched_at": "2026-08-13T14:00:00Z",
+      "raw_snippet": "טיפולי שיניים למבוטחים שמלאו להם 72 שנים",
+      "confidence": "high"
+    },
+    {
+      "id": "dental-72-no-copay-items",
+      "claim": "The periodic check-up, bitewing pair and scaling for the 72-plus dental basket carry no co-payment",
+      "claim_type": "law",
+      "source_url": "https://he.wikisource.org/w/index.php?title=%D7%97%D7%95%D7%A7_%D7%91%D7%99%D7%98%D7%95%D7%97_%D7%91%D7%A8%D7%99%D7%90%D7%95%D7%AA_%D7%9E%D7%9E%D7%9C%D7%9B%D7%AA%D7%99&action=raw",
+      "source_fetched_at": "2026-08-13T14:00:00Z",
+      "raw_snippet": "בדיקה תקופתית, זוג צילומי נשך במסגרת בדיקה, הסרת אבנית, ארבעה מפגשים ראשונים להתאמת תותבות והסרת נקודות לחץ – בלא השתתפות עצמית",
+      "confidence": "high"
+    },
+    {
+      "id": "dental-orthodontics-excluded",
+      "claim": "Orthodontics is expressly excluded from the children's dental-trauma basket item",
+      "claim_type": "law",
+      "source_url": "https://he.wikisource.org/w/index.php?title=%D7%97%D7%95%D7%A7_%D7%91%D7%99%D7%98%D7%95%D7%97_%D7%91%D7%A8%D7%99%D7%90%D7%95%D7%AA_%D7%9E%D7%9E%D7%9C%D7%9B%D7%AA%D7%99&action=raw",
+      "source_fetched_at": "2026-08-13T14:00:00Z",
+      "raw_snippet": "ולמעט אורתודנטיה",
+      "confidence": "high"
+    },
+    {
+      "id": "pupils-accident-compulsory",
+      "claim": "Every pupil entitled to free education must be insured under personal-accident insurance through the local education authority",
+      "claim_type": "law",
+      "source_url": "https://he.wikisource.org/w/index.php?title=%D7%97%D7%95%D7%A7_%D7%9C%D7%99%D7%9E%D7%95%D7%93_%D7%97%D7%95%D7%91%D7%94&action=raw",
+      "source_fetched_at": "2026-08-13T14:00:00Z",
+      "raw_snippet": "מי שזכאי לחינוך חינם לפי סעיף זה יהיה מבוטח בביטוח תאונות אישיות, באמצעות רשות החינוך המקומית",
+      "confidence": "high"
+    },
+    {
+      "id": "pupils-accident-24-7",
+      "claim": "The pupils' personal-accident policy covers injury anywhere in Israel at any hour, whether or not connected to school activity",
+      "claim_type": "policy-term",
+      "source_url": "https://meyda.education.gov.il/files/bituach/Personal-accidents/insurance_policy_2025-26.pdf",
+      "source_fetched_at": "2026-08-13T14:00:00Z",
+      "raw_snippet": "היזק גופני שאירע במקום כלשהו בשטח מדינת ישראל",
+      "verified_via": "pdf",
+      "verified_at": "2026-08-13T14:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "pupils-accident-premium-69",
+      "claim": "The 2025/26 pupils' personal-accident policy carries a premium of 69 NIS, listed as item 10 of the policy summary, with no deductible",
+      "claim_type": "amount",
+      "source_url": "https://meyda.education.gov.il/files/bituach/Personal-accidents/insurance_policy_2025-26.pdf",
+      "source_fetched_at": "2026-08-13T14:00:00Z",
+      "raw_snippet": "₪ 69 .10סכום הפרמיה",
+      "verified_via": "pdf",
+      "verified_at": "2026-08-13T14:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "limitation-three-years",
+      "claim": "The limitation period for an insurance-benefits claim is three years from the insured event",
+      "claim_type": "law",
+      "source_url": "https://he.wikisource.org/w/index.php?title=%D7%97%D7%95%D7%A7_%D7%97%D7%95%D7%96%D7%94_%D7%94%D7%91%D7%99%D7%98%D7%95%D7%97&action=raw",
+      "source_fetched_at": "2026-08-13T14:00:00Z",
+      "raw_snippet": "תקופת ההתיישנות של תביעה לתגמולי ביטוח היא שלוש שנים לאחר שקרה מקרה הביטוח",
+      "confidence": "high"
+    },
+    {
+      "id": "limitation-five-years-branches",
+      "claim": "Life, illness-and-hospitalisation and long-term-care insurance carry a five-year limitation period",
+      "claim_type": "law",
+      "source_url": "https://he.wikisource.org/w/index.php?title=%D7%97%D7%95%D7%A7_%D7%97%D7%95%D7%96%D7%94_%D7%94%D7%91%D7%99%D7%98%D7%95%D7%97&action=raw",
+      "source_fetched_at": "2026-08-13T14:00:00Z",
+      "raw_snippet": "ביטוח חיים, ביטוח מפני מחלות ואשפוז וביטוח סיעודי",
+      "confidence": "high"
+    },
+    {
+      "id": "limitation-not-tolled-by-claim",
+      "claim": "Submitting the claim to the insurer does not stop the limitation clock running",
+      "claim_type": "law",
+      "source_url": "https://he.wikisource.org/w/index.php?title=%D7%97%D7%95%D7%A7_%D7%97%D7%95%D7%96%D7%94_%D7%94%D7%91%D7%99%D7%98%D7%95%D7%97&action=raw",
+      "source_fetched_at": "2026-08-13T14:00:00Z",
+      "raw_snippet": "אינו נעצר בעקבות מסירת התביעה למבטח",
+      "confidence": "high"
+    },
+    {
+      "id": "supervisor-investigates-complaints",
+      "claim": "The Commissioner investigates public complaints about the conduct of an insurer or insurance agent",
+      "claim_type": "law",
+      "source_url": "https://he.wikisource.org/w/index.php?title=%D7%97%D7%95%D7%A7_%D7%94%D7%A4%D7%99%D7%A7%D7%95%D7%97_%D7%A2%D7%9C_%D7%A9%D7%99%D7%A8%D7%95%D7%AA%D7%99%D7%9D_%D7%A4%D7%99%D7%A0%D7%A0%D7%A1%D7%99%D7%99%D7%9D_(%D7%91%D7%99%D7%98%D7%95%D7%97)&action=raw",
+      "source_fetched_at": "2026-08-13T14:00:00Z",
+      "raw_snippet": "הממונה יברר תלונות הציבור שראה בהן ממש בדבר פעולה של מבטח או של סוכן ביטוח בענייני ביטוח",
+      "confidence": "high"
+    },
+    {
+      "id": "supervisor-not-if-in-court",
+      "claim": "The Commissioner will not investigate a matter already before a court or arbitrator except for special recorded reasons",
+      "claim_type": "law",
+      "source_url": "https://he.wikisource.org/w/index.php?title=%D7%97%D7%95%D7%A7_%D7%94%D7%A4%D7%99%D7%A7%D7%95%D7%97_%D7%A2%D7%9C_%D7%A9%D7%99%D7%A8%D7%95%D7%AA%D7%99%D7%9D_%D7%A4%D7%99%D7%A0%D7%A0%D7%A1%D7%99%D7%99%D7%9D_(%D7%91%D7%99%D7%98%D7%95%D7%97)&action=raw",
+      "source_fetched_at": "2026-08-13T14:00:00Z",
+      "raw_snippet": "הממונה לא יברר תלונה בענין שהחל בו דיון לפני בית משפט או בורר",
+      "confidence": "high"
+    },
+    {
+      "id": "survivors-waiver-24-months",
+      "claim": "A pension member with no survivors other than a parent may waive death-risk cover for up to 24 months, renewable while he has no survivors",
+      "claim_type": "policy-term",
+      "source_url": "https://digital-content.fnx.co.il/sites/docs/genery/takanonimpensia/%D7%AA%D7%A7%D7%A0%D7%95%D7%9F-%D7%94%D7%A4%D7%A0%D7%99%D7%A7%D7%A1-%D7%9E%D7%A7%D7%99%D7%A4%D7%94-1-7-2024.pdf",
+      "source_fetched_at": "2026-08-13T14:00:00Z",
+      "raw_snippet": "רשאי לוותר על כיסוי ביטוחי לסיכוני מוות עבור שאיריו למשך תקופה שלא תעלה על 24 חודשים",
+      "verified_via": "pdf",
+      "verified_at": "2026-08-13T14:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "survivors-waiver-no-premium",
+      "claim": "During the survivors-cover waiver no death-risk insurance premiums are charged to the member",
+      "claim_type": "policy-term",
+      "source_url": "https://digital-content.fnx.co.il/sites/docs/genery/takanonimpensia/%D7%AA%D7%A7%D7%A0%D7%95%D7%9F-%D7%94%D7%A4%D7%A0%D7%99%D7%A7%D7%A1-%D7%9E%D7%A7%D7%99%D7%A4%D7%94-1-7-2024.pdf",
+      "source_fetched_at": "2026-08-13T14:00:00Z",
+      "raw_snippet": "לא ייגבו מהעמית דמי ביטוח בשל כיסוי ביטוחי למקרה מוות",
+      "verified_via": "pdf",
+      "verified_at": "2026-08-13T14:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "orphan-under-21",
+      "claim": "An orphan for pension survivors purposes is a child who has not yet reached 21, or a child with a disability",
+      "claim_type": "policy-term",
+      "source_url": "https://digital-content.fnx.co.il/sites/docs/genery/takanonimpensia/%D7%AA%D7%A7%D7%A0%D7%95%D7%9F-%D7%94%D7%A4%D7%A0%D7%99%D7%A7%D7%A1-%D7%9E%D7%A7%D7%99%D7%A4%D7%94-1-7-2024.pdf",
+      "source_fetched_at": "2026-08-13T14:00:00Z",
+      "raw_snippet": "שטרם מלאו לו 21 שנים",
+      "verified_via": "pdf",
+      "verified_at": "2026-08-13T14:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "survivors-waiver-underwriting-on-return",
+      "claim": "The fund may run medical underwriting when a member who waived survivors' cover asks to re-include it",
+      "claim_type": "policy-term",
+      "source_url": "https://digital-content.fnx.co.il/sites/docs/genery/takanonimpensia/%D7%AA%D7%A7%D7%A0%D7%95%D7%9F-%D7%94%D7%A4%D7%A0%D7%99%D7%A7%D7%A1-%D7%9E%D7%A7%D7%99%D7%A4%D7%94-1-7-2024.pdf",
+      "source_fetched_at": "2026-08-13T14:00:00Z",
+      "raw_snippet": "הגדלת הכיסוי הביטוחי כך שיכלול גם כיסוי ביטוחי לשאירים ,לגבי עמית שוויתר",
+      "verified_via": "pdf",
+      "verified_at": "2026-08-13T14:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "underwriting-may-exclude-condition",
+      "claim": "On the strength of medical underwriting the managing company may reject the request or exclude any pre-existing medical condition",
+      "claim_type": "policy-term",
+      "source_url": "https://digital-content.fnx.co.il/sites/docs/genery/takanonimpensia/%D7%AA%D7%A7%D7%A0%D7%95%D7%9F-%D7%94%D7%A4%D7%A0%D7%99%D7%A7%D7%A1-%D7%9E%D7%A7%D7%99%D7%A4%D7%94-1-7-2024.pdf",
+      "source_fetched_at": "2026-08-13T14:00:00Z",
+      "raw_snippet": "וכן רשאית להחריג מהכיסוי הביטוחי",
+      "verified_via": "pdf",
+      "verified_at": "2026-08-13T14:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "mortgage-irrevocable-beneficiary",
+      "claim": "A bank may require property and life cover up to the loan amount provided the bank is an irrevocable beneficiary",
+      "claim_type": "regulation",
+      "source_url": "https://www.boi.org.il/media/utld2tgp/451.pdf",
+      "source_fetched_at": "2026-08-13T14:00:00Z",
+      "raw_snippet": "ובלבד שהתאגיד הבנקאי יהא מוטב בלתי חוזר",
+      "verified_via": "pdf",
+      "verified_at": "2026-08-13T14:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "mortgage-free-choice-notice",
+      "claim": "The bank must tell the borrower prominently and in large letters that he may take the insurance directly rather than through the bank's agency",
+      "claim_type": "regulation",
+      "source_url": "https://www.boi.org.il/media/utld2tgp/451.pdf",
+      "source_fetched_at": "2026-08-13T14:00:00Z",
+      "raw_snippet": "באופן בולט ובאותיות גדולות",
+      "verified_via": "pdf",
+      "verified_at": "2026-08-13T14:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "mortgage-cancel-no-fee",
+      "claim": "The customer may cancel the policy at any time without any fee against an alternative policy naming the bank as irrevocable beneficiary",
+      "claim_type": "regulation",
+      "source_url": "https://www.boi.org.il/media/utld2tgp/451.pdf",
+      "source_fetched_at": "2026-08-13T14:00:00Z",
+      "raw_snippet": "הבהרה כי הלקוח יכול לבטל את הפוליסה בכל עת ללא עמלה",
+      "verified_via": "pdf",
+      "verified_at": "2026-08-13T14:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "mortgage-structure-capped",
+      "claim": "The bank may not require structure cover on the pledged property above the unpaid revalued loan balance",
+      "claim_type": "regulation",
+      "source_url": "https://www.boi.org.il/media/utld2tgp/451.pdf",
+      "source_fetched_at": "2026-08-13T14:00:00Z",
+      "raw_snippet": "לא יחייב לווה בביטוח הנכס המשועבד בערך העולה על יתרת ההלוואה המשוערכת הבלתי מסולקת",
+      "verified_via": "pdf",
+      "verified_at": "2026-08-13T14:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "mortgage-no-duty-under-30000",
+      "claim": "There is no duty to insure loans of up to 30,000 NIS or whose balance is below that",
+      "claim_type": "regulation",
+      "source_url": "https://www.boi.org.il/media/utld2tgp/451.pdf",
+      "source_fetched_at": "2026-08-13T14:00:00Z",
+      "raw_snippet": "העדר החובה לבצע ביטוח בגין הלוואות בסכומים עד 30,000 ש\"ח",
+      "verified_via": "pdf",
+      "verified_at": "2026-08-13T14:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "mislaka-official-site",
+      "claim": "The official operator site of the pension clearing house declares itself the official site, set up on the initiative of and under supervision of the Capital Market Authority",
+      "claim_type": "official-source",
+      "source_url": "https://www.swiftness.co.il/",
+      "source_fetched_at": "2026-08-13T14:00:00Z",
+      "raw_snippet": "האתר הרשמי של המסלקה הפנסיונית",
+      "confidence": "high"
+    },
+    {
+      "id": "mislaka-fee-20",
+      "claim": "A one-off clearing-house request covering all of a saver's products at all institutional bodies costs 20 NIS including VAT",
+      "claim_type": "amount",
+      "source_url": "https://www.swiftness.co.il/savers/qa/",
+      "source_fetched_at": "2026-08-13T14:00:00Z",
+      "raw_snippet": "20 ₪ (כולל מע\"מ)",
+      "confidence": "high"
+    },
+    {
+      "id": "mislaka-impersonation-warning",
+      "claim": "The clearing house publishes its own warning about impersonation attempts by parties claiming to act on its behalf",
+      "claim_type": "official-source",
+      "source_url": "https://www.swiftness.co.il/",
+      "source_fetched_at": "2026-08-13T14:00:00Z",
+      "raw_snippet": "נסיונות להתחזות לגורמים מטעם המסלקה הפנסיונית",
+      "confidence": "high"
+    },
+    {
+      "id": "reform-feb-2016-cutoff",
+      "claim": "The June 2024 reform auto-transferred only first-shekel commercial policies purchased after February 2016 held by people also insured under a שב\"ן",
+      "claim_type": "law",
+      "source_url": "https://www.gov.il/BlobFolder/reports/insurances-surgeons-2025/he/files_publications_digital_health_insurances-surgeons-2025.pdf",
+      "source_fetched_at": "2026-08-13T16:00:00Z",
+      "raw_snippet": "מסחריות מסוג \"מהשקל הראשון\" (שנרכשו לאחר פברואר  )2016ואשר היו מבוטחים גם בשב״ן ,קיבלו הודעה מראש",
+      "verified_via": "pdf",
+      "verified_at": "2026-08-13T16:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "regulator-overlap-position",
+      "claim": "The Ministry of Health's position is that first-shekel policies overlap to a large extent with שב\"ן services, while משלים שב\"ן policies do not include duplicate insurance",
+      "claim_type": "official-position",
+      "source_url": "https://www.gov.il/BlobFolder/reports/insurances-surgeons-2025/he/files_publications_digital_health_insurances-surgeons-2025.pdf",
+      "source_fetched_at": "2026-08-13T16:00:00Z",
+      "raw_snippet": "הן גם יקרות בהרבה וחופפות במידה רבה לשירותים שניתנים בשב״ן",
+      "verified_via": "pdf",
+      "verified_at": "2026-08-13T16:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "regulator-mashlim-no-duplication",
+      "claim": "משלים שב\"ן policies are by definition complementary to שב\"ן services and do not include duplicate insurance",
+      "claim_type": "official-position",
+      "source_url": "https://www.gov.il/BlobFolder/reports/insurances-surgeons-2025/he/files_publications_digital_health_insurances-surgeons-2025.pdf",
+      "source_fetched_at": "2026-08-13T16:00:00Z",
+      "raw_snippet": "פוליסות \"משלים שב״ן\" הן בהגדרה",
+      "verified_via": "pdf",
+      "verified_at": "2026-08-13T16:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "reform-reversal-deadline-31-may-2025",
+      "claim": "An insured transferred to משלים שב\"ן could return to the first-shekel track only on a request submitted before 31 May 2025, a year from the actual transfer",
+      "claim_type": "deadline",
+      "source_url": "https://finance.walla.co.il/item/3660919",
+      "source_fetched_at": "2026-08-13T16:00:00Z",
+      "raw_snippet": "ועד ל-31 במאי 2025 - כלומר, שנה ממועד ביצוע השינוי בפועל",
+      "confidence": "medium"
+    },
+    {
+      "id": "group-health-max-five-years",
+      "claim": "A group health policy's insurance period must end on a date known in advance and may not exceed five years",
+      "claim_type": "law",
+      "source_url": "https://he.wikisource.org/wiki/%D7%94%D7%95%D7%A8%D7%90%D7%95%D7%AA_%D7%94%D7%A4%D7%99%D7%A7%D7%95%D7%97_%D7%A2%D7%9C_%D7%A9%D7%99%D7%A8%D7%95%D7%AA%D7%99%D7%9D_%D7%A4%D7%99%D7%A0%D7%A0%D7%A1%D7%99%D7%99%D7%9D_(%D7%91%D7%99%D7%98%D7%95%D7%97)_(%D7%91%D7%99%D7%98%D7%95%D7%97_%D7%91%D7%A8%D7%99%D7%90%D7%95%D7%AA_%D7%A7%D7%91%D7%95%D7%A6%D7%AA%D7%99)",
+      "source_fetched_at": "2026-08-13T16:00:00Z",
+      "raw_snippet": "תקופת הביטוח תסתיים בתאריך ידוע מראש שיירשם בפוליסה ולא תעלה על 5 שנים",
+      "confidence": "medium"
+    },
+    {
+      "id": "group-to-individual-no-underwriting",
+      "claim": "An insurer must let someone insured under a group health policy move to an individual policy without fresh medical review and without a qualifying period, on terms the Commissioner directs",
+      "claim_type": "law",
+      "source_url": "https://he.wikisource.org/wiki/%D7%94%D7%95%D7%A8%D7%90%D7%95%D7%AA_%D7%94%D7%A4%D7%99%D7%A7%D7%95%D7%97_%D7%A2%D7%9C_%D7%A9%D7%99%D7%A8%D7%95%D7%AA%D7%99%D7%9D_%D7%A4%D7%99%D7%A0%D7%A0%D7%A1%D7%99%D7%99%D7%9D_(%D7%91%D7%99%D7%98%D7%95%D7%97)_(%D7%91%D7%99%D7%98%D7%95%D7%97_%D7%91%D7%A8%D7%99%D7%90%D7%95%D7%AA_%D7%A7%D7%91%D7%95%D7%A6%D7%AA%D7%99)",
+      "source_fetched_at": "2026-08-13T16:00:00Z",
+      "raw_snippet": "בלא בחינה מחודשת של מצב רפואי קודם ובלא תקופת אכשרה",
+      "confidence": "medium"
+    },
+    {
+      "id": "pension-disability-definition",
+      "claim": "A pension fund defines a disabled member as one at least 25% of whose working capacity is impaired by health, who therefore cannot work in his own or any other suitable occupation for over 90 consecutive days",
+      "claim_type": "policy-term",
+      "source_url": "https://digital-content.fnx.co.il/sites/docs/genery/takanonimpensia/%D7%AA%D7%A7%D7%A0%D7%95%D7%9F-%D7%94%D7%A4%D7%A0%D7%99%D7%A7%D7%A1-%D7%9E%D7%A7%D7%99%D7%A4%D7%94-1-7-2024.pdf",
+      "source_fetched_at": "2026-08-13T16:00:00Z",
+      "raw_snippet": "מסוגל לעבוד בעבודתו או בכל עבודה אחרת המתאימה לו לפי השכלתו ,הכשרתו או ניסיונו במשך תקופה",
+      "verified_via": "pdf",
+      "verified_at": "2026-08-13T16:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "circular-2018-1-8-mislaka-check",
+      "claim": "Circular 2018-1-8 requires the seller, before selling a disability plan, to check for existing cover at minimum via a one-time request to the pension clearing house",
+      "claim_type": "regulation",
+      "source_url": "https://www.chamber.org.il/media/160802/h_2018-1-8.pdf",
+      "source_fetched_at": "2026-08-13T16:00:00Z",
+      "raw_snippet": "יברר אודות קיומו של כיסוי ביטוחי קיים ,לכל הפחות באמצעות הגשת בקשת מידע חד פעמית",
+      "verified_via": "pdf",
+      "verified_at": "2026-08-13T16:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "circular-2018-1-8-no-sale-insured-income",
+      "claim": "Circular 2018-1-8 permits concluding a disability insurance contract only where the insured has employment income not already covered by existing cover",
+      "claim_type": "regulation",
+      "source_url": "https://www.chamber.org.il/media/160802/h_2018-1-8.pdf",
+      "source_fetched_at": "2026-08-13T16:00:00Z",
+      "raw_snippet": "גוף מוסדי רשאי לכרות חוזה ביטוח לכיסוי אובדן כושר עבודה רק אם מצא כי למבוטח קיימת הכנסה",
+      "verified_via": "pdf",
+      "verified_at": "2026-08-13T16:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "circular-2018-1-8-cancel-duplicate",
+      "claim": "Circular 2018-1-8 requires acting to cancel a disability plan on learning it covers income already covered by existing cover",
+      "claim_type": "regulation",
+      "source_url": "https://www.chamber.org.il/media/160802/h_2018-1-8.pdf",
+      "source_fetched_at": "2026-08-13T16:00:00Z",
+      "raw_snippet": "לביטול התכנית לאובדן כושר עבודה",
+      "verified_via": "pdf",
+      "verified_at": "2026-08-13T16:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "circular-2017-1-3-website-area",
+      "claim": "Circular 2017-1-3 requires the insurer to allocate an area titled 'ביטול פוליסה קיימת' on the main page of its website",
+      "claim_type": "regulation",
+      "source_url": "https://www.kalir.co.il/articles/1831",
+      "source_fetched_at": "2026-08-13T16:00:00Z",
+      "raw_snippet": "מבטח יקצה בעמוד הראשי באתר האינטרנט שלו אזור המיועד לביטול פוליסה שכותרתו \"ביטול פוליסה קיימת\".",
+      "verification_note": "Regulator's own file at gov.il returns 403 to curl. This URL is a complete verbatim reproduction of the circular on a law-firm site, used as a secondary mirror; cite the circular by number and date, not this host.",
+      "confidence": "medium"
+    },
+    {
+      "id": "circular-2017-1-3-three-business-days",
+      "claim": "Under Circular 2017-1-3 the insurer must notify the insured of deficiencies in a cancellation request within no more than three business days of receipt",
+      "claim_type": "regulation",
+      "source_url": "https://www.kalir.co.il/articles/1831",
+      "source_fetched_at": "2026-08-13T16:00:00Z",
+      "raw_snippet": "תוך פרק זמן שלא יעלה על 3 ימי עסקים מיום קבלת הבקשה על הליקויים",
+      "verification_note": "Regulator's own file at gov.il returns 403 to curl. This URL is a complete verbatim reproduction of the circular on a law-firm site, used as a secondary mirror; cite the circular by number and date, not this host.",
+      "confidence": "medium"
+    },
+    {
+      "id": "circular-2016-1-7-duplicate-consent",
+      "claim": "Circular 2016-1-7 bars enrolling an insured into a duplicate compensation policy unless they confirmed after being told it duplicates an existing policy and that both will be charged",
+      "claim_type": "regulation",
+      "source_url": "https://www.kalir.co.il/articles/1992",
+      "source_fetched_at": "2026-08-13T16:00:00Z",
+      "raw_snippet": "וכי יגבו ממנו דמי ביטוח עבור שתי הפוליסות",
+      "verification_note": "Regulator's own file at gov.il returns 403 to curl. This URL is a complete verbatim reproduction of the circular on a law-firm site, used as a secondary mirror; cite the circular by number and date, not this host.",
+      "confidence": "medium"
+    },
+    {
+      "id": "travel-six-month-exclusion-regulatory",
+      "claim": "The six-month pre-existing-condition carve-out in travel insurance is prescribed by regulation, not left to underwriter discretion",
+      "claim_type": "law",
+      "source_url": "https://www.nevo.co.il/law_html/law01/p194_017.htm",
+      "source_fetched_at": "2026-08-13T16:00:00Z",
+      "raw_snippet": "למעט מחלה שבשלה היה המבוטח בטיפול או בהשגחה בעת צאתו לחוץ לארץ או במשך ששת החדשים שקדמו לצאתו",
+      "confidence": "high"
+    },
+    {
+      "id": "harb-alert-not-dispositive",
+      "claim": "הר הביטוח states on its own site that a duplicate-insurance alert does not always mean unnecessary cover was purchased",
+      "claim_type": "official-source",
+      "source_url": "https://harb.cma.gov.il/Home/Index?agent=NotAgent",
+      "source_fetched_at": "2026-08-13T16:00:00Z",
+      "raw_snippet": "חשוב לדעת כי ההתראה אינה מחייבת תמיד כי נרכש כיסוי מיותר",
+      "confidence": "high"
+    },
+    {
+      "id": "mislaka-fee-contradiction-14",
+      "claim": "The pension clearing house operator's own FAQ also states 14 NIS for a one-off request covering all pension products at all managing bodies, contradicting the 20 NIS figure given elsewhere on the same page",
+      "claim_type": "amount",
+      "source_url": "https://www.swiftness.co.il/savers/qa/",
+      "source_fetched_at": "2026-08-13T16:30:00Z",
+      "raw_snippet": "14 ש\"ח לקבלת מידע מלא אודות כל המוצרים והחסכונות הפנסיונים בכל הגופים המנהלים באופן חד פעמי",
+      "confidence": "high",
+      "verification_note": "Recorded deliberately alongside mislaka-fee-20. The SAME page gives two different amounts for the same one-off all-products request. The skill therefore quotes neither as settled and tells the agent to read the tariff at the point of request."
+    }
+  ]
+}

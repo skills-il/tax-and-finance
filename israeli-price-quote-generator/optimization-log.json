@@ -1,0 +1,14 @@
+{
+  "cycles": [
+    {
+      "version": "1.0.1",
+      "date": "2026-07-06",
+      "lessons": [
+        "MAJOR fixed: Bit/PayBox fee was stated as ~1%; the correct statutory-approved fee is 0.6% (from Jan 2025) on the portion of receipts above 25,000 NIS/year, raised to 0.8% for Bit specifically from May 2026. Fixed in SKILL.md, SKILL_HE, domain-checklist, evidence, and the DB enriched best_practices (prod+dev). The ~1% figure is a real overstatement a freelancer could misquote to a client.",
+        "Verified current, NO change (all load-bearing legal facts): VAT 18% (2025-01-01, 2026 raise to 19% rejected); osek-patur ceiling exactly 122,833 NIS for 2026; Payment Terms Law 5777-2017 tiers UNCHANGED (State 45d/invoice; Local & B2B shotef+45; construction 80; late interest per Interest & Linkage Law) - the suspected 2024/2025 B2B amendment was a FALSE ALARM, verified against the live nevo statute (current to 2025-07-06); export zero-rating VAT Law §30(a)(5); withholding §164; Contracts Law §1/§8 (General Part 5733-1973) and §15 (Remedies 5731-1970); all 6 reference URLs live.",
+        "[CARRY] MINOR: the nevo file id for the Contracts Law (Remedies) is 71887 and the General Part is 71888 - if a specific Remedies URL is ever added to the reference table, point it at 71887. Currently only the General Part URL is in the table (correct).",
+        "[CARRY] MINOR enrichment idea: the 2026 'esek zair' reform (30% automatic normative expense deduction under the osek-patur ceiling) could be mentioned; not a correction."
+      ]
+    }
+  ]
+}

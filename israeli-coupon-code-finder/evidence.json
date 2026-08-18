@@ -1,0 +1,246 @@
+{
+  "skill_slug": "israeli-coupon-code-finder",
+  "schemaVersion": "1.0",
+  "generated_at": "2026-07-25",
+  "claims": [
+    {
+      "id": "legal-cancel-14-days",
+      "claim": "A consumer can cancel a remote (online or phone) purchase within 14 days of receiving the product or the document with the transaction details.",
+      "claim_type": "law",
+      "source_url": "https://www.kolzchut.org.il/he/ביטול_עסקה_שנעשתה_באינטרנט_או_בטלפון",
+      "source_fetched_at": "2026-06-08T00:00:00Z",
+      "raw_snippet": "בתוך 14 ימים (שבועיים) מיום קבלת המוצר או קבלת מסמך עם פרטי העסקה",
+      "confidence": "high"
+    },
+    {
+      "id": "legal-cancel-fee-cap",
+      "claim": "When cancelling a remote sale not due to a defect, the business may charge a cancellation fee of 5% of the price paid or 100 NIS, whichever is lower.",
+      "claim_type": "percentage",
+      "source_url": "https://www.kolzchut.org.il/he/ביטול_עסקה_שנעשתה_באינטרנט_או_בטלפון",
+      "source_fetched_at": "2026-06-08T00:00:00Z",
+      "raw_snippet": "דמי ביטול בגובה של 5% מהמחיר ששולם או 100 ₪, לפי הנמוך מביניהם",
+      "confidence": "high"
+    },
+    {
+      "id": "legal-cancel-extended-4-months",
+      "claim": "People with disabilities, people aged 65 or older, and new immigrants may cancel a remote sale within 4 months.",
+      "claim_type": "law",
+      "source_url": "https://www.kolzchut.org.il/he/ביטול_עסקה_שנעשתה_באינטרנט_או_בטלפון",
+      "source_fetched_at": "2026-06-08T00:00:00Z",
+      "raw_snippet": "לקוחות שהם אנשים עם מוגבלות או שמלאו להם 65 שנים או שהם עולים חדשים - יכולים לבטל את העסקה בתוך 4 חודשים",
+      "confidence": "high"
+    },
+    {
+      "id": "src-couponim",
+      "claim": "Couponim (couponim.co.il) is an Israeli coupon-aggregator site that lists discount codes, deals, and sales.",
+      "claim_type": "url",
+      "source_url": "https://couponim.co.il",
+      "source_fetched_at": "2026-06-08T00:00:00Z",
+      "raw_snippet": "קופונים Couponim הוא אתר הקופונים המרכזי בישראל, המרכז במקום אחד קודי הנחה, מבצעים וקופונים סודיים לחנויות המובילות בישראל ובעולם",
+      "confidence": "high"
+    },
+    {
+      "id": "src-cashback-il",
+      "claim": "Cashback.co.il is an Israeli cashback platform that refunds part of a purchase made through its links.",
+      "claim_type": "url",
+      "source_url": "https://www.cashback.co.il",
+      "source_fetched_at": "2026-06-08T00:00:00Z",
+      "raw_snippet": "קאשבק - חנויות, הטבות קופונים ומוצרים המזכים אתכם בהחזר כספי",
+      "confidence": "high"
+    },
+    {
+      "id": "src-buyme",
+      "claim": "BuyMe (buyme.co.il) is Israel's largest gift-card and experiences platform, whose gift cards can be used as a payment lever.",
+      "claim_type": "url",
+      "source_url": "https://buyme.co.il",
+      "source_fetched_at": "2026-06-08T00:00:00Z",
+      "raw_snippet": "BUYME אתר המתנות והחוויות הגדול בישראל | Gift Card",
+      "confidence": "high"
+    },
+    {
+      "id": "src-max-benefits",
+      "claim": "Max runs a cardholder benefits and discounts hub at max.co.il/benefits for its credit-card holders.",
+      "claim_type": "url",
+      "source_url": "https://www.max.co.il/benefits/lobby",
+      "source_fetched_at": "2026-06-08T00:00:00Z",
+      "raw_snippet": "הטבות ופינוקים למחזיקי כרטיס אשראי מקס - max הטבות",
+      "confidence": "high"
+    },
+    {
+      "id": "src-chaver",
+      "claim": "Moadon Chaver (hvr.co.il) is an Israeli members' benefits club whose site is addressed to career soldiers and military retirees, and which routes card issuance and support through Isracard.",
+      "claim_type": "url",
+      "source_url": "https://www.hvr.co.il",
+      "source_fetched_at": "2026-06-08T00:00:00Z",
+      "raw_snippet": "ברוכים הבאים לאתר הבר",
+      "confidence": "medium",
+      "verified_via": "browser",
+      "verified_at": "2026-07-25T00:00:00Z",
+      "fetch_note": "Site is served in windows-1255 and decodes to mojibake for plain fetchers; read via a rendering fetch on 2026-07-25, which showed the club addressed to career soldiers and retirees, an Isracard issuance contact (1-700-50-30-02) and support@hvr.co.il."
+    },
+    {
+      "id": "store-ivory",
+      "claim": "Ivory (ivory.co.il) is a leading Israeli online retailer for computers, cellular, and electrical products.",
+      "claim_type": "url",
+      "source_url": "https://www.ivory.co.il",
+      "source_fetched_at": "2026-06-08T00:00:00Z",
+      "raw_snippet": "אייבורי | הרשת המובילה למחשבים, סלולר ומוצרי חשמל",
+      "confidence": "high"
+    },
+    {
+      "id": "store-bug",
+      "claim": "Bug (bug.co.il) is an Israeli online store for gadgets, computers, and cellular products.",
+      "claim_type": "url",
+      "source_url": "https://www.bug.co.il",
+      "source_fetched_at": "2026-06-08T00:00:00Z",
+      "raw_snippet": "באג! גאדג'טים, מחשבים וסלולר",
+      "confidence": "high"
+    },
+    {
+      "id": "store-terminalx",
+      "claim": "Terminal X (terminalx.com) is an Israeli online fashion store.",
+      "claim_type": "url",
+      "source_url": "https://www.terminalx.com",
+      "source_fetched_at": "2026-06-08T00:00:00Z",
+      "raw_snippet": "כל מותגי האופנה במקום אחד",
+      "confidence": "high"
+    },
+    {
+      "id": "legal-no-fee-on-defect",
+      "claim": "When the cancellation is due to a defect in the product or a mismatch between the product/service and the information the business gave, the business may not charge a cancellation fee.",
+      "claim_type": "law",
+      "source_url": "https://www.kolzchut.org.il/he/ביטול_עסקה_שנעשתה_באינטרנט_או_בטלפון",
+      "source_fetched_at": "2026-06-08T00:00:00Z",
+      "raw_snippet": "אם העסקה בוטלה בגלל אחת מהסיבות הבאות, אסור לבעל העסק לגבות דמי ביטול: פגם במוצר, אי התאמה בין המוצר או השירות למידע שנמסר ללקוח על-ידי בעל העסק",
+      "confidence": "high"
+    },
+    {
+      "id": "legal-4month-precondition",
+      "claim": "The extended (4-month) cancellation period for people with disabilities, seniors 65+, and new immigrants applies when the transaction included a conversation (phone, chat, or email) between the customer and a business representative, and the business may require proof of eligibility.",
+      "claim_type": "law",
+      "source_url": "https://www.kolzchut.org.il/he/ביטול_עסקה_שנעשתה_באינטרנט_או_בטלפון",
+      "source_fetched_at": "2026-06-08T00:00:00Z",
+      "raw_snippet": "אם התקיימה שיחה (בטלפון, בצ'אט או במייל וכו') בין הלקוח לנציג של בית העסק במהלך ביצוע העסקה",
+      "confidence": "high"
+    },
+    {
+      "id": "import-exemption-75usd",
+      "claim": "The Israeli personal-import tax exemption applies to shipments whose goods are worth up to 75 USD; a shipment above 75 USD and up to 500 USD is customs-exempt but owes 18% VAT, plus purchase tax if the product is subject to it.",
+      "claim_type": "threshold",
+      "source_url": "https://www.kolzchut.org.il/he/זכותון_בנושא_יבוא_אישי_%28חבילות_מחו%22ל%29",
+      "source_fetched_at": "2026-07-25T00:00:00Z",
+      "raw_snippet": "הפטור ממס על קניות בייבוא אישי ניתן עד סכום של 75 דולר...משלוח עם מוצרים שערכם הכולל עד 75 דולר פטור לחלוטין ממסי יבוא...משלוח עם מוצרים שערכם הכולל מעל 75 דולר ולא יותר מ-500 דולר פטור מתשלום מכס בלבד, וחייב בתשלום מע\"מ (18%) ו מס קניה - אם המוצר מחויב בו",
+      "confidence": "high"
+    },
+    {
+      "id": "import-bands-500-1000",
+      "claim": "Goods worth 500 to 1,000 USD owe VAT and some also owe customs and purchase tax; goods above 1,000 USD, and any tobacco or alcohol shipment at any value, owe VAT plus customs plus purchase tax.",
+      "claim_type": "threshold",
+      "source_url": "https://www.kolzchut.org.il/he/זכותון_בנושא_יבוא_אישי_%28חבילות_מחו%22ל%29",
+      "source_fetched_at": "2026-07-25T00:00:00Z",
+      "raw_snippet": "מוצרים שעלו 1,000-500 דולר חייבים בתשלום מע\"מ וחלקם חייבים גם בתשלום מכס ומס קנייה...מוצרים שערכם מעל 1,000 דולר או משלוח של טבק, סיגריות ומשקאות אלכוהוליים בכל סכום שהוא, חייבים בתשלום מע\"מ וכן במכס ובמס קנייה",
+      "confidence": "high"
+    },
+    {
+      "id": "import-130usd-window",
+      "claim": "Between 25 February 2026 and 1 June 2026 the personal-import exemption threshold was 130 USD, before reverting to 75 USD.",
+      "claim_type": "threshold",
+      "source_url": "https://www.kolzchut.org.il/he/זכותון_בנושא_יבוא_אישי_%28חבילות_מחו%22ל%29",
+      "source_fetched_at": "2026-07-25T00:00:00Z",
+      "raw_snippet": "בין 25.02.2026 ל-01.06.2026 הפטור ניתן למוצרים עד 130 דולר",
+      "confidence": "high"
+    },
+    {
+      "id": "legal-no-fee-broader",
+      "claim": "The business may also not charge a cancellation fee when the product was not supplied by the agreed date, or when the consumer cancelled because of another breach of the transaction terms by the business.",
+      "claim_type": "law",
+      "source_url": "https://www.kolzchut.org.il/he/ביטול_עסקה_שנעשתה_באינטרנט_או_בטלפון",
+      "source_fetched_at": "2026-07-25T00:00:00Z",
+      "raw_snippet": "המוצר לא סופק במועד שנקבע...הצרכן ביטל את העסקה בגלל הפרה אחרת של תנאי העסקה על-ידי בעל העסק",
+      "confidence": "high"
+    },
+    {
+      "id": "legal-4month-service-notice",
+      "claim": "Within the extended 4-month window, cancelling a one-time service requires at least 2 business days before the service date, and a tourism or hospitality service at least 7 business days.",
+      "claim_type": "law",
+      "source_url": "https://www.kolzchut.org.il/he/ביטול_עסקה_שנעשתה_באינטרנט_או_בטלפון",
+      "source_fetched_at": "2026-07-25T00:00:00Z",
+      "raw_snippet": "אפשר לבטל בתוך 4 חודשים, ובתנאי שנותרו לפחות 2 ימי עסקים עד למועד קבלת השירות...אפשר לבטל בתוך 4 חודשים, ובתנאי שנותרו לפחות 7 ימי עסקים עד למועד קבלת השירות",
+      "confidence": "high"
+    },
+    {
+      "id": "src-cal-benefits",
+      "claim": "Cal (cal-online.co.il/benefits) runs a cardholder benefits and discounts hub for its credit-card holders.",
+      "claim_type": "url",
+      "source_url": "https://www.cal-online.co.il/benefits/",
+      "source_fetched_at": "2026-07-25T00:00:00Z",
+      "raw_snippet": "הטבות ומועדונים",
+      "confidence": "medium",
+      "fetch_note": "WAF-blocked (F5 \"Request Rejected\") to both curl and headless Chromium on 2026-07-25; host is live for real browsers. Existence cross-checked via search, not by reading the page."
+    },
+    {
+      "id": "src-isracard-benefits",
+      "claim": "Isracard's cardholder benefits hub is at benefits.isracard.co.il.",
+      "claim_type": "url",
+      "source_url": "https://benefits.isracard.co.il",
+      "source_fetched_at": "2026-07-25T00:00:00Z",
+      "raw_snippet": "הטבות ישראכרט",
+      "confidence": "medium",
+      "fetch_note": "Cloudflare-blocked (403 interstitial) to both curl and headless Chromium on 2026-07-25; host is live for real browsers. Existence cross-checked via search, not by reading the page."
+    },
+    {
+      "id": "src-isracard",
+      "claim": "Isracard (isracard.co.il) is an Israeli credit-card and financial-services company that runs cardholder benefit programs.",
+      "claim_type": "url",
+      "source_url": "https://www.isracard.co.il",
+      "source_fetched_at": "2026-06-08T00:00:00Z",
+      "raw_snippet": "ישראכרט | כרטיסי אשראי ושירותים פיננסיים",
+      "confidence": "high"
+    },
+    {
+      "id": "legal-cancel-exclusions",
+      "claim": "The remote-sale cancellation right does not cover goods that lose value quickly, goods made to special order for the customer, a recordable/copyable product whose original packaging was opened, or digital information.",
+      "claim_type": "law",
+      "source_url": "https://www.kolzchut.org.il/he/ביטול_עסקה_שנעשתה_באינטרנט_או_בטלפון",
+      "source_fetched_at": "2026-07-25T00:00:00Z",
+      "raw_snippet": "מוצר שעשוי לאבד את ערכו במהירות (לדוגמה, פרחים)...מוצר שיוצר עבור הלקוח, בהזמנה מיוחדת...מוצר שניתן להקלטה או שכפול, והצרכן פתח את האריזה המקורית...מידע דיגיטלי",
+      "confidence": "high"
+    },
+    {
+      "id": "legal-return-at-own-expense",
+      "claim": "After cancelling, the consumer normally returns the product to the business at their own expense.",
+      "claim_type": "law",
+      "source_url": "https://www.kolzchut.org.il/he/ביטול_עסקה_שנעשתה_באינטרנט_או_בטלפון",
+      "source_fetched_at": "2026-07-25T00:00:00Z",
+      "raw_snippet": "בדרך כלל על הצרכן להחזיר את המוצר לבית העסק על חשבונו",
+      "confidence": "high"
+    },
+    {
+      "id": "legal-refund-14-days",
+      "claim": "The business must refund the consumer within 14 days of receiving the cancellation notice.",
+      "claim_type": "law",
+      "source_url": "https://www.kolzchut.org.il/he/ביטול_עסקה_שנעשתה_באינטרנט_או_בטלפון",
+      "source_fetched_at": "2026-07-25T00:00:00Z",
+      "raw_snippet": "בעל העסק צריך להחזיר לצרכן את כספו בתוך 14 ימים מיום שקיבל את הודעת הביטול",
+      "confidence": "high"
+    },
+    {
+      "id": "import-tax-base",
+      "claim": "The value tested against the exemption threshold excludes shipping and insurance when they are calculated separately from the goods, but the tax rate itself is computed on the parcel value plus shipping and insurance.",
+      "claim_type": "threshold",
+      "source_url": "https://www.kolzchut.org.il/he/זכותון_בנושא_יבוא_אישי_%28חבילות_מחו%22ל%29",
+      "source_fetched_at": "2026-07-25T00:00:00Z",
+      "raw_snippet": "חישוב ערך המוצרים לא כולל הובלה וביטוח, בתנאי שהם מחושבים בנפרד מערך המוצרים...שיעור המס החל מחושב לפי ערך החבילה בתוספת דמי המשלוח והביטוח אם ישנם",
+      "confidence": "high"
+    },
+    {
+      "id": "legal-foreign-forum",
+      "claim": "Israeli courts have allowed an Israeli consumer to sue a large foreign company in Israel despite a foreign-jurisdiction clause in its terms of use (RAA 5860/16 Facebook Inc v. Ben Hamo).",
+      "claim_type": "law",
+      "source_url": "https://www.law.co.il/computer-law/2018/05/31/facebook-inc-v-ben-hemo-31052018/",
+      "source_fetched_at": "2026-07-25T00:00:00Z",
+      "raw_snippet": "ניתן לתבוע את פייסבוק בישראל, לפי דיני קליפורניה...עצם קיומה של תניית שיפוט זר אינה מפקיעה את סמכות בית המשפט המקומי",
+      "confidence": "high"
+    }
+  ]
+}

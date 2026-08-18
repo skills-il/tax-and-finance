@@ -1,0 +1,27 @@
+name: New Skill Request
+description: Suggest a new skill for this category
+title: "[Skill Request]: "
+labels: ["skill-request"]
+body:
+  - type: textarea
+    id: use-case
+    attributes:
+      label: Use case
+      placeholder: What Israeli/Hebrew problem would this skill solve?
+    validations:
+      required: true
+  - type: dropdown
+    id: urgency
+    attributes:
+      label: How urgently do you need this?
+      options:
+        - Nice to have
+        - Would use weekly
+        - Blocking my work
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Additional details
+      placeholder: APIs, regulations, existing tools, etc.

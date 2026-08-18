@@ -1,0 +1,26 @@
+{
+  "cycles": [
+    {
+      "version": "1.2.0",
+      "date": "2026-06-07",
+      "lessons": [
+        "Core bug found and fixed: the documented BOI API path (sdmx/v2/data/dataflow/BOI/EXR/1.0 and IR_INTEREST/1.0) returns 404. The working data path is ws/public/sdmxapi/rest/data/{DATAFLOW}/{series}: exchange rates are EXR/RER_<CUR>_ILS, interest is the BIR dataflow, CPI is PRI. Verified live (USD/ILS ~2.81-2.91 early June 2026). Fixed SKILL.md, SKILL_HE.md, references/boi-api.md, and the script.",
+        "Script also had two latent bugs: it parsed the wrong XML shape (generic ObsValue elements instead of the real flat <Obs TIME_PERIOD OBS_VALUE> attributes) so it always fell back to fake example data, and it used the default urllib User-Agent which the BOI edge server rejects. Both fixed; parsing validated against real API XML.",
+        "Aligned the representative-rate publication time to ~15:30 (was inconsistent: 16:00 in SKILL.md vs 15:30 in the reference). Refreshed the stale example fallback FX levels (USD 3.60 -> ~2.90).",
+        "Could not run the script end-to-end in the sandbox (intercepting proxy causes SSL CERTIFICATE_VERIFY_FAILED); verified the URL via curl and the parser against the downloaded XML. The script correctly does NOT disable TLS verification.",
+        "Next cycle: identify the single headline BOI policy-rate series within BIR (it has ~30 sub-series) so --interest can return the rate programmatically instead of pointing to the website."
+      ]
+    },
+    {
+      "version": "1.3.0",
+      "date": "2026-07-18",
+      "lessons": [
+        "CRITICAL STALE fixed: the representative-rate publication schedule was Sunday-Thursday; the Israeli financial week moved to Monday-Friday on 5 Jan 2026. Verified DIRECTLY via the live SDMX API (Fridays 2026-07-03/07-10 have USD/ILS observations; Sundays 07-05/07-12 do not). Fixed to Mon-Fri (Mon-Thu ~15:30, Fri ~12:30; weekend Sat-Sun; fall back to Friday, not Thursday) across SKILL.md, SKILL_HE.md, references/boi-api.md, references/domain-checklist.md, and the script's example-fallback weekday-skip (4,5=Fri,Sat -> 5,6=Sat,Sun).",
+        "Added the Friday 12:30 publication time (was omitted; only 15:30 was stated). Added a BOI representative-rate methodology/schedule reference link (reprate page).",
+        "Expert cleanups: --interest-history overstated a numeric rate-history feature the script does not deliver (fetch_interest_rate returns only source pointers); downgraded the argparse help + SKILL prose to 'points to the official rate-decision source'. Fixed a residual line-165 'Fri/Sat' comment. Trimmed the module docstring's CPI overstatement (no CPI flag exists).",
+        "Verified unchanged: SDMX API base path + EXR/BIR/PRI dataflows all resolve (old sdmx/v2/data/dataflow path 404s); the interest rate is correctly NOT hardcoded anywhere (the 6-Jul-2026 cut to 3.50% is not needed); CPI ~15th of the following month.",
+        "Deferred: identify the headline BIR policy-rate series so --interest can return the rate programmatically; add a CPI (PRI) fetch path to the script; the reprate reference page is Radware-bot-protected to automated fetch (renders in a real browser) - the load-bearing Mon-Fri fact is API-verifiable regardless."
+      ]
+    }
+  ]
+}

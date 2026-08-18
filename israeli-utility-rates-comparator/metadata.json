@@ -1,0 +1,44 @@
+{
+  "author": "skills-il",
+  "version": "1.4.1",
+  "category": "tax-and-finance",
+  "tags": {
+    "he": [
+      "חשמל",
+      "מים",
+      "גז",
+      "ארנונה",
+      "סלולר",
+      "אינטרנט",
+      "תעריפים",
+      "השוואת מחירים"
+    ],
+    "en": [
+      "electricity",
+      "water",
+      "gas",
+      "arnona",
+      "cellular",
+      "internet",
+      "tariffs",
+      "price-comparison"
+    ]
+  },
+  "display_name": {
+    "he": "השוואת תעריפי חשמל, מים, גז, סלולר ואינטרנט בישראל",
+    "en": "Israeli Utility & Telecom Rates Comparator"
+  },
+  "display_description": {
+    "he": "השוואת ספקי חשמל פרטיים מול חברת החשמל, תעריפי מים מדורגים, מחירי גז בישול, חבילות סלולר ואינטרנט-סיבים, וארנונה בין רשויות מקומיות בישראל. להשתמש כשהמשתמש צריך להבין מבנה תעריפי חברת החשמל ותעריף תעו\"ז (שיא/שפל), לחשב כדאיות פאנלים סולאריים, להשוות מחירי מים בין מדרגות, לבחור חבילת סלולר זולה, לעבור לאינטרנט סיבים, או להעריך הבדלי ארנונה בין ערים ולנווט תהליך השגה. מכסה את שוק החשמל הפתוח לתחרות, יצרנים פרטיים שמספקים ללקוחות ביתיים, מחירי מקורות והתאגידים העירוניים, חברות סלולר ו-MVNO, תשתיות סיבים אופטיים, ושונות תעריפי ארנונה. לא להשתמש לחוזי שירות מסחריים או תעשייתיים בקנה מידה גדול, או ניתוח השקעות בתשתיות אנרגיה.",
+    "en": "Compare electricity providers, water tariffs, cooking-gas (LPG) rates, cellular plans, fiber internet packages, and arnona (municipal property tax) across Israeli municipalities and utility companies. Use when a user needs to understand IEC tariff structures, calculate solar panel ROI, compare tiered water pricing, pick a cheap cellular plan, switch to fiber internet, or evaluate arnona differences between cities. Covers electricity market deregulation, independent power producers, Mekorot water pricing, cellular operators and MVNOs, fiber-optic infrastructure, and municipal rate variations. Do NOT use for commercial/industrial utility contracts at scale, or utility infrastructure investment analysis."
+  },
+  "supported_agents": [
+    "claude-code",
+    "cursor",
+    "github-copilot",
+    "windsurf",
+    "opencode",
+    "codex",
+    "gemini-cli"
+  ]
+}

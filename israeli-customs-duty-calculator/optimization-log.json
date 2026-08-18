@@ -1,0 +1,25 @@
+{
+  "cycles": [
+    {
+      "version": "1.2.0",
+      "date": "2026-07-26",
+      "lessons": [
+        "THRESHOLD RE-CONFIRMED, NOT CHANGED: the personal-import exemption is still USD 75 in July 2026. No new order since the USD 130 window ended on 1 June 2026. For a figure that moved four times in seven months, confirming it is the main job of the cycle.",
+        "CORRECTED the above-USD-500 band. The skill said 'full duty + VAT + purchase tax'. Kol Zchut says VAT applies and only SOME goods (וחלקם) additionally owe duty and purchase tax. As written the skill overestimated landed cost on every parcel in that band.",
+        "CORRECTED the USD 1,000 tier. The broker and rashimon requirement was stated as law; the source states only a tax consequence. Now framed as what carriers require in practice. Note the expert reviewer pushed back that this went too far and that simplified clearance really is capped by regulation. I could not source either direction (web-search budget exhausted), so the wording stays hedged and says to confirm with the carrier. Re-open this next cycle with a source.",
+        "REMOVED e-cigarettes from the exemption carve-out. The quoted exemption text names tobacco products and alcoholic beverages only. First draft of the fix still asserted that e-cigs are 'separately subject to purchase tax', which the judge caught as an unsourced affirmative liability; it is now a plain 'check the current rule'.",
+        "CORRECTED an internal contradiction on the VAT base: Step 2 said VAT applies to 'the product value' while the worked example and the script both correctly used CIF. The script was right. The two bases are now stated explicitly: the THRESHOLD is tested on goods value alone, the TAX on CIF plus duty plus purchase tax.",
+        "ADDED the 72-hour anti-splitting rule, verbatim-sourced. Two parcels from the same supplier to the same customer within 72 hours are assessed as one shipment. This answers the most common consumer workaround and was absent.",
+        "SCRIPT, four reproduced bugs: (1) a non-USD personal import silently lost the exemption because the threshold branch required currency == USD, so a EUR 50 parcel was taxed; it now requires --usd-value and refuses rather than guessing. (2) The threshold used strict less-than, so a parcel of exactly USD 75 was taxed although the rule is 'up to 75'. (3) --personal did not enforce the duty waiver in the 75-500 band, so a user who read a real duty rate off Shaar Olami was charged duty customs would not collect; the waiver is now enforced and reported. (4) A negative --fx produced a negative landed cost; inputs are now validated, including rates entered as 12 instead of 0.12.",
+        "SCRIPT: tobacco and alcohol exclusion existed only in the docstring, so a USD 50 bottle of whisky printed EXEMPT. Added --excluded-goods, which bypasses the exemption branch.",
+        "ADDED an explicit ad-valorem scope limit. The tariff uses specific (NIS per kg, per litre, per unit) and compound rates on food, beverages, alcohol, tobacco and some textiles, and neither the prose nor the script can express them. The skill now says so instead of implying every rate is a percentage.",
+        "PROCESS, the batch's recurring defect once more: the above-500 correction and the USD 1,000 downgrade landed in Step 2 but not in the Gotchas or the Step 1 table, and the superseded evidence claim tier-500-plus was left in place actively contradicting the new one. Old-value propagation has to include the summary tables, the gotcha list and evidence.json, not just the section that states the rule.",
+        "CARRY: purchase tax is computed on CIF plus duty plus a statutory uplift per tariff item (TAMA). The script omits the uplift and therefore understates exactly the shipments where purchase tax dominates. Not fixed because the uplift rates were not sourced this cycle.",
+        "CARRY: the FTA reference file was not touched this cycle and carries several unsourced specifics: the Canada CIFTA Form B239 four-year validity, the EU 6,000-euro invoice-declaration ceiling (which is load-bearing, it drives Example 3), the US Green Form discontinuation date, and the EFTA and Mercosur rows. The Canada citation reportedly does not contain the facts attributed to it.",
+        "CARRY: the EU-Israel settlement-goods exclusion from preferential treatment is missing entirely, and it is the most litigated origin rule on that agreement.",
+        "CARRY: release blockers are absent and matter more than tax for many parcels: standards approval, Ministry of Communications RF approval, and import licensing. Also absent: courier clearance and handling fees, which routinely exceed the tax on a small parcel, and the fact that customs may re-value a declared amount.",
+        "CARRY: 'VAT is recoverable' for commercial imports is true only where the rashimon is in the importer's own name and file number."
+      ]
+    }
+  ]
+}

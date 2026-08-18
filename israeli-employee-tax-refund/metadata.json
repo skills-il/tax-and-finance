@@ -1,0 +1,92 @@
+{
+  "author": "skills-il",
+  "version": "1.4.1",
+  "category": "tax-and-finance",
+  "tags": {
+    "he": [
+      "החזר-מס",
+      "שכיר",
+      "טופס-106",
+      "טופס-135",
+      "נקודות-זיכוי",
+      "מילואים",
+      "תרומות",
+      "יישוב-מזכה",
+      "רשות-המסים",
+      "ישראל"
+    ],
+    "en": [
+      "tax-refund",
+      "employee",
+      "salaried",
+      "form-106",
+      "form-135",
+      "credit-points",
+      "miluim",
+      "donations",
+      "reshut-hamisim",
+      "israel"
+    ]
+  },
+  "display_name": {
+    "he": "החזר מס לשכירים",
+    "en": "Israeli Employee Tax Refund"
+  },
+  "display_description": {
+    "he": "אינו ייעוץ מס ואינו דוח שהוגש. ליווי שכירים בהליך החזר מס וולונטרי מרשות המסים. הסקיל קורא את טופס 106, מזהה טריגרים להחזר (החלפת עבודה, אבטלה, חופשת לידה, מילואים, תרומות לפי סעיף 46, יישוב מזכה, נקודות זיכוי שלא נדרשו, נכות, מזונות, משיכת קרן השתלמות), מעריך את גובה ההחזר לפי מדרגות 2026 ושווי נקודה (242 ₪/חודש), מייצר רשימת מסמכים לכל טריגר, וממלא טופס 135 או מפנה לפורטל המקוון של רשות המסים. מכיר את חלון 6 השנים אחורה לפי סעיף 160 לפקודה. השתמשו בו כשמשתמש שואל על החזר מס לשכירים, טופס 135, החזר על שנים קודמות, מילואים, תרומות, או נקודות זיכוי שלא נוצלו. אל תשתמשו בסקיל הזה לעצמאים, טופס 1301, אופציות, קריפטו, או מע\"מ.",
+    "en": "Not tax advice and not a filed return. Guide salaried Israeli employees through the voluntary tax-refund process with Reshut HaMisim. Reads Form 106, detects refund triggers (mid-year job change, unemployment, maternity leave, military reserve duty, Section 46 donations, yishuv mezakeh, undeclared credit points, disability, alimony, early keren hishtalmut withdrawal), estimates the refund using 2026 brackets and the 242 ₪/month credit-point value, generates a per-trigger document checklist, and fills Form 135 or routes the user to the online refund portal. Knows the 6-year retroactive window (Section 160 ITO). Use when a salaried employee asks about Israeli tax refund, החזר מס לשכירים, Form 135, missed credit points, miluim refund, or refunds for previous tax years. Do NOT use for self-employed Form 1301 filers (use israeli-tax-returns), payroll math (use israeli-payroll-calculator), stock options (use israeli-stock-options-tax), crypto (use israeli-crypto-tax-reporter), or VAT (use israeli-vat-reporting)."
+  },
+  "supported_agents": [
+    "claude-code",
+    "claude-desktop",
+    "cursor",
+    "github-copilot",
+    "windsurf",
+    "opencode",
+    "codex",
+    "openclaw",
+    "antigravity",
+    "gemini-cli"
+  ],
+  "openclaw": {
+    "requires": {
+      "bins": [],
+      "env": []
+    },
+    "emoji": "💸"
+  },
+  "volatility": "legislative",
+  "authoritative_sources": [
+    {
+      "url": "https://www.gov.il/he/service/itc135",
+      "type": "regulator",
+      "language": "he"
+    },
+    {
+      "url": "https://secapp.taxes.gov.il",
+      "type": "regulator",
+      "language": "he"
+    },
+    {
+      "url": "https://www.kolzchut.org.il/he/%D7%94%D7%97%D7%96%D7%A8_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
+      "type": "rights-database",
+      "language": "he"
+    },
+    {
+      "url": "https://www.kolzchut.org.il/he/%D7%A0%D7%A7%D7%95%D7%93%D7%95%D7%AA_%D7%96%D7%99%D7%9B%D7%95%D7%99_%D7%9E%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
+      "type": "rights-database",
+      "language": "he"
+    },
+    {
+      "url": "https://www.kolzchut.org.il/he/%D7%A4%D7%98%D7%95%D7%A8_%D7%9E%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94_%D7%9C%D7%90%D7%A0%D7%A9%D7%99%D7%9D_%D7%A2%D7%9D_%D7%A0%D7%9B%D7%95%D7%AA",
+      "type": "rights-database",
+      "language": "he"
+    },
+    {
+      "url": "https://www.btl.gov.il",
+      "type": "regulator",
+      "language": "he"
+    }
+  ],
+  "domain_checklist_version": 3
+}

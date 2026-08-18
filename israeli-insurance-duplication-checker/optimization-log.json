@@ -1,0 +1,34 @@
+{
+  "cycles": [
+    {
+      "version": "1.1.0",
+      "date": "2026-08-13",
+      "holdout_before": 0.75,
+      "holdout_after": 1.0,
+      "buckets": {
+        "improved": [
+          "האם כדאי לבטל את הביטוח הסיעודי הפרטי שלי?"
+        ],
+        "regressed": [],
+        "persistent_fail": [],
+        "stable_success": [
+          "should I cancel one of my two life insurance policies?",
+          "כמה עולה ביקור אצל רופא מומחה בקופת חולים?",
+          "יש לי ביטוח משכנתא וגם ביטוח דירה, זה אותו דבר?"
+        ]
+      },
+      "lessons": [
+        "Reviewer assertions must be verified, not transcribed. The expert audit asserted the kupot group LTC policy was ordered wound up from 1.7.2025 / 1.1.2026. That was a Ministry of Health DRAFT that never issued and was dropped; the June 2026 Comptroller report treats the arrangement as live. The irreversibility argument stands instead on the sourced fact that individual policies are no longer sold at all.",
+        "The same audit asserted that waiving שאירים cover is pure waste for a member with no survivors. Verification INVERTED it: re-adding the cover permits medical underwriting and the fund may exclude a pre-existing condition, so it is a one-way door unless ביטוח המשך is kept. The skill now raises the waiver WITH the trap.",
+        "A v1.0.0 claim that group policies were 'never auto-converted' by the שקל ראשון reform could not be sourced and is probably wrong; the sourced position is that the group market was affected far less and with delay. Corrected in both languages and added to the do-not-assert list. This had defined the skill's stated core audience for a full version.",
+        "'עיסוק סביר' is commentary shorthand, not the takanon's term; the string does not appear in the takanon at all. The skill now quotes the actual definition (25% capacity, 90 consecutive days) and labels the shorthand as shorthand.",
+        "verify-evidence.py --check-sources has a false-negative mode: an unbalanced '<' anywhere on a page makes the <[^>]+> stripper delete everything to the next '>'. On the National Health Insurance Law that removed 78,282 characters including the children's dental item, so a correct verbatim snippet failed. Flagged to the admin; NOT patched, because the file had uncommitted changes.",
+        "The evidence extractor matches percentages, NIS amounts and URLs, so it never flagged circular numbers, statutory section numbers or Hebrew verbatim quotes. Eleven such claims had been unjustified since v1.0.0 and were only caught by the Judge. Worth extending the extractor.",
+        "The 5,000-word cap is enforced on SKILL.md only, though SKILL_HE.md loads into the same context. HE was 7,211 words with nothing objecting.",
+        "Deferred: no Hebrew mirror of references/claims-and-escalation.md (Hebrew Step ט carries the wording inline, so nothing is lost).",
+        "Deferred MINOR: the kupa tier list still has no evidence entry and will drift; it now carries an explicit 'no source of record' caveat.",
+        "Not attempted: a fallback route for a user who does not know whether their employer policy is individual or group (payslip line, HR benefits page, insurer personal area). The skill asks the question but the answer gates the whole health section."
+      ]
+    }
+  ]
+}

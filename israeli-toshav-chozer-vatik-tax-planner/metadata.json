@@ -1,0 +1,54 @@
+{
+  "display_name": {
+    "he": "מתכנן מס לתושב חוזר ותיק",
+    "en": "Israeli Toshav Chozer Vatik Tax Planner"
+  },
+  "display_description": {
+    "he": "אינו ייעוץ מס ואינו דוח שהוגש. מתכנן את הפטור ממס בסעיף 14 לתושב חוזר ותיק (10+ שנים בחו\"ל): מבדיל בין מסלול ותיק למסלול רגיל, מסביר מתי הקלוק של 10 השנים מתחיל, מציג מה משתנה ב-2026 בגלל ביטול הפטור מדיווח, ובונה תחזית של 10 שנים שמסווגת כל הכנסה כפטורה או חייבת. כלי תכנון בלבד, לא ייעוץ מס מחייב.",
+    "en": "Not tax advice and not a filed return. Plans the Section 14 tax exemption for a toshav chozer vatik (10+ years abroad): distinguishes the vatik track from the regular track, explains when the 10-year clock starts, surfaces the 2026 reporting-obligation change (Amendment 272), and builds a 10-year cash-flow projection that classifies each income stream as exempt or taxable. Planning aid only, not binding tax advice."
+  },
+  "tags": [
+    "section-14",
+    "toshav-chozer-vatik",
+    "form-1348",
+    "tax-exemption",
+    "vatik",
+    "foreign-income",
+    "returning-resident",
+    "mas-hachnasa",
+    "10-year-exemption",
+    "amendment-272",
+    "israel"
+  ],
+  "author": "skills-il",
+  "version": "1.2.1",
+  "category": "tax-and-finance",
+  "supported_agents": [
+    "claude-code",
+    "cursor",
+    "github-copilot",
+    "windsurf",
+    "opencode",
+    "codex",
+    "openclaw",
+    "antigravity",
+    "gemini-cli",
+    "chatgpt",
+    "claude-ai",
+    "claude-desktop",
+    "manus"
+  ],
+  "openclaw": false,
+  "volatility": "legislative",
+  "authoritative_sources": [
+    "https://www.nevo.co.il/law_html/law01/255_001.htm",
+    "https://www.kolzchut.org.il/he/הטבות_במס_לתושבים_חוזרים_ששהו_בחו%22ל_מעל_10_שנים",
+    "https://www.kolzchut.org.il/he/הטבות_במס_לתושבים_חוזרים_ששהו_בחו%22ל_בין_6_ל-10_שנים",
+    "https://www.bshcpa.co.il/תושב-חוזר-ותיק/",
+    "https://www.bshcpa.co.il/ביטול-פטור-מדיווח-לתושבים-חוזרים/",
+    "https://arnontl.com/he/news/ביטול-הפטור-מדיווח-על-הכנסות-פטורות-לע/",
+    "https://www.shibolet.com/en/cancellation-of-reporting-exemption-for-new-immigrants-and-long-term-returning-residents-regarding-foreign-income-and-new-reporting-obligation-for-israeli-resident-trustees-regarding-trusts-not-requir/",
+    "https://fs.knesset.gov.il/globaldocs/MMM/2ef1a063-cd62-f011-a85f-005056aa9911/2_2ef1a063-cd62-f011-a85f-005056aa9911_11_20997.pdf"
+  ],
+  "domain_checklist_version": 1
+}

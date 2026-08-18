@@ -1,0 +1,28 @@
+# Eval queries for israeli-stock-options-tax
+# Format: +positive / -negative / ?edge
+
+# Positive (should trigger)
++ How much tax will I pay on my stock options in Israel?
++ כמה מס אני אשלם על האופציות שלי?
++ Calculate Section 102 capital gains tax on options
++ My startup is getting acquired, what are my net proceeds after tax?
++ Compare capital gains track vs income track for my RSUs
++ What happens if I sell before 24 months trustee period?
++ I have options with $2 strike price, exit at $10, how much tax?
++ RSU taxation in Israel under Section 102
++ אקזיט בסטארטאפ - כמה מס על אופציות
++ How much surtax on stock option gains above threshold?
++ Early exercise vs exercise at exit - tax implications
++ מסלול הוני מול פירותי - מה עדיף?
+
+# Negative (should NOT trigger)
+- How do I set up an ESOP plan for my startup? (-> israeli-startup-toolkit)
+- File my annual tax return Form 1301 (-> israeli-tax-returns)
+- Calculate my monthly payroll deductions (-> israeli-payroll-calculator)
+- How much capital gains tax on Bitcoin in Israel? (-> israeli-crypto-tax-reporter)
+- Best way to extract profits as controlling shareholder (-> israeli-corporate-tax-strategy)
+
+# Edge cases
+? What tax bracket am I in? (ambiguous - could be general or options-related)
+? How does Israeli capital gains tax work? (broad - could trigger but not primary)
+? I'm leaving Israel, what about my unvested options? (exit tax, partially relevant)

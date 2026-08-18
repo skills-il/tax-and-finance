@@ -1,0 +1,37 @@
+{
+  "cycles": [
+    {
+      "version": "1.3.1",
+      "date": "2026-06-16",
+      "lessons": [
+        "Resolved this cycle: esek za'ir governing section was cited as Income Tax Ordinance section 17א; corrected to section 87ב (added by Amendment 277). The surrounding facts (30% normative deduction, 25% related-party cap, shared osek-patur ceiling) were already correct.",
+        "Resolved this cycle: 2026 BL self-employed advance figures were stale (min 187, max 7,850, income floor 2,065); corrected to min 265, max 8,550, floor 3,442 per BTL circular 1502. Note: kolzchut pages still showed the prior-year values during review, so verify BL advance figures against the official annual BTL circular, not kolzchut.",
+        "Resolved this cycle: the mkdamot deadline was mis-stated as 'bi-monthly filers: 19th'. The 19th is actually the online-payment extension (standard due date is the 15th for all filers; paying via the Tax Authority website extends to the 19th, 18:30; bi-monthly requires prior approval). Fixed in SKILL body and deadline-calendar.md table.",
+        "Resolved this cycle: deadline-calendar.md omitted the BL direct-debit (horaat keva) extension to the 22nd that the SKILL body had; added it so the alert-setup reference matches the body.",
+        "Expert MINOR deferred (in scope, informational): osek patur threshold-crossing guidance (Step 5 / Example 2) should add the nuance that crossing the ceiling makes the dealer retroactively liable for VAT on the excess turnover for that year, not only prospectively. Next cycle: add a one-line note to Step 5."
+      ]
+    },
+    {
+      "version": "1.4.0",
+      "date": "2026-07-26",
+      "lessons": [
+        "CRITICAL FIX, time-sensitive: the invoice allocation-number (מספר הקצאה) threshold dropped to 5,000 NIS before VAT on 1 June 2026, but the skill still presented 10,000 as current and 5,000 as a future change, in six places across three files including the conversion checklist a freelancer follows the day they register. Following it would mean issuing a 7,000 NIS invoice with no allocation number, and the CLIENT permanently loses the input-VAT deduction. Verified against Grant Thornton and Stark CPA coverage of the Tax Authority rollout.",
+        "RESOLVED the carried-forward osek-patur crossing item, in two parts, both quoted verbatim from kolzchut: the duty to notify is triggered by the PROJECTION that year-end income will exceed the ceiling ('ברגע שצופים שההכנסות עד סוף השנה יעברו אות התקרה'), not by receiving the money; and input VAT on expenses incurred while still osek patur can NEVER be reclaimed after converting ('אי אפשר לדרוש רטרואקטיבית קיזוז מע\"מ...אלא רק על הוצאות שייווצרו מרגע הפיכתו לעוסק מורשה'). Deliberately did NOT state a notification deadline in days or a penalty figure: practitioner sites assert them but they are not in the regulations, which impose only the annual 31 January turnover declaration.",
+        "FIXED an internal contradiction the expert caught: the alert table classified a freelancer by year-to-date PERCENTAGE while the crossing rule keys off the PROJECTION. Someone at 95,000 in July looked 'informational' under the bands while their projection was already far past the ceiling. The projection is now the primary trigger and the bands are secondary context.",
+        "FIXED wrong causality on Bituach Leumi. The skill said 'Bituach Leumi payments may increase' as a consequence of converting to osek murshe. BL is driven by income, not VAT status. What actually matters, and was missing, is the duty to file a revised income declaration with BL and a בקשה לשינוי מקדמות with the Tax Authority when income jumps, otherwise the year ends in a debt with linkage.",
+        "REMOVED an unsourced indexation mechanism. The skill said the osek patur ceiling is 'CPI-indexed'. No primary source publishes a CPI-linkage formula; the statute sets a base figure (120,000) and empowers the Finance Minister to raise it. Now described as updated periodically by order.",
+        "Broadened the esek za'ir citation from section 87ב to sections 87ב-87ז.",
+        "PROCESS, fourth occurrence in this batch: the first pass of this cycle removed the CPI claim from ONE sentence and left it standing three more times in English, twice in Hebrew and once in evidence.json, and never propagated the 87ב-87ז broadening to evidence.json. Both reviewers caught it. The discipline that works is mechanical: after any figure or rule change, grep the OLD value across the whole folder INCLUDING evidence.json and metadata.json, and require zero unqualified hits before running the panel.",
+        "VERIFIED AND KEPT (do not re-litigate): the skill uses the esek za'ir 25% correctly as an ELIGIBILITY DISQUALIFIER (no more than 25% of revenue from a related party or former employer), not as a deduction rate. A research subagent asserted it was a skill error; reading the actual text refuted that.",
+        "VERIFIED AND KEPT: the deadline split by authority is correct. Tax Authority mkdamot are due the 15th, extended to the 19th if paid online by 18:30; Bituach Leumi is due the 15th with direct-debit payers debited on the 22nd. A previous cycle fixed this and it held.",
+        "CARRY: the monthly-vs-bi-monthly VAT filing threshold is referenced five times without ever being quantified, so an agent cannot classify a user. Two sources disagreed on the current figure (1,725,000 vs 1,775,000), so nothing was written this cycle. Resolve against a primary source and state it once.",
+        "CARRY: the Form 1301 annual-report deadlines (31 May paper / 30 June online) are asserted flatly in five places but the evidence entry is marked confidence 'medium' with a fetch_note saying it could not be source-verified this cycle. The Tax Authority service page 403s to automated fetch and the kolzchut annual-report page does not carry the dates in fetchable text. Re-anchor to a primary source.",
+        "CARRY: the expert argues turnover above the ceiling is VAT-bearing for that year, so a crossing freelancer should hold an 18% reserve on everything invoiced after the projection shows a crossing. Kolzchut supports prospective liability from reclassification; a practitioner site asserts VAT on the excess. The sources conflict, so nothing was asserted. Resolve before the next release, because it is the most expensive fact for this user.",
+        "CARRY: the skill never states the MECHANISM for notifying the Tax Authority (change-of-classification at the VAT station for an existing osek number, what to bring, that it can be started online, and that the user must keep issuing kabalot until it is approved). Withholding an unsourced deadline is right; withholding the mechanism is not.",
+        "CARRY: keren hishtalmut for the self-employed is omitted entirely while pension gets four paragraphs, even though its deadline is the same 31 December the skill already alerts on.",
+        "CARRY: the esek za'ir block sits inside the crossing section, which obscures that it is an income-tax reporting election and not a VAT status. It also presents the 30% normative deduction only as a benefit, when a freelancer whose real expenses exceed 30% of turnover is worse off.",
+        "CARRY: references/deadline-calendar.md has no pension section even though the SKILL body treats the 31 December pension deadlines as a first-class alert, and the reference file is what the skill tells the agent to consult when setting up alerts."
+      ]
+    }
+  ]
+}

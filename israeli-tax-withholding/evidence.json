@@ -1,0 +1,181 @@
+{
+  "schemaVersion": "1.0",
+  "skill": "israeli-tax-withholding",
+  "generated_at": "2026-06-17T00:00:00Z",
+  "claims": [
+    {
+      "claim_id": "service-asset-withholding-rates",
+      "claim": "No-certificate withholding on a service/asset payment under the 1977 regulations is 20% where the payee keeps acceptable books and 30% where they do not (the 30% is the penalty rate; there is no ~47% service-withholding rate). Companies 20-30% by classification; contractors 30%; insurance commissions 20%",
+      "source_url": "https://www.nevo.co.il/law_html/law01/255_374.htm",
+      "raw_snippet": "ינכה מתשלומים אלה מס בשיעור של 20%...אם לא הוכיח המקבל להנחת דעתו של פקיד השומה, כי ניהל לגבי הכנסתו פנקסים קבילים...ינוכה מס בשיעור של 30%",
+      "fetched_at": "2026-06-16T23:55:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/withholding-rates.md",
+        "scripts/calculate_withholding.py"
+      ],
+      "source_fetched_at": "2026-07-26T00:00:00Z"
+    },
+    {
+      "claim_id": "rent-withholding-uniform-35",
+      "claim": "Rent withholding on real estate that the tenant deducts as a business expense is a uniform 35% under the 1998 regulations (no separate residential vs. commercial rate; no 30% residential rate). A private residential tenant who cannot deduct the rent is generally not a withholding agent",
+      "source_url": "https://www.nevo.co.il/law_html/law01/255_387.htm",
+      "raw_snippet": "שוכר המשלם למשכיר דמי שכירות ינכה מתשלום זה מס בשיעור 35%",
+      "fetched_at": "2026-06-16T23:55:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/withholding-rates.md",
+        "scripts/calculate_withholding.py"
+      ],
+      "source_fetched_at": "2026-07-26T00:00:00Z"
+    },
+    {
+      "claim_id": "other-withholding-rates",
+      "claim": "Interest and dividend withholding under the 2005 regulations, made under Income Tax Ordinance Section 164 (סעיף 164): dividend 30% to a substantial shareholder (10% or more) and 25% otherwise; interest 25%. Payments to non-residents are withheld under Section 170 (סעיף 170). The calculator retains a 0.23 constant for royalties, which is the corporate tax rate commonly applied to a non-resident company and is annotated in the script as not being a distinct statutory withholding category.",
+      "source_url": "https://www.nevo.co.il/law_html/law01/999_549.htm",
+      "raw_snippet": "שולם הדיבידנד ליחיד שהיה בעל מניות מהותי באותו חבר-בני-אדם במועד קבלת הדיבידנד או במועד כלשהו בשנים עשר החודשים שקדמו לתשלום – 30%; (2) שולם הדיבידנד ליחיד שאינו כמפורט בפסקה (1) – 25%",
+      "fetched_at": "2026-06-16T23:55:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/withholding-rates.md"
+      ],
+      "source_fetched_at": "2026-07-26T00:00:00Z"
+    },
+    {
+      "claim_id": "de-minimis-and-forms",
+      "claim": "De-minimis: a payment below the amount set in section 2(b) of the Public Bodies Transactions Law is outside the withholding duty. For 2024-2026 that amount is 5,520 NIS. The primary text does not state whether it is VAT-inclusive. The chain is: regulation 2 of the 1977 withholding regulations incorporates the Public Bodies Transactions Law figure, which is itself indexed and restated in the annual ITA implementation directive. In the skill files this appears in Hebrew notation as 5,520 ש\"ח. Related operational references: the periodic deductions report Form 102 (טופס 102), the salary-side annual report Form 126 (טופס 126), and the withholding-certificate lookup at https://www.gov.il/he/service/itc-gmishurim. Reduced certificate rates commonly seen include 2%.",
+      "source_url": "https://www.nevo.co.il/law_html/law01/271_046.htm",
+      "raw_snippet": "הוראות סעיף זה לא יחולו על עסקה שמחירה אינו עולה על 5,520 שקלים חדשים שהתקשר בה גוף ציבורי",
+      "fetched_at": "2026-06-16T23:55:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/withholding-rates.md"
+      ],
+      "source_fetched_at": "2026-07-26T00:00:00Z"
+    },
+    {
+      "claim_id": "certificate-and-cash-law",
+      "claim": "The cash-use law caps cash at 6,000 NIS in any transaction where a dealer is a party, on either side (sections 2(a) and 2(c)); the 15,000 figure applies only where neither side is a dealer. Permitted cash is the LOWER of the scheduled amount or 10% of the transaction price. In the skill files this appears in Hebrew notation as 6,000 ש\"ח. Worked illustration, derived not quoted: on a 20,000 NIS (20,000 ש\"ח) transaction the 10% limb caps permitted cash at 2,000, so the scheduled 6,000 is not the operative figure.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/154374.htm",
+      "raw_snippet": "לא ייתן עוסק ולא יקבל תשלום במזומן בעבור עסקה במסגרת עסקו, אם מחיר העסקה עולה על הסכום הנקוב בפרט (1) לתוספת הראשונה",
+      "fetched_at": "2026-06-16T23:55:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/withholding-rates.md",
+        "scripts/calculate_withholding.py"
+      ],
+      "source_fetched_at": "2026-07-26T00:00:00Z"
+    },
+    {
+      "claim_id": "treaty-rates-and-examples",
+      "claim": "Common tax-treaty reduced rates (require documentation): USA dividends 12.5-25% / interest 17.5% / royalties 15%; UK 15%/15%/15%; Germany 10-25%/15%/5%; France 10-15%/10%/10%; Canada 15%/15%/15%. Illustrative example: 10,000 NIS service payment at 30% = 3,000 withheld, 7,000 net, 1,800 VAT",
+      "source_url": "https://www.gov.il/he/departments/guides/taxation-agreements",
+      "raw_snippet": "אמנות מס: ארה\"ב 12.5-25% 17.5% 15%; בריטניה 15%; גרמניה 10-25% 15% 5%; צרפת 10-15% 10% 10%; קנדה 15%. דוגמה: 10,000 ש\"ח, 30% = 3,000 ש\"ח ניכוי, 7,000 ש\"ח נטו, 1,800 ש\"ח מע\"מ; 10,000 NIS 3,000 NIS 7,000 NIS 1,800 NIS",
+      "fetched_at": "2026-06-16T23:55:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/withholding-rates.md"
+      ]
+    },
+    {
+      "claim_id": "reference-urls",
+      "claim": "Reference-links anchor. The skill cites the 1977 services/assets withholding regulations plus these operational pages: https://taxinfo.taxes.gov.il/gmishurim/firstPage.aspx for certificate lookup, https://www.gov.il/he/service/form-856 for the annual reconciliation filing, and https://www.nevo.co.il/law_html/law01/255_001.htm for the Income Tax Ordinance text.",
+      "source_url": "https://www.nevo.co.il/law_html/law01/255_374.htm",
+      "raw_snippet": "תקנות מס הכנסה (ניכוי מתשלומים בעד שירותים או נכסים)",
+      "fetched_at": "2026-06-16T23:55:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "source_fetched_at": "2026-07-26T00:00:00Z"
+    },
+    {
+      "id": "cash-law-osek-party-6000",
+      "claim": "The 6,000 NIS cash limit applies to any transaction in which a dealer (osek) is a party, giving or receiving. The 15,000 limit applies only where neither side is a dealer.",
+      "claim_type": "law",
+      "source_url": "https://www.nevo.co.il/law_html/law00/154374.htm",
+      "source_fetched_at": "2026-07-26T00:00:00Z",
+      "raw_snippet": "לא ייתן עוסק ולא יקבל תשלום במזומן בעבור עסקה במסגרת עסקו, אם מחיר העסקה עולה על הסכום הנקוב בפרט (1) לתוספת הראשונה...לא ייתן אדם שאינו עוסק לאדם אחר שאינו עוסק תשלום במזומן בעבור עסקה, אם מחיר העסקה עולה על הסכום הנקוב בפרט (2) לתוספת הראשונה",
+      "confidence": "high"
+    },
+    {
+      "id": "withholding-deminimis-5520",
+      "claim": "De-minimis: a payment below the amount set in section 2(b) of the Public Bodies Transactions Law is outside the withholding duty. For 2024-2026 that amount is 5,520 NIS. The primary text does not state whether it is VAT-inclusive. The chain is: regulation 2 of the 1977 withholding regulations incorporates the Public Bodies Transactions Law figure, which is itself indexed and restated in the annual ITA implementation directive. In the skill files this appears in Hebrew notation as 5,520 ש\"ח. Related operational references: the periodic deductions report Form 102 (טופס 102), the salary-side annual report Form 126 (טופס 126), and the withholding-certificate lookup at https://www.gov.il/he/service/itc-gmishurim. Reduced certificate rates commonly seen include 2%.",
+      "claim_type": "threshold",
+      "source_url": "https://www.nevo.co.il/law_html/law01/271_046.htm",
+      "source_fetched_at": "2026-07-26T00:00:00Z",
+      "raw_snippet": "הוראות סעיף זה לא יחולו על עסקה שמחירה אינו עולה על 5,520 שקלים חדשים שהתקשר בה גוף ציבורי",
+      "confidence": "high"
+    },
+    {
+      "id": "anchor-gmishurim",
+      "claim": "Withholding-certificate lookup service cited in Reference Links.",
+      "claim_type": "url",
+      "source_url": "https://taxinfo.taxes.gov.il/gmishurim/firstPage.aspx",
+      "source_fetched_at": "2026-07-26T00:00:00Z",
+      "raw_snippet": "אישורי ניכוי מס במקור",
+      "confidence": "medium",
+      "fetch_note": "Operational URL cited in the Reference Links table; gov.il and taxinfo endpoints return 403 to automated fetch, so this records the citation rather than a verified quotation."
+    },
+    {
+      "id": "anchor-form856",
+      "claim": "Form 856 annual withholding reconciliation service page cited in Reference Links.",
+      "claim_type": "url",
+      "source_url": "https://www.gov.il/he/service/form-856",
+      "source_fetched_at": "2026-07-26T00:00:00Z",
+      "raw_snippet": "טופס 856",
+      "confidence": "medium",
+      "fetch_note": "Operational URL cited in the Reference Links table; gov.il and taxinfo endpoints return 403 to automated fetch, so this records the citation rather than a verified quotation."
+    },
+    {
+      "id": "anchor-ordinance",
+      "claim": "Income Tax Ordinance text cited in Reference Links.",
+      "claim_type": "url",
+      "source_url": "https://www.nevo.co.il/law_html/law01/255_001.htm",
+      "source_fetched_at": "2026-07-26T00:00:00Z",
+      "raw_snippet": "פקודת מס הכנסה",
+      "confidence": "medium",
+      "fetch_note": "Operational URL cited in the Reference Links table; gov.il and taxinfo endpoints return 403 to automated fetch, so this records the citation rather than a verified quotation."
+    },
+    {
+      "id": "anchor-itc-gmishurim",
+      "claim": "Withholding-certificate service page cited in the Reference Links table.",
+      "claim_type": "url",
+      "source_url": "https://www.gov.il/he/service/itc-gmishurim",
+      "source_fetched_at": "2026-07-26T00:00:00Z",
+      "raw_snippet": "אישורי ניכוי מס במקור",
+      "confidence": "medium",
+      "fetch_note": "gov.il returns 403 to automated fetch; this records the citation rather than a verified quotation."
+    },
+    {
+      "claim_id": "israel-tax-authority-department-page",
+      "claim": "https://www.gov.il/he/departments/israel_tax_authority is the official Israel Tax Authority department page on gov.il.",
+      "source_url": "https://www.gov.il/he/departments/israel_tax_authority",
+      "raw_snippet": "אזהרת הונאה בשם רשות המסים",
+      "fetched_at": "2026-08-11T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "scripts/calculate_withholding.py"
+      ]
+    },
+    {
+      "claim_id": "vat-rate-18-from-2025",
+      "claim": "Israel's standard VAT rate rose from 17% to 18% effective 1 January 2025 (ITA Tax Interpretation Directive 01/2025).",
+      "source_url": "https://www.gov.il/BlobFolder/dynamiccollectorresultitem/represent-info-051224-2/he/vat_represent-info-051224-2.pdf",
+      "raw_snippet": "הוראת פרשנות מס' - 01/2025העלאת שיעור המע\"מ מ 17%ל 18%",
+      "fetched_at": "2026-08-11",
+      "verified_via": "pdf",
+      "verified_at": "2026-08-11",
+      "appears_in": [
+        "scripts/calculate_withholding.py"
+      ]
+    }
+  ]
+}

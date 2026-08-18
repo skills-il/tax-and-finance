@@ -1,0 +1,46 @@
+{
+  "author": "skills-il",
+  "version": "1.3.0",
+  "category": "tax-and-finance",
+  "tags": {
+    "he": [
+      "תשלומים",
+      "סליקת-אשראי",
+      "גרו",
+      "משולם",
+      "דרישת-תשלום",
+      "ביט",
+      "טוקניזציה",
+      "חיוב-חוזר",
+      "ישראל"
+    ],
+    "en": [
+      "payments",
+      "credit-card",
+      "grow",
+      "meshulam",
+      "payment-link",
+      "bit",
+      "tokenization",
+      "recurring-billing",
+      "israel"
+    ]
+  },
+  "display_name": {
+    "he": "שער תשלומים Grow (משולם)",
+    "en": "Grow Payment Gateway (Meshulam)"
+  },
+  "display_description": {
+    "he": "אינטגרציה עם Grow (משולם) לסליקת אשראי באפליקציות ישראליות: דפי תשלום (iframe/redirect/SDK), טוקניזציה, חיובים חוזרים, דרישות תשלום, החזרים, חשבוניות, webhooks ואימות 3DS דרך Light API של Grow. השתמש כשהמשתמש מבקש לקבל תשלומים דרך Grow או משולם, להקים סליקת אשראי, ליצור דרישת תשלום, לטפל בהוראות קבע (חיובים חוזרים) דרך טוקני Grow, לעבד החזרים או ביטולי Bit, לחבר webhooks של Grow, או מזכיר Grow, משולם, grow-il או meshulam.co.il. מכסה אשראי, Bit, Apple Pay ו-Google Pay. מונע טעויות אינטגרציה יקרות כמו שליחת JSON במקום FormData, קריאות מצד הלקוח במקום השרת, ודילוג על שלב approveTransaction החובה. אל תשתמש לאינטגרציה עם קארדקום (cardcom-payment-gateway), טרנזילה (tranzila-payment-gateway), או תזמור תשלומים בין שערים (israeli-payment-orchestrator).",
+    "en": "Integrate Grow by Meshulam payment gateway into Israeli applications -- covers payment pages (iframe/redirect/SDK), tokenization, recurring billing, payment links, refunds, invoices, webhooks, and 3DS authentication via the Grow Light API. Use when user asks to accept payments via Grow or Meshulam, set up \"slikat ashrai\" with Grow, create payment links (drishat tashlum), handle recurring charges (hora'ot keva) via Grow tokens, process refunds or Bit cancellations, integrate Grow webhooks, or mentions \"Grow\", \"Meshulam\", \"grow-il\", \"meshulam.co.il\", Grow payment page, or Grow API. Prevents costly integration mistakes by guiding correct FormData request format, server-side-only restrictions, and the mandatory approveTransaction step that many developers miss. Do NOT use for Cardcom integration (use cardcom-payment-gateway), Tranzila integration (use tranzila-payment-gateway), general payment orchestration across multiple gateways (use israeli-payment-orchestrator), or non-payment queries."
+  },
+  "supported_agents": [
+    "claude-code",
+    "cursor",
+    "github-copilot",
+    "windsurf",
+    "opencode",
+    "codex",
+    "gemini-cli"
+  ]
+}

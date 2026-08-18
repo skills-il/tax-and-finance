@@ -1,0 +1,41 @@
+{
+  "author": "skills-il",
+  "version": "1.3.1",
+  "category": "tax-and-finance",
+  "tags": {
+    "he": [
+      "בנק-ישראל",
+      "ריבית",
+      "שע\"ח",
+      "מדד-המחירים",
+      "כלכלה",
+      "ישראל"
+    ],
+    "en": [
+      "boi",
+      "interest-rate",
+      "exchange-rate",
+      "cpi",
+      "economy",
+      "israel"
+    ]
+  },
+  "display_name": {
+    "he": "נתונים כלכליים מבנק ישראל",
+    "en": "BOI Economic Data"
+  },
+  "display_description": {
+    "he": "שליפה וניתוח נתונים כלכליים מבנק ישראל: ריבית, מדד המחירים לצרכן, שערי חליפין (שער יציג) ונתוני הלמ\"ס. השתמש כשהמשתמש שואל על ריבית בנק ישראל, שערי חליפין, מדד המחירים, ציפיות אינפלציה או אינדיקטורים כלכליים ישראליים. כישור תשתיתי לאנליטיקה פיננסית ישראלית. כולל גישת API ל-edge.boi.gov.il (BOI SDMX). אל תשתמש בנתוני בורסה (השתמש ב-tase-stock-analysis) או בהמרת מטבעות (השתמש ב-shekel-currency-converter).",
+    "en": "Fetch and analyze Bank of Israel (BOI) economic data: interest rates, CPI (madad hamchirim), exchange rates (sha'ar yatzig), and CBS statistics. Use when user asks about BOI interest rate, exchange rates, CPI index, or Israeli economic indicators. Foundation skill for Israeli financial analytics. Do NOT use for stock market data (use tase-stock-analysis instead) or for currency conversion (use shekel-currency-converter instead)."
+  },
+  "supported_agents": [
+    "claude-code",
+    "cursor",
+    "github-copilot",
+    "windsurf",
+    "opencode",
+    "codex",
+    "antigravity",
+    "gemini-cli"
+  ]
+}

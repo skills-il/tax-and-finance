@@ -1,0 +1,29 @@
+{
+  "cycles": [
+    {
+      "version": "1.1.0",
+      "date": "2026-07-06",
+      "change": "Onboarding pass (merged community PR #17). Fixed two CRITICAL domain errors surfaced by expert review: (C1) dual-listed ordinaries are the SAME fungible share = 1:1 by construction, not variable-ratio ADRs, so the 'never assume 1:1' guidance was inverted and could misprice a pair; (C2) chart.py compared each leg's last close independently with no same-session check, so a >threshold gap could be an overnight move between two different trading days. Also: removed non-functional SKILL.md frontmatter metadata block (sync compat), dropped dead 'global-stock-analysis' anti-trigger reference, corrected trading model to the post-2026 Mon-Fri schedule (Friday ~14:00), added Reference Links + domain-checklist, rebuilt evidence.json to schema, HE section parity.",
+      "holdout_before": 1.0,
+      "holdout_after": 1.0,
+      "buckets": {
+        "improved": [],
+        "regressed": [],
+        "persistent_fail": [],
+        "stable_success": [
+          "יש ארביטראז' על טבע בין תל אביב לניו יורק?",
+          "מה הפרמיה על צ'ק פוינט בין הבורסות?",
+          "תנתח לי את מניית בנק לאומי"
+        ]
+      },
+      "lessons": [
+        "C1 fix: added Step 4 (ratio is 1:1 for dual-listed ordinaries; only a true ADR carries a ratio, from its F-6) + registry rewrite. Resolved this cycle.",
+        "C2 fix: chart.py now carries both legs' as-of dates + a synchronous flag, skips ~100x scaling errors, and viz marks non-synchronous pairs (dashed bars + caveat note). Resolved this cycle.",
+        "Expert MAJOR deferred (M4 liquidity/thin-TASE-leg staleness): needs a volume/last-trade-age signal from the provider; revisit next cycle.",
+        "Expert MINOR deferred (m1 DST offset 6h/8h collapsing Mon-Thu overlap): compute overlap from live UTC offsets instead of a fixed 7h assumption; low priority.",
+        "Expert MINOR deferred (m6 yfinance dependency undeclared vs allowed-tools): add a requirements note; operational, not correctness.",
+        "Contributor's original trigger tuning (v0.1.0 0.82 -> v0.9.0 0.94 -> v1.0.0 0.97) preserved as provenance; re-scored against a fresh frozen holdout this cycle (1.0/1.0, description change was routing-neutral)."
+      ]
+    }
+  ]
+}

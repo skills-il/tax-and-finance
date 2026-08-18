@@ -1,0 +1,19 @@
+{
+  "cycles": [
+    {
+      "version": "1.1.1",
+      "date": "2026-07-15",
+      "lessons": [
+        "Expert MAJOR deferred: scripts/tax_comparison.py docstring promises a management-fee comparison but print_comparison models only salary/dividend/optimal-mix/loan. Add an analyze_management_fees() function next cycle.",
+        "Expert MINOR deferred: the Section 77 forced-distribution coverage lacks the numeric tests (has-not-distributed-half-of-profits-over-five-years, accumulated-profits floor). Add if a future cycle expands retention guidance.",
+        "Expert MINOR deferred: controlling-shareholder EMPLOYEE-side National Insurance/health band totals differ marginally from regular employees; the skill's controlling-shareholder employee table uses the regular figures. Magnitude is a fraction of a percent, cosmetic; revisit only if a precise-NI cycle is warranted.",
+        "Confirmed-correct-do-not-relitigate: the 2026 income-tax bracket ceilings for the 20% and 31% bands are CORRECT per Amendment 288 (retroactive to January 2026), verified twice against kolzchut's 2026 page. A no-web reviewer may re-flag these as the frozen-2024 (narrower) reading that some CPA blogs still publish, that reading is stale. The credit point and surtax threshold ARE frozen; only the middle bands widened.",
+        "Confirmed-correct: all 2026 Bituach Leumi banded rates (employee, self-employed, and controlling-shareholder employer) were verified against the rendered official BTL rate table. A no-web reviewer flagged these as overstated versus remembered standard rates, that concern was wrong.",
+        "Expert MINOR deferred: the Step 7 decision-matrix cell labels the shareholder loan as deemed-interest-rate-per-year under the effective-tax-rate column; a scanner could misread it as the tax cost rather than the interest base (the body computes the real tax drag correctly in Step 5). Restate the summary cell next cycle.",
+        "Expert MINOR deferred: the Step 2 combined-rate table quotes top-bracket salary as roughly fifty-five to sixty percent, but above the NI ceiling there is no employer NI so incremental salary is about the top marginal rate; narrow the headline at the high-amount breakeven point.",
+        "Expert MINOR deferred: references/extraction-methods.md Example 1 (the 200k salary case) has loose worked arithmetic that does not reconcile against the skill's own bracket/NI tables; the conclusion is unaffected but recompute for internal consistency.",
+        "Expert MINOR deferred: the trapped-profits protective cushion (fixed exemption / expense shield / asset shield, which zeroes the surcharge for many small companies) lives only in tax-rates-2026.md; surface it briefly in SKILL Step 8 so the 2%/6% lever is not over-applied to companies below the floor."
+      ]
+    }
+  ]
+}

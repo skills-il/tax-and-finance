@@ -1,0 +1,74 @@
+{
+  "skill": "cardcom-payment-gateway",
+  "cycles": [
+    {
+      "date": "2026-07-06",
+      "from_version": "2.1.0",
+      "to_version": "2.1.1",
+      "trigger": "update-oldest-skills batch (least-recently-touched refresh)",
+      "method": "Fresh-context Opus research agent parsed the LIVE Cardcom V11 OpenAPI spec (secure.cardcom.solutions/swagger/v11/swagger.json, version 11.0) directly, verifying every endpoint path, schema property name, and enum value against ground truth rather than a JS-rendered docs SPA.",
+      "buckets": {
+        "fixed": [
+          "Removed fabricated endpoint Documents/CreateTaxInvoice from references/api-endpoints.md (absent from V11 spec); pointed readers to Documents/CreateDocument + DocumentTypeToCreate:TaxInvoice.",
+          "Clarified Languge (misspelled) lives on Document/DocumentTran schemas, not DocumentBase; DocumentLP + the LowProfile/Create request use correctly-spelled Language.",
+          "Named the real SuspendedDeals/Charge endpoint (group also has Cancel, GetSuspendedDealInfo) in Step 7 instead of deferring to 'the official docs'."
+        ],
+        "verified_correct": [
+          "ResponseCode==0 success semantics (700/701 also success for J2/J5) -- spec description matches verbatim; DealResponse appears in ZERO response schemas.",
+          "DocumentTypeToCreate string enum (all 25 values), field spellings TaxId/IsSendByEmail/ISOCoinId(D), RecuringPayments single-r path, ApiPassword required only for CreateDocument + RefundByTransactionId.",
+          "VAT 18% (raised from 17% Jan 2025; 2026 rise to 19% rejected).",
+          "Community libs @tsdiapi/cardcom (npm, active) + CardCom/OpenFields-{FrontEnd-React,Backend-Node} (both HTTP 200)."
+        ],
+        "persistent_fail": [
+          "Test credentials (terminal 1000, card 4580000000000000, CVV 123) are NOT in the OpenAPI spec (test creds never are). Terminal 1000 is the widely-documented demo terminal and the 4580 card appears in community libs, so plausible, but not independently verified against an official Cardcom test-creds page this cycle. Re-verify against a cited Cardcom tutorial on next update or soften the claim."
+        ]
+      },
+      "lessons": [
+        "For API-wrapper skills, download and parse the vendor's raw OpenAPI/swagger JSON directly. A JS-rendered docs SPA (or a web-search summary of it) can invert a subtle correct detail -- one summary this cycle wrongly 'corrected' the real misspelling Languge to Language. The raw schema is ground truth; the rendered page is not.",
+        "A high-fabrication-risk payment API can still be almost entirely accurate -- the single defect here (one invented endpoint) was buried in a reference file, not the SKILL.md body, which used the correct CreateDocument+enum pattern throughout. Diff reference files against the spec's full path list, don't just spot-check the body."
+      ]
+    },
+    {
+      "version": "2.2.0",
+      "date": "2026-07-27",
+      "lessons": [
+        "Parsed the live OpenAPI spec (secure.cardcom.solutions/swagger/v11/swagger.json, title 'CardCom API' 11.0, 59 paths) rather than the docs SPA, per last cycle's lesson. Every endpoint the skill cites exists.",
+        "ADDED Step 4.5 on allocation numbers, which the skill was entirely silent on despite Step 4 generating Israeli tax documents. Key points: the API has NO AllocationNumber field and that is not an omission (Cardcom requests it server-side); it requires a ONE-TIME Tax Authority authorization where BOTH permission subjects must be selected (verifying a supplier's number AND requesting one for a customer invoice); thresholds pre-VAT are 25,000 (2024), 20,000 (2025), 10,000 (1 Jan 2026), 5,000 (1 Jun 2026); an osek patur is unaffected.",
+        "MAJOR FIXED: the skill taught 'Languge' (the V11 misspelling) as a blanket rule for the Document object. Verified in the spec: Document and DocumentTran use 'Languge' but DocumentLP, the object attached to LowProfile/Create, uses the correctly spelled 'Language', and ALL of them set additionalProperties:false. The blanket rule breaks the Low Profile flow, which is the flow the skill recommends first. references/document-types.md had it right and the body contradicted it.",
+        "MAJOR FIXED: references/api-endpoints.md gave GetTransactionInfoById the fields TerminalNumber/ApiName/TransactionId. The spec requires TerminalNumber, UserName, UserPassword, InternalDealNumber, all four, with additionalProperties:false. This endpoint uses UserName/UserPassword, NOT ApiName/ApiPassword.",
+        "MAJOR FIXED (script): SUCCESS_CODES was {0,700,701} applied unconditionally, so the validator PASSed a 700 on a charge, a document creation or a refund. 700/701 mean a J2/J5 validation-only check succeeded and NO money moved. Now only 0 passes; 700/701 require an explicit --validation-only flag. Also removed int() coercion, which silently turned 0.9 and \"0\" into a reported success.",
+        "MINOR FIXED: the body claimed the enum includes 'their *Refund variants' for Quote and Order. The 25-value DocumentToCreate enum has no QuoteRefund and no OrderRefund; the 11 real refund variants are now listed explicitly.",
+        "PCI corrected: the current standard is v4.0.1 (limited revision, June 2024); 51 of the 64 new requirements were future-dated and became effective 31 March 2025. The old text said 'v4.0 became mandatory March 2025'.",
+        "PERSISTENT_FAIL RESOLVED BY SOFTENING, per the previous cycle's instruction: the terminal-1000 test credentials, the weekly/monthly settlement days, and the pricing band were all asserted flatly with no real source. Rather than keep asserting them, each now says plainly what is unverified and tells the reader to confirm with Cardcom. The test-creds note additionally warns not to assume terminal 1000 cannot move money."
+      ],
+      "carry": [
+        "The test credentials, settlement days and pricing are now softened rather than verified. If an official Cardcom sandbox/pricing page is ever found, restore the specifics with a citation.",
+        "Several evidence entries still carry prose in source_url instead of a URL (e.g. claims 15, 19, 26) and raw_snippets that restate the claim rather than quote a page. They fail --check-sources as HTTP 000. Clean the schema next cycle.",
+        "scripts/validate_cardcom_response.py does not know which operation produced the response, so --validation-only is a manual assertion by the caller. Passing the operation name would let the script enforce it."
+      ]
+    },
+    {
+      "version": "2.3.0",
+      "date": "2026-07-28",
+      "trigger": "User report: the skill claimed ApiPassword was 'required only for refunds and document creation', but the V11 spec marks it required for ListTransactions; integrators hit an unexplained 604.",
+      "lessons": [
+        "ROOT CAUSE, and the most important lesson in this file: the 2.1.1 cycle logged 'ApiPassword required only for CreateDocument + RefundByTransactionId' under verified_correct. A prior pass parsed this same swagger.json and CONFIRMED the wrong claim. It checked only the endpoints the skill already covered and then generalised to 'only'. Verifying every stated claim is not the same as enumerating the authoritative table. This is the API-shaped instance of the rate-table-completeness gap: for any field whose requirement varies per endpoint, enumerate the FULL required-array across ALL paths and diff, never spot-check the covered subset.",
+        "ApiPassword is required on 19 of the 50 V11 endpoints that take a request body (Documents writes, Financial reports, TapTransactions, Account/GetByAccountId, and Transactions/{ListTransactions,RefundByTransactionId,SpecialTransactions}). Encoded as a rule of thumb (company-wide reads/writes need it, single-card charges do not) so the pattern generalises instead of listing endpoints the reader must memorise.",
+        "CRITICAL FIXED beyond the report: references/api-endpoints.md told readers to send TerminalNumber to ListTransactions and SpecialTransactions. Neither schema HAS that property and both set additionalProperties:false, so the documented call was guaranteed to fail even after adding ApiPassword. Terminal scoping on ListTransactions is LimitForTerminal.",
+        "CRITICAL FIXED: SpecialTransactions was documented as 'Credit, installments, special deals' taking TerminalNumber/ApiName/Amount. It is a READ endpoint ('get other transaction if you use CardCom as acquire') whose only four properties are ApiName, ApiPassword, FromDate, ToDate. The name misleads and the old row invented a write API.",
+        "The reporting endpoints were reference-table-only with no SKILL.md body coverage, which is why three separate errors survived several cycles: the body examples get re-read and re-verified each cycle, lone table rows do not. Added Step 6.5 with a worked ListTransactions call.",
+        "604 is NOT documented in the swagger or the rendered docs (which enumerate only 200/400/401). The existing Troubleshooting entry attributing it to a missing ApiPassword is consistent with field reports but has no citable source. Left as-is rather than expanded. Next cycle: ask Cardcom support for the response-code table.",
+        "CARRY RESOLVED: the 2.2.0 carry asked to restore pricing and settlement specifics if an official page was ever found. https://www.cardcom.solutions/blog/clearing-fees-comparison-guide (reached via the Hebrew pricing URL, which 301s there) publishes all three settlement cycles and a ~1.2% starting fee. Both restored with citations; pricing deliberately recorded as a floor, not a quote.",
+        "CARRY RESOLVED: the evidence-schema debt. All 34 entries now have a bare URL in source_url (prose moved to a new source_note field), and --check-sources is clean: 0 unreachable, 0 failed, was 26 unreachable. Cleaning source_url first EXPOSED 8 genuine snippet failures that HTTP 000 had been masking, including PCI SAQ scope cited to a marketing blog (now the PCI SSC SAQ-A PDF) and VAT 18% cited to a 403 page (now PwC, last reviewed 29 June 2026). Unreachable was hiding wrong, not just unverified.",
+        "@tsdiapi/cardcom last published 0.4.0 on 2025-11-20, so 'actively maintained' was stale; claim softened to a dated fact via registry.npmjs.org (the npmjs.com web page 403s plain fetches).",
+        "Self-review caught my own error before push: I wrote '19 of 50 endpoints' from a script that counted post-or-get, while a stricter recount gave 47. The spec has 59 operations, 50 with a request body, 19 requiring ApiPassword. Wording corrected to '19 of the 50 V11 endpoints that take a request body'. Round-number counts in prose need the denominator stated."
+      ],
+      "carry": [
+        "Response-code semantics (604 and the rest) are undocumented publicly. Ask Cardcom support for the code table; until then Troubleshooting entries about specific codes rest on field reports only.",
+        "Test credentials (terminal 1000, card 4580000000000000) still have no official source. Skill presents them as unverified community folklore. Unchanged from 2.2.0.",
+        "The Financial/* and TapTransactions/* groups all require ApiPassword and have no worked examples or body coverage, exactly the shape that hid the ListTransactions bugs. Consider coverage next cycle.",
+        "scripts/validate_cardcom_response.py still does not know which operation produced the response, so --validation-only remains a manual assertion by the caller."
+      ]
+    }
+  ]
+}
