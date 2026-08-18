@@ -7,14 +7,16 @@
       "claim_id": "grow-base-urls-and-format",
       "claim": "Grow by Meshulam Light API: sandbox base https://sandbox.meshulam.co.il , production base https://secure.meshulam.co.il , endpoint path prefix /api/light/server/1.0/ . All requests are multipart/form-data (NOT JSON) and server-side only (browser requests are blocked). Grow rebranded from Meshulam; the Light API host remains meshulam.co.il (api.meshulam.co.il is the dashboard/help host, not the API).",
       "source_url": "https://developers.grow.business/reference/post_api-light-server-1-0-createpaymentprocess-1",
-      "raw_snippet": "POST https://sandbox.meshulam.co.il/api/light/server/1.0/createPaymentProcess ; content type multipart/form-data; server-side only.",
-      "fetched_at": "2026-06-07T00:00:00Z",
+      "raw_snippet": "transaction info Get Payment Process Info post Response get payment process info Powered by Regular Payment SDK post https://sandbox.meshulam.co.il /api/light/server/1.0/createPaymentProcess Each business has its own unique identifiers (userId + pageCode) - the identifiers on this documentation are for example only. To integrate with the API, please contact Grow support to obtain the necessary permissions and your unique identifiers.",
+      "fetched_at": "2026-08-18",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/api-endpoints.md",
         "scripts/grow-payment-helper.sh"
-      ]
+      ],
+      "verified_via": "cited page fetched; 17 of 28 of the claim's distinctive terms occur on it, and the snippet is the page's own wording around \"meshulam\"",
+      "verified_at": "2026-08-18"
     },
     {
       "claim_id": "grow-endpoints",
@@ -32,13 +34,15 @@
       "claim_id": "createpaymentprocess-params",
       "claim": "createPaymentProcess required params: pageCode, userId, sum, successUrl, cancelUrl, description, pageField[fullName] (at least two names), pageField[phone] (valid Israeli mobile). Optional: pageField[email], paymentNum (1-12), maxPaymentNum, chargeType, notifyUrl, invoiceNotifyUrl, cField1-cField9, productData[]. The payment page URL is valid for 10 minutes. transactionTypes is a positional array (SDK-wallet pages only): index 0 Credit Card, 1 Bit, 2 Apple Pay, 3 Google Pay, 4 Bank transfer, 5 Pay Box (there are no numeric value-codes).",
       "source_url": "https://developers.grow.business/reference/post_api-light-server-1-0-createpaymentprocess-1",
-      "raw_snippet": "createPaymentProcess required: pageCode, userId, sum, successUrl, cancelUrl, description, pageField[fullName], pageField[phone]. transactionTypes (SDK wallet only) positional: [0] credit card, [1] Bit, [2] Apple Pay, [3] Google Pay, [4] bank transfer, [5] Pay Box.",
-      "fetched_at": "2026-06-07T00:00:00Z",
+      "raw_snippet": "Info post Response get payment process info Powered by Regular Payment SDK post https://sandbox.meshulam.co.il /api/light/server/1.0/createPaymentProcess Each business has its own unique identifiers (userId + pageCode) - the identifiers on this documentation are for example only. To integrate with the API, please contact Grow support to obtain the necessary permissions and your unique identifiers.",
+      "fetched_at": "2026-08-18",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/api-endpoints.md"
-      ]
+      ],
+      "verified_via": "cited page fetched; 34 of 43 of the claim's distinctive terms occur on it, and the snippet is the page's own wording around \"createpaymentprocess\"",
+      "verified_at": "2026-08-18"
     },
     {
       "claim_id": "approve-transaction",
@@ -56,13 +60,15 @@
       "claim_id": "webhook-fields",
       "claim": "Grow webhooks are authenticated via a webhookKey field carried in the payload (there is no X-Grow-Signature header). Common webhook fields: webhookKey, transactionCode, paymentSum, paymentDate, fullName, payerPhone, payerEmail, cardSuffix, cardBrand, asmachta, paymentSource. Recurring adds directDebitId, paymentsNum, periodicalPaymentSum. Failed recurring adds error_message, charges_attempts, regular_payment_id. Invoice webhook adds invoiceNumber, invoiceUrl.",
       "source_url": "https://developers.grow.business/docs/overview-7",
-      "raw_snippet": "Webhook payload includes webhookKey, transactionCode, paymentSum, paymentDate, fullName, payerPhone, payerEmail, cardSuffix, cardBrand, cardType, asmachta, paymentSource, paymentDesc, statusCode, transactionToken; payment-link/new-system payloads may also carry shipping and dynamicFields; recurring: directDebitId, paymentsNum, periodicalPaymentSum; invoice: invoiceNumber, invoiceUrl. Webhook triggers include one-time, per-page, per-link, recurring, failed-recurring, POS, invoice-creation, mobile-app, and WordPress-plugin transactions. statusCode 2 = paid; transactionToken saved card token; allPaymentNum allPaymentsNum total payments",
-      "fetched_at": "2026-06-07T00:00:00Z",
+      "raw_snippet": "\"quantity\": \"1\", \"price\": \"2\", \"price_mark\": \"0\" } ], \"shipping\": { \"type\": \"משלוח עד הבית -7 ימי עסקים\", \"amount\": \"10\" }, \"dynamicFields\": [ { \"key\": \"\", \"label\": \"תרצו שנארוז כמתנה?\", \"option_label\": \"כן\", \"option_key\": \"\", \"field_value\": \"כן\" }, { \"key\": \"\", \"label\": \"אנא הזן מועד הגעה רצוי\", \"option_label\": \"\", \"option_key\": \"\", \"field_value\": \"01/1/25\" }, { \"key\": \"\", \"label\": \"תרצו להוסיף פפיון ?",
+      "fetched_at": "2026-08-18",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/webhook-payloads.md"
-      ]
+      ],
+      "verified_via": "cited page fetched; 45 of 67 of the claim's distinctive terms occur on it, and the snippet is the page's own wording around \"fields\"",
+      "verified_at": "2026-08-18"
     },
     {
       "claim_id": "reference-urls",
@@ -82,13 +88,15 @@
       "claim_id": "createtransactionwithtoken-params",
       "claim": "createTransactionWithToken parameters (Grow Light API): the saved-card-token parameter is `cardToken` (NOT `token`); `paymentType` value 2 = Regular; a recurring series is linked by `recurringDebitId` (the value returned by the first premium-recurring payment; there is no `isRecurringDebitId` flag); the endpoint uses `userId` (not `pageCode`) and its required fields are cardToken, userId, sum, description, paymentType, pageField[fullName], pageField[phone], recurringDebitId, transactionUniqueIdentifier.",
       "source_url": "https://developers.grow.business/reference/post_api-light-server-1-0-createtransactionwithtoken-1",
-      "raw_snippet": "createTransactionWithToken cardToken credit card token paymentType 2 Regular recurringDebitId userId sum description pageField transactionUniqueIdentifier",
-      "fetched_at": "2026-07-18T00:00:00Z",
+      "raw_snippet": "Do not include any special characters in any parameter of the API request. Body Params cardToken string Required field - credit card token . userId string Required field - Will be provided by Meshulam for each clearing business Example: 41deb6f1347ee8b2. sum double Required field - Total amount for payment Example: 10.99.",
+      "fetched_at": "2026-08-18",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "scripts/grow-payment-helper.sh"
-      ]
+      ],
+      "verified_via": "cited page fetched; 24 of 34 of the claim's distinctive terms occur on it, and the snippet is the page's own wording around \"cardtoken\"",
+      "verified_at": "2026-08-18"
     }
   ]
 }

@@ -218,12 +218,14 @@
       "claim_id": "hp-prefix-51-52",
       "claim": "Israeli private company (Hevra Peratit / ח\"פ) business numbers begin with 51 or 52",
       "source_url": "https://lookuptax.com/docs/tax-identification-number/israel-tax-id-guide",
-      "raw_snippet": "Israeli private company (Hevra Peratit / ח\"פ) business numbers begin with 51 or 52",
-      "fetched_at": "2026-07-06T00:00:00Z",
+      "raw_snippet": "number (from the Hebrew Hevra Pratit , private company). This number serves as the corporate TIN. Format: 9 numeric digits with no internal separators or embedded meaning. For VAT-registered companies, the Israel Tax Authority uses the same 9-digit number as the VAT registration identifier. Incorporated companies are identifiable because the first digit is always 5 ; partnerships and other entities use different leading digits. The H.",
+      "fetched_at": "2026-08-18",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ]
+      ],
+      "verified_via": "cited page fetched; 6 of 8 of the claim's distinctive terms occur on it, and the snippet is the page's own wording around \"private\"",
+      "verified_at": "2026-08-18"
     },
     {
       "claim_id": "amuta-prefix-58",
@@ -251,12 +253,14 @@
       "claim_id": "shaam-clearance-model",
       "claim": "Israel uses a clearance model: invoices above threshold are submitted to SHAAM (Israeli Tax Authority Computerized Processing System) via API or web portal, which validates and returns a unique allocation number",
       "source_url": "https://edicomgroup.com/electronic-invoicing/israel",
-      "raw_snippet": "Israel uses a clearance model: invoices above threshold are submitted to SHAAM (Israeli Tax Authority Computerized Processing System) via API or web portal, which validates and returns a unique allocation number",
-      "fetched_at": "2026-07-06T00:00:00Z",
+      "raw_snippet": "Zambia Zimbabwe Characteristics of Electronic Invoicing in Israel The system adopted in Israel follows a centralized validation or “clearance” model, in which invoice data must first be sent to the ITA platform for verification and approval. Only after receiving authorization from the authority is the invoice considered valid and can be officially issued to the recipient.",
+      "fetched_at": "2026-08-18",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ]
+      ],
+      "verified_via": "cited page fetched; 13 of 19 of the claim's distinctive terms occur on it, and the snippet is the page's own wording around \"clearance\"",
+      "verified_at": "2026-08-18"
     },
     {
       "claim_id": "depreciation-rates",
