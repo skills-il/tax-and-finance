@@ -2,7 +2,7 @@
 
 ### Error: "Pension fund not transferring"
 Cause: Switching pension funds requires a specific signed transfer request to the receiving fund.
-Solution: Contact the new fund to initiate. Once they have the signed request, transfer must complete within 10 business days. No fees. If transferring from pre-2013 bituach menahalim, verify whether you forfeit the guaranteed annuity factor before signing.
+Solution: Contact the new fund to initiate. Send the request to the old fund only after deposits to the new fund have begun. The statutory completion deadline is short but is not verified in this skill: confirm it with the receiving fund rather than quoting a number. No fees. If transferring from pre-2013 bituach menahalim, verify whether you forfeit the guaranteed annuity factor before signing.
 
 ### Error: "Employer not contributing"
 Cause: Employer legally required to contribute pension after 6 months (no prior pension) or 3 months retroactive (with prior pension)

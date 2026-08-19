@@ -43,7 +43,7 @@ For unbiased advice ask specifically for a yoetz pensioni.
 | Kranot Neemanot | kranot neemanot | Mutual funds (not pension) | Capital gains tax |
 
 ### Step 2: Mandatory Pension Contributions
-Since 2008, all employees must have pension insurance. Average wage (BL §2 definition, 2026): 13,769 NIS/month. This is the base figure for nearly every pension ceiling. (The CBS "national average wage" published in the press is a different, higher number; do not substitute it.)
+Since 2008, all employees must have pension insurance. Statutory average wage (sakhar memutza) as published for 2026 by the Tax Authority and used by National Insurance: 13,769 NIS/month. This is the base figure for nearly every pension ceiling. (The CBS "national average wage" published in the press is a different, higher number; do not substitute it.)
 
 **Employee contributions:**
 - **Employee:** 6% of salary
@@ -62,6 +62,14 @@ Since 2008, all employees must have pension insurance. Average wage (BL §2 defi
   "Contributions above 2x the average wage route elsewhere" collapses the first
   two and states the mandatory ceiling at double its real value. The mandatory
   ceiling is the average wage, NOT twice it.
+
+- **Not one of these: the Bituach Leumi maximum insurable income (51,910
+  NIS/month from 01.01.2026).** It is the ceiling on income charged BL and
+  health contributions, and it governs nothing in this skill. Users routinely
+  reach for it when they say "the insurable salary ceiling", which lands them
+  almost four times above the real mandatory-pension ceiling of 13,769. When a
+  user names a ceiling without qualifying it, ask which of these four they
+  mean before computing anything.
 
 **Pension contribution timing for new employees** (Mandatory Pension Expansion Order):
 - Employee with existing pension at intake: contributions begin Day 1, paid retroactively after 3 months of work or end of tax year (whichever first).
@@ -123,7 +131,7 @@ The per-cohort table is in `references/retirement-age-by-cohort.md`.
 - **Severance (pitzuim):** On termination, subject to the Section 14 arrangement and the Form 161 process. Tax-exempt up to 13,750 NIS per year of service. See Step 6 in full before any withdrawal decision.
 - **Disability:** New comprehensive pension funds under the unified regulations (takanon achid, June 2018) pay up to 75% of insured salary for disability. Bituach Leumi nechut klalit may overlap; offset rules apply per the takanon achid. The disability premium is built into the 6.5% employer tagmulim, up to 2.5% of salary; if the employee opts out of disability coverage that premium is added to the savings component.
 - **Survivors (sha'arim)** under takanon achid for an ACTIVE member: spouse 60% of insured salary; orphans combined 40% of insured salary (divided among children under 21, extended to 24 during military / national / regular national service); dependent parent 20%; total cap 100% of insured salary. For an INACTIVE member, the benefit is calculated from the accumulated balance using actuarial coefficients, not fixed percentages. Bituach Leumi shaerim STACKS on top of this; it is not an offset.
-- **Nayadut (fund transfer):** No transfer fees. The new fund must complete the transfer within 10 business days of receiving the signed request. Vetek (seniority) is preserved for the keren hishtalmut 6-year lock. Transferring from a pre-2013 bituach menahalim to a pensia fund forfeits guaranteed annuity factors (mekadem hamara mubatach) on those balances; check before transferring.
+- **Nayadut (fund transfer):** No transfer fees. Send the request to the OLD fund only after deposits to the new fund have actually begun, or the transfer can stall. The statutory completion deadline is short but was not re-verifiable this cycle: confirm the current deadline with the receiving fund rather than quoting a number to the user. Vetek (seniority) is preserved for the keren hishtalmut 6-year lock. Transferring from a pre-2013 bituach menahalim to a pensia fund forfeits guaranteed annuity factors (mekadem hamara mubatach) on those balances; check before transferring.
 
 ### Step 6: Severance at Termination (Form 161)
 The single most consequential decision at job change. Mistakes here cost tens of thousands of NIS in future tax.
@@ -146,7 +154,7 @@ The 2.33% gap arises only in case 1 if the employer chose to contribute the mini
 - **Form 161 -- Part A (Employer Notice)** -- Filled by the employer at termination, declaring employee details, employment period, salary, Section 14 status, and severance amounts paid out and accumulated in funds.
 - **Form 161 -- Part B (Employee Notice)** -- Filled by the employee declaring intent for each component of severance: cash withdrawal (subject to heichum kitzbah), rezef-kitzbah (pension continuity), rezef-pitzuyim (severance continuity), or prisat pituyim (spread tax over up to 6 years). Part B REPLACES the old standalone Form 161א as of January 2024.
 - **Form 161 -- Part C** -- Employer's calculation worksheet and instructions to the fund.
-- **Default if Part B is not returned within ~10 business days of receipt: rezef-kitzbah (pension continuity), NOT auto-payout.** The Tax Authority treats a non-responding employee as having elected pension continuity if all severance funds are in annuity-eligible accounts. This is the opposite of the pre-2024 rule.
+- **Default if Part B is not returned: rezef-kitzbah (pension continuity), NOT auto-payout.** The submission window is short (commonly cited as about 10 business days from receipt) but is NOT verified in this skill: read the window off the Part A form the employer hands over, and do not quote a number to the user. The Tax Authority treats a non-responding employee as having elected pension continuity if all severance funds are in annuity-eligible accounts. This is the opposite of the pre-2024 rule.
 - **Form 161ג (161C)** -- Filed to REVOKE a prior rezef-pitzuyim election within 2 years of termination (the "bittul pituyim" window). Submitted directly to the Tax Authority.
 - **Form 161ד (161D)** -- Filed at retirement to settle the lifetime kitzbah-mezakah exemption calculation against severance the employee took during their career (kibu'a zechuyot).
 
@@ -166,7 +174,7 @@ Tikun 190 of the Income Tax Ordinance (2012) lets people aged 60+ who already dr
 - No annual deposit cap, no lifetime cap (the benefit is on the tax treatment, not a contribution ceiling).
 - Lock-up: funds must remain at least until the depositor is eligible for kitzbah (essentially immediately, given the prerequisite).
 - Withdrawal as kitzbah: monthly payments fully exempt from income tax for life.
-- Withdrawal as lump sum: 15% tax on the real (CPI-adjusted) gain only; principal is not taxed.
+- Withdrawal as lump sum: 15% tax on the NOMINAL gain only; principal is not taxed. The base is nominal, not real (CPI-adjusted) -- this is the single most misquoted detail of Tikun 190.
 - Inheritance: on the depositor's death, the funds pass to designated beneficiaries; their tax treatment depends on the beneficiary's age and choice (kitzbah vs lump sum).
 
 **Common confusion:** "Tikun 190" is used colloquially to refer to BOTH this 60+ deposit benefit AND the parallel reform of severance / kitzbah taxation under the same amendment. The two have nothing operational in common. When a client says "Tikun 190" ask which they mean.
@@ -189,15 +197,7 @@ Tikun 190 of the Income Tax Ordinance (2012) lets people aged 60+ who already dr
 - Worth keeping a pre-2013 policy in most cases; rarely worth opening a new one.
 
 ### Step 9: Life Events
-**Divorce, pension split:** The Pension Savings Division between Separated Spouses Law (2014) lets an ex-spouse register the divorce decree directly with the pension fund or insurer. Once registered, the fund administers the agreed split (typically up to 50% of the accumulation during the marriage) and pays each ex-spouse separately at their respective retirements. No repeated court enforcement is needed. Register promptly: the fund may pay out before registration without splitting if it has no notice.
-
-**Relocation abroad:** Section 14(a) of the Income Tax Ordinance grants olim chadashim and toshavim chozrim vatikim a 10-year exemption from Israeli tax on income produced abroad from the sources listed in sections 2, 2A and 3, which covers a foreign pension. Section 9c separately caps the tax on such a pension at what the individual would have paid in the paying country; Israeli pensions paid to a non-resident are taxed under the source rule of Section 4א and the relevant tax treaty. Bituach Leumi has bilateral social security agreements with most European countries (UK, Germany, France, Netherlands, Austria, Belgium, Bulgaria, Czech Republic, Denmark, Finland, Norway, Sweden, Switzerland and several others) that coordinate insurance periods. **There is no totalization (social security) agreement between Israel and the United States** -- this is a common misconception. A US-Israel tax treaty exists, but it covers income tax, not BL coordination. Treat any client moving to/from the US as a special case requiring cross-border tax advice.
-
-**Spousal attribution (nikuy zikkui):** Under Section 47 of the Income Tax Ordinance, a non-working spouse's pension/hishtalmut contributions can shift to the working spouse's credit ceiling, increasing the household's overall tax benefit. Often missed in single-earner households.
-
-**Combining multiple pensions at retirement (gibush kitzbaot):** Aggregate kitzbah from prior employers/funds into a single drawdown to maximize use of the kitzbah-mezakah exemption. Done via Form 161ד at retirement.
-
-**Bridge pension (pensia gisha):** Common in high-tech severance packages; lets an executive draw kitzbah from age 60 to 67 from a managed payout. Tax treatment varies by fund design.
+Five events change the pension answer materially: divorce (pension splitting under the 2014 Law), relocation abroad (Section 14(a) and the absence of any Israel-US totalization agreement), spousal attribution under Section 47, aggregating pensions at retirement (gibush kitzbaot, Form 161ד), and bridge pensions from age 60. Full rules, citations and the per-event traps are in `references/life-events.md`; read it before advising on any of them.
 
 ## Examples
 
@@ -211,7 +211,7 @@ Result: Explain that the first year of business is exempt from mandatory pension
 
 ### Example 3: Job Change with Severance
 User says: "I'm switching jobs and have 80,000 NIS of severance accrued under full Section 14. Should I take it or leave it?"
-Result: Walk through Form 161 (new 2024 unified form -- the employer files Part A, the employee fills Part B within ~10 business days of receipt). Default if no Part B is filed is rezef-kitzbah (pension continuity), NOT auto-payout. For a worker under ~35 (more than 32 years to retirement) heichum kitzbah penalty is zero, so withdrawal is tax-free up to 13,750 NIS per year of service and the kitzbah pool is unaffected. For a worker over ~35, prefer rezef-pitzuyim UNLESS the new employer's arrangement is not compatible (in which case rezef-kitzbah is the safer default). Mention prisat pituyim as a fallback if the worker needs liquidity but the severance pushes them into a high marginal bracket.
+Result: Walk through Form 161 (new 2024 unified form -- the employer files Part A, the employee fills Part B within a short window stated on the form itself; do not quote a day count you have not read off the form). Default if no Part B is filed is rezef-kitzbah (pension continuity), NOT auto-payout. For a worker under ~35 (more than 32 years to retirement) heichum kitzbah penalty is zero, so withdrawal is tax-free up to 13,750 NIS per year of service and the kitzbah pool is unaffected. For a worker over ~35, prefer rezef-pitzuyim UNLESS the new employer's arrangement is not compatible (in which case rezef-kitzbah is the safer default). Mention prisat pituyim as a fallback if the worker needs liquidity but the severance pushes them into a high marginal bracket.
 
 ### Example 4: Approaching Retirement (Tikun 190)
 User says: "I'm 64, I just sold my business and have 1.5M NIS sitting in the bank. My private pension is 8,000 NIS/month. What should I do with the cash?"
@@ -224,11 +224,14 @@ Result: Explain the Pension Savings Division between Separated Spouses Law (2014
 ## Bundled Resources
 
 ### Scripts
-- `scripts/calculate_pension.py` -- Computes mandatory pension contributions (employee, employer, severance), keren hishtalmut benefits with the 15,712 NIS salary cap enforced, and retirement savings projections (with realistic mekadem hamara per gender) for both employees and self-employed. Run: `python scripts/calculate_pension.py --help`
+- `scripts/calculate_pension.py` -- Computes mandatory pension contributions (employee, employer, severance), keren hishtalmut benefits with the 15,712 NIS salary cap enforced, and retirement savings projections (with realistic mekadem hamara per gender) for both employees and self-employed. Female retirement age is resolved from the per-cohort birth-year table, never a flat number, so pass `--birth-year` alongside `--female`; without it the script assumes the 1970-and-later age of 65 and says so. Run: `python scripts/calculate_pension.py --help`
 
 ### References
 - `references/pension-fund-types.md` -- Detailed comparison of Israeli pension vehicles: Keren Pensia, Bituach Menahalim, Kupat Gemel le-Tagmulim, Kupat Gemel le-Hashka'a (IRA), and Kupat Gemel le-Kitzbah (Tikun 190 vehicle), with fee structures, insurance components, default fund system, and major fund providers. Consult when advising on pension fund selection in Step 8.
 - `references/tax-benefits.md` -- Israeli pension tax benefits including the 35% tax credit on employee contributions, employer contribution exclusions, keren hishtalmut tax-free gains, self-employed deduction rules, Section 14 details, Tikun 190 deposit mechanics, and pension payout tax exemption rates. Consult when calculating tax savings from pension and savings contributions.
+- `references/retirement-age-by-cohort.md` -- Women's retirement age by year of birth, including the 1959-and-earlier cohort. This is the authoritative source for retirement age; never use a flat number.
+- `references/life-events.md` -- Life events (Step 9): divorce and pension splitting, relocation abroad, spousal attribution, gibush kitzbaot, and bridge pensions.
+- `references/troubleshooting.md` -- Common failure modes and their fixes.
 
 ## Recommended MCP Servers
 
@@ -246,7 +249,7 @@ No pension-specific MCP exists today. Pair with general Israeli financial MCPs (
 - Israeli pension funds invest significantly in local government bonds (igrot chov mimshaltiiot), which means returns are partially linked to Israeli economic performance. Agents should not compare Israeli pension returns directly to US 401(k) S&P 500 benchmarks.
 - Self-employed keren hishtalmut has TWO separate ceilings: the tax deduction ceiling (13,203 NIS/year) and the profit-exempt ceiling (20,566 NIS/year). Agents often conflate these into a single figure.
 - Bituach Leumi old-age pension (kitzvat zikna) STACKS on top of private pension fund payouts; it is not an offset. Self-employed users sometimes assume one replaces the other and underestimate retirement income, or skip private pension thinking BL is enough.
-- Form 161 was redesigned January 2024 -- single unified form, Part B replaces the old 161א. The submission window is ~10 business days from receipt of Form 161 (Part A) from the employer, not the 4 months / 120 days that the old 161א allowed. Default if no Part B submitted is rezef-kitzbah (pension continuity), NOT auto-payout -- the opposite of the pre-2024 rule. Skills referencing "161א" without mentioning the 2024 redesign are stale.
+- Form 161 was redesigned January 2024: one unified form, Part B replaces the old 161א, and the submission window is now short rather than the 120 days 161א allowed. See Step 6 for the window and the reversed default. Anything referencing "161א" without the 2024 redesign is stale.
 - Hishtalmut tax-free employer contribution stops at salary 15,712 NIS/month. For higher earners, the employer hishtalmut on salary above the ceiling is taxable income to the employee even though it still sits in the fund.
 
 ## Reference Links

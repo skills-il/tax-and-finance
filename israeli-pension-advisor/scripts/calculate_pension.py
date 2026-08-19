@@ -28,15 +28,19 @@ SELF_PENSION_HIGH_RATE = 0.1255
 SELF_HISHTALMUT_MAX = 20566      # Tax-free profit ceiling (2026)
 SELF_HISHTALMUT_DEDUCT = 13203   # Tax deduction ceiling (2026)
 
-AVG_WAGE = 13769                 # Average wage 2026 (BL §2 definition)
+AVG_WAGE = 13769                 # Statutory average wage 2026 (ITA/BL)
 # NOTE: this is the salary implied by the tax-favoured DEPOSIT ceiling
 # (20.5% x 2 x average wage = 5,645/month). It is NOT the mandatory-pension
 # insurable ceiling, which is the average wage itself (13,769), and NOT the
 # fund's maximum determining salary (about 41,307 = 3 x average wage).
 COMPREHENSIVE_FUND_DEPOSIT_IMPLIED_SALARY = 2 * AVG_WAGE  # 27,538
 MANDATORY_PENSION_INSURABLE_MAX = AVG_WAGE               # 13,769, tzav harchava
-COMPREHENSIVE_FUND_INSURABLE_SALARY_MAX = 2 * AVG_WAGE   # kept for compatibility
+# Retained only for backwards compatibility with external callers. Do NOT use
+# it as the mandatory-contribution base: the compulsory ceiling is the average
+# wage itself (MANDATORY_PENSION_INSURABLE_MAX), not twice it.
+COMPREHENSIVE_FUND_INSURABLE_SALARY_MAX = 2 * AVG_WAGE
 COMPREHENSIVE_FUND_DEPOSIT_MAX = 5645  # Monthly deposit ceiling 2026 (20.5% of 2x avg wage)
+COMPREHENSIVE_FUND_MAX_DETERMINING_SALARY = 41307  # ~3x avg wage; the fund's own entitlement cap
 HISHTALMUT_TAX_FREE_SALARY_CAP = 15712  # Monthly salary cap for tax-free employer hishtalmut (2026)
 
 
@@ -64,10 +68,15 @@ def calculate_pension_contributions(
 ) -> PensionBreakdown:
     """Calculate monthly pension and savings contributions.
 
-    Uses the real comprehensive-fund insurable salary cap (2x average wage),
-    and enforces the 15,712 NIS hishtalmut tax-free salary ceiling.
+    The COMPULSORY contribution base is the mandatory-pension insurable
+    salary ceiling under the tzav harchava, which is the average wage
+    (13,769 in 2026) and NOT twice it. Using 2x the average wage here is the
+    classic conflation of the mandatory ceiling with the comprehensive-fund
+    tax-favoured deposit ceiling, and it overstates the employer's statutory
+    obligation for every salary above the average wage. See SKILL.md Step 2.
+    Also enforces the 15,712 NIS hishtalmut tax-free salary ceiling.
     """
-    insurable = min(monthly_salary, COMPREHENSIVE_FUND_INSURABLE_SALARY_MAX)
+    insurable = min(monthly_salary, MANDATORY_PENSION_INSURABLE_MAX)
 
     employee_pension = round(insurable * PENSION_EMPLOYEE, 2)
     employer_pension = round(insurable * PENSION_EMPLOYER, 2)
@@ -106,11 +115,63 @@ def calculate_pension_contributions(
     )
 
 
+# Retirement age for women by YEAR OF BIRTH, under the Retirement Age Law
+# 5764-2004 as amended (in force January 2022, phased over 11 years).
+# Source: references/retirement-age-by-cohort.md. The age is set by date of
+# birth, NEVER by a flat number -- a woman born 1968 retires at 64y6m, not at
+# the 2026 headline figure of 63y3m.
+FEMALE_RETIREMENT_AGE_BY_BIRTH_YEAR = {
+    1960: 62 + 4 / 12,
+    1961: 62 + 8 / 12,
+    1962: 63.0,
+    1963: 63 + 3 / 12,
+    1964: 63 + 6 / 12,
+    1965: 63 + 9 / 12,
+    1966: 64.0,
+    1967: 64 + 3 / 12,
+    1968: 64 + 6 / 12,
+    1969: 64 + 9 / 12,
+}
+FEMALE_RETIREMENT_AGE_PRE_1960 = 62.0   # born 1959 or earlier: flat 62
+FEMALE_RETIREMENT_AGE_1970_PLUS = 65.0  # born 1970 or later: flat 65
+MALE_RETIREMENT_AGE = 67.0
+
+
+def female_retirement_age(birth_year: int) -> float:
+    """Return the statutory retirement age for a woman born in `birth_year`.
+
+    Never returns a flat "current year" figure. Cohorts born 1959 and earlier
+    retire at 62 (all are already past retirement age today, but the row is
+    kept so the lookup is total and cannot silently fall through).
+    """
+    if birth_year <= 1959:
+        return FEMALE_RETIREMENT_AGE_PRE_1960
+    if birth_year >= 1970:
+        return FEMALE_RETIREMENT_AGE_1970_PLUS
+    return FEMALE_RETIREMENT_AGE_BY_BIRTH_YEAR[birth_year]
+
+
+def resolve_retirement_age(gender: str, birth_year: int = None) -> float:
+    """Resolve retirement age from gender + birth year.
+
+    For women, `birth_year` is REQUIRED to get a correct answer; without it
+    the caller gets the 1970-and-later age (65), which is the conservative
+    end of the schedule, rather than a misleadingly low current-year figure.
+    """
+    if gender != "female":
+        return MALE_RETIREMENT_AGE
+    if birth_year is None:
+        return FEMALE_RETIREMENT_AGE_1970_PLUS
+    return female_retirement_age(birth_year)
+
+
 def project_retirement(
     monthly_salary: float,
     current_age: int,
     gender: str = "male",
     retirement_age: float = None,
+    birth_year: int = None,
+    mandatory_only: bool = False,
     annual_return: float = 0.04,
     existing_balance: float = 0,
 ) -> dict:
@@ -121,17 +182,27 @@ def project_retirement(
     These are approximations; real fund-specific factors vary by track
     and survivor coverage.
 
-    Female retirement age in 2026 defaults to 63.25 (63 years 3 months);
-    the year-of-birth schedule means the actual age may differ by cohort.
+    Female retirement age is resolved from `birth_year` via the per-cohort
+    table (see FEMALE_RETIREMENT_AGE_BY_BIRTH_YEAR). A flat number is never
+    used. If `birth_year` is omitted for a woman, the 1970-and-later age of
+    65 is assumed.
     """
     if retirement_age is None:
-        retirement_age = 67 if gender == "male" else 63.25
+        retirement_age = resolve_retirement_age(gender, birth_year)
 
     years = retirement_age - current_age
     if years <= 0:
         return {"error": "Already at or past retirement age"}
 
-    insurable = min(monthly_salary, COMPREHENSIVE_FUND_INSURABLE_SALARY_MAX)
+    # A PROJECTION models what is actually deposited, which is not the same as
+    # the statutory minimum. Most Israeli employers contribute the full 18.5%
+    # on full salary up to the fund's maximum determining salary (~41,307),
+    # not merely up to the compulsory ceiling. Capping here at the compulsory
+    # ceiling would understate an above-average earner's balance badly. Callers
+    # who want the statutory floor instead can pass mandatory_only=True.
+    cap = (MANDATORY_PENSION_INSURABLE_MAX if mandatory_only
+           else COMPREHENSIVE_FUND_MAX_DETERMINING_SALARY)
+    insurable = min(monthly_salary, cap)
     monthly_contribution = insurable * (PENSION_EMPLOYEE + PENSION_EMPLOYER + PENSION_SEVERANCE)
     monthly_return = (1 + annual_return) ** (1 / 12) - 1
 
@@ -140,10 +211,17 @@ def project_retirement(
     for _ in range(n_months):
         balance = balance * (1 + monthly_return) + monthly_contribution
 
+    # Annuity factor (mekadem hamara) tracks the AGE ACTUALLY RETIRED AT, not a
+    # frozen current-year assumption: retiring later means fewer expected payout
+    # months, so the divisor shrinks. Anchors are the industry approximations of
+    # ~205 for a man at 67 and ~230 for a woman at 63y3m; roughly 3.6 points of
+    # factor per year of age between them. Fund-specific factors vary by track
+    # and survivor coverage, so treat these as estimates, not quotes.
     if gender == "male":
-        mekadem = 205.0  # ~17 years
+        mekadem = 205.0 - (retirement_age - 67.0) * 3.6
     else:
-        mekadem = 230.0  # ~19 years; women have longer life expectancy + earlier retirement
+        mekadem = 230.0 - (retirement_age - 63.25) * 3.6
+    mekadem = max(150.0, min(260.0, mekadem))
 
     monthly_pension_gross = balance / mekadem if mekadem > 0 else 0
 
@@ -161,7 +239,10 @@ def project_retirement(
         "estimated_monthly_pension_net_est": round(monthly_pension_net, 2),
         "assumptions": (
             f"{annual_return*100:.1f}% annual real return; retirement at age "
-            f"{retirement_age}; mekadem hamara ~{mekadem:.0f}; tax estimated at 31% "
+            f"{retirement_age}; deposit base {'the compulsory ceiling' if mandatory_only else 'full salary capped at the fund maximum determining salary'} "
+            f"({insurable:,.0f} NIS/month of the {monthly_salary:,.0f} gross); "
+            f"mekadem hamara ~{mekadem:.0f} (linear interpolation between two industry "
+            f"anchors, not a published table; clamped to 150-260); tax estimated at 31% "
             f"marginal on the portion above the 2026 exempt amount ({exempt_amount:,.0f} NIS)."
         ),
     }
@@ -176,8 +257,12 @@ def format_breakdown(breakdown: PensionBreakdown) -> str:
     ]
     if breakdown.insurable_salary < breakdown.gross_salary:
         lines.append(
-            f"    Note: salary above 2x avg wage ({COMPREHENSIVE_FUND_INSURABLE_SALARY_MAX:,} NIS) "
-            "routes to a supplementary fund."
+            f"    Note: the compulsory 18.5% is owed only up to the mandatory-pension "
+            f"insurable ceiling ({MANDATORY_PENSION_INSURABLE_MAX:,} NIS, the average wage). "
+            "Anything above it is contractual, not statutory. Separately, the "
+            f"comprehensive fund's tax-favoured deposit stops at "
+            f"{COMPREHENSIVE_FUND_DEPOSIT_MAX:,} NIS/month; beyond that, route to a "
+            "keren mashlima or kupat gemel le-tagmulim. These are different ceilings."
         )
     lines.extend([
         "",
@@ -236,7 +321,11 @@ def main():
     parser.add_argument("--age", type=int, default=30, help="Current age for projection")
     parser.add_argument(
         "--female", action="store_true",
-        help="Use female retirement age (63.25 in 2026, rising to 65 by 2032; year-of-birth schedule applies)"
+        help="Use the female retirement-age schedule (set by year of birth; pass --birth-year)"
+    )
+    parser.add_argument(
+        "--birth-year", type=int, default=None,
+        help="Year of birth. Required for a correct female retirement age (per-cohort table); ignored for men"
     )
     parser.add_argument(
         "--first-business-year", action="store_true",
@@ -322,10 +411,14 @@ def main():
     print(format_breakdown(breakdown))
 
     if args.project:
-        retirement_age = 63.25 if args.female else 67
+        retirement_age = resolve_retirement_age(gender, args.birth_year)
         print()
-        print(f"  --- Retirement Projection (age {args.age} -> {retirement_age}, {gender}) ---")
-        projection = project_retirement(args.salary, args.age, gender=gender)
+        print(f"  --- Retirement Projection (age {args.age} -> {retirement_age:.2f}, {gender}) ---")
+        if gender == "female" and args.birth_year is None:
+            print("  NOTE: no --birth-year given; assuming the 1970-and-later age of 65.")
+        projection = project_retirement(
+            args.salary, args.age, gender=gender, retirement_age=retirement_age
+        )
         if "error" in projection:
             print(f"  {projection['error']}")
         else:

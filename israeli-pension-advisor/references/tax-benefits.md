@@ -61,7 +61,7 @@ The other half of Amendment 190: lets pensioners 60+ with a qualifying kitzbah d
 - **Eligibility:** Age 60+ AND already drawing kitzbah of at least the minimum threshold (~5,306 NIS/month in 2026)
 - **No annual or lifetime deposit cap**
 - **Withdrawal as monthly kitzbah:** Fully exempt from income tax for life
-- **Withdrawal as lump sum:** 15% tax on the real (CPI-adjusted) GAIN only; principal not taxed
+- **Withdrawal as lump sum:** 15% tax on the NOMINAL GAIN only; principal not taxed. The base is nominal, never real (CPI-adjusted)
 - **Standard use cases:** severance at retirement, sale of business proceeds, retirement bonus, inheritance, excess liquid savings
 - **Comparison:** the 15% applies to the NOMINAL gain, and the benchmark it is measured against is 25% on the REAL (CPI-adjusted) gain in a regular investment account, not the marginal rate. A 1M NIS deposit drawn as a lump sum after 10 years with a 500K nominal gain pays 15% x 500K = 75K NIS. Compare that against 25% of the real gain over the same period before calling it a saving: when inflation has been high, the real gain is much smaller than the nominal one and the nominal-basis 15% can be the worse of the two.
 - **Estate planning:** Funds pass to designated beneficiaries under fund rules

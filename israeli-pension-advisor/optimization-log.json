@@ -24,6 +24,18 @@
         "CARRY (MINOR, expert): the 5,306 Tikun-190 eligibility threshold is labelled 'kitzbah mezakah minimum' but the legally precise term is 'kitzbah mizirit' (קצבה מזערית / minimum pension), distinct from the 'kitzbah mezakah' qualifying ceiling (9,430). Number and guidance are correct; rename for precision next cycle.",
         "CARRY (FYI, not cited as numbers so nothing stale): nekudat zikui monthly value (~242 in 2026) and income-tax-bracket/surtax thresholds are referenced only generically; if specific numbers are ever added, they CPI-bump annually and the 2025 expanded surtax on capital income would need noting."
       ]
+    },
+    {
+      "version": "2.5.0",
+      "date": "2026-08-19",
+      "lessons": [
+        "CARRY: nayadut statutory transfer-completion deadline unverified (kolzchut 403). Hedged in 4 places; source or drop next cycle.",
+        "CARRY: Form 161 Part B window and the post-2024 'silence defaults to rezef-kitzbah' reversal unverified (gov.il/he/service 403). Hedged in 6 places.",
+        "Old-value sweep must cover references/troubleshooting.md and BOTH Hebrew occurrences: the first nayadut hedge missed two of four sites and the evidence note wrongly certified the fix as complete. Grep the whole folder, not the files you edited.",
+        "Expert MINOR deferred: cohort table is year-granular while the prose insists the age is set by DATE of birth; 1960 splits mid-year.",
+        "Expert MINOR deferred: projection freezes the 2026 exemption ratio (57.5%) and a flat 31% marginal rate over a multi-decade horizon.",
+        "A prose correction is not landed until the SCRIPT implements it: the mandatory-ceiling fix sat in SKILL.md Step 2 for a cycle while the calculator still used 2x the average wage as dead-constant proof."
+      ]
     }
   ]
 }

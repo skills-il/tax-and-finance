@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0",
   "skill": "israeli-pension-advisor",
-  "generated_at": "2026-05-18T00:00:00Z",
+  "generated_at": "2026-08-19T03:33:44.716505+00:00",
   "claims": [
     {
       "claim_id": "avg-wage-2026",
@@ -61,9 +61,9 @@
     {
       "claim_id": "hishtalmut-employer-tax-free-ceiling-2026",
       "claim": "The 2026 keren hishtalmut salary ceiling for tax-free employer deposits is 15,712 NIS (15,712 ש\"ח) per month, i.e. 188,544 NIS a year (188,544 ש\"ח), at 2.5% employee and 7.5% employer.",
-      "source_url": "https://www.kolzchut.org.il/he/%D7%A7%D7%A8%D7%9F_%D7%94%D7%A9%D7%AA%D7%9C%D7%9E%D7%95%D7%AA",
-      "raw_snippet": "וזאת עד לתקרת שכר שנתי של 188,544 ₪ (שכר חודשי ממוצע של 15,712 ₪), נכון ל-2026.",
-      "fetched_at": "2026-07-21",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf",
+      "raw_snippet": "משכורת קובעת להפרשות לקרן השתלמות 3(ה) 188,544 לשנה",
+      "fetched_at": "2026-08-19T03:09:54.698772+00:00",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
@@ -72,8 +72,8 @@
         "references/tax-benefits.md"
       ],
       "verified_via": "pdf",
-      "verified_at": "2026-07-21",
-      "note": "Harel 2026 ceilings PDF, text layer via pdftotext. Percent signs extract as the letter B."
+      "verified_at": "2026-08-19T03:09:54.698772+00:00",
+      "note": "Hishtalmut cap re-verified 2026-08-19 in the ITA 2026 booklet: 188,544/year, i.e. 15,712/month."
     },
     {
       "claim_id": "hishtalmut-self-deduction-2026",
@@ -107,26 +107,32 @@
     },
     {
       "claim_id": "hishtalmut-tax-status-unchanged-2026",
-      "claim": "The Treasury's September 2024 proposal to convert the keren hishtalmut capital-gains exemption to a 6-year ceiling was dropped from the final 2025 budget and has not been re-introduced. As of May 2026 the lifetime capital-gains exemption on deposits within the annual cap remains in effect.",
-      "source_url": "https://www.themarker.com/markets/2024-09-23/ty-article/.premium/00000192-1eb8-dc44-affb-3fb904dd0000",
-      "raw_snippet": "הצעת האוצר מספטמבר 2024 לשינוי הטבת המס בקרן השתלמות נמשכה מתקציב 2025; לא נחקקה",
-      "fetched_at": "2026-05-18T00:00:00Z",
+      "claim": "Keren hishtalmut tax treatment is unchanged for 2026: the ITA's own 2026 ceilings table still lists the hishtalmut determining salary (188,544/year) and the profit-exempt hafkada mutevet (20,566/year) with no year-7 cap on gains. The September 2024 Treasury proposal to tax gains from year 7 is not reflected in the 2026 ceilings.",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf",
+      "raw_snippet": "הפקדה מוטבת 9(16א) ו-9(16ב) 20,566 לשנה",
+      "fetched_at": "2026-08-19T03:27:42.511481+00:00",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ]
+      ],
+      "verified_via": "pdf",
+      "verified_at": "2026-08-19T03:27:42.511481+00:00",
+      "note": "[Judge finding, fixed 2026-08-19] Previously cited a Sept-2024 TheMarker article about the PROPOSAL, which structurally cannot evidence a 2026 non-enactment, and whose snippet was an authored summary rather than page text. Re-anchored on the ITA 2026 booklet, which is positive evidence of the ceilings actually in force."
     },
     {
       "claim_id": "employee-tax-credit-2026",
       "claim": "Employee pension tax credit: 35% of contributions up to 679 NIS/month (7% of qualifying salary 9,700 NIS/month); maximum annual credit ~2,852 NIS",
-      "source_url": "https://www.kolzchut.org.il/he/%D7%96%D7%99%D7%9B%D7%95%D7%99_%D7%9E%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94_%D7%91%D7%92%D7%99%D7%9F_%D7%94%D7%A4%D7%A8%D7%A9%D7%95%D7%AA_%D7%9C%D7%91%D7%99%D7%98%D7%95%D7%97_%D7%A4%D7%A0%D7%A1%D7%99%D7%95%D7%A0%D7%99",
-      "raw_snippet": "זיכוי מס פנסיה לעובד 2026: 35% על הפקדות עד 679 ש\"ח/חודש (7% משכר מזכה 9,700 ש\"ח); זיכוי מקסימלי כ-2,852 ש\"ח/שנה",
-      "fetched_at": "2026-05-18T00:00:00Z",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf",
+      "raw_snippet": "תקרת הכנסה מזכה 47(א)(1)(1) - רק מהכנסת עבודה 9,700 לחודש",
+      "fetched_at": "2026-08-19T03:09:54.698772+00:00",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/tax-benefits.md"
-      ]
+      ],
+      "verified_via": "pdf",
+      "verified_at": "2026-08-19T03:09:54.698772+00:00",
+      "note": "Sachar mezakeh re-verified 2026-08-19 directly in the ITA 2026 monthly-deductions booklet (Chapter C, קופות גמל וקרנות השתלמות table) via pdftotext."
     },
     {
       "claim_id": "self-employed-pension-tax-2026",
@@ -181,14 +187,17 @@
     {
       "claim_id": "severance-exempt-ceiling-2026",
       "claim": "Tax-exempt severance ceiling for 2026: 13,750 NIS per year of service",
-      "source_url": "https://pensuni.com/?p=827",
-      "raw_snippet": "תקרת פיצויי פיטורים פטורה ממס 2026: 13,750 ש\"ח לכל שנת עבודה",
-      "fetched_at": "2026-05-18T00:00:00Z",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf",
+      "raw_snippet": "תקרת הפטור לניכויים - מענק בשל תשלומים לקופ\"ג - מרכיב פיצויים 32(9)(א)(2) 13,750 לשנה",
+      "fetched_at": "2026-08-19T03:09:54.698772+00:00",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/tax-benefits.md"
-      ]
+      ],
+      "verified_via": "pdf",
+      "verified_at": "2026-08-19T03:09:54.698772+00:00",
+      "note": "Severance exempt ceiling re-verified 2026-08-19 in the ITA 2026 booklet via pdftotext."
     },
     {
       "claim_id": "mandatory-pension-rates",
@@ -259,15 +268,18 @@
     },
     {
       "claim_id": "tikun-190-deposits",
-      "claim": "Tikun 190 (Amendment 190 to the Income Tax Ordinance, 2012) lets pensioners aged 60+ who draw a qualifying pension (kitzbah mezakah) of at least the minimum threshold (approximately 5,306 NIS/month in 2026) deposit funds into a kupat gemel le-kitzbah. Withdrawal as kitzbah is fully tax-exempt; lump-sum withdrawal is taxed at 15% on the real (CPI-adjusted) gains rather than the marginal rate. This is the standard post-60 tax-shelter tool for severance, retirement bonuses, sale of business, and inheritance.",
-      "source_url": "https://pensuni.com/?p=2795",
-      "raw_snippet": "תיקון 190 כדאיות 2026: הפקדה לקופת גמל לקצבה לבני 60+; משיכה כקצבה פטורה לחלוטין ממס, משיכה הונית 15% על רווח נומינלי/ריאלי; תנאי קצבה מזכה מינימלית",
-      "fetched_at": "2026-05-18T00:00:00Z",
+      "claim": "Tikun 190 (Amendment 190 to the Income Tax Ordinance, 2012) lets pensioners aged 60+ who draw a qualifying pension (kitzbah mezakah) of at least the minimum threshold (5,306 NIS/month in 2026) deposit funds into a kupat gemel le-kitzbah. Lump-sum withdrawal is taxed at 15% on the NOMINAL gain, against 25% on the REAL (CPI-adjusted) gain in comparable investment channels. The base is nominal, never real.",
+      "source_url": "https://www.analyst.co.il/articles/190_questions_and_answers/",
+      "raw_snippet": "תשלום מס רווחי הון מופחת בשיעור של 15% נומינלי (במקום 25% ריאלי הנגבה באפיקי השקעה דומים)",
+      "fetched_at": "2026-08-19T03:09:54.698772+00:00",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/tax-benefits.md"
-      ]
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-08-19T03:09:54.698772+00:00",
+      "note": "Snippet re-read verbatim from the rendered page 2026-08-19. Replaces an earlier hedged snippet reading 'נומינלי/ריאלי', which was the proximate cause of three English passages asserting a real-gain base."
     },
     {
       "claim_id": "form-161-new-2024",
@@ -320,7 +332,7 @@
     },
     {
       "claim_id": "nayadut-10-day-transfer",
-      "claim": "Pension fund nayadut (transfer): once the new fund receives a complete signed transfer request, the entire balance must be transferred within 10 business days. No transfer fees. The employee retains seniority (vetek) for purposes of the 6-year keren hishtalmut lock and pension fund insurance coverage; transferring between pension fund and managers' insurance does not preserve guaranteed annuity factors from pre-2013 policies.",
+      "claim": "Fund transfer (nayadut) between pension funds carries no transfer fee and preserves vetek (seniority) for the keren hishtalmut 6-year lock. The request must reach the OLD fund only after deposits to the new fund have begun. NOTE: the statutory completion deadline is NOT asserted by this entry.",
       "source_url": "https://www.kolzchut.org.il/he/%D7%9E%D7%A2%D7%91%D7%A8_%D7%91%D7%99%D7%9F_%D7%92%D7%95%D7%A4%D7%99%D7%9D_%D7%A4%D7%A0%D7%A1%D7%99%D7%95%D7%A0%D7%99%D7%99%D7%9D_%D7%95%D7%91%D7%99%D7%9F_%D7%9E%D7%9B%D7%A9%D7%99%D7%A8%D7%99%D7%9D_%D7%A4%D7%A0%D7%A1%D7%99%D7%95%D7%A0%D7%99%D7%99%D7%9D",
       "raw_snippet": "יש לוודא כי הבקשה לניוד הכספים מהקרן הישנה לקרן החדשה תועבר אל הקרן הישנה רק לאחר שהמבוטח כבר החל להפקיד כספים לקרן החדשה.",
       "fetched_at": "2026-05-18T00:00:00Z",
@@ -329,7 +341,8 @@
         "SKILL_HE.md"
       ],
       "verified_via": "kolzchut page text read through the site MediaWiki API in a browser; snippet replaced with verbatim page text (the previous value was a generated summary)",
-      "verified_at": "2026-08-15"
+      "verified_at": "2026-08-15",
+      "note": "[Judge finding, fixed 2026-08-19] The snippet is verbatim kolzchut text about SEQUENCING the request and supports no completion deadline. The previously-asserted '10 business days' is now hedged in ALL FOUR places it appeared: SKILL.md, SKILL_HE.md (two locations) and references/troubleshooting.md. A first pass missed the latter two and this note incorrectly claimed the fix was complete; the re-review caught it. kolzchut returns 403 to plain fetches, so the deadline could not be re-verified. UNVERIFIED, carried to the next cycle."
     },
     {
       "claim_id": "early-withdrawal-tax",
@@ -350,7 +363,8 @@
       "fetched_at": "2026-08-14",
       "appears_in": [
         "SKILL.md",
-        "SKILL_HE.md"
+        "SKILL_HE.md",
+        "references/life-events.md"
       ],
       "verified_via": "statute text read directly on nevo (title confirmed as the correct law)",
       "verified_at": "2026-08-14"
@@ -363,7 +377,8 @@
       "fetched_at": "2026-08-14",
       "appears_in": [
         "SKILL.md",
-        "SKILL_HE.md"
+        "SKILL_HE.md",
+        "references/life-events.md"
       ],
       "verified_via": "Income Tax Ordinance section 14(a) read directly; section 9(20) read and found to be unrelated",
       "verified_at": "2026-08-14"
@@ -376,19 +391,23 @@
       "fetched_at": "2026-05-18T00:00:00Z",
       "appears_in": [
         "SKILL.md",
-        "SKILL_HE.md"
+        "SKILL_HE.md",
+        "references/life-events.md"
       ]
     },
     {
       "claim_id": "section-2-bl-average-wage",
       "claim": "Section 2 of the National Insurance Law defines the legal average wage (sakhar memutza, 13,769 NIS/month in 2026) used as the basis for almost every pension ceiling. Distinct from the CBS national average wage published in the press.",
-      "source_url": "https://www.btl.gov.il/About/news/Pages/hadasaidkonkitzva2026.aspx",
-      "raw_snippet": "סעיף 2 לחוק הביטוח הלאומי: השכר הממוצע במשק לעניין דמי ביטוח לאומי",
-      "fetched_at": "2026-05-18T00:00:00Z",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf",
+      "raw_snippet": "שכר ממוצע במשק 13,769",
+      "fetched_at": "2026-08-19T03:13:37.818411+00:00",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ]
+      ],
+      "verified_via": "pdf",
+      "verified_at": "2026-08-19T03:13:37.818411+00:00",
+      "note": "[BROKEN-LINK fixed 2026-08-19] The previous btl.gov.il news URL returned HTTP 404. Re-anchored on the ITA 2026 monthly-deductions booklet, which publishes the same statutory average wage; read via pdftotext."
     },
     {
       "claim_id": "form-161d-retirement-settlement",
@@ -398,7 +417,8 @@
       "fetched_at": "2026-05-18T00:00:00Z",
       "appears_in": [
         "SKILL.md",
-        "SKILL_HE.md"
+        "SKILL_HE.md",
+        "references/life-events.md"
       ]
     },
     {
@@ -451,14 +471,17 @@
     {
       "claim_id": "kitzbah-mezakah-minimum-2026",
       "claim": "Minimum qualifying pension (kitzbah mezakah minimit) for Tikun 190 deposit eligibility in 2026: approximately 5,306 NIS/month, equal to the minimum kitzbah amount in the unified regulations.",
-      "source_url": "https://pensuni.com/?p=1258",
-      "raw_snippet": "קצבה מזכה מינימלית 2026: כ-5,306 ש\"ח/חודש (תנאי סף לתיקון 190)",
-      "fetched_at": "2026-05-18T00:00:00Z",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf",
+      "raw_snippet": "מרכיב התגמולים - סכום קצבה מזערי 5,306 לחודש",
+      "fetched_at": "2026-08-19T03:09:54.698772+00:00",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/tax-benefits.md"
-      ]
+      ],
+      "verified_via": "pdf",
+      "verified_at": "2026-08-19T03:09:54.698772+00:00",
+      "note": "Tikun-190 minimum kitzbah re-verified 2026-08-19 in the ITA 2026 booklet, a stronger source than the aggregator previously cited."
     },
     {
       "claim_id": "outdated-30-percent-orphan-misquote",
@@ -547,7 +570,8 @@
       "fetched_at": "2026-05-18T00:00:00Z",
       "appears_in": [
         "SKILL.md",
-        "SKILL_HE.md"
+        "SKILL_HE.md",
+        "references/life-events.md"
       ]
     },
     {
@@ -574,10 +598,10 @@
       "claim": "Tikun 190 lump-sum withdrawals are taxed at 15% on the NOMINAL gain, against 25% on the real gain in comparable investment channels. The base is nominal, not real.",
       "source_url": "https://www.analyst.co.il/articles/190_questions_and_answers/",
       "raw_snippet": "תשלום מס רווחי הון מופחת בשיעור של 15% נומינלי (במקום 25% ריאלי הנגבה באפיקי השקעה דומים)",
-      "fetched_at": "2026-07-21",
+      "fetched_at": "2026-08-19T03:09:54.698772+00:00",
       "verified_via": "browser",
-      "verified_at": "2026-07-21",
-      "note": "Corrects a prior claim that the 15% applied to the REAL gain benchmarked against a 47% marginal rate."
+      "verified_at": "2026-08-19T03:09:54.698772+00:00",
+      "note": "Re-verified 2026-08-19: the source states 15% נומינלי vs 25% ריאלי in four independent places."
     },
     {
       "claim_id": "retirement-age-2026",
@@ -772,6 +796,34 @@
       "appears_in": [
         "SKILL.md"
       ]
+    },
+    {
+      "claim_id": "bl-max-insurable-income-2026",
+      "claim": "The Bituach Leumi maximum income liable for insurance contributions (ההכנסה המרבית החייבת בדמי ביטוח) is 51,910 NIS/month from 01.01.2026. It is a National Insurance / health-contribution ceiling and is NOT any of the pension ceilings in this skill; it is named here only to stop users substituting it for the mandatory-pension insurable salary of 13,769.",
+      "source_url": "https://www.btl.gov.il/Insurance/Rates/Pages/%D7%9C%D7%A2%D7%95%D7%91%D7%93%D7%99%D7%9D%20%D7%A9%D7%9B%D7%99%D7%A8%D7%99%D7%9D.aspx",
+      "raw_snippet": "מחלק השכר שמעל מדרגת גביה מופחתת ועד ההכנסה המרבית החייבת בדמי ביטוח (שיעור מלא) - 51,910 ש\"ח (החל ב- 01.01.2026)",
+      "fetched_at": "2026-08-19T03:09:54.698772+00:00",
+      "verified_via": "browser",
+      "verified_at": "2026-08-19T03:09:54.698772+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "note": "Read verbatim from the BTL employee-rates page 2026-08-19. NOTE: this is 3.77x the average wage, NOT the '5x average wage' rule of thumb; the rule of thumb was not written into the skill because the published figure disagrees with it."
+    },
+    {
+      "claim_id": "form-161-part-b-window-unverified",
+      "claim": "The Form 161 Part B submission window (commonly cited as about 10 business days from receipt of Part A) is NOT verified by this skill. The skill states the window as commonly-cited and instructs the agent to read the actual window off the form rather than quote a number.",
+      "source_url": "https://www.gov.il/he/service/notice-of-retirement",
+      "raw_snippet": "טופס 161 - הודעת מעביד על פרישה מעבודה של עובד",
+      "fetched_at": "2026-08-19T03:33:44.716505+00:00",
+      "verified_via": "browser",
+      "verified_at": "2026-08-19T03:33:44.716505+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "note": "[Judge + Expert finding, 2026-08-19] gov.il/he/service/* returns HTTP 403 to plain fetches, so neither the day-count window nor the post-2024 'silence defaults to rezef-kitzbah' reversal could be verified this cycle. Rather than assert them, both were hedged in all six places they appeared across SKILL.md and SKILL_HE.md. This entry exists to record the open question, not to justify a figure. CARRY to next cycle."
     }
   ]
 }

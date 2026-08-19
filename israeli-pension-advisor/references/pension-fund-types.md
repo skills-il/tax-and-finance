@@ -72,7 +72,7 @@
 - **Eligibility:** Age 60+ and already drawing a kitzbah of at least the minimum threshold (approximately 5,306 NIS/month in 2026)
 - **No deposit cap** (annual or lifetime)
 - **Withdrawal as kitzbah:** Fully exempt from income tax for life
-- **Withdrawal as lump sum:** 15% tax on the real (CPI-adjusted) gain only
+- **Withdrawal as lump sum:** 15% tax on the NOMINAL gain only (not the real, CPI-adjusted gain)
 - **Use cases:** Sale of business, retirement bonus, severance at age 60+, inheritance, surplus liquid savings
 - See `references/tax-benefits.md` for the full mechanics
 
