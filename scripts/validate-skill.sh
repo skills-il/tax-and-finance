@@ -6,6 +6,7 @@
 set -euo pipefail
 
 ERRORS=""
+WARNINGS=""
 
 # Frontmatter YAML parsing needs python3 + PyYAML. Probe once; if either is
 # missing, skip the check with a notice rather than failing the build.
@@ -132,6 +133,58 @@ for file in "$@"; do
     ERRORS="$ERRORS\n- $file: SKILL.md body is $WORD_COUNT words (max 5,000). Move detailed docs to references/"
   fi
 
+  # 7b. SKILL_HE.md: the Hebrew companion was historically invisible to this
+  # script, because check 1 rejects any file not named SKILL.md and every later
+  # check reads only "$file". Hebrew is the site's DEFAULT locale, so a Hebrew
+  # file could drift well past the word cap, keep sections the English file had
+  # moved to references/, and carry untranslated headings, with nothing to catch
+  # it. These checks close that gap.
+  #
+  # Split deliberately between hard errors and warnings. Missing files and
+  # untranslated headings are unambiguous bugs, so they fail. The word cap and
+  # heading parity are content debt that predates this check on a fair number of
+  # skills, so they warn rather than break CI for whoever edits one next.
+  HE_FILE="$DIR/SKILL_HE.md"
+  if [ ! -f "$HE_FILE" ]; then
+    # Not cosmetic: the sync pipeline falls back to the English body for
+    # content_he, so the Hebrew page silently renders English with no error.
+    ERRORS="$ERRORS\n- $file: missing sibling SKILL_HE.md. The sync pipeline falls back to the English body for content_he, so the Hebrew page renders English with no visible failure."
+  else
+    # 7b-i. Untranslated section headings left in the Hebrew file.
+    # Headings inside a fenced code block are template/example content, not
+    # sections of this document. skills-il-skill-creator legitimately prints an
+    # English SKILL.md skeleton inside ``` fences in its Hebrew file, and an
+    # earlier version of this check flagged it and "fixed" the template into
+    # Hebrew, which told authors to write Hebrew headings in an English file.
+    # Strip fenced blocks before looking for untranslated headings.
+    HE_ENG_HEADINGS=$(awk '
+      /^[[:space:]]*```/ { fence = !fence; next }
+      !fence && /^#{2,3} (Examples|Troubleshooting|Instructions|Gotchas|Reference Links|Bundled Resources|Recommended MCP Servers|References|Scripts)[[:space:]]*$/ { print NR ":" $0 }
+    ' "$HE_FILE" || true)
+    if [ -n "$HE_ENG_HEADINGS" ]; then
+      HE_ENG_COUNT=$(printf '%s\n' "$HE_ENG_HEADINGS" | grep -c . || true)
+      HE_ENG_LIST=$(printf '%s\n' "$HE_ENG_HEADINGS" | sed 's/^/    /')
+      ERRORS="$ERRORS\n- $HE_FILE: $HE_ENG_COUNT untranslated English heading(s) render as-is on the Hebrew page:\n$HE_ENG_LIST"
+    fi
+
+    # 7b-ii. Hebrew body word count. Same 5,000 cap as the English body.
+    HE_BODY=$(awk 'BEGIN{n=0} /^---$/{n++; if(n==2){found=1; next}} found{print}' "$HE_FILE")
+    if [ "$(head -1 "$HE_FILE")" != "---" ]; then
+      HE_BODY=$(cat "$HE_FILE")
+    fi
+    HE_WORDS=$(printf '%s' "$HE_BODY" | wc -w | tr -d ' ')
+    if [ "$HE_WORDS" -gt 5000 ]; then
+      WARNINGS="$WARNINGS\n- $HE_FILE: Hebrew body is $HE_WORDS words (cap 5,000). Move detail to references/ as you would for SKILL.md. This is a warning today and is intended to become an error once the existing backlog is cleared."
+    fi
+
+    # 7b-iii. Section-structure parity between the two languages.
+    EN_H=$(grep -c '^#\{2,3\} ' "$file" || true)
+    HE_H=$(grep -c '^#\{2,3\} ' "$HE_FILE" || true)
+    if [ "$EN_H" != "$HE_H" ]; then
+      WARNINGS="$WARNINGS\n- $HE_FILE: section count differs from SKILL.md (EN=$EN_H, HE=$HE_H). Usually means a fix landed in one language only, or a section was moved to references/ on one side. Check before shipping."
+    fi
+  fi
+
   # 8. No README.md in skill folder
   if [ -f "$DIR/README.md" ]; then
     ERRORS="$ERRORS\n- $file: Skill folder must not contain README.md (use SKILL.md or references/)"
@@ -144,6 +197,12 @@ for file in "$@"; do
 
   [ -z "$ERRORS" ] && echo "  PASS: $file"
 done
+
+if [ -n "$WARNINGS" ]; then
+  echo ""
+  echo "WARNINGS (not blocking):"
+  echo -e "$WARNINGS"
+fi
 
 if [ -n "$ERRORS" ]; then
   echo ""

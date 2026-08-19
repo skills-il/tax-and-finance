@@ -218,7 +218,7 @@ python3 scripts/cashflow-projection.py --json my-plan.json
 - `references/form-1348-fields.md`: למה טופס 1348 הוא לא הטופס לחוזרים, ומה הם באמת מגישים.
 - `references/2026-reporting-change.md`: פרטי תיקון 272 (סעיפים 134ב + 135(ב), תאריך תחילה, סף).
 
-### Scripts
+### סקריפטים
 
 - `scripts/cashflow-projection.py`: מסווג של 10 שנים עם הערת הדיווח לאחר 2026 ודגל אזרחות אמריקאית.
 
