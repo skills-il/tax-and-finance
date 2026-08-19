@@ -52,6 +52,39 @@ When these tests are met, profits above the 25% margin are deemed distributed to
 
 Common §62A triggers: solo consultants, freelance developers, lawyers/doctors operating through a personal Ltd, and "wallet companies" (chevrot arnak).
 
+### Step 1b: Benefit-Track Gate (Encouragement of Capital Investments Law)
+
+The 23% corporate rate and the 30% dividend rate are the STANDARD-company defaults. A company
+holding a status under the Law for Encouragement of Capital Investments, 5719-1959 pays neither,
+and modelling it at 23% roughly doubles the corporate layer. Ask before comparing: "does the
+company hold a Preferred, Special Preferred, or Technology Enterprise status?" Israeli software
+and tech companies are the population this most often catches.
+
+| Track | Development Area A | Elsewhere | Dividend from that profit |
+|---|---|---|---|
+| Preferred Enterprise (מפעל מועדף) | 7.5% | 16% | 20% (s.51יח) |
+| Special Preferred Enterprise (מפעל מועדף מיוחד) | 5% | 8% | 20% (s.51יח) |
+| Preferred Technology Enterprise (מפעל טכנולוגי מועדף) | 7.5% | 12% | 20%, or 4% to a foreign company (s.51כו) |
+| Special Preferred Technology Enterprise (מפעל טכנולוגי מועדף מיוחד) | 6% | 6% | 20%, or 4% to a foreign company (s.51כו) |
+
+Three rules that decide whether the headline rate is the right one:
+
+1. **Qualifying income only.** The reduced rate applies to preferred / qualifying technological
+   income. Other income stays at 23%. For the technology tracks it applies only to the
+   Israel-developed share of the intangible asset, on a nexus basis, so mixed IP gives a blended rate.
+2. **The 4% dividend rate is narrow.** It needs a foreign-resident body corporate recipient AND
+   90% or more of the payer's shares held directly by foreign-resident bodies corporate, plus the
+   further conditions in s.51כו(2). Otherwise the rate is 20%.
+3. **Entitlement is selected by approval or election date, not by tax year.** A company on a
+   pre-2011 מפעל מוטב or מפעל מאושר approval, or one computing an earlier year, may still be on a
+   superseded table (the Preferred Area A rate was 9% for 2014-2016, and the benefit-track dividend
+   rate was 15% until 2017). See `references/tax-rates-2026.md` for the cohort-selection rule under
+   Amendment 68 s.39 and the superseded tables. Do NOT answer such a company from the table above.
+
+Pass the track to the comparison script with `--benefit-track` (`pte`, `pte-a`, `spte`, `pfe`,
+`pfe-a`, `spfe`, `spfe-a`); it defaults to `standard`. Use `--dividend-rate` for the 4% or the
+non-controlling 25% case.
+
 ### Step 2: Understand the Extraction Methods
 
 Israeli tax law provides four main ways for a controlling shareholder to extract value from their company. Each has a fundamentally different tax structure:
@@ -59,7 +92,7 @@ Israeli tax law provides four main ways for a controlling shareholder to extract
 | Method | Corporate Tax | Personal Tax | Bituach Leumi | Key Advantage |
 |--------|-------------|-------------|---------------|---------------|
 | **Salary** | 0% (deductible expense) | Progressive rates (10%-50%) | Employee + Employer NI | Tax credit points, pension deductions, NI ceiling |
-| **Dividend** | 23% (on profit first) | 30% (controlling shareholder) | None | No NI, simple, no employer cost beyond profit |
+| **Dividend** | 23% (on profit first; less on a benefit track, Step 1b) | 30% (controlling shareholder; 20% or 4% on benefit-track profits) | None | No NI, simple, no employer cost beyond profit |
 | **Shareholder Loan** | 0% (no immediate tax) | Section 3(tet) deemed interest (6.53% in 2026) | None | Defers real tax, keeps cash flexible |
 | **Management Fees** | 0% (deductible) | Income tax as business income + VAT 18% | Self-employed NI rates | Can deduct business expenses against fees |
 
@@ -182,17 +215,9 @@ De minimis exemption: cumulative withdrawals stay outside §3(tet1) if balance i
 | Loan has no repayment schedule | Red flag for Tax Authority |
 | Company has retained earnings | Increases risk of deemed dividend reclassification |
 
-**When shareholder loan makes sense:**
-- Short-term cash need (under 12 months) with clear repayment plan
-- Bridge financing until dividend declaration is approved
-- The 6.53% deemed interest cost is lower than the tax on alternative extraction
-- Company has a formal loan agreement with interest and repayment terms
+**When it makes sense:** a short-term need with a documented loan agreement and a repayment plan, or bridge financing until a dividend is approved, where the 6.53% deemed-interest cost beats the tax on the alternative.
 
-**When to avoid shareholder loans:**
-- Long-term extraction need (will accumulate deemed interest annually)
-- Company has distributable retained earnings (Tax Authority will challenge the loan structure)
-- No documented loan agreement or repayment schedule
-- Existing shareholder loan balance is already significant
+**When to avoid:** a long-term extraction need, a company with distributable retained earnings (the Tax Authority will challenge the loan structure), no written agreement or schedule, or an already-significant outstanding balance. See `references/section-3tet-rules.md` for the reclassification-risk detail.
 
 **Deemed interest calculation example:**
 
@@ -224,17 +249,9 @@ A shareholder can provide management services to the company through a separate 
 
 Note: 52% of the NI amount is tax-deductible (Section 47A).
 
-**Advantages:**
-- Can deduct business expenses (office, car, phone, travel) against the fees
-- More flexibility in timing of income recognition
-- Can employ family members in the management entity
+**Advantages:** business expenses (office, car, phone, travel) are deductible against the fees, timing of income recognition is more flexible, and family members can be employed in the management entity.
 
-**Disadvantages:**
-- VAT (18%) applies on the gross fee (though offset if company is also osek murshe)
-- Self-employed NI rates are higher than employee rates
-- Tax Authority may challenge "excessive" management fees as disguised dividends
-- Requires maintaining a separate business entity with bookkeeping
-- Transfer pricing rules apply (Section 85A) -- fees must reflect market rates
+**Disadvantages:** VAT (18%) on the gross fee (offset if the company is also an osek murshe), higher self-employed NI rates, the risk that the Tax Authority recharacterises "excessive" fees as disguised dividends, the overhead of a separate bookkept entity, and Section 85A transfer pricing, which requires the fee to reflect market rates.
 
 **When management fees work:**
 - Shareholder has legitimate business expenses to offset
@@ -278,7 +295,7 @@ Before recommending any strategy, verify these compliance requirements:
 | §3(tet1) "use of asset" tracking | A controlling shareholder's personal use of company-owned apartments, vehicles (beyond limited business use), art, yachts, etc., accrues a deemed withdrawal under §3(tet1) at deemed annual usage value, even without any cash loan. Track these alongside cash-loan balances. |
 | §126(b) inter-company dividend exemption | Dividends paid between Israeli companies are exempt from corporate tax under §126(b). When a holding-company structure is involved, dividend planning differs from the single-tier model in this skill; consult on the structure. |
 | BL minimum for no-salary baal shlita | A controlling shareholder drawing zero salary still owes Bituach Leumi minimum (~NIS 266/month combined NI+health for someone with no other taxable income) paid directly by the individual |
-| Withholding tax on dividends | Company must withhold 30% and deposit with Tax Authority by the 15th of the following month |
+| Withholding tax on dividends | Company withholds at the applicable rate (30% controlling / 25% non-controlling / 20% or 4% on benefit-track profits) and pays the assessing officer by the **16th** of each month for the previous month, filing Form 102 by the same date (regs. 13 and 14(a), Income Tax Regulations (Deduction from Interest, Dividend and Certain Gains), 5766-2005, as replaced with effect from 1 January 2018). The 15th is the superseded pre-2018 date and is also the Bituach Leumi date, which is where the confusion comes from |
 | Form 856 reporting | Payments to shareholders must be reported |
 | Section 3(tet) reporting | Deemed interest must be reported on Form 126 |
 | Trapped-profits 2% surtax + safe harbor | Closely-held companies with excess undistributed earnings owe an additional 2% corporate tax under Amendment 277 (in force from 2025). Distributing at least 6% of accumulated profits during the year (5% for 2025 only) is a safe harbor that avoids the surcharge; weigh this modest distribution against the 2% annual drag |
@@ -287,7 +304,7 @@ Before recommending any strategy, verify these compliance requirements:
 | VAT invoice for management fees | Must issue tax invoice (heshbonit mas) |
 | Surtax reporting | Include all income sources when calculating surtax threshold; the +2% non-labor surtax (effective 2025) applies separately to dividends, capital gains, interest, and rental |
 | Non-resident shareholder | Section 3(i)(1) withholding applies; treaty rates override domestic 25%/30% -- check the relevant tax treaty |
-| Preferred Enterprise companies | Dividend extraction from Preferred Enterprise profits uses a reduced rate (20% for most preferred recipients) under the Law for Encouragement of Capital Investments; do not assume 30% if the company holds Preferred Enterprise status |
+| Encouragement-Law benefit track | Confirm the company's status and the year the approval or election was made before applying any rate. Corporate: 7.5%/16% (PFE), 5%/8% (SPFE), 7.5%/12% (PTE), 6% (SPTE). Dividend out of those profits: 20%, or 4% on technological income to a qualifying foreign company. Do not assume 23%/30%. See Step 1b |
 
 **Always recommend:**
 - Consult with a licensed Israeli CPA (roeh heshbon) or tax advisor (yoetz mas) before executing any strategy
@@ -311,12 +328,17 @@ Before recommending any strategy, verify these compliance requirements:
 
 8. **Ignoring the trapped-profits 2% safe harbor in the retain-vs-distribute decision.** Amendment 277 introduced an annual 2% corporate-tax surcharge on closely-held companies that accumulate excess retained earnings without distributing. Crucially, there is a **safe harbor**: distributing at least 6% of accumulated profits during the year (5% for 2025 only) avoids the surcharge entirely. So the real lever is "distribute 6% and the 2% vanishes", not "pay 2% forever". Agents that mention the surcharge but omit the safe harbor push owners to pay a 2% drag they could have escaped with a modest distribution.
 
-9. **Treating §3(tet1) as a cash-loan-only rule.** Amendment 235 explicitly captures shareholder personal use of company-owned assets (apartment, vehicle beyond limited business use, art, yacht) at deemed annual usage value. A baal shlita living in a company-owned apartment without paying market rent accrues a deemed withdrawal even with zero cash loan. This is the single most-missed §3(tet1) trap in real ITA audits.
+9. **Modelling a benefit-track company at 23% and 30%.** A Preferred Technology Enterprise outside Development Area A pays **12%** corporate tax and **20%** on the dividend, an effective 29.6% against the 46.1% the standard model produces. Agents that jump to the standard rates overstate the burden by more than half for exactly the population, Israeli software and tech companies, that asks this question most. Ask about Encouragement-Law status before running any comparison, and remember the reduced rate covers qualifying income only.
+
+10. **Answering a grandfathered company from the current table.** Benefit entitlement is selected by the approval or election date of the programme, not by the tax year. A company on a pre-2011 מפעל מוטב or מפעל מאושר approval, or a question about an earlier year, may be governed by a superseded schedule (Preferred Area A was 9% for 2014-2016; the benefit-track dividend rate was 15% until 2017). Confirming the current rate is correct does not make it the applicable one.
+
+11. **Treating §3(tet1) as a cash-loan-only rule.** Amendment 235 explicitly captures shareholder personal use of company-owned assets (apartment, vehicle beyond limited business use, art, yacht) at deemed annual usage value. A baal shlita living in a company-owned apartment without paying market rent accrues a deemed withdrawal even with zero cash loan. This is the single most-missed §3(tet1) trap in real ITA audits.
 
 ## Bundled Resources
 
 - `references/tax-rates-2026.md` -- Complete 2026 tax rates: income brackets, corporate tax, dividend rates, NI rates, surtax thresholds, credit point value, Section 3(tet) rates
 - `references/extraction-methods.md` -- Detailed comparison of salary, dividend, loan, and management fee extraction with worked examples
+- `references/domain-checklist.md` -- Coverage contract for this domain: what the skill must cover, what is deliberately out of scope, and why
 - `references/section-3tet-rules.md` -- Section 3(tet) and 3(yod) deemed interest rules, reclassification risks, documentation requirements
 - `scripts/tax_comparison.py` -- Interactive Python calculator: input company profit and shareholder details, outputs side-by-side comparison of all extraction methods with total tax burden
 
@@ -336,6 +358,8 @@ Official sources for verifying and updating the tax figures in this skill:
 | Income Tax Ordinance | https://www.nevo.co.il/law_html/law00/84255.htm | Legal text for Section 3(tet), Section 121B (surtax), Section 32(9) |
 | Bituach Leumi -- Contribution Rates | https://www.btl.gov.il/Insurance/National%20Insurance/Pages/default.aspx | Current NI and health insurance rates |
 | Section 3(tet) Annual Rate | https://britcpa.co.il/hozrim/שיעורי-הריבית-לעניין-סעיפים-3ט-ו-3י-לשנת-4/ | Published annually, usually in December for the following year |
+| Law for Encouragement of Capital Investments, 5719-1959 | https://www.nevo.co.il/law_html/law01/p181_001.htm | Sections 51טז, 51יח, 51כא, 51כה, 51כו for benefit-track corporate and dividend rates; Amendment 68 s.39 for the grandfathering cohorts |
+| Income Tax Regulations (Deduction from Interest, Dividend and Certain Gains), 5766-2005 | https://www.nevo.co.il/law_html/law01/999_549.htm | Regs. 13 and 14 for the monthly withholding deposit date and Form 102 |
 | Kolzchut -- Tax Rights | https://www.kolzchut.org.il/he/%D7%9E%D7%93%D7%A8%D7%92%D7%95%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94 | Income tax brackets, credit points, updated annually |
 | CWS Israel -- Tax Guide | https://www.cwsisrael.com/israeli-tax-changes-2026-complete-guide/ | English-language summary of annual tax changes |
 

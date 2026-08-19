@@ -9,6 +9,8 @@ Usage:
     python tax_comparison.py --profit 500000
     python tax_comparison.py --profit 500000 --current-salary 180000
     python tax_comparison.py --profit 1000000 --current-salary 228000 --credit-points 2.75
+    python tax_comparison.py --profit 1000000 --benefit-track pte
+    python tax_comparison.py --profit 1000000 --benefit-track pte --dividend-rate 0.04
     python tax_comparison.py --example
 """
 
@@ -19,6 +21,29 @@ import sys
 
 CORPORATE_TAX_RATE = 0.23
 DIVIDEND_TAX_CONTROLLING = 0.30
+
+# Benefit tracks under the Law for Encouragement of Capital Investments, 5719-1959.
+# key -> (corporate rate, dividend withholding rate, label)
+# Corporate rates: s.51tet-zayin (PFE), s.51kaf-alef(a) (SPFE), s.51kaf-hey (PTE, SPTE).
+# Dividend rates: s.51yod-het (PFE, SPFE), s.51kaf-vav(1) (PTE, SPTE),
+#                 s.51kaf-vav(2) for the 4% foreign-company rate.
+# These rates apply ONLY to the track's qualifying income, and for the technology
+# tracks only to the Israel-developed share of the intangible asset (nexus).
+BENEFIT_TRACKS = {
+    "standard": (0.23, 0.30, "Standard company (s.126(a))"),
+    "pfe-a":    (0.075, 0.20, "Preferred Enterprise, Development Area A"),
+    "pfe":      (0.16, 0.20, "Preferred Enterprise, elsewhere"),
+    "spfe-a":   (0.05, 0.20, "Special Preferred Enterprise, Development Area A"),
+    "spfe":     (0.08, 0.20, "Special Preferred Enterprise, elsewhere"),
+    "pte-a":    (0.075, 0.20, "Preferred Technology Enterprise, Development Area A"),
+    "pte":      (0.12, 0.20, "Preferred Technology Enterprise, elsewhere"),
+    "spte":     (0.06, 0.20, "Special Preferred Technology Enterprise"),
+}
+
+# Rate for a dividend out of qualifying technological income paid to a foreign-resident
+# body corporate where 90% or more of the payer's shares are held directly by one or more
+# foreign-resident bodies corporate (s.51kaf-vav(2)). Further conditions apply.
+DIVIDEND_TECH_FOREIGN_90 = 0.04
 SURTAX_THRESHOLD = 721_560
 SURTAX_RATE = 0.03
 SURTAX_NON_LABOR_RATE = 0.02
@@ -131,10 +156,12 @@ def analyze_salary(profit: float, credit_points: float, current_salary: float = 
     }
 
 
-def analyze_dividend(profit: float, current_salary: float = 0) -> dict:
-    corp_tax = profit * CORPORATE_TAX_RATE
+def analyze_dividend(profit: float, current_salary: float = 0,
+                     corp_rate: float = CORPORATE_TAX_RATE,
+                     div_rate: float = DIVIDEND_TAX_CONTROLLING) -> dict:
+    corp_tax = profit * corp_rate
     distributable = profit - corp_tax
-    div_tax = distributable * DIVIDEND_TAX_CONTROLLING
+    div_tax = distributable * div_rate
     total_income = current_salary + distributable
     surtax = calc_surtax(total_income, non_labor_income=distributable) - calc_surtax(current_salary)
     total_tax = corp_tax + div_tax + surtax
@@ -147,7 +174,9 @@ def analyze_dividend(profit: float, current_salary: float = 0) -> dict:
     }
 
 
-def analyze_optimal_mix(profit: float, credit_points: float, current_salary: float = 0) -> dict:
+def analyze_optimal_mix(profit: float, credit_points: float, current_salary: float = 0,
+                        corp_rate: float = CORPORATE_TAX_RATE,
+                        div_rate: float = DIVIDEND_TAX_CONTROLLING) -> dict:
     best_net = 0
     best_cost = 0
     step = 10_000
@@ -164,9 +193,9 @@ def analyze_optimal_mix(profit: float, credit_points: float, current_salary: flo
         net_sal = gross - net_tax - s_surtax - ee_ni
 
         rem = profit - salary_cost
-        ct = rem * CORPORATE_TAX_RATE
+        ct = rem * corp_rate
         dist = rem - ct
-        dt = dist * DIVIDEND_TAX_CONTROLLING
+        dt = dist * div_rate
         tot_inc = total_sal + dist
         d_surtax = calc_surtax(tot_inc, non_labor_income=dist) - calc_surtax(total_sal)
         net_div = dist - dt - d_surtax
@@ -179,7 +208,7 @@ def analyze_optimal_mix(profit: float, credit_points: float, current_salary: flo
     # Recalculate best
     gross = solve_gross_salary(best_cost, current_salary)
     rem = profit - best_cost
-    ct = rem * CORPORATE_TAX_RATE
+    ct = rem * corp_rate
     dist = rem - ct
     total_tax = profit - best_net
     return {
@@ -209,14 +238,21 @@ def fmt(n: float) -> str:
     return f"{n:,.0f}"
 
 
-def print_comparison(profit: float, credit_points: float, current_salary: float):
+def print_comparison(profit: float, credit_points: float, current_salary: float,
+                     track: str = "standard", div_rate_override: float = None):
+    corp_rate, div_rate, label = BENEFIT_TRACKS[track]
+    if div_rate_override is not None:
+        div_rate = div_rate_override
     sal = analyze_salary(profit, credit_points, current_salary)
-    div = analyze_dividend(profit, current_salary)
-    opt = analyze_optimal_mix(profit, credit_points, current_salary)
+    div = analyze_dividend(profit, current_salary, corp_rate, div_rate)
+    opt = analyze_optimal_mix(profit, credit_points, current_salary, corp_rate, div_rate)
     loan = analyze_loan(profit, current_salary)
 
     print("=" * 70)
     print(f"  ISRAELI CORPORATE TAX STRATEGY COMPARISON (2026)")
+    print(f"  Regime: {label} -- corporate {corp_rate * 100:g}%, dividend {div_rate * 100:g}%")
+    if track != "standard":
+        print(f"  Reduced rates apply to QUALIFYING income only; other income stays at 23%.")
     print(f"  Company Profit: {fmt(profit)} NIS")
     if current_salary > 0:
         print(f"  Current Annual Salary: {fmt(current_salary)} NIS")
@@ -253,11 +289,23 @@ def main():
     parser.add_argument("--current-salary", type=float, default=0, help="Current annual salary (NIS)")
     parser.add_argument("--credit-points", type=float, default=2.25, help="Tax credit points (default: 2.25)")
     parser.add_argument("--example", action="store_true", help="Show example calculations")
+    parser.add_argument("--benefit-track", default="standard", choices=sorted(BENEFIT_TRACKS),
+                        help="Encouragement-Law benefit track held by the company "
+                             "(default: standard, 23%%). Use pte/pte-a/spte for technology "
+                             "enterprises, pfe/pfe-a/spfe/spfe-a for industrial ones.")
+    parser.add_argument("--dividend-rate", type=float, default=None,
+                        help="Override the dividend withholding rate as a decimal, e.g. 0.25 for a "
+                             "non-controlling shareholder or 0.04 for the s.51kaf-vav(2) "
+                             "foreign-company rate on technological income.")
     args = parser.parse_args()
+
+    if args.dividend_rate is not None and not 0 <= args.dividend_rate <= 1:
+        print("Error: --dividend-rate must be a decimal between 0 and 1")
+        sys.exit(1)
 
     if args.example:
         for p in [200_000, 500_000, 1_000_000]:
-            print_comparison(p, 2.25, 0)
+            print_comparison(p, 2.25, 0, args.benefit_track, args.dividend_rate)
             print()
         return
 
@@ -268,7 +316,8 @@ def main():
         print("Error: profit must be positive")
         sys.exit(1)
 
-    print_comparison(args.profit, args.credit_points, args.current_salary)
+    print_comparison(args.profit, args.credit_points, args.current_salary,
+                     args.benefit_track, args.dividend_rate)
 
 
 if __name__ == "__main__":

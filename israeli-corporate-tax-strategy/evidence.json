@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0",
   "skill": "israeli-corporate-tax-strategy",
-  "generated_at": "2026-05-21T12:30:00Z",
+  "generated_at": "2026-08-19T06:16:07.412512+03:00",
   "claims": [
     {
       "claim_id": "corporate-tax-23",
@@ -441,16 +441,18 @@
     },
     {
       "claim_id": "ni-ceiling-51910",
-      "claim": "Bituach Leumi maximum insurable income for 2026: 51,910 NIS/month",
-      "source_url": "https://www.btl.gov.il/Insurance/HozrimBituah/Hozrim/_%D7%A9%D7%99%D7%A0%D7%95%D7%99_%D7%91%D7%AA%D7%A9%D7%9C%D7%95%D7%9D_%D7%93%D7%9E%D7%99_%D7%91%D7%99%D7%98%D7%95%D7%97_%D7%9C%D7%90%D7%95%D7%9E%D7%99_%D7%95%D7%93%D7%9E%D7%99_%D7%91%D7%99%D7%98%D7%95%D7%97_%D7%91%D7%A8%D7%99%D7%90%D7%95%D7%AA_%D7%9C%D7%A9%D7%A0%D7%AA_2026.pdf",
-      "raw_snippet": "NI maximum insurable income 51,910",
-      "fetched_at": "2026-05-21T12:30:00Z",
+      "claim": "The maximum income liable to national-insurance contributions is 51,910 NIS per month from 1 January 2026, and the reduced-rate band runs to 7,703 NIS per month",
+      "source_url": "https://www.btl.gov.il/Insurance/Rates/Pages/%D7%9C%D7%A2%D7%95%D7%91%D7%93%D7%99%D7%9D%20%D7%A9%D7%9B%D7%99%D7%A8%D7%99%D7%9D.aspx",
+      "raw_snippet": "מחלק השכר שמעל מדרגת גביה מופחתת ועד ההכנסה המרבית החייבת בדמי ביטוח (שיעור מלא) - 51,910 ש\"ח (החל ב- 01.01.2026)",
+      "fetched_at": "2026-08-19",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/tax-rates-2026.md",
         "scripts/tax_comparison.py"
-      ]
+      ],
+      "verified_via": "curl",
+      "verified_at": "2026-08-19"
     },
     {
       "claim_id": "ni-lower-7703",
@@ -468,16 +470,18 @@
     },
     {
       "claim_id": "employee-ni-low-1-04",
-      "claim": "2026 employee Bituach Leumi rate below threshold: 1.04% (raised from 0.4% in 2024 budget)",
-      "source_url": "https://www.btl.gov.il/Insurance/HozrimBituah/Hozrim/_%D7%A9%D7%99%D7%A0%D7%95%D7%99_%D7%91%D7%AA%D7%A9%D7%9C%D7%95%D7%9D_%D7%93%D7%9E%D7%99_%D7%91%D7%99%D7%98%D7%95%D7%97_%D7%9C%D7%90%D7%95%D7%9E%D7%99_%D7%95%D7%93%D7%9E%D7%99_%D7%91%D7%99%D7%98%D7%95%D7%97_%D7%91%D7%A8%D7%99%D7%90%D7%95%D7%AA_%D7%9C%D7%A9%D7%A0%D7%AA_2026.pdf",
-      "raw_snippet": "Employee NI 1.04%",
-      "fetched_at": "2026-05-21T12:30:00Z",
+      "claim": "Employee national-insurance rate in the reduced band is 1.04%; regular-employee employer rates are 4.51% (reduced band) and 7.6% (full band); employee health is 3.23% in the reduced band",
+      "source_url": "https://www.btl.gov.il/Insurance/Rates/Pages/%D7%9C%D7%A2%D7%95%D7%91%D7%93%D7%99%D7%9D%20%D7%A9%D7%9B%D7%99%D7%A8%D7%99%D7%9D.aspx",
+      "raw_snippet": "דמי ביטוח לאומי 4.51% (החל ב- 01.01.2025) 1.04% (החל ב- 01.01.2025)",
+      "fetched_at": "2026-08-19",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/tax-rates-2026.md",
         "scripts/tax_comparison.py"
-      ]
+      ],
+      "verified_via": "curl",
+      "verified_at": "2026-08-19"
     },
     {
       "claim_id": "employee-ni-high-7-0",
@@ -648,27 +652,31 @@
     },
     {
       "claim_id": "credit-point-base-2-25",
-      "claim": "Base entitlement: 2.25 credit points for Israeli residents",
-      "source_url": "https://www.kolzchut.org.il/he/%D7%A0%D7%A7%D7%95%D7%93%D7%AA_%D7%96%D7%99%D7%9B%D7%95%D7%99",
-      "raw_snippet": "2.25 points for residents",
-      "fetched_at": "2026-05-21T12:30:00Z",
+      "claim": "A resident individual has 2.25 credit points: two points under s.34 of the Income Tax Ordinance plus a quarter point of travel credit under s.36",
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "raw_snippet": "זיכוי לתושב ישראל 34. בחישוב המס של יחיד שהיה תושב ישראל בשנת המס יובאו בחשבון שתי נקודות זיכוי.",
+      "fetched_at": "2026-08-19",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/tax-rates-2026.md",
         "references/extraction-methods.md",
         "scripts/tax_comparison.py"
-      ]
+      ],
+      "verified_via": "curl",
+      "verified_at": "2026-08-19"
     },
     {
       "claim_id": "credit-point-women-0-5",
-      "claim": "Additional 0.5 credit points for women",
-      "source_url": "https://www.kolzchut.org.il/he/%D7%A0%D7%A7%D7%95%D7%93%D7%AA_%D7%96%D7%99%D7%9B%D7%95%D7%99",
-      "raw_snippet": "Additional 0.5 points for women",
-      "fetched_at": "2026-05-21T12:30:00Z",
+      "claim": "A woman receives an additional half credit point (s.36A of the Income Tax Ordinance)",
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "raw_snippet": "זיכוי לאשה 36א. בחישוב המס של אשה תובא בחשבון ½ נקודת זיכוי.",
+      "fetched_at": "2026-08-19",
       "appears_in": [
         "references/tax-rates-2026.md"
-      ]
+      ],
+      "verified_via": "curl",
+      "verified_at": "2026-08-19"
     },
     {
       "claim_id": "vat-18",
@@ -1024,17 +1032,17 @@
       "verified_at": "2026-08-11"
     },
     {
-      "claim_id": "withholding-deposit-15th",
-      "claim": "Withheld tax is reported on Form 102 and paid to the assessing officer by the 16th of each month, covering the period from the 14th of the previous month to the 13th of the reporting month (Income Tax (Deduction from Salary and Wages) Regulations 1993, reg. 11(a), as amended in 2017)",
-      "source_url": "https://www.nevo.co.il/law_html/law01/255_163.htm",
-      "raw_snippet": "מעביד יגיש לפקיד השומה עד ה-16 בכל חודש דין וחשבון בטופס 0102, על מספר העובדים ששילם להם משכורת חודש, משכורת חלקית, משכורת בלתי קבועה, קיצבה, תשלום לפי תקנה 6, שכר עבודה, או מענק פרישה בתקופה שבין ה-14 בחודש הקודם עד ל-13 בחודש הדיווח, על סכום המשכורת ששילם, בתקופה האמורה, בין אם נוכה ממנה מס ובין אם לאו, ועל סכום המס שניכה לפי תקנות 3, 4, 5, 6 או 7 באותה תקופה, וישלם באותו מועד את סכום המס שניכה כאמור.",
-      "fetched_at": "2026-08-11",
+      "claim_id": "withholding-deposit-16th",
+      "claim": "Tax withheld from a dividend is paid to the assessing officer by the 16th of each month for the previous month, and reported on Form 102 by the same date (Income Tax Regulations (Deduction from Interest, Dividend and Certain Gains) 5766-2005, regs. 13 and 14(a), as replaced with effect from 1 January 2018; the previous text said the 15th)",
+      "source_url": "https://www.nevo.co.il/law_html/law01/999_549.htm",
+      "raw_snippet": "חייב ישלם לפקיד השומה, עד היום ה-16 בכל חודש, את סכום המס שניכה לפי תקנות אלה, בחודש הקודם.",
+      "fetched_at": "2026-08-19",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
       ],
       "verified_via": "curl",
-      "verified_at": "2026-08-11"
+      "verified_at": "2026-08-19"
     },
     {
       "claim_id": "btl-self-employed-page",
@@ -1320,6 +1328,306 @@
         "SKILL_HE.md"
       ],
       "verified_at": "2026-08-11"
+    },
+    {
+      "claim_id": "withholding-form-102-16th",
+      "claim": "A non-financial-institution payer files Form 102 with the assessing officer by the 16th of each month together with payment of the withheld tax (reg. 14(a))",
+      "source_url": "https://www.nevo.co.il/law_html/law01/999_549.htm",
+      "raw_snippet": "חייב שאינו מוסד כספי יגיש לפקיד השומה עד ה-16 בכל חודש, יחד עם תשלום סכום המס שניכה כאמור בתקנה 13(א), דוח לפי טופס 0102 על סכום המס שניכה כאמור וכן על הדיבידנד או הריבית והפרשי ההצמדה ששילם",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "fetched_at": "2026-08-19",
+      "verified_via": "curl",
+      "verified_at": "2026-08-19"
+    },
+    {
+      "claim_id": "pte-corporate-12-and-7-5-spte-6",
+      "claim": "Preferred Technology Enterprise corporate tax is 12% (elsewhere) and 7.5% (Development Area A); Special Preferred Technology Enterprise is 6% (s.51כה)",
+      "source_url": "https://www.nevo.co.il/law_html/law01/p181_001.htm",
+      "raw_snippet": "על הכנסה טכנולוגית מועדפת חייבת של חברה מועדפת בעלת מפעל טכנולוגי מועדף, יוטל מס חברות בשיעור של 12%; (2) על הכנסה טכנולוגית מועדפת חייבת של חברה מועדפת בעלת מפעל טכנולוגי מועדף, הנמצא באזור פיתוח א', יוטל מס חברות בשיעור של 7.5%; (3) על הכנסה טכנולוגית מועדפת חייבת של חברה מועדפת בעלת מפעל טכנולוגי מועדף מיוחד, יוטל מס חברות בשיעור של 6%.",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-rates-2026.md",
+        "scripts/tax_comparison.py"
+      ],
+      "fetched_at": "2026-08-19",
+      "verified_via": "curl",
+      "verified_at": "2026-08-19"
+    },
+    {
+      "claim_id": "tech-dividend-20",
+      "claim": "A dividend out of a technology enterprise's qualifying technological income is taxed at 20% (s.51כו(1))",
+      "source_url": "https://www.nevo.co.il/law_html/law01/p181_001.htm",
+      "raw_snippet": "בניכוי המס ששולם עליו, המחולקים כדיבידנד, יוטל מס בשיעור של 20%",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-rates-2026.md",
+        "scripts/tax_comparison.py"
+      ],
+      "fetched_at": "2026-08-19",
+      "verified_via": "curl",
+      "verified_at": "2026-08-19"
+    },
+    {
+      "claim_id": "tech-dividend-foreign-4",
+      "claim": "A 4% rate applies to such a dividend paid to a foreign-resident body corporate where 90% or more of the payer's shares are held directly by one or more foreign-resident bodies corporate (s.51כו(2))",
+      "source_url": "https://www.nevo.co.il/law_html/law01/p181_001.htm",
+      "raw_snippet": "על רווחי החברה כאמור בפסקה (1) המחולקים כדיבידנד לחבר בני אדם שהוא תושב חוץ, יוטל מס בשיעור של 4%, אם התקיימו כל אלה: (א) 90% או יותר מהמניות בחברה מוחזקים במישרין בידי חבר בני אדם תושב חוץ, אחד או יותר; הוחזקו המניות בעקיפין באמצעות חברה אחרת, יוטל מס בשיעור של 4% אם הדיבידנד מהחברה האחרת חולק לחבר בני האדם תושב החוץ בתוך שנה מהמועד שבו קיבלה החברה האחרת את הדיבידנד",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-rates-2026.md",
+        "scripts/tax_comparison.py"
+      ],
+      "fetched_at": "2026-08-19",
+      "verified_via": "curl",
+      "verified_at": "2026-08-19"
+    },
+    {
+      "claim_id": "pfe-area-a-9pct-2014-2016",
+      "claim": "The Preferred Enterprise Development Area A rate was 9% for tax years 2014 to 2016 and was changed to 7.5% by Amendment 73 with effect from 1 January 2017",
+      "source_url": "https://www.nevo.co.il/law_html/law01/p181_001.htm",
+      "raw_snippet": "מיום 1.1.2017 תיקון מס' 73 ס\"ח תשע\"ז מס' 2592 מיום 29.12.2016 עמ' 263 ( ה\"ח 1083 ) (1) נמצא המפעל המועדף באזור פיתוח א' – 9% 7.5%",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-rates-2026.md"
+      ],
+      "fetched_at": "2026-08-19",
+      "verified_via": "curl",
+      "verified_at": "2026-08-19"
+    },
+    {
+      "claim_id": "pfe-rates-2011-2013-historic",
+      "claim": "Historic Preferred Enterprise rates: 10% Area A and 15% elsewhere for 2011-2012; 7% and 12.5% for 2013",
+      "source_url": "https://www.nevo.co.il/law_html/law01/p181_001.htm",
+      "raw_snippet": "נמצא המפעל המועדף באזור פיתוח א' – 10%; (2) נמצא המפעל המועדף באזור שאינו אזור פיתוח א' - 15%.",
+      "appears_in": [
+        "references/tax-rates-2026.md"
+      ],
+      "fetched_at": "2026-08-19",
+      "verified_via": "curl",
+      "verified_at": "2026-08-19"
+    },
+    {
+      "claim_id": "pfe-rates-2013-historic",
+      "claim": "For tax year 2013 the Preferred Enterprise rates were 7% in Development Area A and 12.5% elsewhere",
+      "source_url": "https://www.nevo.co.il/law_html/law01/p181_001.htm",
+      "raw_snippet": "' – 7%; (2) נמצא המפעל המועדף באזור שאינו אזור פיתוח א' – 12.5%.",
+      "appears_in": [
+        "references/tax-rates-2026.md"
+      ],
+      "fetched_at": "2026-08-19",
+      "verified_via": "curl",
+      "verified_at": "2026-08-19"
+    },
+    {
+      "claim_id": "preferred-dividend-15-until-2017",
+      "claim": "The dividend rate on preferred income was 15% from 1 January 2014 and was raised to 20% by Amendment 73 with effect from 1 January 2017",
+      "source_url": "https://www.nevo.co.il/law_html/law01/p181_001.htm",
+      "raw_snippet": "51יח. על אף האמור בסעיף 125ב לפקודה, על דיבידנד ששולם שמקורו בהכנסה מועדפת יחול שיעור מס של 15% 20% .",
+      "appears_in": [
+        "references/tax-rates-2026.md"
+      ],
+      "fetched_at": "2026-08-19",
+      "verified_via": "curl",
+      "verified_at": "2026-08-19"
+    },
+    {
+      "claim_id": "amendment-68-transitional-new-regime-2011",
+      "claim": "The Preferred Enterprise regime applies to preferred income produced or accrued by a preferred company from the commencement date of Amendment 68, 1 January 2011 (transitional s.39(a))",
+      "source_url": "https://www.nevo.co.il/law_html/law01/p181_001.htm",
+      "raw_snippet": "חוק לעידוד השקעות הון, כנוסחו בסעיף 37 לחוק זה, יחול לגבי הכנסה מועדפת שהופקה או נצמחה בידי חברה מועדפת החל ביום תחילתו של חוק זה",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-rates-2026.md"
+      ],
+      "fetched_at": "2026-08-19",
+      "verified_via": "curl",
+      "verified_at": "2026-08-19"
+    },
+    {
+      "claim_id": "amendment-68-approved-enterprise-grandfathering",
+      "claim": "An Approved Enterprise in a programme approved before 1 January 2011 stays under the pre-2011 law through the cooling period, and at its end may elect to continue under the pre-2011 law to the end of the benefit period under s.45 (transitional s.39(b))",
+      "source_url": "https://www.nevo.co.il/law_html/law01/p181_001.htm",
+      "raw_snippet": "עד תום תקופת הצינון יחולו עליו הוראות חוק לעידוד השקעות הון כנוסחו לפני יום התחילה",
+      "appears_in": [
+        "references/tax-rates-2026.md"
+      ],
+      "fetched_at": "2026-08-19",
+      "verified_via": "curl",
+      "verified_at": "2026-08-19"
+    },
+    {
+      "claim_id": "amendment-68-cooling-period-3-or-5",
+      "claim": "The cooling period is three years from the start of the operating year for a programme approved before 1 April 2005, and five years for one approved after that date",
+      "source_url": "https://www.nevo.co.il/law_html/law01/p181_001.htm",
+      "raw_snippet": "\"תקופת הצינון\" – לגבי מפעל שנכלל בתכנית שאושרה לפני יום כ\"א באדר ב' התשס\"ה (1 באפריל 2005) – שלוש שנים מיום תחילת שנת ההפעלה של התכנית, ולגבי מפעל בתכנית שאושרה לאחר המועד האמור – חמש שנים.",
+      "appears_in": [
+        "references/tax-rates-2026.md"
+      ],
+      "fetched_at": "2026-08-19",
+      "verified_via": "curl",
+      "verified_at": "2026-08-19"
+    },
+    {
+      "claim_id": "amendment-68-approved-optin-30-june-2011",
+      "claim": "An Approved Enterprise could opt into the new Preferred regime by request no later than 30 June 2011, irrevocably, applying from tax year 2011 (transitional s.39(c))",
+      "source_url": "https://www.nevo.co.il/law_html/law01/p181_001.htm",
+      "raw_snippet": "הוראות סעיף קטן (ב) לא יחולו לגבי מפעל כאמור באותו סעיף קטן שביקש, עד יום כ\"ח בסיוון התשע\"א (30 ביוני 2011)",
+      "appears_in": [
+        "references/tax-rates-2026.md"
+      ],
+      "fetched_at": "2026-08-19",
+      "verified_via": "curl",
+      "verified_at": "2026-08-19"
+    },
+    {
+      "claim_id": "amendment-68-beneficiary-enterprise-grandfathering",
+      "claim": "A Beneficiary Enterprise whose qualifying minimum investment was made wholly or partly by 31 December 2010 stays under pre-2011 sections 40יא and 51א to 51יד, provided the company declared a year of election no later than tax year 2012 (transitional s.39(e)(1))",
+      "source_url": "https://www.nevo.co.il/law_html/law01/p181_001.htm",
+      "raw_snippet": "על הכנסתה של חברה מוטב ממפעל תעשייתי שהוא מפעל מוטב, אשר ההשקעה המזערית המזכה לשם הקמתו או הרחבתו נעשתה, כולה או חלקה, עד יום כ\"ד בטבת התשע\"א (31 בדצמבר 2010)",
+      "appears_in": [
+        "references/tax-rates-2026.md"
+      ],
+      "fetched_at": "2026-08-19",
+      "verified_via": "curl",
+      "verified_at": "2026-08-19"
+    },
+    {
+      "claim_id": "amendment-68-waiver-notice",
+      "claim": "A Beneficiary Enterprise may opt into the Preferred or Special Preferred regime by filing an irrevocable waiver notice on the Tax Authority form, no later than the annual-return deadline, applying from the following tax year (transitional s.39(e)(2))",
+      "source_url": "https://www.nevo.co.il/law_html/law01/p181_001.htm",
+      "raw_snippet": "הודעת ויתור תימסר, בטופס שקבע מנהל רשות המסים, לא יאוחר מהמועד הקבוע להגשת הדוח השנתי לפי הוראות סעיפים 131 ו-132 לפקודת מס הכנסה, והיא תחול לגבי שנת המס שלאחר שנת המס שלגביה הוגש הדוח ואילך, בלא זכות חזרה ממנה",
+      "appears_in": [
+        "references/tax-rates-2026.md"
+      ],
+      "fetched_at": "2026-08-19",
+      "verified_via": "curl",
+      "verified_at": "2026-08-19"
+    },
+    {
+      "claim_id": "spfe-ten-years-then-pfe",
+      "claim": "Preferred Technology Enterprise eligibility requires a group with aggregate annual revenue under ILS 10 billion and average R&D of at least 7% of revenue or over ILS 75 million a year; SPTE requires group revenue of at least ILS 10 billion; SPFE requires ILS 1 billion preferred income and ILS 10 billion group revenue",
+      "source_url": "https://www.nevo.co.il/law_html/law01/p181_001.htm",
+      "raw_snippet": "סך ההכנסה המועדפת של המפעל המועדף המיוחד היה 1 מיליארד שקלים חדשים או יותר",
+      "appears_in": [
+        "references/tax-rates-2026.md"
+      ],
+      "fetched_at": "2026-08-19",
+      "verified_via": "curl",
+      "verified_at": "2026-08-19"
+    },
+    {
+      "claim_id": "pte-nexus-israel-developed-ip",
+      "claim": "The technology-track reduced corporate rates apply only to the portion of the intangible asset developed in Israel, on a nexus basis; a capital gain on sale of a beneficial intangible asset to a related foreign company is taxed at 12% (PTE, where acquired from a foreign company for at least ILS 200 million) or 6% (SPTE)",
+      "source_url": "https://www.nevo.co.il/law_html/law01/p181_001.htm",
+      "raw_snippet": "שיעור המס על רווח הון של חברה מועדפת בעלת מפעל טכנולוגי מועדף במכירת נכס לא מוחשי מוטב לחברה קשורה תושבת חוץ יהיה 12%, ובלבד שהנכס נרכש מחברה תושבת חוץ במחיר של 200 מיליון שקלים חדשים או יותר",
+      "appears_in": [
+        "references/tax-rates-2026.md"
+      ],
+      "fetched_at": "2026-08-19",
+      "verified_via": "curl",
+      "verified_at": "2026-08-19"
+    },
+    {
+      "claim_id": "derived-benefit-track-effective-29-6",
+      "claim": "השיעור האפקטיבי המשולב על רווח של מפעל טכנולוגי מועדף מחוץ לאזור פיתוח א' שחולק כדיבידנד הוא 29.6%: 12% מס חברות לפי סעיף 51כה(1), ואז 20% לפי סעיף 51כו(1) על 88% שנותרו (0.12 + 0.20 × 0.88 = 0.296). זהו חישוב אריתמטי משני שיעורים שכל אחד מהם מאומת בנפרד, ולא ציטוט ממקור.",
+      "source_url": "https://www.nevo.co.il/law_html/law01/p181_001.htm",
+      "raw_snippet": "יוטל מס חברות בשיעור של 12%",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "fetched_at": "2026-08-19",
+      "verified_via": "curl",
+      "verified_at": "2026-08-19"
+    },
+    {
+      "claim_id": "section-51tet-zayin-he",
+      "claim": "סעיף 51טז לחוק לעידוד השקעות הון קובע את שיעורי מס החברות למפעל מועדף",
+      "source_url": "https://www.nevo.co.il/law_html/law01/p181_001.htm",
+      "raw_snippet": "51 טז. על אף האמור בסעיף 126(א) לפקודה, חברה מועדפת זכאית כי לגבי הכנסתה המועדפת יוטל מס חברות בשיעורים כמפורט להלן",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-rates-2026.md"
+      ],
+      "fetched_at": "2026-08-19",
+      "verified_via": "curl",
+      "verified_at": "2026-08-19"
+    },
+    {
+      "claim_id": "section-51kaf-he",
+      "claim": "סעיף 51כא קובע את הטבות המס למפעל מועדף מיוחד, וסעיפים 51כה ו-51כו קובעים את שיעורי מס החברות והדיבידנד למפעל טכנולוגי מועדף",
+      "source_url": "https://www.nevo.co.il/law_html/law01/p181_001.htm",
+      "raw_snippet": "שיעור המס על דיבידנד ששילם מפעל טכנולוגי מועדף",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-rates-2026.md"
+      ],
+      "fetched_at": "2026-08-19",
+      "verified_via": "curl",
+      "verified_at": "2026-08-19"
+    },
+    {
+      "claim_id": "amendment-68-section-39-he",
+      "claim": "סעיף 39 לתיקון 68 הוא הוראת המעבר שקובעת איזו קבוצת זכאות חלה על כל חברה",
+      "source_url": "https://www.nevo.co.il/law_html/law01/p181_001.htm",
+      "raw_snippet": "39. (א) חוק לעידוד השקעות הון, כנוסחו בסעיף 37 לחוק זה, יחול לגבי הכנסה מועדפת שהופקה או נצמחה בידי חברה מועדפת החל ביום תחילתו של חוק זה",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-rates-2026.md"
+      ],
+      "fetched_at": "2026-08-19",
+      "verified_via": "curl",
+      "verified_at": "2026-08-19"
+    },
+    {
+      "claim_id": "form-0102-he",
+      "claim": "הדוח החודשי על ניכוי המס מדיבידנד מוגש בטופס 0102",
+      "source_url": "https://www.nevo.co.il/law_html/law01/999_549.htm",
+      "raw_snippet": "דוח לפי טופס 0102 על סכום המס שניכה כאמור וכן על הדיבידנד או הריבית והפרשי ההצמדה ששילם",
+      "appears_in": [
+        "SKILL_HE.md"
+      ],
+      "fetched_at": "2026-08-19",
+      "verified_via": "curl",
+      "verified_at": "2026-08-19"
+    },
+    {
+      "claim_id": "credit-point-travel-quarter",
+      "claim": "Section 36 of the Income Tax Ordinance grants a quarter credit point as a travel credit to a resident individual",
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "raw_snippet": "זיכוי בעד נסיעה למקום ההשתכרות 36. בחישוב המס של יחיד תושב ישראל תובא בחשבון ¼ נקודת זיכוי כזיכוי נסיעה.",
+      "fetched_at": "2026-08-19",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-rates-2026.md"
+      ],
+      "verified_via": "curl",
+      "verified_at": "2026-08-19"
+    },
+    {
+      "claim_id": "form-0102-en",
+      "claim": "Form 0102 is the monthly withholding return filed with the assessing officer (English reference to the same form)",
+      "source_url": "https://www.nevo.co.il/law_html/law01/999_549.htm",
+      "raw_snippet": "דוח לפי טופס 0102 על סכום המס שניכה כאמור",
+      "fetched_at": "2026-08-19",
+      "appears_in": [
+        "SKILL.md",
+        "references/domain-checklist.md"
+      ],
+      "verified_via": "curl",
+      "verified_at": "2026-08-19"
     }
   ]
 }
