@@ -1,6 +1,38 @@
 {
   "cycles": [
     {
+      "version": "1.3.0",
+      "date": "2026-08-19",
+      "holdout_before": 1.0,
+      "holdout_after": 1.0,
+      "buckets": {
+        "improved": [],
+        "regressed": [],
+        "persistent_fail": [],
+        "stable_success": [
+          "is it worth refinancing my Israeli mortgage",
+          "what's the maximum LTV for a first apartment in Israel",
+          "business line of credit for my Israeli company"
+        ]
+      },
+      "lessons": [
+        "CRITICAL fixed, and this is the headline of the cycle: the skill said Bank of Israel 'does not legally cap PTI, but flags >40% as high risk'. BOTH halves were wrong. Directive 329 section 5 is a HARD PROHIBITION at 50% ('תאגיד בנקאי לא יאשר ולא יבצע הלוואה לדיור, בשיעור החזר מהכנסה העולה על 50%'), and the 40% figure in section 6 is a BANK CAPITAL rule (100% risk weight), not a borrower cap and not a mere flag. Now encoded as a ceiling on the bank plus a cost cliff, with an explicit warning never to tell a user they may borrow up to 50% PTI.",
+        "REVOKED, do NOT re-seed: the v1.2.1 cycle recorded 'PTI over 40% high-risk flag with a Prime+3 stress test' under 'Confirmed-correct-do-not-relitigate'. That line is how the defect survived. It was never verified against the directive text; it was carried forward on the strength of an earlier cycle's assertion. Treat every 'confirmed, do not relitigate' entry in this file as a hypothesis until re-read at the primary source.",
+        "CRITICAL fixed (fabrication): 'Israeli mortgages must contain at least two tracks by Bank of Israel regulation' was invented. The word מסלול does not appear in Directive 329 at all, and the directive sets no minimum track count. Removed, and inverted into a Gotcha so an agent does not re-derive it.",
+        "CRITICAL fixed (fabrication): 'Banks must run a stress test assuming Prime + 3 percentage points' was attributed to BoI regulation. Directive 329 contains no stress-test requirement (zero hits for תרחיש / עמידות / מבחן). Recast as prudent borrower practice, explicitly labelled as advice and not regulation.",
+        "CRITICAL fixed: the prime-specific cap question is settled at source. The word פריים does not appear anywhere in Directive 329. There is no Prime-specific cap in force; the only composition limit is section 7's 66.66% on the WHOLE variable-rate portion. Note the skill previously wrote the complement as 33.33%, which is arithmetically wrong against a 66.66% cap; it is 33.34%. The claim is now stated as what the current text contains, NOT as 'the prime cap was scrapped in year X', because no source for that date was fetched this cycle.",
+        "MAJOR fixed (found only by fetching): the gov.il page cited as a 'multi-track payment calculator that accounts for CPI linkage' is nothing of the sort. Its title is 'מחשבון לחישוב ניקוד וגובה ההלוואה לדיור (משכנתא)', an eligibility-POINTS calculator for the government assistance loan. Both the Reference Links row and the Troubleshooting instruction that sent users there to model CPI have been corrected. A URL returning 200 says a page exists, not that it is the page you described.",
+        "MAJOR fixed: the 'Foreign-resident max LTV 50% (regulatory ceiling)' row was unsourced. Directive 329 section 2 classifies by PROPERTY (single / replacement / investment), not by residency, and has no foreign-resident row. Residency appears only in section 12.3, which exempts FX and FX-linked loans to a foreign resident from the section-7 variable cap. Row removed and replaced with a classification instruction.",
+        "MAJOR fixed (drift surface): the purchase-tax brackets (1,978,745 / 8% to 6,055,070) were duplicated here and in israeli-real-estate. Removed from this skill entirely; the shape of the rule is retained and the figures are routed to mas.gov.il and israeli-real-estate. Logged as a re-litigated Out-of-scope row with the reasoning, not a silent deletion.",
+        "ARCHITECTURE: the snapshot rates are gone. The BoI rate and Prime are no longer hard-coded at all. Better than that, a curl-fetchable authoritative endpoint was found and wired in: https://boi.org.il/PublicApi/GetInterest returns {currentInterest, nextInterestDate, lastPublishedDate} as JSON and is NOT behind the Radware challenge that blocks every boi.org.il HTML page. On 2026-08-19 it returned 3.5 with the next decision 2026-09-01, so the departing snapshot value was in fact still current; it was removed for being a drift surface, not for being wrong.",
+        "CARRY to next cycle: the Prime margin over the BoI rate (previously asserted as 1.5 percentage points) is now unsourced and has been removed from the body, with the agent routed to the bank's published prime. On 2026-08-19 it could not be captured: boi.org.il HTML is Radware-protected, kolzchut is bot-blocked, and all four major banks' rate pages returned 404 or a JS shell. Logged in domain-checklist.md as an explicitly reasoned Out-of-scope row. Recapture it next cycle if any authoritative source becomes fetchable.",
+        "CARRY to next cycle: the shared Playwright MCP browser was unusable this session. Two consecutive navigations to a kolzchut URL reported gov.il/he/error and then gov.il/he/departments/israel_tax_authority. The location.href assertion caught it both times. No evidence in this cycle rests on a browser read; three boi.org.il URLs are recorded as unreachable-not-verified rather than falsely marked verified_via=browser.",
+        "COVERAGE added from the primary source, none of which the skill previously carried: section 4 (aggregate LTV with prior loans on the same apartment), section 10a (70% LTV discretion where the excess above 50% is under 200,000 NIS), section 4a (discounted-apartment valuation capped at 2.1M NIS, minimum own funds 60,000 / 100,000 NIS), section 8a (temporary 10% quarterly cap on contractor-subsidised bullet and balloon loans, to 31.12.2026), section 9 (refinancing may not create or widen a breach), section 11 and 12 carve-outs, section 13 (public-sector and defence lane up to 50,000 NIS, the Bank Yahav lane), and the whole of Appendix A on how PTI is actually measured (disposable income, the 18-month rule, alimony, the rent deduction, and the relative's-income 20% condition).",
+        "EVIDENCE: evidence.json was rebuilt from 11 claims to 37. The three load-bearing regulatory claims previously cited a BoI landing page with the two-word snippet 'Directive 329', which the quality linter now rejects as a keyword stub and which --check-sources could never falsify. Every regulatory claim is now a contiguous verbatim Hebrew quote from the directive PDF, machine-confirmed present in the PDF text layer.",
+        "Deferred over the Phase 4.1 discretionary cap: the enriched-content prompts array in the DB still uses the key 'prompt' instead of 'body'; harmless today but off-spec. Also SKILL.md is now 4,900+ words against a 5,000 cap, so the next substantive addition should move Step 5's bank roster or the Troubleshooting block into references/."
+      ]
+    },
+    {
       "version": "1.2.1",
       "date": "2026-07-16",
       "lessons": [

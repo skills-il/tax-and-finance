@@ -1,6 +1,6 @@
 {
   "author": "skills-il",
-  "version": "1.2.2",
+  "version": "1.3.0",
   "category": "tax-and-finance",
   "tags": {
     "he": [
@@ -25,8 +25,8 @@
     "en": "Israeli Mortgage Comparator"
   },
   "display_description": {
-    "he": "השוואת מסלולי משכנתא בין בנקים ישראליים, חישוב תשלומים חודשיים והבנת תקנות בנק ישראל",
-    "en": "Compare mortgage tracks (maslulei mashkanta) across Israeli banks, calculate monthly payments for mixed-track portfolios, and understand Bank of Israel regulations including LTV limits and CPI-linked caps. Use when a user needs to evaluate mortgage offers from different banks, calculate refinancing savings, or understand how Prime rate changes affect their payments. Covers Leumi, Hapoalim, Discount, Mizrachi-Tefahot, FIBI, Mercantile, and Yahav. Do NOT use for commercial real estate loans, business credit lines, or non-Israeli mortgage products."
+    "he": "השוואת מסלולי משכנתא בין בנקים ישראליים, חישוב תשלומים חודשיים והבנת מגבלות הוראה 329 של בנק ישראל: תקרות LTV, איסור החזר מהכנסה מעל 50%, ומגבלת חלק ההלוואה בריבית משתנה. מתאים לפני חתימה על משכנתא, בבדיקת כדאיות מיחזור, או כשרוצים להבין איך שינוי ריבית פריים משפיע על ההחזר. לא מיועד להלוואות נדל\"ן מסחרי, מסגרות אשראי עסקיות או משכנתאות מחוץ לישראל.",
+    "en": "Compare mortgage tracks (maslulei mashkanta) across Israeli banks, calculate monthly payments for mixed-track portfolios, and understand Bank of Israel Directive 329 limits including LTV ceilings, the payment-to-income prohibition, and the cap on the variable-rate share. Use when a user needs to evaluate mortgage offers from different banks, calculate refinancing savings, or understand how Prime rate changes affect their payments. Covers Leumi, Hapoalim, Discount, Mizrachi-Tefahot, FIBI, Mercantile, and Yahav. Do NOT use for commercial real estate loans, business credit lines, or non-Israeli mortgage products."
   },
   "supported_agents": [
     "claude-code",

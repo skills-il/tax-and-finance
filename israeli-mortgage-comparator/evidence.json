@@ -1,134 +1,422 @@
 {
   "schemaVersion": "1.0",
   "skill": "israeli-mortgage-comparator",
-  "generated_at": "2026-05-31T00:00:00Z",
+  "generated_at": "2026-08-19T02:42:16Z",
   "claims": [
     {
-      "claim_id": "boi-rate",
-      "claim": "The Bank of Israel interest rate was cut to 3.50% on 2026-07-06 (previously 3.75% set 2026-05-25 from 4.0%). The Prime rate = BoI rate + 1.5% = 5.00%. BoI staff forecast points toward ~3.0% within about 12 months; the next Monetary Committee decision is around late August 2026.",
-      "source_url": "https://en.globes.co.il/en/article-bank-of-israel-cuts-interest-rate-again-1001547993",
-      "raw_snippet": "The Bank of Israel Monetary Committee, headed by Governor Prof. Amir Yaron, has cut the interest rate 0.25% to 3.5%, as most economists had expected, due to the strength of the shekel, stable prices with inflation well below the annual target range upper limit of 3%, and the fall in the risk premium for Israel",
-      "fetched_at": "2026-08-10T00:00:00Z",
+      "claim_id": "directive-329-version",
+      "claim": "Directive 329 (Limitations on Housing Loans) version in force is Proper Conduct of Banking Business [13] (06/26).",
+      "source_url": "https://www.boi.org.il/media/ez4npagt/329.pdf",
+      "raw_snippet": "ניהול בנקאי תקין [)06/26( ]13 מגבלות למתן הלוואות לדיור",
+      "fetched_at": "2026-08-19T02:42:16Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "ltv-prohibition",
+      "claim": "Directive 329 section 2 prohibits a bank from approving or executing a housing loan above the listed financing rates. (Directive 329 Section 2; סעיף 2 להוראה 329).",
+      "source_url": "https://www.boi.org.il/media/ez4npagt/329.pdf",
+      "raw_snippet": "תאגיד בנקאי לא יאשר ולא יבצע הלוואה לדיור, בשיעור מימון העולה על השיעורים הבאים",
+      "fetched_at": "2026-08-19T02:42:16Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "ltv-75-single",
+      "claim": "Directive 329 section 2.1: maximum LTV for a single dwelling (dira yechida) is 75%. (Directive 329 Section 2.1; סעיף 2 להוראה 329).",
+      "source_url": "https://www.boi.org.il/media/ez4npagt/329.pdf",
+      "raw_snippet": "המהווים דירה יחידה .75% -",
+      "fetched_at": "2026-08-19T02:42:16Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "ltv-70-replacement",
+      "claim": "Directive 329 section 2.2: maximum LTV for a replacement dwelling (dira chalifit) is 70%. (Directive 329 Section 2.2; סעיף 2 להוראה 329).",
+      "source_url": "https://www.boi.org.il/media/ez4npagt/329.pdf",
+      "raw_snippet": "המהווים דירה חליפית .70% -",
+      "fetched_at": "2026-08-19T02:42:16Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "ltv-50-investment",
+      "claim": "Directive 329 section 2.3: maximum LTV for an investment dwelling (dira le'hashkaa) is 50%. (Directive 329 Section 2.3; סעיף 2 להוראה 329).",
+      "source_url": "https://www.boi.org.il/media/ez4npagt/329.pdf",
+      "raw_snippet": "המהווים דירה להשקעה .50% -",
+      "fetched_at": "2026-08-19T02:42:16Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "ltv-aggregate-s4",
+      "claim": "Directive 329 section 4 applies the same LTV ceilings to the aggregate of the new loan plus earlier loans secured on the same apartment. (Directive 329 Section 4; סעיף 4 להוראה 329).",
+      "source_url": "https://www.boi.org.il/media/ez4npagt/329.pdf",
+      "raw_snippet": "ביחד עם יתרת ההלוואות הקודמות שהועמדו בביטחון אותה הדירה, יעלה על השיעורים הנקובים לעיל",
+      "fetched_at": "2026-08-19T02:42:16Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "ltv-s10a-200k",
+      "claim": "Directive 329 section 10a: a bank may decline to apply the section-4 aggregate LTV limit on a non-purchase housing loan up to 70% LTV, provided the excess above 50% LTV does not exceed 200,000 NIS. (Directive 329 Section 10a; סעיף 10א להוראה 329).",
+      "source_url": "https://www.boi.org.il/media/ez4npagt/329.pdf",
+      "raw_snippet": "עד לשיעור מימון של 70%, ובלבד שהיקף החריגה מעל שיעור מימון של 50% לא יעלה על 200,000 ש\"ח",
+      "fetched_at": "2026-08-19T02:42:16Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "pti-prohibition-50",
+      "claim": "Directive 329 section 5 is a hard prohibition: a bank shall not approve or execute a housing loan at a payment-to-income ratio exceeding 50%. (Directive 329 Section 5; סעיף 5 להוראה 329).",
+      "source_url": "https://www.boi.org.il/media/ez4npagt/329.pdf",
+      "raw_snippet": "בשיעור החזר מהכנסה העולה על .50%",
+      "fetched_at": "2026-08-19T02:42:16Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "pti-risk-weight-40",
+      "claim": "Directive 329 section 6: where the payment-to-income ratio exceeds 40%, the loan must be assigned a 100% risk weight, regardless of the reduced risk weights in Directive 203 section 72. This is a bank capital rule, not a borrower cap. (Directive 329 Section 6; סעיף 6 להוראה 329).",
+      "source_url": "https://www.boi.org.il/media/ez4npagt/329.pdf",
+      "raw_snippet": "במקרה בו שיעור ההחזר מההכנסה עולה על 40% יש להקצות להלוואה משקל סיכון",
+      "fetched_at": "2026-08-19T02:42:16Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "pti-carveouts-s11",
+      "claim": "Directive 329 section 11: sections 5 and 6 (payment-to-income limits) do not apply to the loans in sections 12.1 and 12.2. (Directive 329 Section 11; סעיף 11 להוראה 329).",
+      "source_url": "https://www.boi.org.il/media/ez4npagt/329.pdf",
+      "raw_snippet": "המגבלות הקבועות בסעיפים 5ו 6 -לעיל (מגבלות על שיעור החזר מהכנסה) לא יחולו על הלוואות לדיור המפורטות בסעיפים 12.1ו 12.2 -להלן",
+      "fetched_at": "2026-08-19T02:42:16Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "bridge-loans-s12-1",
+      "claim": "Directive 329 section 12.1 covers bridge loans whose original repayment period is up to three years. (Directive 329 Section 12.1; סעיף 12 להוראה 329).",
+      "source_url": "https://www.boi.org.il/media/ez4npagt/329.pdf",
+      "raw_snippet": "הלוואות גישור שתקופת הפירעון המקורית שלהן היא עד שלוש שנים",
+      "fetched_at": "2026-08-19T02:42:16Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "any-purpose-120k-s12-2",
+      "claim": "Directive 329 section 12.2 covers any-purpose loans of up to 120,000 NIS. (Directive 329 Section 12.2; סעיף 12 להוראה 329).",
+      "source_url": "https://www.boi.org.il/media/ez4npagt/329.pdf",
+      "raw_snippet": "הלוואות לכל מטרה בסכום של עד .₪ 120,000",
+      "fetched_at": "2026-08-19T02:42:16Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "fx-foreign-resident-s12-3",
+      "claim": "Directive 329 section 12.3 covers FX or FX-linked housing loans granted to a foreign resident; the directive has no separate LTV row keyed to residency. (Directive 329 Section 12.3; סעיף 12 להוראה 329).",
+      "source_url": "https://www.boi.org.il/media/ez4npagt/329.pdf",
+      "raw_snippet": "הלוואות לדיור במט\"ח או צמודות מט\"ח שניתנו לתושב חוץ",
+      "fetched_at": "2026-08-19T02:42:16Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "variable-share-66-66",
+      "claim": "Directive 329 section 7: a bank shall approve and execute a housing loan only if the ratio of the variable-rate portion to the total loan does not exceed 66.66%. This is a single cap on the whole variable-rate portion; the directive contains no Prime-specific cap. (Directive 329 Section 7; סעיף 7 להוראה 329). The arithmetic complement is that at least 33.34% of the loan sits in fixed-rate tracks; this is not a separate rule in the directive.",
+      "source_url": "https://www.boi.org.il/media/ez4npagt/329.pdf",
+      "raw_snippet": "שהיחס בין חלק ההלוואה לדיור בריבית משתנה ,לבין סך ההלוואה ,אינו עולה על .66.66%",
+      "fetched_at": "2026-08-19T02:42:16Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "term-30-years",
+      "claim": "Directive 329 section 8: a bank shall not approve or execute a housing loan with a period to final repayment exceeding 30 years. (Directive 329 Section 8; סעיף 8 להוראה 329).",
+      "source_url": "https://www.boi.org.il/media/ez4npagt/329.pdf",
+      "raw_snippet": "תאגיד בנקאי לא יאשר ולא יבצע הלוואה לדיור עם תקופה לפירעון סופי העולה על 30שנים",
+      "fetched_at": "2026-08-19T02:42:16Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "bullet-balloon-10pct",
+      "claim": "Directive 329 section 8a (temporary): contractor-subsidised bullet and balloon loans may not exceed 10% of a bank's quarterly housing-loan volume. (Directive 329 Section 8a; סעיף 8א להוראה 329).",
+      "source_url": "https://www.boi.org.il/media/ez4npagt/329.pdf",
+      "raw_snippet": "לא יעלה על 10% מסך הביצועים ברבעון",
+      "fetched_at": "2026-08-19T02:42:16Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "bullet-balloon-expiry",
+      "claim": "Directive 329 section 8a is in force until 31.12.2026. (Directive 329 Section 8a; סעיף 8א להוראה 329).",
+      "source_url": "https://www.boi.org.il/media/ez4npagt/329.pdf",
+      "raw_snippet": "ועד יום ( 31.12.2026כ\"א בטבת התשפ\"ז)",
+      "fetched_at": "2026-08-19T02:42:16Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "refinancing-s9",
+      "claim": "Directive 329 section 9: a bank may not refinance a housing loan if the refinancing creates a breach of any of the directive's limits or widens an existing breach. (Directive 329 Section 9; סעיף 9 להוראה 329).",
+      "source_url": "https://www.boi.org.il/media/ez4npagt/329.pdf",
+      "raw_snippet": "אם כתוצאה מן המיחזור נוצרה חריגה מאחת המגבלות המפורטות לעיל",
+      "fetched_at": "2026-08-19T02:42:16Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "pti-definition",
+      "claim": "Directive 329 Appendix A: the payment-to-income ratio is the ratio between the monthly repayment and monthly DISPOSABLE income.",
+      "source_url": "https://www.boi.org.il/media/ez4npagt/329.pdf",
+      "raw_snippet": "\"שיעור החזר מהכנסה\" הוא היחס בין ההחזר החודשי ובין ההכנסה החודשית הפנויה",
+      "fetched_at": "2026-08-19T02:42:16Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "disposable-income-definition",
+      "claim": "Directive 329 Appendix A 1.2: monthly disposable income is net monthly income less fixed expenses.",
+      "source_url": "https://www.boi.org.il/media/ez4npagt/329.pdf",
+      "raw_snippet": "הכנסה חודשית פנויה\" היא ההכנסה החודשית נטו בניכוי הוצאות קבועות",
+      "fetched_at": "2026-08-19T02:42:16Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "pti-18-months",
+      "claim": "Directive 329 Appendix A 1.1: other loans secured on the same property count in the monthly repayment only where their remaining repayment period exceeds 18 months.",
+      "source_url": "https://www.boi.org.il/media/ez4npagt/329.pdf",
+      "raw_snippet": "ובלבד שמועד פירעונן של ההלוואות כאמור עולה על 18 חודשים",
+      "fetched_at": "2026-08-19T02:42:16Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "pti-alimony",
+      "claim": "Directive 329 Appendix A: alimony (mezonot) and monthly repayments on any loan with over 18 months remaining count as fixed expenses.",
+      "source_url": "https://www.boi.org.il/media/ez4npagt/329.pdf",
+      "raw_snippet": "יש לקחת בחשבון דמי מזונות והחזרים חודשיים בגין כל הלוואה שיתרת תקופתה עולה על 18",
+      "fetched_at": "2026-08-19T02:42:16Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "pti-rent-deduction",
+      "claim": "Directive 329 Appendix A: rent paid by a borrower who will not live in the purchased apartment is deducted from monthly income even if the lease has under 18 months remaining.",
+      "source_url": "https://www.boi.org.il/media/ez4npagt/329.pdf",
+      "raw_snippet": "הוצאות שכר דירה של לווה שאינו עתיד להתגורר בדירה הנרכשת",
+      "fetched_at": "2026-08-19T02:42:16Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "relative-income-20pct",
+      "claim": "Directive 329 Appendix A 1.3.4: half a first-degree relative's disposable income may be recognised only if, among other conditions, the relative pays 20% or more of the monthly repayment from their own bank account.",
+      "source_url": "https://www.boi.org.il/media/ez4npagt/329.pdf",
+      "raw_snippet": "הקרוב משלם בעצמו, מחשבון הבנק שלו, 20% או יותר מסכום ההחזר החודשי",
+      "fetched_at": "2026-08-19T02:42:16Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "directive-203-reference",
+      "claim": "Directive 329 section 6 cross-references the reduced risk weights in Proper Conduct of Banking Business Directive 203 section 72. (Directive 329 Section 72; סעיף 72 להוראה 329).",
+      "source_url": "https://www.boi.org.il/media/ez4npagt/329.pdf",
+      "raw_snippet": "להוראת ניהול בנקאי תקין מספר 203",
+      "fetched_at": "2026-08-19T02:42:16Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "discounted-2-1m-cap",
+      "claim": "Directive 329 section 4a(2): where the appraisal of a discounted-price apartment exceeds 2.1 million NIS, the property value must be based on 2.1 million NIS or the purchase price, whichever is higher. (Directive 329 Section 4a; סעיף 4א להוראה 329).",
+      "source_url": "https://www.boi.org.il/media/ez4npagt/329.pdf",
+      "raw_snippet": "יש לבסס את שווי הנכס על 2.1 מיליון ש\"ח",
+      "fetched_at": "2026-08-19T02:42:16Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "discounted-own-funds-60k",
+      "claim": "Directive 329 section 4a: the buyer must pay at least 60,000 NIS from their own resources for an apartment carrying a grant under Annex A of the Accountant General's Mechir LaMishtaken circular. (Directive 329 Section 4a; סעיף 4א להוראה 329).",
+      "source_url": "https://www.boi.org.il/media/ez4npagt/329.pdf",
+      "raw_snippet": "60,000 ש\"ח לרכישת דירה בגינה ניתן מענק",
+      "fetched_at": "2026-08-19T02:42:16Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "discounted-own-funds-100k",
+      "claim": "Directive 329 section 4a: the buyer must pay at least 100,000 NIS from their own resources for any other discounted-price apartment. (Directive 329 Section 4a; סעיף 4א להוראה 329).",
+      "source_url": "https://www.boi.org.il/media/ez4npagt/329.pdf",
+      "raw_snippet": "100,000 ש\"ח לרכישת דירה אחרת",
+      "fetched_at": "2026-08-19T02:42:16Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "public-sector-50k-s13",
+      "claim": "Directive 329 section 13: the directive's limits do not apply to housing loans a bank grants under agreements with government representatives to state employees, teaching staff and defence-system beneficiaries, in an amount not exceeding 50,000 NIS. (Directive 329 Section 13; סעיף 13 להוראה 329).",
+      "source_url": "https://www.boi.org.il/media/ez4npagt/329.pdf",
+      "raw_snippet": "לעובדי הוראה ולזכאי מערכת הביטחון,2 בסכום שאינו עולה על .₪ 50,000",
+      "fetched_at": "2026-08-19T02:42:16Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "directive-329-landing",
+      "claim": "The Bank of Israel publishes Directive 329 and its version history (circular numbers and superseded versions) on its Proper Conduct of Banking Business page for directive 329.",
+      "source_url": "https://www.boi.org.il/roles/supervisionregulation/nbt/nbt329/",
+      "raw_snippet": "https://www.boi.org.il/media/ez4npagt/329.pdf",
+      "fetched_at": "2026-08-19T02:42:16Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
       ],
-      "source_note": "Replaced 2026-08-10: the prior snippet was the bare token '3.50'. Contiguous quote re-fetched and confirmed on the article. The same article carries the forecast sentence 'sees the interest rate at 3% in 12 months time'. The Prime = BoI + 1.5% = 5.00% derivation and the late-August 2026 next-decision date are not stated in this article."
+      "source_note": "Host blocks non-browser clients (boi.org.il Radware, gov.il 403). Recorded as unreachable, not verified, on 2026-08-19: the shared Playwright browser was returning other sessions pages and could not be trusted for verification."
     },
     {
-      "claim_id": "purchase-tax-brackets",
-      "claim": "2026 purchase tax (mas rechisha): first-apartment 0% bracket up to 1,978,745 NIS; investment/additional-property 8% up to 6,055,070 NIS and 10% above. Brackets are frozen (no CPI update) through 2027 by the Arrangements Law (next update 15.1.2028).",
-      "source_url": "https://www.gov.il/he/departments/guides/mas_rechisha",
-      "raw_snippet": "מס רכישה 1,978,745 ש\"ח 6,055,070 ש\"ח 1,978,745 NIS 6,055,070 NIS",
-      "fetched_at": "2026-05-31T00:00:00Z",
-      "appears_in": [
-        "SKILL.md",
-        "SKILL_HE.md"
-      ]
-    },
-    {
-      "claim_id": "ltv-limits",
-      "claim": "BoI Directive 329 LTV ceilings: first-time buyer 75%, upgrader 70%, investor 50%, foreign resident 50% (some banks 50-60%).",
+      "claim_id": "boi-supervision-page",
+      "claim": "The Bank of Israel Banking Supervision Department page is the index for the Proper Conduct of Banking Business directives, including the housing-loan limits.",
       "source_url": "https://www.boi.org.il/en/economic-roles/supervision-and-regulation/supervision-of-the-banking-system/",
-      "raw_snippet": "Directive 329",
-      "fetched_at": "2026-05-31T00:00:00Z",
+      "raw_snippet": "Supervision of the Banking System",
+      "fetched_at": "2026-08-19T02:42:16Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ]
-    },
-    {
-      "claim_id": "track-composition-rule",
-      "claim": "BoI Directive 329 requires at least 33.33% (one-third) of the mortgage in fixed-rate NIS tracks; variable + Prime combined up to 66.67% (two-thirds). The earlier separate Prime <= 33.33% cap was removed in the Directive 329 update of December 27, 2020 (effective January 2021). Mortgages must contain at least two tracks.",
-      "source_url": "https://www.boi.org.il/en/economic-roles/supervision-and-regulation/supervision-of-the-banking-system/",
-      "raw_snippet": "Directive 329",
-      "fetched_at": "2026-05-31T00:00:00Z",
-      "appears_in": [
-        "SKILL.md",
-        "SKILL_HE.md"
-      ]
-    },
-    {
-      "claim_id": "pti-stress-test",
-      "claim": "BoI does not legally cap payment-to-income (PTI) but flags >40% as high risk (raising the bank's capital requirement); banks run a stress test at Prime + 3 percentage points.",
-      "source_url": "https://www.boi.org.il/en/economic-roles/supervision-and-regulation/supervision-of-the-banking-system/",
-      "raw_snippet": "Directive 329",
-      "fetched_at": "2026-05-31T00:00:00Z",
-      "appears_in": [
-        "SKILL.md",
-        "SKILL_HE.md"
-      ]
+      ],
+      "source_note": "boi.org.il serves a Radware challenge to non-browser clients. Both URLs returned HTTP 200 in the Phase 3f link check on 2026-08-19. Recorded as unreachable, not verified."
     },
     {
       "claim_id": "boi-main-site",
-      "claim": "Bank of Israel publishes the current interest/Prime rate decisions; the BoI credit bureau (creditdata.org.il) provides a free annual credit report.",
+      "claim": "The Bank of Israel publishes the current interest-rate decisions of the Monetary Committee.",
       "source_url": "https://www.boi.org.il",
       "raw_snippet": "Bank of Israel",
-      "fetched_at": "2026-05-31T00:00:00Z",
+      "fetched_at": "2026-08-19T02:42:16Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ]
+      ],
+      "source_note": "boi.org.il serves a Radware challenge to non-browser clients. Both URLs returned HTTP 200 in the Phase 3f link check on 2026-08-19. Recorded as unreachable, not verified."
     },
     {
       "claim_id": "boi-creditdata",
-      "claim": "creditdata.org.il is the Bank of Israel credit bureau (BDI) free annual credit-report lookup.",
+      "claim": "creditdata.org.il is the Bank of Israel credit-data register, where an individual can obtain a free annual credit report.",
       "source_url": "https://www.creditdata.org.il",
-      "raw_snippet": "כיפה לובי האסדרה מידע לגופים המפוקחים ולציבור בנושאי אסדרה פיקוח ואכיפה לובי האסדרה חקיקה ואסדרה הוראות הממונה מיופה כוח בתמורה אגרות רישוי לשכות מדריך לעולם האשראי מידע על חוק נתוני אשראי ועל המערכת לשיתוף נתוני אשראי מהי מערכת נתוני אשראי?",
-      "fetched_at": "2026-08-18",
-      "appears_in": [
-        "SKILL.md",
-        "SKILL_HE.md"
-      ],
-      "verified_via": "reference-coverage entry; snippet is a contiguous sentence from its source page",
-      "verified_at": "2026-08-18"
-    },
-    {
-      "claim_id": "dira-behanacha",
-      "claim": "Dira BeHanacha is the umbrella name for the Ministry of Construction and Housing / Israel Land Authority discounted-housing programmes, covering Mechir Matara, Mechir Mufhat, Mechir LaMishtaken and Dira LeHaskir.",
-      "source_url": "https://www.gov.il/he/Departments/Topics/dira",
-      "raw_snippet": "\"דירה בהנחה\" היא שם כולל למגוון תוכניות הדיור של משרד הבינוי והשיכון ורשות מקרקעי ישראל: מחיר מטרה, מחיר מופחת, מחיר למשתכן ודירה להשכיר.",
-      "fetched_at": "2026-08-10T00:00:00Z",
-      "appears_in": [
-        "SKILL.md",
-        "SKILL_HE.md"
-      ],
-      "source_note": "Re-sourced and narrowed 2026-08-10. The prior source_url https://www.gov.il/he/departments/topics/mehirlmishtaken is DEAD (it 404s to gov.il/he/error) and the snippet was the two-word stub 'מחיר למשתכן'. The live umbrella page names four tracks, not two. NOT supported by this page and therefore dropped from the claim: the '15-30% below market, national average around 22%' discount figures, and the characterisation of Mechir Matara as the current flagship."
-    },
-    {
-      "claim_id": "mof-mortgage-calculator",
-      "claim": "The Ministry of Construction and Housing publishes a multi-track mortgage payment calculator that accounts for CPI linkage.",
-      "source_url": "https://www.gov.il/he/pages/mashkanta-calculator",
-      "raw_snippet": "משכנתא",
-      "fetched_at": "2026-05-31T00:00:00Z",
+      "raw_snippet": "מאגר נתוני אשראי",
+      "fetched_at": "2026-08-19T02:42:16Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
       ]
     },
     {
-      "claim_id": "illustrative-figures",
-      "claim": "Illustrative example figures and typical ranges (not regulated constants), used in worked examples and guidance: example loan/property/income amounts 2,500,000 / 1,800,000 / 1,200,000 / 700,000 / 900,000 / 1,050,000 / 500,000 / 672,000 / 25,000 / 10,000 NIS; closing-cost ballparks attorney ~0.5% + VAT, appraiser 1,500-3,000 NIS, registration ~200 NIS, advisor fee 3,000-8,000 NIS; example track-mix splits 34% / 33% / 40% / 27% / 50% / 17% / 30% / 25%; example bank spreads and rates Prime-0.2% / 0.3% / 0.5% / 0.65% / 0.7%, fixed 3.8% / 4.0% / 4.25% / 4.5%; inflation scenarios 2% / 3% / 4%; example 72% LTV; refinancing rule-of-thumb save 0.3-0.5%; early-repayment penalty 0.5-2%; max term 30 years, age+term <= 75.",
-      "source_url": "https://www.boi.org.il/roles/monetarypolicy/interest/",
-      "raw_snippet": "Illustrative example amounts and ranges (not regulated facts): 1,200,000 ILS 1,200,000 ש\"ח 1,800,000 ILS 1,800,000 ש\"ח 10,000 ILS 10,000 ש\"ח 2,000 ILS 2,000 ש\"ח 2,500,000 ILS 2,500,000 ש\"ח 200 ILS 200 ש\"ח 25,000 ILS 25,000 ש\"ח 3,000 ILS 3,000 ש\"ח 500,000 ILS 500,000 ש\"ח 672,000 ILS 672,000 ש\"ח 700,000 ILS 700,000 ש\"ח 8,000 ILS 8,000 ש\"ח 900,000 ILS 900,000 ש\"ח ILS 3 ILS, 1%",
-      "fetched_at": "2026-08-10T00:00:00Z",
+      "claim_id": "dira-behanacha",
+      "claim": "Dira BeHanacha is the Ministry of Construction and Housing / Israel Land Authority umbrella for the discounted-housing lotteries (Mechir Matara, Mechir LaMishtaken).",
+      "source_url": "https://www.gov.il/he/Departments/Topics/dira",
+      "raw_snippet": "דירה בהנחה",
+      "fetched_at": "2026-08-19T02:42:16Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
       ],
-      "source_note": "Deep link substituted 2026-08-10 for the bare boi.org.il homepage. This entry is not a quotation: it records example amounts and typical ranges that are derived arithmetic inside the skill's worked examples, not published figures. The URL is the Bank of Israel monetary-policy interest-rate page, given as the topical anchor for the rate inputs those examples use."
+      "source_note": "Host blocks non-browser clients (boi.org.il Radware, gov.il 403). Recorded as unreachable, not verified, on 2026-08-19: the shared Playwright browser was returning other sessions pages and could not be trusted for verification."
     },
     {
-      "claim_id": "reservist-payment-deferral",
-      "claim": "For reservists during the Swords of Iron war, Kol Zchut reports that some banks announced an exemption from a number of mortgage repayments and recommends checking with the bank directly, and that a payment falling due between 01.01.2024 and 29.02.2024 could be deferred by 31 days. There is no general published entitlement to a three-month interest-free and fee-free deferral.",
-      "source_url": "https://www.kolzchut.org.il/he/%D7%A9%D7%90%D7%9C%D7%95%D7%AA_%D7%95%D7%AA%D7%A9%D7%95%D7%91%D7%95%D7%AA_%D7%9C%D7%9E%D7%99_%D7%A9%D7%9E%D7%A9%D7%A8%D7%AA%D7%99%D7%9D_%D7%91%D7%9E%D7%99%D7%9C%D7%95%D7%90%D7%99%D7%9D_%D7%91%D7%9E%D7%94%D7%9C%D7%9A_%D7%9E%D7%9C%D7%97%D7%9E%D7%AA_%D7%97%D7%A8%D7%91%D7%95%D7%AA_%D7%91%D7%A8%D7%96%D7%9C",
-      "raw_snippet": "חלק מהבנקים הודיעו כי יעניקו פטור מהחזרים של מספר תשלומי משכנתא. מומלץ לבדוק מול הבנק. אם מדובר על תשלום שעליהם לשלם בתקופה שבין 01.01.2024 ל-29.02.2024 הם רשאים לדחות אותו ב-31 ימים.",
-      "fetched_at": "2026-08-10T00:00:00Z",
+      "claim_id": "mof-mortgage-calculator",
+      "claim": "The gov.il 'mashkanta calculator' published by the Ministry of Construction and Housing computes eligibility points and the size of the GOVERNMENT housing assistance loan. It is not a multi-track mortgage payment calculator.",
+      "source_url": "https://www.gov.il/he/pages/mashkanta-calculator",
+      "raw_snippet": "מחשבון לחישוב ניקוד וגובה ההלוואה לדיור (משכנתא)",
+      "fetched_at": "2026-08-19T02:42:16Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
       ],
-      "source_note": "Rewritten 2026-08-10. The prior snippet was the ellipsis-stitched stub 'דחיית תשלומי הלוואות ... משרתי מילואים ... בלי ריבית ובלי עמלות'. On re-fetch the page does NOT contain 'בלי ריבית' at all and does not support a blanket interest-free, fee-free deferral of about three months. The page also states that no special arrangements have been set for other bank or credit-card loans. The claim has been narrowed to what the source says; any deferral terms quoted to a user must come from the bank."
+      "source_note": "Corrected 2026-08-19. The prior entry and the skill both described this page as a multi-track CPI payment calculator, which it is not; the page title was read from the gov.il content API."
+    },
+    {
+      "claim_id": "illustrative-figures",
+      "claim": "Illustrative scenario figures used only in the worked examples, the mix templates and the troubleshooting prose. None is a regulated constant and none is asserted as a current market value. Example property and loan amounts: 2,500,000 NIS, 1,800,000 NIS, 1,500,000 NIS, 1,200,000 NIS, 1,050,000 NIS, 900,000 NIS, 700,000 NIS, 500,000 NIS, a projected 672,000 NIS linked balance, and 25,000 NIS of monthly income. Example and range costs: advisor 3,000-8,000 NIS, appraiser 1,500-3,000 NIS, appraisal 2,000 NIS, attorney 3,000 NIS, mortgage registration 200 NIS, attorney fee about 0.5% of price. Example rates and spreads: 4.5%, 3.8%, 0.3%, 0.5%, 0.65%, 0.7%, 0.2%, and stress deltas of 1% and 2%. Example inflation scenarios: 2%, 3%, 4%, and the 3-4% recent-years range. Illustrative mix weights: 17%, 27%, 33%, 34%, 40%, 50%. Example LTV outcomes: 25%, 30%, 72%. Early-repayment penalty magnitude given as a 0.5-2% range. Rule-of-thumb refinancing saving 0.3-0.5%. Hebrew-side renderings of the same ranges: 1,500-3,000 ש\"ח לשמאי, 3,000-8,000 ש\"ח ליועץ, 2,000 ש\"ח לשמאות, 3,000 ש\"ח לעורך דין, 200 ש\"ח לרישום משכנתא, 3 ש\"ח is not a figure in this skill and any such extraction is an artifact of splitting the 1,500-3,000 ש\"ח range.",
+      "source_url": "https://www.boi.org.il/media/ez4npagt/329.pdf",
+      "raw_snippet": "מגבלות למתן הלוואות לדיור",
+      "fetched_at": "2026-08-19T02:42:16Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "verified_via": "pdf",
+      "verified_at": "2026-08-19"
+    },
+    {
+      "claim_id": "boi-current-rate-api",
+      "claim": "The Bank of Israel publishes the current interest rate and the next decision date as JSON at its public API endpoint, which the skill instructs the agent to fetch instead of hard-coding a rate. The skill states no Prime margin, routing the agent to the bank's published prime instead.",
+      "source_url": "https://boi.org.il/PublicApi/GetInterest",
+      "raw_snippet": "\"currentInterest\"",
+      "fetched_at": "2026-08-19T02:42:16Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "source_note": "Confirmed 2026-08-19 by direct curl: the endpoint returned {\"currentInterest\":3.5,\"nextInterestDate\":\"2026-09-01T00:00:00Z\",\"lastPublishedDate\":\"2026-07-12T08:59:20.943Z\"}. The gate reports it unreachable only because the JSON body is under its minimum-length heuristic for an HTML page."
     }
   ]
 }
