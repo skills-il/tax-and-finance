@@ -49,39 +49,26 @@ under-reports tax on high earners by 44 points on every shekel above the thresho
 ### Value Per Point
 - **2025-2027:** 2,904 NIS per year (242 NIS per month), frozen (not inflation-adjusted)
 
-### Base Entitlements
+### The credit-point schedule lives in `credit-points.md`
 
-| Category | Points | Who Qualifies |
-|----------|--------|---------------|
-| Israeli resident (male) | 2.25 | All male tax residents |
-| Israeli resident (female) | 2.75 | All female tax residents |
+**The full schedule was moved out of this file and corrected.** Every category, every child age
+band, both combat-reserve regimes, the oleh and returning-resident tracks, discharged soldiers,
+netul yecholet, Section 44 and Section 11 are in `references/credit-points.md`, each with its
+statutory citation. Read that file; do not reconstruct a table here.
 
-### Children
+Headline corrections made in v1.9.0, because the superseded values in this file were being
+quoted:
 
-| Child Age | Points Per Child | Notes |
-|-----------|-----------------|-------|
-| Born during tax year | 1.5 | Year of birth only |
-| Ages 1-5 | 2.5 | Per child |
-| Ages 6-17 | 1.0 | Per child |
-| Age 18 | 0.5 | Last year of child credit |
-
-### Immigration and Return
-
-| Status | Year 1 | Year 2 | Year 3 | Duration |
-|--------|--------|--------|--------|----------|
-| New immigrant (Oleh Chadash) | 3.0 | 2.0 | 1.0 | 3.5 years from aliyah |
-| Returning resident (10+ years abroad) | 3.0 | 2.0 | 1.0 | Same as oleh |
-
-### Other Categories
-
-| Category | Points | Conditions |
-|----------|--------|------------|
-| Single parent | 1.0 | Divorced, widowed, separated with custody |
-| Academic degree (BA) | 1.0 | Per year, for up to 3 years matching study duration (graduates 2023+). Graduates 2014-2022: 1 year only |
-| Academic degree (MA) | 0.5 | For 2 years after completion (graduates 2023+). Graduates 2014-2022: 1 year only |
-| Vocational certificate | 1.0 | Per year, for up to 3 years matching study duration (graduates 2023+). Graduates 2014-2022: 1 year only |
-| Disability (100% or blind) | 2.0 | Permanent disability |
-| Combat reserve soldiers (from 2026) | 0.5-1.0 | 0.5 for 20+ days, 0.75 for 45+ days, 1.0 for 60+ days |
+| Item | Superseded value that was here | Correct value |
+|---|---|---|
+| Child born in the tax year | 1.5 | 2.5 |
+| Child aged 1-2 | folded into a flat "ages 1-5 = 2.5" | 4.5 |
+| Child aged 3 | folded into a flat "ages 1-5 = 2.5" | 3.5 |
+| Child aged 6-17 | 1.0 for both parents | 2.0 mother / 1.0 father |
+| New immigrant | 3.0 / 2.0 / 1.0 over 3.5 years | 1 / 3 / 2 / 1 over 54 months, 8.5 points total (s.35(a)) |
+| Returning resident | same as oleh | s.35(d) covers only those who resumed residency 16.5.2010 to 30.9.2012 |
+| Combat reserve | 0.5 / 0.75 / 1.0, max 1.0 | Max 4.0; 2026-2027 bands start at 30 days, permanent bands from 2028 start at 20 days (s.39B, ITA circular 2025-001368) |
+| Discharged soldier | absent | 2.0 points per year for 3 years, or 1.0 for shorter service (s.39A) |
 
 ## Rental Income Tax Tracks (Residential)
 

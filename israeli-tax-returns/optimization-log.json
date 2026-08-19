@@ -29,6 +29,16 @@
         "Pension ceilings in Step 3.5 (7% of 23,232 NIS/month for salaried, 5.5%/11% limbs for self-employed) were not re-verified this cycle. Check them against the ITA booklet next time; the booklet is fetchable and pdftotext-able.",
         "Mikdamot rates and the Form 6111 300,000 NIS turnover threshold were not re-verified this cycle."
       ]
+    },
+    {
+      "version": "1.9.0",
+      "date": "2026-08-19",
+      "lessons": [
+        "UNVERIFIED carried forward: whether a pre-2022 oleh cohort is still governed by a superseded s.35 schedule. The consolidated Ordinance on nevo shows only the current text and carries no transitional note; kolzchut blocks both curl and WebFetch. The skill now states the current schedule and instructs the agent to confirm the schedule in force for the relevant tax year. Resolve next cycle from Reshumot or the Knesset bill text for Amendment 262.",
+        "Deferred over the Phase 4.1 discretionary cap: spouse-related credit points ss.37/38/39 and the s.66 separate-computation interaction are listed in domain-checklist.md Should-cover but not written into SKILL.md.",
+        "Watch item: israeli-payroll-calculator references/credit-points.md carries the same child credit-point table. It was correct this cycle and matched the statute exactly, but the two files can drift. Any future change to one must check the other.",
+        "Phase 5.7 not run: the description was not modified this cycle."
+      ]
     }
   ]
 }

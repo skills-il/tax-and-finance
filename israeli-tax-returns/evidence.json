@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0",
   "skill": "israeli-tax-returns",
-  "generated_at": "2026-06-16T23:30:00Z",
+  "generated_at": "2026-08-19T00:00:00Z",
   "claims": [
     {
       "claim_id": "income-tax-brackets-2026",
@@ -19,7 +19,7 @@
     },
     {
       "claim_id": "credit-point-value-and-categories",
-      "claim": "Each credit point (nekudat zikui) reduces annual tax by 2,904 NIS (242/month, frozen 2025-2027). Category values: resident male 2.25, female 2.75, new immigrant 3.0/2.0/1.0, child born 1.5, child 1-5 = 2.5, child 6-17 = 1.0, child 18 = 0.5, single parent 1.0, BA/vocational 1.0, MA 0.5, disability 2.0, combat reserve 0.5-1.0 The booklet states only the monthly credit-point value (242 per month, section 33A); the annual 2,904 figure is 242 x 12 and the per-category counts come from the Income Tax Ordinance, not from this booklet.",
+      "claim": "Each credit point (nekudat zikui) reduces annual tax by 2,904 NIS (242 NIS per month, Section 33A, per the ITA 2026 deductions booklet). The booklet states only the monthly value; the annual 2,904 figure is 242 x 12. The per-category point counts are NOT in this booklet and come from the Income Tax Ordinance: see claims child-credit-points-mother-s66g4, child-credit-points-father-s66g5, oleh-credit-points-s35, discharged-soldier-s39a and miluim-s39b-permanent-2028.",
       "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf",
       "raw_snippet": "242 נקודת זיכוי 33א לחודש",
       "fetched_at": "2026-08-11",
@@ -30,7 +30,7 @@
       ],
       "verified_via": "pdf",
       "verified_at": "2026-08-11",
-      "source_note": "Replaced 2026-08-10: prior snippet was ellipsis-stitched. Quote re-read from the Israel Tax Authority 2026 monthly-deductions booklet PDF via pdftotext -layout and confirmed present; Hebrew restored to reading order from the layout-extracted text. This is the verbatim row from the booklet's chapter 'פרק ג - סכומים מתואמים לשנת המס 2026', section 'א. נקודת זיכוי'. The booklet gives the monthly value only; the 2,904 NIS annual figure is 242 x 12, i.e. arithmetic, and the per-category point counts in the claim are not in this row."
+      "source_note": "Corrected 2026-08-19 in v1.9.0: this claim previously restated a superseded credit-point schedule (child born 1.5, ages 1-5 = 2.5, ages 6-17 = 1.0, oleh 3/2/1, combat reserve 0.5-1.0) which the booklet never supported. The Ordinance is now cited per category."
     },
     {
       "claim_id": "surtax-and-corporate",
@@ -285,6 +285,377 @@
         "SKILL.md",
         "SKILL_HE.md"
       ]
+    },
+    {
+      "claim_id": "child-credit-points-mother-s66g4",
+      "claim": "Income Tax Ordinance s.66(c)(4): a woman gets, per child, 2.5 points in the year of birth, 0.5 in the year of majority, 4.5 from the tax year after birth to the year the child turns 2, 3.5 in the year the child turns 3, 2.5 in the years the child turns 4 and 5, and 2 points from the year the child turns 6 to the year before the year of majority.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "raw_snippet": "לנקודות זיכוי בעד ילדיה כלהלן: (א) ½2 נקודות זיכוי בעד כל אחד מילדיה בשנת לידתו, ו-½ נקודת זיכוי בעד כל אחד מילדיה בשנת בגרותו, ½4 נקודות זיכוי בעד כל אחד מילדיה החל בשנת המס שלאחר שנת לידתו ועד לשנת המס שבה מלאו לו שנתיים, ½3 נקודות זיכוי בעד כל אחד מילדיה בשנת המס שבה מלאו לו שלוש שנים, ½2 נקודות זיכוי בעד כל אחד מילדיה בשנות המס שבהן מלאו לו ארבע שנים וחמש שנים, ושתי נקודות זיכוי בעד כל אחד מילדיה החל בשנת המס שבה מלאו לו שש שנים ועד לשנת המס שקדמה לשנת בגרותו; לעניין זה ולעניין פסקה (5), \" שנת לידה \" ו\" שנת בגרות \" – כהגדרתן בסעיף 40(ב)(3); (א1) על א",
+      "fetched_at": "2026-08-19",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/credit-points.md",
+        "references/tax-brackets-credits.md"
+      ],
+      "verified_via": "Ordinance s.66(c)(4) read directly on nevo",
+      "verified_at": "2026-08-19"
+    },
+    {
+      "claim_id": "child-credit-points-father-s66g5",
+      "claim": "Income Tax Ordinance s.66(c)(5): a man gets, per child, 2.5 points in the year of birth, 4.5 from the tax year after birth to the year the child turns 2, 3.5 in the year the child turns 3, 2.5 in the years the child turns 4 and 5, and 1 point from the year the child turns 6 to the year before the year of majority. He gets no half-point in the year of majority.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "raw_snippet": "(5) הגבר יהא זכאי, כנגד המס החל על הכנסתו מיגיעה אישית, לנקודות זיכוי בעד כל אחד מילדיו, כלהלן: (א) ½2 נקודות זיכוי בשנת לידתו של הילד; (ב) ½4 נקודות זיכוי בשל כל ילד החל בשנת המס שלאחר לידתו ועד לשנת המס שבה מלאו לו שנתיים, ½3 נקודות זיכוי בשנת המס שבה מלאו לו שלוש שנים, ו-½2 נקודות זיכוי בשנות המס שבהן מלאו לו ארבע שנים וחמש שנים; (ג) נקודת זיכוי אחת בעד כל אחד מילדיו החל בשנת המס שבה מלאו לו שש שנים ועד לשנת המס שקדמה לשנת בגרותו; (5א) (פקע) (6) בחישוב המס של גבר שנישא לאלמנה יובאו בחשבון נקודות זיכוי בעד כל אחד",
+      "fetched_at": "2026-08-19",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/credit-points.md",
+        "references/tax-brackets-credits.md"
+      ],
+      "verified_via": "Ordinance s.66(c)(5) read directly on nevo",
+      "verified_at": "2026-08-19"
+    },
+    {
+      "claim_id": "form-101-six-child-age-boxes",
+      "claim": "Form 101 part H collects children in six separate age boxes: born in the tax year, turning 1 to 2, turning 3, turning 4 to 5, turning 6 to 17, and turning 18. This is the structural proof that the schedule has six bands, not three.",
+      "source_url": "https://www.gov.il/BlobFolder/service/itc101/he/Service_Pages_Income_tax_annual-report-2024_itc101.pdf",
+      "raw_snippet": "מספר ילדים שנולדו בשנת המס ❏ מספר ילדים שימלאו להם 4שנים עד 5שנים בשנת המס ❏ מספר ילדים שימלאו להם שנה אחת עד שנתיים בשנת המס ❏ .מספר ילדים שימלאו להם 6שנים עד 17שנים בשנת המס . ❏ מספר ילדים שימלאו להם 18שנים בשנת המס . ❏ מספר ילדים שימלאו להם 3שנים בשנת המס ❏ בגין ילדיי המפורטים בחלק ג .ימולא ע\"י הורה )למעט הורה אשר סימן בפסקה 7לעיל( ,אשה לא נשואה שילדיה אינם בחזקתה וכן הורה יחיד).(12 . ❏ מספר ילדים שנולדו בשנת המס . ❏ מספר י",
+      "fetched_at": "2026-08-19",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/credit-points.md"
+      ],
+      "verified_via": "Form 101 PDF read with pdftotext",
+      "verified_at": "2026-08-19"
+    },
+    {
+      "claim_id": "oleh-credit-points-s35",
+      "claim": "Section 35 (סעיף 35) of the Income Tax Ordinance, s.35(a): an oleh gets 1/12 point per month for the first 12 months from aliyah, 1/4 point per month for the following 18 months, 1/6 point per month for the following 12, and 1/12 point per month for the following 12. That is 1 + 4.5 + 2 + 1 = 8.5 points across a 54-month window.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "raw_snippet": "זיכוי לעולה 35. (א) בחישוב המס של עולה יובאו בחשבון – (1) 1/12 נקודת זיכוי לכל חודש משנים-עשר החודשים הראשונים מעלייתו לישראל; (1א) 1/4 נקודת זיכוי לכל חודש משמונה-עשר החודשים שלאחריהם; (2) 1/6 נקודת זיכוי לכל חודש משנים עשר החדשים שלאחריהם; (3) 1/12 נקודת זיכוי לכל חודש משנים עשר החדשים שלאחריהם. (ב) בחישוב מס של בן זוג רשום שהכנסתו החייבת כוללת הכנסה של בן זוגו שהוא עולה, והמס על הכנסתם מחושב במאוחד, יובאו בחשבון נקודות הזיכ",
+      "fetched_at": "2026-08-19",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/credit-points.md",
+        "references/tax-brackets-credits.md"
+      ],
+      "verified_via": "Ordinance s.35(a) read directly on nevo",
+      "verified_at": "2026-08-19"
+    },
+    {
+      "claim_id": "oleh-54-month-window-s35g",
+      "claim": "Income Tax Ordinance s.35(c): the credit is given for a tax year wholly or partly inside the 54 months, by the number of months the oleh sat in Israel that year, and only on the first occasion a person is an oleh. A continuous absence of not less than 6 months and not more than 3 years may, on request, be excluded from the 54 months.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "raw_snippet": "(ג) הזיכוי האמור יינתן לשנת מס שכולה או מקצתה נמצאת בתקופת 54 החודשים האמורים, לפי מספר החדשים שהעולה ישב בישראל באותה שנה, ולא יינתן אלא בפעם הראשונה שנעשה לעולה; לפי בקשתו לא תובא במנין 54 החודשים תקופת היעדרות רצופה מהארץ שאיננה פחותה מששה חדשים ואיננה עולה על שלוש שנים. (ד) בסעיף זה – \" עולה \" – מי שבידו אשרת עולה או תעודת עולה לפי חוק השבות, תש\"י-1950, או מי שזכאי לאשרה או לתעודה כאמור ובי",
+      "fetched_at": "2026-08-19",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/credit-points.md"
+      ],
+      "verified_via": "Ordinance s.35(c) read directly on nevo",
+      "verified_at": "2026-08-19"
+    },
+    {
+      "claim_id": "toshav-chozer-s35d-closed-cohort",
+      "claim": "Income Tax Ordinance s.35(d) defines 'toshav chozer' for the s.35 credit-point track as an individual who again became an Israeli resident between 16 May 2010 and 30 September 2012, after six consecutive years as a foreign resident. It is a closed historical cohort, so a person returning today does not get s.35 points on that basis.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "raw_snippet": "\" תושב חוזר \" – יחיד ששב והיה לתושב ישראל לאחר שהיה תושב חוץ במשך שש שנים רצופות לפחות. (ד) (1) שר האוצר, באישור ועדת הכספים של הכנסת, רשאי להאריך את התקופות המפורטות בפסקאות משנה (א) עד (ח), כולן או חלקן, לגבי יחיד שהיה לתושב ישראל לראשונה או לגבי תושב חוזר ותיק, לתקופה שלא תעלה על עשר שנות מס, ובלבד שביצע השקעה משמעותית בישראל שיש בה כדי לקדם יעדים לאומיים הנוגעים למשק המדינה, בתוך שנתיים מהמועד",
+      "fetched_at": "2026-08-19",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/credit-points.md",
+        "references/tax-brackets-credits.md"
+      ],
+      "verified_via": "Ordinance s.35(d) read directly on nevo",
+      "verified_at": "2026-08-19"
+    },
+    {
+      "claim_id": "discharged-soldier-s39a",
+      "claim": "Section 39A (סעיף 39א) of the Income Tax Ordinance: a discharged soldier gets 1/6 of a credit point per month for each of the 36 months after the month regular service ended if he served at least 23 full months (22 for a woman), and 1/12 of a point per month if he served less. That is 2 points per full year, or 1 point for shorter service, against income from personal exertion.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "raw_snippet": "זיכוי לחייל משוחרר 39א. בחישוב המס על הכנסתו מיגיעה אישית של חייל משוחרר תובא בחשבון חלק מנקודת זיכוי לכל חודש משלושים ושישה החודשים הראשונים שלאחר החודש שבו סיים את שירותו הסדיר, כמפורט להלן: (1) 1/6 נקודת זיכוי – אם שירת שירות סדיר של – (א) לגבי גבר – 23 חודשים מלאים לפחות; (ב) לגבי אישה – 22 חודשים מלאים לפחות; (2) 1/12 נקודת זיכוי – אם שירת שירות סדיר של פחות מ- (א) לגבי גבר – 23 חודשים מלאים; (ב) לגבי אישה – 22 חודשים מלאים; לענין זה, \" חייל משוחרר \" ו\" שירות סדיר \" – כהגדרתם בחוק קליטת חיילים משוחררים, התשנ\"ד-1994. זיכוי בעד שירות מילואים כלוחם 39ב",
+      "fetched_at": "2026-08-19",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/credit-points.md",
+        "references/tax-brackets-credits.md"
+      ],
+      "verified_via": "Ordinance s.39A read directly on nevo",
+      "verified_at": "2026-08-19"
+    },
+    {
+      "claim_id": "form-101-box-14-soldier-national-service",
+      "claim": "Form 101 box 14 (טופס 101 סעיף 14) covers both a discharged soldier and someone who performed national service (sherut leumi), and requires a copy of the discharge or service-completion certificate.",
+      "source_url": "https://www.gov.il/BlobFolder/service/itc101/he/Service_Pages_Income_tax_annual-report-2024_itc101.pdf",
+      "raw_snippet": "אני חייל/ת משוחרר/ת /שירתתי בשירות לאומי .תאריך תחילת השירות . מצורף צילום של תעודת שחרור/סיום שירות. ❏ 15בגין סיום לימודים לתואר אקדמי ,סיום התמחות או סיום לימודי מקצוע .מצורפת הצהרה בטופס",
+      "fetched_at": "2026-08-19",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/credit-points.md"
+      ],
+      "verified_via": "Form 101 PDF read with pdftotext",
+      "verified_at": "2026-08-19"
+    },
+    {
+      "claim_id": "miluim-s39b-permanent-2028",
+      "claim": "Section 39B of the Income Tax Ordinance, added by Amendment 283 published 23.11.2025 in Sefer HaChukim 3461: 0.5 point for 30 to 39 combat reserve days in the preceding tax year, 0.75 for 40 to 49, one point for 50 days and above, plus a further 0.25 point for each additional 5 days beyond those 50, capped at 4 points in total.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "raw_snippet": "זיכוי בעד שירות מילואים כלוחם 39ב. (א) בחישוב המס לשנת המס של יחיד ששירת שירות מילואים כלוחם בשנת המס שקדמה לה (להלן – שנת המס הקודמת), יובאו בחשבון נקודות זיכוי כמפורט להלן: (1) ½ נקודת זיכוי – אם שירת שירות מילואים כלוחם בין 30 ל-39 ימים בשנת המס הקודמת; (2) ¾ נקודת זיכוי – אם שירת שירות מילואים כלוחם בין 40 ל-49 ימים בשנת המס הקודמת; (3) נקודת זיכוי אחת – אם שירת שירות מילואים כלוחם 50 ימים ומעלה בשנת המס הקודמת; (4) תוספת ¼ נקודת זיכוי בעד כל חמישה ימים נוספים ששירת שירות מילואים כלוחם מעבר ל-50 הימים האמורים בפסקה (3), ובלבד שסך נקודות הזיכוי לפי סעיף זה לא יעלה על 4 נקודות זיכוי. (ב) בסעיף זה – \" לוחם \" – לפי פקודות הצבא כהגדרתן בחוק השיפוט הצבאי, התשט\"ו-1955;",
+      "fetched_at": "2026-08-19",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/credit-points.md",
+        "references/tax-brackets-credits.md"
+      ],
+      "verified_via": "Ordinance s.39B read directly on nevo",
+      "verified_at": "2026-08-19"
+    },
+    {
+      "claim_id": "miluim-s39b-two-regimes-circular",
+      "claim": "ITA employers circular 2025-001368 of 16.12.2025: the permanent s.39B rule gives 0.75 point at 20 days with a further 0.25 per additional 5 days to a cap of 4, and applies from tax year 2028. A separate two-year hora'at sha'a for 1.1.2026 to 31.12.2027 gives 0.5 point for 30 to 39 days, 0.75 for 40 to 49, and one point for 50 days and above, plus 0.25 per additional 5 days beyond 50, capped at 4.",
+      "source_url": "https://www.gov.il/BlobFolder/dynamiccollectorresultitem/employers-info161225-1/he/IncomeTax_employers-info161225-1.pdf",
+      "raw_snippet": "בסעיף 39ב נקבע כי בחישוב המס לשנת המס של יחיד ששירת שירות מילואים כלוחם בשנת המס שקדמה לה (להלן\" :שנת המס הקודמת\") ,יובאו בחשבון 0.75נקודת זיכוי אם שירת לפחות 20 ימים בשנת המס הקודמת .כמו כן ,בעד כל חמישה ימים נוספים (מעבר ל 20הימים הראשונים) תתווסף 0.25נקודת זיכוי ובלבד שסך נקודות הזיכוי על פי סעיף זה לא יעלו על 4נקודות זיכוי סך הכל (ראה פירוט בטבלה בסעיף 4להלן). .3במסגרת החוק נקבעה הוראת שעה למשך שנתיים ,לתקופה שמתחילה ביום 1בינואר 2026עד יום 31בדצמבר ,2027לפיה בחישוב המס לשנת המס של יחיד ששירת שירות מילואים כלוחם בשנת המס הקודמת ,יובאו בחשבון 0.5נקודת זיכוי אם שירת 30יום ועד 39ימים 0.75 ,נקודת זיכוי אם שירת בין 40יום ל 49ימים ונקודת זיכוי אחת אם שירת 50ימים ומעלה. כמו כן ,בעד כל חמישה ימים נוספים (מעבר ל 50הימים הראשונים) תתווסף 0.25נקודת זיכוי ובלבד שסך נקודות הזיכוי על פי סעיף זה לא יעלו על 4נקודות זיכוי סך הכל . רצ\"ב סיכום נקודות הזיכוי לשנות המס 2026ו ,2027-להן זכאי מי ששירת במילואים כלוחם בהתאם למספר ימי המילואים בשנה הקודמת: מספר ימי שירות מילואים כלוחם עד- מ- 39 30 49 40 54 50 59 55 64 60 69 65 74 70 79 75 84 80 89 85 94 90 99 95 104 100 109 105 ומעלה 11",
+      "fetched_at": "2026-08-19",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/credit-points.md",
+        "references/tax-brackets-credits.md"
+      ],
+      "verified_via": "ITA circular PDF read with pdftotext",
+      "verified_at": "2026-08-19"
+    },
+    {
+      "claim_id": "miluim-s39b-prior-year-and-idf-certificate",
+      "claim": "Points under s.39B are counted on combat reserve service in the PRECEDING tax year, and are given only against an IDF certificate of entitlement. Form 101 collects the day count at part H box 16.",
+      "source_url": "https://www.gov.il/BlobFolder/dynamiccollectorresultitem/employers-info161225-1/he/IncomeTax_employers-info161225-1.pdf",
+      "raw_snippet": "יחיד ששירת שירות מילואים כלוחם בשנת המס הקודמת ,יצרף אישור מצה\"ל על זכאותו בעד שירות מילואים כלוחם ובהתאם לאישור זה בלבד יינתנו נקודות הזיכוי. .7טופס 101עודכן בהתאם בחלק ח' ,סעיף .16 .8יש לעדכן את תוכנות השכר בהתאם לאמור בהנחיה זו. העתקים: מר שי אהרו",
+      "fetched_at": "2026-08-19",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/credit-points.md"
+      ],
+      "verified_via": "ITA circular PDF read with pdftotext",
+      "verified_at": "2026-08-19"
+    },
+    {
+      "claim_id": "netul-yecholet-s45a-two-points",
+      "claim": "Income Tax Ordinance s.45(a): a resident who had a paralysed child, a blind child, or a child with an intellectual-developmental disability gets two credit points for each such child. Under s.45(c) the points are given only if the filer did not take the s.44 credit for that child.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "raw_snippet": "זיכוי בעד נטולי יכולת 45. (א) יחיד תושב ישראל שהיה לו בשנת המס ילד משותק, ילד עיוור או ילד עם מוגבלות שכלית-התפתחותית או שהיה לבן זוגו ילד כאמור, יובאו בחשבון בחישוב המס שלו או של בן זוגו שתי נקודות זיכוי בשל כל ילד כאמור. (ב) (בוטל) (ג) יחיד יהיה זכאי לנקודות הזיכוי על פי סעיף קטן (א) רק אם לא קיבל זיכוי ממס עבור אותו ילד על פי סעיף 44. (ד) שר האוצר רשאי לקבוע תנאים לזכאות לנקודות זיכוי על פי סעיף זה. זיכוי בעד דמי ביטוח ותגמולים 45א. (א) יחיד יזוכה ממס ב-25% מן הסכומים ששילמו הוא או בן זוגו בשנת המס – (1) לביטוח חייו או חיי בן זוגו בחברת ביטוח אם הוא ת",
+      "fetched_at": "2026-08-19",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/credit-points.md"
+      ],
+      "verified_via": "Ordinance s.45 read directly on nevo",
+      "verified_at": "2026-08-19"
+    },
+    {
+      "claim_id": "section-44-institution-credit",
+      "claim": "Section 44 (סעיף 44) of the Income Tax Ordinance: where the filer or spouse paid in the tax year to maintain in a special institution a child, spouse, or parent who is completely paralysed, permanently bedridden, blind, or not of sound mind, or a child with an intellectual-developmental disability, the credit is 35 percent of the part of the sums paid that exceeds 12.5 percent of taxable income.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "raw_snippet": "זיכוי בעד הוצאות החזקת קרוב במוסד 44. בחישוב הכנסתו החייבת של יחיד תושב ישראל שהוא או בן זוגו שילם בשנת המס בעד החזקתם במוסד מיוחד של ילד, בן זוג או הורה משותקים לחלוטין, מרותקים למיטה בתמידות, עיוורים או בלתי שפויים בדעתם, וכן בשל החזקת ילד עם מוגבלות שכלית-התפתחותית במוסד מיוחד, יותר לו זיכוי ממס של 35% מאותו חלק מהסכומים ששילם העולה על 12.5% מהכנסתו החייבת. שר האוצר רשאי לקבוע בתקנות תנאים לזכאות לזיכוי ממס על פי סעיף זה. זיכוי בעד נטולי יכולת 45. (א) יחיד תושב ישראל שהיה לו בשנת המס ילד משותק, ילד עיוור או ילד עם מוגבלות שכלית-התפ",
+      "fetched_at": "2026-08-19",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/credit-points.md"
+      ],
+      "verified_via": "Ordinance s.44 read directly on nevo",
+      "verified_at": "2026-08-19"
+    },
+    {
+      "claim_id": "mezonot-and-minor-credit-points",
+      "claim": "Section 40A (סעיף 40א) of the Income Tax Ordinance gives one credit point to a divorced filer who pays mezonot to a former spouse and is married to another spouse. Section 40B (סעיף 40ב) gives one credit point to an individual who is 16 but not yet 18 in the tax year.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "raw_snippet": "נקודת זיכוי לגרוש שנשא אשה אחרת 40א. בחישוב המס של גרוש שהוא או בן זוגו משלם מזונות לבן זוגו לשעבר, והוא נשוי לבן-זוג אחר, תובא בחשבון נקודת זיכוי אחת. נקודת זיכוי לנער 40ב. בחישוב המס של יחיד שמלאו לו או לבן-זוגו 16 שנים אך לא 18 שנים תובא בחשבון נקודת זיכוי. נקודות זיכוי ליחיד שסיים לימודים לתואר אקדמי 40ג. (א) בחישוב המס של יחיד תושב ישראל (בסעיף זה – יחיד) תובא בחשבון נקודת זיכוי אחת אם הוא זכ",
+      "fetched_at": "2026-08-19",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/credit-points.md"
+      ],
+      "verified_via": "Ordinance ss.40A and 40B read directly on nevo",
+      "verified_at": "2026-08-19"
+    },
+    {
+      "claim_id": "single-parent-additional-points-s40b",
+      "claim": "Income Tax Ordinance s.40(b)(2): a parent living apart who is entitled to the child points under s.40(b)(1) gets one additional credit point, and where the children's keep is split between the parents the parent not entitled under s.40(b)(1) gets one point or a part of it according to their share of the keep. Section 40(b)(1b) gives a further point in an only-parent family.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "raw_snippet": "(2) הורים החיים בנפרד יקבל ההורה הזכאי לנקודת זיכוי לפי פסקה (1), נקודת זיכוי אחת נוספת ואם כלכלת ילדיהם מחולקת ביניהם, יקבל ההורה שאינו זכאי לנקודת זיכוי על פי פסקה (1) נקודת זיכוי אחת או חלק ממנה לפי חלקו בהוצאות הכלכלה; (3) לענין סעיף קטן זה – \" ילד להורה אחד \" – ילד שבשנת המס טרם מלאו לו תשע עשרה שנים ואחד מהוריו נפטר בשנ",
+      "fetched_at": "2026-08-19",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/credit-points.md"
+      ],
+      "verified_via": "Ordinance s.40(b) read directly on nevo",
+      "verified_at": "2026-08-19"
+    },
+    {
+      "claim_id": "reg-134a-filing-exemption-ceilings-2025",
+      "claim": "Regulation 134A filing-exemption ceilings for tax year 2025, per the ITA 2026 deductions booklet: salary (Addition A) 723,000 NIS; rent as additional income (Addition B) 375,000; foreign income and foreign pension (Addition D) 375,000; interest (Addition E) 717,000; securities-sale turnover (Addition F) 2,810,000; holding of foreign assets, Reg. 3(a)(6), 2,086,000; balance in a foreign bank account, Reg. 3(a)(7), 2,086,000; income chargeable to s.121B surtax, Reg. 3(a)(8), 721,560. The 723,000 salary ceiling and the 721,560 surtax figure are two different thresholds. These are תקנה 134א and תקנה 3(א) of the Income Tax Regulations (Exemption from Filing a Return), 1988, Regulation 134A and Regulation 3.",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf",
+      "raw_snippet": "פטור מהגשה דין וחשבון 134א: לשנה מס 2025 723,000 משכורת -תוספת א לשנה מס 2025 375,000 דמי שכירות (הכנסה נוספת) -תוספת ב לשנה מס 2025 375,000 הכנסת חוץ ,הכנסה מקצבת חוץ -תוספת ד לשנה מס 2025 717,000 הכנסה מריבית -תוספת ה לשנה מס 2025 2,810,000 הכנסה ממכירת ניירות ערך (מחזור) -תוספת ו לשנה מס 2025 2,086,000 החזקה בנכסי חוץ -סייג לפטור -תקנה (3א)()6 לשנה מס 2025 החזקה ביתרה בחשבון תאגיד בנקאי חוץ -סייג 2,086,000 לפטור -תקנה (3א)()7 לשנה מס 2025 הכנסות גבוהות -הכנסה החייבת במס נוסף 721,560 121ב -סייג לפטור -תקנה (3א)()8 15 סכומים אחרים ה פטור מהגשת דוח עצמאי מקוון: פטור מהגשת דו\"ח עצמאי מקוון -הכנסה ליחיד לשנת המס 20",
+      "fetched_at": "2026-08-19",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/form-guide.md"
+      ],
+      "verified_via": "pdf",
+      "verified_at": "2026-08-19"
+    },
+    {
+      "claim_id": "online-filing-exemption-131b2",
+      "claim": "Exemption from filing the return online under s.131(b2)(4), tax year 2025: 95,820 NIS for an individual and 191,640 NIS for a couple, per the ITA 2026 deductions booklet.",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf",
+      "raw_snippet": "פטור מהגשת דוח עצמאי מקוון: פטור מהגשת דו\"ח עצמאי מקוון -הכנסה ליחיד לשנת המס 2025 95,820 (131ב)4()2 פטור מהגשת דו\"ח עצמאי מקוון -הכנסה לזוג לשנת המס 2025 191,640 (131ב)4()2 עלות שכר לעובד בתאגיד פיננסי -תקרה לשנה 2,810,280 לתשלום )17(32 ו .הוצאות נסיעה לחו\"ל ליום 160$ הוצאות לינה לפי קבלות מזערי ליום 365$ הוצאות לינה לפי קבלות",
+      "fetched_at": "2026-08-19",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "verified_via": "pdf",
+      "verified_at": "2026-08-19"
+    },
+    {
+      "claim_id": "aliya-return-incentive-2026-horaat-shaa",
+      "claim": "Economic Efficiency Law 2026, chapter D, temporary provision 'Encouragement of Aliyah to Israel and Return to It', in force 31.3.2026: exemption from tax on income from personal exertion produced in Israel for an oleh chadash or toshav chozer vatik who arrived between 5.11.2025 and 31.12.2026, given in addition to any other relief, under s.2(a) over five tax years with ceilings of 600,000 NIS in 2026, 1,000,000 NIS in 2027, 1,000,000 NIS in 2028, 350,000 NIS in 2029 and 150,000 NIS in 2030. The implementing circular had not been published as at this booklet.",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf",
+      "raw_snippet": "ביום 31.3.2026נכנסה לתוקפה הוראת השעה \"חוק עידוד עלייה לישראל וחזרה אליה\" שמטרתה לעודד עלייה של עולים חדשים ושיבה לישראל של תושבים חוזרים ותיקים .הוראת השעה נועדה להקל על קליטתם בישראל של עולים ותושבים חוזרים ותיקים באמצעות מתן הטבת מס משמעותית על הכנסותיהם מיגיעה אישית (מעסק וממשכורת) המופקת בישראל. הטבה זו ניתנת בנוסף לכל הטבה אחרת המוקנית לעולים חדשים ותושבים חוזרים. הוראת השעה מקנה פטור ממס לעולה חדש או לתושב חוזר ותיק שהגיע לישראל בתקופה שבין ה 5/11/2025 -ל 31/12/2026-על הכנסתו מיגיעה אישית (הכנסות מעסק וממשכורת) ועד לתקרה השנתית הקבועה בחוק. ההטבה קבועה בסעיף (2א) להוראת השעה והיא תינתן במהלך חמש שנות מס ,החל משנת המס 2026ועד ,2030בהתאם לתקרות הפטור הבאות: שנת מס תקרת הפטור (בש\"ח) 2026 600,000 2027 1,000,000 2028 1,000,000 2029 350,000 2030 150,000 חוזר שבו יפורטו כלל התנאים והסוגיות הנוגעות ליישום החוק יפורסם בהמשך. 4 ג .עדכונים במתן הטבות מס ליישובים .1במהלך חודש ינואר נוספו לרשי",
+      "fetched_at": "2026-08-19",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/credit-points.md"
+      ],
+      "verified_via": "pdf",
+      "verified_at": "2026-08-19"
+    },
+    {
+      "claim_id": "section-11-yishuv-2026-changes",
+      "claim": "Section 11 / סעיף 11 yishuv relief, ITA 2026 deductions booklet: Kedem Arava added at 10 percent with a ceiling of 180,000 NIS, Yonadav at 7 percent with 146,640 NIS, Bitron at 12 percent with 213,240 NIS; a 2026-2029 hora'at sha'a changed rates and ceilings for part of the Chevel Tekuma yishuvim and added Ashkelon; and under the Encouragement of Mixed Urban Yishuv Law a full-year resident of a qualifying mixed urban yishuv gets a 12 percent credit up to an income ceiling of 226,560 NIS, with Nof HaGalil added. Section 11 gives a percentage discount on tax on personal-exertion income only, per yishuv, capped at an annual income ceiling.",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf",
+      "raw_snippet": "במהלך חודש ינואר נוספו לרשימת היישובים המוטבים שלושת ישובים הבאים : שיעור 10%תקרה 180,000 )1קדם ערבה תקרה 146,640 שיעור 7% )2יונדב תקרה 213,240 שיעור 12% )3בתרון .2חוק הטבות מס ליישובים (תיקוני חקיקה) ,התשפ\"ו – ( 2026הוראת שעה) בהתאם לחוק נקבעה הוראת שעה לתיקון פקודת מס הכנסה לשנים 2026עד 2029לפיה נעשו שינויים המשפיעים על שיעורי ההטבה והתקרות לחלק מיישובי חבל תקומה וכמו כן ,במסגרת הוראת השעה נוספה העיר אשקלון לרשימת היישובים המוטבים. .3חוק עידוד יישוב עירוני מעורב (הוראת שעה) ,התשפ\"ו 2026 - בהתאם לחוק נקבעה הוראת שעה לתיקון פקודת מס הכנסה לשנים 2026עד 2029לפיה מי שהיה במשך כל שנת המס תושב ביישוב עירוני מעורב מוטב כהגדרתו בחוק יהיה זכאי באותה שנה לזיכוי ממס בשיעור 12%עד לתקרת הכנסה של 226,560שקלים חדשים. במסגרת הוראת שעה זו נוסף הישוב נוף הגליל לרשימת הישובים המוטבים. הי",
+      "fetched_at": "2026-08-19",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/credit-points.md"
+      ],
+      "verified_via": "pdf",
+      "verified_at": "2026-08-19"
+    },
+    {
+      "claim_id": "credit-point-arithmetic-derived",
+      "claim": "Derived arithmetic at the 2026 credit-point value of 2,904 NIS: the gap between a 4.5-point and a 2.5-point band for a one-year-old is 2 points = 5,808 NIS; the gap between a 4.0-point and a 1.0-point combat-reserve entitlement is 3 points = 8,712 NIS; the 4.0-point combat-reserve cap is worth 11,616 NIS; 8.25 points is 23,958 NIS. Each figure is the point count multiplied by 2,904, which is the booklet's 242 NIS monthly value times twelve.",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf",
+      "raw_snippet": "242 נקודת זיכוי 33א ב .קופות גמל וקרנות השתלמות תקרת הכנסה מ",
+      "fetched_at": "2026-08-19",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/credit-points.md"
+      ],
+      "verified_via": "pdf",
+      "verified_at": "2026-08-19",
+      "source_note": "Arithmetic derived from the booklet's credit-point value; the multiplications are shown in full in the claim."
+    },
+    {
+      "claim_id": "education-credit-points-s40c",
+      "claim": "Section 40C (סעיף 40ג) of the Income Tax Ordinance: one credit point for a first academic degree and half a point for a second, for as many tax years as the studies took, capped at three tax years for a first degree and two for a second, starting the tax year after studies ended.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "raw_snippet": "נקודות זיכוי ליחיד שסיים לימודים לתואר אקדמי 40ג. (א) בחישוב המס של יחיד תושב ישראל (בסעיף זה – יחיד) תובא בחשבון נקודת זיכוי אחת אם הוא זכאי לקבל תואר אקדמי ראשון ומחצית נקודת זיכוי אם הוא זכאי לקבל תואר אקדמי שני, ממוסד להשכלה גבוהה. (ב) נקודת זיכוי אחת או מחצית נקודת זיכוי כאמור בסעיף זה, לפי הענין, תובא בחשבון במספר שנות מס שהן כמספר שנות לימודיו האקדמיות, ובלבד שתובא בחשבון בלא יותר משלוש שנות מס בעבור לימודי תואר אקדמי ראשון ובלא יותר משתי שנות מס בעבור לימודי תואר אקדמי שני. (ג) נקודת זיכוי אחת כאמור בסעיף זה בעבור לימודי תואר אקדמי ראשון תובא בחשבון החל בשנת המס שלאחר שנת המס שבה הסתיימו לימודיו לתואר אקדמי ראשון, ומחצית נקודת זיכוי כאמור בסעיף זה בעבור לימודי תואר אקדמי שני – החל בש",
+      "fetched_at": "2026-08-19",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/credit-points.md"
+      ],
+      "verified_via": "Ordinance s.40C read directly on nevo",
+      "verified_at": "2026-08-19"
+    },
+    {
+      "claim_id": "base-credit-point-s34-resident",
+      "claim": "Section 34 (סעיף 34) of the Income Tax Ordinance gives an individual who was an Israeli resident in the tax year two credit points.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "raw_snippet": "זיכוי לתושב ישראל 34. בחישוב המס של יחיד שהיה תושב ישראל בשנת המס יובאו בחשבון שתי נקודות זיכוי. זיכוי לעולה 35. (א) בחישוב המס של עולה יובאו בחשבון –",
+      "fetched_at": "2026-08-19",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/credit-points.md"
+      ],
+      "verified_via": "Ordinance s.34 read directly on nevo",
+      "verified_at": "2026-08-19"
+    },
+    {
+      "claim_id": "travel-credit-s36-quarter-point",
+      "claim": "Section 36 (סעיף 36) of the Income Tax Ordinance gives an Israeli resident a further quarter of a credit point as a travel credit, which is why the base for a resident is 2.25 rather than 2.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "raw_snippet": "זיכוי בעד נסיעה למקום ההשתכרות 36. בחישוב המס של יחיד תושב ישראל תובא בחשבון ¼ נקודת זיכוי כזיכוי נסיעה. זיכוי לאשה 36א. בחישוב המס של אשה תובא בחשבון ½ נקודת זיכוי. זיכו",
+      "fetched_at": "2026-08-19",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/credit-points.md"
+      ],
+      "verified_via": "Ordinance s.36 read directly on nevo",
+      "verified_at": "2026-08-19"
+    },
+    {
+      "claim_id": "woman-credit-s36a-half-point",
+      "claim": "Section 36A (סעיף 36א) of the Income Tax Ordinance gives a woman a further half credit point, so a resident woman's base is 2.75.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "raw_snippet": "זיכוי לאשה 36א. בחישוב המס של אשה תובא בחשבון ½ נקודת זיכוי. זיכוי בעד בן-זוג 37. בחישוב המס של יחיד מוטב תושב ישראל, שה",
+      "fetched_at": "2026-08-19",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/credit-points.md"
+      ],
+      "verified_via": "Ordinance s.36A read directly on nevo",
+      "verified_at": "2026-08-19"
+    },
+    {
+      "claim_id": "form-101-box-15-form-119",
+      "claim": "Form 101 box 15 (טופס 101 סעיף 15) claims the credit on completing an academic degree, an internship (hitmachut), or vocational studies (limudei miktzoa), and requires a declaration on Form 119 (טופס 119).",
+      "source_url": "https://www.gov.il/BlobFolder/service/itc101/he/Service_Pages_Income_tax_annual-report-2024_itc101.pdf",
+      "raw_snippet": "בגין סיום לימודים לתואר אקדמי ,סיום התמחות או סיום לימודי מקצוע .מצורפת הצהרה בטופס .119 ❏ 16שירתתי כלוחם/לוחמת מילואים סה”כ ____י",
+      "fetched_at": "2026-08-19",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/credit-points.md"
+      ],
+      "verified_via": "Form 101 PDF read with pdftotext",
+      "verified_at": "2026-08-19"
+    },
+    {
+      "claim_id": "form-101-box-3-yishuv-form-1312a",
+      "claim": "Form 101 box 3 claims the yishuv mezake relief and requires a certificate from the local authority on Form 1312א, written in English sources as Form 1312A (טופס 1312א).",
+      "source_url": "https://www.gov.il/BlobFolder/service/itc101/he/Service_Pages_Income_tax_annual-report-2024_itc101.pdf",
+      "raw_snippet": "אני תושב/ת קבוע/ה בישוב מזכה ) (13מתאריך מתגוררים ביישוב .חובה לצרף :תעודת עולה. ❏ 4אני עולה חדש/ה מתאריך לא היתה לי הכנסה בישראל מתחילת שנת המס הנוכחית עד תאריך . מי שתקופת זכאותו אינה רצופה בשל שירות חובה בצה\"ל ,לימודים על תיכונ",
+      "fetched_at": "2026-08-19",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/credit-points.md"
+      ],
+      "verified_via": "Form 101 PDF read with pdftotext",
+      "verified_at": "2026-08-19"
     }
   ]
 }

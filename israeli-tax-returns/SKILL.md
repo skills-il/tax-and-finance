@@ -45,11 +45,15 @@ Form 1301 is the main annual income tax return for individuals and non-corporate
 
 **Who must file Form 1301:** (mandatory-filing triggers are set by the Income Tax Regulations (Exemption from Filing a Return), 1988, under Section 131(a) of the Ordinance, a salaried employee is exempt only if they stay under every threshold below)
 - Self-employed individuals (osek murshe or osek patur)
-- Individuals whose gross salary exceeded 721,560 NIS (the surtax / high-salary mandatory-filing threshold, frozen 2025-2027)
+- Individuals whose annual salary exceeded the Regulation 134A filing-exemption ceiling. **Two different ceilings get conflated here and they are not the same number.** For tax year 2025 the salary ceiling in Addition A is **723,000 NIS**; separately, Regulation 3(a)(8) withdraws the exemption from anyone whose income is chargeable to surtax under Section 121B, at **721,560 NIS**. Either one crossed means a return is due.
 - Individuals with income from multiple employers
 - Individuals with foreign income or assets abroad exceeding reporting thresholds (including a foreign securities/brokerage account)
 - Anyone who received capital gains during the tax year
 - Individuals with rental income above the exempt threshold; in particular, annual residential rent above **375,000 NIS** requires a return even on the 10% track (below that, the 10% track can be settled without a full return)
+
+**All eight Regulation 134A filing-exemption ceilings for tax year 2025 are tabulated in `references/form-guide.md`.** Crossing any one of them removes the exemption.
+
+A separate exemption from filing the return **online** (Section 131(b2)(4)) applies below 95,820 NIS for an individual or 191,640 NIS for a couple, tax year 2025. That is an exemption from the online channel, not from filing.
 
 **Main sections of Form 1301:** personal details; employment income (from Form 106); business/profession income (Appendix Aleph / Form 1320); rental income and chosen track; capital and investment income; foreign income (Appendix 1327); deductions and credits (pension Sections 45A/47, donations Section 46, life insurance); and nekudot zikui (Step 3).
 
@@ -88,85 +92,56 @@ were never credited.
 
 ### Step 2.6: Havraa-Day Reduction on Form 106 (Fields 011/012, tax years 2024-2025 only)
 
-For tax years 2024 and 2025 ONLY, temporary legislation reduced employees' convalescence pay (dmei havra'a) to help fund Iron Swords reserve-duty benefits: a separate 2024 law, then the חוק הקפאה והפחתה של דמי הבראה (Havraa Freeze-and-Reduction Law) published 27 March 2025 for tax year 2025. It produces a value on the Form 106 and Form 1301 of most salaried filers for those two years. Per Reshut HaMisim circular 2025-000583 (14 May 2025):
-
-- **Amount:** for a full-time employee, one havraa day is reduced, not less than 418 NIS and not more than 471.4 NIS. (A reduced half-day track applies to lower earners, see `references/form-guide.md`.)
-- **Where it appears:** Form 106 reports it in field 011/012, "מחיר יום ההבראה שהופחת ממשכורת העובד" (price of the havraa day reduced from the employee's salary). On Form 1301 it appears at line 60, "השתתפות זמנית הפחתת דמי הבראה", printed inside Part יב (the personal-deductions section).
-- **It is informational only, NOT a deduction and NOT a credit.** The reduced amount was already netted out of the gross salary reported in field 158, and the employer's participation amount is not income to the employee (per the circular). Do NOT enter field 011/012 as a Part יב deduction or as a tax credit, even though it is printed inside the deductions section of the form. Treating it as a deduction double-counts the benefit and understates tax.
-- **Exemption:** a home/domestic employer (an individual employing someone outside a business, for example a household employing a caregiver) is exempt from the reduction.
-- **Sunset, resolved as of 27 July 2026: the law was NOT renewed.** Both the freeze and the reduction expired with tax year 2025 and are not in force for 2026, so a 2026 Form 106 should carry no field 011/012 value and a 2026 Form 1301 no line 60 value. If one appears, question it rather than transcribing it.
-- **This step is still live work, not history.** Returns for tax years 2024 and 2025 are exactly what is being filed during 2026, so the reduction still has to be handled correctly on the return in front of you. Read the step as scoped to the tax YEAR of the return, not to the year you are filing in.
+For tax years 2024 and 2025 only, temporary legislation reduced employees' convalescence pay (dmei havra'a). It produces a value in Form 106 field 011/012 and at line 60 of Form 1301 for those two years, and those are exactly the returns being filed during 2026. **It is informational, not a deduction and not a credit:** the amount was already netted out of the gross salary in field 158, so entering it as a Part YB deduction double-counts the benefit and understates tax. A home or domestic employer is exempt from the reduction. The law was **not renewed** and expired with tax year 2025, so a 2026 form carrying such a value should be questioned rather than transcribed. Amounts, the half-day track, and the circular reference are in `references/form-guide.md`.
 
 ### Step 3: Nekudot Zikui (Tax Credit Points) Calculation
 
-Each nekudot zikui point reduces the annual tax liability by 2,904 NIS (2025-2027, frozen, approximately 242 NIS/month). Calculate the taxpayer's total points:
+Each nekudot zikui point reduces the annual tax liability by 2,904 NIS (2026, 242 NIS/month). Points reduce the tax itself, not taxable income, and cannot take the liability below zero.
+
+**The full schedule, with every category and every band, is in `references/credit-points.md`. Read it before quoting a number.** The summary below is the shape of the calculation, not a substitute for the table.
 
 | Category | Points | Notes |
 |----------|--------|-------|
-| Israeli resident (male) | 2.25 | Base entitlement |
-| Israeli resident (female) | 2.75 | Base entitlement (0.5 additional) |
-| New immigrant (oleh chadash) | 3.0 in year 1, 2.0 in year 2, 1.0 in year 3 | For 3.5 years from aliyah date |
-| Returning resident (toshav chozer) | Same as oleh chadash | After 10+ years abroad |
-| Child born during tax year | 1.5 | For each child born that year |
-| Children aged 1-5 | 2.5 per child | For each child |
-| Children aged 6-17 | 1.0 per child | For each child |
-| Child aged 18 | 0.5 | Last year of child credit |
-| Single parent | 1.0 | Divorced, widowed, or separated with custody |
-| Academic degree (BA) | 1.0 | Per year, for up to 3 years matching study duration (graduates 2023+). Graduates 2014-2022: 1 year only |
-| Academic degree (MA) | 0.5 | For 2 years after completion (graduates 2023+). Graduates 2014-2022: 1 year only |
-| Vocational certificate | 1.0 | Per year, for up to 3 years matching study duration (graduates 2023+). Graduates 2014-2022: 1 year only |
+| Israeli resident | 2.25 | Section 34 (2.0) plus Section 36 travel credit (0.25) |
+| Woman, additional | 0.5 | Section 36A, so a resident woman is 2.75 |
+| Children | **Six age bands, not three** | Year of birth 2.5; ages 1-2 **4.5**; age 3 **3.5**; ages 4-5 2.5; ages 6-17 **2.0 mother / 1.0 father**; year the child turns 18 0.5 mother only. Sections 66(c)(4) and 66(c)(5) |
+| Child who is paralysed, blind, or has an intellectual-developmental disability | 2.0 per child | Section 45(a), on top of the age band. Mutually exclusive with the Section 44 credit |
+| Single parent | 1.0 | Section 40(b)(2), additional |
+| New immigrant (oleh chadash) | 1 / 3 / 2 / 1 per year across a **54-month** window from the aliyah date, **8.5 points total** | Section 35(a). Keyed to the aliyah date, not the calendar year |
+| Returning resident (toshav chozer) | **Not the oleh track.** Section 35(d) covers only those who resumed Israeli residency between 16.5.2010 and 30.9.2012 | A person returning today gets no Section 35 points on that basis |
+| Discharged soldier / national service | **2.0 per year for 3 years** if regular service was 23+ months (man) or 22+ months (woman), otherwise 1.0 per year | Section 39A, 1/6 or 1/12 point per month for the 36 months after discharge. Form 101 box 14 |
+| Combat reserve service | **Up to 4.0**, on the previous year's days | Section 39B. 2026-2027: 0.5 at 30-39 days, 0.75 at 40-49, 1.0 at 50-54, then +0.25 per extra 5 days to 4.0 at 110+. From 2028: 0.75 from 20 days, +0.25 per extra 5 days to 4.0 at 85+ |
+| Divorced filer who remarried and pays mezonot | 1.0 | Section 40A |
+| Aged 16-17 in the tax year | 1.0 | Section 40B |
+| Academic degree (BA) | 1.0 | For as many tax years as the degree took, capped at 3. Section 40C |
+| Academic degree (MA) | 0.5 | Capped at 2 tax years. Section 40C |
+| Vocational studies certificate | 1.0 | Form 101 box 15 claims it alongside the academic credit, on a Form 119 declaration. Confirm the year count for vocational studies before quoting it |
 | Disability (100% or blind) | 2.0 | Permanent |
-| Combat reserve soldiers | 0.5-1.0 | Based on reserve days (from 2026: 0.5 points for 20+ days, 0.75 for 45+ days, 1.0 for 60+ days) |
+
+**Section 44 institution credit (not a credit point):** where the filer paid to maintain a child, spouse, or parent who is completely paralysed, permanently bedridden, blind, or not of sound mind in a special institution, the credit is 35 percent of the part of the payments exceeding 12.5 percent of taxable income.
+
+**Section 11 yishuv mutav (not a credit point):** a percentage discount on tax on personal-exertion income, capped at an annual ceiling. The rate and the ceiling differ **per yishuv** and change annually. Read the row for the specific yishuv in chapter H of the ITA deductions booklet; never quote a rate from memory.
 
 **Calculation example:**
-A married woman (2.75 points) with two children aged 3 and 7 (2.5 + 1.0 = 3.5 points) = 6.25 total points = 6.25 x 2,904 = 18,150 NIS annual tax reduction.
+A married woman (2.75 points) with two children aged 3 and 7 in the tax year: age 3 gives 3.5 points, age 7 gives 2.0 points for the mother. Total 2.75 + 5.5 = 8.25 points = 8.25 x 2,904 = 23,958 NIS annual tax reduction.
 
-### Step 3.5: Pension Contribution Credit (Section 45A) and Deduction (Section 47)
+### Step 3.1: Aliyah and Return Incentive (temporary provision, in force 31.3.2026)
 
-Pension contributions receive two separate tax benefits that must both be claimed on Form 1301. Missing either is one of the most common filing errors.
+Chapter D of the Economic Efficiency Law 2026 exempts an **oleh chadash or toshav chozer vatik who arrived in Israel between 5 November 2025 and 31 December 2026** from tax on personal-exertion income (business and salary) produced in Israel, up to an annual ceiling that runs 600,000 NIS in 2026, 1,000,000 in 2027 and 2028, 350,000 in 2029, and 150,000 in 2030. It is given **in addition** to every other relief such a person has, including Section 35 credit points. The ITA implementing circular had not been published as of the 2026 deductions booklet, so confirm the detailed conditions before relying on them. Full table and citation in `references/credit-points.md`.
 
-**Section 45A: 35 percent income tax credit (zikui)**
-- Reduces tax liability directly by 35 percent of the qualifying pension contribution
-- Applies to both employees and self-employed who deposit into a pension fund, insurance policy with a pension component, or kupat gemel l-kitzba
-- Employee (sachir) ceiling: qualifying contribution up to 7 percent of hachnasa mezaka under Section 45a(d)(2)(b)(2). Hachnasa mezaka from employment income is capped at 9,700 NIS/month for 2026 under Section 47(a)(1)(1), so the maximum monthly credited deposit is 679 NIS. An amit mutav has a separate track whose 2026 ceiling the Tax Authority publishes as 19,400 NIS/month, which is exactly twice the 9,700 figure, matching the statute's 'pa'amayim' wording.
-- Self-employed (atzmai) eligibility: 5.5 percent of business income is the ceiling used for the 45A credit (verify the exact annual figure each year on kolzchut.org.il or pensuni.com before applying to a return)
-- Claim on Form 1301 in the credits section, separate line from nekudot zikui
+### Step 3.5: Pension and Donation Credits (Sections 45A, 47, 46)
 
-**Section 47: pension deduction (nikui)**
-- Reduces taxable income (not tax directly) by the contribution amount
-- Self-employed can deduct up to 11 percent of annual business income (capped at the qualifying ceiling)
-- Employee contributions above the 7 percent 45A threshold can qualify under Section 47
-- Always preferred for high marginal-rate taxpayers; verify whether a self-employed filer benefits more from 45A (credit) or 47 (deduction) based on their marginal bracket
+Three benefits that are among the most commonly missed on a return, and the two most common sources of a salaried refund claim.
 
-**Combined rule:** the same shekel cannot double-count. Self-employed filers typically structure deposits so that part qualifies for 45A (credit) and part for 47 (deduction) within the 16.5 percent combined ceiling.
+- **Section 45A pension credit:** 35 percent of the qualifying pension contribution, reducing tax directly. For an employee the qualifying deposit is 7 percent of hachnasa mezaka, and hachnasa mezaka from employment is capped at 9,700 NIS/month for 2026, so the maximum credited deposit is 679 NIS/month. An amit mutav has a separate track whose 2026 ceiling the Tax Authority publishes as 19,400 NIS/month.
+- **Section 47 pension deduction:** reduces taxable income rather than tax. A self-employed filer can deduct up to 11 percent of annual business income within the qualifying ceiling; employee contributions above the 7 percent 45A threshold can qualify here. The same shekel cannot be counted under both.
+- **Section 46 donation credit:** 35 percent for individuals (23 percent, the corporate rate, for companies), only to an institution holding a valid Section 46 recognition. Minimum floor **207 NIS** applied to the year's COMBINED donations, not to each donation separately, which is the point most often got wrong. Ceiling is the lower of 10,354,816 NIS (2026) or 30 percent of taxable income; the excess carries forward 3 years.
 
-**Calculation example (self-employed, 300,000 NIS annual business income):**
-- Pension deposit: 33,000 NIS (11 percent of income)
-- Section 47 deduction: reduces taxable income by up to 33,000 NIS (marginal benefit depends on bracket)
-- Section 45A credit: 35 percent of up to 5.5 percent of income = up to 16,500 NIS eligible, so up to 5,775 NIS direct tax reduction
-- Always verify the exact current ceilings at kolzchut.org.il before quoting a number
-
-### Step 3.6: Donation Credit (Section 46)
-
-Donations to a recognized public institution qualify for a tax credit under Section 46 of the Income Tax Ordinance. This is a frequently-missed refund source for salaried filers (often claimed via Form 135).
-
-- **Credit rate:** 35 percent of the eligible donation amount for individuals (companies get the corporate-rate credit). The credit reduces tax liability directly, like nekudot zikui, not taxable income.
-- **Recognized institution requirement:** the recipient must hold a valid Section 46 recognition (mosad tziburi mukar lefi seif 46). A donation to a charity without 46 recognition does NOT qualify. Verify the institution's 46 status (the Tax Authority publishes the approved list).
-- **Minimum floor: 207 NIS** of total donations in the year (it was 200 NIS in 2023 and 190 NIS in 2020-2022, so an older figure will wrongly disqualify a claim). The floor applies to the COMBINED total of separate donations to Section 46 institutions, not to each donation individually, which is the point most often got wrong: four 60 NIS donations qualify, and treating them one at a time says none do.
-- **Ceiling: the lower of 10,354,816 NIS (2026) or 30 percent of the donor's taxable income for that year.** In practice the percentage limb binds for almost everyone. Anything above the ceiling carries forward to the next 3 tax years.
-- **Company donors get the credit at the corporate rate (23 percent), not 35 percent.**
-- **Documentation:** keep the original donation receipts marked with the institution's 46 recognition; the ITA may require them.
-- Figures are indexed; re-check them for the return's tax year.
+Worked examples, the self-employed 5.5 / 11 / 16.5 percent structure, and the documentation requirements are in `references/form-guide.md`.
 
 ### Step 3.7: Return-Preparation and Professional Fee Deduction (Section 17(11))
 
-Fees paid to a CPA (roeh heshbon) or tax advisor for preparing the return and handling the tax matter are deductible under Section 17(11) of the Income Tax Ordinance, and are claimable by salaried employees (sachirim), not only the self-employed.
-
-- **What qualifies:** preparing the annual return(s) and handling the tax matter in all assessment (shuma) and appeal (irur) proceedings: return-preparation and CPA / tax-advisor fees, and representation before the pakid shuma and in tax appeals.
-- **Salaried vs self-employed:** the deduction is well accepted for filers with business income. For a pure salaried filer it is claimable under 17(11) but is a contested area the assessor may disallow, so document it and have a CPA claim it. Do not flatly tell a salaried filer the fee is non-deductible.
-- **Which year:** the fee is deductible in the tax year it was actually paid. A return-preparation fee is usually paid the year AFTER the year the return reports, so it reduces that later year, not the income of the year being filed.
-- **Carve-outs:** disallowed for business or profession income where no books (pinkasim) were kept (does not affect salaried filers); legal costs on an objection or appeal found frivolous are disallowed, and any costs awarded to the taxpayer reduce the claim.
-- **Placement on Form 1301:** there is no dedicated field for a salaried filer's Section 17(11) deduction, and SHAAM online filing has no free-form attachment for a pure salaried 1301/135, so this deduction usually needs a CPA-assisted filing to be captured. Keep the CPA invoice and attach an explanation. Do NOT reduce field 158 (the gross-salary line), which the Tax Authority cross-checks against Form 106; confirm placement with a CPA.
+Fees paid to a CPA or tax advisor for preparing the return and handling the tax matter, including representation before the pakid shuma and in appeals, are deductible under Section 17(11), and are claimable by **salaried employees too**, not only the self-employed. For a pure salaried filer it is a contested area the assessor may disallow, so document it and have a CPA claim it: do not flatly tell a salaried filer the fee is non-deductible. The fee is deductible in the tax year it was actually **paid**, which is usually the year after the year the return reports. There is no dedicated Form 1301 field for it. Do NOT reduce field 158, the gross-salary line the Tax Authority cross-checks against Form 106. Carve-outs and placement detail are in `references/form-guide.md`.
 
 ### Step 4: Income Tax Brackets and Surtax
 
@@ -199,18 +174,7 @@ Note the last two rows: 47% applies to every shekel above 560,280 and does not s
 
 Required for any business (individual or corporate) with annual turnover exceeding 300,000 NIS (including VAT).
 
-Form 6111 uses standardized codes to report financial data in a uniform format for the Tax Authority's computerized systems. The form has two main sections:
-
-**Section A (Profit and Loss):** revenue by source, cost of goods/services, operating expenses, financial income and expenses, depreciation, net profit/loss before tax, and tax adjustments (non-deductible expenses, timing differences).
-
-**Section B (Balance Sheet):** current and fixed assets, current and long-term liabilities, and equity (share capital, retained earnings).
-
-**Preparation guidelines:**
-- All amounts must be in NIS
-- Use the Tax Authority's standardized item codes (available at misim.gov.il)
-- Data must match the audited financial statements exactly
-- Submit electronically via the SHAAM online portal
-- The form is typically prepared by the CPA using accounting software (Hashavshevet, iCount, Rivhit) that supports Form 6111 export
+Form 6111 reports financial data in the Tax Authority's standardized codes. Section A is profit and loss (revenue, cost of sales, operating expenses, financial items, depreciation, net profit, tax adjustments); Section B is the balance sheet (assets, liabilities, equity). All amounts in NIS, using the item codes published at misim.gov.il, matching the audited statements exactly, submitted via SHAAM. It is usually produced by the CPA's accounting software (Hashavshevet, iCount, Rivhit), which exports Form 6111 directly.
 
 ### Step 6: Employer and Supplier Reports (Forms 126 and 856)
 
@@ -261,27 +225,9 @@ Capital gains from selling stocks, bonds, mutual funds, and other securities:
 
 Self-employed individuals and businesses are typically assessed advance income tax payments (mikdamot) by the Tax Authority. These are periodic prepayments against the expected annual tax liability.
 
-**How mikdamot work:**
-- The Tax Authority sets a percentage rate based on the business's prior year returns
-- Applied to bi-monthly turnover (total revenue excluding VAT)
-- Due by the 15th of the month following the bi-monthly period
-- New businesses receive a percentage based on industry statistics and projected turnover
+The Tax Authority sets a percentage rate from the business's prior-year returns (industry statistics and projected turnover for a new business), applied to bi-monthly turnover excluding VAT, due by the 15th of the month after each bi-monthly period: 15 March, 15 May, 15 July, 15 September, 15 November, 15 January.
 
-**Payment schedule:**
-
-| Period | Months | Payment Due |
-|--------|--------|-------------|
-| 1 | January - February | March 15 |
-| 2 | March - April | May 15 |
-| 3 | May - June | July 15 |
-| 4 | July - August | September 15 |
-| 5 | September - October | November 15 |
-| 6 | November - December | January 15 |
-
-**Reconciliation at year-end:**
-When filing the annual return (Form 1301 or 1214), the total advance payments made during the year are reconciled against the actual tax liability:
-- If mikdamot paid > actual tax: the taxpayer receives a refund (hechzer mas)
-- If mikdamot paid < actual tax: the taxpayer owes the difference (plus possible interest)
+At year end the total paid is reconciled on Form 1301 or 1214 against the actual liability: an excess is refunded (hechzer mas), a shortfall is owed plus possible interest.
 
 **Adjusting the rate:** if the business's income changes significantly (revenue drops sharply, a large new contract, or a change in business activity), request a rate adjustment (shinui shiur mikdamot) from the Tax Authority.
 
@@ -289,11 +235,9 @@ When filing the annual return (Form 1301 or 1214), the total advance payments ma
 
 All returns are submitted electronically via the Tax Authority's online system (SHAAM):
 
-**Registration:** register at misim.gov.il with a teudat zehut or company number and set up credentials with two-factor. CPAs use their own credentials plus per-client yipui koach.
+Register at misim.gov.il with a teudat zehut or company number and two-factor credentials. Log in, pick the form and tax year, enter or upload the data, review the calculated liability, submit for a confirmation number, then pay via the payment portal (bank transfer, credit card, or post-office reference).
 
-**Submission:** log in, pick the form and tax year, enter or upload data, review the calculated liability, submit for a confirmation number, then pay via the payment portal (bank transfer, credit card, or post-office reference).
-
-**CPA authorization (yipui koach):** granted by the taxpayer in the SHAAM portal, per client and per year. It lets the CPA submit returns, view assessments, and correspond with the Tax Authority for that client.
+CPA authorization (yipui koach) is granted by the taxpayer in the SHAAM portal, per client and per year, and lets the CPA submit returns, view assessments, and correspond with the Tax Authority.
 
 **Filing extensions:**
 - Form 1301: see Step 1 for the 2025-return deadlines. CPA clients usually get automatic extensions under the association quota agreement, often to 30 September or later
@@ -361,13 +305,18 @@ Actions:
 
 ### References
 - `references/form-guide.md` - Forms 1301, 1214, 126, 856, 6111, 1322, 1325: who files, deadlines, key fields. Consult for a specific form or to decide which forms apply.
+- `references/credit-points.md` - The full nekudot zikui schedule: every child age band, oleh, returning resident, discharged soldier, both combat-reserve regimes, netul yecholet, Section 44, Section 11. Consult before quoting any credit-point number.
 - `references/tax-brackets-credits.md` - 2026 brackets (1-2 and the 47% band frozen at 2025 values, 3-5 widened for 2026), nekudot zikui values and categories, surtax thresholds, corporate rates. Consult for any tax calculation.
 
 ## Gotchas
 - Form 1301 for tax year 2025, filed in 2026: 30 June online, 29 May on paper. April 30 is a legacy paper baseline, not the online deadline, and April 15 is American. Filers represented by a CPA get later extensions under the CPA-association quota agreement, often 30 September or later.
 - Individuals file Form 1301, not a 1040. US form numbers and fields do not exist here.
 - Capital gains go on a separate schedule with their own rates (25% financial assets, up to 50% on real estate by holding period and property count). Do not apply one blanket rate.
-- Nekudot zikui must be claimed annually and vary by status (marital, children, new oleh, discharged soldier). Do not assume a default count.
+- The child credit-point schedule has SIX age bands, not three, and Form 101 part H has a separate box for each. A one-year-old is worth 4.5 points, not 2.5: quoting the flat "ages 1-5" band understates a parent's credit by 5,808 NIS. From age 6 the mother gets 2.0 and the father 1.0, so a single "per child" figure is wrong for one of them whichever you pick.
+- Combat-reserve points (Section 39B) run to a maximum of 4.0, not 1.0, and they are counted on the PREVIOUS tax year's days. There are two band tables: one for 2026-2027 starting at 30 days, a different permanent one from 2028 starting at 20 days. Picking the wrong table, or capping at 1.0, can understate a heavy reservist by 8,712 NIS.
+- A returning resident is not on the oleh credit-point track. Section 35(d) defines toshav chozer for this purpose as someone who resumed residency between 16.5.2010 and 30.9.2012 only. Telling a returnee they get "the same points as an oleh" invents an entitlement.
+- Discharged-soldier points (Section 39A) are worth up to 2.0 points a year for three years and are routinely never claimed, because nothing on the return prompts for them. Ask.
+- Nekudot zikui must be claimed annually and vary by status (marital, children, new oleh, discharged soldier, combat reservist). Do not assume a default count.
 - From 2026 Mas Shevach on a non-exempt investment property counts toward surtax income (5% above 721,560 NIS). Treating the two as separate under-reports the liability.
 - Return-preparation fees are deductible under Section 17(11) for SALARIED filers too, not only the self-employed. There is no dedicated Form 1301 field: keep the invoice and attach an explanation.
 - The havraa-reduction figure on Form 106/1301 (field 011/012, "מחיר יום ההבראה שהופחת ממשכורת העובד", tax years 2024-2025 only) is informational: it was already netted out of gross salary and is not income to the employee. Agents reasoning from the form's visual structure may wrongly treat it as a Part יב deduction and mis-state tax.
@@ -382,6 +331,10 @@ Actions:
 | Kol-Zchut tax credit points | https://www.kolzchut.org.il/he/נקודת_זיכוי | Nekudot zikui value and eligibility |
 | Kol-Zchut Mas Shevach calculation | https://www.kolzchut.org.il/he/חישוב_מס_שבח | Capital gains, exemptions, linear method |
 | Israel Real Estate Taxation office | https://www.gov.il/he/departments/topics/land_taxation | Mas Shevach and Rechisha forms and rates |
+| Income Tax Ordinance (consolidated, Nevo) | https://www.nevo.co.il/law_html/law00/84255.htm | Sections 11, 34-40C, 44, 45, 66(c) credit-point text |
+| ITA 2026 deductions booklet (luach nikuyim) | https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf | Credit-point value, Regulation 134A ceilings, yishuv rates |
+| ITA circular 2025-001368 (16.12.2025), Section 39B | https://www.gov.il/BlobFolder/dynamiccollectorresultitem/employers-info161225-1/he/IncomeTax_employers-info161225-1.pdf | Combat-reserve credit-point bands, both regimes |
+| Form 101 (kartis oved) | https://www.gov.il/BlobFolder/service/itc101/he/Service_Pages_Income_tax_annual-report-2024_itc101.pdf | The boxes an employee actually claims credits through |
 | ITA havraa-reduction circular 2025-000583 | https://www.gov.il/BlobFolder/dynamiccollectorresultitem/employers-info-140525-1/he/IncomeTax_employers-info-140525-1.pdf | Havraa reduction (418-471.4 NIS), field 011/012 |
 
 ## Troubleshooting
