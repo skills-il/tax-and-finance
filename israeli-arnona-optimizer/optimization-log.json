@@ -1,6 +1,21 @@
 {
   "cycles": [
     {
+      "version": "1.5.0",
+      "date": "2026-08-19",
+      "lessons": [
+        "STRUCTURAL ROOT CAUSE: the skill covered 11 of the regulation's rows because the domain-checklist carried ONE line reading 'discount eligibility with CORRECT bands'. Every gate then verified the eleven rows it did list and found nothing wrong. The checklist now enumerates each statutory paragraph as its own row, which is the only thing that makes a missing row visible.",
+        "FABRICATION FIXED: scripts/arnona-calculator.py hardcoded student 50% and large-family 30%, figures the prose itself declined to state as unverifiable. Neither has any paragraph in the regulation. Both keys removed rather than re-sourced. low-income was a flat 80% with no band structure; it is now the top band with a --discount-percentage override. soldier had max_sqm 100 against a statutory 70/90.",
+        "CEILING VS ENTITLEMENT: almost every Regulation 2 row reads 'a council MAY set a discount not exceeding X'. The skill had been presenting these as amounts owed. Every row now carries kind=ceiling or kind=entitlement and prints it.",
+        "CARRY RESOLVED from v1.3.0: the 2026 per-capita income thresholds were deferred as 'not assertable without fabrication'. They are published in the regulation's own First Schedule and are now encoded in full, all nine household sizes, four columns, plus the per-person increments for 10+ and the 20-May minimum-wage update rule.",
+        "REFUTED at source, from the incoming audit brief: Reg. 2(4) does NOT list prison-service disabled or hostile-action casualties. Those sit at Reg. 14e(2)(e) and (f) as a two-thirds ENTITLEMENT, a materially better route than the 66% ceiling they were attributed to. Reg. 2(4) instead carries Austrian OFG and Belgian 1954 pensions, which the brief did not mention. Also the senior small-business discount is Reg. 14c, not 14d (14d is the Chapter Hey2 definitions section).",
+        "FOUND UNREPORTED: Reg. 14e1 hostage and missing-person 100% entitlement (added 5784); Reg. 3d shmita agricultural land 90-100%; Reg. 14 new-industry unemployment-banded table; Reg. 22a the new budget-deficit bar on granting discounts at all; the Senior Citizens Law s.9(c)(4) 150%-of-average-wage test where several seniors share a flat, and its s.9(d) automatic-renewal-to-70 rule.",
+        "EVIDENCE: he.wikisource consolidated statute pages are curl-readable with digits in the text layer and match --check-sources verbatim. Prefer them over kolzchut restatements, which are Cloudflare-blocked and forced twelve entries into verified_via=playwright. Eleven of those remain and should migrate to statutory sources next cycle.",
+        "Deferred (MINOR): the calculator still models only the residential 45% limb of Reg. 3c, not the 39% other-property limb. Add a usage-aware rate for that row next cycle.",
+        "Deferred (MINOR): rate tables in RATE_TABLES are still described as approximate and are not traced to any tzav arnona. They are the last unsourced numbers in the skill."
+      ]
+    },
+    {
       "version": "1.3.0",
       "date": "2026-07-20",
       "lessons": [

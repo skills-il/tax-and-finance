@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0",
   "skill": "israeli-arnona-optimizer",
-  "generated_at": "2026-06-07T00:00:00Z",
+  "generated_at": "2026-08-19T02:11:26Z",
   "claims": [
     {
       "claim_id": "hasaga-deadlines",
@@ -44,10 +44,10 @@
     },
     {
       "claim_id": "disabled-discount",
-      "claim": "Disabled-person arnona discount: up to 40% for a person with a Bituach Leumi medical disability of 90% or more; up to 80% for a person with 75%+ loss of earning capacity (degree of ai-kosher) who receives a full monthly benefit. There is no 50-74% disability band in the national regulation.",
-      "source_url": "https://www.jerusalem.muni.il/he/residents/arnona/arnonadiscounts/apartmentsdiscounts/disability/",
-      "raw_snippet": "הנחה לנכה: 40% לבעל נכות רפואית 90% ומעלה; עד 80% לבעל דרגת אי-כושר השתכרות 75% ומעלה המקבל קצבה חודשית מלאה.",
-      "fetched_at": "2026-06-07T00:00:00Z",
+      "claim": "Disability arnona bands come from the regulation itself: Reg. 2(a)(3) caps a 90%-or-more proven medical disability at 40%, and Reg. 2(a)(2) caps a 75%-or-more earning-incapacity with a full monthly benefit at 80%. The previously cited Jerusalem municipality page is a secondary restatement and is bot-blocked to plain fetches.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
+      "raw_snippet": "נכה אשר דרגת נכותו הרפואית המוכחת על פי כל דין היא בשיעור 90 אחוזים ומעלה, או מי שטרם קבלת קצבת הזקנה נקבעה לו נכות כאמור – הנחה שאינה עולה על 40 אחוזים",
+      "fetched_at": "2026-08-19T02:14:07Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
@@ -209,6 +209,1102 @@
       "fetched_at": "2026-08-13T00:00:00Z",
       "verified_via": "playwright",
       "verified_at": "2026-08-13T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md"
+      ]
+    },
+    {
+      "claim_id": "arnona-blind-90",
+      "claim": "Reg. 2(a)(5): a holder of a blind person's certificate under the Welfare Services Law 5718-1958 gets a discount not exceeding 90 percent.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
+      "raw_snippet": "בעל תעודת עיוור לפי חוק שירותי הסעד, התשי״ח–1958 – הנחה שאינה עולה על 90 אחוזים",
+      "fetched_at": "2026-08-19T02:11:26Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md",
+        "scripts/arnona-calculator.py"
+      ]
+    },
+    {
+      "claim_id": "arnona-single-parent-20",
+      "claim": "Reg. 2(a)(10): a single parent under the Single-Parent Families Law 5752-1992, or a single parent of a co-resident child aged 21 or under in conscript or national service, gets a discount of up to 20%.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
+      "raw_snippet": "הוא הורה יחיד כהגדרתו בחוק משפחות חד־הוריות, התשנ״ב–1992",
+      "fetched_at": "2026-08-19T02:11:26Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md",
+        "scripts/arnona-calculator.py"
+      ]
+    },
+    {
+      "claim_id": "arnona-single-parent-ceiling",
+      "claim": "Reg. 2(a)(10) states the single-parent discount ceiling as up to 20 percent.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
+      "raw_snippet": "ובתנאי שגילם אינו עולה על 21 שנה – הנחה עד 20%",
+      "fetched_at": "2026-08-19T02:11:26Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md",
+        "scripts/arnona-calculator.py"
+      ]
+    },
+    {
+      "claim_id": "arnona-disabled-child-33",
+      "claim": "Reg. 2(a)(11): a parent of a child, including a foster child, entitled to the disabled-child benefit under the National Insurance (Disabled Child) Regulations 5770-2010, gets up to 33% on 100 sqm.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
+      "raw_snippet": "ובלבד שהשתלמה בעדו גמלת ילד נכה – הנחה עד 33% לגבי 100 מטרים רבועים משטח הנכס",
+      "fetched_at": "2026-08-19T02:11:26Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md",
+        "scripts/arnona-calculator.py"
+      ]
+    },
+    {
+      "claim_id": "arnona-released-captive-20",
+      "claim": "Reg. 2(a)(12): a released captive entitled to payment under the Payments to Released Captives Law 5765-2005 gets up to 20%.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
+      "raw_snippet": "פדוי שבי הזכאי לתשלום לפי חוק תשלומים לפדויי שבי, התשס״ה–2005 – עד 20%",
+      "fetched_at": "2026-08-19T02:11:26Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md",
+        "scripts/arnona-calculator.py"
+      ]
+    },
+    {
+      "claim_id": "arnona-righteous-66",
+      "claim": "Reg. 2(a)(9): a person recognised as Righteous Among the Nations by Yad Vashem, and their spouse or former spouse resident in Israel, gets a discount not exceeding 66 percent.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
+      "raw_snippet": "חסיד אומות העולם לרבות בן זוגו או מי שהיה בן זוגו, היושב בישראל – הנחה שאינה עולה על 66 אחוזים",
+      "fetched_at": "2026-08-19T02:11:26Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md",
+        "scripts/arnona-calculator.py"
+      ]
+    },
+    {
+      "claim_id": "arnona-nursing-benefit-70",
+      "claim": "Reg. 2(a)(7)(c): a recipient of a nursing benefit under Chapter Vav of the National Insurance Law gets a discount not exceeding 70 percent.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
+      "raw_snippet": "הזכאי לאחת הגמלאות המפורטות להלן – הנחה שלא תעלה על 70 אחוזים",
+      "fetched_at": "2026-08-19T02:11:26Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md",
+        "scripts/arnona-calculator.py"
+      ]
+    },
+    {
+      "claim_id": "arnona-oleh-dependent-80",
+      "claim": "Reg. 2(a)(6a): an oleh certified by Bituach Leumi as entitled to a special benefit or a nursing benefit for olim gets a discount not exceeding 80 percent.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
+      "raw_snippet": "לגמלה מיוחדת לעולה או לגמלת סיעוד לעולה",
+      "fetched_at": "2026-08-19T02:11:26Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md",
+        "scripts/arnona-calculator.py"
+      ]
+    },
+    {
+      "claim_id": "arnona-tzadal-90",
+      "claim": "Reg. 2(a)(6b): an SLA member recognised as rehabilitation-eligible, and their spouse, get up to 90 percent on 100 sqm for 12 months within 36 from arrival in Israel after May 2000.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
+      "raw_snippet": "איש צד״ל – הנחה שאינה עולה על 90 אחוז לגבי 100 מטרים רבועים למשך 12 חודשים מתוך 36 חודשים",
+      "fetched_at": "2026-08-19T02:11:26Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md",
+        "scripts/arnona-calculator.py"
+      ]
+    },
+    {
+      "claim_id": "arnona-persecution-gamlot-66-70sqm",
+      "claim": "Reg. 2(a)(4): the persecution and Prisoner-of-Zion pension list carries a discount not exceeding 66 percent on 70 sqm, rising to 90 sqm where more than four family members live with the entitled person.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
+      "raw_snippet": "הזכאי לאחת הגמלאות המפורטות להלן – הנחה שלא תעלה על 66 אחוזים לגבי 70 מטרים רבועים משטח הנכס",
+      "fetched_at": "2026-08-19T02:11:26Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md",
+        "scripts/arnona-calculator.py"
+      ]
+    },
+    {
+      "claim_id": "arnona-persecution-list-90sqm",
+      "claim": "Reg. 2(a)(4): where the number of family members living with the entitled person exceeds four, the discount applies to 90 sqm.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
+      "raw_snippet": "עלה מספר בני המשפחה הגרים עם הזכאי על ארבעה – הנחה, כאמור, לגבי 90 מטרים רבועים משטח הנכס",
+      "fetched_at": "2026-08-19T02:11:26Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md",
+        "scripts/arnona-calculator.py"
+      ]
+    },
+    {
+      "claim_id": "arnona-persecution-beg-wuv",
+      "claim": "Reg. 2(a)(4) lists German BEG, Dutch WUV, Austrian OFG and Belgian 1954 persecution pensions as qualifying.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
+      "raw_snippet": "גמלת נכות המשולמת על ידי ממשלת הולנד בשל רדיפות הנאצים בהתאם לחוק הגמלאות ההולנדי לנפגעי רדיפות 1940–1945 (WUV)",
+      "fetched_at": "2026-08-19T02:11:26Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md",
+        "scripts/arnona-calculator.py"
+      ]
+    },
+    {
+      "claim_id": "arnona-senior-pension-25",
+      "claim": "Reg. 2(a)(1)(a): a senior receiving an old-age, survivors, dependants, or work-injury disability pension gets a discount not exceeding 25 percent on 100 sqm only.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
+      "raw_snippet": "קיצבת זיקנה, קיצבת שאירים, קיצבת תלויים או נכות בשל פגיעה בעבודה – הנחה שאינה עולה על 25 אחוזים לגבי 100 מ״ר בלבד משטח הנכס",
+      "fetched_at": "2026-08-19T02:11:26Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md",
+        "scripts/arnona-calculator.py"
+      ]
+    },
+    {
+      "claim_id": "arnona-senior-supplement-100",
+      "claim": "Reg. 2(a)(1)(b): where the senior also receives an income-support benefit, the discount is up to 100 percent on 100 sqm only.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
+      "raw_snippet": "הוא מקבל גימלת הבטחת הכנסה – הנחה בשיעור עד 100 אחוזים לגבי 100 מטרים רבועים בלבד משטח הנכס",
+      "fetched_at": "2026-08-19T02:11:26Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md",
+        "scripts/arnona-calculator.py"
+      ]
+    },
+    {
+      "claim_id": "arnona-incapacity-80",
+      "claim": "Reg. 2(a)(2): a person entitled to a full monthly benefit with an earning-incapacity degree of 75 percent or more under s.127lamed-vav of the National Insurance Law gets a discount not exceeding 80 percent.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
+      "raw_snippet": "אשר דרגת אי כושר השתכרותו היא בשיעור 75 אחוזים ומעלה – הנחה שאינה עולה על 80 אחוזים",
+      "fetched_at": "2026-08-19T02:11:26Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md",
+        "scripts/arnona-calculator.py"
+      ]
+    },
+    {
+      "claim_id": "arnona-medical-disability-40",
+      "claim": "Reg. 2(a)(3): a proven medical disability of 90 percent or more carries a discount not exceeding 40 percent.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
+      "raw_snippet": "נכה אשר דרגת נכותו הרפואית המוכחת על פי כל דין היא בשיעור 90 אחוזים ומעלה",
+      "fetched_at": "2026-08-19T02:11:26Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md",
+        "scripts/arnona-calculator.py"
+      ]
+    },
+    {
+      "claim_id": "arnona-miluim-commander-25",
+      "claim": "Reg. 3g: a council may set a discount of up to 25 percent for an active reserve commander, on 100 sqm only.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
+      "raw_snippet": "מועצה רשאית לקבוע הנחה בשיעור של עד 25% מסכום הארנונה הכללית שהוטלה באותה שנת הכספים על מחזיק בנכס שהוא מפקד מילואים פעיל, לגבי 100 מטרים רבועים בלבד",
+      "fetched_at": "2026-08-19T02:11:26Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md",
+        "scripts/arnona-calculator.py"
+      ]
+    },
+    {
+      "claim_id": "arnona-miluim-5-reg",
+      "claim": "Reg. 3f: a council may set a discount of up to 5 percent for an active reserve soldier.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
+      "raw_snippet": "מועצה רשאית לקבוע הנחה בשיעור של עד 5% מסכום הארנונה הכללית שהוטלה באותה שנת הכספים על מחזיק בנכס שהוא חייל מילואים פעיל",
+      "fetched_at": "2026-08-19T02:11:26Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md",
+        "scripts/arnona-calculator.py"
+      ]
+    },
+    {
+      "claim_id": "arnona-gaza-envelope-45-39",
+      "claim": "Reg. 3c: Sderot, the Eshkol, Hof Ashkelon, Sdot Negev and Sha'ar HaNegev regional councils and the Gaza-envelope local committees set a 45 percent discount on residential property and 39 percent on other property for fiscal years 2015 to 2026.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
+      "raw_snippet": "הנחה בשיעור של 45% לנכסים מסוג מגורים והנחה בשיעור של 39% לנכס אחר, לשנות הכספים 2015 עד 2026",
+      "fetched_at": "2026-08-19T02:11:26Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md",
+        "scripts/arnona-calculator.py"
+      ]
+    },
+    {
+      "claim_id": "arnona-gaza-7km",
+      "claim": "Reg. 3c(b): the discount covers property within 7 kilometres of the perimeter fence around the Gaza Strip, by shortest aerial distance.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
+      "raw_snippet": "מצוי במרחק של עד 7 קילומטרים מגדר המערכת המקיפה את רצועת עזה",
+      "fetched_at": "2026-08-19T02:11:26Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md",
+        "scripts/arnona-calculator.py"
+      ]
+    },
+    {
+      "claim_id": "arnona-evacuated-100",
+      "claim": "Reg. 3c1: a holder in a locality listed under the Iron Swords deferral-of-dates law is entitled to a 100 percent discount from 7 October 2023 to the end of the evacuation or refresh period.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
+      "raw_snippet": "זכאי להנחה בשיעור של 100% מסכום הארנונה הכללית שהוטלה על הנכס מיום כ״ב בתשרי התשפ״ד (7 באוקטובר 2023)",
+      "fetched_at": "2026-08-19T02:11:26Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md",
+        "scripts/arnona-calculator.py"
+      ]
+    },
+    {
+      "claim_id": "arnona-hostage-100",
+      "claim": "Reg. 14e1: a holder determined to be a hostage or missing person under the Hostages and Missing Persons Law 5784-2023 is entitled to a 100 percent discount for the period they are so classified.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
+      "raw_snippet": "זכאי להנחה מארנונה כללית שהוטלה על הנכס בשיעור של 100%, לגבי התקופה שבה הוא בגדר חטוף או נעדר",
+      "fetched_at": "2026-08-19T02:11:26Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md",
+        "scripts/arnona-calculator.py"
+      ]
+    },
+    {
+      "claim_id": "arnona-soldier-100-entitlement",
+      "claim": "Reg. 14e(1): a conscript soldier is entitled to a 100 percent discount while serving and until four months after discharge.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
+      "raw_snippet": "הנחה של 100 אחוזים למחזיק שהוא",
+      "fetched_at": "2026-08-19T02:11:26Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md",
+        "scripts/arnona-calculator.py"
+      ]
+    },
+    {
+      "claim_id": "arnona-soldier-4-months",
+      "claim": "Reg. 14e(1)(a): the soldier entitlement runs while he is a soldier and until the end of four months from the date of his discharge.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
+      "raw_snippet": "חייל – כל עוד הוא חייל, עד תום ארבעה חודשים מיום שחרורו",
+      "fetched_at": "2026-08-19T02:11:26Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md",
+        "scripts/arnona-calculator.py"
+      ]
+    },
+    {
+      "claim_id": "arnona-veteran-two-thirds",
+      "claim": "Reg. 14e(2): a disabled veteran, Nazi-war invalid, disabled police or prison-service member, bereaved family member, or hostile-action casualty is entitled to a two-thirds discount.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
+      "raw_snippet": "הנחה של שני שלישים למחזיק שהוא",
+      "fetched_at": "2026-08-19T02:11:26Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md",
+        "scripts/arnona-calculator.py"
+      ]
+    },
+    {
+      "claim_id": "arnona-hostile-action-14e2",
+      "claim": "Reg. 14e(2)(f): a person entitled to benefits under the Benefits for Victims of Hostile Actions Law 5730-1970 is within the two-thirds entitlement.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
+      "raw_snippet": "זכאי לתגמולים לפי חוק התגמולים לנפגעי פעולות איבה, התש״ל–1970",
+      "fetched_at": "2026-08-19T02:11:26Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md",
+        "scripts/arnona-calculator.py"
+      ]
+    },
+    {
+      "claim_id": "arnona-14f-70-90sqm",
+      "claim": "Reg. 14f: a holder of a property larger than 70 sqm gets the Chapter Hey2 discount on 70 sqm only, rising to 90 sqm where the number of family members living with them exceeds four.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
+      "raw_snippet": "לא יהיה זכאי להנחה לפי תקנה 14ה, אלא לגבי 70 מטרים רבועים בלבד; עלה מספר בני משפחתו של המחזיק והגרים עמו על ארבעה – תינתן הנחה, כאמור, לגבי 90 מטרים רבועים בלבד",
+      "fetched_at": "2026-08-19T02:11:26Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md",
+        "scripts/arnona-calculator.py"
+      ]
+    },
+    {
+      "claim_id": "arnona-civilian-social-three-quarters",
+      "claim": "Reg. 14e(1a): a civilian-social service member serving 30 weekly hours on average over two years is entitled to a three-quarters discount.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
+      "raw_snippet": "הנחה של שלושה רבעים למחזיק שהוא משרת בשירות אזרחי–חברתי המשרת 30 שעות שבועיות בממוצע במשך שנתיים",
+      "fetched_at": "2026-08-19T02:11:26Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md",
+        "scripts/arnona-calculator.py"
+      ]
+    },
+    {
+      "claim_id": "arnona-civilian-split-50",
+      "claim": "Reg. 14e(3): a split-track civilian service member is entitled to a 50 percent discount.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
+      "raw_snippet": "הנחה של 50 אחוזים למחזיק שהוא",
+      "fetched_at": "2026-08-19T02:11:26Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md",
+        "scripts/arnona-calculator.py"
+      ]
+    },
+    {
+      "claim_id": "arnona-empty-building-ladder",
+      "claim": "Reg. 13(a): the empty-building discount ladder is up to 100% for the first 6 months, up to 66.66% for months 7 to 12, and up to 50% for months 13 to 36.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
+      "raw_snippet": "מהחודש ה־7 עד החודש ה־12 – עד 66.66%",
+      "fetched_at": "2026-08-19T02:11:26Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md",
+        "scripts/arnona-calculator.py"
+      ]
+    },
+    {
+      "claim_id": "arnona-empty-building-first-6",
+      "claim": "Reg. 13(a)(1): the first stage of the empty-building ladder is up to 6 months at up to 100%.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
+      "raw_snippet": "עד 6 חודשים – עד 100%",
+      "fetched_at": "2026-08-19T02:11:26Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md",
+        "scripts/arnona-calculator.py"
+      ]
+    },
+    {
+      "claim_id": "arnona-empty-building-13-36",
+      "claim": "Reg. 13(a)(3): months 13 to 36 of the cumulative empty period carry up to 50%.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
+      "raw_snippet": "מהחודש ה־13 עד החודש ה־36 – עד 50%",
+      "fetched_at": "2026-08-19T02:11:26Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md",
+        "scripts/arnona-calculator.py"
+      ]
+    },
+    {
+      "claim_id": "arnona-empty-30-days",
+      "claim": "Reg. 13(d): a continuous empty period shorter than thirty days is not counted toward the cumulative period.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
+      "raw_snippet": "לא תובא בחשבון תקופה הפחותה משלושים ימים שבה עמד הבנין ריק ברציפות",
+      "fetched_at": "2026-08-19T02:11:26Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md",
+        "scripts/arnona-calculator.py"
+      ]
+    },
+    {
+      "claim_id": "arnona-empty-notify-7-days",
+      "claim": "Reg. 13(e): the holder must notify the local authority 7 days before the property is used again, failing which the discount for the last continuous empty stretch may be cancelled.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
+      "raw_snippet": "7 ימים בטרם נעשה שימוש מחדש בנכס",
+      "fetched_at": "2026-08-19T02:11:26Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md",
+        "scripts/arnona-calculator.py"
+      ]
+    },
+    {
+      "claim_id": "arnona-new-building-12-months",
+      "claim": "Reg. 12(a)(1): the first owner of a new empty building unused since completion may get a discount of up to 100% for up to twelve months.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
+      "raw_snippet": "עד שנים עשר חודשים – הנחה עד 100 אחוזים",
+      "fetched_at": "2026-08-19T02:11:26Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md",
+        "scripts/arnona-calculator.py"
+      ]
+    },
+    {
+      "claim_id": "arnona-single-discount-17a",
+      "claim": "Reg. 17(a): where several discounts apply, only one is given, the highest of them, and no discount is given to an additional holder of the property.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
+      "raw_snippet": "תינתן לזכאי להנחה, הנחה אחת בלבד, הגבוהה מביניהן, ולא תינתן כל הנחה למחזיק נוסף בנכס שלגביו ניתנה הנחה",
+      "fetched_at": "2026-08-19T02:11:26Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md",
+        "scripts/arnona-calculator.py"
+      ]
+    },
+    {
+      "claim_id": "arnona-two-properties-17b",
+      "claim": "Reg. 17(b): a holder of two or more properties gets the discount for one property only, the higher of them.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
+      "raw_snippet": "זכאי להנחה המחזיק בשני נכסים או יותר – תינתן הנחה לנכס אחד בלבד, לפי הגבוהה מביניהן",
+      "fetched_at": "2026-08-19T02:11:26Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md",
+        "scripts/arnona-calculator.py"
+      ]
+    },
+    {
+      "claim_id": "arnona-prorata-17c",
+      "claim": "Reg. 17(c): a holder for part of the fiscal year gets the discount pro rata to the number of months held.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
+      "raw_snippet": "תינתן ההנחה בשיעור יחסי למספר החודשים שבהם החזיק בנכס",
+      "fetched_at": "2026-08-19T02:11:26Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md",
+        "scripts/arnona-calculator.py"
+      ]
+    },
+    {
+      "claim_id": "arnona-payment-condition-20",
+      "claim": "Reg. 20: no discount is given unless the year's arnona balance was paid in one advance payment, by standing order, or under another payment arrangement satisfactory to the local authority.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
+      "raw_snippet": "לא תינתן הנחה לפי תקנות אלה אלא אם כן שולמה יתרת הארנונה הכללית שהוטלה על הנכס באותה שנת כספים בתשלום אחד מראש, בהוראת קבע",
+      "fetched_at": "2026-08-19T02:11:26Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md",
+        "scripts/arnona-calculator.py"
+      ]
+    },
+    {
+      "claim_id": "arnona-cancellation-16",
+      "claim": "Reg. 16: an entitled person who has not settled the year's arnona balance by 31 December loses the discount from that day and it is added back to the arnona debt.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
+      "raw_snippet": "עד יום 31 בדצמבר של אותה שנה, תהיה ההנחה שנקבעה לו בטלה מאותו יום ותיווסף ליתרת הארנונה",
+      "fetched_at": "2026-08-19T02:11:26Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md",
+        "scripts/arnona-calculator.py"
+      ]
+    },
+    {
+      "claim_id": "arnona-nazak-70-reg7",
+      "claim": "Reg. 7: the discounts committee may give a discount of up to 70 percent to a needy holder who incurred exceptionally high medical-treatment expenses or suffered an event causing a serious unforeseen worsening of their material position.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
+      "raw_snippet": "הועדה תהא מוסמכת לתת הנחה בשיעור עד 70 אחוזים למחזיק בנכס שהוא נזקק",
+      "fetched_at": "2026-08-19T02:11:26Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md",
+        "scripts/arnona-calculator.py"
+      ]
+    },
+    {
+      "claim_id": "arnona-senior-business-14c",
+      "claim": "Reg. 14c: a senior business owner aged 65 (60 for a woman) with a single business of at most 75 sqm and turnover not exceeding 240,000 NIS index-linked, who already receives a Reg. 2(8) home discount, may receive the same rate on the first 40 sqm of the business.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
+      "raw_snippet": "הוא עוסק שמחזור העסקאות שלו בכל עסקיו אינו עולה על 240,000 שקלים חדשים",
+      "fetched_at": "2026-08-19T02:11:26Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md",
+        "scripts/arnona-calculator.py"
+      ]
+    },
+    {
+      "claim_id": "arnona-senior-business-75sqm",
+      "claim": "Reg. 14c(a)(2) and (3): the business must not exceed 75 sqm and the owner must be 65, or 60 for a woman.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
+      "raw_snippet": "שטחו של העסק אינו עולה על 75 מטרים רבועים",
+      "fetched_at": "2026-08-19T02:11:26Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md",
+        "scripts/arnona-calculator.py"
+      ]
+    },
+    {
+      "claim_id": "arnona-senior-business-40sqm",
+      "claim": "Reg. 14c(b): the business discount is given for the first 40 square metres of the business area.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
+      "raw_snippet": "ותינתן לגבי 40 המטרים הרבועים הראשונים של שטח העסק",
+      "fetched_at": "2026-08-19T02:11:26Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md",
+        "scripts/arnona-calculator.py"
+      ]
+    },
+    {
+      "claim_id": "arnona-income-table-2026",
+      "claim": "Reg. 2(a)(8) First Schedule for fiscal year 2026 sets four discount columns of up to 90%, 70%, 50% and 30% by average monthly household income and number of persons.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
+      "raw_snippet": "<td>שיעור ההנחה</td><td>עד 90%</td><td>עד 70%</td><td>עד 50%</td><td>עד 30%</td>",
+      "fetched_at": "2026-08-19T02:11:26Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md",
+        "scripts/arnona-calculator.py"
+      ]
+    },
+    {
+      "claim_id": "arnona-income-table-1-person",
+      "claim": "First Schedule 2026, one person: up to 3,623 NIS for the 90% column, then 4,430, 5,235 and 6,041 for the 70%, 50% and 30% columns.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
+      "raw_snippet": "<td>עד 3,623</td><td>מעל 3,623 עד 4,430</td><td>מעל 4,430 עד 5,235</td><td>מעל 5,235 עד 6,041</td>",
+      "fetched_at": "2026-08-19T02:11:26Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md",
+        "scripts/arnona-calculator.py"
+      ]
+    },
+    {
+      "claim_id": "arnona-income-table-2-3-person",
+      "claim": "First Schedule 2026, two and three persons.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
+      "raw_snippet": "<td>עד 5,798</td><td>מעל 5,798 עד 7,088</td><td>מעל 7,088 עד 8,377</td><td>מעל 8,377 עד 9,666</td>",
+      "fetched_at": "2026-08-19T02:11:26Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md",
+        "scripts/arnona-calculator.py"
+      ]
+    },
+    {
+      "claim_id": "arnona-income-table-3-person",
+      "claim": "First Schedule 2026, three persons.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
+      "raw_snippet": "<td>עד 7,683</td><td>מעל 7,683 עד 9,392</td><td>מעל 9,392 עד 11,100</td><td>מעל 11,100 עד 12,807</td>",
+      "fetched_at": "2026-08-19T02:11:26Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md",
+        "scripts/arnona-calculator.py"
+      ]
+    },
+    {
+      "claim_id": "arnona-income-table-4-person",
+      "claim": "First Schedule 2026, four persons.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
+      "raw_snippet": "<td>עד 9,278</td><td>מעל 9,278 עד 11,341</td><td>מעל 11,341 עד 13,403</td><td>מעל 13,403 עד 15,465</td>",
+      "fetched_at": "2026-08-19T02:11:26Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md",
+        "scripts/arnona-calculator.py"
+      ]
+    },
+    {
+      "claim_id": "arnona-income-table-5-person",
+      "claim": "First Schedule 2026, five persons.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
+      "raw_snippet": "<td>עד 10,872</td><td>מעל 10,872 עד 13,291</td><td>מעל 13,291 עד 15,707</td><td>מעל 15,707 עד 18,124</td>",
+      "fetched_at": "2026-08-19T02:11:26Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md",
+        "scripts/arnona-calculator.py"
+      ]
+    },
+    {
+      "claim_id": "arnona-income-table-6-person",
+      "claim": "First Schedule 2026, six persons.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
+      "raw_snippet": "<td>עד 12,323</td><td>מעל 12,323 עד 15,063</td><td>מעל 15,063 עד 17,801</td><td>מעל 17,801 עד 20,539</td>",
+      "fetched_at": "2026-08-19T02:11:26Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md",
+        "scripts/arnona-calculator.py"
+      ]
+    },
+    {
+      "claim_id": "arnona-income-table-7-person",
+      "claim": "First Schedule 2026, seven persons.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
+      "raw_snippet": "<td>עד 13,771</td><td>מעל 13,771 עד 16,835</td><td>מעל 16,835 עד 19,896</td><td>מעל 19,896 עד 22,956</td>",
+      "fetched_at": "2026-08-19T02:11:26Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md",
+        "scripts/arnona-calculator.py"
+      ]
+    },
+    {
+      "claim_id": "arnona-income-table-8-person",
+      "claim": "First Schedule 2026, eight persons.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
+      "raw_snippet": "<td>עד 15,077</td><td>מעל 15,077 עד 18,429</td><td>מעל 18,429 עד 21,780</td><td>מעל 21,780 עד 25,131</td>",
+      "fetched_at": "2026-08-19T02:11:26Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md",
+        "scripts/arnona-calculator.py"
+      ]
+    },
+    {
+      "claim_id": "arnona-income-table-9-person",
+      "claim": "First Schedule 2026, nine persons.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
+      "raw_snippet": "<td>עד 16,237</td><td>מעל 16,237 עד 19,847</td><td>מעל 19,847 עד 23,456</td><td>מעל 23,456 עד 27,064</td>",
+      "fetched_at": "2026-08-19T02:11:26Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md",
+        "scripts/arnona-calculator.py"
+      ]
+    },
+    {
+      "claim_id": "arnona-income-table-10plus-90",
+      "claim": "First Schedule 2026, ten persons or more: add up to 1,160 NIS per person beyond nine in the 90% column.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
+      "raw_snippet": "לגבי הנפש העשירית ואילך – עד 1,160 לנפש, בהכפלת מספר הנפשות מעבר ל־9 נפשות",
+      "fetched_at": "2026-08-19T02:11:26Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md",
+        "scripts/arnona-calculator.py"
+      ]
+    },
+    {
+      "claim_id": "arnona-income-table-10plus-70",
+      "claim": "First Schedule 2026, ten persons or more: add up to 1,417 NIS per person beyond nine in the 70% column.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
+      "raw_snippet": "לגבי הנפש העשירית ואילך – עד 1,417 לנפש, בהכפלת מספר הנפשות מעבר ל־9 נפשות",
+      "fetched_at": "2026-08-19T02:11:26Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md",
+        "scripts/arnona-calculator.py"
+      ]
+    },
+    {
+      "claim_id": "arnona-income-table-10plus-50",
+      "claim": "First Schedule 2026, ten persons or more: add up to 1,675 NIS per person beyond nine in the 50% column.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
+      "raw_snippet": "לגבי הנפש העשירית ואילך – עד 1,675 לנפש, בהכפלת מספר הנפשות מעבר ל־9 נפשות",
+      "fetched_at": "2026-08-19T02:11:26Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md",
+        "scripts/arnona-calculator.py"
+      ]
+    },
+    {
+      "claim_id": "arnona-income-table-10plus-30",
+      "claim": "First Schedule 2026, ten persons or more: add up to 1,933 NIS per person beyond nine in the 30% column.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
+      "raw_snippet": "לגבי הנפש העשירית ואילך – עד 1,933 לנפש, בהכפלת מספר הנפשות מעבר ל־9 נפשות",
+      "fetched_at": "2026-08-19T02:11:26Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md",
+        "scripts/arnona-calculator.py"
+      ]
+    },
+    {
+      "claim_id": "arnona-income-update-may-20",
+      "claim": "Reg. 2(a)(8)(a1)(1): the First Schedule amounts are updated on 1 January of each fiscal year by the change in the minimum wage known on 20 May of the preceding fiscal year against that known on 20 May of the year before.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
+      "raw_snippet": "לפי שיעור השינוי בשכר המינימום שהיה ידוע ב־20 במאי של שנת הכספים הקודמת ליום העדכון",
+      "fetched_at": "2026-08-19T02:11:26Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md",
+        "scripts/arnona-calculator.py"
+      ]
+    },
+    {
+      "claim_id": "arnona-income-exclusion-child",
+      "claim": "Reg. 2(a)(8)(b): benefits under Chapters Daled and Yod-Alef of the National Insurance Law and the disabled-child benefit are excluded from counted income.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
+      "raw_snippet": "קצבה המשולמת לפי פרקים ד׳ ו־י״א לחוק הביטוח וגמלה לפי תקנות הביטוח הלאומי (ילד נכה), התש״ע–2010",
+      "fetched_at": "2026-08-19T02:11:26Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md",
+        "scripts/arnona-calculator.py"
+      ]
+    },
+    {
+      "claim_id": "arnona-income-exclusion-reserve",
+      "claim": "Reg. 2(a)(8)(b): special and additional reserve-service payments under the Reserve Service Law 5768-2008 are excluded from counted income.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
+      "raw_snippet": "תגמול מיוחד ותגמול נוסף כמשמעותם בחוק שירות המילואים, התשס״ח–2008",
+      "fetched_at": "2026-08-19T02:11:26Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md",
+        "scripts/arnona-calculator.py"
+      ]
+    },
+    {
+      "claim_id": "arnona-income-12-month-average",
+      "claim": "Reg. 2(a)(8)(b): for an employee, average monthly income is the average over the twelve months preceding the fiscal year for which the discount is sought.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
+      "raw_snippet": "בשכיר – ממוצע ההכנסה החודשית בשנים עשר החודשים שלפני שנת הכספים שבעדה נדרשת ההנחה",
+      "fetched_at": "2026-08-19T02:11:26Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md",
+        "scripts/arnona-calculator.py"
+      ]
+    },
+    {
+      "claim_id": "arnona-sub-tests-2a",
+      "claim": "Reg. 2a: in setting the discount rate under the tests in Reg. 2(1) to (10) the council may take the holder's material position into account and set conditions and sub-tests.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
+      "raw_snippet": "רשאית המועצה להתחשב במצבו החומרי של המחזיק ולצורך זה אף לקבוע תנאים ומבחני משנה לזכאות להנחה",
+      "fetched_at": "2026-08-19T02:11:26Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md",
+        "scripts/arnona-calculator.py"
+      ]
+    },
+    {
+      "claim_id": "arnona-deficit-22a",
+      "claim": "Reg. 22a: a council may not resolve on discounts if the resulting revenue loss would create a current deficit in its budget; the treasurer's opinion must be laid before the council first.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
+      "raw_snippet": "כדי להביא ליצירת גירעון שוטף, כהגדרתו בסעיף 140ג לפקודת העיריות, בתקציב הרשות המקומית",
+      "fetched_at": "2026-08-19T02:11:26Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md",
+        "scripts/arnona-calculator.py"
+      ]
+    },
+    {
+      "claim_id": "arnona-14h-exclusions",
+      "claim": "Reg. 14h: Regulations 16, 17(b), 18, 20 and 21 do not apply to a discount given under Chapter Hey2.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
+      "raw_snippet": "הוראות תקנות 16, 17(ב), 18, 20 ו־21 לא יחולו על מתן הנחה לפי פרק זה",
+      "fetched_at": "2026-08-19T02:11:26Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md",
+        "scripts/arnona-calculator.py"
+      ]
+    },
+    {
+      "claim_id": "arnona-3c1-exclusions",
+      "claim": "Reg. 3c1(c): Regulations 16, 17(b) and 20 do not apply to the evacuated-locality discount.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
+      "raw_snippet": "תקנות 16, 17(ב) ו־20 לא יחולו על הנחה לפי תקנה זו",
+      "fetched_at": "2026-08-19T02:11:26Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md",
+        "scripts/arnona-calculator.py"
+      ]
+    },
+    {
+      "claim_id": "arnona-shmita-90-100",
+      "claim": "Reg. 3d: agricultural land left unworked for shmita observance for at least eight months of the fiscal year, with proven agricultural use in two of the three preceding years, gets a discount of 90 to 100 percent.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
+      "raw_snippet": "בשיעור של 90 עד 100 אחוזים מסכום הארנונה הכללית שהיתה מוטלת על אדמה זו באותה שנת כספים",
+      "fetched_at": "2026-08-19T02:11:26Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md",
+        "scripts/arnona-calculator.py"
+      ]
+    },
+    {
+      "claim_id": "arnona-new-industry-table",
+      "claim": "Reg. 14(a): the new-industry discount runs from up to 10% to up to 75% by year of holding and by the local unemployment rate published by the Employment Service.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
+      "raw_snippet": "<td>ראשונה או חלק ממנה</td><td>הנחה עד 50%</td><td>הנחה עד 75%</td>",
+      "fetched_at": "2026-08-19T02:11:26Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md",
+        "scripts/arnona-calculator.py"
+      ]
+    },
+    {
+      "claim_id": "arnona-oleh-12-of-24-reg",
+      "claim": "Reg. 2(a)(6)(a): an oleh gets a discount not exceeding 90 percent on 100 sqm only, for 12 months out of the 24 beginning on the day of registration as an oleh in the population registry.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
+      "raw_snippet": "עולה – הנחה שאינה עולה על 90 אחוזים לגבי 100 מטרים רבועים בלבד משטח הנכס למשך 12 חודשים מתוך 24 החודשים",
+      "fetched_at": "2026-08-19T02:11:26Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md",
+        "scripts/arnona-calculator.py"
+      ]
+    },
+    {
+      "claim_id": "arnona-empty-cumulative-2005",
+      "claim": "Reg. 13(b): the cumulative empty period is counted from the day this regulation came into force, 1 March 2005.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
+      "raw_snippet": "תחילת חישוב התקופה המצטברת הנזכרת בתקנת משנה (א) תהא ביום תחילתה של תקנה זו",
+      "fetched_at": "2026-08-19T02:11:26Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md",
+        "scripts/arnona-calculator.py"
+      ]
+    },
+    {
+      "claim_id": "vatikim-senior-30-100",
+      "claim": "Senior Citizens Law 5750-1989 s.9(b): the senior arnona discount is 30 percent, and 100 percent where an income-support benefit under the Income Support Law 5741-1980 is paid.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%97%D7%95%D7%A7_%D7%94%D7%90%D7%96%D7%A8%D7%97%D7%99%D7%9D_%D7%94%D7%95%D7%AA%D7%99%D7%A7%D7%99%D7%9D",
+      "raw_snippet": "ההנחה לפי סעיף קטן (א) תינתן לאזרח ותיק בשיעור של 30%; ואם משתלמת לו גמלה לפי",
+      "fetched_at": "2026-08-19T02:11:26Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md",
+        "scripts/arnona-calculator.py"
+      ]
+    },
+    {
+      "claim_id": "vatikim-senior-100sqm",
+      "claim": "Senior Citizens Law s.9(a): where the residence exceeds 100 sqm the discount is given for 100 sqm only.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%97%D7%95%D7%A7_%D7%94%D7%90%D7%96%D7%A8%D7%97%D7%99%D7%9D_%D7%94%D7%95%D7%AA%D7%99%D7%A7%D7%99%D7%9D",
+      "raw_snippet": "עלה שטח דירת המגורים על 100 מ״ר, תינתן ההנחה רק לגבי 100 מ״ר",
+      "fetched_at": "2026-08-19T02:11:26Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md",
+        "scripts/arnona-calculator.py"
+      ]
+    },
+    {
+      "claim_id": "vatikim-senior-income-test",
+      "claim": "Senior Citizens Law s.9(c)(4): the discount goes only to a senior whose total income from every source does not exceed the average wage last published before the application; where more than one senior lives in the flat, the combined income of all residents must not exceed 150% of the average wage.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%97%D7%95%D7%A7_%D7%94%D7%90%D7%96%D7%A8%D7%97%D7%99%D7%9D_%D7%94%D7%95%D7%AA%D7%99%D7%A7%D7%99%D7%9D",
+      "raw_snippet": "אינו עולה על השכר הממוצע כפי שפורסם לאחרונה לפני הגשת הבקשה להנחה",
+      "fetched_at": "2026-08-19T02:11:26Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md",
+        "scripts/arnona-calculator.py"
+      ]
+    },
+    {
+      "claim_id": "vatikim-senior-150-percent",
+      "claim": "Senior Citizens Law s.9(c)(4): where more than one senior lives in the flat, the combined income of everyone living there must not exceed 150 percent of the average wage.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%97%D7%95%D7%A7_%D7%94%D7%90%D7%96%D7%A8%D7%97%D7%99%D7%9D_%D7%94%D7%95%D7%AA%D7%99%D7%A7%D7%99%D7%9D",
+      "raw_snippet": "אינו עולה על 150% מהשכר הממוצע",
+      "fetched_at": "2026-08-19T02:11:26Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md",
+        "scripts/arnona-calculator.py"
+      ]
+    },
+    {
+      "claim_id": "vatikim-senior-one-flat-one-person",
+      "claim": "Senior Citizens Law s.9(c)(1) and (2): the discount is given for one residence only and to one senior only, even if more than one entitled person lives in the flat.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%97%D7%95%D7%A7_%D7%94%D7%90%D7%96%D7%A8%D7%97%D7%99%D7%9D_%D7%94%D7%95%D7%AA%D7%99%D7%A7%D7%99%D7%9D",
+      "raw_snippet": "ההנחה תינתן לאותו אזרח ותיק בעד דירת מגורים אחת בלבד",
+      "fetched_at": "2026-08-19T02:11:26Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md",
+        "scripts/arnona-calculator.py"
+      ]
+    },
+    {
+      "claim_id": "vatikim-senior-auto-renewal-70",
+      "claim": "Senior Citizens Law s.9(d)(2)(a): for a senior on the 30 percent rate who has not turned 70, automatic renewal continues until the end of the three calendar years after the year the discount was given, or until they reach 70, whichever is earlier.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%97%D7%95%D7%A7_%D7%94%D7%90%D7%96%D7%A8%D7%97%D7%99%D7%9D_%D7%94%D7%95%D7%AA%D7%99%D7%A7%D7%99%D7%9D",
+      "raw_snippet": "עד תום שלוש השנים הקלנדריות שלאחר השנה שבמהלכה ניתנה לו ההנחה בארנונה, או עד הגיעו לגיל 70, לפי המוקדם",
+      "fetched_at": "2026-08-19T02:11:26Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md",
+        "scripts/arnona-calculator.py"
+      ]
+    },
+    {
+      "claim_id": "vatikim-section-9-scope",
+      "claim": "Senior Citizens Law: the financing-agreement provision expressly does not apply to section 9, the arnona-discount section.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%97%D7%95%D7%A7_%D7%94%D7%90%D7%96%D7%A8%D7%97%D7%99%D7%9D_%D7%94%D7%95%D7%AA%D7%99%D7%A7%D7%99%D7%9D",
+      "raw_snippet": "ואולם הוראות סעיף זה לא יחולו לעניין סעיף 9",
+      "fetched_at": "2026-08-19T02:12:41Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md"
+      ]
+    },
+    {
+      "claim_id": "arnona-reg-12-cross-ref",
+      "claim": "Reg. 13(c) cross-refers to Regulation 12 for the evidence a holder must supply that a building is empty and unused.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
+      "raw_snippet": "להוכחת היותו של הבנין בנין ריק שאין משתמשים בו, כאמור בתקנה 12 ובתקנת משנה (א)",
+      "fetched_at": "2026-08-19T02:12:41Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md"
+      ]
+    },
+    {
+      "claim_id": "arnona-reg-13-cross-ref",
+      "claim": "Reg. 12(a) opens subject to Regulation 13.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
+      "raw_snippet": "בכפוף לאמור בתקנה 13(3)",
+      "fetched_at": "2026-08-19T02:12:41Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md"
+      ]
+    },
+    {
+      "claim_id": "arnona-reg-16-cross-ref",
+      "claim": "Reg. 34(c) reads Regulation 16 with a substituted date for the Chapter Tet coronavirus discounts.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
+      "raw_snippet": "יקראו את תקנה 16 כך שבמקום ”עד יום 31 בדצמבר של אותה שנה“",
+      "fetched_at": "2026-08-19T02:12:41Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md"
+      ]
+    },
+    {
+      "claim_id": "arnona-reg-21-cross-ref",
+      "claim": "Reg. 34(b): Regulation 21 does not apply to Chapter Tet except for Regulation 33.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
+      "raw_snippet": "תקנה 21 לא תחול על פרק זה למעט על תקנה 33",
+      "fetched_at": "2026-08-19T02:12:41Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md"
+      ]
+    },
+    {
+      "claim_id": "arnona-reg-7-cross-ref",
+      "claim": "Reg. 10(a): the committee determines entitlement and discount rates subject to Regulation 7.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
+      "raw_snippet": "ואת שיעורי ההנחה בכפוף לאמור בתקנה 7",
+      "fetched_at": "2026-08-19T02:12:41Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md"
+      ]
+    },
+    {
+      "claim_id": "arnona-reg-2-application",
+      "claim": "Reg. 4(a): discounts set under Regulation 2(3) to (6) and (8) to (10), and under Regulation 3, are given on a signed application in Form 1 of the Second Schedule.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
+      "raw_snippet": "הנחות שקבעה המועצה לפי תקנה 2(3) עד (6) ו־(8) עד (10), וכן לפי תקנה 3",
+      "fetched_at": "2026-08-19T02:12:41Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md"
+      ]
+    },
+    {
+      "claim_id": "arnona-reg-14-national-service",
+      "claim": "Reg. 2(a)(10) refers to a national-service volunteer as defined in Regulation 14d of these regulations.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
+      "raw_snippet": "או מתנדבת בשירות הלאומי כהגדרתה בתקנה 14ד לתקנות אלה",
+      "fetched_at": "2026-08-19T02:12:41Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md"
+      ]
+    },
+    {
+      "claim_id": "arnona-reg-14e-area-limit",
+      "claim": "Reg. 14f: a holder of a property over 70 sqm is not entitled to the Regulation 14e discount except for 70 sqm.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
+      "raw_snippet": "לא יהיה זכאי להנחה לפי תקנה 14ה, אלא לגבי 70 מטרים רבועים בלבד",
+      "fetched_at": "2026-08-19T02:12:41Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",

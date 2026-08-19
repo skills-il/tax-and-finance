@@ -4,7 +4,6 @@ description: Calculate municipal property tax (arnona) for Israeli properties, c
 license: MIT
 allowed-tools: Bash(python:*) Read Edit Write WebFetch
 compatibility: Requires Python 3.10+ for calculator script
-version: 1.3.0
 ---
 
 # Israeli Arnona Optimizer
@@ -47,26 +46,71 @@ Consult `references/arnona-rates-guide.md` for detailed rate tables and zone cla
 
 ### Step 3: Check Discount Eligibility
 
-After calculating the base arnona, check if the user qualifies for any discounts. Israeli law (the Arnona Regulations and individual municipal bylaws) provides discounts for specific populations:
+Israeli arnona discounts come from ONE national instrument, the Arrangements in the State Economy Regulations (Arnona Discount), 5753-1993, plus municipal bylaws on top. Two things decide how you phrase an answer:
 
-| Category | Discount | Key Requirements |
-|----------|----------|-----------------|
-| Oleh Chadash (new immigrant) | Up to 90% on up to 100 sqm | 12 discounted months chosen within the first 24 months from the teudat-oleh / registration date; primary residence |
-| Active-duty soldier (chayal sadir) | 100% on 70 sqm (90 sqm if 5+ people live in the apartment) | Any conscript, and for up to 4 months after discharge; must be the owner or the tenant. A soldier living in a parent's home is not eligible, though the parents may be exempt if they show the soldier supported them |
-| Senior (vatik), pension recipient | Up to 25% (discretionary) | Receives old-age / survivors / work-injury pension; no income test |
-| Senior (vatik), income-tested | 30% (mandatory) | Household income up to the average wage |
-| Senior (vatik) with income supplement | Up to 100% | Also receives hashlamat hachnasa within the income limit |
-| Disabled, medical disability 90%+ | Up to 40% | Bituach Leumi medical-disability certificate (90%+) |
-| Disabled, earning incapacity 75%+ | Up to 80% | 75%+ loss of earning capacity (ai-kosher) with a full monthly benefit |
-| Low income (income test) | Up to 30% / 50% / 70% / 90% by income band | Discretionary, not a mandatory discount. Band depends on average gross monthly household income in the preceding year and the number of people in the household |
-| Income support (havtachat hachnasa) recipient | Up to 70%, at the municipality's decision | Only recipients whose benefit started before 2003 with no 6-month continuous break in eligibility; distinct from the senior income-supplement band |
-| Hardship (nazak) | Up to 70% | Granted by the local discounts (nazak) committee after an unexpected event causing serious income loss (illness, death in family, sudden unemployment), or exceptionally high medical-treatment expenses |
-| Reserve duty (miluim) | Up to 5%, discretionary | Holders of a teudat mesharet miluim pa'il (or an equivalent valid IDF confirmation) registered as the owner or the tenant. This is a discretionary discount, so a municipality may decline it or set its own rules |
-| Student | Municipality-dependent | Discretionary per municipal bylaw; we could not verify a uniform national rate, so check your municipality's own discount table |
-| Single parent | Municipality-dependent | Set by municipal bylaw; we could not verify a uniform national rate, so check your municipality's own discount table |
-| Large family (4+ children) | Municipality-dependent, income-tested | We could not verify a uniform national rate, so check your municipality's own discount table |
-| Bereaved family | 66.66% (mandatory) on 70 sqm (90 sqm if 5+ people live in the apartment) | Receives a monthly benefit as a bereaved family member of a fallen IDF or security-forces member: parents, widows and widowers (including common-law), orphans, and in some cases a fallen soldier's ex-wife |
-| Holocaust survivor | Up to 66%, at the municipality's discretion (2/3 mandatory for nechei ha-milchama ba-Nazim) | Discount applies to 70 sqm of the apartment, or 90 sqm if 5 or more family members live there |
+- **Ceiling vs entitlement.** Almost every row in Regulation 2 opens with "a council MAY set a discount not exceeding X percent". That X is a **ceiling the municipality chooses within**, not an amount the resident is owed. Chapter Hey2 (Regulations 14e, 14e1) and Regulations 3c and 3c1 are the opposite: the resident "is entitled", and the municipality has no discretion. Never present a Regulation 2 ceiling as an entitlement.
+- **Area caps differ per row.** 100 sqm, 70 sqm (90 sqm if more than four family members live with the holder), or no cap at all. Applying a blanket 100 sqm to every row overstates several discounts and understates others.
+
+**A. Entitlements (mandatory, no municipal discretion)**
+
+| Who | Discount | Area cap | Source |
+|-----|----------|----------|--------|
+| Conscript soldier, national-service volunteer, civilian-security service; and up to 4 months after discharge | 100% | 70 sqm, 90 sqm if the holder's family living with them exceeds four | Reg. 14e(1), cap in Reg. 14f |
+| Parent supported by the soldier before service, with no other livelihood | 100% | same | Reg. 14e(1)(b) |
+| Civilian-social service, 30 weekly hours over two years | three quarters | same | Reg. 14e(1a) |
+| IDF-disabled, Nazi-war disabled, police and prison-service disabled, bereaved family of a fallen serviceperson, hostile-action casualty | two thirds | same | Reg. 14e(2) |
+| Civilian service split track, or civilian-social service 20 weekly hours over three years | 50% | same | Reg. 14e(3) |
+| Person determined to be a hostage or missing person (Hostages and Missing Persons Law 5784-2023) | 100% | none | Reg. 14e1 |
+| Senior citizen whose total income from every source is within the average wage; where more than one senior lives in the flat, the combined income of all residents must be within 150% of the average wage | 30% | 100 sqm | Senior Citizens Law 5750-1989, s.9(b) and s.9(c)(4) |
+| The same senior, receiving an income-support benefit under the Income Support Law 5741-1980 | 100% | 100 sqm | Senior Citizens Law, s.9(b) |
+| Holder in Sderot, the Gaza-envelope localities, or within 7 km of the Gaza perimeter fence | 45% residential, 39% other property | none | Reg. 3c, fiscal years 2015 to 2026 |
+| Holder in an evacuated locality listed under the Iron Swords deferral law | 100% from 7 October 2023 to the end of the evacuation period | none | Reg. 3c1 |
+
+The senior entitlement runs for one flat only and goes to one senior only, even where several qualify in the same flat. Once granted it renews automatically; a senior on the 30% rate who is under 70 gets automatic renewal for three calendar years or until turning 70, whichever comes first, and must re-apply after that. Regulation 2(a)(1) below is the parallel DISCRETIONARY route, which is why the same person can appear in both tables at different rates. Give the resident the higher one, since only one discount applies.
+
+**B. Ceilings the council may set within (Regulation 2 and Regulations 3f, 3g, 7, 14c)**
+
+| Who | Ceiling | Area cap | Reg. 2 paragraph |
+|-----|---------|----------|------------------|
+| Senior citizen receiving old-age, survivors, dependants, or work-injury pension | 25% | 100 sqm | 2(1)(a) |
+| The same senior who also receives an income-support benefit | 100% | 100 sqm | 2(1)(b) |
+| Full monthly benefit with earning-incapacity 75% or more, including a pre-old-age-pension determination | 80% | none stated | 2(2) |
+| Proven medical disability of 90% or more | 40% | none stated | 2(3) |
+| Prisoner of Zion or family of a Hanged of the Kingdom; Nazi-persecution disability pension; German BEG, Dutch WUV, Austrian OFG, or Belgian 1954 pension | 66% | 70 sqm, 90 sqm if more than four family members live with them | 2(4) |
+| Holder of a blind person's certificate under the Welfare Services Law 5718-1958 | 90% | none stated | 2(5) |
+| Oleh, or holder of an oleh-citizen certificate | 90% | 100 sqm, for 12 months chosen within the first 24 | 2(6) |
+| Oleh dependent on the help of others, receiving a special or nursing benefit for olim | 80% | none stated | 2(6a) |
+| SLA (South Lebanon Army) member recognised as rehabilitation-eligible, and their spouse | 90% | 100 sqm, 12 months within 36 from arrival after May 2000 | 2(6b) |
+| Recipient of a long-term nursing benefit (gimlat siud) under Chapter Vav of the National Insurance Law | 70% | none stated | 2(7)(c) |
+| Average monthly income within the First Schedule table, by household size | 90% / 70% / 50% / 30% by income column | none stated | 2(8) |
+| Righteous Among the Nations recognised by Yad Vashem, and their spouse | 66% | none stated | 2(9) |
+| Single parent; or a single parent of a co-resident child under 21 in conscript or national service | 20% | none stated | 2(10) |
+| Parent of a child, including a foster child, entitled to the disabled-child benefit; or over 18 with a disability benefit preceded by the disabled-child benefit | 33% | 100 sqm | 2(11) |
+| Released captive entitled to payment under the Payments to Released Captives Law 5765-2005 | 20% | none stated | 2(12) |
+| Active reserve soldier holding a valid active-reservist certificate | 5% | none stated | Reg. 3f |
+| Active reserve COMMANDER in a command role holding a valid certificate | 25% | 100 sqm | Reg. 3g |
+| Needy holder (nazak): exceptional medical expenses, or an event causing a serious unforeseen worsening of their material position | 70%, granted by the discounts committee | none stated | Reg. 7 |
+| Senior business owner: sole business up to 75 sqm, aged 65 (60 for a woman), turnover up to 240,000 NIS index-linked, already receiving a Reg. 2(8) discount at home | the same rate given on the home | first 40 sqm of the business | Reg. 14c |
+
+**No national row exists for these.** The regulation has NO student discount and NO large-family discount. A municipality may still grant one under its own bylaw, so check the local table, but there is no national rate to quote and none should be assumed. A large family's national route is the Regulation 2(8) income test, whose thresholds rise with household size.
+
+**Non-residential and agricultural rows.** Three further routes sit outside the residential tables above and are easy to miss when the property is not a flat: a new industrial plant gets a ceiling from up to 10% to up to 75% depending on its year of holding and the local unemployment rate published by the Employment Service (Reg. 14); agricultural land left unworked for shmita observance for at least eight months of the fiscal year, with agricultural use proven in two of the three preceding years, gets 90% to 100% (Reg. 3d); and a holder of non-residential premises who meets the Chapter Hey2 conditions can claim the same rate there if they owed no income-tax advance that year and the assessing officer certified it (Reg. 14z). Details in `references/arnona-discounts-guide.md`.
+
+**Regulation 2(8) income table, fiscal year 2026** (average monthly gross household income, NIS; the columns give the 90% / 70% / 50% / 30% ceilings):
+
+| Persons | up to 90% | up to 70% | up to 50% | up to 30% |
+|---------|-----------|-----------|-----------|-----------|
+| 1 | up to 3,623 | 3,623 to 4,430 | 4,430 to 5,235 | 5,235 to 6,041 |
+| 2 | up to 5,798 | 5,798 to 7,088 | 7,088 to 8,377 | 8,377 to 9,666 |
+| 3 | up to 7,683 | 7,683 to 9,392 | 9,392 to 11,100 | 11,100 to 12,807 |
+| 4 | up to 9,278 | 9,278 to 11,341 | 11,341 to 13,403 | 13,403 to 15,465 |
+| 5 | up to 10,872 | 10,872 to 13,291 | 13,291 to 15,707 | 15,707 to 18,124 |
+| 6 | up to 12,323 | 12,323 to 15,063 | 15,063 to 17,801 | 17,801 to 20,539 |
+| 7 | up to 13,771 | 13,771 to 16,835 | 16,835 to 19,896 | 19,896 to 22,956 |
+| 8 | up to 15,077 | 15,077 to 18,429 | 18,429 to 21,780 | 21,780 to 25,131 |
+| 9 | up to 16,237 | 16,237 to 19,847 | 19,847 to 23,456 | 23,456 to 27,064 |
+
+For 10 people or more, take the 9-person figure in the same column and add per additional person: 1,160 in the 90% column, 1,417 in the 70% column, 1,675 in the 50% column, 1,933 in the 30% column. These amounts update every 1 January by the change in the minimum wage known on 20 May of the preceding fiscal year, so re-read the First Schedule each year rather than carrying these figures forward.
 
 Run the calculator with discount flags:
 
@@ -77,13 +121,14 @@ python scripts/arnona-calculator.py --municipality "tel-aviv" --area 80 --zone 2
 Consult `references/arnona-discounts-guide.md` for the full list of discount categories, required documentation, and municipality-specific variations.
 
 **Important rules about discounts:**
-- Discounts apply only to the primary residence (dira ikarit), up to 100 sqm in most municipalities.
+- Discounts apply only to a flat used solely for residence. Read the area cap off the row you are using, not off a blanket 100 sqm.
 - Area above the discount cap is charged at the full rate.
-- Only one discount can be applied at a time (the highest applicable discount).
+- Only one discount applies. Where several fit, the resident gets the single highest one, and no discount goes to a second holder of the same property (Reg. 17(a)). A holder of two or more properties gets the discount on one only (Reg. 17(b)), and a part-year holder gets it pro rata by months held (Reg. 17(c)).
+- A discount is conditional on clearing the year's arnona balance, whether in one advance payment, by standing order, or under another payment arrangement the municipality accepts (Reg. 20). An unpaid balance at 31 December voids the discount for that year and it is added back to the debt (Reg. 16). Regulations 16, 17(b) and 20 do not apply to the Reg. 3c1 evacuation discount, and Regulations 16, 17(b), 18, 20 and 21 do not apply to the Chapter Hey2 entitlements.
 - Discounts must be renewed annually in most municipalities.
-- The application deadline varies by municipality (typically January-March).
+- The application deadline is set by each council (Reg. 21), typically January to March.
 
-**Income-test reform for 2026 (effective 1 January 2026):** the income-tested discounts (the low-income table, and the income tests behind other bands) were reformed. Eligibility is now computed on the applicant's **12-month average income only** (the earlier 3-month option was removed), against a **per-capita threshold table indexed to the minimum wage and household size**, and certain Bituach Leumi benefits (child allowances, old-age/survivors pensions) are excluded from the counted income. The reform widened eligibility (roughly 740,000 to 840,000 households) while keeping the top band at 90%. Because the exact per-capita thresholds are published annually by the Ministry of Interior and each municipality, always verify the current-year table before quoting a specific income cutoff. The figures in `references/arnona-discounts-guide.md` are indicative and must be checked against the 2026 table.
+**Income-test reform for 2026 (effective 1 January 2026):** the income-tested discounts (the low-income table, and the income tests behind other bands) were reformed. Eligibility is now computed on the applicant's **12-month average income only** (the earlier 3-month option was removed), against a **per-capita threshold table indexed to the minimum wage and household size**, and certain Bituach Leumi benefits (child allowances, old-age/survivors pensions) are excluded from the counted income. The reform widened eligibility (roughly 740,000 to 840,000 households) while keeping the top band at 90%. The operative thresholds are the First Schedule table reproduced above, which is the regulation's own text for fiscal year 2026. They are revised every 1 January, so re-read the Schedule at the start of each year rather than carrying the figures forward.
 
 ### Step 4: Draft Appeal Letters
 
@@ -93,7 +138,7 @@ If the user believes their arnona assessment is incorrect, help them draft an ap
 2. **Wrong zone classification**: The property should be classified in a lower-rate zone based on its location.
 3. **Incorrect usage classification**: The property is classified as commercial but is actually used for residential purposes (or vice versa).
 4. **Structural issues**: Parts of the property are uninhabitable (e.g., under renovation, flood damage, structural defects).
-5. **Empty/vacant property**: The property has been vacant for an extended period (some municipalities offer partial exemptions for vacant properties, typically up to 6 months).
+5. **Empty/vacant property**: An empty building nobody uses carries a discount ladder the council may set within, cumulative over the period one person owns the building and counted from the regulation's commencement on 1 March 2005: up to 100% for the first 6 months, up to 66.66% for months 7 to 12, and up to 50% for months 13 to 36 (Reg. 13(a)). Any continuous vacancy shorter than 30 days does not count toward the cumulative period, and the holder must notify the municipality 7 days before the property is used again or the last stretch of discount can be cancelled. Separately, the FIRST owner of a NEW empty building that has never been used since completion may get up to 100% for up to twelve months (Reg. 12). This is a separate route, not an extension of the Reg. 13 ladder.
 
 **Appeal process:**
 - File the appeal (hasaga) within 90 days of receiving the arnona bill.
@@ -181,7 +226,8 @@ Result: The agent drafts a formal appeal letter in Hebrew addressed to the Haifa
 | Source | URL | What to Check |
 |--------|-----|---------------|
 | Kolzchut: Arnona | https://www.kolzchut.org.il/he/ארנונה | Plain-language guide to arnona obligations, discounts, and appeal rights |
-| gov.il: Property Tax (Arnona) | (link removed, this gov.il page now returns 404) | Official ministry topic page covering legislation and discount eligibility |
+| Arrangements in the State Economy Regulations (Arnona Discount), 5753-1993, consolidated | https://he.wikisource.org/wiki/תקנות_הסדרים_במשק_המדינה_(הנחה_מארנונה) | The authoritative text of every discount paragraph, the First Schedule income table, and the empty-building ladder. Read this before quoting any rate |
+| Senior Citizens Law 5750-1989, consolidated | https://he.wikisource.org/wiki/חוק_האזרחים_הותיקים | The s.9 senior arnona entitlement, its income test, and the automatic-renewal rules |
 | Bituach Leumi: Disability Benefits | https://www.btl.gov.il/benefits/Disability/Pages/default.aspx | Source documents for the disability percentages used in arnona discount eligibility |
 | Tel Aviv Municipality | https://www.tel-aviv.gov.il/ | Tel Aviv tzav arnona, current rates, online payment, appeals |
 | Jerusalem Municipality | https://www.jerusalem.muni.il/ | Jerusalem alef-heh zone rates, payment, discount applications |
@@ -191,6 +237,8 @@ Result: The agent drafts a formal appeal letter in Hebrew addressed to the Haifa
 - Arnona discounts (hanacha) have strict eligibility windows and require annual renewal. Agents may suggest discounts the user no longer qualifies for or that have expired.
 - Property classification (residential vs. commercial) significantly affects arnona rates. Agents may misclassify home offices, which in Israel are usually still taxed at residential rates unless formally rezoned.
 - Arnona appeal deadlines are typically 90 days from the annual bill date. Agents may draft appeals after the deadline has passed, making them void.
+- Most rows in the discount regulation are CEILINGS a council chooses within, not amounts owed. Telling a resident "you get 40%" when the regulation says "up to 40%" sets them up for an argument with a clerk they cannot win. Say "up to", and name whether the row is discretionary or an entitlement.
+- There is NO national student discount and NO national large-family discount. Agents fill that gap with plausible round numbers, typically 50% and 30%. Neither has a paragraph behind it. If the user asks, say the national regulation is silent and point them at the municipal bylaw table.
 
 ## Troubleshooting
 
@@ -200,7 +248,7 @@ Solution: Check the municipality name spelling. Use the `--list-municipalities` 
 
 ### Error: "Discount category not recognized"
 Cause: The discount type specified does not match one of the supported discount categories in the calculator.
-Solution: Run `python scripts/arnona-calculator.py --list-discounts` to see all supported discount categories. Common mistakes include using "immigrant" instead of "oleh". The supported categories are: oleh, soldier, senior-pension, senior-income, senior-supplement, disabled-medical, disabled-incapacity, low-income, income-support, nazak, student, single-parent, large-family, bereaved, holocaust-survivor. Reserve-duty (miluim) relief is municipality-administered and not a calculator key, check your municipal bylaw.
+Solution: Run `python scripts/arnona-calculator.py --list-discounts`, which groups every category into entitlements and council-set ceilings and prints the regulation behind each one. Common mistakes include using "immigrant" instead of "oleh". Two keys were REMOVED in v1.5.0 because no national rate exists behind them: `student` and `large-family`. The regulation has no paragraph for either, so the calculator will not produce a number; read the municipality's own bylaw table, and for a large household use `low-income`, whose thresholds already rise with household size. `bereaved` and `holocaust-survivor` were renamed to `disabled-veteran` (Reg. 14e(2), a two-thirds entitlement covering bereaved families, hostile-action casualties, police and prison-service disabled) and `persecution-pension` (Reg. 2(a)(4), a 66% ceiling on 70 sqm).
 
 ### Error: "Zone not valid for this municipality"
 Cause: Each municipality uses its own zone classification system. Tel Aviv uses numbered zones (1-4), Jerusalem uses Hebrew-letter zones alef through heh (א-ה), and other cities have their own systems.
