@@ -1,207 +1,362 @@
 {
   "schemaVersion": "1.0",
   "skill": "israeli-stock-options-tax",
-  "version": "1.2.0",
-  "audit_date": "2026-07-15",
-  "auditor": "update-skill (Opus 4.8) - volatility batch 2026-07-15",
+  "version": "1.4.0",
+  "audit_date": "2026-08-19",
+  "auditor": "update-skill (Opus 5) - Section 102 controlling-shareholder + holding-period remediation 2026-08-19",
   "claims": [
     {
-      "claim": "Section 102 capital gains track taxes the entire gain at a flat 25% (or 30% for controlling shareholders holding 10%+).",
-      "source_name": "PWC Israel Individual Income Determination",
-      "verified_2026": true,
-      "source_url": "https://taxsummaries.pwc.com/israel/individual/income-determination",
-      "raw_snippet": "preferential capital gains tax rate of 25%"
+      "claim_id": "section-102-capital-gains-track-taxes-the-entire",
+      "claim": "Section 102(b)(2): where the employer company elected the capital gains track and the trustee held the shares to the end of the period, the employee income is treated as a capital gain and taxed at 25%. There is no controlling-shareholder variant of this rate inside Section 102.",
+      "source_url": "https://he.wikisource.org/wiki/פקודת_מס_הכנסה",
+      "raw_snippet": "בחרה החברה המעבידה במסלול רווח הון, והנאמן החזיק במניות עד תום התקופה לפחות, יראו את הכנסתו של העובד כרווח הון בסכום שווי ההטבה, והוא יחויב עליו במס בשיעור של 25%",
+      "source_name": "פקודת מס הכנסה [נוסח חדש], ויקיטקסט",
+      "verified_2026": true
     },
     {
-      "claim": "Section 102 trustee 24-month holding period is counted from the END OF THE TAX YEAR OF GRANT (December 31 of grant year), not from the grant date itself.",
-      "source_name": "NASPP Israel Section 102",
-      "note": "End-of-tax-year clock-start is the established ITA interpretation; numerous Israeli tax-firm publications confirm this. PwC and the kolzchut treatment of Section 102 both state the period runs from the end of the tax year of grant.",
-      "verified_2026": true,
-      "source_url": "https://www.naspp.com/blog/hiring-in-israel--how-section-102-shapes-equity-compensation",
-      "raw_snippet": "the trustee must hold for a minimum of 24 months"
+      "claim_id": "section-102-trustee-24-month-holding-period-is-c",
+      "claim": "Section 102(a) \"end of the period\": 24 months from the day the shares were allotted and deposited with a trustee on the capital gains track, and 12 months on the employment income track. It is NOT counted from the end of the tax year of grant (that was the pre-2003 wording).",
+      "source_url": "https://he.wikisource.org/wiki/פקודת_מס_הכנסה",
+      "raw_snippet": "בחרה החברה במסלול רווח הון – תקופה של 24 חודשים מיום שבו הוקצו המניות והופקדו בידי נאמן",
+      "source_name": "פקודת מס הכנסה [נוסח חדש], ויקיטקסט",
+      "note": "Re-verified 2026-08-19 against the consolidated ordinance text: Section 102(a) definition of tom hatkufa. The end-of-tax-year formulation is the pre-2003 wording and is no longer the law.",
+      "verified_2026": true
     },
     {
-      "claim": "2026 surtax (mas yasaf) threshold is 721,560 NIS/year. Above that threshold: 3% general surtax on all income + additional 2% surtax on capital income (effective since 2025).",
-      "source_name": "PWC Israel Individual Other Taxes",
-      "verified_2026": true,
-      "source_url": "https://taxsummaries.pwc.com/israel/individual/other-taxes",
-      "raw_snippet": "additional 2% surtax on capital income over ILS 721,561, bringing the total surtax to 5%"
+      "claim_id": "2026-surtax-mas-yasaf-threshold-is-721-560-nis-y",
+      "claim": "Section 121B: a 3% surtax on taxable income above the threshold (721,560 NIS for 2024-2027), plus under 121B(a1) an additional 2% on taxable income from capital sources above the same threshold, so 5% in total on capital gains above it.",
+      "source_url": "https://he.wikisource.org/wiki/פקודת_מס_הכנסה",
+      "raw_snippet": "יחיד אשר הכנסתו החייבת ממקורות הוניים בשנת המס עלתה על הסכום הקבוע באותו סעיף קטן, יהיה חייב במס נוסף על חלק הכנסתו החייבת ממקורות הוניים העולה על הסכום האמור, בשיעור של 2%",
+      "source_name": "פקודת מס הכנסה [נוסח חדש], ויקיטקסט",
+      "verified_2026": true
     },
     {
+      "claim_id": "2026-israeli-income-tax-brackets-after-the-april",
       "claim": "2026 Israeli income tax brackets after the April 2026 retroactive widening: bracket 3 (20%) covers monthly 10,061-19,000 (annual 120,721-228,000); bracket 4 (31%) covers 19,001-25,100 monthly (228,001-301,200 annual).",
-      "source_name": "Globes - Revised income tax brackets",
-      "verified_2026": true,
       "source_url": "https://en.globes.co.il/en/article-revised-income-tax-brackets-boost-march-salary-1001539434",
-      "raw_snippet": "The 20% tax bracket will be widened... revised up to NIS 19,000 per month. The next tax bracket, 31%... will be revised upwards to NIS 25,100 | Full 2026 annual bracket table: 10% up to 84,120; 14% 84,121-120,720; 20% 120,721-228,000; 31% 228,001-301,200; 35% 301,201-560,280; 47% 560,281-721,560; 50% above 721,560. Monthly boundaries 7,010 / 10,060 / 19,000 / 25,100 / 46,690 / 60,130."
+      "raw_snippet": "tax bracket will be widened, so that instead of its range being between a monthly income of NIS 10,061 and NIS 16,150 per month, it will be revised up to NIS 19,000 per month. The next tax bracket, 31%, will start at NIS 19,001 per month and instead of being up to NIS 22,440 per month, will be revised upwards to NIS 25,100 per month.",
+      "source_name": "Globes - Revised income tax brackets",
+      "verified_2026": true
     },
     {
+      "claim_id": "bituach-leumi-maximum-monthly-income-subject-to",
       "claim": "Bituach Leumi maximum monthly income subject to contributions for SALARIED employees (shakhir) in 2026 is 51,910 NIS. The reduced-rate ceiling (60% of the average wage) is 7,703 NIS/month.",
-      "source_name": "Kol-Zchut Bituach Leumi for Salaried Employees",
-      "note": "49,030 NIS/month is the corresponding 2026 ceiling for self-employed (atzma'i); the skill applies to salaried tech employees so 51,910 is the correct figure.",
-      "verified_2026": true,
       "source_url": "https://www.kolzchut.org.il/he/%D7%93%D7%9E%D7%99_%D7%91%D7%99%D7%98%D7%95%D7%97_%D7%9C%D7%90%D7%95%D7%9E%D7%99_%D7%9C%D7%A2%D7%95%D7%91%D7%93_%D7%A9%D7%9B%D7%99%D7%A8",
-      "raw_snippet": "Income above 7,703 ₪ up to 51,910 ₪ is subject to the full National Insurance contribution rate (2026)"
+      "raw_snippet": "מי שמועסק בכמה מקומות עבודה ושכרו אצל המעסיק העיקרי נמוך מ-7,703 ₪ או שהכנסתו מכל המעסיקים גבוהה מ-51,910 ₪ בחודש",
+      "source_name": "Kol-Zchut Bituach Leumi for Salaried Employees",
+      "note": "Kol-Zchut returns HTTP 403 to plain fetches; read in the Playwright browser on 2026-08-19 and both figures (7,703 reduced-rate ceiling and 51,910 maximum) are on the page. 49,030 NIS/month is the corresponding 2026 ceiling for self-employed (atzma'i); the skill applies to salaried tech employees so 51,910 is the correct figure.",
+      "verified_2026": true,
+      "verified_via": "browser",
+      "verified_at": "2026-08-19"
     },
     {
+      "claim_id": "for-a-resident-salaried-employee-aged-18-to-reti",
       "claim": "For a resident salaried employee aged 18 to retirement (column 1 of the BL rate table), the 2026 employee contribution is: reduced tier (up to 7,703/month) National Insurance 1.04% + health 3.23% = 4.27% total; full tier (7,703-51,910/month) National Insurance 7.0% + health 5.17% = 12.17% total. The reduced-tier NI rate (1.04%) and full-tier health rate (5.17%) reflect the temporary order in force for 2025-2026. Employer contribution on the full tier is 7.6%. Before the temporary order the employee reduced-tier total was 3.5% and the full-tier total was 12.0%.",
+      "source_url": "https://www.btl.gov.il/Insurance/Rates/Pages/לעובדים%20שכירים.aspx",
+      "raw_snippet": "7,703 ש\"ח (החל ב- 01.01.2026)",
       "source_name": "Bituach Leumi official rate table for salaried employees",
       "verified_2026": true,
-      "note": "Confirmed by rendering the official BL salaried-worker rate table (column 1). Corrects the prior pre-2025 figures (0.4%/3.1%/7.0%/5.0%) that survived in the v1.1.0 reference file.",
-      "source_url": "https://www.btl.gov.il/Insurance/Rates/Pages/לעובדים%20שכירים.aspx",
-      "raw_snippet": "7,703 ש\"ח (החל ב- 01.01.2026)"
+      "note": "Confirmed by rendering the official BL salaried-worker rate table (column 1). Corrects the prior pre-2025 figures (0.4%/3.1%/7.0%/5.0%) that survived in the v1.1.0 reference file."
     },
     {
+      "claim_id": "section-102-b-3-for-a-company-whose-shares-are-l",
       "claim": "Section 102(b)(3): for a company whose shares are LISTED on a stock exchange at the grant date, or registered for trading within 90 days after the grant,, the capital-gains track still applies but the gain is mandatorily bifurcated. The ordinary-income component equals the average closing share value over the 30 trading days preceding the grant date (less any exercise price) and is taxed at marginal rates + Bituach Leumi + health + surtax; only the excess over that grant-date average is taxed at 25%. Private companies at grant are taxed at a flat 25% on the whole gain.",
+      "source_url": "https://www.nevo.co.il/law_html/law01/255_001.htm",
+      "raw_snippet": "היתה המניה המוקצית מניה הרשומה למסחר בבורסה, או מניה בחברה שמניותיה נרשמו למסחר בתוך 90 ימים ממועד ההקצאה, יראו את חלק שווי ההטבה בגובה ממוצע שוויין של מניות החברה בבורסה בתום שלושים ימי המסחר שקדמו להקצאה, או בתום שלושים ימי המסחר שלאחר הרישום למסחר כאמור, לפי הענין, בניכוי ההוצאות, כהכנסה לפי סעיף 2(1) או (2) לפי הענין, ואת יתרת שווי ההטבה כרווח הון החייב במס בשיעור של 25%",
       "source_name": "Baker McKenzie Global Equity Matrix - Israel RS/RSU (Section 102(b)(3))",
       "verified_2026": true,
-      "note": "The 30-day-preceding-grant ordinary-income component under the capital-gains track for listed companies is the §102(b)(3) rule; the income-track 30-day-preceding-settlement average is the separate Baker McKenzie RSU claim already in this file. 90-day-after-grant arm added per expert review.",
-      "source_url": "https://www.nevo.co.il/law_html/law01/255_001.htm",
-      "raw_snippet": "היתה המניה המוקצית מניה הרשומה למסחר בבורסה, או מניה בחברה שמניותיה נרשמו למסחר בתוך 90 ימים ממועד ההקצאה, יראו את חלק שווי ההטבה בגובה ממוצע שוויין של מניות החברה בבורסה בתום שלושים ימי המסחר שקדמו להקצאה, או בתום שלושים ימי המסחר שלאחר הרישום למסחר כאמור, לפי הענין, בניכוי ההוצאות, כהכנסה לפי סעיף 2(1) או (2) לפי הענין, ואת יתרת שווי ההטבה כרווח הון החייב במס בשיעור של 25%"
+      "note": "The 30-day-preceding-grant ordinary-income component under the capital-gains track for listed companies is the §102(b)(3) rule; the income-track 30-day-preceding-settlement average is the separate Baker McKenzie RSU claim already in this file. 90-day-after-grant arm added per expert review."
     },
     {
-      "claim": "Capital gains track does NOT apply Bituach Leumi or health insurance to the gain. Income track and 3(i) DO apply BL and health to the employment-income portion.",
-      "source_name": "BDO Israel ESOP Reporting",
-      "verified_2026": true,
-      "source_url": "https://www.bdo.global/en-gb/insights/tax/expatriate-tax/israel-esop-reporting-regulations-amended",
-      "raw_snippet": "Capital gains track does NOT apply Bituach Leumi or health insurance to the gain. Income track and 3(i) DO apply BL and health to the employment-income portion."
+      "claim_id": "capital-gains-track-does-not-apply-bituach-leumi",
+      "claim": "Under Section 102(b)(2) the capital-track benefit is characterised as a CAPITAL GAIN, not as income under Section 2(1)/2(2). Bituach Leumi and health tax attach to employment income, so they do not apply on the capital track, whereas 102(b)(1), 102(b)(3), 102(b)(4) and Section 3(i) produce Section 2(1)/2(2) income and do.",
+      "source_url": "https://he.wikisource.org/wiki/פקודת_מס_הכנסה",
+      "raw_snippet": "יראו את הכנסתו של העובד כרווח הון בסכום שווי ההטבה, והוא יחויב עליו במס בשיעור של 25%",
+      "source_name": "פקודת מס הכנסה [נוסח חדש], ויקיטקסט",
+      "verified_2026": true
     },
     {
-      "claim": "Section 102 'controlling shareholder' definition triggers at 10%+ holdings (current or historical) and raises the capital gains rate to 30%.",
-      "source_name": "PWC Israel Other Taxes",
-      "verified_2026": true,
-      "source_url": "https://taxsummaries.pwc.com/israel/individual/other-taxes",
-      "raw_snippet": "Section 102 'controlling shareholder' definition triggers at 10%+ holdings (current or historical) and raises the capital gains rate to 30%."
+      "claim_id": "section-102-controlling-shareholder-definition-t",
+      "claim": "Section 102(a) defines \"employee\" as including an office holder in the company but EXCLUDING a controlling shareholder, so a 10%+ holder is outside Section 102 entirely and is taxed at marginal rates under Section 3(i) / Section 2(1)-(2), not at 25% and not at 30%.",
+      "source_url": "https://he.wikisource.org/wiki/פקודת_מס_הכנסה",
+      "raw_snippet": "”עובד“ – לרבות נושא משרה בחברה, אך למעט בעל שליטה",
+      "source_name": "פקודת מס הכנסה [נוסח חדש], ויקיטקסט",
+      "verified_2026": true
     },
     {
-      "claim": "Early sale before the 24-month period elapses voids the capital gains track election and the ENTIRE gain is reclassified as employment income, taxed at marginal rates + BL + health + surtax.",
-      "source_name": "Pearl Cohen Section 102 pitfalls",
-      "verified_2026": true,
-      "source_url": "https://www.pearlcohen.com/section-102-options-the-unwritten-rules-and-pitfalls-to-look-for/",
-      "raw_snippet": "Early sale before the 24-month period elapses voids the capital gains track election and the ENTIRE gain is reclassified as employment income, taxed at marginal rates + BL + health + surtax."
+      "claim_id": "early-sale-before-the-24-month-period-elapses-vo",
+      "claim": "Section 102(b)(4): where the capital gains track was elected and the realisation date falls before the end of the period, the entire benefit is treated as income under Section 2(1) or 2(2), that is employment income at marginal rates plus Bituach Leumi, health and surtax.",
+      "source_url": "https://he.wikisource.org/wiki/פקודת_מס_הכנסה",
+      "raw_snippet": "על אף האמור בסעיף זה, בחרה החברה במסלול רווח הון ומועד המימוש חל לפני תום התקופה, יראו את הכנסתו של העובד כהכנסה",
+      "source_name": "פקודת מס הכנסה [נוסח חדש], ויקיטקסט",
+      "verified_2026": true
     },
     {
+      "claim_id": "under-the-2024-2025-amendment-effective-january",
       "claim": "Under the 2024-2025 amendment effective January 1, 2025, Section 102 plan filings are online-only, the ITA performs red-flag screening, and put/call plans can obtain advance approval.",
-      "source_name": "Herzog Law - New and Amended 102 Rules",
-      "verified_2026": true,
       "source_url": "https://herzoglaw.co.il/en/news-and-insights/new-and-amended-102-rules/",
-      "raw_snippet": "Income Tax Rules (Tax Relief in Allocating Shares to Employees) (Amendment), 2024... coming into effect on January 1, 2025"
+      "raw_snippet": "On September 19, 2024, the Israeli Tax Authority (the “ ITA “) enacted the Income Tax Rules (Tax Relief in Allocating Shares to Employees) (Amendment), 2024",
+      "source_name": "Herzog Law - New and Amended 102 Rules",
+      "verified_2026": true
     },
     {
+      "claim_id": "section-102-plan-grants-can-only-be-made-startin",
       "claim": "Section 102 plan grants can only be made starting 30 days AFTER the plan is submitted to the ITA (not 30 days after board approval). Trustee-deposit deadlines anchor on the DATE OF GRANT (not the board-resolution date): 45 days from date of grant for the board-resolution copy, 90 days from date of grant for the signed option agreement.",
+      "source_url": "https://www.gornitzky.com/israel-tax-authority-provides-relief-for-certain-section-102-administrative-requirements/",
+      "raw_snippet": "within 45 days and 90 days, respectively, from the date of grant",
       "source_name": "Gornitzky GNY - Section 102 Administrative Requirements",
       "verified_2026": true,
-      "note": "Corrected from prior 'deposit within 30 days of board approval' wording in the v1.0.2 reference file. Both deemed-compliance clocks anchor on grant date per Gornitzky and ITA professional circulars; in practice the board-resolution date and grant date often coincide but can differ when the board approves a grant pool to be issued over time.",
-      "source_url": "https://www.gornitzky.com/israel-tax-authority-provides-relief-for-certain-section-102-administrative-requirements/",
-      "raw_snippet": "within 45 days and 90 days, respectively, from the date of grant"
+      "note": "Corrected from prior 'deposit within 30 days of board approval' wording in the v1.0.2 reference file. Both deemed-compliance clocks anchor on grant date per Gornitzky and ITA professional circulars; in practice the board-resolution date and grant date often coincide but can differ when the board approves a grant pool to be issued over time."
     },
     {
-      "claim": "US citizens employed in Israel face a phantom-income timing mismatch: NSO exercise / RSU vest are taxable in the US years before the Israeli Section 102 capital gains tax event at sale.",
-      "source_name": "Tax4US - 5 Critical Tax Traps for Americans in Israel",
+      "claim_id": "us-citizens-employed-in-israel-face-a-phantom-in",
+      "claim": "US side of the timing mismatch: for a nonstatutory stock option the US taxes income at exercise (and RSUs at vest), while Israel under the Section 102 capital gains track defers its tax event to sale, so the US tax can fall years before the Israeli one.",
+      "source_url": "https://www.irs.gov/taxtopics/tc427",
+      "raw_snippet": "If you receive an option to buy stock as payment for your services, you may have income when you receive the option, when you exercise the option, or when you dispose of the option or stock received when you exercise the option.",
+      "source_name": "IRS Topic no. 427, Stock options",
       "verified_2026": true,
-      "source_url": "https://www.tax4us.co.il/en/employee-stock-options-taxation-5-critical-tax-traps-for-americans-in-israel/",
-      "raw_snippet": "You are required to pay significant tax in the U.S. on 'phantom income' years before you saw a single shekel in practice, and before a taxable event even occurred in Israel"
+      "verified_via": "browser",
+      "verified_at": "2026-08-19",
+      "note": "irs.gov serves a JS shell to plain fetches; page read in the Playwright browser on 2026-08-19."
     },
     {
+      "claim_id": "under-the-us-israel-tax-treaty-1995-israel-has-p",
       "claim": "Under the US-Israel tax treaty (1995), Israel has primary taxing rights on Israeli-source employment income (including stock-based compensation earned while working in Israel). US citizens can claim Foreign Tax Credit via Form 1116.",
+      "source_url": "https://www.vestingstrategy.com/guides/israel-equity-compensation-tax-guide",
+      "raw_snippet": "US citizens must coordinate Israeli tax with US worldwide reporting; foreign tax credits and timing differences are common",
       "source_name": "VestingStrategy - Israel Equity Compensation Tax Guide",
-      "verified_2026": true,
-      "source_url": "https://www.vestingstrategy.com/guides/israel-equity-compensation-tax-guide",
-      "raw_snippet": "US citizens must coordinate Israeli tax with US worldwide reporting; foreign tax credits and timing differences are common"
+      "verified_2026": true
     },
     {
-      "claim": "Section 100A (Israeli exit tax) treats unsold assets, including unvested options and unsold 102 shares, as deemed-sold one day before cessation of Israeli residency. The employee can elect to defer payment until actual sale.",
-      "source_name": "Nahum-Deutsch CPA - Exit Tax",
-      "verified_2026": true,
-      "source_url": "https://www.ndcpa.co.il/?prodoc=exit-tax-when-selling-shares-of-an-llc&lang=en",
-      "raw_snippet": "the assets of a person ceasing to be an Israeli resident shall be deemed to have been sold one day before they ceased to be an Israeli resident"
+      "claim_id": "section-100a-israeli-exit-tax-treats-unsold-asse",
+      "claim": "Section 100A: an asset of an Israeli resident who ceases to be an Israeli resident is deemed sold on the day before the day they ceased to be a resident.",
+      "source_url": "https://he.wikisource.org/wiki/פקודת_מס_הכנסה",
+      "raw_snippet": "נכס של אדם תושב ישראל שחדל להיות תושב ישראל, ייחשב כנמכר ביום שלפני היום שבו חדל להיות תושב ישראל",
+      "source_name": "פקודת מס הכנסה [נוסח חדש], ויקיטקסט",
+      "verified_2026": true
     },
     {
-      "claim": "Stock-for-stock acquisitions can qualify for Section 104H tax-deferred rollover: no Israeli tax at the merger, cost basis carries over to acquirer shares, 24-month clock and capital gains track election are preserved.",
-      "source_name": "VestingStrategy Israel guide",
+      "claim_id": "stock-for-stock-acquisitions-can-qualify-for-sec",
+      "claim": "Section 104H (סעיף 104ח) governs a share exchange: a transfer of shares of a transferred company, including rights to acquire shares, in exchange for the allocation of exchange-listed shares in another company, with or without additional consideration.",
+      "source_url": "https://he.wikisource.org/wiki/פקודת_מס_הכנסה",
+      "raw_snippet": "”החלפת מניות“ – העברת מניות של חברה",
+      "source_name": "פקודת מס הכנסה [נוסח חדש], ויקיטקסט",
       "verified_2026": true,
-      "note": "Section 104H is the standard 'corporate restructuring' rollover provision in the Israeli Income Tax Ordinance; widely documented across Israeli M&A practice.",
-      "source_url": "https://www.vestingstrategy.com/guides/israel-equity-compensation-tax-guide",
-      "raw_snippet": "Stock-for-stock acquisitions can qualify for Section 104H tax-deferred rollover: no Israeli tax at the merger, cost basis carries over to acquirer shares, 24-month clock and capital gains track election are preserved."
+      "note": "Section 104H is the standard 'corporate restructuring' rollover provision in the Israeli Income Tax Ordinance; widely documented across Israeli M&A practice."
     },
     {
-      "claim": "For RSUs settled by a public company under the income track, employment income is computed using the average stock value of the 30 trading days preceding settlement (not just the day-of-settlement price).",
-      "source_name": "Baker McKenzie Global Equity Matrix - Israel RS/RSU",
-      "verified_2026": true,
-      "source_url": "https://resourcehub.bakermckenzie.com/en/resources/global-equity-matrix/emea/israel/topics/rsrsu",
-      "raw_snippet": "the average value of the Stock for the 30 trading days preceding the settlement of the RSUs is taxable to the employee as ordinary income"
-    },
-    {
+      "claim_id": "the-israel-tax-authority-gov-il-department-page",
       "claim": "The Israel Tax Authority gov.il department page front-links the individual annual income tax return, Form 1301 (\"הגשת דוח שנתי מקוון טופס 1301\"). The other form identifiers used by this skill are Form 867 / טופס 867 (annual trustee withholding certificate), Form 146 / טופס 146 (quarterly Section 102 trustee report), Form 156 / טופס 156 (annual Section 102 trustee report) and US IRS Form 1116 / טופס 1116 (Foreign Tax Credit); those are named here as identifiers, and are NOT evidenced by this page.",
       "source_url": "https://www.gov.il/he/departments/israel_tax_authority",
-      "source_name": "Israel Tax Authority forms + IRS Form 1116",
       "raw_snippet": "הגשת דוח שנתי מקוון טופס 1301",
+      "source_name": "Israel Tax Authority forms + IRS Form 1116",
       "verified_2026": "2026-08-11T00:00:00Z"
     },
     {
-      "claim": "Illustrative worked figures, computed from the evidenced rates (not independent facts): 30,000 NIS/month salary plus a 500,000 NIS gain = 860,000 NIS annual income; a 500,000 NIS gain at 25% = 125,000 NIS; a 2,000,000 NIS gain at 25% plus 5% surtax on the excess over 721,560 = 500,000 + 63,922 = 563,922 NIS; a 480,000 NIS gain at 25% = 120,000 NIS; example strike/sale prices of 1, 2, 21 and 50 NIS per share. Roughly 90% of Israeli ESOPs use the capital-gains track.",
+      "claim_id": "illustrative-worked-figures-computed-from-the-ev",
+      "claim": "Illustrative worked figures in the skill examples are ARITHMETIC derived from the cited statutory rates and the 2026 bracket table, not independent facts. Examples: a 1,000,000 NIS capital-track gain gives 25% x 1,000,000 + 5% x (1,000,000 - 721,560) = 263,922; a 2,000,000 NIS gain gives 500,000 + 63,922 = 563,922; a 500,000 NIS gain with no other income gives 125,000 NIS (125,000 ש\"ח) and no surtax; a 480,000 NIS gain gives 120,000 NIS; total annual income of 860,000 NIS crosses the surtax threshold; a 100,000 NIS gain on top of a 500,000 NIS salary attracts 39,766.4 NIS of income tax at the 35% and 47% brackets (560,280 boundary).",
       "source_url": "https://taxsummaries.pwc.com/israel/individual/other-taxes",
-      "source_name": "Derived arithmetic from evidenced 25% CG rate, 5% capital surtax, and 721,560 threshold",
       "raw_snippet": "50 NIS, 50 ש\"ח, 500,000 NIS, 500,000 ש\"ח, 560,280 NIS, 560,280 ש\"ח, 563,922 NIS, 860,000 NIS, 860,000 ש\"ח, 721,560 ש\"ח, 51,910 ש\"ח, 480,000 NIS, ~90% of Israeli ESOPs, 90% 21 ש\"ח, 242 NIS, 263,922 NIS, 28,000 NIS, 28,000 ש\"ח, 30,000 ש\"ח, 336,000 NIS, 336,000 ש\"ח, 360,000 NIS, 360,000 ש\"ח, 480,000 ש\"ח 1 NIS, 2 ש\"ח, 21 NIS, 100,000 NIS, 100,000 ש\"ח, 120,000 ש\"ח, 1,000,000 NIS",
+      "source_name": "Derived arithmetic from evidenced 25% CG rate, 5% capital surtax, and 721,560 threshold",
+      "verified_2026": true,
+      "verified_via": "manual",
+      "verified_at": "2026-08-19",
+      "note": "Hand-recomputed on 2026-08-19 against the bracket table and the Section 121B surtax rates cited elsewhere in this file."
+    },
+    {
+      "claim_id": "the-skill-references-section-102-102-b-3-listed",
+      "claim": "The skill cites סעיף 102 (Section 102) of the Income Tax Ordinance, which is headed \"allocation of shares to employees\" and sits in Part E1 of the Ordinance.",
+      "source_url": "https://he.wikisource.org/wiki/פקודת_מס_הכנסה",
+      "raw_snippet": "חלק ה׳1: הקצאת מניות לעובדים",
+      "source_name": "פקודת מס הכנסה [נוסח חדש], ויקיטקסט",
       "verified_2026": true
     },
     {
-      "claim": "The skill references Section 102 (102(b)(3) listed-company split), Section 3(i)/3(ט) (non-102 grants), Section 100A (exit tax), and Section 104H (stock-for-stock rollover) of the Israeli Income Tax Ordinance.",
-      "source_url": "https://www.nevo.co.il/law_html/law01/255_001.htm",
-      "source_name": "Israeli Income Tax Ordinance (Nevo full text)",
-      "raw_snippet": "סעיף 102, סעיף 3, סעיף 100, סעיף 104, Section 102, Section 3, Section 100, Section 104",
-      "verified_2026": true
-    },
-    {
+      "claim_id": "reference-links-source-pwc-israel-personal-incom",
       "claim": "Reference-links source: PWC Israel personal income tax brackets.",
       "source_url": "https://taxsummaries.pwc.com/israel/individual/taxes-on-personal-income",
+      "raw_snippet": "Israel - Individual - Taxes on personal income",
       "source_name": "PWC Israel personal income tax brackets",
-      "raw_snippet": "https://taxsummaries.pwc.com/israel/individual/taxes-on-personal-income",
       "verified_2026": true
     },
     {
+      "claim_id": "reference-links-source-cws-israel-2026-tax-chang",
       "claim": "Reference-links source: CWS Israel 2026 tax changes guide.",
       "source_url": "https://www.cwsisrael.com/israeli-tax-changes-2026-complete-guide/",
+      "raw_snippet": "Employer of Record Israel 2026",
       "source_name": "CWS Israel 2026 tax changes guide",
-      "raw_snippet": "https://www.cwsisrael.com/israeli-tax-changes-2026-complete-guide/",
       "verified_2026": true
     },
     {
+      "claim_id": "reference-links-source-rsu-taxation-methodology",
       "claim": "Reference-links source: RSU taxation methodology reference.",
       "source_url": "https://www.rsu-calculator.com/explanation",
+      "raw_snippet": "Calculations follow Section 102 of the Israeli Income Tax Ordinance, including selling and transfer fees.",
       "source_name": "RSU taxation methodology reference",
-      "raw_snippet": "https://www.rsu-calculator.com/explanation",
       "verified_2026": true
     },
     {
+      "claim_id": "where-102-rsu-shares-are-held-at-a-foreign-broke",
       "claim": "Where 102/RSU shares are held at a foreign broker rather than by an Israeli trustee, no Israeli tax is withheld at sale and the Israeli-resident employee self-reports the capital gain on the annual income tax return, Form 1301, which the Israel Tax Authority publishes as \"דוח מס שנתי ליחיד ובעל עסק שאינו חברה (1301)\". The semi-annual advance payments (mikdamot) on securities gains are asserted separately in the skill and are NOT evidenced by this page.",
       "source_url": "https://www.gov.il/he/departments/israel_tax_authority",
-      "source_name": "Israel Tax Authority - securities capital-gains self-reporting and advance payments",
       "raw_snippet": "דוח מס שנתי ליחיד ובעל עסק שאינו חברה (1301)",
+      "source_name": "Israel Tax Authority - securities capital-gains self-reporting and advance payments",
       "verified_2026": "2026-08-11T00:00:00Z"
     },
     {
+      "claim_id": "the-maximum-income-liable-for-national-insurance",
       "claim": "The maximum income liable for national insurance contributions is 51,910 NIS (51,910 ש\"ח) per month from 01.01.2026.",
+      "source_url": "https://www.btl.gov.il/Insurance/Rates/Pages/לעובדים%20שכירים.aspx",
+      "raw_snippet": "51,910 ש\"ח (החל ב- 01.01.2026)",
       "source_name": "Bituach Leumi official rate table for salaried employees",
       "verified_2026": true,
-      "note": "Confirmed by rendering the official BL salaried-worker rate table (column 1). Corrects the prior pre-2025 figures (0.4%/3.1%/7.0%/5.0%) that survived in the v1.1.0 reference file.",
-      "source_url": "https://www.btl.gov.il/Insurance/Rates/Pages/לעובדים%20שכירים.aspx",
-      "raw_snippet": "51,910 ש\"ח (החל ב- 01.01.2026)"
+      "note": "Confirmed by rendering the official BL salaried-worker rate table (column 1). Corrects the prior pre-2025 figures (0.4%/3.1%/7.0%/5.0%) that survived in the v1.1.0 reference file."
     },
     {
+      "claim_id": "the-total-employee-contribution-on-the-reduced-t",
       "claim": "The total employee contribution on the reduced tier is 4.27%.",
+      "source_url": "https://www.btl.gov.il/Insurance/Rates/Pages/לעובדים%20שכירים.aspx",
+      "raw_snippet": "4.27% (החל ב- 01.01.2025)",
       "source_name": "Bituach Leumi official rate table for salaried employees",
       "verified_2026": true,
-      "note": "Confirmed by rendering the official BL salaried-worker rate table (column 1). Corrects the prior pre-2025 figures (0.4%/3.1%/7.0%/5.0%) that survived in the v1.1.0 reference file.",
-      "source_url": "https://www.btl.gov.il/Insurance/Rates/Pages/לעובדים%20שכירים.aspx",
-      "raw_snippet": "4.27% (החל ב- 01.01.2025)"
+      "note": "Confirmed by rendering the official BL salaried-worker rate table (column 1). Corrects the prior pre-2025 figures (0.4%/3.1%/7.0%/5.0%) that survived in the v1.1.0 reference file."
     },
     {
+      "claim_id": "the-total-employee-contribution-on-the-full-tier",
       "claim": "The total employee contribution on the full tier is 12.17%.",
+      "source_url": "https://www.btl.gov.il/Insurance/Rates/Pages/לעובדים%20שכירים.aspx",
+      "raw_snippet": "12.17% (החל ב- 01.02.2025)",
       "source_name": "Bituach Leumi official rate table for salaried employees",
       "verified_2026": true,
-      "note": "Confirmed by rendering the official BL salaried-worker rate table (column 1). Corrects the prior pre-2025 figures (0.4%/3.1%/7.0%/5.0%) that survived in the v1.1.0 reference file.",
-      "source_url": "https://www.btl.gov.il/Insurance/Rates/Pages/לעובדים%20שכירים.aspx",
-      "raw_snippet": "12.17% (החל ב- 01.02.2025)"
+      "note": "Confirmed by rendering the official BL salaried-worker rate table (column 1). Corrects the prior pre-2025 figures (0.4%/3.1%/7.0%/5.0%) that survived in the v1.1.0 reference file."
+    },
+    {
+      "claim_id": "section-102-a-income-track-holding-period-12-months",
+      "claim": "Section 102(a): on the employment income track the end of the period is 12 months from the day the shares were allotted and deposited with a trustee.",
+      "source_url": "https://he.wikisource.org/wiki/פקודת_מס_הכנסה",
+      "raw_snippet": "בחרה החברה במסלול הכנסת עבודה – תקופה של 12 חודשים מיום שבו הוקצו המניות והופקדו בידי נאמן",
+      "source_name": "פקודת מס הכנסה [נוסח חדש], ויקיטקסט",
+      "verified_2026": true
+    },
+    {
+      "claim_id": "section-102-a-trustee-allocation-requires-not-a-controlling-shareholder",
+      "claim": "Section 102(a): an allocation through a trustee requires that the employee is not a controlling shareholder in the company at the date of the allocation or as a result of it.",
+      "source_url": "https://he.wikisource.org/wiki/פקודת_מס_הכנסה",
+      "raw_snippet": "ובלבד שהעובד אינו בעל שליטה בה במועד ההקצאה או בעקבותיה",
+      "source_name": "פקודת מס הכנסה [נוסח חדש], ויקיטקסט",
+      "verified_2026": true
+    },
+    {
+      "claim_id": "section-32-9-controlling-shareholder-10-percent-definition",
+      "claim": "Section 32(9) (סעיף 32(9)) defines a controlling shareholder as a person holding, directly or indirectly, alone or together with a relative, at least 10% of the issued share capital or of the voting power, a right to hold or acquire them, a right to at least 10% of the profits, or a right to appoint a director.",
+      "source_url": "https://he.wikisource.org/wiki/פקודת_מס_הכנסה",
+      "raw_snippet": "ב־10% לפחות מהון המניות שהוצא או ב־10% לפחות מכוח ההצבעה",
+      "source_name": "פקודת מס הכנסה [נוסח חדש], ויקיטקסט",
+      "verified_2026": true
+    },
+    {
+      "claim_id": "section-32-9-controlling-shareholder-right-to-appoint-director",
+      "claim": "Section 32(9) controlling-shareholder test also catches a right to receive at least 10% of the profits or a right to appoint a director.",
+      "source_url": "https://he.wikisource.org/wiki/פקודת_מס_הכנסה",
+      "raw_snippet": "בזכות לקבל 10% לפחות מהרווחים",
+      "source_name": "פקודת מס הכנסה [נוסח חדש], ויקיטקסט",
+      "verified_2026": true
+    },
+    {
+      "claim_id": "section-102-b-4-early-sale-reclassifies-to-employment-income",
+      "claim": "Section 102(b)(4): where the company elected the capital gains track and the realisation date falls before the end of the period, the employee income is treated as income under Section 2(1) or 2(2), that is employment income at marginal rates.",
+      "source_url": "https://he.wikisource.org/wiki/פקודת_מס_הכנסה",
+      "raw_snippet": "בחרה החברה במסלול רווח הון ומועד המימוש חל לפני תום התקופה, יראו את הכנסתו של העובד כהכנסה",
+      "source_name": "פקודת מס הכנסה [נוסח חדש], ויקיטקסט",
+      "verified_2026": true
+    },
+    {
+      "claim_id": "section-102-b-3-listed-company-split-30-trading-days",
+      "claim": "Section 102(b)(3): for a share listed for trading, or a share in a company whose shares were registered for trading within 90 days of the allocation, the part of the benefit equal to the average value of the company shares on the exchange at the end of the 30 trading days preceding the allocation (or the 30 trading days following the registration) less expenses is ordinary income under Section 2(1)/2(2), and the remainder is a capital gain taxed at 25%.",
+      "source_url": "https://he.wikisource.org/wiki/פקודת_מס_הכנסה",
+      "raw_snippet": "ממוצע שוויין של מניות החברה בבורסה בתום שלושים ימי המסחר שקדמו להקצאה",
+      "source_name": "פקודת מס הכנסה [נוסח חדש], ויקיטקסט",
+      "verified_2026": true
+    },
+    {
+      "claim_id": "section-102-b-3-ordinary-component-capped-at-benefit-value",
+      "claim": "Section 102(b)(3) caps the ordinary-income component: the amount determined as income under Section 2(1) or 2(2) may not exceed the value of the benefit at the realisation date.",
+      "source_url": "https://he.wikisource.org/wiki/פקודת_מס_הכנסה",
+      "raw_snippet": "ובלבד שהסכום שנקבע כהכנסה לפי",
+      "source_name": "פקודת מס הכנסה [נוסח חדש], ויקיטקסט",
+      "verified_2026": true
+    },
+    {
+      "claim_id": "section-102-e-section-3-9-disapplied-for-employee-allocations",
+      "claim": "Section 102(e): the provisions of Section 3(i) do not apply to an allocation of shares to employees in an employer company. Since a controlling shareholder is not an \"employee\" for Section 102, Section 3(i) is the regime that does reach their grant.",
+      "source_url": "https://he.wikisource.org/wiki/פקודת_מס_הכנסה",
+      "raw_snippet": "הוראות סעיף 3(ט) לא יחולו על הקצאת מניות לעובדים בחברה מעבידה",
+      "source_name": "פקודת מס הכנסה [נוסח חדש], ויקיטקסט",
+      "verified_2026": true
+    },
+    {
+      "claim_id": "section-14-a-ten-year-exemption-foreign-source-only",
+      "claim": "Section 14(a) (סעיף 14(א)): a new immigrant or veteran returning resident is exempt for ten years on income produced or accrued OUTSIDE Israel, so Israeli-source employment income such as the Israeli-workday part of a Section 102 benefit is not covered.",
+      "source_url": "https://he.wikisource.org/wiki/פקודת_מס_הכנסה",
+      "raw_snippet": "יהיו פטורים ממס במשך עשר שנים מהמועד שהיו לתושבי ישראל כאמור, על הכנסותיהם מכל המקורות המנויים",
+      "source_name": "פקודת מס הכנסה [נוסח חדש], ויקיטקסט",
+      "verified_2026": true
+    },
+    {
+      "claim_id": "section-91-b-capital-gains-25-30-substantial-shareholder",
+      "claim": "Section 91(b) (סעיף 91(ב)): an individual pays capital gains tax at a rate not exceeding 25%, and 30% where the seller is a substantial shareholder. This is the GENERAL capital gains rate, not a Section 102 rate.",
+      "source_url": "https://he.wikisource.org/wiki/פקודת_מס_הכנסה",
+      "raw_snippet": "רווח הון ריאלי כאמור בסעיף 121, במכירת נייר ערך בחבר־בני־אדם שבו המוכר הוא יחיד שהוא בעל מניות מהותי במועד מכירתו של נייר הערך או במועד כלשהו ב־12 החודשים שקדמו למכירה, יחויב במס בשיעור שלא יעלה על 30%",
+      "source_name": "פקודת מס הכנסה [נוסח חדש], ויקיטקסט",
+      "verified_2026": true
+    },
+    {
+      "claim_id": "section-125b-dividend-25-30-substantial-shareholder",
+      "claim": "Section 125B (סעיף 125ב): dividend in the hands of an individual is 25%, and 30% for a substantial shareholder. Again a general rate, unrelated to Section 102.",
+      "source_url": "https://he.wikisource.org/wiki/פקודת_מס_הכנסה",
+      "raw_snippet": "דיבידנד בידי יחיד שהיה במועד קבלת הדיבידנד או במועד כלשהו בשנים עשר החודשים שקדמו לו, בעל מניות מהותי",
+      "source_name": "פקודת מס הכנסה [נוסח חדש], ויקיטקסט",
+      "verified_2026": true
+    },
+    {
+      "claim_id": "section-100a-exit-tax-covers-102-shares-and-rights",
+      "claim": "Section 100A (סעיף 100א): an asset of an Israeli resident who ceases to be an Israeli resident is deemed sold on the day before, and \"asset\" expressly includes shares and rights granted under Sections 3(i) and 102.",
+      "source_url": "https://he.wikisource.org/wiki/פקודת_מס_הכנסה",
+      "raw_snippet": "”נכס“ – לרבות מניות וזכויות שהוענקו כאמור בסעיפים 3(ט) ו־102",
+      "source_name": "פקודת מס הכנסה [נוסח חדש], ויקיטקסט",
+      "verified_2026": true
+    },
+    {
+      "claim_id": "section-97-b-1-oleh-vatik-foreign-asset-exemption",
+      "claim": "Section 97(b)(1) (סעיף 97(ב)(1)): a first-time Israeli resident or veteran returning resident is exempt from capital gains tax on the sale of an asset they HAD OUTSIDE Israel, if sold within ten years of becoming an Israeli resident.",
+      "source_url": "https://he.wikisource.org/wiki/פקודת_מס_הכנסה",
+      "raw_snippet": "יחיד שהיה לתושב ישראל לראשונה ותושב חוזר ותיק, כאמור בסעיף 14(א), פטור ממס על רווח הון ממכירת נכס שהיה לו מחוץ לישראל, אם מכרו בתוך עשר שנים מהיום שהיה לתושב ישראל",
+      "source_name": "פקודת מס הכנסה [נוסח חדש], ויקיטקסט",
+      "verified_2026": true
+    },
+    {
+      "claim_id": "section-121-brackets-2026-2027-lower-rates",
+      "claim": "Section 121(b)(1), amounts adjusted for 2026-2027: 10% on the first 84,120 NIS, 14% from 84,121 to 120,720, 20% from 120,721 to 228,000, 31% from 228,001 to 301,200 (personal-exertion income).",
+      "source_url": "https://he.wikisource.org/wiki/פקודת_מס_הכנסה",
+      "raw_snippet": "על כל שקל חדש מ־84,121 שקלים חדשים עד 120,720 שקלים חדשים – 14%",
+      "source_name": "פקודת מס הכנסה [נוסח חדש], ויקיטקסט",
+      "verified_2026": true
+    },
+    {
+      "claim_id": "section-121-brackets-2026-2027-upper-rates",
+      "claim": "Section 121(a), amounts adjusted for 2026-2027: 35% from 301,201 to 560,280 NIS and 47% on every further shekel. With the 3% Section 121B surtax above 721,560 the top marginal rate on ordinary income is 50%.",
+      "source_url": "https://he.wikisource.org/wiki/פקודת_מס_הכנסה",
+      "raw_snippet": "על כל שקל חדש מ־301,201 שקלים חדשים עד 560,280 שקלים חדשים – 35%",
+      "source_name": "פקודת מס הכנסה [נוסח חדש], ויקיטקסט",
+      "verified_2026": true
+    },
+    {
+      "claim_id": "section-121-top-rate-47-percent",
+      "claim": "Section 121(a)(3): 47% on every additional shekel above 560,280 NIS.",
+      "source_url": "https://he.wikisource.org/wiki/פקודת_מס_הכנסה",
+      "raw_snippet": "על כל שקל חדש נוסף – 47%",
+      "source_name": "פקודת מס הכנסה [נוסח חדש], ויקיטקסט",
+      "verified_2026": true
     }
   ]
 }

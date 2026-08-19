@@ -1,6 +1,25 @@
 {
   "cycles": [
     {
+      "version": "1.4.0",
+      "date": "2026-08-19",
+      "lessons": [
+        "RESOLVED (carry from 1.2.0): 102 Non-Trustee (102(c)) tax-event timing is now documented, shares taxed at allocation vs unlisted options taxed at realisation, with the statutory cites.",
+        "CRITICAL class found this cycle: a rate from an ADJACENT section (91(b)/125B, 30% for a substantial shareholder) had been imported into Section 102, where the statute excludes that person from the section entirely. When a skill states a rate 'for X holders', check first whether X is inside the regime at all.",
+        "CRITICAL class found this cycle: the skill carried the PRE-2003 wording of the Section 102 holding period (end of the tax year of grant) and taught it as a 'correction to a common misconception'. Secondary Israeli tax-firm content repeats superseded statutory wording; read the consolidated ordinance text.",
+        "TOOLING: he.wikisource.org carries the full consolidated Income Tax Ordinance and is fetchable by plain curl, unlike nevo.co.il and gov.il. It is now the primary citation for every statutory claim in this skill.",
+        "PERSISTENT_FAIL (carry from 1.2.0, third cycle): in-trust dividends on 102 capital-track shares taxed at 25% during the trustee period. Governed by the Income Tax Rules (Tax Relief in Allocating Shares to Employees) 2003, not by the ordinance section, and no fetchable authoritative text was found this cycle. Do not add it without a citable source.",
+        "PERSISTENT_FAIL (carry from 1.2.0): US dual-citizen treaty re-sourcing of 102 capital-track gains to Israel to make the FTC usable. Still no citable source located.",
+        "Watch: surtax threshold 721,560 is stated in the ordinance annotation as the 2024-2027 figure, so it is stable until 2028."
+      ],
+      "buckets": {
+        "persistent_fail": [
+          "in-trust dividends 25% during trustee period",
+          "US treaty re-sourcing for FTC"
+        ]
+      }
+    },
+    {
       "version": "1.2.0",
       "date": "2026-07-15",
       "lessons": [
