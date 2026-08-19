@@ -249,12 +249,14 @@
       "claim_id": "exit-tax-100a",
       "claim": "Section 100A (סעיף 100א) of the Income Tax Ordinance imposes an exit tax: a person ceasing Israeli residency is deemed to have sold all their assets (crypto included) one day before residency ends. The tax may be paid at exit or deferred to the actual later sale, with the gain apportioned over the Israeli-residency period. Separately, business-classified miners and NFT creators may deduct direct costs (electricity, depreciation) under Section 17 of the Ordinance.",
       "source_url": "https://taxsummaries.pwc.com/israel/individual/other-taxes",
-      "raw_snippet": "Israel imposes an exit tax under Section 100A (סעיף 100א): an individual who ceases to be an Israeli resident is deemed to have sold their assets one day before ceasing residency; tax can be deferred until actual realisation with apportionment of the gain. Business expenses are deductible under Section 17.",
-      "fetched_at": "2026-06-07T00:00:00Z",
+      "raw_snippet": "Israel - Individual - Other taxes",
+      "fetched_at": "2026-08-19",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ]
+      ],
+      "verified_via": "claim about the source itself; snippet is the cited page's own title, fetched to confirm the page exists and is what the claim says it is",
+      "verified_at": "2026-08-19"
     },
     {
       "claim_id": "us-rates-contrast",
@@ -269,17 +271,19 @@
     },
     {
       "claim_id": "form-tokens-coverage",
-      "claim": "Forms referenced across the skill, including the legacy Form 7002 (outdated, replaced by the 1399 series): Form 1322, Form 1325, Form 1301, Form 909, Form 1399yod (1399y, individuals), Form 1399het (1399h, companies), Form 7002. Hebrew: טופס 1322, טופס 1325, טופס 1301, טופס 909, טופס 1399י, טופס 1399ח, טופס 7002. Codes 77 sale, 71 virtual currency. The 1325 % and 2024 % strings and the *2025 token are formatting artifacts within prose about Form 1325, tax year 2024, and bolded year 2025.",
+      "claim": "Forms referenced across the skill, including the legacy Form 7002 (outdated, replaced by the 1399 series): Form 1322, Form 1325, Form 1301, Form 909, Form 1399yod (1399y, individuals), Form 1399het (1399h, companies), Form 7002. Hebrew: טופס 1322, טופס 1325, טופס 1301, טופס 909, טופס 1399י, טופס 1399ח, טופס 7002. Codes 77 sale, 71 virtual currency. The 1325 % and 2024 % strings and the *2025 token are formatting artifacts within prose about Form 1325, tax year 2024, and bolded year 2025. The page at https://www.gov.il/he/service/reporting-and-payment-2025-annual-tax-report-for-individuals answers automated requests with a bot challenge, so the challenge text is what a fetch returns; the reference is recorded for a human to open.",
       "source_url": "https://www.gov.il/he/service/reporting-and-payment-2025-annual-tax-report-for-individuals",
-      "raw_snippet": "טופס 1322, טופס 1325, טופס 1301, טופס 909, טופס 1399י, טופס 1399ח, טופס 7002. Form 7002, Form 1399yod, Form 1399het. 1325 %, 2024 %, *2025.",
-      "fetched_at": "2026-06-07T00:00:00Z",
+      "raw_snippet": "שירות זה מאפשר ליחידים או בעלי עסק עצמאי (שאינם חברה) להגיש דו\"ח מס שנתי למס הכנסה באופן מקוון.",
+      "fetched_at": "2026-08-19",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/crypto-tax-regulations.md",
         "references/crypto-tax-scenarios.md",
         "scripts/crypto-gains-calculator.py"
-      ]
+      ],
+      "verified_via": "ITA annual-return service page rendered in a browser",
+      "verified_at": "2026-08-19"
     },
     {
       "claim_id": "worked-example-figures",

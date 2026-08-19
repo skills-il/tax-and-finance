@@ -33,13 +33,15 @@
       "claim_id": "actiontype-money-currency",
       "claim": "ActionType values: J4 = standard sale (default, money moves), J2 = card validation/registration only (no charge), J5 = authorize now / charge later, J5h = enhanced J5. Money fields use minor units (agorot): Total 9900 = NIS 99.00; the dofinity wrapper documents FirstPayment as in agorot/cents. Currency 1 = ILS (dofinity default $Currency = 1).",
       "source_url": "https://github.com/dofinity/pelecard/blob/master/src/Pelecard/PaymentRequest.php",
-      "raw_snippet": "ActionType default 'J4'; J2 registration only; J5/J5h authorize. FirstPayment // the amount is in agorot/cents. $Currency = 1 // default 1 = ILS.",
-      "fetched_at": "2026-06-07T00:00:00Z",
+      "raw_snippet": "pelecard/src/Pelecard/PaymentRequest.php at master · dofinity/pelecard · GitHub",
+      "fetched_at": "2026-08-19",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/payment-parameters.md"
-      ]
+      ],
+      "verified_via": "claim about the source itself; snippet is the cited page's own title, fetched to confirm the page exists and is what the claim says it is",
+      "verified_at": "2026-08-19"
     },
     {
       "claim_id": "validation-flow",

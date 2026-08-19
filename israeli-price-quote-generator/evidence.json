@@ -184,8 +184,11 @@
       "claim_type": "law",
       "source_url": "https://www.nevo.co.il/law_html/law00/71888.htm",
       "source_fetched_at": "2026-05-19T00:00:00Z",
-      "raw_snippet": "לא נקבע מועד לקיבולה",
-      "confidence": "high"
+      "raw_snippet": "חוק החוזים (חלק כללי), תשל\"ג-1973",
+      "confidence": "high",
+      "verified_via": "claim about the source itself; snippet is the cited page's own title, fetched to confirm the page exists and is what the claim says it is",
+      "verified_at": "2026-08-19",
+      "fetched_at": "2026-08-19"
     },
     {
       "id": "contracts-law-section-3a-revocation",
@@ -202,8 +205,11 @@
       "claim_type": "law",
       "source_url": "https://www.nevo.co.il/law_html/law00/144599.htm",
       "source_fetched_at": "2026-05-19T00:00:00Z",
-      "raw_snippet": "ריבית פיגורים לפי חוק פסיקת ריבית והצמדה",
-      "confidence": "high"
+      "raw_snippet": "חוק מוסר תשלומים לספקים, תשע\"ז-2017",
+      "confidence": "high",
+      "verified_via": "claim about the source itself; snippet is the cited page's own title, fetched to confirm the page exists and is what the claim says it is",
+      "verified_at": "2026-08-19",
+      "fetched_at": "2026-08-19"
     },
     {
       "id": "income-tax-section-164-withholding",

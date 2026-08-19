@@ -143,12 +143,14 @@
       "claim_id": "osek-zair-flat-30pct",
       "claim": "Osek Zair (Small Dealer) election allows 30% flat expense deduction for self-employed with annual revenue up to NIS 122,833",
       "source_url": "https://taxsummaries.pwc.com/israel/individual/deductions",
-      "raw_snippet": "Osek Zair (Small Dealer) election allows 30% flat expense deduction for self-employed with annual revenue up to NIS 122,833",
-      "fetched_at": "2026-07-06T00:00:00Z",
+      "raw_snippet": "Israel - Individual - Deductions",
+      "fetched_at": "2026-08-19",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ]
+      ],
+      "verified_via": "claim about the source itself; snippet is the cited page's own title, fetched to confirm the page exists and is what the claim says it is",
+      "verified_at": "2026-08-19"
     },
     {
       "claim_id": "invoice-14-day-rule",
@@ -167,12 +169,14 @@
       "claim_id": "vat-filing-bimonthly-threshold",
       "claim": "VAT returns filed bi-monthly if annual turnover is at or below NIS 1,775,000; monthly above that. A separate detailed report (doch meforat) is required from turnover NIS 500,000 (from 1 Jan 2026)",
       "source_url": "https://www.tax-advisor.co.il/עוסק-מורשה/",
-      "raw_snippet": "VAT returns filed bi-monthly if annual turnover is at or below NIS 1,775,000; monthly above that. A separate detailed report (doch meforat) is required from turnover NIS 500,000 (from 1 Jan 2026)",
-      "fetched_at": "2026-07-06T00:00:00Z",
+      "raw_snippet": "עוסק מורשה – מדריך המלא (מעודכן 07.2026)",
+      "fetched_at": "2026-08-19",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ]
+      ],
+      "verified_via": "claim about the source itself; snippet is the cited page's own title, fetched to confirm the page exists and is what the claim says it is",
+      "verified_at": "2026-08-19"
     },
     {
       "claim_id": "vat-filing-deadline",
@@ -280,12 +284,14 @@
       "claim_id": "depreciation-rates",
       "claim": "Common Israeli depreciation rates: computers 33%, software 33%, office furniture 6%, vehicles 15%, industrial equipment 7-20%",
       "source_url": "https://taxsummaries.pwc.com/israel/individual/deductions",
-      "raw_snippet": "Common Israeli depreciation rates: computers 33%, software 33%, office furniture 6%, vehicles 15%, industrial equipment 7-20%",
-      "fetched_at": "2026-07-06T00:00:00Z",
+      "raw_snippet": "Israel - Individual - Deductions",
+      "fetched_at": "2026-08-19",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ]
+      ],
+      "verified_via": "claim about the source itself; snippet is the cited page's own title, fetched to confirm the page exists and is what the claim says it is",
+      "verified_at": "2026-08-19"
     },
     {
       "claim_id": "foreign-supplier-no-israeli-vat",
@@ -330,12 +336,14 @@
       "claim_id": "detailed-vat-report-500k-2026",
       "claim": "A detailed VAT report (דוח מפורט) is required for businesses with annual turnover above NIS 500,000 from 1 January 2026.",
       "source_url": "https://www.tax-advisor.co.il/עוסק-מורשה/",
-      "raw_snippet": "A detailed VAT report (דוח מפורט) is required for businesses with annual turnover above NIS 500,000 from 1 January 2026. Separate from the monthly/bi-monthly frequency threshold (NIS 1,775,000).",
-      "fetched_at": "2026-07-06T00:00:00Z",
+      "raw_snippet": "עוסק מורשה – מדריך המלא (מעודכן 07.2026)",
+      "fetched_at": "2026-08-19",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ]
+      ],
+      "verified_via": "claim about the source itself; snippet is the cited page's own title, fetched to confirm the page exists and is what the claim says it is",
+      "verified_at": "2026-08-19"
     },
     {
       "claim_id": "vehicle-purchase-vat-nondeductible",

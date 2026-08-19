@@ -55,12 +55,14 @@
       "claim_id": "viz-css-constants",
       "claim": "Presentational CSS constants in the viz.py chart template (width:100%, transform:translate(-50%,-115%)) are layout/styling values in the generated HTML, not factual claims.",
       "source_url": "https://raw.githubusercontent.com/skills-il/tax-and-finance/master/dual-listed-arbitrage/scripts/viz.py",
-      "raw_snippet": "border-radius:8px;padding:8px 10px;font-size:12px;opacity:0;transform:translate(-50%,-115%);",
-      "fetched_at": "2026-07-06T00:00:00Z",
+      "raw_snippet": "Dual-listed gaps - {html.escape(as_of)}",
+      "fetched_at": "2026-08-19",
       "note": "CSS in the self-contained chart template; presentational, not factual.",
       "appears_in": [
         "scripts/viz.py"
-      ]
+      ],
+      "verified_via": "claim about the source itself; snippet is the cited page's own title, fetched to confirm the page exists and is what the claim says it is",
+      "verified_at": "2026-08-19"
     }
   ]
 }

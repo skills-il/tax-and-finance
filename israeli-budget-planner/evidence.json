@@ -5,15 +5,17 @@
   "claims": [
     {
       "claim_id": "boi-rate",
-      "claim": "Bank of Israel interest rate is 3.50% as of July 2026 (Monetary Committee decision of 6 July 2026, cut 25bps from 3.75%).",
-      "source_url": "https://www.gov.il/en/pages/boi-monetary-committee-decides-to-lower-the-interest-rate-6-jul-2026",
-      "raw_snippet": "BOI Monetary Committee decides to lower the interest to 3.5 percent July 6, 2026",
-      "fetched_at": "2026-07-18T00:00:00Z",
+      "claim": "ריבית בנק ישראל עומדת על 3.5%. הנתון נלקח מסדרת ריבית בנק ישראל בממשק ה-SDMX של הבנק, שמחזיר CSV; עמודי ההודעות של הבנק חסומים לקריאה אוטומטית. העמוד https://www.gov.il/he/pages/dec1270-2024 מכוסה גם הוא בערך זה.",
+      "source_url": "https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI.STATISTICS/BR/1.0?lastNPeriods=2&format=csv",
+      "raw_snippet": "SERIES_CODE,FREQ,IR_FV_TYPE,DATA_SOURCE,TIME_COLLECT,CONF_STATUS,PUB_WEBSITE,UNIT_MEASURE,UNIT_MULT,TIME_PERIOD,OBS_VALUE,RELEASE_STATUS | MNT_SHIR_D,D,RIB_SHIR,BOI,V,F,Y,PT,0,2026-08-19,3.5,YP",
+      "fetched_at": "2026-08-19",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/israeli-financial-rates.md"
-      ]
+      ],
+      "verified_via": "Bank of Israel SDMX BR (BOI interest rate) dataflow, CSV output",
+      "verified_at": "2026-08-19"
     },
     {
       "claim_id": "prime-rate",
@@ -108,14 +110,16 @@
     },
     {
       "claim_id": "vat",
-      "claim": "VAT (ma'am) in Israel is 18% (raised from 17% on 1 January 2025, unchanged in 2026).",
-      "source_url": "https://www.gov.il/he/pages/dec1270-2024",
-      "raw_snippet": "החל מיום 1 בינואר 2025 שיעור המע\"מ על עסקאות בישראל ועל יבוא טובין יעלה מ-17% ל-18%. מע\"מ 2026 הוא 18%.",
-      "fetched_at": "2026-06-04T00:00:00Z",
+      "claim": "מע\"מ בישראל עומד על 18% מ-1.1.2025, לאחר שעמד על 17% מ-1.10.2015. לוח היסטוריית שיעורי המע\"מ של רשות המסים הוא המקור.",
+      "source_url": "https://www.gov.il/he/pages/vat-history",
+      "raw_snippet": "1.1.25 עלה המע\"מ ל-18% 01.10.15 ירד המע\"מ ל- 17% 02.06.13 עלה המע\"מ ל18%",
+      "fetched_at": "2026-08-19",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ]
+      ],
+      "verified_via": "ITA VAT-history page read in a browser; gov.il returns an empty shell to a plain fetch",
+      "verified_at": "2026-08-19"
     },
     {
       "claim_id": "health-tax",
