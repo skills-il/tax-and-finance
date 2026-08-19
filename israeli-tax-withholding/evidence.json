@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0",
   "skill": "israeli-tax-withholding",
-  "generated_at": "2026-06-17T00:00:00Z",
+  "generated_at": "2026-08-19T00:00:00Z",
   "claims": [
     {
       "claim_id": "service-asset-withholding-rates",
@@ -73,15 +73,18 @@
     },
     {
       "claim_id": "treaty-rates-and-examples",
-      "claim": "Common tax-treaty reduced rates (require documentation): USA dividends 12.5-25% / interest 17.5% / royalties 15%; UK 15%/15%/15%; Germany 10-25%/15%/5%; France 10-15%/10%/10%; Canada 15%/15%/15%. Illustrative example: 10,000 NIS service payment at 30% = 3,000 withheld, 7,000 net, 1,800 VAT",
-      "source_url": "https://www.gov.il/he/departments/guides/taxation-agreements",
-      "raw_snippet": "אמנות מס: ארה\"ב 12.5-25% 17.5% 15%; בריטניה 15%; גרמניה 10-25% 15% 5%; צרפת 10-15% 10% 10%; קנדה 15%. דוגמה: 10,000 ש\"ח, 30% = 3,000 ש\"ח ניכוי, 7,000 ש\"ח נטו, 1,800 ש\"ח מע\"מ; 10,000 NIS 3,000 NIS 7,000 NIS 1,800 NIS",
-      "fetched_at": "2026-06-16T23:55:00Z",
+      "claim": "Common tax-treaty reduced rates (require documentation): USA dividends 12.5-25% / interest 17.5% / royalties 15%; UK 15%/15%/15%; Germany 10-25%/15%/5%; France 10-15%/10%/10%; Canada 15%/15%/15%. Illustrative example: 10,000 NIS service payment at 30% = 3,000 withheld, 7,000 net, 1,800 VAT The gov.il treaty index URL previously cited returns 404 as of 2026-08-19; these treaty rows are carried forward from the v1.4.0 cycle and are not re-verified. The ITA publications index is cited as the live locator for forms and treaty publications. Amounts in the worked examples derive from the stated rates: on 10,000 NIS at 18% VAT the VAT is 1,800 ש\"ח.",
+      "source_url": "https://www.gov.il/he/collectors/publications?OfficeId=c0d8ba69-e309-4fe5-801f-855971774a90",
+      "raw_snippet": "רשות המסים בישראל, פרסומים: 1,830 תוצאות.",
+      "fetched_at": "2026-08-19T00:00:00Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/withholding-rates.md"
-      ]
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-08-19T00:00:00Z",
+      "source_fetched_at": "2026-08-19T00:00:00Z"
     },
     {
       "claim_id": "reference-urls",
@@ -96,62 +99,67 @@
       "source_fetched_at": "2026-07-26T00:00:00Z"
     },
     {
-      "id": "cash-law-osek-party-6000",
       "claim": "The 6,000 NIS cash limit applies to any transaction in which a dealer (osek) is a party, giving or receiving. The 15,000 limit applies only where neither side is a dealer.",
-      "claim_type": "law",
       "source_url": "https://www.nevo.co.il/law_html/law00/154374.htm",
       "source_fetched_at": "2026-07-26T00:00:00Z",
       "raw_snippet": "לא ייתן עוסק ולא יקבל תשלום במזומן בעבור עסקה במסגרת עסקו, אם מחיר העסקה עולה על הסכום הנקוב בפרט (1) לתוספת הראשונה...לא ייתן אדם שאינו עוסק לאדם אחר שאינו עוסק תשלום במזומן בעבור עסקה, אם מחיר העסקה עולה על הסכום הנקוב בפרט (2) לתוספת הראשונה",
-      "confidence": "high"
+      "claim_id": "cash-law-osek-party-6000",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "fetched_at": "2026-07-26T00:00:00Z"
     },
     {
-      "id": "withholding-deminimis-5520",
       "claim": "De-minimis: a payment below the amount set in section 2(b) of the Public Bodies Transactions Law is outside the withholding duty. For 2024-2026 that amount is 5,520 NIS. The primary text does not state whether it is VAT-inclusive. The chain is: regulation 2 of the 1977 withholding regulations incorporates the Public Bodies Transactions Law figure, which is itself indexed and restated in the annual ITA implementation directive. In the skill files this appears in Hebrew notation as 5,520 ש\"ח. Related operational references: the periodic deductions report Form 102 (טופס 102), the salary-side annual report Form 126 (טופס 126), and the withholding-certificate lookup at https://www.gov.il/he/service/itc-gmishurim. Reduced certificate rates commonly seen include 2%.",
-      "claim_type": "threshold",
       "source_url": "https://www.nevo.co.il/law_html/law01/271_046.htm",
       "source_fetched_at": "2026-07-26T00:00:00Z",
       "raw_snippet": "הוראות סעיף זה לא יחולו על עסקה שמחירה אינו עולה על 5,520 שקלים חדשים שהתקשר בה גוף ציבורי",
-      "confidence": "high"
+      "claim_id": "withholding-deminimis-5520",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "fetched_at": "2026-07-26T00:00:00Z"
     },
     {
-      "id": "anchor-gmishurim",
       "claim": "Withholding-certificate lookup service cited in Reference Links.",
-      "claim_type": "url",
       "source_url": "https://taxinfo.taxes.gov.il/gmishurim/firstPage.aspx",
       "source_fetched_at": "2026-07-26T00:00:00Z",
       "raw_snippet": "אישורי ניכוי מס במקור",
-      "confidence": "medium",
-      "fetch_note": "Operational URL cited in the Reference Links table; gov.il and taxinfo endpoints return 403 to automated fetch, so this records the citation rather than a verified quotation."
+      "fetch_note": "Operational URL cited in the Reference Links table; gov.il and taxinfo endpoints return 403 to automated fetch, so this records the citation rather than a verified quotation.",
+      "claim_id": "anchor-gmishurim",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "fetched_at": "2026-07-26T00:00:00Z"
     },
     {
-      "id": "anchor-form856",
-      "claim": "Form 856 annual withholding reconciliation service page cited in Reference Links.",
-      "claim_type": "url",
-      "source_url": "https://www.gov.il/he/service/form-856",
-      "source_fetched_at": "2026-07-26T00:00:00Z",
-      "raw_snippet": "טופס 856",
-      "confidence": "medium",
-      "fetch_note": "Operational URL cited in the Reference Links table; gov.il and taxinfo endpoints return 403 to automated fetch, so this records the citation rather than a verified quotation."
-    },
-    {
-      "id": "anchor-ordinance",
       "claim": "Income Tax Ordinance text cited in Reference Links.",
-      "claim_type": "url",
       "source_url": "https://www.nevo.co.il/law_html/law01/255_001.htm",
       "source_fetched_at": "2026-07-26T00:00:00Z",
       "raw_snippet": "פקודת מס הכנסה",
-      "confidence": "medium",
-      "fetch_note": "Operational URL cited in the Reference Links table; gov.il and taxinfo endpoints return 403 to automated fetch, so this records the citation rather than a verified quotation."
+      "fetch_note": "Operational URL cited in the Reference Links table; gov.il and taxinfo endpoints return 403 to automated fetch, so this records the citation rather than a verified quotation.",
+      "claim_id": "anchor-ordinance",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "fetched_at": "2026-07-26T00:00:00Z"
     },
     {
-      "id": "anchor-itc-gmishurim",
       "claim": "Withholding-certificate service page cited in the Reference Links table.",
-      "claim_type": "url",
       "source_url": "https://www.gov.il/he/service/itc-gmishurim",
       "source_fetched_at": "2026-07-26T00:00:00Z",
       "raw_snippet": "אישורי ניכוי מס במקור",
-      "confidence": "medium",
-      "fetch_note": "gov.il returns 403 to automated fetch; this records the citation rather than a verified quotation."
+      "fetch_note": "gov.il returns 403 to automated fetch; this records the citation rather than a verified quotation.",
+      "claim_id": "anchor-itc-gmishurim",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "fetched_at": "2026-07-26T00:00:00Z"
     },
     {
       "claim_id": "israel-tax-authority-department-page",
@@ -174,6 +182,173 @@
       "verified_via": "pdf",
       "verified_at": "2026-08-11",
       "appears_in": [
+        "scripts/calculate_withholding.py"
+      ]
+    },
+    {
+      "claim_id": "de-minimis-mechanism-reg2a",
+      "claim": "תקנה 2(א) / reg. 2(a) of the 1977 withholding regulations sets the 20% base rate and excludes a payment for an asset or service whose value does not exceed the amount fixed in סעיף 2(ב) / section 2(b) of the Public Bodies Transactions Law, 1976. The test is the value of that asset or service, not a cumulative annual total. Applying the 20% base rate to a 10,000 NIS payment gives 2,000 ש\"ח withheld and 8,000 ש\"ח net; the 30% sanction rate would give 3,000 ש\"ח and 7,000 ש\"ח.",
+      "source_url": "https://www.nevo.co.il/law_html/law01/255_374.htm",
+      "raw_snippet": "משלם המשלם למקבל תשלומים בעד שירותים או נכסים, למעט תשלומים כאמור בעד נכס או שירות ששווים אינו עולה על הסכום הקבוע בסעיף 2(ב) לחוק עסקאות גופים ציבוריים (אכיפת ניהול חשבונות ותשלום חובות מס), תשל\"ו-1976, ינכה מתשלומים אלה מס בשיעור של 20%.",
+      "fetched_at": "2026-08-19T00:00:00Z",
+      "source_fetched_at": "2026-08-19T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/withholding-rates.md"
+      ]
+    },
+    {
+      "claim_id": "periodic-return-due-16th-form-0852",
+      "claim": "תקנה 4 / reg. 4 of the 1977 regulations: the payer files the periodic return and pays the withheld tax by the 16th of each month, not the 15th, and the regulation names Form 0852 (טופס 0852). The 16th replaced the 15th by תק' תשע\"ח-2017.",
+      "source_url": "https://www.nevo.co.il/law_html/law01/255_374.htm",
+      "raw_snippet": "4 . משלם יגיש לפקיד השומה עד היום ה-16 לכל חודש דין וחשבון בטופס 0852 שיכלול פרטים על מקבלי התשלום, על התשלומים בעד שירותים או נכסים ששילם להם ועל סכום המס שנוכה לפי תקנות אלה בחודש הקודם וישלם לו באותו מועד את סך כל המס שנוכה.",
+      "fetched_at": "2026-08-19T00:00:00Z",
+      "source_fetched_at": "2026-08-19T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/withholding-rates.md",
+        "scripts/calculate_withholding.py"
+      ]
+    },
+    {
+      "claim_id": "no-turnover-threshold-payer-definition",
+      "claim": "There is no turnover threshold for becoming a withholding agent under תקנה 1 of the 1977 regulations. \"משלם\" is any person making service/asset payments, except an individual or partnership of individuals the assessing officer has approved in writing as not a payer for a tax year after a material contraction of their business. A grep of the full regulation text for \"מחזור\" returns zero occurrences.",
+      "source_url": "https://www.nevo.co.il/law_html/law01/255_374.htm",
+      "raw_snippet": "\"משלם\" – אדם המשלם תשלומים בעד שירותים או נכסים, למעט יחיד או שותפות של יחידים שפקיד השומה אישר בכתב לענין זה, כי בשנת מס פלונית לא יחשבו כמשלם, כתוצאה מהקטנה מהותית בהיקף עסקיהם",
+      "fetched_at": "2026-08-19T00:00:00Z",
+      "source_fetched_at": "2026-08-19T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/withholding-rates.md"
+      ]
+    },
+    {
+      "claim_id": "schedule-a-exempt-recipients",
+      "claim": "Schedule A to the 1977 regulations lists recipients outside the regime, including the State, Bank of Israel, a local authority, the National Insurance Institute, a banking institution, an insurer, and a house-committee representation for common-property maintenance charges.",
+      "source_url": "https://www.nevo.co.il/law_html/law01/255_374.htm",
+      "raw_snippet": "המדינה בנק ישראל רשות מקומית מבקר המדינה איגוד ערים המוסד לביטוח לאומי מועצה דתית",
+      "fetched_at": "2026-08-19T00:00:00Z",
+      "source_fetched_at": "2026-08-19T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/withholding-rates.md"
+      ]
+    },
+    {
+      "claim_id": "s166c-withholding-payment-categories",
+      "claim": "Income Tax Ordinance Section 166(c) / סעיף 166(ג) enumerates the Section 164 payment types, including insurance commission (1), payment for agricultural work or agricultural produce (4), and payment for diamond processing or diamond trading (7).",
+      "source_url": "https://www.nevo.co.il/law_html/law01/255_001.htm",
+      "raw_snippet": "(1) עמלת ביטוח; (2) שכר אמנים, שכר בוחנים, שכר מרצים, שכר מעניקי שירותי משרד, שכר דירקטורים ושכר ספורטאים; (3) שכר סופרים; (4) תשלום בעד עבודה חקלאית או תוצרת חקלאית; (5) תשלומים בעד עבודות בניה או עבודות הובלה; (6) תשלומים בעד עבודות הלבשה, עבודות מתכת, עבודות חשמל ואלקטרוניקה ועבודות הובלה; (7) תשלומים בעד עיבוד יהלומים או בעד מסחר ביהלומים; (8) תשלומים בעד שירותים או נכסים",
+      "fetched_at": "2026-08-19T00:00:00Z",
+      "source_fetched_at": "2026-08-19T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/withholding-rates.md",
+        "scripts/calculate_withholding.py"
+      ]
+    },
+    {
+      "claim_id": "prizes-s164-and-s124b-35",
+      "claim": "Income Tax Ordinance Section 124B / סעיף 124ב sets the substantive tax rate on gambling, lottery and prize income under s.2A at 35% with no exemption, relief, deduction, credit or offset. No separate withholding rate for prizes is asserted by this skill.",
+      "source_url": "https://www.nevo.co.il/law_html/law01/255_001.htm",
+      "raw_snippet": "שיעור המס על הכנסה מהימורים, מהגרלות או מפרסים 124ב. על אף הוראות סעיף 121, שיעור המס על הכנסה מהימורים, מהגרלות או מפעילות נושאת פרסים, לפי סעיף 2א, יהיה 35%, בלא זכאות לפטור, להנחה, לניכוי, לזיכוי או לקיזוז כלשהם",
+      "fetched_at": "2026-08-19T00:00:00Z",
+      "source_fetched_at": "2026-08-19T00:00:00Z",
+      "appears_in": [
+        "references/withholding-rates.md",
+        "scripts/calculate_withholding.py"
+      ]
+    },
+    {
+      "claim_id": "two-tier-rates-general-rule",
+      "claim": "The withholding regulations set different rates for payees who keep acceptable books and file on time, and higher rates for non-compliers. This is a general rule across categories, per the ITA taxpayer guide chapter 8 section 9. Stated in the ITA taxpayer guide, chapter 8 (פרק ח) סעיף 9.",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-guide-knowyourright/he/Guides_IncomeTax_da-2025.pdf",
+      "raw_snippet": "בתקנות לניכוי מס במקור מהכנסות שאינן שכר עבודה נקבעו שיעורים שונים למי שמנהלים ספרים קבילים ומגישים את הדו\"ח במועד, ושיעורים גבוהים יותר לסרבנים.",
+      "fetched_at": "2026-08-19T00:00:00Z",
+      "source_fetched_at": "2026-08-19T00:00:00Z",
+      "verified_via": "pdf",
+      "verified_at": "2026-08-19T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/withholding-rates.md"
+      ]
+    },
+    {
+      "claim_id": "withholders-scoped-by-ministerial-order",
+      "claim": "The classes of withholders and of payments are fixed by an order of the Finance Minister with Knesset Finance Committee approval under s.164, making the withholding family an open, order-by-order set rather than a closed list. Stated in the ITA taxpayer guide, chapter 8 (פרק ח) סעיף 9.",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-guide-knowyourright/he/Guides_IncomeTax_da-2025.pdf",
+      "raw_snippet": "קביעת סוגי המנכים וסוגי התשלומים נעשית בצו",
+      "fetched_at": "2026-08-19T00:00:00Z",
+      "source_fetched_at": "2026-08-19T00:00:00Z",
+      "verified_via": "pdf",
+      "verified_at": "2026-08-19T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/withholding-rates.md"
+      ]
+    },
+    {
+      "claim_id": "ita-directs-to-live-per-payee-rate",
+      "claim": "The ITA does not publish a consolidated withholding rate table and directs withholders and payees to obtain current rates directly from the Tax Authority site, queried per payee. Stated in the ITA taxpayer guide, chapter 8 (פרק ח) סעיף 9.",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-guide-knowyourright/he/Guides_IncomeTax_da-2025.pdf",
+      "raw_snippet": "מידע זמין ומעודכן לגבי שיעורי ניכוי מס במקור יכולים המנכים והמנוכים לקבל ישירות מאתר רשות המסים.",
+      "fetched_at": "2026-08-19T00:00:00Z",
+      "source_fetched_at": "2026-08-19T00:00:00Z",
+      "verified_via": "pdf",
+      "verified_at": "2026-08-19T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/withholding-rates.md",
+        "scripts/calculate_withholding.py"
+      ]
+    },
+    {
+      "claim_id": "misim-per-payee-lookup-url",
+      "claim": "The ITA per-payee withholding rate lookup is at misim.gov.il/gmishurim/frmInputMekabel.aspx, queried by company or dealer number.",
+      "source_url": "https://www.misim.gov.il/gmishurim/frmInputMekabel.aspx",
+      "raw_snippet": "אישורי ניכוי מס במקור",
+      "fetched_at": "2026-08-19T00:00:00Z",
+      "source_fetched_at": "2026-08-19T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/withholding-rates.md",
+        "scripts/calculate_withholding.py"
+      ]
+    },
+    {
+      "claim_id": "annual-deduction-returns-856-126-april-30",
+      "claim": "The annual deduction returns, Form 856 (טופס 856) and Form 126, are filed by 30 April, and are transmitted online as employer returns 856/126.",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-guide-knowyourright/he/Guides_IncomeTax_da-2025.pdf",
+      "raw_snippet": "הגשת דוחות שנתיים בניכויים עד 30באפריל )טופסי (856 ,126",
+      "fetched_at": "2026-08-19T00:00:00Z",
+      "source_fetched_at": "2026-08-19T00:00:00Z",
+      "verified_via": "pdf",
+      "verified_at": "2026-08-19T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/withholding-rates.md",
+        "scripts/calculate_withholding.py"
+      ]
+    },
+    {
+      "claim_id": "s164-covers-gambling-lottery-prize-income",
+      "claim": "Income Tax Ordinance Section 164 / סעיף 164 places gambling, lottery and prize-activity income under s.2A within the withholding duty.",
+      "source_url": "https://www.nevo.co.il/law_html/law01/255_001.htm",
+      "raw_snippet": "חובת ניכוי במקור 164. כל המשלם או האחראי לתשלומה של הכנסת עבודה, לרבות חלק ממענק שנתקבל עקב פרישה או מוות, שאינו פטור על פי סעיף 9(7א), של השתכרות או רווח שמקורם בהימורים, בהגרלות או בפעילות נושאת פרסים, כאמור בסעיף 2א",
+      "fetched_at": "2026-08-19T00:00:00Z",
+      "source_fetched_at": "2026-08-19T00:00:00Z",
+      "appears_in": [
+        "references/withholding-rates.md",
         "scripts/calculate_withholding.py"
       ]
     }

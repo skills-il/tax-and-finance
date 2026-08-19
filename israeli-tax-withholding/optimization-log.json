@@ -1,6 +1,25 @@
 {
   "cycles": [
     {
+      "version": "1.5.0",
+      "date": "2026-08-19",
+      "lessons": [
+        "RESOLVED (was CARRY): calculator drift on --type royalties. The 0.23 constant is gone; royalties and four other unrated statutory categories now raise a sourced routing error instead of a number. The --rates section labelling was also fixed (rent now shows reg. 1998, not s.170).",
+        "RESOLVED: the Form 102 deadline contradiction. Reg. 4 of the 1977 regulations reads 'עד היום ה-16 לכל חודש' and its amendment history shows תק' תשע\"ח-2017 replaced the 15th. The brief for this cycle said the evidence ran three-to-one AGAINST the 16th; the primary source settled it the other way. Majority-of-copies is not evidence.",
+        "CRITICAL FIX nobody reported: the mandatory-withholder turnover threshold did not exist. The 1977 regulations define 'משלם' as any payer with a written assessing-officer carve-out, and s.164 scopes the family by ministerial order. A user told they were 'below the threshold' would have skipped a real obligation.",
+        "UNREPORTED FIX: two gov.il Reference Links (service/form-856 and departments/guides/taxation-agreements) both 404. curl reported 403 (Cloudflare) which looks identical to bot-blocking; only a browser navigation with a location.href assertion exposed the redirect to /he/error. Both were removed.",
+        "UNREPORTED FIX: references listed 'Prizes and awards 25%' with no source. s.124ב sets the substantive rate on gambling/lottery/prize income at 35% with no relief. The 25% was removed rather than replaced, because the operative WITHHOLDING rate lives in its own regulations and was not located.",
+        "UNREPORTED FIX, same defect class as the reported royalties constant: the script also carried services_company=0.30 and contractor=0.30. reg. 2 draws no individual/company distinction, so a compliant company was over-withheld by half exactly as the reported services default was; and building/haulage work is its own category under s.166(ג)(5) whose 30% was unsourced. services_company moved to the 0.20 base, contractor moved to the unpriced/routed set. Rule that generalises: when one hardcoded rate in a table is found invented, re-derive EVERY row of that table, not the reported one.",
+        "DIAMONDS RESOLVED against the brief's UNVERIFIED marking. They are absent from the 2025 ITA guide, but Ordinance s.166(ג)(7) names 'תשלומים בעד עיבוד יהלומים או בעד מסחר ביהלומים' as a s.164 category. Absence from a guide is not absence from the statute; the enumeration was hiding in the s.166 reporting definition, not in the withholding chapter.",
+        "CARRY: the rate for agricultural work/produce, diamonds, and insurance commission is still not sourced. Each lives in its own תקנות under s.164 and no legal database with a working search was reachable this session (WebSearch budget was exhausted at 200/200 before the run started). The skill now names the categories and routes to the per-payee lookup. Next cycle: get the s.164 order/regulation list from nevo or מאגר החקיקה by direct URL and cite the specific תקנה per category.",
+        "CARRY (unchanged from 1.3.0): non-resident withholding under s.170 is not a flat 25%. The prose hedges to 'commonly applied at 25%' but the calculator still hardcodes non_resident = 0.25 with no company branch.",
+        "CARRY (unchanged from 1.3.0): the Circular 3/2026 description overstates input-VAT denial and does not reflect the staggered 1.8.2025 / 1.1.2026 commencement.",
+        "CARRY (unchanged from 1.3.0): 'treaty relief needs prior approval from the assessing officer' is stated absolutely; a green-track bank-declaration route exists for enumerated capital transactions.",
+        "CARRY: the treaty rate table is now explicitly marked not-re-verified this cycle, because its only cited source URL is dead. Either find the live ITA treaty index or move the table to per-treaty citations next cycle.",
+        "PROCESS: the evidence gate's 'unjustified claim' list is section- and regulation-aware ('Section 166', 'תקנה 4'), and matches against the claim field as well as raw_snippet. Putting the citation tokens into the claim prose is the correct fix; editing a raw_snippet to contain them would corrupt the verbatim quote."
+      ]
+    },
+    {
       "version": "1.3.0",
       "date": "2026-07-26",
       "lessons": [

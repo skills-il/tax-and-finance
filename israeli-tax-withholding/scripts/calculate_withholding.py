@@ -21,30 +21,74 @@ VAT_RATE = 0.18  # Standard Israeli VAT rate (raised from 17% on Jan 1, 2025)
 # withholding certificate. These are the no-certificate ITA defaults; a valid
 # certificate typically brings the rate down to 0-5%.
 DEFAULT_RATES = {
-    "services": 0.30,          # 30% - reg. 1977 default for a payee WITHOUT
-                               #       acceptable books (no ~47% rate exists)
-    "services_with_books": 0.20,  # 20% - reg. 1977 base rate where the payee
-                               #          keeps acceptable books
-    "services_company": 0.30,  # up to 30% - companies; tax office may classify
-                               #             lower, 20-30%
+    # reg. 2(a) of the 1977 regulations: the BASE rate, and the ordinary case.
+    # This is the correct starting point for a compliant payee. Only move to
+    # services_no_books once you know the payee failed the books/returns test.
+    "services": 0.20,
+    "services_with_books": 0.20,  # explicit alias for "services"
+    "services_no_books": 0.30,    # reg. 2(b) sanction rate for a payee who did
+                                  # not prove acceptable books + timely returns
+    # reg. 2 draws no individual/company distinction: a company payee sits on the
+    # same 20% base and 30% sanction. The "20-30%" range often quoted for
+    # companies reflects the assessing officer's classification on the payee's
+    # certificate, not a different statutory default, so start at the base.
+    "services_company": 0.20,
     "rent": 0.35,              # 35% - uniform rate for real estate the tenant
                                #       deducts as a business expense
     "rent_residential": 0.35,  # 35% - no separate residential rate exists;
                                #       alias kept for backward compatibility
-    # Royalties have no separate rate in the 1977 regulations. To an Israeli
-    # resident, use the services/assets default (20% with acceptable books,
-    # 30% without). To a non-resident, withholding is set under Section 170 and
-    # usually requires the assessing officer's involvement. The value below is
-    # the corporate tax rate that is commonly applied to a non-resident company;
-    # it is NOT a distinct statutory withholding category, so confirm before use.
-    "royalties": 0.23,         # corporate rate, see note above
     "interest": 0.25,          # 25% - Section 164
     "dividends": 0.25,         # 25% - Section 164
     "dividends_major": 0.30,   # 30% - substantial shareholder (10% or more)
     "non_resident": 0.25,      # Section 170; commonly 25%, but treaty relief is
                                # NOT automatic and needs prior ITA approval
-    "contractor": 0.30,        # 30% - Construction/service contractors,
-                               #       no certificate
+}
+
+# Statutory withholding categories that this skill deliberately does NOT price,
+# because no rate for them was verified against a primary source. Emitting a
+# guess here would be worse than emitting nothing: the caller cannot tell an
+# invented number from a sourced one. A previous version of this file carried
+# a hardcoded royalties rate that was really the corporate tax rate wearing a
+# withholding label. Route these to the ITA's per-payee lookup instead.
+LOOKUP_URL = "https://www.misim.gov.il/gmishurim/frmInputMekabel.aspx"
+
+UNPRICED_TYPES = {
+    "royalties": (
+        "The 1977 regulations create no separate royalties withholding category. "
+        "To an Israeli resident, use --type services (20%) or services_no_books "
+        "(30%). To a non-resident, withholding is set under Section 170 and "
+        "normally needs the assessing officer's involvement; a treaty rate is "
+        "not self-executing."
+    ),
+    "agricultural": (
+        "Payment for agricultural work or agricultural produce is a statutory "
+        "withholding category (Income Tax Ordinance s.166(c)(4), under s.164), "
+        "but its rate lives in its own regulations and is not encoded here."
+    ),
+    "diamonds": (
+        "Payment for diamond processing or diamond trading is a statutory "
+        "withholding category (Income Tax Ordinance s.166(c)(7), under s.164), "
+        "but its rate lives in its own regulations and is not encoded here."
+    ),
+    "insurance_commission": (
+        "Insurance commission is a statutory withholding category (Income Tax "
+        "Ordinance s.166(c)(1), under s.164). The 20% figure in circulation is "
+        "not verified against a primary source in this skill, so it is not "
+        "encoded."
+    ),
+    "contractor": (
+        "Building and haulage work is its own statutory withholding category "
+        "(Income Tax Ordinance s.166(c)(5), under s.164) with its own "
+        "regulations. The 30% figure previously hardcoded here was not verified "
+        "against a primary source, so it is not encoded. For a plain service or "
+        "asset payment to a contractor, use --type services or services_no_books."
+    ),
+    "prizes": (
+        "Gambling, lottery and prize income is withheld under s.164 by reference "
+        "to s.2A. The substantive tax rate under s.124B is 35% with no "
+        "exemption, relief, deduction, credit or offset, but the operative "
+        "withholding rate is set by its own regulations and is not encoded here."
+    ),
 }
 
 
@@ -79,10 +123,18 @@ def calculate_withholding(
     Returns:
         WithholdingResult with all calculated amounts.
     """
+    if payment_type in UNPRICED_TYPES:
+        raise ValueError(
+            f"No withholding rate is encoded for '{payment_type}'.\n"
+            f"{UNPRICED_TYPES[payment_type]}\n"
+            f"Look the payee's operative rate up at {LOOKUP_URL}, or pass an "
+            f"explicit --certificate-rate."
+        )
     if payment_type not in DEFAULT_RATES:
         raise ValueError(
             f"Unknown payment type: {payment_type}. "
-            f"Valid types: {list(DEFAULT_RATES.keys())}"
+            f"Valid types: {list(DEFAULT_RATES.keys())}. "
+            f"Categories with no encoded rate: {list(UNPRICED_TYPES.keys())}"
         )
 
     has_certificate = certificate_rate is not None
@@ -127,12 +179,15 @@ def format_result(result: WithholdingResult) -> str:
         f"    Total disbursed:    {result.net_payment + result.withholding_amount + result.vat_amount:>10,.2f} NIS",
         f"",
         f"  NOTE: Withholding is on the pre-VAT amount. VAT is paid separately.",
-        f"  Report and pay on Form 102 (periodic deductions report) by the",
-        f"  15th of the following month. The annual per-payee reconciliation",
-        f"  is Form 856, due April 30 of the following year.",
+        f"  Report and pay by the 16th of the following month (reg. 4 of the",
+        f"  1977 regulations, form 0852; Form 102 is the periodic deductions",
+        f"  report). The 15th is the Bituach Leumi date, not this one. The",
+        f"  annual per-payee reconciliation is Form 856, due April 30 of the",
+        f"  following year.",
         f"  With no certificate the services default is 20% where the payee keeps",
         f"  acceptable books and 30% where they do not; a valid certificate usually",
-        f"  reduces it to 0-5%.",
+        f"  reduces it to 0-5%. Confirm the payee's operative rate at",
+        f"  {LOOKUP_URL}",
     ]
     return "\n".join(lines)
 
@@ -144,7 +199,7 @@ def main():
     )
     parser.add_argument(
         "--type", dest="payment_type",
-        choices=list(DEFAULT_RATES.keys()),
+        choices=list(DEFAULT_RATES.keys()) + list(UNPRICED_TYPES.keys()),
         help="Payment type"
     )
     parser.add_argument("--amount", type=float, help="Payment amount (before VAT)")
@@ -168,17 +223,37 @@ def main():
         print("=== Default Israeli Tax Withholding Rates ===")
         print(f"  {'Type':<22} {'Rate':>6}  Section")
         print(f"  {'─' * 42}")
+        sections = {
+            "services": "164 / reg. 1977",
+            "services_with_books": "164 / reg. 1977",
+            "services_no_books": "164 / reg. 1977",
+            "services_company": "164 / reg. 1977",
+            "rent": "164 / reg. 1998",
+            "rent_residential": "164 / reg. 1998",
+            "interest": "164",
+            "dividends": "164",
+            "dividends_major": "164",
+            "non_resident": "170",
+        }
         for ptype, rate in DEFAULT_RATES.items():
-            section = "164" if ptype in ("services", "services_company", "interest", "dividends", "dividends_major") else "170"
-            print(f"  {ptype:<22} {rate*100:>5.0f}%  {section}")
+            print(f"  {ptype:<22} {rate*100:>5.0f}%  {sections.get(ptype, '164')}")
+        print()
+        print("  Statutory categories with NO encoded rate (look them up per payee):")
+        for ptype, why in UNPRICED_TYPES.items():
+            print(f"  {ptype:<22}   {why.split('.')[0]}.")
+        print(f"  Per-payee lookup: {LOOKUP_URL}")
         return
 
     if args.example:
-        print("Example 1: Payment to freelancer (no certificate)")
+        print("Example 1: Payment to a compliant freelancer (no certificate)")
         result = calculate_withholding("services", 10000)
         print(format_result(result))
         print()
-        print("Example 2: Payment to vendor with 5% certificate")
+        print("Example 2: Same payment, payee could not prove acceptable books")
+        result = calculate_withholding("services_no_books", 10000)
+        print(format_result(result))
+        print()
+        print("Example 3: Payment to vendor with 5% certificate")
         result = calculate_withholding("services", 10000, certificate_rate=5)
         print(format_result(result))
         return
@@ -187,12 +262,16 @@ def main():
         parser.print_help()
         sys.exit(1)
 
-    result = calculate_withholding(
-        args.payment_type,
-        args.amount,
-        args.certificate_rate,
-        not args.no_vat,
-    )
+    try:
+        result = calculate_withholding(
+            args.payment_type,
+            args.amount,
+            args.certificate_rate,
+            not args.no_vat,
+        )
+    except ValueError as exc:
+        print(str(exc), file=sys.stderr)
+        sys.exit(2)
     print(format_result(result))
 
 
