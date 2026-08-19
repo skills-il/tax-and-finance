@@ -34,6 +34,12 @@ Generated: 2026-05-12 via research on: mas.gov.il, kolzchut.org.il, btl.gov.il, 
 
 - [ ] זיכוי בשל החזקת קרוב במוסד לפי סעיף 44. 35% מההפרש בין ששולם לבין 12.5% מהכנסת המבקש; הכנסת הקרוב עד 188,000 ₪ (יחיד) / 301,000 ₪ (זוג) ב-2026; טופס 116; מוציא זה את זה עם סעיף 45(א). source: https://www.kolzchut.org.il/en/Income_Tax_Credit_for_a_Parent_or_Spouse_Living_in_an_Institution. why core: named standalone credit for the sandwich-generation filer; never applied at source.
 
+- הפטור ממס לעולה חדש ולתושב חוזר ותיק לפי חוק עידוד עלייה לישראל וחזרה אליה (הוראת שעה), התשפ"ו-2026. Full exemption on Israeli personal-exertion income for arrivals 5.11.2025-31.12.2026, tax years 2026-2030, realised for a salaried claimant through exactly this skill's refund route. Source: ITA 2026 deductions booklet, chapter ב.
+- זיכוי עבודה במשמרות לפי סעיף 10 לפקודה. 15% credit capped at 12,540 ₪ against a 143,040 ₪ income ceiling for 2026, regulations in force to 31.12.2026, confined to productive industrial plants. Source: ITA 2026 deductions booklet + section 10(ב) ITO.
+- טבלת יישוב מוטב במלואה. The rate does not imply the ceiling, so the skill must cover every rate/ceiling combination the ITA publishes for the year, plus the three 2026 temporary-order regimes (חבל תקומה / אשקלון, יישוב עירוני מעורב / נוף הגליל, אזור קו עימות מזרחי). Source: ITA 2026 deductions booklet chapters ה and ח + sections 11(ב2), 11(ב3), 11(ב4) ITO.
+- כל שורות הזכאות לנקודות זיכוי שנתבעות בחלק ז' לטופס 101. Includes horeh yachid (s.40(ב)(1)), ילד להורה אחד (s.40(ב)(1ב)), separated parents (s.40(ב)(2)), maintenance to a former spouse while remarried (s.40א), age 16-17 (s.40ב), the maturity-year half point (s.66(ג)(4)(א)), and vocational certificates (s.40ד with the s.40ה election).
+- ערכים לפי שנת תביעה, לא לפי השנה הנוכחית. Section 46's minimum and ceiling, the brackets, the credit-point value and the surtax threshold are all index-adjusted annually; a claim for an earlier year must use that year's figures.
+
 ## Should cover (advanced / edge cases)
 
 - [ ] פטור ממס הכנסה לנכה לפי סעיף 9(5) לפקודה. לעיוור, לנכה רפואי 100%, או לנכה 90%+ עקב פגיעה באיברים שונים; תקרת הכנסה מיגיעה אישית פטורה ממס נקבעת שנתית ומשתנה לפי משך הנכות (מעל/מתחת 365 יום) ולפי קצבה חודשית. source: https://www.kolzchut.org.il/he/%D7%94%D7%97%D7%96%D7%A8_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94. why advanced: requires medical-board determination; skill should detect signal and route to qualified consultant rather than auto-fill.
@@ -58,9 +64,12 @@ Generated: 2026-05-12 via research on: mas.gov.il, kolzchut.org.il, btl.gov.il, 
 - מיסוי קריפטו ורווחי הון מנכסים דיגיטליים. separate reporting regime. related skill: `israeli-crypto-tax-reporter` handles it.
 - מע"מ ודיווח מע"מ. relevant only to עוסק, not שכיר. related skill: `israeli-vat-reporting` handles it.
 - מס שבח על מכירת דירה / רווח הון ממקרקעין. separate tax under חוק מיסוי מקרקעין. related skill: `israeli-tax-returns` covers cross-references.
-- "סעיף 35 משכנתא לעולה חדש". Section 35 ITO governs נקודות זיכוי לעולה חדש / תושב חוזר ותיק (not mortgage interest). Mortgage-related tax benefits for olim flow through the new-immigrant credit-points regime. Excluded as a discrete trigger to avoid misinformation; oleh credit points handled under the נקודות זיכוי 2026 must-cover item above.
+- "סעיף 35 משכנתא לעולה חדש". Section 35 ITO governs נקודות זיכוי לעולה חדש / תושב חוזר ותיק (not mortgage interest). Mortgage-related tax benefits for olim flow through the new-immigrant credit-points regime. Excluded as a discrete trigger to avoid misinformation; oleh credit points handled under the נקודות זיכוי 2026 must-cover item above. Re-litigated 2026-08-19 and kept out of scope: an ordinary user does ask about oleh tax benefits, but the answer they need is now covered affirmatively by the section 35 points and the 2026 aliya exemption, and this row exists only to stop a specific false claim, not to withhold an entitlement.
 
 ## Authoritative sources
+
+- https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf. ITA deductions booklet 2026: chapter ב (aliya exemption ceilings), chapter ה (15 yishuv rate/ceiling rows, Eilat, security forces), chapter ח (full locality list), amounts chapter (section 46 minimum and ceiling, shift-work caps). Earlier years use the same URL pattern with the year swapped; 2020 and 2021 are no longer served.
+- https://www.nevo.co.il/law_html/law00/84255.htm. Consolidated Income Tax Ordinance: sections 10, 11, 35, 39א, 39ב, 40, 40א, 40ב, 40ג, 40ד, 40ה, 44, 45, 46, 66, 160.
 
 - https://www.gov.il/he/service/itc135. Form 135 official page: who files, attachments, submission channels.
 - https://www.gov.il/he/pages/sa300821-2. Online refund-for-employees system.

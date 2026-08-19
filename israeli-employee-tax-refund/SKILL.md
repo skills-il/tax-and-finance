@@ -32,7 +32,7 @@ This skill is for **salaried employees (שכירים) voluntarily seeking a refu
 | Asks about gross-to-net or payslip math (not a closed tax year) | `israeli-payroll-calculator` |
 | Has stock options, RSUs, or Section 102 income | `israeli-stock-options-tax` |
 | Has crypto disposals | `israeli-crypto-tax-reporter` |
-| Has foreign-source income in any year being claimed (US W-2, foreign rental, foreign brokerage) | `israeli-tax-returns`. Foreign income usually triggers a Form 1301 obligation, and Section 14 olim/returning residents need a specialist. Never fold it into a Form 135 refund. |
+| Has foreign-source income in any year being claimed (US W-2, foreign rental, foreign brokerage) | `israeli-tax-returns`. Foreign income usually triggers a Form 1301 obligation, and Section 14 olim/returning residents need a specialist. Never fold it into a Form 135 refund. This routing is about FOREIGN income only: an oleh or תושב חוזר ותיק with Israeli salary alone stays here, including for the 2026 aliya exemption in trigger 18. |
 | Has a פיצויי פיטורים / severance / Form 161 event in any year being claimed | `israeli-tax-returns`. Severance carries Section 9(7A) math, the תקרת פטור, and the רצף קצבה / רצף פיצויים choice. Form 161 appears here only as an OCR target. |
 | Wants prospective mid-year withholding adjustment | The Tax Authority's online תיאום מס at `gov.il/he/service/tax-coordination-online`, NOT this skill |
 
@@ -43,7 +43,7 @@ Ask the user:
 
 ### Step 2: Read Form 106 (אישור שנתי על משכורת ומס שנוכה)
 
-Form 106 is the annual income summary the employer issues by March 31 of the following year (106 for 2025 is issued by 31.3.2026). Identify these fields:
+Form 106 is the annual income summary the employer issues by March 31 of the following year. Identify these fields:
 
 | Field | Hebrew label | What it tells you |
 |-------|--------------|-------------------|
@@ -52,34 +52,19 @@ Form 106 is the annual income summary the employer issues by March 31 of the fol
 | 218 / 219 | הפקדה לקרן השתלמות | Keren hishtalmut deposit. Relevant for the early-withdrawal refund and the deduction cap check. |
 | Months worked | חודשי עבודה | If less than 12, the user did not work the full year for this employer; common refund trigger. |
 
-With multiple Form 106s in one tax year, sum field 042 across them. The most common refund driver is each employer withholding as if its salary were the worker's only income, producing cumulative over-withholding.
+With multiple Form 106s in one tax year, sum field 042 across them. The commonest refund driver is each employer withholding as if its salary were the worker's only income.
 
-**Bituach Leumi annual confirmation feeds the same fields as Form 106.** If the user had any of these BTL income-replacement payments during the year, ask for the corresponding annual confirmation (אישור שנתי למס הכנסה) from Bituach Leumi (orderable from btl.gov.il) and aggregate it into the same totals you compute from Form 106:
-
-| BTL payment | ITO treatment | Where on the refund form |
-|---|---|---|
-| דמי לידה (maternity) | Fully taxable as personal-exertion income; no Section 9 exemption | Gross goes to field 158/172; BTL-withheld tax to field 042 |
-| דמי אבטלה (unemployment) | Fully taxable; no Section 9 exemption | Same: 158/172 + 042 |
-| דמי פגיעה (short-term work injury, up to 91 days) | Fully taxable; distinct from later נכות מעבודה pension | Same: 158/172 + 042 |
-| דמי שמירת היריון (pregnancy preservation) | Fully taxable; no Section 9 exemption | Same: 158/172 + 042 |
-| תגמולי מילואים (reserve duty) | Usually paid via the employer, so already inside Form 106. Direct-from-BTL payments are the exception and produce their own BTL annual confirmation. | Already in 106 fields; only direct-paid portion adds to 158/172 + 042 |
+**Bituach Leumi annual confirmation feeds the same fields as Form 106.** If the user received דמי לידה, דמי אבטלה, דמי פגיעה (short-term work injury, up to 91 days) or דמי שמירת היריון during the year, ask for the annual אישור שנתי למס הכנסה from btl.gov.il and aggregate it with the Form 106 totals: gross into field 158/172, BTL-withheld tax into field 042. All four are fully taxable personal-exertion income with no Section 9 exemption. תגמולי מילואים are usually paid via the employer and so already sit inside Form 106; only a portion paid direct from BTL adds its own confirmation. `references/document-requirements.md` lists which confirmation to order for each.
 
 The Section 9(6) exemptions (קצבת ילדים, זקנה, שאירים, נכות כללית, מענק לידה, ניידות) cover permanent or family-status allowances, not income replacement while temporarily out of work. Do not assume "BTL paid me, so it is exempt" for maternity, unemployment, or work-injury per-diem.
 
-A common misconception: the refund usually originates from the **salary side**, not BTL. BTL typically **under-withholds** on דמי לידה / דמי אבטלה, so that portion alone can leave the recipient owing tax. The refund appears because the employer over-withheld during the months actually worked, its monthly calculation assuming a full 12-month salary.
+A common misconception: the refund usually originates from the **salary side**, not BTL. BTL typically under-withholds on דמי לידה / דמי אבטלה, so that portion alone can leave the recipient owing tax. The refund appears because the employer over-withheld during the months actually worked.
 
 ### Step 3: Determine the Refund Window
 
 The retroactive refund window is 6 calendar years from the end of the tax year, per Section 160 of the Income Tax Ordinance.
 
-| Tax year | Last day to claim a refund |
-|----------|---------------------------|
-| 2020 | 31.12.2026 |
-| 2021 | 31.12.2027 |
-| 2022 | 31.12.2028 |
-| 2023 | 31.12.2029 |
-| 2024 | 31.12.2030 |
-| 2025 | 31.12.2031 |
+The deadline is 31 December of the sixth year after the tax year, so 2020 closes 31.12.2026, 2021 closes 31.12.2027, and so on through 2025 closing 31.12.2031. The full table is in `references/2026-rates.md`.
 
 Years before 2020 can no longer be claimed in 2026. Tell the user which years are open and which have closed.
 
@@ -96,28 +81,31 @@ Walk through this trigger list with the user. For each detected trigger, record 
 | 5 | Charitable donations to recognized institutions | Total donations to Section 46-approved institutions ≥ 207 ₪ in the year (2026 minimum) | Section 46 ITO |
 | 6 | Resident of yishuv mezakeh (settled area / periphery) | Center of life in an eligible locality for 12+ consecutive months; the locality appears on the annual official list | Section 11 ITO + Negev/Galilee Law |
 | 7 | New immigrant credit points (סעיף 35) | Oleh chadash within the first 4.5 years of aliyah (54 months for olim arriving 2022 or later, 42 months for earlier arrivals). Per-month allotment is shown in Step 5. | Section 35 ITO + Amendment 262 of 2022 (note: this is the credit-points benefit, not a mortgage interest deduction) |
-| 8 | Completed a bachelor's or master's degree | First bachelor's grants 1 credit point per study year up to 3 years (graduates 2023+), or 1 point for one tax year (graduates 2014-2022). First master's grants 0.5 point for 2 years (2023+) or 0.5 point for one year (2014-2022). | Section 40g ITO |
-| 9 | Single-parent or paying alimony | Court judgment establishing single-parent status or paying child support | Sections 64, 65, 66 ITO |
-| 10 | Disability tax exemption | Recognized 100% medical disability, blindness, or 90%+ disability under the multi-organ-injury calculation (פגיעה באיברים שונים); requires medical-board determination. 2026 ceiling on earned income exempt under the section: 445,200 ₪/year for disability lasting 365 days or more; 81,960 ₪/year for short-term disability (185-364 days). Higher 684,000 ₪ ceiling applies when the income is from a חוק הנכים / חוק נפגעי פעולות איבה pension. | Section 9(5) ITO |
-| 11 | Self-deposit to pension or life insurance beyond the employer's deposit | Additional deposit by the employee directly to a pension fund or life insurance product. The credit rate under Section 45A is currently 35% of the qualifying deposit, applied to "insured salary" contributions. | Sections 45A and 47 ITO |
+| 8 | Completed a bachelor's or master's degree | Bachelor's: 1 point per study year up to 3 years (2023+ graduates) or 1 point for one tax year (2014-2022). Master's: 0.5 point for 2 years (2023+) or one year (2014-2022). See also trigger 19's sibling entitlement for vocational certificates in Step 5. | Section 40ג ITO |
+| 9 | Single parent, parents living apart, or paying maintenance to a former spouse | Court judgment establishing single-parent status, a split-custody arrangement, or maintenance paid to a former spouse while remarried. Each is a separate entitlement with its own point count, listed in Step 5. | Sections 40(ב)(1), 40(ב)(1ב), 40(ב)(2) and 40א ITO |
+| 10 | Disability tax exemption | 100% medical disability, blindness, or 90%+ under the multi-organ-injury calculation (פגיעה באיברים שונים), on a medical-board determination. 2026 exempt-income ceilings: 445,200 ₪ (365+ days), 81,960 ₪ (185-364 days), 684,000 ₪ for a חוק הנכים / נפגעי פעולות איבה pension. | Section 9(5) ITO |
+| 11 | Self-deposit to pension or life insurance beyond the employer's deposit | A deposit made by the employee directly. Section 45A gives a 35% credit on the qualifying deposit against "insured salary" contributions. | Sections 45A and 47 ITO |
 | 12 | Early keren hishtalmut withdrawal | Withdrew from a keren hishtalmut before 6 years; bank withheld 47% at source but real marginal rate is lower | Section 9(16a) + Section 164 ITO |
 | 13 | Salaried employee paid more child credit points than employer recognized | Custody arrangement changed; employer's 101 form was not updated | Section 40 ITO |
-| 14 | One-time bonus or 13th salary pushed a single month into a higher bracket | Israeli withholding is computed month by month. A December bonus, options exercise, or 13th-salary payment can land that month in the 35% or 47% band even though the annual marginal rate is much lower. Sum the bonus into the annual reconciliation. | Regulation 6 of תקנות מס הכנסה (ניכוי ממשכורת ומשכר עבודה) |
-| 15 | Discharged soldier / national-service graduate credit points | Within 36 months of discharge the חייל משוחרר box on Form 101 was not ticked, so the points were never applied at source. Very common in a first job after release. | Section 39 ITO |
-| 16 | Child or spouse who is נטול יכולת (severely disabled) | The taxpayer (or their spouse) has a child who is paralyzed, blind, or has an intellectual-developmental disability. 2 credit points, never applied at source (needs Form 116א). Distinct from trigger 10 (the taxpayer's OWN disability). | Section 45(a) ITO |
-| 17 | Maintaining a disabled relative in an institution | The taxpayer funds the institutional care (מוסד) of an incapacitated child, spouse, or parent. A 35% credit, claimed on Form 116. Choose EITHER this (trigger 17) OR trigger 16 for the same child, whichever is larger, not both. | Section 44 ITO + תקנות תשנ"ו-1996 |
+| 14 | One-time bonus or 13th salary pushed a single month into a higher bracket | Withholding is computed month by month, so a December bonus or 13th salary can land that month in the 35% or 47% band even though the annual marginal rate is far lower. Sum it into the annual reconciliation. | Regulation 6 of תקנות מס הכנסה (ניכוי ממשכורת ומשכר עבודה) |
+| 15 | Discharged soldier / national-service graduate credit points | The חייל משוחרר box on Form 101 was not ticked within 36 months of discharge, so the points were never applied at source. Very common in a first job. | Section 39א ITO |
+| 16 | Child who is נטול יכולת (paralyzed, blind, or with an intellectual-developmental disability), the taxpayer's or their spouse's | 2 credit points, never applied at source (needs Form 116א). Distinct from trigger 10, which is the taxpayer's OWN disability. | Section 45(א) ITO |
+| 17 | Funding a relative's institutional care (מוסד) | 35% credit on Form 116. Mutually exclusive with trigger 16 for the same child; compute both and keep the larger. | Section 44 ITO |
+
+| 18 | Oleh chadash or תושב חוזר ותיק who arrived 5.11.2025 - 31.12.2026 | Full income-tax EXEMPTION on Israeli personal-exertion income for tax years 2026-2030, up to an annual ceiling (600,000 ₪ for 2026). Given IN ADDITION to the trigger 7 credit points, not instead of them. Cannot be taken through payroll yet, so a salaried claimant realises it by filing a refund request once 2026 closes. Ceilings, the lower relative-income limb, the 2026 pro-rating and the residency anti-abuse rule are in `references/2026-rates.md`. | חוק עידוד עלייה לישראל וחזרה אליה (הוראת שעה), התשפ"ו-2026, section 2(a) |
+| 19 | Second- or third-shift work at an industrial production plant | 15% credit on the shift pay, capped at 12,540 ₪ of credit against at most 143,040 ₪ of income for 2026. The regulations run to 31.12.2026 and reach only plants whose main activity is productive; a shift worker in retail, security or healthcare is outside them. | Section 10 ITO + תקנות מס הכנסה (שיעור המס על הכנסה בעד עבודה במשמרות), התשמ"ז-1986 |
 
 Triggers 16 and 17 are mutually exclusive for the same relative: a taxpayer cannot take both the Section 45(a) 2 credit points and the Section 44 institution credit for the same child. Compute both and keep the larger. Both require Form 116/116א with medical certification, so they are almost never applied at source and are high-yield retroactive claims.
 
 Separately, if the user is a low-income worker (the two-job, low-wage, reserve-duty persona), also check מענק עבודה (the earned-income / negative-income-tax grant). It is NOT a Form 135 refund; it is a separate claim paid by Bituach Leumi, so route the user to `btl.gov.il` (מענק עבודה) in addition to any Form 135 refund. Do not fold it into the refund estimate.
 
-Trigger 7 clarification (common misinformation): there is no "Section 35 mortgage interest deduction for olim". Section 35 grants credit points on a declining schedule (the per-month rates are in Step 5's allotment table and `references/2026-rates.md`): 8.5 points over 54 months for olim arriving 1.1.2022 or later, or 7.5 points over 42 months for pre-2022 arrivals. Do not promise the user a "mortgage interest refund" under Section 35. Section 35 points are NOT available to ordinary returning residents (תושב חוזר), who instead get the Section 14 foreign-income exemption; route returning residents and veteran returning residents (תושב חוזר ותיק) to `israeli-tax-returns`.
+Trigger 7 clarification (common misinformation): there is no "Section 35 mortgage interest deduction for olim". Section 35 grants credit points on a declining schedule (rates in Step 5 and `references/2026-rates.md`): 8.5 points over 54 months for olim arriving 1.1.2022 or later, 7.5 points over 42 months for earlier arrivals. Section 35 points are not available to an ordinary תושב חוזר, who gets the Section 14 foreign-income exemption instead. A תושב חוזר ותיק with foreign income still belongs in `israeli-tax-returns`, but one with Israeli salary who arrived inside the trigger 18 window is claimed here.
 
 
 
 ### Step 5: Estimate the Refund
 
-Estimate the refund as (correct tax under the brackets and credits) minus (tax actually withheld per the sum of field 042 across all Form 106s for the year). Use these 2026 figures.
+Estimate the refund as (correct tax under that year's brackets and credits) minus (tax withheld, the sum of field 042 across all Form 106s for the year).
 
 **2026 monthly tax brackets for employees:**
 
@@ -129,67 +117,33 @@ Estimate the refund as (correct tax under the brackets and credits) minus (tax a
 | 19,001 - 25,100 ₪ | 228,001 - 301,200 ₪ | 31% |
 | 25,101 - 46,690 ₪ | 301,201 - 560,280 ₪ | 35% |
 | 46,691 ₪ and above | 560,281 ₪ and above | 47% (Section 121 ITO top bracket) |
-| Plus mas yesafim | Annual income above 721,560 ₪ | Additional 3% surtax (Section 121B ITO), applied on top of the 47% |
+| Plus mas yesafim | Annual income above 721,560 ₪ | Additional 3% surtax (Section 121B ITO), on top of the 47% |
 
-For prior tax years, look up the brackets that applied to that year (do not extrapolate the 2026 brackets backward).
+For prior tax years use that year's brackets; `scripts/estimate_refund.py` carries them for 2020-2026 and rejects any other year rather than silently substituting. The 2026 credit point is worth **242 ₪ per month, 2,904 ₪ per year**.
 
-**2026 credit-point (נקודת זיכוי) values:**
+**Credit-point allotment.** The base is 2.25 points for an Israeli resident and 2.75 for a woman. On top of that sit the child schedule, the single-parent and separated-parent rows, the s.40א maintenance point, the 16-17 age point, the oleh, discharged-soldier, academic and vocational points, and the 2 points for a נטול יכולת child. The full table, with the statutory anchor for each row, is in `references/2026-rates.md`. Three rows the employer almost never applies at source, and which therefore drive most retroactive claims: the half point in the year a child turns 18 (mother or single parent only, never the father), the extra point for a single parent's ילד להורה אחד, and the s.40ד vocational-certificate point.
 
-| Period | Value |
-|--------|-------|
-| Per month | 242 ₪ |
-| Per year | 2,904 ₪ |
+**Section 44 institution credit (not a credit point):** 35% of the amount paid above 12.5% of the taxpayer's income, if the relative's 2026 annual taxable income is under 188,000 ₪ (301,000 ₪ for a couple). Claimed on Form 116.
 
-**Default credit-point allotment for a salaried resident:**
-
-| Recipient | Points per year |
-|-----------|-----------------|
-| Israeli resident (base) | 2.25 |
-| Female resident (additional 0.5) | 2.75 |
-| Each child up to age 5 (2024+ schedule, per parent) | 2.5 in birth year, 4.5 age 1, 4.5 age 2, 3.5 age 3, 2.5 age 4, 2.5 age 5 |
-| Each child age 6-17 (to mother, post-2022) | 2 |
-| Each child age 6-17 (to father) | 1 |
-| Each child age 6-17 (pre-2022) | 1 (mother) / 0 (father) |
-| Single parent (חד-הורי) | Additional points per scheme |
-| New immigrant (post-2022 arrival) | 1 point year 1, 3 points years 1.5-2.5, 2 points year 3, 1 point year 4 (per Step 4 trigger 7 table) |
-| Master's graduate (2023+) | 0.5 point per year for 2 years after graduation |
-| Bachelor's graduate (2023+) | 1 point per study year, capped at 3 years |
-| Discharged soldier / national-service graduate | 2 points/year (full service: 23+ months men, 22+ months women) or 1 point/year (shorter service over 1 year), for 36 months from the month after discharge. 2 points = 5,808 ₪/year; 1 point = 2,904 ₪/year at the 2026 value |
-| Parent of a נטול יכולת child (Section 45(a)) | 2 points/year (5,808 ₪) per paralyzed / blind / intellectual-developmental-disability child, including the spouse's child; claimed on Form 116א, not applied at source |
-
-**Section 44 institution credit (not a credit point):** a taxpayer funding a relative's stay in an institution (מוסד) may claim 35% of the amount paid above 12.5% of the taxpayer's income, provided the disabled relative's annual taxable income is under 188,000 ₪ (or 301,000 ₪ for a couple) in 2026. Claimed on Form 116.
-
-**Reserve-duty credit-point bonus (Section 39B, Amendment 283 התשפ"ו-2025):**
-
-| Days served in the tax year | Points awarded | Annual value at 2,904 ₪/point |
-|-----------------------------|----------------|-------------------------------|
-| 30-39 | 0.5 | 1,452 ₪ |
-| 40-49 | 0.75 | 2,178 ₪ |
-| 50-54 | 1.0 | 2,904 ₪ |
-| Each additional 5 days | +0.25 | +726 ₪ |
-| Maximum | 4.0 | 11,616 ₪ |
-
-The reserve-duty points are realized in the tax year **after** the service, so a soldier who served 60 days in 2025 claims them on the 2026 refund.
+**Reserve-duty credit-point bonus (Section 39B, Amendment 283 התשפ"ו-2025, published 23.11.2025):** 0.5 point for 30-39 days of combat reserve service in the previous tax year, 0.75 for 40-49, 1.0 for 50 or more, plus 0.25 for every further 5 days beyond 50, capped at 4 points (11,616 ₪ at the 2026 value). The full table is in `references/2026-rates.md`. There is one schedule only; the points are realized in the tax year **after** the service, so 60 days served in 2025 are claimed on the 2026 refund.
 
 **Donation credit (Section 46):**
 
-A donation of 207 ₪ or more (2026 minimum) to a Section-46-approved institution returns 35% of the donated amount as a credit. The annual ceiling is 10,354,816 ₪ or 30% of taxable income, whichever is lower. Receipts may be original, certified copy, or electronic (the latter marked מסמך ממוחשב). Always confirm the receiving institution still holds an active Section 46 approval for the year of the donation by checking the Tax Authority's approved-institutions list.
+A donation to a Section-46-approved institution returns 35% of the donated amount as a credit, above an annual minimum and below an annual ceiling that are BOTH index-adjusted each year: for 2026, a 207 ₪ minimum and a ceiling of 10,354,816 ₪ or 30% of taxable income, whichever is lower. Earlier claim years use their own figures (the 2022 minimum was 190 ₪, the 2023 minimum 200 ₪); the per-year table is in `references/2026-rates.md`. Receipts may be original, certified copy, or electronic (מסמך ממוחשב). Confirm the institution held an active Section 46 approval in the donation year.
 
 **Yishuv mezakeh credit:**
 
 Residents of eligible localities get a percentage credit on earned income, capped at a per-locality annual ceiling, after 12 continuous months of centre of life there. Rate and ceiling are both PER LOCALITY.
 
-Do not guess the percentage and do not leave it at zero: look the locality up in chapter ח of that year's ITA deductions booklet and pass it as `--yishuv-pct`. `references/2026-rates.md` has the 2026 tiers, representative localities, and the separate Eilat and security-forces regimes. Leaving the default silently returns zero credit, a missed entitlement for a periphery resident.
+Do not guess the percentage and do not leave it at zero: look the locality up in chapter ח of that year's ITA deductions booklet and pass BOTH `--yishuv-pct` and `--yishuv-ceiling`. The 2026 table has 15 rate/ceiling combinations, and the rate does not imply the ceiling (12% appears against four different ceilings, 14% against four), so never infer one from the other. Three הוראת שעה regimes new for 2026 add אשקלון (חבל תקומה, capped 14% / 180,000 ₪), נוף הגליל (mixed urban, 12% / 226,560 ₪) and the eastern confrontation line, and קדם ערבה, יונדב, בתרון and אדוריים joined the list. `references/2026-rates.md` carries all 15 rows, the new localities and the separate Eilat (10% / 268,560 ₪) and security-forces (5% / 178,320 ₪) regimes. Leaving the default silently returns zero credit, a missed entitlement for a periphery resident.
 
-Present the estimate as a range, not a single number, and remind the user that the Tax Authority's actual calculation may differ once the supporting documents are reviewed.
+Present the estimate as a range, not a single number, and say that the Tax Authority's own calculation may differ once the documents are reviewed.
 
 ### Step 6: Generate the Document Checklist
 
-Build a personalised list from the triggers detected in Step 4. Three items are always required: Form 106 from every employer for each year claimed, teudat zehut plus ספח, and a bank account confirmation (אישור ניהול חשבון) for the payout.
+Build the list from the triggers detected in Step 4. Three items are always required: Form 106 from every employer for each year claimed, teudat zehut plus ספח, and a bank account confirmation (אישור ניהול חשבון) for the payout.
 
-The full per-trigger checklist lives in `references/document-requirements.md`. Read it and emit only the rows matching the user's detected triggers. It covers all 17 triggers, including the Bituach Leumi annual confirmations, טופס 3010 for reserve duty, Section 46 receipts and the approved-institution check, אישור תושבות for yishuv mezakeh, Forms 116 and 116א, and the keren hishtalmut תלוש משיכה.
-
-Always remind the user to keep copies; the Tax Authority can request originals later.
+The full per-trigger checklist lives in `references/document-requirements.md`. Read it and emit only the rows matching the detected triggers. Trigger 18 additionally needs the תעודת עולה or the residency-start confirmation fixing the arrival date inside the 5.11.2025 - 31.12.2026 window; trigger 19 needs the employer's confirmation of second- or third-shift pay. Remind the user to keep copies; the Tax Authority can request originals later.
 
 ### Step 7: Choose the Submission Channel
 
@@ -204,32 +158,29 @@ If the user is required to file a Form 1301 (e.g., income above the surtax thres
 
 ### Step 7.5: Prospective Fix via Form 101 (Highly Important)
 
-If a trigger is **ongoing** (still a single parent, still an oleh inside the window, still in a yishuv mezakeh, children still in the right age band, still serving reserve duty), tell the user to update Form 101 at the employer for the current and following year. Form 101 sets the credit-points basis the employer withholds against.
+If a trigger is **ongoing** (still a single parent, still an oleh inside the window, still in a yishuv mutav, children still in the right age band, still serving reserve duty), tell the user to update Form 101 at the employer, whose part ז is where each of these entitlements is claimed. Without this the user files the same refund every year for the same missed credit: the refund returns last year's over-withholding, the 101 stops it going forward.
 
-Without this prospective fix, the user will file the same refund every year for the same missed credit. The retrospective refund (this skill's output) returns last year's over-withholding; updating Form 101 stops the over-withholding going forward.
-
-The user should submit the updated 101 to their HR / payroll department, attach the same supporting documents the refund used (תעודת עולה, אישור תושבות, custody court order, etc.), and ask payroll to recompute withholding starting the next pay period.
+Submit the updated 101 to HR / payroll with the same supporting documents the refund used (תעודת עולה, אישור תושבות, custody court order) and ask payroll to recompute withholding from the next pay period. The trigger 18 aliya exemption is the one entitlement that cannot yet be taken this way.
 
 ### Step 8: Submit and Track
 
 After submission:
 
-- The Tax Authority must process and pay the refund within one year from the assessment date, or two years from the end of the tax year, whichever is later.
-- Refunds paid after that statutory window accrue הצמדה (CPI linkage) plus 4% annual interest, paid on top of the principal.
-- The user can check status at the same portal where they submitted.
-- If the user receives a "drisha להשלמת מסמכים" (request to supplement documents), respond within the stated deadline or the request closes and a new application is required.
+- The refund must be paid within one year from the assessment date, or two years from the end of the tax year, whichever is later. Later payment accrues הצמדה (CPI linkage) plus 4% annual interest on top of the principal.
+- Status is checked at the same portal where the claim was submitted.
+- A "drisha להשלמת מסמכים" must be answered within the stated deadline or the request closes and a new application is needed.
 
 ## Examples
 
 ### Example 1: Refund After Two Jobs in 2024
 
-A salaried developer worked 6 months at Employer A (gross 25,000 ₪/month) and then 6 months at Employer B (gross 22,000 ₪/month) in 2024. No mid-year תיאום מס was filed, and no Form 101 was filed at Employer B, so B withheld at the maximum rate.
+A salaried developer worked 6 months at Employer A (25,000 ₪/month) then 6 months at Employer B (22,000 ₪/month) in 2024, with no mid-year תיאום מס and no Form 101 at B, so B withheld at the maximum rate.
 
-1. Collect Form 106 from both employers. Field 042: 27,158 ₪ withheld at A (regular withholding with 2.75 credit points); 62,040 ₪ withheld at B (47% maximum withholding on 22,000 ₪ for 6 months); total 89,198 ₪.
-2. Compute the correct annual tax on aggregate income of 282,000 ₪ using the 2024 brackets. Run `python scripts/estimate_refund.py --year 2024 --salary 282000 --withheld 89198 --points 2.75`; it returns a tax due of about 48,017 ₪.
-3. Trigger 1 detected: mid-year job change with no תיאום מס. Estimated refund range: 37,063 to 45,299 ₪.
+1. Field 042 across both 106s: 27,158 ₪ at A (regular withholding, 2.75 points) plus 62,040 ₪ at B (47% on 22,000 ₪ for 6 months) = 89,198 ₪.
+2. `python scripts/estimate_refund.py --year 2024 --salary 282000 --withheld 89198 --points 2.75` returns a tax due of about 48,017 ₪ on the 282,000 ₪ aggregate.
+3. Trigger 1 detected. Estimated refund range: 37,063 to 45,299 ₪.
 
-This refund size comes from the missing Form 101 at the second employer, not the job change. With normal withholding at both, a mid-year move gives a far smaller gap and can even leave tax owed: 282,000 ₪ with 47,200 ₪ withheld comes out to roughly 800 ₪ owed. Always run the numbers before promising a refund.
+This refund size comes from the missing Form 101 at the second employer, not the job change. With normal withholding at both, a mid-year move can even leave tax owed: 282,000 ₪ with 47,200 ₪ withheld comes out to roughly 800 ₪ owed. Always run the numbers before promising a refund.
 4. Document checklist: both Form 106s, teudat zehut, bank confirmation.
 5. Channel: online portal (no Form 1301 obligation).
 6. Year 2024 deadline: 31.12.2030.
@@ -242,16 +193,6 @@ A salaried teacher served 65 days of reserve duty in 2025. Reserve-duty credit p
 2. Value: 1.75 × 2,904 ₪ = 5,082 ₪ refund expected for 2026.
 3. Document: Form 3010 from the reserve unit listing 65 days served in 2025.
 4. Submit via online portal for tax year 2026 after the 2026 Form 106 is issued (by 31.3.2027).
-
-### Example 3: Section 46 Donations for 2022
-
-An employee donated 6,000 ₪ to three Section-46-approved nonprofits in 2022 but never claimed the credit.
-
-1. Trigger 5 detected. Amount 6,000 ₪ × 35% = 2,100 ₪ credit.
-2. Deadline check: 2022 closes 31.12.2028. Still open.
-3. Document checklist: signed original receipts from each institution; verify each institution's Section-46 approval was active in 2022 against the Tax Authority's historical approved list.
-4. Channel: online portal or Form 135.
-5. Note: the 1.1.2026 digital-reporting rule does not apply retroactively to 2022 donations; paper receipts are sufficient for that year.
 
 ## Bundled Resources
 
@@ -269,41 +210,38 @@ An employee donated 6,000 ₪ to three Section-46-approved nonprofits in 2022 bu
 
 | MCP | Why pair it |
 |-----|-------------|
-| `kolzchut` | Live authoritative rights pages for every refund trigger (current-year credit-point values, donation ceiling, miluim points table, yishuv mezakeh list, disability criteria). Use it whenever a figure in this skill needs to be re-verified against the latest Kol-Zchut publication. |
+| `kolzchut` | Live rights pages for every refund trigger. Use it whenever a figure here needs re-verifying against the current-year publication. |
 
-Companion skill: `hebrew-ocr-forms` can extract field 042 / 158 / 172 / 218 from scanned Form 106 and Form 161 PDFs before this skill consumes them.
+Companion skill: `hebrew-ocr-forms` extracts fields 042 / 158 / 172 / 218 from scanned Form 106 and Form 161 PDFs.
 
 ## Gotchas
 
 - The 6-year window is measured from the **end** of the tax year (Section 160 ITO), not from the date the employer issued Form 106. The 2020 deadline is 31.12.2026, not 31.3.2026.
 - Reserve-duty credit points (Section 39B / Amendment 283) are realized in the year **after** the service. A soldier who served in 2024 claims them on the 2025 refund, not the 2024 refund.
 - Section 35 (oleh credit points) is not "mortgage interest deduction". Do not promise the user a mortgage refund under Section 35.
+- The 2026 aliya exemption (trigger 18) is a temporary order that sunsets after tax year 2030, and it stacks ON TOP of the Section 35 points rather than replacing them. Offering an oleh who arrived inside the window only a credit-point refund understates the claim by an order of magnitude.
+- Where the trigger 18 exemption applies, it removes income from the tax base before credit points are applied, so points can end up worth less than their headline value in an exempt year. Compute the exempt tranche first, then apply the points to what remains.
+- The yishuv mutav rate does not determine the ceiling. Read both values for the user's own locality from the current year's booklet; a rate looked up against the wrong ceiling silently over- or under-states the credit.
+- Section 46's minimum donation and ceiling are index-adjusted every year. A 195 ₪ donation qualifies in a 2022 claim (minimum 190 ₪) but not in a 2026 one (minimum 207 ₪). Never apply the current year's minimum to an earlier claim year.
 - Section 46 receipts are valid as original, certified copy, or electronic (מסמך ממוחשב). Confirm the receiving institution held an active Section 46 approval for the donation year.
 - Filing a refund request opens the whole tax year to assessment: a marginal case can come back as a **demand to pay**, and any refund is first offset against existing income-tax, Bituach Leumi, מזונות, or הוצאה לפועל debts.
-- If the user is obligated to file a Form 1301 (income above the surtax threshold, foreign assets, mixed income), neither Form 135 nor the online refund portal applies. Route them to `israeli-tax-returns` and integrate the refund computation inside the 1301.
 - Prospective mid-year withholding adjustment (תיאום מס) and retrospective refund (Form 135 / online portal) are different mechanisms. תיאום מס handles the current year before it closes; refund handles years that already closed. Users frequently conflate them.
-- Yishuv mezakeh requires center of life in the locality for 12 consecutive months. Spending part of the year elsewhere can disqualify the year.
+- Yishuv mutav requires centre of life in the locality for 12 consecutive months. Moving between two eligible localities is fine (the 12 months accumulate) but the credit is pro-rated across them.
 
 ## Reference Links
 
 | Source | URL | What to check |
 |--------|-----|---------------|
+| ITA deductions booklet 2026 (לוח ניכויים) | https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf | Authoritative source for every 2026 amount here: chapter ה has the 15 yishuv rate/ceiling rows, chapter ח the full locality list, and the amounts chapter the Section 46 and shift-work figures |
 | Tax Authority Form 135 official page | https://www.gov.il/he/service/itc135 | Form 135 PDF, who files, attachments |
 | Online refund portal | https://secapp.taxes.gov.il | Auth flow, document uploads |
-| Online refund landing page | https://www.gov.il/he/pages/sa300821-2 | Eligibility for the online track |
+| Income Tax Ordinance, consolidated | https://www.nevo.co.il/law_html/law00/84255.htm | Sections 10, 11, 35, 39B, 40, 40א, 40ג, 40ד, 44, 45, 46, 160 as currently in force |
 | Kol-Zchut: refund overview | https://www.kolzchut.org.il/he/%D7%94%D7%97%D7%96%D7%A8_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94 | 6-year window, processing time, interest + הצמדה |
 | Kol-Zchut: 2026 credit points | https://www.kolzchut.org.il/he/%D7%A0%D7%A7%D7%95%D7%93%D7%95%D7%AA_%D7%96%D7%99%D7%9B%D7%95%D7%99_%D7%9E%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94 | Monthly point value and category list |
-| Kol-Zchut: reserve-duty points | https://www.kolzchut.org.il/he/%D7%A0%D7%A7%D7%95%D7%93%D7%95%D7%AA_%D7%96%D7%99%D7%9B%D7%95%D7%99_%D7%9E%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94_%D7%9C%D7%9C%D7%95%D7%97%D7%9E%D7%99_%D7%9E%D7%99%D7%9C%D7%95%D7%90%D7%99%D7%9D | Section 39B schedule per Amendment 283 |
-| Kol-Zchut: Section 46 donations | https://www.kolzchut.org.il/he/%D7%96%D7%99%D7%9B%D7%95%D7%99_%D7%9E%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94_%D7%91%D7%A9%D7%9C_%D7%AA%D7%A8%D7%95%D7%9E%D7%94_(%D7%A1%D7%A2%D7%99%D7%A3_46) | Minimum, ceiling, credit rate, digital-reporting rule |
-| Kol-Zchut: yishuv mezakeh | https://www.kolzchut.org.il/he/%D7%96%D7%99%D7%9B%D7%95%D7%99_%D7%9E%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94_%D7%9C%D7%AA%D7%95%D7%A9%D7%91%D7%99%D7%9D_%D7%91%D7%A4%D7%A8%D7%99%D7%A4%D7%A8%D7%99%D7%94 | Settled-area list and per-locality percentages |
-| Kol-Zchut: Form 106 overview | https://www.kolzchut.org.il/he/%D7%98%D7%95%D7%A4%D7%A1_106 | What Form 106 is and who issues it |
-| Claltax: Form 106 field map | https://claltax.com/%D7%98%D7%95%D7%A4%D7%A1-106-%D7%A9%D7%9B%D7%99%D7%A8-%D7%95%D7%92%D7%9E%D7%9C%D7%90%D7%99/ | Field 042 / 158 / 172 / 218 / 219 explainer |
-| Kol-Zchut: income tax brackets | https://www.kolzchut.org.il/he/%D7%9E%D7%93%D7%A8%D7%92%D7%95%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94 | Monthly and annual bracket table |
+| Kol-Zchut: oleh / returning-resident exemption | https://www.kolzchut.org.il/he/%D7%A4%D7%98%D7%95%D7%A8_%D7%9E%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94_%D7%9C%D7%A2%D7%95%D7%9C%D7%99%D7%9D_%D7%97%D7%93%D7%A9%D7%99%D7%9D_%D7%95%D7%9C%D7%AA%D7%95%D7%A9%D7%91%D7%99%D7%9D_%D7%97%D7%95%D7%96%D7%A8%D7%99%D7%9D_%D7%95%D7%AA%D7%99%D7%A7%D7%99%D7%9D | Arrival window, per-year ceilings, relative-income limb |
+| Kol-Zchut: yishuv mezakeh | https://www.kolzchut.org.il/he/%D7%96%D7%99%D7%9B%D7%95%D7%99_%D7%9E%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94_%D7%9C%D7%AA%D7%95%D7%A9%D7%91%D7%99%D7%9D_%D7%91%D7%A4%D7%A8%D7%99%D7%A4%D7%A8%D7%99%D7%94 | 12-month rule, Eilat regime, moving between localities |
 | Kol-Zchut: Section 9(5) disability exemption | https://www.kolzchut.org.il/he/%D7%A4%D7%98%D7%95%D7%A8_%D7%9E%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94_%D7%9C%D7%90%D7%A0%D7%A9%D7%99%D7%9D_%D7%A2%D7%9D_%D7%A0%D7%9B%D7%95%D7%AA | Current Section 9(5) ceilings |
-| Kol-Zchut: discharged-soldier credit points | https://www.kolzchut.org.il/he/%D7%A0%D7%A7%D7%95%D7%93%D7%95%D7%AA_%D7%96%D7%99%D7%9B%D7%95%D7%99_%D7%9E%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94_%D7%9C%D7%97%D7%99%D7%99%D7%9C%D7%99%D7%9D_%D7%9E%D7%A9%D7%95%D7%97%D7%A8%D7%A8%D7%99%D7%9D_%D7%95%D7%9E%D7%A1%D7%99%D7%99%D7%9E%D7%99_%D7%A9%D7%99%D7%A8%D7%95%D7%AA_%D7%9C%D7%90%D7%95%D7%9E%D7%99-%D7%90%D7%96%D7%A8%D7%97%D7%99 | 1 vs 2 points, 36-month window |
-| Tax Authority: Form 116א disabled-relative credit | https://www.gov.il/he/service/itc-request-for-tax-credits-disabled-relative | Section 45(a) / 44 claim, certification, income caps |
-| Bituach Leumi: annual confirmation for income tax | https://www.btl.gov.il | Annual אישור שנתי למס הכנסה for BTL payments |
-| FinBiz Academy: maternity tax pattern | https://finbizacademy.co.il/baby_born/ | Why the salary side drives maternity / unpaid-leave refunds |
+| Claltax: Form 106 field map | https://claltax.com/%D7%98%D7%95%D7%A4%D7%A1-106-%D7%A9%D7%9B%D7%99%D7%A8-%D7%95%D7%92%D7%9E%D7%9C%D7%90%D7%99/ | Field 042 / 158 / 172 / 218 / 219 explainer |
 
 ## Troubleshooting
 
@@ -320,9 +258,4 @@ Most common cause is missing or expired digital identity. Direct the user to set
 Section 46 approvals are issued for a defined period. If the institution's approval expired before the donation was made, the donation does not qualify. Ask the user to obtain a fresh confirmation from the institution stating the approval was active on the donation date.
 
 ### Error: "Disability exemption (Section 9(5)), refund estimate seems off"
-Confirm three details before computing:
-1. Disability duration. Under 185 days does not qualify. 185-364 days uses the short-term ceiling of 81,960 ₪/year exempt earned income. 365 days and over uses the long-term ceiling of 445,200 ₪/year.
-2. Income source. Pensions paid under חוק הנכים or חוק נפגעי פעולות איבה use the higher 684,000 ₪/year ceiling instead.
-3. Qualification basis. 100% medical disability, blindness, OR 90%+ via the multi-organ-injury calculation all qualify. Anything less does not, even if the user has a Bituach Leumi disability rating.
-
-For any case that is not clearly inside one of the standard ceilings, route the user to a Roeh Cheshbon experienced with Section 9(5) determinations.
+Confirm the duration band (under 185 days does not qualify; 185-364 days uses the 81,960 ₪ short-term ceiling; 365 days and over uses 445,200 ₪), the income source (a pension under חוק הנכים or חוק נפגעי פעולות איבה uses the higher 684,000 ₪ ceiling), and the qualification basis (100% medical disability, blindness, or 90%+ via the multi-organ-injury calculation; a Bituach Leumi disability rating on its own is not enough). The full ceiling table is in `references/2026-rates.md`. For anything outside those bands, route the user to a Roeh Cheshbon experienced with Section 9(5) determinations.

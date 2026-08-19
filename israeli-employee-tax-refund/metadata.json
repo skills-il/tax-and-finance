@@ -1,6 +1,6 @@
 {
   "author": "skills-il",
-  "version": "1.4.1",
+  "version": "1.5.0",
   "category": "tax-and-finance",
   "tags": {
     "he": [
@@ -58,6 +58,16 @@
   "volatility": "legislative",
   "authoritative_sources": [
     {
+      "url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf",
+      "type": "regulator",
+      "language": "he"
+    },
+    {
+      "url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "type": "legislation",
+      "language": "he"
+    },
+    {
       "url": "https://www.gov.il/he/service/itc135",
       "type": "regulator",
       "language": "he"
@@ -88,5 +98,5 @@
       "language": "he"
     }
   ],
-  "domain_checklist_version": 3
+  "domain_checklist_version": 4
 }

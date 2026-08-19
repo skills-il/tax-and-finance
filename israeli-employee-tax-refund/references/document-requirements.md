@@ -95,3 +95,15 @@ This is the per-trigger document checklist the skill walks the user through in S
 - Form 116 (institution credit).
 - Institution payment receipts for the tax year.
 - The disabled relative's income confirmation (to verify the 2026 income cap of 188,000 / 301,000 ₪).
+
+## Worked example: Section 46 donations for an earlier year
+
+
+An employee donated 6,000 ₪ to three Section-46-approved nonprofits in 2022 but never claimed the credit.
+
+1. Trigger 5 detected. Amount 6,000 ₪ × 35% = 2,100 ₪ credit.
+2. Deadline check: 2022 closes 31.12.2028. Still open.
+3. Document checklist: signed original receipts from each institution; verify each institution's Section-46 approval was active in 2022 against the Tax Authority's historical approved list.
+4. Channel: online portal or Form 135.
+5. Note: the 2022 minimum donation was 190 ₪, not 207 ₪. Each year has its own minimum and ceiling (`references/2026-rates.md`).
+

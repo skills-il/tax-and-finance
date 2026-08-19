@@ -13,6 +13,17 @@
         "Expert MINOR deferred: nothing tells the filer a refund can be claimed in a year with income below the tax threshold, or that no accountant or representative is required to file Form 135.",
         "Process lesson: the per-year refactor renamed CREDIT_POINT_VALUE_ANNUAL_2026 to CREDIT_POINT_ANNUAL_BY_YEAR but missed one call site in the miluim print path, so every --miluim-days run crashed with NameError. The smoke test exercised --year across all years but never passed --miluim-days. Exercise EVERY declared flag after a constant rename, not just the ones in the changed code path."
       ]
+    },
+    {
+      "version": "1.5.0",
+      "date": "2026-08-19",
+      "lessons": [
+        "Section 11(b1) azor kav imut dromi (20% up to 241,080 NIS in the nevo consolidated text) was NOT encoded: the ITA 2026 published table's 20% rows are 259,920 and 267,840, and the two figures could not be reconciled at source. Re-check against next year's booklet.",
+        "13 legacy kolzchut evidence entries carry paraphrased rather than verbatim raw_snippets. They pass only because kolzchut bot-blocks curl and lands in the 'unreachable' bucket. Rewrite them as verbatim page text next cycle before kolzchut ever becomes fetchable.",
+        "The 2020 and 2021 ITA deductions booklets are no longer served, so the Section 46 minimum for those two claim years stays unsourced. The script now declines to disqualify rather than guessing.",
+        "The audit-reported second Section 39B regime from 2028 (0.75 points at 20-24 days) was REFUTED: neither the consolidated Ordinance (current to 08.06.2026) nor the ITA 2026 booklet contains any such limb. Do not re-encode it without a primary source.",
+        "The ITA circular setting out the full conditions of the aliya temporary order was still pending when the 2026 booklet was published. Fold it in once issued."
+      ]
     }
   ]
 }

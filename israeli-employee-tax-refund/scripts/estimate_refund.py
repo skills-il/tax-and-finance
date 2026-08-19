@@ -64,9 +64,16 @@ SURTAX_CAPITAL_ADDON_FIRST_YEAR = 2025
 PRIMARY_SOURCED_YEARS = {2021, 2022, 2023, 2024, 2025, 2026}
 SUPPORTED_YEARS = sorted(BRACKETS_BY_YEAR_MONTHLY)
 
-SECTION_46_MIN_2026 = 207
+# Section 46 donation credit. The minimum qualifying donation AND the annual ceiling are both
+# index-adjusted every tax year, so applying 2026's figures to a 2022 claim silently disqualifies
+# a donation that did qualify. Values read from that year's ITA deductions booklet text layer.
+# The ITA no longer serves the 2020 and 2021 booklets, so those two years are deliberately absent:
+# the estimator warns and declines to disqualify rather than guessing a minimum.
 SECTION_46_CREDIT_RATE = 0.35
-SECTION_46_CEILING_2026 = 10354816
+SECTION_46_MIN_BY_YEAR = {2022: 190, 2023: 200, 2024: 207, 2025: 207, 2026: 207}
+SECTION_46_CEILING_BY_YEAR = {
+    2022: 9517000, 2023: 10019808, 2024: 10354816, 2025: 10354816, 2026: 10354816,
+}
 
 
 @dataclass
@@ -143,9 +150,26 @@ def estimate(
     credit_value = total_points * CREDIT_POINT_ANNUAL_BY_YEAR[year]
 
     donation_credit = 0.0
-    if donations_annual >= SECTION_46_MIN_2026:
-        eligible = min(donations_annual, SECTION_46_CEILING_2026, salary_annual * 0.30)
+    section_46_min = SECTION_46_MIN_BY_YEAR.get(year)
+    section_46_ceiling = SECTION_46_CEILING_BY_YEAR.get(year, 10354816)
+    if donations_annual > 0 and section_46_min is None:
+        # No primary-sourced minimum for this year. Grant the credit rather than disqualify,
+        # and say so, because a wrongly-applied later-year minimum wipes out a real entitlement.
+        notes.append(
+            f"Section 46 minimum donation for {year} is not in this table (the ITA no longer publishes "
+            f"the {year} deductions booklet). The credit was applied WITHOUT the minimum test. Look the "
+            f"{year} minimum up before relying on this figure for a donation under about 200 NIS."
+        )
+        eligible = min(donations_annual, section_46_ceiling, salary_annual * 0.30)
         donation_credit = eligible * SECTION_46_CREDIT_RATE
+    elif section_46_min is not None and donations_annual >= section_46_min:
+        eligible = min(donations_annual, section_46_ceiling, salary_annual * 0.30)
+        donation_credit = eligible * SECTION_46_CREDIT_RATE
+    elif donations_annual > 0:
+        notes.append(
+            f"Donations of {donations_annual:,.0f} NIS are below the {year} Section 46 minimum of "
+            f"{section_46_min} NIS, so no donation credit was applied."
+        )
 
     yishuv_credit = 0.0
     if yishuv_pct <= 0:

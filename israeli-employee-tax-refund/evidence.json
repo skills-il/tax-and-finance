@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0",
   "skill": "israeli-employee-tax-refund",
-  "generated_at": "2026-07-06T00:00:00Z",
+  "generated_at": "2026-08-19T02:16:32.021031+00:00",
   "claims": [
     {
       "claim_id": "credit-point-value-2026",
@@ -406,96 +406,94 @@
       ]
     },
     {
-      "id": "credit-point-2021",
       "claim": "The Israel Tax Authority monthly deductions booklet for tax year 2021 sets the value of an income-tax credit point at 218 NIS per month (2,616 NIS a year, i.e. 12 x 218).",
       "claim_type": "rate",
       "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/itc_itc_necuyim2021-1.pdf",
       "raw_snippet": "לחודש 218 נקודת זיכוי",
-      "source_fetched_at": "2026-08-11T00:00:00Z",
       "confidence": "high",
       "appears_in": [
         "scripts/estimate_refund.py"
-      ]
+      ],
+      "claim_id": "credit-point-2021",
+      "fetched_at": "2026-08-11T00:00:00Z"
     },
     {
-      "id": "credit-point-2022",
       "claim": "The Israel Tax Authority monthly deductions booklet for tax year 2022 sets the value of an income-tax credit point at 223 NIS per month (2,676 NIS a year, i.e. 12 x 223).",
       "claim_type": "rate",
       "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2022.pdf",
       "raw_snippet": "לחודש 223 נקודת זיכוי",
-      "source_fetched_at": "2026-08-11T00:00:00Z",
       "confidence": "high",
       "appears_in": [
         "scripts/estimate_refund.py"
-      ]
+      ],
+      "claim_id": "credit-point-2022",
+      "fetched_at": "2026-08-11T00:00:00Z"
     },
     {
-      "id": "credit-point-2023",
       "claim": "The Israel Tax Authority monthly deductions booklet for tax year 2023 sets the value of an income-tax credit point at 235 NIS per month (2,820 NIS a year, i.e. 12 x 235).",
       "claim_type": "rate",
       "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2023.pdf",
       "raw_snippet": "לחודש 235 נקודת זיכוי 33א",
-      "source_fetched_at": "2026-08-11T00:00:00Z",
       "confidence": "high",
       "appears_in": [
         "scripts/estimate_refund.py"
-      ]
+      ],
+      "claim_id": "credit-point-2023",
+      "fetched_at": "2026-08-11T00:00:00Z"
     },
     {
-      "id": "credit-point-2024",
       "claim": "The Israel Tax Authority monthly deductions booklet for tax year 2024 sets the value of an income-tax credit point at 242 NIS per month (2,904 NIS a year, i.e. 12 x 242).",
       "claim_type": "rate",
       "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2024.pdf",
       "raw_snippet": "לחודש 242 נקודת זיכוי 33א",
-      "source_fetched_at": "2026-08-11T00:00:00Z",
       "confidence": "high",
       "appears_in": [
         "scripts/estimate_refund.py"
-      ]
+      ],
+      "claim_id": "credit-point-2024",
+      "fetched_at": "2026-08-11T00:00:00Z"
     },
     {
-      "id": "credit-point-2025",
       "claim": "The Israel Tax Authority monthly deductions booklet for tax year 2025 sets the value of an income-tax credit point at 242 NIS per month (2,904 NIS a year, i.e. 12 x 242).",
       "claim_type": "rate",
       "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2025.pdf",
       "raw_snippet": "לחודש 242 נקודת זיכוי 33א",
-      "source_fetched_at": "2026-08-11T00:00:00Z",
       "confidence": "high",
       "appears_in": [
         "scripts/estimate_refund.py"
-      ]
+      ],
+      "claim_id": "credit-point-2025",
+      "fetched_at": "2026-08-11T00:00:00Z"
     },
     {
-      "id": "historical-brackets-2020-secondary",
       "claim": "Monthly tax brackets and the 219 NIS credit point for tax year 2020 come from a secondary source because the Israel Tax Authority no longer serves the 2020 deductions booklet; the estimator flags 2020 results as secondary-sourced.",
       "claim_type": "rate",
       "source_url": "https://www.kolzchut.org.il/he/מדרגות_מס_הכנסה_-_נתוני_עבר",
       "raw_snippet": "מדרגות המס להכנסה מיגיעה אישית לשנת 2020",
-      "source_fetched_at": "2026-08-01T00:00:00Z",
       "confidence": "medium",
       "appears_in": [
         "scripts/estimate_refund.py"
-      ]
+      ],
+      "claim_id": "historical-brackets-2020-secondary",
+      "fetched_at": "2026-08-01T00:00:00Z"
     },
     {
-      "id": "surtax-capital-addon-2025",
       "claim": "From tax year 2025 the Economic Efficiency Law published on 26 December 2024 adds a further 2% surtax, on top of the tax fixed in Section 121B(a), on taxable income from capital sources above the amount fixed in that section. Section 121B(a) itself charges 3% above 721,560 NIS. No such capital-source addition existed for 2020-2024.",
       "claim_type": "rate",
       "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2025.pdf",
       "raw_snippet": "בחוק נקבע כי בנוסף על המס הקבוע בסעיף 121ב(א), יחיד יהיה חייב במס נוסף בשיעור של 2%\nעל הכנסה חייבת ממקורות הוניים העולה על הסכום הקבוע בסעיף.",
-      "source_fetched_at": "2026-08-11T00:00:00Z",
       "confidence": "high",
       "appears_in": [
         "scripts/estimate_refund.py"
-      ]
+      ],
+      "claim_id": "surtax-capital-addon-2025",
+      "fetched_at": "2026-08-11T00:00:00Z"
     },
     {
-      "id": "yishuv-mutav-2026-table",
       "claim": "The 2026 preferred-locality (yishuv mutav) list with each locality's rate and ceiling is published in chapter ח of the ITA 2026 deductions booklet; the credit applies only to earned income under section 11 ITO. Representative 2026 values: Kiryat Shmona 20% up to 259,920 NIS, Sderot 20% up to 267,840 NIS, Safed 12% up to 213,240 NIS, Katzrin 10% up to 180,000 NIS, Rahat 16% up to 226,560 NIS, Rosh Pina 7% up to 146,640 NIS.",
       "claim_type": "rate",
       "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf",
       "raw_snippet": "‫מצורפת בפרק ח רשימת היישובים המוטבים לשנת ‪.2026‬‬",
-      "source_fetched_at": "2026-08-01T00:00:00Z",
       "verified_via": "gov.il content API (programmatic re-extraction)",
       "verified_at": "2026-08-01T00:00:00Z",
       "confidence": "high",
@@ -503,15 +501,15 @@
         "SKILL.md",
         "SKILL_HE.md",
         "references/2026-rates.md"
-      ]
+      ],
+      "claim_id": "yishuv-mutav-2026-table",
+      "fetched_at": "2026-08-01T00:00:00Z"
     },
     {
-      "id": "eilat-credit-2026",
       "claim": "Eilat and Chevel Eilot residents receive a 10% credit on earned income produced in the area, up to 268,560 NIS, under section 11 of the Eilat Free Trade Zone Law.",
       "claim_type": "rate",
       "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf",
       "raw_snippet": "הנחה בשיעור של 10% על הכנסה חייבת מיגיעה אישית שהופקה באזור אילת או חבל אילות עד לסכום של 268,560 ₪",
-      "source_fetched_at": "2026-08-01T00:00:00Z",
       "verified_via": "pdf",
       "verified_at": "2026-08-01T00:00:00Z",
       "confidence": "high",
@@ -519,35 +517,37 @@
         "SKILL.md",
         "SKILL_HE.md",
         "references/2026-rates.md"
-      ]
+      ],
+      "claim_id": "eilat-credit-2026",
+      "fetched_at": "2026-08-01T00:00:00Z"
     },
     {
-      "id": "security-forces-credit-2026",
       "claim": "Security forces receive a 5% credit on the special salary up to 178,320 NIS per year under section 11(c) ITO.",
       "claim_type": "rate",
       "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf",
       "raw_snippet": "‫הנחה בשיעור של ‪ 5%‬מהמשכורת המיוחדת עד לסכום של ‪ ₪ 178,320‬לשנה‪.‬‬",
-      "source_fetched_at": "2026-08-01T00:00:00Z",
       "verified_via": "gov.il content API (programmatic re-extraction)",
       "verified_at": "2026-08-01T00:00:00Z",
       "confidence": "high",
       "appears_in": [
         "references/2026-rates.md"
-      ]
+      ],
+      "claim_id": "security-forces-credit-2026",
+      "fetched_at": "2026-08-01T00:00:00Z"
     },
     {
-      "id": "shift-work-credit-2026",
       "claim": "The shift-work credit under section 10 ITO is extended to 31.12.2026, capped at 12,540 NIS against annual income up to 143,040 NIS.",
       "claim_type": "rate",
       "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf",
       "raw_snippet": "‫לשנה‬ ‫‪143,040‬‬ ‫עבודה במשמרות ‪(10‬ג) ‪ -‬תקרת הכנסה‬",
-      "source_fetched_at": "2026-08-01T00:00:00Z",
       "verified_via": "gov.il content API (programmatic re-extraction)",
       "verified_at": "2026-08-01T00:00:00Z",
       "confidence": "high",
       "appears_in": [
         "references/2026-rates.md"
-      ]
+      ],
+      "claim_id": "shift-work-credit-2026",
+      "fetched_at": "2026-08-01T00:00:00Z"
     },
     {
       "claim_id": "btl-annual-certificate",
@@ -754,6 +754,850 @@
         "SKILL_HE.md",
         "references/domain-checklist.md"
       ]
+    },
+    {
+      "claim_id": "aliya-exemption-2026-in-force",
+      "claim": "The aliya temporary order entered into force 31.3.2026",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf",
+      "raw_snippet": "ביום  31.3.2026נכנסה לתוקפה הוראת השעה \"חוק עידוד עלייה לישראל וחזרה אליה\"",
+      "fetched_at": "2026-08-19T02:16:32.021031+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md"
+      ],
+      "verified_via": "pdf",
+      "verified_at": "2026-08-19T02:16:32.021031+00:00"
+    },
+    {
+      "claim_id": "aliya-exemption-window",
+      "claim": "The aliya exemption covers arrival between 5.11.2025 and 31.12.2026",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf",
+      "raw_snippet": "הוראת השעה מקנה פטור ממס לעולה חדש או לתושב חוזר ותיק שהגיע לישראל בתקופה שבין",
+      "fetched_at": "2026-08-19T02:16:32.021031+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md"
+      ],
+      "verified_via": "pdf",
+      "verified_at": "2026-08-19T02:16:32.021031+00:00"
+    },
+    {
+      "claim_id": "aliya-exemption-additional",
+      "claim": "The aliya exemption is granted in addition to every other oleh benefit",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf",
+      "raw_snippet": "הטבה זו ניתנת בנוסף לכל הטבה אחרת המוקנית לעולים חדשים ותושבים חוזרים.",
+      "fetched_at": "2026-08-19T02:16:32.021031+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md"
+      ],
+      "verified_via": "pdf",
+      "verified_at": "2026-08-19T02:16:32.021031+00:00"
+    },
+    {
+      "claim_id": "aliya-exemption-section-2a",
+      "claim": "Section 2(a) of the temporary order runs the benefit over five tax years, 2026 to 2030",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf",
+      "raw_snippet": "ההטבה קבועה בסעיף (2א) להוראת השעה והיא תינתן במהלך חמש שנות מס ,החל משנת",
+      "fetched_at": "2026-08-19T02:16:32.021031+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md"
+      ],
+      "verified_via": "pdf",
+      "verified_at": "2026-08-19T02:16:32.021031+00:00"
+    },
+    {
+      "claim_id": "aliya-exemption-ceiling-2026",
+      "claim": "2026 aliya exemption ceiling is 600,000 NIS",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf",
+      "raw_snippet": "2026                         600,000",
+      "fetched_at": "2026-08-19T02:16:32.021031+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md"
+      ],
+      "verified_via": "pdf",
+      "verified_at": "2026-08-19T02:16:32.021031+00:00"
+    },
+    {
+      "claim_id": "aliya-exemption-ceiling-2027-2028",
+      "claim": "2027 and 2028 aliya exemption ceiling is 1,000,000 NIS",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf",
+      "raw_snippet": "2027                       1,000,000",
+      "fetched_at": "2026-08-19T02:16:32.021031+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md"
+      ],
+      "verified_via": "pdf",
+      "verified_at": "2026-08-19T02:16:32.021031+00:00"
+    },
+    {
+      "claim_id": "aliya-exemption-ceiling-2029",
+      "claim": "2029 aliya exemption ceiling is 350,000 NIS",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf",
+      "raw_snippet": "2029                         350,000",
+      "fetched_at": "2026-08-19T02:16:32.021031+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md"
+      ],
+      "verified_via": "pdf",
+      "verified_at": "2026-08-19T02:16:32.021031+00:00"
+    },
+    {
+      "claim_id": "aliya-exemption-ceiling-2030",
+      "claim": "2030 aliya exemption ceiling is 150,000 NIS",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf",
+      "raw_snippet": "2030                         150,000",
+      "fetched_at": "2026-08-19T02:16:32.021031+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md"
+      ],
+      "verified_via": "pdf",
+      "verified_at": "2026-08-19T02:16:32.021031+00:00"
+    },
+    {
+      "claim_id": "aliya-exemption-relative-ceiling",
+      "claim": "Income from a relative carries a lower ceiling of 140,000 NIS for 2026-2029",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%A4%D7%98%D7%95%D7%A8_%D7%9E%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94_%D7%9C%D7%A2%D7%95%D7%9C%D7%99%D7%9D_%D7%97%D7%93%D7%A9%D7%99%D7%9D_%D7%95%D7%9C%D7%AA%D7%95%D7%A9%D7%91%D7%99%D7%9D_%D7%97%D7%95%D7%96%D7%A8%D7%99%D7%9D_%D7%95%D7%AA%D7%99%D7%A7%D7%99%D7%9D",
+      "raw_snippet": "140,000 ₪",
+      "fetched_at": "2026-08-19T02:16:32.021031+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md"
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-08-19T02:16:32.021031+00:00"
+    },
+    {
+      "claim_id": "aliya-exemption-refund-route",
+      "claim": "A salaried claimant realises the aliya exemption by filing a refund request after tax year 2026 closes",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%A4%D7%98%D7%95%D7%A8_%D7%9E%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94_%D7%9C%D7%A2%D7%95%D7%9C%D7%99%D7%9D_%D7%97%D7%93%D7%A9%D7%99%D7%9D_%D7%95%D7%9C%D7%AA%D7%95%D7%A9%D7%91%D7%99%D7%9D_%D7%97%D7%95%D7%96%D7%A8%D7%99%D7%9D_%D7%95%D7%AA%D7%99%D7%A7%D7%99%D7%9D",
+      "raw_snippet": "שכירים יכולים להגיש בקשה להחזר מס הכנסה לאחר סיום שנת המס 2026.",
+      "fetched_at": "2026-08-19T02:16:32.021031+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md"
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-08-19T02:16:32.021031+00:00"
+    },
+    {
+      "claim_id": "aliya-exemption-prorated-2026",
+      "claim": "In 2026 the ceiling is pro-rated; an arrival on 01.07.2026 gives 50%, so 300,000 NIS",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%A4%D7%98%D7%95%D7%A8_%D7%9E%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94_%D7%9C%D7%A2%D7%95%D7%9C%D7%99%D7%9D_%D7%97%D7%93%D7%A9%D7%99%D7%9D_%D7%95%D7%9C%D7%AA%D7%95%D7%A9%D7%91%D7%99%D7%9D_%D7%97%D7%95%D7%96%D7%A8%D7%99%D7%9D_%D7%95%D7%AA%D7%99%D7%A7%D7%99%D7%9D",
+      "raw_snippet": "עולה שהגיע לישראל ב-01.07.2026, יקבל פטור על חצי שנה, 50%, כלומר עד תקרה של 300,000 ₪ לשנה.",
+      "fetched_at": "2026-08-19T02:16:32.021031+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md"
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-08-19T02:16:32.021031+00:00"
+    },
+    {
+      "claim_id": "aliya-exemption-75-days",
+      "claim": "Ceasing residency in 2028 or 2029 with under 75 days in Israel forfeits the exemption for 2026 and 2027 too",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%A4%D7%98%D7%95%D7%A8_%D7%9E%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94_%D7%9C%D7%A2%D7%95%D7%9C%D7%99%D7%9D_%D7%97%D7%93%D7%A9%D7%99%D7%9D_%D7%95%D7%9C%D7%AA%D7%95%D7%A9%D7%91%D7%99%D7%9D_%D7%97%D7%95%D7%96%D7%A8%D7%99%D7%9D_%D7%95%D7%AA%D7%99%D7%A7%D7%99%D7%9D",
+      "raw_snippet": "מי שיפסיק להיות תושב ישראל במהלך אחת משנות המס 2028 או 2029 וישהה בישראל פחות מ־75 ימים באחת מהשנים האלו, לא יהיה זכאי לפטור ממס הכנסה כלל, גם עבור השנים 2026 ו-2027.",
+      "fetched_at": "2026-08-19T02:16:32.021031+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md"
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-08-19T02:16:32.021031+00:00"
+    },
+    {
+      "claim_id": "shift-work-regs-extended",
+      "claim": "The 1986 shift-work regulations were extended to 31.12.2026",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf",
+      "raw_snippet": "הכנסה (שיעור המס על הכנסה בעד עבודה במשמרות) ,התשמ\"ז –  ,1986עד ליום",
+      "fetched_at": "2026-08-19T02:16:32.021031+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md"
+      ],
+      "verified_via": "pdf",
+      "verified_at": "2026-08-19T02:16:32.021031+00:00"
+    },
+    {
+      "claim_id": "shift-work-credit-cap",
+      "claim": "Shift-work credit capped at 12,540 NIS against a 143,040 NIS annual income ceiling for 2026",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf",
+      "raw_snippet": "על  ₪ 12,540עד לתקרת הכנסה שנתית של  ₪ 143,040לכל שנת מס.",
+      "fetched_at": "2026-08-19T02:16:32.021031+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md"
+      ],
+      "verified_via": "pdf",
+      "verified_at": "2026-08-19T02:16:32.021031+00:00"
+    },
+    {
+      "claim_id": "shift-work-15-percent",
+      "claim": "The shift-work credit rate under section 10(b) is 15%",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf",
+      "raw_snippet": "עבודה במשמרות (10ב) – תקרת זיכוי 15%",
+      "fetched_at": "2026-08-19T02:16:32.021031+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md"
+      ],
+      "verified_via": "pdf",
+      "verified_at": "2026-08-19T02:16:32.021031+00:00"
+    },
+    {
+      "claim_id": "shift-work-productive-plants",
+      "claim": "Section 10(b) confines the benefit to industrial plants whose main activity is productive, per the 1969 Industry Encouragement (Taxes) Law",
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "raw_snippet": "במפעלי תעשיה שעיקר פעילותם בשנת המס היא פעילות ייצורית כמשמעותה בחוק עידוד התעשיה (מסים), התשכ\"ט-1969",
+      "fetched_at": "2026-08-19T02:16:32.021031+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md"
+      ]
+    },
+    {
+      "claim_id": "shift-work-2022-figures",
+      "claim": "For 2022 the maximum shift-work credit was 11,520 NIS against a 131,520 NIS income ceiling",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2022.pdf",
+      "raw_snippet": "סכום הזיכוי המרבי בגין שכר המשמרות",
+      "fetched_at": "2026-08-19T02:16:32.021031+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md"
+      ],
+      "verified_via": "pdf",
+      "verified_at": "2026-08-19T02:16:32.021031+00:00"
+    },
+    {
+      "claim_id": "yishuv-2026-15-rows",
+      "claim": "The ITA 2026 preferred-locality table sets a rate and a ceiling per locality for 2026",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf",
+      "raw_snippet": "שיעור 2026          תקרה 2026",
+      "fetched_at": "2026-08-19T02:16:32.021031+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md"
+      ],
+      "verified_via": "pdf",
+      "verified_at": "2026-08-19T02:16:32.021031+00:00"
+    },
+    {
+      "claim_id": "yishuv-12-186000",
+      "claim": "The 2026 table includes a 12% rate against a 186,000 NIS ceiling",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf",
+      "raw_snippet": "12%              186,000",
+      "fetched_at": "2026-08-19T02:16:32.021031+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md"
+      ],
+      "verified_via": "pdf",
+      "verified_at": "2026-08-19T02:16:32.021031+00:00"
+    },
+    {
+      "claim_id": "yishuv-12-186600",
+      "claim": "The 2026 table includes a 12% rate against a 186,600 NIS ceiling",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf",
+      "raw_snippet": "12%              186,600",
+      "fetched_at": "2026-08-19T02:16:32.021031+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md"
+      ],
+      "verified_via": "pdf",
+      "verified_at": "2026-08-19T02:16:32.021031+00:00"
+    },
+    {
+      "claim_id": "yishuv-14-180000",
+      "claim": "The 2026 table includes a 14% rate against a 180,000 NIS ceiling",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf",
+      "raw_snippet": "14%              180,000",
+      "fetched_at": "2026-08-19T02:16:32.021031+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md"
+      ],
+      "verified_via": "pdf",
+      "verified_at": "2026-08-19T02:16:32.021031+00:00"
+    },
+    {
+      "claim_id": "yishuv-14-219960",
+      "claim": "The 2026 table includes a 14% rate against a 219,960 NIS ceiling",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf",
+      "raw_snippet": "14%              219,960",
+      "fetched_at": "2026-08-19T02:16:32.021031+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md"
+      ],
+      "verified_via": "pdf",
+      "verified_at": "2026-08-19T02:16:32.021031+00:00"
+    },
+    {
+      "claim_id": "yishuv-14-259920",
+      "claim": "The 2026 table includes a 14% rate against a 259,920 NIS ceiling",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf",
+      "raw_snippet": "14%              259,920",
+      "fetched_at": "2026-08-19T02:16:32.021031+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md"
+      ],
+      "verified_via": "pdf",
+      "verified_at": "2026-08-19T02:16:32.021031+00:00"
+    },
+    {
+      "claim_id": "yishuv-18-245400",
+      "claim": "The 2026 table includes an 18% rate against a 245,400 NIS ceiling",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf",
+      "raw_snippet": "18%              245,400",
+      "fetched_at": "2026-08-19T02:16:32.021031+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md"
+      ],
+      "verified_via": "pdf",
+      "verified_at": "2026-08-19T02:16:32.021031+00:00"
+    },
+    {
+      "claim_id": "yishuv-18-259920",
+      "claim": "The 2026 table includes an 18% rate against a 259,920 NIS ceiling",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf",
+      "raw_snippet": "18%              259,920",
+      "fetched_at": "2026-08-19T02:16:32.021031+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md"
+      ],
+      "verified_via": "pdf",
+      "verified_at": "2026-08-19T02:16:32.021031+00:00"
+    },
+    {
+      "claim_id": "yishuv-20-267840",
+      "claim": "The 2026 table includes a 20% rate against a 267,840 NIS ceiling",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf",
+      "raw_snippet": "20%              267,840",
+      "fetched_at": "2026-08-19T02:16:32.021031+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md"
+      ],
+      "verified_via": "pdf",
+      "verified_at": "2026-08-19T02:16:32.021031+00:00"
+    },
+    {
+      "claim_id": "yishuv-7-146640",
+      "claim": "The 2026 table includes a 7% rate against a 146,640 NIS ceiling",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf",
+      "raw_snippet": "7%             146,640",
+      "fetched_at": "2026-08-19T02:16:32.021031+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md"
+      ],
+      "verified_via": "pdf",
+      "verified_at": "2026-08-19T02:16:32.021031+00:00"
+    },
+    {
+      "claim_id": "yishuv-10-180000",
+      "claim": "The 2026 table includes a 10% rate against a 180,000 NIS ceiling",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf",
+      "raw_snippet": "10%              180,000",
+      "fetched_at": "2026-08-19T02:16:32.021031+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md"
+      ],
+      "verified_via": "pdf",
+      "verified_at": "2026-08-19T02:16:32.021031+00:00"
+    },
+    {
+      "claim_id": "yishuv-12-213240",
+      "claim": "The 2026 table includes a 12% rate against a 213,240 NIS ceiling",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf",
+      "raw_snippet": "12%              213,240",
+      "fetched_at": "2026-08-19T02:16:32.021031+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md"
+      ],
+      "verified_via": "pdf",
+      "verified_at": "2026-08-19T02:16:32.021031+00:00"
+    },
+    {
+      "claim_id": "yishuv-12-226560",
+      "claim": "The 2026 table includes a 12% rate against a 226,560 NIS ceiling",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf",
+      "raw_snippet": "12%              226,560",
+      "fetched_at": "2026-08-19T02:16:32.021031+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md"
+      ],
+      "verified_via": "pdf",
+      "verified_at": "2026-08-19T02:16:32.021031+00:00"
+    },
+    {
+      "claim_id": "yishuv-14-213240",
+      "claim": "The 2026 table includes a 14% rate against a 213,240 NIS ceiling",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf",
+      "raw_snippet": "14%              213,240",
+      "fetched_at": "2026-08-19T02:16:32.021031+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md"
+      ],
+      "verified_via": "pdf",
+      "verified_at": "2026-08-19T02:16:32.021031+00:00"
+    },
+    {
+      "claim_id": "yishuv-16-226560",
+      "claim": "The 2026 table includes a 16% rate against a 226,560 NIS ceiling",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf",
+      "raw_snippet": "16%              226,560",
+      "fetched_at": "2026-08-19T02:16:32.021031+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md"
+      ],
+      "verified_via": "pdf",
+      "verified_at": "2026-08-19T02:16:32.021031+00:00"
+    },
+    {
+      "claim_id": "yishuv-20-259920",
+      "claim": "The 2026 table includes a 20% rate against a 259,920 NIS ceiling",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf",
+      "raw_snippet": "20%              259,920",
+      "fetched_at": "2026-08-19T02:16:32.021031+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md"
+      ],
+      "verified_via": "pdf",
+      "verified_at": "2026-08-19T02:16:32.021031+00:00"
+    },
+    {
+      "claim_id": "yishuv-new-2026-localities",
+      "claim": "Adoraim, Kedem Arava, Yonadav, Bitron, Nof HaGalil and Ashkelon were added for 2026",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf",
+      "raw_snippet": "בשנת המס  2026נוספו הישובים :אדוריים, קדם ערבה, יונדב, בתרון, נוף הגליל ואשקלון",
+      "fetched_at": "2026-08-19T02:16:32.021031+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md"
+      ],
+      "verified_via": "pdf",
+      "verified_at": "2026-08-19T02:16:32.021031+00:00"
+    },
+    {
+      "claim_id": "yishuv-kedem-arava",
+      "claim": "Kedem Arava added January 2026 at 10% with a 180,000 NIS ceiling",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf",
+      "raw_snippet": "שיעור  10%תקרה 180,000",
+      "fetched_at": "2026-08-19T02:16:32.021031+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md"
+      ],
+      "verified_via": "pdf",
+      "verified_at": "2026-08-19T02:16:32.021031+00:00"
+    },
+    {
+      "claim_id": "yishuv-yonadav",
+      "claim": "Yonadav added January 2026 at 7% with a 146,640 NIS ceiling",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf",
+      "raw_snippet": "תקרה 146,640      שיעור 7%",
+      "fetched_at": "2026-08-19T02:16:32.021031+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md"
+      ],
+      "verified_via": "pdf",
+      "verified_at": "2026-08-19T02:16:32.021031+00:00"
+    },
+    {
+      "claim_id": "yishuv-bitron",
+      "claim": "Bitron added January 2026 at 12% with a 213,240 NIS ceiling",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf",
+      "raw_snippet": "תקרה 213,240     שיעור 12%",
+      "fetched_at": "2026-08-19T02:16:32.021031+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md"
+      ],
+      "verified_via": "pdf",
+      "verified_at": "2026-08-19T02:16:32.021031+00:00"
+    },
+    {
+      "claim_id": "yishuv-ashkelon-tkuma",
+      "claim": "The 2026 Tax Benefits for Localities temporary order added Ashkelon to the preferred-locality list",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf",
+      "raw_snippet": "הוראת השעה נוספה העיר אשקלון לרשימת היישובים המוטבים.",
+      "fetched_at": "2026-08-19T02:16:32.021031+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md"
+      ],
+      "verified_via": "pdf",
+      "verified_at": "2026-08-19T02:16:32.021031+00:00"
+    },
+    {
+      "claim_id": "yishuv-mixed-urban",
+      "claim": "A mixed urban preferred locality gives a 12% credit up to 226,560 NIS; Nof HaGalil was added under that order",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf",
+      "raw_snippet": "שנה לזיכוי ממס בשיעור  12%עד לתקרת הכנסה של  226,560שקלים חדשים.",
+      "fetched_at": "2026-08-19T02:16:32.021031+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md"
+      ],
+      "verified_via": "pdf",
+      "verified_at": "2026-08-19T02:16:32.021031+00:00"
+    },
+    {
+      "claim_id": "yishuv-tkuma-cap",
+      "claim": "Section 11(b2) caps a chevel Tkuma-adjacent resident at 14% up to a 180,000 NIS ceiling",
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "raw_snippet": "לא יעלה על 14% מהכנסתו החייבת מיגיעה אישית עד לתקרת הכנסה של 180,000 שקלים חדשים",
+      "fetched_at": "2026-08-19T02:16:32.021031+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md"
+      ]
+    },
+    {
+      "claim_id": "yishuv-eastern-front",
+      "claim": "The 2026 Eastern Confrontation Line temporary order entitles residents at the section 11(b)(1) rate",
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "raw_snippet": "כהגדרתו בחוק הטבות מס ליישוב אזור קו עימות מזרחי (הוראת שעה), התשפ\"ו-2026",
+      "fetched_at": "2026-08-19T02:16:32.021031+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md"
+      ]
+    },
+    {
+      "claim_id": "yishuv-annual-publication",
+      "claim": "Section 11(vav) obliges the ITA director to publish the preferred-locality list by 15 January each tax year",
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "raw_snippet": "המנהל יפרסם ברשומות ובאתר האינטרנט של רשות המסים, עד ה-15 בינואר של כל שנת מס, את רשימת היישובים המוטבים",
+      "fetched_at": "2026-08-19T02:16:32.021031+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md"
+      ]
+    },
+    {
+      "claim_id": "s46-min-2022",
+      "claim": "The Section 46 minimum donation for 2022 was 190 NIS and the maximum 9,517,000 NIS",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2022.pdf",
+      "raw_snippet": "לשנה       190                           סכום מזערי ,סכום העולה על",
+      "fetched_at": "2026-08-19T02:16:32.021031+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md"
+      ],
+      "verified_via": "pdf",
+      "verified_at": "2026-08-19T02:16:32.021031+00:00"
+    },
+    {
+      "claim_id": "s46-min-2023",
+      "claim": "The Section 46 minimum donation for 2023 was 200 NIS",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2023.pdf",
+      "raw_snippet": "לשנה         200        תרומה למוסד ציבורי  -זיכוי ממס  -סכום תרומה מינימלי",
+      "fetched_at": "2026-08-19T02:16:32.021031+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md"
+      ],
+      "verified_via": "pdf",
+      "verified_at": "2026-08-19T02:16:32.021031+00:00"
+    },
+    {
+      "claim_id": "s46-ceiling-2023",
+      "claim": "The Section 46 maximum eligible donation for 2023 was 10,019,808 NIS",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2023.pdf",
+      "raw_snippet": "10,019,808לשנה        תרומה למוסד ציבורי  -זיכוי ממס  -סכום תרומה מקסימלי",
+      "fetched_at": "2026-08-19T02:16:32.021031+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md"
+      ],
+      "verified_via": "pdf",
+      "verified_at": "2026-08-19T02:16:32.021031+00:00"
+    },
+    {
+      "claim_id": "s40d-vocational-point",
+      "claim": "Section 40D grants one credit point for completing vocational studies and earning a teudat miktzoa",
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "raw_snippet": "בחישוב המס של יחיד תושב ישראל תובא בחשבון נקודת זיכוי אם סיים לימודי מקצוע והיה זכאי לתעודת מקצוע",
+      "fetched_at": "2026-08-19T02:16:32.021031+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md"
+      ]
+    },
+    {
+      "claim_id": "s40d-three-years",
+      "claim": "The section 40D point is granted for as many tax years as there were study years, capped at three",
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "raw_snippet": "נקודת זיכוי כאמור בסעיף זה תובא בחשבון במספר שנות מס כמספר שנות לימודי המקצוע, ובלבד שתובא בחשבון בלא יותר משלוש שנות מס.",
+      "fetched_at": "2026-08-19T02:16:32.021031+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md"
+      ]
+    },
+    {
+      "claim_id": "s40d-1700-hours",
+      "claim": "Vocational studies under section 40D means at least 1,700 study hours",
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "raw_snippet": "בהיקף שעות לימוד הזהה ל-1,700 שעות לימוד הנהוגות במוסד להשכלה גבוהה",
+      "fetched_at": "2026-08-19T02:16:32.021031+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md"
+      ]
+    },
+    {
+      "claim_id": "s40e-choice",
+      "claim": "Section 40E lets a claimant satisfying both 40C and 40D choose between them ‏(סעיף 40ה לפקודת מס הכנסה)",
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "raw_snippet": "יחיד שמתקיימים בו התנאים הקבועים בסעיף 40ג ובסעיף 40ד, יהיה זכאי לבחור",
+      "fetched_at": "2026-08-19T02:16:32.021031+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md"
+      ]
+    },
+    {
+      "claim_id": "s40a-maintenance-point",
+      "claim": "Section 40A grants one credit point to a divorced person paying maintenance to a former spouse and married to another ‏(סעיף 40א לפקודת מס הכנסה)",
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "raw_snippet": "בחישוב המס של גרוש שהוא או בן זוגו משלם מזונות לבן זוגו לשעבר, והוא נשוי לבן-זוג אחר, תובא בחשבון נקודת זיכוי אחת.",
+      "fetched_at": "2026-08-19T02:16:32.021031+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md"
+      ]
+    },
+    {
+      "claim_id": "s40b-age-16-17",
+      "claim": "Section 40B grants one credit point to an individual aged 16 or 17 ‏(סעיף 40ב לפקודת מס הכנסה)",
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "raw_snippet": "בחישוב המס של יחיד שמלאו לו או לבן-זוגו 16 שנים אך לא 18 שנים תובא בחשבון נקודת זיכוי.",
+      "fetched_at": "2026-08-19T02:16:32.021031+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md"
+      ]
+    },
+    {
+      "claim_id": "s40b1b-single-parent-extra",
+      "claim": "Section 40(b)(1b) grants one additional credit point to a single parent of a yeled le-hore echad",
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "raw_snippet": "תובא בחשבון כנגד הכנסתו מיגיעה אישית של אותו הורה, נקודת זיכוי אחת נוספת",
+      "fetched_at": "2026-08-19T02:16:32.021031+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md"
+      ]
+    },
+    {
+      "claim_id": "s40b2-separated-parents",
+      "claim": "Section 40(b)(2) gives the parent entitled under 40(b)(1) one additional point, and the other parent one point or a fraction where upkeep is split",
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "raw_snippet": "הורים החיים בנפרד יקבל ההורה הזכאי לנקודת זיכוי לפי פסקה (1), נקודת זיכוי אחת נוספת",
+      "fetched_at": "2026-08-19T02:16:32.021031+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md"
+      ]
+    },
+    {
+      "claim_id": "s40b1-single-parent-schedule",
+      "claim": "A single parent not entitled under section 37 receives 2.5 points in the birth year and half a point in the maturity year ‏(הזכאות קמה למי שאינו זכאי לפי סעיף 37 לפקודה)",
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "raw_snippet": "½2 נקודות זיכוי בשל כל ילד בשנת לידתו ו-½ נקודת זיכוי בשל כל ילד בשנת בגרותו",
+      "fetched_at": "2026-08-19T02:16:32.021031+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md"
+      ]
+    },
+    {
+      "claim_id": "maturity-year-half-point-mother",
+      "claim": "Under section 66(c)(4)(a) the mother receives half a credit point in the child's maturity year",
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "raw_snippet": "½ נקודת זיכוי בעד כל אחד מילדיה בשנת בגרותו",
+      "fetched_at": "2026-08-19T02:16:32.021031+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md"
+      ]
+    },
+    {
+      "claim_id": "father-schedule-stops-before-18",
+      "claim": "Under section 66(c)(5)(c) the father's point runs only to the tax year preceding the maturity year",
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "raw_snippet": "נקודת זיכוי אחת בעד כל אחד מילדיו החל בשנת המס שבה מלאו לו שש שנים ועד לשנת המס שקדמה לשנת בגרותו",
+      "fetched_at": "2026-08-19T02:16:32.021031+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md"
+      ]
+    },
+    {
+      "claim_id": "maturity-year-definition",
+      "claim": "Shnat bagrut is defined as the tax year in which the child turns eighteen",
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "raw_snippet": "\" שנת בגרות \" – שנת המס שבה מלאו לילד שמונה עשרה שנים.",
+      "fetched_at": "2026-08-19T02:16:32.021031+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md"
+      ]
+    },
+    {
+      "claim_id": "s39b-amendment-283",
+      "claim": "Amendment 283 was published in Sefer HaChukim 3461 on 23.11.2025 and added section 39B",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf",
+      "raw_snippet": "ביום  23.11.2025פורסם בספר החוקים  3461חוק לתיקון פקודת מס הכנסה (מס' ,)283",
+      "fetched_at": "2026-08-19T02:16:32.021031+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md"
+      ],
+      "verified_via": "pdf",
+      "verified_at": "2026-08-19T02:16:32.021031+00:00"
+    },
+    {
+      "claim_id": "s39b-schedule-statutory",
+      "claim": "Section 39B adds a quarter point per further five days beyond 50, capped at 4 credit points",
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "raw_snippet": "תוספת ¼ נקודת זיכוי בעד כל חמישה ימים נוספים ששירת שירות מילואים כלוחם מעבר ל-50 הימים האמורים בפסקה (3), ובלבד שסך נקודות הזיכוי לפי סעיף זה לא יעלה על 4 נקודות זיכוי.",
+      "fetched_at": "2026-08-19T02:16:32.021031+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md"
+      ]
+    },
+    {
+      "claim_id": "s39a-discharged-soldier",
+      "claim": "The discharged-soldier credit is granted by section 39A over the 36 months following regular service ‏(סעיף 39א לפקודת מס הכנסה)",
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "raw_snippet": "בחישוב המס על הכנסתו מיגיעה אישית של חייל משוחרר תובא בחשבון חלק מנקודת זיכוי לכל חודש משלושים ושישה החודשים הראשונים שלאחר החודש שבו סיים את שירותו הסדיר",
+      "fetched_at": "2026-08-19T02:16:32.021031+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md"
+      ]
+    },
+    {
+      "claim_id": "s45-45a-mutually-exclusive",
+      "claim": "Section 45(c) allows the netul yecholet points only where section 44 was not taken for the same child",
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "raw_snippet": "יחיד יהיה זכאי לנקודות הזיכוי על פי סעיף קטן (א) רק אם לא קיבל זיכוי ממס עבור אותו ילד על פי סעיף 44.",
+      "fetched_at": "2026-08-19T02:16:32.021031+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md"
+      ]
+    },
+    {
+      "claim_id": "security-forces-2026",
+      "claim": "The security-forces credit is 5% of the special salary up to 178,320 NIS per year for 2026",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf",
+      "raw_snippet": "הנחה בשיעור של  5%מהמשכורת המיוחדת עד לסכום של  ₪ 178,320לשנה.",
+      "fetched_at": "2026-08-19T02:16:32.021031+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md"
+      ],
+      "verified_via": "pdf",
+      "verified_at": "2026-08-19T02:16:32.021031+00:00"
+    },
+    {
+      "claim_id": "eilat-2026",
+      "claim": "The Eilat credit is 10% of earned income produced in Eilat or Chevel Eilot up to 268,560 NIS",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf",
+      "raw_snippet": "הנחה בשיעור של  10%על הכנסה חייבת מיגיעה אישית שהופקה באזור אילת או",
+      "fetched_at": "2026-08-19T02:16:32.021031+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md"
+      ],
+      "verified_via": "pdf",
+      "verified_at": "2026-08-19T02:16:32.021031+00:00"
     }
   ]
 }
