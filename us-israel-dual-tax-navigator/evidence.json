@@ -1,0 +1,169 @@
+{
+  "skill_slug": "us-israel-dual-tax-navigator",
+  "schemaVersion": "1.0",
+  "generated_at": "2026-08-23",
+  "claims": [
+    {
+      "id": "fbar-threshold-10000",
+      "claim": "FBAR is required when the aggregate value of all foreign financial accounts exceeds USD 10,000 at any time during the calendar year",
+      "claim_type": "threshold",
+      "source_url": "https://www.irs.gov/newsroom/details-on-reporting-foreign-bank-and-financial-accounts",
+      "raw_snippet": "The aggregate value of all foreign financial accounts exceeds $10,000 at any time during the calendar year. A U.S. person is a citizen or resident of the United States or any domestic legal entity such as a partnership, corporation",
+      "source_fetched_at": "2026-08-23T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "fbar-deadline",
+      "claim": "FBAR is due April 15 with an automatic extension to October 15 that does not need to be requested",
+      "claim_type": "date",
+      "source_url": "https://www.irs.gov/newsroom/details-on-reporting-foreign-bank-and-financial-accounts",
+      "raw_snippet": "The FBAR is due April 15. Those who don't meet the April 15 due date must file by October 15, the automatically extended due date for the FBAR. They don't need to request the extension.",
+      "source_fetched_at": "2026-08-23T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "f8938-abroad-thresholds",
+      "claim": "Form 8938 thresholds for specified individuals living outside the US are more than USD 200,000 last day or 300,000 any time if unmarried, and more than USD 400,000 last day or 600,000 any time if married filing jointly (בעברית: טופס 8938)",
+      "claim_type": "threshold",
+      "source_url": "https://www.irs.gov/businesses/comparison-of-form-8938-and-fbar-requirements",
+      "raw_snippet": "Specified individuals living outside the US: Unmarried individual (or married filing separately): Total value of assets was more than $200,000 on the last day of the tax year, or more than $300,000 at any time during the year. Married individual filing jointly: Total value of assets was more than $400,000 on the last day of the tax year, or more than $600,000 at any time during the year.",
+      "source_fetched_at": "2026-08-23T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "f8938-domestic-thresholds",
+      "claim": "Form 8938 thresholds for specified individuals living in the US are more than USD 50,000 last day or 75,000 any time if unmarried, and more than USD 100,000 last day or 150,000 any time if married filing jointly",
+      "claim_type": "threshold",
+      "source_url": "https://www.irs.gov/businesses/comparison-of-form-8938-and-fbar-requirements",
+      "raw_snippet": "Married individual filing jointly: Total value of assets was more than $100,000 on the last day of the tax year, or more than $150,000 at any time during the year. Specified individuals living outside the US: Unmarried individual (or married filing separately): Total value of assets was more than $200,000 on the last day of the tax year, or more than $300,000 at any time during the year.",
+      "source_fetched_at": "2026-08-23T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "feie-2026",
+      "claim": "The foreign earned income exclusion amount for taxable years beginning in 2026 is USD 132,900 under section 911(b)(2)(D)(i)",
+      "claim_type": "currency",
+      "source_url": "https://www.irs.gov/pub/irs-drop/rp-25-32.pdf",
+      "raw_snippet": ".39 Foreign Earned Income Exclusion. For taxable years beginning in 2026, the foreign earned income exclusion amount under § 911(b)(2)(D)(i) is $132,900.",
+      "source_fetched_at": "2026-08-23T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "feie-2025",
+      "claim": "The foreign earned income exclusion amount for taxable years beginning in 2025 is USD 130,000 under section 911(b)(2)(D)(i)",
+      "claim_type": "currency",
+      "source_url": "https://www.irs.gov/pub/irs-drop/rp-24-40.pdf",
+      "raw_snippet": ".39 Foreign Earned Income Exclusion. For taxable years beginning in 2025, the foreign earned income exclusion amount under § 911(b)(2)(D)(i) is $130,000.",
+      "source_fetched_at": "2026-08-23T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "fbar-penalty-table",
+      "claim": "The inflation adjusted maximum FBAR penalty is USD 16,536 for a non-willful violation and USD 165,353 for a willful violation, against statutory amounts of 10,000 and 100,000",
+      "claim_type": "currency",
+      "source_url": "https://www.govinfo.gov/content/pkg/CFR-2025-title31-vol3/xml/CFR-2025-title31-vol3-sec1010-821.xml",
+      "raw_snippet": "31 U.S.C. 5321(a)(5)(B)(i) Foreign Financial Agency Transaction—Non-Willful Violation of Transaction 10,000 16,536 31 U.S.C. 5321(a)(5)(C)(i)(I) Foreign Financial Agency Transaction—Willful Violation of Transaction 100,000 165,353",
+      "source_fetched_at": "2026-08-23T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "fbar-willful-50pct",
+      "claim": "The willful FBAR penalty is the greater of the inflation adjusted 100,000 amount or 50 percent of the account balance at the violation date",
+      "claim_type": "law",
+      "source_url": "https://www.irs.gov/irm/part4/irm_04-026-016",
+      "raw_snippet": "For violations occurring after October 22, 2004, a penalty for each willful FBAR violation may be imposed up to the greater of the $100,000 penalty amount under 31 USC 5321(a)(5)(C)(i)(I) , adjusted for inflation as described in paragraph (4), or 50% of the amount in the account at the time of the violation",
+      "source_fetched_at": "2026-08-23T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "abroad-june15",
+      "claim": "A US citizen residing overseas gets an automatic 2 month extension to June 15 without requesting it",
+      "claim_type": "date",
+      "source_url": "https://www.irs.gov/individuals/international-taxpayers/us-citizens-and-resident-aliens-abroad",
+      "raw_snippet": "you are allowed an automatic 2-month extension to file your return without requesting an extension. If you use a calendar year, the regular due date of your return is April 15, and the automatic extended due date would be June 15.",
+      "source_fetched_at": "2026-08-23T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "abroad-oct15-4868",
+      "claim": "A further extension to October 15 requires Form 4868 filed before the automatic 2 month extension date, and interest still accrues on tax unpaid at the regular due date (בעברית: טופס 4868)",
+      "claim_type": "date",
+      "source_url": "https://www.irs.gov/individuals/international-taxpayers/us-citizens-and-resident-aliens-abroad",
+      "raw_snippet": "you can request an additional extension to October 15 by filing Form 4868, Application for Automatic Extension of Time To File U.S. Individual Income Tax Return , before the automatic 2-month extension date. Even if you are allowed an extension, you will have to pay interest on any tax not paid by the regular due date of your return.",
+      "source_fetched_at": "2026-08-23T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "sfop-nonresidency-330",
+      "claim": "The streamlined foreign offshore non-residency requirement is no US abode and physical presence outside the US for at least 330 full days in one or more of the most recent 3 years for which the due date has passed",
+      "claim_type": "threshold",
+      "source_url": "https://www.irs.gov/individuals/international-taxpayers/u-s-taxpayers-residing-outside-the-united-states",
+      "raw_snippet": "the individual did not have a U.S. abode and the individual was physically outside the United States for at least 330 full days.",
+      "source_fetched_at": "2026-08-23T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "sfop-3-and-6",
+      "claim": "Streamlined foreign offshore requires 3 years of delinquent or amended returns and 6 years of delinquent FBARs, with full tax and interest remitted",
+      "claim_type": "threshold",
+      "source_url": "https://www.irs.gov/individuals/international-taxpayers/u-s-taxpayers-residing-outside-the-united-states",
+      "raw_snippet": "file delinquent or amended tax returns, together with all required information returns (e.g., Forms 3520, 5471, and 8938) and (2) for each of the most recent 6 years for which the FBAR due date has passed, file any delinquent FBARs (FinCEN Form 114, previously Form TD F 90-22.1). The full amount of the tax and interest due in connection with these filings must be remitted",
+      "source_fetched_at": "2026-08-23T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "sfop-penalty-relief",
+      "claim": "An eligible streamlined foreign offshore filer is not subject to failure to file, failure to pay, accuracy related, information return, or FBAR penalties",
+      "claim_type": "law",
+      "source_url": "https://www.irs.gov/individuals/international-taxpayers/u-s-taxpayers-residing-outside-the-united-states",
+      "raw_snippet": "A taxpayer who is eligible to use these Streamlined Foreign Offshore Procedures and who complies with all of the instructions outlined below will not be subject to failure-to-file and failure-to-pay penalties, accuracy-related penalties, information return penalties, or FBAR penalties.",
+      "source_fetched_at": "2026-08-23T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "ftc-not-on-excluded",
+      "claim": "A foreign tax credit cannot be claimed for taxes on income excluded under the foreign earned income exclusion, and taking the credit may be treated as revoking the election",
+      "claim_type": "law",
+      "source_url": "https://www.irs.gov/individuals/international-taxpayers/foreign-tax-credit",
+      "raw_snippet": "If you elect to exclude either foreign earned income or foreign housing costs , you cannot take a foreign tax credit for taxes on income you exclude. If you do take the credit, one or both of the elections may be considered revoked.",
+      "source_fetched_at": "2026-08-23T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "feie-revocation-5yr",
+      "claim": "A revoked foreign earned income exclusion choice cannot be re-made within 5 years without IRS approval, and claiming the foreign tax credit, additional child tax credit or earned income credit in a later year is treated as revoking the prior choice",
+      "claim_type": "law",
+      "source_url": "https://www.irs.gov/publications/p54",
+      "raw_snippet": "if you decide to take the foreign tax credit, additional child tax credit, or earned income credit in a subsequent year, you will be considered to have revoked your prior choice. Note: You do not need to revoke a prior choice just because you have no foreign earned income or foreign housing costs for the year. If you revoked a choice and within 5 years again wish to choose the same exclusion, you must apply for IRS approval.",
+      "source_fetched_at": "2026-08-23T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "treaty-savings-clause",
+      "claim": "Under the US-Israel income tax treaty the Article 6 paragraph 3 savings clause lets a Contracting State tax its citizens as if the Convention had not come into effect, subject to paragraph 4 carve-outs preserving Article 10 (Grants), Article 21 (Social Security Payments), Article 26 (Relief from Double Taxation), Article 27 (Nondiscrimination) and Article 28 (Mutual Agreement Procedure) (בעברית: סעיף 6 לאמנה, וסעיף 26 בין החריגים)",
+      "claim_type": "law",
+      "source_url": "https://www.irs.gov/pub/irs-trty/israel.pdf",
+      "raw_snippet": "ARTICLE 6 General Rules of Taxation 1. A resident of one of the Contracting States may be taxed by the other Contracting State on any income from sources within that other Contracting State and only on such income, subject to any limitations set forth in this Convention. For this purpose, the rules set forth in Article 4 (Source of Income) shall be applied to determine the source of income. 2. The provisions of this Convention shall not be construed to restrict in any manner any exclusion, exemption, deduction, credit, or other allowance now or hereafter accorded-- (a) By the laws of one of the Contracting States in the determination of the tax imposed by that Contracting State, or (b) By any other agreement between the Contracting States. 3. Notwithstanding any provisions of this Convention except paragraph (4), a Contracting State may tax its residents (as determined under Article 3 (Fiscal Residence) and its citizens as if this Convention had not come into effect. 4. The provisions of paragraph (3) shall not affect: (a) The benefits conferred by a Contracting State under Articles 10 (Grants), 21 (Social Security Payments), 26 (Relief from Double Taxation), 27 (Nondiscrimination) , and 28 (Mutual Agreement Procedure)",
+      "source_fetched_at": "2026-08-23T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "ftc-form-1116",
+      "claim": "The Foreign Tax Credit is claimed on Form 1116 (בעברית: טופס 1116)",
+      "claim_type": "form-number",
+      "source_url": "https://www.irs.gov/individuals/international-taxpayers/foreign-tax-credit",
+      "raw_snippet": "File Form 1116, Foreign Tax Credit (Individual, Estate, or Trust) , to claim the foreign tax credit if you are an individual, estate or trust, and you",
+      "source_fetched_at": "2026-08-23T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "feie-landing-page-stale",
+      "claim": "The IRS foreign earned income exclusion landing page lists exclusion amounts only through 2023 and is stale as a source for the current amount",
+      "claim_type": "url",
+      "source_url": "https://www.irs.gov/individuals/international-taxpayers/foreign-earned-income-exclusion",
+      "raw_snippet": "on your worldwide income. However, you may qualify to exclude your foreign earnings from income up to an amount that is adjusted annually for inflation ($107,600 for 2020, $108,700 for 2021, $112,000 for 2022, and $120,000 for 2023). In addition, you can exclude or deduct certain foreign housing amounts. You may also be entitled to exclude from inc",
+      "source_fetched_at": "2026-08-23T00:00:00Z",
+      "confidence": "high"
+    }
+  ]
+}

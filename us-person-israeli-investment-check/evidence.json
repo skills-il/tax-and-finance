@@ -1,0 +1,115 @@
+{
+  "skill_slug": "us-person-israeli-investment-check",
+  "schemaVersion": "1.0",
+  "generated_at": "2026-08-23",
+  "claims": [
+    {
+      "id": "pfic-income-asset-tests",
+      "claim": "A foreign corporation is a PFIC if 75 percent or more of its gross income is passive (income test, section 1297(b)) or at least 50 percent of its average assets produce or are held to produce passive income (asset test, section 1297(e)) (בעברית: סעיף 1297, מבחני ההכנסה והנכסים)",
+      "claim_type": "percentage",
+      "source_url": "https://www.irs.gov/pub/irs-pdf/i8621.pdf",
+      "raw_snippet": "1. Income test. 75% or more of the corporation's gross income for its tax year is passive income (as defined in section 1297(b)). 2. Asset test. At least 50% of the average percentage of assets (determined under section 1297(e)) held by the foreign corporation during the tax year are assets that produce passive income or that ar",
+      "source_fetched_at": "2026-08-23T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "pfic-de-minimis",
+      "claim": "Form 8621 filing is excepted where the PFIC stock owned by the US person is worth USD 25,000 or less, or USD 50,000 or less on a joint return, on the last day of the tax year and on any disposal day (בעברית: טופס 8621, פטור הסכום הנמוך)",
+      "claim_type": "threshold",
+      "source_url": "https://www.irs.gov/pub/irs-pdf/i8621.pdf",
+      "raw_snippet": "The stock of the foreign corporation that is owned by the U.S. person (including stock owned indirectly) has a value of $25,000 or less ($50,000 or less in the case of a joint return) on the last day of the U.S. person's tax year and on any day during the tax year on which the U.S. person disposes o",
+      "source_fetched_at": "2026-08-23T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "pfic-excess-distribution",
+      "claim": "A shareholder of a section 1291 fund is subject to special rules on an excess distribution, and the entire gain on disposition of a section 1291 fund is treated as an excess distribution (בעברית: סעיף 1291, חלוקה עודפת)",
+      "claim_type": "law",
+      "source_url": "https://www.irs.gov/pub/irs-pdf/i8621.pdf",
+      "raw_snippet": "1291 fund are subject to special rules when they receive an excess distribution (defined below) from, or recognize gain on the sale or disposition of the stock of, a section 1291 fund. A distribution may be partly or wholly an excess distribution. The entire amount of gain from the disposition of a ",
+      "source_fetched_at": "2026-08-23T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "rp2017-purpose-6048-only",
+      "claim": "Revenue Procedure 2020-17 provides an exemption only from the section 6048 information reporting requirements, for certain tax-favored foreign retirement trusts and certain tax-favored foreign nonretirement savings trusts (בעברית: פטור מדיווח לפי סעיף 6048 בלבד)",
+      "claim_type": "law",
+      "source_url": "https://www.irs.gov/pub/irs-drop/rp-20-17.pdf",
+      "raw_snippet": "SECTION 1. PURPOSE This revenue procedure provides an exemption from the information reporting requirements under section 6048 of the Internal Revenue Code for certain U.S. citizen and resident individuals (U.S. individuals) with respect to their transactions with, and ownership of, certain tax-favored foreign retirement trusts and certain tax-favored foreign nonretirement savings trusts, as described in sections 5.0",
+      "source_fetched_at": "2026-08-23T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "rp2017-eligible-individual",
+      "claim": "Only eligible individuals, generally those who have been compliant with the income tax obligations related to the trust, may rely on Revenue Procedure 2020-17",
+      "claim_type": "law",
+      "source_url": "https://www.irs.gov/pub/irs-drop/rp-20-17.pdf",
+      "raw_snippet": "Only eligible individuals described in section 5.02 of this revenue procedure (generally U.S. individuals who have been compliant with respect to their income tax obligations related to such trusts) may rely on this revenue procedure. In addition, this revenue",
+      "source_fetched_at": "2026-08-23T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "rp2017-503-retirement",
+      "claim": "A tax-favored foreign retirement trust under section 5.03 must operate exclusively or almost exclusively to provide pension or retirement benefits, be tax-favored locally, be reported to local tax authorities, accept only earned-income contributions, and be limited to USD 50,000 or less annually or USD 1,000,000 or less lifetime (בעברית: סעיף 5.03)",
+      "claim_type": "threshold",
+      "source_url": "https://www.irs.gov/pub/irs-drop/rp-20-17.pdf",
+      "raw_snippet": ".03 Tax-Favored Foreign Retirement Trust. For purposes of this revenue procedure, a tax-favored foreign retirement trust means a foreign trust for U.S. tax purposes that is created, organized, or otherwise established under the laws of a foreign jurisdiction (the trust’s jurisdiction) as a trust, plan, fund, scheme, or other arrangement (collectively, a trust) to operate exclusively or almost exclusively to provide, or to earn income for the provision of, pension or retirement benefits and ancillary or incidental benefits, and that meets the following requirements established by the laws of the trust’s jurisdiction. (1) The trust is generally exempt from income tax or is otherwise tax-favored under the laws of the trust’s jurisdiction. For purposes of this revenue procedure, a trust is tax-favored if it meets any one or more of the following conditions: (i) contributions to the trust that would otherwise be subject to tax are deductible or excluded from income, are taxed at a reduced rate, give rise to a tax credit, or are otherwise eligible for another tax benefit (such as a government subsidy or contribution); and (ii) taxation of investment income earned by the trust is deferred until distribution or the investment income is ta",
+      "source_fetched_at": "2026-08-23T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "rp2017-503-withdrawal-condition",
+      "claim": "Section 5.03(5) requires that withdrawals from a tax-favored foreign retirement trust be conditioned on reaching a specified retirement age, disability or death, or that penalties apply to earlier withdrawals, with a carve-out only for in-service loans, hardship, education or a primary residence",
+      "claim_type": "law",
+      "source_url": "https://www.irs.gov/pub/irs-drop/rp-20-17.pdf",
+      "raw_snippet": "(5) Withdrawals, distributions, or payments from the trust are conditioned upon reaching a specified retirement age, disability, or death, or penalties apply to withdrawals, distributions, or payments made before such conditions are met. A trust that otherwise meets the requirements of this section 5.03(5), but that allows withdrawals, distributions, or payments for in-service loans or for reasons such as hardship, educational purposes, or the purchase of a primary residence, will be treated as meeting the requirem",
+      "source_fetched_at": "2026-08-23T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "rp2017-504-nonretirement",
+      "claim": "A tax-favored foreign non-retirement savings trust under section 5.04 must operate exclusively or almost exclusively to provide medical, disability or educational benefits, and contributions must be limited to USD 10,000 or less annually or USD 200,000 or less lifetime (בעברית: סעיף 5.04)",
+      "claim_type": "threshold",
+      "source_url": "https://www.irs.gov/pub/irs-drop/rp-20-17.pdf",
+      "raw_snippet": ".04 Tax-Favored Foreign Non-Retirement Savings Trust. For purposes of this revenue procedure, a tax-favored foreign non-retirement savings trust means a foreign trust for U.S. tax purposes that is created, organized, or otherwise established under the laws of a foreign jurisdiction (the trust’s jurisdiction) as a trust, plan, fund, scheme, or other arrangement (collectively, a trust) to operate exclusively or almost exclusively to provide, or to earn income for the provision of, medical, disability, or educational benefits, and that meets the following requirements established by the laws of the trust’s jurisdiction. (1) The trust is generally exempt from income tax or is otherwise tax-favored under the laws of the trust’s jurisdiction as defined in section 5.03(1) of this revenue procedure. (2) Annual information reporting with respect to the trust (or about the beneficiary or participant) is provided, or is otherwise available, to the relevant tax authorities in the trust’s jurisdict",
+      "source_fetched_at": "2026-08-23T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "f3520-triggers",
+      "claim": "US persons file Form 3520 to report certain transactions with foreign trusts, ownership of foreign trusts under sections 671 through 679, and receipt of certain large gifts or bequests from certain foreign persons (בעברית: טופס 3520)",
+      "claim_type": "form-number",
+      "source_url": "https://www.irs.gov/forms-pubs/about-form-3520",
+      "raw_snippet": "U.S. persons (and executors of estates of U.S. decedents) file Form 3520 to report: Certain transactions with foreign trusts. Ownership of foreign trusts under the rules of sections Internal Revenue Code 671 through 679. Receipt of certain large gifts or bequests from certain foreign perso",
+      "source_fetched_at": "2026-08-23T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "f3520a-trigger",
+      "claim": "A foreign trust with at least one US owner files Form 3520-A annually to provide information about the trust, its US beneficiaries, and any US person treated as an owner",
+      "claim_type": "form-number",
+      "source_url": "https://www.irs.gov/forms-pubs/about-form-3520-a",
+      "raw_snippet": "A foreign trust with at least one U.S. owner files this form annually to provide information about: the trust, its U.S. beneficiaries, and any U.S. person who is treated as an owner of any portion of the foreign trust. Current revision Form 3520-A PDF Instruct",
+      "source_fetched_at": "2026-08-23T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "f8938-cross-ref",
+      "claim": "Form 8938 thresholds for specified individuals living outside the US are more than USD 200,000 on the last day or 300,000 at any time if unmarried, and more than USD 400,000 or 600,000 if married filing jointly. Handled by the sibling skill, referenced here only as a boundary (בעברית: טופס 8938)",
+      "claim_type": "threshold",
+      "source_url": "https://www.irs.gov/businesses/comparison-of-form-8938-and-fbar-requirements",
+      "raw_snippet": "Specified individuals living outside the US: Unmarried individual (or married filing separately): Total value of assets was more than $200,000 on the last day of the tax year, or more than $300,000 at any time during the year. Married individual filing jointly: Total value of assets was more than $400,000 on ",
+      "source_fetched_at": "2026-08-23T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "about-8621-page",
+      "claim": "Form 8621 is the Information Return by a Shareholder of a Passive Foreign Investment Company or Qualified Electing Fund",
+      "claim_type": "form-number",
+      "source_url": "https://www.irs.gov/forms-pubs/about-form-8621",
+      "raw_snippet": "Form 8621, Information Return by a Shareholder of a Passive Foreign Investment Company or Qualified Electing Fund | Internal Revenue Service Skip to main content An official website of the United Stat",
+      "source_fetched_at": "2026-08-23T00:00:00Z",
+      "confidence": "high"
+    }
+  ]
+}

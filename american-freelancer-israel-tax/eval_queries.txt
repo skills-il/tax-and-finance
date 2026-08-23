@@ -1,0 +1,23 @@
+# Eval queries for american-freelancer-israel-tax
+# TYPE | SPLIT | query | expected | deciding description phrase
+
+POSITIVE | TRAIN | Why do I owe US tax as an osek murshe when I already pay Israeli tax? | MATCH | "asks why they owe US tax despite paying Israeli tax"
+POSITIVE | TRAIN | Does the foreign earned income exclusion cover self-employment tax? | MATCH | "whether the exclusion covers it"
+POSITIVE | TRAIN | How much should I set aside from each invoice for US taxes? | MATCH | "or how much to set aside"
+POSITIVE | TRAIN | What is SE tax and do I owe it as a freelancer in Tel Aviv? | MATCH | "what SE tax is"
+POSITIVE | TEST  | Is there a US-Israel social security agreement for the self-employed? | MATCH | "because there is no US-Israel totalization agreement"
+POSITIVE | TEST  | I am an osek patur and American, what do I owe the IRS on my freelance income? | MATCH | "an American osek patur or osek murshe in Israel"
+
+NEGATIVE | TRAIN | Should I open an Israeli company to reduce my taxes? | NO MATCH | "or for advice on whether to incorporate"
+NEGATIVE | TRAIN | How do I file my Israeli VAT report? | NO MATCH | "for Israeli-side bookkeeping or VAT"
+NEGATIVE | TEST  | Do I need to file an FBAR for my business account? | NO MATCH | "Do NOT use for annual filing mechanics or FBAR"
+NEGATIVE | TEST  | Is my keren hishtalmut a PFIC? | NO MATCH | "for classifying Israeli funds as PFICs"
+
+EDGE | TRAIN | Would incorporating in Israel stop the double social tax? | ENGAGE THEN DECLINE | The skill presents the option and its anti-deferral cost in Stage 4, then explicitly declines to recommend. The description excludes "advice on whether to incorporate", which is the recommendation, not the explanation.
+EDGE | TEST  | I am a salaried employee, do I owe self-employment tax? | ENGAGE THEN REDIRECT | Stage 1 condition 2 screens out a sachir on a tlush and says the analysis differs.
+
+# Sense-check pass: every NEGATIVE names a literal exclusion clause in the description.
+# The incorporation EDGE and the incorporation NEGATIVE are deliberately distinguished:
+# explaining the option is in scope, recommending it is not, and the body enforces that split.
+# Train: 4 positive + 2 negative + 1 edge = 7 rows, 7 correct -> all correct
+# Test:  2 positive + 2 negative + 1 edge = 5 rows, 5 correct -> all correct

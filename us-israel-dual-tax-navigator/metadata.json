@@ -1,0 +1,68 @@
+{
+  "display_name": {
+    "he": "ניווט דיווחי מס לאזרחות כפולה ישראל-ארה\"ב",
+    "en": "US-Israel Dual Filing Navigator"
+  },
+  "display_description": {
+    "he": "אינו ייעוץ מס ואינו דוח שהוגש. אזרחים אמריקאים שגרים בישראל חייבים להמשיך להגיש דוח שנתי לרשות המסים האמריקאית, גם בשנה שבה הם לא חייבים שם שקל. הסקיל בונה מפה של מה בדיוק צריך להגיש בשנת מס נתונה: דוח 1040, דיווח על חשבונות בנק זרים (FBAR), טופס 8938, ומתי כל אחד מהם מוגש מול לוח הזמנים הישראלי. הוא משווה בין שתי הדרכים להקטין מס כפול, ומסביר את המלכודת שנועלת אתכם על אחת מהן לחמש שנים. מתאים גם למי שעלה לפני שנים ומעולם לא הגיש, כולל מסלול ההסדרה המקוצר. התוצר הוא דף עבודה ורשימת מסמכים לרואה החשבון, לא דוח חתום. לא מתאים להגשת הדוח הישראלי עצמו, לסיווג קרנות ישראליות כ-PFIC, למס על עצמאים או לוויתור על אזרחות.",
+    "en": "Not tax advice and not a filed return. A US citizen living in Israel keeps a US filing duty for life, even in a year with no US tax owed. This skill maps what actually has to be filed for a given tax year: the 1040, the FBAR, Form 8938, and how those line up against the Israeli calendar. It compares the Foreign Earned Income Exclusion against the Foreign Tax Credit and flags the revocation trap that can lock the choice for five years, and it covers the Streamlined Foreign Offshore route for someone who never filed after making aliyah. Produces a filing-obligation map and a document checklist for your accountant, never a signed return. Do NOT use for Israeli-side filing, for PFIC classification of Israeli funds, for self-employment tax, or for renouncing citizenship."
+  },
+  "tags": {
+    "he": [
+      "מס אמריקאי",
+      "אזרחות כפולה",
+      "דיווח מס"
+    ],
+    "en": [
+      "us-tax",
+      "dual-citizenship",
+      "tax-filing"
+    ]
+  },
+  "author": "skills-il",
+  "version": "1.0.0",
+  "category": "tax-and-finance",
+  "supported_agents": [
+    "claude-code",
+    "cursor",
+    "github-copilot",
+    "windsurf",
+    "opencode",
+    "codex",
+    "openclaw",
+    "antigravity",
+    "gemini-cli",
+    "grok-build",
+    "chatgpt",
+    "claude-ai",
+    "claude-desktop",
+    "manus",
+    "gemini-spark",
+    "grok"
+  ],
+  "openclaw": true,
+  "volatility": "legislative",
+  "authoritative_sources": [
+    {
+      "url": "https://www.irs.gov/individuals/international-taxpayers/us-citizens-and-resident-aliens-abroad",
+      "type": "regulator",
+      "language": "en"
+    },
+    {
+      "url": "https://www.irs.gov/pub/irs-drop/rp-25-32.pdf",
+      "type": "statute",
+      "language": "en"
+    },
+    {
+      "url": "https://www.govinfo.gov/content/pkg/CFR-2025-title31-vol3/xml/CFR-2025-title31-vol3-sec1010-821.xml",
+      "type": "statute",
+      "language": "en"
+    },
+    {
+      "url": "https://www.irs.gov/pub/irs-trty/israel.pdf",
+      "type": "statute",
+      "language": "en"
+    }
+  ],
+  "domain_checklist_version": 1
+}

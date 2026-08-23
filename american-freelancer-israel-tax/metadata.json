@@ -1,0 +1,58 @@
+{
+  "display_name": {
+    "he": "אמריקאי עצמאי בישראל",
+    "en": "American Freelancer in Israel"
+  },
+  "display_description": {
+    "he": "אינו ייעוץ מס ואינו דוח שהוגש. עצמאי אמריקאי בישראל משלם ביטוח לאומי, ואז מגלה חשבון מס סוציאלי שני מארה\"ב. הסיבה היא שאין אמנת ביטחון סוציאלי בין המדינות, ושההחרגה של הכנסה מעבודה בחו\"ל, שעליה נשענים רוב האמריקאים בחו\"ל, לא נוגעת במס העצמאים בכלל. אפשר לא לחוב שקל מס הכנסה אמריקאי ועדיין לחוב אלפי דולרים. הסקיל בונה תחזית שנתית מההכנסה נטו לפי סדר החישוב הרשמי, מסביר את המקדמות הרבעוניות ואת האחוז שכדאי להפריש מכל חשבונית, ופורש את האפשרויות המבניות ואת המחיר של כל אחת בלי להמליץ. לא מתאים להחלטה אם להתאגד, למכניקת ההגשה השנתית או להנהלת חשבונות ומע\"מ בישראל.",
+    "en": "Not tax advice and not a filed return. An American freelancing in Israel pays Bituach Leumi and then discovers a second social tax bill from the US. There is no US-Israel totalization agreement, and the foreign earned income exclusion that most expats rely on does not touch self-employment tax at all, so you can owe zero US income tax and still owe thousands of dollars. This skill projects the yearly bill from your net earnings following the official order of computation, explains the quarterly estimated payments and what share of each invoice to set aside, and lays out the structural options with their real costs without recommending one. Do NOT use for the decision whether to incorporate, for annual filing mechanics, or for Israeli bookkeeping and VAT."
+  },
+  "tags": {
+    "he": [
+      "מס אמריקאי",
+      "עצמאים",
+      "ביטוח לאומי"
+    ],
+    "en": [
+      "us-tax",
+      "self-employed",
+      "freelancers"
+    ]
+  },
+  "author": "skills-il",
+  "version": "1.0.0",
+  "category": "tax-and-finance",
+  "supported_agents": [
+    "claude-code",
+    "cursor",
+    "github-copilot",
+    "windsurf",
+    "opencode",
+    "codex",
+    "openclaw",
+    "antigravity",
+    "gemini-cli",
+    "grok-build",
+    "chatgpt",
+    "claude-ai",
+    "claude-desktop",
+    "manus",
+    "gemini-spark",
+    "grok"
+  ],
+  "openclaw": true,
+  "volatility": "legislative",
+  "authoritative_sources": [
+    {
+      "url": "https://www.irs.gov/pub/irs-pdf/i1040sse.pdf",
+      "type": "regulator",
+      "language": "en"
+    },
+    {
+      "url": "https://www.irs.gov/businesses/small-businesses-self-employed/self-employment-tax-social-security-and-medicare-taxes",
+      "type": "regulator",
+      "language": "en"
+    }
+  ],
+  "domain_checklist_version": 1
+}

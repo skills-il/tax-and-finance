@@ -1,0 +1,22 @@
+# Eval queries for us-person-israeli-investment-check
+# TYPE | SPLIT | query | expected | deciding description phrase
+
+POSITIVE | TRAIN | Is my keren hishtalmut a problem for my US taxes? | MATCH | "whether their keren hishtalmut, pension, kupat gemel or Israeli fund creates a US reporting problem"
+POSITIVE | TRAIN | Do I need to file 8621 for my Israeli mutual fund? | MATCH | "whether the holding is a PFIC needing Form 8621"
+POSITIVE | TRAIN | Is my Israeli pension a foreign trust for the IRS? | MATCH | "whether it is a foreign trust needing Forms 3520 and 3520-A"
+POSITIVE | TRAIN | I am American, should I buy a TASE ETF or does it cause tax trouble? | MATCH | "or is deciding what to buy"
+POSITIVE | TEST  | Does Revenue Procedure 2020-17 cover my kupat gemel? | MATCH | "the Revenue Procedure 2020-17 exemption criteria"
+POSITIVE | TEST  | Which Israeli savings products are bad for a US citizen to hold? | MATCH | "Screens the Israeli savings and investment products a US person holds"
+
+NEGATIVE | TRAIN | When is my US tax return due if I live in Israel? | NO MATCH | "Do NOT use for annual filing mechanics"
+NEGATIVE | TRAIN | Do I need to file an FBAR this year? | NO MATCH | "or FBAR"
+NEGATIVE | TEST  | How much Israeli tax do I pay on my keren hishtalmut? | NO MATCH | "for Israeli-side tax"
+NEGATIVE | TEST  | I am an osek murshe, what US self-employment tax do I owe? | NO MATCH | "for self-employment tax"
+
+EDGE | TRAIN | Can you tell me definitively whether my keren hishtalmut is a foreign trust? | ENGAGE THEN DECLINE | "or to obtain a final classification of any specific product". The skill engages, runs the screen, and explicitly refuses the final classification.
+EDGE | TEST  | Should I sell my Israeli fund to get out of the PFIC rules? | ENGAGE THEN DECLINE | Investment advice is refused in the Do NOT list, and disposing triggers the excess distribution treatment, which the skill explains without recommending.
+
+# Sense-check pass: every NEGATIVE names a literal exclusion clause in the description.
+# Both EDGE rows are intended engage-then-decline, which the body handles explicitly.
+# Train: 4 positive + 2 negative + 1 edge = 7 rows, 7 correct -> all correct
+# Test:  2 positive + 2 negative + 1 edge = 5 rows, 5 correct -> all correct

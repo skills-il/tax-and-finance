@@ -1,0 +1,58 @@
+{
+  "display_name": {
+    "he": "בדיקת מוצרי השקעה ישראליים לאזרח אמריקאי",
+    "en": "US-Person Israeli Investment Check"
+  },
+  "display_description": {
+    "he": "אינו ייעוץ מס ואינו דוח שהוגש. עובד ישראלי מצורף כברירת מחדל בדיוק למוצרים שדיני המס האמריקאיים מתייחסים אליהם הכי גרוע. הסקיל בודק כל מוצר שאתם מחזיקים, קרן השתלמות, קופת גמל, פנסיה, קרנות נאמנות, קרנות סל וביטוח מנהלים, מול שתי חשיפות נפרדות: האם זה PFIC שמחייב טופס 8621, והאם זו נאמנות זרה שמחייבת טפסים 3520 ו-3520-A. הוא עובר על המבחנים שבחוק ועל תנאי הפטור שבנוהל 2020-17 במקום לנחש, ומפיק טבלה שאומרת לכל מוצר איזה מבחן הכריע ומה השאלה המדויקת לשאול רואה חשבון. התוצר הוא סינון, לא סיווג סופי. לא מתאים למכניקת ההגשה השנתית, למס הישראלי או למס על עצמאים.",
+    "en": "Not tax advice and not a filed return. An Israeli employee is enrolled by default into exactly the products the US tax code treats worst. This skill screens each product you hold, keren hishtalmut, kupat gemel, pension, Israeli funds, TASE ETFs and bituach menahalim, against two separate exposures: whether it is a PFIC needing Form 8621, and whether it is a foreign trust needing Forms 3520 and 3520-A. It walks the actual statutory tests and the Revenue Procedure 2020-17 exemption criteria rather than guessing, and outputs a per-product table naming the test that decided each one and the precise question to put to an accountant. The output is a screen, never a final classification. Do NOT use for annual filing mechanics, Israeli-side tax, or self-employment tax."
+  },
+  "tags": {
+    "he": [
+      "מס אמריקאי",
+      "קרן השתלמות",
+      "דיווח מס"
+    ],
+    "en": [
+      "us-tax",
+      "pfic",
+      "tax-filing"
+    ]
+  },
+  "author": "skills-il",
+  "version": "1.0.0",
+  "category": "tax-and-finance",
+  "supported_agents": [
+    "claude-code",
+    "cursor",
+    "github-copilot",
+    "windsurf",
+    "opencode",
+    "codex",
+    "openclaw",
+    "antigravity",
+    "gemini-cli",
+    "grok-build",
+    "chatgpt",
+    "claude-ai",
+    "claude-desktop",
+    "manus",
+    "gemini-spark",
+    "grok"
+  ],
+  "openclaw": true,
+  "volatility": "legislative",
+  "authoritative_sources": [
+    {
+      "url": "https://www.irs.gov/pub/irs-pdf/i8621.pdf",
+      "type": "regulator",
+      "language": "en"
+    },
+    {
+      "url": "https://www.irs.gov/pub/irs-drop/rp-20-17.pdf",
+      "type": "statute",
+      "language": "en"
+    }
+  ],
+  "domain_checklist_version": 1
+}

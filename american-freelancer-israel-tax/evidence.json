@@ -1,0 +1,106 @@
+{
+  "skill_slug": "american-freelancer-israel-tax",
+  "schemaVersion": "1.0",
+  "generated_at": "2026-08-23",
+  "claims": [
+    {
+      "id": "se-rate-153",
+      "claim": "The self-employment tax rate is 15.3 percent, made up of 12.4 percent for social security and 2.9 percent for Medicare",
+      "claim_type": "percentage",
+      "source_url": "https://www.irs.gov/businesses/small-businesses-self-employed/self-employment-tax-social-security-and-medicare-taxes",
+      "raw_snippet": "Self-employment tax rate The self-employment tax rate is 15.3%. The rate consists of two parts: 12.4% for social security (old-age, survivors, and disability insurance) and 2.9% for Medicare (hospital insurance",
+      "source_fetched_at": "2026-08-23T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "se-400-threshold",
+      "claim": "Self-employment tax applies where net earnings from self-employment were USD 400 or more",
+      "claim_type": "threshold",
+      "source_url": "https://www.irs.gov/businesses/small-businesses-self-employed/self-employment-tax-social-security-and-medicare-taxes",
+      "raw_snippet": "Your net earnings from self-employment (excluding church employee income) were $400 or more. You had church employee income of $108.28 or more. Generally, your net earnings from self-employment are su",
+      "source_fetched_at": "2026-08-23T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "se-9235-factor",
+      "claim": "Schedule SE line 4a multiplies net earnings by 92.35 percent (0.9235) to reach the amount subject to self-employment tax",
+      "claim_type": "percentage",
+      "source_url": "https://www.irs.gov/pub/irs-pdf/f1040sse.pdf",
+      "raw_snippet": "4a If line 3 is more than zero, multiply line 3 by 92.35% (0.9235). Otherwise, enter amount from line 3 . 4a N",
+      "source_fetched_at": "2026-08-23T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "feie-does-not-reduce-se",
+      "claim": "Foreign earnings from self-employment cannot be reduced by the foreign earned income exclusion when computing self-employment tax, and a self-employed US citizen living outside the United States must in most cases pay SE tax",
+      "claim_type": "law",
+      "source_url": "https://www.irs.gov/pub/irs-pdf/i1040sse.pdf",
+      "raw_snippet": "U.S. Citizens or Resident Aliens Living Outside the United States If you are a self-employed U.S. citizen or resident alien living outside the United States, in most cases you must pay SE tax. Foreign earnings from self-employment can’t be reduced by your foreign earned income exclusion when computing SE tax. Exception. The Unit",
+      "source_fetched_at": "2026-08-23T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "totalization-country-list",
+      "claim": "The United States has social security totalization agreements with 30 named countries and Israel is not among them, so the dual-taxation relief those agreements provide is unavailable to a US person self-employed in Israel",
+      "claim_type": "law",
+      "source_url": "https://www.irs.gov/pub/irs-pdf/i1040sse.pdf",
+      "raw_snippet": "The United States now has social security agreements with the following countries: Australia, Austria, Belgium, Brazil, Canada, Chile, the Czech Republic, Denmark, Finland, France, Germany, Greece, Hungary, Iceland, Ireland, Italy, Japan, Luxembourg, the Netherlands, Norway, Poland, Portugal, the Slovak Republic, Slovenia, South Korea, Spain, Sweden, Switzerland, the United Kingdom, and Uruguay. If you have questions about international social security agreements, or to see i",
+      "source_fetched_at": "2026-08-23T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "ss-wage-base-2025",
+      "claim": "For 2025 the maximum amount of self-employment income subject to social security tax is USD 176,100",
+      "claim_type": "currency",
+      "source_url": "https://www.irs.gov/pub/irs-pdf/i1040sse.pdf",
+      "raw_snippet": "Maximum income subject to social security tax. For 2025, the maximum amount of self-employment income subject to social security tax is $176,100. Reminders Form 1040-SS. ",
+      "source_fetched_at": "2026-08-23T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "addl-medicare-thresholds",
+      "claim": "Additional Medicare Tax threshold amounts are USD 250,000 married filing jointly, USD 125,000 married filing separately, and USD 200,000 single, head of household or qualifying surviving spouse",
+      "claim_type": "threshold",
+      "source_url": "https://www.irs.gov/pub/irs-pdf/i1040sse.pdf",
+      "raw_snippet": "Married filing jointly— $250,000 • Married filing separately— $125,000 • Single, Head of household, or Qualifying surviving spouse— $200,000 If you have both wages and self-employment income, the threshold amount for applying the Additional Medicare ",
+      "source_fetched_at": "2026-08-23T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "se-deduction-employer-equivalent",
+      "claim": "The employer-equivalent portion of self-employment tax is deductible in figuring adjusted gross income, and that deduction affects only income tax, not net earnings from self-employment or the self-employment tax itself",
+      "claim_type": "law",
+      "source_url": "https://www.irs.gov/businesses/small-businesses-self-employed/self-employment-tax-social-security-and-medicare-taxes",
+      "raw_snippet": "Self-employment tax deduction You can deduct the employer-equivalent portion of your self-employment tax in figuring your adjusted gross income. This deduction only affects your income tax. It does not affect either your net earnings from self-employment or your self-employment t",
+      "source_fetched_at": "2026-08-23T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "ssa-international-referral",
+      "claim": "The Schedule SE instructions direct taxpayers to the SSA International Programs website to check whether any additional social security agreement has been entered into",
+      "claim_type": "url",
+      "source_url": "https://www.irs.gov/pub/irs-pdf/i1040sse.pdf",
+      "raw_snippet": "If you have questions about international social security agreements, or to see if any additional agreements have been entered into, you can go to the SSA’s International Programs website at SSA.gov/International. The website also provides contact information for questions about ",
+      "source_fetched_at": "2026-08-23T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "f8938-cross-ref",
+      "claim": "Form 8938 thresholds for specified individuals living outside the US start at more than USD 200,000 on the last day or 300,000 at any time. Owned by the sibling skill and referenced here only as a scope boundary (בעברית: טופס 8938)",
+      "claim_type": "threshold",
+      "source_url": "https://www.irs.gov/businesses/comparison-of-form-8938-and-fbar-requirements",
+      "raw_snippet": "Specified individuals living outside the US: Unmarried individual (or married filing separately): Total value of assets was more than $200,000 on the last day of the tax year, or more than $300,000 at any time during the year. Married individual filing jointly: Total value of assets was more than $4",
+      "source_fetched_at": "2026-08-23T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "addl-medicare-rate-09",
+      "claim": "A 0.9 percent Additional Medicare Tax may apply where the total on line 6 of all Schedules SE exceeds the threshold for the filing status",
+      "claim_type": "percentage",
+      "source_url": "https://www.irs.gov/pub/irs-pdf/i1040sse.pdf",
+      "raw_snippet": "Additional Medicare Tax A 0.9% Additional Medicare Tax may apply to you if the total amount on line 6 of all your Schedules SE exceeds one of the following threshold amounts (based on your filing status). • Married filing jointly— $250,000 • Married filing separately— $125,000 • Single, He",
+      "source_fetched_at": "2026-08-23T00:00:00Z",
+      "confidence": "high"
+    }
+  ]
+}

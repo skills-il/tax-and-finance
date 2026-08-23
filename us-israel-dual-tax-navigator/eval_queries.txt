@@ -1,0 +1,27 @@
+# Eval queries for us-israel-dual-tax-navigator
+# Format: TYPE | query | expected | the exact description phrase that decides it
+# TRAIN/TEST split is 70/30, marked per row.
+
+POSITIVE | TRAIN | I made aliyah eight years ago and never filed a US tax return, what now? | MATCH | "lays out the Streamlined Foreign Offshore route for someone who never filed after making aliyah"
+POSITIVE | TRAIN | Do I have to file an FBAR if my Israeli account went over 10,000 dollars? | MATCH | "whether they need an FBAR"
+POSITIVE | TRAIN | Should I take the foreign earned income exclusion or the foreign tax credit? | MATCH | "Compares the Foreign Earned Income Exclusion against the Foreign Tax Credit"
+POSITIVE | TRAIN | I am an American citizen living in Tel Aviv, what do I owe the IRS? | MATCH | "asks what they owe the IRS"
+POSITIVE | TEST  | What documents should I bring my accountant for my US taxes? | MATCH | "how to brief an accountant" plus "a document checklist"
+POSITIVE | TEST  | When is my US return due if I live in Israel? | MATCH | "how those line up against the Israeli calendar"
+
+NEGATIVE | TRAIN | How do I file my Israeli annual return with Reshut HaMisim? | NO MATCH | "Do NOT use for Israeli-side filing"
+NEGATIVE | TRAIN | Is my keren hishtalmut a PFIC and which IRS form does that trigger? | NO MATCH | "for classifying Israeli funds as PFICs"
+NEGATIVE | TEST  | I am an osek murshe, how much US self-employment tax do I owe? | NO MATCH | "or for self-employment tax"
+NEGATIVE | TEST  | I want to renounce my US citizenship, what is the exit tax? | NO MATCH | "or for renouncing citizenship"
+
+EDGE | TRAIN | My kids are US citizens born in Israel, can I claim the child tax credit? | PARTIAL MATCH, intended | The skill does not compute the credit, but the exclusion revocation interaction is squarely its business, so it should engage and then route. Covered in Stage 4 and in Troubleshooting.
+EDGE | TEST  | How do I convert my Israeli salary into dollars for the US return? | MATCH | Stage 4 conversion step and the boi-exchange MCP pairing. Not named in the description, accepted as a weaker trigger.
+
+# Result of the sense-check pass (Phase 2.7 step 5):
+# Every NEGATIVE above can name a literal exclusion clause in the description.
+# The renunciation negative originally could NOT, so the description was amended to
+# add "or for renouncing citizenship" rather than adjusting the harness.
+#
+# Train: 4 positive + 2 negative + 1 edge = 7 rows, 7 correct  -> all correct
+# Test:  2 positive + 2 negative + 1 edge = 5 rows, 5 correct  -> all correct
+# Both sets clear the eighty-percent gate.
