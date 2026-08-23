@@ -135,7 +135,7 @@ clearly that choosing among them is not something this skill does.
 The middle option is the one most often suggested casually in forums and it is the one with
 the largest hidden US complexity, because a US person owning a foreign corporation can walk
 into anti-deferral reporting that is worse than the tax they were avoiding. Say so, name it as
-outside this skill's scope, and send it to a cross-border professional. Never present
+outside this skill's scope, and refer it to a cross-border professional. Never present
 incorporation as a clean fix.
 
 ### Stage 5: Produce the worksheet

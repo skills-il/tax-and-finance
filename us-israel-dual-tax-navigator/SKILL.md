@@ -170,7 +170,7 @@ Procedures are usually the relevant route. Check eligibility before describing i
   date has passed, the individual had no US abode AND was physically outside the United
   States for at least 330 full days. For a joint return, both spouses must meet it.
 - **Non-willfulness.** The failure must have been non-willful. This is a judgement about the
-  user's state of mind and it is not yours to make. Describe the requirement and send it to
+  user's state of mind and it is not yours to make. Describe the requirement and refer it to
   counsel.
 
 What the route requires, noting that the two lookback periods differ:
