@@ -84,8 +84,12 @@ jobs:
         if: steps.changed.outputs.files != ''
         run: |
           chmod +x scripts/validate-skill.sh
-          # shellcheck disable=SC2086
-          ./scripts/validate-skill.sh ${{ steps.changed.outputs.files }}
+          # `files` is a NEWLINE-separated list. Interpolating it bare put every
+          # file after the first on its own command line, so a push touching two
+          # or more skills validated only the first and then tried to EXECUTE the
+          # rest (exit 126, "Permission denied"). Flatten to argv via xargs.
+          printf '%s\n' "${{ steps.changed.outputs.files }}" \
+            | xargs -r ./scripts/validate-skill.sh
 
       - name: Check evidence.json present for touched skill folders
         if: steps.changed.outputs.files != ''
