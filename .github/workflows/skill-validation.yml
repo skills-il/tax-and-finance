@@ -29,6 +29,11 @@ on:
       - '**/*.js'
       - '**/*.ts'
 
+  # No way existed to validate the whole catalogue on demand. A per-push gate
+  # cannot detect a coverage hole by construction, so this runs the validator
+  # over every SKILL.md in the repo.
+  workflow_dispatch:
+
 permissions:
   contents: read
   pull-requests: write
@@ -50,7 +55,9 @@ jobs:
           # `gh pr diff` unconditionally, which on a push to master resolved to
           # "no pull requests found", swallowed the error via `|| true`, and
           # silently enforced nothing on the branch that gets most commits.
-          if [ "${{ github.event_name }}" = "pull_request" ]; then
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            ALL=$(git ls-files '*/SKILL.md' '*/metadata.json' '*/evidence.json')
+          elif [ "${{ github.event_name }}" = "pull_request" ]; then
             ALL=$(gh pr diff ${{ github.event.pull_request.number }} --name-only)
           else
             BEFORE="${{ github.event.before }}"
