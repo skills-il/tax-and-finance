@@ -107,7 +107,15 @@ jobs:
           # See /he/guides/how-we-validate Layer 2 + .claude/skills/update-skill/SKILL.md.
           set -e
           MISSING=""
-          for dir in ${{ steps.changed.outputs.dirs }}; do
+          # Assign first, THEN loop. `dirs` is newline-separated and Actions
+          # substitutes it into the script source, so interpolating it directly
+          # into the for-list put a literal newline mid-statement and bash died
+          # with "syntax error near unexpected token". Quoting the assignment
+          # makes it one string; the unquoted expansion below word-splits on
+          # IFS, newlines included, which is what this loop wanted all along.
+          DIRS="${{ steps.changed.outputs.dirs }}"
+          # shellcheck disable=SC2086
+          for dir in $DIRS; do
             if [ -f "$dir/SKILL.md" ] && [ ! -f "$dir/evidence.json" ]; then
               MISSING="$MISSING\n  - $dir/evidence.json"
             fi
