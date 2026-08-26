@@ -17,7 +17,7 @@ Spec schema (JSON):
     "validity_days": 14,               # 14-30 typical, 40 max for enterprise
     "issuer": {
         "name": "Yael Cohen",
-        "oseik_status": "morshe",      # morshe | patur | zair | chevra
+        "oseik_status": "morshe",      # morshe | patur | chevra (NOT "zair": esek za'ir is an income-tax election, not a VAT status)
         "oseik_number": "311234567",
         "phone": "050-1234567",
         "email": "yael@example.co.il",
@@ -28,7 +28,7 @@ Spec schema (JSON):
         "name": "Rishon Tech Ltd",
         "id_label": "company",          # company | oseik | none
         "id": "514567890",
-        "tier": "b2b"                   # state | local-authority | b2b | construction
+        "tier": "b2b"                   # state | state-construction | budgeted-body | local-authority | b2b | construction
     },
     "lines": [
         {"description": "ייעוץ אסטרטגי", "quantity": 20, "unit": "שעות",
@@ -55,11 +55,17 @@ from decimal import ROUND_HALF_EVEN, Decimal
 VAT_RATE = Decimal("0.18")
 OSEIK_PATUR_THRESHOLD_2026 = Decimal("122833")
 
+# Statutory payment dates by payer row. Construction splits by WHO ordered the
+# work: section 3(b) (state authority) is 85 days from invoice / 70 from
+# month-end, section 3(f) (local authority) is 80 days from month-end. Section
+# 3(e) covers budgeted bodies, universities and other statutory bodies.
 PAYMENT_TIER_CAPS = {
-    "state": ("45 days from invoice submission", 45, "from-invoice"),
+    "state": ("45 days from invoice submission, or 30 days from month-end", 45, "from-invoice"),
+    "state-construction": ("85 days from invoice, or 70 days from month-end (section 3(b))", 70, "from-month-end"),
+    "budgeted-body": ("shotef + 45 (section 3(e))", 45, "from-month-end"),
     "local-authority": ("45 days from month-end", 45, "from-month-end"),
     "b2b": ("shotef + 45 (45 days from month-end)", 45, "from-month-end"),
-    "construction": ("80 days from month-end", 80, "from-month-end"),
+    "construction": ("80 days from month-end, local-authority construction (section 3(f))", 80, "from-month-end"),
 }
 
 
@@ -76,6 +82,11 @@ def compute_totals(lines, charges_vat):
     line_outputs = []
     for line in lines:
         qty = Decimal(str(line.get("quantity", 1)))
+        if "unit_price" not in line:
+            raise ValueError(
+                f"line item {line.get('description', '(no description)')!r} has no "
+                f"'unit_price'; every line needs a unit price in the quote currency"
+            )
         price = Decimal(str(line["unit_price"]))
         discount = Decimal(str(line.get("discount", 0)))
         raw_line = qty * price - discount
@@ -114,10 +125,30 @@ def validate(spec):
         )
         if annual_revenue_estimate > OSEIK_PATUR_THRESHOLD_2026 * Decimal("0.5"):
             warnings.append(
-                "This single quote is more than 50% of the 2026 oseik patur ceiling "
+                "This single quote is more than half of the 2026 oseik patur ceiling "
                 f"(122,833 ₪). Confirm year-to-date revenue stays under the cap; "
                 f"otherwise plan a status conversion to oseik morshe."
             )
+
+    if spec.get("export_zero_vat") and status == "patur":
+        raise ValueError(
+            "export_zero_vat cannot be used with oseik_status='patur'. Zero-rating "
+            "under VAT Law section 30(a)(5) is an oseik morshe concept (it is what "
+            "preserves the input-VAT credit); an oseik patur document must carry no "
+            "VAT wording at all. Drop export_zero_vat for a patur issuer."
+        )
+
+    if spec.get("export_zero_vat"):
+        warnings.append(
+            "export_zero_vat is set, so this quote shows 0% VAT under VAT Law "
+            "section 30(a)(5). That paragraph does NOT zero-rate the service where the "
+            "subject of the agreement is that the service is actually rendered, in addition "
+            "to the foreign resident, also to an Israeli resident in Israel, an "
+            "Israeli-majority partnership, or a company treated as an Israeli resident "
+            "(the foreign-parent / Israeli-subsidiary case). Confirm WHO RECEIVES the "
+            "service, not who pays, and keep the contract, proof of foreign residency and "
+            "the foreign-currency payment record. If in doubt, quote 'plus VAT if applicable'."
+        )
 
     client_tier = spec.get("client", {}).get("tier", "b2b")
     payment_term = spec.get("payment_term", "shotef+30")
@@ -126,12 +157,19 @@ def validate(spec):
         try:
             user_days = int(payment_term.split("+", 1)[1])
             cap_days = PAYMENT_TIER_CAPS[client_tier][1]
+            if client_tier == "state" and payment_term.startswith("shotef+") and user_days > 30:
+                warnings.append(
+                    "Tier 'state' has two statutory dates (section 3(a)): 45 days from "
+                    "delivery of the invoice, or 30 days from month-end. This quote uses a "
+                    f"month-end count ({payment_term}), so the applicable figure is 30, not 45. "
+                    "Check which counting basis the contract uses."
+                )
             if user_days > cap_days:
                 cap_desc = PAYMENT_TIER_CAPS[client_tier][0]
                 warnings.append(
-                    f"Payment term {payment_term} exceeds statutory cap "
+                    f"Payment term {payment_term} is longer than the statutory date "
                     f"({cap_desc}) for tier {client_tier!r}. "
-                    f"Late Payment Law 5777-2017 voids longer terms in B2B/public-sector contracts."
+                    f"Late Payment Law 5777-2017 sets that date when the contract is silent; a longer date agreed expressly is challengeable as exceptionally unfair, not automatically void."
                 )
         except ValueError:
             pass
@@ -189,7 +227,10 @@ def render_markdown(spec, line_outputs, subtotal, vat, total, charges_vat):
         )
 
     out.append("")
-    out.append(f"**סה\"כ לפני מע\"מ:** {money(subtotal)} {sym}")
+    if charges_vat or spec.get("export_zero_vat"):
+        # An oseik patur document must not carry VAT-implying wording, so the
+        # "before VAT" line is only printed where a VAT line follows it.
+        out.append(f"**סה\"כ לפני מע\"מ:** {money(subtotal)} {sym}")
     if charges_vat:
         out.append(f"**מע\"מ 18%:** {money(vat)} {sym}")
     elif spec.get("export_zero_vat"):
@@ -205,18 +246,43 @@ def render_markdown(spec, line_outputs, subtotal, vat, total, charges_vat):
     # like "net-30" → "30 ימים".
     if payment_term.startswith("shotef+"):
         days = payment_term.split("+", 1)[1]
-        term_he = f"שוטף + {days} ימים מהנפקת החשבונית"
+        invoice_he = "דרישת התשלום" if status == "patur" else "החשבונית"
+        term_he = f"שוטף + {days} ימים מהנפקת {invoice_he}"
     elif payment_term.startswith("net-"):
         days = payment_term.split("-", 1)[1]
         term_he = f"{days} ימים מהנפקת החשבונית"
     else:
         term_he = payment_term
+    tier_he = {
+        "state": "רשות מדינה או משרד ממשלתי, 45 ימים מהמצאת החשבון או 30 ימים מתום החודש (סעיף 3(א))",
+        "state-construction": "עבודות הנדסה בנאיות לגוף מדינה, 85 ימים מהמצאת החשבון או 70 ימים מתום החודש (סעיף 3(ב))",
+        "budgeted-body": "גוף מתוקצב או מוסד להשכלה גבוהה מתוקצב, שוטף + 45 (סעיף 3(ה))",
+        "local-authority": "רשות מקומית, שוטף + 45 (סעיף 3(ו))",
+        "construction": "עבודות הנדסה בנאיות לרשות מקומית, שוטף + 80 (סעיף 3(ו))",
+        "b2b": "עסקה בין עסקים, שוטף + 45 (סעיף 3(ז))",
+    }.get(spec.get("client", {}).get("tier", "b2b"), "עסקה בין עסקים, שוטף + 45 (סעיף 3(ז))")
     out.append(
-        f"- **תנאי תשלום:** {term_he}. חוק מוסר תשלומים לספקים, "
-        "התשע\"ז-2017 קובע תקרה חוקית של שוטף + 45 לעסקה בין עסקים; "
-        "עיכוב מעבר לתקרה החוקית נושא ריבית פיגורים לפי חוק פסיקת ריבית והצמדה, התשכ\"א-1961."
+        f"- **תנאי תשלום:** {term_he}, כמוסכם בין הצדדים. בהיעדר הסכמה אחרת, "
+        f"חוק מוסר תשלומים לספקים, התשע\"ז-2017 קובע לסוג המזמין הזה: {tier_he}. "
+        "איחור מעבר למועד שבחוק נושא ריבית שקלית, ובחלוף 30 ימים נוספים גם דמי פיגורים, "
+        "לפי חוק פסיקת ריבית והצמדה, התשכ\"א-1961."
     )
+    out.append(
+        "- **פרטי החשבונית:** חשבון שחסר בו פרט מהותי שנדרש בחוזה מוחזר לספק "
+        "ונחשב כאילו לא הומצא (סעיף 3(ח) לחוק), ולכן כדאי לסכם מראש מה החשבונית חייבת לכלול."
+    )
+    if charges_vat and subtotal > Decimal("5000"):
+        out.append(
+            "- **מספר הקצאה:** החשבונית תופק עם מספר הקצאה מרשות המסים "
+            "(נדרש לחשבונית מעל 5,000 ₪ כדי שהלקוח יוכל לקזז את המע\"מ)."
+        )
     clauses = spec.get("clauses") or {}
+    if spec.get("client", {}).get("tier") != "consumer":
+        out.append(
+            "- **ניכוי במקור:** התשלום כפוף להצגת אישור פטור מניכוי מס במקור בתוקף; "
+            "אחרת ינוכה לפי השיעור החל על הספק. הניכוי אינו מקטין את סכום החשבונית, "
+            "רק את המזומן שמתקבל ביום התשלום."
+        )
     if clauses.get("scope_change_rate"):
         out.append(
             f"- **שינויים בהיקף:** כל שינוי בהיקף העבודה יחויב בנפרד "
@@ -272,7 +338,7 @@ def render_html(markdown_body, title):
 <title>{title}</title>
 <style>
   body {{ font-family: 'Arial Hebrew', 'David', sans-serif; max-width: 800px; margin: 2em auto; padding: 1em; }}
-  table {{ border-collapse: collapse; width: 100%; }}
+  table {{ border-collapse: collapse; width: 17cm; max-width: 100vw; }}
   th, td {{ border: 1px solid #ccc; padding: 0.5em; text-align: right; }}
   @media print {{ body {{ margin: 0; padding: 0; }} @page {{ size: A4; margin: 1.5cm; }} }}
 </style>

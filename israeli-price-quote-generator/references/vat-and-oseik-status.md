@@ -6,7 +6,6 @@
 
 - Was 17% from 2015 through 2024
 - Raised to 18% effective 2025-01-01 per the 2025 Budget Law
-- A January 2026 proposal to raise to 19% was rejected by the cabinet (curbed defence spending instead)
 - Sources: PwC tax summary, Knesset press release, multiple secondary sources
 
 ## Oseik patur 2026 threshold
@@ -23,8 +22,9 @@
 |---|---|---|---|
 | Oseik morshe | Yes, 18% | "עוסק מורשה" + מספר עוסק | חשבונית מס |
 | Oseik patur | No | "עוסק פטור, אינו רשום כעוסק מורשה" + מספר עוסק | חשבונית עסקה + קבלה |
-| Esek za'ir | No | "עסק זעיר" (or unchanged from oseik patur for under-threshold) | חשבונית עסקה + קבלה |
 | Chevra ba'am | Yes, 18% | "חברה בע\"מ" + מספר חברה | חשבונית מס |
+
+**Esek za'ir (עסק זעיר) is not a row in this table.** It is an income-tax track (a 30% automatic normative expense deduction, available where annual turnover does not exceed 122,833 ₪ for 2026), not a VAT status, and it says nothing about the quote header or about VAT: an oseik morshe can be an esek za'ir and still charges 18%. Use the issuer's actual VAT status for the header and the VAT line, every time.
 
 ### Oseik patur invoice rules (the trap)
 
@@ -44,11 +44,13 @@ When an oseik morshe sells services to a non-resident customer outside Israel, t
 - The issuer can still claim input VAT on related expenses (this is the value of being zero-rated vs exempt)
 - Mark the line clearly: "0% VAT, export of services per VAT Law §30(a)(5)"
 
+**The exception that catches Israeli freelancers.** Section 30(a)(5) zero-rates a service to a foreign resident "למעט שירות ששר האוצר קבע לענין זה", and then adds: "לא יראו שירות כניתן לתושב חוץ כאשר נושא ההסכם הוא מתן השירות בפועל, נוסף על תושב החוץ, גם לתושב ישראל בישראל, לשותפות שרוב הזכויות בה הן של שותפים תושבי ישראל או לחברה שלענין פקודת מס הכנסה רואים אותה כתושבת ישראל". So where the agreement's subject is that the service is actually rendered to an Israeli resident as well as the foreign customer (the classic case being a foreign parent contracting for work delivered to its Israeli subsidiary), the zero rate does NOT apply, however the invoice is addressed and however the payment arrives. Ask who receives the service, not who pays. Keep the contract, the proof of foreign residency and the foreign-currency payment record: the zero rate must be documented.
+
 ## When the freelancer crosses the threshold
 
 If the freelancer is currently oseik patur and the quote being drafted would push them over 122,833 ₪ for the calendar year:
 
-1. **Quote is fine as oseik patur** if work delivery + payment will fall in the next calendar year (revenue is recognized when received for cash-basis filers).
+1. **Deferring the work into the next calendar year does not automatically keep the issuer under the ceiling.** The ceiling is measured on מחזור עסקאות for the tax year, and when a transaction is attributed to a year depends on the issuer's reporting basis and on the type of supply, which differs between services and goods. Do not present late invoicing as a way to stay under 122,833 ₪; a wrong attribution is corrected retroactively. Where timing is the deciding factor, send the user to their accountant.
 2. **Status conversion is required** before issuing the future חשבונית עסקה if the work delivers + gets paid before year-end and pushes them over the cap.
 3. **The user must visit the regional מע\"מ office** to convert. Until conversion, they cannot legally charge VAT.
 

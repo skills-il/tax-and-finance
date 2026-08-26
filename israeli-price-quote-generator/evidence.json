@@ -1,7 +1,7 @@
 {
   "skill_slug": "israeli-price-quote-generator",
   "schemaVersion": "1.0",
-  "generated_at": "2026-05-19",
+  "generated_at": "2026-08-26T22:25:34.758748+00:00",
   "claims": [
     {
       "id": "vat-rate-2026",
@@ -10,15 +10,6 @@
       "source_url": "https://taxsummaries.pwc.com/israel/corporate/other-taxes",
       "source_fetched_at": "2026-05-19T00:00:00Z",
       "raw_snippet": "The 2025 current rate of VAT is 18%.",
-      "confidence": "high"
-    },
-    {
-      "id": "vat-2026-not-raised",
-      "claim": "A January 2026 proposal to raise Israeli VAT from 18% to 19% was rejected; VAT remains 18% in 2026",
-      "claim_type": "percentage",
-      "source_url": "https://www.vatcalc.com/vat/israel-vat-rise-to-19-jan-2026-proposal/",
-      "source_fetched_at": "2026-05-19T00:00:00Z",
-      "raw_snippet": "Israel avoids VAT rise to 19% Jan 2026 proposal",
       "confidence": "high"
     },
     {
@@ -35,18 +26,20 @@
       "claim": "An oseik patur is not permitted to issue a tax invoice (chesbonit mas); uses chesbonit iska for payment request",
       "claim_type": "law",
       "source_url": "https://www.kolzchut.org.il/he/עוסק_פטור",
-      "source_fetched_at": "2026-05-19T00:00:00Z",
-      "raw_snippet": "עוסק פטור אינו רשאי להוציא חשבונית מס בגין עסקאותיו. כדי לגבות את התשלום מלקוחותיו, עוסק פטור מוציא דרישת תשלום ('חשבונית עסקה')",
-      "confidence": "high"
+      "source_fetched_at": "2026-08-26T22:27:14.408583+00:00",
+      "raw_snippet": "העוסק הפטור אינו גובה מס ערך מוסף (מע\"מ) מלקוחותיו ולכן הוא אינו רשאי להוציא חשבוניות מס בגין עסקאותיו. כדי לגבות את התשלום מלקוחותיו, עוסק פטור מוציא דרישת תשלום (\"חשבונית עסקה\"), שבה הוא מורה ללקוח כמה עליו לשלם. בעת קבלת התשלום עוסק פטור מוציא קבלה בלבד.",
+      "confidence": "high",
+      "fetched_at": "2026-08-26T22:27:14.408583+00:00"
     },
     {
       "id": "oseik-patur-no-vat",
       "claim": "An oseik patur does not collect VAT from customers",
       "claim_type": "law",
       "source_url": "https://www.kolzchut.org.il/he/עוסק_פטור",
-      "source_fetched_at": "2026-05-19T00:00:00Z",
-      "raw_snippet": "עוסק פטור אינו גובה מס ערך מוסף (מע\"מ) מלקוחותיו",
-      "confidence": "high"
+      "source_fetched_at": "2026-08-26T22:27:14.408583+00:00",
+      "raw_snippet": "עוסק פטור הוא עצמאי שאינו גובה מס ערך מוסף (מע\"מ) מלקוחותיו",
+      "confidence": "high",
+      "fetched_at": "2026-08-26T22:27:14.408583+00:00"
     },
     {
       "id": "late-payment-law-name",
@@ -134,13 +127,18 @@
     },
     {
       "id": "esek-zair-30-percent-deduction",
-      "claim": "The 'bal esek za'ir' (בעל עסק זעיר) model lets a self-employed person whose 2026 annual turnover does not exceed 122,833 NIS deduct normative expenses of 30% of turnover instead of claiming actual expenses; it applies to an osek patur or an osek murshe alike, so it is orthogonal to VAT status.",
+      "claim": "A \"baal esek zair\" may automatically deduct 30% of income when reporting to the Income Tax Authority, without presenting receipts; the track requires annual turnover not exceeding 122,833 NIS for 2026 and is an income-tax election, not a VAT status.",
       "claim_type": "percentage",
-      "source_url": "https://www.gov.il/he/pages/small-business-owner-income-tax",
-      "source_fetched_at": "2026-08-11",
-      "raw_snippet": "עצמאי המוגדר כ-\"בעל עסק זעיר\" (עוסק פטור או עוסק מורשה שמחזור הכנסותיו השנתי בשנת 2026 אינו עולה על 122,833 ₪), זכאי לנכות מהכנסותיו הוצאות בשיעור של 30% מהמחזור במקום לדרוש הוצאות שהוצאו בפועל.",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%A2%D7%A1%D7%A7_%D7%96%D7%A2%D7%99%D7%A8",
+      "source_fetched_at": "2026-08-26T22:34:50.360154+00:00",
+      "raw_snippet": "בעת הדיווח למס הכנסה, בעל עסק זעיר רשאי לקזז באופן אוטומטי סכום של 30% מהכנסותיו, בלי להציג קבלות או חשבוניות בפועל.",
       "confidence": "medium",
-      "fetched_at": "2026-08-11"
+      "fetched_at": "2026-08-26T22:34:50.360154+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/vat-and-oseik-status.md"
+      ]
     },
     {
       "id": "vat-law-section-30-export",
@@ -156,9 +154,10 @@
       "claim": "Under VAT Law (חוק מס ערך מוסף) and Tax Authority guidance, an oseik patur is not registered for VAT and may not charge it on quotes or issue a חשבונית מס",
       "claim_type": "law",
       "source_url": "https://www.kolzchut.org.il/he/עוסק_פטור",
-      "source_fetched_at": "2026-05-19T00:00:00Z",
-      "raw_snippet": "עוסק פטור אינו רשאי להוציא חשבונית מס בגין עסקאותיו",
-      "confidence": "high"
+      "source_fetched_at": "2026-08-26T22:27:14.408583+00:00",
+      "raw_snippet": "העוסק הפטור אינו גובה מס ערך מוסף (מע\"מ) מלקוחותיו ולכן הוא אינו רשאי להוציא חשבוניות מס בגין עסקאותיו. כדי לגבות את התשלום מלקוחותיו, עוסק פטור מוציא דרישת תשלום (\"חשבונית עסקה\"), שבה הוא מורה ללקוח כמה עליו לשלם. בעת קבלת התשלום עוסק פטור מוציא קבלה בלבד.",
+      "confidence": "high",
+      "fetched_at": "2026-08-26T22:27:14.408583+00:00"
     },
     {
       "id": "contracts-law-section-5-acceptance",
@@ -222,31 +221,291 @@
     },
     {
       "id": "cancellation-tier-percentages",
-      "claim": "Common Israeli SMB cancellation tiers in price quotes: 25% before work starts, 50% mid-project, 100% after delivery, subject to actual-damages cap",
+      "claim": "Cancellation charges written into an Israeli price quote are agreed damages (פיצויים מוסכמים) under סעיף 15 לחוק החוזים (תרופות בשל הפרת חוזה), התשל\"א-1970, payable without proof of damage; the statute sets no scale of percentages.",
       "claim_type": "feature",
-      "source_url": "https://www.nevo.co.il/law_html/law00/71889.htm",
-      "source_fetched_at": "2026-05-19T00:00:00Z",
-      "raw_snippet": "Industry convention: 25% pre-work, 50% mid-project, 100% post-delivery cancellation fees; enforceable only up to actual damages",
-      "confidence": "low"
+      "source_url": "https://www.nevo.co.il/law_html/law00/71887.htm",
+      "source_fetched_at": "2026-08-26T22:25:34.758748+00:00",
+      "raw_snippet": "פיצויים מוסכמים 15. (א) הסכימו הצדדים מראש על שיעור פיצויים (להלן – פיצויים מוסכמים), יהיו הפיצויים כמוסכם, ללא הוכחת נזק",
+      "confidence": "low",
+      "fetched_at": "2026-08-26T22:25:34.758748+00:00"
     },
     {
       "id": "cancellation-clause-tiers-not-automatic",
-      "claim": "Cancellation-fee tiers (25/50/100 percent) commonly appear in Israeli quotes but a court can cap an excess penalty at actual damages under Section 15 (סעיף 15) of the Contracts Law (Remedies for Breach), 5731-1970",
+      "claim": "Section 15 / סעיף 15 of the Contracts Law (Remedies) 5731-1970 lets a court reduce agreed damages only where they bear no reasonable relation to the damage foreseeable at contract formation.",
       "claim_type": "law",
-      "source_url": "https://www.nevo.co.il/law_html/law00/71889.htm",
-      "source_fetched_at": "2026-05-19T00:00:00Z",
-      "raw_snippet": "פיצויים מוסכמים שנקבעו בהפרזה ניתנים להפחתה בידי בית המשפט",
-      "confidence": "medium"
+      "source_url": "https://www.nevo.co.il/law_html/law00/71887.htm",
+      "source_fetched_at": "2026-08-26T22:25:34.758748+00:00",
+      "raw_snippet": "הסכימו הצדדים מראש על שיעור פיצויים (להלן – פיצויים מוסכמים), יהיו הפיצויים כמוסכם, ללא הוכחת נזק; אולם רשאי בית המשפט להפחיתם אם מצא שהפיצויים נקבעו ללא כל יחס סביר לנזק שניתן היה לראותו מראש בעת כריתת החוזה כתוצאה מסתברת של ההפרה.",
+      "confidence": "medium",
+      "fetched_at": "2026-08-26T22:25:34.758748+00:00"
     },
     {
       "id": "bit-paybox-fees-2025",
-      "claim": "Bit and PayBox charge a 0.6% fee (raised to 0.8% for Bit from May 2026) on the portion of receipts exceeding 25,000 NIS per year, effective January 2025. Bit = Bank Hapoalim, PayBox = Discount Group, Pepper Pay = Bank Leumi.",
+      "claim": "Bit charges a 0.8% fee on receipts above a cumulative 25,000 NIS per calendar year (the free ceiling).",
       "claim_type": "feature",
-      "source_url": "https://www.calcalist.co.il/investing/article/rjwfsrxm1x",
-      "source_fetched_at": "2026-05-19T00:00:00Z",
-      "raw_snippet": "עמלה של 0.6% על קבלות מעל 25,000 ש\"ח בשנה, החל מ-1 בינואר 2025",
+      "source_url": "https://www.bitpay.co.il/he/private-faq",
+      "source_fetched_at": "2026-08-26T22:34:50.360154+00:00",
+      "raw_snippet": "כספים שיתקבלו מעל התקרה החינמית ועד 100,000₪ בשנה קלנדרית, יחויב בעמלת \" קבלת תשלום (מעבר לסף פעילות של ₪25,000 בשנה)\" בשיעור של 0.8%",
       "confidence": "medium",
-      "fetched_at": "2026-07-06T13:00:00Z"
+      "fetched_at": "2026-08-26T22:34:50.360154+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "id": "bit-annual-p2p-cap",
+      "claim_id": "bit-annual-p2p-cap",
+      "claim": "Bit caps P2P receipts at 100,000 NIS per calendar year since 14.11.2024.",
+      "claim_type": "regulatory",
+      "source_url": "https://www.bitpay.co.il/he/private-faq",
+      "source_fetched_at": "2026-08-26T22:25:34.758748+00:00",
+      "fetched_at": "2026-08-26T22:25:34.758748+00:00",
+      "raw_snippet": "בקבלת כסף מאחרים: בכל שנה קלנדרית אפשר לקבל עד ₪100,000 כולל תשלום דרך קבוצות.",
+      "confidence": "high",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "id": "mtl-3a-two-bases",
+      "claim_id": "mtl-3a-two-bases",
+      "claim": "Section 3(a) of the Late Payment Law gives two payment dates for state authorities: 45 days from delivery of the invoice, or 30 days from month-end where the contract counts from month-end.",
+      "claim_type": "regulatory",
+      "source_url": "https://www.nevo.co.il/law_html/law00/144599.htm",
+      "source_fetched_at": "2026-08-26T22:25:34.758748+00:00",
+      "fetched_at": "2026-08-26T22:25:34.758748+00:00",
+      "raw_snippet": "לא יאוחר מ-45 ימים מהמועד שבו הומצא למזמין החשבון; (2) אם התקופה לתשלום לספק נספרת מתום החודש שבמהלכו הומצא החשבון למזמין – לא יאוחר מ-30 ימים מתום אותו החודש.",
+      "confidence": "high",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/payment-terms-law.md"
+      ]
+    },
+    {
+      "id": "mtl-3b-construction",
+      "claim_id": "mtl-3b-construction",
+      "claim": "Section 3(b) sets 85 days from delivery of the invoice, or 70 days from month-end, for construction-engineering works ordered by a section 3(a) body.",
+      "claim_type": "regulatory",
+      "source_url": "https://www.nevo.co.il/law_html/law00/144599.htm",
+      "source_fetched_at": "2026-08-26T22:25:34.758748+00:00",
+      "fetched_at": "2026-08-26T22:25:34.758748+00:00",
+      "raw_snippet": "תשולם התמורה בעד העסקה לא יאוחר מ-85 ימים מהמועד שבו הומצא החשבון למזמין כאמור באותו סעיף קטן או מ-70 ימים מתום החודש שבו הומצא לו החשבון",
+      "confidence": "high",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/payment-terms-law.md"
+      ]
+    },
+    {
+      "id": "mtl-3e-budgeted",
+      "claim_id": "mtl-3e-budgeted",
+      "claim": "Section 3(e)(1) puts budgeted bodies, budgeted higher-education institutions and other bodies established by law on 45 days from month-end, unless another date is expressly agreed with the CEO approval of the payer.",
+      "claim_type": "regulatory",
+      "source_url": "https://www.nevo.co.il/law_html/law00/144599.htm",
+      "source_fetched_at": "2026-08-26T22:25:34.758748+00:00",
+      "fetched_at": "2026-08-26T22:25:34.758748+00:00",
+      "raw_snippet": "ישלם לספק את התמורה בעד העסקה לא יאוחר מ-45 ימים מתום החודש שבו הומצא לו החשבון, אלא אם כן קבעו הצדדים באופן מפורש בחוזה, באישור המנהל הכללי של המזמין, מועד אחר לתשלום",
+      "confidence": "high",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/payment-terms-law.md"
+      ]
+    },
+    {
+      "id": "mtl-3f-150-days",
+      "claim_id": "mtl-3f-150-days",
+      "claim": "A local authority may defer the externally-financed portion, but it must be paid no later than 150 days from delivery of the invoice even if the financing never arrived.",
+      "claim_type": "regulatory",
+      "source_url": "https://www.nevo.co.il/law_html/law00/144599.htm",
+      "source_fetched_at": "2026-08-26T22:25:34.758748+00:00",
+      "fetched_at": "2026-08-26T22:25:34.758748+00:00",
+      "raw_snippet": "שהתשלום הנדחה ישולם לא יאוחר מ-150 ימים מהיום שבו הומצא החשבון לרשות המקומית, אף אם היא לא קיבלה את המימון החיצוני",
+      "confidence": "high",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/payment-terms-law.md"
+      ]
+    },
+    {
+      "id": "mtl-3g-contracting-out",
+      "claim_id": "mtl-3g-contracting-out",
+      "claim": "Section 3(g) sets 45 days from month-end for a business payer unless the parties expressly agreed another date in the contract, and another date may only be set where required by the special character of the engagement or where it is not exceptionally unfair.",
+      "claim_type": "regulatory",
+      "source_url": "https://www.nevo.co.il/law_html/law00/144599.htm",
+      "source_fetched_at": "2026-08-26T22:25:34.758748+00:00",
+      "fetched_at": "2026-08-26T22:25:34.758748+00:00",
+      "raw_snippet": "ישלם לספק את התמורה בעד העסקה לא יאוחר מ-45 ימים מתום החודש שבו הומצא לו החשבון, אלא אם כן קבעו הצדדים באופן מפורש בחוזה מועד אחר לתשלום; ואולם לא ייקבע מועד אחר לתשלום כאמור, אלא אם כן הדבר נדרש בשל אופייה המיוחד של ההתקשרות או שהוא אינו מועד בלתי הוגן באופן חריג.",
+      "confidence": "high",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/payment-terms-law.md"
+      ]
+    },
+    {
+      "id": "mtl-3h-incomplete-invoice",
+      "claim_id": "mtl-3h-incomplete-invoice",
+      "claim": "Section 3(h): an invoice missing a material particular is returned with the defects listed and treated as never delivered; the examination period is 23 business days, or 60 days for construction works.",
+      "claim_type": "regulatory",
+      "source_url": "https://www.nevo.co.il/law_html/law00/144599.htm",
+      "source_fetched_at": "2026-08-26T22:25:34.758748+00:00",
+      "fetched_at": "2026-08-26T22:25:34.758748+00:00",
+      "raw_snippet": "ויראו זאת כאילו החשבון לא הומצא למזמין, ובלבד שהמזמין פירט את הליקויים שנמצאו בחשבון",
+      "confidence": "high",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/payment-terms-law.md"
+      ]
+    },
+    {
+      "id": "mtl-3h-examination-periods",
+      "claim_id": "mtl-3h-examination-periods",
+      "claim": "The examination period under section 3(h) is 23 business days from delivery of the invoice, and 60 days for construction works.",
+      "claim_type": "regulatory",
+      "source_url": "https://www.nevo.co.il/law_html/law00/144599.htm",
+      "source_fetched_at": "2026-08-26T22:25:34.758748+00:00",
+      "fetched_at": "2026-08-26T22:25:34.758748+00:00",
+      "raw_snippet": "23 ימי עסקים ממועד המצאת החשבון; (ב) לעניין עסקה לפי סעיף קטן (ב) ועסקה לפי סעיף קטן (ו) לביצוע עבודות הנדסה בנאיות – 60 ימים ממועד המצאת החשבון",
+      "confidence": "high",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/payment-terms-law.md"
+      ]
+    },
+    {
+      "id": "mtl-4-two-stage",
+      "claim_id": "mtl-4-two-stage",
+      "claim": "Section 4 / סעיף 4 of the Late Payment Law adds shekel interest from the section 3 payment date and, after a further 30 days, arrears charges as well.",
+      "claim_type": "regulatory",
+      "source_url": "https://www.nevo.co.il/law_html/law00/144599.htm",
+      "source_fetched_at": "2026-08-26T22:25:34.758748+00:00",
+      "fetched_at": "2026-08-26T22:25:34.758748+00:00",
+      "raw_snippet": "תשולם לספק בתוספת ריבית שקלית, ובחלוף 30 ימים מהמועד האמור – בתוספת דמי פיגורים, ויחולו הוראות חוק פסיקת ריבית והצמדה",
+      "confidence": "high",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/payment-terms-law.md"
+      ]
+    },
+    {
+      "id": "mtl-4b-superiority",
+      "claim_id": "mtl-4b-superiority",
+      "claim": "Section 4(b) applies the interest provisions to a section 3(e)(1) body or a section 3(g) business only where that payer had superiority in shaping the contract terms.",
+      "claim_type": "regulatory",
+      "source_url": "https://www.nevo.co.il/law_html/law00/144599.htm",
+      "source_fetched_at": "2026-08-26T22:25:34.758748+00:00",
+      "fetched_at": "2026-08-26T22:25:34.758748+00:00",
+      "raw_snippet": "רק בהתקשרות שבה היתה לאותו גוף או עסק, לפי העניין, עדיפות בעיצוב תנאי החוזה",
+      "confidence": "high",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/payment-terms-law.md"
+      ]
+    },
+    {
+      "id": "mtl-esek-definition",
+      "claim_id": "mtl-esek-definition",
+      "claim": "Section 2 / סעיף 2 of the Late Payment Law defines \"esek\" as a financial institution, an oseik morshe or an oseik patur, excluding a corporation at least half-owned by a local authority, a water corporation, Mifal HaPayis and the sports-betting council.",
+      "claim_type": "regulatory",
+      "source_url": "https://www.nevo.co.il/law_html/law00/144599.htm",
+      "source_fetched_at": "2026-08-26T22:25:34.758748+00:00",
+      "fetched_at": "2026-08-26T22:25:34.758748+00:00",
+      "raw_snippet": "עסק \" – מוסד כספי, עוסק מורשה או עוסק פטור כהגדרתם בחוק מס ערך מוסף, התשל\"ו-1975, למעט תאגיד שבידי רשות מקומית לפחות מחצית מההון",
+      "confidence": "high",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/payment-terms-law.md"
+      ]
+    },
+    {
+      "id": "vat-30a5-dual-beneficiary",
+      "claim_id": "vat-30a5-dual-beneficiary",
+      "claim": "VAT Law section 30(a)(5) does not zero-rate a service where the subject of the agreement is that the service is actually rendered, in addition to the foreign resident, also to an Israeli resident in Israel, an Israeli-majority partnership, or a company treated as an Israeli resident.",
+      "claim_type": "regulatory",
+      "source_url": "https://he.wikisource.org/wiki/%D7%97%D7%95%D7%A7_%D7%9E%D7%A1_%D7%A2%D7%A8%D7%9A_%D7%9E%D7%95%D7%A1%D7%A3",
+      "source_fetched_at": "2026-08-26T22:25:34.758748+00:00",
+      "fetched_at": "2026-08-26T22:25:34.758748+00:00",
+      "raw_snippet": "לא יראו שירות כניתן לתושב חוץ כאשר נושא ההסכם הוא מתן השירות בפועל, נוסף על תושב החוץ, גם לתושב ישראל בישראל, לשותפות שרוב הזכויות בה הן של שותפים תושבי ישראל או לחברה שלענין פקודת מס הכנסה רואים אותה כתושבת ישראל",
+      "confidence": "high",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/vat-and-oseik-status.md"
+      ]
+    },
+    {
+      "id": "allocation-number-5000",
+      "claim_id": "allocation-number-5000",
+      "claim": "From 01.06.2026 input VAT may be offset from invoices above 5,000 NIS only if the Tax Authority issued an allocation number; the thresholds were 10,000 NIS in H1 2026, 20,000 NIS in 2025 and 25,000 NIS in 2024.",
+      "claim_type": "regulatory",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%A7%D7%99%D7%96%D7%95%D7%96_%D7%AA%D7%A9%D7%9C%D7%95%D7%9E%D7%99_%D7%9E%D7%A2%22%D7%9E_%D7%A9%D7%9C_%D7%A2%D7%95%D7%A1%D7%A7_%D7%9E%D7%95%D7%A8%D7%A9%D7%94_(%D7%9E%D7%A1_%D7%AA%D7%A9%D7%95%D7%9E%D7%95%D7%AA)",
+      "source_fetched_at": "2026-08-26T22:25:34.758748+00:00",
+      "fetched_at": "2026-08-26T22:25:34.758748+00:00",
+      "raw_snippet": "מ-01.06.2026 ניתן לקזז מע\"מ מחשבוניות שמעל 5,000 ₪ רק אם ניתן להן מספר הקצאה מרשות המיסים (לחשבוניות שהוצאו במחצית הראשונה של 2026 מספר הקצאה נדרש רק מעל 10,000 ₪, לחשבוניות שהוצאו בשנת 2025 מספר הקצאה נדרש רק מעל 20,000 ₪, ולחשבוניות שהוצאו בשנת 2024 - רק מעל 25,000 ₪)",
+      "confidence": "high",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "id": "allocation-number-retro",
+      "claim_id": "allocation-number-retro",
+      "claim": "An allocation number can be requested retroactively up to a year from the invoice date, with a deferral application after six months.",
+      "claim_type": "regulatory",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%A7%D7%99%D7%96%D7%95%D7%96_%D7%AA%D7%A9%D7%9C%D7%95%D7%9E%D7%99_%D7%9E%D7%A2%22%D7%9E_%D7%A9%D7%9C_%D7%A2%D7%95%D7%A1%D7%A7_%D7%9E%D7%95%D7%A8%D7%A9%D7%94_(%D7%9E%D7%A1_%D7%AA%D7%A9%D7%95%D7%9E%D7%95%D7%AA)",
+      "source_fetched_at": "2026-08-26T22:25:34.758748+00:00",
+      "fetched_at": "2026-08-26T22:25:34.758748+00:00",
+      "raw_snippet": "ניתן לבקש מספר הקצאה בדיעבד עד שנה מהמועד שבו הוצאה החשבונית. אם עברו 6 חודשים, יש להגיש גם בקשה לדחיית מועד.",
+      "confidence": "high",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "id": "allocation-number-gates-deduction",
+      "claim_id": "allocation-number-gates-deduction",
+      "claim": "A missing allocation number blocks the offset of the VAT, that is the buyer input-VAT deduction, rather than invalidating the invoice.",
+      "claim_type": "regulatory",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%A7%D7%99%D7%96%D7%95%D7%96_%D7%AA%D7%A9%D7%9C%D7%95%D7%9E%D7%99_%D7%9E%D7%A2%22%D7%9E_%D7%A9%D7%9C_%D7%A2%D7%95%D7%A1%D7%A7_%D7%9E%D7%95%D7%A8%D7%A9%D7%94_(%D7%9E%D7%A1_%D7%AA%D7%A9%D7%95%D7%9E%D7%95%D7%AA)",
+      "source_fetched_at": "2026-08-26T22:25:34.758748+00:00",
+      "fetched_at": "2026-08-26T22:25:34.758748+00:00",
+      "raw_snippet": "לרשות המיסים יש סמכות לא לאשר מספר הקצאה, ואם הוא לא יתקבל - לא ניתן יהיה לקזז את המע\"מ.",
+      "confidence": "high",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "id": "contracts-law-s6-conduct",
+      "claim_id": "contracts-law-s6-conduct",
+      "claim": "Section 6 / סעיף 6 of the Contracts Law: acceptance may also be by an act performing the contract or by other conduct, where such modes are implied by the offer.",
+      "claim_type": "regulatory",
+      "source_url": "https://www.nevo.co.il/law_html/law00/71888.htm",
+      "source_fetched_at": "2026-08-26T22:25:34.758748+00:00",
+      "fetched_at": "2026-08-26T22:25:34.758748+00:00",
+      "raw_snippet": "הקיבול יכול שיהיה במעשה לביצוע החוזה או בהתנהגות אחרת, אם דרכים אלה של קיבול משתמעות מן ההצעה",
+      "confidence": "high",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     }
   ]
 }

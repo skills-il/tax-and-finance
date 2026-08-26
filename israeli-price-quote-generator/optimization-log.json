@@ -9,6 +9,37 @@
         "[CARRY] MINOR: the nevo file id for the Contracts Law (Remedies) is 71887 and the General Part is 71888 - if a specific Remedies URL is ever added to the reference table, point it at 71887. Currently only the General Part URL is in the table (correct).",
         "[CARRY] MINOR enrichment idea: the 2026 'esek zair' reform (30% automatic normative expense deduction under the osek-patur ceiling) could be mentioned; not a correction."
       ]
+    },
+    {
+      "version": "1.2.0",
+      "date": "2026-08-27",
+      "holdout_before": 1.0,
+      "holdout_after": 1.0,
+      "buckets": {
+        "improved": [],
+        "regressed": [],
+        "persistent_fail": [],
+        "stable_success": [
+          "כתוב לי הצעת מחיר ללקוח",
+          "draft a price quote for an Israeli client",
+          "הצעת מחיר לעוסק פטור",
+          "תוציא לי חשבונית מס (negative, routes to green-invoice)"
+        ]
+      },
+      "lessons": [
+        "Description change this cycle was confined to the opening legal clause (now 'אינו ייעוץ משפטי ואינו ייעוץ מס' / 'Not legal advice and not tax advice', per the legal gate) plus replacing 'statutory max shotef+45' with 'statutory default shotef+45'. No trigger phrase moved, so the frozen holdout scored identically before and after.",
+        "CRITICAL fixed: the Late Payment Law table carried only 3 of 5 payer rows. Added 3(a) two counting bases, 3(b) state construction 85/70, 3(e) budgeted bodies and universities, the 3(f) 150-day financed-portion stop, the section 2 definition of 'esek', the 3(h) incomplete-invoice rule and the two-stage section 4 interest with its 4(b) superiority condition.",
+        "CRITICAL fixed: the skill told users a longer agreed B2B payment term is void. Section 3(g) permits an expressly agreed different date unless exceptionally unfair. This had propagated into SKILL.md, SKILL_HE.md, references/payment-terms-law.md and the script warning.",
+        "CRITICAL fixed: VAT s.30(a)(5) was stated as a flat 'customer abroad = 0%'. The dual-beneficiary exception (service actually rendered also to an Israeli resident) is the commonest freelancer trap and is now Step 6.5, in Template 4, and a runtime warning in the script.",
+        "CRITICAL fixed: Contracts Law s.7 was cited for acceptance in both languages. Correct sections are 5 (notice) and 6(a) (conduct). evidence.json had flagged this in an earlier cycle and the fix had never been applied to the files, so a recorded-but-unapplied evidence note is worth grepping for at the start of every cycle.",
+        "MAJOR fixed: Remedies Law s.15 was described as an actual-damages cap. Agreed damages are payable without proof of damage and reducible only against damage foreseeable at formation, so the prior text understated the freelancer's position.",
+        "MAJOR added: allocation numbers (5,000 NIS from 01.06.2026), with the accurate rule that the number gates the BUYER's input-VAT deduction and does not invalidate the invoice.",
+        "PayBox fee is UNVERIFIED: paybox.co.il does not resolve and the prior Calcalist source now 403s. The skill routes the user to the bank instead of stating a number. Re-check next cycle and restore a figure only from a Discount Bank page.",
+        "Bit's own homepage and its FAQ page give different start dates for the 0.8% receipts fee (1.5.26 vs 1.1.25). The skill states the rate and the 100,000 NIS annual cap and deliberately does not state a start date. Worth re-checking whether Bit reconciles them.",
+        "gov.il Cloudflare-blocks every non-browser client, so the Income Tax Ordinance s.164 evidence entry stays 'unreachable' rather than verified. Find a fetchable primary source for s.164 next cycle.",
+        "Expert MAJOR deferred: no retainer template exists. The Bundled Resources promise was corrected to describe the four templates that do exist; adding a retainer template (monthly invoicing anchor, minimum term, unused-hours rollover) is the next content increment.",
+        "Expert MINOR deferred: render_html wraps markdown in <pre> instead of converting it, so the A4 table CSS is effectively dead. Either convert the markdown or drop the promise of a printable HTML quote."
+      ]
     }
   ]
 }

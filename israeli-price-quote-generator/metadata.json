@@ -1,6 +1,6 @@
 {
   "author": "skills-il",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "category": "tax-and-finance",
   "tags": {
     "he": [
@@ -29,8 +29,8 @@
     "en": "Israeli Price Quote Generator"
   },
   "display_description": {
-    "he": "אינו ייעוץ מס ואינו דוח שהוגש. מייצר הצעות מחיר (הצעת מחיר) לפרילנסרים ועוסקים מורשים/פטורים בישראל, עם חישוב מע\"מ 18% נכון, כותרת מתאימה לסטטוס העוסק (עוסק מורשה / עוסק פטור / חברה בע\"מ), תאריך תוקף, ותנאי תשלום לפי חוק מוסר תשלומים לספקים תשע\"ז-2017 (שוטף+30 כברירת מחדל, מקסימום חוקי שוטף+45 בין עסקים). השתמשו כשרוצים להכין הצעת מחיר ללקוח, להציע שירות לפני חתימת חוזה, או לבנות מסמך הצעה דו-לשוני לעברית ולאנגלית. אל תשתמשו להפקת חשבונית מס לאחר אישור ההצעה (השתמשו ב-green-invoice), להצעות למכרזים ממשלתיים (israeli-tender-proposal-builder), או לגביית חובות (israeli-client-payment-chaser).",
-    "en": "Not tax advice and not a filed return. Generates Hebrew price quotes (hatzaat mechir) for Israeli freelancers, oseik morshe, oseik patur, and incorporated businesses. Computes 18% VAT correctly, sets the issuer header per oseik status, adds a validity date, and writes a payment-terms clause aligned with the Late Payment to Suppliers Law 5777-2017 (shotef+30 default, statutory max shotef+45 for B2B). Use when a user asks to draft a price quote, build a pre-sale proposal with VAT, send a hatzaat mechir, or produce a bilingual HE/EN quote. Do NOT use for issuing actual tax invoices after acceptance (use green-invoice), for government tender proposals (use israeli-tender-proposal-builder), or for chasing unpaid invoices (use israeli-client-payment-chaser)."
+    "he": "אינו ייעוץ משפטי ואינו ייעוץ מס. מייצר הצעות מחיר (הצעת מחיר) לפרילנסרים ועוסקים מורשים/פטורים בישראל, עם חישוב מע\"מ 18% נכון, כותרת מתאימה לסטטוס העוסק (עוסק מורשה / עוסק פטור / חברה בע\"מ), תאריך תוקף, ותנאי תשלום לפי חוק מוסר תשלומים לספקים תשע\"ז-2017 (שוטף+30 כברירת מחדל, שוטף+45 כברירת המחדל שבחוק בין עסקים). השתמשו כשרוצים להכין הצעת מחיר ללקוח, להציע שירות לפני חתימת חוזה, או לבנות מסמך הצעה דו-לשוני לעברית ולאנגלית. אל תשתמשו להפקת חשבונית מס לאחר אישור ההצעה (השתמשו ב-green-invoice), להצעות למכרזים ממשלתיים (israeli-tender-proposal-builder), או לגביית חובות (israeli-client-payment-chaser).",
+    "en": "Not legal advice and not tax advice. Generates Hebrew price quotes (hatzaat mechir) for Israeli freelancers, oseik morshe, oseik patur, and incorporated businesses. Computes 18% VAT correctly, sets the issuer header per oseik status, adds a validity date, and writes a payment-terms clause aligned with the Late Payment to Suppliers Law 5777-2017 (shotef+30 default, statutory shotef+45 default for B2B). Use when a user asks to draft a price quote, build a pre-sale proposal with VAT, send a hatzaat mechir, or produce a bilingual HE/EN quote. Do NOT use for issuing actual tax invoices after acceptance (use green-invoice), for government tender proposals (use israeli-tender-proposal-builder), or for chasing unpaid invoices (use israeli-client-payment-chaser)."
   },
   "supported_agents": [
     "claude-code",
@@ -74,5 +74,5 @@
       "language": "en"
     }
   ],
-  "domain_checklist_version": 1
+  "domain_checklist_version": 2
 }

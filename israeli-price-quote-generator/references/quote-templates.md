@@ -29,7 +29,10 @@ Three Hebrew templates and one bilingual HE/EN template. Replace `{...}` placeho
 
 ## תנאי עבודה
 
-- **תנאי תשלום:** שוטף + 30 ימים מהנפקת החשבונית, בהתאם לחוק מוסר תשלומים לספקים, התשע"ז-2017.
+- **תנאי תשלום:** שוטף + 30 ימים מהנפקת החשבונית, כמוסכם בין הצדדים. בהיעדר הסכמה אחרת חוק מוסר תשלומים לספקים, התשע"ז-2017 קובע שוטף + 45 בעסקה בין עסקים.
+- **פרטי החשבונית:** על החשבונית לכלול {po_or_contract_ref}. חשבון שחסר בו פרט מהותי שנדרש בחוזה מוחזר ונחשב כאילו לא הומצא (סעיף 3(ח) לחוק).
+- **מספר הקצאה:** בהצעה מעל 5,000 ₪ ללקוח עסקי, החשבונית תופק עם מספר הקצאה מרשות המסים.
+- **ניכוי במקור:** התשלום כפוף להצגת אישור פטור מניכוי מס במקור בתוקף; אחרת ינוכה לפי השיעור החל על הספק.
 - **שינויים בהיקף:** כל שינוי מעבר למפורט יחויב בנפרד לפי תעריף {hourly_rate} ₪ + מע"מ לשעה.
 - **אמצעי תשלום:** Bit {phone}, או העברה בנקאית: {bank_name} ({bank_code}), סניף {branch}, חשבון {account}.
 
@@ -77,7 +80,10 @@ ________________________  תאריך: __________
 
 ## תנאי עבודה
 
-- **תנאי תשלום:** {payment_split}, שוטף + 30 ימים, בהתאם לחוק מוסר תשלומים לספקים, התשע"ז-2017.
+- **תנאי תשלום:** {payment_split}, שוטף + 30 ימים, כמוסכם בין הצדדים. בהיעדר הסכמה אחרת חוק מוסר תשלומים לספקים, התשע"ז-2017 קובע שוטף + 45 בעסקה בין עסקים.
+- **פרטי החשבונית:** על החשבונית לכלול {po_or_contract_ref}. חשבון שחסר בו פרט מהותי שנדרש בחוזה מוחזר ונחשב כאילו לא הומצא (סעיף 3(ח) לחוק).
+- **מספר הקצאה:** בהצעה מעל 5,000 ₪ ללקוח עסקי, החשבונית תופק עם מספר הקצאה מרשות המסים.
+- **ניכוי במקור:** התשלום כפוף להצגת אישור פטור מניכוי מס במקור בתוקף; אחרת ינוכה לפי השיעור החל על הספק.
 - **שינויים בהיקף:** כל שינוי בהיקף העבודה מעבר למפורט בהצעה זו יחויב בנפרד לפי תעריף שעתי של {hourly_rate} ₪ + מע"מ.
 - **ביטול הזמנה:** ביטול לאחר אישור הצעה זו יחויב ב-{cancellation_percent}% מהסכום הכולל.
 - **אמצעי תשלום:** {payment_methods}.
@@ -114,7 +120,7 @@ ________________________  תאריך: __________
 
 ## תנאי עבודה
 
-- **תנאי תשלום:** שוטף + 30 ימים מהנפקת חשבונית עסקה, בהתאם לחוק מוסר תשלומים לספקים, התשע"ז-2017.
+- **תנאי תשלום:** שוטף + 30 ימים מהנפקת דרישת התשלום, כמוסכם בין הצדדים. בהיעדר הסכמה אחרת חוק מוסר תשלומים לספקים, התשע"ז-2017 קובע שוטף + 45 בעסקה בין עסקים.
 - **לאחר אישור ההצעה** תופק חשבונית עסקה, ועם קבלת התשלום תופק קבלה.
 - **אמצעי תשלום:** Bit {phone}, או העברה בנקאית: {bank_name}, סניף {branch}, חשבון {account}.
 
@@ -158,7 +164,9 @@ ________________________  תאריך: __________
   - Bank: {bank_name}, SWIFT {swift_code}
   - IBAN: {iban}
 - **Currency / מטבע:** USD. השער הקובע לחיוב הוא שער יציג של בנק ישראל ביום הוצאת החשבונית. The reference rate is the Bank of Israel daily reference rate on the invoice date.
-- **VAT:** Zero-rated under VAT Law section 30(a)(5) (export of services to non-resident).
+- **VAT:** Zero-rated under VAT Law section 30(a)(5) (service to a foreign resident).
+
+> **Before using this template, check the section 30(a)(5) exception.** The zero rate does NOT apply where the subject of the agreement is that the service is actually rendered, in addition to the foreign customer, also to an Israeli resident in Israel, an Israeli-majority partnership, or a company treated as an Israeli resident (the classic case: a foreign parent contracting for work delivered to its Israeli subsidiary). Ask who receives the service, not who pays. If the answer is not clearly "only the foreign resident", quote "plus VAT if applicable" instead of 0% and check with an accountant. Keep the contract, proof of foreign residency and the foreign-currency payment record.
 
 ## Acceptance / חתימת קבלת ההצעה
 
