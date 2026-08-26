@@ -55,7 +55,31 @@ Use this template to track all recurring expenses. Fill in each row, then evalua
 ## Cancellation Checklist
 - [ ] Check contract end date and penalties
 - [ ] Download/export any data you need before canceling
-- [ ] Cancel via the same channel you signed up (or easier per Israeli law)
-- [ ] Get written confirmation of cancellation
-- [ ] Set reminder to verify no further charges appear
-- [ ] Note the 14-day cooling period right under Israeli Consumer Protection Law
+- [ ] Send the cancellation notice through one of the channels the business must accept under s.14ט(א) (phone or in person, registered mail, email, fax, or the website's home-page cancellation link required by s.14ט(ב))
+- [ ] Get written confirmation of cancellation and keep the proof of sending
+- [ ] Diarise the s.13ד(ג) deadline: the contract ends within three business days of the notice, six if sent by registered mail, and charges must stop from then
+- [ ] Set a reminder to verify no further charges appear; if they do, s.31א allows statutory damages up to 10,000 NIS with no proof of loss
+- [ ] Check which cancellation regime applies: the 14-day cooling-off right covers door-to-door (s.14) and distance/online (s.14ג) transactions, NOT every subscription. A gym membership runs on s.13א1 and the Fourth Schedule instead
+
+
+## Cancellation notice template (Hebrew)
+
+Send this through any channel section 14ט(א) requires the business to accept, and keep the proof of sending. The date matters: under 13ד(ג) the contract ends three business days later, or six if sent by registered mail.
+
+```
+לכבוד: {שם העוסק}
+תאריך: {תאריך}
+הנדון: הודעת ביטול עסקה מתמשכת
+
+שמי {שם מלא}, מספר זהות {מספר זהות}, מספר לקוח/מנוי {מספר}.
+אני מודיע/ה בזאת על ביטול העסקה המתמשכת שלי אצלכם, בהתאם לסעיף 14ט לחוק הגנת הצרכן, התשמ"א-1981.
+בהתאם לסעיף 13ד(ג) לחוק, החוזה יסתיים בתוך שלושה ימי עסקים ממסירת הודעה זו, ומאותו מועד עליכם להפסיק את אספקת השירות ולחדול מכל חיוב בגינו.
+אבקש אישור ביטול בכתב וכן אישור על הפסקת החיובים.
+
+בכבוד רב,
+{שם} {טלפון} {דואר אלקטרוני}
+```
+
+For a gym membership use the same letter but state section 13א1 and the Fourth Schedule instead, and note that cancellation takes effect at the end of one month. Add one demand: ask the club, in writing, to produce (a) the written pre-contract disclosure of the alternative-track monthly price and (b) the resulting cancellation-fee calculation. Without that disclosure the Schedule gives no basis for the fee at all, and the 25 / 20 / 17 percent figures are only a ceiling on a fee that has to be computed first.
+
+**Mobile lines:** do not send this letter to the current carrier as a first step. Start the move at the receiving provider and let the porting process close the old line, or the number can be lost.

@@ -1,6 +1,36 @@
 {
   "cycles": [
     {
+      "version": "1.4.0",
+      "date": "2026-08-27",
+      "lessons": [
+        "CRITICAL fixed: Golan Telecom was described as an independent operator with unlimited 30-50 NIS plans. Golan's own site states its services run on Cellcom's licences since 24.12.2023, and its published plans are quota-based (34.90/300GB, 39/400GB, 49/750GB 5G, 59/1500GB). The 'switch to a rival' framing had survived two prior cycles.",
+        "CRITICAL fixed: 'gift cards are non-refundable' was stated flatly. A card bought online is a distance sale: 14 days under s.14ג(ג), refund in 14 days with a fee of at most 5% or 100 NIS under s.14ה(ב)(1), and four months under s.14ג1 for a person with a disability, a person 65+, or an oleh within five years.",
+        "CRITICAL fixed: no cancellation-regime routing existed, so an agent could send a continuous-contract notice for a gym or, worse, cancel a mobile line before porting and lose the number. Gotcha 9 now routes by contract type and carries the porting warning.",
+        "The gift-card renewal regime was misdescribed as 'vouchers over 150 NIS extendable to 15 years, refundable to the payment method on cancellation'. The regulations actually give a 5-year floor plus a 5-year renewal, 10 years where the balance exceeds 150 NIS, notices above 50 NIS, and a refund credited back as a balance on the payment instrument, not cash.",
+        "Expert CRITICAL REJECTED after reading the statute: the reviewer asserted the Fourth Schedule gives a no-fee medical exit from a gym contract. It does not. Encoding it would have told users to demand a right that does not exist. The real omission, now added, is that the fee is months-used times the gap to the alternative-track monthly price and is chargeable only where that price was disclosed in writing before signing, with 25/20/17 percent as a ceiling.",
+        "Added: s.14ט(א) channels and the s.14ט(ב) mandatory home-page cancellation link, s.13ד(ג) three/six business days, s.31א statutory damages up to 10,000 NIS, s.13ד1 overcharge timetable, s.14ז credit-voucher rules, the Bank of Israel fee reform staging (7 NIS debit cap October 2026, 10/5/1 NIS caps July 2027), and electricity-supplier switching.",
+        "Removed as unverifiable: the PayBox fee figure, 'Cal Young', 'American Express (Hever club)' as a product name, the Clal ownership year, the FLY CARD 1.6.2026 issuance date, the Har HaBituach government-login claim, and the cashback platforms' payout minimums and store counts. Each was a specific, plausible, unsourced number.",
+        "Deferred: the seasonal-sales discount ranges remain unsourced editorial estimates presented in a table that looks like the sourced Golan prices. Either source them or mark the table as indicative next cycle.",
+        "Deferred (Expert MINOR): a curriculum-based course and a seasonal pool-only facility fall outside the Fourth Schedule's מכון כושר definition; noted inline but not expanded.",
+        "Note for next cycle: gov.il and boi.org.il serve Radware bot-challenge pages with HTTP 200 to plain fetches, so a 200 there is not evidence the content was read. Use the browser with a location.href assertion.",
+        "Description change this cycle was the legal-gate prefix only ('אינו ייעוץ משפטי.' / 'Not legal advice.'); no trigger phrase moved, so the frozen holdout scored identically before and after."
+      ],
+      "holdout_before": 0.9,
+      "holdout_after": 0.9,
+      "buckets": {
+        "improved": [],
+        "regressed": [],
+        "persistent_fail": [],
+        "stable_success": [
+          "איך אני חוסך כסף בישראל",
+          "cancel my gym membership Israel",
+          "השוואת מחירים לפני קנייה",
+          "invest my savings (negative, routes to pension skill)"
+        ]
+      }
+    },
+    {
       "version": "1.3.1",
       "date": "2026-07-16",
       "lessons": [

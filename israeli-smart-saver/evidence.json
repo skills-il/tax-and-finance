@@ -5,10 +5,10 @@
   "claims": [
     {
       "claim_id": "consumer-law-sections",
-      "claim": "Israeli Consumer Protection Law: gift-card minimum 5-year validity from issuance is set by Amendment 33 (2014), section 14ח. The 14-day cancellation right (tkufat tzinun) applies to door-to-door sales (section 14) and distance/online sales (section 14ג). Continuous transactions (esek mitmashech) are cancellable at any time under the Law's continuous-transaction provisions. Also covers: סעיף 14ח",
+      "claim": "Section 14ח(ב) of the Consumer Protection Law requires a limited-validity gift card to run at least five years from issuance, and blocks use from the date of a bankruptcy or liquidation order against the issuer. (סעיף 14ח; ראו גם סעיף 14ג לעסקת מכר מרחוק וסעיף 14 לרוכלות)",
       "source_url": "https://www.nevo.co.il/law_html/law00/70305.htm",
-      "raw_snippet": "בתקופת ההודעה, על מועד סיום העסקה או ההתחייבות; המועד האמור יצוין גם בכל אחד מאלה: (1) בחוזה, אם קיים חוזה בכתב, או במסמך לפי הוראות סעיף 14ג(ב); (2) בכל חשבונית, או קבלה או הודעת תשלום, הנשלחת לצרכן בתקופה שתחילתה שלושה חודשים לפני מועד סיום העסקה או ההתחייבות, ובלבד שאם נשלחת לצרכן אחת מאלה יותר מאשר פעם בחודש, תחול הוראה זו אחת לחודש בלבד; המועד האמור יצוין בהבלטה מיוחדת ובאותיות ברורות וקריאות; (3) במסרון למספר הטלפון הנייד שמסר הצרכן לעוסק, אם מסר – 21 ימים לפני מועד סיום העסקה או ההתחייבות, ואם חל מועד מסירת ההודעה לפי פס",
-      "fetched_at": "2026-08-18",
+      "raw_snippet": "ובלבד שתקופת תוקפו של התו לא תפחת מחמש שנים ממועד ההנפקה; ואולם ניתן נגד מנפיק תו קנייה צו פשיטת רגל או צו פירוק, לא יוכל האוחז בתו לרכוש באמצעותו טובין או שירותים ממועד מתן הצו.",
+      "fetched_at": "2026-08-26T23:27:12.064492+00:00",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
@@ -19,27 +19,30 @@
     },
     {
       "claim_id": "gift-card-2025-payment-services-reform",
-      "claim": "On 8 July 2025 the Knesset Economics Committee approved regulations for digital gift vouchers: vouchers worth over 150 NIS (150 שקל) may stay valid for up to 15 years instead of the current ten, issuers must send consumers an annual reminder and received a temporary exemption from the Payment Services Law, and the regulations apply to previously issued vouchers as well, taking effect about six months later. The 150 NIS threshold is written 150 ש\"ח elsewhere in the skill; the article writes it 150 שקל.",
-      "source_url": "https://www.calcalist.co.il/local_news/article/bkdjihqrxx",
-      "raw_snippet": "שוברי מתנה בשווי מעל 150 שקל יוכלו להישאר בתוקף עד 15 שנה במקום עשר שנים כיום. החברות יחויבו לשלוח תזכורת שנתית לצרכנים וקיבלו פטור זמני מחוק שירותי תשלום. התקנות יחולו גם על שוברים שהונפקו בעבר וייכנסו לתוקף בעוד כחצי שנה",
-      "fetched_at": "2026-08-10T00:00:00Z",
+      "claim": "Under the Payment Services (Exemption) Regulations, an expired payment instrument is renewed on the holder request for a further five years, and for ten years where the accrued balance exceeds 150 NIS.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/208503.htm",
+      "raw_snippet": "עלה הסכום הצבור באמצעי תשלום כאמור בפסקת משנה (א) שתוקפו פג על 150 שקלים חדשים, יחדש נותן שירותי התשלום לבקשת המחזיק את תוקפו",
+      "fetched_at": "2026-08-26T23:27:12.064492+00:00",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
       ],
-      "source_note": "Replaced 2026-08-10: the prior snippet was the ellipsis-stitched stub 'תוקף של 15 שנה ... מעל 150 שקל ... תזכורת שנתית'. Contiguous standfirst re-fetched via a headless browser (calcalist returns a JS shell to plain HTTP clients). Two prior assertions are NOT in this article and have been dropped from the claim: an alert one month before expiry, and refundability of remaining balances to the payment method on cancellation. Note the article says issuers received a temporary EXEMPTION from the Payment Services Law, which is the opposite of the prior framing of the reform as an extension of the Payment Services Regulations."
+      "source_note": "Snippet located in the consolidated Nevo text of the Payment Services (Exemption) Regulations and independently re-checked by a separate reviewer in this cycle.",
+      "verified_at": "2026-08-26T23:45:29.425446+00:00"
     },
     {
       "claim_id": "elal-flycard-isracard",
-      "claim": "The El-Al FLY CARD club moves from CAL to Isracard. The existing CAL-issued card keeps working and keeps accruing Matmid points until 31 December 2026; from 1 January 2027 it becomes an ordinary credit card that no longer accrues FLY CARD points, and migration to an Isracard card requires an active application (it is not automatic).",
-      "source_url": "https://hakartis.com/blog/flycard-cal-to-isracard-migration-2026",
-      "raw_snippet": "עד 31 בדצמבר 2026: הכרטיס הנוכחי של כאל ממשיך לעבוד ולצבור נקודות הנוסע המתמיד כרגיל. אין צורך לעשות דבר בינתיים.",
-      "fetched_at": "2026-08-10T00:00:00Z",
+      "claim": "A CAL-issued El Al FLY CARD keeps earning Matmid frequent-flyer points only until 31 December 2026, per El Al own FAQ.",
+      "source_url": "https://www.elal.com/heb/frequentflyer/flycard/flycard_all",
+      "raw_snippet": "כן, וזאת עד ליום 31 בדצמבר 2026, כפי שצוין בהודעה שנשלחה אליך ממועדון הנוסע המתמיד וחברת כאל.",
+      "fetched_at": "2026-08-26T23:27:12.064492+00:00",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
       ],
-      "source_note": "Replaced 2026-08-10: the prior snippet was the ellipsis-stitched keyword stub 'FLY CARD ... ישראכרט ... כאל ... אל על'. Re-fetched via a headless browser. The prior claim's '1 June 2026' Isracard issuance date does NOT appear on the page and has been removed. A second contiguous quote from the same page: 'החל מ-1 בינואר 2027: הכרטיס הופך לכרטיס אשראי רגיל.'"
+      "source_note": "Replaced 2026-08-10: the prior snippet was the ellipsis-stitched keyword stub 'FLY CARD ... ישראכרט ... כאל ... אל על'. Re-fetched via a headless browser. The prior claim's '1 June 2026' Isracard issuance date does NOT appear on the page and has been removed. A second contiguous quote from the same page: 'החל מ-1 בינואר 2027: הכרטיס הופך לכרטיס אשראי רגיל.'",
+      "verified_via": "browser",
+      "verified_at": "2026-08-26T23:27:12.064492+00:00"
     },
     {
       "claim_id": "credit-card-companies",
@@ -91,17 +94,6 @@
       "verified_at": "2026-08-18"
     },
     {
-      "claim_id": "boi-public-info",
-      "claim": "The Bank of Israel publishes banking-customer service and complaint information for the public.",
-      "source_url": "https://www.boi.org.il/en/information-and-service-to-the-public/",
-      "raw_snippet": "Bank of Israel https://www.boi.org.il/en/information-and-service-to-the-public/banking-customer-service-information/",
-      "fetched_at": "2026-05-31T00:00:00Z",
-      "appears_in": [
-        "SKILL.md",
-        "SKILL_HE.md"
-      ]
-    },
-    {
       "claim_id": "zap-price-comparison",
       "claim": "Zap.co.il is the leading Israeli price-comparison site for electronics and appliances.",
       "source_url": "https://www.zap.co.il",
@@ -114,7 +106,7 @@
     },
     {
       "claim_id": "illustrative-figures",
-      "claim": "Illustrative example amounts, discount rates and typical ranges (not regulated facts), used in worked examples and guidance: cashback rates 2-8% / 2-10% / 5-15%; example 1,000 NIS purchase with 3% card + 5% platform + 10% gift-card stacking saving ~172 NIS (~17%); example monthly savings 200 NIS = 2,400 NIS/year, 300-800 NIS/month; subscription costs 10-500 NIS; seasonal discounts 10-70%; telecom plans 30-150 NIS/month; interest-free tashlumim up to 12 months; gift-card discounts 5-15%; example phone 120 NIS vs MVNO ~40-45 NIS saving 80 NIS/month = 960 NIS/year.",
+      "claim": "Illustrative example amounts, discount rates and typical ranges (not regulated facts), used in worked examples and guidance: cashback rates 2-8% / 2-10% / 5-15%; example 1,000 NIS purchase with 3% card + 5% platform + 10% gift-card stacking saving ~172 NIS (~17%); example monthly savings 200 NIS = 2,400 NIS/year, 300-800 NIS/month; subscription costs 10-500 NIS; seasonal discounts 10-70%; telecom plans 30-150 NIS/month; interest-free tashlumim up to 12 months; gift-card discounts 5-15%; example phone 120 NIS vs MVNO ~40-45 NIS saving 80 NIS/month = 960 NIS/year. Includes the illustrative 8,000 ₪ per month spending threshold in the card-choice table.",
       "source_url": "https://www.gov.il/he/departments/consumer_protection_authority",
       "raw_snippet": "Illustrative ranges (not regulated): 20% 30% 40% 50% 60% 80% 1,000 שקל 100 שקל 120 שקל 150 שקל 172 ש\"ח 2,400 שקל 200 שקל 27 ש\"ח 30 שקל 27 NIS 30 NIS 35 NIS 35 שקל 40 NIS 40 שקל 100 NIS 400 שקל 45 ש\"ח 45 שקל 50 שקל 500 שקל 80 שקל 800 שקל 960 שקל",
       "fetched_at": "2026-08-10T00:00:00Z",
@@ -123,6 +115,249 @@
         "SKILL_HE.md"
       ],
       "source_note": "Deep link substituted 2026-08-10 for the bare zap.co.il homepage. This entry is not a quotation: it records example amounts, discount rates and typical ranges used inside the skill's worked examples. They are illustrative arithmetic, not published figures, and no URL can substantiate them; the Consumer Protection and Fair Trade Authority page is given as the topical anchor."
+    },
+    {
+      "claim_id": "cpl-14tet-channels",
+      "claim": "Section 14ט(א) of the Consumer Protection Law obliges a business to accept a cancellation notice orally by phone or at the premises, by registered mail, by email, by fax if it has one, over the internet where the deal could be made online, and by any further channel the Minister sets.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/70305.htm",
+      "raw_snippet": "יאפשר לו העוסק לבטל את העסקה בהודעת ביטול שימסור לו הצרכן בכל אחת מהדרכים המפורטות להלן",
+      "fetched_at": "2026-08-26T23:27:12.064492+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "verified_at": "2026-08-26T23:42:10.730592+00:00"
+    },
+    {
+      "claim_id": "cpl-14tet-b-homepage-link",
+      "claim": "Section 14ט(ב) requires a business that can be contracted with online to place a dedicated cancellation link, prominently and clearly, on the home page of its website.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/70305.htm",
+      "raw_snippet": "ייצור עוסק בדף הראשי של אתר האינטרנט שלו קישור ייעודי שבאמצעותו ניתן לשלוח הודעת ביטול בהתאם להוראות סעיף קטן (א)(5), שימוקם באופן מובלט וברור.",
+      "fetched_at": "2026-08-26T23:27:12.064492+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "verified_at": "2026-08-26T23:42:10.730592+00:00"
+    },
+    {
+      "claim_id": "cpl-13dalet-g-three-days",
+      "claim": "Section 13ד(ג): a continuous-transaction contract ends within three business days of the cancellation notice, or six business days if sent by registered mail, and from that date the business stops supply and may not charge for anything supplied later. (סעיף 13ד לחוק הגנת הצרכן)",
+      "source_url": "https://www.nevo.co.il/law_html/law00/70305.htm",
+      "raw_snippet": "חוזה בעסקה מתמשכת יסתיים בתוך שלושה ימי עסקים מיום שנמסרה הודעת ביטול לפי הוראות סעיף 14ט, ואם נמסרה הודעת הביטול באמצעות דואר רשום – בתוך שישה ימי עסקים",
+      "fetched_at": "2026-08-26T23:27:12.064492+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "verified_at": "2026-08-26T23:42:10.730592+00:00"
+    },
+    {
+      "claim_id": "cpl-31a-10000",
+      "claim": "Section 31א allows a court to award statutory damages of up to 10,000 NIS with no proof of loss, including where the consumer sent a cancellation notice under 14ט and the business kept charging. (סעיף 31א)",
+      "source_url": "https://www.nevo.co.il/law_html/law00/70305.htm",
+      "raw_snippet": "רשאי בית המשפט לפסוק, בשל אותה הפרה, פיצויים שאינם תלויים בנזק (בסעיף זה – פיצויים לדוגמה), בסכום שלא יעלה על 10,000 שקלים חדשים",
+      "fetched_at": "2026-08-26T23:27:12.064492+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "verified_at": "2026-08-26T23:42:10.730592+00:00"
+    },
+    {
+      "claim_id": "cpl-13d1-overcharge",
+      "claim": "Section 13ד1: the business has ten business days to investigate a claimed overcharge on a standing authorisation, must refund within four business days with shekel interest plus 16 NIS towards expenses, and must send a reasoned written answer within 21 business days.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/70305.htm",
+      "raw_snippet": "יברר העוסק את טענותו בתוך עשרה ימי עסקים; (2) מצא העוסק כי גבה מהצרכן סכום עודף, ישיבו לצרכן בתוך ארבעה ימי עסקים, בתוספת ריבית שקלית, מיום הגבייה ובתוספת תשלום בשל הוצאות הצרכן בסכום של 16 שקלים חדשים",
+      "fetched_at": "2026-08-26T23:27:12.064492+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "verified_at": "2026-08-26T23:42:10.730592+00:00"
+    },
+    {
+      "claim_id": "cpl-13a1-gym",
+      "claim": "Section 13א1 and the Fourth Schedule: a gym membership is cancelled by written notice, takes effect at the end of one month, and cancellation fees are capped at the lower of 25 / 20 / 17 percent of the consideration by third of the term, or the amount payable for the remaining term. (סעיף 13א1 והתוספת הרביעית)",
+      "source_url": "https://www.nevo.co.il/law_html/law00/70305.htm",
+      "raw_snippet": "דמי הביטול לא יעלו על הסכום הנמוך מבין הסכומים המחושבים לפי פסקה (1) או (2) להלן: (1) 25% מהתמורה – אם בוטלה בשליש הראשון של התקופה הקצובה, על 20% מהתמורה – אם בוטלה בשליש השני של התקופה הקצובה, או על 17% מהתמורה – אם בוטלה בשליש האחרון של התקופה הקצובה",
+      "fetched_at": "2026-08-26T23:27:12.064492+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "verified_at": "2026-08-26T23:42:10.730592+00:00"
+    },
+    {
+      "claim_id": "cpl-14zayin-credit-voucher",
+      "claim": "Section 14ז: a credit voucher is valid for at least two years from delivery, its redemption may not be conditioned on producing the invoice, restrictive redemption terms have no effect, and cash change is due where the unused remainder is at most 5 percent of the voucher or 100 NIS, whichever is lower. (סעיף 14ז)",
+      "source_url": "https://www.nevo.co.il/law_html/law00/70305.htm",
+      "raw_snippet": "שובר הזיכוי יהיה תקף לשנתיים לפחות מיום מסירתו; (4) מימוש שובר הזיכוי לא יותנה בהצגת החשבונית שניתנה לצרכן בעת ביצוע העסקה",
+      "fetched_at": "2026-08-26T23:27:12.064492+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "verified_at": "2026-08-26T23:42:10.730592+00:00"
+    },
+    {
+      "claim_id": "cpl-14zayin-cash-change",
+      "claim": "Under section 14ז(ג), a consumer redeeming a credit voucher on cheaper goods is entitled to the remainder in cash where it does not exceed 5 percent of the voucher amount or 100 NIS, whichever is lower.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/70305.htm",
+      "raw_snippet": "וההפרש לא עלה על 5% מהסכום הנקוב בשובר או 100 שקלים חדשים, לפי הנמוך מביניהם, יהיה הצרכן זכאי לקבל את העודף במזומן",
+      "fetched_at": "2026-08-26T23:27:12.064492+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "verified_at": "2026-08-26T23:42:10.730592+00:00"
+    },
+    {
+      "claim_id": "golan-cellcom-licences",
+      "claim": "Golan Telecom services are provided on the licences of Cellcom Israel Ltd since 24.12.2023, per Golan own website.",
+      "source_url": "https://www.golantelecom.co.il/offers",
+      "raw_snippet": "החל מ 24.12.2023 יינתנו שירותי גולן (גולן טלקום וגולן בינלאומי) על בסיס רשיונותיהן של סלקום ישראל בע\"מ וסלקום תקשורת קווית ש.מ.",
+      "fetched_at": "2026-08-26T23:27:12.064492+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "golan-published-plans",
+      "claim": "Golan Telecom publishes entry plans at 34.90 NIS for 300GB, 39 NIS for 400GB, 49 NIS for a 750GB 5G plan and 59 NIS for 1500GB.",
+      "source_url": "https://www.golantelecom.co.il/offers",
+      "raw_snippet": "גלישה 300GB שיחות בינלאומיות 240 דקות תוקף מבצע 12 חודשים תוקף מבצע - 12 חודשים 90. 34 ₪ לחודש",
+      "fetched_at": "2026-08-26T23:27:12.064492+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "boi-fee-reform-caps",
+      "claim": "The Bank of Israel fee reform published 21 June 2026 caps the monthly fee at 10 NIS for the first 100 transactions, 5 NIS where 0 to 2 transactions were made, and 1 NIS for each transaction beyond 100.",
+      "source_url": "https://www.boi.org.il/publications/pressreleases/21-06-2026/",
+      "raw_snippet": "העמלה בעד 100 הפעולות הראשונות בחודש תעמוד על סכום מרבי שלא יעלה על 10 שקלים חדשים",
+      "fetched_at": "2026-08-26T23:27:12.064492+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-08-26T23:27:12.064492+00:00"
+    },
+    {
+      "claim_id": "boi-fee-reform-dates",
+      "claim": "The new payment-account service takes effect in July 2027, with banks free to start earlier, and the supervised debit-card fee of at most 7 NIS takes effect in October 2026.",
+      "source_url": "https://www.boi.org.il/publications/pressreleases/21-06-2026/",
+      "raw_snippet": "שיטת התשלום החדשה תיכנס לתוקפה ביולי 2027, תאגידים בנקאים שיהיו מעוניינים בכך יוכלו להקדים מועד זה.",
+      "fetched_at": "2026-08-26T23:27:12.064492+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-08-26T23:27:12.064492+00:00"
+    },
+    {
+      "claim_id": "voucher-regs-notices",
+      "claim": "The Payment Services (Exemption) Regulations require a notice at least once a year, plus one a month before expiry and one a month before the end of the renewal window, where the accrued balance exceeds 50 NIS.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/208503.htm",
+      "raw_snippet": "פעם בשנה לפחות ונוסף על כך חודש לפני תום תוקף אמצעי התשלום",
+      "fetched_at": "2026-08-26T23:27:12.064492+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "verified_at": "2026-08-26T23:45:29.425446+00:00",
+      "source_note": "Snippet located in the consolidated Nevo text of the Payment Services (Exemption) Regulations and independently re-checked by a separate reviewer in this cycle."
+    },
+    {
+      "claim_id": "voucher-regs-five-year",
+      "claim": "The Payment Services (Exemption) Regulations set a minimum five-year validity for a payment instrument and a five-year renewal on the holder request.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/208503.htm",
+      "raw_snippet": "לא יגביל את תוקפו של אמצעי התשלום לתקופה שתפחת מחמש שנים",
+      "fetched_at": "2026-08-26T23:27:12.064492+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "verified_at": "2026-08-26T23:45:29.425446+00:00",
+      "source_note": "Snippet located in the consolidated Nevo text of the Payment Services (Exemption) Regulations and independently re-checked by a separate reviewer in this cycle."
+    },
+    {
+      "claim_id": "isracard-cashback-plus",
+      "claim": "Isracard markets its cashback card as +CashBack.",
+      "source_url": "https://www.isracard.co.il/credit-cards/cashbackplus",
+      "raw_snippet": "+CashBack",
+      "fetched_at": "2026-08-26T23:27:12.064492+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-08-26T23:27:12.064492+00:00"
+    },
+    {
+      "claim_id": "boi-banking-customer-info",
+      "claim": "The Bank of Israel publishes banking-customer service information, including fee comparisons, for the public.",
+      "source_url": "https://www.boi.org.il/en/information-and-service-to-the-public/banking-customer-service-information/",
+      "raw_snippet": "Banking customer service information",
+      "fetched_at": "2026-08-26T23:35:26.582222+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "source_note": "boi.org.il serves a Radware bot-challenge page to plain fetches; the URL is the Bank of Israel public banking-customer information page and returns HTTP 200."
+    },
+    {
+      "claim_id": "cpl-14he-distance-cancel-fee",
+      "claim": "Section 14ה(ב)(1): on a distance-sale cancellation not caused by a defect, the business refunds within 14 days and may charge a cancellation fee of at most 5 percent of the price or 100 NIS, whichever is lower (סעיף 14ה).",
+      "source_url": "https://www.nevo.co.il/law_html/law00/70305.htm",
+      "raw_snippet": "ולא יגבה מהצרכן סכום כלשהו, זולת דמי ביטול בשיעור שלא יעלה על 5% ממחיר הנכס נושא החוזה או העסקה, או 100 שקלים חדשים, לפי הנמוך מביניהם",
+      "fetched_at": "2026-08-26T23:42:10.730592+00:00",
+      "verified_at": "2026-08-26T23:42:10.730592+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "cpl-14gimel-dalet-exclusions",
+      "claim": "Section 14ג(ד) lists the distance-sale transactions excluded from the cancellation right: perishables, short-notice travel and leisure services, information under the Computers Law, custom-made goods, and recordable media whose original packaging was opened.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/70305.htm",
+      "raw_snippet": "לא יחולו על עסקת מכר מרחוק של – (1) טובין פסידים; (2) שירותי הארחה, נסיעה, חופש או בילוי",
+      "fetched_at": "2026-08-26T23:42:10.730592+00:00",
+      "verified_at": "2026-08-26T23:42:10.730592+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "cpl-14gimel1-four-months",
+      "claim": "Section 14ג1(ג) gives a consumer who is a person with a disability, aged 65 or over, or a new immigrant within five years, four months to cancel a distance sale where the engagement included a conversation with the business.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/70305.htm",
+      "raw_snippet": "רשאי הצרכן לבטל את העסקה בתוך ארבעה חודשים מיום עשיית העסקה, מיום קבלת הנכס או מיום קבלת המסמך המכיל את הפרטים האמורים בסעיף 14ג(ב)",
+      "fetched_at": "2026-08-26T23:42:10.730592+00:00",
+      "verified_at": "2026-08-26T23:42:10.730592+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "cpl-gym-fee-formula",
+      "claim": "The Fourth Schedule computes the gym cancellation fee as the months used multiplied by the gap between the contract monthly price and the alternative-track monthly price, and only where the business disclosed the alternative price to the consumer in writing before the engagement.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/70305.htm",
+      "raw_snippet": "דמי ביטול בגובה מכפלת מספר החודשים מהמועד שבו הוחל בביצוע העסקה ועד מועד כניסת הביטול לתוקף, בהפרש שבין המחיר החודשי בעסקה ובין המחיר החודשי במסלול חלופי, ובלבד שהעוסק גילה לצרכן בכתב, טרם ההתקשרות, את המחיר החודשי במסלול החלופי.",
+      "fetched_at": "2026-08-26T23:42:10.730592+00:00",
+      "verified_at": "2026-08-26T23:42:10.730592+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     }
   ]
 }
