@@ -63,7 +63,9 @@
         "SKILL_HE.md"
       ],
       "verified_via": "browser",
-      "verified_at": "2026-08-26T17:44:05Z"
+      "verified_at": "2026-08-26T18:37:35Z",
+      "verified_href": "https://www.gov.il/he/departments/topics/israel-invoice",
+      "verification_note": "Read with a private Playwright instance, not the shared browser. location.href asserted inside the same evaluate call as the text extraction and matched the requested URL. gov.il returns 403 to raw HTTP."
     },
     {
       "claim_id": "allocation-effect",
@@ -245,12 +247,14 @@
       "raw_snippet": "כתנאי לניכוי מס התשומות",
       "fetched_at": "2026-08-26T17:44:05Z",
       "verified_via": "browser",
-      "verified_at": "2026-08-26T17:44:05Z",
+      "verified_at": "2026-08-26T18:37:35Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "scripts/categorize_invoices.py"
-      ]
+      ],
+      "verified_href": "https://www.gov.il/he/departments/topics/israel-invoice",
+      "verification_note": "Read with a private Playwright instance, not the shared browser. location.href asserted inside the same evaluate call as the text extraction and matched the requested URL. gov.il returns 403 to raw HTTP."
     },
     {
       "claim_id": "allocation-request-service",
@@ -259,24 +263,28 @@
       "raw_snippet": "בקשה למספר הקצאה לחשבונית מס",
       "fetched_at": "2026-08-26T17:44:05Z",
       "verified_via": "browser",
-      "verified_at": "2026-08-26T17:44:05Z",
+      "verified_at": "2026-08-26T18:37:35Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ]
+      ],
+      "verified_href": "https://www.gov.il/he/service/request-assignment-number-for-tax-invoice",
+      "verification_note": "Private Playwright, href asserted in-call and matched; page title 'בקשה למספר הקצאה לחשבונית מס | רשות המסים בישראל'."
     },
     {
       "claim_id": "verify-vendor-invoice-service",
-      "claim": "The Israel Tax Authority operates an online service to verify a supplier's invoice details against its allocation number",
-      "source_url": "https://www.gov.il/he/service/verify-vendor-invoice-information",
+      "claim": "The Israel Tax Authority lists an online service to verify a supplier's invoice details against its allocation number. The service page itself is Cloudflare-gated, so the service is evidenced from the Israel Invoice topic page that lists it. The service page is https://www.gov.il/he/service/verify-vendor-invoice-information , listed on the topic page but Cloudflare-gated to automated readers.",
+      "source_url": "https://www.gov.il/he/departments/topics/israel-invoice",
       "raw_snippet": "אימות פרטי חשבונית הספק על סמך מספר הקצאה",
       "fetched_at": "2026-08-26T17:44:05Z",
       "verified_via": "browser",
-      "verified_at": "2026-08-26T17:44:05Z",
+      "verified_at": "2026-08-26T18:37:35Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ]
+      ],
+      "verified_href": "https://www.gov.il/he/departments/topics/israel-invoice",
+      "verification_note": "Corrected: this entry previously cited the service URL with verified_via=browser although that page had never been opened. Snippet confirmed on the ITA topic page with href asserted in-call."
     },
     {
       "claim_id": "input-vat-six-months-38a",

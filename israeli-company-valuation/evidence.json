@@ -9,8 +9,6 @@
       "source_url": "https://taxsummaries.pwc.com/israel/corporate/taxes-on-corporate-income",
       "raw_snippet": "The corporate tax rate is 23% in 2026 (same rate as in 2025).",
       "confidence": "high",
-      "verified_via": "browser",
-      "verified_at": "2026-08-03T00:20:00Z",
       "claim_id": "corporate-tax-23-2026",
       "fetched_at": "2026-08-02T20:45:00Z",
       "appears_in": [
@@ -24,8 +22,6 @@
       "source_url": "https://taxsummaries.pwc.com/israel/corporate/taxes-on-corporate-income",
       "raw_snippet": "Such MNE groups will be required to pay a top-up tax where their Israeli operations have an effective tax rate of less than 15%. The QDMTT shall apply for tax years beginning after 31 December 2025.",
       "confidence": "high",
-      "verified_via": "browser",
-      "verified_at": "2026-08-03T00:20:00Z",
       "claim_id": "qdmtt-15-2026",
       "fetched_at": "2026-08-02T20:45:00Z",
       "appears_in": [
@@ -39,8 +35,6 @@
       "source_url": "https://taxsummaries.pwc.com/israel/corporate/taxes-on-corporate-income",
       "raw_snippet": "The income reclassification shall apply if 70% or more of the total income or taxable income of the closely held company in the tax year is sourced from the services performed by the individual or the individual's relatives for a single entity during a period of at least 22 months during a three-year period.",
       "confidence": "high",
-      "verified_via": "browser",
-      "verified_at": "2026-08-03T00:20:00Z",
       "claim_id": "service-company-25-profitability",
       "fetched_at": "2026-08-02T20:45:00Z",
       "appears_in": [
@@ -52,12 +46,10 @@
       "claim": "An annual 2% tax applies to accumulated undistributed profits of a closely held company, effective 2025",
       "claim_type": "percentage",
       "source_url": "https://taxsummaries.pwc.com/israel/corporate/taxes-on-corporate-income",
-      "raw_snippet": "As of 2025, closely held companies (as defined above) are generally required to pay an annual tax of 2% on certain accumulated profits.",
+      "raw_snippet": "Tax on accumulated profits As of 2025, closely held companies ( as defined above ) are generally required to pay an annual tax of 2% on certain accumulated profits.",
       "confidence": "high",
-      "verified_via": "browser",
-      "verified_at": "2026-08-03T00:20:00Z",
       "claim_id": "trapped-profits-2pct",
-      "fetched_at": "2026-08-02T20:45:00Z",
+      "fetched_at": "2026-08-26T18:37:14Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
@@ -67,12 +59,10 @@
       "claim": "The Preferred Enterprise corporate tax rate is 7.5% in development area A and 16% outside development area A",
       "claim_type": "percentage",
       "source_url": "https://taxsummaries.pwc.com/israel/corporate/tax-credits-and-incentives",
-      "raw_snippet": "The PFE corporate tax rate is 7.5% for operations in 'development area A' and 16% for operations outside development area A.",
+      "raw_snippet": "The PFE corporate tax rate is 7.5% for operations in ‘development area A’ and 16% for operations outside development area A.",
       "confidence": "high",
-      "verified_via": "browser",
-      "verified_at": "2026-08-03T00:20:00Z",
       "claim_id": "pfe-rates",
-      "fetched_at": "2026-08-02T21:00:00Z",
+      "fetched_at": "2026-08-26T18:37:14Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
@@ -84,8 +74,6 @@
       "source_url": "https://taxsummaries.pwc.com/israel/corporate/tax-credits-and-incentives",
       "raw_snippet": "The WHT rate applicable to dividends from PFE profits is 20%, which may be reduced under certain tax treaties.",
       "confidence": "high",
-      "verified_via": "browser",
-      "verified_at": "2026-08-03T00:20:00Z",
       "claim_id": "pfe-dividend-wht",
       "fetched_at": "2026-08-02T21:00:00Z",
       "appears_in": [
@@ -99,8 +87,6 @@
       "source_url": "https://taxsummaries.pwc.com/israel/corporate/tax-credits-and-incentives",
       "raw_snippet": "The SPFE corporate tax rate is 5% for operations in development area A and 8% for operations outside of development area A for ten years. After ten years, the PFE tax rates shall apply unless the company has a new investment program that requalifies the company again for SPFE status.",
       "confidence": "high",
-      "verified_via": "browser",
-      "verified_at": "2026-08-03T00:20:00Z",
       "claim_id": "spfe-rates",
       "fetched_at": "2026-08-02T21:00:00Z",
       "appears_in": [
@@ -114,8 +100,6 @@
       "source_url": "https://taxsummaries.pwc.com/israel/corporate/tax-credits-and-incentives",
       "raw_snippet": "To qualify, an Israeli company must meet certain conditions, such as having SPFE annual revenue greater than or equal to ILS 1 billion and being part of a group of companies that generates annual revenues greater than or equal to ILS 10 billion in the same industrial sector in which the Israeli company operates.",
       "confidence": "high",
-      "verified_via": "browser",
-      "verified_at": "2026-08-03T00:20:00Z",
       "claim_id": "spfe-eligibility",
       "fetched_at": "2026-08-02T21:00:00Z",
       "appears_in": [
@@ -129,8 +113,6 @@
       "source_url": "https://taxsummaries.pwc.com/israel/corporate/tax-credits-and-incentives",
       "raw_snippet": "Under the PTE regime, reduced corporate tax rates of 7.5% for operations in development area A or 12% for operations outside of development area A shall apply on qualifying income, subject to detailed rules. These corporate tax rates shall apply only with respect to the portion of intellectual property (IP) developed in Israel, based on a nexus approach.",
       "confidence": "high",
-      "verified_via": "browser",
-      "verified_at": "2026-08-03T00:20:00Z",
       "claim_id": "pte-rates",
       "fetched_at": "2026-08-02T21:00:00Z",
       "appears_in": [
@@ -144,8 +126,6 @@
       "source_url": "https://taxsummaries.pwc.com/israel/corporate/tax-credits-and-incentives",
       "raw_snippet": "To be eligible for the PTE regime, a company must engage in the technology sector and be part of a group of companies with aggregate annual revenues less than ILS 10 billion and meet one of the following two tests: The enterprise's average R&D expenses in the three years prior to the current tax year must be greater than or equal to 7% of the company's total revenues or exceed ILS 75 million per year.",
       "confidence": "high",
-      "verified_via": "browser",
-      "verified_at": "2026-08-03T00:20:00Z",
       "claim_id": "pte-eligibility",
       "fetched_at": "2026-08-02T21:00:00Z",
       "appears_in": [
@@ -159,8 +139,6 @@
       "source_url": "https://taxsummaries.pwc.com/israel/corporate/tax-credits-and-incentives",
       "raw_snippet": "A reduced 4% WHT rate may apply to dividends paid to a foreign company, provided that at least 90% of the payer's shares are held by foreign resident companies. For other dividend distributions, the WHT rate shall be 20%, which may be reduced under certain tax treaties.",
       "confidence": "high",
-      "verified_via": "browser",
-      "verified_at": "2026-08-03T00:20:00Z",
       "claim_id": "pte-dividend-wht",
       "fetched_at": "2026-08-02T21:00:00Z",
       "appears_in": [
@@ -172,12 +150,10 @@
       "claim": "Under the Special Preferred Technology Enterprise regime a reduced corporate tax rate of 6% applies to qualifying income, and eligibility requires group aggregate annual revenues of at least ILS 10 billion",
       "claim_type": "percentage",
       "source_url": "https://taxsummaries.pwc.com/israel/corporate/tax-credits-and-incentives",
-      "raw_snippet": "To be eligible for the SPTE regime, a company must meet the eligibility conditions of a PTE above and be part of a group of companies with aggregate annual revenues of at least ILS 10 billion. Under the SPTE regime, a reduced corporate tax rate of 6% shall apply on qualifying income, subject to detailed qualifying rules.",
+      "raw_snippet": "To be eligible for the SPTE regime, a company must meet the eligibility conditions of a PTE above and be part of a group of companies with aggregate annual revenues of at least ILS 10 billion.",
       "confidence": "high",
-      "verified_via": "browser",
-      "verified_at": "2026-08-03T00:20:00Z",
       "claim_id": "spte-rate",
-      "fetched_at": "2026-08-02T21:00:00Z",
+      "fetched_at": "2026-08-26T18:37:14Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
@@ -189,8 +165,6 @@
       "source_url": "https://taxsummaries.pwc.com/israel/corporate/tax-credits-and-incentives",
       "raw_snippet": "Companies that sell IP to a related foreign company may qualify for a reduced 12% capital gains tax rate, provided that the company acquired the IP from a foreign company after 1 January 2017 for at least ILS 200 million, subject to the approval of the Israeli Innovation Authority.",
       "confidence": "high",
-      "verified_via": "browser",
-      "verified_at": "2026-08-03T00:20:00Z",
       "claim_id": "pte-ip-capital-gain",
       "fetched_at": "2026-08-02T21:00:00Z",
       "appears_in": [
@@ -263,8 +237,6 @@
       "source_url": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datacurrent.html",
       "raw_snippet": "Levered, unlevered and pure play betas by industry. Also includes other risk measures including operating earnings variability and price-based risk measures.",
       "confidence": "medium",
-      "verified_via": "browser",
-      "verified_at": "2026-08-03T00:20:00Z",
       "claim_id": "damodaran-industry-data",
       "fetched_at": "2026-08-02T20:50:00Z",
       "appears_in": [
@@ -308,8 +280,6 @@
       "source_url": "https://y-tax.co.il/en/reorganization-and-structural-changes-section-104/",
       "raw_snippet": "Instead, the law allows for a tax deferral, not a tax exemption. The tax on the gain accrued in the transferred assets is not cancelled.",
       "confidence": "high",
-      "verified_via": "browser",
-      "verified_at": "2026-08-03T00:20:00Z",
       "claim_id": "section-104-definition",
       "fetched_at": "2026-08-03T00:10:00Z",
       "appears_in": [
@@ -348,8 +318,6 @@
       "claim_type": "percentage",
       "source_url": "https://taxsummaries.pwc.com/israel/corporate/taxes-on-corporate-income",
       "raw_snippet": "The tax on undistributed profits may be avoided if the company distributes a dividend equal to: (i) at least 6%",
-      "verified_via": "browser",
-      "verified_at": "2026-08-03T00:20:00Z",
       "confidence": "high",
       "claim_id": "trapped-profits-distribution",
       "fetched_at": "2026-08-03T00:20:00Z",
@@ -363,8 +331,6 @@
       "claim_type": "feature",
       "source_url": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datacurrent.html",
       "raw_snippet": "These betas might provide better estimates of costs of equity for undiversified owners of private businesses.",
-      "verified_via": "browser",
-      "verified_at": "2026-08-03T00:20:00Z",
       "confidence": "high",
       "claim_id": "total-beta-private",
       "fetched_at": "2026-08-03T00:20:00Z",
@@ -378,8 +344,6 @@
       "claim_type": "law",
       "source_url": "https://y-tax.co.il/en/reorganization-and-structural-changes-section-104/",
       "raw_snippet": "Lack of a valuation basis for the asset or the shares",
-      "verified_via": "browser",
-      "verified_at": "2026-08-03T00:20:00Z",
       "confidence": "high",
       "claim_id": "unsupported-valuation-ita-dispute",
       "fetched_at": "2026-08-03T00:20:00Z",
@@ -393,8 +357,6 @@
       "claim_type": "law",
       "source_url": "https://y-tax.co.il/en/reorganization-and-structural-changes-section-104/",
       "raw_snippet": "may lead to a breach of the holding conditions or the asset holding requirement",
-      "verified_via": "browser",
-      "verified_at": "2026-08-03T00:20:00Z",
       "confidence": "high",
       "claim_id": "reorg-restriction-period",
       "fetched_at": "2026-08-03T00:20:00Z",
@@ -409,8 +371,6 @@
       "source_url": "https://taxsummaries.pwc.com/israel/individual/income-determination",
       "raw_snippet": "The real gain, if any, realised upon the sale of shares purchased on or after 1 January 2003 is generally taxed at a rate of 25% for individuals.",
       "confidence": "high",
-      "verified_via": "browser",
-      "verified_at": "2026-08-03T01:45:00Z",
       "claim_id": "cgt-shares-25",
       "fetched_at": "2026-08-03T01:00:00Z",
       "appears_in": [
@@ -424,8 +384,6 @@
       "source_url": "https://taxsummaries.pwc.com/israel/individual/income-determination",
       "raw_snippet": "This rate is increased to 30% where the seller was a 10% or more shareholder at the date of sale or during any of the 12 months preceding the sale",
       "confidence": "high",
-      "verified_via": "browser",
-      "verified_at": "2026-08-03T01:45:00Z",
       "claim_id": "cgt-substantial-30",
       "fetched_at": "2026-08-03T01:00:00Z",
       "appears_in": [
@@ -450,12 +408,10 @@
       "claim": "Shares acquired before 2003 are taxed at a blended rate, applying the individual's marginal rate in the range of 31% to 50% to the apportioned part of the gain",
       "claim_type": "percentage",
       "source_url": "https://taxsummaries.pwc.com/israel/individual/income-determination",
-      "raw_snippet": "The ordinary individual tax rate (determined in accordance with the individual's marginal tax rate in the range of 31% to 50%) will be applied to the gain amount",
-      "verified_via": "browser",
-      "verified_at": "2026-08-03T01:45:00Z",
+      "raw_snippet": "The ordinary individual tax rate (determined in accordance with the individual’s marginal tax rate in the range of 31% to 50%) will be applied to the gain amount",
       "confidence": "high",
       "claim_id": "cgt-pre-2003-blended",
-      "fetched_at": "2026-08-03T01:45:00Z",
+      "fetched_at": "2026-08-26T18:36:58Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
