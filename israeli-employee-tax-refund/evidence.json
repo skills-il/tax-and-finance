@@ -38,14 +38,16 @@
       "claim_id": "mas-yesafim-2026",
       "claim": "Mas yesafim surtax per Section 121B ITO: 3% on annual income above 721,560 NIS in 2026, on top of regular brackets",
       "source_url": "https://www.kolzchut.org.il/he/%D7%9E%D7%93%D7%A8%D7%92%D7%95%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
-      "raw_snippet": "מס יסף לפי סעיף 121ב לפקודה: 3% על הכנסה שנתית מעל 721,560 ₪ בשנת 2026, על גבי המדרגות הרגילות. Section 121B mas yesafim 3% above 721,560 ₪ annual income threshold 2026, Section 121B (סעיף 121ב) ITO. Section 121 top employment bracket is 47%.",
-      "fetched_at": "2026-05-18T00:00:00Z",
+      "raw_snippet": "לפי סעיף 121ב לפקודה אדם שהכנסתו השנתית גבוהה מ-721,560 ₪ (60,130 ₪ לחודש) חייב גם במס של 3%, בנוסף למדרגת המס הרגילה (47%). לכן שיעור המס במדרגה הנוספת יהיה 50%.",
+      "fetched_at": "2026-08-26T08:01:10+00:00",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/2026-rates.md",
         "scripts/estimate_refund.py"
-      ]
+      ],
+      "verified_via": "text",
+      "verified_at": "2026-08-26T08:01:10+00:00"
     },
     {
       "claim_id": "section-39b-miluim-points",
@@ -164,14 +166,16 @@
     {
       "claim_id": "section-40g-academic-credit",
       "claim": "Section 40g ITO academic credit points: bachelor's grants 1 point per study year up to 3 years for 2023+ graduates (or 1 point for one tax year for 2014-2022 graduates); master's grants 0.5 point for 2 years (2023+) or 0.5 for one year (2014-2022)",
-      "source_url": "https://www.kolzchut.org.il/he/%D7%A0%D7%A7%D7%95%D7%93%D7%95%D7%AA_%D7%96%D7%99%D7%9B%D7%95%D7%99_%D7%9E%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
-      "raw_snippet": "סעיף 40ג לפקודת מס הכנסה - נקודות זיכוי לסיום תואר אקדמי. תואר ראשון לבוגרי 2023 ואילך: 1 נקודה לכל שנת לימודים עד 3 שנים. תואר ראשון לבוגרי 2014-2022: 1 נקודה לשנת מס אחת (בחירת הנישום: שנת הסיום או שנה לאחריה). תואר שני 2023+: 0.5 נקודה לשנה לשנתיים אחרי הסיום. תואר שני 2014-2022: 0.5 נקודה לשנת מס אחת. Section 40g (סעיף 40ג) ITO academic credit. Includes professional degrees with mandatory internship like medicine.",
-      "fetched_at": "2026-05-18T00:00:00Z",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%A0%D7%A7%D7%95%D7%93%D7%95%D7%AA_%D7%96%D7%99%D7%9B%D7%95%D7%99_%D7%9E%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94_%D7%91%D7%92%D7%99%D7%9F_%D7%AA%D7%95%D7%90%D7%A8_%D7%A9%D7%A0%D7%99",
+      "raw_snippet": "מי שסיימו לימודי תואר שני בשנת 2023 או מאוחר יותר זכאים לחצי נקודת זיכוי ב-2 שנות המס שלאחר שנת סיום הלימודים מי שסיימו לימודי תואר שני בין השנים 2014-2022 זכאים לחצי נקודת זיכוי למשך שנה אחת בשנת המס שאחרי שנת סיום הלימודים או בשנה שאחריה",
+      "fetched_at": "2026-08-26T08:01:10+00:00",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/2026-rates.md"
-      ]
+      ],
+      "verified_via": "text",
+      "verified_at": "2026-08-26T08:01:10+00:00"
     },
     {
       "claim_id": "section-45a-47-pension",
@@ -218,26 +222,30 @@
     },
     {
       "claim_id": "section-14-returning-residents",
-      "claim": "Section 14 ITO grants returning residents (תושב חוזר) a 10-year foreign-income exemption. Out of scope for this skill — route to israeli-tax-returns. Section 102 ITO governs stock options taxation (out of scope, route to israeli-stock-options-tax)",
-      "source_url": "https://www.kolzchut.org.il/he/%D7%94%D7%97%D7%96%D7%A8_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
-      "raw_snippet": "סעיף 14 לפקודת מס הכנסה: פטור 10 שנים על הכנסות חוץ לתושבים חוזרים ועולים. סעיף 102 לפקודה: מסלול אופציות לעובדים. Section 14 (סעיף 14) ITO 10-year foreign-income exemption. Section 102 (Section 102) ITO governs employee stock options route 102.",
-      "fetched_at": "2026-05-18T00:00:00Z",
+      "claim": "Returning residents who were abroad 10+ consecutive years get a 10-year exemption on all foreign-source income. Used here only as a routing rationale: foreign income is out of scope for this skill, route to israeli-tax-returns. NOTE: the bare section number \"14\" is NOT confirmed by this source and remains unverified.",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%94%D7%98%D7%91%D7%95%D7%AA_%D7%91%D7%9E%D7%A1_%D7%9C%D7%AA%D7%95%D7%A9%D7%91%D7%99%D7%9D_%D7%97%D7%95%D7%96%D7%A8%D7%99%D7%9D_%D7%A9%D7%A9%D7%94%D7%95_%D7%91%D7%97%D7%95%22%D7%9C_%D7%9E%D7%A2%D7%9C_10_%D7%A9%D7%A0%D7%99%D7%9D",
+      "raw_snippet": "במשך 10 שנים מחזרתם לארץ התושבים החוזרים זכאים לפטור ממס על כל הכנסה שמקורה מחוץ לישראל (כולל פנסיה מחו\"ל).",
+      "fetched_at": "2026-08-26T08:08:06+00:00",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ]
+      ],
+      "verified_via": "text",
+      "verified_at": "2026-08-26T08:08:06+00:00"
     },
     {
       "claim_id": "form-106-overview",
       "claim": "Form 106 (אישור שנתי על משכורת ומס שנוכה) — annual employer income/tax summary issued by 31 March of the following year",
       "source_url": "https://www.kolzchut.org.il/he/%D7%98%D7%95%D7%A4%D7%A1_106",
-      "raw_snippet": "טופס 106 - אישור שנתי על משכורת ומס שנוכה. מונפק על ידי המעסיק עד 31.3 של השנה שלאחר שנת המס. Form 106 is the canonical employer annual confirmation issued by 31.3 of following year. When a worker has multiple jobs in one tax year they receive multiple Form 106s (plural) - one per employer.",
-      "fetched_at": "2026-05-18T00:00:00Z",
+      "raw_snippet": "מעסיק חייב למסור לעובד את הטופס עד ה-31.03 בכל שנה ולעובד שסיים את עבודתו - ביום סיום ההעסקה",
+      "fetched_at": "2026-08-26T08:01:10+00:00",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/document-requirements.md"
-      ]
+      ],
+      "verified_via": "text",
+      "verified_at": "2026-08-26T08:01:10+00:00"
     },
     {
       "claim_id": "form-106-field-numbers",
@@ -283,15 +291,17 @@
     },
     {
       "claim_id": "tiyum-mas-prospective",
-      "claim": "Tax coordination (תיאום מס) prospective mid-year withholding adjustment at gov.il/he/service/tax-coordination-online handles the current tax year; separate from retrospective refund via Form 135",
+      "claim": "Employees working for several employers who did not file a תיאום מס have tax withheld at the highest bracket, which is the commonest refund driver. תיאום מס is the prospective in-year mechanism and is distinct from the retrospective refund claim.",
       "source_url": "https://www.kolzchut.org.il/he/%D7%94%D7%97%D7%96%D7%A8_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
-      "raw_snippet": "תיאום מס מקוון לעובד עם מספר מעבידים באותה שנה - מנגנון פרוספקטיבי לשנת המס הנוכחית, נעשה דרך gov.il/he/service/tax-coordination-online (לפני סוף שנת המס). שונה מבקשת החזר רטרוספקטיבית (טופס 135 או פורטל מקוון) שמיועדת לשנים שכבר נסגרו. Tax coordination online (https://www.gov.il/he/service/tax-coordination-online): prospective for current year, refund retrospective for closed years. The kolzchut refund page explicitly distinguishes these two mechanisms. Primary URL gov.il/he/service/tax-coordination-online returns 403 to non-browser User-Agents.",
-      "fetched_at": "2026-05-18T00:00:00Z",
+      "raw_snippet": "עובדים שמועסקים בכמה מקומות עבודה ולא ביצעו תיאום מס",
+      "fetched_at": "2026-08-26T08:08:06+00:00",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/domain-checklist.md"
-      ]
+      ],
+      "verified_via": "text",
+      "verified_at": "2026-08-26T08:08:06+00:00"
     },
     {
       "claim_id": "bituach-leumi-payments",
@@ -322,60 +332,43 @@
       "claim_id": "halat-unpaid-leave",
       "claim": "Unpaid leave (חופשה ללא תשלום, חל\"ת) creates partial-year withholding mismatch — common refund trigger",
       "source_url": "https://www.kolzchut.org.il/he/%D7%97%D7%95%D7%A4%D7%A9%D7%94_%D7%9C%D7%9C%D7%90_%D7%AA%D7%A9%D7%9C%D7%95%D7%9D",
-      "raw_snippet": "חופשה ללא תשלום (חל\"ת) - תקופה שבה העובד לא קיבל שכר מהמעסיק. גורמת לפער בין ניכוי המס שחושב על בסיס שכר חודשי מלא לבין החיוב השנתי בפועל. Unpaid leave (חל\"ת) creates withholding mismatch.",
-      "fetched_at": "2026-05-18T00:00:00Z",
+      "raw_snippet": "עובד רשאי, בהסכמת המעסיק, לצאת לחופשה ללא תשלום (חל\"ת) מבלי שיחסי העבודה יתנתקו",
+      "fetched_at": "2026-08-26T08:01:10+00:00",
       "appears_in": [
         "references/domain-checklist.md"
-      ]
+      ],
+      "verified_via": "text",
+      "verified_at": "2026-08-26T08:01:10+00:00"
     },
     {
       "claim_id": "refund-processing-time-interest",
-      "claim": "Tax Authority refund processing window per Section 160 ITO: within one year from assessment date or two years from end of tax year (whichever is later). Late refunds accrue הצמדה (CPI linkage) plus 4% annual interest",
+      "claim": "Refund payment deadline (ITO ss.159א-160א). For a voluntary refund claimant: within one year of the assessment made after the refund request, or two years from the end of the year in which the TAX WAS PAID, whichever is later. For a person obliged to file a return: 90 days from receipt of the return, or 31 July of the following tax year, whichever is later. Late refunds carry CPI linkage plus 4% annual interest.",
       "source_url": "https://www.kolzchut.org.il/he/%D7%94%D7%97%D7%96%D7%A8_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
-      "raw_snippet": "זמן טיפול בהחזר מס: בתוך שנה מיום השומה או שנתיים מתום שנת המס, הגבוה מביניהם. החזר באיחור נושא הפרשי הצמדה וריבית של 4% שנתי. Refund must be paid within one year from assessment or two years from end of tax year. Late refunds accrue CPI linkage plus 4% annual interest. Same kolzchut page covers Section 9(5) framework cross-references.",
-      "fetched_at": "2026-05-18T00:00:00Z",
+      "raw_snippet": "תוך שנה מיום שנערכה שומה (לאחר שהוגשה הבקשה להחזר), או בתוך שנתיים מתום השנה שבה שולם המס, לפי המועד המאוחר מביניהם. אם מדובר באדם שחייב בהגשת דו\"ח, ההחזר אמור להיות מוחזר בתוך 90 יום מיום קבלת הדו\"ח במשרד השומה, או ב-31 ביולי בשנת המס שלאחר שנת המס שלגביה הוגש הדו\"ח - לפי המועד המאוחר מביניהם. להחזר המס מתווספים הפרשי הצמדה וריבית של 4% לשנה.",
+      "fetched_at": "2026-08-26T08:10:57+00:00",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/2026-rates.md",
         "references/domain-checklist.md"
-      ]
-    },
-    {
-      "claim_id": "url-encoded-hebrew-noise",
-      "claim": "URL-encoded Hebrew in markdown tables contains percent-prefixed hex bytes (%D7%XX, %A0, %91-%99) that the structural verifier matches as percentages. These are not real numeric claims",
-      "source_url": "https://www.kolzchut.org.il/he/%D7%94%D7%97%D7%96%D7%A8_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
-      "raw_snippet": "URLs containing UTF-8 percent-encoded Hebrew characters such as %D7%94, %D7%97, %D7%96, %D7%A8, %D7%9E, %D7%A1 etc. produce strings like 7%, 8%, 9%, 1%, 4%, 91%, 92%, 93%, 94%, 95%, 96%, 97%, 98%, 99%, 90%, 100%, 0%, 2%, 3% when scanned as percentages. These are URL encoding artifacts of Hebrew letters in kolzchut.org.il and gov.il links, not factual claims about tax rates. The verifier's structural pass cannot distinguish URL-encoded bytes from real percentages.",
-      "fetched_at": "2026-05-18T00:00:00Z",
-      "appears_in": [
-        "SKILL.md",
-        "SKILL_HE.md",
-        "metadata.json",
-        "references/domain-checklist.md"
-      ]
-    },
-    {
-      "claim_id": "markdown-bold-2026",
-      "claim": "Markdown bold notation **2026 ... ** is used to set off the year heading and is not a phone hotline (*2026 is not a real telephone number)",
-      "source_url": "https://www.kolzchut.org.il/he/%D7%9E%D7%93%D7%A8%D7%92%D7%95%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
-      "raw_snippet": "Markdown formatting **2026 monthly tax brackets for employees:** **2026 credit-point (נקודת זיכוי) values:** - the leading * is a markdown bold marker, not a *NNNN telephone short-code prefix.",
-      "fetched_at": "2026-05-18T00:00:00Z",
-      "appears_in": [
-        "SKILL.md"
-      ]
+      ],
+      "verified_via": "text",
+      "verified_at": "2026-08-26T08:10:57+00:00"
     },
     {
       "claim_id": "discharged-soldier-credit-points-2026",
       "claim": "Discharged soldiers / national-service graduates get 2 credit points (full service: 23+ months men, 22+ months women) or 1 point (shorter service over 1 year), for 36 months from the month after discharge. 2026 value: 2 points = 5,808 NIS/yr, 1 point = 2,904 NIS/yr. Claimed on Form 101 / Form 135.",
       "source_url": "https://www.kolzchut.org.il/he/%D7%A0%D7%A7%D7%95%D7%93%D7%95%D7%AA_%D7%96%D7%99%D7%9B%D7%95%D7%99_%D7%9E%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94_%D7%9C%D7%97%D7%99%D7%99%D7%9C%D7%99%D7%9D_%D7%9E%D7%A9%D7%95%D7%97%D7%A8%D7%A8%D7%99%D7%9D_%D7%95%D7%9E%D7%A1%D7%99%D7%99%D7%9E%D7%99_%D7%A9%D7%99%D7%A8%D7%95%D7%AA_%D7%9C%D7%90%D7%95%D7%9E%D7%99-%D7%90%D7%96%D7%A8%D7%97%D7%99",
-      "raw_snippet": "חיילים משוחררים ומסיימי שירות לאומי-אזרחי זכאים לזיכוי במס (נקודות זיכוי) על הכנסה מיגיעה אישית החל מהחודש שלאחר חודש השחרור, במשך 36 החודשים הראשונים. מי ששירת 23 חודשים ומעלה (גברים) / 22 חודשים ומעלה (נשים): זכאי ל-2 נקודות זיכוי. למי שזכאים לשתי נקודות זיכוי, ההטבה תהיה בשווי 5,808 ₪ לשנה ו-484 ₪ לחודש (נכון לשנת 2026). למי שזכאים לנקודת זיכוי אחת, ההטבה תהיה בשווי 2,904 ₪ לשנה ו-242 ₪ לחודש.",
-      "fetched_at": "2026-07-06T00:00:00Z",
+      "raw_snippet": "חיילים משוחררים ומסיימי שירות לאומי-אזרחי זכאים לזיכוי במס ( נקודות זיכוי ) על הכנסה מיגיעה אישית החל מהחודש שלאחר חודש השחרור, במשך 36 החודשים הראשונים.",
+      "fetched_at": "2026-08-26T08:01:10+00:00",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/document-requirements.md",
         "references/domain-checklist.md"
-      ]
+      ],
+      "verified_via": "text",
+      "verified_at": "2026-08-26T08:01:10+00:00"
     },
     {
       "claim_id": "section-45-natul-yecholet-2026",
@@ -1598,6 +1591,123 @@
       ],
       "verified_via": "pdf",
       "verified_at": "2026-08-19T02:16:32.021031+00:00"
+    },
+    {
+      "claim_id": "section-9-5-threshold-from-2021",
+      "claim": "From 15.11.2021 the Section 9(5) exemption threshold is 90% disability under one of the listed laws; where the 90% comes from a weighted multi-impairment calculation, one impairment must be at least 40%. In general disability this means the MEDICAL disability percentage, not the incapacity degree.",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%A4%D7%98%D7%95%D7%A8_%D7%9E%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94_%D7%9C%D7%90%D7%A0%D7%A9%D7%99%D7%9D_%D7%A2%D7%9D_%D7%A0%D7%9B%D7%95%D7%AA",
+      "raw_snippet": "החל מ-15.11.2021 הזכאות לפטור ניתנת במקרים הבאים: למי שנקבעה להם נכות בשיעור 90% לפחות לפי אחד מהחוקים שצוינו לפני כן . אם נקבעה להם נכות בשיעור 90% כתוצאה מ חישוב משוקלל של כמה ליקויים, אחד מהליקויים צריך להיות בשיעור 40% לפחות. יש לשים לב שבנכות כללית הכוונה לאחוזי נכות רפואית (לא דרגת אי כושר).",
+      "fetched_at": "2026-08-26T08:04:00+00:00",
+      "verified_via": "text",
+      "verified_at": "2026-08-26T08:04:00+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "section-9-5-pension-limb-100-90",
+      "claim": "For recipients of a disability pension under חוק הנכים or חוק התגמולים לנפגעי פעולות איבה, the qualifying degrees are 100% for a single impairment, or at least 90% on a weighted calculation provided it would reach 100% on an ordinary calculation. This is also the pre-15.11.2021 general test.",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%A4%D7%98%D7%95%D7%A8_%D7%9E%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94_%D7%9C%D7%90%D7%A0%D7%A9%D7%99%D7%9D_%D7%A2%D7%9D_%D7%A0%D7%9B%D7%95%D7%AA",
+      "raw_snippet": "שנקבעה להם דרגת נכות באחד מהשיעורים הבאים: 100% על ליקוי אחד 90% לפחות בחישוב משוקלל של כמה ליקויים (ובתנאי שהיו מסתכמים ב-100% לפחות בחישוב רגיל)",
+      "fetched_at": "2026-08-26T08:04:00+00:00",
+      "verified_via": "text",
+      "verified_at": "2026-08-26T08:04:00+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md"
+      ]
+    },
+    {
+      "claim_id": "section-9-5-grandfathering",
+      "claim": "Grandfathering: those who met the pre-15.11.2021 conditions but not the new ones keep the exemption while they continue to meet the old conditions; so do those who applied for a disability determination by 01.12.2021.",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%A4%D7%98%D7%95%D7%A8_%D7%9E%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94_%D7%9C%D7%90%D7%A0%D7%A9%D7%99%D7%9D_%D7%A2%D7%9D_%D7%A0%D7%9B%D7%95%D7%AA",
+      "raw_snippet": "למי שענו על תנאי הזכאות הקודמים לפני 15.11.2021 ולא עונים על תנאי הזכאות החדשים (הם ימשיכו להיות זכאים לפטור כל עוד יענו על אותם תנאי זכאות). למי שהגישו עד ל-01.12.2021 בקשה לקביעת נכות לפי החוקים שצוינו",
+      "fetched_at": "2026-08-26T08:04:00+00:00",
+      "verified_via": "text",
+      "verified_at": "2026-08-26T08:04:00+00:00",
+      "appears_in": [
+        "references/2026-rates.md"
+      ]
+    },
+    {
+      "claim_id": "section-9-5-duration-185",
+      "claim": "Qualifying disability must be permanent, or temporary for at least 185 days, determined under one of seven listed laws.",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%A4%D7%98%D7%95%D7%A8_%D7%9E%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94_%D7%9C%D7%90%D7%A0%D7%A9%D7%99%D7%9D_%D7%A2%D7%9D_%D7%A0%D7%9B%D7%95%D7%AA",
+      "raw_snippet": "נקבעה להם נכות לצמיתות, או נכות זמנית למשך 185 יום לפחות",
+      "fetched_at": "2026-08-26T08:04:00+00:00",
+      "verified_via": "text",
+      "verified_at": "2026-08-26T08:04:00+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md"
+      ]
+    },
+    {
+      "claim_id": "section-10-shift-work-regs-2026",
+      "claim": "Section 10 ITO shift-work credit: the 1986 shift-work regulations were extended to 31.12.2026; credit capped at 12,540 NIS against an annual income ceiling of 143,040 NIS.",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf",
+      "raw_snippet": "הטבה בשל משמרות– סעיף 10 לפקודת מס הכנסה בהתאם לפרסום מיום 23.03.2025 בקובץ תקנות מספר11801, הוארך תוקף תקנות מס הכנסה (שיעור המס על הכנסה בעד עבודה במשמרות), התשמ\"ז – 1986, עד ליום 31.12.2026",
+      "fetched_at": "2026-08-26T08:09:36+00:00",
+      "verified_via": "pdf",
+      "verified_at": "2026-08-26T08:09:36+00:00",
+      "appears_in": [
+        "SKILL_HE.md",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "tiyum-mas-gov-service-page",
+      "claim": "The ITA online tax-coordination service is for the CURRENT year only and is available to employees with more than one employer; the page also states a refund may be claimed up to six years back from the end of the tax year.",
+      "source_url": "https://www.gov.il/he/service/tax-coordination-online",
+      "raw_snippet": "ניתן לערוך תיאום מס לשנה הנוכחית בלבד אם בתום השנה יתברר כי שיעור המס ששולם בפועל היה גבוה מהסכום הנדרש, ניתן להגיש בקשה להחזר מס עד שש שנים אחורה מתום שנת המס",
+      "fetched_at": "2026-08-26T08:09:36+00:00",
+      "verified_via": "browser",
+      "verified_at": "2026-08-26T08:09:36+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "form-119-degree-credit-claim",
+      "claim": "Form 119 is the form that claims the academic-degree credit. Employees file Form 101 + Form 119 plus the degree-entitlement confirmation with the employer at the start of the tax year; after the year closes it goes with the refund claim.",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%A0%D7%A7%D7%95%D7%93%D7%95%D7%AA_%D7%96%D7%99%D7%9B%D7%95%D7%99_%D7%9E%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94_%D7%91%D7%92%D7%99%D7%9F_%D7%AA%D7%95%D7%90%D7%A8_%D7%A9%D7%A0%D7%99",
+      "raw_snippet": "שכירים צריכים למלא טופס 101 , טופס 119 ואישור זכאות לתואר אקדמי, אותם יש למסור למעסיק בתחילת שנת המס. אם חלפה שנת המס ניתן להגיש בקשה להחזר מס באופן מקוון או ב לשכת פקיד השומה שמשתייכים אליה . ניתן לקבל החזרים עד 6 שנים אחורה.",
+      "fetched_at": "2026-08-26T08:12:17+00:00",
+      "verified_via": "text",
+      "verified_at": "2026-08-26T08:12:17+00:00",
+      "appears_in": [
+        "references/document-requirements.md"
+      ]
+    },
+    {
+      "claim_id": "form-106-ita-personal-area-fallback",
+      "claim": "All Form 106s from every employer for the last 6 years are downloadable from the ITA personal area; the employer's duty to issue Form 106 survives bankruptcy, and delivery is due by 31.03 annually or on the last day of employment.",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%98%D7%95%D7%A4%D7%A1_106",
+      "raw_snippet": "ניתן להוריד את כל טפסי 106 מכל המעסיקים ב-6 השנים האחרונות מתוך האזור האישי באתר רשות המסים.",
+      "fetched_at": "2026-08-26T08:12:17+00:00",
+      "verified_via": "text",
+      "verified_at": "2026-08-26T08:12:17+00:00",
+      "appears_in": [
+        "references/document-requirements.md"
+      ]
+    },
+    {
+      "claim_id": "form-106-duty-survives-bankruptcy",
+      "claim": "The employer's obligation to provide Form 106 exists even if the employer went bankrupt, and covers employees who were dismissed, resigned or retired.",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%98%D7%95%D7%A4%D7%A1_106",
+      "raw_snippet": "כל עובד שכיר, כולל עובד שפוטר, התפטר או פרש גמלאות. החובה לתת טופס 106 קיימת גם אם המעסיק פשט את הרגל.",
+      "fetched_at": "2026-08-26T08:12:17+00:00",
+      "verified_via": "text",
+      "verified_at": "2026-08-26T08:12:17+00:00",
+      "appears_in": [
+        "references/document-requirements.md"
+      ]
     }
   ]
 }

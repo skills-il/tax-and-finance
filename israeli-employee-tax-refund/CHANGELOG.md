@@ -2,6 +2,23 @@
 
 All notable changes to this skill are documented here.
 
+## [1.6.0] - 2026-08-26
+
+### Fixed
+
+- Section 9(5) disability exemption: the skill stated the PRE-15.11.2021 eligibility test (100% medical disability, or 90%+ via a multi-impairment calculation) as if it were current law, and SKILL_HE.md told the reader outright that anything less than that does not qualify. Since 15.11.2021 the general threshold is 90% disability, and where the 90% is reached by a weighted calculation across several impairments one impairment must be at least 40%. In נכות כללית the relevant figure is the MEDICAL disability percentage and not the incapacity degree (דרגת אי כושר). A user with a 90% determination was being told they had no entitlement, on an exemption worth up to 445,200 NIS of exempt income a year and claimable six years back. Both regimes are documented in references/2026-rates.md, together with the pension limb for חוק הנכים and חוק נפגעי פעולות איבה recipients, the grandfathering rules for determinations predating 15.11.2021, the 185-day duration test and the list of qualifying laws.
+- Refund payment deadline: the second limb ran "two years from the end of the tax year" where the rule is two years from the end of the year in which the TAX WAS PAID. Also noted that a filer obliged to submit a return is on a different clock (90 days from receipt of the return, or 31 July of the following year) and belongs in israeli-tax-returns.
+
+### Added
+
+- Fallback when Form 106 cannot be obtained (a deferred finding carried since 1.3.0): all Form 106s from every employer for the last 6 years can be downloaded from the ITA personal area, and the employer's duty to issue one survives bankruptcy. Documented with the caveat that the ITA-side summary does not reliably carry the keren hishtalmut fields 218 and 219.
+- Form 119, the form that actually claims the section 40ג academic-degree credit. The skill listed the degree trigger and named seven other forms but never this one, so the entitlement could be identified and then not claimed.
+
+### Changed
+
+- evidence.json repaired and re-verified. Ten entries were failing source verification: eight carried paraphrased summaries rather than verbatim page text and had only ever passed because kolzchut bot-blocks curl, which parked them in the "unreachable" bucket. Two were not claims about the world at all, having been written purely to suppress extractor false positives, and one of those was masking two genuinely unevidenced section 9(5) eligibility thresholds. Source URLs were corrected on entries that cited a hub page containing none of the claimed content. The file now passes --check-sources in full for the first time.
+- Removed the bare "Section 14" citation for the returning-resident foreign-income exemption. The 10-year exemption itself is sourced and retained; the section number could not be confirmed against an accessible primary source, so it is not asserted.
+
 ## [1.5.0] - 2026-08-19
 
 ### Added

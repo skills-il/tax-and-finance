@@ -81,9 +81,21 @@ Refund must be paid within one year from the assessment date, or two years from 
 | Disability 185-364 days, earned income | 81,960 |
 | Non-personal-labor (passive) income, any qualifying duration | 81,960 |
 | Interest income from compensation funds (קרן פיצויים), 365 days or more | 337,200 |
-| Blind individuals (עיוורים) | Same ceilings as 100% medical disability |
+| Blind individuals (עיוורים) | Same ceilings as a qualifying disability determination |
 
-Qualifying threshold: 100% medical disability, blindness, OR 90%+ via the multi-organ-injury calculation (פגיעה באיברים שונים). Under 185 days does not qualify. Ceiling-based, not rate-based: income up to the cap is fully exempt; income above is taxed normally.
+Qualifying threshold. The test changed on 15.11.2021 and BOTH regimes are still live, so establish which one applies before answering.
+
+Current regime (determinations from 15.11.2021): at least **90%** disability under one of the qualifying laws. Where that 90% is reached by a weighted calculation across several impairments, one impairment must be at least **40%**. In נכות כללית this means the MEDICAL disability percentage, not the incapacity degree (דרגת אי כושר), which is a different rating and does not by itself qualify.
+
+Pension limb, and the pre-15.11.2021 general test: for recipients of a disability pension under חוק הנכים or חוק התגמולים לנפגעי פעולות איבה, the qualifying degrees are 100% on a single impairment, or at least 90% on a weighted calculation provided it would reach 100% on an ordinary calculation.
+
+Grandfathering: anyone who met the pre-15.11.2021 conditions but not the current ones keeps the exemption for as long as they continue to meet the old conditions, as does anyone who applied for a determination by 01.12.2021.
+
+Duration: the disability must be permanent, or temporary for at least 185 days. Under 185 days does not qualify.
+
+Qualifying laws: חוק הנכים (תגמולים ושיקום), חוק נכי המלחמה בנאצים, חוק נכי רדיפות הנאצים, חוק התגמולים לנפגעי פעולות איבה, חוק לפיצוי נפגעי גזזת, and חוק הביטוח הלאומי (פגיעה בעבודה, נכות כללית, ילד נכה, פגיעה בהתנדבות).
+
+Do NOT tell a user with a 90% determination that they fall short of the threshold: that was the pre-2021 rule. Ceiling-based, not rate-based: income up to the cap is fully exempt; income above is taxed normally. Source: https://www.kolzchut.org.il/he/%D7%A4%D7%98%D7%95%D7%A8_%D7%9E%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94_%D7%9C%D7%90%D7%A0%D7%A9%D7%99%D7%9D_%D7%A2%D7%9D_%D7%A0%D7%9B%D7%95%D7%AA
 
 ## Section 35: Olim chadashim credit-point schedule
 
@@ -100,7 +112,7 @@ Total: 8.5 credit points across 54 months (4.5 years).
 
 For pre-2022 arrivals: 4.5 / 2 / 1 across 18 / 12 / 12 months (total 7.5 points, 42 months).
 
-Returning residents (תושב חוזר) generally do NOT qualify for Section 35. Most returnees use the 10-year foreign-income exemption under Section 14 instead. Veteran returning residents (תושב חוזר ותיק, after 10+ years abroad) have a separate Milchan-amendment benefit track that is out of scope here.
+Returning residents (תושב חוזר) generally do NOT qualify for Section 35. Most returnees use the 10-year foreign-income exemption instead (returnees who were abroad 10+ consecutive years are exempt on all foreign-source income for 10 years). Veteran returning residents (תושב חוזר ותיק, after 10+ years abroad) have a separate Milchan-amendment benefit track that is out of scope here.
 
 ## Section 40g: Academic credit-points schedule
 

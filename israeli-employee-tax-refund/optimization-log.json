@@ -24,6 +24,26 @@
         "The audit-reported second Section 39B regime from 2028 (0.75 points at 20-24 days) was REFUTED: neither the consolidated Ordinance (current to 08.06.2026) nor the ITA 2026 booklet contains any such limb. Do not re-encode it without a primary source.",
         "The ITA circular setting out the full conditions of the aliya temporary order was still pending when the 2026 booklet was published. Fold it in once issued."
       ]
+    },
+    {
+      "version": "1.6.0",
+      "date": "2026-08-26",
+      "lessons": [
+        "RESOLVED this cycle (carried from 1.3.0): Form 106 fallback via the ITA personal area, with the 218/219 caveat, is now in references/document-requirements.md.",
+        "Expert MAJOR still open, carried from 1.3.0 and NOT resolved: married-couple mechanics. ss.64/65/66 are cited once and never explained, and the estimator takes ONE salary and ONE points figure, so a couple running household totals gets a materially wrong answer with no warning. Consider a hard guard in the script, not just prose.",
+        "Expert MAJOR still open, carried from 1.3.0: איחוד תיקים is never mentioned; a spouse holding a תיק means the file is worked as a couple and the refund can be offset against the spouse's balance.",
+        "Expert MAJOR still open, carried from 1.3.0 and the highest-value remaining item: Example 1 shows only the no-101-at-all archetype (47% flat, 37-45k refund). The commoner real Form 106 has a 101 filed with the 'not my only income' box ticked, giving roughly 16-20k. Leading with the 47% case plausibly sets expectations about 2x too high. Needs a practitioner read before rewriting.",
+        "Expert MINOR still open, carried from 1.3.0: s.45A self-deposit can double-count against the s.47 ceiling; and nothing tells the filer a refund can be claimed in a year with income below the tax threshold, or that no מייצג is required to file טופס 135.",
+        "STILL OPEN from 1.5.0: s.11(b1) azor kav imut dromi, nevo says 20% up to 241,080 while the ITA 2026 table's 20% rows are 259,920 and 267,840. Not reconciled this cycle.",
+        "STILL OPEN from 1.5.0: the s.46 minimum for claim years 2020 and 2021 remains unsourced (booklets no longer served). Script correctly declines to disqualify rather than guessing.",
+        "STILL OPEN from 1.5.0: the ITA circular on the aliya temporary order was still pending at last check; fold in once issued.",
+        "PROCESS, cost this cycle a full verification panel: all three dispatched subagents (fact-freshness, cpa-expert, cpa-expert-2) went idle without ever returning output, including after an explicit re-request. Every finding in 1.6.0 was produced by direct primary-source reading instead. Do not assume a dispatched panel will return; check ListAgents early and budget for doing the work inline.",
+        "PROCESS: 13 legacy paraphrased kolzchut snippets flagged in 1.5.0 were the real thing. They passed for cycles only because kolzchut bot-blocks curl and landed in the 'unreachable' bucket, which is NOT verified. Repaired this cycle; --check-sources now passes in full.",
+        "PROCESS, the important one: two evidence entries existed purely to suppress extractor false positives (percent-encoded Hebrew reading as percentages, '**2026' reading as a phone shortcode). One of them was masking two genuinely unevidenced s.9(5) eligibility thresholds, which is how the stale pre-2021 disability test survived. NEVER add a gate-appeasement entry; fix the text so the false positive does not arise.",
+        "PROCESS: a reported defect is a lead, not a fact. Two of my own strong suspicions this cycle were REFUTED by the source: that 2025's brackets were a copy-paste of 2024 (it is the indexation freeze), and that the refund processing-time rule was wrong (the skill's rule is correct for a voluntary claimant; the 90-day/31-July rule I found governs return-obligated filers, and I had only read the second sentence).",
+        "UNVERIFIED, do not re-encode without a primary source: whether the 2024=2025 identity across brackets, credit point, mas-yesafim threshold and s.46 figures is a single statutory freeze and which instrument enacted it. Values were left untouched.",
+        "UNVERIFIED: the bare section number for the returning-resident 10-year foreign-income exemption. The substance is sourced; the citation 'Section 14' was removed rather than asserted. Restore it if a primary source confirms."
+      ]
     }
   ]
 }

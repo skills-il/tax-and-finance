@@ -5,6 +5,8 @@ This is the per-trigger document checklist the skill walks the user through in S
 ## Always required
 
 - Form 106 from every employer for each tax year claimed.
+
+  If the employer will not issue one, has closed, or the year is an old one, do NOT stop: all Form 106s from every employer for the last 6 years can be downloaded from the taxpayer's personal area on the ITA site, and the employer's duty to issue one survives bankruptcy. The employer must hand it over by 31.03 each year, or on the last day of employment if the job ended. Caveat: the ITA-side withholding summary is built from employer reporting and does not reliably carry the keren hishtalmut fields (218 / 219), so where a keren hishtalmut trigger is in play, still chase the original Form 106 or the fund's own certificate before relying on it.
 - תעודת זהות (front + ספח).
 - אישור ניהול חשבון בנק (bank account confirmation) for the refund payout. Issued by the bank, valid for 90 days typically.
 
@@ -46,8 +48,9 @@ This is the per-trigger document checklist the skill walks the user through in S
 
 ### 8. Section 40g academic studies credit
 
+- Form 119 (בקשה להקלה במס לזכאי תואר אקדמי / תעודת מקצוע). This is the form that actually claims the credit; without it the entitlement is not applied. An employee files 101 + 119 plus the entitlement confirmation with the employer at the start of the tax year; once the year has closed it goes in with the refund claim instead.
 - Diploma (תעודת בוגר / בוגרת for bachelor's, מוסמך / מוסמכת for master's).
-- Transcript or graduation certificate stating completion year.
+- Transcript or graduation certificate stating completion year, since the entitlement window is keyed to the completion year.
 
 ### 9. Single parent / alimony payer
 
