@@ -1,12 +1,43 @@
 {
   "cycles": [
     {
+      "version": "1.3.0",
+      "date": "2026-08-27",
+      "lessons": [
+        "CRITICAL fixed: govcarins.mof.gov.il was described as a general educational makif cost tool. Its own heading is 'סימולטור ביטוח רכב מקיף לעובדי מדינה', priced off the annual state tender with a tender-year selector. Now routed by user type: state employees first, everyone else skip.",
+        "CRITICAL fixed: the car.cma.gov.il troubleshooting entry described a licence-plate field and a 24-48h wait for vehicle registration. The tool has NO plate field and no registry lookup, it is a risk-parameter form. Entry rewritten to the real failure mode (unfilled vehicle-characteristic fields).",
+        "CRITICAL fixed: shin-nun / no-claims record was attributed to HaPool. HaPool is the residual-market INSURER, not a claims database. Corrected to Har HaBituach (free, presents the avar bituchi and forwards the form), the insurer's own certificate, and INFOCAR (per-VEHICLE claims history, not a per-driver record).",
+        "CRITICAL fixed: Maccabi SHABAN ladder had two tiers with Zahav as basic. Maccabi and Kol Zchut both list THREE: Sheli / Zahav / Kesef, with Kesef the entry tier. Example 3 rebuilt. Two questions deliberately left open with an instruction to check: whether Sheli is priced standalone or includes the Zahav base, and whether Kesef still accepts new joiners (the financecheck source and the kupa sources disagree).",
+        "CRITICAL fixed (Expert): the skill never mentioned the permitted-driver class on the hova certificate or additional-driver terms on makif, so a user could buy the cheapest quote and hand the keys to an uncovered driver. Added to Step 2 and the Step 5 table, framed as a check to perform rather than an asserted statutory rule.",
+        "Added: HaPool as the residual market for drivers the market declines (it heads the CMA calculator's carrier list); two-wheeler/ofanoa hova as a first-class vehicle type; the CMA Service Index (מדד השירות) as the third comparison axis; the August 2026 Clalit-Ayalon long-term-care agreement effective Jan 2027 for 8 years; a Reference Links section (was missing entirely).",
+        "Removed rather than re-sourced, because no source carried them: a 6,000-8,000 ILS/sqm rebuild rate (replaced with 'get a valuation', it drove the very underinsurance the skill warns about), a 5-8% annual-payment saving, a 10-20% shin-nun premium swing, a 6-12 month surgery waiting period (Kol Zchut says waiting periods are per-service and set by each kupa), a 10% earthquake deductible, a '4.9M insured' figure, and an 'under-24 surcharge' threshold. Deliberate non-assertion plus an instruction to obtain the real number is the correct shape here.",
+        "The Kol Zchut earthquake page was REWRITTEN between cycles: it no longer contains '10%' or 'ברירת מחדל'. Two evidence snippets were stranded. Re-cut against the live text, dropped the 'by law' framing (the page says 'בדרך כלל ... אלא אם בעל הדירה ביקש לוותר עליו'), and captured two better facts it now carries: the earthquake deductible is a percentage of the SUM INSURED not of the damage, and quakes within 72 hours may count as one event.",
+        "Evidence gate note for the next cycle: this skill extracts almost NO numerics (0 facts, 9 URLs at the end of this cycle), so a green verify-evidence run proves essentially nothing here. The real risk surface is the destinations, and they must be checked by NAVIGATION. curl cannot distinguish a real cma.gov.il page from an invented one: both return HTTP 202 with ~1 character. gov.il's genuine 404 redirects to /he/error titled 'שגיאה', which is the negative control to use.",
+        "CARRY: statutory mid-term cancellation and pro-rata refund mechanics for elementary lines are still not sourced to a primary text (softened to 'ask about it' this cycle). CARRY: the 2026 CMA circular on occasional-driver (נהגים מזדמנים) policies, including its disclosure duty about possible absence of hova cover, reported but never verified against the circular. CARRY: agent/platform commission disclosure is now flagged generically in Step 4 but no platform's actual arrangement is documented. CARRY (Expert MAJOR, deferred over the 5000-word cap): SHABAN seniority and waiting-period continuity when switching kupa, and makif sum-insured basis (Levi Yitzhak vs insurer price list) as a comparison row.",
+        "Legal gate returned NOTICE_REQUIRED (Tier B, S2 x F1): the skill emitted a personal recommendation on which policy to buy ('a clear recommendation', 'המלצה ברורה'), which is a conclusion about the user's own facts in a domain reserved to a licensed סוכן ביטוח. Added the bilingual notice immediately after the H1, prepended the short clause to both descriptions and both frontmatter descriptions, and recharacterised the Example Results from 'a clear recommendation' to 'a ranked comparison the user decides from'. NOTE the structural verify_legal.py only reported a level=3 advisory WARN here and could not see the recommendation output at all, because it reads for reserved-instrument emission and title strings. The tripwire under-calls this shape; the body read is what caught it.",
+        "Phase 5.7: the description changed only by PREPENDING the legal clause, with no trigger phrase removed or reworded, so no holdout case could regress by construction. Assessed against a frozen 10-query set (6 positive / 3 negative / 1 edge) with a 7/3 split; the 3 holdout cases pass identically before and after. This was a reasoned assessment against the frozen set, not a mechanical scoring harness.",
+        "Moved the Bituach Siudi section to references/bituach-siudi{,-he}.md to stay under the 5000-word cap after the legal notice landed; SKILL.md ended at 4989 words."
+      ],
+      "holdout_before": 1.0,
+      "holdout_after": 1.0,
+      "buckets": {
+        "improved": [],
+        "regressed": [],
+        "persistent_fail": [],
+        "stable_success": [
+          "I need to compare car insurance quotes in Israel",
+          "should I open a pension fund (correctly NOT triggered)",
+          "ביטוח סיעודי, מה קורה עם הקופות"
+        ]
+      }
+    },
+    {
       "version": "1.2.1",
       "date": "2026-07-16",
       "lessons": [
         "Resolved the deferred CARRY items from the 1.2.0 cycle: (a) dropped the office-hours framing on the CMA car.cma.gov.il calculator (it is an always-on online tool, no Sunday-Thursday 8-17 restriction); (b) corrected the rishayon-shimush line, the annual vehicle-licensing fee (agrat rishuy) is a separate government charge, not an insurance-quote line item; (c) repointed the earthquake evidence URL from the dead gov.il guide to the Kol-Zchut earthquake-home-insurance page; (d) repointed the Wobi/Phoenix evidence URL to TheMarker.",
         "STALE fixed: Wobi/Phoenix moved. The Competition Authority cleared the Phoenix acquisition of Wobi in May 2026, but the CMA / Insurance Commissioner final sign-off is still pending as of mid-2026, so the deal is not yet closed. Updated the platform note in both languages.",
-        "Confirmed-correct-do-not-relitigate (2026, verified): the bituach-siudi wind-down framing (unenforced MoH draft; ~4.9M still insured; operative pressure date end-2026 Clalit-Harel agreement expiry); the HMO SHABAN tier names and orderings (Maccabi Zahav basic / Sheli premium; Clalit Mushlam Zahav / Platinum; Meuhedet Adif / Shia; Leumit Kesef basic / Zahav premium, note Leumit's Zahav is premium, inverted vs Maccabi/Clalit, and the skill already states this correctly); earthquake default opt-out with ~10% deductible and no central pool and no enacted mandatory reform; hova as a regulated uniform tariff vs market-priced makif; the ADL 4-of-6 siudi trigger effective 1.1.2025."
+        "Confirmed-correct-do-not-relitigate (2026, verified): the bituach-siudi wind-down framing (unenforced MoH draft; ~4.9M still insured; operative pressure date end-2026 Clalit-Harel agreement expiry); SUPERSEDED BY 1.3.0, DO NOT RESTORE: Maccabi has THREE tiers (Kesef entry / Zahav middle / Sheli top), not two, and Zahav is NOT the basic tier. Also SUPERSEDED BY 1.3.0: the ~10% earthquake deductible figure was removed as unsourced (the cited Kol Zchut page was rewritten and no longer carries it). Remaining tier orderings still stand ( Clalit Mushlam Zahav / Platinum; Meuhedet Adif / Shia; Leumit Kesef basic / Zahav premium, note Leumit's Zahav is premium, inverted vs Maccabi/Clalit, and the skill already states this correctly); earthquake opt-out and no central pool and no enacted mandatory reform; hova as a regulated uniform tariff vs market-priced makif; the ADL 4-of-6 siudi trigger effective 1.1.2025."
       ]
     },
     {

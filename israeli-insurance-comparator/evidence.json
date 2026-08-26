@@ -1,19 +1,8 @@
 {
   "schemaVersion": "1.0",
   "skill": "israeli-insurance-comparator",
-  "generated_at": "2026-05-31T00:00:00Z",
+  "generated_at": "2026-08-27T00:00:00Z",
   "claims": [
-    {
-      "claim_id": "har-habituach",
-      "claim": "Har HaBituach (harb.cma.gov.il) is the CMA-operated aggregator listing every insurance policy an Israeli holds across all insurers; login via Israeli ID + one-time code.",
-      "source_url": "https://harb.cma.gov.il/",
-      "raw_snippet": "הר הביטוח",
-      "fetched_at": "2026-05-31T00:00:00Z",
-      "appears_in": [
-        "SKILL.md",
-        "SKILL_HE.md"
-      ]
-    },
     {
       "claim_id": "gov-calculators",
       "claim": "Official government insurance tools: car.cma.gov.il is the CMA mandatory-car (hova) standardized-tariff calculator; govcarins.mof.gov.il is the Ministry of Finance comprehensive (makif) cost-estimation simulator. Covers these references: https://car.cma.gov.il/ https://govcarins.mof.gov.il/",
@@ -29,39 +18,30 @@
       "verified_at": "2026-08-19"
     },
     {
-      "claim_id": "maccabi-tier-order",
-      "claim": "Maccabi Zahav is the basic SHABAN supplementary tier (no medical underwriting); Maccabi Sheli is the premium add-on layered on top of Zahav (medical underwriting, higher surgery ceilings, free choice of surgeon).",
-      "source_url": "https://www.financecheck.co.il/insurance/maccabi-health-insurance",
-      "raw_snippet": "מכבי זהב",
-      "fetched_at": "2026-05-31T00:00:00Z",
-      "appears_in": [
-        "SKILL.md",
-        "SKILL_HE.md"
-      ]
-    },
-    {
       "claim_id": "insurance-no-vat",
-      "claim": "Israeli insurance premiums are not subject to VAT; insurers are taxed as financial institutions (mosad kaspi), paying profit-and-payroll tax instead of charging VAT.",
-      "source_url": "https://www.kalir.co.il/",
-      "raw_snippet": "חיים קליר ושות': ייצוג בתביעות ביטוח ונזיקין",
-      "fetched_at": "2026-08-18",
+      "claim": "Under the Israeli VAT law an insurer is a mosad kaspi (financial institution); financial institutions pay mas sachar ve'revach on wages and profit instead of charging VAT on their services, so insurance premiums are not VAT-rated.",
+      "source_url": "https://he.wikipedia.org/wiki/%D7%97%D7%95%D7%A7_%D7%9E%D7%A1_%D7%A2%D7%A8%D7%9A_%D7%9E%D7%95%D7%A1%D7%A3",
+      "raw_snippet": "מוסד כספי: בנקים, חברות ביטוח ונותני שירותים פיננסיים חייבים במס שכר ורווח על תשלומי השכר והרווח.",
+      "fetched_at": "2026-08-27T00:00:00Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
       ],
-      "verified_via": "navigational claim about the source itself; snippet is the cited page's own title, fetched to confirm the page exists and is what the claim says it is",
-      "verified_at": "2026-08-18"
+      "verified_via": "browser",
+      "verified_at": "2026-08-27T00:00:00Z"
     },
     {
       "claim_id": "siudi-timeline",
-      "claim": "The Ministry of Health's proposed July 2025 order to stop kupot-channel bituach siudi sales was never finalized; sales continued and the operative wind-down horizon slipped to end-2026 (handoff) and 2027 (run-off clause removed).",
+      "claim": "Clalit and Harel extended their long-term-care agreement by a further two years, to the end of 2026, conditional on publication of the CMA's final directives.",
       "source_url": "https://www.calcalist.co.il/local_news/article/r11b7psr1x",
       "raw_snippet": "השתיים הודיעו לפני כשבוע וחצי על הארכת ההסכם ביניהן לתקופה של שנתיים נוספות, עד לסוף 2026, בהינתן פרסום ההוראות הסופיות של הרשות.",
       "fetched_at": "2026-05-31T00:00:00Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ]
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-08-27T00:00:00Z"
     },
     {
       "claim_id": "siudi-adl",
@@ -72,29 +52,22 @@
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ]
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-08-27T00:00:00Z"
     },
     {
       "claim_id": "earthquake-optout",
-      "claim": "Earthquake coverage is included by default in an Israeli home policy, and the insured can opt out.",
+      "claim": "A structure policy normally includes cover for earthquake damage unless the owner asked to waive it.",
       "source_url": "https://www.kolzchut.org.il/he/%D7%91%D7%99%D7%98%D7%95%D7%97_%D7%93%D7%99%D7%A8%D7%94_%D7%9E%D7%A4%D7%A0%D7%99_%D7%A0%D7%96%D7%A7%D7%99_%D7%A8%D7%A2%D7%99%D7%93%D7%AA_%D7%90%D7%93%D7%9E%D7%94",
-      "raw_snippet": "כיסוי לרעידת אדמה נכלל כברירת מחדל בפוליסה לביטוח דירה, אך המבוטח יכול לוותר עליו באופן יזום.",
-      "fetched_at": "2026-07-16T00:00:00Z",
+      "raw_snippet": "אם בעלי הדירות רכשו ביטוח מבנה, הביטוח כולל בדרך כלל כיסוי לנזק מרעידות אדמה אלא אם בעל הדירה ביקש לוותר עליו.",
+      "fetched_at": "2026-08-27T00:00:00Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ]
-    },
-    {
-      "claim_id": "wobi-phoenix",
-      "claim": "The Competition Authority cleared The Phoenix's acquisition of the Wobi insurance price-comparison site (via the Oren Mizrach agency) for NIS 150 million; final approval rests with the Insurance Commissioner and had not been given.",
-      "source_url": "https://www.themarker.com/markets/2026-05-10/ty-article/.premium/0000019e-1213-d790-a3ff-fff7f6d00000",
-      "raw_snippet": "רשות התחרות אישרה לחברת הפניקס לרכוש את אתר השוואת מחירי הביטוח וואבי באמצעות סוכנות אורן מזרח שבבעלות חברת הביטוח תמורת 150 מיליון שקל. ואולם, האישור הסופי לעסקה נתון בידי המפקח על הביטוח, עמית גל, שאינו שש להעניקו.",
-      "fetched_at": "2026-07-16T00:00:00Z",
-      "appears_in": [
-        "SKILL.md",
-        "SKILL_HE.md"
-      ]
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-08-27T00:00:00Z"
     },
     {
       "claim_id": "shaban-regulated",
@@ -110,15 +83,17 @@
       "verified_at": "2026-08-13T00:00:00Z"
     },
     {
-      "claim_id": "illustrative-figures",
-      "claim": "Illustrative/typical ranges used as guidance, not fixed regulated figures: a 10% earthquake deductible is typical; paying annually instead of monthly often saves about 5-8%; correcting shin-nun no-claims years can move premiums by roughly 10-20%; standard-construction rebuild value is roughly 6,000-8,000 ILS (6,000-8,000 ש\"ח) per square meter.",
+      "claim_id": "earthquake-deductible",
+      "claim": "The earthquake deductible is separate, is normally set as a percentage of the sum insured rather than by the size of the damage, and may be substantially higher than an ordinary deductible.",
       "source_url": "https://www.kolzchut.org.il/he/%D7%91%D7%99%D7%98%D7%95%D7%97_%D7%93%D7%99%D7%A8%D7%94_%D7%9E%D7%A4%D7%A0%D7%99_%D7%A0%D7%96%D7%A7%D7%99_%D7%A8%D7%A2%D7%99%D7%93%D7%AA_%D7%90%D7%93%D7%9E%D7%94",
-      "raw_snippet": "כיסוי רעידת אדמה כולל ברירת מחדל של השתתפות עצמית העומדת על 10%. המבוטח יכול, באמצעות רכישת פרמיה נוספת להוריד את גובה ההשתתפות העצמית לשיעור נמוך יותר של 5% או 2% מסכום הביטוח.",
-      "fetched_at": "2026-05-31T00:00:00Z",
+      "raw_snippet": "ההשתתפות העצמית בכיסוי לרעידת אדמה עשויה להיות גבוהה משמעותית מההשתתפות העצמית במקרי ביטוח אחרים. היא נקבעת בדרך כלל כאחוז מסכום הביטוח ולא רק לפי גובה הנזק.",
+      "fetched_at": "2026-08-27T00:00:00Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ]
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-08-27T00:00:00Z"
     },
     {
       "claim_id": "siudi-runoff-2027",
@@ -126,6 +101,216 @@
       "source_url": "https://www.calcalist.co.il/local_news/article/r11b7psr1x",
       "raw_snippet": "ביטול סעיף \"החיסול העצמי\" בפוליסות הסיעוד בעוד שנתיים, החל מ-2027.",
       "fetched_at": "2026-05-31T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-08-27T00:00:00Z"
+    },
+    {
+      "claim_id": "govcarins-state-employees",
+      "claim": "govcarins.mof.gov.il is the Ministry of Finance simulator for comprehensive (makif) car insurance for STATE EMPLOYEES, priced off the state procurement tender with a tender-year selector, and it explains how to derive the tender's hova rate.",
+      "source_url": "https://govcarins.mof.gov.il/",
+      "raw_snippet": "סימולטור ביטוח רכב מקיף לעובדי מדינה ברוכים הבאים לסימולטור ביטוח רכב מקיף, ביחרו שנת מכרז לחישוב 2026 2025 2024 2023 2022 2021 מחשבון זה הינו לביטוח מקיף בלבד. מחיר הביטוח כולל 2 תביעות ומעלה, אלא אם המבוטח יעביר טופס עבר ביטוחי הכולל פחות מ-2 תביעות.",
+      "fetched_at": "2026-08-27T00:00:00Z",
+      "verified_via": "browser",
+      "verified_at": "2026-08-27T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "cma-calculator-no-plate-field",
+      "claim": "The CMA hova calculator at car.cma.gov.il is a risk-parameter form with no licence-plate field: it collects vehicle type, ownership, driver age, licence years, accidents, suspensions, fuel type, engine capacity, ABS, ESP, airbags, FCW and LDW. A commercial vehicle up to 3.5t is priced by selecting vehicle type 'private car'.",
+      "source_url": "https://car.cma.gov.il/Parameters/Get?next_page=2&curr_page=2",
+      "raw_snippet": "פרטי הרכב סוג רכב רכב פרטי אופנוע אוטובוס/טיולית מונית רכב מסחרי רכב מיוחד סוג בעלות בעלות פרטית בעלות אחרת ת. תחילת ביטוח הנהג הצעיר ביותר הצפוי להשתמש ברכב מין הנהג נהג נהגת גיל הנהג מספר שנות רישוי",
+      "fetched_at": "2026-08-27T00:00:00Z",
+      "verified_via": "browser",
+      "verified_at": "2026-08-27T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "hapool-first-carrier",
+      "claim": "HaPool (המאגר לביטוח שיורי), the residual-market mechanism, is listed first among the carriers charging the identical regulated hova tariff on the CMA calculator, alongside Phoenix, Clal, Migdal, Harel (incl. Shirbit), Wesure and Hachshara.",
+      "source_url": "https://car.cma.gov.il/Parameters/Get?next_page=2&curr_page=2",
+      "raw_snippet": "תעריפי הביטוח לרכב פרטי ומסחרי עד 3.5 טון בחברות להלן הינם זהים: 1. הפול - המאגר לביטוח שיורי 2. הפניקס חברה לביטוח בע\"מ 3. כלל חברה לביטוח בע\"מ 4. מגדל חברה לביטוח בע\"מ 5. הראל חברה לביטוח בע\"מ (כולל שירביט מבית הראל) 6. ווישור חברה לביטוח בע\"מ 7. הכשרה חברה לביטוח בע\"מ",
+      "fetched_at": "2026-08-27T00:00:00Z",
+      "verified_via": "browser",
+      "verified_at": "2026-08-27T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "maccabi-three-tiers",
+      "claim": "Maccabi runs three SHABAN tiers, listed top-down on its own site as Maccabi Sheli, Maccabi Zahav, Maccabi Kesef, above the basic basket; Kesef is the entry tier. Kol Zchut independently lists the same three.",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%A9%D7%99%D7%A8%D7%95%D7%AA%D7%99_%D7%91%D7%A8%D7%99%D7%90%D7%95%D7%AA_%D7%A0%D7%95%D7%A1%D7%A4%D7%99%D7%9D_(%D7%91%D7%99%D7%98%D7%95%D7%97_%D7%9E%D7%A9%D7%9C%D7%99%D7%9D)",
+      "raw_snippet": "מכבי - מכבי שלי, מכבי זהב, מכבי כסף",
+      "fetched_at": "2026-08-27T00:00:00Z",
+      "verified_via": "browser",
+      "verified_at": "2026-08-27T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "shaban-tiers-differ-by-price",
+      "claim": "Most kupot run several SHABAN tiers differing in scope of services and correspondingly in price; a health declaration in the joining form is optional, and the only condition for receiving a SHABAN service is its waiting period.",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%A9%D7%99%D7%A8%D7%95%D7%AA%D7%99_%D7%91%D7%A8%D7%99%D7%90%D7%95%D7%AA_%D7%A0%D7%95%D7%A1%D7%A4%D7%99%D7%9D_(%D7%91%D7%99%D7%98%D7%95%D7%97_%D7%9E%D7%A9%D7%9C%D7%99%D7%9D)",
+      "raw_snippet": "למרבית קופות החולים קיימים כמה רבדים של תוכניות שב\"ן, הנבדלים בהיקף השירותים שהם מעניקים למבוטחים ובהתאם לכך, במחיר הנגבה עבורם.",
+      "fetched_at": "2026-08-27T00:00:00Z",
+      "verified_via": "browser",
+      "verified_at": "2026-08-27T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "harb-avar-bituchi",
+      "claim": "Har HaBituach is a free CMA site that aggregates all policies and premiums, alerts to duplicate cover, presents the motor-property insurance history (avar bituchi), and sends the avar bituchi form directly and securely to speed up joining a new insurer. Login is via the government identity system.",
+      "source_url": "https://harb.cma.gov.il/",
+      "raw_snippet": "מתריע בפני כפל ביטוחי מאפשר הצגת העבר הביטוחי בענף רכב רכוש זירוז תהליך הצירוף לביטוח על ידי משלוח בצורה ישירה של טופס העבר הביטוחי בצורה מאובטחת",
+      "fetched_at": "2026-08-27T00:00:00Z",
+      "verified_via": "browser",
+      "verified_at": "2026-08-27T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "infocar-vehicle-claims",
+      "claim": "INFOCAR, operated by the insurers' clearing centre (Merkaz HaSlika), is the insurance claims-history database for a specific VEHICLE, and reports whether the vehicle was insured and by which company.",
+      "source_url": "https://infocar.co.il/",
+      "raw_snippet": "ברוכים הבאים למאגר המידע להיסטוריית תביעות הביטוח מבית מרכז הסליקה, בהליך מהיר ופשוט בעלות של 12 שקלים (כולל מע\"מ) בלבד תוכלו לקבל מידע על היסטוריית התביעות בגין תאונות שארעו לרכב",
+      "fetched_at": "2026-08-27T00:00:00Z",
+      "verified_via": "browser",
+      "verified_at": "2026-08-27T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "cma-service-index",
+      "claim": "The CMA publishes an annual Service Index (מדד השירות) of insurers and managing companies, described as an important tool for customers choosing the institutional body from which to buy an insurance, pension or savings product, aimed at increasing transparency and competition on service. The most recent published edition covers 2024.",
+      "source_url": "https://www.gov.il/he/pages/service_index_all",
+      "raw_snippet": "כמדי שנה, רשות שוק ההון מפרסמת את מדד השירות של חברות הביטוח והחברות המנהלות המהווה כלי חשוב בידי הלקוחות בבואם לבחור גוף מוסדי ממנו ירכשו מוצר ביטוח, פנסיה או חיסכון. מטרת מדד השירות היא הגברת השקיפות לציבור החוסכים והמבוטחים לצד הגברת התחרות בתחום השירות.",
+      "fetched_at": "2026-08-27T00:00:00Z",
+      "verified_via": "browser",
+      "verified_at": "2026-08-27T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "clalit-ayalon-siudi-2026",
+      "claim": "On 16 August 2026 Clalit announced it had signed with Ayalon to provide long-term-care insurance to its insured members from January 2027 for eight years, replacing Harel, which withdrew in 2024 and agreed to continue until the end of 2026 after the subsequent tender drew no bidders.",
+      "source_url": "https://www.globes.co.il/news/article.aspx?did=1001552475",
+      "raw_snippet": "קופת חולים כללית הודיעה היום כי חתמה על הסכם עם חברת הביטוח איילון, שתעניק את שירותי הביטוח הסיעודי למבוטחי כללית במשך שמונה השנים הבאות. בכך נמצא מחליף לחברת הראל, שפרשה ממתן שירותי הביטוח הסיעודי של כללית בשנת 2024, אך לאחר שלא נמצא לה מחליף הסכימה להמשיך בהסכם עד סוף 2026.",
+      "fetched_at": "2026-08-27T00:00:00Z",
+      "verified_via": "browser",
+      "verified_at": "2026-08-27T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "pe-cma-complaints",
+      "claim": "pe.cma.gov.il is the CMA public-enquiries site covering insurance, gemel, pension, financial-service providers and the pension clearing house, and allows submitting a quick enquiry without registering.",
+      "source_url": "https://pe.cma.gov.il/Login/Login",
+      "raw_snippet": "פניות הציבור בביטוח, גמל, פנסיה, נותני שירותים פיננסים והמסלקה הפנסיונית",
+      "fetched_at": "2026-08-27T00:00:00Z",
+      "verified_via": "browser",
+      "verified_at": "2026-08-27T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "platform-hova",
+      "claim": "Hova.co.il is an Israeli insurance comparison site centred on mandatory car insurance (bituach hova), whose own navigation also offers makif, third-party, home and travel insurance.",
+      "source_url": "https://www.hova.co.il/",
+      "raw_snippet": "ביטוח חובה - Hova",
+      "fetched_at": "2026-08-27T00:00:00Z",
+      "verified_via": "browser",
+      "verified_at": "2026-08-27T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "platform-shukabit",
+      "claim": "Shukabit (shukabit.co.il) is an Israeli insurance comparison platform covering car, home and mortgage insurance among other lines.",
+      "source_url": "https://shukabit.co.il/",
+      "raw_snippet": "השוואת ביטוח - שוק הביטוח",
+      "fetched_at": "2026-08-27T00:00:00Z",
+      "verified_via": "browser",
+      "verified_at": "2026-08-27T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "platform-wobi",
+      "claim": "Wobi (wobi.co.il) is an Israeli platform for comparing and buying insurance, covering car, travel and home lines among others.",
+      "source_url": "https://www.wobi.co.il/",
+      "raw_snippet": "משווים, חוסכים וקונים ביטוח | Wobi",
+      "fetched_at": "2026-08-27T00:00:00Z",
+      "verified_via": "browser",
+      "verified_at": "2026-08-27T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "platform-bestie",
+      "claim": "Bestie (bestie.co.il) describes ITSELF as the only Israeli comparison platform that is not an insurance company or agency and therefore is not trying to sell insurance. This is the platform's own self-description, not an independent verification of its commercial arrangements. Its site covers car, home and mortgage-related insurance, with no supplementary-health line.",
+      "source_url": "https://bestie.co.il/",
+      "raw_snippet": "בסטי היא פלטפורמת ההשוואה היחידה בישראל שהיא לא חברה או סוכנות ביטוח ולכן אנחנו לא מחפשים למכור לכם ביטוח.",
+      "fetched_at": "2026-08-27T00:00:00Z",
+      "verified_via": "browser",
+      "verified_at": "2026-08-27T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "platform-insurancefind",
+      "claim": "InsuranceFind (insurancefind.co.il) presents itself as a directory/guide to Israeli insurance companies rather than a live quote aggregator.",
+      "source_url": "https://insurancefind.co.il/",
+      "raw_snippet": "המדריך המוביל לביטוח בישראל",
+      "fetched_at": "2026-08-27T00:00:00Z",
+      "verified_via": "browser",
+      "verified_at": "2026-08-27T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "earthquake-72h",
+      "claim": "Earthquakes occurring within 72 hours of each other may be treated as a single insured event for deductible purposes.",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%91%D7%99%D7%98%D7%95%D7%97_%D7%93%D7%99%D7%A8%D7%94_%D7%9E%D7%A4%D7%A0%D7%99_%D7%A0%D7%96%D7%A7%D7%99_%D7%A8%D7%A2%D7%99%D7%93%D7%AA_%D7%90%D7%93%D7%9E%D7%94",
+      "raw_snippet": "רעידות אדמה שמתרחשות בתוך פרק זמן של 72 שעות עשויות להיחשב לאירוע ביטוחי אחד לצורך ההשתתפות העצמית.",
+      "fetched_at": "2026-08-27T00:00:00Z",
+      "verified_via": "browser",
+      "verified_at": "2026-08-27T00:00:00Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
