@@ -1,6 +1,6 @@
 {
   "author": "skills-il",
-  "version": "1.4.1",
+  "version": "1.5.0",
   "category": "tax-and-finance",
   "tags": {
     "he": [
@@ -25,8 +25,8 @@
     "en": "IL Invoice Organizer"
   },
   "display_description": {
-    "he": "אינו ייעוץ מס ואינו דוח שהוגש. ניתוח וארגון חשבוניות בעברית להנהלת חשבונות ישראלית: חילוץ מע\"מ 18% בכלל 18/118, סיווג לקטגוריות רשות המסים (1-12), זיהוי עוסק מורשה/פטור/ח\"פ, אימות מספר הקצאה (מודל חשבוניות ישראל), וייצוא מוכן לרואה חשבון. השתמשו כשצריך לארגן ערמת חשבוניות לחודש או לשנה, לחלץ מע\"מ מסכום כולל, או להכין מסמכים לרואה החשבון. אל תשתמשו לצורך הנפקת חשבוניות (השתמשו ב-israeli-e-invoice) או לדיווח מע\"מ תקופתי (השתמשו ב-israeli-vat-reporting).",
-    "en": "Not tax advice and not a filed return. Parse and organize Hebrew invoices for Israeli bookkeeping: VAT 1/6 extraction, Tax Authority expense categories, Osek Murshe/Patur recognition, and accountant-ready export. Use when user asks about organizing invoices, expense categorization, VAT extraction, or preparing documents for their accountant. Do NOT use for invoice generation (use israeli-e-invoice instead) or for VAT report filing (use israeli-vat-reporting instead)."
+    "he": "אינו ייעוץ מס ואינו דוח שהוגש. ניתוח וארגון חשבוניות בעברית להנהלת חשבונות ישראלית: חילוץ מע\"מ 18% בכלל 18/118, סיווג לקטגוריות הוצאה, זיהוי עוסק מורשה/פטור/ח\"פ, אימות מספר הקצאה (מודל חשבוניות ישראל), וייצוא מוכן לרואה חשבון. השתמשו כשצריך לארגן ערמת חשבוניות לחודש או לשנה, לחלץ מע\"מ מסכום כולל, או להכין מסמכים לרואה החשבון. אל תשתמשו לצורך הנפקת חשבוניות (השתמשו ב-israeli-e-invoice) או לדיווח מע\"מ תקופתי (השתמשו ב-israeli-vat-reporting).",
+    "en": "Not tax advice and not a filed return. Parse and organize Hebrew invoices for Israeli bookkeeping: VAT 1/6 extraction, expense categorization, Osek Murshe/Patur recognition, and accountant-ready export. Use when user asks about organizing invoices, expense categorization, VAT extraction, or preparing documents for their accountant. Do NOT use for invoice generation (use israeli-e-invoice instead) or for VAT report filing (use israeli-vat-reporting instead)."
   },
   "supported_agents": [
     "claude-code",

@@ -6,10 +6,10 @@
   "claims": [
     {
       "claim_id": "vat-rate-18",
-      "claim": "Israeli standard VAT rate is 18% in 2026 (raised from 17% on 1 January 2025)",
-      "source_url": "https://www.vatcalc.com/vat/israel-vat-rise-to-19-jan-2026-proposal/",
-      "raw_snippet": "Israeli standard VAT rate is 18% in 2026 (raised from 17% on 1 January 2025) Proposal to raise to 19% in Jan 2026 was rejected; rate remains 18%",
-      "fetched_at": "2026-07-06T00:00:00Z",
+      "claim": "The Israeli standard VAT rate is 18%, raised from 17% on 1 January 2025, and is still 18% as at the 29 June 2026 review date of this source",
+      "source_url": "https://taxsummaries.pwc.com/israel/corporate/other-taxes",
+      "raw_snippet": "The 2025 current rate of VAT is 18%.",
+      "fetched_at": "2026-08-26T17:47:06Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
@@ -17,10 +17,10 @@
     },
     {
       "claim_id": "vat-rate-19-rejected",
-      "claim": "Ministry of Finance 2026 budget proposal to raise VAT from 18% to 19% was rejected; rate stays at 18% through 2026",
-      "source_url": "https://www.vatcalc.com/vat/israel-vat-rise-to-19-jan-2026-proposal/",
-      "raw_snippet": "Ministry of Finance 2026 budget proposal to raise VAT from 18% to 19% was rejected; rate stays at 18% through 2026",
-      "fetched_at": "2026-07-06T00:00:00Z",
+      "claim": "No rise above 18% is in force. A 2026-budget proposal to move to 19% did not take effect, and a source reviewed 29 June 2026 still gives 18% as the current rate.",
+      "source_url": "https://taxsummaries.pwc.com/israel/corporate/other-taxes",
+      "raw_snippet": "The 2025 current rate of VAT is 18%.",
+      "fetched_at": "2026-08-26T17:47:06Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
@@ -54,16 +54,16 @@
     },
     {
       "claim_id": "allocation-threshold-jun-2026",
-      "claim": "SHAAM allocation threshold drops to NIS 5,000 (pre-VAT) from 1 June 2026; further reductions are planned for 2027 (not a permanent floor)",
-      "source_url": "https://www.greeninvoice.co.il/magazine/israel-invoice/",
-      "raw_snippet": "סכום הסף: חובה לקבל מספר הקצאה על כל חשבונית בסכום גבוה מ-5,000 ש\"ח (החל מיוני 2026) מי חייב במספר הקצאה עסקים מורשים, חברה בע\"מ ושותפויות, בכל הפקת חשבונית מס (לצורך קיזוז מע\"מ ללקוח). מי פטור? עוסקים פטורים ועסקאות ללא מע\"מ רפורמת חשבוניות ישראל, נכנסה לתוקף במאי 2024, והחל מה-1 ליוני 2026, מחייבת קבלת מספר הקצאה מרשות המיסים עבור כל חשבונית שהעסק מפיק בסכום גבוה מ-5,000 ₪ (לפני מע\"מ). נסו אותנו בחינם ל-30 יום מה זה מודל חשבוניות ישראל?",
-      "fetched_at": "2026-08-18",
+      "claim": "The allocation-number threshold is NIS 5,000 (pre-VAT) from 1 June 2026. That is the terminal step: no further reduction is legislated or announced, and the Israel Tax Authority page enumerating the ladder contains no mention of 2027 or 2028.",
+      "source_url": "https://www.gov.il/he/departments/topics/israel-invoice",
+      "raw_snippet": "מספרי הקצאה אלה יידרשו כתנאי לניכוי מס התשומות בעסקאות שמעל לתקרה שנקבעה בחוק (20,000 ₪ לשנת 2025, 10,000 החל מה-1 בינואר 2026 ו-5,000 ₪ החל מה-1 ביוני 2026)",
+      "fetched_at": "2026-08-26T17:44:05Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
       ],
-      "verified_via": "cited page fetched and confirmed to contain \"5,000\"; snippet replaced with the page's own wording around it",
-      "verified_at": "2026-08-18"
+      "verified_via": "browser",
+      "verified_at": "2026-08-26T17:44:05Z"
     },
     {
       "claim_id": "allocation-effect",
@@ -79,110 +79,21 @@
       "verified_at": "2026-08-18"
     },
     {
-      "claim_id": "vat-extract-formula",
-      "claim": "Correct formula to extract VAT from a VAT-inclusive amount at 18%: VAT = total * 18 / 118",
-      "source_url": "https://invoicedataextraction.com/blog/israel-vat-invoice-requirements",
-      "raw_snippet": "omplete 2026 Guide Israel VAT Invoice Requirements: Complete 2026 Guide Israeli VAT invoice requirements for foreign businesses: the 18% rate, mandatory fields, Hebrew rules, reverse charge, and SHAAM allocation numbers.",
-      "fetched_at": "2026-08-18",
-      "appears_in": [
-        "SKILL.md",
-        "SKILL_HE.md"
-      ],
-      "verified_via": "cited page fetched and confirmed to contain \"18%\"; snippet replaced with the page's own wording around it",
-      "verified_at": "2026-08-18"
-    },
-    {
       "claim_id": "vehicle-2-3-rule",
-      "claim": "Non-commercial vehicle expenses: only 2/3 of input VAT is deductible (1/3 permanently non-deductible)",
-      "source_url": "https://www.gov.il/he/departments/guides/income-tax-allowed-expenses",
-      "raw_snippet": "Non-commercial vehicle expenses: only 2/3 of input VAT is deductible (1/3 permanently non-deductible) Long-standing rule under VAT regulations, unchanged for 2026",
-      "fetched_at": "2026-07-06T00:00:00Z",
+      "claim": "Regulation 18(ב)(2): two thirds of the input VAT is deductible on a mixed-use asset or service where the main use is for business and the Director has not fixed the proportion",
+      "source_url": "https://he.wikisource.org/w/index.php?title=%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%9E%D7%A1_%D7%A2%D7%A8%D7%9A_%D7%9E%D7%95%D7%A1%D7%A3&action=raw",
+      "raw_snippet": "ועיקר השימוש בנכס או בשירות הוא לצרכי עסק, רשאי העוסק לנכות שני שלישים ממס התשומות;",
+      "fetched_at": "2026-08-26T17:47:06Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
       ]
-    },
-    {
-      "claim_id": "entertainment-80pct",
-      "claim": "Entertainment / hosting / meals expenses: only 80% deductible for income tax (irrespective of full VAT deduction)",
-      "source_url": "https://www.gov.il/he/departments/guides/income-tax-allowed-expenses",
-      "raw_snippet": "Entertainment / hosting / meals expenses: only 80% deductible for income tax (irrespective of full VAT deduction)",
-      "fetched_at": "2026-07-06T00:00:00Z",
-      "appears_in": [
-        "SKILL.md",
-        "SKILL_HE.md"
-      ]
-    },
-    {
-      "claim_id": "osek-patur-threshold-2026",
-      "claim": "Osek Patur annual turnover ceiling is NIS 122,833 starting 2026 (raised from NIS 120,000 used in 2024-2025)",
-      "source_url": "https://www.cwsisrael.com/freelancer-tax-compliance-in-israel-2026/",
-      "raw_snippet": "to choose between two main statuses: Osek Patur (Exempt Entity): This is for small businesses with an annual turnover below NIS 120,000 (as of 2025) . You are exempt from charging VAT, which simplifies invoicing and reporting. However, certain professions, such as lawyers, doctors, architects, and consultants, are not eligible for this status regardless of their income .",
-      "fetched_at": "2026-08-18",
-      "appears_in": [
-        "SKILL.md",
-        "SKILL_HE.md"
-      ],
-      "verified_via": "cited page fetched and confirmed to contain \"120,000\"; snippet replaced with the page's own wording around it",
-      "verified_at": "2026-08-18"
     },
     {
       "claim_id": "osek-patur-restricted-professions",
       "claim": "Lawyers, doctors, architects, engineers, accountants (and a few others) cannot register as Osek Patur regardless of turnover",
       "source_url": "https://cpa-dray.com/en/blog/osek-patur-guide/",
       "raw_snippet": "The Osek Patur Guide - Dray & Dray - Israel Tax Guides",
-      "fetched_at": "2026-08-18",
-      "appears_in": [
-        "SKILL.md",
-        "SKILL_HE.md"
-      ],
-      "verified_via": "navigational claim about the source itself; snippet is the cited page's own title, fetched to confirm the page exists and is what the claim says it is",
-      "verified_at": "2026-08-18"
-    },
-    {
-      "claim_id": "osek-zair-flat-30pct",
-      "claim": "Osek Zair (Small Dealer) election allows 30% flat expense deduction for self-employed with annual revenue up to NIS 122,833",
-      "source_url": "https://taxsummaries.pwc.com/israel/individual/deductions",
-      "raw_snippet": "Israel - Individual - Deductions",
-      "fetched_at": "2026-08-19",
-      "appears_in": [
-        "SKILL.md",
-        "SKILL_HE.md"
-      ],
-      "verified_via": "claim about the source itself; snippet is the cited page's own title, fetched to confirm the page exists and is what the claim says it is",
-      "verified_at": "2026-08-19"
-    },
-    {
-      "claim_id": "invoice-14-day-rule",
-      "claim": "Tax invoice (Heshbonit Mas) must be issued within 14 days of the taxable supply or payment, whichever comes first",
-      "source_url": "https://invoicedataextraction.com/blog/israel-vat-invoice-requirements",
-      "raw_snippet": "Israeli tax law requires that a Heshbonit Mas be issued within 14 days of the taxable supply taking place or of cash settlement, whichever comes first. Missing this window does not eliminate the tax obligation, but it does create compliance exposure and can complicate VAT recovery for the purchasing party.",
-      "fetched_at": "2026-08-18",
-      "appears_in": [
-        "SKILL.md",
-        "SKILL_HE.md"
-      ],
-      "verified_via": "source fetched and the passage copied verbatim from the cited page",
-      "verified_at": "2026-08-18"
-    },
-    {
-      "claim_id": "vat-filing-bimonthly-threshold",
-      "claim": "VAT returns filed bi-monthly if annual turnover is at or below NIS 1,775,000; monthly above that. A separate detailed report (doch meforat) is required from turnover NIS 500,000 (from 1 Jan 2026)",
-      "source_url": "https://www.tax-advisor.co.il/עוסק-מורשה/",
-      "raw_snippet": "עוסק מורשה – מדריך המלא (מעודכן 07.2026)",
-      "fetched_at": "2026-08-19",
-      "appears_in": [
-        "SKILL.md",
-        "SKILL_HE.md"
-      ],
-      "verified_via": "claim about the source itself; snippet is the cited page's own title, fetched to confirm the page exists and is what the claim says it is",
-      "verified_at": "2026-08-19"
-    },
-    {
-      "claim_id": "vat-filing-deadline",
-      "claim": "VAT periodic return deadline is the 15th of the month following the reporting period",
-      "source_url": "https://taxsummaries.pwc.com/israel/corporate/other-taxes",
-      "raw_snippet": "Israel - Corporate - Other taxes",
       "fetched_at": "2026-08-18",
       "appears_in": [
         "SKILL.md",
@@ -231,43 +142,6 @@
       "verified_at": "2026-08-18"
     },
     {
-      "claim_id": "hp-prefix-51-52",
-      "claim": "Israeli private company (Hevra Peratit / ח\"פ) business numbers begin with 51 or 52",
-      "source_url": "https://lookuptax.com/docs/tax-identification-number/israel-tax-id-guide",
-      "raw_snippet": "number (from the Hebrew Hevra Pratit , private company). This number serves as the corporate TIN. Format: 9 numeric digits with no internal separators or embedded meaning. For VAT-registered companies, the Israel Tax Authority uses the same 9-digit number as the VAT registration identifier. Incorporated companies are identifiable because the first digit is always 5 ; partnerships and other entities use different leading digits. The H.",
-      "fetched_at": "2026-08-18",
-      "appears_in": [
-        "SKILL.md",
-        "SKILL_HE.md"
-      ],
-      "verified_via": "cited page fetched; 33 of 35 of the claim's distinctive terms occur on it, and the snippet is the page's own wording around \"private\"",
-      "verified_at": "2026-08-18"
-    },
-    {
-      "claim_id": "amuta-prefix-58",
-      "claim": "Israeli non-profit association (Amuta) business numbers begin with 58",
-      "source_url": "https://lookuptax.com/docs/tax-identification-number/israel-tax-id-guide",
-      "raw_snippet": "Israel TIN Number Guide — Mispar Zehut, Osek Murshe & H.P. Company Number | LookupTax",
-      "fetched_at": "2026-08-18",
-      "appears_in": [
-        "SKILL.md",
-        "SKILL_HE.md"
-      ],
-      "verified_via": "navigational claim about the source itself; snippet is the cited page's own title, fetched to confirm the page exists and is what the claim says it is",
-      "verified_at": "2026-08-18"
-    },
-    {
-      "claim_id": "invoice-types-300-305-320",
-      "claim": "Israeli invoice document codes: 300 = Tax Invoice, 305 = Tax Invoice/Receipt combined, 310 = Credit Invoice, 320 = Receipt only, 330 = Proforma",
-      "source_url": "https://www.gov.il/he/pages/invoices-format",
-      "raw_snippet": "Israeli invoice document codes: 300 = Tax Invoice, 305 = Tax Invoice/Receipt combined, 310 = Credit Invoice, 320 = Receipt only, 330 = Proforma",
-      "fetched_at": "2026-07-06T00:00:00Z",
-      "appears_in": [
-        "SKILL.md",
-        "SKILL_HE.md"
-      ]
-    },
-    {
       "claim_id": "shaam-clearance-model",
       "claim": "Israel uses a clearance model: invoices above threshold are submitted to SHAAM (Israeli Tax Authority Computerized Processing System) via API or web portal, which validates and returns a unique allocation number",
       "source_url": "https://edicomgroup.com/electronic-invoicing/israel",
@@ -278,32 +152,6 @@
         "SKILL_HE.md"
       ],
       "verified_via": "cited page fetched; 36 of 42 of the claim's distinctive terms occur on it, and the snippet is the page's own wording around \"clearance\"",
-      "verified_at": "2026-08-18"
-    },
-    {
-      "claim_id": "depreciation-rates",
-      "claim": "Common Israeli depreciation rates: computers 33%, software 33%, office furniture 6%, vehicles 15%, industrial equipment 7-20%",
-      "source_url": "https://taxsummaries.pwc.com/israel/individual/deductions",
-      "raw_snippet": "Israel - Individual - Deductions",
-      "fetched_at": "2026-08-19",
-      "appears_in": [
-        "SKILL.md",
-        "SKILL_HE.md"
-      ],
-      "verified_via": "claim about the source itself; snippet is the cited page's own title, fetched to confirm the page exists and is what the claim says it is",
-      "verified_at": "2026-08-19"
-    },
-    {
-      "claim_id": "foreign-supplier-no-israeli-vat",
-      "claim": "Invoices from foreign suppliers (AWS, Google, OpenAI, Figma, Upwork, most overseas SaaS) carry NO Israeli VAT; the 18/118 rule must not be applied to them. Import VAT on goods is reclaimed only via the customs import entry (רשימון יבוא). Foreign-currency amounts convert to ILS at the invoice-date rate.",
-      "source_url": "https://www.nevo.co.il/law_html/law01/271_005.htm",
-      "raw_snippet": "ל האיחוד האירופי; מיום 10.3.2008 תק' תשס\"ח-2008 ק\"ת תשס\"ח מס' 6655 מיום 10.3.2008 עמ' 616 בוטלו ק\"ת תשס\"ח מס' 6699 מיום 6.8.3008 עמ' 1184 הוספת פסקה 3(א)(1)(יז) הנוסח: (יז) מענק שניתן לשם הפקת סרט על ידי מוסד ציבורי מסייע כהגדרתו בתקנות הקולנוע (הכרה בסרט כסרט ישראלי), התשס\"ה-2005. מיום 6.8.2008 תק' (מס' 3) תשס\"ח-2008 ק\"ת תשס\"ח מס' 6699 מיום 6.8.2008 עמ' 1184 הוספת פסקה 3(א)(1)(יז) מיום 17.12.2009 תק' תש\"ע-2009 ק\"ת תש\"ע מס' 6837 מיום 17.12.2009 עמ' 276 הוספת פסקה 3(א)(1)(יח) מיום 1.1.",
-      "fetched_at": "2026-08-18",
-      "appears_in": [
-        "SKILL.md",
-        "SKILL_HE.md"
-      ],
-      "verified_via": "cited page fetched and confirmed to contain \"118\"; snippet replaced with the page's own wording around it",
       "verified_at": "2026-08-18"
     },
     {
@@ -320,32 +168,6 @@
       "verified_at": "2026-08-18"
     },
     {
-      "claim_id": "six-month-input-vat-window-23a",
-      "claim": "Input VAT may be deducted in the invoice's VAT period or within 6 months after it (תקנה 23א); later deduction requires prior approval from the VAT office.",
-      "source_url": "https://www.nevo.co.il/law_html/law01/271_005.htm",
-      "raw_snippet": "מיום 1.3.1978 תק' (מס' 2) תשל\"ח-1978 ק\"ת תשל\"ח מס' 3820 מיום 1.3.1978 עמ' 779 הוספת תקנה 23א מיום 22.6.1995 תק' (מס' 2) תשנ\"ה-1995 ק\"ת תשנ\"ב מס' 5686 מיום 22.6.1995 עמ' 1546 23א. (א) עוסק המוכר נכס או נותן שירות לתושב שטחי עזה ויריחו, או הקונה נכס או מקבל שירות מהתושב, יגיש דו\"ח נוסף על עסקאות אלה כאמור בסעיף 72 לחוק. (ב) דו\"ח נוסף שנדרש עוסק להגישו לפי סעיף 72 לחוק יהא חתום בידי העוסק ואם העוסק הוא חבר בני אדם יצויים ליד החתימה שם החותם ותפקידו.",
-      "fetched_at": "2026-08-18",
-      "appears_in": [
-        "SKILL.md",
-        "SKILL_HE.md"
-      ],
-      "verified_via": "cited page fetched and confirmed to contain \"תקנה 23א\"; snippet replaced with the page's own wording around it",
-      "verified_at": "2026-08-18"
-    },
-    {
-      "claim_id": "detailed-vat-report-500k-2026",
-      "claim": "A detailed VAT report (דוח מפורט) is required for businesses with annual turnover above NIS 500,000 from 1 January 2026.",
-      "source_url": "https://www.tax-advisor.co.il/עוסק-מורשה/",
-      "raw_snippet": "עוסק מורשה – מדריך המלא (מעודכן 07.2026)",
-      "fetched_at": "2026-08-19",
-      "appears_in": [
-        "SKILL.md",
-        "SKILL_HE.md"
-      ],
-      "verified_via": "claim about the source itself; snippet is the cited page's own title, fetched to confirm the page exists and is what the claim says it is",
-      "verified_at": "2026-08-19"
-    },
-    {
       "claim_id": "vehicle-purchase-vat-nondeductible",
       "claim": "Regulation 14(a) of the VAT Regulations 1976 forbids a dealer from deducting input VAT on the purchase or import of a 'private vehicle', even where the vehicle is used solely for business transactions (100% business use), except for the exceptions listed in Regulation 14(b).",
       "source_url": "https://www.gov.il/he/pages/instructions-for-deduction-of-input-tax-for-vehicles-and-motorcycles",
@@ -358,30 +180,18 @@
     },
     {
       "claim_id": "invoice-in-business-name",
-      "claim": "A tax invoice must be issued in the name of the claiming business (על שם העוסק) to allow input-VAT deduction; invoices addressed to the owner personally, a spouse, or a different entity are disallowed.",
-      "source_url": "https://www.nevo.co.il/law_html/law01/271_002.htm",
-      "raw_snippet": "A tax invoice must be issued in the name of the claiming business (על שם העוסק) to allow input-VAT deduction; invoices addressed to the owner personally, a spouse, or a different entity are disallowed. §38 VAT Law + bookkeeping regs.",
-      "fetched_at": "2026-07-06T00:00:00Z",
+      "claim": "Section 38(א): a dealer may deduct input VAT contained in a tax invoice issued TO HIM lawfully (חשבונית מס שהוצאה לו כדין), which is why an invoice addressed to the owner personally or to another entity is disallowed",
+      "source_url": "https://he.wikisource.org/w/index.php?title=%D7%97%D7%95%D7%A7_%D7%9E%D7%A1_%D7%A2%D7%A8%D7%9A_%D7%9E%D7%95%D7%A1%D7%A3&action=raw",
+      "raw_snippet": "עוסק זכאי לנכות מהמס שהוא חייב בו את מס התשומות הכלול בחשבונית מס שהוצאה לו כדין",
+      "fetched_at": "2026-08-26T17:47:06Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
       ]
     },
     {
-      "claim_id": "invoice-thresholds-consolidated-2026",
-      "claim": "Consolidated 2026 Israeli invoice/VAT thresholds and rule references used across the skill.",
-      "source_url": "https://www.tax-advisor.co.il/עוסק-מורשה/",
-      "raw_snippet": "מודל חשבוניות ישראל: סף מספר הקצאה 20,000 ש\"ח ב-2025, 10,000 ש\"ח מ-1.1.2026, 5,000 ש\"ח מ-1.6.2026. תקרת עוסק פטור 122,833 ש\"ח מ-2026 (עלתה מ-120,000 ש\"ח). דוח מע\"מ דו-חודשי עד 1,775,000 ש\"ח, חודשי מעל; דוח מפורט ממחזור 500,000 ש\"ח מ-1.1.2026. סטיית עיגול מותרת 1 ש\"ח / 1 NIS. פחת מבנה 4%, ריהוט 6%. עוסק זעיר: לא יותר מ-25% מצד קשור, לא בעל מניות 10%+, ניכוי 30%. סלולר מעורב מינימום 50%. טופס 6111. תקנה 14, תקנה 15א, תקנה 16, תקנה 18, תקנה 23א. Thresholds in NIS: 20,000; 10,000; 5,000; 122,833; 120,000; 1,775,000; 500,000.",
-      "fetched_at": "2026-07-06T00:00:00Z",
-      "appears_in": [
-        "SKILL.md",
-        "SKILL_HE.md",
-        "references/expense-categories.md"
-      ]
-    },
-    {
       "claim_id": "illustrative-worked-example-figures",
-      "claim": "Illustrative computed figures in the worked examples are derived arithmetic, not sourced facts: they follow from the statutory 18% VAT rate (the 18/118 extraction) and the 2/3 mixed-use deduction rate. Amounts: 5,850 NIS / 5,850 ש\"ח total; VAT 892.37 NIS / 892.37 ש\"ח; net 4,957.63 NIS / 4,957.63 ש\"ח; fuel 2,340 NIS / 2,340 ש\"ח; VAT 356.95 NIS / 356.95 ש\"ח; deductible 237.97 NIS / 237.97 ש\"ח; non-deductible 118.98 NIS / 118.98 ש\"ח. Rounding tolerance 1 NIS / 1 ש\"ח. Structural fragments NIS 3, NIS 4 (dates/codes) are not monetary facts.",
+      "claim": "Worked-example figures are arithmetic derived from the verified 18% rate and the Regulation 18 fractions, not independent factual claims. Example 4: 2,340 NIS gross gives 356.95 NIS VAT; under Reg 18(b)(2) that is 237.97 NIS deductible and 118.98 NIS not; under Reg 18(b)(3) it is 89.24 NIS deductible and 267.71 NIS not. Example 2: 5,850 NIS gross gives 892.37 NIS VAT and 4,957.63 NIS net. Example 3 uses a 4 NIS rounding illustration. Category codes 1 to 12 are this skill's own numbering. תקנה 18",
       "source_url": "https://www.gov.il/he/pages/vat-to-the-new-dealer",
       "raw_snippet": "סכום המע״מ מחושב בשיעור קבוע ממחיר העסקה (נכון לינואר 2026 שיעור המע״מ הוא 18%).",
       "fetched_at": "2026-08-11",
@@ -427,8 +237,271 @@
         "SKILL.md",
         "SKILL_HE.md"
       ]
+    },
+    {
+      "claim_id": "allocation-ladder-ita",
+      "claim": "The Israel Tax Authority states the allocation-number ladder as NIS 20,000 for 2025, 10,000 from 1 January 2026 and 5,000 from 1 June 2026, required as a condition for deducting input VAT",
+      "source_url": "https://www.gov.il/he/departments/topics/israel-invoice",
+      "raw_snippet": "כתנאי לניכוי מס התשומות",
+      "fetched_at": "2026-08-26T17:44:05Z",
+      "verified_via": "browser",
+      "verified_at": "2026-08-26T17:44:05Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "scripts/categorize_invoices.py"
+      ]
+    },
+    {
+      "claim_id": "allocation-request-service",
+      "claim": "The Israel Tax Authority operates an online service for a supplier to request an allocation number for a tax invoice, currently for transactions above NIS 5,000 before VAT",
+      "source_url": "https://www.gov.il/he/service/request-assignment-number-for-tax-invoice",
+      "raw_snippet": "בקשה למספר הקצאה לחשבונית מס",
+      "fetched_at": "2026-08-26T17:44:05Z",
+      "verified_via": "browser",
+      "verified_at": "2026-08-26T17:44:05Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "verify-vendor-invoice-service",
+      "claim": "The Israel Tax Authority operates an online service to verify a supplier's invoice details against its allocation number",
+      "source_url": "https://www.gov.il/he/service/verify-vendor-invoice-information",
+      "raw_snippet": "אימות פרטי חשבונית הספק על סמך מספר הקצאה",
+      "fetched_at": "2026-08-26T17:44:05Z",
+      "verified_via": "browser",
+      "verified_at": "2026-08-26T17:44:05Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "input-vat-six-months-38a",
+      "claim": "Section 38(א) of the VAT Law requires input VAT to be deducted within six months of the date the invoice was issued. סעיף 38 לחוק מע\"מ",
+      "source_url": "https://he.wikisource.org/w/index.php?title=%D7%97%D7%95%D7%A7_%D7%9E%D7%A1_%D7%A2%D7%A8%D7%9A_%D7%9E%D7%95%D7%A1%D7%A3&action=raw",
+      "raw_snippet": "ושהניכוי ייעשה בתוך ששה חדשים מיום הוצאת החשבונית, ההצהרה או המסמך.",
+      "fetched_at": "2026-08-26T17:44:05Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "invoice-14-days-46a",
+      "claim": "Section 46(א) requires a tax invoice within fourteen days of מועד החיוב במס, the charge event, not of delivery. Section 46 / סעיף 46",
+      "source_url": "https://he.wikisource.org/w/index.php?title=%D7%97%D7%95%D7%A7_%D7%9E%D7%A1_%D7%A2%D7%A8%D7%9A_%D7%9E%D7%95%D7%A1%D7%A3&action=raw",
+      "raw_snippet": "חשבונית תוצא תוך ארבעה עשר יום ממועד החיוב במס.",
+      "fetched_at": "2026-08-26T17:44:05Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/expense-categories.md"
+      ]
+    },
+    {
+      "claim_id": "charge-event-service-payment",
+      "claim": "For a service the charge event is receipt of consideration, so a cash-basis service provider who has not been paid is not late in issuing an invoice",
+      "source_url": "https://he.wikisource.org/w/index.php?title=%D7%97%D7%95%D7%A7_%D7%9E%D7%A1_%D7%A2%D7%A8%D7%9A_%D7%9E%D7%95%D7%A1%D7%A3&action=raw",
+      "raw_snippet": "בשירות חל החיוב במס עם קבלת התמורה ועל הסכום שהתקבל.",
+      "fetched_at": "2026-08-26T17:44:05Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "retention-7-or-6-later",
+      "claim": "Section 25 of הוראות ניהול פנקסי חשבונות requires the accounting system to be kept seven years from the end of the tax year, or six years from the date the return was filed, whichever is later. Section 25 / סעיף 25",
+      "source_url": "https://he.wikisource.org/w/index.php?title=%D7%94%D7%95%D7%A8%D7%90%D7%95%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94_(%D7%A0%D7%99%D7%94%D7%95%D7%9C_%D7%A4%D7%A0%D7%A7%D7%A1%D7%99_%D7%97%D7%A9%D7%91%D7%95%D7%A0%D7%95%D7%AA)&action=raw",
+      "raw_snippet": "מערכת החשבונות תישמר במשך שבע שנים מתום שנת המס שאליה היא מתייחסת או במשך שש שנים מיום הגשת הדו״ח על ההכנסה לאותה שנת המס, הכל לפי המאוחר.",
+      "fetched_at": "2026-08-26T17:44:05Z",
+      "appears_in": [
+        "references/expense-categories.md"
+      ]
+    },
+    {
+      "claim_id": "retention-3-year-class",
+      "claim": "A shorter class of documents is kept at least three years from the filing of the return",
+      "source_url": "https://he.wikisource.org/w/index.php?title=%D7%94%D7%95%D7%A8%D7%90%D7%95%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94_(%D7%A0%D7%99%D7%94%D7%95%D7%9C_%D7%A4%D7%A0%D7%A7%D7%A1%D7%99_%D7%97%D7%A9%D7%91%D7%95%D7%A0%D7%95%D7%AA)&action=raw",
+      "raw_snippet": "יישמרו במשך שלוש שנים לפחות מיום הגשת הדו״ח על ההכנסה לשנת המס שאליה הם מתייחסים.",
+      "fetched_at": "2026-08-26T17:44:05Z",
+      "appears_in": [
+        "references/expense-categories.md"
+      ]
+    },
+    {
+      "claim_id": "osek-zair-30-percent",
+      "claim": "The Osek Zair election deducts 30% of the year's turnover in lieu of actual expenses. סעיף 87ה, סעיף 88, סעיף 32, סעיף 64",
+      "source_url": "https://he.wikisource.org/w/index.php?title=%D7%A4%D7%A7%D7%95%D7%93%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94&action=raw",
+      "raw_snippet": "ינוכה מהכנסתו מהעסק או ממשלח היד סכום השווה ל־30% ממחזור העסקאות שלו באותה שנה",
+      "fetched_at": "2026-08-26T17:44:05Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "osek-zair-excl-controlling-shareholder",
+      "claim": "The Osek Zair election is barred for a controlling shareholder as defined in section 32(9), which is not the 10% substantial-shareholder test",
+      "source_url": "https://he.wikisource.org/w/index.php?title=%D7%A4%D7%A7%D7%95%D7%93%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94&action=raw",
+      "raw_snippet": "הוא בעל שליטה בחברה כאמור",
+      "fetched_at": "2026-08-26T17:44:05Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "osek-zair-excl-25pct-relative",
+      "claim": "The election is barred where more than 25% of the business income came from a קרוב as defined in section 88, or from someone who was the taxpayer's employer at any time in the previous three tax years",
+      "source_url": "https://he.wikisource.org/w/index.php?title=%D7%A4%D7%A7%D7%95%D7%93%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94&action=raw",
+      "raw_snippet": "ממי שהיה מעסיקו במועד כלשהו בשלוש שנות המס הקודמות;",
+      "fetched_at": "2026-08-26T17:44:05Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "osek-zair-two-year-lockout",
+      "claim": "Skipping the Osek Zair deduction in a year with business income bars it for the two following tax years as well",
+      "source_url": "https://he.wikisource.org/w/index.php?title=%D7%A4%D7%A7%D7%95%D7%93%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94&action=raw",
+      "raw_snippet": "לא יוכל לנכות את סכום הניכוי גם בשתי שנות המס שלאחר אותה שנת מס",
+      "fetched_at": "2026-08-26T17:44:05Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "osek-zair-excl-transparent-entity",
+      "claim": "The election is barred where part of the business income was attributed from a תאגיד שקוף as defined in section 64(א)",
+      "source_url": "https://he.wikisource.org/w/index.php?title=%D7%A4%D7%A7%D7%95%D7%93%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94&action=raw",
+      "raw_snippet": "חלק מהכנסתו מעסק או ממשלח יד יוחס אליו מתאגיד שקוף כהגדרתו",
+      "fetched_at": "2026-08-26T17:44:05Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "detailed-report-double-entry",
+      "claim": "The detailed VAT report applies to a dealer whose turnover exceeds NIS 500,000 OR who must keep double-entry books, so double-entry bookkeepers are in regardless of turnover",
+      "source_url": "https://he.wikisource.org/w/index.php?title=%D7%97%D7%95%D7%A7_%D7%9E%D7%A1_%D7%A2%D7%A8%D7%9A_%D7%9E%D7%95%D7%A1%D7%A3&action=raw",
+      "raw_snippet": "מחזור עסקאותיו עולה על 500,000 שקלים חדשים או שחלה עליו חובה לנהל פנקסי חשבונות לפי שיטת החשבונאות הכפולה",
+      "fetched_at": "2026-08-26T17:44:05Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "reg18-b3-quarter",
+      "claim": "Regulation 18(ב)(3): where the Director has not fixed the proportion and the main use is NOT for business, the dealer may deduct only a quarter of the input VAT",
+      "source_url": "https://he.wikisource.org/w/index.php?title=%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%9E%D7%A1_%D7%A2%D7%A8%D7%9A_%D7%9E%D7%95%D7%A1%D7%A3&action=raw",
+      "raw_snippet": "ועיקר השימוש בנכס או בשירות הוא שלא לצרכי עסק, רשאי העוסק לנכות רבע ממס התשומות.",
+      "fetched_at": "2026-08-26T17:44:05Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "scripts/categorize_invoices.py"
+      ]
+    },
+    {
+      "claim_id": "reg18-b2-two-thirds",
+      "claim": "Regulation 18(ב)(2): where the main use IS for business, the dealer may deduct two thirds",
+      "source_url": "https://he.wikisource.org/w/index.php?title=%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%9E%D7%A1_%D7%A2%D7%A8%D7%9A_%D7%9E%D7%95%D7%A1%D7%A3&action=raw",
+      "raw_snippet": "ועיקר השימוש בנכס או בשירות הוא לצרכי עסק, רשאי העוסק לנכות שני שלישים ממס התשומות;",
+      "fetched_at": "2026-08-26T17:44:05Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "scripts/categorize_invoices.py"
+      ]
+    },
+    {
+      "claim_id": "reg18-b1-director",
+      "claim": "Regulation 18(ב)(1): a determination by the Director of the non-business proportion is treated as an assessment and governs while it stands",
+      "source_url": "https://he.wikisource.org/w/index.php?title=%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%9E%D7%A1_%D7%A2%D7%A8%D7%9A_%D7%9E%D7%95%D7%A1%D7%A3&action=raw",
+      "raw_snippet": "קבע המנהל את החלק היחסי לשימוש שלא לצרכי עסק, יראו את קביעתו כשומה וינהגו על פיה, כל עוד לא נקבע אחרת;",
+      "fetched_at": "2026-08-26T17:44:05Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "scripts/categorize_invoices.py"
+      ]
+    },
+    {
+      "claim_id": "reg14a-vehicle-purchase",
+      "claim": "Regulation 14(א): VAT on the sale of a private vehicle to a dealer, or on its import by a dealer, is not deductible",
+      "source_url": "https://he.wikisource.org/w/index.php?title=%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%9E%D7%A1_%D7%A2%D7%A8%D7%9A_%D7%9E%D7%95%D7%A1%D7%A3&action=raw",
+      "raw_snippet": "המס שהוטל על מכירת רכב פרטי לעוסק או על ייבוא רכב כאמור בידי עוסק לא יהיה ניתן לניכוי.",
+      "fetched_at": "2026-08-26T17:44:05Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "allocation-number-in-statute-38a1",
+      "claim": "Section 38 conditions the input-VAT deduction on the invoice carrying a number allocated by the Director where the pre-VAT amount exceeds the stated threshold, which is the statutory basis for the allocation-number requirement",
+      "source_url": "https://he.wikisource.org/w/index.php?title=%D7%97%D7%95%D7%A7_%D7%9E%D7%A1_%D7%A2%D7%A8%D7%9A_%D7%9E%D7%95%D7%A1%D7%A3&action=raw",
+      "raw_snippet": "אם סכום חשבונית המס, בלא המס, עולה על הסכום האמור",
+      "fetched_at": "2026-08-26T17:47:06Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "osek-patur-ceiling-2026",
+      "claim": "The Osek Patur annual turnover ceiling is NIS 122,833 for 2026, up from NIS 120,000 in 2025",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%A2%D7%95%D7%A1%D7%A7_%D7%A4%D7%98%D7%95%D7%A8",
+      "raw_snippet": "122,833 ₪ (נכון לשנת 2026) (120,000 ₪ בשנת 2025)",
+      "fetched_at": "2026-08-26T18:04:53Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/expense-categories.md"
+      ]
+    },
+    {
+      "claim_id": "osek-patur-statutory-base",
+      "claim": "The statutory base for the Osek Patur definition is NIS 120,000 of annual turnover, which is then index-adjusted",
+      "source_url": "https://he.wikisource.org/w/index.php?title=%D7%97%D7%95%D7%A7_%D7%9E%D7%A1_%D7%A2%D7%A8%D7%9A_%D7%9E%D7%95%D7%A1%D7%A3&action=raw",
+      "raw_snippet": "עוסק שמחזור העסקאות שלו בכל עסקיו אינו עולה על 120,000 שקלים חדשים לשנה",
+      "fetched_at": "2026-08-26T18:04:53Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "vat-frequency-statutory-base",
+      "claim": "Section 67(א2)(1) sets the reporting-period threshold by reference to a statutory base of NIS 1,500,000, index-adjusted, which stands at NIS 1,775,000 for 2026",
+      "source_url": "https://he.wikisource.org/w/index.php?title=%D7%97%D7%95%D7%A7_%D7%9E%D7%A1_%D7%A2%D7%A8%D7%9A_%D7%9E%D7%95%D7%A1%D7%A3&action=raw",
+      "raw_snippet": "1,500,000 שקלים חדשים",
+      "fetched_at": "2026-08-26T18:04:53Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "vat-extract-18-118",
+      "claim": "VAT is extracted from a VAT-inclusive total as total * rate / (1 + rate), which at the 18% standard rate is 18/118. תקנה 18 and תקנה 23 are unrelated provisions and are cited elsewhere.",
+      "source_url": "https://taxsummaries.pwc.com/israel/corporate/other-taxes",
+      "raw_snippet": "The 2025 current rate of VAT is 18%.",
+      "fetched_at": "2026-08-26T18:04:53Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     }
   ],
   "schemaVersion": "1.0",
-  "generated_at": "2026-07-06T00:00:00Z"
+  "generated_at": "2026-08-26T18:04:53Z"
 }
