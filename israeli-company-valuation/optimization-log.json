@@ -1,0 +1,32 @@
+{
+  "cycles": [
+    {
+      "version": "1.2.0",
+      "date": "2026-08-26",
+      "lessons": [
+        "Phase 5.7 was skipped: the description was not touched this cycle, so the holdout gate did not apply. eval_pass_rate 0.92 / 12 assertions carried forward from 1.1.0.",
+        "Expert MAJOR deferred: --tax-rate silently defaults to 0.23 while --risk-free is a hard error, which contradicts the skill's central thesis that defaulting to the statutory rate is the failure mode. Make it required or warn.",
+        "Expert MAJOR deferred: no exit-multiple terminal value and no implied-exit-multiple check, though Step 6 asks for the comparison. The implied version needs no sector data and is cheap.",
+        "Expert MAJOR deferred: no --stake flag, so the script cannot express the answer to the driving user query ('what is 30% worth'), and cannot express a fully-diluted denominator despite Step 1 making that a hard rule.",
+        "Expert MAJOR deferred: carried-forward losses (section 28) are absent from the equity bridge and from the Step 4 effective rate, though an NOL stock shelters forecast EBIT in exactly the early years the DCF weights most.",
+        "Expert MAJOR deferred: purchase price allocation and intangible identification are a Should-cover checklist item with no coverage anywhere.",
+        "Expert MAJOR deferred: transfer pricing is a Must-cover item reduced to one bullet. Section 85א, the 2006 regulations, circular 11/2018 and the master-file tiering are all unmentioned.",
+        "Expert MAJOR deferred: the share-sale versus asset-sale fork omits VAT on an asset sale and purchase tax where real estate is among the assets.",
+        "Expert MINOR deferred: the Gotchas 'roughly threefold' overstatement is true of 7.5%, not of the 5% row it points at, and references/israeli-tax-regimes.md states the same idea as 'more than half'. Pick one framing.",
+        "Expert MINOR deferred: the negative-EBIT guard warns but still prints a full valuation and a range. Consider suppressing the valuation blocks entirely.",
+        "Expert MINOR deferred: the legal notice reads as tax-skill boilerplate and never mentions valuation, though the harm the skill guards against is an unsigned valuation entering a share transfer. Do not reword without checking the counsel-supplied template first.",
+        "CARRY: no Israeli valuation-practice standard is named anywhere (IVS/IPEV/לשכת רואי חשבון/ISA disclosure rules for הערכת שווי מהותית). Two reviewers raised it and neither could source it. Settle it against primary sources next cycle.",
+        "CARRY: the load-bearing scope-limit claim that 'Israel has no statutory licence for a business valuer' has still not been verified against a primary source, and the legal gate's PASS partly rests on it.",
+        "Process lesson: a research subagent asserted the Special Preferred Enterprise ILS 1bn / same-sector condition was wrong. Reading section 51כ and section 51כד directly showed the SKILL.md text was right and the reviewer had imported the figure from the wrong provision. Verify before correcting, in both directions.",
+        "Process lesson: the Judge correctly caught the four-employee exclusion but cited it to section 62א(א)(4); the Ordinance shows (4) is deleted and the exclusion is (5). Reviewer findings are leads, not text to transcribe.",
+        "Expert MAJOR (raised in priority, still deferred): the script's headline 'Indicative enterprise value RANGE' sits directly under a materially smaller equity-after-discounts figure and there is no equity range anywhere. Run the bridge and both discounts INSIDE sensitivity_grid() and add the DLOM axis Step 10 already requires. Closest of the deferred items to producing a wrong quoted number.",
+        "Expert MAJOR (deferred, must not survive another cycle): the section 14 severance arrangement is not distinguished, so Step 7 and equity_bridge() treat the shortfall as unconditional. Under a full הסדר סעיף 14 there is no company-level shortfall to deduct at all, and most post-2008 Israeli employment sits there.",
+        "Expert MAJOR deferred: references/valuation-methods.md is English-only except its final section, while SKILL_HE.md routes to it four times (allocation waterfall, multiples table, NAV adjustments, levels-of-value ladder). Give it a Hebrew twin as was done for transaction-and-sale-he.md this cycle. This is the mechanism by which the Hebrew coverage gaps fixed in 1.2.0 escaped notice for two versions.",
+        "Expert MAJOR deferred: negative EBIT still prints a complete negative valuation, a negative range, and a terminal-share percentage the guard's own NOTE says is not interpretable. Suppress the VALUATION and SENSITIVITY blocks and exit after the routing note.",
+        "Expert MINOR deferred: no input-domain validation on --dlom, --dloc, --beta or --size-premium. Only --equity-weight and terminal growth are bounded.",
+        "Process lesson: the C4 script fix was applied to the staleness flag and the vintage line but NOT to the arithmetic the same code comment named, so for one round the separate-country-premium convention INVERTED the sign of country risk (a riskier Israel produced a lower cost of equity and a higher valuation). Fixed in this cycle by holding the mature-market ERP as its own constant instead of deriving it by subtraction. Writing a comment that names a defect is not fixing it.",
+        "Process lesson: SKILL_HE.md had silently lost three Must-cover items (exit-multiple terminal value, the enumerated multiples table, six of the ten Step 10 documentation items) and nothing in the pipeline compared the two bodies section by section. Heading parity passed throughout, because the headings were present and the content under them was not."
+      ]
+    }
+  ]
+}

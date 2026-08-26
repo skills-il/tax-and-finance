@@ -35,13 +35,19 @@ import sys
 
 # Country risk parameters. Vintage is printed on every run so the reader can
 # judge staleness. Re-verify against the source in evidence.json at each update.
-COUNTRY_DATA_VINTAGE = "5 January 2026"
-COUNTRY_DATA_VINTAGE_ISO = "2026-01-05"
+COUNTRY_DATA_VINTAGE = "July 2026"
+COUNTRY_DATA_VINTAGE_ISO = "2026-07-09"
 # The dataset refreshes twice a year. Past this many days we stop trusting it
 # silently and tell the operator to refetch, mirroring the risk-free rule.
 COUNTRY_DATA_STALE_AFTER_DAYS = 180
-ISRAEL_COUNTRY_RISK_PREMIUM = 0.0207
-ISRAEL_TOTAL_EQUITY_RISK_PREMIUM = 0.0630  # already includes the country premium
+ISRAEL_COUNTRY_RISK_PREMIUM = 0.0198
+ISRAEL_TOTAL_EQUITY_RISK_PREMIUM = 0.061783  # already includes the country premium
+# Published mature-market ERP from the SAME vintage (US ERP less the US adjusted
+# default spread). Held as its own constant on purpose: deriving it as
+# total minus country premium lets a half-override invert the sign of country
+# risk, because a fresh, larger country premium is then subtracted from a stale
+# total. Keep all three in step whenever the vintage is refreshed.
+MATURE_MARKET_ERP = 0.0420
 ISRAEL_SOVEREIGN_RATING = "Baa1"
 
 SCOPE_LIMIT = """
@@ -71,9 +77,7 @@ def cost_of_equity(risk_free, beta, size_premium, specific_premium,
         convention = ("beta x Israel total ERP (country premium already "
                       "included, not added again)")
     else:
-        # Mature-market ERP is derived as total minus country premium.
-        mature_erp = ISRAEL_TOTAL_EQUITY_RISK_PREMIUM - ISRAEL_COUNTRY_RISK_PREMIUM
-        market_component = beta * mature_erp
+        market_component = beta * MATURE_MARKET_ERP
         country_component = ISRAEL_COUNTRY_RISK_PREMIUM
         convention = "beta x mature-market ERP, plus country premium separately"
 
@@ -207,6 +211,9 @@ def main():
     p.add_argument("--total-erp", type=float,
                    help="override the built-in Israel total equity risk premium "
                         "as a decimal (country premium included).")
+    p.add_argument("--mature-erp", type=float, default=None,
+                   help="Mature-market ERP from the same vintage. Used only "
+                        "with --separate-country-premium.")
     p.add_argument("--separate-country-premium", action="store_true",
                    help="use mature-market ERP plus a separate country premium "
                         "instead of the Israel total ERP")
@@ -259,13 +266,29 @@ def main():
                 "bridge first, see SKILL.md step 3.")
 
     global ISRAEL_COUNTRY_RISK_PREMIUM, ISRAEL_TOTAL_EQUITY_RISK_PREMIUM
+    global MATURE_MARKET_ERP
     if a.country_risk_premium is not None:
         ISRAEL_COUNTRY_RISK_PREMIUM = a.country_risk_premium
     if a.total_erp is not None:
         ISRAEL_TOTAL_EQUITY_RISK_PREMIUM = a.total_erp
+    if a.mature_erp is not None:
+        MATURE_MARKET_ERP = a.mature_erp
 
+    # Which premium actually drives the cost of equity depends on the
+    # convention, so staleness must clear only when the operator overrode the
+    # one in use. Keying this off the CRP alone let a stale total ERP through
+    # with no warning at all.
+    # Only the parameters actually consumed by the chosen convention count as
+    # refreshed. Keying this off the wrong one is how a stale premium used to
+    # drive the answer with the warning suppressed.
+    if a.separate_country_premium:
+        overrode_in_use = (a.country_risk_premium is not None
+                           and a.mature_erp is not None)
+    else:
+        overrode_in_use = a.total_erp is not None
     age = country_data_age_days()
-    stale = age > COUNTRY_DATA_STALE_AFTER_DAYS and a.country_risk_premium is None
+    stale = age > COUNTRY_DATA_STALE_AFTER_DAYS and not overrode_in_use
+    overridden = overrode_in_use
 
     ke, convention = cost_of_equity(
         a.risk_free, a.beta, a.size_premium, a.specific_premium,
@@ -281,11 +304,23 @@ def main():
                        a.contingent_liabilities, a.severance_shortfall)
     eq_after = apply_discounts(eq, a.dlom, a.dloc)
 
+    if a.ebit <= 0:
+        print("NOTE: normalized EBIT is zero or negative. A discounted cash flow")
+        print("on negative cash flow produces a meaningless negative value, and")
+        print("the terminal-share diagnostic below is not interpretable either.")
+        print("Use the asset approach or, for a pre-revenue company, the")
+        print("round-based methods in references/valuation-methods.md.\n")
+
     print("=" * 68)
     print("ISRAELI COMPANY VALUATION, INDICATIVE")
     print("=" * 68)
     print("\nCOUNTRY PARAMETERS")
-    print("  Dataset vintage        : %s" % COUNTRY_DATA_VINTAGE)
+    if overridden:
+        print("  Dataset vintage        : supplied on the command line, NOT %s"
+              % COUNTRY_DATA_VINTAGE)
+        print("                           record the vintage you read in the write-up")
+    else:
+        print("  Dataset vintage        : %s (built in)" % COUNTRY_DATA_VINTAGE)
     print("  Sovereign rating       : %s" % ISRAEL_SOVEREIGN_RATING)
     print("  Country risk premium   : {:.2%}".format(ISRAEL_COUNTRY_RISK_PREMIUM))
     print("  Israel total ERP       : {:.2%}".format(ISRAEL_TOTAL_EQUITY_RISK_PREMIUM))
@@ -293,8 +328,9 @@ def main():
     if stale:
         print("  WARNING: this country risk data is older than %d days. It refreshes"
               % COUNTRY_DATA_STALE_AFTER_DAYS)
-        print("  in January and July. Refetch it and pass --country-risk-premium and")
-        print("  --total-erp, or state in the write-up that a stale premium was used.")
+        print("  in January and July. Refetch it and pass --total-erp (or, with")
+        print("  --separate-country-premium, BOTH --country-risk-premium and")
+        print("  --mature-erp), or say in the write-up that a stale premium was used.")
     else:
         print("  Check the vintage above. This dataset refreshes twice a year.")
 
@@ -361,4 +397,10 @@ def main():
 
 
 if __name__ == "__main__":
-    sys.exit(main())
+    try:
+        sys.exit(main())
+    except ValueError as exc:
+        # These are the deliberate guard-rail messages raised above. Printing
+        # the traceback instead buries the explanation the user needs.
+        sys.stderr.write("error: %s\n" % exc)
+        sys.exit(2)

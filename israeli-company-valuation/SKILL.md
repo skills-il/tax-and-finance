@@ -15,13 +15,11 @@ Any form or text this tool produces is an automatic draft for your personal prep
 
 ## Problem
 
-Ask what a private Israeli company is worth and you get either a number with no working behind it or a spreadsheet built from a US textbook. Both are wrong in the same specific ways: the discount rate carries no Israel country premium, the tax line uses the statutory rate for a company that may actually pay far less under the Encouragement of Capital Investments Law, and the answer arrives as a single confident number when the honest output is a range. This skill builds the valuation the way an Israeli practitioner builds it, shows every input and where it came from, and refuses to hand back false precision.
+Ask what a private Israeli company is worth and you get either a number with no working behind it or a spreadsheet built from a US textbook. Both fail the same three ways: no Israel country premium in the discount rate, the statutory tax rate applied to a company that may pay far less under the Encouragement of Capital Investments Law, and a single confident number where the honest output is a range. This skill builds the valuation the way an Israeli practitioner does, shows every input and where it came from, and refuses to hand back false precision.
 
 ## Instructions
 
-**Open every output with the scope limit, do not only close with it.** A valuation that arrives with a sourced WACC build-up, a parameter table and a sensitivity grid looks authoritative, and that credibility is exactly what makes a bare footer disclaimer insufficient. Lead with the limit in the mandatory scope limit section below, and repeat it at the end.
-
-The limit is about DECIDING, not only about filing. Say plainly: this range is pre-tax to the seller, it is not a negotiated price, and it does not account for the terms of the shareholders' agreement.
+**Open every output with the scope limit, do not only close with it.** A valuation that arrives with a sourced WACC build-up, a parameter table and a sensitivity grid looks authoritative, and that credibility is exactly what makes a bare footer disclaimer insufficient. The limit is about DECIDING, not only about filing.
 
 Work through the steps in order. Do not skip to a number. At every step where a market parameter enters, record the value, the source, and the date you read it, because an undated parameter is the most common reason a valuation gets challenged.
 
@@ -52,7 +50,7 @@ Ask before computing. The purpose changes the answer, not just the wording.
 | Shareholder dispute, divorce, estate | Set by the forum | Discounts may be inadmissible; ask first |
 | Internal sanity check | Indicative | Lightest documentation |
 
-Also fix: the valuation date, the intended user of the valuation, whether you are valuing the whole company or a specific stake, and whether that stake is controlling.
+Also fix: the valuation date, the intended user, whether you are valuing the whole company or a specific stake, and whether that stake is controlling.
 
 **Define the denominator before quoting any per-share or percentage figure.** A stake stated as a bare percentage is meaningless on its own. Ask:
 
@@ -93,20 +91,15 @@ This is the step generic models get wrong. Do not default to the statutory rate.
 | Standard company | 23% | 23% | Per shareholder status |
 | Preferred Enterprise | 7.5% | 16% | 20% |
 | Special Preferred Enterprise | 5% | 8% (for ten years) | 20% |
-| Preferred Technology Enterprise | 7.5% | 12% | 20%, or 4% where at least 90% foreign-held |
-| Special Preferred Technology Enterprise | 6% | 6% | 20%, or 4% where at least 90% foreign-held |
+| Preferred Technology Enterprise | 7.5% | 12% | 20%, or 4% on a dividend to a foreign COMPANY where at least 90% of shares are held by foreign-resident companies |
+| Special Preferred Technology Enterprise | 6% | 6% | As Preferred Technology Enterprise |
 
-Eligibility gates worth checking before you accept a reduced rate:
-
-- Preferred Technology Enterprise: group revenue under ILS 10 billion, and average R&D over the prior three years at or above 7% of revenue or above ILS 75 million a year.
-- Special Preferred Technology Enterprise: meets the technology conditions and sits in a group with revenue of at least ILS 10 billion.
-- Special Preferred Enterprise: revenue of at least ILS 1 billion, in a group generating at least ILS 10 billion in the same sector.
-- Technology-enterprise rates apply only to the share of IP developed in Israel, on a nexus basis.
+Do not accept a reduced rate on the strength of the sector or the headline table. Each track has cumulative eligibility gates, the technology tracks apply only to the Israel-developed share of the IP on a nexus basis, and a pre-2017 Approved or Beneficiary Enterprise can still govern an older company at different rates and a 15% dividend withholding. Ask which regime the approval was actually granted under, and check the gates in `references/israeli-tax-regimes.md` before using anything other than 23%.
 
 Three further Israeli-specific rules that move the cash flows:
 
-- A closely held company faces an annual 2% charge on accumulated undistributed profits. That charge can be avoided by distributing a dividend of at least 6% of accumulated profits as of the end of the prior tax year, or more than 50% of accumulated profits less certain deductions. Separately, profitability above 25% pushes an active shareholder's pro-rata share of the excess into their own taxable income at their marginal rate, and income is reclassified to the individual where 70% or more of the company's income comes from services performed for a single entity. Together these change how much cash the company can actually retain, so they hit both the forecast and the treatment of surplus cash. Model the distribution behaviour the company will actually adopt, not a company that retains everything tax-free.
-- Large multinational groups face a 15% minimum effective rate under the top-up tax, for tax years beginning after 31 December 2025. A model showing a group paying 6% may be modelling a rate that no longer survives.
+- A closely held company faces an annual 2% charge on excess profits under sections 81א to 81ו, from tax year 2025, and sections 62א(א1) and 62א(א)(3) can push company income onto an active shareholder at marginal rates. The base is not flat accumulated profits, the escape routes run on a deadline, and profits sourced from Encouragement-Law income sit outside the charge, so a preferred enterprise is only partly exposed. The thresholds, the shields, and the escape routes are in `references/israeli-tax-regimes.md`; read them before modelling retained cash. All three change how much the company can actually keep, so they hit the forecast and the treatment of surplus cash. Model the distribution behaviour the company will actually adopt, not a company that retains everything tax-free.
+- Israel's domestic minimum top-up tax applies for fiscal years beginning on or after 1 January 2026, to groups above EUR 750 million of consolidated revenue in at least two of the four preceding years. It is a domestic top-up only: Israel has not implemented the income inclusion rule or the undertaxed profits rule, so it tops up Israeli low-taxed profit rather than a group's foreign profit. The 15% is a FLOOR, not a cap: it tops low-taxed profit UP. So a preferred-enterprise company modelled at 6% to 12% cannot keep that rate if the group is in scope, and the forecast has to step up to 15%.
 - Ask whether a preferred status persists through the forecast AND into terminal value. Assuming a reduced rate forever is a substantive assumption. State it explicitly instead of burying it in a cell.
 
 Use the SAME effective rate in the free-cash-flow tax line and in the debt tax shield. Mixing them is a silent error.
@@ -119,24 +112,14 @@ Build the cost of equity component by component and show each one.
 
 Fetch this live every time from the Bank of Israel yield page. Never carry a risk-free rate from memory or from a previous conversation, and never reuse one from training data. The page renders via JavaScript behind a bot check, so read it in a browser or use the Tel Aviv Stock Exchange government bond data as the alternative. If you genuinely cannot reach either, say so and ask the user for the current yield rather than inventing one.
 
-**Equity and country risk premium.** As of the 5 January 2026 dataset, Israel carries a Moody's rating of Baa1, an adjusted default spread of 1.36%, a country risk premium of 2.07%, and a total equity risk premium of 6.30%.
+**Equity and country risk premium.** As of the July 2026 dataset, Israel carries a Moody's rating of Baa1, an adjusted default spread of 1.27%, a country risk premium of 1.98%, and a total equity risk premium of 6.18%. The implied mature-market premium in the same file is 4.20%.
 
 Two rules here:
 
-1. Check the vintage. The dataset refreshes in January and July. Report which vintage you used.
-2. Do not double count. The 6.30% total already contains the 2.07% country premium. Adding the country premium on top of the total inflates the cost of equity by two full points. State which convention your build-up uses.
+1. Check the vintage, and check it against the data-current index rather than the country-premium landing page. That landing page kept saying January long after the July file was published, so a check made there confirms a stale vintage and looks like verification. Report which vintage you used.
+2. Do not double count. The 6.18% total already contains the 1.98% country premium. Adding the country premium on top of the total inflates the cost of equity by about two points. State which convention your build-up uses.
 
-Israel's rating moved after the October 2023 war. A model still carrying a pre-war Israel country premium is the single most likely error in an Israeli discount rate today. If a user brings you a valuation to check, look here first.
-
-**Beta.** A private company has no observable beta. Take industry betas from a peer set, unlever at the peers' structure and tax rate, then relever at the subject's target structure using the subject's Israeli effective rate from Step 4.
-
-Consider a total beta where the owner is undiversified, which is the normal case for an Israeli private company whose owner holds most of their wealth in it. A market beta prices only the risk a diversified investor cannot diversify away. An owner with everything in one company bears the total risk, and total betas are published precisely because they give better cost-of-equity estimates for undiversified owners of private businesses. Using a market beta for a sale to a diversified buyer and a total beta for a valuation from the owner's perspective is a defensible distinction. State which one you used and why.
-
-**Size premium.** An Israeli private company almost always sits below the smallest listed size bucket, so omitting a size premium understates the discount rate materially. There is no published Israeli-specific size study, so practitioners import US empirical data, and the primary dataset is paywalled. Name the dataset and vintage you are using. If you do not have access to one, say so and present the valuation across a band of size premia instead of asserting a figure you cannot source.
-
-**Company-specific premium.** Key-person dependency, customer concentration, thin management depth. Reason it out loud rather than adding a round number.
-
-**Cost of debt and WACC.** Take the pre-tax cost from the company's actual borrowing rate, or build it synthetically as a spread over the shekel government yield. Apply the tax shield at the Step 4 effective rate. Weight at market values, state whether you used the target or the actual capital structure, and note that market-value weighting is circular and resolved by iteration.
+**Beta, size premium, company-specific premium, cost of debt and weighting.** Build each one explicitly and show it. A private company has no observable beta, so relever an industry beta at the subject's structure using the Step 4 effective rate, and consider a total beta where the owner is undiversified. Treat the size premium as contested rather than settled, name any dataset you use, and never assert a round number you cannot source. Apply the debt tax shield at the Step 4 effective rate, and weight at market values. The method, the total-beta argument, and the circularity in market-value weighting are set out in `references/valuation-methods.md`.
 
 ### Step 6. Project cash flow and terminal value
 
@@ -154,8 +137,9 @@ Run both and compare. If the Gordon-growth terminal value implies an exit multip
 Start from enterprise value, then:
 
 - Less net financial debt.
-- Plus surplus cash and non-operating assets. Owner-managed Israeli companies frequently hold non-operating real estate. If the company owns property, flag that a licensed appraiser is needed for it, and check whether the property holding reclassifies the company under a different tax regime.
+- Plus surplus cash and non-operating assets. Owner-managed Israeli companies frequently hold non-operating real estate. If the company owns property, flag that a licensed appraiser is needed for it, and check whether the holding makes the company a real estate association (איגוד מקרקעין) under section 1 of the Real Estate Taxation Law. That reclassification is a tax characterisation question, not an appraisal question, and it matters: a sale of SHARES in such a company is an action in an association, charged to betterment tax under the Real Estate Taxation Law instead of ordinary capital gains, with purchase tax landing on the BUYER by reference to the association's real estate. The individual's headline rates do not change (section 48A(b) charges real betterment at up to 25%, rising to 30% for a substantial shareholder at the date of the action or in the preceding twelve months), so do not tell the seller the rate is different. The surtax layers ride on it too, since real betterment is charged as under section 121 of the Ordinance, so the top slice reaches 35% exactly as on an ordinary share sale. What changes is the charging statute, the buyer's purchase tax, the reporting track, and the loss of ordinary capital-gains apportionment. Cash and securities that do not serve to produce the company's income are disregarded in the test, so a cash-rich property company can still fall inside it.
 - Less contingent liabilities.
+- Age the controlling shareholder's loan account before booking it as a receivable. Under section 3(i1) a withdrawal by a substantial shareholder that is not repaid by the end of the tax year FOLLOWING the year of withdrawal is deemed their income, as a dividend where the company has distributable profits. There is a de minimis: a cumulative withdrawal that stayed at or below ILS 100,000 on every day of the tax year and the preceding one is outside the rule. A debit balance is therefore often neither collectible at face nor tax-free, and in an owner-managed company it is regularly the largest non-operating item on the balance sheet.
 - Less any shortfall in the severance provision. Under-funded severance is common and reduces equity value directly.
 
 ### Step 8. Apply discounts, carefully
@@ -165,11 +149,7 @@ Two separate discounts, each needing separate justification.
 - **Marketability.** A private holding cannot be sold quickly at a quoted price. No Israeli regulator publishes a mandated or safe-harbour range, and no Israeli empirical study is published, so any range you use is imported international practice. Name the empirical study you rely on. Do not assert a round percentage with nothing behind it, because in a related-party transfer that is exactly what gets challenged.
 - **Control.** Do NOT reach for a lack-of-control discount just because the stake is under 50%. Work the levels-of-value ladder explicitly: control value, then marketable minority, then non-marketable minority. State which rung this interest sits on and why.
 
-Three things decide the rung, and percentage alone decides none of them:
-
-1. **What the articles actually give this block.** Ordinary resolutions pass by simple majority, but reserved matters, veto rights, board appointment rights and special majorities are set in the articles and the shareholders' agreement. A large minority holder with vetoes holds a blocking position and is not a plain minority.
-2. **Who the buyer is.** This is the one most often missed. A stake sold to an existing holder who thereby crosses into full or majority control is a control-consolidating purchase. That block carries swing value, and in real Israeli deals it commands a premium rather than a discount. Applying a textbook minority discount in that situation systematically underprices the seller. If the buyer ends up at or near full ownership, say explicitly that a discount is likely inappropriate and that a control premium is arguable.
-3. **Whether tag-along or drag-along equalises the per-share price.** If the minority is contractually entitled to the same price per share as the majority, much of the rationale for a discount disappears.
+Three things decide the rung, and percentage alone decides none of them: what the articles actually give this block, who the buyer is, and whether tag-along or drag-along equalises the per-share price. The second is the one most often missed, and getting it wrong systematically underprices the seller. Work all three through `references/valuation-methods.md` before applying any discount.
 
 Never stack both discounts without justifying each one independently. Careless stacking is the most challenged move in a review.
 
@@ -204,17 +184,16 @@ Present:
 9. A statement of who prepared the valuation and on what basis, and that no independent credentialed valuer has signed it.
 10. The scope limit again at the end.
 
-Run `scripts/valuation_model.py` to produce the DCF, the WACC build-up, and the sensitivity grid once inputs are settled.
+Once inputs are settled, run `scripts/valuation_model.py` for the DCF, the WACC build-up, and the sensitivity grid. Pass `--help` for the full flag list.
 
 ### If an actual share sale is behind this, say these things
 
+**First establish whether the deal is primary or secondary, because "selling 30% to an investor" usually means neither.** In a secondary sale an existing holder sells existing shares and pockets the proceeds, and everything below applies. In a primary round the company ISSUES new shares, the money goes to the company rather than to the owner, there is no capital gains event for the founder at all, and the arithmetic is different: post-money equals the investment divided by the investor's percentage, pre-money is post-money less the investment, and the founder is diluted rather than paid. Ask which one it is before quoting any figure, and note that an option-pool top-up agreed before the round comes out of the pre-money.
+
 The valuation is a price input, not the deal. Do not compute the seller's tax here, but never let them think the range is what they pocket. State each of these, then send them to their accountant. Full detail, including rates, duties, and deal mechanics, is in `references/transaction-and-sale.md`, which you should open whenever a real transaction is in play.
 
-- **The range is pre-tax.** An individual's real gain on shares bought from 1 January 2003 is generally taxed at 25%, rising to 30% for a seller holding 10% or more of any means of control at the sale or in the prior 12 months, which covers almost anyone selling a meaningful stake in their own company. Surtax applies above the annual threshold on top. Ask for the original cost of the shares; shares held from before 2003 follow different apportionment rules.
-- **The sale creates duties on a short clock:** reporting plus an advance payment, withholding at source unless the seller holds a certificate, and updating the shareholder register with the Registrar of Companies. Name the duties, never invent form numbers or deadlines.
-- **A sale between existing shareholders is a related-party transaction.** A price far from market invites recharacterisation, the Companies Law personal-interest approval track may apply, and an advance tax ruling is the practical route.
-- **Share sale versus asset sale is a structuring fork** that changes what should be sold, not just what it is worth.
-- **Value is not price.** Locked box versus completion accounts, working-capital and net-debt adjustments, earn-outs discounted to present value, escrow, release of personal guarantees, and the seller's post-deal salary, which loops back into Step 3 normalization.
+- **The range is pre-tax.** An individual's real gain on shares bought from 1 January 2003 is generally taxed at 25%, rising to 30% for a seller holding 10% or more of any means of control at the sale or in the prior 12 months, which covers almost anyone selling a meaningful stake in their own company. Surtax applies on top above the annual threshold, and from tax year 2025 a further 2% applies to capital-source income at that same threshold, so a substantial shareholder's marginal rate on the top slice reaches 35%. Ask for the original cost of the shares; shares held from before 2003 follow different apportionment rules.
+- **The sale creates duties on a short clock**, it is a related-party transaction where the buyer is an existing holder, share sale versus asset sale is a structuring fork, and value is not price: mechanism terms move cash more than a point of multiple does. All four are set out in `references/transaction-and-sale.md`, which you should have open. Name the duties, never invent form numbers or deadlines.
 
 ### Mandatory scope limit
 
@@ -228,16 +207,9 @@ Recommend the professional even when the user pushes back. A user who takes an a
 
 ### If the valuation supports a Section 104 reorganization or a reported share transfer
 
-Section 104 lets an owner transfer an asset to a company in exchange for an allotment of shares without that transfer being treated as a taxable sale at the time. The relief is a deferral, not an exemption: the tax follows the asset and lands when the shares or assets are eventually sold. The provisions sit in Part E2 of the Income Tax Ordinance.
+Section 104 (Part E2 of the Income Tax Ordinance) lets an owner transfer an asset to a company for an allotment of shares without that transfer being a taxable sale at the time. The relief is a deferral, not an exemption. Here the valuation is not the end product: it fixes the share allocation ratio and the carried-over original cost, and a thin or undocumented valuation is itself the risk, because a missing valuation basis is a named cause of disputes with the Israel Tax Authority.
 
-The valuation is not the end product. It exists to fix the share allocation ratio and the carried-over original cost of the shares allocated. Lack of a valuation basis for the asset or the shares is a named cause of disputes with the Israel Tax Authority and of failure to meet the value ratio requirement, so a thin or undocumented valuation is itself the risk here.
-
-Additional requirements the user must know:
-
-- These reorganizations carry restriction periods and continuity conditions, and breaching them can retroactively unwind the deferral, which practitioners call a tax accident. **Do not state a specific holding period or continuity percentage from memory.** These conditions were materially amended in 2025 and published summaries disagree about what currently applies. Confirm the conditions in force for the specific sub-section with the accountant or against the Israel Tax Authority before relying on any figure.
-- For anything non-trivial, the practical acceptance route is an advance tax ruling from the Israel Tax Authority with the valuation attached, not self-assessment defended later.
-- Where the transfer is cross-border or between related parties, transfer pricing rules impose an arm's length requirement plus documentation.
-- Confirm current form numbers and filing deadlines directly against the Israel Tax Authority. Do not state a form number or a deadline from memory.
+**Do not state a holding period, continuity percentage, form number, or deadline from memory.** Those conditions were materially amended in 2025 and published summaries disagree about what currently applies. Read `references/transaction-and-sale.md` and confirm against the Israel Tax Authority.
 
 ## Recommended MCP Servers
 
@@ -254,18 +226,16 @@ Wire these when available. They replace exactly the inputs that go stale.
 
 Agent failure modes specific to this domain. These are mistakes the model makes, not the user.
 
-- **Reciting a risk-free rate from training data.** The shekel yield curve moves continuously. Any rate recalled rather than fetched is stale by construction, and it propagates into every number downstream. Fetch it or ask for it.
-- **Carrying a pre-war Israel country risk premium.** Israel's sovereign rating fell after October 2023 and the country premium rose with it. A model built on the older figure understates the discount rate and overstates the company, often by a lot.
+- **Reciting a risk-free rate from training data, or reaching for the Bank of Israel policy rate instead.** The shekel yield curve moves continuously, so any rate recalled rather than fetched is stale by construction and propagates into every number downstream. The policy rate is a different number used in a different place: it informs short-term cost of debt, not the discount rate base. Fetch the bond yield or ask for it.
+- **Carrying a stale Israel country risk premium.** Two versions of this. Israel's sovereign rating fell after October 2023 and the country premium rose with it, so a pre-war figure understates the discount rate badly. But the premium also moves between vintages without any rating change, and the dataset's own country-premium landing page went on saying January long after the July file was published, so checking the vintage there confirms a stale number and feels like verification. Check the data-current index instead.
 - **Double counting country risk.** A total equity risk premium quoted for Israel already includes the country premium. Adding the country premium again is a mechanical two-point error that looks perfectly reasonable in a spreadsheet.
 - **Applying the statutory tax rate reflexively.** A large part of the Israeli economy pays a reduced rate under the Encouragement of Capital Investments Law. Applying the standard rate to a company on the lowest preferred rates overstates the tax drag by roughly threefold. Always ask which regime the company is in before taxing a single shekel of EBIT.
 - **Using different tax rates in the cash flow and the tax shield.** They must match. This one is invisible in the output and wrong in the answer.
-- **Producing a point estimate.** The instinct is to answer the question asked with one number. In valuation that is false precision, and it is the specific defect regulators criticize. Always return a range with a sensitivity grid.
+- **Producing a point estimate, or presenting the range as what the seller pockets.** Answering with one number is false precision, and it is the specific defect regulators criticize, so always return a range with a sensitivity grid. And the range is pre-tax and pre-mechanism, and in a primary round the owner is not paid at all, so say that in the same breath as the number.
 - **Inventing a marketability discount.** There is no Israeli published range. A confident round percentage with no cited study behind it is fabrication dressed as expertise, and it is the first thing challenged in a related-party transfer.
-- **Treating the Bank of Israel policy rate as the risk-free rate.** They are different numbers used in different places. The policy rate informs short-term cost of debt, not the discount rate base.
 - **Reciting the old reorganization holding conditions.** The continuity and restriction rules for Part E2 reorganizations were amended in 2025, and widely published summaries still carry the superseded version. Any specific holding period or continuity percentage recalled from training data is likely to be the old rule. Route the user to confirm rather than stating one.
 - **Defaulting to a minority discount because the stake is under half.** If the buyer is an existing holder moving toward full control, the block carries swing value and a discount underprices the seller. Ask who the buyer ends up as before discounting anything.
 - **Quoting a percentage or a per-share price without fixing the denominator.** Issued versus fully diluted, and ordinary versus preferred, change the answer materially. Establish the basis first.
-- **Presenting the range as what the seller pockets.** It is pre-tax and pre-mechanism. Say so in the same breath as the number.
 - **Modelling before reading the shareholders' agreement.** A pre-agreed formula, a right of first refusal, or a BMBY clause can make the whole model advisory. Ask for the documents when a real deal is behind the question.
 - **Forgetting owner compensation normalization.** In an Israeli owner-managed company, unadjusted owner salary is usually the largest single distortion in EBITDA, and multiples applied to a distorted EBITDA carry the error straight through.
 
@@ -286,8 +256,8 @@ Agent failure modes specific to this domain. These are mistakes the model makes,
 |---|---|---|
 | Bank of Israel, bond yields | https://www.boi.org.il/roles/statistics/makamandbonds/yield/ | The shekel risk-free rate. Read in a browser, the page is JavaScript-rendered behind a bot check |
 | Tel Aviv Stock Exchange, government bonds | https://market.tase.co.il/he/market_data | Fallback risk-free source |
-| Damodaran, country risk premiums | https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ctryprem.html | Israel country risk premium, equity risk premium, sovereign rating, and the vintage date |
-| Damodaran, current industry data | https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datacurrent.html | Industry betas and sector multiples |
+| Damodaran, current data index | https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datacurrent.html | Industry betas, sector multiples, AND the country-premium file actually in force. Check the vintage HERE |
+| Damodaran, country risk premiums | https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ctryprem.html | Israel country premium, equity risk premium, sovereign rating. This landing page lags the current file, so confirm the vintage against the index above |
 | PwC, Israel corporate tax | https://taxsummaries.pwc.com/israel/corporate/taxes-on-corporate-income | Standard corporate rate, top-up tax, closely held company rules |
 | PwC, Israel tax credits and incentives | https://taxsummaries.pwc.com/israel/corporate/tax-credits-and-incentives | Preferred-enterprise rates and eligibility conditions |
 | Israel Tax Authority | https://www.gov.il/he/departments/israel_tax_authority | Current rates, forms, filing deadlines, circulars |

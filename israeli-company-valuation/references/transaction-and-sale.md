@@ -21,3 +21,14 @@ The valuation is a price input, not the deal. Do not compute the seller's tax he
 
 **Who values.** When two partners sit on opposite sides, decide early whether there is one jointly appointed expert, one per side, or an agreed third, and who pays. This is the practical first decision in a partner buyout.
 
+## Section 104 reorganizations and reported share transfers
+
+Section 104 (Part E2 of the Income Tax Ordinance) lets an owner transfer an asset to a company for an allotment of shares without that transfer being a taxable sale at the time. The relief is a deferral, not an exemption: the tax follows the asset and lands on the eventual sale.
+
+The valuation is not the end product. It fixes the share allocation ratio and the carried-over original cost of the shares allocated. A missing valuation basis is a named cause of disputes with the Israel Tax Authority and of failure to meet the value ratio requirement, so a thin or undocumented valuation is itself the risk here.
+
+These reorganizations carry restriction periods and continuity conditions, and breaching them can retroactively unwind the deferral. **Do not state a specific holding period, continuity percentage, form number, or deadline from memory.** Those conditions were materially amended in 2025 and published summaries disagree about what currently applies. The remaining requirements are set out below.
+
+- For anything non-trivial, the practical acceptance route is an advance tax ruling from the Israel Tax Authority with the valuation attached, not self-assessment defended later.
+- Where the transfer is cross-border or between related parties, transfer pricing rules impose an arm's length requirement plus documentation.
+- Confirm current form numbers and filing deadlines directly against the Israel Tax Authority.

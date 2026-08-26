@@ -1,336 +1,750 @@
 {
   "skill_slug": "israeli-company-valuation",
   "schemaVersion": "1.0",
-  "generated_at": "2026-08-03",
+  "generated_at": "2026-08-26T17:07:08Z",
   "claims": [
     {
-      "id": "corporate-tax-23-2026",
       "claim": "The Israeli standard corporate tax rate is 23% in 2026, the same as 2025",
       "claim_type": "percentage",
       "source_url": "https://taxsummaries.pwc.com/israel/corporate/taxes-on-corporate-income",
-      "source_fetched_at": "2026-08-02T20:45:00Z",
       "raw_snippet": "The corporate tax rate is 23% in 2026 (same rate as in 2025).",
       "confidence": "high",
       "verified_via": "browser",
-      "verified_at": "2026-08-03T00:20:00Z"
+      "verified_at": "2026-08-03T00:20:00Z",
+      "claim_id": "corporate-tax-23-2026",
+      "fetched_at": "2026-08-02T20:45:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
-      "id": "qdmtt-15-2026",
       "claim": "A Qualified Domestic Minimum Top-up Tax imposes a 15% minimum effective tax rate on large multinational groups, applying for tax years beginning after 31 December 2025",
       "claim_type": "percentage",
       "source_url": "https://taxsummaries.pwc.com/israel/corporate/taxes-on-corporate-income",
-      "source_fetched_at": "2026-08-02T20:45:00Z",
       "raw_snippet": "Such MNE groups will be required to pay a top-up tax where their Israeli operations have an effective tax rate of less than 15%. The QDMTT shall apply for tax years beginning after 31 December 2025.",
       "confidence": "high",
       "verified_via": "browser",
-      "verified_at": "2026-08-03T00:20:00Z"
+      "verified_at": "2026-08-03T00:20:00Z",
+      "claim_id": "qdmtt-15-2026",
+      "fetched_at": "2026-08-02T20:45:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
-      "id": "service-company-25-profitability",
       "claim": "For a closely held company, income is reclassified to the individual where 70% or more of total or taxable income comes from services performed for a single entity, and separately, as of 2025, profitability exceeding 25% pushes the active shareholder's pro-rata share of the excess into their taxable income at their marginal rate",
       "claim_type": "percentage",
       "source_url": "https://taxsummaries.pwc.com/israel/corporate/taxes-on-corporate-income",
-      "source_fetched_at": "2026-08-02T20:45:00Z",
       "raw_snippet": "The income reclassification shall apply if 70% or more of the total income or taxable income of the closely held company in the tax year is sourced from the services performed by the individual or the individual's relatives for a single entity during a period of at least 22 months during a three-year period.",
       "confidence": "high",
       "verified_via": "browser",
-      "verified_at": "2026-08-03T00:20:00Z"
+      "verified_at": "2026-08-03T00:20:00Z",
+      "claim_id": "service-company-25-profitability",
+      "fetched_at": "2026-08-02T20:45:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
-      "id": "trapped-profits-2pct",
       "claim": "An annual 2% tax applies to accumulated undistributed profits of a closely held company, effective 2025",
       "claim_type": "percentage",
       "source_url": "https://taxsummaries.pwc.com/israel/corporate/taxes-on-corporate-income",
-      "source_fetched_at": "2026-08-02T20:45:00Z",
       "raw_snippet": "As of 2025, closely held companies (as defined above) are generally required to pay an annual tax of 2% on certain accumulated profits.",
       "confidence": "high",
       "verified_via": "browser",
-      "verified_at": "2026-08-03T00:20:00Z"
+      "verified_at": "2026-08-03T00:20:00Z",
+      "claim_id": "trapped-profits-2pct",
+      "fetched_at": "2026-08-02T20:45:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
-      "id": "pfe-rates",
       "claim": "The Preferred Enterprise corporate tax rate is 7.5% in development area A and 16% outside development area A",
       "claim_type": "percentage",
       "source_url": "https://taxsummaries.pwc.com/israel/corporate/tax-credits-and-incentives",
-      "source_fetched_at": "2026-08-02T21:00:00Z",
       "raw_snippet": "The PFE corporate tax rate is 7.5% for operations in 'development area A' and 16% for operations outside development area A.",
       "confidence": "high",
       "verified_via": "browser",
-      "verified_at": "2026-08-03T00:20:00Z"
+      "verified_at": "2026-08-03T00:20:00Z",
+      "claim_id": "pfe-rates",
+      "fetched_at": "2026-08-02T21:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
-      "id": "pfe-dividend-wht",
       "claim": "Dividends from Preferred Enterprise profits carry a 20% withholding tax rate, reducible under treaties",
       "claim_type": "percentage",
       "source_url": "https://taxsummaries.pwc.com/israel/corporate/tax-credits-and-incentives",
-      "source_fetched_at": "2026-08-02T21:00:00Z",
       "raw_snippet": "The WHT rate applicable to dividends from PFE profits is 20%, which may be reduced under certain tax treaties.",
       "confidence": "high",
       "verified_via": "browser",
-      "verified_at": "2026-08-03T00:20:00Z"
+      "verified_at": "2026-08-03T00:20:00Z",
+      "claim_id": "pfe-dividend-wht",
+      "fetched_at": "2026-08-02T21:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
-      "id": "spfe-rates",
       "claim": "The Special Preferred Enterprise corporate tax rate is 5% in development area A and 8% outside development area A, for ten years",
       "claim_type": "percentage",
       "source_url": "https://taxsummaries.pwc.com/israel/corporate/tax-credits-and-incentives",
-      "source_fetched_at": "2026-08-02T21:00:00Z",
       "raw_snippet": "The SPFE corporate tax rate is 5% for operations in development area A and 8% for operations outside of development area A for ten years. After ten years, the PFE tax rates shall apply unless the company has a new investment program that requalifies the company again for SPFE status.",
       "confidence": "high",
       "verified_via": "browser",
-      "verified_at": "2026-08-03T00:20:00Z"
+      "verified_at": "2026-08-03T00:20:00Z",
+      "claim_id": "spfe-rates",
+      "fetched_at": "2026-08-02T21:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
-      "id": "spfe-eligibility",
       "claim": "Special Preferred Enterprise status requires annual revenue of at least ILS 1 billion and membership in a group generating at least ILS 10 billion annually in the same industrial sector",
       "claim_type": "threshold",
       "source_url": "https://taxsummaries.pwc.com/israel/corporate/tax-credits-and-incentives",
-      "source_fetched_at": "2026-08-02T21:00:00Z",
       "raw_snippet": "To qualify, an Israeli company must meet certain conditions, such as having SPFE annual revenue greater than or equal to ILS 1 billion and being part of a group of companies that generates annual revenues greater than or equal to ILS 10 billion in the same industrial sector in which the Israeli company operates.",
       "confidence": "high",
       "verified_via": "browser",
-      "verified_at": "2026-08-03T00:20:00Z"
+      "verified_at": "2026-08-03T00:20:00Z",
+      "claim_id": "spfe-eligibility",
+      "fetched_at": "2026-08-02T21:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
-      "id": "pte-rates",
       "claim": "Under the Preferred Technology Enterprise regime, reduced corporate tax rates of 7.5% in development area A or 12% outside development area A apply to qualifying income, limited to the portion of IP developed in Israel on a nexus approach",
       "claim_type": "percentage",
       "source_url": "https://taxsummaries.pwc.com/israel/corporate/tax-credits-and-incentives",
-      "source_fetched_at": "2026-08-02T21:00:00Z",
       "raw_snippet": "Under the PTE regime, reduced corporate tax rates of 7.5% for operations in development area A or 12% for operations outside of development area A shall apply on qualifying income, subject to detailed rules. These corporate tax rates shall apply only with respect to the portion of intellectual property (IP) developed in Israel, based on a nexus approach.",
       "confidence": "high",
       "verified_via": "browser",
-      "verified_at": "2026-08-03T00:20:00Z"
+      "verified_at": "2026-08-03T00:20:00Z",
+      "claim_id": "pte-rates",
+      "fetched_at": "2026-08-02T21:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
-      "id": "pte-eligibility",
       "claim": "Preferred Technology Enterprise eligibility requires group aggregate annual revenues below ILS 10 billion and average R&D expenses over the prior three years of at least 7% of total revenues or exceeding ILS 75 million per year",
       "claim_type": "threshold",
       "source_url": "https://taxsummaries.pwc.com/israel/corporate/tax-credits-and-incentives",
-      "source_fetched_at": "2026-08-02T21:00:00Z",
       "raw_snippet": "To be eligible for the PTE regime, a company must engage in the technology sector and be part of a group of companies with aggregate annual revenues less than ILS 10 billion and meet one of the following two tests: The enterprise's average R&D expenses in the three years prior to the current tax year must be greater than or equal to 7% of the company's total revenues or exceed ILS 75 million per year.",
       "confidence": "high",
       "verified_via": "browser",
-      "verified_at": "2026-08-03T00:20:00Z"
+      "verified_at": "2026-08-03T00:20:00Z",
+      "claim_id": "pte-eligibility",
+      "fetched_at": "2026-08-02T21:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
-      "id": "pte-dividend-wht",
       "claim": "A reduced 4% withholding tax may apply to Preferred Technology Enterprise dividends paid to a foreign company where at least 90% of the payer's shares are held by foreign resident companies, otherwise 20%",
       "claim_type": "percentage",
       "source_url": "https://taxsummaries.pwc.com/israel/corporate/tax-credits-and-incentives",
-      "source_fetched_at": "2026-08-02T21:00:00Z",
       "raw_snippet": "A reduced 4% WHT rate may apply to dividends paid to a foreign company, provided that at least 90% of the payer's shares are held by foreign resident companies. For other dividend distributions, the WHT rate shall be 20%, which may be reduced under certain tax treaties.",
       "confidence": "high",
       "verified_via": "browser",
-      "verified_at": "2026-08-03T00:20:00Z"
+      "verified_at": "2026-08-03T00:20:00Z",
+      "claim_id": "pte-dividend-wht",
+      "fetched_at": "2026-08-02T21:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
-      "id": "spte-rate",
       "claim": "Under the Special Preferred Technology Enterprise regime a reduced corporate tax rate of 6% applies to qualifying income, and eligibility requires group aggregate annual revenues of at least ILS 10 billion",
       "claim_type": "percentage",
       "source_url": "https://taxsummaries.pwc.com/israel/corporate/tax-credits-and-incentives",
-      "source_fetched_at": "2026-08-02T21:00:00Z",
       "raw_snippet": "To be eligible for the SPTE regime, a company must meet the eligibility conditions of a PTE above and be part of a group of companies with aggregate annual revenues of at least ILS 10 billion. Under the SPTE regime, a reduced corporate tax rate of 6% shall apply on qualifying income, subject to detailed qualifying rules.",
       "confidence": "high",
       "verified_via": "browser",
-      "verified_at": "2026-08-03T00:20:00Z"
+      "verified_at": "2026-08-03T00:20:00Z",
+      "claim_id": "spte-rate",
+      "fetched_at": "2026-08-02T21:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
-      "id": "pte-ip-capital-gain",
       "claim": "Companies selling IP to a related foreign company may qualify for a reduced 12% capital gains tax rate where the IP was acquired from a foreign company after 1 January 2017 for at least ILS 200 million, subject to Israel Innovation Authority approval",
       "claim_type": "percentage",
       "source_url": "https://taxsummaries.pwc.com/israel/corporate/tax-credits-and-incentives",
-      "source_fetched_at": "2026-08-02T21:00:00Z",
       "raw_snippet": "Companies that sell IP to a related foreign company may qualify for a reduced 12% capital gains tax rate, provided that the company acquired the IP from a foreign company after 1 January 2017 for at least ILS 200 million, subject to the approval of the Israeli Innovation Authority.",
       "confidence": "high",
       "verified_via": "browser",
-      "verified_at": "2026-08-03T00:20:00Z"
+      "verified_at": "2026-08-03T00:20:00Z",
+      "claim_id": "pte-ip-capital-gain",
+      "fetched_at": "2026-08-02T21:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
-      "id": "israel-crp-2026",
-      "claim": "As of the 5 January 2026 update, Israel carries a Moody's rating of Baa1, an adjusted default spread of 1.36%, a country risk premium of 2.07%, and a total equity risk premium of 6.30%",
+      "claim": "As of the July 2026 dataset, Israel carries a Moody's rating of Baa1, an adjusted default spread of 1.27%, a country risk premium of 1.98%, and a total equity risk premium of 6.18%",
       "claim_type": "percentage",
-      "source_url": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ctryprem.html",
-      "source_fetched_at": "2026-08-02T20:50:00Z",
-      "raw_snippet": "Israel  Baa1  1.36%  2.07%  6.30%",
-      "confidence": "high"
+      "source_url": "https://pages.stern.nyu.edu/~adamodar/pc/datasets/ctrypremJuly26.xlsx",
+      "raw_snippet": "Israel\t540379.92126168101\tBaa1\t0.012726408900586053\t0.061783145701302992\t0.01978314570130299\t0.23\tMiddle East",
+      "confidence": "high",
+      "claim_id": "israel-crp-2026",
+      "fetched_at": "2026-08-26T16:47:08Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "scripts/valuation_model.py"
+      ],
+      "verified_via": "file",
+      "verified_at": "2026-08-26T16:47:08Z"
     },
     {
-      "id": "damodaran-vintage",
-      "claim": "The Damodaran country risk premium table used here carries a stated last-updated date of January 5, 2026",
+      "claim": "The country-risk dataset in force is the July 2026 vintage, whose default spreads were corrected on 9 July 2026. The ctryprem.html landing page still advertises the January 5, 2026 file, so the vintage must be confirmed against the data-current index",
       "claim_type": "date",
-      "source_url": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ctryprem.html",
-      "source_fetched_at": "2026-08-02T20:50:00Z",
-      "raw_snippet": "Last updated: January 5, 2026",
-      "confidence": "high"
+      "source_url": "https://pages.stern.nyu.edu/~adamodar/pc/datasets/ctrypremJuly26.xlsx",
+      "raw_snippet": "Default spreads corrected on July 9, 2026",
+      "confidence": "high",
+      "claim_id": "damodaran-vintage",
+      "fetched_at": "2026-08-26T16:47:08Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "verified_via": "file",
+      "verified_at": "2026-08-26T16:47:08Z"
     },
     {
-      "id": "risk-free-source-boi",
       "claim": "The Bank of Israel publishes yields to maturity on Israeli government bonds and makam, which is the reference source for the shekel risk-free rate",
       "claim_type": "url",
       "source_url": "https://www.boi.org.il/roles/statistics/makamandbonds/yield/",
-      "source_fetched_at": "2026-08-02T20:55:00Z",
       "raw_snippet": "אג\"ח ומק\"מ - תשואות לפדיון",
-      "confidence": "high"
+      "confidence": "high",
+      "claim_id": "risk-free-source-boi",
+      "fetched_at": "2026-08-02T20:55:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
-      "id": "tase-gov-bonds",
       "claim": "The Tel Aviv Stock Exchange publishes live market data, including indices and securities data, which is the route to Israeli comparable-company multiples and to government bond data",
       "claim_type": "url",
       "source_url": "https://market.tase.co.il/he/market_data",
-      "source_fetched_at": "2026-08-02T20:55:00Z",
       "raw_snippet": "נתוני מסחר",
       "confidence": "high",
       "verified_via": "browser",
-      "verified_at": "2026-08-03T01:30:00Z"
+      "verified_at": "2026-08-03T01:30:00Z",
+      "claim_id": "tase-gov-bonds",
+      "fetched_at": "2026-08-02T20:55:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
-      "id": "damodaran-industry-data",
       "claim": "Damodaran publishes current industry-level betas, cost of capital, and enterprise value multiples by sector",
       "claim_type": "url",
       "source_url": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datacurrent.html",
-      "source_fetched_at": "2026-08-02T20:50:00Z",
       "raw_snippet": "Levered, unlevered and pure play betas by industry. Also includes other risk measures including operating earnings variability and price-based risk measures.",
       "confidence": "medium",
       "verified_via": "browser",
-      "verified_at": "2026-08-03T00:20:00Z"
+      "verified_at": "2026-08-03T00:20:00Z",
+      "claim_id": "damodaran-industry-data",
+      "fetched_at": "2026-08-02T20:50:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
-      "id": "ita-root",
       "claim": "The Israel Tax Authority publishes its forms, circulars and professional directives on gov.il",
       "claim_type": "url",
       "source_url": "https://www.gov.il/he/departments/israel_tax_authority",
-      "source_fetched_at": "2026-08-02T20:55:00Z",
       "raw_snippet": "רשות המסים בישראל",
       "confidence": "high",
       "verified_via": "browser",
-      "verified_at": "2026-08-03T00:25:00Z"
+      "verified_at": "2026-08-03T00:25:00Z",
+      "claim_id": "ita-root",
+      "fetched_at": "2026-08-02T20:55:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
-      "id": "ita-tax-rulings",
       "claim": "A tax ruling is a decision on tax liability or tax consequences of an action, given by the Institute for Tax Rulings before the action is carried out and in certain cases after it, covering among others the Income Tax Ordinance and the Encouragement of Capital Investments Law",
       "claim_type": "url",
       "source_url": "https://www.gov.il/he/service/preliminary-taxation-decisions",
-      "source_fetched_at": "2026-08-02T20:55:00Z",
       "raw_snippet": "\"החלטת מיסוי\" הינה החלטה בכל הנוגע לחבות המס, תוצאות המס או ההשלכות על חבות המס בשל פעולה, שביצע מבקש החלטת מיסוי",
       "confidence": "high",
       "verified_via": "browser",
-      "verified_at": "2026-08-03T00:25:00Z"
+      "verified_at": "2026-08-03T00:25:00Z",
+      "claim_id": "ita-tax-rulings",
+      "fetched_at": "2026-08-02T20:55:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
-      "id": "section-104-definition",
       "claim": "סעיף 104 לפקודת מס הכנסה. Section 104 of the Israeli Income Tax Ordinance allows the transfer of an asset to a company in exchange for an allotment of shares without that transfer being treated as a taxable sale at the time, and the restructuring provisions sit in Part E2 of the Ordinance (חלק ה'2)",
       "claim_type": "law",
       "source_url": "https://y-tax.co.il/en/reorganization-and-structural-changes-section-104/",
-      "source_fetched_at": "2026-08-03T00:10:00Z",
       "raw_snippet": "Instead, the law allows for a tax deferral, not a tax exemption. The tax on the gain accrued in the transferred assets is not cancelled.",
       "confidence": "high",
       "verified_via": "browser",
-      "verified_at": "2026-08-03T00:20:00Z"
+      "verified_at": "2026-08-03T00:20:00Z",
+      "claim_id": "section-104-definition",
+      "fetched_at": "2026-08-03T00:10:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
-      "id": "reorg-deferral-continuity",
       "claim": "Israeli tax law permits non-taxable reorganizations where ownership and business continuity are maintained, deferring the tax liability until the transferred shares or assets are actually sold",
       "claim_type": "law",
       "source_url": "https://taxsummaries.pwc.com/israel/corporate/other-issues",
-      "source_fetched_at": "2026-08-03T00:05:00Z",
       "raw_snippet": "Israeli tax law allows for non-taxable reorganisations in situations in which the ownership and business enterprise of the original parties is continued after the reorganisation takes place, allowing for the deferral of the tax liability until the shares or assets transferred in such reorganisations are actually sold.",
-      "confidence": "high"
+      "confidence": "high",
+      "claim_id": "reorg-deferral-continuity",
+      "fetched_at": "2026-08-03T00:05:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
-      "id": "cbs-cpi",
       "claim": "The Israeli Central Bureau of Statistics publishes the Consumer Price Index used for the nominal versus real consistency check",
       "claim_type": "url",
       "source_url": "https://www.cbs.gov.il",
-      "source_fetched_at": "2026-08-02T20:55:00Z",
       "raw_snippet": "הלשכה המרכזית לסטטיסטיקה",
-      "confidence": "high"
+      "confidence": "high",
+      "claim_id": "cbs-cpi",
+      "fetched_at": "2026-08-02T20:55:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
-      "id": "trapped-profits-distribution",
       "claim": "The 2% tax on undistributed profits of a closely held company may be avoided by distributing a dividend of at least 6% of accumulated profits as of the end of the prior tax year, or more than 50% of accumulated profits less certain deductions",
       "claim_type": "percentage",
       "source_url": "https://taxsummaries.pwc.com/israel/corporate/taxes-on-corporate-income",
-      "source_fetched_at": "2026-08-03T00:20:00Z",
       "raw_snippet": "The tax on undistributed profits may be avoided if the company distributes a dividend equal to: (i) at least 6%",
       "verified_via": "browser",
       "verified_at": "2026-08-03T00:20:00Z",
-      "confidence": "high"
+      "confidence": "high",
+      "claim_id": "trapped-profits-distribution",
+      "fetched_at": "2026-08-03T00:20:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
-      "id": "total-beta-private",
       "claim": "Total betas, which reflect a firm's total risk rather than only market risk, may provide better estimates of the cost of equity for undiversified owners of private businesses",
       "claim_type": "feature",
       "source_url": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datacurrent.html",
-      "source_fetched_at": "2026-08-03T00:20:00Z",
       "raw_snippet": "These betas might provide better estimates of costs of equity for undiversified owners of private businesses.",
       "verified_via": "browser",
       "verified_at": "2026-08-03T00:20:00Z",
-      "confidence": "high"
+      "confidence": "high",
+      "claim_id": "total-beta-private",
+      "fetched_at": "2026-08-03T00:20:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
-      "id": "unsupported-valuation-ita-dispute",
       "claim": "A lack of a valuation basis for the asset or the shares in a reorganization may create disputes with the Israel Tax Authority and impair compliance with the value ratio requirement",
       "claim_type": "law",
       "source_url": "https://y-tax.co.il/en/reorganization-and-structural-changes-section-104/",
-      "source_fetched_at": "2026-08-03T00:20:00Z",
       "raw_snippet": "Lack of a valuation basis for the asset or the shares",
       "verified_via": "browser",
       "verified_at": "2026-08-03T00:20:00Z",
-      "confidence": "high"
+      "confidence": "high",
+      "claim_id": "unsupported-valuation-ita-dispute",
+      "fetched_at": "2026-08-03T00:20:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
-      "id": "reorg-restriction-period",
       "claim": "Taking material actions during the restriction period without advance planning may breach the holding conditions or the asset holding requirement, and selling or materially changing the transferred asset during that period may cancel the tax deferral",
       "claim_type": "law",
       "source_url": "https://y-tax.co.il/en/reorganization-and-structural-changes-section-104/",
-      "source_fetched_at": "2026-08-03T00:20:00Z",
       "raw_snippet": "may lead to a breach of the holding conditions or the asset holding requirement",
       "verified_via": "browser",
       "verified_at": "2026-08-03T00:20:00Z",
-      "confidence": "high"
+      "confidence": "high",
+      "claim_id": "reorg-restriction-period",
+      "fetched_at": "2026-08-03T00:20:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
-      "id": "cgt-shares-25",
       "claim": "The real gain on the sale of shares purchased on or after 1 January 2003 is generally taxed at 25% for individuals",
       "claim_type": "percentage",
       "source_url": "https://taxsummaries.pwc.com/israel/individual/income-determination",
-      "source_fetched_at": "2026-08-03T01:00:00Z",
       "raw_snippet": "The real gain, if any, realised upon the sale of shares purchased on or after 1 January 2003 is generally taxed at a rate of 25% for individuals.",
       "confidence": "high",
       "verified_via": "browser",
-      "verified_at": "2026-08-03T01:45:00Z"
+      "verified_at": "2026-08-03T01:45:00Z",
+      "claim_id": "cgt-shares-25",
+      "fetched_at": "2026-08-03T01:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
-      "id": "cgt-substantial-30",
       "claim": "The capital gains rate rises to 30% where the seller held 10% or more of any means of control at the date of sale or during any of the 12 months preceding it",
       "claim_type": "percentage",
       "source_url": "https://taxsummaries.pwc.com/israel/individual/income-determination",
-      "source_fetched_at": "2026-08-03T01:00:00Z",
       "raw_snippet": "This rate is increased to 30% where the seller was a 10% or more shareholder at the date of sale or during any of the 12 months preceding the sale",
       "confidence": "high",
       "verified_via": "browser",
-      "verified_at": "2026-08-03T01:45:00Z"
+      "verified_at": "2026-08-03T01:45:00Z",
+      "claim_id": "cgt-substantial-30",
+      "fetched_at": "2026-08-03T01:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
-      "id": "surtax-2026",
       "claim": "A 3% surtax applies to annual taxable income from all sources above ILS 721,560 in 2026, and as of 2025 an additional 2% surtax applies to the portion of income from capital sources, including capital gains, above that threshold (בעברית: הסף הוא 721,560 שקל בשנת 2026)",
       "claim_type": "threshold",
       "source_url": "https://taxsummaries.pwc.com/israel/individual/income-determination",
-      "source_fetched_at": "2026-08-03T01:00:00Z",
       "raw_snippet": "exceeding a certain threshold (ILS 721,560 in 2026) is subject to an additional surtax of 2%",
-      "confidence": "high"
+      "confidence": "high",
+      "claim_id": "surtax-2026",
+      "fetched_at": "2026-08-03T01:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
-      "id": "cgt-pre-2003-blended",
       "claim": "Shares acquired before 2003 are taxed at a blended rate, applying the individual's marginal rate in the range of 31% to 50% to the apportioned part of the gain",
       "claim_type": "percentage",
       "source_url": "https://taxsummaries.pwc.com/israel/individual/income-determination",
-      "source_fetched_at": "2026-08-03T01:45:00Z",
       "raw_snippet": "The ordinary individual tax rate (determined in accordance with the individual's marginal tax rate in the range of 31% to 50%) will be applied to the gain amount",
       "verified_via": "browser",
       "verified_at": "2026-08-03T01:45:00Z",
-      "confidence": "high"
+      "confidence": "high",
+      "claim_id": "cgt-pre-2003-blended",
+      "fetched_at": "2026-08-03T01:45:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "damodaran-mature-erp-july26",
+      "claim": "The mature-market equity risk premium implied by the July 2026 dataset is 4.20%, being the US equity risk premium of 4.42% less the US adjusted default spread of 0.2186%",
+      "claim_type": "percentage",
+      "source_url": "https://pages.stern.nyu.edu/~adamodar/pc/datasets/ctrypremJuly26.xlsx",
+      "raw_snippet": "United States\t28750956.130731199\tAa1\t0.0021863536781947081\t0.044200000000000003\t0.0021863536781947081\t0.25\tNorth America",
+      "fetched_at": "2026-08-26T16:47:08Z",
+      "verified_via": "file",
+      "verified_at": "2026-08-26T16:47:08Z",
+      "confidence": "high",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "excess-profitability-62a-a1",
+      "claim": "Section 62A(a1) of the Income Tax Ordinance deems the excess profitability of a closely held company, being income from personal-exertion-intensive activity less payments to a related company less 25% of that difference, to be the active shareholder's own section 2(1) earned income pro rata to their rights in profits",
+      "claim_type": "legal_reference",
+      "source_url": "https://www.grantthornton.co.il/insights1/professional-insights/2025/profitability/",
+      "raw_snippet": "סעיף 62א(א1) לפקודת מס הכנסה",
+      "fetched_at": "2026-08-26T16:47:08Z",
+      "confidence": "high",
+      "appears_in": [
+        "references/israeli-tax-regimes.md",
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "amendment-277-effective",
+      "claim": "Amendment 277, which introduced the closely held company rules relied on here, took effect on 1 January 2025",
+      "claim_type": "date",
+      "source_url": "https://www.grantthornton.co.il/insights1/professional-insights/2025/profitability/",
+      "raw_snippet": "מועד התחילה של התיקון הינו 1 בינואר 2025.",
+      "fetched_at": "2026-08-26T16:47:08Z",
+      "confidence": "high",
+      "appears_in": [
+        "references/israeli-tax-regimes.md"
+      ]
+    },
+    {
+      "claim_id": "service-company-22-of-36",
+      "claim": "Amendment 277 shortened the examination window for the service-company attribution rule from 30 months out of 48 to 22 months out of 36",
+      "claim_type": "legal_reference",
+      "source_url": "https://www.bshcpa.co.il/מיסוי-חברות-ארנק/",
+      "raw_snippet": "כיום: 22 מתוך 36 חודשים בלבד.",
+      "fetched_at": "2026-08-26T16:47:08Z",
+      "confidence": "high",
+      "appears_in": [
+        "references/israeli-tax-regimes.md"
+      ]
+    },
+    {
+      "claim_id": "service-company-25pct-carveout",
+      "claim": "The 25% escape belongs to the officer and management-services limb of section 62A(a): attribution under THAT limb does not apply where the individual holds, directly or indirectly, 25% or more of the means of control in the entity receiving the services. It does not rescue a company from the separate 70% employee-like-services limb.",
+      "claim_type": "legal_reference",
+      "source_url": "https://www.bshcpa.co.il/מיסוי-חברות-ארנק/",
+      "raw_snippet": "אם בעל השליטה מחזיק, במישרין או בעקיפין, ב-25% או יותר מאמצעי השליטה בחבר בני האדם המקבל את השירותים, ההכנסות לא תיחשבנה כהכנסה אישית שלו.",
+      "fetched_at": "2026-08-26T16:47:08Z",
+      "confidence": "medium",
+      "appears_in": [
+        "references/israeli-tax-regimes.md"
+      ]
+    },
+    {
+      "claim_id": "undistributed-profits-81a-81f",
+      "claim": "The 2% additional tax on a closely held company's undistributed profits sits in sections 81A to 81F of the Income Tax Ordinance, and is the subject of Israel Tax Authority circular 7/2025 of 19 October 2025",
+      "claim_type": "legal_reference",
+      "source_url": "https://www.grantthornton.co.il/insights1/tax-insignths/2025/Locked_profits/",
+      "raw_snippet": "חוזר מס הכנסה 7/2025",
+      "fetched_at": "2026-08-26T16:47:08Z",
+      "confidence": "high",
+      "appears_in": [
+        "references/israeli-tax-regimes.md",
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "undistributed-profits-deadline-2026",
+      "claim": "The Israel Tax Authority replaced the 30 April deadline for electing the section 81B(b)(2) and (3) distribution routes with the earlier of the filing date of the return for the examined year or the end of the following tax year",
+      "claim_type": "date",
+      "source_url": "https://www.gov.il/he/pages/pa080226-1",
+      "raw_snippet": "מועדי הדיווח ותשלום המס בגין חלופות התשלום הקבועות בסעיפים 81ב(ב)(2) ו-(3) לפקודה",
+      "fetched_at": "2026-08-26T16:47:08Z",
+      "confidence": "high",
+      "appears_in": [
+        "references/israeli-tax-regimes.md"
+      ]
+    },
+    {
+      "claim_id": "israel-qdmtt-2026",
+      "claim": "Israel enacted a domestic minimum top-up tax on 31 December 2025, intended to be a Qualified Domestic Minimum Top-Up Tax, applying from 1 January 2026",
+      "claim_type": "legal_reference",
+      "source_url": "https://oecdpillars.com/israel-enacts-its-dmtt-law-with-significant-changes-from-the-previous-draft-law/",
+      "raw_snippet": "Israel enacted the Law on the Minimum Corporate Tax for Corporate Groups",
+      "fetched_at": "2026-08-26T16:47:08Z",
+      "confidence": "high",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/israeli-tax-regimes.md"
+      ]
+    },
+    {
+      "claim_id": "israel-no-iir-no-utpr",
+      "claim": "Israel has not implemented the Income Inclusion Rule or the Undertaxed Profits Rule, so its top-up tax reaches Israeli-located low-taxed profit only",
+      "claim_type": "legal_reference",
+      "source_url": "https://taxnews.ey.com/news/2026-0193-israel-implements-qualified-domestic-minimum-top-up-tax-effective-beginning-in-2026",
+      "raw_snippet": "Israel has not implemented the Income Inclusion Rule or Undertaxed Profits Rule mechanisms at this stage.",
+      "fetched_at": "2026-08-26T16:47:08Z",
+      "confidence": "high",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/israeli-tax-regimes.md"
+      ]
+    },
+    {
+      "claim_id": "pte-competitiveness-and-group-revenue",
+      "claim": "A Preferred Technology Enterprise must satisfy, in addition to the R&D test, both a group-income ceiling of ILS 10 billion and the competitiveness test under section 18A(c)(1) or (2)",
+      "claim_type": "legal_reference",
+      "source_url": "https://www.nevo.co.il/law_html/law01/p181_001.htm",
+      "raw_snippet": "המפעל היה מפעל בר-תחרות בהתאם לאמור בסעיף 18א(ג)(1) או (2)",
+      "fetched_at": "2026-08-26T16:47:08Z",
+      "confidence": "high",
+      "appears_in": [
+        "references/israeli-tax-regimes.md",
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "pte-secondary-headcount-test",
+      "claim": "One of the alternative secondary tests for a Preferred Technology Enterprise is that at least 20% of employees are ones whose entire salary was recorded as research and development expense, or that it employs at least 200 such employees",
+      "claim_type": "legal_reference",
+      "source_url": "https://www.nevo.co.il/law_html/law01/p181_001.htm",
+      "raw_snippet": "20% או יותר מעובדיה הם עובדים אשר מלוא שכרם שולם ונרשם בדוחות הכספיים שלה כהוצאות מחקר ופיתוח או שהיא מעסיקה 200 עובדים כאמור או יותר",
+      "fetched_at": "2026-08-26T16:47:08Z",
+      "confidence": "high",
+      "appears_in": [
+        "references/israeli-tax-regimes.md"
+      ]
+    },
+    {
+      "claim_id": "pte-vc-investment-8m",
+      "claim": "An alternative secondary test for a Preferred Technology Enterprise is that a venture capital fund invested at least ILS 8 million in the company",
+      "claim_type": "currency",
+      "source_url": "https://www.nevo.co.il/law_html/law01/p181_001.htm",
+      "raw_snippet": "קרן הון סיכון כהגדרתה בתוספת הראשונה לחוק ניירות ערך, התשכ\"ח-1968, השקיעה בחברה 8 מיליון שקלים חדשים לפחות, והחברה לא שינתה את תחום עיסוקה אחרי מועד השקעה זו",
+      "fetched_at": "2026-08-26T16:48:27Z",
+      "confidence": "high",
+      "appears_in": [
+        "references/israeli-tax-regimes.md"
+      ]
+    },
+    {
+      "claim_id": "capital-gains-combined-35",
+      "claim": "From tax year 2025 section 121B(a1) imposes an additional 2% surtax on taxable capital income above ILS 721,560, taking the inclusive surtax on that income to 5%, so a substantial shareholder's 30% share-sale gain reaches 35% on the top slice",
+      "claim_type": "percentage",
+      "source_url": "https://barlaw.co.il/practice_areas/tax/client_updates/high-income-earners-in-israel-prepare-to-pay-an-additional-surtax/",
+      "raw_snippet": "an additional 2% surtax will be imposed specifically on taxable capital income (income from dividends, interest, capital gains from real estate sales and other capital sources) exceeding the maximum of ILS 721,560. This means that taxable capital income exceeding the maximum will now be subject to an inclusive surtax of 5%.",
+      "fetched_at": "2026-08-26T16:48:27Z",
+      "confidence": "high",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "igud-mekarkein-definition",
+      "claim": "A real estate association under section 1 of the Real Estate Taxation Law is an association all of whose assets are rights in land, and cash, shares, bonds, other securities and movables are disregarded where they do not serve to produce the association's income",
+      "claim_type": "legal_reference",
+      "source_url": "https://he.wikisource.org/wiki/חוק_מיסוי_מקרקעין_(שבח_ורכישה)",
+      "raw_snippet": "לא יראו כנכסיו של האיגוד – מזומנים, מניות, איגרות חוב, ניירות ערך אחרים, ומטלטלין, שאינם משמשים לאיגוד לייצור הכנסתו",
+      "fetched_at": "2026-08-26T16:47:08Z",
+      "confidence": "high",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "damodaran-ctryprem-landing",
+      "claim": "Damodaran publishes country default spreads and equity risk premiums on the country-premium page, whose stated last-updated date can lag the current data file",
+      "claim_type": "url",
+      "source_url": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ctryprem.html",
+      "raw_snippet": "Country Default Spreads and Risk Premiums",
+      "fetched_at": "2026-08-26T16:48:43Z",
+      "confidence": "high",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "igud-shevach-rates-48a",
+      "claim": "Section 48A(b) of the Real Estate Taxation Law charges an individual real betterment at up to 25%, rising to up to 30% in an action in a real estate association where the individual is a substantial shareholder at the date of the action or at any time in the twelve preceding months (סעיף 48א(ב) לחוק מיסוי מקרקעין)",
+      "claim_type": "legal_reference",
+      "source_url": "https://he.wikisource.org/wiki/חוק_מיסוי_מקרקעין_(שבח_ורכישה)",
+      "raw_snippet": "יחיד יהיה חייב במס על שבח ריאלי כאמור בסעיף 121 לפקודה בשיעור של עד 30%, בפעולה באיגוד מקרקעין, אם הוא בעל מניות מהותי באיגוד המקרקעין במועד הפעולה באותו איגוד, או במועד כלשהו בשנים עשר החודשים שקדמו לפעולה כאמור",
+      "fetched_at": "2026-08-26T17:07:08Z",
+      "confidence": "high",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "62a-a1-30m-and-25pct",
+      "claim": "Section 62A(a1) applies only where the closely held company personal-exertion-intensive income is below ILS 30 million times the number of controlling shareholders AND the profitability rate exceeded 25%, and the deducted normal return is 25% of that income less payments to a related company",
+      "claim_type": "currency",
+      "source_url": "https://he.wikisource.org/wiki/%D7%A4%D7%A7%D7%95%D7%93%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
+      "raw_snippet": "ההכנסה מפעילות עתירת יגיעה אישית של חברת המעטים בשנת המס נמוכה מהמכפלה של 30 מיליון שקלים חדשים במספר בעלי השליטה בחברת המעטים באותה שנה",
+      "fetched_at": "2026-08-26T17:07:08Z",
+      "confidence": "high",
+      "appears_in": [
+        "references/israeli-tax-regimes.md"
+      ]
+    },
+    {
+      "claim_id": "62a-a5-four-employees",
+      "claim": "Section 62A(a)(5) excludes a closely held company employing four or more workers from the paragraph (3) employee-like-services attribution, counting a person employed up to four hours a day as half a worker",
+      "claim_type": "legal_reference",
+      "source_url": "https://he.wikisource.org/wiki/%D7%A4%D7%A7%D7%95%D7%93%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
+      "raw_snippet": "(5) הוראות פסקה (3) לא יחולו על חברת מעטים המעסיקה ארבעה מועסקים או יותר",
+      "fetched_at": "2026-08-26T17:07:08Z",
+      "confidence": "high",
+      "appears_in": [
+        "references/israeli-tax-regimes.md"
+      ]
+    },
+    {
+      "claim_id": "62a-a1-25pct-officer-carveout",
+      "claim": "The 25% escape from attribution belongs to the officer and management-services limb in section 62A(a)(1), not to the 70% employee-like-services limb",
+      "claim_type": "legal_reference",
+      "source_url": "https://he.wikisource.org/wiki/%D7%A4%D7%A7%D7%95%D7%93%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
+      "raw_snippet": "הוראות פסקה זו לא יחולו על יחיד שמחזיק, במישרין או בעקיפין, ב־25% או יותר באחד מאמצעי השליטה בחבר בני האדם האחר ביום כלשהו בשנת המס",
+      "fetched_at": "2026-08-26T17:07:08Z",
+      "confidence": "high",
+      "appears_in": [
+        "references/israeli-tax-regimes.md"
+      ]
+    },
+    {
+      "claim_id": "62a-a3-70pct-22-months",
+      "claim": "Section 62A(a)(3) attributes income where 70% or more of the closely held company total or taxable income, excluding special income and gains, comes from services to one person or their relative for at least 22 months out of a three-year period",
+      "claim_type": "percentage",
+      "source_url": "https://he.wikisource.org/wiki/%D7%A4%D7%A7%D7%95%D7%93%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
+      "raw_snippet": "מקורן של 70% או יותר מסך כל הכנסתה או הכנסתה החייבת של חברת המעטים בשנת המס",
+      "fetched_at": "2026-08-26T17:07:08Z",
+      "confidence": "high",
+      "appears_in": [
+        "references/israeli-tax-regimes.md",
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "shareholder-withdrawal-3t1",
+      "claim": "Under section 3(i1) a withdrawal by a substantial shareholder is deemed their income at the end of the tax year following the year of withdrawal, and a cumulative withdrawal not exceeding ILS 100,000 on any day of the tax year or the preceding one is outside the rule (סעיף 3(ט1) לפקודת מס הכנסה)",
+      "claim_type": "currency",
+      "source_url": "https://he.wikisource.org/wiki/%D7%A4%D7%A7%D7%95%D7%93%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
+      "raw_snippet": "ובלבד שלא יראו כמשיכה של כספים מחברה סכום משיכות מצטבר, שלא עלה ביום כלשהו בשנת המס וביום כלשהו בשנת המס שלפניה, על מאה אלף שקלים חדשים",
+      "fetched_at": "2026-08-26T17:07:08Z",
+      "confidence": "high",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "corporate-tax-126a-statute",
+      "claim": "Section 126(a) of the Income Tax Ordinance imposes corporate tax at 23%",
+      "claim_type": "percentage",
+      "source_url": "https://he.wikisource.org/wiki/%D7%A4%D7%A7%D7%95%D7%93%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
+      "raw_snippet": "על הכנסתו החייבת של חבר בני־אדם יוטל מס שייקרא ”מס חברות“, בשיעור 23%",
+      "fetched_at": "2026-08-26T17:07:08Z",
+      "confidence": "high",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     }
   ]
 }
