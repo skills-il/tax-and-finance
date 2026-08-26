@@ -54,8 +54,15 @@ DISCLAIMER = (
 def classify_stream(track: str, source: str, kind: str, year_idx: int,
                     asset_acquired_before_return: bool) -> str:
     """Return 'EXEMPT' or 'TAXABLE' for a given (track, stream, year) tuple."""
-    # Israeli-source income is taxable under every track.
+    # Israeli-source income is outside section 14 under every track. But do NOT
+    # print a bare "TAXABLE" for Israeli personal-exertion income: for an oleh or
+    # a toshav chozer vatik whose residency began in the Hok Iddud window, the
+    # first 600,000 NIS of 2026 Israeli salary (and 1,000,000 in 2027-2028) is
+    # exempt under that separate statute. Labelling it TAXABLE contradicted the
+    # skill's own Step 5, in the skill's headline deliverable.
     if source == "israeli":
+        if kind == "active":
+            return "IL-LABOUR"
         return "TAXABLE"
 
     # Foreign-source income classification depends on track.
@@ -86,6 +93,71 @@ def classify_stream(track: str, source: str, kind: str, year_idx: int,
     return "TAXABLE"
 
 
+VALID_TRACKS = ("vatik", "regular", "none")
+VALID_SOURCES = ("foreign", "israeli")
+VALID_KINDS = ("active", "passive", "capital-gain")
+
+
+class PlanError(Exception):
+    """A problem with the input plan that the user must fix."""
+
+
+def validate(plan: Dict) -> None:
+    """Fail loudly on a malformed plan.
+
+    A silently-wrong track is the worst failure mode this script has: an
+    unrecognised value used to fall through to 'TAXABLE' for every stream,
+    producing a confident all-taxable projection with no warning. Since the
+    whole point of the script is to distinguish the tracks, that is a wrong
+    answer dressed as an answer.
+    """
+    if not isinstance(plan, dict):
+        raise PlanError("Input must be a JSON object.")
+    track = plan.get("track")
+    if track not in VALID_TRACKS:
+        raise PlanError(
+            f"track must be one of {VALID_TRACKS}, got {track!r}. "
+            "Refusing to guess: an unrecognised track would silently classify "
+            "every stream as taxable."
+        )
+    rstart = plan.get("residency_start")
+    if not rstart:
+        raise PlanError("residency_start is required (YYYY-MM-DD).")
+    try:
+        datetime.fromisoformat(str(rstart)).date()
+    except Exception:
+        raise PlanError(
+            f"residency_start {rstart!r} is not a valid YYYY-MM-DD date. "
+            "This date selects the Amendment 272 reporting regime, so it "
+            "cannot be skipped."
+        )
+    streams = plan.get("income_streams")
+    if not isinstance(streams, list) or not streams:
+        raise PlanError("income_streams must be a non-empty list.")
+    for i, s in enumerate(streams, 1):
+        where = f"income_streams[{i}] ({s.get('label', 'unlabelled')})"
+        for field in ("label", "source", "kind", "annual_amount"):
+            if field not in s:
+                raise PlanError(f"{where}: missing required field {field!r}.")
+        if s["source"] not in VALID_SOURCES:
+            raise PlanError(f"{where}: source must be one of {VALID_SOURCES}, got {s['source']!r}.")
+        if s["kind"] not in VALID_KINDS:
+            raise PlanError(f"{where}: kind must be one of {VALID_KINDS}, got {s['kind']!r}.")
+        years = s.get("years_active")
+        if not isinstance(years, list) or not years:
+            raise PlanError(f"{where}: years_active must be a non-empty list of years 1-10.")
+        for y in years:
+            if not isinstance(y, int) or not 1 <= y <= 10:
+                raise PlanError(f"{where}: years_active entries must be integers 1-10, got {y!r}.")
+        if plan["track"] == "regular" and s["kind"] in ("passive", "capital-gain") \
+                and s["source"] == "foreign" and "asset_acquired_before_return" not in s:
+            raise PlanError(
+                f"{where}: on the regular track, asset_acquired_before_return decides "
+                "whether this stream is exempt at all. State it explicitly rather than "
+                "letting it default to false."
+            )
+
+
 def render(plan: Dict) -> str:
     track = plan["track"]
     residency_start = plan["residency_start"]
@@ -103,12 +175,23 @@ def render(plan: Dict) -> str:
     lines.append("")
     lines.append("DISCLAIMER: " + DISCLAIMER)
     lines.append("")
+    lines.append("VERDICTS: EXEMPT / TAXABLE are section 14 classifications of FOREIGN income.")
+    lines.append("IL-LABOUR marks Israeli personal-exertion income, which section 14 never")
+    lines.append("exempts. It is NOT necessarily taxable: under Hok Iddud an oleh or toshav")
+    lines.append("chozer vatik who became resident between 5.11.2025 and the end of 2026 is")
+    lines.append("exempt on Israeli personal-exertion income up to an annual cap (600,000 NIS")
+    lines.append("in 2026, 1,000,000 in 2027 and 2028, 350,000 in 2029, 150,000 in 2030), with")
+    lines.append("a 140,000 sub-cap for income from a relative. This script does not map your")
+    lines.append("year indices to calendar years, so it cannot apply the caps: take the")
+    lines.append("IL-LABOUR lines to a CPA against the schedule in the skill's Step 5.")
+    lines.append("")
 
     # Per-year breakdown
     for year_idx in range(1, 11):
         lines.append(f"--- Year {year_idx} ---")
         exempt_total = {}
         taxable_total = {}
+        il_labour_total = {}
         for s in streams:
             if year_idx not in s.get("years_active", []):
                 continue
@@ -122,12 +205,19 @@ def render(plan: Dict) -> str:
             currency = s.get("currency", "?")
             amount = s["annual_amount"]
             label = s["label"]
-            bucket = exempt_total if verdict == "EXEMPT" else taxable_total
+            if verdict == "EXEMPT":
+                bucket = exempt_total
+            elif verdict == "IL-LABOUR":
+                bucket = il_labour_total
+            else:
+                bucket = taxable_total
             bucket[currency] = bucket.get(currency, 0) + amount
-            lines.append(f"  [{verdict:7}] {label}: {amount:,} {currency}  ({s['source']}/{s['kind']})")
-        if exempt_total or taxable_total:
-            lines.append(f"  TOTAL EXEMPT:  " + ", ".join(f"{v:,} {k}" for k, v in exempt_total.items()))
-            lines.append(f"  TOTAL TAXABLE: " + ", ".join(f"{v:,} {k}" for k, v in taxable_total.items()))
+            lines.append(f"  [{verdict:9}] {label}: {amount:,} {currency}  ({s['source']}/{s['kind']})")
+        if exempt_total or taxable_total or il_labour_total:
+            lines.append("  TOTAL EXEMPT (foreign, s.14):  " + (", ".join(f"{v:,} {k}" for k, v in exempt_total.items()) or "none"))
+            lines.append("  TOTAL TAXABLE:                " + (", ".join(f"{v:,} {k}" for k, v in taxable_total.items()) or "none"))
+            if il_labour_total:
+                lines.append("  ISRAELI LABOUR (check Hok Iddud cap): " + ", ".join(f"{v:,} {k}" for k, v in il_labour_total.items()))
         else:
             lines.append("  (no streams active this year)")
         lines.append("")
@@ -208,10 +298,22 @@ def main():
     ap.add_argument("--json", help="Path to JSON input file")
     args = ap.parse_args()
     if args.json:
-        with open(args.json) as f:
-            plan = json.load(f)
+        try:
+            with open(args.json) as f:
+                plan = json.load(f)
+        except FileNotFoundError:
+            print(f"error: no such file: {args.json}", file=sys.stderr)
+            sys.exit(2)
+        except json.JSONDecodeError as e:
+            print(f"error: {args.json} is not valid JSON: {e}", file=sys.stderr)
+            sys.exit(2)
     else:
         plan = interactive()
+    try:
+        validate(plan)
+    except PlanError as e:
+        print(f"error: {e}", file=sys.stderr)
+        sys.exit(2)
     print(render(plan))
 
 

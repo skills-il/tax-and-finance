@@ -36,7 +36,7 @@ For 10 years starting on the date the individual becomes an Israeli tax resident
 2. **Mixed-source income** where part of the activity was performed in Israel. The exemption is pro-rated to the foreign-source portion.
 3. **Equity compensation sourced by vesting** (see `equity-compensation-sourcing.md`). Pre-move grant + post-move vest + work performed in Israel = largely Israeli-source, regardless of grant date.
 4. **Income through Israeli-resident intermediaries** that the Tax Authority can re-characterize as Israeli-source.
-5. **Certain CFC (Controlled Foreign Company) flows**: dividends from a foreign company the returnee controls (>25%) can be re-characterized. Trust distributions where the returnee is settlor or beneficiary can also be re-characterized. These are technical and require a CPA opinion.
+5. **Certain CFC (Controlled Foreign Company) flows**: dividends from a foreign company the returnee controls can be re-characterized (do not apply a 25% test: Section 75B turns on more than 50% of the means of control being held by Israeli residents, with a further limb where Israeli residents hold more than 40% and together with a relative of one or more of them hold more than 50%, plus passive-income and foreign-tax-rate tests). Trust distributions where the returnee is settlor or beneficiary can also be re-characterized. These are technical and require a CPA opinion.
 
 ### Israeli-source income table (taxable throughout the 10-year window)
 
@@ -60,9 +60,13 @@ The exemption clock starts on the day the individual becomes an Israeli tax resi
 
 Choosing the exact tax-residency start date is a planning decision. A CPA can help structure events around the desired date.
 
-## Section 14(b), Year of Acclimation (Shnat Hashtagrut)
+## Section 14(b), Year of Acclimation (Shnat Histaglut)
 
-A separate election under section 14(b) lets a returnee defer being treated as an Israeli tax resident for one additional year (the "year of acclimation"). This is sometimes used to delay the start of the 10-year exemption clock so it lines up with the start of foreign income flows.
+A separate election under section 14(b)(1) lets a returnee be treated as a non-resident for one year from the date of return (the "year of acclimation").
+
+**It does NOT extend the exemption.** Section 14(b)(2) provides that where the election is made, the acclimation year **is counted** toward the periods it lists, expressly including the section 14(a) exemption period and the section 97(b)(1) capital-gains period. So the election does not delay the start of the 10-year clock and does not add an eleventh exempt year. Any guidance that says otherwise, including earlier versions of this file, is wrong. The election buys a year of non-resident treatment, which is genuinely useful for a returnee who may leave again, and that is what it should be sold on.
+
+**It also does not move the Hok Iddud window.** Hok Iddud section 2(e) states that section 14(b)(1) does not apply when determining the date an individual became a first-time or veteran returning resident for that law's purposes. Electing acclimation therefore neither postpones nor forfeits the Israeli-source labour caps.
 
 **Critical: the election must be filed in writing within 90 days of arrival in Israel** (90 ימים ממועד הגעתו לישראל), using Form 1130, the official year-of-acclimation election notice. This is the rule from ITA Circular 1/2011 (חוזר מס הכנסה 1/2011). The election is irrevocable for that year.
 
@@ -79,7 +83,7 @@ There is no single "election form" for the section 14 exemption itself. The exem
 3. Optionally holding a Returning Resident Certificate (Te'udat Toshav Chozer) from the Ministry of Aliyah and Integration. Note: this certificate is an administrative document useful for absorption services. It is NOT binding on the Tax Authority; section 14 status is determined independently by Mas Hachnasa under the Ordinance. BSH CPA writes: "תעודת תושב חוזר ותיק המוענקת ע"י משרד הקליטה אינה מקנה הטבות מס מכוח מעמד תושב חוזר כהגדרתו בפקודת מס הכנסה ואינה מחייבת את רשות המסים בעניין תושבות לצורכי מס."
 4. For section 14(b) year-of-acclimation, a separate Form 1130 filed within 90 days of arrival.
 
-For bank-level treatment of foreign-currency deposits, Form 2409 is commonly requested by Israeli banks within 14 days of any incoming foreign transfer. The 14-day window is a bank convention, not a statute, and varies in practice. Check with the specific bank.
+For bank-level treatment of foreign-currency deposits, Form 2409 is commonly requested by Israeli banks in connection with an incoming foreign transfer. Any deadline here is a bank convention, not a statute, and it varies in practice, so ask the specific bank for its own window rather than quoting one.
 
 ## Capital losses during the exempt window
 

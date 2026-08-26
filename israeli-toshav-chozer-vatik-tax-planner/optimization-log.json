@@ -1,6 +1,38 @@
 {
   "cycles": [
     {
+      "version": "1.3.0",
+      "date": "2026-08-27",
+      "holdout_before": 1.0,
+      "holdout_after": 1.0,
+      "buckets": {
+        "improved": [],
+        "regressed": [],
+        "persistent_fail": [],
+        "stable_success": [
+          "תושב חוזר ותיק פטור ממס",
+          "returning to Israel after 12 years abroad, what tax exemption",
+          "should I open a pension fund (correctly NOT triggered)"
+        ]
+      },
+      "lessons": [
+        "CRITICAL fixed: the Shnat Histaglut guidance was contrary to s.14(b)(2), which counts the acclimation year INSIDE the s.14(a) and s.97(b)(1) periods. The election does not extend the clock. Hok Iddud s.2(e) also disapplies s.14(b)(1) for its own start date, so the stated 'sacrifice the 2026 600K cap' trade-off never existed. Verified verbatim against the Nevo statute text, not against the report.",
+        "CRITICAL fixed: Example 2 offered the Hok Iddud caps to a REGULAR toshav chozer. The statute grants them only to an oleh or a vatik.",
+        "CRITICAL fixed: Gotcha 13 said the Misrad HaKlitah certificate confers no tax benefit. Hok Iddud s.1 makes it a precondition to the Israeli-source caps, so the old wording could cost a returnee the whole benefit.",
+        "CRITICAL fixed (Expert): s.97(b)(3) linear apportionment was missing and the skill implied a binary cliff at year 10, which pushes users into forced sales that crystallise US tax and destroy losses under Gotcha 12. Verified verbatim.",
+        "CRITICAL fixed (Expert): the relief excluding a foreign company from Israeli residency where a vatik manages it from Israel was entirely absent, though it is the question the returning-founder audience actually has. Verified verbatim in the 'תושב ישראל' definition.",
+        "CRITICAL fixed (Expert): cashflow-projection.py labelled Israeli-source labour TAXABLE unconditionally, contradicting Step 5's Hok Iddud caps in the skill's headline deliverable. Now emits IL-LABOUR with the cap schedule. Israeli PASSIVE income stays TAXABLE, which is correct since 'הכנסה מזכה' is limited to personal-exertion income under s.2(1)/(2).",
+        "Script hardening: an unrecognised `track` previously fell through to all-TAXABLE with no warning, which is the worst failure shape for a skill whose entire purpose is distinguishing tracks. It now exits 2 with a message, as do a bad residency date, out-of-range years, a missing required field, malformed JSON, a missing file, and a regular-track stream with no asset_acquired_before_return.",
+        "Added the s.14(a) opt-out. The exemption is granted 'אלא אם כן ביקשו אחרת', and waiving it is the only lever that generates a US FTC. The skill previously spent a whole step lamenting the absent FTC without mentioning the waiver.",
+        "Removed rather than re-sourced: a '3 years if left before 1.1.2009' rule (the real transitional rule was 5 years for 2007-2009 residents and is spent), a 14-day Form 2409 bank deadline (the cited page ties 14 days to a specific foreign-currency-deposit interest exemption, not to every transfer), an unsourced 25% CFC test, and a front-loaded credit-point taper that is backwards for year 1.",
+        "Evidence hygiene: 13 of 64 entries carried PARAPHRASED raw_snippets that could never match their pages, so --check-sources could not falsify them. Re-cut against live page text; verified-against-source rose from 11 to 19. A paraphrase in raw_snippet is functionally an unverifiable claim.",
+        "Playwright hijack CONFIRMED again this session: a request for gov.il/he/departments/targetaudience/taxes-audience-returning-citizen returned boi.org.il's error page. The location.href assertion inside the same evaluate call caught it; nothing else would have. Never read the DOM without it.",
+        "CARRY: SKILL_HE.md has 31 lines that begin with a digit or Latin character after the list marker (bolded list items like '- **10 ומעלה, רצוף**'), which is the RTL line-start smell. Count is unchanged this cycle (no new ones introduced); reflowing all 31 is a dedicated pass.",
+        "CARRY (Expert MAJOR, deferred over the word cap): the statutory day-count residency presumptions (183, and 30+425) live only in references/form-1348-fields.md, which is framed as 'the form you do NOT file', so a reader of Steps 1-9 never sees them; foreign pension treatment in year 11 (s.9A) and the treaty pension articles; a pre-arrival 'Step 0' planning block; the anti-abuse gift carve-out is now stated but the script has no field for it; and whether the 2030 Hok Iddud cap is pro-rated at the end of the window the way 2026 is at the start.",
+        "SIBLING CONTRADICTIONS to fix in those skills, not here: israeli-aliyah-navigator states the 75-day clawback as a SINGLE condition (the statute is cumulative) and says olim do NOT get the acclimation election (s.14(b)(1) covers first-time residents expressly); and the 'acclimation defers the clock' error this cycle corrected also appears in israeli-aliyah-navigator and israeli-digital-nomad-navigator."
+      ]
+    },
+    {
       "version": "1.1.1",
       "date": "2026-07-15",
       "lessons": [

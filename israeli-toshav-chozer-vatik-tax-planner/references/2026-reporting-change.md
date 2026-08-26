@@ -10,7 +10,7 @@ This is the #1 thing this skill must get right. The change is widely misreported
 | Reporting foreign income to Mas Hachnasa | Exempt - no reporting | Required (still exempt from tax) |
 | Reporting foreign assets | Exempt - no reporting | Required when ITA asks |
 | Foreign trust disclosures | Limited | Expanded |
-| Statute basis | Sections 134b + 135(b) granted the reporting exemption | Both sections canceled by Amendment 272 |
+| Statute basis | Sections 134b + 135(1)(b) granted the reporting exemption | Both sections canceled by Amendment 272 |
 
 ## Effective date and applicability threshold
 
