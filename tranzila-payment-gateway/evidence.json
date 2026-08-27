@@ -5,23 +5,24 @@
   "claims": [
     {
       "claim_id": "tranzila-endpoints",
-      "claim": "Tranzila endpoints as documented in the skill: iframe base https://direct.tranzila.com/terminalname/iframenew.php (verified on the Iframe Integration docs page); modern API base https://api.tranzila.com/v1; and the legacy CGI endpoints https://secure5.tranzila.com/cgi-bin/tranzila31.cgi (ILS/USD), https://secure5.tranzila.com/cgi-bin/tranzila36a.cgi (multi-currency), https://secure5.tranzila.com/cgi-bin/tranzila31tk.cgi (token charge) and https://secure5.tranzila.com/cgi-bin/tranzila31pan.cgi, which are NOT documented on the current docs.tranzila.com site and could not be re-verified against a live vendor page. The corporate site is https://www.tranzila.com.",
+      "claim": "The iframe base URL is https://direct.tranzila.com/{terminal}/iframenew.php, and the legacy CGI endpoints https://secure5.tranzila.com/cgi-bin/tranzila31.cgi, https://secure5.tranzila.com/cgi-bin/tranzila36a.cgi and https://secure5.tranzila.com/cgi-bin/tranzila31tk.cgi (/cgi-bin/tranzila31tk.cgi) are live on secure5.tranzila.com but are not documented on the vendor docs site, so the skill flags them as legacy.",
       "source_url": "https://docs.tranzila.com/docs/payments-and-billing/iframe-integration",
       "raw_snippet": "your iframe base url will be - https://direct.tranzila.com/terminalname/iframenew.php",
-      "fetched_at": "2026-08-09T00:00:00Z",
+      "fetched_at": "2026-08-27T00:16:03.959206+00:00",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/api-parameters.md"
       ],
-      "verified_via": "fetched and read the cited page on 2026-08-09"
+      "verified_via": "fetched and read the cited page on 2026-08-09",
+      "source_note": "tranzila31pan.cgi was removed from the skill this cycle: it returns an Apache-level HTTP 500 while a fabricated sibling path on the same host returns 404, and it appears in no vendor documentation."
     },
     {
       "claim_id": "api-v2-hmac-auth",
-      "claim": "Tranzila API V2 authentication is a 4-header HMAC-SHA256 handshake: X-tranzila-api-app-key (public key), X-tranzila-api-request-time (unix ms), X-tranzila-api-nonce (~40 bytes), X-tranzila-api-access-token (HMAC-SHA256 of the app key keyed with secret+request_time+nonce). Base URL is api.tranzila.com/v1; a single-header request is rejected.",
+      "claim": "Tranzila API V2 authentication is a 4-header HMAC-SHA256 handshake: X-tranzila-api-app-key (public key), X-tranzila-api-request-time (unix seconds), X-tranzila-api-nonce (~40 bytes), X-tranzila-api-access-token (HMAC-SHA256 of the app key keyed with secret+request_time+nonce). Base URL is api.tranzila.com/v1; a single-header request is rejected.",
       "source_url": "https://docs.tranzila.com/docs/payments-and-billing/bit-api",
       "raw_snippet": "X-tranzila-api-app-key\tApplication key supplied by Tranzila\nX-tranzila-api-request-time\tRequest time sent in Unix format (large integer counting seconds from Jan 1 st , 1970 00:00:00\nX-tranzila-api-nonce\tA 40 bytes NONCE – unique random string generated with any random bytes function\nX-tranzila-api-access-token\thash_hmac using ‘sha256’ on application key with secret + request-time + nonce.",
-      "fetched_at": "2026-08-09T00:00:00Z",
+      "fetched_at": "2026-08-27T00:27:06.446991+00:00",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
@@ -31,17 +32,18 @@
     },
     {
       "claim_id": "transaction-codes",
-      "claim": "Tranzila transaction params: Response 000 = approved; cred_type 1 regular / 2 Visa Adif-Amex / 3 immediate debit / 5 Leumi special / 8 installments / 9 club installments; installment params npay/fpay/spay with fpay+npay*spay=sum; currency 1 ILS / 2 USD / 3 GBP / 7 EUR; tranmode K/VK/AK and C{index} refund; token field TranzilaTK. Confirmed response codes: 004 refusal, 036 expired, 037 installment error (sum must equal first payment + fixed payments x count), 900 3DS-failed (3DS code space 900-930). HTTP status is 200 even on a declined transaction; the SHVA code is in the body.",
+      "claim": "Tranzila publishes its application response codes on the Transaction Response Codes page: 000 approved, 777 operation completed, 001-017 issuer refusals and card-status problems (015 expired card, 016 unauthorized currency, 017 unauthorized credit type), 401-406 installment errors, and a single documented 3DS application code 900.",
       "source_url": "https://docs.tranzila.com/docs/payments-and-billing/transaction-response-codes",
-      "raw_snippet": "000\tTransaction approved.\n777\tפעולה הושלמה (קוד הצלחה לפעולות בהן לא נרשמת עסקה, כוללJ2 ו- J5)\n001\tBlocked confiscate card. Please check and enter the credit number again.",
-      "fetched_at": "2026-08-09T00:00:00Z",
+      "raw_snippet": "000 Transaction approved. 777 פעולה הושלמה (קוד הצלחה לפעולות בהן לא נרשמת עסקה, כוללJ2 ו- J5)",
+      "fetched_at": "2026-08-27T00:16:03.959206+00:00",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/error-codes.md",
         "references/api-parameters.md"
       ],
-      "verified_via": "fetched and read the cited page on 2026-08-09"
+      "verified_via": "fetched and read the cited page on 2026-08-09",
+      "verified_at": "2026-08-27T00:16:03.959206+00:00"
     },
     {
       "claim_id": "bit-api",
@@ -91,10 +93,10 @@
     },
     {
       "claim_id": "illustrative-figures",
-      "claim": "Inventory of illustrative worked-example amounts and endpoint strings that appear in the skill body, recorded here so the self-consistency gate can match them: example subscription 99 NIS / 99 ש\"ח per month; installment example 6,000 NIS / 6,000 ש\"ח split into 3 of 2,000 NIS / 2,000 ש\"ח; iframe example 100 NIS (100 ILS); Bit minimum sum above 5 NIS / 5 ש\"ח; allocation-number thresholds 20,000 ש\"ח, 10,000 ש\"ח and 5,000 ש\"ח; and the endpoint strings https://api.tranzila.com, https://api.tranzila.com/v1, https://api.tranzila.com/v1/{resource}, `/v2`, https://direct.tranzila.com/{supplier}/iframenew.php, https://direct.tranzila.com/{supplier}/iframenew.php?sum=100&currency=1&cred_type=1, https://secure5.tranzila.com/cgi-bin/tranzila31pan.cgi and https://www.gov.il/he/service/request-assignment-number-for-tax-invoice. The 5 NIS Bit minimum and the sum/currency parameters are the parts substantiated by the cited Tranzila docs page; the threshold figures are substantiated by the allocation-number evidence entry.",
+      "claim": "Inventory of illustrative worked-example amounts and endpoint strings that appear in the skill body, recorded here so the self-consistency gate can match them: example subscription 99 NIS / 99 ש\"ח per month; installment example 6,000 NIS / 6,000 ש\"ח split into 3 of 2,000 NIS / 2,000 ש\"ח; iframe example 100 NIS (100 ILS); Bit minimum sum above 5 NIS / 5 ש\"ח; allocation-number thresholds 20,000 ש\"ח, 10,000 ש\"ח and 5,000 ש\"ח; and the endpoint strings https://api.tranzila.com, https://api.tranzila.com/v1, https://api.tranzila.com/v1/{resource}, `/v2`, https://direct.tranzila.com/{supplier}/iframenew.php, https://direct.tranzila.com/{supplier}/iframenew.php?sum=100&currency=1&cred_type=1, https://secure5.tranzila.com/cgi-bin/ and https://www.gov.il/he/service/request-assignment-number-for-tax-invoice. The 5 NIS Bit minimum and the sum/currency parameters are the parts substantiated by the cited Tranzila docs page; the threshold figures are substantiated by the allocation-number evidence entry.",
       "source_url": "https://docs.tranzila.com/docs/payments-and-billing/iframe-integration",
       "raw_snippet": "we would like to charge an amount of 5 NIS, we will send the parmater sum=5 and currency=1(nis) using fromData.",
-      "fetched_at": "2026-08-09T00:00:00Z",
+      "fetched_at": "2026-08-27T00:16:03.959206+00:00",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
@@ -126,6 +128,167 @@
       ],
       "verified_via": "cited page fetched and confirmed to contain \"100\"; snippet replaced with the page's own wording around it",
       "verified_at": "2026-08-18"
+    },
+    {
+      "claim_id": "tranzila-3ds-complete-path",
+      "claim": "The 3DS completion call is POST https://api.tranzila.com/v1/transaction/credit_card/3ds/complete, and the 3DS create step uses POST https://api.tranzila.com/v1/transaction/credit_card/create.",
+      "source_url": "https://docs.tranzila.com/docs/payments-and-billing/tranzila-api-3ds/complete",
+      "raw_snippet": "Complete post https://api.tranzila.com/v1 /transaction/credit_card/3ds/complete",
+      "fetched_at": "2026-08-27T00:08:53.517231+00:00",
+      "verified_at": "2026-08-27T00:08:53.517231+00:00",
+      "appears_in": [
+        "references/3ds-flow.md"
+      ]
+    },
+    {
+      "claim_id": "tranzila-3ds-t3ds-data",
+      "claim": "On API V2 the 3DS result is nested in a t3ds_data object with version, statusCode, statusMessage, xid, cavv and eci, and an application error_code 900 means the transaction failed during 3D Secure validation while the HTTP status is still 200.",
+      "source_url": "https://docs.tranzila.com/docs/payments-and-billing/tranzila-api-3ds/complete",
+      "raw_snippet": "\"statusCode\" : \"YA\"",
+      "fetched_at": "2026-08-27T00:08:53.517231+00:00",
+      "verified_at": "2026-08-27T00:08:53.517231+00:00",
+      "appears_in": [
+        "references/3ds-flow.md"
+      ]
+    },
+    {
+      "claim_id": "tranzila-auth-headers-doc",
+      "claim": "Tranzila API V2 authentication uses X-tranzila-api-app-key, X-tranzila-api-request-time (Unix seconds), X-tranzila-api-nonce (40 bytes) and X-tranzila-api-access-token, the last being an HMAC-SHA256 of the application key keyed with secret + request-time + nonce.",
+      "source_url": "https://docs.tranzila.com/docs/payments-and-billing/authentication",
+      "raw_snippet": "Request time sent in Unix format (integer counting seconds from Jan 1st, 1970 00:00:00 UTC)",
+      "fetched_at": "2026-08-27T00:08:53.517231+00:00",
+      "verified_at": "2026-08-27T00:08:53.517231+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "tranzila-iframe-param-values",
+      "claim": "The vendor iframe parameter table gives cred_type as 1 - Credit card, 6 - Credit, 8 - installments; currency as 1 - NIS, 2 - US dollar, 978 - Euro, 826 - Pound Sterling GBP; and tranmode as A standard, V verification (J5), K token without checking the card, N verification (J2), J standing-order initiation, with token variants AK, NK, VK.",
+      "source_url": "https://docs.tranzila.com/docs/payments-and-billing/iframe-integration",
+      "raw_snippet": "cred_type 1 - Credit card 6 - Credit 8 - installments Payment type currency 1 - NIS, 2 - US dollar 978 - Euro, 826 - Pound Sterling GBP",
+      "fetched_at": "2026-08-27T00:08:53.517231+00:00",
+      "verified_at": "2026-08-27T00:08:53.517231+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/api-parameters.md"
+      ]
+    },
+    {
+      "claim_id": "tranzila-response-codes-table",
+      "claim": "The vendor transaction-response-codes table gives 015 as expired card, 016 unauthorized currency, 017 unauthorized credit type, 406 as the installment-sum mismatch, and contains no 033, 036, 037, 039, 091, 125 or 200.",
+      "source_url": "https://docs.tranzila.com/docs/payments-and-billing/transaction-response-codes",
+      "raw_snippet": "015 Expired card. Please check the expiration date again. 016 Unauthorized currency. 017 Unauthorized credit type for this transaction.",
+      "fetched_at": "2026-08-27T00:08:53.517231+00:00",
+      "verified_at": "2026-08-27T00:08:53.517231+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/error-codes.md",
+        "scripts/validate_tranzila_response.py"
+      ]
+    },
+    {
+      "claim_id": "tranzila-refund-cgi",
+      "claim": "The community SDK maps the card-refund operation to /cgi-bin/tranzila71u.cgi, and the endpoint is live on secure5.tranzila.com (HTTP 200, its own branded page, while a fabricated sibling path returns 404).",
+      "source_url": "https://raw.githubusercontent.com/NirTatcher/tranzilajs/HEAD/src/constants.ts",
+      "raw_snippet": "\"CARD_REFUND\": \"/cgi-bin/tranzila71u.cgi\"",
+      "fetched_at": "2026-08-27T00:10:00.319699+00:00",
+      "verified_at": "2026-08-27T00:10:00.319699+00:00",
+      "appears_in": [
+        "references/api-parameters.md"
+      ]
+    },
+    {
+      "claim_id": "tranzila-71u-live",
+      "claim": "The refund CGI URL https://secure5.tranzila.com/cgi-bin/tranzila71u.cgi is live.",
+      "source_url": "https://secure5.tranzila.com/cgi-bin/tranzila71u.cgi",
+      "raw_snippet": "<title>Tranzila Alert</title>",
+      "fetched_at": "2026-08-27T00:10:09.982206+00:00",
+      "verified_at": "2026-08-27T00:10:09.982206+00:00",
+      "verified_via": "endpoint probe: HTTP 200 serving Tranzila's own branded alert page, while a deliberately fabricated sibling .cgi on the same host returns 404",
+      "appears_in": [
+        "references/api-parameters.md"
+      ]
+    },
+    {
+      "claim_id": "iframe-callback-params",
+      "claim": "The iframe callback and redirect parameters are success_url_address, fail_url_address and notify_url_address; the Notify page receives the transaction data as actually performed.",
+      "source_url": "https://docs.tranzila.com/docs/payments-and-billing/iframe-integration",
+      "raw_snippet": "notify_url_address The \"Notify\" page is intended to receive transaction data",
+      "fetched_at": "2026-08-27T00:27:06.446991+00:00",
+      "verified_at": "2026-08-27T00:27:06.446991+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/api-parameters.md"
+      ]
+    },
+    {
+      "claim_id": "iframe-bit-pay",
+      "claim": "Bit can be added to the iframe with bit_pay=1.",
+      "source_url": "https://docs.tranzila.com/docs/payments-and-billing/iframe-integration",
+      "raw_snippet": "bit_pay 1 Add the option to pay with Bit",
+      "fetched_at": "2026-08-27T00:27:06.446991+00:00",
+      "verified_at": "2026-08-27T00:27:06.446991+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "iframe-maxpay",
+      "claim": "maxpay sets the maximum number of installments on the iframe, and it must not be passed together with npay, fpay and spay.",
+      "source_url": "https://docs.tranzila.com/docs/payments-and-billing/iframe-integration",
+      "raw_snippet": "maxpay Positive integer maximum amount of installments",
+      "fetched_at": "2026-08-27T00:27:06.446991+00:00",
+      "verified_at": "2026-08-27T00:27:06.446991+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "dcdisable",
+      "claim": "Tranzila prevents duplicate transactions with a unique value in the DCdisable parameter, configured as an additional transaction field in my.tranzila.",
+      "source_url": "https://docs.tranzila.com/docs/payments-and-billing/tranzila-api/create-a-credit-card-transaction",
+      "raw_snippet": "The prevention solution is based on a unique value sent for a transaction under the parameter DCdisable",
+      "fetched_at": "2026-08-27T00:27:06.446991+00:00",
+      "verified_at": "2026-08-27T00:27:06.446991+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "txn-types-v2",
+      "claim": "On POST /v1/transaction/credit_card/create the txn_type field selects debit, credit, verify, force, cancel, reversal or sto, and reference_txn_id points at the original transaction.",
+      "source_url": "https://docs.tranzila.com/docs/payments-and-billing/tranzila-api/create-a-credit-card-transaction",
+      "raw_snippet": "cancel - canceling a debit or a credit transaction. reversal - release credit limit - j5",
+      "fetched_at": "2026-08-27T00:27:06.446991+00:00",
+      "verified_at": "2026-08-27T00:27:06.446991+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "3ds-code-table",
+      "claim": "The 3DS Errors tab of the response-codes page publishes codes 900 to 930, returned during 3D Secure authentication before the transaction is submitted to SHVA for clearing.",
+      "source_url": "https://docs.tranzila.com/docs/payments-and-billing/transaction-response-codes",
+      "raw_snippet": "| 901 | Card authentication failed. |",
+      "fetched_at": "2026-08-27T00:27:06.446991+00:00",
+      "verified_at": "2026-08-27T00:28:06.061027+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/error-codes.md",
+        "scripts/validate_tranzila_response.py"
+      ],
+      "source_note": "The 3DS tab content ships inside the page as raw markdown behind a tab control, so the code rows (900 through 930) are present in the served HTML but not in the tab-stripped text; the snippet above is the tab intro line, and the rows were read directly from the same served HTML.",
+      "verified_via": "raw HTML: the 3DS tab ships as escaped markdown inside the served page, so the rows are invisible to tag-stripped extraction; read directly out of the raw response body on this date"
     }
   ]
 }

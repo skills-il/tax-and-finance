@@ -1,6 +1,25 @@
 {
   "cycles": [
     {
+      "version": "1.4.0",
+      "date": "2026-08-27",
+      "lessons": [
+        "CRITICAL fixed (script rot): the 1.3.0 cycle rewrote the error-code table in SKILL.md and references/error-codes.md but never touched scripts/validate_tranzila_response.py, which still mapped 033 AND 036 both to 'Card expired' and carried 039, 091, 107, 111, 125 and 200. None of 033/036/039/091/125/200 exists in the vendor table; expired card is 015 and the installment-sum error is 406. Prose being right is not evidence the script is right, and the changelog claiming a fix is not evidence either.",
+        "CRITICAL fixed: cred_type was listed as 1/2/3/5/8/9 and currency as 1/2/3(GBP)/7(EUR). The vendor's iframe table publishes cred_type 1/6/8 and currency 1/2/978/826. Sending an undocumented value returns 016 or 017, so this was a live transaction failure, not a documentation nit.",
+        "CRITICAL fixed: the iframe callbacks were documented as notify_url. The iframe uses success_url_address / fail_url_address / notify_url_address; the bare notify_url is the Hosted Fields, 3DS and Bit name. With the wrong name no webhook ever arrives, so the customer is charged and the order is never fulfilled.",
+        "CRITICAL fixed: refunds were 'tranmode=C{index} with the ConfirmationCode' and nothing else. The legacy route is tranzila71u.cgi and additionally needs CreditPass (a separate credit password enabled on the terminal) and authnr; the API V2 route is txn_type credit/cancel/reversal with reference_txn_id. Both are now in both language files and in Example 4.",
+        "CRITICAL fixed: a J5 authorisation has to be captured with txn_type=force (or released with reversal), and Example 2 built a subscription on an uncaptured J5. Added, together with DCdisable, Tranzila's own duplicate-charge guard (field 20 in my.tranzila, 24h window at parent-terminal level, 254 chars, and no check at all on a transaction that failed the first time).",
+        "Fixed: the Gotcha said the legacy CGI response is newline-separated. It is an '&'-joined query string. The bundled script had always parsed it correctly, so the prose would have made a developer write a splitter that breaks on the real body.",
+        "SELF-INFLICTED ERROR, caught by the Expert: I removed 3DS codes 901-930 as fabricated after they did not appear in the tag-stripped text of the response-codes page. They are real. The page ships its 3DS tab as escaped markdown inside the served HTML, invisible to tag-stripping but present in the raw body. Lesson: 'absent from the extracted text' is not 'absent from the page' on a JS docs portal, and an over-correction that deletes real codes is as harmful as the fabrication it was fixing. Grep the RAW response before declaring something absent.",
+        "REJECTED an Expert MAJOR after reading the source: the reviewer said DCdisable requires u71=1 on Direct/IFRAME. u71=1 is the parameter for showing product details on the invoice, in a different section of the iframe page. Not encoded.",
+        "Fixed: TranzilaTK was described as a 19-character token whose last four digits match the card. The vendor publishes no length or format, and API V2 tokens are longer alphanumerics. The script no longer rejects a token by length.",
+        "Fixed: 'no Omnipay gateway exists' was wrong. omnipay/tranzila 404s, but futureecom/omnipay-tranzila is live on Packagist. active_merchant_tranzila is real but its only release is 0.0.1 from 2010. Probing one vendor-namespace slug is not a survey.",
+        "Added: PCI DSS 3.3.1 prohibition on storing CVV or full PAN after authorization (it was missing entirely from a payments skill), the SAQ mapping attributed to PCI SSC rather than to Tranzila, and a Privacy Protection Law note on the myid teudat zehut field.",
+        "Deferred: Steps 8, 9 and 10 (Payment Requests, Standing Orders, Invoicing) are still placeholder prose pointing at the docs index, while the vendor publishes concrete endpoints (GET /v1/pr/create, /v2/sto/create, the invoices API tree). Hosted Fields is likewise unfollowable without the script URL and init API. These are the next content increment.",
+        "Deferred: references/domain-checklist.md certifies only the surface that was corrected, which is why the iframe callback names, the API V2 field names, capture and DCdisable were invisible to every prior review. Rewrite the checklist around the vendor's own doc tree next cycle."
+      ]
+    },
+    {
       "version": "1.3.1",
       "date": "2026-07-16",
       "lessons": [
