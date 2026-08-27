@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0",
   "skill": "israeli-crypto-tax-reporter",
-  "generated_at": "2026-06-07T00:00:00Z",
+  "generated_at": "2026-08-27T08:51:00+00:00",
   "claims": [
     {
       "claim_id": "cgt-individual-25",
@@ -46,9 +46,9 @@
     },
     {
       "claim_id": "surtax-2026",
-      "claim": "Surtax (mas yesafim) for 2026: 3% base on all taxable income above NIS 721,560 plus an additional 2% on capital-source income above the same threshold, effective 5% on crypto gains in that band. Threshold NIS 721,560 annual / NIS 60,130 monthly, frozen through tax year 2027 by the December 2024 indexation-pause amendment.",
-      "source_url": "https://bakertilly.co.il/blog-mas-yasaf-2026.html",
-      "raw_snippet": "מס יסף בשנת 2026: 3% על הכנסה החייבת מעל 721,560 ש\"ח, ובתוספת 2% על הכנסה הונית מעל אותו סף, כך שעל רווחי הון השיעור הכולל הוא 5%. הסף קפוא לשנים 2025 עד 2027.",
+      "claim": "The surtax threshold is NIS 721,560 for tax years 2024 through 2027, fixed in the Ordinance itself rather than left to CPI indexation. The commercial page previously cited carried the 5% and the 721,560 but not the 2% limb or the freeze, so the citation was moved to the statute on 2026-08-27.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%A4%D7%A7%D7%95%D7%93%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
+      "raw_snippet": "נקוב לשנת 2017; בשנת 2023, 698,280 ש״ח; בשנים 2024–2027, 721,560 ש״ח",
       "fetched_at": "2026-06-07T00:00:00Z",
       "appears_in": [
         "SKILL.md",
@@ -59,13 +59,12 @@
     },
     {
       "claim_id": "vat-18",
-      "claim": "Israeli VAT rate is 18% from 1 January 2025 (raised from 17%); applies to business-classified crypto activity such as mining and dealing.",
+      "claim": "Israel's standard VAT rate is 18% from January 2025. **RETRACTED as applied to crypto:** earlier versions of this skill said business-classified crypto activity such as dealing attracts 18% output VAT plus osek registration. Circular 05/2018 s.3.2.3.2.3 registers a business-level trader as a מוסד כספי under Section 4 of the VAT Law, which pays מס רווח and מס שכר rather than charging output VAT; only the miner is an osek (s.3.2.3.2.4), and a non-business investor is outside VAT entirely (s.3.2.3.1). The 18% figure is retained here only as the general standard rate and must NOT be applied to a crypto business.",
       "source_url": "https://sovos.com/regulatory-updates/vat/israel-vat-rate-increase-to-18-from-january-1-2025/",
       "raw_snippet": "Israel increased its standard VAT rate to 18% from 17% effective 1 January 2025.",
       "fetched_at": "2026-06-07T00:00:00Z",
       "appears_in": [
-        "SKILL.md",
-        "SKILL_HE.md"
+        "(retracted; no longer asserted for crypto in any skill file)"
       ]
     },
     {
@@ -82,7 +81,7 @@
     },
     {
       "claim_id": "carf-2026-2027",
-      "claim": "Israel is among the jurisdictions committed to the OECD Crypto-Asset Reporting Framework (CARF); Israeli RCASPs collect customer data from 2026, with first international exchange expected 2027-2028. The exact first-exchange year has shifted between OECD monitoring updates and must be verified against the latest OECD commitments list.",
+      "claim": "Israeli RCASPs collect customer data from 1 January 2026 under CARF. **The first-exchange year in this entry is SUPERSEDED**: it said 2027-2028, and the OECD Global Forum commitments list places Israel in the 'first exchanges by 2028' group. See claim carf-israel-first-exchange-2028, which is the operative one. This entry is kept only for the 2026 collection date.",
       "source_url": "https://www.oecd.org/content/dam/oecd/en/networks/global-forum-tax-transparency/commitments-carf.pdf",
       "raw_snippet": ", Japan, Jersey, Kazakhstan, Korea, Latvia, Liechtenstein, Lithuania, Luxembourg, Malta, Netherlands, New Zealand, Norway, Poland, Portugal, Romania, San Marino, Slovak Republic, Slovenia, South Africa, Spain, Sweden, Uganda, United Kingdom.",
       "fetched_at": "2026-08-18",
@@ -143,9 +142,9 @@
     },
     {
       "claim_id": "salaried-filing-exemption-2025",
-      "claim": "A TY2025 draft amendment to the exemption-from-filing regulations exempts a salaried taxpayer from the annual return on crypto gains when traded through a supervised Israeli platform that withheld tax at source and total income stays under the Section 131 ceilings (about NIS 723,000 gross from work/business, or NIS 721,560 total taxable income). Exceeding the ceiling restores the Section 131 filing duty. Still in draft as of mid-2026.",
-      "source_url": "https://www.bshcpa.co.il/%D7%A4%D7%98%D7%95%D7%A8-%D7%9E%D7%93%D7%99%D7%95%D7%95%D7%97-%D7%A2%D7%9C-%D7%A7%D7%A8%D7%99%D7%A4%D7%98%D7%95/",
-      "raw_snippet": "טיוטת תקנות מס הכנסה (פטור מהגשת דין וחשבון) 2025: שכיר יהיה פטור מהגשת דוח על רווחי קריפטו אם המסחר בוצע דרך גוף מפוקח בישראל שניכה מס במקור, וכל עוד ההכנסה אינה עולה על תקרת סעיף 131 (כ-723,000 ש\"ח מעבודה/עסק או 721,560 ש\"ח הכנסה חייבת כוללת).",
+      "claim": "The enabling power for the proposed digital-asset filing exemption is Section 134A of the Income Tax Ordinance, headed 'סמכות לפטור מהגשת דו\"ח', under which the Finance Minister may exempt classes of taxpayer from filing an annual return. The instrument itself, טיוטת תקנות מס הכנסה (פטור מהגשת דין וחשבון) (תיקון) (נכס דיגיטלי), was published for comment in January 2025 and remains a DRAFT; its ceiling is a digital-asset-specific one in תוספת ו to the exemption regulations. The general Section 131 ceilings that earlier versions of this skill quoted for it are a different mechanism and were removed on 2026-08-27; this skill now quotes no shekel figure for the exemption at all.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%A4%D7%A7%D7%95%D7%93%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
+      "raw_snippet": "שר האוצר, באישור ועדת הכספים של הכנסת, רשאי לפטור, בתנאים או ללא תנאים, מחובת הגשת דו״ח את המפורטים להלן",
       "fetched_at": "2026-06-07T00:00:00Z",
       "appears_in": [
         "SKILL.md",
@@ -190,9 +189,9 @@
     },
     {
       "claim_id": "oleh-section-14-exemption",
-      "claim": "A new immigrant (oleh chadash) or veteran returning resident (toshav chozer vatik) is entitled under Section 14(a) of the Income Tax Ordinance to a 10-year exemption, from the date of becoming an Israeli resident, on income and capital gains sourced from assets held abroad; this can reach crypto acquired abroad before aliyah.",
-      "source_url": "https://www.kolzchut.org.il/he/%D7%A4%D7%98%D7%95%D7%A8_%D7%9E%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94_%D7%9C%D7%A2%D7%95%D7%9C%D7%99%D7%9D_%D7%97%D7%93%D7%A9%D7%99%D7%9D_%D7%95%D7%9C%D7%AA%D7%95%D7%A9%D7%91%D7%99%D7%9D_%D7%97%D7%95%D7%96%D7%A8%D7%99%D7%9D_%D7%95%D7%AA%D7%99%D7%A7%D7%99%D7%9D",
-      "raw_snippet": "לפי סעיף 14(א) לפקודת מס הכנסה, עולה חדש ותושב חוזר ותיק זכאים לפטור ממס למשך 10 שנים על הכנסות שהופקו מחוץ לישראל, כולל רווחי הון ממכירת נכסים בחו\"ל.",
+      "claim": "A first-time Israeli resident or a toshav chozer vatik is exempt from capital gains tax on the sale of an asset he held outside Israel, if he sells it within ten years of becoming an Israeli resident. This is Section 97(b)(1); Section 14(a) carries the parallel income limb. It can reach crypto acquired before aliyah, which the FIFO calculator does not model. The kolzchut URL previously cited for this returns a live page saying no such article exists, so the citation was moved to the statute on 2026-08-27. בעברית: סעיף 14(א) וסעיף 97(ב)(1) לפקודת מס הכנסה.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%A4%D7%A7%D7%95%D7%93%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
+      "raw_snippet": "פטור ממס על רווח הון ממכירת נכס שהיה לו מחוץ לישראל, אם מכרו בתוך עשר שנים מהיום שהיה לתושב ישראל",
       "fetched_at": "2026-07-20T00:00:00Z",
       "appears_in": [
         "SKILL.md",
@@ -213,7 +212,7 @@
     },
     {
       "claim_id": "aml-50000",
-      "claim": "Crypto service providers in Israel operate under the Prohibition on Money Laundering Order; a NIS 50,000 per-six-months ceiling applies to casual-customer activity before full identification/recording duties attach. This provider AML reporting is separate from the taxpayer's tax-reporting duty.",
+      "claim": "Crypto service providers in Israel operate under the Prohibition on Money Laundering Order; a NIS 50,000 per-six-months ceiling applies to casual-customer activity before full identification/recording duties attach. This provider AML reporting is separate from the taxpayer's tax-reporting duty. The gov.il department landing page cited here returns HTTP 403 to both a plain fetch and the gov.il content API, and is in any case a landing page that would not carry the threshold, which lives in the צו איסור הלבנת הון for financial-asset service providers. Recorded as UNVERIFIED on 2026-08-27; the skill must not state the figure as settled.",
       "source_url": "https://www.gov.il/he/departments/the_israel_money_laundering_and_terror_financing_prohibition_authority",
       "raw_snippet": "צו איסור הלבנת הון לנותני שירות בנכס פיננסי: סף לקוח מזדמן של 50,000 ש\"ח לתקופה של שישה חודשים.",
       "fetched_at": "2026-06-07T00:00:00Z",
@@ -223,7 +222,7 @@
     },
     {
       "claim_id": "boi-rates",
-      "claim": "Bank of Israel publishes daily representative rates (sha'ar yatzig) used to convert foreign-fiat legs of crypto trades to NIS.",
+      "claim": "Bank of Israel publishes daily representative rates (sha'ar yatzig) used to convert foreign-fiat legs of crypto trades to NIS. boi.org.il returns a WAF challenge to automated fetches. The proposition that the Bank of Israel publishes daily representative rates is not in dispute, and this skill explicitly declines to treat the representative rate as a legal requirement, so nothing turns on it.",
       "source_url": "https://www.boi.org.il/roles/markets/exchangerates/",
       "raw_snippet": "בנק ישראל מפרסם שערים יציגים יומיים.",
       "fetched_at": "2026-06-07T00:00:00Z",
@@ -335,9 +334,9 @@
     },
     {
       "claim_id": "vdp-clarification-notice",
-      "claim": "Israel Tax Authority public clarification to the 2025 Voluntary Disclosure Procedure, published at https://www.gov.il/he/pages/pa010925-1 . It clarifies Section 28 (non-payment of tax and use of information) and replaces the reference to Sections 152-154 of the Ordinance in Section 18 with Sections 150-158a.",
+      "claim": "The Tax Authority published a short public clarification to the August 2025 Voluntary Disclosure Procedure. The page is titled 'נוהל גילוי מרצון (הוראת שעה, אוגוסט 2025)' with the subtitle 'הבהרה לציבור'. It is a two-paragraph clarification ONLY: checked 2026-08-27 via the gov.il content API, it contains no deadline, no track thresholds and no mention of digital assets, so it must NOT be cited for any of those. The substantive VDP figures are evidenced separately from the ITA announcement page sa250825-1.",
       "source_url": "https://www.gov.il/he/pages/pa010925-1",
-      "raw_snippet": "לעניין סעיף 18 לנוהל - הליך השומה במקרה של אי הסכמה: בסעיף 18 לנוהל, במקום סעיפים 152 - 154 לפקודה, יבואו סעיפים 150 - 158א לפקודה, או הסעיפים המקבילים בחוקי המס האחרים.",
+      "raw_snippet": "נוהל גילוי מרצון (הוראת שעה, אוגוסט 2025)",
       "fetched_at": "2026-08-11T00:00:00Z",
       "appears_in": [
         "SKILL.md",
@@ -380,6 +379,367 @@
       "verified_at": "2026-08-11",
       "appears_in": [
         "SKILL.md"
+      ]
+    },
+    {
+      "claim_id": "s100a-deferral-is-a-deeming-rule",
+      "claim": "Section 100A of the Income Tax Ordinance has five subsections (a) to (e) and no subsection (b1). Deferral of the exit tax is NOT an election: 100A(b) deems a person who did not pay at cessation of residency to have requested deferral to realization. Linkage differentials and interest as defined in Section 159A are added ONLY from the realization date to actual payment, so nothing accrues during the deferral.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%A4%D7%A7%D7%95%D7%93%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
+      "raw_snippet": "אדם כאמור בסעיף קטן (א) שלא שילם את המס במועד שבו חדל להיות תושב ישראל, יראו אותו כאילו ביקש לדחות את תשלום המס למועד מימוש הנכס",
+      "fetched_at": "2026-08-27T08:51:00+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/crypto-tax-regulations.md",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "s100a-no-interest-during-deferral",
+      "claim": "Under Section 100A(b), linkage differentials and interest run only from realization to actual payment, so none accrue during the deferral period.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%A4%D7%A7%D7%95%D7%93%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
+      "raw_snippet": "ואולם, הפרשי הצמדה וריבית, כהגדרתם בסעיף 159א ייווספו רק החל במועד המימוש ועד לתשלום המס בפועל",
+      "fetched_at": "2026-08-27T08:51:00+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/crypto-tax-regulations.md"
+      ]
+    },
+    {
+      "claim_id": "s100a-apportionment-formula",
+      "claim": "Section 100A(d) defines the chargeable portion of the gain as the REAL capital gain measured AT REALIZATION, multiplied by the period from acquisition to cessation of Israeli residency and divided by the whole period from acquisition to realization. It is apportioned by elapsed time, not by a valuation at exit.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%A4%D7%A7%D7%95%D7%93%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
+      "raw_snippet": "רווח ההון הריאלי במועד המימוש כשהוא מוכפל בתקופת ההחזקה שמיום הרכישה של הנכס ועד ליום שבו חדל להיות תושב ישראל, ומחולק בסך כל התקופה שמיום הרכישה של הנכס ועד ליום מימושו",
+      "fetched_at": "2026-08-27T08:51:00+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/crypto-tax-regulations.md"
+      ]
+    },
+    {
+      "claim_id": "s91b2-security-in-body-corporate",
+      "claim": "Section 91(b)(2)'s rate of up to 30% applies to the sale of a security in a body corporate (נייר ערך בחבר-בני-אדם) by a material shareholder. A fungible crypto token is not a security in a body corporate, so the 30% rate must not be defaulted onto an ordinary crypto disposal.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%A4%D7%A7%D7%95%D7%93%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
+      "raw_snippet": "יחיד שהוא בעל מניות מהותי במועד מכירתו של נייר הערך או במועד כלשהו ב־12 החודשים שקדמו למכירה, יחויב במס בשיעור שלא יעלה על 30%",
+      "fetched_at": "2026-08-27T08:51:00+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/crypto-tax-regulations.md",
+        "references/domain-checklist.md",
+        "scripts/crypto-gains-calculator.py"
+      ]
+    },
+    {
+      "claim_id": "s91c-inflationary-amount-10-percent",
+      "claim": "Section 91(c) taxes the chargeable inflationary amount at 10%, not at 0%. The outcome is nil for crypto only because Section 88 confines the chargeable inflationary amount to gain that would have arisen had the asset been sold on 31.12.1993.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%A4%D7%A7%D7%95%D7%93%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
+      "raw_snippet": "המס על הסכום האינפלציוני החייב יהיה 10%",
+      "fetched_at": "2026-08-27T08:51:00+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "s91d1-30-day-advance",
+      "claim": "Section 91(d)(1) requires the seller of an asset to file a return with the assessing officer within 30 days of the sale, on a form prescribed by the Director, and to pay an advance equal to the tax on the gain.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%A4%D7%A7%D7%95%D7%93%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
+      "raw_snippet": "נמכר נכס, יגיש המוכר לפקיד השומה, בתוך 30 ימים מיום המכירה, דוח בטופס שקבע המנהל",
+      "fetched_at": "2026-08-27T08:51:00+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "s91d2a-officer-may-increase-advance",
+      "claim": "Section 91(d)(2a) lets the assessing officer increase the advance where he has reasonable grounds to believe it is understated by at least 20%, with the difference payable within 30 days of his decision.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%A4%D7%A7%D7%95%D7%93%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
+      "raw_snippet": "היה לפקיד השומה טעם סביר להניח כי המקדמה שעל המוכר לשלם על רווח ההון עולה ב־20% לפחות על סכום המקדמה שפורט בדוח",
+      "fetched_at": "2026-08-27T08:51:00+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "s121b-surtax-two-components",
+      "claim": "The surtax has two components: Section 121B(a) charges 3% on taxable income above the threshold, and Section 121B(a1) adds a further 2% on taxable income from capital sources above the same threshold, giving 5% on crypto gains in that band. בעברית: סעיף 121ב(א) וסעיף 121ב(א1) לפקודת מס הכנסה.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%A4%D7%A7%D7%95%D7%93%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
+      "raw_snippet": "נוסף על האמור בסעיף קטן (א), יחיד אשר הכנסתו החייבת ממקורות הוניים בשנת המס עלתה על הסכום הקבוע באותו סעיף קטן, יהיה חייב במס נוסף על חלק הכנסתו החייבת ממקורות הוניים העולה על הסכום האמור, בשיעור של 2%",
+      "fetched_at": "2026-08-27T08:51:00+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/crypto-tax-regulations.md",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "s121b-threshold-frozen-2024-2027",
+      "claim": "The Income Tax Ordinance itself fixes the surtax threshold at NIS 721,560 for tax years 2024 through 2027, so no CPI uplift applies in that span.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%A4%D7%A7%D7%95%D7%93%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
+      "raw_snippet": "נקוב לשנת 2017; בשנת 2023, 698,280 ש״ח; בשנים 2024–2027, 721,560 ש״ח",
+      "fetched_at": "2026-08-27T08:51:00+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/crypto-tax-regulations.md",
+        "references/domain-checklist.md",
+        "metadata.json"
+      ]
+    },
+    {
+      "claim_id": "s121b-b-surtax-outside-the-advance",
+      "claim": "Section 121B(b) disapplies Section 91(d)'s advance-payment rules to income chargeable to the surtax, so the 3% and 2% are settled in the annual return and are NOT part of the 30-day mikdama. בעברית: סעיף 121ב(ב).",
+      "source_url": "https://he.wikisource.org/wiki/%D7%A4%D7%A7%D7%95%D7%93%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
+      "raw_snippet": "על הכנסה החייבת במס נוסף לפי סעיפים קטנים (א) או (א1) לא יחולו הוראות סעיף 91(ד) לעניין מקדמות",
+      "fetched_at": "2026-08-27T08:51:00+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "s121b-e-excludes-inflationary-amount",
+      "claim": "Section 121B(e) defines the surtax's taxable income so as to EXCLUDE the inflationary amount as defined in Section 88, so the inflationary component is outside the surtax base. בעברית: סעיף 121ב(ה).",
+      "source_url": "https://he.wikisource.org/wiki/%D7%A4%D7%A7%D7%95%D7%93%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
+      "raw_snippet": "הכנסה חייבת כהגדרתה בסעיף 1 וכמשמעותה בסעיף 89, למעט סכום אינפלציוני",
+      "fetched_at": "2026-08-27T08:51:00+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "s134a-exemption-power",
+      "claim": "Section 134A, headed 'סמכות לפטור מהגשת דו\"ח', is the enabling power under which the Finance Minister may exempt classes of taxpayer from filing an annual return. It is the power behind the proposed digital-asset filing exemption; Section 131 is the filing duty being exempted from. בעברית: סעיף 134א לפקודת מס הכנסה.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%A4%D7%A7%D7%95%D7%93%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
+      "raw_snippet": "שר האוצר, באישור ועדת הכספים של הכנסת, רשאי לפטור, בתנאים או ללא תנאים, מחובת הגשת דו״ח את המפורטים להלן",
+      "fetched_at": "2026-08-27T08:51:00+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/crypto-tax-regulations.md",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "s159a-linkage-and-interest-defined",
+      "claim": "Section 159A(a) is where 'הפרשי הצמדה וריבית' is defined for the Ordinance, which is the definition Section 100A(b) points to for the exit-tax deferral.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%A4%D7%A7%D7%95%D7%93%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
+      "raw_snippet": "תוספת לסכום שמדובר בו, השווה לסכום האמור כשהוא מוכפל בשיעור עליית מדד המחירים לצרכן בתקופה הנדונה",
+      "fetched_at": "2026-08-27T08:51:00+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/crypto-tax-regulations.md"
+      ]
+    },
+    {
+      "claim_id": "s92-loss-offset-ratio",
+      "claim": "Section 92(a)(1) offsets a capital loss first against the REAL capital gain, and each shekel of the remainder offsets three and a half shekels of chargeable inflationary amount (the statute spells the ratio out in words). Section 92(b) carries an unused amount forward against capital gains in the following years in succession, BUT only if a return was filed for the year in which the loss arose.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%A4%D7%A7%D7%95%D7%93%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
+      "raw_snippet": "יקוזז תחילה כנגד ריווח ההון הריאלי וכל שקל חדש של היתרה יקוזז כנגד שלושה וחצי שקלים חדשים של סכום אינפלציוני חייב",
+      "fetched_at": "2026-08-27T08:51:00+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "circular-vat-financial-institution",
+      "claim": "Circular 05/2018 section 3.2.3.2.3 classifies and registers a person whose crypto activity reaches business level as a 'מוסד כספי' (financial institution) for VAT purposes under Section 4 of the VAT Law, NOT as an osek charging 18% output VAT. Section 3.2.3.2.4 separately registers the miner as an 'עוסק'. בעברית: סעיף 3.2.3.2.3 לחוזר מפנה לסעיף 4 לחוק מס ערך מוסף, וסעיף 3.2.3.2.4 עוסק בכורה.",
+      "source_url": "https://www.gov.il/BlobFolder/policy/income-tax-professional-inst-5-2018/he/Policy_ProfessionalInstIncomeTax_hor_acc%2015.2.18.pdf",
+      "raw_snippet": "מי שפעילותו באמצעי תשלום מבוזר מגיעה לכדי",
+      "fetched_at": "2026-08-27T08:51:00+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "circular-badge-of-trade-is-case-law",
+      "claim": "Circular 05/2018 section 3.1.4 does NOT enumerate the badge-of-trade factors; it states that classification is determined by the business tests as established in the CASE LAW. The same section states categorically that crypto received through mining is business income, with no scale test. בעברית: סעיף 3.1.4 לחוזר.",
+      "source_url": "https://www.gov.il/BlobFolder/policy/income-tax-professional-inst-5-2018/he/Policy_ProfessionalInstIncomeTax_hor_acc%2015.2.18.pdf",
+      "raw_snippet": "סיווג ההכנסות ייקבע בהתאם למבחני עסק כפי שנקבעו בפסיקה",
+      "fetched_at": "2026-08-27T08:51:00+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "circular-mining-is-business-income",
+      "claim": "Circular 05/2018 section 3.1.4 treats crypto obtained through mining as business income categorically, so a hobby-versus-business scale test is not available for mining.",
+      "source_url": "https://www.gov.il/BlobFolder/policy/income-tax-professional-inst-5-2018/he/Policy_ProfessionalInstIncomeTax_hor_acc%2015.2.18.pdf",
+      "raw_snippet": "יש לראות את ההכנסות המתקבלות בידיו",
+      "fetched_at": "2026-08-27T08:51:00+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "circular-barter-same-value-both-sides",
+      "claim": "Circular 05/2018 section 3.1.5.1 requires the consideration in a barter transaction to be the SAME amount for the seller's proceeds and the buyer's original cost, valued at the fair value in shekels of the crypto, unless the asset or goods purchased carry a stated price (מחיר נקוב), in which case that stated price fixes the crypto's disposal value. בעברית: סעיף 3.1.5.1 לחוזר.",
+      "source_url": "https://www.gov.il/BlobFolder/policy/income-tax-professional-inst-5-2018/he/Policy_ProfessionalInstIncomeTax_hor_acc%2015.2.18.pdf",
+      "raw_snippet": "סכום התמורה המשולמת בעסקת החליפין תהא זהה הן למוכר לעניין קביעת התמורה והן לרוכש לעניין קביעת המחיר המקורי",
+      "fetched_at": "2026-08-27T08:51:00+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/crypto-tax-scenarios.md",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "circular-no-retention-period",
+      "claim": "Circular 05/2018 section 3.1.3 requires documents to be kept only 'as far as required to the satisfaction of the assessing officer' and fixes NO retention period. The seven-year figure comes from the bookkeeping directives, not from this circular, which also contains no reference to the Bank of Israel representative rate and prescribes no cost-basis method. בעברית: סעיף 3.1.3 לחוזר.",
+      "source_url": "https://www.gov.il/BlobFolder/policy/income-tax-professional-inst-5-2018/he/Policy_ProfessionalInstIncomeTax_hor_acc%2015.2.18.pdf",
+      "raw_snippet": "ככול שיידרש להנחת דעתו של פקיד השומה",
+      "fetched_at": "2026-08-27T08:51:00+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/crypto-tax-regulations.md",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "ita-form-1322-scope",
+      "claim": "The Israeli Tax Authority's published title for Form 1322 scopes it to capital gains on EXCHANGE-TRADED securities, so it is not the natural vehicle for a crypto disposal.",
+      "source_url": "https://www.gov.il/he/service/reporting-and-payment-2025-annual-tax-report-for-individuals",
+      "raw_snippet": "טופס 1322 - רווחי הון מניירות ערך סחירים (הנסחרים בבורסה) 2025",
+      "fetched_at": "2026-08-27T08:51:00+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/crypto-tax-regulations.md",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "ita-form-1325-scope",
+      "claim": "The Israeli Tax Authority's published title for Form 1325 describes it as an auxiliary form aggregating securities sales BY TAX RATE. Nothing in the title concerns withholding at source, which earlier versions of this skill asserted.",
+      "source_url": "https://www.gov.il/he/service/reporting-and-payment-2025-annual-tax-report-for-individuals",
+      "raw_snippet": "טופס 1325 - טופס עזר לריכוז מכירות של ניירות ערך על פי שיעורי המס 2025",
+      "fetched_at": "2026-08-27T08:51:00+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/crypto-tax-regulations.md"
+      ]
+    },
+    {
+      "claim_id": "ita-nispach-labels-belong-to-1320",
+      "claim": "On the Israeli Tax Authority's own annual-return page the נספח labels attach to Form 1320 (נספח א'), not to Forms 1322 or 1325. The 'Nispach Gimel' labels earlier versions of this skill attached to 1322 and 1325 are not the ITA's.",
+      "source_url": "https://www.gov.il/he/service/reporting-and-payment-2025-annual-tax-report-for-individuals",
+      "raw_snippet": "טופס 1320 (נספח א') - דוח רווח והפסד לבעלי עסק עצמאי לשנת 2025",
+      "fetched_at": "2026-08-27T08:51:00+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/crypto-tax-regulations.md",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "ita-form-1326a",
+      "claim": "Form 1326א is the Israeli Tax Authority's own auxiliary form for computing a real gain or loss, i.e. the real-gain versus inflationary-amount split that this skill's calculator does not perform.",
+      "source_url": "https://www.gov.il/he/service/reporting-and-payment-2025-annual-tax-report-for-individuals",
+      "raw_snippet": "טופס 1326א' - טופס עזר לחישוב רווח או הפסד ריאלי ממניות שליטה 2025",
+      "fetched_at": "2026-08-27T08:51:00+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/crypto-tax-regulations.md"
+      ]
+    },
+    {
+      "claim_id": "ita-form-1344-carried-forward-losses",
+      "claim": "Form 1344 is the Israeli Tax Authority's appendix for reporting losses carried forward from a previous tax year, which is where a Section 92 capital-loss carry-forward is declared.",
+      "source_url": "https://www.gov.il/he/service/reporting-and-payment-2025-annual-tax-report-for-individuals",
+      "raw_snippet": "טופס 1344 - דיווח על הפסדים מועברים משנת מס קודמת לשנת 2025",
+      "fetched_at": "2026-08-27T08:51:00+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/crypto-tax-regulations.md",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "ita-form-1399yod-asset-sale",
+      "claim": "Form 1399י is the Israeli Tax Authority's 'notice of the sale of an ASSET and computation of the tax due', which is the Section 91(d)(1) 30-day notice and the appropriate form for a crypto disposal. Form 1399ח is the parallel form.",
+      "source_url": "https://www.gov.il/he/service/reporting-and-payment-2025-annual-tax-report-for-individuals",
+      "raw_snippet": "טופס 1399י - הודעה על מכירת נכס וחישוב המס המגיע לשנת המס 2025",
+      "fetched_at": "2026-08-27T08:51:00+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/crypto-tax-regulations.md",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "vdp-deadline-and-green-track",
+      "claim": "The Israeli Tax Authority declared the Voluntary Disclosure Procedure on 25 August 2025 to run until 31 August 2026, granting immunity from criminal proceedings to those who correct their reports and pay the tax in full. The Green Track's digital-asset limb covers income from digital assets not exceeding NIS 500,000 for the ENTIRE disclosure period, where the fair value of all the applicant's digital assets as at 31 December 2024 does not exceed NIS 1,500,000. The Tax Authority, not the applicant, decides the track.",
+      "source_url": "https://www.gov.il/he/pages/sa250825-1",
+      "raw_snippet": "הכנסות שמקורן בנכסים דיגיטליים בסכום שאינו עולה על סך של 500,000 ₪ לכל תקופת הגילוי, וכן שווים ההוגן של כלל הנכסים הדיגיטליים ליום 31/12/2024 אינו עולה על סך של 1,500,000 ₪",
+      "fetched_at": "2026-08-27T08:51:00+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/crypto-tax-regulations.md",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "carf-israel-first-exchange-2028",
+      "claim": "The OECD Global Forum's CARF commitments list places Israel in the group of jurisdictions undertaking FIRST EXCHANGES BY 2028, not in the 2027 group. Earlier versions of this skill hedged to 2027-2028.",
+      "source_url": "https://www.oecd.org/content/dam/oecd/en/networks/global-forum-tax-transparency/commitments-carf.pdf",
+      "raw_snippet": "Jurisdictions undertaking first exchanges by 2028",
+      "fetched_at": "2026-08-27T08:51:00+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/crypto-tax-regulations.md",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "s125c-interest-rate-tiers",
+      "claim": "Interest is not automatically taxed at 25%. Section 125C(b) sets a general 25% for an individual; Section 125C(c)(1) charges 15% where the interest is paid on an asset that is NOT index-linked, only partly linked, or unlinked to redemption; and Section 125C(d) overrides both with the full marginal rate under Section 121 where the interest is business income or recorded in the books, where interest and linkage expenses were claimed on the asset, where the recipient is a material shareholder in the payer, or where he is an employee, supplier or other special-relations party of the payer. Section 2(4) is a charging section and fixes no rate. בעברית: סעיף 2(4), סעיף 125ג(ב), סעיף 125ג(ג)(1) וסעיף 125ג(ד) לפקודת מס הכנסה, וסעיף 121.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%A4%D7%A7%D7%95%D7%93%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
+      "raw_snippet": "שולמה הריבית על נכס שאינו צמוד למדד, או שהוא צמוד בחלקו לשיעור עליית המדד, כולו או חלקו, או שאינו צמוד למדד עד לפדיון או עד להחזר, תחויב הכנסתו של היחיד מריבית במס בשיעור של 15%",
+      "fetched_at": "2026-08-27T08:51:00+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/crypto-tax-regulations.md"
+      ]
+    },
+    {
+      "claim_id": "scenario-worked-figures",
+      "claim": "Illustrative arithmetic inside the worked scenarios in references/crypto-tax-scenarios.md and the CSV-contract note at the top of that file: 23,040 ₪ (Scenario 2's correct FIFO gain), 627 ₪ (what the same scenario becomes if a per-unit price is pasted into the total-consideration column), 4,590 ₪ (Scenario 5's NFT acquisition value) and 47,000 ₪ (Scenario 9's deposit-date value). These are author-chosen illustrations, NOT claims about any rate, threshold or real taxpayer, and the arithmetic was checked by hand. The 627 figure was produced by actually running the bundled calculator on the mis-transcribed file, which is the point the note makes.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%A4%D7%A7%D7%95%D7%93%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
+      "raw_snippet": "יחיד יהיה חייב במס על רווח הון ריאלי כאמור",
+      "fetched_at": "2026-08-27T08:51:00+00:00",
+      "appears_in": [
+        "references/crypto-tax-scenarios.md"
       ]
     }
   ]

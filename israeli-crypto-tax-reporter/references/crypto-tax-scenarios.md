@@ -1,5 +1,14 @@
 # Crypto Tax Scenarios: Worked Examples for Israeli Taxpayers
 
+> **Feeding these scenarios to the calculator.** The facts below are stated PER UNIT
+> ("2 ETH at 8,000 NIS each"), the way a person describes a trade. The CSV column
+> `price_nis` is the **TOTAL** consideration for the row, so that trade is
+> `price_nis=16000`, not `8000`. Transcribing a per-unit figure straight into the
+> CSV rescales every gain by the quantity: Scenario 2 becomes a 627 NIS loss
+> instead of a 23,040 NIS gain, with no warning, because nothing in the data
+> distinguishes the two readings. Multiply before you paste.
+
+
 ## Scenario 1: Simple Buy and Sell (Bitcoin)
 
 **Facts:**
@@ -15,7 +24,7 @@ Tax (25%):           78,100 x 0.25 = 19,525 NIS
 ```
 
 **Reporting:**
-- Form 1325 entry with acquisition date Jan 15 and disposal date Sep 20
+- Form 1399י entry with acquisition date Jan 15 and disposal date Sep 20 (see the form-scope table in crypto-tax-regulations.md: 1322/1325 are securities forms)
 - Advance payment (mikdama) due by Oct 20, 2024 (30 days after sale)
 - Holding period: 8 months (short-term, but still 25% for crypto)
 
@@ -77,7 +86,7 @@ Tax (25%):           1,000 x 0.25 = 250 NIS
 Cost basis of 0.02 BTC: 3,000 NIS (the NIS value paid, i.e., the SOL disposal value)
 ```
 
-**Form 1325:** Report the SOL disposal. The BTC acquisition is not reported until the BTC is sold.
+**Reporting:** the SOL disposal goes on the 30-day Form 1399י notice. The BTC acquisition is not reported until the BTC is sold. Circular 05/2018 section 3.1.5.1 requires the same shekel figure to serve as the SOL proceeds and the BTC original cost, so both CSV legs must carry identical values.
 
 ## Scenario 4: DeFi Staking Rewards
 
@@ -115,13 +124,22 @@ Total tax on these 5 MATIC: 5 NIS (income) + 2.5 NIS (capital gain) = 7.5 NIS
 - February 2024: Bought an NFT for 0.5 ETH when ETH = 9,000 NIS (cost: 4,500 NIS, plus 0.01 ETH gas = 90 NIS)
 - October 2024: Sold the NFT for 1.5 ETH when ETH = 12,000 NIS
 
-**Calculation:**
+**There are TWO taxable events here, not one.** Paying 0.5 ETH plus 0.01 ETH of gas disposes of 0.51 ETH under Section 88, so the purchase leg is itself a disposal of the ETH at its 4,590 NIS value, against whatever FIFO basis those ETH carry. Compute that gain or loss first, then the NFT leg.
+
 ```
-Acquisition cost:    4,500 + 90 = 4,590 NIS
-Disposal proceeds:   1.5 x 12,000 = 18,000 NIS
-Capital gain:        18,000 - 4,590 = 13,410 NIS
-Tax (25%):           13,410 x 0.25 = 3,352.50 NIS
+Leg 1, disposal of 0.51 ETH to buy the NFT:
+  Proceeds:          0.51 x 9,000 = 4,590 NIS
+  Less FIFO basis of those 0.51 ETH (from the ETH lots)
+  = gain or loss on the ETH, taxable now
+
+Leg 2, the NFT itself:
+  Acquisition cost:  4,590 NIS   (the value given for it, per circular s.3.1.5.1)
+  Disposal proceeds: 1.5 x 12,000 = 18,000 NIS
+  Capital gain:      18,000 - 4,590 = 13,410 NIS
+  Tax (25%):         3,352.50 NIS
 ```
+
+**Gas paid in crypto is a disposal on the same reasoning**, so it is inside Leg 1 rather than a simple expense. An earlier version of this scenario recognised only Leg 2 and understated the year by the whole ETH gain.
 
 **Note:** The 1.5 ETH received has a cost basis of 18,000 NIS for future disposals.
 
@@ -129,30 +147,22 @@ If the user were a professional NFT artist selling their own creations, this wou
 
 ## Scenario 6: Mining Income
 
-**Facts (hobbyist miner):**
+**Facts (small-scale miner):**
 - Mined 0.001 BTC per month throughout 2024 (0.012 BTC total)
 - Average BTC price at time of mining: 160,000 NIS per BTC
 - Electricity costs attributable to mining: 2,400 NIS/year
 - Equipment cost: 15,000 NIS (3-year useful life = 5,000 NIS depreciation/year)
 
-**If classified as business income:**
+**There is no scale test here.** Circular 05/2018 section 3.1.4 states categorically that crypto reaching a person through mining is **business income** ("יש לראות את ההכנסות המתקבלות בידיו - כהכנסה עסקית"). Scale affects the size of the numbers, not the classification. An earlier version of this scenario offered a "capital treatment" branch at 25%; that branch was wrong and has been removed.
+
 ```
-Mining income:       0.012 x 160,000 = 1,920 NIS
+Mining income:       0.012 x 160,000 = 1,920 NIS   (business income, s.2(1))
 Less: electricity:   -2,400 NIS
 Less: depreciation:  -5,000 NIS
 Net business loss:   -5,480 NIS
 ```
-The loss can offset other business income (but not capital gains, unless special circumstances).
 
-**If classified as asset creation (capital treatment):**
-```
-Cost basis of 0.012 BTC: 1,920 NIS (market value at time of mining)
-Income at mining:        1,920 NIS (taxable as income)
-Tax (25% passive):       480 NIS
-```
-Mining costs (electricity, depreciation) may be deductible against the mining income.
-
-**Note:** At commercial scale (dedicated mining operation), the Tax Authority will almost certainly classify this as business income.
+The loss offsets other business income (not capital gains, absent special circumstances). Business income also carries National Insurance and health tax on top of marginal income tax, and for VAT the miner registers as an **עוסק** under section 3.2.3.2.4 of the circular, which is a different regime from the **מוסד כספי** registration that applies to a business-level trader.
 
 ## Scenario 7: Airdrop Tokens
 
@@ -211,19 +221,25 @@ Trading fees earned:  1,850 NIS
 Tax (as income):      Marginal rate, e.g., 35% = 647.50 NIS
 ```
 
-**Position closure (withdrawal):**
-```
-Total deposited:     10,000 + 37,000 = 47,000 NIS
-Total withdrawn:     12,000 + 44,400 = 56,400 NIS
-Gain on position:    56,400 - 47,000 = 9,400 NIS
+**Position closure (withdrawal). Pick a treatment for the DEPOSIT and carry it through, because the two are not independent:**
 
-This 9,400 NIS may be split between:
-- ETH price appreciation (capital gain, 25%)
-- Pool rebalancing (may be treated differently)
-
-Conservative approach: treat entire 9,400 NIS as capital gain
-Tax (25%): 9,400 x 0.25 = 2,350 NIS
 ```
+Treatment A, the deposit WAS a disposal (a swap of ETH+USDC for LP tokens):
+  Recognise gain or loss on the deposited ETH and USDC in March, against
+  their FIFO basis, at 47,000 NIS of proceeds.
+  The LP position then takes a 47,000 NIS basis, and the December gain is
+  56,400 - 47,000 = 9,400 NIS.
+
+Treatment B, the deposit was NOT a disposal:
+  Nothing is recognised in March, and the LP position inherits the ORIGINAL
+  FIFO cost of the deposited ETH and USDC, NOT their 47,000 NIS market value
+  at deposit. The December gain is 56,400 minus that original cost, so it
+  also captures the appreciation up to the deposit date.
+```
+
+Earlier versions of this scenario said the deposit was not a taxable event and then used the 47,000 NIS deposit-date market value as the basis, which is Treatment B's premise with Treatment A's basis. That silently steps the basis up to market with no recognition event and understates the eventual gain by the whole pre-deposit appreciation. The ITA has issued no guidance choosing between A and B, so state which one you are applying and why.
+
+Whichever you pick, the gain may then split between ETH price appreciation (capital gain at 25%) and pool rebalancing. The conservative course is to treat the whole amount as capital gain.
 
 **Total tax:** 647.50 + 2,350 = 2,997.50 NIS
 
@@ -271,4 +287,15 @@ Capital gain:               222,000 - 146,000 = 76,000 NIS
 Tax (25%):                  76,000 x 0.25 = 19,000 NIS
 ```
 
-**Note:** The NIS gain includes both the crypto appreciation AND the USD/NIS exchange rate change. Both are taxable as part of the capital gain. Use Bank of Israel representative rate (shaar yatzig) for the conversion dates.
+**Note:** The NIS gain includes both the crypto appreciation AND the USD/NIS exchange rate change. Both are taxable as part of the capital gain. The Bank of Israel representative rate (shaar yatzig) is a defensible, documentable choice of conversion rate; Circular 05/2018 does not mandate it, and its own rule is fair value in shekels with a stated-price override.
+
+
+## Scenario 10: Staking Rewards Classification (moved from SKILL.md in v1.6.0)
+
+**Facts:** 10 ETH staked through 2024; 0.5 ETH received in rewards; ETH at 8,000 NIS when the rewards were received.
+
+**Treatment:**
+- The 10 staked ETH have not been disposed of, so there is no capital gain event on them.
+- The 0.5 ETH reward is income at receipt on the conservative view: 0.5 x 8,000 = **4,000 NIS**, taxable in the year received whether or not it was sold.
+- The rate turns on classification. At the 25% passive rate the tax is 1,000 NIS; if the receipt is ordinary income the marginal rate applies instead. The Tax Authority has issued no definitive guidance on staking, so recommend a tax adviser rather than asserting one.
+- The 0.5 ETH then carries a cost basis of 4,000 NIS for its eventual disposal.

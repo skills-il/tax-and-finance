@@ -1,6 +1,45 @@
 {
   "cycles": [
     {
+      "version": "1.6.0",
+      "date": "2026-08-27",
+      "lessons": [
+        "The dominant lesson of this cycle: the first pass corrected SKILL.md and SKILL_HE.md and did NOT carry the corrections into references/, the scenarios file, the calculator or evidence.json, so the skill contradicted itself inside a single load. The Expert found the three retracted Circular 05/2018 fabrications still live verbatim in crypto-tax-regulations.md, the forbidden mining scale-test still live as the only worked mining example, and the withdrawn 1322/1325 routing still live as the operative 1301 instruction. Next cycle: after ANY correction, grep the whole folder for the retracted proposition, not just for the changed literal.",
+        "CRITICAL: the VDP window closes 31 Aug 2026 and the deadline was baked into the frontmatter description. Rewritten date-aware with a post-closure branch (s.131 correction, no immunity) and the description neutralised so it cannot go stale. The Green Track digital-asset limit is 500,000 for the ENTIRE disclosure period, not annual, and the previously cited page (pa010925-1) is a two-paragraph clarification that supports none of the figures; re-sourced to the ITA announcement sa250825-1.",
+        "CRITICAL (VAT): Circular 05/2018 s.3.2.3.2.3 registers a business-level crypto trader as a מוסד כספי under s.4 of the VAT Law, NOT as an osek at 18%. Only the miner is an osek (3.2.3.2.4) and a non-business investor is outside VAT (3.2.3.1). The skill had collapsed three regimes into one wrong one.",
+        "CRITICAL (calculator): a disposal with no matching purchase lot produced a FABRICATED zero cost basis AND a fabricated acquisition_date equal to the disposal date, with the warning on stderr only and absent from --json entirely. Deferred for three cycles as a doc/code contradiction; it was worse than logged. Now UNPRICED, excluded, surfaced in JSON, exit 3. The Expert then argued successfully that excluding-with-a-warning is still the wrong failure direction for a self-assessment tool, so ALL summary totals are now suppressed while any disposal is unpriced.",
+        "CRITICAL (calculator): an unrecognised transaction type set, including Hebrew labels from an Israeli exchange export, was silently dropped, so a wholly-discarded file printed a clean zero-tax report with exit 0 and warnings:[] in JSON. Worse than the UNPRICED case. Now reported and sets the report incomplete.",
+        "CRITICAL (calculator): price_nis is the TOTAL row consideration, documented only in a Python comment, while every worked scenario in the skill is stated per unit. Transcribing the skill's own Scenario 2 turned a 23,040 gain into a 627 loss with no warning. The contract is now stated in --help, in Step 2 of both language files, and at the top of the scenarios file.",
+        "CRITICAL (calculator): the 5% surtax was applied to pre-2025 years in which the 2% capital-source limb of s.121B(a1) did not exist, which is exactly the Voluntary Disclosure computation. Now gated on the tax year with an explicit refusal for earlier years.",
+        "THE AUDIT WAS WRONG ON CARF and the primary source caught it. The research agent resolved Israel's first CARF exchange to 2027 from a secondary source; the OECD Global Forum commitments PDF, which the skill already cited, lists Israel under 'Jurisdictions undertaking first exchanges by 2028'. Transcribing the audit would have shipped a wrong year.",
+        "THE EXPERT WAS WRONG ON s.125C SUBSECTION LETTERS and the statute caught it. It gave 125C(b)(1) for the 15% rate and 125C(c)-(d) for the denials; the Ordinance has 125C(b)=25%, 125C(c)(1)=15%, 125C(d)=full marginal rate. Two reviewer-supplied section letters wrong in one cycle.",
+        "Fabricated attributions removed from Circular 05/2018: the enumerated badge-of-trade list (s.3.1.4 delegates to the case law), the שער יציג requirement (the word does not appear in the circular), and the 7-year retention period (s.3.1.3 fixes none). Mining is business income categorically per the same section, with no scale test.",
+        "s.97(a)(5) is a gift EXEMPTION, not a basis-carryover rule; evidence.json had itself flagged this as unverified while the assertion stayed live in four places. The carryover runs through s.88's מחיר מקורי / יום הרכישה.",
+        "s.91(b)(3) was cited in six places as the inflation-split provision. It is the 15%/20% non-index-linked bond rate. The split is s.88 plus s.91(c), which taxes the CHARGEABLE inflationary amount at 10%, nil for crypto only via the 31.12.1993 cut-off.",
+        "Forms: 1322 is scoped by the ITA's own title to securities הנסחרים בבורסה, 1325 aggregates securities BY TAX RATE, and the נספח labels belong to 1320. The ITA publishes no crypto appendix, so the skill now says the gain enters the 1301's capital-gains fields supported by the filed 1399י copies, a disposal schedule in the 1399י columns, and Form 1344 for a s.92(b) carry-forward.",
+        "CARRY resolved: CARF pinned to 2028; the salaried filing exemption re-scoped to s.134A with a תוספת ו ceiling and the invented s.131 figures dropped; the swap-leg reconciliation now enforced in code against circular s.3.1.5.1.",
+        "CARRY still open: a worked foreign-tax-credit example under ss.199-210, unresolved for a fifth cycle. Next cycle either write it or move it to 'Out of scope (explicit)' in the domain-checklist so it stops being carried indefinitely.",
+        "Deferred (Expert MINOR): empty and malformed CSVs share one error message rendering a Python set literal; --demo prints the schedule and advance blocks unconditionally; --ignore-data-errors still lets sign-flipped rows through to an invented gain; 52 of 58 evidence entries carry no verified_at.",
+        "Phase 5.7: the description HAD to change (the legal gate required a 'not legal advice' prefix, and 'open until 31 Aug 2026' would have become false in four days). Scored against a frozen 12-query set with a fixed 4-query holdout: regressed=[] and holdout_after == holdout_before, so the edit is trigger-neutral, which is the property that matters for a mandated prefix. The absolute 0.50 is a limitation of the crude token-overlap scorer used here, not a measured routing failure: it does not model the 'Do NOT use for' anti-trigger, which is why the US-jurisdiction negative reads as a persistent fail in both arms. Next cycle, score with a real routing eval rather than token overlap before drawing any conclusion from the absolute number.",
+        "Legal gate returned NOTICE_REQUIRED, not CLEAR: the existing TIER_A_TAX notice named only a tax adviser or accountant, while v1.6.0 added advice on the Voluntary Disclosure Procedure, which is about CRIMINAL immunity and exposure. Appended a legal limb to both notices, added a counsel hook to the open-window instruction, and widened both description prefixes to 'not legal advice'. verify_legal.py had passed the whole time, because it only checks that A notice exists, not that it covers what the skill now does.",
+        "The legal gate also caught a stale YAML frontmatter in SKILL_HE.md that four other gates missed: it still advertised 'Form 1322/1325 reporting data' and 'open until 31 Aug 2026' after the body had retracted both. Only SKILL.md's frontmatter and metadata.json had been updated. Next cycle: treat the two frontmatters and metadata.json as one artefact to change together."
+      ],
+      "holdout_before": 0.5,
+      "holdout_after": 0.5,
+      "buckets": {
+        "improved": [],
+        "regressed": [],
+        "persistent_fail": [
+          "how do i file us capital gains tax on coinbase",
+          "i moved abroad, what happens to my crypto tax in israel"
+        ],
+        "stable_success": [
+          "should i use the voluntary disclosure procedure for unreported crypto",
+          "how do i classify staking rewards and airdrops for israeli tax"
+        ]
+      }
+    },
+    {
       "version": "1.4.1",
       "date": "2026-07-20",
       "lessons": [
