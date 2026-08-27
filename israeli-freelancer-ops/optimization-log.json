@@ -32,6 +32,16 @@
         "CARRY: the esek za'ir block sits inside the crossing section, which obscures that it is an income-tax reporting election and not a VAT status. It also presents the 30% normative deduction only as a benefit, when a freelancer whose real expenses exceed 30% of turnover is worse off.",
         "CARRY: references/deadline-calendar.md has no pension section even though the SKILL body treats the 31 December pension deadlines as a first-class alert, and the reference file is what the skill tells the agent to consult when setting up alerts."
       ]
+    },
+    {
+      "version": "1.6.0",
+      "date": "2026-08-27",
+      "lessons": [
+        "The same rule was stated three times in one skill and only one of the three was right. Grep every occurrence of a staged threshold across BOTH language files and the Gotchas before deciding the skill is consistent; the correct copy in the Gotchas is what hid the wrong copy in the body.",
+        "A self-contradicting sentence (\"the threshold is 5,000, and from June 2026 it drops to 5,000\") reads as fluent and survives review. Any sentence where a value appears on both sides of a \"drops to\" deserves a second look.",
+        "A staged threshold needs the issue-date rule stated next to it, not just the current number. Without it, an agent tests a March 2026 invoice against the June 2026 threshold and reports a defect that does not exist.",
+        "Four sibling skills in the same repo carried the correct ladder. Cross-checking the catalogue is cheaper than re-fetching gov.il and it also proves the corrected value is the one the rest of the catalogue already agrees on."
+      ]
     }
   ]
 }

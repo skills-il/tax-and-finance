@@ -44,7 +44,16 @@ Configure graduated reminder schedule:
 - **Day 60:** Formal email follow-up with invoice copy attached, payment details (bank transfer info), and a clear due date.
 - **Day 90+:** Alert the freelancer for escalation consideration. Suggest using the israeli-client-payment-chaser skill for structured collection (if available).
 
-**Israel Invoice allocation numbers (from 2026):** For osek murshe, tax invoices (hashbonit mas) exceeding **5,000 NIS** (before VAT) must include an allocation number (mispar haktza'a) obtained from the Tax Authority system. From June 2026 this threshold drops to 5,000 NIS. Without an allocation number, the recipient cannot deduct input VAT. When tracking invoices, flag any issued invoice above the threshold that is missing an allocation number.
+**Israel Invoice allocation numbers (חשבוניות ישראל).** For osek murshe, a tax invoice (hashbonit mas) above the threshold must carry an allocation number (mispar haktza'a) from the Tax Authority system, or the recipient cannot deduct the input VAT. **The threshold is staged, and the one that applies is the one in force on the invoice ISSUE date, not today's:**
+
+| In force from | Threshold (pre-VAT) |
+|---|---|
+| 5 May 2024 | above NIS 25,000 |
+| 1 Jan 2025 | above NIS 20,000 |
+| 1 Jan 2026 | above NIS 10,000 |
+| 1 Jun 2026 | above NIS 5,000 (current) |
+
+An invoice issued in March 2026 is tested against 10,000, not 5,000, so do not flag a NIS 7,000 invoice from that month as missing a number. There is no announced step below 5,000; do not invent one. When tracking invoices, flag any issued invoice above the threshold for its own issue date that has no allocation number.
 
 Additional tracking:
 - Record partial payments and update outstanding balances accordingly
@@ -131,7 +140,7 @@ Do NOT state a specific statutory deadline in days for the notification, or a pe
 Generate a transition checklist:
 1. Register as osek murshe at the local Tax Authority office (misrad mas hachnasa)
 2. Update invoicing system to issue tax invoices with VAT
-3. Register for the Israel Invoice allocation number system (required for invoices over 5,000 NIS (before VAT))
+3. Register for the Israel Invoice allocation number system (currently required for invoices above NIS 5,000 pre-VAT; see the staged table above for earlier issue dates)
 4. Notify clients of new invoicing format
 5. Set up VAT filing schedule (see Step 4)
 6. Begin tracking input VAT on business expenses for deductions

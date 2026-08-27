@@ -6,71 +6,83 @@
     {
       "claim": "Osek patur annual turnover ceiling is 122,833 NIS / 122,833 ש\"ח for 2026 (updated periodically by order; no CPI-linkage formula is published) and was 120,000 NIS / 120,000 ש\"ח in 2024 and 2025.",
       "source_url": "https://www.kolzchut.org.il/he/עוסק_פטור",
-      "raw_snippet": "כדי להיות עוסק פטור אסור שמחזור העסקאות השנתי (ולא הרווח!) בעסק יעבור את הסכום של 122,833 ₪ (נכון לשנת 2026) (120,000 ₪ בשנת 2025)."
+      "raw_snippet": "כדי להיות עוסק פטור אסור שמחזור העסקאות השנתי (ולא הרווח!) בעסק יעבור את הסכום של 122,833 ₪ (נכון לשנת 2026) (120,000 ₪ בשנת 2025).",
+      "claim_id": "osek-patur-annual-turnover-ceiling-is-122-833-ni"
     },
     {
       "claim": "Esek za'ir (עסק זעיר) is anchored in Income Tax Ordinance sections 87ב-87ז / סעיפים 87ב-87ז (added by Amendment 277): a 30% normative expense deduction is auto-credited; eligibility is barred if more than 25% of business income comes from a relative or former employer.",
       "source_url": "https://www.kolzchut.org.il/he/עסק_זעיר",
       "raw_snippet": "בעת הדיווח למס הכנסה, בעל עסק זעיר רשאי לקזז באופן אוטומטי סכום של 30%",
-      "source_fetched_at": "2026-07-26T00:00:00Z"
+      "source_fetched_at": "2026-07-26T00:00:00Z",
+      "claim_id": "esek-za-ir-is-anchored-in-income-tax"
     },
     {
       "claim": "Section 45א (סעיף 45א) gives a 35% income-tax credit on self-employed pension deposits, structured as 5.5% of qualifying income (a base 5% plus an additional 0.5% slice when no disability-insurance deduction is taken). The 2026 qualifying-income ceiling is 232,800 NIS / 232,800 ש\"ח, so the 5% base slice caps the credit-eligible deposit at 5% of 232,800 = 11,640 NIS (11,640 ש\"ח) and the extra 0.5% slice adds 0.5% of 232,800 = 1,164 NIS (1,164 ש\"ח).",
       "source_url": "https://www.supermarker.themarker.com/Gemel/TaxBenefitsForKupatGemelAndHishtalmut.aspx",
       "raw_snippet": "הפקדה של 16.5% מהרובד הראשון לצורך קבלת הטבות מס (11% ניכוי מס ו- 5.5% זיכוי",
-      "source_fetched_at": "2026-07-26T00:00:00Z"
+      "source_fetched_at": "2026-07-26T00:00:00Z",
+      "claim_id": "section-45-45-gives-a-35-income-tax-cr"
     },
     {
       "claim": "The 0.5% additional Section 45א slice (yielding the 5.5% combined credit rate) applies when the self-employed person takes no disability-insurance deduction.",
       "source_url": "https://pensuni.com/?p=1447",
-      "raw_snippet": "יחיד שלא נוכו לו סכומים בעד רכישת ביטוח מועדף מפני אבדן כושר עבודה... יזוכה ממס בשיעור של 35% מן הסכומים שהפקיד לקופת גמל לקצבה... עד לשיעור של 0.5% מהכנסתו"
+      "raw_snippet": "יחיד שלא נוכו לו סכומים בעד רכישת ביטוח מועדף מפני אבדן כושר עבודה... יזוכה ממס בשיעור של 35% מן הסכומים שהפקיד לקופת גמל לקצבה... עד לשיעור של 0.5% מהכנסתו",
+      "claim_id": "the-0-5-additional-section-45-slice-yielding"
     },
     {
       "claim": "Section 47 (סעיף 47 / Section 47) gives an income deduction of 11% of qualifying income; the 2026 ceiling is 232,800 ש\"ח and the maximum deduction-eligible deposit for a preferred member (עמית מוטב) is 25,608 NIS / 25,608 ש\"ח. Combined with the 45א credit the deposit rate reaches 16.5%.",
       "source_url": "https://pensuni.com/?p=1447",
       "raw_snippet": "הפקדה המזכה לצורך הטבות מס",
-      "source_fetched_at": "2026-07-26T00:00:00Z"
+      "source_fetched_at": "2026-07-26T00:00:00Z",
+      "claim_id": "section-47-47-section-47-gives-an-incom"
     },
     {
       "claim": "Mandatory self-employed pension 2026 rates: 4.45% on income up to half the average wage and 12.55% on the portion above it; the 2026 average wage is 13,769 NIS / 13,769 ש\"ח per month, giving annual employer-equivalent caps of 3,676 NIS (3,676 ש\"ח) on the lower bracket and 14,044 NIS (14,044 ש\"ח) total on the upper.",
       "source_url": "https://pensuni.com/?p=2233",
       "raw_snippet": "שיעור ההפקדה לפנסיית חובה לעצמאים עומד על 4.45% עד חצי מהשכר הממוצע במשק, ועל 12.55% מהחלק מעל מחצית השכר הממוצע במשק. בשנת 2026 השכר הממוצע במשק עומד על 13,769",
-      "source_fetched_at": "2026-07-26T00:00:00Z"
+      "source_fetched_at": "2026-07-26T00:00:00Z",
+      "claim_id": "mandatory-self-employed-pension-2026-rates-4-45"
     },
     {
       "claim": "Bituach Leumi self-employed 2026 advances (BTL circular 1502): minimum monthly advance 265 NIS / 265 ש\"ח, maximum monthly advance 8,550 NIS / 8,550 ש\"ח.",
       "source_url": "https://www.efraty.com/מידע-שימושי/ביטוח-לאומי/ביטוח-לאומי-לעצמאי-ת/",
       "raw_snippet": "מקדמה חודשית מינימלית לעובד עצמאי",
-      "source_fetched_at": "2026-07-26T00:00:00Z"
+      "source_fetched_at": "2026-07-26T00:00:00Z",
+      "claim_id": "bituach-leumi-self-employed-2026-advances-btl-c"
     },
     {
       "claim": "Self-employed national-insurance minimum monthly income floor is 3,442 NIS / 3,442 ש\"ח; direct-debit (הוראת קבע) payers are debited on the 22nd of the month.",
       "source_url": "https://www.kolzchut.org.il/he/דמי_ביטוח_לאומי_לעצמאי",
       "raw_snippet": "עצמאים שהכנסתם נמוכה מ-3,442 ₪ בחודש (\"ההכנסה המזערית\") ישלמו כפי שמשלמים על הכנסה בסכום",
-      "source_fetched_at": "2026-07-26T00:00:00Z"
+      "source_fetched_at": "2026-07-26T00:00:00Z",
+      "claim_id": "self-employed-national-insurance-minimum-monthly"
     },
     {
       "claim": "Income-tax advances (מקדמות) are due by the 15th of the month following the reporting period; paying online via the Tax Authority website extends the deadline to the 19th (until 18:30).",
       "source_url": "https://www.kolzchut.org.il/he/תשלום_מקדמות_של_עסק_עצמאי_למס_הכנסה",
       "raw_snippet": "לפי החוק יש לשלם את המקדמות ולדווח על מחזור העסקאות בכל 15 בחודש עבור הכנסות של החודש הקודם.",
-      "source_fetched_at": "2026-07-26T00:00:00Z"
+      "source_fetched_at": "2026-07-26T00:00:00Z",
+      "claim_id": "income-tax-advances-are-due-by-the-15th"
     },
     {
       "claim": "PCN 874 detailed VAT report (דו\"ח מפורט / report 874) is mandatory for osek murshe with annual turnover above 500,000 NIS / 500,000 ש\"ח, filed by the 23rd of the following month.",
       "source_url": "https://www.invoice4u.co.il/blog/דיווח-מפורט-למעמ-דיווח-874/",
       "raw_snippet": "מחזור העסקאות לשנה עלה על 500,000 ₪",
-      "source_fetched_at": "2026-07-26T00:00:00Z"
+      "source_fetched_at": "2026-07-26T00:00:00Z",
+      "claim_id": "pcn-874-detailed-vat-report-report"
     },
     {
       "claim": "Israeli VAT rate is 18% since 01.01.2025 (it was 17% until 31.12.2024).",
       "source_url": "https://www.kolzchut.org.il/he/מס_ערך_מוסף_(מע%22מ)",
-      "raw_snippet": "סכום המע\"מ מחושב בשיעור קבוע ממחיר העסקה או הסחורה, והחל מיום 01.01.2025 הוא עומד על 18% ממחיר הרכישה או השירות."
+      "raw_snippet": "סכום המע\"מ מחושב בשיעור קבוע ממחיר העסקה או הסחורה, והחל מיום 01.01.2025 הוא עומד על 18% ממחיר הרכישה או השירות.",
+      "claim_id": "israeli-vat-rate-is-18-since-01-01-2025-it-was"
     },
     {
-      "claim": "Israel Invoice allocation numbers are a condition for deducting input VAT on transactions above the ceiling set in law: 20,000 NIS for 2025, 10,000 NIS from 1 January 2026, and 5,000 NIS from 1 June 2026.",
+      "claim": "Israel Invoice allocation numbers are a condition for deducting input VAT on transactions above the ceiling set in law. The ladder is 25,000 NIS from 5 May 2024, 20,000 NIS for 2025, 10,000 NIS from 1 January 2026, and 5,000 NIS from 1 June 2026. The threshold that applies is the one in force on the invoice ISSUE date, so an invoice issued in March 2026 is tested against 10,000 NIS and a 7,000 NIS invoice from that month needs no allocation number.",
       "source_url": "https://www.gov.il/he/service/request-assignment-number-for-tax-invoice",
       "raw_snippet": "מספרי הקצאה אלה יידרשו כתנאי לניכוי מס התשומות בעסקאות שמעל לתקרה שנקבעה בחוק (20,000 ₪ לשנת 2025) 10,000 החל מה-1 בינואר 2026 ו-5,000 ₪ החל מה-1 ביוני 2026.",
-      "fetched_at": "2026-08-11T00:00:00Z"
+      "fetched_at": "2026-08-27T00:00:00Z",
+      "claim_id": "israel-invoice-allocation-numbers-are-a-conditio"
     },
     {
       "claim": "Annual income-tax report (Form 1301 / טופס 1301) for tax year 2025: individuals filing a non-online report file by 29.5.2026; individuals required to file online file by 30.6.2026.",
@@ -78,31 +90,36 @@
       "raw_snippet": "אלו המועדים להגשת הדוחות לשנת המס 2025: יחידים החייבים בהגשת דוח שאינו מקוון יגישו עד 29.5.2026. יחידים החייבים בהגשת דוח מקוון יגישו עד 30.6.2026.",
       "confidence": "medium",
       "fetch_note": "Tax Authority service page returns HTTP 403 to automated fetch and the kolzchut annual-report page does not carry the dates in its fetchable text, so this deadline is NOT source-verified this cycle. The 30 June online / 31 May paper split is consistently reported by Israeli CPA firms but must be re-anchored to a primary source next cycle.",
-      "fetched_at": "2026-08-11T00:00:00Z"
+      "fetched_at": "2026-08-11T00:00:00Z",
+      "claim_id": "annual-income-tax-report-form-1301-1301"
     },
     {
       "claim": "Worked Example 2 (osek patur threshold projection): at 85% of the 122,833 ceiling the freelancer has earned 104,400 NIS / 104,400 ש\"ח; an average monthly income of 11,600 NIS / 11,600 ש\"ח projects an annual total of 139,200 NIS / 139,200 ש\"ח, exceeding the threshold by 16,400 NIS / 16,400 ש\"ח. These are illustrative arithmetic figures (11,600 x 12 = 139,200; 139,200 - 122,833 ≈ 16,400; 104,400 ≈ 85% of 122,833), not external statutory values.",
       "source_url": "https://www.kolzchut.org.il/he/עוסק_פטור",
       "raw_snippet": "כדי להיות עוסק פטור אסור שמחזור העסקאות השנתי (ולא הרווח!) בעסק יעבור את הסכום של 122,833 ₪ (נכון לשנת",
-      "source_fetched_at": "2026-07-26T00:00:00Z"
+      "source_fetched_at": "2026-07-26T00:00:00Z",
+      "claim_id": "worked-example-2-osek-patur-threshold-projectio"
     },
     {
       "claim": "Worked Example 3 (year-end accountant package): illustrative cover-sheet figures of annual revenue 185,000 NIS / 185,000 ש\"ח, expenses 42,000 NIS / 42,000 ש\"ח, net 143,000 NIS / 143,000 ש\"ח (185,000 - 42,000 = 143,000). These are sample numbers, not external statutory values.",
       "source_url": "https://www.kolzchut.org.il/he/עוסק_פטור",
       "raw_snippet": "סך כל ההכנסות מהעסקאות שבוצעו בשנת",
-      "source_fetched_at": "2026-07-26T00:00:00Z"
+      "source_fetched_at": "2026-07-26T00:00:00Z",
+      "claim_id": "worked-example-3-year-end-accountant-package"
     },
     {
       "claim": "Osek patur threshold alert levels are illustrative percentages of the 122,833 ceiling: 70% ≈ 86,000 NIS / 86,000 ש\"ח (informational), 85% ≈ 104,400 NIS / 104,400 ש\"ח (warning), 95% ≈ 116,700 NIS / 116,700 ש\"ח (urgent). These follow from 0.70/0.85/0.95 x 122,833, not external statutory values.",
       "source_url": "https://www.kolzchut.org.il/he/עוסק_פטור",
       "raw_snippet": "יעבור את הסכום של 122,833 ₪ (נכון לשנת",
-      "source_fetched_at": "2026-07-26T00:00:00Z"
+      "source_fetched_at": "2026-07-26T00:00:00Z",
+      "claim_id": "osek-patur-threshold-alert-levels-are-illustrati"
     },
     {
       "claim": "Reference-links anchor: the kolzchut osek patur page cited in the Reference Links table carries the current ceiling.",
       "source_url": "https://www.kolzchut.org.il/he/עוסק_פטור",
       "raw_snippet": "122,833 ₪ (נכון לשנת 2026)",
-      "source_fetched_at": "2026-07-26T00:00:00Z"
+      "source_fetched_at": "2026-07-26T00:00:00Z",
+      "claim_id": "reference-links-anchor-the-kolzchut-osek-patur"
     },
     {
       "id": "osek-patur-crossing-notify",
@@ -111,7 +128,8 @@
       "source_url": "https://www.kolzchut.org.il/he/עוסק_פטור",
       "source_fetched_at": "2026-07-26T00:00:00Z",
       "raw_snippet": "ברגע שצופים שההכנסות עד סוף השנה יעברו אות התקרה השנתית של העוסק הפטור, יש להודיע על כך לרשות המסים ולבקש לשנות את סיווג העסק מעוסק פטור לעוסק מורשה",
-      "confidence": "high"
+      "confidence": "high",
+      "claim_id": "an-osek-patur-must-notify-the-tax-authority-and"
     },
     {
       "id": "osek-patur-no-retroactive-input-vat",
@@ -120,7 +138,8 @@
       "source_url": "https://www.kolzchut.org.il/he/עוסק_פטור",
       "source_fetched_at": "2026-07-26T00:00:00Z",
       "raw_snippet": "אי אפשר לדרוש רטרואקטיבית קיזוז מע\"מ על הוצאות שהיו לעסק מתחילת השנה כאשר היה מוגדר כעוסק פטור, אלא רק על הוצאות שייווצרו מרגע הפיכתו לעוסק מורשה",
-      "confidence": "high"
+      "confidence": "high",
+      "claim_id": "input-vat-on-expenses-incurred-while-registered"
     },
     {
       "id": "osek-patur-ceiling-2026",
@@ -129,7 +148,8 @@
       "source_url": "https://www.kolzchut.org.il/he/עוסק_פטור",
       "source_fetched_at": "2026-07-26T00:00:00Z",
       "raw_snippet": "122,833 ₪ (נכון לשנת 2026)",
-      "confidence": "high"
+      "confidence": "high",
+      "claim_id": "the-osek-patur-annual-turnover-ceiling-is-122-83"
     },
     {
       "id": "pension-credit-reference-url",
@@ -138,7 +158,8 @@
       "source_url": "https://www.kolzchut.org.il/he/זיכוי_ממס_הכנסה_בגין_הפרשות_לביטוח_פנסיוני",
       "source_fetched_at": "2026-07-26T00:00:00Z",
       "raw_snippet": "זיכוי ממס הכנסה בגין הפרשות לביטוח פנסיוני (זכות) – כל-זכות",
-      "confidence": "medium"
+      "confidence": "medium",
+      "claim_id": "reference-links-anchor-for-the-kolzchut-page-on"
     },
     {
       "claim_id": "portal-annual-tax-report",
@@ -278,6 +299,18 @@
       "fetched_at": "2026-08-15",
       "verified_via": "curl with a browser user agent",
       "verified_at": "2026-08-15",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "allocation-ladder-2024-opening-row",
+      "claim": "The Israel Invoice allocation-number threshold opened at 25,000 NIS pre-VAT on 5 May 2024 before stepping down to 20,000 (2025), 10,000 (1 January 2026) and 5,000 (1 June 2026). CORROBORATED ACROSS THE CATALOGUE rather than re-fetched: il-invoice-organizer, israeli-vat-reporting, israeli-price-quote-generator and israeli-export-shipping-kit all carry the same four-step ladder, and the gov.il snippet in the sibling entry carries the last three steps verbatim.",
+      "source_url": "https://www.gov.il/he/service/request-assignment-number-for-tax-invoice",
+      "raw_snippet": "מספרי הקצאה אלה יידרשו כתנאי לניכוי מס התשומות בעסקאות שמעל לתקרה שנקבעה בחוק (20,000 ₪ לשנת 2025) 10,000 החל מה-1 בינואר 2026 ו-5,000 ₪ החל מה-1 ביוני 2026.",
+      "fetched_at": "2026-08-27T00:00:00Z",
+      "source_fetched_at": "2026-08-27T00:00:00Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
