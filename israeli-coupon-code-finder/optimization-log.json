@@ -15,6 +15,16 @@
         "Provenance carry: benefits.isracard.co.il and cal-online.co.il/benefits are hard WAF blocks (Cloudflare 403 and F5 400) to curl AND to headless Chromium. Their existence is cross-checked by search, not by reading the page; both evidence entries are confidence=medium. Re-verify from a real browser next cycle.",
         "Judge lesson for future cycles: the first draft of the foreign-marketplace jurisdiction gate said Israeli consumer law 'does not reach' foreign sellers. That is legally overstated. RAA 5860/16 Facebook v. Ben Hamo let an Israeli consumer sue a foreign company in Israel despite a foreign-jurisdiction clause (applying California substantive law). The correct framing is practical unenforceability against a small overseas seller, not absence of the right."
       ]
+    },
+    {
+      "version": "1.2.0",
+      "date": "2026-08-27",
+      "lessons": [
+        "The link sweep was clean, and saying so is a result. Every named destination was checked by navigation with a per-host fabricated-path control; two hosts (isracard, cal-online) return WAF bodies byte-identical for real and fake paths, so only a browser can tell them apart and a status-code sweep would have called both dead.",
+        "The real defects were in the script, not the links. A validator-shaped tool that accepts unknown keys and renders a table of dashes looks finished and recommends a candidate it knows nothing about.",
+        "The doc said \"date\" and the code read \"date_seen\". A one-word schema mismatch is invisible to every gate and produces exactly the empty-column output an agent will not question.",
+        "Deferred: rank_codes.py takes expiry as free text inside conditions, so nothing mechanically filters an expired code. That is defensible as a formatting tool, but the description promises expiry checking, so either the schema should carry a real date field or the description should be explicit that the agent does that check."
+      ]
     }
   ]
 }

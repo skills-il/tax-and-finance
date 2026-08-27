@@ -40,7 +40,7 @@ Search these source types together, not one chatbot at a time. This is the whole
 | Loyalty points and store credit | An accumulated points wallet, store credit, or a welcome credit at the store often beats any public code. For the exact store named (e.g. Terminal X), check the shopper's own account first | The store's own account and app |
 | Credit-card benefit hubs | A cardholder discount at this store that beats any public code. The issuer layer is fragmented, so check the shopper's own card | All three Israeli issuers run one: Max (max.co.il/benefits/lobby), Isracard (benefits.isracard.co.il), and Cal (cal-online.co.il/benefits) |
 | Gift-card stacking | A discounted gift card you buy then pay with | BuyMe (buyme.co.il) |
-| Consumer / employee clubs | Member pricing the shopper may already be entitled to | Moadon Chaver (hvr.co.il, operated by Isracard) for career soldiers and retirees; any ovdim (works-council) benefit portal |
+| Consumer / employee clubs | Member pricing the shopper may already be entitled to | Moadon Chaver (hvr.co.il) for career soldiers and retirees, which is **behind a member login** (teudat zehut plus password), so the shopper has to check it themselves and the skill cannot read it; any ovdim (works-council) benefit portal |
 | Store-direct levers | First-order newsletter/SMS/WhatsApp-join code, app-only code, abandoned-cart email, loyalty-club price, student or chayal (soldier) pricing | The store's own site and app |
 | Telegram coupon channels | Rotating codes posted by deal channels | Search live; do NOT assume a specific channel exists |
 
@@ -134,7 +134,7 @@ Actions:
 - `references/source-map.md` -- quick-reference table of source types, what each is good for, and the Hebrew search terms that surface them.
 
 ### Scripts
-- `scripts/rank_codes.py` -- takes a JSON list of candidate codes (code, source, date, discount, conditions) and prints the ranked summary table plus a "try this first" pick. Run: `python scripts/rank_codes.py --help`
+- `scripts/rank_codes.py` -- takes a JSON list of candidate codes and prints the ranked summary table plus a "try this first" pick. The keys it reads are exactly **`code`, `source`, `date_seen`, `discount`, `conditions`** and optional **`confidence`**. **The date field is `date_seen`, not `date`.** Anything else is ignored with a warning on stderr, and an item carrying none of these keys is rejected outright rather than rendered as a row of dashes. `discount` and `conditions` are free text, so put the expiry, the minimum cart and the new-customer flag in `conditions`; the script ranks and formats, it does not parse dates or evaluate expiry for you. Run: `python scripts/rank_codes.py --help`
 
 ## Gotchas
 

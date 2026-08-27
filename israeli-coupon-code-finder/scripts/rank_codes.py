@@ -58,6 +58,10 @@ def _negated(date_str):
     return tuple(-ord(c) for c in date_str)
 
 
+# The exact keys render() reads. Documented in SKILL.md; keep the two in step.
+RECOGNISED_KEYS = {"code", "source", "date_seen", "discount", "conditions", "confidence"}
+
+
 def cell(value):
     text = str(value if value not in (None, "") else "-")
     return text.replace("|", "/").replace("\n", " ").strip()
@@ -109,7 +113,14 @@ def main():
         print(render(EXAMPLE))
         return 0
 
-    raw = open(args.file, encoding="utf-8").read() if args.file else sys.stdin.read()
+    if args.file:
+        try:
+            raw = open(args.file, encoding="utf-8").read()
+        except OSError as e:
+            print(f"Cannot read {args.file}: {e.strerror}", file=sys.stderr)
+            return 1
+    else:
+        raw = sys.stdin.read()
     if not raw.strip():
         print("No input. Pass --file, pipe JSON to stdin, or use --example.", file=sys.stderr)
         return 1
@@ -121,6 +132,30 @@ def main():
     if not isinstance(items, list):
         print("Input must be a JSON list of candidate-code objects.", file=sys.stderr)
         return 1
+    if not all(isinstance(it, dict) for it in items):
+        print("Every item must be a JSON object.", file=sys.stderr)
+        return 1
+
+    # Guessed field names are the common failure here, and silently rendering a
+    # table of dashes is worse than refusing: it looks like a real answer and
+    # ends with "try this first" for a code nothing is known about.
+    unknown = [it for it in items if not (RECOGNISED_KEYS & set(it))]
+    if items and unknown:
+        print(f"{len(unknown)} of {len(items)} item(s) carry none of the recognised keys.",
+              file=sys.stderr)
+        print("Expected keys: " + ", ".join(sorted(RECOGNISED_KEYS))
+              + ". Note the field is date_seen, not date.", file=sys.stderr)
+        return 1
+
+    # Partial-schema input is the common real failure: an agent guesses "date"
+    # or "expires", the column renders as "-", and the table still looks finished.
+    # Name the keys being ignored rather than dropping them silently.
+    ignored = sorted({k for it in items for k in it} - RECOGNISED_KEYS)
+    if ignored:
+        print("Ignoring unrecognised key(s): " + ", ".join(ignored)
+              + ". Recognised keys are: " + ", ".join(sorted(RECOGNISED_KEYS))
+              + " (the date field is date_seen).", file=sys.stderr)
+
     print(render(items))
     return 0
 
