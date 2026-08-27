@@ -5,12 +5,12 @@ Israel uses the international Harmonized System at 6 digits and adds 2 Israel-sp
 ## Structure
 
 ```
-XX XX XX XX XX
-|  |  |  |  |
-|  |  |  |  +-- Position 7-8: Israel-specific ("paragraphs")
-|  |  |  +----- Position 5-6: International HS sub-heading
-|  |  +-------- Position 3-4: International HS heading
-|  +----------- Position 1-2: Chapter
+XX XX XX XX
+|  |  |  |
+|  |  |  +-- Positions 7-8: Israel-specific ("paragraphs")
+|  |  +----- Positions 5-6: international HS sub-heading
+|  +-------- Positions 3-4: international HS heading
++----------- Positions 1-2: chapter
 ```
 
 Example: `8525.89.10` (hypothetical) - Chapter 85 (electrical), heading 8525, subheading 89, Israeli paragraph 10.
@@ -37,15 +37,15 @@ Example: `8525.89.10` (hypothetical) - Chapter 85 (electrical), heading 8525, su
 - Chapter 94: furniture
 - Chapter 95: toys, games
 
-## Binding pre-ruling
+## Advance classification decision
 
-If the classification is unclear, request a free binding pre-ruling from Israeli Customs. Submit:
+If the classification is unclear, request an advance classification decision from Israeli Customs. **Whether it carries a fee, and how far it binds the authority, are not verified in this file: ask the customs house when you file.** Submit:
 - A detailed description of the goods
 - A catalog or technical data sheet
 - Photos or samples if relevant
 - Intended use
 
-The ruling is binding on Customs for that specific product as long as the description is accurate.
+A decision of this kind is generally relied on for the specific product described, and an inaccurate description undermines it. The precise legal effect is not verified here.
 
 ## Differences from US HTS and EU CN
 

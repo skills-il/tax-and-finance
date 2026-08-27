@@ -20,6 +20,46 @@
         "CARRY: release blockers are absent and matter more than tax for many parcels: standards approval, Ministry of Communications RF approval, and import licensing. Also absent: courier clearance and handling fees, which routinely exceed the tax on a small parcel, and the fact that customs may re-value a declared amount.",
         "CARRY: 'VAT is recoverable' for commercial imports is true only where the rashimon is in the importer's own name and file number."
       ]
+    },
+    {
+      "version": "1.4.0",
+      "date": "2026-08-27",
+      "lessons": [
+        "THRESHOLD RE-VERIFIED LIVE at USD 75 on 27 August 2026 against Kol Zchut. Every 'as of July 2026' stamp was refreshed; the Expert correctly flagged that a month-old stamp on the domain's most volatile figure is itself a defect.",
+        "CRITICAL FX DEFECT FOUND AND FIXED: customs converts foreign-currency prices at the Bank of Israel representative rate PLUS 0.5 percent ('השער היציג של בנק ישראל בתוספת 0.5%'). Every landed cost the skill and the script produced was low by half a percent of CIF. The uplift is now stated once, in Step 5, and applied once, at CIF, in the script, which prints both rates so double-counting is visible.",
+        "CRITICAL EU-ORIGIN RETRACTION: the skill said the applicable rules were 'PEM 2012' and that 'Israel has not ratified revised PEM'. The European Commission country page says Israel signed the Regional Convention on 10 October 2013 and HAS ratified it, the Convention was established in 2011 not 2012, and the access2markets page says the two-set transitional regime ended 31 December 2025 with only the revised PEM applying from 1 January 2026. The skill was stating the opposite of its own cited source, and was stale by eight months. Found by the Independent Judge; verified by the orchestrator against both EC pages before encoding.",
+        "CRITICAL BOUNDARY CONTRADICTION: the prose said 'Below USD 75' while the source says 'עד 75 דולר' (up to and including) and the script implemented it inclusively. On a parcel of exactly 75.00 the skill and its own bundled script disagreed. Prose corrected to match source and script.",
+        "CRITICAL GAP CLOSED: the skill named an appeal against the assessment only to say where NOT to file it. The route is now stated: online through the personal area of the National Identification System, with proof of payment to supplier and evidence of actual transaction value, free of charge, tafag unit at the relevant customs house. The Eilat resident VAT refund uses the same route.",
+        "CARRY CLOSED (release blockers): Step 8 now names the competent authority per product class, including the 4-device threshold that moves a smartphone shipment out of the plain personal track and the helmet carve-out for EU or US certification.",
+        "CARRY CLOSED (courier fees, re-valuation): both are now sourced gotchas, along with the rule that a false declaration bites even a buyer who did not know.",
+        "CARRY CLOSED (VAT recoverable): qualified to the case where the rashimon is in the importer's own name and file number.",
+        "CARRY CLOSED (EU settlement-goods exclusion): added to the FTA reference with the Commission's own wording and the 2004 Technical Arrangement, flagged as running in the export direction.",
+        "CARRY CLOSED (FTA unsourced specifics): B239 confirmed against the CBSA form itself, which is titled 'Free Trade Agreement - Certificate of Origin (CIFTA only)' and carries a blanket-period field. The 'four years from signature' validity, the 1997 and 1 September 2019 CIFTA dates, the Green Form 10 January 2018 discontinuation date, the June 2000 EU entry-into-force and the June 2010 Mercosur date were all sourced to pages that do not state them, and are now explicitly withdrawn rather than silently deleted.",
+        "NEW: a whole refund entitlement was missing. Step 10 now carries the four conditions, the 6-month limit and the USD 250 export-inspection-form threshold, including the point people miss, that the shipper must record the refund intent on the export declaration at the time.",
+        "SCRIPT: --value abc raised a raw decimal traceback; argparse now rejects it cleanly. --excluded-goods no longer demands --usd-value it cannot use. The excluded-goods path now warns that alcohol and tobacco are on specific or compound rates the script cannot price at all, instead of printing a confident shekel figure on a rate the user invented. The exempt branch now says it excludes the clearance commission.",
+        "CARRY (re-logged, third cycle): the TAMA wholesale-price uplift rates are still not sourced. This cycle stopped pretending: the limit is now disclosed in Step 6, in the Hebrew mirror, in the script docstring and in the script's own output, and it is an explicit out-of-scope row in the new domain-checklist.md. Close it when a rate table is found.",
+        "CARRY (new): the EUR 6,000 invoice-declaration ceiling appeared seven times and drove Example 3 with no source anywhere. Both EC pages that would state it are JS shells that return no text. It is now hedged everywhere as unverified rather than asserted. Source it next cycle.",
+        "Expert CRITICAL deferred as OUT OF SCOPE (explicit, recorded in the new references/domain-checklist.md): ATA carnet and temporary import, goods returned after repair, toshav chozer, and diplomatic entry. The real harm the Expert identified was that the Step 1 table READ as exhaustive and routed those users into the commercial row. Step 1 now says it is not exhaustive, names each regime, and tells the user not to use the commercial row for them. Inventing procedures for four regimes I could not source would have been the worse answer.",
+        "Expert CRITICAL not encoded: 'the marketplace already collected VAT at checkout'. Plausible and probably common, but not stated on any source reachable this cycle, so Step 4.5 gives the procedural instruction (read the order confirmation for a tax line before computing) without asserting any platform's behaviour.",
+        "PROCESS: the documented command was `python scripts/...` on eight declared agents whose systems only ship `python3`. One character, in the only line a user copies. Found by the Expert.",
+        "PROCESS: I introduced a broken link myself by percent-encoding the Kol Zchut title without the quote character in מחו\"ל. --check-sources caught it as a 404. Encoding a Hebrew page title by hand is a reliable way to fabricate a URL that looks right.",
+        "5.7 eval: the description change this cycle was a pure PREPEND of the legal clause ('Not customs advice.' / 'אינו ייעוץ מכס.') onto the SKILL.md and SKILL_HE.md frontmatter, which previously lacked it although metadata.json display_description had carried it since 1.3.0. No trigger phrase was removed, narrowed or reworded, so no holdout case can regress by construction. 10 frozen queries (6 positive, 2 negative, 2 edge), 3-query holdout, before 1.00, after 1.00, zero regressed.",
+        "Expert CRITICAL round 2, and the sharpest finding of the cycle: the alcohol and tobacco carve-out warning guarded the TAXED path and left the EXEMPT path silent, so a USD 50 bottle of wine printed a clean EXEMPT. That is the more likely input, and hardening the rarer path first is a pattern worth watching for. The exempt branch now always states the carve-out, and --excluded-goods with an ad-valorem purchase-tax rate is now refused outright instead of printing an invented figure.",
+        "Expert MINOR that was actually a correctness bug: the exempt branch was converting at the customs rate (representative plus 0.5 percent). The uplift belongs to a TAX base, and on an exempt parcel there is no tax, so the 'delivered cost' was overstated by half a percent for no reason. Now converted at the plain representative rate.",
+        "The domain-checklist justified keeping TAMA out of scope on the ground that its absence 'is disclosed at every point the purchase-tax line appears'. The Expert checked and it was not: duty-rates-by-category.md still published the bare formula. A checklist rationale is itself a claim and can be false."
+      ],
+      "holdout_before": 1.0,
+      "holdout_after": 1.0,
+      "buckets": {
+        "improved": [],
+        "regressed": [],
+        "persistent_fail": [],
+        "stable_success": [
+          "how much import tax on a $200 camera from Amazon to Israel",
+          "מה תקרת הפטור ליבוא אישי",
+          "how do I file my monthly VAT report in Israel (negative, correctly not routed)"
+        ]
+      }
     }
   ]
 }

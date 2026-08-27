@@ -7,7 +7,7 @@ Computes the cascading tax sequence used by Israeli Customs:
 
 Constants:
   - Israel VAT rate: 18% (since January 1, 2025).
-  - Personal import threshold: USD 75 (as of July 2026). The threshold
+  - Personal import threshold: USD 75 (re-verified 27 August 2026). The threshold
     moved 75 -> 150 in December 2025, was revoked back to 75 by the
     Knesset on 24 February 2026, was reset to 130 by a new Finance
     Ministry order effective 25 February 2026, and reverted to 75 when
@@ -16,6 +16,15 @@ Constants:
   - Two different bases: the exemption THRESHOLD is tested on the goods
     value alone (excluding shipping and insurance), while the TAX is computed
     on the CIF value plus any duty and purchase tax.
+  - FX: customs converts foreign-currency prices at the Bank of Israel
+    REPRESENTATIVE rate plus 0.5%. Pass the representative rate in --fx; this
+    script applies the 0.5% uplift itself and prints both rates. Do not
+    pre-multiply, or the uplift is counted twice.
+  - Purchase tax is levied on a reconstructed WHOLESALE price, which adds a
+    statutory per-tariff-item uplift (TAMA) on top of CIF plus duty. That
+    uplift is NOT modelled here and its rates are not published in a form this
+    script can consume, so the purchase-tax line is a FLOOR, not the charge.
+    Whenever --purchase-tax-rate is non-zero the output says so.
   - The USD 75-500 duty waiver is NOT modelled here: pass --duty-rate 0 for a
     personal import in that band.
   - Tobacco products and alcoholic beverages are EXCLUDED
@@ -39,13 +48,23 @@ from __future__ import annotations
 import argparse
 import json
 import sys
-from decimal import Decimal, ROUND_HALF_UP
+from decimal import Decimal, InvalidOperation, ROUND_HALF_UP
 from typing import Optional
 
 # Constants grounded in evidence.json
 PERSONAL_IMPORT_DUTY_WAIVER_CEILING_USD = Decimal("500")
 VAT_RATE = Decimal("0.18")
 PERSONAL_IMPORT_THRESHOLD_USD = Decimal("75")
+# Customs converts at the BoI representative rate plus 0.5%.
+CUSTOMS_FX_UPLIFT = Decimal("1.005")
+
+
+def decimal_arg(raw: str) -> Decimal:
+    """argparse type that rejects non-numeric input with a readable message."""
+    try:
+        return Decimal(raw)
+    except InvalidOperation:
+        raise argparse.ArgumentTypeError(f"{raw!r} is not a number")
 
 
 def money(x: Decimal) -> Decimal:
@@ -67,13 +86,17 @@ def calculate_landed_cost(
     excluded_goods: bool = False,
 ) -> dict:
     """Compute full landed cost breakdown. All outputs are in ILS."""
+    # The uplift is applied HERE and nowhere else. fx_rate is the Bank of
+    # Israel representative rate as published; customs_fx is what customs uses.
+    boi_rate = fx_rate
+    customs_fx = fx_rate * CUSTOMS_FX_UPLIFT
     # Personal-import threshold check. The threshold is denominated in USD and
     # tested on the goods value alone, excluding shipping and insurance. For a
     # non-USD invoice the caller must supply the USD equivalent, otherwise the
     # exemption cannot be evaluated and the goods would be silently taxed.
     goods_usd = product_value if currency.upper() == "USD" else usd_value
     duty_waived = False
-    if personal_import and goods_usd is None:
+    if personal_import and goods_usd is None and not excluded_goods:
         raise ValueError(
             f"--personal with a {currency.upper()} invoice requires --usd-value: "
             "the exemption threshold is denominated in USD and cannot be applied "
@@ -87,12 +110,12 @@ def calculate_landed_cost(
             return {
                 "exempt": True,
                 "reason": f"Goods value {goods_usd} USD is at or below the personal import threshold of {PERSONAL_IMPORT_THRESHOLD_USD} USD.",
-                "cif_ils": money((product_value + shipping + insurance) * fx_rate),
+                "cif_ils": money((product_value + shipping + insurance) * boi_rate),
                 "duty_ils": Decimal("0.00"),
                 "purchase_tax_ils": Decimal("0.00"),
                 "vat_ils": Decimal("0.00"),
                 "broker_fees_ils": money(broker_fees_ils),
-                "landed_cost_ils": money((product_value + shipping + insurance) * fx_rate + broker_fees_ils),
+                "landed_cost_ils": money((product_value + shipping + insurance) * boi_rate + broker_fees_ils),
             }
 
     # Under the personal-import regime customs duty is waived between the
@@ -110,7 +133,7 @@ def calculate_landed_cost(
 
     # CIF in ILS
     cif_foreign = product_value + shipping + insurance
-    cif_ils = cif_foreign * fx_rate
+    cif_ils = cif_foreign * customs_fx
 
     # Cascading calculation
     duty = cif_ils * duty_rate
@@ -130,12 +153,14 @@ def calculate_landed_cost(
         "vat_ils": money(vat),
         "broker_fees_ils": money(broker_fees_ils),
         "landed_cost_ils": money(landed),
+        "purchase_tax_is_floor": purchase_tax_rate > 0,
         "inputs": {
             "product_value_foreign": str(product_value),
             "shipping_foreign": str(shipping),
             "insurance_foreign": str(insurance),
             "currency": currency.upper(),
-            "fx_rate": str(fx_rate),
+            "boi_representative_rate": str(boi_rate),
+            "customs_fx_rate": str(money(customs_fx)),
             "duty_rate": str(duty_rate),
             "purchase_tax_rate": str(purchase_tax_rate),
             "vat_rate": str(VAT_RATE),
@@ -147,16 +172,16 @@ def parse_args() -> argparse.Namespace:
     p = argparse.ArgumentParser(
         description="Israeli landed-cost calculator (customs + purchase tax + VAT).",
     )
-    p.add_argument("--value", type=Decimal, required=True, help="Product value in the invoice currency.")
-    p.add_argument("--shipping", type=Decimal, default=Decimal("0"), help="Freight cost in invoice currency.")
-    p.add_argument("--insurance", type=Decimal, default=Decimal("0"), help="Insurance cost in invoice currency.")
+    p.add_argument("--value", type=decimal_arg, required=True, help="Product value in the invoice currency.")
+    p.add_argument("--shipping", type=decimal_arg, default=Decimal("0"), help="Freight cost in invoice currency.")
+    p.add_argument("--insurance", type=decimal_arg, default=Decimal("0"), help="Insurance cost in invoice currency.")
     p.add_argument("--currency", type=str, default="USD", help="Invoice currency (USD, EUR, GBP, etc.).")
-    p.add_argument("--fx", type=Decimal, required=True, help="Foreign currency to ILS rate (e.g. USD->ILS).")
-    p.add_argument("--duty-rate", type=Decimal, default=Decimal("0"), help="Customs duty rate as decimal (0.08 = 8 percent).")
-    p.add_argument("--purchase-tax-rate", type=Decimal, default=Decimal("0"), help="Purchase tax rate as decimal.")
-    p.add_argument("--broker-fees-ils", type=Decimal, default=Decimal("0"), help="Broker and handling fees in ILS.")
+    p.add_argument("--fx", type=decimal_arg, required=True, help="Bank of Israel REPRESENTATIVE rate, foreign currency to ILS. The script adds the 0.5 percent customs uplift itself; do not pre-multiply.")
+    p.add_argument("--duty-rate", type=decimal_arg, default=Decimal("0"), help="Customs duty rate as decimal (0.08 = 8 percent).")
+    p.add_argument("--purchase-tax-rate", type=decimal_arg, default=Decimal("0"), help="Purchase tax rate as decimal. Ad valorem only. Alcohol, tobacco and much food, textile and footwear are on specific or compound rates this script cannot price. The resulting line also omits the wholesale-price uplift and is therefore a floor.")
+    p.add_argument("--broker-fees-ils", type=decimal_arg, default=Decimal("0"), help="Broker and handling fees in ILS.")
     p.add_argument("--personal", action="store_true", help="Personal import (applies the USD threshold exemption).")
-    p.add_argument("--usd-value", type=Decimal, default=None, help="Goods value in USD. Required with --personal when the invoice is not in USD.")
+    p.add_argument("--usd-value", type=decimal_arg, default=None, help="Goods value in USD. Required with --personal when the invoice is not in USD.")
     p.add_argument("--excluded-goods", action="store_true", help="Tobacco, cigarettes or alcoholic beverages: never exempt, taxed from the first shekel.")
     p.add_argument("--json", action="store_true", help="Output as JSON.")
     return p.parse_args()
@@ -176,6 +201,13 @@ def main() -> int:
         if val > 1:
             print(f"Error: {name} is a decimal fraction (0.12 = 12 percent), got {val}.", file=sys.stderr)
             return 1
+    if args.excluded_goods and args.purchase_tax_rate > 0:
+        print("Error: --excluded-goods with an ad-valorem --purchase-tax-rate.", file=sys.stderr)
+        print("  Alcohol and tobacco are taxed on SPECIFIC or COMPOUND rates (NIS per litre", file=sys.stderr)
+        print("  of pure alcohol, NIS per unit), which this script cannot express. Any", file=sys.stderr)
+        print("  percentage you supply here is invented. Use the Tax Authority's", file=sys.stderr)
+        print("  consolidated import-tax table for alcoholic beverages, cigarettes and tobacco.", file=sys.stderr)
+        return 1
     try:
         result = calculate_landed_cost(
             product_value=args.value,
@@ -200,16 +232,34 @@ def main() -> int:
 
     if result.get("exempt"):
         print(f"EXEMPT: {result['reason']}")
-        print(f"Estimated delivered cost (no taxes): {result['landed_cost_ils']} ILS")
+        print(f"Estimated delivered cost (no import taxes): {result['landed_cost_ils']} ILS")
+        print("  Converted at the plain Bank of Israel representative rate: the customs")
+        print("  +0.5 percent uplift belongs to a tax base, and there is no tax here.")
+        print("  NOTE: excludes the carrier's or Israel Post's clearance commission,")
+        print("        which on a small parcel routinely exceeds the tax that was waived.")
+        print("  CHECK THE GOODS CLASS: tobacco products and alcoholic beverages NEVER")
+        print("  qualify for this exemption at any value. If the parcel contains either,")
+        print("  this EXEMPT result is wrong. Re-run with --excluded-goods.")
         return 0
 
     print("Israeli landed-cost breakdown")
+    print(f"  FX (BoI rep.):    {result['inputs']['boi_representative_rate']}")
+    print(f"  FX (customs +0.5%): {result['inputs']['customs_fx_rate']}")
     print(f"  CIF:              {result['cif_ils']} ILS")
     print(f"  Customs duty:     {result['duty_ils']} ILS")
     print(f"  Purchase tax:     {result['purchase_tax_ils']} ILS")
     print(f"  VAT:              {result['vat_ils']} ILS")
     print(f"  Broker fees:      {result['broker_fees_ils']} ILS")
     print(f"  Total landed:     {result['landed_cost_ils']} ILS")
+    if args.excluded_goods:
+        print("  WARNING: alcohol and tobacco are taxed on SPECIFIC or COMPOUND rates")
+        print("           (NIS per litre of pure alcohol, NIS per unit), not on a percentage.")
+        print("           This script prices ad-valorem rates only, so the figures above")
+        print("           are NOT the charge on these goods. Use the Tax Authority's")
+        print("           consolidated import-tax table for alcohol, cigarettes and tobacco.")
+    if result.get("purchase_tax_is_floor"):
+        print("  NOTE: the purchase-tax line omits the statutory wholesale-price uplift (TAMA),")
+        print("        so it is a FLOOR. Take the combined rate off the Tax Authority calculator.")
     return 0
 
 

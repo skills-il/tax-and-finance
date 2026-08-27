@@ -1,8 +1,6 @@
 {
   "schemaVersion": "1.0",
   "skill": "israeli-customs-duty-calculator",
-  "version": "1.2.0",
-  "verified_on": "2026-07-26",
   "claims": [
     {
       "claim_id": "personal-import-threshold-current",
@@ -13,10 +11,10 @@
     },
     {
       "claim_id": "threshold-history-150-rescinded",
-      "claim": "The Knesset revoked the December 2025 order that raised the threshold from USD 75 to USD 150 on 24 February 2026 (vote 59-25).",
+      "claim": "The Knesset revoked the order that had raised the personal-import exemption from USD 75 to USD 150, by 59 votes to 25.",
       "source_url": "https://www.themarker.com/news/2026-02-24/ty-article/0000019c-8b9f-d930-ad9f-ffff8eef0000",
-      "raw_snippet": "המרד בליכוד: בוטל צו הפטור",
-      "fetched_at": "2026-07-26T00:00:00Z"
+      "raw_snippet": "הכנסת ביטלה את צו הפטור",
+      "fetched_at": "2026-08-27T15:49:30.562677+00:00"
     },
     {
       "claim_id": "threshold-130-new-order",
@@ -74,9 +72,10 @@
     },
     {
       "claim_id": "hs-code-8-digit-structure",
-      "claim": "Israel uses the international Harmonized System at 6 digits and adds 2 Israel-specific digits (positions 7-8) for local duty and purchase-tax rules.",
+      "claim": "The Israeli Customs and Purchase Tax Tariff, published at Shaar Olami, is the instrument that classifies goods and determines their tax rates and import conditions. Only the classification on that tariff governs; a foreign HTS or CN code does not. That the Harmonized System is international to six digits with further national digits appended is standard nomenclature practice and is not itself a sourced figure here.",
       "source_url": "https://shaarolami-query.customs.mof.gov.il/CustomspilotWeb/en/CustomsBook/Import/Doubt",
-      "raw_snippet": "the Customs and Purchase Tax Tariff"
+      "raw_snippet": "The Customs and Purchase Tax Tariff is the main instrument used for the classification of goods The correct classification of goods is the key to determining tax rates, as well as obtaining various authorizations, permits and licenses",
+      "fetched_at": "2026-08-27T15:57:43.240324+00:00"
     },
     {
       "claim_id": "us-israel-fta-35-percent-rule",
@@ -86,20 +85,19 @@
       "fetched_at": "2026-07-26T00:00:00Z"
     },
     {
-      "claim_id": "cifta-modernized-2019",
-      "claim": "The modernized Canada-Israel FTA (CIFTA) entered into force on 1 September 2019; origin proof is Form B239.",
+      "claim_id": "cifta-rules-of-origin-memo",
+      "claim": "CBSA memorandum D11-5-6 provides a link to the CIFTA Rules of Origin Regulations used to determine entitlement to preferential tariff treatment under CIFTA. It states neither an entry-into-force date nor a certificate form number.",
       "source_url": "https://www.cbsa-asfc.gc.ca/publications/dm-md/d11/d11-5-6-eng.html",
-      "raw_snippet": "under the Canada-Israel Free Trade Agreement",
-      "fetched_at": "2026-07-26T00:00:00Z"
+      "raw_snippet": "CIFTA Rules of Origin Regulations that are used to determine the entitlement of goods to preferential tariff treatment under the Canada-Israel Free Trade Agreement (CIFTA)",
+      "fetched_at": "2026-08-27T15:31:18.050343+00:00"
     },
     {
-      "claim_id": "eu-israel-pem-2012",
-      "claim": "EU-Israel preferential trade uses the Pan-Euro-Mediterranean (PEM) Convention 2012 rules; Israel has not ratified the revised PEM Convention.",
+      "claim_id": "eu-israel-origin-regime",
+      "claim": "EU-Israel preferential trade origin runs through the Regional (PEM) Convention. The EC country page is the reference for Israel's participation and for the settlement-origin exclusion.",
       "source_url": "https://policy.trade.ec.europa.eu/eu-trade-relationships-country-and-region/countries-and-regions/israel_en",
-      "raw_snippet": "EU-Israel trade relationship and Association Agreement",
-      "verified_via": "browser",
-      "verified_at": "2026-07-26T00:00:00Z",
-      "verification_note": "The cited page could not be substring-matched by a scripted fetch (news paywall, JS rendering, or a 403). The underlying fact was confirmed by reading the page; treat the snippet as a locator rather than a quotation."
+      "raw_snippet": "These individual origin protocols are being progressively replaced by a reference to the Regional Convention on pan-Euro-Mediterranean preferential rules of origin",
+      "verification_note": "The cited page could not be substring-matched by a scripted fetch (news paywall, JS rendering, or a 403). The underlying fact was confirmed by reading the page; treat the snippet as a locator rather than a quotation.",
+      "fetched_at": "2026-08-27T15:49:30.562677+00:00"
     },
     {
       "claim_id": "eur1-wet-ink-required",
@@ -130,9 +128,10 @@
     },
     {
       "claim_id": "eu-pem-revised-convention",
-      "claim": "The revised Pan-Euro-Mediterranean (PEM) Convention provides simplified, modernised rules of origin compared with the original PEM Convention; Israel continues to apply the 2012 PEM rules and has not adopted the revised Convention.",
+      "claim": "The revised Pan-Euro-Mediterranean (PEM) Convention provides simplified, modernised rules of origin compared with the original PEM Convention.",
       "source_url": "https://trade.ec.europa.eu/access-to-markets/en/content/rules-origin-revised-pan-euro-mediterranean-convention",
-      "raw_snippet": "These are simplified and modernised rules of origin compared to those included in the PEM Convention."
+      "raw_snippet": "These are simplified and modernised rules of origin compared to those included in the PEM Convention.",
+      "fetched_at": "2026-08-27T15:56:34.966803+00:00"
     },
     {
       "claim_id": "hs-chapter-assignments",
@@ -206,6 +205,253 @@
         "SKILL.md",
         "SKILL_HE.md"
       ]
+    },
+    {
+      "claim_id": "customs-fx-uplift-half-percent",
+      "claim": "Customs converts foreign-currency import prices at the Bank of Israel representative rate plus 0.5%.",
+      "source_url": "https://www.kolzchut.org.il/he/זכותון_בנושא_יבוא_אישי_(חבילות_מחו\"ל)",
+      "raw_snippet": "למוצרי יבוא שמחירם קבוע במטבע חוץ, שער המטבע יחושב לפי השער היציג של בנק ישראל בתוספת 0.5%.",
+      "fetched_at": "2026-08-27T15:31:18.050343+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "scripts/calculate_duty.py"
+      ]
+    },
+    {
+      "claim_id": "import-approval-authorities",
+      "claim": "Several product classes require a competent authority's approval or import licence: communications products, baby monitors, smartphones from 4 devices up and remote controls (Ministry of Communications); vehicle spare parts (Ministry of Transport); food and food supplements (Ministry of Health National Food Service); plants and seeds (Ministry of Agriculture); helmets and gas barbecues (Standards Institute, helmets exempt with European or American certification).",
+      "source_url": "https://www.kolzchut.org.il/he/זכותון_בנושא_יבוא_אישי_(חבילות_מחו\"ל)",
+      "raw_snippet": "מוצרי תקשורת, מוניטורים לתינוקות, טלפונים חכמים (כאשר הייבוא הוא של 4 מכשירים ומעלה), שלטים, וכיו\"ב משרד התקשורת",
+      "fetched_at": "2026-08-27T15:31:18.050343+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "import-approval-helmets-standards",
+      "claim": "Helmets and gas-fired barbecues fall to the Standards Institute of Israel; a helmet needs no approval if it carries European or American certification.",
+      "source_url": "https://www.kolzchut.org.il/he/זכותון_בנושא_יבוא_אישי_(חבילות_מחו\"ל)",
+      "raw_snippet": "קסדות, מנגל המופעל באמצעות גז מכון התקנים (לגבי קסדות אין צורך באישור אם יש להן תקינה אירופית או אמריקאית)",
+      "fetched_at": "2026-08-27T15:31:18.050343+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "refund-conditions-6-months",
+      "claim": "Import tax paid on goods returned or exchanged for a defect is refundable subject to four conditions, including that the goods were returned no later than 6 months after import.",
+      "source_url": "https://www.kolzchut.org.il/he/זכותון_בנושא_יבוא_אישי_(חבילות_מחו\"ל)",
+      "raw_snippet": "המוצרים הוחזרו לא יאוחר מ-6 חודשים לאחר ייבואם, והוכח כי אכן הוחזרו במועד.",
+      "fetched_at": "2026-08-27T15:31:18.050343+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "refund-250-usd-export-form",
+      "claim": "Where the returned or exchanged goods exceed USD 250, a customs export-inspection request form must be attached to the refund claim.",
+      "source_url": "https://www.kolzchut.org.il/he/זכותון_בנושא_יבוא_אישי_(חבילות_מחו\"ל)",
+      "raw_snippet": "אם ערך המוצרים המוחזרים או המוחלפים עולה על 250 דולר - יש לצרף לבקשה טופס בקשה לבדיקת מכס בגין יצוא חבילה לחו\"ל",
+      "fetched_at": "2026-08-27T15:31:18.050343+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "refund-not-bulk-not-used",
+      "claim": "The refund also requires that the goods were not imported in bulk and were not used beyond any use necessary to discover the defect.",
+      "source_url": "https://www.kolzchut.org.il/he/זכותון_בנושא_יבוא_אישי_(חבילות_מחו\"ל)",
+      "raw_snippet": "המוצרים לא יובאו בצובר, כלומר בתפזורת. הוכח כי לא נעשה שימוש במוצרים, למעט שימוש שגרם לגילוי הפגם או אי ההתאמה",
+      "fetched_at": "2026-08-27T15:31:18.050343+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "carrier-clearance-commission",
+      "claim": "Israel Post and the courier companies charge a commission for the clearance service on top of the shipping cost; objections about that commission go to the carrier, not to customs.",
+      "source_url": "https://www.kolzchut.org.il/he/זכותון_בנושא_יבוא_אישי_(חבילות_מחו\"ל)",
+      "raw_snippet": "חברת דואר ישראל וחברות הבלדרות גובות, ככלל, עבור שירות זה עמלה, בנוסף לעלות השילוח. כל ההשגות או הערעורים או הבירורים לגבי עמלות חברת הדואר או חברות הבלדרות, יש להפנות ישירות לשירות הלקוחות של החברה המשלחת.",
+      "fetched_at": "2026-08-27T15:31:18.050343+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "customs-may-reject-declared-value",
+      "claim": "Customs may examine the declared value and reject it, setting an alternative value under part 2.5 of the personal-import valuation procedure.",
+      "source_url": "https://www.kolzchut.org.il/he/זכותון_בנושא_יבוא_אישי_(חבילות_מחו\"ל)",
+      "raw_snippet": "המכס רשאי לבדוק את הערך המוצהר ובמקרים שונים, לפסול את הערך המוצהר ולקבוע ערך חלופי",
+      "fetched_at": "2026-08-27T15:31:18.050343+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "false-declaration-forfeiture",
+      "claim": "A parcel whose declaration or label does not match its contents may be seized or fined as a condition of release, and that applies even where the buyer did not know the declaration was wrong.",
+      "source_url": "https://www.kolzchut.org.il/he/זכותון_בנושא_יבוא_אישי_(חבילות_מחו\"ל)",
+      "raw_snippet": "החילוט יתבצע גם אם מזמין החבילה לא ידע שההצהרה או התווית לא נכונות.",
+      "fetched_at": "2026-08-27T15:31:18.050343+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "mixed-parcel-item-by-item",
+      "claim": "A parcel containing items with different tax treatments is assessed item by item, not on one blended rate.",
+      "source_url": "https://www.kolzchut.org.il/he/זכותון_בנושא_יבוא_אישי_(חבילות_מחו\"ל)",
+      "raw_snippet": "אם יש בחבילה כמה פריטים שנקבע עליהם מיסוי שונה (למשל: ביגוד ואלכוהול) המיסוי יחושב בנפרד עבור כל אחד מהפריטים",
+      "fetched_at": "2026-08-27T15:31:18.050343+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "prohibited-and-licensed-import-condition",
+      "claim": "Personal import is permitted provided the goods are not prohibited from import and, where an approval or import licence is required, it has been obtained from the competent authority.",
+      "source_url": "https://www.kolzchut.org.il/he/זכותון_בנושא_יבוא_אישי_(חבילות_מחו\"ל)",
+      "raw_snippet": "כל אדם רשאי לייבא מחו\"ל מוצרים וסחורות בייבוא אישי, בתנאים הבאים: המוצרים אינם אסורים בייבוא לישראל",
+      "fetched_at": "2026-08-27T15:31:18.050343+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "cifta-form-b239-title",
+      "claim": "CBSA form B239 is titled 'Free Trade Agreement - Certificate of Origin (CIFTA only)' and carries a blanket-period field rather than a fixed statutory validity.",
+      "source_url": "https://www.cbsa-asfc.gc.ca/publications/forms-formulaires/b239-eng.html",
+      "raw_snippet": "B239 - Free Trade Agreement – Certificate of Origin (CIFTA only)",
+      "fetched_at": "2026-08-27T15:31:18.050343+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/fta-preferences.md"
+      ]
+    },
+    {
+      "claim_id": "eu-settlement-origin-exclusion",
+      "claim": "Goods originating from Israeli settlements in territories under Israeli administration since June 1967 are not entitled to any preferential tariff treatment under the EU-Israel Association Agreement.",
+      "source_url": "https://policy.trade.ec.europa.eu/eu-trade-relationships-country-and-region/countries-and-regions/israel_en",
+      "raw_snippet": "Goods originating from Israeli settlements in territories that have been under Israeli administration since June 1967 are not entitled to benefit from any preferential tariff treatment",
+      "fetched_at": "2026-08-27T15:31:18.050343+00:00",
+      "appears_in": [
+        "references/fta-preferences.md"
+      ]
+    },
+    {
+      "claim_id": "eu-technical-arrangement-2004",
+      "claim": "A Technical Arrangement between EU and Israeli customs authorities, in force since 2004, requires proofs of origin issued in Israel to identify the place of production; the Commission publishes a list by name and postal code of the areas concerned.",
+      "source_url": "https://policy.trade.ec.europa.eu/eu-trade-relationships-country-and-region/countries-and-regions/israel_en",
+      "raw_snippet": "a 'Technical Arrangement' between the EU and Israel customs authorities, which has been in force since 2004. The Arrangement requires proofs of origin issued in Israel to identify the place where the prod",
+      "fetched_at": "2026-08-27T15:31:18.050343+00:00",
+      "appears_in": [
+        "references/fta-preferences.md"
+      ]
+    },
+    {
+      "claim_id": "purchase-tax-wholesale-price-base",
+      "claim": "Purchase tax under the Purchase Tax (Goods and Services) Law 1952 is levied as a percentage of the wholesale price of the product. The per-tariff-item uplift by which that wholesale price is reconstructed on an import (TAMA) is NOT sourced here and the skill discloses that everywhere the purchase-tax line appears.",
+      "source_url": "https://he.wikipedia.org/wiki/מס_קנייה",
+      "raw_snippet": "מס קנייה''' הוא [[מס עקיף]] ([[מס צריכה]]) המוטל על קבוצות מוצרים לצרכן ומחושב כאחוז מסוים מהמחיר ה[[סיטונאות|סיטונאי]] של המוצר.",
+      "fetched_at": "2026-08-27T15:31:18.050343+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "scripts/calculate_duty.py"
+      ]
+    },
+    {
+      "claim_id": "kolzchut-personal-import-guide-url",
+      "claim": "The Kol Zchut personal-import rights guide is the aggregator source for the current threshold, the band table, the FX uplift, the approval authorities and the refund conditions. Linked percent-encoded in the Reference Links tables.",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%96%D7%9B%D7%95%D7%AA%D7%95%D7%9F_%D7%91%D7%A0%D7%95%D7%A9%D7%90_%D7%99%D7%91%D7%95%D7%90_%D7%90%D7%99%D7%A9%D7%99_(%D7%97%D7%91%D7%99%D7%9C%D7%95%D7%AA_%D7%9E%D7%97%D7%95%22%D7%9C)",
+      "raw_snippet": "זכותון זה מרכז מידע למי שמזמינים חבילות מחו\"ל, כולל פרטים על תשלומי המסים והמכס",
+      "fetched_at": "2026-08-27T15:31:51.008402+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "tax-assessment-appeal-route",
+      "claim": "An appeal against the amount of import tax assessed is filed online through the personal area of the National Identification System, attaching proof of payment to the supplier and evidence of the actual transaction value; the service is free and the tafag unit at the relevant customs house handles enquiries.",
+      "source_url": "https://www.kolzchut.org.il/he/זכותון_בנושא_יבוא_אישי_(חבילות_מחו\"ל)",
+      "raw_snippet": "מי שמעוניינים להגיש בקשה לערעור על גובה המסים צריכים להגיש בקשה מקוונת באמצעות האזור האישי במערכת ההזדהות הלאומית",
+      "fetched_at": "2026-08-27T15:49:30.562677+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "appeal-documents-free",
+      "claim": "The appeal requires proof of the payment transferred to the supplier and evidence of the actual transaction value, and the service is provided free of charge.",
+      "source_url": "https://www.kolzchut.org.il/he/זכותון_בנושא_יבוא_אישי_(חבילות_מחו\"ל)",
+      "raw_snippet": "אישור העברת תשלום לספק. אסמכתאות על שווי העסקה בפועל. השירות ניתן ללא עלות.",
+      "fetched_at": "2026-08-27T15:49:30.562677+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "eilat-vat-refund-route",
+      "claim": "Eilat residents may file a VAT refund claim through the same personal-area route in the National Identification System, handled by the same tafag unit.",
+      "source_url": "https://www.kolzchut.org.il/he/זכותון_בנושא_יבוא_אישי_(חבילות_מחו\"ל)",
+      "raw_snippet": "תושבי אילת שמעוניינים להגיש בקשה להחזר מע\"מ יכולים להגיש בקשה מקוונת באמצעות האזור האישי במערכת ההזדהות הלאומית",
+      "fetched_at": "2026-08-27T15:49:30.562677+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "revised-pem-only-from-2026",
+      "claim": "Two sets of alternative rules of origin applied until 31 December 2025; from 1 January 2026 only the revised PEM Convention applies. The PEM Convention was established in 2011.",
+      "source_url": "https://trade.ec.europa.eu/access-to-markets/en/content/rules-origin-revised-pan-euro-mediterranean-convention",
+      "raw_snippet": "Two sets of alternative rules of origin apply until 31 December 2025. As of 1 January 2026, only the revised PEM Convention will apply",
+      "fetched_at": "2026-08-27T15:49:30.562677+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/fta-preferences.md"
+      ]
+    },
+    {
+      "claim_id": "israel-ratified-pem-2013",
+      "claim": "Israel signed the Regional Convention on pan-Euro-Mediterranean preferential rules of origin on 10 October 2013 and has ratified it. Earlier versions of this skill said the opposite.",
+      "source_url": "https://policy.trade.ec.europa.eu/eu-trade-relationships-country-and-region/countries-and-regions/israel_en",
+      "raw_snippet": "Israel signed the Regional Convention on 10 October 2013, and it has also ratified it.",
+      "fetched_at": "2026-08-27T15:49:30.562677+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/fta-preferences.md"
+      ]
+    },
+    {
+      "claim_id": "pem-convention-established-2011",
+      "claim": "The PEM Convention was established in 2011 to provide a more unified framework for origin protocols.",
+      "source_url": "https://policy.trade.ec.europa.eu/eu-trade-relationships-country-and-region/countries-and-regions/israel_en",
+      "raw_snippet": "(PEM Convention), which was established in 2011 to provide a more unified framework for origin protocols",
+      "fetched_at": "2026-08-27T15:49:30.562677+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/fta-preferences.md"
+      ]
     }
-  ]
+  ],
+  "generated_at": "2026-08-27T15:49:30.562677+00:00"
 }
