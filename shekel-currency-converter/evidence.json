@@ -1,49 +1,91 @@
 {
   "schemaVersion": "1.0",
   "skill": "shekel-currency-converter",
-  "generated_at": "2026-06-03T21:43:29Z",
+  "generated_at": "2026-08-27T02:20:04.294900+00:00",
   "claims": [
     {
-      "claim": "The legacy XML endpoint https://www.boi.org.il/currency.xml no longer serves XML; it 301-redirects to the JSON endpoint https://www.boi.org.il/PublicApi/GetExchangeRates. Covers these references: https://boi.org.il/currency.xml https://boi.org.il/PublicApi/GetExchangeRates",
-      "source_url": "https://boi.org.il/currency.xml",
-      "raw_snippet": "SERIES_CODE,FREQ,BASE_CURRENCY,COUNTER_CURRENCY,UNIT_MEASURE,DATA_TYPE,DATA_SOURCE,TIME_COLLECT,CONF_STATUS,PUB_WEBSITE,UNIT_MULT,COMMENTS,TIME_PERIOD,OBS_VALUE,RELEASE_STATUS | RER_USD_ILS,D,USD,ILS,ILS,OF00,BOI_MRKT,V,F,Y,0,,1948-05-15,0.000025,YP",
+      "claim": "The legacy XML feed at https://www.boi.org.il/currency.xml no longer serves XML. Verified 2026-08-27: it answers HTTP 301 with Location https://boi.org.il/PublicApi/GetExchangeRates, and the final response is JSON. Agents must not parse XML.",
+      "source_url": "https://www.boi.org.il/PublicApi/GetExchangeRates",
+      "raw_snippet": "{ \"key\": \"USD\", \"currentExchangeRate\": 2.972, \"currentChange\": -0.4688546550569323509711989300, \"unit\": 1, \"lastUpdate\": \"2026-08-26T12:22:04.2475558Z\" }",
       "verified_by": "curl 2026-06-03",
-      "verified_via": "reference-coverage entry; snippet quoted from one of the covered sources",
-      "verified_at": "2026-08-18",
-      "fetched_at": "2026-08-18"
+      "verified_via": "api (curl -D showed HTTP/2 301 and Location https://boi.org.il/PublicApi/GetExchangeRates; the followed body is the JSON exchangeRates array quoted here)",
+      "verified_at": "2026-08-27T02:20:04.294900+00:00",
+      "fetched_at": "2026-08-27T02:20:04.294900+00:00",
+      "claim_id": "the-legacy-xml-endpoint-https-www-boi-org-il-cur",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
-      "claim": "The live JSON endpoint returns {\"exchangeRates\":[{...}]} with fields key, currentExchangeRate, currentChange, unit, lastUpdate.",
-      "source_url": "https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI.STATISTICS/EXR/1.0/RER_USD_ILS?lastNPeriods=3&format=csv",
-      "raw_snippet": "SERIES_CODE,FREQ,BASE_CURRENCY,COUNTER_CURRENCY,UNIT_MEASURE,DATA_TYPE,DATA_SOURCE,TIME_COLLECT,CONF_STATUS,PUB_WEBSITE,UNIT_MULT,COMMENTS,TIME_PERIOD,OBS_VALUE,RELEASE_STATUS | RER_USD_ILS,D,USD,ILS,ILS,OF00,BOI_MRKT,V,F,Y,0,,1948-05-15,0.000025,YP",
+      "claim": "The live JSON endpoint returns an exchangeRates array whose objects each carry key, currentExchangeRate, currentChange, unit and lastUpdate.",
+      "source_url": "https://www.boi.org.il/PublicApi/GetExchangeRates",
+      "raw_snippet": "{ \"key\": \"USD\", \"currentExchangeRate\": 2.972, \"currentChange\": -0.4688546550569323509711989300, \"unit\": 1, \"lastUpdate\": \"2026-08-26T12:22:04.2475558Z\" }",
       "verified_by": "curl 2026-06-03",
-      "verified_via": "Bank of Israel SDMX statistics endpoint (edge.boi.gov.il), CSV output; the Bank's web pages block automated fetching",
-      "verified_at": "2026-08-18",
-      "fetched_at": "2026-08-18"
+      "verified_via": "api",
+      "verified_at": "2026-08-27T02:20:04.294900+00:00",
+      "fetched_at": "2026-08-27T02:20:04.294900+00:00",
+      "claim_id": "the-live-json-endpoint-returns-exchangerates-wit",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
-      "claim": "currentChange is a percentage daily move (e.g., ~1.66 for USD), not an absolute NIS delta.",
+      "claim": "currentChange is a percentage daily move (for example -0.47 for USD on 2026-08-26), not an absolute NIS delta, and it is not used in conversion math.",
       "source_url": "https://www.boi.org.il/PublicApi/GetExchangeRates",
-      "raw_snippet": "SERIES_CODE,FREQ,BASE_CURRENCY,COUNTER_CURRENCY,UNIT_MEASURE,DATA_TYPE,DATA_SOURCE,TIME_COLLECT,CONF_STATUS,PUB_WEBSITE,UNIT_MULT,COMMENTS,TIME_PERIOD,OBS_VALUE,RELEASE_STATUS | RER_USD_ILS,D,USD,ILS,ILS,OF00,BOI_MRKT,V,F,Y,0,,1948-05-15,0.000025,YP",
-      "verified_by": "curl 2026-06-03"
+      "raw_snippet": "{ \"key\": \"USD\", \"currentExchangeRate\": 2.972, \"currentChange\": -0.4688546550569323509711989300, \"unit\": 1, \"lastUpdate\": \"2026-08-26T12:22:04.2475558Z\" }",
+      "verified_by": "curl 2026-06-03",
+      "claim_id": "currentchange-is-a-percentage-daily-move-e-g-1-6",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "fetched_at": "2026-08-27T02:13:00.784072+00:00",
+      "verified_via": "api",
+      "verified_at": "2026-08-27T02:13:00.784072+00:00"
     },
     {
-      "claim": "The Bank of Israel publishes a representative rate for exactly 14 currencies: USD, GBP, JPY, EUR, AUD, CAD, DKK, NOK, ZAR, SEK, CHF, JOD, LBP, EGP.",
+      "claim": "The Bank of Israel publishes a representative rate for exactly 14 currencies: USD, GBP, JPY, EUR, AUD, CAD, DKK, NOK, ZAR, SEK, CHF, JOD, LBP, EGP. Verified live on 2026-08-27: the endpoint returned exactly these 14 keys.",
       "source_url": "https://www.boi.org.il/PublicApi/GetExchangeRates",
-      "raw_snippet": "keys returned by the live endpoint: USD, GBP, JPY, EUR, AUD, CAD, DKK, NOK, ZAR, SEK, CHF, JOD, LBP, EGP (14 objects total).",
-      "verified_by": "curl 2026-06-03"
+      "raw_snippet": "{ \"key\": \"USD\", \"currentExchangeRate\": 2.972, \"unit\": 1 } and thirteen further objects in the same exchangeRates array, whose key values are GBP, JPY, EUR, AUD, CAD, DKK, NOK, ZAR, SEK, CHF, JOD, LBP and EGP, for exactly fourteen published currencies",
+      "verified_by": "curl 2026-06-03",
+      "claim_id": "the-bank-of-israel-publishes-a-representative-ra",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "fetched_at": "2026-08-27T02:13:00.784072+00:00",
+      "verified_via": "api (full response enumerated on 2026-08-27; the array contained exactly these 14 key values)",
+      "verified_at": "2026-08-27T02:13:00.784072+00:00"
     },
     {
-      "claim": "Units vary by currency: JPY unit=100, LBP unit=10, most others unit=1.",
+      "claim": "Units vary by currency: JPY unit = 100, LBP unit = 10, most others unit = 1. The SDMX series expresses the same basis as UNIT_MULT, where unit = 10 ** UNIT_MULT (USD 0, LBP 1, JPY 2).",
       "source_url": "https://www.boi.org.il/PublicApi/GetExchangeRates",
-      "raw_snippet": "{\"key\":\"JPY\",\"currentExchangeRate\":1.7968,\"unit\":100,...}, {\"key\":\"LBP\",\"currentExchangeRate\":0.0003,\"unit\":10,...}",
-      "verified_by": "curl 2026-06-03"
+      "raw_snippet": "{ \"key\": \"JPY\", \"currentExchangeRate\": 1.8684, \"unit\": 100, \"lastUpdate\": \"2026-08-26T12:22:04.2475558Z\" }, { \"key\": \"LBP\", \"currentExchangeRate\": 0.0003, \"unit\": 10, \"lastUpdate\": \"2026-08-26T12:22:04.2475558Z\" }",
+      "verified_by": "curl 2026-06-03",
+      "claim_id": "units-vary-by-currency-jpy-unit-100-lbp-unit-10",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "fetched_at": "2026-08-27T02:13:00.784072+00:00",
+      "verified_via": "api",
+      "verified_at": "2026-08-27T02:13:00.784072+00:00"
     },
     {
-      "claim": "The JSON endpoint's ?date= parameter is ignored: passing an old date still returns today's rate (lastUpdate unchanged).",
+      "claim": "The JSON endpoint's ?date= parameter is ignored: passing an old date still returns the most recently published rate with an unchanged lastUpdate. Verified live on 2026-08-27 against no-date, ?date=2025-06-03 and ?date=2026-01-01.",
       "source_url": "https://www.boi.org.il/PublicApi/GetExchangeRates?date=2025-06-03",
-      "raw_snippet": "GetExchangeRates?date=2026-01-01 and GetExchangeRates?date=2025-06-03 both return USD 2.872 with lastUpdate 2026-06-03T12:22:02Z (identical to the no-date response).",
-      "verified_by": "curl 2026-06-03"
+      "raw_snippet": "{ \"key\": \"USD\", \"currentExchangeRate\": 2.972, \"unit\": 1, \"lastUpdate\": \"2026-08-26T12:22:04.2475558Z\" }",
+      "verified_by": "curl 2026-06-03",
+      "claim_id": "the-json-endpoint-s-date-parameter-is-ignored-pa",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "fetched_at": "2026-08-27T02:13:00.784072+00:00",
+      "verified_via": "api",
+      "verified_at": "2026-08-27T02:13:00.784072+00:00"
     },
     {
       "claim": "Historical rates come from the BOI SDMX EXR dataflow. Base path https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/ ; series pattern https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI.STATISTICS/EXR/1.0/RER_<CUR>_ILS ; concrete example https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI.STATISTICS/EXR/1.0/RER_USD_ILS . With startPeriod, endPeriod and format=csv the response is a CSV whose columns include TIME_PERIOD and OBS_VALUE; read on 2026-08-11 the first 2026 USD observation is 2026-01-02 at 3.181 and the last in the window is 2026-01-15 at 3.156. Covers these references: https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI.STATISTICS/EXR/1.0/RER_USD_ILS?startPeriod=2026-01-01&endPeriod=2026-01-15&format=csv",
@@ -52,7 +94,12 @@
       "verified_by": "curl 2026-06-03",
       "fetched_at": "2026-08-18",
       "verified_via": "reference-coverage entry; the links it covers moved into the claim and the snippet is a quote from its own source page",
-      "verified_at": "2026-08-18"
+      "verified_at": "2026-08-18",
+      "claim_id": "historical-rates-come-from-the-boi-sdmx-exr-data",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim": "The SDMX series omits non-publication days. Read on 2026-08-11, this request with endPeriod=2026-01-01 returns no row for 2026-01-01 and ends at 2025-12-31 with OBS_VALUE 3.19, so a consumer must walk back to the most recent published date on or before the date requested. Covers these references: https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI.STATISTICS/EXR/1.0/RER_USD_ILS?startPeriod=2025-12-11&endPeriod=2026-01-01&format=csv",
@@ -61,7 +108,12 @@
       "verified_by": "curl 2026-06-03",
       "fetched_at": "2026-08-18",
       "verified_via": "reference-coverage entry; the links it covers moved into the claim and the snippet is a quote from its own source page",
-      "verified_at": "2026-08-18"
+      "verified_at": "2026-08-18",
+      "claim_id": "the-sdmx-series-omits-non-publication-days-read",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim": "Publication pattern: Sunday excluded, Mon-Fri published; weekend gap visible (no rows on Saturday or Sunday). 2026-05-26,3.3263 / 2026-05-27,3.3056 / 2026-05-28,3.2894 / 2026-05-29,3.2715 / (gap 05-30 Sat, 05-31 Sun) / 2026-06-01,3.2769",
@@ -70,34 +122,54 @@
       "verified_by": "curl 2026-06-03",
       "verified_via": "reference-coverage entry; the links it covers moved into the claim and the snippet is a quote from its own source page",
       "verified_at": "2026-08-18",
-      "fetched_at": "2026-08-18"
+      "fetched_at": "2026-08-18",
+      "claim_id": "publication-pattern-sunday-excluded-mon-fri-publ",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
-      "claim": "The representative rate is published soon after 15:15 on regular days, and soon after 12:15 on Fridays, holiday eves and some other Jewish holidays. The representative exchange rate is currently published soon after 15:15 (or soon after 12:15 on Fridays, holiday eves and some other Jewish holidays). The Bank of Israel web pages block automated fetching, so this is sourced to the Bank's own public exchange-rate API instead.",
-      "source_url": "https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI.STATISTICS/EXR/1.0/RER_USD_ILS?lastNPeriods=3&format=csv",
-      "raw_snippet": "SERIES_CODE,FREQ,BASE_CURRENCY,COUNTER_CURRENCY,UNIT_MEASURE,DATA_TYPE,DATA_SOURCE,TIME_COLLECT,CONF_STATUS,PUB_WEBSITE,UNIT_MULT,COMMENTS,TIME_PERIOD,OBS_VALUE,RELEASE_STATUS | RER_USD_ILS,D,USD,ILS,ILS,OF00,BOI_MRKT,V,F,Y,0,,1948-05-15,0.000025,YP",
+      "claim": "The representative rate is published once per business day, and the JSON endpoint keeps returning the previous publication until the next one lands, so a call made before the day's publication returns the previous business day's rate. This is why the rate's date must be taken from lastUpdate and never from the system clock. Verified 2026-08-27 at 02:08 UTC: the endpoint returned lastUpdate 2026-08-26 while the SDMX series had no observation for 2026-08-27 yet. The Bank of Israel's explanatory notes give the clock times (about 15:15 on regular days, about 12:15 on Fridays and holiday eves) but that page is JS-rendered and returns a browser challenge to automated fetches, so the exact times are NOT machine-verifiable from this skill and must be treated as indicative; lastUpdate is the authority.",
+      "source_url": "https://www.boi.org.il/PublicApi/GetExchangeRates",
+      "raw_snippet": "{ \"key\": \"USD\", \"currentExchangeRate\": 2.972, \"currentChange\": -0.4688546550569323509711989300, \"unit\": 1, \"lastUpdate\": \"2026-08-26T12:22:04.2475558Z\" }",
       "verified_by": "WebFetch 2026-06-03",
-      "verified_via": "Bank of Israel SDMX statistics endpoint (edge.boi.gov.il), CSV output; the Bank's web pages block automated fetching",
-      "verified_at": "2026-08-18",
-      "fetched_at": "2026-08-18"
+      "verified_via": "api (publication-lag behaviour verified against the endpoint and the SDMX series; the clock times themselves are not machine-verifiable and are flagged as indicative in the skill)",
+      "verified_at": "2026-08-27T02:20:04.294900+00:00",
+      "fetched_at": "2026-08-27T02:20:04.294900+00:00",
+      "claim_id": "the-representative-rate-is-published-soon-after",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
-      "claim": "The Bank of Israel sets a single representative (average) rate, not separate buy/sell rates. The average rate in NIS is calculated on the basis of a sampling of exchange rates published by the banks on the Reuters screens (one unified representative rate, not separate buying/selling rates). The Bank of Israel web pages block automated fetching, so this is sourced to the Bank's own public exchange-rate API instead.",
-      "source_url": "https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI.STATISTICS/EXR/1.0/RER_USD_ILS?lastNPeriods=3&format=csv",
-      "raw_snippet": "SERIES_CODE,FREQ,BASE_CURRENCY,COUNTER_CURRENCY,UNIT_MEASURE,DATA_TYPE,DATA_SOURCE,TIME_COLLECT,CONF_STATUS,PUB_WEBSITE,UNIT_MULT,COMMENTS,TIME_PERIOD,OBS_VALUE,RELEASE_STATUS | RER_USD_ILS,D,USD,ILS,ILS,OF00,BOI_MRKT,V,F,Y,0,,1948-05-15,0.000025,YP",
+      "claim": "The Bank of Israel sets a single representative rate per currency, with no buy/sell spread: each object in the response carries exactly one currentExchangeRate.",
+      "source_url": "https://www.boi.org.il/PublicApi/GetExchangeRates",
+      "raw_snippet": "{ \"key\": \"USD\", \"currentExchangeRate\": 2.972, \"currentChange\": -0.4688546550569323509711989300, \"unit\": 1, \"lastUpdate\": \"2026-08-26T12:22:04.2475558Z\" }",
       "verified_by": "WebFetch 2026-06-03",
-      "verified_via": "Bank of Israel SDMX statistics endpoint (edge.boi.gov.il), CSV output; the Bank's web pages block automated fetching",
-      "verified_at": "2026-08-18",
-      "fetched_at": "2026-08-18"
+      "verified_via": "api",
+      "verified_at": "2026-08-27T02:20:04.294900+00:00",
+      "fetched_at": "2026-08-27T02:20:04.294900+00:00",
+      "claim_id": "the-bank-of-israel-sets-a-single-representative",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
-      "claim": "For imports into Israel priced in foreign currency, the exchange rate is generally the Bank of Israel representative rate plus 0.5%; the customs rate is administered by the Israel Tax Authority. ביבוא מוצרים לישראל, שמחירם קבוע במטבע חוץ, ככלל, שער המטבע מחושב לפי השער היציג של בנק ישראל בתוספת של 0.5%.",
+      "claim": "For imports into Israel priced in foreign currency, the customs value on an import declaration (rashimon) uses the customs rate published weekly by the Israel Tax Authority, not the bare Bank of Israel representative rate. The Tax Authority's exchange-rate service returns HTTP 403 to automated fetches and could NOT be verified on 2026-08-27, so this skill instructs the reader to read the published customs rate rather than derive it, and flags the commonly-cited 0.5% uplift and the weekly effectivity window as unconfirmed. Imported services under reverse-charge VAT use the plain representative rate with no customs uplift.",
       "source_url": "https://www.gov.il/he/service/exchange-rate",
-      "raw_snippet": "שירות זה מספק מידע על שערי מטבע חוץ לצורכי מכס, שנקבעו למטבע הנבחר או לכל המטבעות על פי טווח תאריכים.",
+      "raw_snippet": "UNVERIFIED: the Israel Tax Authority exchange-rate service returned HTTP 403 to an automated fetch on 2026-08-27, so no snippet could be quoted and the skill routes the reader to the published rate instead of asserting a derived figure.",
       "verified_by": "WebSearch 2026-06-03",
-      "verified_via": "gov.il page read through a browser session, which holds the Cloudflare clearance a plain fetch does not",
-      "verified_at": "2026-08-18",
-      "fetched_at": "2026-08-18"
+      "verified_via": "UNVERIFIED (bot-blocked; the skill deliberately asserts no derived customs figure as a result)",
+      "verified_at": "2026-08-27T02:20:04.294900+00:00",
+      "fetched_at": "2026-08-27T02:20:04.294900+00:00",
+      "claim_id": "for-imports-into-israel-priced-in-foreign-curren",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim": "For Israeli income tax, foreign-currency amounts are converted at the representative exchange rate on the relevant date (income accrual/receipt or payment date), per the Income Tax Rules (Conversion to New Shekels of amounts originating outside Israel), 5764-2003. %D7%9B%D7%9C%D7%9C%D7%99 %D7%9E%D7%A1 %D7%94%D7%9B%D7%A0%D7%A1%D7%94 (%D7%94%D7%9E%D7%A8%D7%94 %D7%9C%D7%A9%D7%A7%D7%9C%D7%99%D7%9D %D7%97%D7%93%D7%A9%D7%99%D7%9D %D7%A9%D7%9C %D7%A1%D7%9B%D7%95%D7%9E%D7%99%D7%9D %D7%A9%D7%9E%D7%A7%D7%95%D7%A8%D7%9D %D7%9E%D7%97%D7%95%D7%A5 %D7%9C%D7%99%D7%A9%D7%A8%D7%90%D7%9C), %D7%AA%D7%A9%D7%A1%22%D7%93-2003 -- conversion at the representative rate on the relevant date.",
@@ -106,29 +178,99 @@
       "verified_by": "WebSearch 2026-06-03",
       "verified_via": "reference-coverage entry; the links it covers moved into the claim and the snippet is a quote from its own source page",
       "verified_at": "2026-08-18",
-      "fetched_at": "2026-08-18"
+      "fetched_at": "2026-08-18",
+      "claim_id": "for-israeli-income-tax-foreign-currency-amounts",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
-      "claim": "Illustrative mid-2026 rates (snapshot, move daily): USD ~2.872, EUR ~3.3365, GBP ~3.8629, JPY ~1.7968 (per 100), CHF ~3.6409.",
+      "claim": "Illustrative rates snapshot published 2026-08-26 (these move daily and the skill labels them illustrative): USD 2.972, EUR 3.4685, GBP 4.0511, JPY 1.8684 per 100, CHF 3.697, CAD 2.1441, AUD 2.1357.",
       "source_url": "https://www.boi.org.il/PublicApi/GetExchangeRates",
-      "raw_snippet": "{\"key\":\"USD\",\"currentExchangeRate\":2.872}, {\"key\":\"EUR\",\"currentExchangeRate\":3.3365}, {\"key\":\"GBP\",\"currentExchangeRate\":3.8629}, {\"key\":\"JPY\",\"currentExchangeRate\":1.7968,\"unit\":100}, {\"key\":\"CHF\",\"currentExchangeRate\":3.6409}. Rounded illustrative figures used in the skill body: 1 USD is about 2.87 NIS (2.87 ש\"ח); 100 JPY is about 1.80 NIS (1.80 ש\"ח).",
-      "verified_by": "curl 2026-06-03"
+      "raw_snippet": "{ \"key\": \"USD\", \"currentExchangeRate\": 2.972, \"unit\": 1 }, { \"key\": \"EUR\", \"currentExchangeRate\": 3.4685, \"unit\": 1 }, { \"key\": \"GBP\", \"currentExchangeRate\": 4.0511, \"unit\": 1 }, { \"key\": \"JPY\", \"currentExchangeRate\": 1.8684, \"unit\": 100 }, { \"key\": \"CHF\", \"currentExchangeRate\": 3.697, \"unit\": 1 }",
+      "verified_by": "curl 2026-06-03",
+      "claim_id": "illustrative-mid-2026-rates-snapshot-move-daily",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "fetched_at": "2026-08-27T02:13:00.784072+00:00",
+      "verified_via": "api",
+      "verified_at": "2026-08-27T02:13:00.784072+00:00"
     },
     {
-      "claim": "NIS amounts are formatted with comma thousands separator and period decimal, e.g. 1,234.56 NIS. Covers these references: https://www.boi.org.il/en/economic-roles/financial-markets/exchange-rates/. The Bank of Israel web pages block automated fetching, so this is sourced to the Bank's own public exchange-rate API instead.",
-      "source_url": "https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI.STATISTICS/EXR/1.0/RER_USD_ILS?lastNPeriods=3&format=csv",
-      "raw_snippet": "SERIES_CODE,FREQ,BASE_CURRENCY,COUNTER_CURRENCY,UNIT_MEASURE,DATA_TYPE,DATA_SOURCE,TIME_COLLECT,CONF_STATUS,PUB_WEBSITE,UNIT_MULT,COMMENTS,TIME_PERIOD,OBS_VALUE,RELEASE_STATUS | RER_USD_ILS,D,USD,ILS,ILS,OF00,BOI_MRKT,V,F,Y,0,,1948-05-15,0.000025,YP",
-      "verified_by": "WebSearch 2026-06-03",
-      "verified_via": "Bank of Israel SDMX statistics endpoint (edge.boi.gov.il), CSV output; the Bank's web pages block automated fetching",
-      "verified_at": "2026-08-18",
-      "fetched_at": "2026-08-18"
-    },
-    {
-      "claim": "There are no representative rates on Saturdays, Sundays, Israeli holidays, Christmas Day, New Year's Day and Easter.",
-      "source_url": "https://www.boi.org.il/en/economic-roles/financial-markets/explanatory-notes-to-the-representative-exchange-rates/",
-      "raw_snippet": "There are no representative rates on Saturdays, Sundays, Israeli holidays, Christmas Day, New Year’s Day and Easter, when foreign-exchange markets are closed in most countries.",
+      "claim": "There are no representative rates on Saturdays, Sundays or Israeli holidays. Verified deterministically from the SDMX EXR series on 2026-08-27: over 2026-08-20 to 2026-08-25 the USD series publishes 20, 21, 24 and 25 August and omits Saturday 22 August and Sunday 23 August entirely, which is why a tax-date lookup must walk back to the most recent published day.",
+      "source_url": "https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI.STATISTICS/EXR/1.0/RER_USD_ILS?startPeriod=2026-08-20&endPeriod=2026-08-25&format=csv",
+      "raw_snippet": "TIME_PERIOD, OBS_VALUE 2026-08-20, 2.992 2026-08-21, 2.991 2026-08-24, 2.994 2026-08-25, 2.986",
       "verified_by": "WebFetch 2026-06-03",
-      "id": "boi-no-rates-weekend"
+      "id": "boi-no-rates-weekend",
+      "claim_id": "there-are-no-representative-rates-on-saturdays-s",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "fetched_at": "2026-08-27T02:13:56.431550+00:00",
+      "verified_via": "api (raw CSV; the weekend rows are absent from the series)",
+      "verified_at": "2026-08-27T02:13:56.431550+00:00"
+    },
+    {
+      "claim_id": "live-usd-jpy-rates-2026-08-26",
+      "claim": "Bank of Israel representative rates published 2026-08-26, used in this skill only as labelled illustrative examples: USD 2.972 NIS per 1 unit, and JPY 1.8684 NIS per 100 units (about 2.97 ₪ and about 1.87 ₪ respectively). The JSON endpoint returns the rate together with its own lastUpdate stamp, which is the publication date and is not necessarily today.",
+      "source_url": "https://www.boi.org.il/PublicApi/GetExchangeRates",
+      "raw_snippet": "{ \"key\": \"USD\", \"currentExchangeRate\": 2.972, \"unit\": 1, \"lastUpdate\": \"2026-08-26T12:22:04.2475558Z\" }, { \"key\": \"JPY\", \"currentExchangeRate\": 1.8684, \"unit\": 100, \"lastUpdate\": \"2026-08-26T12:22:04.2475558Z\" }",
+      "fetched_at": "2026-08-27T02:12:03.893590+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/currency-codes.md",
+        "references/boi-api-guide.md",
+        "scripts/fetch_rates.py"
+      ],
+      "verified_via": "api",
+      "verified_at": "2026-08-27T02:12:03.893590+00:00"
+    },
+    {
+      "claim_id": "lbp-small-unit-precision",
+      "claim": "The Lebanese pound is published on a 10-unit basis (SDMX UNIT_MULT = 1) at an observation value so small that a per-unit rate rendered at four decimal places displays as 0.0000 ₪ even though the converted total is correct. The skill therefore widens the displayed precision instead of reporting a zero rate.",
+      "source_url": "https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI.STATISTICS/EXR/1.0/RER_LBP_ILS?startPeriod=2026-08-20&endPeriod=2026-08-26&format=csv",
+      "raw_snippet": "SERIES_CODE, FREQ, BASE_CURRENCY, COUNTER_CURRENCY, UNIT_MULT, TIME_PERIOD, OBS_VALUE RER_LBP_ILS, D, LBP, ILS, 1, 2026-08-26, 0.0003",
+      "fetched_at": "2026-08-27T02:12:03.893590+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "scripts/fetch_rates.py"
+      ],
+      "verified_via": "api",
+      "verified_at": "2026-08-27T02:12:03.893590+00:00"
+    },
+    {
+      "claim_id": "boi-explanatory-notes-reference",
+      "claim": "The Bank of Israel's explanatory notes to the representative exchange rates, cited in the skill's Reference Links table as the human-facing authority for the publication schedule and the non-publication days, is live at https://www.boi.org.il/en/economic-roles/financial-markets/explanatory-notes-to-the-representative-exchange-rates/ . Checked 2026-08-27: it returns HTTP 200 but renders client-side, so a plain fetch yields a shell with no readable text. It is therefore cited as a reader-facing reference only; the schedule and non-publication claims in this skill are substantiated instead from the SDMX series itself, which is deterministic raw CSV.",
+      "source_url": "https://www.boi.org.il/en/economic-roles/financial-markets/exchange-rates/",
+      "raw_snippet": "Bank of Israel exchange rates section, the parent page under which the representative exchange rates and their explanatory notes are published.",
+      "fetched_at": "2026-08-27T02:14:15.801753+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/boi-api-guide.md"
+      ],
+      "verified_via": "http status only (page is JS-rendered; no text layer to quote, so no factual claim rests on it)",
+      "verified_at": "2026-08-27T02:14:15.801753+00:00"
+    },
+    {
+      "claim_id": "nis-number-formatting-convention",
+      "claim": "Israeli number formatting places the shekel sign before the amount and uses a comma as the thousands separator and a period as the decimal separator, so one thousand two hundred thirty four and fifty six agorot is written 1,234.56 ₪ and never 1.234,56 in the European convention. This is a presentation convention of the skill's own output, not an external regulatory fact, and the bundled script emits amounts in this form.",
+      "source_url": "https://www.boi.org.il/PublicApi/GetExchangeRates",
+      "raw_snippet": "{ \"key\": \"USD\", \"currentExchangeRate\": 2.972, \"unit\": 1, \"lastUpdate\": \"2026-08-26T12:22:04.2475558Z\" }",
+      "fetched_at": "2026-08-27T02:20:22.683750+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "scripts/fetch_rates.py"
+      ],
+      "verified_via": "self-declared output convention (no external source is claimed; the rate object is cited only to anchor the worked amount)",
+      "verified_at": "2026-08-27T02:20:22.683750+00:00"
     }
   ]
 }

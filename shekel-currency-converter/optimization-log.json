@@ -49,6 +49,29 @@
         "MINOR: spell out capital-gains FX date rules (cost at purchase-date rate, proceeds at sale-date rate) beyond the generic accrual-date line.",
         "MINOR: note BOI may skip publication on some chol-hamoed / early-close days beyond the blanket 'holidays' wording (walk-back already handles it)."
       ]
+    },
+    {
+      "date": "2026-08-27",
+      "from_version": "2.1.0",
+      "to_version": "2.2.0",
+      "type": "minor",
+      "summary": "Live-API re-verification plus three correctness fixes. Every documented endpoint was called for real with body assertions and a negative control: the JSON endpoint returns exactly the 14 documented currencies, an undefined sibling path 404s, the SDMX EXR series returns real CSV with weekends absent, UNIT_MULT is 0/2/1 for USD/JPY/LBP as documented, ?date= is genuinely ignored across three dates, and currency.xml still 301s to the JSON API so the no-XML instruction remains correct. CRITICAL fix: the reported rate date came from the system clock, so a call made before the daily publication served the PREVIOUS business day's rate stamped with today's date. Since the shaar yatzig is date-attributed for tax, that misstated which day's rate was used. The date now comes from the response's lastUpdate (or the SDMX TIME_PERIOD) and the script refuses to emit a rate whose publication date it cannot establish.",
+      "changes": [
+        "scripts/fetch_rates.py: rate date from lastUpdate, never date.today(); refuses to emit an undated tax-stamped rate; per-unit rate precision widened so LBP no longer prints 0.0000; new significant-figure WARNING when the published rate carries fewer than 3 significant figures; cross-currency output relabelled as DERIVED, not the shaar yatzig; build_dated_rates now hard-fails when the two legs resolve to different publication days instead of stamping a nondeterministic date (set iteration with last-writer-wins); publication-lag note added to the output footer; illustrative --demo rates refreshed to the 2026-08-26 publication.",
+        "SKILL.md + SKILL_HE.md: lastUpdate rule stated in Step 2 AND Step 4 (the Hebrew Step 4 had been missed); cross-currency provenance warning; LBP coarse-precision warning; capital-gains two-date rule, foreign-currency loan per-event rule, and the books-vs-no-books caveat on year-end revaluation added to the tax-date section; explicit scope exclusion (not a trading feed, not a bank or card rate, not crypto) added in both languages; stale frontmatter version removed from SKILL.md.",
+        "Customs guidance REFRAMED: the skill no longer instructs the agent to derive the customs rate as representative + 0.5%, and no longer asserts the weekly effectivity window. The Tax Authority exchange-rate service returns HTTP 403 to automated fetches and neither figure could be verified, so the skill now routes the reader to the published customs rate and flags the commonly-cited 0.5% as unconfirmed.",
+        "references/currency-codes.md + boi-api-guide.md: illustrative rates refreshed (EUR/GBP/CHF were left stale by an earlier partial refresh); the worked JSON example had a live rate paired with a June lastUpdate and a sign-flipped currentChange, now a coherent 2026-08-26 object.",
+        "evidence.json: six entries were recycling an unrelated SDMX CSV header as their raw_snippet, so the source check could never falsify them; each repointed to a source that actually substantiates it. Weekend non-publication is now evidenced from the SDMX series itself (deterministic raw CSV) rather than the JS-rendered BOI notes page."
+      ],
+      "deferrals": [
+        "CRITICAL-adjacent, next cycle: the 15:15 / 12:15 publication times are stated in the skill but are NOT machine-verifiable, because the BOI explanatory-notes page is JS-rendered and returns a browser challenge. They are now flagged as indicative with lastUpdate named as the authority. Find a citable source or drop the clock times.",
+        "MAJOR: the customs reframe tells the reader to read the published customs rate but gives no reachable URL. gov.il/he/service/exchange-rate is 403 and the shaarolami-query.customs.mof.gov.il host suggested in review 404s. Find a working lookup before next cycle.",
+        "MAJOR: no rule yet for a foreign bank account held by an individual not required to keep books, beyond the caveat added this cycle.",
+        "MINOR: a future --date returns a confusing SDMX 404 and suggests --demo, which invites sample output for a tax question; detect a future date up front.",
+        "MINOR: deep-history walk-back crosses the pre-1986 Old Shekel era with no annotation.",
+        "MINOR: name the charging-event date for reverse-charge VAT on imported services instead of 'the relevant date'.",
+        "MINOR: state that the customs rate answers only the currency-translation part of the import-VAT base, which also includes duty, purchase tax and landed costs."
+      ]
     }
   ]
 }

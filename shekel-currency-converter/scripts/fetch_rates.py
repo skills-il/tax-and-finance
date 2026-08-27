@@ -3,7 +3,12 @@
 
 Current rates come from the live Bank of Israel JSON endpoint. Historical
 (tax-date) rates come from the Bank of Israel SDMX EXR series, because the
-JSON endpoint's ?date= parameter is ignored and always returns today's rate.
+JSON endpoint's ?date= parameter is ignored and always returns the most
+recently published rate. Note that "most recently published" is not the same as
+"today": the endpoint keeps serving the previous publication until the next one
+lands, so before the daily publication it returns the PREVIOUS business day's
+rate. The date reported for a conversion is therefore always taken from the
+endpoint's own lastUpdate field, never from the system clock.
 
 Usage:
     python scripts/fetch_rates.py --list
@@ -19,7 +24,6 @@ import csv
 import io
 from urllib.request import urlopen
 from urllib.error import URLError
-from datetime import date
 from typing import Optional
 
 
@@ -57,12 +61,20 @@ class RateFetchError(Exception):
     must never substitute sample data for a tax-stamped conversion."""
 
 
-def fetch_current_rates() -> dict:
+def fetch_current_rates() -> tuple[dict, str]:
     """Fetch current representative rates from the Bank of Israel JSON endpoint.
 
     Returns:
-        Dictionary mapping currency code to (rate, unit, change_pct) tuples.
-        change_pct is the percentage daily move, not an absolute NIS delta.
+        Tuple of (rates, rate_date). rates maps currency code to
+        (rate, unit, change_pct); change_pct is the percentage daily move, not
+        an absolute NIS delta. rate_date is the date the returned rates were
+        actually published, taken from the endpoint's own lastUpdate field.
+
+        Do NOT substitute today's date for rate_date. The endpoint keeps serving
+        the previous publication until the next one lands (Mon-Thu soon after
+        15:15, Fri soon after 12:15, Israel time), so before today's publication
+        it returns YESTERDAY's rate. The shaar yatzig is date-attributed for tax,
+        so labelling it with today's date misstates which day's rate was used.
 
     Raises:
         RateFetchError: if the endpoint cannot be reached or returns no usable
@@ -77,6 +89,7 @@ def fetch_current_rates() -> dict:
         ) from e
 
     rates = {}
+    rate_date = None
     for entry in data.get("exchangeRates", []):
         code = entry.get("key")
         rate = entry.get("currentExchangeRate")
@@ -84,11 +97,20 @@ def fetch_current_rates() -> dict:
         change = entry.get("currentChange", 0.0)
         if code and rate:
             rates[code] = (float(rate), int(unit), float(change))
+            stamp = entry.get("lastUpdate")
+            if stamp and (rate_date is None or stamp[:10] > rate_date):
+                rate_date = stamp[:10]
     if not rates:
         raise RateFetchError(
             "Bank of Israel endpoint returned no usable rates."
         )
-    return rates
+    if rate_date is None:
+        raise RateFetchError(
+            "Bank of Israel endpoint returned rates with no lastUpdate stamp, "
+            "so the publication date cannot be established. Refusing to emit a "
+            "tax-stamped rate with an unknown date."
+        )
+    return rates, rate_date
 
 
 def fetch_historical_rate(currency: str, target_date: str) -> Optional[tuple]:
@@ -159,14 +181,58 @@ def _sample_rates() -> dict:
     labeled as illustrative sample data that must not be used for tax.
     """
     return {
-        "USD": (2.872, 1, 1.66),
-        "EUR": (3.3365, 1, 1.41),
-        "GBP": (3.8629, 1, 1.52),
-        "JPY": (1.7968, 100, 1.59),
-        "CHF": (3.6409, 1, 1.22),
-        "CAD": (2.0732, 1, 1.66),
-        "AUD": (2.0584, 1, 1.45),
+        "USD": (2.972, 1, -0.47),
+        "EUR": (3.4685, 1, -0.4),
+        "GBP": (4.0511, 1, -0.48),
+        "JPY": (1.8684, 100, -0.33),
+        "CHF": (3.697, 1, -0.59),
+        "CAD": (2.1441, 1, -0.48),
+        "AUD": (2.1357, 1, -0.01),
     }
+
+
+def _sig_figs(value: float) -> int:
+    """Count the significant figures the BOI actually published for a rate."""
+    text = f"{abs(value):.10f}".rstrip("0").lstrip("0.")
+    return len(text.lstrip("0")) or 1
+
+
+def _fmt_rate(value: float) -> str:
+    """Format a per-unit rate without collapsing a small rate to zero.
+
+    A fixed 4-decimal format prints the Lebanese pound as "0.0000", which reads
+    as a zero rate on a line a user may copy into a filing. Widen the decimal
+    places until the value is non-zero. This is a DISPLAY fix only: it cannot
+    add precision the Bank of Israel did not publish, which is what
+    _precision_warning exists to say out loud.
+    """
+    for places in (4, 6, 8, 10):
+        text = f"{value:.{places}f}"
+        if float(text) != 0.0:
+            return text
+    return f"{value:.10g}"
+
+
+def _precision_warning(published_value: float) -> Optional[str]:
+    """Warn when the published rate carries too few significant figures.
+
+    The Bank of Israel publishes some low-value currencies at very coarse
+    precision. The Lebanese pound, for example, is published as 0.0003 per 10
+    units: a single significant figure, which bounds any converted amount to
+    roughly plus or minus 17 percent. That published figure IS the official
+    representative rate, so it is not wrong to use it, but a converted total
+    printed to the agora should not be presented as if it were precise.
+    """
+    figures = _sig_figs(published_value)
+    if figures >= 3:
+        return None
+    return (
+        f"  WARNING: the Bank of Israel publishes this rate to only {figures} "
+        f"significant figure(s) ({published_value:g}),\n"
+        "        so the converted total carries a wide margin and must not be\n"
+        "        relied on to the agora. It is the official published rate, but\n"
+        "        confirm the figure with the Bank of Israel before filing."
+    )
 
 
 def convert(
@@ -195,12 +261,12 @@ def convert(
     if from_currency == "ILS" and to_currency in rates:
         rate, unit, _ = rates[to_currency]
         result = amount / rate * unit
-        return (result, rate / unit, f"1 {to_currency} = {rate/unit:.4f} ILS")
+        return (result, rate / unit, f"1 {to_currency} = {_fmt_rate(rate/unit)} ILS")
 
     if to_currency == "ILS" and from_currency in rates:
         rate, unit, _ = rates[from_currency]
         result = amount * rate / unit
-        return (result, rate / unit, f"1 {from_currency} = {rate/unit:.4f} ILS")
+        return (result, rate / unit, f"1 {from_currency} = {_fmt_rate(rate/unit)} ILS")
 
     # Cross-currency via ILS
     if from_currency in rates and to_currency in rates:
@@ -209,7 +275,13 @@ def convert(
         nis_amount = amount * from_rate / from_unit
         result = nis_amount / to_rate * to_unit
         cross_rate = (from_rate / from_unit) / (to_rate / to_unit)
-        return (result, cross_rate, f"1 {from_currency} = {cross_rate:.4f} {to_currency} (via ILS)")
+        return (
+            result,
+            cross_rate,
+            f"1 {from_currency} = {_fmt_rate(cross_rate)} {to_currency} "
+            "(DERIVED from two Bank of Israel shekel rates; the Bank of Israel "
+            "publishes no direct rate for this pair)",
+        )
 
     return None
 
@@ -223,8 +295,8 @@ def build_dated_rates(
     earlier than target_date if the requested day had no publication).
     """
     rates = {"ILS": (1.0, 1, 0.0)}
-    used_date = target_date
-    for cur in {from_currency.upper(), to_currency.upper()}:
+    resolved = {}
+    for cur in sorted({from_currency.upper(), to_currency.upper()}):
         if cur == "ILS":
             continue
         hist = fetch_historical_rate(cur, target_date)
@@ -232,8 +304,22 @@ def build_dated_rates(
             continue
         rate, unit, when = hist
         rates[cur] = (rate, unit, 0.0)
-        used_date = when  # last writer wins; both should resolve to same day
-    return rates, used_date
+        resolved[cur] = when
+    if not resolved:
+        return rates, target_date
+    # Both legs must resolve to the SAME publication day. Picking whichever leg
+    # happened to iterate last would stamp a nondeterministic date on a
+    # cross-currency conversion, which is the exact date-misattribution this
+    # skill exists to prevent.
+    distinct = sorted(set(resolved.values()))
+    if len(distinct) > 1:
+        detail = ", ".join(f"{c} resolved to {d}" for c, d in sorted(resolved.items()))
+        raise RateFetchError(
+            "The two currencies resolved to different publication dates "
+            f"({detail}). Refusing to stamp one date on a conversion built from "
+            "two different days. Request each leg against the shekel separately."
+        )
+    return rates, distinct[0]
 
 
 def format_result(
@@ -244,9 +330,9 @@ def format_result(
     description: str,
     rate_date: Optional[str] = None,
     is_sample: bool = False,
+    published_value: Optional[float] = None,
 ) -> str:
     """Format conversion result for display."""
-    date_str = rate_date or date.today().isoformat()
     if is_sample:
         lines = [
             "=== Currency Conversion (DEMO) ===",
@@ -259,6 +345,10 @@ def format_result(
             "  WARNING: Sample data only. Do NOT use for tax, VAT, or any filing.",
         ]
         return "\n".join(lines)
+    if rate_date is None:
+        raise ValueError("rate_date is required: a shaar yatzig must carry the "
+                         "date it was actually published, never today's date.")
+    date_str = rate_date
     lines = [
         "=== Currency Conversion ===",
         "",
@@ -269,10 +359,19 @@ def format_result(
         "  Source: Bank of Israel representative rate (shaar yatzig)",
         "",
         "  NOTE: Representative rate for reference. Actual bank rates may differ.",
-        "  NOTE: Import VAT on GOODS uses the weekly customs rate (this rate + 0.5%),",
-        "        NOT this plain rate. Imported SERVICES (reverse-charge VAT) DO use",
-        "        this plain representative rate, with no 0.5% addition.",
+        "  NOTE: This is the rate PUBLISHED on the date shown. If you need a rate",
+        "        for a later date, it may not be published yet: the Bank of Israel",
+        "        publishes once per business day and this endpoint keeps serving the",
+        "        previous publication until the next one lands.",
+        "  NOTE: Import VAT on GOODS uses the weekly customs rate published by the",
+        "        Tax Authority, NOT this rate. Read the published customs rate; do",
+        "        not derive it. Imported SERVICES (reverse-charge VAT) DO use",
+        "        this plain representative rate, with no customs uplift.",
     ]
+    if published_value is not None:
+        warning = _precision_warning(published_value)
+        if warning:
+            lines.extend(["", warning])
     return "\n".join(lines)
 
 
@@ -335,8 +434,7 @@ def main():
                 args.from_curr, args.to_curr, args.date
             )
         else:
-            rates = fetch_current_rates()
-            used_date = None
+            rates, used_date = fetch_current_rates()
     except RateFetchError as e:
         # FAIL LOUD: never present sample data as an official tax rate.
         print(f"Error: {e}", file=sys.stderr)
@@ -369,6 +467,7 @@ def main():
         args.amount, args.from_curr, args.to_curr,
         converted, description, used_date or args.date,
         is_sample=is_sample,
+        published_value=None if is_sample else _rate_used,
     ))
 
 

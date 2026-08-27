@@ -9,11 +9,11 @@ Used to review the skill for correctness and completeness.
 1. **Correct live current-rate source.** Use the live BOI JSON endpoint
    `https://www.boi.org.il/PublicApi/GetExchangeRates`. The legacy
    `currency.xml` no longer serves XML (it redirects to the JSON API).
-   Source: live curl 2026-06-03 (HTTP 200, JSON body); evidence.json claim 1-2.
+   Source: live curl 2026-08-27 (HTTP 200, JSON body, 14 keys, undefined sibling path 404s as a negative control); evidence.json claim 1-2.
 2. **Correct historical / tax-date rate source.** The JSON endpoint's `?date=`
    is ignored (always returns today). A specific past date must come from the
    BOI SDMX EXR series `RER_<CUR>_ILS` (CSV, `OBS_VALUE` keyed by
-   `TIME_PERIOD`). Source: live curl 2026-06-03; evidence.json claim 6-7.
+   `TIME_PERIOD`). Source: live curl 2026-08-27 (weekend rows absent from the series); evidence.json claim 6-7.
 3. **Weekend/holiday walk-back.** The SDMX series omits Saturdays, Sundays, and
    Israeli holidays. For a non-publication date, use the most recent published
    rate on or before it, and tell the user which date was used. Verified:
@@ -32,9 +32,11 @@ Used to review the skill for correctness and completeness.
 6. **Import VAT uses the customs rate, NOT the bare representative rate.** For
    goods priced in foreign currency, customs value is converted at the weekly
    customs rate (sha'ar ha-mekhes) set by the Israel Tax Authority on the
-   rashimon = BOI representative rate + 0.5%. Do not quote the plain
+   rashimon = the customs rate published weekly by the Tax Authority, which must be
+   read rather than derived (the commonly-cited 0.5% uplift is not machine-verifiable,
+   the Tax Authority service is bot-blocked). Do not quote the plain
    representative rate as the import-VAT rate for goods. Imported SERVICES
-   (reverse-charge VAT) instead use the PLAIN representative rate, with no 0.5%
+   (reverse-charge VAT) instead use the PLAIN representative rate, with no customs
    addition, because there is no rashimon. Source: gov.il/he/service/
    exchange-rate; evidence.json claim 12.
 7. **Single representative rate per currency per day** (no buy/sell split),
@@ -71,7 +73,7 @@ Used to review the skill for correctness and completeness.
 - BOI live JSON rates: https://www.boi.org.il/PublicApi/GetExchangeRates
 - BOI SDMX EXR series: https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI.STATISTICS/EXR/1.0/RER_USD_ILS
 - BOI representative-rate explanatory notes (schedule, single-rate): https://www.boi.org.il/en/economic-roles/financial-markets/explanatory-notes-to-the-representative-exchange-rates/
-- Israel Tax Authority customs/exchange rate (+0.5%): https://www.gov.il/he/service/exchange-rate
+- Israel Tax Authority customs/exchange rate service (bot-blocked to automated fetches; read in a browser): https://www.gov.il/he/service/exchange-rate
 - Income Tax Rules (Conversion to NIS), 5764-2003: https://www.nevo.co.il/law_html/law01/999_233.htm
 
 The Tax Authority customs-rate query system (host shaarolami-query.customs.mof.gov.il) is a session-based web app with no clean public JSON API, so it is referenced in prose rather than linked or machine-queried.

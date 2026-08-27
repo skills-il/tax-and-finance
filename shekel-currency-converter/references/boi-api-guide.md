@@ -14,10 +14,10 @@ The legacy XML feed at `https://www.boi.org.il/currency.xml` no longer serves XM
   "exchangeRates": [
     {
       "key": "USD",
-      "currentExchangeRate": 2.872,
-      "currentChange": 1.66,
+      "currentExchangeRate": 2.972,
+      "currentChange": -0.4688546550569324,
       "unit": 1,
-      "lastUpdate": "2026-06-03T12:22:02Z"
+      "lastUpdate": "2026-08-26T12:22:04.2475558Z"
     }
   ]
 }
@@ -52,9 +52,9 @@ Parse the CSV: read `OBS_VALUE` (the rate) keyed by `TIME_PERIOD` (the date). Th
   - Financial reporting
 
 ## Import VAT and the customs rate (caveat)
-For import VAT and customs duty on GOODS, the value priced in foreign currency is NOT converted at the bare BOI representative rate. The Israel Tax Authority sets a weekly customs rate (shaar hamekhes) used on the import declaration (rashimon); it is the BOI representative rate plus 0.5% (the rate published on the preceding Friday applies Tuesday through the following Monday). Use the customs rate for import VAT on goods, not the plain representative rate.
+For import VAT and customs duty on GOODS, the value priced in foreign currency is NOT converted at the bare BOI representative rate. The Israel Tax Authority sets a weekly customs rate (shaar hamekhes) used on the import declaration (rashimon); read it from the Tax Authority publication for the relevant week rather than deriving it. The uplift over the representative rate is commonly cited as 0.5%, but the Tax Authority exchange-rate service returns HTTP 403 to automated fetches, so neither the uplift nor the weekly effectivity window can be machine-verified from this skill; treat a derived figure as unconfirmed. Use the published customs rate for import VAT on goods, not the plain representative rate.
 
-For imported SERVICES (reverse-charge VAT, e.g. foreign SaaS or overseas contractors), there is no rashimon and no customs rate: VAT is computed at the PLAIN BOI representative rate on the relevant date, without the 0.5% addition.
+For imported SERVICES (reverse-charge VAT, e.g. foreign SaaS or overseas contractors), there is no rashimon and no customs rate: VAT is computed at the PLAIN BOI representative rate on the relevant date, without any customs uplift.
 
 ## Published Currencies (14 total)
 USD, GBP, JPY, EUR, AUD, CAD, DKK, NOK, ZAR, SEK, CHF, JOD, LBP, EGP.
