@@ -11,32 +11,11 @@ allowed-tools: Bash(python:*) WebFetch
 
 ### Step 1: Identify Which Utility to Compare
 
-Determine which utility cost the user wants to analyze. Israeli household utilities and recurring service costs include:
-
-**Electricity (חשמל):**
-- Israel Electric Corporation (IEC / חברת החשמל) owns transmission, distribution, and meter reading
-- The household supply market is open: as of 2026 roughly 360,000 customers have moved to private suppliers and the count keeps climbing
-- Tariffs are set by the Electricity Authority (רשות החשמל)
-- Time-of-use (TOU) pricing available for smart-meter customers (about 1M meters / ~30% of households as of 2026)
-
-**Water (מים):**
-- Mekorot (מקורות) is the national water company supplying bulk water
-- Municipal water corporations (taagidei mayim) handle local distribution
-- Tiered pricing: ascending block tariff system where price per cubic meter increases with consumption
-
-**Cooking Gas (גז בישול / גפ"מ) and Natural Gas (גז טבעי):**
-- Most households still use LPG cooking-gas balloons (12kg) or centralized building tanks
-- Natural gas infrastructure expanding via Energean (Karish/Athena) pipelines, mostly in newer buildings
-- LPG tariffs published by the Energy Ministry per locality
-
-**Cellular and Internet (סלולר ואינטרנט):**
-- Cellular market opened to MVNOs in 2012 (Hot Mobile, Golan Telecom, Rami Levy Mobile, 019, Home Cellular and others); unlimited plans dropped to single-digit-to-low-double-digit shekels
-- Internet has split into infrastructure (Bezeq, HOT, IBC/Unlimited fiber, partner-built fiber) and content/ISP (Bezeq Beinleumi, Cellcom, Partner, 013, 014/Cellact, Triple-C, Hot-Net), most consumers buy as a single bill ("שוק סיטונאי") today
-
-**Arnona (ארנונה):**
-- Municipal property tax charged by local authorities
-- Rates vary dramatically between municipalities
-- Based on property size (sqm), zone, and usage type (residential/commercial)
+Establish which bill the user wants to move; the levers differ sharply. Electricity, water and
+cooking gas are national or near-national and barely change with location, arnona changes with the
+municipality, telecom with the provider. Ask for the last three bills, and where a household has
+several, start with the largest line rather than the one they mentioned. Market-structure
+background, including who owns which telecom brand, is in `references/details-2026.md`.
 
 ### Step 2: Electricity Comparison
 
@@ -60,16 +39,47 @@ The Electricity Authority publishes official tariffs at pua.gov.il. IEC tariffs 
 | Winter (Dec-Feb) | 17:00-22:00 | 114.70 | 46.63 |
 | Transition (Mar-May, Oct-Nov) | see note | 49.58 | 45.78 |
 
-- In force from 1.7.2026. The winter peak band applies on weekdays, Fri/eves AND Shabbat/holidays; there is no morning peak band.
-- Do not quote transition-season band hours: the IEC page states them in a garbled form. It rarely matters, the spread there is under 4 agorot.
+- In force from 1.7.2026, re-verified against the IEC low-voltage TOU page on 27 August 2026: all three seasons and both VAT bases still match.
+- **Peak applies on different days per season, and this is where most of the money is.** In SUMMER and in TRANSITION there is NO peak band at all on Fridays, holiday eves, Shabbat or holidays: the whole day is off-peak. In WINTER the peak band applies on every day including Shabbat and holidays. There is no morning peak in any season.
+- For TOU purposes these holidays count as Shabbat, and their eves as Friday: Rosh Hashana, Yom Kippur, the first day of Sukkot, Simchat Torah, the first and seventh days of Pesach, Independence Day and Shavuot. The hours are Israel local time and the metering equipment is adjusted when summer time is in force.
+- Do not quote transition-season band hours: the IEC page states them in a garbled form ("22:00-17:00"). It rarely matters, the spread there is under 4 agorot.
 - Savings are seasonal: shifting load off-peak is worth over 120 agorot/kWh in summer and under 4 in transition. Never quote a flat "15-25% saving"; compute it from the user's own seasonal pattern.
 - Tariffs update semi-annually via Electricity Authority decisions and can shift mid-year; verify before quoting.
 
-**Monthly fixed charges:**
-- Connection fee (agrat chibbur) regardless of consumption
-- Distribution fee
-- Public broadcasting fee (agrat shidrur)
-- For apartments: a share of common-area electricity (chashmal klali) for stairwells, elevators, and lobby lighting, billed via the va'ad bayit (building committee) and separate from the IEC bill. New tenants are often surprised by this line item.
+**Fixed charges, priced (from 1.7.2026, IEC residential tariff page).** These are what makes a
+bill more than kWh times rate, and a total cannot be computed without them. Agorot for energy,
+shekels for the rest.
+
+| Component | Excl. VAT | Incl. VAT |
+|---|---|---|
+| Energy, per kWh (agorot) | 53.83 | 63.52 |
+| Distribution, bi-monthly customer, single-phase meter (**the ordinary residential case**) | 9.97 | 11.76 |
+| Distribution, bi-monthly customer, three-phase meter | 11.56 | 13.64 |
+| Distribution, monthly customer | 157.31 | 185.63 |
+| Supply, bi-monthly customer, single-phase meter | 15.60 | 18.41 |
+| Supply, bi-monthly customer, three-phase meter | 15.53 | 18.33 |
+| Supply, monthly customer | 107.70 | 127.09 |
+| Capacity, per KVA per year | 6.18 | 7.29 |
+
+Two fixed charges, distribution and supply, not one, and the amount depends on whether the
+customer is billed monthly or bi-monthly and on whether the meter is single or three phase.
+**Pick the row before quoting a total.** A normal apartment is a bi-monthly, single-phase
+customer; the monthly rows are roughly sixteen times larger per period, so choosing the wrong one
+moves the fixed component by more than the whole energy charge of a small household, which can flip a supplier-switch or a TOU comparison.
+On the TOU tariff the fixed charges differ again: monthly distribution 174.50 incl. VAT and
+bi-monthly distribution 37.88, with supply the same as above.
+
+**There is no broadcasting fee on an electricity bill.** Earlier versions of this skill listed
+"agrat shidrur" among the charges an IEC customer keeps paying. The official residential
+tariff page enumerates exactly three fixed components, distribution, supply and capacity, and
+no broadcasting fee is among them.
+
+The residential tariff itself applies to homes used for residence only, places of worship and
+buildings used for agriculture.
+
+For apartments there is also a share of common-area electricity (chashmal klali) for
+stairwells, lifts and lobby lighting. That is billed through the va'ad bayit and is not on the
+IEC bill at all, which is what surprises new tenants.
 
 To compare electricity costs:
 1. Obtain the user's recent electricity bills (at least 3 months, preferably 12 for seasonal patterns)
@@ -79,99 +89,123 @@ To compare electricity costs:
 
 **Independent electricity producers (residential market):**
 
-The residential electricity market is open to private suppliers. As of 2026, approximately 360,000 customers had switched to alternate suppliers (up from ~280,000 at end-2025), with discounts of 7% to 20% off the IEC tariff for the generation portion. Active residential suppliers in 2026 include:
+The residential electricity market is open to private suppliers. The residential supply market is open to private suppliers and the number who have switched keeps rising. The evidenced figure is roughly 279,500 customers who moved during 2025 (Calcalist); a '360,000 in 2026, up from ~280,000 at end-2025' pair previously stated here is NOT on any cited source and is withdrawn. Quote the direction, not a headcount. Active residential suppliers in 2026 include:
 - **Cellcom Energy**, **Partner**, **Bezeq**, **HOT Energy** (telecom-bundled offers)
 - **Pazgas Electricity**, **Amisragas**, **Electra Power** (energy and gas group offers)
 - **OPC Energy**, **Dalia Energy**, **Enlight Renewable Energy** (independent generators, historically large-customer focused, also signing residential customers)
 
-**Critical: switching does NOT replace the full bill.** Independent suppliers compete only on the **generation** (ייצור) component, which is roughly 60-70% of the bill. The household continues to pay IEC for distribution (חלוקה), transmission (הולכה), the public broadcasting fee, and meter charges. The supplier discount applies only to the energy portion.
+**Critical: switching does NOT replace the full bill.** Independent suppliers compete only on the **generation** (ייצור) component, which is roughly 60-70% of the bill. The household continues to pay IEC the fixed distribution (חלוקה) and supply (אספקה) charges and the capacity charge, priced in the table in Step 2. There is no broadcasting fee on the bill. The supplier discount applies only to the energy portion.
 
 **Cooling-off period:** Under the Consumer Protection Law (חוק הגנת הצרכן), residential customers have a 14-day right to cancel after signing with an alternate supplier. Always read the cancellation clauses before signing, and keep a copy of the contract. The Energy Ministry is also working to shorten the supplier-switching window from 14 days to 7 days during 2026.
 
-**Discounts on the electricity bill (separate from supplier choice):**
-- **Seniors with income supplement (השלמת הכנסה):** 50% discount on consumption up to 400 kWh/month (or 800 kWh per bi-monthly bill). The 50% rate covers 11 eligible groups. Three of them (above retirement age with old-age pension plus income supplement, old-age pension for the disabled, and Holocaust survivors) are set to move to 65%; verify status at gov.il before quoting 65% as fact.
-- **Holocaust survivors (ניצולי שואה):** 50% discount on up to 400 kWh/month
-- **Disabled (נכים) with high disability percentage:** discount tiers per Bituach Leumi recognition
-- The discount is applied automatically once Bituach Leumi shares eligibility with IEC; nothing to file each month, but verify the discount line appears on your bill.
+**Discounts on the electricity bill (separate from supplier choice). TWELVE groups qualify, not
+three.** IEC's own entitlement page enumerates them, and earlier versions of this skill named only
+seniors, Holocaust survivors and "the disabled", so a large family or a lone soldier reading it
+would never learn they are entitled. Ask which of these applies before assuming none does:
 
-**Debt and disconnection protections (say this to any user whose bill is unaffordable):** request a הסדר תשלומים (payment arrangement) for arrears; disconnection for non-payment is regulated (advance notice, a minimum-debt threshold, and no disconnection while a billing dispute is open); a household dependent on electrically-powered life-support / medical equipment can register as a צרכן מוגן (protected consumer) and cannot be disconnected. See `references/details-2026.md`.
+1. Income-support benefit under s.2(a)(4) of the Income Support Law
+2. Above retirement age receiving an old-age or survivors' pension PLUS income supplement
+3. Nazi-persecution and war-disabled compensation recipients, and Holocaust survivors on
+   income-tested compensation
+4. Old-age pension for the disabled under s.251 of the National Insurance Law
+5. Special-services allowance at 112% or more
+6. Disabled-child allowance where the child depends on another person's help or needs special
+   medical treatment (other disabled-child grounds do NOT qualify)
+7. Nursing (סיעוד) allowance at level 5 or 6
+8. A lone soldier in regular service, or a soldier entitled to rent assistance because of the
+   distance between home and posting
+9. A single parent (הורה עצמאי) with three or more children receiving income support, income
+   supplement or alimony
+10. A family with four or more children receiving income support, income supplement or alimony
+11. IDF disabled at 50% or more, or below 50% with a permanent maintenance grant, and likewise
+    hostile-action casualties on the same terms
+12. Special-services allowance at 50%
+
+The rate is 50% on consumption up to 400 kWh/month (800 kWh on a bi-monthly bill), and three
+groups are set to move to 65%; verify status before quoting 65% as fact.
+
+**The entitlement fails silently if the contract is in the wrong name.** The awarding body
+(Bituach Leumi, the Holocaust Survivors' Rights Authority, the IDF or the Defence Ministry
+depending on group) notifies the person and passes their details to IEC, but the discount only
+lands if that person is the registered IEC consumer under their own name and ID number. Anyone in
+one of the twelve groups who does not see a reduced payment on the bill should call IEC on 103 to
+have the registration corrected. Tell users this: it is the most common reason a real entitlement
+produces no money.
+
+**Debt and disconnection protections (raise this with any user whose bill is unaffordable).**
+Ask the supplier about a הסדר תשלומים (payment arrangement) for arrears, and about registering a
+household dependent on electrically-powered life-support or medical equipment as a צרכן מוגן
+(protected consumer). Both routes exist and are worth pursuing.
+
+**Do not state the protections as absolutes.** The exact conditions are set in the Electricity
+Authority's אמות מידה and are **not verified in this skill**. Tell the user the route exists and
+to confirm the terms with the Authority or the supplier; do not tell them they cannot be
+disconnected. Background in `references/details-2026.md`.
 
 ### Step 3: Calculate Solar Panel ROI
 
-Solar panels (panelim sola'riyyim) are popular in Israel due to high solar irradiance.
+**EXPORT TARIFF WITHDRAWN. Do not quote one from this skill.** The only source it carries is a
+March 2025 trade-press article about a tariff then out for CONSULTATION, reporting 0.60 ILS/kWh
+for five years falling to 0.3807 (systems up to 30 kW) and 0.39 CPI-linked (up to 15 kW), and
+identifying 0.48 over a fixed 25 years as the then-incumbent rate. Earlier versions of this skill
+presented 48 agorot plus a "+6 agorot urban premium for cities over 50,000" as an ADOPTED regime
+and told the agent to suppress the 0.60 and 0.38 figures, which are the source's own. That premium
+and that population threshold appear in no source at all. Read the hesder line in the actual
+contract or the current Electricity Authority tariff book, and say so to the user.
 
-**Gate this FIRST, before any ROI math:** only someone who controls the roof / connection point can install. An apartment resident needs רכוש-משותף consent (building owners' agreement / roof-rights allocation under חוק המקרקעין); a renter generally cannot install at all. For apartments, a shared-roof / roof-lease arrangement is the alternative. Do not hand an apartment renter a payback figure for something they legally cannot do alone.
+The parts that do not depend on the export tariff are still usable:
 
-**Net metering program:**
-- Install solar panels on your roof or property
-- Excess electricity is fed back to the IEC grid
-- Credit accrues via net-metering (מונה נטו) on a bidirectional meter (מונה דו-כיווני), by kWh netting, not a meter spinning backward
-- You pay only for net consumption (consumption minus production)
-- System size limited to your annual consumption level
+1. **Roof**: south-facing, unshaded, structurally sound, and confirm the applicant controls it (a
+   shared roof needs the building's agreement).
+2. **Annual production**: roughly 1,500-1,800 kWh per installed kWp, Negev at the top of that
+   range, the north at the bottom, the centre between.
+3. **Value of self-consumption**: every kWh used on site avoids the full retail rate, 63.52 agorot
+   incl. VAT, which is verified. Export earns less than retail under every variant in the source,
+   so **self-consumption is worth more than export**, and that conclusion holds without knowing the
+   export tariff.
+4. **Payback**: build it from self-consumption at the retail rate and present the export leg as a
+   range the user must confirm. **Do not multiply an unverified export tariff across 25 years.**
+   The contract duration is itself unresolved (published material differs between 25 and 15 years)
+   and it moves a payback materially.
 
-**ROI calculation factors:**
-1. **System cost**: in 2026, typically 3,500-5,500 ILS per kWp turnkey installed (small systems cost more per kWp). Common residential sizes: 3 kW ~11,000-13,000 ILS; 5 kW ~18,000-22,000 ILS; 10 kW ~38,000-48,000 ILS basic, up to ~75,000 ILS for premium panels or battery-paired systems.
-2. **Annual production**: Israel averages 1,500-1,800 kWh per installed kWp (Negev gets ~1,800, north gets ~1,400-1,500, central ~1,600)
-3. **Current electricity cost**: multiply production by the current IEC tariff (from 1.7.2026, standard residential ~0.6352 ILS/kWh inc. 18% VAT, 53.83 agorot before VAT)
-4. **Annual savings**: production in kWh multiplied by tariff rate (savings on offset consumption) plus the export tariff (~48 agorot/kWh residential, plus a +6 agorot urban premium for cities >50k) for excess fed to the grid. The old energy-vs-energy net-metering is closed to new entrants; self-consumption saves the most. See `references/details-2026.md` for the full two-track regime (≤15 kW residential track).
-5. **Payback period**: system cost divided by annual savings (typically 4-7 years in Israel, faster in the south)
-6. **System lifetime**: 25+ years with gradual degradation (~0.5% per year)
-7. **Maintenance**: minimal, panel cleaning 1-2 times per year
-8. **Connection approval**: apply to IEC for the export connection; confirm which track (≤15 kW residential vs larger) the installer is quoting, and that the applicant holds rights to the roof/connection point.
-
-**Steps to evaluate solar:**
-1. Check roof orientation (south-facing is optimal in Israel)
-2. Assess shading from nearby buildings or structures
-3. Contact 3+ solar installers for quotes (comparison sites: Solar Edge, SolarTech Israel)
-4. Verify municipal approval requirements (heter bniya for roof modifications)
-5. Apply to IEC for net metering connection
-6. Calculate ROI using the factors above
+Fuller notes are in `references/details-2026.md`, under the same caveat.
 
 ### Step 4: Water Tariff Comparison
 
-Israeli residential water uses an ascending block tariff (tiered pricing):
+Water is priced in two tiers by the Water Authority, nationally, so unlike arnona it barely moves
+between cities.
 
-**Tier 1 (consumption up to basic allocation):**
-- Lower rate per cubic meter (m3)
-- Basic allocation: approximately 3.5 m3 per person per month (varies by household size)
-- Calculated based on registered residents at the address (nefashot)
+**The Tier-1 allocation has TWO limbs and the second is the one people miss.** The rule is up to
+3.5 m3 per registered person per month, **and not less than 7 m3 per housing unit**. The floor
+matters most to exactly the households least likely to know it: a one- or two-person home is
+entitled to 7 m3 at the low rate regardless of headcount. Saying only "3.5 per person" under-claims
+their allocation and prices the difference at the high rate.
 
-**Tier 2 (consumption above basic allocation):**
-- Higher rate per cubic meter
-- Approximately 84% more expensive than Tier 1 (Jan 2026: Tier 1 ~8.51 ILS/m³ inc. VAT vs Tier 2 ~15.62 ILS/m³ inc. VAT, both include sewage)
-- Applies to all consumption beyond the basic allocation
+- Tier 1 (low rate): 8.51 ILS/m3 incl. VAT, from 1 January 2026
+- Tier 2 (everything above the allocation): 15.62 ILS/m3 incl. VAT
 
-**Important factors:**
-- **Nefashot registration**: register all household members at your water corporation to maximize Tier 1 allocation. Unregistered members mean a lower threshold before Tier 2 kicks in. Registration is forward-looking; back-credit is generally limited to the current billing period.
-- **Garden/pool allocation**: additional allocation available for documented garden irrigation or swimming pool
-- **Sewage charge (biuv)**: in most municipalities sewage is bundled into the regulated per-m³ water tariff (the 8.51 / 15.62 ILS/m³ figures already include sewer). Where the local authority bills sewer separately, the standalone sewer rate is ~4.39 ILS/m³ on a volume basis (typically 70-90% of metered water).
-- **Confirmed-leak credit**: water corporations grant a partial credit (often 50-100%) for documented hidden leaks under תקנות תאגידי מים וביוב. Requires a plumber certificate filed within 60 days of detection.
+**Register every nefesh with the water corporation.** The allocation is per REGISTERED person and
+registration is not retroactive beyond its date, so an unregistered household member is the single
+most common cause of a bill that looks too high. Note also that since 1.5.2015 the development
+levies (היטלי פיתוח) were replaced by כללי דמי הקמה, so do not tell a user to compare an
+"infrastructure development levy" under the old name.
 
-**Municipal water corporations (examples):**
-- **Mei Avivim** (Tel Aviv)
-- **Hagihon** (Jerusalem)
-- **Mei Haifa** (Haifa)
-- **Mei Raanana** (Raanana)
-- **Mekorot** directly (some smaller localities)
-
-Each corporation may add slightly different surcharges for infrastructure and maintenance. Compare by checking:
-1. Base water rate per m3 (Tier 1 and Tier 2)
-2. Sewage rate (bundled into the per-m³ tariff in most municipalities)
-3. Infrastructure development levy (where applicable). Note: residential water is purely volumetric, there is no fixed household water service charge to compare.
-
-To compare costs:
-1. Obtain recent water bills (hagbanah)
-2. Note household size (nefashot registered)
-3. Calculate average monthly consumption in cubic meters
-4. Check which tier most consumption falls into
-5. Compare total cost including all surcharges
+Corporation-by-corporation detail, the shared-meter case and leak-credit conditions are in
+`references/details-2026.md`.
 
 ### Step 5: Natural Gas and Cooking Gas Comparison
 
 **Cooking gas balloons (balonei gaz):**
 - Standard 12 kg balloon
-- Prices regulated by the Ministry of Energy (misrad ha'energia)
-- Maximum price published monthly at gov.il
+- **Not a published national maximum.** The Energy Ministry surface this skill links is a
+  comparison calculator (מחשבון השוואת מחירי גז בישול) that asks for the user's LOCALITY and
+  connection type and sits beside the ministry's own guides to switching a private or commercial
+  gas supplier. Prices differ by supplier and by place, which is why a comparison-and-switching
+  tool exists. Earlier versions of this skill told users to wait for a monthly published maximum,
+  which pointed them away from the one lever that moves this bill.
+- **This skill carries no LPG price anchor.** It has none for the balloon, none per kg, none for
+  delivery and none for central gas. Send the user to the ministry calculator for their own
+  locality rather than quoting a figure from here.
 - Delivery fee varies by supplier
 - Israeli LPG suppliers: Supergas, Pazgas, Amisragas, Dorgas
 - Typical household uses 1 balloon every 1-3 months
@@ -184,21 +218,7 @@ To compare costs:
 
 **Central gas (גז מרכזי / צובר), a large apartment segment, has a real lever:** households on a shared bulk tank served by one LPG supplier have the RIGHT to switch central-gas supplier and to demand the supplier's published price list (LPG reform under חוק הפיקוח על מצרכים ושירותים). For these households, switching or renegotiating the central-gas supplier is the main way to lower cooking-gas cost, not just accepting the balloon price. See `references/details-2026.md`.
 
-**Comparison factors:**
-| Factor | Gas Balloon | Natural Gas |
-|--------|-------------|-------------|
-| Cost per cooking hour | Higher | Lower (40-60% savings) |
-| Monthly fixed fee | None | Yes (connection charge) |
-| Delivery reliability | Depends on supplier | Continuous supply |
-| Safety | Requires periodic inspection | Built-in safety systems |
-| Environmental impact | Higher emissions | Lower emissions |
-| Availability | Everywhere | Limited areas |
-
-To determine if switching to natural gas is worthwhile:
-1. Check if your building has natural gas infrastructure (common in buildings built after 2010)
-2. Calculate current cooking gas annual cost
-3. Get a natural gas connection quote (installation + monthly fees)
-4. Calculate break-even point (typically 2-4 years if infrastructure exists)
+See `references/details-2026.md` for the balloon-versus-natural-gas comparison table and the break-even procedure.
 
 ### Step 6: Cellular and Internet Comparison
 
@@ -206,41 +226,51 @@ The Israeli telecom market is one of the cheapest in the developed world after a
 
 **Provider tables and price ranges** (cellular MNO/MVNO plans, fiber infrastructure operators, speed tiers) are in `references/details-2026.md`. Key points for the body:
 - Cheapest cellular clusters ~33-35 NIS/month for 150-400GB with several thousand minutes (genuinely unlimited domestic calls sits at the top of that band); cheaper tiers exist but are data-only or low-data. No setup fee, no commitment ("ללא התחייבות"). Number portability is free and takes ~1 business day, sign with the NEW provider first (never cancel first, that creates a gap). eSIM is widely supported.
-- Home internet splits into infrastructure (Bezeq BFiber, HOT, IBC/Unlimited, Cellcom/Partner fiber) and ISP; a single wholesale-market bundle usually beats a legacy split bill by 20-40 NIS/month. Fiber covers >90% of households; ADSL is being retired.
+- Home internet splits into infrastructure (Bezeq BFiber, HOT, IBC/Unlimited, Cellcom/Partner fiber) and ISP; a single wholesale-market bundle usually beats a legacy split bill by 20-40 NIS/month. Fiber coverage is high and ADSL is being retired; the '>90% of households' figure this skill used to state is **unverified** and should not be quoted.
 - Introductory prices commonly jump 50-100% after 12 months, set a reminder and re-shop. Triple-play (cellular+internet+TV) discounts vanish if you cancel one leg.
+- **Check who owns the brand before calling it an alternative.** Golan Telecom's own About page states that it formerly held its own mobile licence, that since 24.12.2023 Golan Telecom services are provided on the licence of Cellcom Israel Ltd, and that the activity of Golan International was transferred to Cellcom Fixed-Line Communications. A Cellcom customer moving to Golan has therefore not moved to a different licensee. Brand names in this market outlive the independent companies behind them; verify ownership before presenting two brands as rival options.
 
 **How to comparison-shop:**
 1. **Pull last 3 months of bills** for cellular, internet, TV to see actual usage (data per line, peak speed observed, TV channels you watch)
 2. **Run an Israeli comparator**: kamaze.co.il, kamazeole.co.il, israeliphoneplans.com, mishtalemli.co.il, or the Ministry of Communications official comparator at gov.il
 3. **Get 2-3 quotes** by phone; tell each company you're shopping and ask for "מחיר שמירת לקוח" (retention price), usually 15-30% lower than the published price
 4. **Time the switch**: cellular portability is free; internet may have a 1-2 week overlap so schedule installation before cancellation
-5. **For new immigrants or those without Hebrew**: israeliphoneplans.com and No Fryers blog publish English-language guides that explain plan structure and oleh-specific tips
 
 ### Step 7: Arnona Comparison Between Cities
 
-Arnona is the largest recurring utility-like cost for Israeli households, and rates vary sharply between municipalities.
+Arnona is the largest recurring utility-like cost for an Israeli household and the only one that
+changes materially between municipalities.
 
-**How arnona is calculated:**
-- Rate per square meter per YEAR (shekel l'meter ravu'a l'shana). Arnona tariffs are published annually per m2; divide by 6 for a bi-monthly bill or 12 for a monthly one. Treating the annual rate as monthly overstates the bill twelvefold.
-- Different rates for different zones within the same municipality
-- Different rates for residential vs. commercial properties
-- Discounts available for eligible populations (olim chadashim, elderly, low income, disabled)
+**Who pays it: the מחזיק, the occupier.** In a rented flat that is the TENANT, not the landlord.
+This is the first thing to establish in any relocation or cost-comparison question and it is the
+fact most often assumed the other way round.
 
-A city-by-city arnona rate table (80 / 100 sqm monthly estimates for Tel Aviv, Jerusalem, Haifa, Beer Sheva, Raanana, Netanya, Rishon LeZion, Petah Tikva) is in `references/details-2026.md`. Rates vary by zone and change annually, verify at the municipality.
+**How it is charged:** a rate per square metre per YEAR, per zone within the municipality, and
+different for residential and commercial. Divide by 6 for a bi-monthly bill or 12 for a monthly
+one; treating the annual rate as monthly overstates the bill twelvefold. To find the rate, the
+municipality's own site under arnona or tashlumim carries the tariff table per zone.
 
-**How to check your arnona rate:**
-1. Visit your municipality's website (iriya / moatza mekomit)
-2. Look for "arnona" section or "tashlumim" (payments)
-3. Find the tariff table (tav tariffim) for your zone
-4. Calculate based on your property size and classification
+**Discounts** exist for olim, seniors, low income, disability, IDF and national service and
+bereaved families, students, single-person households, and empty or uninhabitable property, each
+with its own eligibility test and time limit. Two rules matter more than the list: **only one
+discount applies per property at a time** (תקנות הסדרים במשק המדינה (הנחה מארנונה), תשנ"ג-1993), so
+a household qualifying on two grounds gets the larger and not the sum; and a discount is granted
+**on application**, so it does not arrive by itself. Never quote a percentage without checking the
+municipality, since national regulations set ceilings that municipalities apply differently.
 
-**Arnona discounts (hanashot):** olim, seniors, low income, disability, IDF/national-service and bereaved families, students, single-person households, empty property and uninhabitable property each carry a discount with its own eligibility test and time limit. Full list in `references/details-2026.md`. Never quote a percentage without checking the municipality: national regulations set ceilings that municipalities apply differently.
+**Objection (השגה):** if the bill is wrong (size, zone, a missing discount, a balcony at full
+rate), file a written hassagah with the municipal arnona manager within **90 days** of the bill.
+The municipality must answer within **60 days** and silence counts as rejection. If rejected,
+**30 days** to appeal to the ועדת ערר לארנונה, and **45 days** from its ruling to the בית משפט
+לעניינים מנהליים. **These deadlines have not been independently verified in this skill and a wrong
+one forfeits a legal right**: confirm them against the municipality's own notice, which must state
+them, before relying on a date.
 
-**Discount stacking rule:** Only one discount tier applies per property at a time, per תקנות הסדרים במשק המדינה (הנחה מארנונה), תשנ"ג-1993. A household qualifying for both senior and low-income discounts receives the larger of the two, not the sum. Apply for whichever gives the highest reduction.
+Indicative city figures, the full discount catalogue and step-by-step objection guidance are in
+`references/details-2026.md`. City-average tables there are orders of magnitude, not quotes.
 
-**Filing an arnona objection (hassagah):** if the bill is wrong (property size, zone classification, a missing discount, a balcony charged at full rate), file a written hassagah with the municipal arnona manager within 90 days of the bill. The municipality must answer within 60 days, and silence counts as rejection. If rejected you have 30 days to appeal to the ועדת ערר לארנונה, and 45 days from its ruling to escalate to בית משפט לעניינים מנהליים. Step-by-step guidance and what evidence to attach at each stage are in `references/details-2026.md`.
-
-For IEC and water-corporation billing disputes (not arnona), the small-claims court (בית משפט לתביעות קטנות, 39,900 ILS cap in 2026) is often a faster path.
+For IEC and water-corporation billing disputes (not arnona), the small-claims court is often a
+faster path; its ceiling is carried from a previous cycle and is not re-verified here.
 
 ### Step 8: Tips for Reducing Utility Bills
 
@@ -248,96 +278,63 @@ Per-utility bill-reduction tips (electricity, water, arnona, cellular & internet
 
 ### Step 9: Smart Meter Adoption and Monitoring
 
-**Smart meters (monéi chokhéakh):**
-- IEC passed 1 million smart meters in August 2024, about 30% of all meters at that point, and brought its rollout target forward by eight years: **3.7 million smart meters by end-2028**. The installed base has grown since, so treat the million as a dated milestone rather than a current count
-- Allow real-time consumption monitoring
-- Enable TOU pricing and accurate readings for private suppliers (the supplier needs interval data, not a monthly estimate)
-- Check eligibility at iec.co.il, call **103** (also reachable as 055-7000103 for SMS / WhatsApp), or use the IEC app
-- Self-paid expedited installation is available where IEC has not yet deployed in the area. IEC publishes the current fee and the waiting time; ask when you apply rather than budgeting from a figure quoted elsewhere
-
-**Monitoring tools:**
-- IEC app (available on iOS and Android): view real-time consumption, billing history, and payment options
-- Home energy monitors: third-party devices that clip onto your electrical panel
-- Solar system monitors: SolarEdge, Enphase apps for solar panel owners
-
-**Benefits of smart meters:**
-- See exactly when you consume the most electricity
-- Identify energy-wasting appliances
-- Optimize consumption patterns for TOU savings
-- Receive alerts for unusual consumption (potential leaks or faulty appliances)
+A smart meter (מונה חכם) is a prerequisite for the TOU tariff and is what makes any load-shifting
+advice actionable, because without interval data there is nothing to shift against. IEC installs
+them on request and on a national rollout. The consumption data is what turns the seasonal peak
+and off-peak figures in Step 2 into a number for this household rather than a national average.
+Adoption details, the rollout position, the data-access routes and prepaid meters are in
+`references/details-2026.md`.
 
 ## Examples
 
 ### Example 1: Family Evaluating Solar Panels
 
-User says: "We live in a house in Modi'in, pay about 800 ILS per month for electricity, and want to know if solar panels are worth it."
+User says: "We pay about 800 ILS a month for electricity. Is solar worth it?"
 
-Actions:
-1. Calculate approximate monthly consumption: 800 ILS / ~0.6352 ILS per kWh (standard residential tariff from 1.7.2026, inc. 18% VAT) = ~1,259 kWh per month
-2. Determine system size needed: 1,259 * 12 / 1,600 (kWh per kWp in central Israel) = ~9.4 kWp; round to a 9-10 kWp system
-3. Estimate system cost: 9.5 kWp * ~3,800 ILS per kWp = ~36,000 ILS turnkey (mid-range 2026 pricing; basic systems start lower, premium and battery-paired go higher)
-4. Estimate annual savings: full net-metering is closed to new entrants. Self-consumption offsets the ~0.6352 ILS/kWh retail rate; export earns ~0.54 ILS/kWh (48 + 6 urban). On a ~15,000 kWh/year system at ~45% self-consumption: ~8,500-9,000 ILS/year
-5. Payback period: ~36,000 / ~8,750 = ~4.1 years (within the 4-7 year band)
-6. 25-year total savings: roughly (8,750 * 25) - 36,000 = ~183,000 ILS (before ~0.5%/year degradation and tariff changes)
-7. Check roof suitability: verify south-facing roof availability and shading.
-8. Get 3 installer quotes. The residential export tariff (~48 agorot/kWh, +6 urban) sits well below the ~63.5 agorot retail rate, so self-consumption beats export. Confirm the applicant controls the roof.
-9. Check municipal heter bniya requirements for roof modifications.
-
-Result: ~4-5 year payback and lifetime savings over 150,000 ILS, modeling self-consumption and export separately. Strong provided the user controls the roof.
+Convert the bill to kWh at the verified retail rate (63.52 agorot incl. VAT), size the system
+from annual consumption divided by the kWh-per-kWp band for their region, and price the saving on
+SELF-CONSUMPTION at that retail rate, which is a number this skill can stand behind. Then stop:
+present the export leg as something the installer's contract and the current tariff book must
+supply, not as a figure from here, and do not multiply an unverified export rate across 25 years
+to produce a lifetime saving. Tell the family to get three quotes and to confirm they control the
+roof. The worked arithmetic is in `references/details-2026.md`, and it carries the same caveat.
 
 ### Example 2: Comparing Utility Costs Between Cities for Relocation
 
-User says: "I'm deciding between moving to Beer Sheva or Haifa. What's the difference in utility costs for a 100 sqm apartment, family of 4?"
+User says: "Should I move from Tel Aviv to Haifa? How much will I save on utilities?"
 
-Actions:
-1. Compare arnona rates: Beer Sheva ~350-480 ILS/month for 100 sqm residential, Haifa ~480-630, a difference of ~130-150 ILS/month favouring Beer Sheva. Read each city's published annual rate per m2 and divide, rather than reusing these bands.
-2. Compare water costs:
-   - Both use tiered national pricing; check each water corporation's surcharges. Family of 4: ~14 m3/month Tier 1.
-3. Compare electricity:
-   - IEC rates are national. Beer Sheva has higher summer cooling costs but better solar potential; Haifa is milder.
-4. Compare gas: similar pricing nationally, both cities have balloon gas and some natural gas
-5. Calculate total annual utility difference:
-   - Arnona savings in Beer Sheva: ~1,560-1,800 ILS/year
-   - Electricity may be slightly higher in Beer Sheva due to cooling
-   - Net annual savings in Beer Sheva: ~1,000-1,500 ILS/year on utilities
-6. Note: Beer Sheva has significantly lower housing costs which compounds the savings
-
-Result: User receives a side-by-side comparison showing that Beer Sheva is approximately 1,000-1,500 ILS per year cheaper on utilities (mainly arnona), plus significantly cheaper housing, while Haifa offers more moderate climate with lower cooling costs.
+Electricity, water and cooking gas are national or near-national, so they barely move with the
+city. Arnona does, and it is the only line that materially changes. Work it from the user's own
+apartment size in square metres, the specific rate zone of each address, and the discounts they
+personally qualify for, and treat any city-average table as an order of magnitude rather than a
+quote. Give the annual arnona delta and say plainly that the rest of the utility bill is
+substantially the same in both cities. Indicative city figures and the objection procedure are
+in `references/details-2026.md`.
 
 ### Example 3: Optimizing Electricity Bill with Smart Meter
 
-User says: "I just got a smart meter installed. My bill is 600 ILS/month. How can I reduce it?"
+User says: "I have a smart meter. How do I lower my bill?"
 
-Actions:
-1. Recommend switching from standard tariff to TOU (time-of-use) tariff
-2. Analyze typical household consumption patterns:
-   - Identify high-consumption appliances: AC, water heater (if electric), dryer, oven
-   - Estimate what percentage of consumption can shift to off-peak hours
-3. Create an optimization plan:
-   - Run washer and dryer after 23:00 in summer, after 22:00 in winter. Shabbat is NOT automatically off-peak: the winter 17:00-22:00 peak band applies on Shabbat and holidays too.
-   - Use dishwasher timer for off-peak operation
-   - Pre-cool home before peak hours in summer
-   - Switch electric water heater timer to heat during off-peak (if applicable)
-4. Calculate potential savings:
-   - If 40% of consumption shifts from peak to off-peak: savings of approximately 15-20%
-   - 600 * 0.17 = ~100 ILS/month potential savings
-5. Recommend IEC app for monitoring real-time consumption
-6. Suggest additional measures: LED bulbs, AC at 24-25 degrees, unplug standby devices
-
-Result: User receives a practical action plan for shifting consumption to off-peak hours, with estimated monthly savings of 80-120 ILS, plus an ongoing monitoring strategy using the IEC app.
+Pull the interval data, find how much consumption already sits in the peak band, and price the
+shift using the SEASONAL figures from Step 2 rather than a flat percentage: moving a load off
+peak is worth over 120 agorot/kWh in summer and under 4 in the transition season, and in summer
+and transition there is no peak band at all on Fridays, Shabbat and holidays, so weekend loads
+are already off-peak. Then check whether TOU beats the flat tariff for this household at all: a
+household that cannot move its evening load is usually better off on the flat rate. Only after
+that is the supplier-discount question worth raising, and it touches the generation component
+only, not the fixed charges.
 
 ## Gotchas
-- Israel Electric Corporation rates are updated by the Electricity Authority on a semi-annual cycle, and a mid-year update can move the rate: the 1.7.2026 update cut the tariff by about 0.57% after the +1.5% January change. Agents routinely quote a superseded rate. Always verify the current tariff before quoting per-kWh numbers.
+- Israel Electric Corporation rates are updated by the Electricity Authority on a semi-annual cycle, and a mid-year update can move the rate: the 1.7.2026 update moved the residential rate to 53.83 agorot excluding VAT and 63.52 including, down from the January 2026 edition. Agents routinely quote a superseded rate. Always verify the current tariff before quoting per-kWh numbers.
 - The TOU (tariff TOZ / תעו"ז) schedule has only two tiers since April 2023: peak (שיא) and off-peak (שפל). The former שלב הגבע (shoulder) tier was eliminated. Agents trained on older docs may still describe a 3-tier structure with a middle band.
-- Switching to an alternate electricity supplier (Cellcom Energy, Pazgas, OPC, etc.) only discounts the generation component, which is roughly 60-70% of the bill. The household still pays IEC for distribution, transmission, the public broadcasting fee, and meter charges. Agents may incorrectly imply the entire bill changes.
+- Switching to an alternate electricity supplier (Cellcom Energy, Pazgas, OPC, etc.) only discounts the generation component, which is roughly 60-70% of the bill. The household still pays IEC the fixed distribution and supply charges and the capacity charge (there is no broadcasting fee on the bill; see the priced table in Step 2). Agents may incorrectly imply the entire bill changes.
 - Water Tier 1 covers up to 3.5 m³ per registered nefesh per month at the lower rate, with a floor: the recognized quantity per housing unit is never less than 7 m³ per month, so a single-occupant household gets 7 rather than 3.5; consumption above goes to Tier 2 (~84% higher in Jan 2026: 8.51 vs 15.62 ILS/m³ inc. VAT). Sewage is bundled into the regulated per-m³ tariff in most municipalities, NOT a separate percentage surcharge as some older guides describe.
 - Israeli utility bills include 18% VAT (raised from 17% on 1 Jan 2025). A rise to 19% was floated at the Finance Ministry but was not enacted: the 2026 state budget contains no such increase, so quote 18%. Be explicit about whether quoted prices include or exclude VAT, especially when comparing alternate-supplier offers, since some advertise the pre-VAT generation rate.
 - The Olim Hadashim arnona discount is 90% on up to 100 sqm for 12 months out of the 24 months following aliyah registration, NOT yearly. Agents may incorrectly describe it as multi-year (e.g., "90% first year, 10% years 2-5"). Disabled olim recognized by Bituach Leumi get up to 80% indefinitely under a separate provision.
 - The IEC customer-service number is **103**; calls from a Bezeq or HOT landline are free. Do not emit older short codes from memory, they may point at a dead number.
-- **Solar export tariff.** Energy-vs-energy net-metering is closed to new entrants. The residential rooftop export tariff is ~48 agorot/kWh plus a +6 agorot urban premium (cities >50k); the small-installation track is <=15 kW. Confirm the contract DURATION against the current tariff book before quoting it: published sources differ (25 years under the older net-metering rule, 15 years in later material), and the difference changes a payback calculation materially. Export pays less than the ~63.5 agorot retail rate, so self-consumption is worth more than export. Quote the contract's actual hesder line, not older ~0.21/~0.60/~0.38 figures.
-- **Cellular and internet "promo expiry".** Most plans advertise a low introductory price (often X NIS for 12 months) that doubles or more after the promo period. Agents that quote the intro price as the "real" monthly cost will mislead the user. Always check the תקנון for "מחיר לאחר תום תקופת המבצע".
-- **Number portability is free, fast, and no-paperwork.** Suggesting users "cancel first then sign up new" is wrong, they should sign with the new provider, who handles portability in ~1 business day. Cancelling first creates a service gap.
+**EXPORT TARIFF WITHDRAWN.** This skill does not state a residential solar export tariff. The only source it carries is a March 2025 trade-press article about a tariff then out for CONSULTATION, which reports 0.60 ILS/kWh for five years falling to 0.3807 (up to 30 kW) and 0.39 CPI-linked (up to 15 kW), and identifies 0.48 over a fixed 25 years as the then-incumbent rate. The '+6 agorot urban premium for cities over 50,000' previously stated here is in no source at all. Read the hesder line in the actual contract or the current Electricity Authority tariff book. Do not multiply an export rate across 25 years from anything in this skill. Self-consumption at the verified 63.52 agorot retail rate is the part that can be relied on.
 
+- Cellular promo-expiry mechanics and the number-portability procedure (always sign with the NEW provider first) are in `references/details-2026.md`.
 ## Reference Links
 
 | Source | URL | What to Check |
@@ -367,9 +364,8 @@ Result: User receives a practical action plan for shifting consumption to off-pe
 |-----|-------------|
 | [Israeli CBS MCP](https://agentskills.co.il/he/mcps/tax-and-finance/israeli-cbs) | CPI and price-index series, useful for checking whether a tariff change tracks inflation or exceeds it |
 | [Kolzchut (All-Rights)](https://agentskills.co.il/he/mcps/government-services/kolzchut) | Live text of the arnona, electricity and water discount entitlements this skill routes to |
-| [Israel Statistics](https://agentskills.co.il/he/mcps/tax-and-finance/israel-statistics) | CBS price indices for cross-checking utility cost trends over time |
 
-Utility tariffs move on published schedules. Use these to check whether a figure is current; confirm any rate's effective date before quoting it.
+Utility tariffs move on published schedules. Confirm any rate's effective date before quoting it.
 
 ## Troubleshooting
 
@@ -379,10 +375,14 @@ Cause: Several factors can cause unexpectedly high bills: billing estimate rathe
 
 Solution: Check if the bill shows an actual reading (kri'at moné) or an estimate (ha'aracha). If estimated, request an actual reading from IEC. Compare the meter reading on your bill with the physical meter. If consumption seems genuinely high, check for: electric water heater on during peak hours (dud hashmal timer), AC filters that need cleaning (dirty filters increase consumption by 15-20%), old refrigerator (replacing a 15+ year old unit saves ~30%), and phantom loads from devices on standby. Install the IEC app to monitor real-time consumption and identify spikes.
 
-### Error: "Water bill shows consumption much higher than our actual usage"
+### Error: "Water bill shows consumption much higher than our household uses"
 
-Cause: The most common cause is an internal leak, often in a toilet that runs continuously (difficult to notice) or an underground pipe leak. Other causes include: meter reading error, unregistered nefashot (household members) putting more consumption into the expensive Tier 2, or building-wide meter issues in shared buildings.
+Cause: an unregistered household member (so the Tier-1 allocation is too small), a leak between
+the municipal meter and the apartment, or a shared-meter building where one bill is split by
+apartment count rather than by actual use.
 
-Solution: Check for toilet leaks by adding food coloring to the tank and waiting 15 minutes without flushing; if color appears in the bowl, there's a leak. Check your most recent bill for nefashot count and verify all family members are registered with your water corporation. Read your water meter before bed and again in the morning without using any water; if the reading changed, you have a leak. Contact your water corporation to request a meter accuracy test (they are required to provide this). If a hidden leak is confirmed, you may be eligible for a bill adjustment (ha'aracha mechudeshét) for the leaked water.
-
-For TOU-not-available, arnona rate mismatch, cellular promo-jump, and consolidating a split Bezeq + ISP bill, see the extended troubleshooting in `references/details-2026.md`.
+Solution: first register every nefesh with the water corporation, since Tier 1 is allocated per
+registered person and the allocation is retroactive only from the registration date. Then check
+for a leak by closing every tap and watching the meter. A leak repaired promptly can qualify for
+a partial credit. Full diagnostic sequence, the shared-meter case and the credit conditions are
+in `references/details-2026.md`.

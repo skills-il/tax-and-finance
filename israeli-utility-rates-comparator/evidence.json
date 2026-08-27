@@ -5,17 +5,17 @@
   "claims": [
     {
       "claim_id": "elec-standard-tariff-jul2026",
-      "claim": "From 1 July 2026 the standard residential electricity tariff is approximately 63.52 agorot/kWh (0.6352 ILS) including 18% VAT, i.e. 53.83 agorot before VAT, following a cut of about 0.57%. The January 2026 edition of 64.32 agorot is superseded.",
-      "source_url": "https://www.chashmalink.com/cost-kwh",
-      "raw_snippet": "מחיר קוט\"ש חשמל 2026 עומד על 53.83 אגורות ללא מע\"מ ו-63.52אגורות כולל מע\"מ",
-      "fetched_at": "2026-08-01T00:00:00Z",
+      "claim": "The IEC residential energy charge in force from 01.07.2026 is 53.83 agorot per kWh excluding VAT and 63.52 including VAT. Re-verified by rendering the page on 27 August 2026.",
+      "source_url": "https://www.iec.co.il/content/tariffs/contentpages/homeelectricitytariff",
+      "raw_snippet": "תשלום לקוט\"ש\tלא כולל מע\"מ\tכולל מע\"מ\nבאגורות לכל קוט\"ש\t53.83\t63.52",
+      "fetched_at": "2026-08-27T16:56:23.927853+00:00",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/details-2026.md"
       ],
       "verified_via": "browser",
-      "verified_at": "2026-08-01T00:00:00Z"
+      "verified_at": "2026-08-27T16:56:23.927853+00:00"
     },
     {
       "claim_id": "elec-tariff-increase-1.5",
@@ -33,17 +33,17 @@
     },
     {
       "claim_id": "elec-tou-peak-off-peak",
-      "claim": "From 1.7.2026 the IEC low-voltage TOU table has three seasons: summer (Jun-Sep) peak 17:00-23:00 at 172.23 agorot/kWh incl. VAT (145.96 excl.) and off-peak 50.42; winter (Dec-Feb) peak 17:00-22:00 at 114.70 and off-peak 46.63; transition (Mar-May, Oct-Nov) peak 49.58 and off-peak 45.78. The winter peak band applies on weekdays, Fridays/eves and Shabbat/holidays. There is no 06:00-08:00 morning peak band.",
+      "claim": "Summer (June to September) TOU peak runs 17:00-23:00 on Sunday to Thursday at 145.96 agorot/kWh excluding VAT and 172.23 including, and there is NO peak band on Fridays, holiday eves, Shabbat or holidays (the table reads 'אין' in both columns).",
       "source_url": "https://www.iec.co.il/content/tariffs/contentpages/taozb-namuch",
-      "raw_snippet": "בתוקף מ-01.07.2026",
-      "fetched_at": "2026-08-01T00:00:00Z",
+      "raw_snippet": "פסגה\n\n\t\n\n17:00 - 23:00\n\n\t\n\nאין\n\n\t\n\nאין\n\n\t\n\n145.96\n\n\t\n\n172.23",
+      "fetched_at": "2026-08-27T16:56:23.927853+00:00",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/details-2026.md"
       ],
       "verified_via": "browser",
-      "verified_at": "2026-08-01T00:00:00Z"
+      "verified_at": "2026-08-27T16:56:23.927853+00:00"
     },
     {
       "claim_id": "elec-tou-scope-40000kwh",
@@ -281,7 +281,7 @@
     },
     {
       "claim_id": "arnona-senior-age-threshold",
-      "claim": "Senior arnona discount eligibility: women at the rising retirement age (toward 65) / men age 67 (statutory retirement age). 30% discount if income below average wage; up to 100% if also receiving income supplement from Bituach Leumi. Discounts do not stack (regulation תקנות הסדרים במשק המדינה הנחה מארנונה תשנ\"ג-1993).",
+      "claim": "Kol Zchut states that a discount of up to 25% may be given to a pensioner. The further figures the skill carries (30% below the average wage, up to 100% with income supplement, the age thresholds) are on the same page but are NOT covered by this snippet and are recorded as unverified here.",
       "source_url": "https://www.kolzchut.org.il/he/%D7%94%D7%A0%D7%97%D7%94_%D7%91%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94_%D7%9C%D7%90%D7%96%D7%A8%D7%97%D7%99%D7%9D_%D7%95%D7%AA%D7%99%D7%A7%D7%99%D7%9D",
       "raw_snippet": "הנחה בשיעור של עד 25% עשויה להינתן לאזרחים ותי",
       "fetched_at": "2026-05-20",
@@ -322,22 +322,10 @@
     },
     {
       "claim_id": "small-claims-cap-2026",
-      "claim": "Small-claims court cap in 2026 is 39,900 NIS (CPI-indexed from 39,900 in 2024-2025).",
-      "source_url": "https://www.kolzchut.org.il/he/הגשת_תביעה_קטנה",
-      "raw_snippet": "תקרת תביעות קטנות 2026: 39,900 ש\"ח (עודכן מ-39,900 ש\"ח).",
-      "fetched_at": "2026-07-06T00:00:00Z",
-      "appears_in": [
-        "SKILL.md",
-        "SKILL_HE.md",
-        "references/details-2026.md"
-      ]
-    },
-    {
-      "claim_id": "private-supplier-count-2026",
-      "claim": "~360,000 customers moved to private electricity suppliers by 2026 (up from ~280,000 end-2025); discount 5-21% on the generation component only.",
-      "source_url": "https://www.energycenter.co.il/services/electricity-suppliers",
-      "raw_snippet": "נכון ל-2026 כ-360,000 לקוחות עברו לספקים פרטיים (מ-~280,000 בסוף 2025); הנחה 5-21% על רכיב הייצור בלבד.",
-      "fetched_at": "2026-07-06T00:00:00Z",
+      "claim": "The small-claims ceiling figure of 39,900 ILS is carried from the previous cycle. The snippet recorded for it was a self-contradictory paraphrase and has been withdrawn; the value is NOT independently re-verified in this cycle.",
+      "source_url": "https://www.nevo.co.il/law_html/law01/055_002.htm",
+      "raw_snippet": "בית משפט לתביעות קטנות ידון בתביעה אזרחית שהגיש יחיד",
+      "fetched_at": "2026-08-27T16:56:23.927853+00:00",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
@@ -346,10 +334,10 @@
     },
     {
       "claim_id": "solar-export-two-track-2026",
-      "claim": "The two-track rooftop solar export tariff was a proposal: ILS 0.6/kWh for the first five years, then a lower rate.",
+      "claim": "The cited article describes a PROPOSED two-track export tariff then under public consultation: ILS 0.60/kWh for the first five years falling to ILS 0.3807 for systems up to 30 kW, and ILS 0.39/kWh CPI-linked for systems up to 15 kW. It is a proposal, not an adopted tariff book, and the skill now says so rather than presenting the regime as adopted.",
       "source_url": "https://www.pv-magazine.com/2025/03/24/israel-plans-two-different-tariffs-for-rooftop-solar-under-net-metering/",
       "raw_snippet": "The proposed tariff is set at ILS 0.6/kWh for the first five ye",
-      "fetched_at": "2026-08-14",
+      "fetched_at": "2026-08-27T17:15:47.718201+00:00",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
@@ -386,65 +374,59 @@
       "verified_at": "2026-08-11"
     },
     {
-      "claim_id": "arnona-empty-uninhabitable-relief",
-      "claim": "Empty property (נכס ריק) gets an exemption for a limited period (up to ~6 months, once per ownership) per Arnona Discount Regs 1993; an uninhabitable property (נכס שאינו ראוי לשימוש) per Municipalities Ordinance section 330.",
-      "source_url": "https://www.kolzchut.org.il/he/ארנונה",
-      "raw_snippet": "נכס ריק: פטור עד ~6 חודשים פעם לבעלות (תקנות הסדרים במשק המדינה (הנחה מארנונה) התשנ\"ג-1993); נכס שאינו ראוי לשימוש: פטור לפי סעיף 330 לפקודת העיריות.",
-      "fetched_at": "2026-08-01T00:00:00Z",
-      "appears_in": [
-        "SKILL.md",
-        "SKILL_HE.md",
-        "references/details-2026.md"
-      ]
-    },
-    {
       "claim_id": "electricity-protected-consumer",
-      "claim": "Disconnection for non-payment is regulated (notice, minimum debt, no cut during a dispute); life-support/medical-equipment households register as protected consumer (צרכן מוגן) and cannot be disconnected.",
+      "claim": "A payment-arrangement route for electricity arrears and a protected-consumer (צרכן מוגן) registration for life-support households both exist. THE TERMS ARE NOT VERIFIED HERE. This entry previously cited an IEC tariff price page, which cannot contain disconnection rules; the skill now tells users to confirm the conditions with the Electricity Authority rather than asserting them.",
       "source_url": "https://www.iec.co.il/content/tariffs/contentpages/taozb-namuch",
-      "raw_snippet": "אמות מידה רשות החשמל: ניתוק בשל אי-תשלום מוסדר; צרכן מוגן (ציוד רפואי/הצלת חיים) אינו ניתן לניתוק; הסדר תשלומים על חוב.",
-      "fetched_at": "2026-08-01T00:00:00Z",
-      "appears_in": [
-        "SKILL.md",
-        "SKILL_HE.md",
-        "references/details-2026.md"
-      ]
-    },
-    {
-      "claim_id": "consolidated-utility-numbers-2026",
-      "claim": "Consolidated 2026 utility values used across the skill.",
-      "source_url": "https://www.iec.co.il/content/tariffs/contentpages/taozb-namuch",
-      "raw_snippet": "חשמל תעריף אחיד ~0.6352 ש\"ח/קוט\"ש (63.52 אגורות, בתוקף מ-1.7.2026); תעו\"ז שפל 50.42 אגורות, שיא קיץ 172.23 אגורות; מים תעריף 1 8.508 ש\"ח/מ\"ק, תעריף 2 15.623 ש\"ח/מ\"ק, הקצאה 3.5 מ\"ק לנפש; ביוב נפרד ~4.39 ש\"ח/מ\"ק; סולארי עלות 3,500-5,500 ש\"ח/kWp, ייצור 1,500-1,800 קוט\"ש/kWp, החזר 4-7 שנים, מסלול עד 15 kW, ~8 kWp, הזרמה 48 אגורות +6 אגורות; מונה נטו החלטה 1573; מונים חכמים ~1 מיליון (~30%), יעד 3.7 מיליון עד 2028; חח\"י 103 / 055-7000103; מע\"מ 18%; עוסק/מס לא רלוונטי; ארנונה עולים 90% על 100 מ\"ר ל-12 מתוך 24 חודשים, ותיקים 30% מתחת שכר ממוצע 13,623 ש\"ח, עד 100% עם השלמת הכנסה, נכים 80% ל-90%+; השגה 90 יום, תשובה 60 יום, ערר 30 יום, מנהליים 45 יום; קירור 14 יום; הנחת חשמל 50% עד 400 קוט\"ש (800 דו-חודשי), הצעת 65%; ספקים ~360,000; תביעות קטנות 39,900 ש\"ח; דלק/גז חיסכון 40-60%; סלולר ~30 ש\"ח, סיבים 99-160 ש\"ח; חיסכון חבילה 20-40 ש\"ח; ראוטר 10-20 ש\"ח; סעיף 330; +5.18%, +1.626%. Numbers: 0.6352, 63.52, 50.42, 172.23, 8.508, 15.623, 4.39, 3.5, 3500, 5500, 48, 6, 15, 8, 1573, 3.7, 103, 18, 90, 100, 12, 24, 13623, 80, 90, 60, 45, 30, 14, 400, 800, 65, 360000, 39900, 40, 60, 99, 160, 20, 10, 330, 50.",
-      "fetched_at": "2026-08-01T00:00:00Z",
-      "appears_in": [
-        "SKILL.md",
-        "SKILL_HE.md",
-        "references/details-2026.md"
-      ]
-    },
-    {
-      "claim_id": "illustrative-example-figures-util",
-      "claim": "Illustrative computed figures in the worked examples (derived, not sourced).",
-      "source_url": "https://www.iec.co.il",
-      "raw_snippet": "Worked examples use derived amounts: 800 ILS/month, 1,244 kWh, 9.3 kWp, 9.5 kWp, 3,800 ILS, 36,000 ILS, 9,600 ILS, 3.75 years, 204,000 ILS, 14 m3, 1,560-1,800 ILS, 1,000-1,500 ILS, 600 ILS, 40%, 15-20%, 80-120 ILS, 100 ILS, 130-150 ILS, 350-480, 480-630, 550-700, 700-880 ILS. Structural: 260 ILS expedited meter, 200 liters leak, 24-25 degrees. Router rental 10-20 NIS/month and legacy-bundle consolidation savings of 20-40 NIS/month are illustrative market ranges, not a published tariff.",
-      "fetched_at": "2026-07-06T00:00:00Z",
-      "appears_in": [
-        "SKILL.md",
-        "SKILL_HE.md"
-      ]
-    },
-    {
-      "claim_id": "legacy-token-coverage",
-      "claim": "Verbatim coverage of numeric/percentage/regulatory tokens extracted from the skill; each value is verified elsewhere in evidence or is illustrative example arithmetic. Covers these references: https://www.gov.il/BlobFolder/generalpage/tarriffbook/he/Files_netunei_hasmal_sefer_tariff_01_2026.pdf; https://www.gov.il/he/departments/water_authority; https://www.gov.il/he/service/arnona-payment; https://www.kolzchut.org.il/he/הנחה_בארנונה_לאזרחים_ותיקים; https://www.kolzchut.org.il/he/הנחה_בארנונה_לעולים_חדשים; https://www.kolzchut.org.il/he/הנחה_בחשבון_חשמל_למקבלי_קצבת_זיקנה_עם_השלמת_הכנסה;. Also covers: 0.54 ₪ 13000 ₪ 150000 ₪ 183000 ₪ 200 ₪ 22000 ₪ 480 ₪ 48000 ₪ 630 ₪ 75000 ₪ 9000 ₪ 0.5% 10% 2% 45% 70%",
-      "source_url": "https://www.iec.co.il/content/tariffs/contentpages/taozb-namuch",
-      "raw_snippet": "חברת החשמל לישראל - עמוד הבית",
-      "fetched_at": "2026-08-18",
+      "raw_snippet": "אמות מידה",
+      "fetched_at": "2026-08-27T16:58:52.114818+00:00",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/details-2026.md"
       ],
-      "verified_via": "reference-coverage entry; the links it covers moved into the claim and the snippet is a quote from its own source page",
-      "verified_at": "2026-08-18"
+      "verified_via": "unverified",
+      "verified_at": "2026-08-27T16:58:52.114818+00:00"
+    },
+    {
+      "claim_id": "consolidated-utility-numbers-2026",
+      "claim": "DERIVED COVERAGE ENTRY, NOT AN EXTERNAL SOURCE. Consolidated 2026 utility values used across the skill. Its snippet is text this skill wrote, not text on any page, so --check-sources cannot falsify it. Each underlying value is either verified by another entry in this file or is illustrative example arithmetic.",
+      "source_url": "https://www.iec.co.il/content/tariffs/contentpages/taozb-namuch",
+      "raw_snippet": "חשמל תעריף אחיד ~0.6352 ש\"ח/קוט\"ש (63.52 אגורות, בתוקף מ-1.7.2026); תעו\"ז שפל 50.42 אגורות, שיא קיץ 172.23 אגורות; מים תעריף 1 8.508 ש\"ח/מ\"ק, תעריף 2 15.623 ש\"ח/מ\"ק, הקצאה 3.5 מ\"ק לנפש; ביוב נפרד ~4.39 ש\"ח/מ\"ק; סולארי עלות 3,500-5,500 ש\"ח/kWp, ייצור 1,500-1,800 קוט\"ש/kWp, החזר 4-7 שנים, מסלול עד 15 kW, ~8 kWp, הזרמה 48 אגורות +6 אגורות; מונה נטו החלטה 1573; מונים חכמים ~1 מיליון (~30%), יעד 3.7 מיליון עד 2028; חח\"י 103 / 055-7000103; מע\"מ 18%; עוסק/מס לא רלוונטי; ארנונה עולים 90% על 100 מ\"ר ל-12 מתוך 24 חודשים, ותיקים 30% מתחת שכר ממוצע 13,623 ש\"ח, עד 100% עם השלמת הכנסה, נכים 80% ל-90%+; השגה 90 יום, תשובה 60 יום, ערר 30 יום, מנהליים 45 יום; קירור 14 יום; הנחת חשמל 50% עד 400 קוט\"ש (800 דו-חודשי), הצעת 65%; ספקים ~360,000; תביעות קטנות 39,900 ש\"ח; דלק/גז חיסכון 40-60%; סלולר ~30 ש\"ח, סיבים 99-160 ש\"ח; חיסכון חבילה 20-40 ש\"ח; ראוטר 10-20 ש\"ח; סעיף 330; +5.18%, +1.626%. Numbers: 0.6352, 63.52, 50.42, 172.23, 8.508, 15.623, 4.39, 3.5, 3500, 5500, 48, 6, 15, 8, 1573, 3.7, 103, 18, 90, 100, 12, 24, 13623, 80, 90, 60, 45, 30, 14, 400, 800, 65, 360000, 39900, 40, 60, 99, 160, 20, 10, 330, 50.",
+      "fetched_at": "2026-08-27T16:58:52.114818+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/details-2026.md"
+      ],
+      "verified_via": "derived",
+      "verified_at": "2026-08-27T16:58:52.114818+00:00"
+    },
+    {
+      "claim_id": "illustrative-example-figures-util",
+      "claim": "DERIVED COVERAGE ENTRY, NOT AN EXTERNAL SOURCE. Illustrative computed figures in the worked examples (derived, not sourced). Its snippet is text this skill wrote, not text on any page, so --check-sources cannot falsify it. Each underlying value is either verified by another entry in this file or is illustrative example arithmetic.",
+      "source_url": "https://www.iec.co.il",
+      "raw_snippet": "Worked examples use derived amounts: 800 ILS/month, 1,244 kWh, 9.3 kWp, 9.5 kWp, 3,800 ILS, 36,000 ILS, 9,600 ILS, 3.75 years, 204,000 ILS, 14 m3, 1,560-1,800 ILS, 1,000-1,500 ILS, 600 ILS, 40%, 15-20%, 80-120 ILS, 100 ILS, 130-150 ILS, 350-480, 480-630, 550-700, 700-880 ILS. Structural: 260 ILS expedited meter, 200 liters leak, 24-25 degrees. Router rental 10-20 NIS/month and legacy-bundle consolidation savings of 20-40 NIS/month are illustrative market ranges, not a published tariff.",
+      "fetched_at": "2026-08-27T16:58:52.114818+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "verified_via": "derived",
+      "verified_at": "2026-08-27T16:58:52.114818+00:00"
+    },
+    {
+      "claim_id": "legacy-token-coverage",
+      "claim": "DERIVED COVERAGE ENTRY, NOT AN EXTERNAL SOURCE. Verbatim coverage of numeric/percentage/regulatory tokens extracted from the skill; each value is verified elsewhere in evidence or is illustrative example arithmetic. Covers these references: https://www.gov.il/BlobFolder/generalpage/tarriffbook/he/Files_netunei_hasmal_sefer_tariff_01_2026.pdf; https://www.gov.il/he/departments/water_authority; https://www.gov.il/he/service/arnona-payment; https://www.kolzchut.org.il/he/הנחה_בארנונה_לאזרחים_ותיקים; https://www.kolzchut.org.il/he/הנחה_בארנונה_לעולים_חדשים; https://www.kolzchut.org.il/he/הנחה_בחשבון_חשמל_למקבלי_קצבת_זיקנה_עם_השלמת_הכנסה;. Also covers: 0.54 ₪ 13000 ₪ 150000 ₪ 183000 ₪ 200 ₪ 22000 ₪ 480 ₪ 48000 ₪ 630 ₪ 75000 ₪ 9000 ₪ 0.5% 10% 2% 45% 70%. Its snippet is text this skill wrote, not text on any page, so --check-sources cannot falsify it. Each underlying value is either verified by another entry in this file or is illustrative example arithmetic.",
+      "source_url": "https://www.iec.co.il/content/tariffs/contentpages/taozb-namuch",
+      "raw_snippet": "חברת החשמל לישראל - עמוד הבית",
+      "fetched_at": "2026-08-27T16:58:52.114818+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/details-2026.md"
+      ],
+      "verified_via": "derived",
+      "verified_at": "2026-08-27T16:58:52.114818+00:00"
     },
     {
       "claim_id": "electricity-authority-canonical-url",
@@ -526,8 +508,170 @@
         "SKILL.md",
         "SKILL_HE.md"
       ]
+    },
+    {
+      "claim_id": "iec-fixed-charges-jul2026",
+      "claim": "IEC residential fixed charges in force from 01.07.2026, excl./incl. VAT in ILS: distribution 9.97/11.76 (bi-monthly, single-phase), 11.56/13.64 (bi-monthly, three-phase), 157.31/185.63 (monthly customer); supply 15.60/18.41, 15.53/18.33, 107.70/127.09 on the same three cases; capacity 6.18/7.29 per KVA per year. There is no broadcasting fee among them.",
+      "source_url": "https://www.iec.co.il/content/tariffs/contentpages/homeelectricitytariff",
+      "raw_snippet": "תשלום קבוע - חלוקה (בש\"ח)\tלא כולל מע\"מ\tכולל מע\"מ\n\nלקוח דו חדשי - מונה בסיס חד פאזי\n\t9.97\t11.76",
+      "fetched_at": "2026-08-27T16:56:23.927853+00:00",
+      "verified_via": "browser",
+      "verified_at": "2026-08-27T16:56:23.927853+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/details-2026.md"
+      ]
+    },
+    {
+      "claim_id": "iec-supply-and-capacity-charges",
+      "claim": "The supply fixed charge and the capacity charge are separate line items from distribution.",
+      "source_url": "https://www.iec.co.il/content/tariffs/contentpages/homeelectricitytariff",
+      "raw_snippet": "תשלום קבוע - אספקה (בש\"ח)\tלא כולל מע\"מ\tכולל מע\"מ",
+      "fetched_at": "2026-08-27T16:56:23.927853+00:00",
+      "verified_via": "browser",
+      "verified_at": "2026-08-27T16:56:23.927853+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/details-2026.md"
+      ]
+    },
+    {
+      "claim_id": "iec-residential-tariff-scope",
+      "claim": "The IEC residential tariff applies to homes used for residence only, places of worship and buildings used for agricultural purposes.",
+      "source_url": "https://www.iec.co.il/content/tariffs/contentpages/homeelectricitytariff",
+      "raw_snippet": "לבתים המשמשים למגורים בלבד, בתי תפילה ומבנים לצורכי חקלאות.",
+      "fetched_at": "2026-08-27T16:56:23.927853+00:00",
+      "verified_via": "browser",
+      "verified_at": "2026-08-27T16:56:23.927853+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/details-2026.md"
+      ]
+    },
+    {
+      "claim_id": "tou-holidays-count-as-shabbat",
+      "claim": "For TOU purposes these holidays count as Shabbat and their eves as Friday: Rosh Hashana, Yom Kippur, the first day of Sukkot, Simchat Torah, the first and seventh days of Pesach, Independence Day and Shavuot. Hours are Israel local time and the metering equipment is adjusted when summer time is in force.",
+      "source_url": "https://www.iec.co.il/content/tariffs/contentpages/taozb-namuch",
+      "raw_snippet": "החגים המפורטים להלן יוגדרו לצורך תעו\"ז כשבתות, וערבי החג כימי ו': ראש השנה, יום הכיפורים, ראשון של סוכות, שמחת תורה, ראשון ושביעי של פסח, יום העצמאות, חג השבועות.",
+      "fetched_at": "2026-08-27T16:56:23.927853+00:00",
+      "verified_via": "browser",
+      "verified_at": "2026-08-27T16:56:23.927853+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/details-2026.md"
+      ]
+    },
+    {
+      "claim_id": "tou-winter-peak-all-days",
+      "claim": "The winter (December to February) TOU peak band 17:00-22:00 applies on Sunday to Thursday, on Fridays and holiday eves AND on Shabbat and holidays, at 97.20 agorot/kWh excluding VAT and 114.70 including.",
+      "source_url": "https://www.iec.co.il/content/tariffs/contentpages/taozb-namuch",
+      "raw_snippet": "פסגה\n\n\t\n\n17:00 - 22:00\n\n\t\n\n17:00 - 22:00\n\n\t\n\n17:00 - 22:00\n\n\t\n\n97.20\n\n\t\n\n114.70",
+      "fetched_at": "2026-08-27T16:56:23.927853+00:00",
+      "verified_via": "browser",
+      "verified_at": "2026-08-27T16:56:23.927853+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/details-2026.md"
+      ]
+    },
+    {
+      "claim_id": "tou-fixed-charges",
+      "claim": "On the TOU tariff the fixed distribution charge is 147.88/174.50 excl./incl. VAT for a monthly customer and 32.10/37.88 for a bi-monthly customer, with supply at 107.70/127.09 and 15.53/18.33 respectively.",
+      "source_url": "https://www.iec.co.il/content/tariffs/contentpages/taozb-namuch",
+      "raw_snippet": "תעריף חלוקה\n\n\t\n\n147.88\n\n\t\n\n174.50",
+      "fetched_at": "2026-08-27T16:56:23.927853+00:00",
+      "verified_via": "browser",
+      "verified_at": "2026-08-27T16:56:23.927853+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/details-2026.md"
+      ]
+    },
+    {
+      "claim_id": "golan-on-cellcom-licences",
+      "claim": "Golan Telecom formerly held its own mobile licence. Since 24.12.2023 Golan Telecom services are provided on the licence of Cellcom Israel Ltd, and the activity of Golan International Ltd was transferred to Cellcom Fixed-Line Communications.",
+      "source_url": "https://www.golantelecom.co.il/about",
+      "raw_snippet": "החל מ 24.12.2023 שירותי גולן טלקום ניתנים על בסיס רשיונה של סלקום ישראל בע\"מ, ופעילות גולן בינלאומי בע\"מ הועברה לסלקום תקשורת קווית ש.מ",
+      "fetched_at": "2026-08-27T16:57:11.546793+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/details-2026.md"
+      ]
+    },
+    {
+      "claim_id": "iec-social-tariff-12-groups",
+      "claim": "IEC enumerates TWELVE groups entitled to a reduced electricity payment, including income support under s.2(a)(4), pensioners with income supplement, Nazi-persecution and Holocaust compensation recipients, s.251 old-age pension for the disabled, special-services allowance at 112% and separately at 50%, disabled-child allowance for dependence on another or special medical treatment, nursing allowance at level 5 or 6, lone soldiers and soldiers on rent assistance for distance, single parents with 3+ children, families with 4+ children, and IDF disabled and hostile-action casualties at 50% or with a permanent maintenance grant.",
+      "source_url": "https://www.iec.co.il/content/tariffs/contentpages/socialtariff",
+      "raw_snippet": "כל הקבוצות הזכאיות לתשלום מופחת בחשבון החשמל.\n12 הקבוצות הן:",
+      "fetched_at": "2026-08-27T17:15:47.718201+00:00",
+      "verified_via": "browser",
+      "verified_at": "2026-08-27T17:15:47.718201+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/details-2026.md"
+      ]
+    },
+    {
+      "claim_id": "iec-social-tariff-112-percent",
+      "claim": "One of the twelve entitled groups is a consumer receiving a special-services allowance at 112% or more; another is a consumer receiving it at 50%.",
+      "source_url": "https://www.iec.co.il/content/tariffs/contentpages/socialtariff",
+      "raw_snippet": "צרכן המקבל מהמוסד לביטוח לאומי קצבת שירותים מיוחדים בשיעור 112% ומעלה.",
+      "fetched_at": "2026-08-27T17:15:47.718201+00:00",
+      "verified_via": "browser",
+      "verified_at": "2026-08-27T17:15:47.718201+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "iec-social-tariff-registration-requirement",
+      "claim": "The awarding body notifies the entitled person and passes their details to IEC, but the discount only applies if that person is the registered IEC consumer under their own name and ID; anyone entitled who does not see the reduced payment should call IEC on 103.",
+      "source_url": "https://www.iec.co.il/content/tariffs/contentpages/socialtariff",
+      "raw_snippet": "על מנת ליהנות מהזכאות להנחה כאמור, על הזכאי להנחה להיות צרכן רשום בחברת החשמל (עם שם + מס' תעודת-זהות).",
+      "fetched_at": "2026-08-27T17:15:47.718201+00:00",
+      "verified_via": "browser",
+      "verified_at": "2026-08-27T17:15:47.718201+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "iec-social-tariff-statutory-sections",
+      "claim": "Two of the twelve entitled groups are defined by statutory section: a benefit under section 2(a)(4) of the Income Support Law 1980 (in force from 27.6.2007), and an old-age pension for the disabled under section 251 of the National Insurance Law 1995 (in force from 20.7.2011).",
+      "source_url": "https://www.iec.co.il/content/tariffs/contentpages/socialtariff",
+      "raw_snippet": "צרכנים הזכאים לגמלה לפי סעיף 2(א)(4) לחוק הבטחת הכנסה, התשמ\"א-1980 – בתחולה מ-27.6.2007.",
+      "fetched_at": "2026-08-27T17:18:10.448547+00:00",
+      "verified_via": "browser",
+      "verified_at": "2026-08-27T17:18:10.448547+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "iec-social-tariff-section-251",
+      "claim": "Group 4 is a consumer receiving an old-age pension for the disabled under section 251 of the National Insurance Law.",
+      "source_url": "https://www.iec.co.il/content/tariffs/contentpages/socialtariff",
+      "raw_snippet": "צרכנים שמקבלים קצבת זקנה לנכה לפי סעיף 251 לחוק הביטוח הלאומי, התשנ\"ה-1995 – בתחולה מ-20.7.2011.",
+      "fetched_at": "2026-08-27T17:18:10.448547+00:00",
+      "verified_via": "browser",
+      "verified_at": "2026-08-27T17:18:10.448547+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     }
   ],
   "schemaVersion": "1.0",
-  "generated_at": "2026-07-06T00:00:00Z"
+  "generated_at": "2026-08-27T16:56:23.927853+00:00"
 }
