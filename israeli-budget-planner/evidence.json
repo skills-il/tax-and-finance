@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0",
   "skill": "israeli-budget-planner",
-  "generated_at": "2026-06-04T00:00:00Z",
+  "generated_at": "2026-08-27T01:40:02.667788+00:00",
   "claims": [
     {
       "claim_id": "boi-rate",
@@ -47,14 +47,16 @@
     },
     {
       "claim_id": "avg-wage",
-      "claim": "Average wage in Israel (Bituach Leumi, section 1) from January 2026 is 13,566 NIS/month.",
-      "source_url": "https://www.btl.gov.il/Mediniyut/GeneralData/Pages/שכר ממוצע.aspx",
-      "raw_snippet": "השכר הממוצע החל מ-01.01.2026 לפי סעיף 1 בחוק הוא 13,566 ש\"ח הן לקצבאות והן לדמי ביטוח. ~13,566 NIS/month.",
-      "fetched_at": "2026-06-04T00:00:00Z",
+      "claim": "Average wage in Israel from January 2026: 13,566 NIS/month under section 1 (basis for benefits and minimum wage) and 13,769 NIS/month under section 2 (basis for insurance-contribution ceilings).",
+      "source_url": "https://www.btl.gov.il/Mediniyut/GeneralData/Pages/%D7%A9%D7%9B%D7%A8%20%D7%9E%D7%9E%D7%95%D7%A6%D7%A2.aspx",
+      "raw_snippet": "השכר הממוצע החל מ- 01.01.2026: לפי סעיף 1 בחוק - קצבאות: 13,566 ש\"ח לפי סעיף 1 בחוק - דמי ביטוח: 13,566 ש\"ח לפי סעיף 2 בחוק - קצבאות: 13,769 ש\"ח לפי סעיף 2 בחוק - דמי ביטוח: 13,769 ש\"ח",
+      "fetched_at": "2026-08-27T01:41:46.735272+00:00",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ]
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-08-27T01:41:46.735272+00:00"
     },
     {
       "claim_id": "credit-point",
@@ -86,27 +88,31 @@
     },
     {
       "claim_id": "mortgage-mix-rule",
-      "claim": "Mortgage mix rule: at least 1/3 must be fixed-unlinked; up to 2/3 may be variable/prime. The old 1/3-prime cap was removed effective 17 January 2021.",
+      "claim": "Mortgage mix rule: at least one third of the total mortgage must be taken in a FIXED-interest track. The source does NOT require the fixed third to be unlinked, so a CPI-linked fixed track satisfies it.",
       "source_url": "https://www.kolzchut.org.il/he/מגבלות_על_לקיחת_משכנתא",
-      "raw_snippet": "לפחות 33% (שליש) מסכום המשכנתא הכולל, חייב להילקח במסלול הלוואה בריבית קבועה; לא ניתן לקחת יותר מ-66% (שני שליש) מסכום המשכנתא הכולל במסלול הלוואה בריבית משתנה. בנק ישראל ביטל את מגבלת שליש הפריים החל מ-17 בינואר 2021, ולווים יכולים כעת לקחת עד 66.6% מהמשכנתא בריבית פריים.",
-      "fetched_at": "2026-06-04T00:00:00Z",
+      "raw_snippet": "לפחות 33% (שליש) מסכום המשכנתא הכולל, חייב להילקח במסלול הלוואה בריבית קבועה",
+      "fetched_at": "2026-08-27T01:49:55.675282+00:00",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/israeli-financial-rates.md"
-      ]
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-08-27T01:49:55.675282+00:00"
     },
     {
       "claim_id": "pti-cap",
-      "claim": "BOI payment-to-income cap: monthly repayment may not exceed 50% of disposable income; banks usually decline above 40%.",
+      "claim": "Bank of Israel payment-to-income cap: a mortgage may not be taken where the monthly repayment, including mortgage insurance and associated costs, exceeds 50% of monthly disposable income. No authoritative source publishes a bank-practice percentage below this, so the skill states none.",
       "source_url": "https://www.kolzchut.org.il/he/מגבלות_על_לקיחת_משכנתא",
-      "raw_snippet": "לא ניתן לקחת משכנתא אם גובה ההחזר החודשי עולה על 50% מההכנסה החודשית הפנויה. בפועל בנקים בישראל לא יאשרו בדרך כלל משכנתא שבה יחס ההחזר עולה על 40%.",
-      "fetched_at": "2026-06-04T00:00:00Z",
+      "raw_snippet": "לא ניתן לקחת משכנתא אם גובה ההחזר החודשי (כולל ביטוח משכנתא ועלויות נלוות), עולה על 50% מההכנסה החודשית הפנויה",
+      "fetched_at": "2026-08-27T01:49:55.675282+00:00",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/israeli-financial-rates.md"
-      ]
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-08-27T01:49:55.675282+00:00"
     },
     {
       "claim_id": "vat",
@@ -124,85 +130,82 @@
     {
       "claim_id": "health-tax",
       "claim": "Employee health-tax (dmei bituach briut) 2026: 3.23% of salary up to the reduced-collection step (7,703 NIS/month), 5.17% above it. Deducted with Bituach Leumi.",
-      "source_url": "https://www.btl.gov.il/Insurance/Health_Insurance/Pages/שיעורי דמי ביטוח בריאות.aspx",
-      "raw_snippet": "מחלק השכר שעד מדרגת גביה מופחתת 7,703 ש\"ח (החל ב- 01.01.2026), ינכה המעסיק 3.23% (החל ב- 01.01.2025) ומחלק השכר שמעל מדרגת גביה מופחתת ינכה המעסיק 5.17% (החל ב- 01.02.2025).",
-      "fetched_at": "2026-06-04T00:00:00Z",
+      "source_url": "https://www.btl.gov.il/Insurance/Health_Insurance/Pages/%D7%A9%D7%99%D7%A2%D7%95%D7%A8%D7%99%20%D7%93%D7%9E%D7%99%20%D7%91%D7%99%D7%98%D7%95%D7%97%20%D7%91%D7%A8%D7%99%D7%90%D7%95%D7%AA.aspx",
+      "raw_snippet": "המעסיק ינכה משכרו של העובד השכיר דמי ביטוח בריאות: מחלק השכר שעד מדרגת גביה מופחתת 7,703 ש\"ח (החל ב- 01.01.2026) , ינכה המעסיק 3.23% (החל ב- 01.01.2025) ומחלק השכר שמעל מדרגת גביה מופחתת ינכה המעסיק 5.17% (החל ב- 01.02.2025)",
+      "fetched_at": "2026-08-27T01:41:46.735272+00:00",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/israeli-financial-rates.md",
         "scripts/budget_calculator.py"
-      ]
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-08-27T01:41:46.735272+00:00"
     },
     {
       "claim_id": "bituach-leumi-employee",
-      "claim": "Employee (salaried) Bituach Leumi rate 2026: 1.04% on the part of salary up to the reduced-collection step (7,703 NIS/month), 7% above it up to the ceiling. Combined employee BL+health is 4.27% reduced / 12.17% full.",
-      "source_url": "https://www.btl.gov.il/Insurance/Rates/Pages/לעובדים שכירים.aspx",
-      "raw_snippet": "דמי ביטוח לאומי עובד: 1.04% (החל ב- 01.01.2025) מהשכר שעד מדרגת גביה מופחתת, 7% (החל ב- 01.01.2006) מעל. טור 1 - עובד תושב/ת ישראל: עובד מופחת 4.27%, עובד מלא 12.17%. The employee Bituach Leumi reduced rate is 1.04% and the full rate is 7%.",
-      "fetched_at": "2026-06-04T00:00:00Z",
+      "claim": "Employee Bituach Leumi + health-tax rates vary by age and pension status; the Bituach Leumi rate table publishes a row per category. Combined employee rate (reduced band / full band): resident aged 18 to retirement age 4.27% / 12.17% (BL 1.04% / 7% plus health 3.23% / 5.17%); under 18 zero / zero; old-age-pension recipient zero / zero; disability-pension recipient with annual approval 3.23% / 5.17% (health-tax only); aged 67 to 70 not receiving old-age pension 3.93% / 10.03%; woman between retirement age and the male retirement age not receiving a pension 3.95% / 10.24%; controlling shareholder in a close company 4.25% / 11.96%; first became resident after age 62 and below retirement age 3.6% / 7.45%. Percentages carry 2025 effective dates and did not change for 2026.",
+      "source_url": "https://www.btl.gov.il/Insurance/Rates/Pages/%D7%9C%D7%A2%D7%95%D7%91%D7%93%D7%99%D7%9D%20%D7%A9%D7%9B%D7%99%D7%A8%D7%99%D7%9D.aspx",
+      "raw_snippet": "דמי ביטוח לאומי | 4.51% (החל ב- 01.01.2025) | 1.04% (החל ב- 01.01.2025) | 5.55% | 7.6% | 7% (החל ב- 01.01.2006) | 14.6% ; דמי ביטוח בריאות | - | 3.23% (החל ב- 01.01.2025) | 3.23% | - | 5.17% (החל ב- 01.02.2025) | 5.17% ; סך הכול | 4.51% | 4.27% (החל ב- 01.01.2025) | 8.78% | 7.6% | 12.17% (החל ב- 01.02.2025) | 19.77% ; מקבלי קצבת נכות מעבודה או נכות כללית ויש להם אישור שנתי מהביטוח הלאומי | 3.84% | 3.23% | 0.61% | 7.29% | 5.17% | 2.12% ; נשים וגברים בין גיל 67 לגיל 70 שאינם מקבלים קצבת אזרח ותיק | 8.06% | 3.93% | 4.13% | 16.99% | 10.03% | 6.96% ; אישה בין גיל פרישה ל \"גיל פרישה לגבר\" שאינה מקבלת קצבת אזרח ותיק | 8.12% | 3.95% | 4.17% | 17.36% | 10.24% | 7.12% ; מי שטרם מלאו לו 18 שנה | 0.61% | -- | 0.61% | 2.12% | -- | 2.12% ; נשים וגברים המקבלים קצבת אזרח ותיק | 0.61% | -- | 0.61% | 2.12% | -- | 2.12% ; אישה וגבר מתחת לגיל פרישה שנעשו לראשונה תושב/ת ישראל מעל גיל 62 | 4.64% | 3.6% | 1.04% | 10.4% | 7.45% | 2.95% ; טור 2 - בעל שליטה בחברת מעטים שמלאו לו 18 וטרם הגיע לגיל פרישה | 8.71% | 4.25% | 4.46%",
+      "fetched_at": "2026-08-27T01:40:02.667788+00:00",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/israeli-financial-rates.md",
+        "references/domain-checklist.md",
         "scripts/budget_calculator.py"
-      ]
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-08-27T01:40:02.667788+00:00"
     },
     {
       "claim_id": "bl-threshold-ceiling",
-      "claim": "Reduced-collection step (60% of average wage) = 7,703 NIS/month from 1 Jan 2026; maximum income subject to insurance (ceiling) = 51,910 NIS/month from 1 Jan 2026. Both BL and health-tax bands split at 7,703.",
-      "source_url": "https://www.btl.gov.il/Insurance/Rates/Pages/לעובדים שכירים.aspx",
+      "claim": "Reduced-collection step = 7,703 NIS/month from 1 Jan 2026; maximum income subject to insurance (ceiling) = 51,910 NIS/month from 1 Jan 2026. Both Bituach Leumi and health-tax bands split at the step and stop at the ceiling.",
+      "source_url": "https://www.btl.gov.il/Insurance/Rates/Pages/%D7%9C%D7%A2%D7%95%D7%91%D7%93%D7%99%D7%9D%20%D7%A9%D7%9B%D7%99%D7%A8%D7%99%D7%9D.aspx",
       "raw_snippet": "מחלק השכר שעד מדרגת גביה מופחתת (שיעור מופחת) - 7,703 ש\"ח (החל ב- 01.01.2026); מחלק השכר שמעל מדרגת גביה מופחתת ועד ההכנסה המרבית החייבת בדמי ביטוח (שיעור מלא) - 51,910 ש\"ח (החל ב- 01.01.2026).",
-      "fetched_at": "2026-06-04T00:00:00Z",
+      "fetched_at": "2026-08-27T01:41:46.735272+00:00",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/israeli-financial-rates.md",
         "scripts/budget_calculator.py"
-      ]
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-08-27T01:41:46.735272+00:00"
     },
     {
       "claim_id": "mortgage-insurance",
-      "claim": "Mandatory mortgage life insurance + structural insurance (bituach chaim / bituach mavne) is a recurring required monthly cost, typically ~100-300 NIS/month, varying by loan size, age, and property.",
+      "claim": "A bank granting a mortgage may require the borrower to buy mortgage insurance as a condition of the loan; it comprises life insurance and structural insurance. The page publishes no premium figure, so the skill must not state one. Early repayment, refinancing, or a change in medical or personal circumstances may reduce the cost.",
       "source_url": "https://www.kolzchut.org.il/he/ביטוח_משכנתא",
-      "raw_snippet": "ביטוח משכנתא (ביטוח חיים וביטוח מבנה) הוא תנאי של הבנק ועלות חודשית קבועה, בדרך כלל כ-100-300 ש\"ח לחודש, המשתנה לפי גובה ההלוואה, גיל הלווה ושווי הנכס. ~100-300 NIS/month.",
-      "fetched_at": "2026-06-04T00:00:00Z",
+      "raw_snippet": "בנק שמעניק משכנתא עשוי לדרוש מנוטל המשכנתא, כתנאי לקבלת ההלוואה, לרכוש ביטוח משכנתא",
+      "fetched_at": "2026-08-27T01:42:51.123747+00:00",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ]
-    },
-    {
-      "claim_id": "blended-track-rate",
-      "claim": "A blended-track mortgage payment should mix at least 1/3 fixed-unlinked at roughly 5.5% with up to 2/3 prime at 5.00%; a single prime-only run understates the real payment.",
-      "source_url": "https://www.kolzchut.org.il/he/מגבלות_על_לקיחת_משכנתא",
-      "raw_snippet": "תמהיל משכנתא: לפחות שליש בריבית קבועה לא צמודה (כ-5.5% בטווח 4.5%-6.5%) ועד שני שליש פריים (5.00%). Blended track: 1/3 fixed at ~5.5% + 2/3 prime at 5.00%.",
-      "fetched_at": "2026-07-18T00:00:00Z",
-      "appears_in": [
-        "SKILL.md",
-        "SKILL_HE.md",
-        "scripts/budget_calculator.py"
-      ]
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-08-27T01:42:51.123747+00:00"
     },
     {
       "claim_id": "mortgage-track-ranges",
-      "claim": "Typical Israeli mortgage track ranges: fixed-unlinked 4.5%-6.5%; CPI-linked fixed 3.0%-5.0% + CPI; CPI-linked variable 2.5%-4.5% + CPI; prime-linked at prime +/- 0.5%.",
+      "claim": "Indicative Israeli mortgage track ranges used by this skill for orientation only: fixed-unlinked 4.5%-6.5%; CPI-linked fixed 3.0%-5.0% plus CPI; CPI-linked variable 2.5%-4.5% plus CPI; prime-linked at prime plus or minus 0.5%. These are NOT published or regulated figures and no authoritative source publishes them; the skill labels them indicative in both languages and instructs the reader to price the actual tracks with the bank. What IS sourced on the cited page is the set of regulatory limits the tracks sit inside.",
       "source_url": "https://www.kolzchut.org.il/he/מגבלות_על_לקיחת_משכנתא",
-      "raw_snippet": "ברכישת דירה ראשונה (ויחידה)- עד 75% משווי הדירה",
-      "fetched_at": "2026-06-04T00:00:00Z",
+      "raw_snippet": "לפחות 33% (שליש) מסכום המשכנתא הכולל, חייב להילקח במסלול הלוואה בריבית קבועה",
+      "fetched_at": "2026-08-27T01:49:55.675282+00:00",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/israeli-financial-rates.md"
       ],
-      "verified_via": "kolzchut page text read through the site MediaWiki API in a browser; snippet replaced with verbatim page text (the previous value was a generated summary)",
-      "verified_at": "2026-08-15"
+      "verified_via": "browser (regulatory limits only; the rate ranges are this skill's own indicative heuristic and are labelled as such in the skill)",
+      "verified_at": "2026-08-27T01:49:55.675282+00:00"
     },
     {
       "claim_id": "cpi-annual",
-      "claim": "Annual CPI in Israel was 1.6% over the 12 months to June 2026, per the Central Bureau of Statistics consumer price index series (id 120010).",
+      "claim": "Annual CPI in Israel was 1.5% over the 12 months to July 2026, per the Central Bureau of Statistics consumer price index series (id 120010).",
       "source_url": "https://api.cbs.gov.il/index/data/price?id=120010&format=json&download=false&last=13",
-      "raw_snippet": "{\"month\":[{\"code\":120010,\"name\":\"מדד המחירים לצרכן - כללי\",\"date\":[{\"year\":2026,\"percent\":0.0,\"percentYear\":1.6,\"currBase\":{\"baseDesc\":\"2024 ממוצע\",\"value\":104.8},\"prevBase\":null,\"month\":6,\"monthDesc\":\"יוני\"}",
-      "fetched_at": "2026-08-11",
+      "raw_snippet": "{\"name\":\"מדד המחירים לצרכן - כללי\",\"percent\":0.3,\"percentYear\":1.5,\"currBase\":{\"baseDesc\":\"2024 ממוצע\",\"value\":105.1},\"month\":7}",
+      "fetched_at": "2026-08-27T01:40:02.667788+00:00",
       "appears_in": [
         "references/israeli-financial-rates.md"
       ],
@@ -212,7 +215,7 @@
     },
     {
       "claim_id": "budget-benchmarks",
-      "claim": "Illustrative household budget benchmarks used by this skill (couple plus one child), expressed as ranges and shares of the budget: housing 4,000-8,000 NIS (25-35%), food 2,500-4,500 (15-25%), education 1,500-3,500 (8-15%), transportation 500-1,500 (3-8%). These are the skill's own planning heuristics, not published CBS figures; the CBS household expenditure survey is the place to check current averages.",
+      "claim": "Illustrative household budget benchmarks that are this skill's OWN planning heuristics, not published survey data, and are labelled as such in SKILL.md, SKILL_HE.md and the reference file: housing 4,000-8,000 NIS (25-35%), food 2,500-4,500 (15-25%), education 1,500-3,500 (8-15%), transportation 500-1,500 (3-8%), arnona 400-800 (3-5%), utilities 400-700 (3-5%), health copay 200-500 (1-3%), insurance 300-600 (2-4%). The skill directs the reader to the CBS household expenditure survey for real distributions. No external source is claimed for these numbers. Example 1 restates the same heuristics as budget shares: rent or mortgage 30-40%, groceries 15%, transport 10%, utilities 8%.",
       "source_url": "https://raw.githubusercontent.com/skills-il/tax-and-finance/master/israeli-budget-planner/references/israeli-financial-rates.md",
       "raw_snippet": "| Housing (rent/mortgage) | 4,000-8,000 | 25-35% |",
       "fetched_at": "2026-06-04T00:00:00Z",
@@ -220,7 +223,9 @@
         "SKILL.md",
         "SKILL_HE.md",
         "references/israeli-financial-rates.md"
-      ]
+      ],
+      "verified_via": "self-declared heuristic (no external source claimed; labelled illustrative in every file it appears in)",
+      "verified_at": "2026-08-27T01:49:55.675282+00:00"
     },
     {
       "claim_id": "income-tax-brackets",
@@ -238,15 +243,17 @@
     },
     {
       "claim_id": "arnona-illustrative",
-      "claim": "Arnona is municipality-set and updated annually; an illustrative mid-size Tel Aviv residential property may run roughly 500-1,500 NIS/month. Extra fixed housing costs (arnona + va'ad bayit) can add 500-2,000 NIS/month.",
-      "source_url": "https://www.tel-aviv.gov.il/Residents/PropertyAndConstruction/Pages/Arnona.aspx",
-      "raw_snippet": "ארנונה נקבעת בצו הארנונה של הרשות המקומית ומתעדכנת מדי שנה; להמחשה נכס מגורים בתל אביב כ-500-1,500 ש\"ח לחודש. עלויות קבועות נוספות (ארנונה ווועד בית) יכולות להוסיף 500-2,000 ש\"ח לחודש.",
-      "fetched_at": "2026-06-04T00:00:00Z",
+      "claim": "Arnona is an annual tax paid to the local authority by whoever holds the property, and the Interior Ministry publishes minimum and maximum arnona rates each year, so the amount is municipality-set and changes annually. The Tel Aviv monthly range quoted in the skill is explicitly illustrative and is not a published figure. The skill states an illustrative Tel Aviv residential range of 500-1,500 NIS per month, and an illustrative arnona plus vaad bayit load of 500-2,000 NIS per month on top of quoted rent. Both are planning heuristics of this skill (500 ₪, 1500 ₪, 2000 ₪), not published figures, and the skill instructs the reader to fetch the municipality tzav arnona for a real number.",
+      "source_url": "https://www.kolzchut.org.il/he/ארנונה",
+      "raw_snippet": "ארנונה היא מס שנתי שתושבים המחזיקים בנכס משלמים לרשות המקומית. משרד הפנים מפרסם מדי שנה את תעריפי המינימום והמקסימום לשיעורי הארנונה",
+      "fetched_at": "2026-08-27T01:41:46.735272+00:00",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/israeli-financial-rates.md"
-      ]
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-08-27T01:41:46.735272+00:00"
     },
     {
       "claim_id": "ref-domains",
@@ -280,17 +287,6 @@
       "verified_at": "2026-08-15"
     },
     {
-      "claim_id": "superseded-rates-context",
-      "claim": "Superseded pre-2026 net-pay values, retained only as historical context in the optimization log and domain checklist to document what was corrected: employee Bituach Leumi reduced rate was 0.4% (now 1.04%); the prose previously stated an invalid BL figure of 3.5%/12%; health-tax was previously documented as 3.1%/5% (now 3.23%/5.17%); the BL threshold was 7,122 NIS.",
-      "source_url": "https://www.btl.gov.il/Insurance/Rates/Pages/לעובדים שכירים.aspx",
-      "raw_snippet": "Historical/superseded context (not current rates): employee Bituach Leumi reduced rate rose from 0.4% to 1.04% in 2026; an earlier draft wrongly cited BL as 3.5%/12% (employer/invalid figures); health-tax was previously listed as 3.1%/5% before the 2026 update to 3.23%/5.17%; the reduced-collection step was 7,122 before rising to 7,703. These appear only in the change log and checklist to record the correction.",
-      "fetched_at": "2026-06-04T00:00:00Z",
-      "appears_in": [
-        "optimization-log.json",
-        "references/domain-checklist.md"
-      ]
-    },
-    {
       "claim_id": "ito-121-brackets",
       "claim": "סעיף 121 לפקודת מס הכנסה קובע את מדרגות המס ליחיד, ובכללן המדרגה עד 301,200 ש\"ח והמדרגות המופחתות עד 228,000 ש\"ח.",
       "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
@@ -315,6 +311,51 @@
         "SKILL.md",
         "SKILL_HE.md"
       ]
+    },
+    {
+      "claim_id": "mortgage-max-term",
+      "claim": "A mortgage may not be approved, on any track, for a term longer than 30 years.",
+      "source_url": "https://www.kolzchut.org.il/he/מגבלות_על_לקיחת_משכנתא",
+      "raw_snippet": "לא תאושר משכנתא (בכל אחד ממסלולי ההלוואה) לתקופה של יותר מ-30 שנים",
+      "fetched_at": "2026-08-27T01:40:02.667788+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/israeli-financial-rates.md",
+        "references/domain-checklist.md",
+        "scripts/budget_calculator.py"
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-08-27T01:40:02.667788+00:00"
+    },
+    {
+      "claim_id": "surtax-top-rate",
+      "claim": "The top income-tax row of 50% applies above 721,560 NIS/year (60,130 NIS/month) and is the 47% bracket plus a 3% surtax (mas yesef); the Tax Authority bracket table itself stops at 47%. Since 2025 an additional 2% applies to high income that is not from employment or a business, taking the top rate on that income to 52%.",
+      "source_url": "https://www.kolzchut.org.il/he/מדרגות_מס_הכנסה",
+      "raw_snippet": "החל משנת 2025 נוסף מס בשיעור 2% על הכנסות גבוהות שלא מעבודה או מעסק",
+      "fetched_at": "2026-08-27T01:40:02.667788+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/israeli-financial-rates.md",
+        "references/domain-checklist.md"
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-08-27T01:40:02.667788+00:00"
+    },
+    {
+      "claim_id": "boi-next-decision",
+      "claim": "The Bank of Israel lowered its rate to 3.5% on 6 July 2026; the next interest-rate decision is 1 September 2026.",
+      "source_url": "https://www.boi.org.il/PublicApi/GetInterest?lang=he",
+      "raw_snippet": "{ \"currentInterest\": 3.5, \"nextInterestDate\": \"2026-09-01T00:00:00Z\", \"lastPublishedDate\": \"2026-07-12\" }",
+      "fetched_at": "2026-08-27T01:40:02.667788+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/israeli-financial-rates.md"
+      ],
+      "verified_via": "api",
+      "verified_at": "2026-08-27T01:40:02.667788+00:00"
     }
   ]
 }

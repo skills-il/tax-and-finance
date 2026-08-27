@@ -1,6 +1,6 @@
 {
   "author": "skills-il",
-  "version": "1.4.1",
+  "version": "1.5.0",
   "category": "tax-and-finance",
   "tags": {
     "he": [
@@ -25,8 +25,8 @@
     "en": "Israeli Budget Planner"
   },
   "display_description": {
-    "he": "תכנון תקציב משק בית עם עלויות, שיעורים ומוצרים פיננסיים ישראליים. שימוש כשצריך חישובי משכנתא, שיעורי ארנונה, עלויות בריאות (מס בריאות), תכנון הוצאות חודשיות, או מידע על יוקר המחיה בישראל.",
-    "en": "Plan household and personal budgets with Israeli-specific costs, rates, and financial products. Use when user asks about budgeting in Israel, mortgage (mashkanta) calculations, arnona rates, cost of living, takciv, or monthly expense planning. Covers Bank of Israel prime rate, mashkanta tracks, arnona, household health costs (mas briut / health-tax), and Israeli household benchmarks."
+    "he": "אינו ייעוץ מס, ייעוץ פנסיוני או ייעוץ השקעות, ואינו אישור משכנתא. תכנון תקציב משק בית עם עלויות, שיעורים ומוצרים פיננסיים ישראליים. שימוש כשצריך חישובי משכנתא, שיעורי ארנונה, עלויות בריאות (מס בריאות), תכנון הוצאות חודשיות, או מידע על יוקר המחיה בישראל.",
+    "en": "Not tax, pension or investment advice, and not a mortgage approval. Plan household and personal budgets with Israeli-specific costs, rates, and financial products. Use when user asks about budgeting in Israel, mortgage (mashkanta) calculations, arnona rates, cost of living, takciv, or monthly expense planning. Covers Bank of Israel prime rate, mashkanta tracks, arnona, household health costs (mas briut / health-tax), and Israeli household benchmarks."
   },
   "supported_agents": [
     "claude-code",
