@@ -10,8 +10,8 @@ official Cardcom V11 OpenAPI specification at
 - **Auth fields:** `ApiName` (string) on every request. `TerminalNumber` (integer) on most,
   but NOT on the reporting endpoints (`ListTransactions`, `SpecialTransactions`, the
   `Financial/*` group), whose schemas set `additionalProperties: false` and reject it.
-  `ApiPassword` (string) is required on 19 of the 50 V11 endpoints that take a request body: every `Documents/*`
-  write, every `Financial/*` report, every `TapTransactions/*` call, `Account/GetByAccountId`,
+  `ApiPassword` (string) is required on 26 of the V11 request schemas in the current spec. Most `Documents/*`
+  writes, `Financial/*` reports and most `TapTransactions/*` calls need it, but NOT all: `Documents/ExternalShopCreateDocument` has no `ApiPassword` property, and `Documents/CrossDocument` and `TapTransactions/NotifyExternalTapTransaction` declare no `required` array. Also `Account/GetByAccountId`,
   and `Transactions/{ListTransactions, RefundByTransactionId, SpecialTransactions}`.
   The rule of thumb is that company-wide reads and writes need it and single-card charges
   do not. It is not a property at all on `LowProfile/Create` or `Transactions/Transaction`.

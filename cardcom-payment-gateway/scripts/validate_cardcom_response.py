@@ -33,13 +33,13 @@ else:
 
 
 # ResponseCode values that count as success in Cardcom V11.
-# 0 is the universal success code; 700 and 701 are returned by J2/J5
-# validation-only transactions and also count as success.
 # 0 is the only unconditional success. 700/701 mean a J2/J5 VALIDATION-ONLY transaction
 # succeeded: the card was checked, NO money moved. Treating them as success on a charge, a
 # document creation or a refund is how goods get shipped without a charge, or a refund is
-# believed complete when nothing was returned. Pass --operation to have them accepted.
+# believed complete when nothing was returned. Pass --validation-only to have them accepted.
 _allow_validation_only = False
+_expect = None
+_expect_amount = None
 SUCCESS_CODES = {0}
 VALIDATION_ONLY_CODES = {700, 701}
 
@@ -154,9 +154,74 @@ def validate_response(data: dict) -> tuple:
     if document_url:
         info.append(f"DocumentUrl: {document_url}")
 
+    # --- A refund must not be mistaken for a charge ---
+    # TransactionInfo carries IsRefund and DealType. A response with ResponseCode 0
+    # and IsRefund true is a successful REFUND, not a successful charge.
+    for scope in (data, data.get("TranzactionInfo") or {}):
+        if not isinstance(scope, dict):
+            continue
+        if scope.get("IsRefund") is True or str(scope.get("DealType", "")).lower() == "refund":
+            if _expect == "refund":
+                info.append("Response is a refund, as expected")
+            elif _expect is not None:
+                errors.append(
+                    f"Response is a REFUND (IsRefund/DealType), but --expect {_expect} "
+                    "was requested. Do not record this as a charge."
+                )
+            else:
+                warnings.append(
+                    "Response is a REFUND (IsRefund/DealType true). Pass --expect refund "
+                    "to assert that, or --expect charge to reject it."
+                )
+
+    # --- Amount reconciliation ---
+    if _expect_amount is not None:
+        actual = data.get("Amount")
+        if actual is None:
+            nested_tx = data.get("TranzactionInfo")
+            if isinstance(nested_tx, dict):
+                actual = nested_tx.get("Amount")
+        if actual is None:
+            errors.append(
+                f"--amount {_expect_amount} was given but the response carries no Amount "
+                "to reconcile against. Do not fulfil on an unreconciled response."
+            )
+        elif abs(float(actual) - _expect_amount) > 0.001:
+            errors.append(
+                f"Amount mismatch: response says {actual}, expected {_expect_amount}. "
+                "The customer was not charged the order amount."
+            )
+        else:
+            info.append(f"Amount reconciled: {actual}")
+
     # --- Nested objects inside a LowProfileResult ---
+    # A null nested object is NOT a pass. The top-level ResponseCode on a
+    # LowProfileResult means only "not a developer error"; the card result lives in
+    # TranzactionInfo, which the spec says is non-null only for ChargeOnly and
+    # ChargeAndCreateToken. A null TranzactionInfo means no money moved, and a null
+    # DocumentInfo after a charge means the tax invoice was never issued.
+    _REQUIRED_FOR = {
+        "charge": ("TranzactionInfo",),
+        "token": ("TokenInfo",),
+        "document": ("DocumentInfo",),
+        "refund": ("TranzactionInfo",),
+    }
+    for key in _REQUIRED_FOR.get(_expect or "", ()):
+        if not isinstance(data.get(key), dict) or not data.get(key):
+            errors.append(
+                f"--expect {_expect} was requested but '{key}' is null or absent. "
+                "On a LowProfile result that means the operation did NOT complete "
+                "(an abandoned page, or a document that was never created). "
+                "Fail closed: do not fulfil."
+            )
+
     for key in ("TranzactionInfo", "TokenInfo", "DocumentInfo", "SuspendedInfo"):
         nested = data.get(key)
+        if key in data and nested is None:
+            warnings.append(
+                f"'{key}' is present but null. On a LowProfile result that means the "
+                "corresponding operation did not complete."
+            )
         if isinstance(nested, dict) and nested:
             # TokenInfo and SuspendedInfo do not carry ResponseCode;
             # TranzactionInfo and DocumentInfo do.
@@ -234,6 +299,18 @@ examples:
     )
     parser.add_argument("--response", help="JSON response string")
     parser.add_argument(
+        "--expect",
+        choices=["charge", "token", "document", "refund", "validation"],
+        help="What the call was supposed to do. Without it the script cannot fail "
+             "closed on a null nested object, because a LowProfile top-level "
+             "ResponseCode of 0 only means the request was not a developer error.",
+    )
+    parser.add_argument(
+        "--amount",
+        type=float,
+        help="Expected charge amount, reconciled against the response Amount.",
+    )
+    parser.add_argument(
         "--validation-only",
         action="store_true",
         help="Accept ResponseCode 700/701 as success. Use ONLY when the call really was a "
@@ -250,9 +327,11 @@ examples:
 
     args = parser.parse_args()
 
-    global _allow_validation_only
+    global _allow_validation_only, _expect, _expect_amount
 
-    _allow_validation_only = args.validation_only
+    _allow_validation_only = args.validation_only or args.expect == "validation"
+    _expect = args.expect
+    _expect_amount = args.amount
 
     if args.example:
         example = generate_example()

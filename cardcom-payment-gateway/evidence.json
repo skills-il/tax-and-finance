@@ -396,7 +396,133 @@
       "verified_via": "spec",
       "verified_at": "2026-07-28T22:13:46Z",
       "confidence": "high"
+    },
+    {
+      "id": "35",
+      "claim": "The allocation-number regime began in May 2024, and the threshold schedule before VAT is NIS 25,000 from May 2024, 20,000 from January 2025, 10,000 from January 2026 and 5,000 from June 2026.",
+      "source_url": "https://www.icount.co.il/blog/invoice-israel/",
+      "raw_snippet": "מאי 2024 25,000 ש״ח ינואר 2025 20,000 ש״ח ינואר 2026 10,000 ש״ח יוני 2026 5",
+      "where_in_skill": "SKILL.md Step 4.5, SKILL_HE.md, references/document-types.md",
+      "confidence": "high",
+      "verified_via": "live-fetch",
+      "verified_at": "2026-08-27T17:19:24.787430+00:00"
+    },
+    {
+      "id": "36",
+      "claim": "Independent corroboration of the same four-step allocation schedule from the start of the reform.",
+      "source_url": "https://www.greeninvoice.co.il/magazine/israel-invoice/",
+      "raw_snippet": "מאי 2024 25,000 ₪ ינואר 2025 20,000 ₪ ינואר 2026 10,000 ש״ח יוני 2026 ואילך 5,000 ש״ח",
+      "where_in_skill": "SKILL.md Step 4.5, SKILL_HE.md, references/document-types.md",
+      "confidence": "high",
+      "verified_via": "live-fetch",
+      "verified_at": "2026-08-27T17:19:24.787430+00:00"
+    },
+    {
+      "id": "37",
+      "claim": "The Israel Invoices reform came into force in May 2024, so documents dated before that never required an allocation number.",
+      "source_url": "https://www.greeninvoice.co.il/magazine/israel-invoice/",
+      "raw_snippet": "מת חשבוניות ישראל, נכנסה לתוקף במאי 2024",
+      "where_in_skill": "SKILL.md Step 4.5, SKILL_HE.md, references/document-types.md",
+      "confidence": "high",
+      "verified_via": "live-fetch",
+      "verified_at": "2026-08-27T17:19:24.787430+00:00"
+    },
+    {
+      "id": "38",
+      "claim": "Section 38(a1) of the VAT Law bars the input-VAT deduction on a tax invoice whose pre-tax amount EXCEEDS the stated figure and carries no allocated number, so a document exactly at the threshold is outside the rule.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%97%D7%95%D7%A7_%D7%9E%D7%A1_%D7%A2%D7%A8%D7%9A_%D7%9E%D7%95%D7%A1%D7%A3",
+      "raw_snippet": "עולה על 5,000 שקלים חדשים (מינואר 2026 ועד מאי 2026: 10,000 שקלים חדשים) ושאינה כוללת מספר שהקצה לה המנהל",
+      "where_in_skill": "SKILL.md Step 4.5, SKILL_HE.md, references/document-types.md",
+      "confidence": "high"
+    },
+    {
+      "id": "39",
+      "claim": "Section 47(a2)(1) applies only to a tax invoice for a transaction whose tax is not at the zero rate, so zero-rated and exempt-only invoices are outside the requirement.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%97%D7%95%D7%A7_%D7%9E%D7%A1_%D7%A2%D7%A8%D7%9A_%D7%9E%D7%95%D7%A1%D7%A3",
+      "raw_snippet": "הוראות סעיף קטן זה יחולו לעניין חשבונית מס שהוצאה בשל עסקה שהמס שחל לגביה אינו בשיעור אפס",
+      "where_in_skill": "SKILL.md Step 4.5, SKILL_HE.md, references/document-types.md",
+      "confidence": "high"
+    },
+    {
+      "id": "40",
+      "claim": "The Israeli VAT rate was 17% until 31 December 2024 and is 18% from 1 January 2025, so a document reissued for an earlier period uses the earlier rate.",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%9E%D7%A1_%D7%A2%D7%A8%D7%9A_%D7%9E%D7%95%D7%A1%D7%A3_%28%D7%9E%D7%A2%22%D7%9E%29",
+      "raw_snippet": "החל מיום 01.01.2025 הוא עומד על 18% ממחיר הרכישה או השירות. עד 31.12.2024 היה שיעור המע\"מ 17%",
+      "where_in_skill": "SKILL.md Gotchas, SKILL_HE.md",
+      "confidence": "high"
+    },
+    {
+      "id": "41",
+      "claim": "26 of the V11 component schemas list ApiPassword in their required array. The exceptions are real: ExtShopCreateDocumentRequest has no ApiPassword property at all, and CrossDocumentRequest and NotifyExternalTapTransactionRequest declare no required array, so the rule must not be generalised to a whole path family.",
+      "source_url": "https://secure.cardcom.solutions/swagger/v11/swagger.json",
+      "raw_snippet": "\"$ref\": \"#/components/schemas/ExtShopCreateDocumentRequest\"",
+      "where_in_skill": "SKILL.md Step 2 and Gotchas, SKILL_HE.md, references/api-endpoints.md",
+      "confidence": "high"
+    },
+    {
+      "id": "42",
+      "claim": "סעיף 47 לחוק מס ערך מוסף הוא הזכות להוציא חשבונית מס; סעיף קטן (א2)(1) מסדיר את בקשת מספר ההקצאה ומחריג עסקה בשיעור אפס.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%97%D7%95%D7%A7_%D7%9E%D7%A1_%D7%A2%D7%A8%D7%9A_%D7%9E%D7%95%D7%A1%D7%A3",
+      "raw_snippet": "47. זכות להוציא חשבונית מס",
+      "where_in_skill": "SKILL_HE.md Step 4.5",
+      "confidence": "high"
+    },
+    {
+      "id": "43",
+      "claim": "TransactionReq.ExternalUniqTranId is the idempotency key: sending the same value again returns error code 608, so it prevents a duplicate charge on retry.",
+      "source_url": "https://secure.cardcom.solutions/swagger/v11/swagger.json",
+      "raw_snippet": "send your uniq trnasaction id to prevent duplication of transaction. if the same ExternalUniqTranId will be send you will receive and error code 608",
+      "where_in_skill": "SKILL.md Step 3b and Step 4.6, SKILL_HE.md, scripts/validate_cardcom_response.py",
+      "confidence": "high"
+    },
+    {
+      "id": "44",
+      "claim": "There is a dedicated endpoint POST /api/v11/Transactions/GetTransactionByExternalUniqTran for checking whether a charge with a given ExternalUniqTranId already succeeded.",
+      "source_url": "https://secure.cardcom.solutions/swagger/v11/swagger.json",
+      "raw_snippet": "use to validate if there is a successful transaction using the External UniqTranId parame",
+      "where_in_skill": "SKILL.md Step 3b and Step 4.6, SKILL_HE.md, scripts/validate_cardcom_response.py",
+      "confidence": "high"
+    },
+    {
+      "id": "45",
+      "claim": "LowProfileResult.ResponseCode is a developer-error code, not the payment result; a zero there does not mean money moved.",
+      "source_url": "https://secure.cardcom.solutions/swagger/v11/swagger.json",
+      "raw_snippet": "if equel zero then success , else , a develper error see Description for more info",
+      "where_in_skill": "SKILL.md Step 3b and Step 4.6, SKILL_HE.md, scripts/validate_cardcom_response.py",
+      "confidence": "high"
+    },
+    {
+      "id": "46",
+      "claim": "LowProfileResult.TranzactionInfo is nullable and is non-null only for the ChargeOnly and ChargeAndCreateToken operations, so a null value means the charge did not complete.",
+      "source_url": "https://secure.cardcom.solutions/swagger/v11/swagger.json",
+      "raw_snippet": "Transaction information, Will no be null at operations: ChargeOnly, ChargeAndCreateToken",
+      "where_in_skill": "SKILL.md Step 3b and Step 4.6, SKILL_HE.md, scripts/validate_cardcom_response.py",
+      "confidence": "high"
+    },
+    {
+      "id": "47",
+      "claim": "TransactionInfo.ResponseCode carries the actual card result, where 0 is success and 700 and 701 are success only for J2 and J5 transactions.",
+      "source_url": "https://secure.cardcom.solutions/swagger/v11/swagger.json",
+      "raw_snippet": "if equal zero then success , 700 and 701 success for J2 and J5 transaction",
+      "where_in_skill": "SKILL.md Step 3b and Step 4.6, SKILL_HE.md, scripts/validate_cardcom_response.py",
+      "confidence": "high"
+    },
+    {
+      "id": "48",
+      "claim": "Advanced.JValidateType selects J2 (simple card validation) or J5 (authorization), and Advanced.ApprovalNumber captures a J5 authorization, so a J5 holds funds that must be captured or released.",
+      "source_url": "https://secure.cardcom.solutions/swagger/v11/swagger.json",
+      "raw_snippet": "capture an J5 (authoriz) request",
+      "where_in_skill": "SKILL.md Step 3b and Step 4.6, SKILL_HE.md, scripts/validate_cardcom_response.py",
+      "confidence": "high"
+    },
+    {
+      "id": "49",
+      "claim": "AdvancedTran.IsRefund marks a refund transaction and requires ApiPassword inside the nested Advanced object, which is the refund path used when no original TransactionId is available.",
+      "source_url": "https://secure.cardcom.solutions/swagger/v11/swagger.json",
+      "raw_snippet": "Is refund transaction , 'ApiPassword' is Required to use this option",
+      "where_in_skill": "SKILL.md Step 3b and Step 4.6, SKILL_HE.md, scripts/validate_cardcom_response.py",
+      "confidence": "high"
     }
   ],
-  "generated_at": "2026-08-10T00:00:00Z"
+  "generated_at": "2026-08-27T17:30:25.718675+00:00"
 }
