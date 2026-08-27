@@ -21,6 +21,21 @@
         "Verified unchanged: SDMX API base path + EXR/BIR/PRI dataflows all resolve (old sdmx/v2/data/dataflow path 404s); the interest rate is correctly NOT hardcoded anywhere (the 6-Jul-2026 cut to 3.50% is not needed); CPI ~15th of the following month.",
         "Deferred: identify the headline BIR policy-rate series so --interest can return the rate programmatically; add a CPI (PRI) fetch path to the script; the reprate reference page is Radware-bot-protected to automated fetch (renders in a real browser) - the load-bearing Mon-Fri fact is API-verifiable regardless."
       ]
+    },
+    {
+      "version": "1.4.0",
+      "date": "2026-08-27",
+      "lessons": [
+        "The 1.2.0 and 1.3.0 cycles both recorded 'identify the headline policy-rate series within BIR (it has ~30 sub-series)' as deferred. The search never terminated because BIR is the WRONG dataflow: it is bank credit rates excluding housing. The policy rate is BR/MNT_RIB_BOI_D. Lesson: when a search for a series inside a named container keeps failing across cycles, re-verify the container before searching it again. The dataflow LIST (sdmx/v2/structure/dataflow/BOI.STATISTICS) answers this in one call and was never fetched.",
+        "Deferred CPI item resolved: the headline CPI is NOT in the BOI PRI dataflow. PRI/CP000000 reads 99.4 for July 2026 while the published index is 105.1 (CBS index id 120010, base 2024 average). Two plausible near-magnitude numbers, so a linkage calculation off the wrong one would not look broken. Never assume a same-domain dataflow is the authoritative series.",
+        "A parameter can be accepted, return HTTP 200, and be silently ignored. lastNPeriods on the BOI server returns the full series back to 1948. An Expert reviewer recommended it as the fix for calendar gaps; it was caught only by counting observations in the response. Count what came back, do not trust that a documented-looking parameter did anything.",
+        "Self-inflicted: this cycle initially asserted that a bare dataflow query returns zero observations. That came from counting <Obs .../> with a self-closing regex, which matches nothing because the server emits <Obs ...></Obs>. The real behaviour is a full-history download (EXR ~20 MB). A parsing bug in the verification tooling produced a confident wrong finding that reached four files before the Independent Judge caught it.",
+        "CARRY: the prime spread over the policy rate could not be sourced this cycle (web-search budget exhausted, boi.org.il Radware-blocked, guessed bank URLs 404). The skill now warns that the policy rate is not the borrower's rate and routes to the bank's published prime, without stating a spread. Next cycle: source the spread from Banking Supervision or a bank's published prime page and state it.",
+        "CARRY: no historical-CPI-by-month lookup. --cpi-last N reaches an older month but the caller has to count back. The CBS index API's period parameters were not documented in this cycle; find and document them.",
+        "boi.org.il is Radware bot-protected and returns HTTP 200 with a 118 KB challenge page. Every boi.org.il reference link extracts to 106 characters of text. They are valid human references but can never be verified by automated fetch; the evidence entry for the 15:30/12:30 publication TIMES is marked unreachable rather than verified. The publication DAYS are API-verifiable and were re-verified.",
+        "api.cbs.gov.il intermittently resets connections (curl exit 56, no HTTP status) after repeated automated requests, then recovers. Two independent reviewers reported it as unreachable while it was serving fine minutes earlier. Retry with backoff before concluding an endpoint is dead.",
+        "Deferred over the discretionary cap: name the ITA's own year-average and year-end exchange-rate tables for annual tax reporting; add a gloss for the ZCM inflation-expectation and MAG monetary-aggregate series if usage shows demand."
+      ]
     }
   ]
 }

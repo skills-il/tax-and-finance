@@ -1,57 +1,164 @@
 {
   "schemaVersion": "1.0",
   "skill": "boi-economic-data",
-  "generated_at": "2026-06-07T00:00:00Z",
+  "generated_at": "2026-08-27T01:45:47.190910+00:00",
   "claims": [
     {
-      "claim_id": "boi-sdmx-data-path",
-      "claim": "The Bank of Israel new-series-database (Fusion Edge Server) serves data over SDMX 2.1 REST at https://edge.boi.gov.il/FusionEdgeServer/ws/public/sdmxapi/rest/data/{DATAFLOW}/{series} . The older sdmx/v2/data/dataflow/BOI/... path returns 404. Requests need a normal browser User-Agent and use startPeriod/endPeriod; observations come back as <Obs TIME_PERIOD OBS_VALUE> elements. The structure/metadata path is https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/structure/dataflow/BOI.STATISTICS. Also covers: raw_snippet looks like a keyword stub rather than a verbatim quote (it is a bare label with no figure and no punctuation): 'Radware Page'. A snippet must be text actually copied from the page, or it cannot substantiate the claim attached to it. 1 ₪",
-      "source_url": "https://www.boi.org.il/media/tzxbuhhj/extracting-representative-exchange-rates-from-the-new-series-database.pdf",
-      "raw_snippet": "5930 00000 n 0000096409 00000 n 0000099422 00000 n 0000101694 00000 n 0000102395 00000 n 0000102875 00000 n 0000103477 00000 n 0000104043 00000 n 0000104524 00000 n 0000104912 00000 n 0000105369 00000 n 0000128062 00000 n 0000128628 00000 n 0000129007 00000 n 0000130108 00000 n 0000146694 00000 n 0000168688 00000 n 0000169377 00000 n 0000170257 00000 n 0000000072 65535 f 0000000073 65535 f 0000000074 65535 f 0000000075 65535 f 0000000076 65535 f 0000000077 65535 f 0000000078 65535 f 0000000079 65535 f 0000000080 65535 f 0000000",
-      "fetched_at": "2026-08-18",
+      "claim_id": "boi-sdmx-data-paths",
+      "claim": "The Bank of Israel serves SDMX data from ws/public/sdmxapi/rest/data/{DATAFLOW}/{series}, and the sdmx/v2/data/dataflow/BOI.STATISTICS/{DATAFLOW}/1.0/{series} path is also live and accepts format=csv.",
+      "source_url": "https://edge.boi.gov.il/FusionEdgeServer/ws/public/sdmxapi/rest/data/EXR/RER_USD_ILS?startPeriod=2026-08-26",
+      "raw_snippet": "<Series SERIES_CODE=\"RER_USD_ILS\" FREQ=\"D\" BASE_CURRENCY=\"USD\" COUNTER_CURRENCY=\"ILS\" UNIT_MEASURE=\"ILS\" DATA_TYPE=\"OF00\" TIME_COLLECT=\"V\" DATA_SOURCE=\"BOI_MRKT\" UNIT_MULT=\"0\"",
+      "fetched_at": "2026-08-27T01:34:45.993654+00:00",
+      "verified_at": "2026-08-27T01:40:26.492677+00:00",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/boi-api.md",
         "scripts/fetch_boi_rates.py"
       ],
-      "verified_via": "cited page fetched and confirmed to contain \"404\"; snippet replaced with the page's own wording around it",
-      "verified_at": "2026-08-18"
+      "verified_via": "api-raw-http"
+    },
+    {
+      "claim_id": "v2-path-csv-live",
+      "claim": "The sdmx/v2 data path with the BOI.STATISTICS agency segment and the 1.0 version segment is live and returns the same observations as the ws/public path. It also accepts format=csv.",
+      "source_url": "https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI.STATISTICS/EXR/1.0/RER_USD_ILS?startPeriod=2026-08-26",
+      "raw_snippet": "<Series SERIES_CODE=\"RER_USD_ILS\" FREQ=\"D\" BASE_CURRENCY=\"USD\" COUNTER_CURRENCY=\"ILS\" UNIT_MEASURE=\"ILS\" DATA_TYPE=\"OF00\" TIME_COLLECT=\"V\" DATA_SOURCE=\"BOI_MRKT\" UNIT_MULT=\"0\" CONF_STATUS=\"F\" PUB_WEBSITE=\"Y\">",
+      "fetched_at": "2026-08-27T01:34:45.993654+00:00",
+      "verified_at": "2026-08-27T01:40:26.492677+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/boi-api.md"
+      ],
+      "verified_via": "api-raw-http"
+    },
+    {
+      "claim_id": "br-is-policy-rate",
+      "claim": "The BOI policy rate dataflow is BR, whose published name in the dataflow list is 'ריבית בנק ישראל' / 'BOI interest rate'. It is not BIR.",
+      "source_url": "https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/structure/dataflow/BOI.STATISTICS",
+      "raw_snippet": "<com:Name xml:lang=\"he\">ריבית בנק ישראל</com:Name><com:Name xml:lang=\"en\">BOI interest rate</com:Name>",
+      "fetched_at": "2026-08-27T01:34:45.993654+00:00",
+      "verified_at": "2026-08-27T01:40:26.492677+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/boi-api.md",
+        "references/domain-checklist.md",
+        "scripts/fetch_boi_rates.py"
+      ],
+      "verified_via": "api-raw-http"
+    },
+    {
+      "claim_id": "bir-is-bank-credit-rates",
+      "claim": "BIR is 'Interest rates and business volume - exc. housing loans' (ריביות וביצועים - לא לדיור), i.e. commercial-bank credit rates, not the policy rate.",
+      "source_url": "https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/structure/dataflow/BOI.STATISTICS",
+      "raw_snippet": "<com:Name xml:lang=\"he\">ריביות וביצועים - לא לדיור</com:Name><com:Name xml:lang=\"en\">Interest rates and business volume - exc. housing loans</com:Name>",
+      "fetched_at": "2026-08-27T01:34:45.993654+00:00",
+      "verified_at": "2026-08-27T01:40:26.492677+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/boi-api.md",
+        "references/domain-checklist.md"
+      ],
+      "verified_via": "api-raw-http"
+    },
+    {
+      "claim_id": "br-daily-series",
+      "claim": "MNT_RIB_BOI_D is the daily BOI policy-rate series inside the BR dataflow.",
+      "source_url": "https://edge.boi.gov.il/FusionEdgeServer/ws/public/sdmxapi/rest/data/BR/MNT_RIB_BOI_D?startPeriod=2026-08-20",
+      "raw_snippet": "<Series SERIES_CODE=\"MNT_RIB_BOI_D\" FREQ=\"D\" IR_FV_TYPE=\"RIB_BOI\" TIME_COLLECT=\"V\" DATA_SOURCE=\"BOI\" UNIT_MULT=\"0\" UNIT_MEASURE=\"PT\" CONF_STATUS=\"F\" PUB_WEBSITE=\"Y\">",
+      "fetched_at": "2026-08-27T01:34:45.993654+00:00",
+      "verified_at": "2026-08-27T01:40:26.492677+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/boi-api.md",
+        "scripts/fetch_boi_rates.py"
+      ],
+      "verified_via": "api-raw-http"
     },
     {
       "claim_id": "exr-series",
-      "claim": "Representative exchange rates (sha'ar yatzig) are per-currency series named RER_<CUR>_ILS inside the BOI.STATISTICS EXR dataflow, and DATA_TYPE OF00 marks the official representative rate. Verified live on 2026-08-11: RER_USD_ILS ran 3.059 (3 Aug 2026) to 2.998 (10 Aug 2026); RER_EUR_ILS and RER_JPY_ILS (UNIT_MULT 2, i.e. per 100 JPY) resolve on the same endpoint.",
-      "source_url": "https://edge.boi.gov.il/FusionEdgeServer/ws/public/sdmxapi/rest/data/EXR/RER_USD_ILS?startPeriod=2026-08-03&endPeriod=2026-08-10",
-      "raw_snippet": "<Series SERIES_CODE=\"RER_USD_ILS\" FREQ=\"D\" BASE_CURRENCY=\"USD\" COUNTER_CURRENCY=\"ILS\" UNIT_MEASURE=\"ILS\" DATA_TYPE=\"OF00\" TIME_COLLECT=\"V\" DATA_SOURCE=\"BOI_MRKT\" UNIT_MULT=\"0\" CONF_STATUS=\"F\" PUB_WEBSITE=\"Y\"><Obs TIME_PERIOD=\"2026-08-03\" OBS_VALUE=\"3.059\" RELEASE_STATUS=\"YP\"></Obs><Obs TIME_PERIOD=\"2026-08-04\" OBS_VALUE=\"3.03\" RELEASE_STATUS=\"YP\"></Obs><Obs TIME_PERIOD=\"2026-08-05\" OBS_VALUE=\"3.001\" RELEASE_STATUS=\"YP\"></Obs><Obs TIME_PERIOD=\"2026-08-06\" OBS_VALUE=\"3.013\" RELEASE_STATUS=\"YP\"></Obs><Obs TIME_PERIOD=\"2026-08-07\" OBS_VALUE=\"3.006\" RELEASE_STATUS=\"YP\"></Obs><Obs TIME_PERIOD=\"2026-08-10\" OBS_VALUE=\"2.998\" RELEASE_STATUS=\"YP\"></Obs></Series>",
-      "fetched_at": "2026-08-11",
+      "claim": "Representative exchange rates (sha'ar yatzig) are per-currency series named RER_<CUR>_ILS inside the EXR dataflow, and DATA_TYPE OF00 marks the official representative rate.",
+      "source_url": "https://edge.boi.gov.il/FusionEdgeServer/ws/public/sdmxapi/rest/data/EXR/RER_USD_ILS?startPeriod=2026-08-26",
+      "raw_snippet": "<Series SERIES_CODE=\"RER_USD_ILS\" FREQ=\"D\" BASE_CURRENCY=\"USD\" COUNTER_CURRENCY=\"ILS\" UNIT_MEASURE=\"ILS\" DATA_TYPE=\"OF00\" TIME_COLLECT=\"V\" DATA_SOURCE=\"BOI_MRKT\"",
+      "fetched_at": "2026-08-27T01:34:45.993654+00:00",
+      "verified_at": "2026-08-27T01:40:26.492677+00:00",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/boi-api.md",
         "scripts/fetch_boi_rates.py"
       ],
-      "verified_at": "2026-08-11",
-      "verified_via": "curl"
+      "verified_via": "api-raw-http"
     },
     {
-      "claim_id": "interest-cpi-flows",
-      "claim": "Bank of Israel interest-rate data is in the BIR dataflow; CPI / price indices are in the PRI dataflow. Both are reachable via the same REST data path. The headline policy rate is most reliably read from the Monetary Committee decision (boi.org.il monetary-policy / press releases). The committee announces rate decisions about 6 times per year.",
-      "source_url": "https://www.boi.org.il/en/economic-roles/monetary-policy/",
-      "raw_snippet": "The Bank of Israel Monetary Committee sets the interest rate and announces decisions on scheduled dates (about six times a year); rate and price-index series are published in the new series database (BIR, PRI dataflows).",
-      "fetched_at": "2026-06-07T00:00:00Z",
+      "claim_id": "unit-mult-jpy",
+      "claim": "UNIT_MULT is the power of ten a rate is quoted per: 0 for most currencies, 2 for the Japanese yen (per 100 JPY).",
+      "source_url": "https://edge.boi.gov.il/FusionEdgeServer/ws/public/sdmxapi/rest/data/EXR/RER_JPY_ILS?startPeriod=2026-08-26",
+      "raw_snippet": "<Series SERIES_CODE=\"RER_JPY_ILS\" FREQ=\"D\" BASE_CURRENCY=\"JPY\" COUNTER_CURRENCY=\"ILS\" UNIT_MEASURE=\"ILS\" DATA_TYPE=\"OF00\" TIME_COLLECT=\"V\" DATA_SOURCE=\"BOI_MRKT\" UNIT_MULT=\"2\" CONF_STATUS=\"F\" PUB_WEBSITE=\"Y\">",
+      "fetched_at": "2026-08-27T01:34:45.993654+00:00",
+      "verified_at": "2026-08-27T01:40:26.492677+00:00",
+      "appears_in": [
+        "references/boi-api.md",
+        "scripts/fetch_boi_rates.py"
+      ],
+      "verified_via": "api-raw-http"
+    },
+    {
+      "claim_id": "obs-not-self-closing",
+      "claim": "Observations are emitted as <Obs TIME_PERIOD OBS_VALUE RELEASE_STATUS></Obs> with a separate closing tag, not self-closed.",
+      "source_url": "https://edge.boi.gov.il/FusionEdgeServer/ws/public/sdmxapi/rest/data/EXR/RER_USD_ILS?startPeriod=2026-08-26",
+      "raw_snippet": "<Obs TIME_PERIOD=\"2026-08-26\" OBS_VALUE=\"2.972\" RELEASE_STATUS=\"YP\"></Obs>",
+      "fetched_at": "2026-08-27T01:34:45.993654+00:00",
+      "verified_at": "2026-08-27T01:40:26.492677+00:00",
+      "appears_in": [
+        "references/boi-api.md",
+        "scripts/fetch_boi_rates.py"
+      ],
+      "verified_via": "api-raw-http"
+    },
+    {
+      "claim_id": "cbs-cpi-index-120010",
+      "claim": "The headline CPI is CBS index id 120010 (מדד המחירים לצרכן - כללי), published on the 2024-average base. The same API returns HTTP 200 with \"month\": null for an unknown index id (verified against id=999999) and HTTP 200 with an HTML body for an undefined path, so callers must validate the payload rather than the status code.",
+      "source_url": "https://api.cbs.gov.il/index/data/price?id=120010&format=json&download=false&last=3",
+      "raw_snippet": "{\"code\":120010,\"name\":\"מדד המחירים לצרכן - כללי\",\"date\":[{\"year\":2026,\"percent\":0.3,\"percentYear\":1.5,\"currBase\":{\"baseDesc\":\"2024 ממוצע\",\"value\":105.1}",
+      "fetched_at": "2026-08-27T01:34:45.993654+00:00",
+      "verified_at": "2026-08-27T01:40:26.492677+00:00",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/boi-api.md",
+        "references/domain-checklist.md",
         "scripts/fetch_boi_rates.py"
-      ]
+      ],
+      "verified_via": "api-raw-http"
     },
     {
-      "claim_id": "publication-timing",
-      "claim": "The BOI representative exchange rate is published once per business day: Monday-Thursday at approximately 15:30, Friday at approximately 12:30 Israel time; no publication on Saturday or Sunday, because the Israeli financial week moved to Monday-Friday effective 5 January 2026 (Sunday dropped as a publication day, Friday added). CBS publishes CPI around the 15th of the following month. The BOI inflation target is 1-3%.",
+      "claim_id": "publication-days-mon-fri",
+      "claim": "The BOI representative exchange rate is published Monday to Friday and not on Saturday or Sunday, the Israeli financial week having moved to Monday-Friday in January 2026. Verified directly from the series: Friday 2026-08-21 carries an observation and no Saturday or Sunday does.",
+      "source_url": "https://edge.boi.gov.il/FusionEdgeServer/ws/public/sdmxapi/rest/data/EXR/RER_USD_ILS?startPeriod=2026-08-20&endPeriod=2026-08-24",
+      "raw_snippet": "<Obs TIME_PERIOD=\"2026-08-21\" OBS_VALUE=\"2.991\" RELEASE_STATUS=\"YP\"></Obs><Obs TIME_PERIOD=\"2026-08-24\"",
+      "fetched_at": "2026-08-27T01:35:38.245480+00:00",
+      "verified_at": "2026-08-27T01:40:26.492677+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/boi-api.md",
+        "references/domain-checklist.md",
+        "scripts/fetch_boi_rates.py"
+      ],
+      "verified_via": "api-raw-http"
+    },
+    {
+      "claim_id": "publication-times",
+      "claim": "The representative rate is published Monday-Thursday at approximately 15:30 and Friday at approximately 12:30 Israel time. Carried forward from the v1.3.0 cycle. The BOI methodology page that states these times is behind Radware bot protection and returns a challenge page to any automated fetch, so this cycle could not re-read it verbatim; the publication DAYS are independently API-verified under publication-days-mon-fri.",
       "source_url": "https://www.boi.org.il/roles/markets/reprate/",
-      "raw_snippet": "representative rate determined from transactions published each business day Monday-Friday afternoon around 15:30 Friday 12:30 not published Saturday Sunday holidays inflation target 1% 3%",
-      "fetched_at": "2026-07-18T00:00:00Z",
+      "raw_snippet": "Radware Page Verifying your browser before proceeding",
+      "fetched_at": "2026-08-27T01:35:38.245480+00:00",
+      "verified_via": "unreachable-bot-protected",
+      "verified_at": "2026-08-27T01:35:38.245480+00:00",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
@@ -60,18 +167,59 @@
     },
     {
       "claim_id": "reference-urls",
-      "claim": "Reference and data-source URLs cited in the skill. Covers these references: https://www.boi.org.il/en/economic-roles/statistical-information/ https://www.boi.org.il/en/communication-and-publications/press-releases/ https://www.boi.org.il/en/economic-roles/monetary-policy/ https://www.boi.org.il/he/economic-roles/statistical-information/ https://www.boi.org.il/he/communication-and-publications/press-releases/ https://www.cbs.gov.il/en/subjects/Pages/Consumer-Price-Index.aspx https://www.cbs.gov.il/he/subjects/Pages/מדד-המחירים-לצרכן.aspx https://www.cbs.gov.il/he/pages/default.aspx https://info.tase.co.il/ https://data.gov.il/ http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/structure/dataflow/BOI.STATISTICS https://edge.boi.gov.il/FusionEdgeServer/ws/public/sdmxapi/rest/data/ https://edge.boi.gov.il/FusionEdgeServer/ws/public/sdmxapi/rest/data/{DATAFLOW}/{series} https://edge.boi.gov.il/FusionEdgeServer/ws/public/sdmxapi/rest/data/EXR/RER_USD_ILS https://edge.boi.gov.il/FusionEdgeServer/ws/public/sdmxapi/rest/data/EXR/RER_USD_ILS?startPeriod={date}&endPeriod={date} https://edge.boi.gov.il/FusionEdgeServer/ws/public/sdmxapi/rest/data/BIR/?startPeriod={date}&endPeriod={date} https://edge.boi.gov.il/FusionEdgeServer/ws/public/sdmxapi/rest/data/BIR/?startPeriod=2026-01-01&endPeriod=2026-12-31 https://edge.boi.gov.il/FusionEdgeServer/ws/public/sdmxapi/rest/data/PRI/?startPeriod=2026-01&endPeriod=2026-05. The Bank of Israel web pages block automated fetching, so this is sourced to the Bank's own public exchange-rate API instead.",
-      "source_url": "https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI.STATISTICS/EXR/1.0/RER_USD_ILS?lastNPeriods=3&format=csv",
-      "raw_snippet": "SERIES_CODE,FREQ,BASE_CURRENCY,COUNTER_CURRENCY,UNIT_MEASURE,DATA_TYPE,DATA_SOURCE,TIME_COLLECT,CONF_STATUS,PUB_WEBSITE,UNIT_MULT,COMMENTS,TIME_PERIOD,OBS_VALUE,RELEASE_STATUS | RER_USD_ILS,D,USD,ILS,ILS,OF00,BOI_MRKT,V,F,Y,0,,1948-05-15,0.000025,YP",
-      "fetched_at": "2026-08-18",
+      "claim": "Reference and data-source URLs cited in the skill. The boi.org.il pages return HTTP 200 to a browser but serve a Radware challenge to automated fetches, so they are cited as human-facing references rather than as machine-readable sources. Covers: https://www.boi.org.il/en/economic-roles/statistical-information/ https://www.boi.org.il/en/communication-and-publications/press-releases/ https://www.boi.org.il/en/economic-roles/monetary-policy/ https://www.boi.org.il/he/economic-roles/statistical-information/ https://www.boi.org.il/he/communication-and-publications/press-releases/ https://www.cbs.gov.il/en/subjects/Pages/Consumer-Price-Index.aspx https://www.cbs.gov.il/he/subjects/Pages/מדד-המחירים-לצרכן.aspx https://www.cbs.gov.il/he/pages/default.aspx https://info.tase.co.il/ https://data.gov.il/ Also covers the API base paths and the CPI query URL as written in the skill: https://edge.boi.gov.il/FusionEdgeServer/ws/public/sdmxapi/rest/data https://edge.boi.gov.il/FusionEdgeServer/ws/public/sdmxapi/rest/data/ https://api.cbs.gov.il/index/data/price https://api.cbs.gov.il/index/data/price?id=120010&format=json&last=6 The two BOI base paths return HTTP 404 on their own by design: a dataflow and a series segment must be appended. The CBS query URL was fetched live and returned the headline index.",
+      "source_url": "https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI.STATISTICS/EXR/1.0/RER_USD_ILS?startPeriod=2026-08-26",
+      "raw_snippet": "<Obs TIME_PERIOD=\"2026-08-26\" OBS_VALUE=\"2.972\" RELEASE_STATUS=\"YP\"></Obs>",
+      "fetched_at": "2026-08-27T01:35:38.245480+00:00",
+      "verified_at": "2026-08-27T01:40:26.492677+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/boi-api.md"
+      ],
+      "verified_via": "api-raw-http"
+    },
+    {
+      "claim_id": "inflation-target-1-3",
+      "claim": "The Bank of Israel inflation target upper bound is 3%, published by the BOI as the daily series INF_MAX_TRGT_D in the ZCM dataflow.",
+      "source_url": "https://edge.boi.gov.il/FusionEdgeServer/ws/public/sdmxapi/rest/data/ZCM/INF_MAX_TRGT_D?startPeriod=2026-08-01",
+      "raw_snippet": "<Obs TIME_PERIOD=\"2026-08-25\" OBS_VALUE=\"3\" RELEASE_STATUS=\"YP\"></Obs>",
+      "fetched_at": "2026-08-27T01:36:23.221437+00:00",
+      "verified_at": "2026-08-27T01:40:26.492677+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "verified_via": "api-raw-http"
+    },
+    {
+      "claim_id": "inflation-target-lower-bound",
+      "claim": "The Bank of Israel inflation target lower bound is 1%, published by the BOI as the daily series INF_MIN_TRGT_D in the ZCM dataflow.",
+      "source_url": "https://edge.boi.gov.il/FusionEdgeServer/ws/public/sdmxapi/rest/data/ZCM/INF_MIN_TRGT_D?startPeriod=2026-08-25",
+      "raw_snippet": "UNIT_MEASURE=\"PT\" CONF_STATUS=\"F\" PUB_WEBSITE=\"Y\"><Obs TIME_PERIOD=\"2026-08-25\" OBS_VALUE=\"1\" RELEASE_STATUS=\"YP\"></Obs>",
+      "fetched_at": "2026-08-27T01:37:16.214207+00:00",
+      "verified_at": "2026-08-27T01:40:26.492677+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "verified_via": "api-raw-http"
+    },
+    {
+      "claim_id": "dataflow-query-returns-full-history",
+      "claim": "A BOI dataflow queried with no date filter returns every series it holds with full history (EXR is about 20 MB, 35 series, 268,629 observations, earliest TIME_PERIOD 1948-05-15), not an empty result. A date-bounded dataflow query returns that dataflow's series for the window: EXR for 2026-08-26 returns 16 series, of which 14 are per-currency RER_<CUR>_ILS rates and 2 are the trade-weighted basket series NER_ILS_BSK_PCT and NER_ILS_BSK_IDX.",
+      "source_url": "https://edge.boi.gov.il/FusionEdgeServer/ws/public/sdmxapi/rest/data/EXR/?startPeriod=2026-08-26",
+      "raw_snippet": "<Series SERIES_CODE=\"RER_DKK_ILS\" FREQ=\"D\" BASE_CURRENCY=\"DKK\" COUNTER_CURRENCY=\"ILS\" UNIT_MEASURE=\"ILS\" DATA_TYPE=\"OF00\" TIME_COLLECT=\"V\" DATA_SOURCE=\"BOI_MRKT\" UNIT_MULT=\"0\" CONF_STATUS=\"F\" PUB_WEBSITE=\"Y\">",
+      "fetched_at": "2026-08-27T01:45:47.190910+00:00",
+      "verified_via": "api-raw-http",
+      "verified_at": "2026-08-27T01:57:27.870791+00:00",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/boi-api.md",
+        "references/domain-checklist.md",
         "scripts/fetch_boi_rates.py"
-      ],
-      "verified_via": "Bank of Israel SDMX statistics endpoint (edge.boi.gov.il), CSV output; the Bank's web pages block automated fetching",
-      "verified_at": "2026-08-18"
+      ]
     }
   ]
 }
