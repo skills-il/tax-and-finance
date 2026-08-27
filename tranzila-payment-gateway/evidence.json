@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0",
   "skill": "tranzila-payment-gateway",
-  "generated_at": "2026-08-27T17:41:48.923317+00:00",
+  "generated_at": "2026-08-27T18:08:12.879354+00:00",
   "claims": [
     {
       "claim_id": "tranzila-endpoints",
@@ -368,6 +368,17 @@
       "raw_snippet": "47. זכות להוציא חשבונית מס",
       "fetched_at": "2026-08-27T17:41:48.923317+00:00",
       "appears_in": [
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "vat-s47a2-seller-duty",
+      "claim": "The buyer's demand in s.47(a2)(1) governs the SELLER's duty to request an allocation number, not the buyer's entitlement to deduct, so a validator must not treat an absent demand as a pass.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%97%D7%95%D7%A7_%D7%9E%D7%A1_%D7%A2%D7%A8%D7%9A_%D7%9E%D7%95%D7%A1%D7%A3",
+      "raw_snippet": "ובעסקה שסכומה, בלא המס, עולה על הסכום האמור בסעיף 38(א1), חייב הוא לעשות כן לפי דרישת הקונה",
+      "fetched_at": "2026-08-27T18:08:12.879354+00:00",
+      "appears_in": [
+        "SKILL.md",
         "SKILL_HE.md"
       ]
     }
