@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0",
   "skill": "israeli-bank-connector",
-  "generated_at": "2026-05-18T01:20:00Z",
+  "generated_at": "2026-08-27T16:15:28.358776+00:00",
   "claims": [
     {
       "claim_id": "library-version-2026-06",
@@ -28,20 +28,22 @@
     },
     {
       "claim_id": "bank-codes-bankisrael",
-      "claim": "Bank of Israel's Access to Payment Systems section assigns banks their identification (participant) codes, currently 2-digit and being expanded to 3 digits by end of Dec 2026. The standard 2-digit clearing codes used in the table (Leumi=10, Discount=11, Hapoalim=12, Union=13, Otsar Hahayal=14, Mercantile=17, OneZero=18, Mizrahi-Tefahot=20, FIBI=31, Yahav=04, Massad=46, Pagi=52) are stable public Israeli bank codes verified against independent bank-code lists (e.g. science.co.il, ezcount). The BOI section page itself does not inline the full code list (the downloadable list sits under its payment-systems publications).",
+      "claim": "The Bank of Israel Access to Payment Systems page covers terms of access and connection requirements for the payment systems. It does NOT carry a bank identification-code list: rendered in Playwright on 27 August 2026 with location.href asserted, the page is a landing page last updated 19/11/2023. The two-digit bank codes in references/supported-banks.md, and the previously-stated expansion to three digits by end-2026, are therefore recorded as unverified rather than sourced here.",
       "source_url": "https://www.boi.org.il/en/economic-roles/supervision-and-regulation/payment-systems-oversight/access-to-payment-systems/",
-      "raw_snippet": "Access to Payment Systems",
-      "fetched_at": "2026-06-29T00:35:00Z",
+      "raw_snippet": "Terms of access and requirements for connecting to the payment systems",
+      "fetched_at": "2026-08-27T16:17:14.206672+00:00",
       "appears_in": [
         "references/supported-banks.md"
-      ]
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-08-27T16:17:14.206672+00:00"
     },
     {
       "claim_id": "boi-en-consumer-enquiries",
       "claim": "BOI English Consumer Enquiries and Inspections page (banking complaints and consumer info, verified 200 OK via WebFetch)",
       "source_url": "https://www.boi.org.il/en/information-and-service-to-the-public/consumer-enquiries-and-inspections/",
-      "raw_snippet": "Consumer Enquiries and Inspections Unit handles complaints from bank and credit card customers",
-      "fetched_at": "2026-05-18T01:20:00Z",
+      "raw_snippet": "The Consumer Enquiries and Inspections Unit's main function is to receive complaints from customers of the banks and credit card companies",
+      "fetched_at": "2026-08-27T16:31:28.229439+00:00",
       "appears_in": [
         "SKILL.md"
       ]
@@ -120,6 +122,111 @@
       "source_url": "https://api.github.com/repos/eshaham/israeli-bank-scrapers/releases/tags/v6.9.0",
       "raw_snippet": "* **max:** add credit card balances",
       "fetched_at": "2026-07-27T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/supported-banks.md"
+      ]
+    },
+    {
+      "claim_id": "scrapers-node-engine-22",
+      "claim": "israeli-bank-scrapers declares engines.node >= 22.22.2, so Node 22 or newer is required. The same registry document was read on 27 August 2026 and still shows 6.9.0 (2026-07-22) as the latest release, so the version pin in this skill did not move this cycle.",
+      "source_url": "https://registry.npmjs.org/israeli-bank-scrapers",
+      "raw_snippet": "\"node\": \">= 22.22.2\"",
+      "fetched_at": "2026-08-27T16:15:28.358776+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/supported-banks.md"
+      ]
+    },
+    {
+      "claim_id": "israeli-bank-mcp-scraper-range",
+      "claim": "israeli-bank-mcp declares israeli-bank-scrapers ^6.7.3, a caret range rather than a hard pin.",
+      "source_url": "https://raw.githubusercontent.com/mottibec/israeli-bank-mcp/main/package.json",
+      "raw_snippet": "\"israeli-bank-scrapers\": \"^6.7.3\"",
+      "fetched_at": "2026-08-27T16:15:28.358776+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/supported-banks.md"
+      ]
+    },
+    {
+      "claim_id": "il-bank-mcp-scraper-range",
+      "claim": "il-bank-mcp's packages/scraper declares israeli-bank-scrapers ^6.1.4, a caret range rather than a hard pin.",
+      "source_url": "https://raw.githubusercontent.com/glekner/il-bank-mcp/master/packages/scraper/package.json",
+      "raw_snippet": "\"israeli-bank-scrapers\": \"^6.1.4\"",
+      "fetched_at": "2026-08-27T16:15:28.358776+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/supported-banks.md"
+      ]
+    },
+    {
+      "claim_id": "israeli-bank-mcp-install-shape",
+      "claim": "israeli-bank-mcp is installed by npm install then npm run build, and the MCP client is pointed at node /path/to/israeli-bank-mcp/build/server.js. It declares no bin and is not on npm.",
+      "source_url": "https://raw.githubusercontent.com/mottibec/israeli-bank-mcp/main/README.md",
+      "raw_snippet": "\"/path/to/israeli-bank-mcp/build/server.js\"",
+      "fetched_at": "2026-08-27T16:15:28.358776+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/supported-banks.md"
+      ]
+    },
+    {
+      "claim_id": "israeli-bank-mcp-tool-surface",
+      "claim": "israeli-bank-mcp exposes exactly two tools, fetch-transactions and two-factor-auth, plus the banks://list resource.",
+      "source_url": "https://raw.githubusercontent.com/mottibec/israeli-bank-mcp/main/README.md",
+      "raw_snippet": "**Fetch transactions** (`fetch-transactions`)",
+      "fetched_at": "2026-08-27T16:15:28.358776+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/supported-banks.md"
+      ]
+    },
+    {
+      "claim_id": "israeli-bank-mcp-env-credentials",
+      "claim": "israeli-bank-mcp reads credentials from environment variables and never from tool arguments, to keep them out of the LLM conversation history; names are <BANK_ID>_<FIELD>.",
+      "source_url": "https://raw.githubusercontent.com/mottibec/israeli-bank-mcp/main/README.md",
+      "raw_snippet": "Credentials are read from environment variables (never from tool arguments",
+      "fetched_at": "2026-08-27T16:15:28.358776+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/supported-banks.md"
+      ]
+    },
+    {
+      "claim_id": "israeli-bank-mcp-iterates-scrapers",
+      "claim": "israeli-bank-mcp resolves banks through SCRAPERS[bankId] from the library rather than a hardcoded list, so its coverage tracks CompanyTypes even where its README list is stale (it omits Pagi).",
+      "source_url": "https://raw.githubusercontent.com/mottibec/israeli-bank-mcp/main/src/server.ts",
+      "raw_snippet": "const scraperInfo = SCRAPERS[bankId];",
+      "fetched_at": "2026-08-27T16:15:28.358776+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "references/supported-banks.md"
+      ]
+    },
+    {
+      "claim_id": "companytypes-18-entries-2026-08",
+      "claim": "The CompanyTypes enum has exactly 18 entries: hapoalim, beinleumi, union, amex, isracard, visaCal, max, otsarHahayal, discount, mercantile, mizrahi, leumi, massad, yahav, behatsdaa, beyahadBishvilha, oneZero, pagi. Enumerated in full and diffed against the skill on 27 August 2026; no row is missing.",
+      "source_url": "https://raw.githubusercontent.com/eshaham/israeli-bank-scrapers/master/src/definitions.ts",
+      "raw_snippet": "beyahadBishvilha = 'beyahadBishvilha',",
+      "fetched_at": "2026-08-27T16:15:28.358776+00:00",
+      "appears_in": [
+        "references/supported-banks.md"
+      ]
+    },
+    {
+      "claim_id": "il-bank-mcp-docker-run",
+      "claim": "il-bank-mcp runs under Docker Compose; the MCP client invokes docker compose run --rm -i mcp-server.",
+      "source_url": "https://raw.githubusercontent.com/glekner/il-bank-mcp/master/README.md",
+      "raw_snippet": "docker compose -f /path/to/il-bank-mcp/docker-compose.yml run --rm -i mcp-server",
+      "fetched_at": "2026-08-27T16:15:28.358776+00:00",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",

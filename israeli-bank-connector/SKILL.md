@@ -11,9 +11,28 @@ compatibility: Requires israeli-bank-mcp or il-bank-mcp MCP server. Claude Code 
 
 ### Step 1: Identify Connected Banks
 Check which MCP server is available and what accounts are connected:
-- israeli-bank-mcp: Direct scraper integration
+- israeli-bank-mcp: direct scraper integration
 - il-bank-mcp: Docker-based with persistent analysis
-- If no MCP: Guide user through CSV/Excel import from bank website
+- If no MCP: guide the user through a CSV or Excel export from the bank website
+
+**Neither MCP is installable with `npx`.** `israeli-bank-mcp` is not published to npm and
+declares no `bin`, so any instruction to run `npx israeli-bank-mcp` is wrong and will fail.
+The real shapes, taken from each repository:
+
+| Server | How it is actually installed and run |
+|---|---|
+| `israeli-bank-mcp` | Clone the repo, `npm install`, `npm run build`, then point the MCP client at `node /path/to/israeli-bank-mcp/build/server.js` |
+| `il-bank-mcp` | Docker. `docker compose up -d` with the bank env vars set, and the client runs `docker compose -f /path/to/il-bank-mcp/docker-compose.yml run --rm -i mcp-server` |
+
+**Node 22 or newer is required for the MCP servers, and Python 3.9 or newer for the bundled script.** `israeli-bank-scrapers` declares `engines.node >= 22.22.2`.
+On an older Node the install or the run fails before any bank is ever contacted, and the
+error will not mention the bank. Check `node --version` first when a user reports that
+nothing works at all.
+
+**`israeli-bank-mcp` exposes two tools and one resource, and that is the whole surface**:
+`fetch-transactions`, `two-factor-auth`, and the `banks://list` resource that reports which
+credential fields each bank needs. Everything in Steps 3 to 5 below is work the agent does
+on the returned data. Do not expect the server to categorize, total, or export anything.
 
 ### Step 2: Retrieve Transactions
 Fetch transaction data for the requested period:
@@ -43,14 +62,30 @@ as "you spent X" overstates spending by whatever the user is putting away, which
 typical Israeli salary deduction is a substantial share.
 
 **Categorisation is keyword matching, so review it before presenting it as fact.** The
-script matches merchant descriptions against Hebrew and English keyword patterns. Hebrew has
-no word boundary the regex engine understands, so patterns are guarded to avoid matching
-inside longer words, but genuine ambiguity remains: a mall called קניון מגדל שלום matches the
-insurer מגדל, and מלון הוט matches the cable company הוט. Show the user the category
-breakdown and invite corrections rather than asserting it is their spending. Credits
-(refunds, reversals, incoming money) are detected by a positive amount and reported
-separately, so a statement feed that reports every line as positive will produce an empty
-spending total; check the sign convention of your source before trusting the output.
+script matches merchant descriptions against Hebrew and English keyword patterns, guarded on
+both scripts so a pattern matches a whole token rather than a fragment: Hebrew-letter
+lookbehind so `פז` does not fire inside `פזגז`, and Latin-letter guards on both sides so
+`hot` does not fire inside `Hotel` or `PHOTO`. Hebrew one-letter prefixes are handled by
+matching a de-prefixed copy of each token as well, which is why `הפקדה לפנסיה` reaches the
+savings rule; without that the guard blocks the most natural Hebrew phrasing and files a
+pension deposit as an insurance expense.
+
+**Misclassifications remain, and this is a CLASS of failure, not a fixed list.** Any Hebrew
+merchant string that contains a pattern token as a real word will match it: a mall called
+קניון מגדל שלום matches the insurer מגדל, and מלון הוט matches the cable company הוט. Those
+two are named because they are common, not because they are the only ones. Show the user the
+category breakdown and invite corrections rather than asserting it is their spending, and
+never present a category total as a fact about the person without them having seen the rows
+behind it.
+
+**Money coming in is not netted off spending, and no net view is offered.** Any positive
+amount, whether a refund, a reversal, a salary, a transfer in or a loan drawdown, is reported
+on its own `Credits In` line and excluded from every category total and every percentage.
+Nothing in the data distinguishes a refund from a salary, so a "net" figure built from that
+bucket subtracts the user's salary from a spending category and reports a negative total. If
+the user wants refunds netted, net the specific rows they point at, by hand. Check the sign
+convention of your source first: a feed that reports every line as positive produces an empty
+spending total.
 
 ### Step 4: Present Insights
 Provide:
@@ -83,7 +118,7 @@ Result: Filtered and categorized business transactions with VAT amounts, ready f
 ## Bundled Resources
 
 ### Scripts
-- `scripts/categorize_transactions.py`, Categorizes Israeli bank transactions by spending category using Israeli-specific merchant pattern matching (Shufersal, Rami Levy, Rav-Kav, etc.). Accepts transaction JSON and outputs categorized spending summaries. Run: `python scripts/categorize_transactions.py --example` for a demo, or `python scripts/categorize_transactions.py --json transactions.json` for real data. Add `--output-json` for machine-readable output.
+- `scripts/categorize_transactions.py`, Categorizes Israeli bank transactions by spending category using Israeli-specific merchant pattern matching (Shufersal, Rami Levy, Rav-Kav, etc.). Accepts transaction JSON and outputs categorized spending summaries. Run: `python3 scripts/categorize_transactions.py --example` for a demo, or `python3 scripts/categorize_transactions.py --json transactions.json` for real data. Add `--output-json` for machine-readable output.
 
 ### References
 - `references/spending-categories.md`, Israeli spending category definitions with Hebrew terms and common merchant examples for each category (housing/diur, groceries/mazon, transportation/tahaburah, utilities/shartuim, etc.). Consult when customizing categorization rules or explaining categories to users.
@@ -94,10 +129,11 @@ Result: Filtered and categorized business transactions with VAT amounts, ready f
 | Source | URL | What to Check |
 |--------|-----|---------------|
 | israeli-bank-scrapers (npm library) | https://github.com/eshaham/israeli-bank-scrapers | Authoritative list of supported banks, breaking changes, scraper limitations |
-| israeli-bank-mcp (Motti Bechhofer) | https://github.com/mottibec/israeli-bank-mcp | Most comprehensive MCP wrapper; install/config and tool reference |
-| il-bank-mcp (Gilad Lekner) | https://github.com/glekner/il-bank-mcp | Docker-based MCP with built-in spending analysis and SQLite storage (less actively maintained, last updated mid-2025; pins an older scraper version) |
+| israeli-bank-scrapers on npm | https://registry.npmjs.org/israeli-bank-scrapers | Current release, and the `engines.node` floor. Latest is 6.9.0 (2026-07-22), Node >= 22.22.2 |
+| israeli-bank-mcp (Motti Bechhofer) | https://github.com/mottibec/israeli-bank-mcp | The more current MCP wrapper (last pushed May 2026). Not on npm: clone and build. Its README bank list is stale, but the server iterates the library's `SCRAPERS` map, so it covers whatever the installed library covers |
+| il-bank-mcp (Gilad Lekner) | https://github.com/glekner/il-bank-mcp | Docker-based MCP with built-in spending analysis and SQLite storage. Last pushed June 2025. Its `packages/scraper` declares `israeli-bank-scrapers ^6.1.4`, a low floor rather than a hard pin, so a fresh build still resolves to the current release; a committed lockfile or a stale image is what actually freezes it |
 | Bank of Israel: Consumer Enquiries | https://www.boi.org.il/en/information-and-service-to-the-public/consumer-enquiries-and-inspections/ | Official BOI Public Inquiries Unit, banking customer service, complaint workflow |
-| Bank of Israel: Access to Payment Systems | https://www.boi.org.il/en/economic-roles/supervision-and-regulation/payment-systems-oversight/access-to-payment-systems/ | BOI section that assigns bank identification (participant) codes; codes are being expanded from 2 to 3 digits by end of 2026 |
+| Bank of Israel: Access to Payment Systems | https://www.boi.org.il/en/economic-roles/supervision-and-regulation/payment-systems-oversight/access-to-payment-systems/ | Payment-system access terms. NOTE: rendered in a browser on 27 August 2026 this is a landing page last updated 19/11/2023 with no identification-code list, so do not cite it for bank codes |
 
 ## Handling credentials and transaction data
 
@@ -106,6 +142,13 @@ one-time codes, and it produces a complete transaction history. Treat both as se
 
 - Credentials belong in the MCP server's own configuration or environment, never in the
   chat, never in a file you create, and never in a command you echo back to the user.
+- `israeli-bank-mcp` reads credentials from environment variables and deliberately never
+  from tool arguments, precisely so they do not end up in the LLM conversation history. Its
+  variable names are derived from the bank id and the login field by camelCase-to-upper-snake,
+  so `leumi` plus `username` gives `LEUMI_USERNAME`, and `otsarHahayal` plus `username` gives
+  `OTSAR_HAHAYAL_USERNAME`. Ask the `banks://list` resource which fields a given bank needs
+  rather than guessing, because the shape differs per bank (Hapoalim wants a usercode, not a
+  username). If a bank fails with a missing-credential error, it names the exact variables.
 - Do not print, log, or repeat a credential, an OTP, or a card number, even partially, and
   do not ask the user to paste one into the conversation.
 - Do not persist raw transaction dumps beyond what the current task needs, and tell the
@@ -116,11 +159,15 @@ one-time codes, and it produces a complete transaction history. Treat both as se
   spending.
 
 ## Gotchas
-- Israel's Open Banking regulation is based on the Berlin Group NextGenPSD2 framework but adapted for Israel with its own timeline and implementation. Full rollout across all banks is still ongoing (as of 2026). Agents may reference UK Open Banking or generic PSD2 endpoints that do not exist in Israel. In practice, israeli-bank-scrapers uses headless browser scraping, not official Open Banking APIs.
+- The operational point, which IS load-bearing: `israeli-bank-scrapers` uses headless browser scraping, not an official Open Banking API, and agents routinely reach for UK Open Banking or generic PSD2 endpoints that do not exist in Israel. Israel's own open-banking regime is reported to derive from the Berlin Group NextGenPSD2 framework on its own timeline, but that characterisation is **unverified in this skill** and should not be repeated to a user as fact.
 - Bank Leumi, Hapoalim, Discount, Mizrahi-Tefahot, and First International each have different API implementations. There is no single unified API across all Israeli banks.
 - Mercantile and Otsar HaHayal are SEPARATE scrapers in the upstream library even though they are subsidiaries of Discount and FIBI respectively. Treat them as their own connection (each has its own loginFields shape). Do not assume Discount credentials cover Mercantile or that FIBI credentials cover Otsar HaHayal.
-- Transaction history depth is bank-specific. Hapoalim and Leumi typically expose less than 12 months via scraping; FIBI-group banks (FIBI, Otsar HaHayal, Pagi) often expose 12+ months. Treat "up to 12 months" as a ceiling, not a promise.
+- Transaction history depth is bank-specific and this skill does not have a sourced table of it. Reports put Hapoalim and Leumi below 12 months and the FIBI group at 12 or more, but that is **unverified**. Treat "up to 12 months" as a ceiling, never a promise, and tell the user what the scrape actually returned rather than what you expected.
 - What the library can retrieve depends on the installed version, so pin before you debug. As of `israeli-bank-scrapers` 6.9.0 (2026-07-22) Leumi exposes savings accounts and Max exposes credit card balances; neither existed in the 6.7.x line. If a user reports a missing Leumi savings account or a missing Max balance, check the version before assuming the scrape failed. Anything older than 6.7.10 will also fail outright on Max (login page) and Isracard (bot detection) rather than just return less.
+- Both MCP wrappers declare the scraper as a caret range (`^6.7.3` and `^6.1.4`), not a hard
+  pin, so a fresh install resolves to the current release. What actually freezes a user on an
+  old scraper is a committed lockfile or a stale Docker image, so check the INSTALLED version
+  rather than the declared range when you are diagnosing a capability gap.
 - Israeli bank account numbers include a branch number (snif) prefix. Agents may validate account numbers using international IBAN format, but Israeli domestic transfers use the local branch+account format.
 - Credit card statements in Israel are issued by separate companies (Isracard, Max, CAL) and not directly by the banks. Agents may try to fetch credit card data from the bank API instead of the card company.
 

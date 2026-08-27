@@ -34,7 +34,7 @@ Major Israeli supermarket chains:
 - Bezeq (landline)
 - Cellcom / Partner / Pelephone / HOT Mobile
 - Internet (Bezeq, Partner, HOT, Cellcom)
-- Gas (Supergas, Amerigas)
+- Gas (Supergas, Amisragas (אמישראגז))
 
 ### Healthcare (Briut)
 - Kupat Cholim (Clalit, Maccabi, Meuhedet, Leumit)
@@ -51,7 +51,7 @@ Major Israeli supermarket chains:
 - Courses and training
 
 ### Entertainment (Bilui)
-- Restaurants and cafes
+- Restaurants and cafes (the script maps these to Entertainment; there is no separate Restaurants category)
 - Cinema (Yes Planet, Cinema City)
 - Streaming (Netflix, Disney+, Spotify)
 - Sports and fitness
@@ -74,4 +74,4 @@ Major Israeli supermarket chains:
 - Israeli banks often abbreviate merchant names
 - Credit card charges may show the card company name, not merchant
 - Standing orders (horaot keva) should be categorized by destination
-- ATM withdrawals cannot be auto-categorized (mark as "cash")
+- ATM withdrawals are NOT auto-categorized. The bundled script has no cash category and no withdrawal pattern, so a withdrawal lands in Other. If you want a cash bucket, add it yourself; do not tell the user the script produced one.

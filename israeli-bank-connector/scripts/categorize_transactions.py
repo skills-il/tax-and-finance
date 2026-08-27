@@ -14,12 +14,18 @@ import json
 import argparse
 import re
 from collections import defaultdict
-from dataclasses import dataclass
-from typing import Optional
 
 
 # Israeli merchant patterns mapped to categories
 MERCHANT_PATTERNS = {
+    # Lines that dominate a real Israeli statement and previously all fell into Other.
+    r"(?i)(mashkanta|משכנתא|משכנת)": "housing",
+    r"(?i)(halvaa|הלוואה|החזר\s*הלוואה)": "housing",
+    r"(?i)(sechar\s*dira|שכר\s*דירה)": "housing",
+    r"(?i)(amlat|עמלת|עמלה|דמי\s*ניהול\s*חשבון)": "other",
+    r"(?i)(bituach\s*leumi|ביטוח\s*לאומי)": "insurance",
+    r"(?i)(mas\s*hachnasa|מס\s*הכנסה)": "other",
+    r"(?i)(gan\s*yeladim|גן\s*ילדים|בית\s*ספר|קורס(?![א-ת])|צהרון)": "education",
     # Groceries (mazon)
     r"(?i)(shufersal|שופרסל)": "groceries",
     r"(?i)(rami.?levy|רמי לוי)": "groceries",
@@ -33,13 +39,13 @@ MERCHANT_PATTERNS = {
     r"(?i)(rav.?kav|רב קו)": "transportation",
     r"(?i)(sonol|סונול)": "transportation",
     r"(?i)(paz|פז(?![א-ת]))": "transportation",
-    r"(?i)(delek|דלק)": "transportation",
-    r"(?i)(gett|גט)": "transportation",
+    r"(?i)(delek|דלק(?![א-ת]))": "transportation",
+    r"(?i)(gett|גט(?![א-ת]))": "transportation",
     r"(?i)(yango|יאנגו)": "transportation",
     # Utilities (shartuim)
-    r"(?i)(israel.?electric|חברת.?חשמל)": "utilities",
+    r"(?i)(israel\s*electric|חברת\s*ה?\s*חשמל)": "utilities",
     r"(?i)(mekorot|מקורות)": "utilities",
-    r"(?i)(bezeq|בזק)": "utilities",
+    r"(?i)(bezeq|בזק(?![א-ת]))": "utilities",
     r"(?i)(partner|פרטנר)": "utilities",
     r"(?i)(cellcom|סלקום)": "utilities",
     r"(?i)(hot|הוט(?![א-ת]))": "utilities",
@@ -52,13 +58,17 @@ MERCHANT_PATTERNS = {
     r"(?i)(super.?pharm|סופר פארם)": "healthcare",
     # Housing (diur)
     r"(?i)(arnona|ארנונה)": "housing",
-    r"(?i)(vaad.?bayit|ועד.?בית)": "housing",
+    r"(?i)(vaad\s*bayit|ועד\s*ה?\s*בית)": "housing",
     r"(?i)(rent|שכירות)": "housing",
     # Education (chinuch)
     r"(?i)(university|אוניברסיט)": "education",
     r"(?i)(college|מכללה)": "education",
     # Entertainment (bilui)
     r"(?i)(cinema|סינמה|yes.?planet)": "entertainment",
+
+    # Restaurants and cafes. SKILL.md lists them under Entertainment; two unreachable
+    # "restaurants"/"shopping" category names were removed rather than left as dead code.
+    r"(?i)(restaurant|מסעד|cafe|קפה(?![א-ת])|wolt|וולט|tenbis|10bis|תן ביס|מזנון|פיצה|pizza|בורגר|burger)": "entertainment",
     r"(?i)(netflix)": "entertainment",
     r"(?i)(spotify)": "entertainment",
     r"(?i)(apple.*music|itunes)": "entertainment",
@@ -75,9 +85,13 @@ MERCHANT_PATTERNS = {
 # classified it as insurance, which put pension money into Total Spending and defeated the
 # whole savings/spending split. Priority patterns resolve that collision explicitly.
 PRIORITY_PATTERNS = {
+    # Cooking-gas (LPG) suppliers are utilities. Tested here, ahead of the Paz fuel
+    # pattern in MERCHANT_PATTERNS: v1.3.0 guarded "פז" so it no longer fires on "פזגז",
+    # but nothing then matched "פזגז" and a real gas bill fell through to Other.
+    r"(?i)(pazgas|פזגז|סופרגז|supergas|אמישראגז|amisragas|דורגז|dorgas)": "utilities",
     r"(?i)(pension|פנסי)": "savings",
     r"(?i)(hishtalmut|השתלמות)": "savings",
-    r"(?i)(gemel|גמל)": "savings",
+    r"(?i)(gemel|גמל(?![א-ת]))": "savings",
     r"(?i)(kupat.?gemel|קופת.?גמל)": "savings",
 }
 
@@ -91,24 +105,64 @@ CATEGORY_NAMES = {
     "entertainment": ("Entertainment", "bilui"),
     "insurance": ("Insurance", "bituach"),
     "savings": ("Savings", "chisachon"),
-    "restaurants": ("Restaurants", "misadot"),
-    "shopping": ("Shopping", "kniyot"),
     "other": ("Other", "acher"),
 }
 
 
-def _whole_word(pattern: str) -> str:
-    """Prevent a Hebrew pattern from matching in the MIDDLE of a longer Hebrew word.
+# The one-letter Hebrew prefixes. A statement line says "הפקדה לפנסיה", not "הפקדה פנסיה",
+# so any guard that treats the preceding letter as part of the word will refuse to match
+# the very phrasing that is normal in Hebrew. Rather than try to express that in a
+# lookbehind, the description is expanded before matching (see _expand_hebrew_prefixes).
+# ONLY lamed. The other one-letter prefixes are what generate false positives when the
+# de-prefixed fragment collides with a pattern: "הדלקה" -> "דלקה" hits the fuel stem,
+# "בגט" -> "גט" hits Gett, "מבזק" -> "בזק", "מקפה" -> "קפה", "שגמל" -> "גמל". Lamed is the
+# prefix that actually matters here, because the phrasing this exists to rescue is
+# "הפקדה לפנסיה" and "ניכוי לגמל", and it introduces none of those collisions.
+HEBREW_PREFIXES = "ל"
 
-    Only a leading guard is applied. A trailing guard cannot be applied blanketly because
-    several patterns are deliberately stems: "פנסי" has to keep matching "פנסיה", and
-    adding a trailing guard silently broke the savings classification. Patterns that must
-    match as a complete token carry their own explicit trailing guard in the tables above.
+
+def _expand_hebrew_prefixes(description: str) -> str:
+    """Append a de-prefixed copy of every Hebrew token that starts with a prefix letter.
+
+    Only the prefix lamed is stripped; see HEBREW_PREFIXES for why.
+
+    The leading Hebrew-letter guard in _whole_word() exists to stop a pattern matching in
+    the MIDDLE of a longer word, but it cannot tell a prefix letter from a word letter, so
+    it also blocks "לפנסיה" and "לגמל". Matching against the original text plus a
+    space-separated de-prefixed copy keeps the mid-word protection (the copy is tokenised,
+    so a fragment is never adjacent to anything) while letting a prefixed word match.
+    """
+    tokens = re.findall(r"[\u05d0-\u05ea]+", description)
+    stripped = [tok[1:] for tok in tokens if len(tok) > 2 and tok[0] in HEBREW_PREFIXES]
+    if not stripped:
+        return description
+    return description + " " + " ".join(stripped)
+
+
+def _whole_word(pattern: str) -> str:
+    """Make a pattern match as a whole token in BOTH scripts.
+
+    Two guards, because the two scripts fail differently:
+
+    - Hebrew has no word boundary the regex engine understands, so a bare substring fires
+      inside a longer word ("פז" inside "פזגז", "מגדל" inside "קניון מגדל שלום"). A leading
+      Hebrew-letter lookbehind fixes that. A trailing Hebrew guard cannot be applied
+      blanketly because several patterns are deliberately stems: "פנסי" has to keep matching
+      "פנסיה". Patterns that must match as a complete token carry their own trailing guard
+      in the tables above.
+    - Latin needs the opposite treatment and previously had NONE, which is why "hot" fired
+      on "Hotel Dan" and "PHOTO SHOP", "mega" on "Omega Watches", "rent" on "Parent Teacher
+      Assoc", and "paz" on "Pazzo Pizza". Latin letter guards on both sides fix those and
+      cannot affect Hebrew, since Hebrew characters are not in A-Za-z.
     """
     flags = ""
     if pattern.startswith("(?i)"):
         flags, pattern = "(?i)", pattern[4:]
-    return f"{flags}(?<![\u05d0-\u05ea]){pattern}"
+    return (
+        f"{flags}(?<![\u05d0-\u05ea])(?<![A-Za-z])"
+        f"{pattern}"
+        f"(?![A-Za-z])"
+    )
 
 
 def categorize_transaction(description: str) -> str:
@@ -120,16 +174,15 @@ def categorize_transaction(description: str) -> str:
     Returns:
         Category string.
     """
-    # Hebrew has no word boundaries that \b understands, so a bare substring pattern
-    # matches inside longer words: "פז" (fuel) fires on "פזגז" (cooking gas, a utility),
-    # "מגדל" (insurer) fires on "קניון מגדל שלום" (a mall). Wrapping each pattern in
-    # Hebrew-letter lookarounds makes Hebrew tokens match as whole words. Latin patterns
-    # are unaffected because the lookarounds only exclude Hebrew characters.
+    # Match against the description PLUS a de-prefixed copy of its Hebrew tokens, so that
+    # "הפקדה לפנסיה" reaches the savings pattern while "קניון מגדל שלום" still cannot be
+    # split mid-word. See _expand_hebrew_prefixes and _whole_word.
+    haystack = _expand_hebrew_prefixes(description)
     for pattern, category in PRIORITY_PATTERNS.items():
-        if re.search(_whole_word(pattern), description):
+        if re.search(_whole_word(pattern), haystack):
             return category
     for pattern, category in MERCHANT_PATTERNS.items():
-        if re.search(_whole_word(pattern), description):
+        if re.search(_whole_word(pattern), haystack):
             return category
     return "other"
 
@@ -153,20 +206,43 @@ def analyze_transactions(transactions: list[dict]) -> dict:
     for txn in transactions:
         desc = txn.get("description", "Unknown")
         raw_amount = txn.get("amount", 0) or 0
+        if isinstance(raw_amount, str):
+            try:
+                raw_amount = float(raw_amount.replace(",", "").replace("\u20aa", "").strip())
+            except ValueError:
+                print(
+                    f"Error: amount {raw_amount!r} on {desc!r} is not a number. "
+                    "Bank CSV and Excel exports often quote amounts as text; convert the "
+                    "amount column to numbers before running this.",
+                    file=sys.stderr,
+                )
+                sys.exit(1)
+        if not isinstance(raw_amount, (int, float)):
+            print(f"Error: amount on {desc!r} is a {type(raw_amount).__name__}, not a number.", file=sys.stderr)
+            sys.exit(1)
         amount = abs(raw_amount)
+        if amount == 0:
+            # A zero line carries no signal and otherwise creates an empty merchant row.
+            continue
         category = categorize_transaction(desc)
 
-        # A positive amount on a statement line is money coming IN (a refund, a reversal,
-        # salary). Counting its absolute value as spending inflates every total and every
-        # percentage. Track credits separately and net them against the category.
+        # A positive amount on a statement line is money coming IN: a refund, a reversal,
+        # but ALSO salary, a transfer in, a loan drawdown. Counting its absolute value as
+        # spending inflates every total and every percentage, so it is tracked separately.
+        # It is NOT netted off the category totals, and NO net view is offered, because
+        # nothing here can tell a refund from a salary: both are simply positive amounts.
+        # A "net" figure built from that distinction-free bucket subtracts a salary from a
+        # spending category and reports a negative category total. If a user wants refunds
+        # netted, net the specific refund rows they identify, by hand.
         if raw_amount > 0:
             credits[category] += raw_amount
             credit_total += raw_amount
         else:
             categories[category] += amount
             merchants[desc] += amount
-        category_count[category] += 1
-        categorized.append({**txn, "category": category, "is_credit": raw_amount > 0})
+        if raw_amount <= 0:
+            category_count[category] += 1
+        categorized.append({**txn, "amount": raw_amount, "category": category, "is_credit": raw_amount > 0})
 
     # Money moved into a pension, keren hishtalmut or gemel is NOT spending: it is the
     # user's own money changing pocket. Folding it into "total spending" overstates the
@@ -207,7 +283,7 @@ def format_analysis(analysis: dict, period: str = "Current") -> str:
         f"  Total Spending: {analysis['total_spending']:>10,.2f} NIS",
         f"  Into Savings:   {analysis['total_savings']:>10,.2f} NIS  (not counted as spending)",
         f"  Total Outflow:  {analysis['total_outflow']:>10,.2f} NIS",
-        *([f"  Credits In:     {analysis['total_credits']:>10,.2f} NIS  (refunds/reversals, excluded above)"]
+        *([f"  Credits In:     {analysis['total_credits']:>10,.2f} NIS  (refunds, reversals, salary, transfers in: excluded above)"]
           if analysis.get("total_credits") else []),
         "",
         "  By Category:",
@@ -291,8 +367,24 @@ def main():
         try:
             with open(args.json) as f:
                 transactions = json.load(f)
+            if not isinstance(transactions, list):
+                print(
+                    f"Error: {args.json} must contain a JSON array of transaction objects, "
+                    f"got {type(transactions).__name__}.",
+                    file=sys.stderr,
+                )
+                sys.exit(1)
+            bad = next((i for i, x in enumerate(transactions) if not isinstance(x, dict)), None)
+            if bad is not None:
+                print(
+                    f"Error: {args.json} entry {bad} is a {type(transactions[bad]).__name__}, "
+                    "not a transaction object. Each entry needs at least a 'description' and "
+                    "an 'amount'.",
+                    file=sys.stderr,
+                )
+                sys.exit(1)
         except FileNotFoundError:
-            print(f"Error: File not found: {args.json}")
+            print(f"Error: File not found: {args.json}", file=sys.stderr)
             sys.exit(1)
         except json.JSONDecodeError as e:
             print(f"Error: Invalid JSON: {e}")
