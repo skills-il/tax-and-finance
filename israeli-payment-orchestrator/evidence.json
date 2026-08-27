@@ -1,28 +1,27 @@
 {
   "schemaVersion": "1.0",
   "skill": "israeli-payment-orchestrator",
-  "generated_at": "2026-06-07T00:00:00Z",
+  "generated_at": "2026-08-27T07:18:23+00:00",
   "claims": [
     {
-      "claim_id": "shva-credittype-codes",
-      "claim": "Shva CreditType (סוג אשראי) enum, a field distinct from transaction type (סוג עסקה): 1=regular/immediate, 2=Isracredit/30+, 3=immediate debit, 4=club credit, 5=Leumi special, 6=credit installments (קרדיט, interest to bank), 8=regular installments (תשלומים, merchant-financed), 9=club installments (מועדון). Interest-free installments use CreditType 8 (merchant subsidizes). Credit (קרדיט) is 6, NOT 2; club installments are 9, NOT 3. Also covers: 2 ₪ 0.7% 0.8% 0.9%",
-      "source_url": "https://github.com/astrails/active_merchant_tranzila",
-      "raw_snippet": "GitHub - astrails/active_merchant_tranzila: Tranzila gateway support for ActiveMerchant · GitHub",
-      "fetched_at": "2026-08-18",
+      "claim_id": "cardcom-credittype-values",
+      "claim": "The only CreditType values published by a vendor are 1 (single payment), 6 (issuer credit) and 8 (regular installments). Cardcom's own v11 API schema documents exactly these three, and Tranzila's current iframe parameter table publishes the identical set. Values 2, 3, 4, 5 and 9 appear in no current vendor parameter table.",
+      "source_url": "https://secure.cardcom.solutions/swagger/v11/swagger.json",
+      "raw_snippet": "Tap transaction credit type: 1 - Single payment / 6 - Credit payments / 8 - Regular payments",
+      "fetched_at": "2026-08-27T07:18:23+00:00",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
-        "references/gateway-matrix.md"
-      ],
-      "verified_via": "navigational claim about the source itself; snippet is the cited page's own title, fetched to confirm the page exists and is what the claim says it is",
-      "verified_at": "2026-08-18"
+        "references/gateway-matrix.md",
+        "references/domain-checklist.md"
+      ]
     },
     {
-      "claim_id": "installment-types",
-      "claim": "Installment type semantics as encoded in this skill's Shva CreditType table: regular installments (תשלומים, CreditType 8) are merchant-financed so the merchant receives the full amount and the customer is billed monthly without interest; credit installments (קרדיט, CreditType 6) are bank-financed with interest to the bank; club installments (תשלומי מועדון, CreditType 9) are an issuer program. These semantics could NOT be confirmed against current Tranzila vendor documentation, which does not enumerate cred_type values.",
-      "source_url": "https://raw.githubusercontent.com/skills-il/tax-and-finance/master/israeli-payment-orchestrator/references/gateway-matrix.md",
-      "raw_snippet": "| 6 | Credit installments | קרדיט | Bank-financed installments (interest to bank) |",
-      "fetched_at": "2026-06-07T00:00:00Z",
+      "claim_id": "cardcom-credittype-6-israel",
+      "claim": "Cardcom documents CreditType 6 specifically as the Israeli multi-payment credit product, confirming that 6 is the issuer-financed credit mode rather than a generic value.",
+      "source_url": "https://secure.cardcom.solutions/swagger/v11/swagger.json",
+      "raw_snippet": "Type of credit for the card, for israel cards only.  6 - israel credit for multiple payments",
+      "fetched_at": "2026-08-27T07:18:23+00:00",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
@@ -30,45 +29,364 @@
       ]
     },
     {
-      "claim_id": "gateway-api-styles",
-      "claim": "Gateway API styles: Cardcom REST JSON; Tranzila REST / form-POST (form-encoded key-value); PayMe bearer-token REST JSON; Meshulam/Grow multipart/form-data (NOT JSON), server-side only, Light API at secure.meshulam.co.il/api/light/server/1.0/; iCredit REST JSON; Pelecard REST JSON. Bit support by default: PayMe yes, Meshulam yes, others no. Fee ranges (0.5-1.0%) are indicative and negotiation-dependent.",
-      "source_url": "https://developers.grow.business/reference/overview",
-      "raw_snippet": "Overview Jump to Content Home Guides API Reference Changelog Discussions v2.",
-      "fetched_at": "2026-08-19",
+      "claim_id": "cardcom-bit-supported",
+      "claim": "Cardcom supports Bit. Its Low Profile creation response carries an explicit UrlToBit field, so Bit is available through Cardcom once enabled on the terminal. Earlier versions of this skill stated Cardcom had no Bit support.",
+      "source_url": "https://secure.cardcom.solutions/swagger/v11/swagger.json",
+      "raw_snippet": "\"UrlToBit\": {\r\n          \"type\": \"string\",",
+      "fetched_at": "2026-08-27T07:18:23+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/gateway-matrix.md",
+        "scripts/compare_gateways.py"
+      ]
+    },
+    {
+      "claim_id": "cardcom-void-vs-refund",
+      "claim": "Cardcom exposes one reversal endpoint, /api/v11/Transactions/RefundByTransactionId. Setting CancelOnly makes it a void valid only before the transaction is deposited; PartialSum performs a partial refund. This is the Cardcom row of the void/refund/partial matrix.",
+      "source_url": "https://secure.cardcom.solutions/swagger/v11/swagger.json",
+      "raw_snippet": "Cancellation only, before deposit of the transaction",
+      "fetched_at": "2026-08-27T07:18:23+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/gateway-matrix.md",
+        "scripts/compare_gateways.py"
+      ]
+    },
+    {
+      "claim_id": "cardcom-partial-refund",
+      "claim": "Cardcom supports partial refunds through the PartialSum field on the refund request.",
+      "source_url": "https://secure.cardcom.solutions/swagger/v11/swagger.json",
+      "raw_snippet": "Partial Sum for refund",
+      "fetched_at": "2026-08-27T07:18:23+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/gateway-matrix.md",
+        "scripts/compare_gateways.py"
+      ]
+    },
+    {
+      "claim_id": "cardcom-base-url",
+      "claim": "The Cardcom API base is https://secure.cardcom.solutions/ with every path prefixed /api/v11/, so https://secure.cardcom.solutions/api/v11/ is the usable base. An earlier version of this skill gave the base without the version segment.",
+      "source_url": "https://secure.cardcom.solutions/swagger/v11/swagger.json",
+      "raw_snippet": "\"servers\": [\r\n    {\r\n      \"url\": \"https://secure.cardcom.solutions/\"",
+      "fetched_at": "2026-08-27T07:18:23+00:00",
+      "appears_in": [
+        "references/gateway-matrix.md",
+        "scripts/compare_gateways.py"
+      ]
+    },
+    {
+      "claim_id": "pelecard-services-surface",
+      "claim": "Pelecard's live service index at https://gateway21.pelecard.biz/services lists the void and pre-broadcast enquiry services this skill names. The index labels them 'Delete Tran Exp1' and 'Get Transaction Data before broadcast'; the wire method names are /services/DeleteTran and /services/GetTransDataBeforeBc, confirmed by POSTing to each on 2026-08-27: /services/DeleteTran returns a Pelecard JSON body while a fabricated sibling path under the same /services prefix redirects to Errors/Http404.",
+      "source_url": "https://gateway21.pelecard.biz/services",
+      "raw_snippet": "Get Transaction Data before broadcast",
+      "fetched_at": "2026-08-27T07:18:23+00:00",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/gateway-matrix.md",
         "scripts/compare_gateways.py"
       ],
-      "verified_via": "claim about the source itself; snippet is the cited page's own title, fetched to confirm the page exists and is what the claim says it is",
-      "verified_at": "2026-08-19"
+      "verified_via": "browser",
+      "verified_at": "2026-08-27"
+    },
+    {
+      "claim_id": "pelecard-broadcast-boundary",
+      "claim": "The Shva broadcast is the boundary that decides whether a Pelecard reversal is a void or a credit; Pelecard exposes the broadcast itself as a service, which is why the void window closes when the batch closes.",
+      "source_url": "https://gateway21.pelecard.biz/services",
+      "raw_snippet": "Broadcast to SHVA",
+      "fetched_at": "2026-08-27T07:18:23+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/gateway-matrix.md"
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-08-27"
+    },
+    {
+      "claim_id": "pelecard-paymentgw-no-refund",
+      "claim": "Pelecard's iframe endpoints live under the /PaymentGW prefix on https://gateway21.pelecard.biz/ and there is no refund endpoint there. Confirmed by live probe on 2026-08-27 against a negative control: POST /PaymentGW/init returns a Pelecard JSON body, while POST /PaymentGW/DebitRegular and POST /PaymentGW/Refund return responses byte-identical to a deliberately fabricated /PaymentGW path, all redirecting to Errors/Http404. The reversal surface lives under /services instead, which the cited index enumerates alongside the authorization services.",
+      "source_url": "https://gateway21.pelecard.biz/services",
+      "raw_snippet": "Authorize Credit Card (J5)",
+      "fetched_at": "2026-08-27T07:18:23+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/gateway-matrix.md"
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-08-27"
+    },
+    {
+      "claim_id": "pelecard-generation-not-environment",
+      "claim": "gateway20.pelecard.biz and gateway21.pelecard.biz are gateway generations, not environments. Confirmed by live probe on 2026-08-27: POST /PaymentGW/init to both hosts returned byte-identical bodies (identical SHA-1 of the response). What decides whether a call is a test or a real charge is the terminal number and credentials, not the hostname. An earlier version of this skill named gateway20 as the base URL and listed a sandbox as available.",
+      "source_url": "https://gateway21.pelecard.biz/services",
+      "raw_snippet": "Authorize Payments Type (J5)",
+      "fetched_at": "2026-08-27T07:18:23+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/gateway-matrix.md",
+        "scripts/compare_gateways.py"
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-08-27"
+    },
+    {
+      "claim_id": "grow-light-api-base",
+      "claim": "The Grow (Meshulam) Light API is documented at developers.grow.business and its production base is https://secure.meshulam.co.il/api/light/server/1.0/. Its refund endpoint refundTransaction and its Bit cancellation endpoint cancelBitTransaction both exist: confirmed by live probe on 2026-08-27, where each returned a real Grow error envelope while a deliberately fabricated method name on the same base returned the distinct body 'unknown method'.",
+      "source_url": "https://developers.grow.business/reference/overview",
+      "raw_snippet": "Payment Process Success URL Iframe vs. Redirect Bit Redirect Post Message",
+      "fetched_at": "2026-08-27T07:18:23+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/gateway-matrix.md",
+        "scripts/compare_gateways.py"
+      ]
+    },
+    {
+      "claim_id": "icredit-wcf-service",
+      "claim": "iCredit is a Rivhit product and its API is a WCF .svc service under https://icredit.rivhit.co.il/API/, not the REST JSON API earlier versions of this skill described. Confirmed by live probe on 2026-08-27 against a negative control: /API/PaymentPageRequest.svc/GetUrl returns a WCF request-error document while a fabricated .svc path returns a zero-byte 404.",
+      "source_url": "https://www.rivhit.co.il/%d7%9b%d7%9c-%d7%94%d7%a4%d7%aa%d7%a8%d7%95%d7%a0%d7%95%d7%aa-%d7%9c%d7%a0%d7%99%d7%94%d7%95%d7%9c-%d7%a2%d7%a1%d7%a7%d7%99%d7%9d/",
+      "raw_snippet": "סליקת אשראי iCredit חתימה דיגיטלית",
+      "fetched_at": "2026-08-27T07:18:23+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/gateway-matrix.md",
+        "scripts/compare_gateways.py"
+      ]
+    },
+    {
+      "claim_id": "payme-no-public-docs",
+      "claim": "PayMe publishes no openly reachable developer-documentation URL. Confirmed on 2026-08-27: https://www.payme.io/developers returns a 301 to the PayMe homepage, and docs.paymeservice.com answers a Cloudflare error 1014 to both a plain and a browser user agent. The API host https://ng.paymeservice.com/api/ is live and its refund-sale route exists, confirmed against a negative control that returns a route-not-found body. PayMe's money unit and refund parameter names are therefore recorded as unverified in this skill rather than guessed.",
+      "source_url": "https://payme.io/products/",
+      "raw_snippet": "Embed advanced payments capabilities with our world class APIs.",
+      "fetched_at": "2026-08-27T07:18:23+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/gateway-matrix.md",
+        "scripts/compare_gateways.py"
+      ]
     },
     {
       "claim_id": "regulation",
-      "claim": "Israeli payment-services regulation: the Regulation of Payment Services and Payment Initiation Law 5783-2023 makes the Israel Securities Authority (ISA) the primary regulator of non-bank payment service providers; the Bank of Israel supervises banks and credit-card companies and oversees Shva as a controlled payment system. Shva (שב\"א, Automatic Bank Services) still operates the credit-card clearing network. Transaction data retention 7 years; PCI DSS tokenization (never store full PANs); 3DS2 for card-not-present transactions.",
+      "claim": "The Bank of Israel's payment-systems oversight role is to ensure the efficiency and stability of Israel's payment systems through regulation, assessment and audit of the controlled payment systems, which include both the technological switching, clearing and settlement systems and the rule schemes governing means of payment. This page does NOT establish who supervises a non-bank payment-service provider; checked 2026-08-27, it contains no mention of the securities regulator or of a 2023 payment-services law, so the skill no longer asserts that from this source.",
       "source_url": "https://www.boi.org.il/en/economic-roles/supervision-and-regulation/payment-systems-oversight/",
-      "raw_snippet": "חוק הסדרת העיסוק בשירותי תשלום ויוזמה בתשלום, התשפ\"ג-2023: רשות ניירות ערך מפקחת על נותני שירותי תשלום שאינם בנק; בנק ישראל מפקח על הבנקים וחברות כרטיסי האשראי ומפקח על שב\"א.",
-      "fetched_at": "2026-06-07T00:00:00Z",
+      "raw_snippet": "ensure the efficiency and stability of the payment systems in Israel by performing regulation, assessment and audit of the controlled payment systems",
+      "fetched_at": "2026-08-27T07:18:23+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/domain-checklist.md"
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-08-27"
+    },
+    {
+      "claim_id": "regulation-he",
+      "claim": "Hebrew page of the Bank of Israel payment-systems oversight section, cited in SKILL_HE.md. It states that the Bank's role as overseer is to ensure the efficiency and stability of Israel's payment systems through regulation, assessment and audit of the controlled payment systems. The URL was corrected this cycle: the previously cited /he/economic-roles/... path renders the Bank's 404 page in a browser while answering a plain fetch with a soft 200, so the old link was dead in a way no status check could see.",
+      "source_url": "https://www.boi.org.il/roles/supervisionregulation/payment-systems-oversight/",
+      "raw_snippet": "הבטחת יעילותן ויציבותן של מערכות התשלומים בישראל וזאת באמצעות ביצוע אסדרה, הערכה וביקורת למערכות התשלומים המבוקרות",
+      "fetched_at": "2026-08-27T07:18:23+00:00",
+      "appears_in": [
+        "SKILL_HE.md"
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-08-27"
+    },
+    {
+      "claim_id": "worked-example-figures",
+      "claim": "Illustrative figures used only inside worked examples in SKILL.md and SKILL_HE.md: a merchant doing 500 transactions a day at an average of 200 ₪, which multiplies out to 3,000,000 ₪ a month, and a customer paying 5,000 ₪ in ten instalments of 500 ₪. These are arithmetic illustrations chosen by the author. They are NOT claims about any gateway, any rate, any threshold or any real merchant, and nothing in the skill depends on them being anyone's actual numbers. The arithmetic was checked by hand: 500 * 30 * 200 = 3,000,000 and 5,000 / 10 = 500. Recorded here so the evidence gate can distinguish an authored illustration from an unsourced factual figure; the cited URL is the skill's primary vendor source and is not offered as evidence for these amounts.",
+      "source_url": "https://secure.cardcom.solutions/swagger/v11/swagger.json",
+      "raw_snippet": "\"title\": \"CardCom API\",",
+      "fetched_at": "2026-08-27T07:18:23+00:00",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
       ]
     },
     {
-      "claim_id": "reference-urls-and-figures",
-      "claim": "Reference URLs for the gateways and the BOI oversight page, plus illustrative figures (idempotency, agorot amounts, 60/40 volume split, 3,000,000 NIS example volume, 5,000 NIS / 500 NIS / 200 NIS example amounts, 1-3% interest-subsidy estimate, 1,000 transactions/day, T+2/T+3 settlement). These figures are illustrative or indicative. Covers these references: https://www.cardcom.co.il/ https://docs.tranzila.com/ https://www.payme.io/developers https://developers.grow.business/reference/overview https://icredit.rivhit.co.il/ https://www.boi.org.il/en/economic-roles/supervision-and-regulation/payment-systems-oversight/ https://www.boi.org.il/he/economic-roles/supervision-and-regulation/payment-systems-oversight/ https://secure.cardcom.solutions/api/ https://secure.cardcom.solutions/Api/v11/Docs https://secure5.tranzila.com/ https://ng.paymeservice.com/api/ https://secure.meshulam.co.il/api/light/server/1.0/ https://sandbox.meshulam.co.il/api/light/server/1.0/ https://icredit.rivhit.co.il/api/ https://gateway20.pelecard.biz/ https://pelecard.com/support/. The Bank of Israel web pages block automated fetching, so this is sourced to the Bank's own public exchange-rate API instead.",
-      "source_url": "https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI.STATISTICS/EXR/1.0/RER_USD_ILS?lastNPeriods=3&format=csv",
-      "raw_snippet": "SERIES_CODE,FREQ,BASE_CURRENCY,COUNTER_CURRENCY,UNIT_MEASURE,DATA_TYPE,DATA_SOURCE,TIME_COLLECT,CONF_STATUS,PUB_WEBSITE,UNIT_MULT,COMMENTS,TIME_PERIOD,OBS_VALUE,RELEASE_STATUS | RER_USD_ILS,D,USD,ILS,ILS,OF00,BOI_MRKT,V,F,Y,0,,1948-05-15,0.000025,YP",
-      "fetched_at": "2026-08-18",
+      "claim_id": "tranzila-credtype-values",
+      "claim": "Tranzila's iframe parameter table publishes exactly three cred_type values: 1 for one payment (the default), 6 for credit installments and 8 for installments. No other value appears in the table, which is the second independent vendor confirming the same three-value set as Cardcom.",
+      "source_url": "https://docs.tranzila.com/docs/payments-and-billing/iframe-integration-directng",
+      "raw_snippet": "1 - One payment (default) 6 - Credit installments 8 - installments",
+      "fetched_at": "2026-08-27T07:18:23+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/gateway-matrix.md",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "tranzila-017-unauthorized-credit-type",
+      "claim": "Tranzila answers an unpublished cred_type value with response code 017, 'Unauthorized credit type for this transaction'. This is why sending 2, 3, 4, 5 or 9 fails, and why switching gateways does not fix it.",
+      "source_url": "https://docs.tranzila.com/docs/payments-and-billing/transaction-response-codes",
+      "raw_snippet": "017 Unauthorized credit type for this transaction.",
+      "fetched_at": "2026-08-27T07:18:23+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/gateway-matrix.md"
+      ]
+    },
+    {
+      "claim_id": "http-200-not-success",
+      "claim": "On these gateways an HTTP 200 does not mean the payment succeeded. Tranzila states it explicitly at the top of its transaction-response-code table: these are application error codes and the HTTP response code will be success. Normalizing this across gateways is the orchestrator's defining job.",
+      "source_url": "https://docs.tranzila.com/docs/payments-and-billing/transaction-response-codes",
+      "raw_snippet": "Those are application error codes, response code will be success (200)",
+      "fetched_at": "2026-08-27T07:18:23+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "tranzila-bit-supported",
+      "claim": "Tranzila supports Bit. Its docs carry a dedicated Bit API with Bit - Init and Bit - Refund endpoints on base https://api.tranzila.com/v1, and the iframe accepts bit_pay=1 to add a Bit payment option. Earlier versions of this skill stated Tranzila had no Bit support and built a worked example around adding a second gateway to obtain it.",
+      "source_url": "https://docs.tranzila.com/docs/payments-and-billing/iframe-integration-directng",
+      "raw_snippet": "bit_pay 1 Add the option to pay with Bit",
+      "fetched_at": "2026-08-27T07:18:23+00:00",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/gateway-matrix.md",
         "scripts/compare_gateways.py"
-      ],
-      "verified_via": "Bank of Israel SDMX statistics endpoint (edge.boi.gov.il), CSV output; the Bank's web pages block automated fetching",
-      "verified_at": "2026-08-18"
+      ]
+    },
+    {
+      "claim_id": "tranzila-api-v2-hmac-auth",
+      "claim": "Tranzila API V2 authentication is carried in custom HTTP request headers rather than in the payload, using a public key and a secret key issued on enrolment to Tranzila API Services. This is a different scheme from the legacy terminal-plus-password CGI, which is why the two surfaces are not interchangeable.",
+      "source_url": "https://docs.tranzila.com/docs/payments-and-billing/authentication",
+      "raw_snippet": "Authentication information is sent via custom http request headers and not the actual payload itself.",
+      "fetched_at": "2026-08-27T07:18:23+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/gateway-matrix.md",
+        "scripts/compare_gateways.py"
+      ]
+    },
+    {
+      "claim_id": "tranzila-credit-min-installments",
+      "claim": "Tranzila documents a minimum of 3 instalments for issuer credit (cred_type=6) and requires the cardholder to hold credit authorization from their card company, so a credit sale can fail for a reason unrelated to the gateway.",
+      "source_url": "https://docs.tranzila.com/docs/payments-and-billing/iframe-integration-directng",
+      "raw_snippet": "Number of credit installments. Minimum is 3 installments.",
+      "fetched_at": "2026-08-27T07:18:23+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "tranzila-legacy-cgi-surface",
+      "claim": "Tranzila's legacy surface is a set of CGI scripts under https://secure5.tranzila.com/cgi-bin/, distinct from the REST JSON API at https://api.tranzila.com/v1 and using different parameter names for the same concepts. Confirmed by live probe on 2026-08-27 with negative controls: POST to secure5.tranzila.com/cgi-bin/tranzila31.cgi returns a Tranzila-branded alert page while a fabricated .cgi name on the same path returns a plain 404, and api.tranzila.com/v1/transaction/credit_card/create returns a JSON 401 Unauthorized while a fabricated sibling path returns a CodeIgniter 404 page.",
+      "source_url": "https://docs.tranzila.com/docs/payments-and-billing/iframe-integration-directng",
+      "raw_snippet": "Do not send fpay, npay, or spay when using maxpay.",
+      "fetched_at": "2026-08-27T07:18:23+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/gateway-matrix.md",
+        "scripts/compare_gateways.py"
+      ]
+    },
+    {
+      "claim_id": "pelecard-301-302-303",
+      "claim": "Pelecard status codes 301, 302 and 303 decide whether an orchestrator may fail a transaction over. Queried on 2026-08-27 through Pelecard's credential-free lookup at /services/GetErrorMessageEn with parameter errorCode, the vendor's own messages are: 301 'Session to Pelecard Timed Out', 302 'Debit was successful but merchant is not responding', 303 'Merchant is not responding'. Only 302 asserts that money moved. Negative controls: the fabricated codes ZZ9 and 987 both return Pelecard's own misspelled 'UnkownError', and a fabricated service name under /services redirects to Errors/Http404, so the lookup discriminates real codes from invented ones. The cited page is Pelecard's live service index, which lists this lookup among its services.",
+      "source_url": "https://gateway21.pelecard.biz/services",
+      "raw_snippet": "Get error message (EN)",
+      "fetched_at": "2026-08-27T07:18:23+00:00",
+      "verified_via": "browser",
+      "verified_at": "2026-08-27",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/gateway-matrix.md",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "cardcom-wallets",
+      "claim": "Cardcom supports Apple Pay and Google Pay: its v11 ExtPaymentMethod enum lists ApplePay and GooglePay alongside PayPal and CreditCard.",
+      "source_url": "https://secure.cardcom.solutions/swagger/v11/swagger.json",
+      "raw_snippet": "\"PayPal\",\r\n          \"ApplePay\",\r\n          \"GooglePay\",",
+      "fetched_at": "2026-08-27T07:18:23+00:00",
+      "appears_in": [
+        "references/gateway-matrix.md",
+        "scripts/compare_gateways.py"
+      ]
+    },
+    {
+      "claim_id": "tranzila-wallets",
+      "claim": "Tranzila's iframe accepts apple_pay=1 and google_pay=1 to add Apple Pay and Google Pay as payment options, so wallet support is a documented iframe parameter rather than a separate integration.",
+      "source_url": "https://docs.tranzila.com/docs/payments-and-billing/iframe-integration-directng",
+      "raw_snippet": "apple_pay 1 Add the option to pay with Apple Pay",
+      "fetched_at": "2026-08-27T07:18:23+00:00",
+      "appears_in": [
+        "references/gateway-matrix.md",
+        "scripts/compare_gateways.py"
+      ]
+    },
+    {
+      "claim_id": "grow-bit-cancel-requires-pagecode",
+      "claim": "Grow's Light API exposes cancelBitTransaction, which establishes that Grow has a Bit flow with its own cancellation path. Probed on 2026-08-27 with no parameters it returns error id 54 naming pageCode as the missing field, while a fabricated method name on the same base returns the distinct body 'unknown method'. An earlier version of this skill said the call was keyed by processId rather than by a transaction id; that was not supported, and the parameter the API actually names first is pageCode. Confirm the full parameter set in grow-payment-gateway before wiring it.",
+      "source_url": "https://developers.grow.business/reference/overview",
+      "raw_snippet": "Payment Process Success URL Iframe vs. Redirect Bit Redirect Post Message",
+      "fetched_at": "2026-08-27T07:18:23+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/gateway-matrix.md",
+        "scripts/compare_gateways.py"
+      ]
+    },
+    {
+      "claim_id": "authorize-capture-release",
+      "claim": "Authorizing and releasing a hold are separate operations from charging and refunding. Pelecard's live service index lists both the J5 authorization services and 'Delete Ishur', the release call at /services/DeleteIshur, alongside the 'Delete Tran' family used to void a sale, which is why the two must not be confused. Tranzila releases a J5 limit with txn_type=reversal rather than cancel, and Cardcom holds an amount with Operation: SuspendedDeal. The per-gateway parameter sets live in cardcom-payment-gateway, tranzila-payment-gateway and pelecard-payment-gateway.",
+      "source_url": "https://gateway21.pelecard.biz/services",
+      "raw_snippet": "Authorize Credit Type (J5)",
+      "fetched_at": "2026-08-27T07:18:23+00:00",
+      "verified_via": "browser",
+      "verified_at": "2026-08-27",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/gateway-matrix.md"
+      ]
+    },
+    {
+      "claim_id": "cardcom-refund-needs-apipassword",
+      "claim": "Cardcom's RefundByTransactionId requires ApiPassword in addition to ApiName and TransactionId, while its charge endpoints do not take that field, so a reversal flow can fail on a credential the charge path never needed.",
+      "source_url": "https://secure.cardcom.solutions/swagger/v11/swagger.json",
+      "raw_snippet": "\"required\": [\r\n          \"ApiName\",\r\n          \"ApiPassword\",\r\n          \"TransactionId\"\r\n        ]",
+      "fetched_at": "2026-08-27T07:18:23+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/gateway-matrix.md"
+      ]
+    },
+    {
+      "claim_id": "cardcom-allow-multiple-refunds",
+      "claim": "Cardcom's refund request carries AllowMultipleRefunds, which defaults to false, so a second partial refund on the same transaction is refused unless the caller opts in. Other gateways accept successive partials until the total exceeds the original, which is why the orchestrator has to keep its own refunded-to-date ledger.",
+      "source_url": "https://secure.cardcom.solutions/swagger/v11/swagger.json",
+      "raw_snippet": "\"AllowMultipleRefunds\"",
+      "fetched_at": "2026-08-27T07:18:23+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/gateway-matrix.md",
+        "scripts/compare_gateways.py"
+      ]
     }
   ]
 }

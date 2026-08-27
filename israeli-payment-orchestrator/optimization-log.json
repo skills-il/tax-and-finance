@@ -1,6 +1,27 @@
 {
   "cycles": [
     {
+      "version": "1.3.0",
+      "date": "2026-08-27",
+      "lessons": [
+        "RESOLVED the CARRY from 1.2.0: the per-gateway void vs refund vs partial-refund table now exists, in SKILL.md Step 7 and in gateway-matrix.md, with an explicit 'unverified' for PayMe and iCredit rather than a guess.",
+        "CRITICAL (contradiction sweep across siblings): Bit was marked 'No' for Cardcom, Tranzila and Pelecard. Cardcom's v11 schema returns UrlToBit and Tranzila publishes bit_pay=1, so the skill was routing users to add a second gateway for a feature the first one already had. Example 2 was built on that false premise and was rewritten.",
+        "CRITICAL: the 'canonical Shva CreditType enum' of 1,2,3,4,5,6,8,9 was sourced to a third-party ActiveMerchant library. Two vendors publish only 1, 6 and 8, and Tranzila answers anything else with 017. The skill's own troubleshooting told users to fix a rejected installment type by sending cred_type 9, which errors. There is no routable club value; club is terminal and acquirer configuration.",
+        "CRITICAL (Expert): the whole authorize / capture / release dimension was absent, although three of four sibling skills document it. An authorization recorded as 'approved' and never captured collects nothing, and releasing a hold with the refund call is the wrong operation (Tranzila txn_type=reversal not cancel; Pelecard DeleteIshur not DeleteTran).",
+        "CRITICAL (Expert): park_for_reconciliation was named in the retry pseudo-code and never designed. Added the pre-persisted key, the same-key retry rule, the per-gateway lookup table and a terminal decision.",
+        "CRITICAL (Expert): the shipped GATEWAY_PRIORITY list failed over to PayMe, the one gateway whose money unit the same document says must be established by test charge. Failover chains are now restricted to gateways with confirmed unit, idempotency field and reversal path.",
+        "Removed all six fee bands and the entire cost-estimating code path. No Israeli gateway publishes a rate card, the bands traced to no vendor, and the script was turning them into a ranked 'cheapest gateway' answer. This REVERSES the prior out-of-scope position, which had deferred fees into this skill from grow-payment-gateway.",
+        "The evidence file was inert: two of five claims were self-citations (one to this skill's own gateway-matrix.md on raw.githubusercontent) and the fee bands were sourced to a Bank of Israel USD/ILS exchange-rate endpoint. Rebuilt from 5 to 30 entries, all --check-sources clean.",
+        "The Hebrew Bank of Israel reference link was dead: /he/economic-roles/... renders the Bank's 404 page in a browser while answering curl with a soft 200. Correct path is /roles/supervisionregulation/payment-systems-oversight/ with no locale prefix. A status check could not have caught this.",
+        "Removed the claim that the ISA supervises non-bank PSPs under the 2023 payment-services law. The cited BOI page contains no mention of either, checked in-browser. The prior evidence entry's snippet was a paraphrase that was never on the page.",
+        "Script defects, all reproduced: an unrecognised --features value (including any Hebrew word) silently matched ALL six gateways because the if/elif chain had no else; --volume 0 and --features '' were treated as 'no arguments'; a negative volume inverted the min() and named the most expensive gateway as cheapest; and the bit/club data was wrong. Rewrote the script.",
+        "Judge round 2 caught a defect introduced BY the fix round: the new reconciliation bullet told readers to make Grow's transactionUniqueIdentifier unique per attempt, which is the opposite of what grow-payment-gateway says and defeats Grow's duplicate detection. A correlator and an idempotency key are different things and are now distinguished explicitly.",
+        "Expert MAJOR deferred: a refund needs a matching credit document under Israeli bookkeeping rules, and cardcom-payment-gateway documents 11 refund document types. The orchestrator is the component that knows a refund happened, so it should trigger or hand off the credit note. Fix next cycle.",
+        "Expert MINOR deferred over the batch cap: add a --documented-only flag to the script; print the filtered-on columns in filtered output; a Hebrew alias map for the feature keys; quote SdkTransactionInfo.CreditType rather than the Tap-schema field in the cardcom-credittype-values snippet.",
+        "Carry for next cycle: pelecard-payment-gateway is now the named authority this skill routes to for the Consumer Protection distance-selling numbers. If that skill's summary changes or its notice status changes, this skill's Step 7 pointer has to be re-read."
+      ]
+    },
+    {
       "version": "1.2.0",
       "date": "2026-07-20",
       "lessons": [
