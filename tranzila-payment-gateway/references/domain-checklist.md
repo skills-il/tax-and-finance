@@ -10,7 +10,7 @@ Anchor for expert review. Scope: integrating Tranzila payments (iframe, hosted f
 - Error handling: HTTP 200 on failure, read the Response field; the SHVA table plus a single documented 3DS application code (900); verify every code against the official Transaction Response Codes page and never explain a code that is not on it.
 - Bit dedicated API + constraints (NIS, >5 NIS, Visa/Isracard, Max-only not supported).
 - Webhook signature verification (don't trust inbound shape).
-- ITA allocation number for B2B invoices (20K/10K/5K schedule).
+- ITA allocation number for B2B invoices, selected by the invoice's OWN date across the full schedule: none before May 2024, then 25K (May 2024), 20K (Jan 2025), 10K (Jan 2026), 5K (Jun 2026). The boundary is 'exceeds', zero-rated and exempt-only invoices are excluded, and a missing number blocks the buyer's deduction without voiding the invoice.
 
 ## Out of scope (explicit)
 - Cardcom (use cardcom-payment-gateway), general accounting.

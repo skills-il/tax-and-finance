@@ -219,7 +219,9 @@ Tranzila has an Invoicing API for generating digitally-signed tax documents appr
 3. Supports tax invoices, receipts, and credit notes
 4. Can be auto-generated with PayPal payments
 
-**Israel Tax Authority allocation number (mispar haktza'a), mandatory for B2B invoices over thresholds.** Since 2025-01-01 the ITA requires every B2B tax invoice over a threshold to carry an allocation number obtained from SHAAM via API. Threshold schedule: NIS 20,000 (from Jan 2025), NIS 10,000 from Jan 2026, **NIS 5,000 from 1 June 2026 (now in force)**. Without the allocation number, the buyer cannot deduct input VAT on the invoice. If you generate invoices through Tranzila's Invoicing API, confirm with Tranzila support that allocation-number requests are wired through SHAAM for invoices at or above the current threshold; if not, fall back to a separate invoicing provider (Green Invoice, Morning, etc.) that does integrate with SHAAM, or request allocation numbers directly via the ITA portal.
+**Israel Tax Authority allocation number (mispar haktza'a), mandatory for B2B invoices over thresholds.** Since May 2024 the ITA requires a B2B tax invoice above a threshold to carry an allocation number obtained from SHAAM. The threshold is keyed to the INVOICE's own date, not today's, so a system that reissues, migrates or audits older documents needs the whole schedule (amounts before VAT): NIS 25,000 from May 2024, NIS 20,000 from January 2025, NIS 10,000 from January 2026, **NIS 5,000 from 1 June 2026 (now in force)**. An invoice dated before May 2024 predates the regime and never needed one. The statute says `עולה על` (EXCEEDS), so an invoice sitting exactly on a band figure is outside the requirement.
+
+Two limits worth wiring into any validation you build on this. Zero-rated and exempt-only invoices are outside the requirement (s.47(a2)(1)), so an export invoice needs no number however large. And the effect of a missing number is precise: s.38(a1) disallows the BUYER's input-VAT deduction. It does not make the invoice void, so do not describe it that way. If you generate invoices through Tranzila's Invoicing API, confirm with Tranzila support that allocation-number requests are wired through SHAAM for invoices above the current threshold; if not, fall back to a separate invoicing provider (Green Invoice, Morning, etc.) that does integrate with SHAAM, or request allocation numbers directly via the ITA portal.
 
 Refer to Tranzila's invoicing documentation for the complete invoicing API reference.
 
@@ -344,7 +346,7 @@ Result: Payment collected remotely without building a checkout page.
 | Transaction response codes | https://docs.tranzila.com/docs/payments-and-billing/transaction-response-codes | The authoritative SHVA and 3DS code tables. Look every code up here by exact number |
 | Authentication (API V2 headers) | https://docs.tranzila.com/docs/payments-and-billing/authentication | The four HMAC headers and the exact access-token derivation |
 | Iframe parameters | https://docs.tranzila.com/docs/payments-and-billing/iframe-integration | The current cred_type, currency and tranmode values |
-| Israel Tax Authority allocation numbers | https://www.gov.il/he/service/request-assignment-number-for-tax-invoice | Mandatory for B2B invoices over NIS 5K pre-VAT (in force since Jun 2026; dropped from NIS 10K in Jan 2026) |
+| Israel Tax Authority allocation numbers | https://www.gov.il/he/service/request-assignment-number-for-tax-invoice | Required above the band for the invoice's own date: nothing before May 2024, then NIS 25,000 (May 2024), 20,000 (Jan 2025), 10,000 (Jan 2026), 5,000 (Jun 2026, in force) |
 | Tranzila company site | https://www.tranzila.com | Terminal enablement requests, installment permissions, contact, PCI certification |
 | tranzilajs community client | https://github.com/NirTatcher/tranzilajs | Community TypeScript/Node client and usage examples |
 
