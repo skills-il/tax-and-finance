@@ -32,8 +32,52 @@ else:
 
 
 # Pelecard convention: '000' is success, anything else is an error.
-# Specific numeric codes are not fully public and vary per acquirer.
+# Pelecard publishes the official message for every code through two
+# credential-free endpoints, so a numeric code never has to stay opaque.
 SUCCESS_STATUS = "000"
+
+ERROR_MESSAGE_URL = (
+    "https://gateway21.pelecard.biz/services/GetErrorMessage{lang}"
+)
+
+
+def lookup_status_message(code: str, lang: str = "En", timeout: float = 8.0):
+    """Resolve a Pelecard status code to its official message.
+
+    Calls Pelecard's own GetErrorMessageEn / GetErrorMessageHe service, which
+    takes only {"ErrorCode": "NNN"} and needs NO credentials. Returns None on
+    any network problem -- this is an enrichment, never a gate.
+    """
+    import json as _json
+    import urllib.error
+    import urllib.request
+
+    code = str(code).strip().strip('"')
+    if not code.isdigit():
+        return None
+    payload = _json.dumps({"ErrorCode": code}).encode("utf-8")
+    req = urllib.request.Request(
+        ERROR_MESSAGE_URL.format(lang="He" if lang.lower().startswith("he") else "En"),
+        data=payload,
+        headers={"Content-Type": "application/json"},
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=timeout) as resp:
+            text = resp.read().decode("utf-8", "replace").strip()
+    except (urllib.error.URLError, OSError, ValueError):
+        return None
+    # The service returns a bare JSON string.
+    try:
+        text = _json.loads(text)
+    except ValueError:
+        pass
+    if not isinstance(text, str):
+        return None
+    text = text.strip()
+    # Pelecard's placeholders for an unassigned code (note its own spelling).
+    if not text or text in ("UnkownError", "\u05e9\u05d2\u05d9\u05d0\u05d4 \u05dc\u05d0 \u05d9\u05d3\u05d5\u05e2\u05d4"):
+        return None
+    return text
 
 # Required fields on every Pelecard callback for safe server-side handling.
 REQUIRED_FIELDS = [
@@ -84,8 +128,11 @@ def _normalize_status(value) -> str:
     return s
 
 
-def validate_response(data: dict) -> tuple:
+def validate_response(data: dict, resolve_codes: bool = False) -> tuple:
     """Validate a Pelecard callback.
+
+    When resolve_codes is True, a failing status code is resolved to its
+    official Pelecard message over the network.
 
     Returns:
         Tuple of (errors, warnings, info).
@@ -139,10 +186,22 @@ def validate_response(data: dict) -> tuple:
                         f"PaymentGW/GetTransaction to confirm the actual status."
                     )
                 else:
+                    detail = ""
+                    if resolve_codes:
+                        msg_en = lookup_status_message(status, "En")
+                        msg_he = lookup_status_message(status, "He")
+                        parts = [m for m in (msg_en, msg_he) if m]
+                        if parts:
+                            detail = " Pelecard says: " + " / ".join(parts)
+                        else:
+                            detail = (
+                                " Could not reach Pelecard's code lookup; resolve "
+                                "manually via POST /services/GetErrorMessageEn "
+                                'with {"ErrorCode": "%s"}.' % status
+                            )
                     errors.append(
-                        f"Transaction failed: PelecardStatusCode={status!r}. "
-                        "Consult Pelecard support for the exact code mapping "
-                        "(codes change per acquirer)."
+                        f"Transaction failed: PelecardStatusCode={status!r}."
+                        + detail
                     )
 
     # --- Total ---
@@ -271,8 +330,11 @@ examples:
   # Show an example valid callback and validate it
   %(prog)s --example
 
-  # Validate a failed callback
-  %(prog)s --response '{"PelecardStatusCode":"033"}'
+  # Validate a failed callback and resolve the code to Pelecard's own message
+  %(prog)s --resolve-codes --response '{"PelecardStatusCode":"033"}'
+
+  # Just look a status code up
+  %(prog)s --explain 033
 """,
     )
     parser.add_argument(
@@ -288,8 +350,37 @@ examples:
         action="store_true",
         help="Show an example valid callback and validate it",
     )
+    parser.add_argument(
+        "--resolve-codes",
+        action="store_true",
+        help=(
+            "On a failing status code, look the official Pelecard message up "
+            "via /services/GetErrorMessageEn and GetErrorMessageHe "
+            "(no credentials required; needs network access)"
+        ),
+    )
+    parser.add_argument(
+        "--explain",
+        metavar="CODE",
+        help="Print the official Pelecard message for a status code and exit",
+    )
 
     args = parser.parse_args()
+
+    if args.explain:
+        code = args.explain.strip()
+        en = lookup_status_message(code, "En")
+        he = lookup_status_message(code, "He")
+        if not en and not he:
+            print(f"{RED}No official message for code {code!r} "
+                  f"(unassigned, or the lookup was unreachable).{RESET}")
+            sys.exit(1)
+        print(f"{BOLD}Pelecard status code {code}{RESET}")
+        if en:
+            print(f"  EN: {en}")
+        if he:
+            print(f"  HE: {he}")
+        sys.exit(0)
 
     if args.example:
         example = generate_example()
@@ -297,9 +388,9 @@ examples:
         print(json.dumps(example, indent=2))
         print()
         print("Validation results:")
-        errors, warnings, info = validate_response(example)
+        errors, warnings, info = validate_response(example, args.resolve_codes)
         print_results(errors, warnings, info)
-        sys.exit(0)
+        sys.exit(1 if errors else 0)
 
     if not args.response and not args.file:
         parser.print_help()
@@ -340,7 +431,7 @@ examples:
         print(f"  {k} = {v}")
     print()
     print("Validation results:")
-    errors, warnings, info = validate_response(data)
+    errors, warnings, info = validate_response(data, args.resolve_codes)
     print_results(errors, warnings, info)
     sys.exit(1 if errors else 0)
 

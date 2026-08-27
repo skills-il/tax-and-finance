@@ -1,6 +1,21 @@
 {
   "cycles": [
     {
+      "version": "1.1.0",
+      "date": "2026-08-27",
+      "lessons": [
+        "Live probing beat documentation again. gateway21/gateway20 were found to serve an IDENTICAL API (three /PaymentGW endpoints only), disproving the 'gateway20 = sandbox' host model that v1.0.3 had only PARTIALLY softened: Step 2 hedged it while the Gotchas and Troubleshooting still hard-coded the wrong rule. Partial propagation of a prior fix is its own defect class.",
+        "Found Pelecard's live public request builder at gateway21.pelecard.biz/services (+ /Scripts/Services/Sandbox.js): 57 distinct service URLs, 54 under /services/. This resolved four separate 'the exact path lives in the Postman workspace / confirm with support' hedges that had survived three cycles.",
+        "The v1.0.3 refund contract was wrong: no PaymentGW refund endpoint exists (9 candidate paths 302 to Http404, same as a fabricated control). Replaced with the real void-vs-refund split (DeleteTran / DeleteIshur / EmvReversal before broadcast).",
+        "CARRY: the post-broadcast credit (zikuy) path is still NOT established. No /services endpoint is a card-not-present credit operation. The skill now says so explicitly and refuses to guess. Obtain it from Pelecard and document it next cycle. This is the single largest remaining gap.",
+        "error-codes.md had asserted the code table was 'not fully public, varies per acquirer, contact support, do not guess'. False: /services/GetErrorMessageEn and GetErrorMessageHe are CREDENTIAL-FREE. Swept 000-999 and shipped the real 254-row bilingual table. A confident negative needs its own positive search.",
+        "Two review rounds each for Judge and Expert. Judge round 1 caught a '57 /services endpoints' miscount (54) and a payment-parameters.md paragraph still teaching the PelecardTransactionId-from-init reconciliation the body had just refuted. Expert round 1 raised 4 CRITICALs; round 2 caught that two of those fixes had landed in SKILL.md/SKILL_HE.md but NOT in references/. Reference files are where a body fix goes to die.",
+        "Deferred (MINOR): Pelecard's /PaymentEnquiry/CreateLink is a fourth surface (payment links) with its own casing, listed but not explained. Also unexplained: the J5 hold expiry window and whether partial capture is supported.",
+        "The Consumer Protection Law 4-month window (disabilities / 65+ / new olim) was missing; a merchant hard-coding 14 days under-refunds. Added with a 'this is a summary' hedge. Next cycle could add the olim five-year qualifier and the date the 4 months run from.",
+        "Tooling note: the legal gate went REVIEW on a FALSE POSITIVE, the Hebrew word ניסוח ('wording') in a new table header matching the legal-drafting regex. Reworded to מה פלאקארד מחזירה. Watch for this in any Hebrew table that quotes a vendor's phrasing."
+      ]
+    },
+    {
       "version": "1.0.3",
       "date": "2026-07-20",
       "lessons": [

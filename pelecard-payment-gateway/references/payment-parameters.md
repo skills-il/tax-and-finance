@@ -1,6 +1,11 @@
 # Pelecard Payment Parameters
 
-This reference groups the Pelecard `PaymentRequest` parameters by purpose. The dofinity/pelecard PHP wrapper documents the full set across these groups; the most-used ones are listed below. For the complete parameter list, see `https://github.com/dofinity/pelecard/blob/master/src/Pelecard/PaymentRequest.php` and Pelecard's official sandbox at `https://gateway20.pelecard.biz/sandbox`.
+This reference groups the **iframe** (`/PaymentGW/init`) parameters by purpose. The dofinity/pelecard PHP wrapper documents the full set; the most-used ones are listed below. For the complete list see `https://github.com/dofinity/pelecard/blob/master/src/Pelecard/PaymentRequest.php` and Pelecard's sandbox builder at `https://gateway20.pelecard.biz/sandbox`.
+
+**These are the `/PaymentGW` names.** The server-to-server `/services/*` surface uses different
+casing for the same concepts (`terminalNumber`, `total`, `currency`, `paramX`, `shopNumber`). See
+`api-endpoints.md` for the mapping and for the `/services` parameter sets. Copy the preset from
+`https://gateway21.pelecard.biz/services` rather than assuming a name carries across.
 
 ## Authentication
 
@@ -32,7 +37,7 @@ The dofinity wrapper documents `Currency` with the comment `1 = ILS`. Pelecard's
 | Code | Currency | Note |
 |------|----------|------|
 | `1` | ILS (Israeli shekel) | Default. Confirmed via the dofinity wrapper. Required for Bit. |
-| Other | USD / EUR / GBP / etc. | Pelecard's currency-code mapping is not consistently documented across Gateway20, Gateway21, and the Match API. **Verify the exact integer for your terminal in the live Postman workspace before sending non-ILS amounts.** |
+| Other | USD / EUR / GBP / etc. | Pelecard's currency-code mapping is not consistently documented across its API surfaces. **Verify the exact integer for your terminal in the live request builder at `https://gateway21.pelecard.biz/services` before sending non-ILS amounts.** Codes `011` ("No Approoval From The Clearing Company For This ISO Currency.") and `012` ("This ISO Currency is not Allowed for This Credit Card.") are what you get when the currency is wrong or unapproved for the terminal or card. |
 
 ## Tashlumim (Installments)
 
@@ -98,7 +103,7 @@ Per the dofinity `PaymentRequest`:
 | `ServerSideGoodFeedbackURL` | Server-to-server IPN on success. |
 | `ServerSideErrorFeedbackURL` | Server-to-server IPN on error. |
 
-The server-side URLs fire only when the transaction reaches a terminal state (success or merchant-rejected error). If the customer closes the browser before submitting the card form, no IPN fires. The complete safety net is to persist the `PelecardTransactionId` from the create-session response, then run a periodic reconciliation job that polls `PaymentGW/GetTransaction` for any session that has not produced an IPN within your timeout window.
+The server-side URLs fire only when the transaction reaches a terminal state. If the customer closes the browser before submitting the card form, no IPN fires; and of the merchant-unreachable codes only `302` states the debit succeeded, while `301` and `303` leave the outcome unknown (see `error-codes.md`). **`PaymentGW/init` does not return a transaction id** (its response is `URL` + `ConfirmationKey`, or those two blank plus an `Error` object), so a reconciliation job keyed on a transaction id stored at session-create time cannot be built. Reconcile on a key you own instead: `POST /services/CheckGoodParamX` or `/services/TrxLookUp` with your `paramX`. (`PaymentGW/ValidateByUniqueKey` keys on a `UniqueKey`, and this skill has NOT established which `init` parameter sets one, so do not build the safety net on it.) See SKILL.md Step 4.
 
 Pelecard does NOT sign IPN deliveries with HMAC, so authenticity is established by re-fetching the transaction via `PaymentGW/GetTransaction` (with optional outbound IP allowlisting and TLS 1.2+ on your endpoints).
 

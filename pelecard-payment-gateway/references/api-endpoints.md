@@ -1,131 +1,189 @@
 # Pelecard API Endpoints
 
-This reference documents the Pelecard endpoints surfaced by the legacy iframe gateway and the third-party PHP wrapper that most Israeli merchants integrate against. Pelecard also publishes a newer "Match API" REST surface (`match-api.pelecard.biz`); the public docs page for it was not retrievable during research, so verify endpoint shape directly with Pelecard before relying on it.
+Everything below was verified live against `gateway21.pelecard.biz` on 2026-08-27, either by
+probing the endpoint directly or by reading Pelecard's own public request builder at
+`https://gateway21.pelecard.biz/services` (which ships the service list and a preset request body
+for each one in `/Scripts/Services/Sandbox.js`). That script defines 57 distinct service URLs: 54
+under `/services/`, plus `/PaymentGW/GetTransaction`, `/PaymentGW/ValidateByUniqueKey` and
+`/PaymentEnquiry/CreateLink`.
 
-## Hosts
+## Hosts: environment is the TERMINAL, not the hostname
 
-| Environment | Host | Purpose |
-|------|------|---------|
-| Sandbox | `gateway20.pelecard.biz/sandbox` | Development and testing. |
-| Production | `gateway21.pelecard.biz` | Live transactions. The Pelecard WordPress plugin's "Third Party Services" disclosure lists this as the production payment API. |
-| Modern REST (verify) | `match-api.pelecard.biz` | Pelecard's "Match" REST sandbox. Doc page exists but rendered empty during research. Confirm endpoint shape with vendor. |
+| Host | What it actually is |
+|------|---------------------|
+| `gateway21.pelecard.biz` | Current gateway generation. Serves the live API. |
+| `gateway20.pelecard.biz` | Older gateway generation. Serves the **same** API surface. |
+| `gateway20.pelecard.biz/sandbox` | A sandbox **UI page** (a request builder), not a separate API host. |
+| `match-api.pelecard.biz` | Pelecard's newer "Match" REST surface. Its docs page returns HTTP 200 with ~37 characters of text (an empty client-side shell). Confirm the shape with Pelecard before depending on it. |
 
-Switch hosts at deploy time via env var. Each host has its own credentials -- prod credentials hitting sandbox (or vice versa) returns "transaction not found".
+**Do not treat the hostname as an environment switch.** Both `gateway20` and `gateway21` answer
+`PaymentGW/init`, `PaymentGW/GetTransaction` and `PaymentGW/ValidateByUniqueKey` identically, and a
+404 on `gateway21` redirects to an error page on `gateway20`, so they are one system. Whether a
+call is a test or a real charge is decided by **which terminal number and credentials you send**,
+not by which host you post to. Ask Pelecard which host your test terminal was issued on, keep host
+and terminal together in one config object, and never let code infer safety from a hostname.
 
-## Authentication
+## The two surfaces (different parameter casing -- this bites)
 
-Every request server-to-server carries the same credentials triple:
+Pelecard has two server-to-server surfaces and they do **not** share a naming convention. Mixing
+them up is the most common cause of a request that returns an error with no useful message.
 
-| Field | Source |
-|-------|--------|
-| `terminal` | Issued by Pelecard. |
-| `user` | API user. |
-| `password` | API password. |
+| | `/PaymentGW/*` | `/services/*` |
+|---|---|---|
+| Credentials | `terminal`, `user`, `password` | `terminalNumber`, `user`, `password` |
+| Transaction id | `TransactionId` | varies: `debitTrxId`, `voucherId`, `uid`, `trxRecordId` |
+| Amount | `Total` | `total` |
+| Currency | `Currency` | `currency` |
+| Order correlation | `ParamX` | `paramX` |
+| Shop | `ShopNo` | `shopNumber` |
 
-The dofinity/pelecard PHP wrapper declares them as `protected $terminal; protected $user; protected $password;`. The convention: never expose them on the client side. Keep them in server environment variables only.
+A few `/services` endpoints (`UpdateToken`, `RetrieveToken`) use PascalCase for the credentials
+(`TerminalNumber`, `User`, `Password`). Copy the preset from the live builder rather than guessing.
 
-## Iframe Payment Flow
+## `/PaymentGW/*` -- the iframe surface (3 endpoints, all verified live)
 
-The iframe flow runs in two phases.
+### `POST /PaymentGW/init` -- create the payment session
 
-### Phase 1: Create the payment session
+Body: the credentials triple plus the transaction parameters (see `payment-parameters.md`).
 
-| Method | Path | Purpose |
-|--------|------|---------|
-| POST | `PaymentGW/init` | Submit credentials + transaction params, receive `URL` + `ConfirmationKey`. (Path per the dofinity wrapper's `const PAYMENT_INIT_URI = 'PaymentGW/init'`; Gateway21 also exposes a REST `/services` surface. Confirm the exact path for your terminal in the Pelecard Postman "Gateway21" collection.) |
-
-Request fields (subset; see `payment-parameters.md` for the full set):
-
-| Field | Type | Required | Notes |
-|-------|------|----------|-------|
-| `terminal` | string | yes | Server-side credential. |
-| `user` | string | yes | Server-side credential. |
-| `password` | string | yes | Server-side credential. |
-| `ActionType` | string | no | `J2` / `J4` (default) / `J5` / `J5h`. |
-| `Currency` | int | no | `1` = ILS (default). Other codes (USD/EUR/GBP) exist but the integer mapping is not consistently documented across Pelecard's API surfaces; verify the exact integer for your terminal in the live Postman workspace before sending non-ILS amounts. |
-| `Total` | int | yes | Minor units (agorot) on Gateway21. Send `9900` for ₪99.00. The dofinity wrapper documents `FirstPayment` as "in agorot/cents"; the same convention applies to `Total`. Confirm against your sandbox terminal before going live. |
-| `MaxPayments` / `MinPayments` | int | no | Tashlumim controls. |
-| `GoodURL` / `ErrorURL` / `CancelURL` | URL | no | Browser redirect destinations. |
-| `ServerSideGoodFeedbackURL` / `ServerSideErrorFeedbackURL` | URL | no | Server-to-server IPN destinations. |
-| `ParamX` / `ShopNo` / `UserKey` | string | no | Custom passthrough. Echoed back on lookup. |
-| `CreateToken` / `TokenForTerminal` | bool / string | no | Tokenization controls. |
-| `IsToken` / `TokenCreditCardDigits` | bool / string | no | Charge a saved token. |
-
-Response fields:
-
-| Field | Type | Notes |
-|-------|------|-------|
-| `URL` | URL | Pelecard-hosted iframe / redirect URL. |
-| `ConfirmationKey` | string | Use to verify the callback later. |
-
-### Phase 2: Receive the callback
-
-After the customer pays, Pelecard hits your `ServerSideGoodFeedbackURL` (or `ServerSideErrorFeedbackURL`) with the result.
-
-Callback fields (subset):
-
-| Field | Notes |
-|-------|-------|
-| `PelecardStatusCode` | The literal string `"000"` indicates success per Pelecard convention; any other value is an error. Treat `"0"` / `"00"` as malformed and verify the callback was not truncated or coerced. |
-| `ConfirmationKey` | Compare byte-for-byte against the value you stored from phase 1, then re-verify via `PaymentGW/GetTransaction`. |
-| `PelecardTransactionId` | Use as your IPN dedupe key (Pelecard may deliver the same IPN twice on a timeout retry) AND as the lookup key for `PaymentGW/GetTransaction`. |
-| `Total` / `Currency` | Echoes from phase 1. Compare the authoritative `DebitTotal` from `PaymentGW/GetTransaction`, not the callback's `Total`. |
-| `ParamX` / `ShopNo` / `UserData*` | Passthrough fields you sent in phase 1. `ParamX` is your merchant-side order correlation ID, NOT an idempotency key. |
-| `ShvaResultEmv` | EMV / 3DS result code. The Pelecard plugin v1.4.19 changelog: "Added Emv errors in order notes. ShvaResultEmv parameter". |
-
-You MUST re-verify the callback by calling `PaymentGW/GetTransaction` server-to-server before treating the order as paid. Pelecard does NOT sign IPN deliveries with HMAC, so the server-to-server lookup is the only authoritative source.
-
-## Transaction Lookup: `PaymentGW/GetTransaction`
-
-| Method | Path | Purpose |
-|--------|------|---------|
-| POST | `PaymentGW/GetTransaction` | Look up a Pelecard transaction by ID. |
-
-`PaymentGW/GetTransaction` is a Gateway21 lookup endpoint (confirmed in Pelecard's Postman "Gateway21" collection). Note: the dofinity/pelecard PHP wrapper is pinned to the legacy `gateway20` host (`const GATEWAY_BASE_URI = 'https://gateway20.pelecard.biz';`) and does its own validation via a different endpoint, `const PAYMENT_VALIDATE_URI = 'PaymentGW/ValidateByUniqueKey';` (posting `ConfirmationKey`, `UniqueKey`, and `TotalX100`). Both are valid server-side re-verification paths; on Gateway21 use `PaymentGW/GetTransaction` with the credentials triple plus the transaction id:
+**Success** returns `URL` and `ConfirmationKey`. **Failure** returns those two fields as empty
+strings plus an `Error` object:
 
 ```json
-{
-  "terminal": "<terminal>",
-  "user": "<user>",
-  "password": "<password>",
-  "TransactionId": "<PelecardTransactionId from callback>"
-}
+{"URL":"","ConfirmationKey":"","Error":{"ErrCode":501,"ErrMsg":"Login for user x failed"}}
 ```
 
-Request fields:
+Check `Error.ErrCode` before using `URL`. A blank `URL` with HTTP 200 is a failure, not a session.
+Resolve `ErrCode` with `/services/GetErrorMessageEn` (see `error-codes.md`).
 
-| Field | Required |
-|-------|----------|
-| `terminal` | yes |
-| `user` | yes |
-| `password` | yes |
-| `TransactionId` | yes (from the callback `PelecardTransactionId`) |
+**`init` does NOT return a `PelecardTransactionId`.** The response has exactly two data fields.
+There is no transaction until the customer actually transacts, so any reconciliation design that
+assumes you can store a transaction id at session-create time is unbuildable. Correlate on your own
+`ParamX` (and/or `UserKey`) instead, and look the transaction up later with `/services/TrxLookUp`.
 
-Response fields (per the dofinity `PelecardTransaction` properties):
+### `POST /PaymentGW/GetTransaction` -- look a transaction up by id
 
-| Field | Notes |
-|-------|-------|
-| `DebitApproveNumber` | Acquirer approval number. |
-| `DebitTotal` | Authoritative debited amount. |
-| `VoucherId` | Internal voucher ID. |
-| `Token` | Saved-card token (when `CreateToken` was true). |
-| `TotalPayments` | Tashlumim count. |
-| `CreditCardCompanyClearer` | Issuer / clearer. |
-| `CreditCardNumber` | Masked PAN / last 4. |
-| `CreditCardExpDate` | Card expiry. |
-| `CardHolderID` | Cardholder ID (te'udat zehut, when applicable). |
-| `FirstPaymentTotal` | First installment amount. |
-| `FixedPaymentTotal` | Subsequent installment amount. |
-| `UserData` | Echoed passthrough. |
+Body: `terminal`, `user`, `password`, `TransactionId`.
 
-Compare `DebitTotal` (in agorot) against your expected order amount. Mismatch indicates tampering, do not mark the order paid.
+Response envelope is **not** flat. It is:
 
-`DebitApproveNumber` is Shva's per-transaction approval / authorization number. End-of-day reconciliation: pull the Shva clearing report from your Pelecard merchant portal and join on `DebitApproveNumber` to confirm funds settled. Charged-but-not-settled transactions appear here.
+```json
+{"StatusCode":"501","ErrorMessage":"Login for user x failed","ResultData":{ ...66 fields... }}
+```
 
-## Refunds
+Read `StatusCode` first (`"000"` = success), then the transaction fields inside `ResultData`.
+Do not read amount or approval fields off the top level; they are not there.
 
-Pelecard supports full and partial refunds via a server-to-server "DebitRegular cancel" / refund endpoint. The merchant calls it with `terminal/user/password/PelecardTransactionId` plus the refund `Total` (in agorot, full or partial). Pelecard returns a new `PelecardTransactionId` for the refund leg. The Pelecard plugin v1.4 changelog: "Added refund capabilities"; the exact endpoint path lives in the Pelecard Postman "Gateway21" collection. Israeli Consumer Protection Law (חוק הגנת הצרכן, סעיפים 14ג-14ה) governs distance-selling refunds: cancellation within 14 days, refund within 14 days of cancellation notice, fee capped at 5% or 100 ₪ (whichever is lower).
+### `POST /PaymentGW/ValidateByUniqueKey` -- validate without credentials
 
-## Match API (modern REST -- verify)
+Body: `ConfirmationKey`, `UniqueKey`, `TotalX100`. **No credentials.** Returns a bare numeric
+result.
 
-`match-api.pelecard.biz/docs/index` is Pelecard's modern REST docs page. The rendered content was not retrievable via WebFetch during research. Treat it as the modern path Pelecard is migrating toward, and confirm endpoints, auth scheme, and request bodies directly with Pelecard before depending on it in production.
+**Do not build your reconciliation or outbound-idempotency net on this.** `UniqueKey` is an input to
+the validation call, but this skill has NOT established which `PaymentGW/init` parameter sets one:
+the documented passthrough fields are `ParamX`, `ShopNo`, `UserKey` and `UserData1`-`15`, none of
+which is shown to become the `UniqueKey`. Use it only if Pelecard confirms how your terminal accepts
+a merchant-supplied `UniqueKey`. The documented reconciliation route is `paramX` via
+`/services/CheckGoodParamX` or `/services/TrxLookUp` (see SKILL.md Step 4).
+
+`TotalX100` means "the amount multiplied by 100", i.e. minor units (agorot). This corroborates the
+agorot convention independently of the dofinity wrapper: the builder's preset sends `TotalX100:
+"100"` for the same 1 shekel that `/services/DebitRegularType` sends as `total: "100"`.
+
+Contrary to older versions of this reference, `ValidateByUniqueKey` is **not** a gateway20-only
+endpoint. It answers on both hosts.
+
+Every other `/PaymentGW/*` path tested (`DebitRegular`, `DebitRegularCancel`, `Refund`,
+`ConfirmDebit`, `CancelTransaction`, `GetToken`) 302-redirects to an HTTP 404 error page, exactly
+as a deliberately fabricated control path does. **There is no `PaymentGW` refund endpoint.**
+
+## `/services/*` -- the server-to-server surface
+
+This is where every operation other than "create an iframe session" lives. 54 endpoints are listed
+under `/services/` in the live builder. The ones an integration actually needs:
+
+### Charge
+
+| Endpoint | Purpose | Key parameters |
+|----------|---------|----------------|
+| `/services/DebitRegularType` | Standard sale (J4) | `terminalNumber`, `user`, `password`, `shopNumber`, `creditCard`, `creditCardDateMmYy`, `token`, `total`, `currency`, `cvv2`, `id`, `authorizationNumber`, `paramX`, `eci`, `xid`, `cavv` |
+| `/services/DebitPaymentsType` | Installments sale | as above plus `paymentsNumber`, `firstPayment` |
+| `/services/DebitCreditType` | Credit-type sale | as `DebitRegularType` |
+| `/services/DebitIsracreditType` | Isracredit-type sale | as `DebitRegularType` |
+
+Pass a saved `token` **instead of** `creditCard` to charge a stored card. That is the recurring
+billing path, and it is a `/services` call, not an iframe parameter.
+
+`eci` / `xid` / `cavv` are the 3D Secure 2 result values you carry **into** the debit after running
+the authentication (see below). `authorizationNumber` carries a prior authorization into the debit,
+which is the mechanism for capturing a J5 hold.
+
+### Authorize (hold) and pending
+
+| Endpoint | Purpose |
+|----------|---------|
+| `/services/AuthorizeCreditCard` | Authorize a card (J5). Places a hold; no money moves. |
+| `/services/AuthorizeCreditType` / `AuthorizePaymentsType` / `AuthorizeIsracreditCard` | Authorize variants |
+| `/services/PendingRegularType` (also `PendingCreditType`, `PendingPaymentsType`, `PendingIsracreditType`) | J9 pending transaction. Takes `authorizationNumber` and `userKey`. |
+| `/services/ClearPendingByUserKey` | Clear a pending request by your `userKey` |
+| `/services/ClearPendingByRecordId` | Clear a pending request by Pelecard's record id |
+
+To capture a hold, submit a debit carrying the `authorizationNumber` the authorization returned.
+Confirm the exact pairing for your terminal with Pelecard before going live; the parameter is
+present on every debit type, but which authorization types your terminal is provisioned for is a
+terminal setting.
+
+### Void and refund
+
+| Endpoint | Parameters | Use |
+|----------|-----------|-----|
+| `/services/DeleteTran` | `terminalNumber`, `user`, `password` + one of (`voucherId` + `creditCard` + `total`) / `debitTrxId` / `uid` | Delete a transaction from the open batch |
+| `/services/DeleteIshur` | `terminalNumber`, `user`, `password`, `debitTrxId` | Delete an authorization (release a hold) |
+| `/services/EmvReversal` | `terminalNumber`, `user`, `password`, `Uid` or `DebitTrxId` | EMV reversal |
+| `/services/EmvFinishDebit` | `terminalNumber`, `user`, `password`, `Uid` | Finish an EMV debit |
+
+See the void-vs-refund section in SKILL.md Step 6. There is no single "refund" endpoint; which
+primitive applies depends on whether the transaction has been broadcast.
+
+### Tokens
+
+| Endpoint | Purpose | Parameters |
+|----------|---------|------------|
+| `/services/ConvertToToken` | Tokenize a card | `terminalNumber`, `user`, `password`, `creditCard`, `creditCardDateMmYy`, `addFourDigits` |
+| `/services/RetrieveToken` | Fetch the token for a card | `TerminalNumber`, `User`, `Password`, `CreditCard` |
+| `/services/UpdateToken` | Update a token after reissue / expiry roll | `TerminalNumber`, `User`, `Password`, `CreditCard`, `CreditCardDateMmYy`, `Token` |
+| `/services/CheckCreditCardForToken` | Check a card is tokenizable before charging | `terminalNumber`, `user`, `password`, `CreditCard`, `CreditCardDateMmYy` |
+
+`UpdateToken` is the "saved card was reissued" path. Without it, every card reissue is a lost
+subscriber.
+
+### Lookup and reconciliation
+
+| Endpoint | Keyed on | Use |
+|----------|----------|-----|
+| `/services/TrxLookUp` | `paramX` | Find the transaction for one of your orders |
+| `/services/CheckGoodParamX` | `paramX`, `shvaSuccessOnly` | Was this order paid successfully? |
+| `/services/CheckGoodParamXList` | `paramX` list | Batch version |
+| `/services/CheckGoodParamXEmv` | `paramX` | EMV variant |
+| `/services/GetTransData` | `startDate`, `endDate` (`dd/MM/yyyy HH:mm`) | Transactions in a window |
+| `/services/GetCompleteTransData` | `startDate`, `endDate` | Full transaction records in a window |
+| `/services/GetTransDataBeforeBc` | date range | Transactions **not yet broadcast** |
+
+`GetTransDataBeforeBc` ("before broadcast") is the endpoint that tells you what is sitting
+unsettled in the open batch.
+
+### Settlement, 3DS, operations
+
+| Endpoint | Purpose |
+|----------|---------|
+| `/services/Broadcast` | Trigger the Shva broadcast (שידור) for the terminal. Takes only `terminalNumber`, `user`, `password`. |
+| `/services/GetBroadcast` / `GetBroadcastsByDate` | Broadcast status / history |
+| `/Services/Initiate3DSAuthenticationProcess` | Start 3DS2 authentication. Takes `RedirectUrl`, `BillingAmount`, `BillingCurrencyCode`, card or `Token`, cardholder name/email/phone/address, and browser fingerprint fields (`HttpAcceptHeader`, `BrowserScreenPixelsHeight/Width`, `BrowserLanguage`, `BrowserScreenBitDepth`, `EndUserIPAddress`, `UserAgent`). |
+| `/services/GetErrorMessageEn` / `GetErrorMessageHe` | Official bilingual message for any status code. **No credentials.** |
+| `/services/GetTerminalName` | Cheapest possible credential smoke test |
+| `/services/ResetUserPassword` | Rotate the API password (they expire; see code `502`) |
+| `/services/CreateInvoice`, `CreateICountInvoice`, `CreateEZCountInvoice` | Emit the tax invoice through Pelecard rather than a separate provider |
+| `/Services/InitiateBankTransfer` | Open-banking bank transfer (returns ISO 20022 status codes `660`-`680`) |
+
+The full list, with a preset request body for each, is at `https://gateway21.pelecard.biz/services`.
+Use it as the primary reference; it is live, public, and always current.
