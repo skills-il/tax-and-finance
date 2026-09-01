@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0",
   "skill": "israeli-client-payment-chaser",
-  "generated_at": "2026-09-01T22:17:15+00:00",
+  "generated_at": "2026-09-01T22:38:41+00:00",
   "claims": [
     {
       "claim_id": "payment-ethics-law-terms",
@@ -432,6 +432,62 @@
       "source_url": "https://he.wikisource.org/wiki/חוק_ההוצאה_לפועל",
       "raw_snippet": "(6) (נמחקה).",
       "fetched_at": "2026-09-01T22:17:15+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "small-claims-venue-closed-list-reg2a",
+      "claim": "Small Claims venue under reg. 2(a) is a closed list: the defendant's residence or place of business, the place of the act or omission sued on, and (for a counterclaim) where the original claim was filed. Paragraphs (2), (3) and (4) are repealed. The rule applies notwithstanding any agreement between the parties.",
+      "source_url": "https://he.wikisource.org/wiki/תקנות_שיפוט_בתביעות_קטנות_(סדרי_דין)",
+      "raw_snippet": "תביעה תוגש לבית המשפט שאזור שיפוטו הוא אחד המקומות המנויים להלן, והוא על אף האמור בכל הסכם שבין בעלי הדין; ואלה הם: (1) מקום מגוריו או מקום עסקו של הנתבע; (2) (נמחקה); (3) (נמחקה); (4) (נמחקה); (5) מקום המעשה או המחדל שבשלו תובעים; (6) בתביעה שכנגד – מקום הגשת התביעה המקורית.",
+      "fetched_at": "2026-09-01T22:38:41+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/legal-escalation.md"
+      ]
+    },
+    {
+      "claim_id": "small-claims-venue-online-claims-reg2b",
+      "claim": "Reg. 2(b): a claim about online publication or online trade may be filed only where the defendant or the plaintiff resides or carries on business",
+      "source_url": "https://he.wikisource.org/wiki/תקנות_שיפוט_בתביעות_קטנות_(סדרי_דין)",
+      "raw_snippet": "תובענה בשל פרסום או סחר ברשת האינטרנט תוגש לבית המשפט שבאזור שיפוטו מצוי מקום מגוריו או מקום עסקו של הנתבע או מקום מגוריו או מקום עסקו של התובע, בלבד.",
+      "fetched_at": "2026-09-01T22:38:41+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "insolvency-s210-proof-of-claim-six-months",
+      "claim": "Insolvency Law sec. 210(a): a creditor files a proof of claim with the trustee within six months of publication of the opening order; 210(b) gives 45 days for a post-order debt or the end of that period, whichever is later; 210(c) lets the trustee extend for good cause",
+      "source_url": "https://he.wikisource.org/wiki/חוק_חדלות_פירעון_ושיקום_כלכלי",
+      "raw_snippet": "נושה בחוב עבר רשאי להגיש לנאמן תביעת חוב, בתוך שישה חודשים ממועד פרסומו של הצו לפתיחת הליכים",
+      "fetched_at": "2026-09-01T22:38:41+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "insolvency-s210b-post-order-debt",
+      "claim": "Sec. 210(b): a debt arising after the opening order is claimed within 45 days of its creation or by the end of the six-month period, whichever is later",
+      "source_url": "https://he.wikisource.org/wiki/חוק_חדלות_פירעון_ושיקום_כלכלי",
+      "raw_snippet": "תוגש תביעת החוב בתוך 45 ימים מיום היווצרות החוב או עד תום התקופה הקבועה בסעיף קטן (א), לפי המאוחר.",
+      "fetched_at": "2026-09-01T22:38:41+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "insolvency-s210-selfreference",
+      "claim": "The Insolvency Law refers to its own section 210 when describing the particulars a proof of claim must contain",
+      "source_url": "https://he.wikisource.org/wiki/חוק_חדלות_פירעון_ושיקום_כלכלי",
+      "raw_snippet": "אלא אם כן הוגשה שלא במועד או שלא כללה את כל הפרטים והמסמכים כנדרש לפי סעיף 210(ו)",
+      "fetched_at": "2026-09-01T22:38:41+00:00",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"

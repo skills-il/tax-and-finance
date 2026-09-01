@@ -1,5 +1,23 @@
 # Changelog
 
+## 1.7.1 - 2026-09-02
+
+### Fixed
+
+- Small-claims venue cited limbs that are repealed. Reg. 2(a) marks paragraphs (2), (3) and (4) as (נמחקה); the live options are the defendant's residence or place of business, and the place of the act or omission sued on. Added that reg. 2(a) applies notwithstanding any agreement between the parties, so a contractual venue clause does not bind in Small Claims, and that reg. 2(b) narrows online-publication and online-trade claims.
+- Step 5.5 said an individual debtor "changes which forum applies". It does not, and it contradicted the venue text. Replaced with what actually changes: no Companies Registrar record, protected-minimum garnishment limits, and a different insolvency track.
+
+### Added
+
+- The proof-of-claim deadline is now stated: six months from publication of the opening order (sec. 210(a) of the Insolvency Law), 45 days for a post-order debt or the end of that period whichever is later (210(b)), with trustee extension for good cause (210(c)).
+- A disputed-debt section in Step 5.5: get the objection in writing early, and the cheque/promissory-note route is NOT a shortcut on a contested debt because an objection sends it to court anyway and the opening fee is spent.
+- Personal guarantee (ערבות אישית) from a controlling shareholder, plus the authorised-signatory check on a company cheque or note.
+
+### Changed
+
+- The Shabbat and chag boundary rule moved to references/legal-escalation.md as one deterministic spec (candle-lighting and nightfall offsets, the recipient's city, chol hamoed, erev chag, non-Jewish recipients, and a conservative fallback when no calendar source is available), replacing three partial prose repetitions.
+- Steps 6 and 7 condensed; the detail they restated already lives in references/legal-escalation.md.
+
 ## 1.7.0 - 2026-09-02
 
 ### Fixed

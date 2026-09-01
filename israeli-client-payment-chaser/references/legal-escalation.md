@@ -131,3 +131,28 @@ Do not quote the Bank of Israel base rate as the statutory late-payment rate; th
 - Shavuot (שבועות): 1 day, May/June
 
 **Note:** Hebrew calendar dates shift relative to the Gregorian calendar each year. Always verify specific dates for the current year.
+
+## Shabbat and chag scheduling: the deterministic rule
+
+Reminder timing is the one part of this skill an agent has to compute rather than look up, so the rule is stated once, here, in full.
+
+**Never send on:** Friday from candle-lighting until Saturday nightfall; a chag, on the same sunset-to-nightfall boundaries; and the afternoon of erev chag and erev Shabbat, which is commercially dead even though it is not halachically prohibited.
+
+**The boundaries, precisely:**
+
+- Shabbat begins at **candle-lighting**, conventionally 18 to 40 minutes before sunset depending on the city (Jerusalem uses 40, most of the country 18 to 20). Use candle-lighting, not sunset, as the cut-off.
+- Shabbat ends at **nightfall (tzeit hakochavim)**, roughly 35 to 45 minutes after sunset by the common Israeli conventions. Where a source offers a range, take the LATER value; sending three minutes early is the error that gets noticed.
+- Sunset differs by roughly 20 minutes across Israel, so resolve times for the RECIPIENT's city, not yours, and not a national average.
+- If the debtor is abroad, use their local Shabbat times, and note that chagim outside Israel run an extra day.
+
+**Also treat as blocked or degraded:**
+
+- **Chol hamoed** (Pesach and Sukkot): a partial working period. Not blocked, but do not expect a reply, and never let a deadline you set expire inside it.
+- **Tisha B'Av** and the **Yom HaZikaron / Yom HaAtzmaut** pair: commercially dead and, in the case of Yom HaZikaron, actively inappropriate for a debt demand.
+- **Purim** is a working day in most of the country and a holiday in Jerusalem (Shushan Purim), so it depends on the recipient's city.
+
+**Non-Jewish recipients:** the Saturday block is not automatically right and the Friday block may be, for different reasons. Where the client's community is known, use their rest day; where it is not, weekday business hours are the safe default.
+
+**When the calendar source is unavailable** (no `hebcal` MCP, no network): do not silently skip the check and send anyway. Fall back to sending only Sunday to Thursday, 09:00 to 16:00 recipient-local, which is inside every boundary above in every week of the year, and tell the user the reminder was conservatively scheduled.
+
+**Resolve times from** <https://www.hebcal.com>, which publishes candle-lighting and havdalah per city, or the `hebcal` MCP.

@@ -29,8 +29,15 @@ Israeli banks (except the Postal Bank) must offer two fixed-price tracks under B
 
 Both expanded tracks came under price supervision in the Banking Order (Customer Service)(Supervision of teller-action, direct-channel-action, expanded track and expanded-plus track services), 5782-2022, published 1.9.2022: a bank may not raise these tariffs without Bank of Israel approval. Read the current price off the bank's published tariff (taarifon) rather than assuming a range.
 
+**First, find out what they are actually paying.** Every step below needs two integers the user almost never has to hand, so do not start by asking them to estimate.
+
+- The account-management charge appears on the statement as a single `עמלות עו"ש` line, billed in arrears for the previous period. Most banks bill it monthly at the start of the month; some bill quarterly, so check the period the line covers before dividing by anything.
+- Map the line items to the calculator's two inputs: internet, app, ATM and standing-order actions are direct-channel; anything done by a clerk, including via a staffed phone line, is a teller action (peulat pakid).
+- Ask the bank in writing for a concentration of the fees actually charged to the account over the last 12 months. Banks produce this on request and it hands you the totals and the action split in one document, which is far faster than adding up statements.
+- The tariff's annexes must be delivered to the customer, and Annex A is specifically the population-group benefits table (`נספח א׳ – הטבות לקבוצות אוכלוסיה`). That is where a bank sets out what it applies to the categories in step 2, so ask for it by name rather than accepting a verbal answer.
+
 Decision steps:
-1. Ask the user for their typical monthly action count, split into direct-channel (internet, app, ATM, standing orders) and teller (peulat pakid). If they do not know, tell them to read it off recent statements or ask the bank.
+1. Ask the user for their typical monthly action count, split into direct-channel (internet, app, ATM, standing orders) and teller (peulat pakid), using the statement mapping above rather than a guess.
 2. Check for a cheaper path first. The senior and disability entitlement is set by the fee rules themselves, so it is identical at every bank and is **not** a percentage discount:
    - **What it is:** a customer who is an azrach vatik, a person with a disability, or who holds no cash-withdrawal card gets **4 teller actions a month charged at the direct-channel price** (Banking Rules (Customer Service)(Fees), 5768-2008, First Schedule, item 1(a)(2) note). There is no published percentage or shekel discount. Do not invent one.
    - **Senior = retirement age.** The fee rules give no age; they define azrach vatik by reference to the Senior Citizens Law, 5750-1989, which keys it to the Retirement Age Law, 5764-2004. That age differs by sex and birth date and has been re-staged more than once, so read it off that law rather than quoting a number.
@@ -139,17 +146,16 @@ Use these to source the user's real numbers. The fee amounts and rights in this 
 
 ## Gotchas
 
-- **Do not assume US tactics map to Israel.** "Threaten to leave and they will cave" is not the lever. The leverage is the regulated tracks, the entitlements, and the one-click switch (niud). Ground negotiation in those, not bluffing.
-- **A harshaa lechiyuv is not on the card.** A standing debit authorization is set up at the bank, on the account, and pulls straight from the account. Cancelling or replacing a card does NOT stop it. To stop it, notify the bank (or under s.34(a) stop the debit at any time), or let a niud move it for you. Do not tell the user a card cancellation ends it.
-- **Card-billed subscriptions fail when the card dies.** A subscription billed to the card number (streaming, gym, insurance) is the opposite case: it is tied to the card, so cancelling or replacing the card makes it FAIL. The fix is to update the payment method with each merchant before the old card stops, not to cancel anything at the bank.
-- **Stopping the debit does not cancel the debt.** Killing the harshaa or the card charge only stops the payment. The contract lives on and the business can still invoice or send you to collections. Always also cancel the underlying transaction (iska mitmasheshet) when the goal is to end the service, not just stop the money.
-- **Settle installments before cancelling a card.** Open tashlumim or a kredit balance can be accelerated into one immediate charge, or block the cancellation entirely, if you cancel the card first.
-- **Do not quote a stale NIS fee.** Fee amounts change and vary by bank. The basic-track cap (10 NIS) is set by order, but the expanded-track price and all per-action fees come from each bank's current tariff. Direct the user to the current tariff and the Bank of Israel calculator before acting on any number.
-- **Do not confuse the two tracks.** Basic = up to 10 direct + up to 1 teller. Expanded = up to 50 direct + up to 10 teller. Both are price-supervised, so the difference is the included volume, not whether a cap applies. Recommending the wrong one wastes money; check the user's actual action split.
-- **The senior/disability entitlement is not a percentage.** It is 4 teller actions a month at the direct-channel price, set uniformly by the fee rules. There is no published percentage or shekel discount, and a bank quoting one is describing its own voluntary offer, not the regulated entitlement. Never invent a percentage or a flat senior age.
-- **There is no soldier, student, youth, or new-immigrant fee discount in the rules.** Grep the fee rules and these populations do not appear: the only categories are seniors, people with a 40%+ disability certificate, customers holding no cash-withdrawal card, and small businesses. Anything a bank offers a soldier or a student is a voluntary commercial benefit in its own tariff that it can withdraw at will, so present it as a bank offer to confirm, never as a legal right.
-- **The refund routes do not cover card-billed charges.** s.34 to s.38 are written about a harshaa lechiyuv on the account. A gym or streaming charge billed to the card number has no s.35 route, and sending the bank one burns the 3-business-day clock. Establish the mechanism first, then pick the remedy.
-- **Do not promise the s.38 refund.** The "unreasonably large debit" remedy is switched off entirely by s.38(c) if the bank offered a debit ceiling and expiry when the authorization was set up, which most now do. Route the user to s.37 (exceeded authorization, no deadline) or s.35 (any debit, 3 business days) instead, and have them set a ceiling on every new authorization.
+- **US tactics do not map here.** "Threaten to leave and they will cave" is not the lever. The leverage is the regulated tracks, the entitlements, and the one-click switch (niud).
+- **A harshaa lechiyuv is not on the card.** It sits at the bank, on the account, and pulls straight from it. Cancelling or replacing a card does NOT stop it. A card-billed subscription is the mirror image: it dies with the card, so update the payment method with each merchant BEFORE the old card stops. Getting these two backwards is the single most common error in this domain.
+- **Stopping the debit does not cancel the debt.** Killing the payment instrument leaves the contract alive, so the business can still invoice or send you to collections. Cancel the underlying iska mitmasheshet too.
+- **The refund routes do not cover card-billed charges.** ss.34-38 are written about a harshaa lechiyuv. A gym or streaming charge on the card number has no s.35 route, and sending the bank one burns the 3-business-day clock. Establish the mechanism, then pick the remedy.
+- **Do not promise the s.38 refund.** s.38(c) switches it off entirely where the bank offered a debit ceiling and expiry at setup, which most now do. Lead with s.37 (exceeded authorization, no deadline) or s.35 (any debit, 3 business days), and have the user set a ceiling on every new authorization.
+- **The senior/disability entitlement is not a percentage.** It is 4 teller actions a month at the direct-channel price, set uniformly by the fee rules, and it reprices per-action teller billing rather than discounting a track's fixed price. A bank quoting a percentage is describing its own voluntary offer. Never invent a percentage or a flat senior age.
+- **No soldier, student, youth or new-immigrant discount exists in the rules.** The only categories are senior, 40%+ disability, no-cash-withdrawal-card, and small business. Anything else a bank offers those groups is a revocable commercial benefit, never a legal right.
+- **Settle installments before cancelling a card.** Open tashlumim or a kredit balance can be accelerated into one immediate charge, or block the cancellation outright.
+- **Do not quote a stale NIS fee.** The basic-track cap (10 NIS) is set by order, but the expanded-track price and every per-action fee come from each bank's current tariff.
+- **Do not confuse the two tracks.** Basic = up to 10 direct + 1 teller. Expanded = up to 50 direct + 10 teller. Both are price-supervised, so the difference is included volume, not whether a cap exists.
 - **The Postal Bank is exempt** from offering the tracks, so this analysis may not apply there.
 - **A track covers only the basic current-account actions it lists.** Overdraft interest, foreign-currency and securities fees stay per the tariff, are not solved by a track, and are often the biggest overpayment. Negotiate them separately (section C).
 
@@ -180,7 +186,7 @@ Nevo blocks automated fetching, so it will look unreachable to an agent while op
 
 ### Ready-to-send templates (copy and fill the brackets)
 
-The four letters live in `references/cancellation-letter-templates.md`: cancel a credit card, stop a debit authorization, cancel an ongoing subscription, and request a track change or a discount. Send them in Hebrew even when the conversation is in English, since that is the language the bank's service desk processes. The Hebrew companion file reproduces all four inline for direct copying.
+The four letters live in `references/cancellation-letter-templates.md`. Send them in Hebrew even when the conversation is in English, since that is what the bank's service desk processes. The Hebrew companion reproduces all four inline.
 
 ## Troubleshooting
 

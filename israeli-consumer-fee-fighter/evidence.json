@@ -1,7 +1,7 @@
 {
   "skill_slug": "israeli-consumer-fee-fighter",
   "schemaVersion": "1.0",
-  "generated_at": "2026-09-01T22:06:50+00:00",
+  "generated_at": "2026-09-01T22:42:30+00:00",
   "claims": [
     {
       "claim": "The parent consumer-banking law is Banking (Customer Service) Law, 5741-1981 (Hok HaBankaut (Sherut LaLakoach), TASHMA-1981).",
@@ -236,9 +236,9 @@
       ]
     },
     {
-      "claim": "Bank of Israel fee-tracks calculator page that compares basic, expanded, and no-track pricing.",
+      "claim": "The Bank of Israel publishes a fee-tracks calculator that compares a customer's monthly action count against every bank's track prices",
       "source_url": "https://www.boi.org.il/information/מחשבונים-וכלים/עמלות/",
-      "raw_snippet": "מחשבון \"מסלולי עמלות\" יסייע לכם להשוות ולבחור באפשרות המתאימה והזולה ביותר",
+      "raw_snippet": "המחשבון מבוסס על מספר הפעולות שמבצע הלקוח במהלך חודש, ועל מחיר מסלולי העמלות בבנקים השונים.",
       "claim_id": "ref-url-boi-calc",
       "fetched_at": "2026-07-06T00:00:00Z",
       "appears_in": [
@@ -246,7 +246,7 @@
         "SKILL_HE.md"
       ],
       "verified_via": "browser",
-      "verified_at": "2026-09-01T21:07:41+00:00"
+      "verified_at": "2026-09-01T22:42:30+00:00"
     },
     {
       "claim": "Since 22.9.2021 an online bank switch completes within 7 business days of submission (extendable to 30 business days on request) and moves shekel and FX balances, standing orders and account debit authorizations, checks, and bank and non-bank card activity. Loans and credit including mortgages, deposits and savings plans, non-transferable securities, and safes or products pledged to the old bank do NOT transfer. The follow-me service runs 3 years. Bank of Jerusalem is excluded from the online switch.",
@@ -600,6 +600,43 @@
         "SKILL.md",
         "SKILL_HE.md",
         "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "azrach-vatik-second-hop-retirement-age",
+      "claim": "Senior Citizens Law 5750-1989 s.1 defines azrach vatik as an Israeli resident who has reached retirement age within the meaning of the Retirement Age Law 5764-2004, which is why the fee rules carry no age of their own",
+      "source_url": "https://he.wikisource.org/wiki/חוק_האזרחים_הותיקים",
+      "raw_snippet": "”אזרח ותיק“ – תושב ישראל שהגיע, לפי הרישום במרשם האוכלוסין, לגיל הפרישה כמשמעותו בחוק גיל פרישה, התשס״ד–2004",
+      "fetched_at": "2026-09-01T22:32:23+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "tariff-annexes-delivered-population-benefits",
+      "claim": "The tariff's annexes are delivered to the customer, and Annex A is the population-group benefits table, which is where a bank sets out what it applies to the senior / disability / no-cash-card categories",
+      "source_url": "https://he.wikisource.org/wiki/כללי_הבנקאות_(שירות_ללקוח)_(עמלות)",
+      "raw_snippet": "נספחים לתעריפון, שיימסרו ללקוח: נספח א׳ – הטבות לקבוצות אוכלוסיה",
+      "fetched_at": "2026-09-01T22:32:23+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "boi-calculator-models-three-entitlement-categories",
+      "claim": "The Bank of Israel's own fee-tracks calculator models exactly the three entitlement categories, asking whether the customer holds a cash-withdrawal card, is an azrach vatik, and is recognised BY THE BANK as having 40% or more disability",
+      "source_url": "https://www.boi.org.il/information/מחשבונים-וכלים/עמלות/",
+      "raw_snippet": "ברשותי כרטיס למשיכת מזומנים",
+      "fetched_at": "2026-09-01T22:42:30+00:00",
+      "verified_via": "browser",
+      "verified_at": "2026-09-01T22:42:30+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/fee-tracks-comparison.md"
       ]
     }
   ]

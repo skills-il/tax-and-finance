@@ -2,7 +2,9 @@
 
 Reference for section B of the skill. All four remedies come from the Payment Services Law, 5779-2019 (חוק שירותי תשלום, התשע"ט-2019), full text at <https://he.wikisource.org/wiki/חוק_שירותי_תשלום>.
 
-The single most useful thing to tell a user: **all four run against the BANK (noten sherutei tashlum lamshalem), not against the business that took the money.** Users waste weeks arguing with a gym or a streaming service when the bank is obliged to refund them directly.
+**Scope, before anything else: all four routes cover a harshaa lechiyuv only.** Sections 34 to 38 are written about a debit authorization sitting on the payment ACCOUNT. They do not reach a charge billed to a card NUMBER, which is the more common shape for a gym, a streaming service or an insurance policy. Sending the bank a s.35(a) demand about a card-billed charge gets it refused, and the three-business-day window in Route 2 is gone by the time the user finds out. Establish the mechanism first: ask whether the charge appears in the bank's list of active authorizations, or only on the card statement. For a card-billed charge the route is the card ISSUER plus the merchant under the ongoing-transaction rules, not these four.
+
+Within that scope, the most useful thing to tell a user: **all four run against the BANK (noten sherutei tashlum lamshalem), not against the beneficiary that took the money.** People waste weeks arguing with the beneficiary when, for an authorization on the account, the bank is the one obliged to refund them.
 
 ## Route 1: cancel the authorization going forward (s.34)
 

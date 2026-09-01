@@ -20,10 +20,13 @@ Notes:
 ## Decision rule (which method is cheapest)
 
 1. Count your typical monthly actions, split into direct-channel and teller. Read them off recent account statements or ask the bank.
-2. If your monthly volume is small (roughly a handful of direct actions, at most one teller action), the **basic track** or even **no track** is usually cheapest.
-3. If you run many actions (dozens of direct actions and/or several teller actions), the **expanded track** usually wins over paying per action.
-4. Run the exact numbers in the **Bank of Israel fee-tracks calculator** - it compares your action count against every bank's prices.
-5. Check eligibility for a **discount** first: seniors and people with 40%+ determined disability get fee discounts; a discount may beat a track.
+2. **Establish eligibility for the teller entitlement BEFORE comparing anything**, because it changes all three methods at once rather than adding a fourth option. Three categories qualify: a senior (azrach vatik), a customer who has presented a 40%+ disability certificate, and a customer who holds no cash-withdrawal card. What they get is **4 teller actions a month priced at the direct-channel rate**, under the note to First Schedule item 1(a)(2).
+   - It is **not a percentage discount.** There is no published percentage and no published shekel figure. Do not invent one, and treat any percentage a bank quotes as its own voluntary offer rather than the regulated entitlement.
+   - It is **not an alternative to joining a track.** It reprices teller actions wherever they are billed per action under item 1(a)(2), which means both when on no track and on a track's teller OVERAGE. It does not discount the fixed track price, and it does nothing for teller actions already inside a track's allowance.
+   - Pass `--entitled` to `scripts/fee_track_calculator.py`; it applies the entitlement to all three methods. Do not reason about it by hand.
+3. If your monthly volume is small (roughly a handful of direct actions, at most one teller action), the **basic track** or even **no track** is usually cheapest.
+4. If you run many actions (dozens of direct actions and/or several teller actions), the **expanded track** usually wins over paying per action.
+5. Run the exact numbers in the **Bank of Israel fee-tracks calculator** - it compares your action count against every bank's prices.
 6. A business account: check whether you qualify as a **small business (esek katan)** for the reduced tariff.
 
 ## Switching
