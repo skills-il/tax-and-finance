@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0",
   "skill": "israeli-client-payment-chaser",
-  "generated_at": "2026-06-16T23:00:00Z",
+  "generated_at": "2026-09-01T22:17:15+00:00",
   "claims": [
     {
       "claim_id": "payment-ethics-law-terms",
@@ -13,18 +13,18 @@
         "SKILL.md",
         "SKILL_HE.md",
         "references/legal-escalation.md"
-      ],
-      "source_fetched_at": "2026-07-26T00:00:00Z"
+      ]
     },
     {
       "claim_id": "limitation-period-7-years",
-      "claim": "An ordinary debt or unpaid invoice has a 7-year limitation period under sec. 5(a) of the Limitation Law (1958), not 3 years; a money judgment has a 25-year period; a debt in an open enforcement file does not lapse at 7 years",
-      "source_url": "https://www.nevo.co.il/law_html/law01/p182m1_001.htm",
-      "raw_snippet": "חוק ההתיישנות, התשי\"ח-1958, סעיף 5(א): תקופת התיישנות 7 שנים לחוב רגיל; פסק דין 25 שנים",
-      "fetched_at": "2026-06-16T22:55:00Z",
+      "claim": "An ordinary (non-land) debt has a 7-year limitation period under sec. 5(1) of the Limitation Law, 5718-1958; a judgment has 25 years under sec. 21",
+      "source_url": "https://he.wikisource.org/wiki/חוק_ההתיישנות",
+      "raw_snippet": "התקופה שבה מתיישנת תביעה שלא הוגשה עליה תובענה (להלן – תקופת ההתיישנות) היא – (1) בשאינו מקרקעין – שבע שנים;",
+      "fetched_at": "2026-09-01T21:40:11+00:00",
       "appears_in": [
         "SKILL.md",
-        "SKILL_HE.md"
+        "SKILL_HE.md",
+        "references/legal-escalation.md"
       ]
     },
     {
@@ -37,8 +37,7 @@
         "SKILL.md",
         "SKILL_HE.md",
         "references/legal-escalation.md"
-      ],
-      "source_fetched_at": "2026-07-26T00:00:00Z"
+      ]
     },
     {
       "claim_id": "enforcement-and-interest-reform",
@@ -50,8 +49,7 @@
         "SKILL.md",
         "SKILL_HE.md",
         "references/legal-escalation.md"
-      ],
-      "source_fetched_at": "2026-07-26T00:00:00Z"
+      ]
     },
     {
       "claim_id": "illustrative-example-figures",
@@ -80,76 +78,92 @@
       "verified_at": "2026-08-11"
     },
     {
-      "id": "small-claims-no-lawyer-required",
       "claim": "The Small Claims process does not require representation by a lawyer; representation is barred by default and the court may permit it on request.",
-      "claim_type": "law",
       "source_url": "https://www.kolzchut.org.il/he/הגשת_תביעה_קטנה",
-      "source_fetched_at": "2026-07-26T00:00:00Z",
       "raw_snippet": "ההליך בבית המשפט לתביעות קטנות אינו דורש ייצוג על-ידי עורך דין",
-      "confidence": "high"
+      "claim_id": "small-claims-no-lawyer-required",
+      "fetched_at": "2026-07-26T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
-      "id": "small-claims-ceiling-2026",
       "claim": "The Small Claims Court monetary ceiling is 39,900 NIS as of January 2026.",
-      "claim_type": "threshold",
       "source_url": "https://www.kolzchut.org.il/he/הגשת_תביעה_קטנה",
-      "source_fetched_at": "2026-07-26T00:00:00Z",
       "raw_snippet": "תביעה כספית בסכום של עד 39,900 ₪ (נכון לינואר 2026)",
-      "confidence": "high"
+      "claim_id": "small-claims-ceiling-2026",
+      "fetched_at": "2026-07-26T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
-      "id": "small-claims-fee",
       "claim": "The Small Claims filing fee is 1% of the claim amount, and in any case not less than 50 NIS.",
-      "claim_type": "fee",
       "source_url": "https://www.kolzchut.org.il/he/הגשת_תביעה_קטנה",
-      "source_fetched_at": "2026-07-26T00:00:00Z",
       "raw_snippet": "אגרה בגובה של 1% מסכום התביעה, ובכל מקרה לא פחות מ-50 ₪",
-      "confidence": "high"
+      "claim_id": "small-claims-fee",
+      "fetched_at": "2026-07-26T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
-      "id": "moser-tashlumim-section-4",
       "claim": "Section 4 of the Payment Ethics to Suppliers Law: an unpaid invoice accrues shekel interest (ribit shkalit) from the payment due date, and late-payment fees (dmei pigurim) only after a further 30 days.",
-      "claim_type": "law",
       "source_url": "https://www.nevo.co.il/law_html/law00/144599.htm",
-      "source_fetched_at": "2026-07-26T00:00:00Z",
       "raw_snippet": "תשולם לספק בתוספת ריבית שקלית, ובחלוף 30 ימים מהמועד האמור – בתוספת דמי פיגורים",
-      "confidence": "high"
+      "claim_id": "moser-tashlumim-section-4",
+      "fetched_at": "2026-07-26T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
-      "id": "moser-tashlumim-private-business",
       "claim": "A private business customer must pay the supplier no later than 45 days from the end of the month in which the invoice was submitted (shotef+45).",
-      "claim_type": "law",
       "source_url": "https://www.nevo.co.il/law_html/law00/144599.htm",
-      "source_fetched_at": "2026-07-26T00:00:00Z",
       "raw_snippet": "ישלם לספק את התמורה בעד העסקה לא יאוחר מ-45 ימים מתום החודש שבו הומצא לו החשבון",
-      "confidence": "high"
+      "claim_id": "moser-tashlumim-private-business",
+      "fetched_at": "2026-07-26T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
-      "id": "small-claims-five-per-year",
       "claim": "A small-claims plaintiff must declare the number of small claims filed in the past year; filing more than five in the same court in a year lets the court transfer the case to Magistrate Court. It is not an absolute cap.",
-      "claim_type": "law",
       "source_url": "https://www.nevo.co.il/law_html/law00/98563.htm",
-      "source_fetched_at": "2026-07-26T00:00:00Z",
       "raw_snippet": "מספר התביעות הקטנות שהגיש במהלך השנה האחרונה",
-      "confidence": "high"
+      "claim_id": "small-claims-five-per-year",
+      "fetched_at": "2026-07-26T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
-      "id": "small-claims-notation",
       "claim": "Normalized restatement in the skill's own ש\"ח notation of the figures quoted above from kolzchut: the Small Claims ceiling of 39,900 ש\"ח and the minimum filing fee of 50 ש\"ח. No new claim is introduced; kolzchut prints these with the shekel sign.",
-      "claim_type": "threshold",
       "source_url": "https://www.kolzchut.org.il/he/הגשת_תביעה_קטנה",
-      "source_fetched_at": "2026-07-26T00:00:00Z",
       "raw_snippet": "תביעה כספית בסכום של עד 39,900 ₪ (נכון לינואר 2026)...לא פחות מ-50 ₪",
-      "confidence": "high"
+      "claim_id": "small-claims-notation",
+      "fetched_at": "2026-07-26T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
-      "id": "small-claims-individuals-only",
       "claim": "Only private individuals, including an osek murshe or osek patur, may file a small claim. A company, partnership or amuta may not file in this court.",
-      "claim_type": "law",
       "source_url": "https://www.kolzchut.org.il/he/הגשת_תביעה_קטנה",
-      "source_fetched_at": "2026-07-26T00:00:00Z",
       "raw_snippet": "חברה בע\"מ, שותפות או עמותה לא יוכלו להגיש תביעה לבית משפט זה",
-      "confidence": "high"
+      "claim_id": "small-claims-individuals-only",
+      "fetched_at": "2026-07-26T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "url-hebcal",
@@ -162,8 +176,7 @@
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ],
-      "source_fetched_at": "2026-08-11"
+      ]
     },
     {
       "claim_id": "eca-authority-page",
@@ -180,7 +193,7 @@
     },
     {
       "claim_id": "ref-boi-prime-rate",
-      "claim": "Bank of Israel prime-rate page, the reference for the interest used in late-payment calculations.",
+      "claim": "The Bank of Israel publishes the monetary-policy rate. This is NOT the statutory late-payment rate and the skill cites it only to warn against that conflation.",
       "source_url": "https://www.boi.org.il/information/interestrates/primerates/",
       "raw_snippet": "information/interestrates/primerates",
       "fetched_at": "2026-08-17",
@@ -207,11 +220,218 @@
     {
       "claim_id": "ref-kolzchut-supplier-payment",
       "claim": "המועד האחרון לתשלום תמורה לספקים עבור סחורה או שירות בכל-זכות.",
-      "source_url": "https://www.kolzchut.org.il/he/%D7%94%D7%9E%D7%95%D7%A2%D7%93_%D7%94%D7%90%D7%97%D7%A8%D7%95%D7%9F_%D7%9C%D7%AA%D7%A9%D7%9C%D7%95%D7%9D_%D7%AA%D7%9E%D7%95%D7%A8%D7%94_%D7%9C%D7%A1%D7%A4%D7%A7%D7%99%D7%9D",
+      "source_url": "https://www.kolzchut.org.il/he/המועד_האחרון_לתשלום_תמורה_לספקים_עבור_סחורה_או_שירות",
       "raw_snippet": "המועד האחרון לתשלום תמורה לספקים עבור סחורה או שירות",
       "fetched_at": "2026-08-17",
       "verified_via": "kolzchut page existence confirmed through the site MediaWiki API in a browser",
       "verified_at": "2026-08-17",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "limitation-judgment-25-years",
+      "claim": "A judgment carries a 25-year limitation period under sec. 21 of the Limitation Law",
+      "source_url": "https://he.wikisource.org/wiki/חוק_ההתיישנות",
+      "raw_snippet": "21. התיישנות פסק דין פסק דין בתובענה שעברו עליו עשרים וחמש שנה בלי שהזכאי לפיו עשה פעולה כל שהיא כדי לבצעו, רשאי החייב לטעון טענת התיישנות",
+      "fetched_at": "2026-09-01T21:40:11+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "small-claims-ceiling-39900-official",
+      "claim": "The Small Claims ceiling is 39,900 NIS as of 1.1.2026, per the Judicial Authority's own service page, and a company may not file",
+      "source_url": "https://www.gov.il/he/service/filing_a_small_claim",
+      "raw_snippet": "סכום תביעה קטנה יכול להיות עד 39,900 ₪ (נכון ל-1.1.2026).",
+      "fetched_at": "2026-09-01T21:40:11+00:00",
+      "verified_via": "browser",
+      "verified_at": "2026-09-01T21:40:11+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/legal-escalation.md"
+      ]
+    },
+    {
+      "claim_id": "small-claims-company-barred-official",
+      "claim": "A limited company cannot file a small claim, per the Judicial Authority service page",
+      "source_url": "https://www.gov.il/he/service/filing_a_small_claim",
+      "raw_snippet": "שימו לב: חברה בע״מ לא יכולה להגיש תביעה קטנה.",
+      "fetched_at": "2026-09-01T21:40:11+00:00",
+      "verified_via": "browser",
+      "verified_at": "2026-09-01T21:40:11+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "vat-law-s7-late-payment-interest",
+      "claim": "VAT Law sec. 7: the price of a transaction includes interest or any other payment for late payment, and damages for breach where the transaction was not cancelled",
+      "source_url": "https://he.wikisource.org/wiki/חוק_מס_ערך_מוסף",
+      "raw_snippet": "ריבית או כל תשלום אחר בשל פיגור בתשלום ופיצויים בשל הפרת ההסכם כשאין עמה ביטול העסקה",
+      "fetched_at": "2026-09-01T21:40:11+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "accountant-general-quarterly-rates-publisher",
+      "claim": "The Accountant General publishes the statutory shekel-interest, linked-interest and late-payment-fee rates quarterly as an open dataset with an effective-from date per row",
+      "source_url": "https://data.gov.il/api/3/action/datastore_search?resource_id=d1cdadd7-f6b6-40a2-aab9-73230d5fe294",
+      "raw_snippet": "\"interestname\": \"ריבית שקלית\"",
+      "fetched_at": "2026-09-01T21:41:42+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/legal-escalation.md"
+      ]
+    },
+    {
+      "claim_id": "vat-law-s7-selfreference",
+      "claim": "The VAT Law refers to its own section 7 as the provision defining the price of a transaction",
+      "source_url": "https://he.wikisource.org/wiki/חוק_מס_ערך_מוסף",
+      "raw_snippet": "”מחזור עסקאות של עוסק“ – סך כל המחיר, כמשמעותו בסעיף 7 , של העסקאות בשנת המס שחלפה",
+      "fetched_at": "2026-09-01T21:40:44+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "execution-66a-closed-list-of-restrictions",
+      "claim": "Execution Law sec. 66a lets the registrar impose a closed list of five restrictions: passport/travel document, exit ban, lakoach mugbal meyuchad under the Cheques Without Cover Law, payment-card use, and founding or being a beneficial owner of a corporation. There is no driving-licence or bank-account-opening restriction.",
+      "source_url": "https://he.wikisource.org/wiki/חוק_ההוצאה_לפועל",
+      "raw_snippet": "הגבלות לפי סעיף 66א לא יוטלו אלא בהתקיים אחד מתנאים אלה",
+      "fetched_at": "2026-09-01T21:55:47+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "execution-66a-cheque-and-card-restrictions",
+      "claim": "The cheque restriction under sec. 66a(3) is designation as a lakoach mugbal meyuchad under the Cheques Without Cover Law 5741-1981, and sec. 66a(4) covers use of a payment card",
+      "source_url": "https://he.wikisource.org/wiki/חוק_ההוצאה_לפועל",
+      "raw_snippet": "(3) הגבלת החייב כלקוח מוגבל מיוחד, כמשמעותו בחוק שיקים ללא כיסוי, התשמ״א–1981 ;",
+      "fetched_at": "2026-09-01T21:55:47+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "execution-66b-gate-on-restrictions",
+      "claim": "Sec. 66b gates the restrictions: the usual route requires the debtor to have been brought before the registrar and shown to be able to pay yet evading without reasonable explanation, on judgment debts exceeding 500 NIS",
+      "source_url": "https://he.wikisource.org/wiki/חוק_ההוצאה_לפועל",
+      "raw_snippet": "התקיימו לגבי החייב התנאים כאמור בסעיף 66ב , ושוכנע רשם ההוצאה לפועל כי הדבר מוצדק בנסיבות העניין",
+      "fetched_at": "2026-09-01T21:55:47+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "execution-azhara-before-creditor-requested-steps",
+      "claim": "Steps taken at the creditor's request alone may not be started until a warning (azhara) has been served on the debtor and the period stated in it has elapsed",
+      "source_url": "https://he.wikisource.org/wiki/חוק_ההוצאה_לפועל",
+      "raw_snippet": "לא יינקטו על ידי הלשכה הליכים על פי בקשת הזוכה בלבד, אלא לאחר שהומצאה אזהרה לחייב וחלף המועד הקבוע בה.",
+      "fetched_at": "2026-09-01T21:55:47+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "execution-66b-conditions-text",
+      "claim": "The conditions gating the restrictions: the debtor was brought before the registrar and shown to be able to pay yet evading, with no reasonable explanation, on judgment debts above 500 NIS",
+      "source_url": "https://he.wikisource.org/wiki/חוק_ההוצאה_לפועל",
+      "raw_snippet": "הוכח לרשם ההוצאה לפועל כי הוא בעל יכולת המשתמט מתשלום החוב ולא ניתן הסבר סביר לאי־התשלום, ובלבד שהחוב הפסוק או החובות הפסוקים במצטבר עולים על 500 שקלים חדשים",
+      "fetched_at": "2026-09-01T21:56:25+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "moser-tashlumim-s4-references-s3",
+      "claim": "Sec. 4(a) of the Payment Ethics to Suppliers Law keys the interest start to the payment date under sec. 3",
+      "source_url": "https://he.wikisource.org/wiki/חוק_מוסר_תשלומים_לספקים",
+      "raw_snippet": "תמורה הקבועה בחשבון שלא שולמה עד המועד לתשלום החשבון כמשמעותו בסעיף 3 , תשולם לספק בתוספת ריבית שקלית, ובחלוף 30 ימים מהמועד האמור – בתוספת דמי פיגורים",
+      "fetched_at": "2026-09-01T21:56:25+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "execution-66a-restriction-list-verbatim",
+      "claim": "The five restrictions listed in sec. 66a, in the statute's own words",
+      "source_url": "https://he.wikisource.org/wiki/חוק_ההוצאה_לפועל",
+      "raw_snippet": "רשאי הוא להטיל על החייב הגבלה כמפורט להלן, אחת או יותר, מיוזמתו או על פי בקשת זוכה, לתקופה ובתנאים שיקבע: (1) הגבלת החייב מקבל דרכון ישראלי או תעודת מעבר לפי חוק הדרכונים, התשי״ב–1952",
+      "fetched_at": "2026-09-01T21:56:25+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "moser-tashlumim-s3a-two-alternative-limbs",
+      "claim": "Sec. 3(a): a state body pays on one of two ALTERNATIVE dates depending on how the contract counts the period, 45 days from submission of the invoice or 30 days from the end of the month of submission. They are alternatives, not cumulative.",
+      "source_url": "https://he.wikisource.org/wiki/חוק_מוסר_תשלומים_לספקים",
+      "raw_snippet": "ישלם לספק את התמורה בעד העסקה באחד המועדים המפורטים להלן: (1) אם התקופה לתשלום לספק נספרת ממועד המצאת החשבון – לא יאוחר מ־45 ימים מהמועד שבו הומצא למזמין החשבון; (2) אם התקופה לתשלום לספק נספרת מתום החודש שבמהלכו הומצא החשבון למזמין – לא יאוחר מ־30 ימים מתום אותו החודש.",
+      "fetched_at": "2026-09-01T22:17:15+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/legal-escalation.md"
+      ]
+    },
+    {
+      "claim_id": "moser-tashlumim-s3f-local-authority-submission",
+      "claim": "Sec. 3(f)(1): a local authority pays within 45 days from the end of the month in which the invoice was SUBMITTED to it, and 80 days for construction engineering works",
+      "source_url": "https://he.wikisource.org/wiki/חוק_מוסר_תשלומים_לספקים",
+      "raw_snippet": "מזמין שהוא רשות מקומית שהתקשר עם ספק בחוזה לביצוע עסקה, ישלם לספק את התמורה בעד העסקה לא יאוחר מ־45 ימים מתום החודש שבו הומצא לו החשבון",
+      "fetched_at": "2026-09-01T22:17:15+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/legal-escalation.md"
+      ]
+    },
+    {
+      "claim_id": "execution-s6b-thirty-days-is-residual",
+      "claim": "Execution Law sec. 6(b): the date for performance set in the judgment governs; the 30-day wait applies only where the judgment sets none, and runs from service where the judgment was given in the debtor's absence and the creditor had to serve it. Sec. 6(b1) permits earlier filing on affidavit.",
+      "source_url": "https://he.wikisource.org/wiki/חוק_ההוצאה_לפועל",
+      "raw_snippet": "לא תוגש בקשה לביצוע פסק דין כאמור בסעיף קטן (א) אלא לאחר שחלף המועד שנקבע בפסק הדין לביצועו, ואם לא נקבע מועד כאמור – לאחר שחלפו 30 ימים מיום מתן פסק הדין",
+      "fetched_at": "2026-09-01T22:17:15+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/legal-escalation.md"
+      ]
+    },
+    {
+      "claim_id": "execution-s6b1-early-filing-on-affidavit",
+      "claim": "Sec. 6(b1) lets the registrar permit filing before the 30 days elapse, on an affidavit showing reason to believe that not opening the file would frustrate enforcement",
+      "source_url": "https://he.wikisource.org/wiki/חוק_ההוצאה_לפועל",
+      "raw_snippet": "רשאי רשם ההוצאה לפועל להתיר לזוכה שביקש זאת, בבקשה הנתמכת בתצהיר, להגיש בקשה לביצוע פסק הדין, אף אם טרם חלפו 30 ימים מיום מתן פסק הדין",
+      "fetched_at": "2026-09-01T22:17:15+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "execution-66a-sixth-limb-deleted",
+      "claim": "A sixth restriction limb once existed in sec. 66a and is now marked deleted in the consolidated statute",
+      "source_url": "https://he.wikisource.org/wiki/חוק_ההוצאה_לפועל",
+      "raw_snippet": "(6) (נמחקה).",
+      "fetched_at": "2026-09-01T22:17:15+00:00",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"

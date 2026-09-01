@@ -1,5 +1,31 @@
 # Changelog
 
+## 1.7.0 - 2026-09-02
+
+### Fixed
+
+- Corrected the limitation citations: an ordinary debt is 7 years under sec. 5(1) of the Limitation Law, and a judgment is 25 years under sec. 21. The supporting evidence entry previously cited a dead URL with a paraphrased quote.
+- Corrected the enforcement restrictions in Step 7. The Execution Law sec. 66a list is closed and does not include a driving-licence restriction or a power to stop the debtor opening bank accounts. The Hebrew no longer conflates לקוח מוגבל מיוחד with חייב מוגבל באמצעים.
+- Removed the "Bank of Israel base rate + statutory margin" formula from references/legal-escalation.md, which was wrong after Amendment 9 and contradicted the skill's own rule against quoting the BoI rate.
+- Re-anchored every aging bucket, reminder stage and template to the payment DUE date rather than the invoice date. Under the statutory shotef+45 default the old anchoring sent late notices to clients still within terms, and the Stage 3 email asserted "more than 60 days have passed" at a point where 30 had.
+- Reconciled the two dmei pigurim start dates, and corrected "75 days" to a start-of-month maximum (about 46 days for a month-end invoice).
+- Replaced a 404 Kol Zchut link for the supplier payment deadline.
+
+### Added
+
+- A scope gate in Step 1: the Payment Ethics to Suppliers Law governs a purchaser buying in the course of business and supplies no statutory due date for a private consumer client.
+- Step 5.5, the cheap rungs before court: converting the debt into a directly enforceable instrument, giving a settlement the force of a judgment, verifying the debtor at the Companies Registrar, and עיכבון.
+- Step 6.5, insolvency: a stay halts individual collection, and a proof of claim must be filed with the trustee within a limited window or the debt is not counted.
+- Interim attachment (עיקול זמני) guidance for a debtor who is dissipating assets.
+- The Accountant General quarterly rate source, plus an always-safe letter formulation that claims the full statutory entitlement without asserting a figure.
+- VAT Law sec. 7: late-payment interest sits inside the VAT base.
+- A rewritten Stage 5 demand letter carrying all six mandatory contents.
+
+### Changed
+
+- Venue for a small claim is now stated as a plaintiff's choice rather than fixed by the debtor's address.
+- Step 4, Step 6, Step 8, Gotchas and the Examples were condensed to stay within the 5,000-word cap; the detailed interest exposition now lives in references/legal-escalation.md.
+
 ## 1.6.1 - 2026-08-11
 
 Replaced two dead gov.il enforcement service URLs with the live Enforcement and Collection Authority portal.

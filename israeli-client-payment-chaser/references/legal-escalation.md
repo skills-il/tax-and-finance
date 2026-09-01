@@ -85,10 +85,11 @@ Do not quote the Bank of Israel base rate as the statutory late-payment rate; th
 
 ### Adjudication of Interest and Linkage Law (חוק פסיקת ריבית והצמדה)
 - **Accrual start date:** Interest begins from the invoice due date (not the invoice issue date)
-- **Rate:** Bank of Israel base rate + statutory margin
+- **Rate: NOT the Bank of Israel base rate.** Since Amendment 9 (in force 1.1.2025) the statute works through three separately published rates, `ריבית שקלית` (shekel interest), `ריבית צמודה` (linked interest) and `דמי פיגורים` (late-payment fees). There is no "BoI base rate plus a margin" formula, and describing one is the error this file previously contained.
+- **Who publishes the rate:** the Accountant General (החשב הכללי), quarterly. The machine-readable source is the `data.gov.il` dataset "ריביות החשב הכללי" (<https://data.gov.il/api/3/action/datastore_search?resource_id=d1cdadd7-f6b6-40a2-aab9-73230d5fe294>), whose rows carry `interestname` and an `ineffecfrom` effective date. Read the row whose effective date covers the period you are calculating for. Do NOT read the rate off a law-firm calculator page, several publish a stale quarter.
+- **The rate re-rolls every quarter**, so no figure is written into this file. If the current quarter's rate cannot be confirmed, use the always-safe formulation in a letter and let the court or the enforcement registrar compute it: `הקרן בתוספת ריבית והצמדה כדין ממועד הפירעון` ("the principal plus interest and linkage as required by law from the due date"). That claims the full statutory entitlement without asserting a number.
 - **Linkage (hatzmada):** In addition to interest, the debt amount is linked to the Consumer Price Index (CPI) from the due date
 - **Compound interest:** Israeli law generally applies simple interest, not compound, unless otherwise agreed in the contract. Amendment 9 to the Interest and Linkage Law (effective January 1, 2025) further eliminated compound interest on enforcement debts and split late payment charges into "interest" (ribit) and "late payment fees" (dmei pigurim). Late payment fees now accrue quarterly starting 3 months after the due date, rather than compounding.
-- **Verify current rate:** Check the Bank of Israel website (boi.org.il) for the current base rate at the time of calculation. Do NOT hard-code the rate here, it changes at each BoI rate decision, so any number written into this file goes stale within months.
 
 ### Contractual vs Statutory Interest
 - If the contract specifies an interest rate, that rate applies (within legal limits)
