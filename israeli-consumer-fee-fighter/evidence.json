@@ -1,343 +1,605 @@
 {
   "skill_slug": "israeli-consumer-fee-fighter",
   "schemaVersion": "1.0",
-  "generated_at": "2026-07-06",
+  "generated_at": "2026-09-01T22:06:50+00:00",
   "claims": [
     {
-      "id": "law-banking-service-1981",
       "claim": "The parent consumer-banking law is Banking (Customer Service) Law, 5741-1981 (Hok HaBankaut (Sherut LaLakoach), TASHMA-1981).",
-      "claim_type": "law",
       "source_url": "https://www.nevo.co.il/law_html/law01/047_016.htm",
-      "source_fetched_at": "2026-08-01T00:00:00Z",
       "raw_snippet": "הנגיד רשאי, לאחר התייעצות בועדה המייעצת ובאישור שר האוצר, להכריז",
-      "confidence": "high"
-    },
-    {
-      "id": "rules-amlot-name-2008",
-      "claim": "The fee-tracks regulation is Banking Rules (Customer Service)(Fees), 5768-2008, and its amendment introduced the basic and expanded tracks.",
-      "claim_type": "law",
-      "source_url": "https://boi.org.il/information/fees/",
-      "source_fetched_at": "2026-07-06T00:00:00Z",
-      "raw_snippet": "נכנס לתוקף התיקון בכללי הבנקאות (שירות ללקוח) (עמלות) – התשס\"ח 2008, אשר מחייב את הבנקים לכלול במסגרת השירותים לניהול חשבון עובר ושב המוצעים ללקוחותיהם, את המסלול הבסיסי ואת המסלול המורחב",
-      "confidence": "high"
-    },
-    {
-      "id": "tracks-effective-date",
-      "claim": "The fee-tracks obligation took effect on 1.4.14.",
-      "claim_type": "date",
-      "source_url": "https://boi.org.il/information/fees/",
-      "source_fetched_at": "2026-07-06T00:00:00Z",
-      "raw_snippet": "בתאריך, 1.4.14, נכנס לתוקף התיקון בכללי הבנקאות (שירות ללקוח) (עמלות) – התשס\"ח 2008",
-      "confidence": "high"
-    },
-    {
-      "id": "basic-track-transactions",
-      "claim": "The basic track (maslul basi) includes up to 10 direct-channel transactions plus up to 1 teller transaction per month.",
-      "claim_type": "feature",
-      "source_url": "https://www.kolzchut.org.il/he/מסלולי_עמלות_במחיר_חודשי_קבוע_בחשבון_עובר_ושב_בבנק",
-      "source_fetched_at": "2026-07-06T00:00:00Z",
-      "raw_snippet": "המסלול הבסיסי מסלול זה כולל עד 10 פעולות בערוץ ישיר (ביצוע פעולות באינטרנט, במסופים, בתיבות אל-תור, בכספומט, הוראות קבע וכו' שאינן מבוצעות על ידי פקיד הבנק) ובנוסף עד פעולת פקיד אחת",
-      "confidence": "high"
-    },
-    {
-      "id": "basic-track-price-cap",
-      "claim": "The basic track price is supervised and cannot exceed 10 NIS per month. (10 ש\"ח).",
-      "claim_type": "currency",
-      "source_url": "https://www.kolzchut.org.il/he/מסלולי_עמלות_במחיר_חודשי_קבוע_בחשבון_עובר_ושב_בבנק",
-      "source_fetched_at": "2026-07-06T00:00:00Z",
-      "raw_snippet": "מחיר המסלול מפוקח ולא יכול לעלות על 10 ₪ בחודש",
-      "confidence": "high"
-    },
-    {
-      "id": "extended-track-transactions",
-      "claim": "The expanded track (maslul murchav) includes up to 50 direct-channel transactions plus up to 10 teller transactions per month.",
-      "claim_type": "feature",
-      "source_url": "https://www.kolzchut.org.il/he/מסלולי_עמלות_במחיר_חודשי_קבוע_בחשבון_עובר_ושב_בבנק",
-      "source_fetched_at": "2026-07-06T00:00:00Z",
-      "raw_snippet": "המסלול המורחב מסלול זה כולל עד 50 פעולות בערוץ ישיר ועד 10 פעולות פקיד",
-      "confidence": "high"
-    },
-    {
-      "id": "extended-track-price-range",
-      "claim": "The expanded track price is not supervised by the Bank of Israel and ranges between 20 and 30 NIS per month. (20 ש\"ח to 30 ש\"ח).",
-      "claim_type": "currency",
-      "source_url": "https://www.kolzchut.org.il/he/מסלולי_עמלות_במחיר_חודשי_קבוע_בחשבון_עובר_ושב_בבנק",
-      "source_fetched_at": "2026-07-06T00:00:00Z",
-      "raw_snippet": "מחירו של מסלול זה לא מפוקח על-ידי בנק ישראל, והוא נע בין 20 ₪ ל-30 ₪ בחודש",
-      "confidence": "low",
-      "superseded": true,
-      "superseded_note": "SUPERSEDED 2026-08-01. The cited Kol Zchut page predates the Banking Order (Customer Service)(Supervision of teller-action, direct-channel-action, expanded track and expanded-plus track), 5782-2022, published 1.9.2022, which is the instrument that brought both expanded tracks under price supervision. That Order, not circular 06-2851, is the authority for the correction; 06-2851 is the June 2026 circular for the separate 2027 reform and merely recites the 2022 supervision as background. Do NOT reinstate this claim in the skill body."
-    },
-    {
-      "id": "extended-plus-track",
-      "claim": "Some banks also offer an expanded-plus track (maslul murchav plus) that adds bank-specific services on top of the expanded track.",
-      "claim_type": "feature",
-      "source_url": "https://boi.org.il/information/fees/",
-      "source_fetched_at": "2026-07-06T00:00:00Z",
-      "raw_snippet": "חלק מהבנקים מציעים, בנוסף, גם מסלול מורחב פלוס הכולל את הפעולות במסלול המורחב ושירותים נוספים ייחודיים לכל בנק",
-      "confidence": "high"
-    },
-    {
-      "id": "no-track-overpay-multiple",
-      "claim": "Customers who perform the track volume without choosing a track may pay up to 2.5x (basic volume) or up to 5x (expanded volume) in fees at some banks.",
-      "claim_type": "feature",
-      "source_url": "https://www.kolzchut.org.il/he/מסלולי_עמלות_במחיר_חודשי_קבוע_בחשבון_עובר_ושב_בבנק",
-      "source_fetched_at": "2026-07-06T00:00:00Z",
-      "raw_snippet": "מי שיבצעו את כמות הפעולות שנקבעה למסלול הבסיסי מבלי שבחרו במסלול הזה עלולים לשלם פי 2.5 על העמלות בחלק מהבנקים. מי שיבצעו את כמות הפעולות שנקבעה למסלול המורחב מבלי שבחרו במסלול הזה עלולים לשלם פי 5 על העמלות בחלק מהבנקים",
-      "confidence": "low",
-      "superseded": true,
-      "superseded_note": "SUPERSEDED 2026-08-01. The skill deliberately no longer quotes any overpayment multiple; the instruction is to compare the user's own per-action total against the track price. Do NOT reinstate a multiple in the skill body."
-    },
-    {
-      "id": "switch-track-effective",
-      "claim": "A customer can switch tracks by notifying the bank; the switch takes effect on the 1st of the month following the month in which notice was given.",
-      "claim_type": "feature",
-      "source_url": "https://www.kolzchut.org.il/he/מסלולי_עמלות_במחיר_חודשי_קבוע_בחשבון_עובר_ושב_בבנק",
-      "source_fetched_at": "2026-07-06T00:00:00Z",
-      "raw_snippet": "לקוח שרוצה לעבור בין מסלולי העמלות יכול להודיע על כך לבנק. המעבר בין המסלולים יתבצע ב-1 בחודש אחרי החודש שבו ניתנה ההודעה",
-      "confidence": "high"
-    },
-    {
-      "id": "senior-disability-discount",
-      "claim": "Senior citizens (azrachim vatikim) and people with a determined disability of at least 40% are entitled to fee discounts.",
-      "claim_type": "threshold",
-      "source_url": "https://www.kolzchut.org.il/he/מסלולי_עמלות_במחיר_חודשי_קבוע_בחשבון_עובר_ושב_בבנק",
-      "source_fetched_at": "2026-07-06T00:00:00Z",
-      "raw_snippet": "אזרחים ותיקים ומי שנקבעה להם נכות בדרגה 40% לפחות זכאים להנחות בעמלות",
-      "confidence": "high"
-    },
-    {
-      "id": "post-bank-exempt",
-      "claim": "The Postal Bank is not obligated to offer the fee tracks.",
-      "claim_type": "feature",
-      "source_url": "https://www.kolzchut.org.il/he/מסלולי_עמלות_במחיר_חודשי_קבוע_בחשבון_עובר_ושב_בבנק",
-      "source_fetched_at": "2026-07-06T00:00:00Z",
-      "raw_snippet": "בנק הדואר לא מחויב להציע את מסלולי העמלות שצוינו",
-      "confidence": "high"
-    },
-    {
-      "id": "tracks-legal-section-4a",
-      "claim": "The fee tracks are anchored in Banking Rules (Customer Service)(Fees), section 4a.",
-      "claim_type": "law",
-      "source_url": "https://www.kolzchut.org.il/he/מסלולי_עמלות_במחיר_חודשי_קבוע_בחשבון_עובר_ושב_בבנק",
-      "source_fetched_at": "2026-07-06T00:00:00Z",
-      "raw_snippet": "כללי הבנקאות (שירות ללקוח)(עמלות) - סעיף 4א",
-      "confidence": "high"
-    },
-    {
-      "id": "boi-fee-track-calculator",
-      "claim": "The Bank of Israel publishes a fee-tracks calculator that compares the basic track, expanded track, or no track across banks to find the cheapest option.",
-      "claim_type": "feature",
-      "source_url": "https://boi.org.il/information/fees/",
-      "source_fetched_at": "2026-07-06T00:00:00Z",
-      "raw_snippet": "מחשבון \"מסלולי עמלות\" יסייע לכם להשוות ולבחור באפשרות המתאימה והזולה ביותר - מסלול בסיסי, מסלול מורחב, או אי הצטרפות למסלול",
-      "confidence": "high"
-    },
-    {
-      "id": "esek-katan-reduced-tariff",
-      "claim": "The Bank of Israel promotes a reduced tariff for small businesses (esek katan), including widening the group of small businesses to which the reduced tariff applies.",
-      "claim_type": "feature",
-      "source_url": "https://boi.org.il/information/fees/",
-      "source_fetched_at": "2026-07-06T00:00:00Z",
-      "raw_snippet": "במטרה לסייע לעסקים קטנים, מקודמים בטיוטה שני צעדים משמעותיים חדשים: הרחבת קבוצת העסקים הקטנים שהתעריפון המוזל יחול עליהם ושינוי ברירת המחדל בצירוף עסק קטן לתעריפון המוזל",
-      "confidence": "high"
-    },
-    {
-      "id": "payment-services-law-name",
-      "claim": "Recurring-charge cancellation rights are governed by the Payment Services Law, 5779-2019.",
-      "claim_type": "law",
-      "source_url": "https://www.nevo.co.il/law_html/law01/502_043.htm",
-      "source_fetched_at": "2026-07-06T00:00:00Z",
-      "raw_snippet": "ביטול הרשאה לחיוב בידי המשלם 34. (א) המשלם רשאי לבטל הרשאה לחיוב, בכל עת, בהודעה לנותן שירותי תשלום למשלם או בהודעה למוטב",
-      "confidence": "high"
-    },
-    {
-      "id": "payment-law-s34-cancel-anytime",
-      "claim": "Under Payment Services Law section 34(a), the payer may cancel a debit authorization at any time by notice to the payment service provider or to the beneficiary. (סעיף 34).",
-      "claim_type": "law",
-      "source_url": "https://www.nevo.co.il/law_html/law01/502_043.htm",
-      "source_fetched_at": "2026-07-06T00:00:00Z",
-      "raw_snippet": "המשלם רשאי לבטל הרשאה לחיוב, בכל עת, בהודעה לנותן שירותי תשלום למשלם או בהודעה למוטב; קיבל נותן שירותי תשלום למשלם הודעה מהמשלם כאמור, יודיע על כך למוטב בהקדם האפשרי ולא יאוחר משני ימי עסקים",
-      "confidence": "high"
-    },
-    {
-      "id": "ongoing-transaction-stop-3-days",
-      "claim": "For an ongoing consumer transaction, the business must stop charging within 3 business days of the cancellation notice (6 business days if the notice was sent by registered mail).",
-      "claim_type": "feature",
-      "source_url": "https://www.kolzchut.org.il/he/ביטול_עסקה_מתמשכת",
-      "source_fetched_at": "2026-07-06T00:00:00Z",
-      "raw_snippet": "העוסק חייב להפסיק את החיוב בתוך 3 ימי עסקים מיום הודעת הביטול (או בתוך 6 ימי עסקים אם ההודעה נמסרה בדואר רשום), אלא אם כן הצרכן ציין תאריך מאוחר יותר",
-      "confidence": "high"
-    },
-    {
-      "id": "ongoing-transaction-compensation",
-      "claim": "If a business keeps charging after the legal cutoff, the consumer is entitled to compensation without proof of damage of up to 10,000 NIS, plus a full refund from the date charging should have stopped. Compensation up to 10,000 ש\"ח without proof of damage.",
-      "claim_type": "currency",
-      "source_url": "https://www.kolzchut.org.il/he/ביטול_עסקה_מתמשכת",
-      "source_fetched_at": "2026-07-06T00:00:00Z",
-      "raw_snippet": "במקרה שבו העסק ממשיך לגבות תשלום לאחר מועד הניתוק הקבוע בחוק, הצרכן זכאי לפיצוי ללא הוכחת נזק של עד 10,000 ₪, בנוסף להחזר כספי מלא מהמועד בו היה על העסק להפסיק את החיובים",
-      "confidence": "high"
-    },
-    {
-      "id": "general-cancellation-14-days",
-      "claim": "A general cancellation right allows cancelling within 14 calendar days from the date the transaction was made or from delivery of a written contract, whichever is later.",
-      "claim_type": "feature",
-      "source_url": "https://www.kolzchut.org.il/he/ביטול_עסקה_מתמשכת",
-      "source_fetched_at": "2026-07-06T00:00:00Z",
-      "raw_snippet": "זכות הביטול הכללית, המאפשרת ביטול בתוך 14 ימים קלנדריים מיום עשיית העסקה או מיום מסירת חוזה בכתב, לפי המאוחר",
-      "confidence": "high"
-    },
-    {
-      "id": "credit-card-debit-law-name",
-      "claim": "Credit and debit cards are governed by the Debit Cards Law, 5746-1986 (Hok Kartisei Chiyuv).",
-      "claim_type": "law",
-      "source_url": "https://he.wikisource.org/wiki/חוק_כרטיסי_חיוב",
-      "source_fetched_at": "2026-07-06T00:00:00Z",
-      "raw_snippet": "חוק כרטיסי חיוב, התשמ״ו–1986",
-      "confidence": "high"
-    },
-    {
-      "id": "ref-url-boi-calc",
-      "claim": "Bank of Israel fee-tracks calculator page that compares basic, expanded, and no-track pricing.",
-      "claim_type": "url",
-      "source_url": "https://www.boi.org.il/information/מחשבונים-וכלים/עמלות/",
-      "source_fetched_at": "2026-07-06T00:00:00Z",
-      "raw_snippet": "מחשבון מסלולי עמלות",
-      "confidence": "high"
-    },
-    {
-      "id": "bank-switching-niud",
-      "claim": "Since 22.9.2021 an online bank switch completes within 7 business days of submission (extendable to 30 business days on request) and moves shekel and FX balances, standing orders and account debit authorizations, checks, and bank and non-bank card activity. Loans and credit including mortgages, deposits and savings plans, non-transferable securities, and safes or products pledged to the old bank do NOT transfer. The follow-me service runs 3 years. Bank of Jerusalem is excluded from the online switch.",
-      "claim_type": "feature",
-      "source_url": "https://www.kolzchut.org.il/he/מעבר_בין_בנקים_באופן_מקוון_%28ניוד%29",
-      "source_fetched_at": "2026-08-01T00:00:00Z",
-      "raw_snippet": "הניוד יושלם בתוך 7 ימי עסקים מיום הגשת הבקשה",
-      "confidence": "high"
-    },
-    {
-      "id": "ref-url-bank-switching",
-      "claim": "Kol Zchut page on switching between banks online (niud) that documents the 7-business-day transfer, what moves, akev acharai, and the 22.9.2021 start date.",
-      "claim_type": "url",
-      "source_url": "https://www.kolzchut.org.il/he/מעבר_בין_בנקים_באופן_מקוון_%28ניוד%29",
-      "source_fetched_at": "2026-08-01T00:00:00Z",
-      "raw_snippet": "הניוד יושלם בתוך 7 ימי עסקים מיום הגשת הבקשה",
-      "confidence": "high"
-    },
-    {
-      "id": "overdraft-higher-interest",
-      "claim": "Exceeding the approved credit line in a current account (chariga mimisgeret) carries higher interest than the regular credit line; used as the reference link for the overdraft negotiation point.",
-      "claim_type": "url",
-      "source_url": "https://www.kolzchut.org.il/he/חריגה_ממסגרת_אשראי_בחשבון_עובר_ושב",
-      "source_fetched_at": "2026-08-01T00:00:00Z",
-      "raw_snippet": "במקרה של חריגה ממסגרת האשראי, הלקוח ישלם לבנק ריבית בסכומים גבוהים יותר ממה שהיה משלם אלמלא החריגה.",
-      "confidence": "high"
-    },
-    {
-      "id": "harshaa-on-account-not-card",
-      "claim": "Under the Payment Services Law 5779-2019 s.34(a) the payer may cancel a debit authorization (harshaa lechiyuv cheshbon) at any time by notice to the payment service provider or the beneficiary, and the provider must notify the beneficiary as soon as possible and no later than two business days.",
-      "claim_type": "feature",
-      "source_url": "https://www.nevo.co.il/law_html/law01/502_043.htm",
-      "source_fetched_at": "2026-08-01T00:00:00Z",
-      "raw_snippet": "קיבל נותן שירותי תשלום למשלם הודעה מהמשלם כאמור, יודיע על כך למוטב בהקדם האפשרי ולא יאוחר משני ימי עסקים",
-      "confidence": "high",
-      "verified_via": "browser",
-      "verified_at": "2026-08-01T00:00:00Z"
-    },
-    {
-      "id": "boi-2851-payment-account-caps",
-      "claim": "BoI circular 06-2851 caps the new 'nihul cheshbon tashlum' service at 10 NIS for the first 100 monthly operations, 5 NIS if only 0-2 operations were performed, and 1 NIS per operation above 100.",
-      "claim_type": "rate",
-      "source_url": "https://www.boi.org.il/media/0cgabv01/h2851.pdf",
-      "raw_snippet": "העמלה בעד 100 הפעולות הראשונות בחודש תעמוד על סכום שלא יעלה על 10 שקלים חדשים. אולם, ככל שבוצעו בחשבון התשלום 0 עד 2 פעולות בחודש, סכום זה יהיה עד 5 שקלים חדשים; עבור כל פעולה נוספת מעל 100 פעולות, הכלולה בשירות זה, הסכום לא יעלה על 1 ש\"ח.",
-      "source_fetched_at": "2026-08-01T00:00:00Z",
-      "verified_via": "pdf",
-      "verified_at": "2026-08-01T00:00:00Z",
-      "confidence": "high"
-    },
-    {
-      "id": "boi-2851-debit-card-cap",
-      "claim": "The reform caps the immediate-debit (debit) card fee at 7 NIS, against a current market average of about 9 NIS.",
-      "claim_type": "rate",
-      "source_url": "https://www.boi.org.il/media/0cgabv01/h2851.pdf",
-      "raw_snippet": "שולב ברפורמה מהלך לפיקוח על תעריף דמי כרטיס כך שלא יעלה על מחיר של 7 ש\"ח. התעריף המירבי שנקבע מאזן בין הרצון להוזיל את התעריף הממוצע הקיים כיום בשוק (כ-9 ש\"ח)",
-      "source_fetched_at": "2026-08-01T00:00:00Z",
-      "verified_via": "pdf",
-      "verified_at": "2026-08-01T00:00:00Z",
-      "confidence": "high"
-    },
-    {
-      "id": "boi-2851-effective-date",
-      "claim": "The updated fee rules take effect 1 July 2027, with staged entry from 1 October 2026; banks may implement earlier.",
-      "claim_type": "date",
-      "source_url": "https://www.boi.org.il/media/0cgabv01/h2851.pdf",
-      "raw_snippet": "העדכונים לכללי העמלות יכנסו לתוקפם ביום 1 ביולי 2027; על אף האמור תאגיד בנקאי רשאי לפעול",
-      "source_fetched_at": "2026-08-01T00:00:00Z",
-      "verified_via": "pdf",
-      "verified_at": "2026-08-01T00:00:00Z",
-      "confidence": "high"
-    },
-    {
-      "id": "boi-2851-auto-enrolment",
-      "claim": "Under the reform the default flips: all customers are enrolled in the new service automatically and need take no active step.",
-      "claim_type": "feature",
-      "source_url": "https://www.boi.org.il/media/0cgabv01/h2851.pdf",
-      "raw_snippet": "שונתה ברירת המחדל, כך שכל הלקוחות יצורפו אוטומטית לשירות ולא יידרשו לפעולה אקטיבית מצדם",
-      "source_fetched_at": "2026-08-01T00:00:00Z",
-      "verified_via": "pdf",
-      "verified_at": "2026-08-01T00:00:00Z",
-      "confidence": "high"
-    },
-    {
-      "id": "expanded-track-supervised-2022",
-      "claim": "Since September 2022 the expanded and expanded-plus tracks are price-supervised: tariffs cannot be raised without Bank of Israel approval.",
-      "claim_type": "regulation",
-      "source_url": "https://www.boi.org.il/media/0cgabv01/h2851.pdf",
-      "raw_snippet": "בשנת 2022 הוטל פיקוח על השירותים \"פעולה על ידי פקיד\", \"פעולה בערוץ ישיר\", \"מסלול מורחב\" ו\"מסלול מורחב פלוס\" ונקבע כי לא ניתן להעלות תעריפים ללא אישור בנק ישראל.",
-      "source_fetched_at": "2026-08-01T00:00:00Z",
-      "verified_via": "pdf",
-      "verified_at": "2026-08-01T00:00:00Z",
-      "confidence": "high"
-    },
-    {
-      "id": "boi-ombudsman-then-supervisor",
-      "claim": "Escalation is two-step: the Bank of Israel states the first step is a complaint to the bank's or credit-card company's own public-complaints ombudsman, and only then an appeal to the Supervisor of Banks Public Inquiries unit. Handling of public complaints is governed by Proper Conduct of Banking Business Directive 308A.",
-      "claim_type": "procedure",
-      "source_url": "https://www.boi.org.il/information/public-enquiries-unit/ihaveaq/",
-      "raw_snippet": "השלב הראשון הוא הגשת תלונה לנציב תלונות הציבור בבנק או בחברת כרטיס האשראי.",
-      "source_fetched_at": "2026-08-01T00:00:00Z",
-      "verified_via": "browser",
-      "verified_at": "2026-08-01T00:00:00Z",
-      "confidence": "high",
+      "claim_id": "law-banking-service-1981",
+      "fetched_at": "2026-08-01T00:00:00Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
       ]
     },
     {
-      "id": "consumer-protection-13d",
+      "claim": "The fee-tracks regulation is Banking Rules (Customer Service)(Fees), 5768-2008, and its amendment introduced the basic and expanded tracks.",
+      "source_url": "https://boi.org.il/information/fees/",
+      "raw_snippet": "בתאריך, 1.4.14, נכנס לתוקף התיקון בכללי הבנקאות (שירות ללקוח) (עמלות)",
+      "claim_id": "rules-amlot-name-2008",
+      "fetched_at": "2026-07-06T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-09-01T21:07:41+00:00"
+    },
+    {
+      "claim": "The fee-tracks obligation took effect on 1.4.14.",
+      "source_url": "https://boi.org.il/information/fees/",
+      "raw_snippet": "בתאריך, 1.4.14, נכנס לתוקף התיקון בכללי הבנקאות (שירות ללקוח) (עמלות) – התשס\"ח 2008",
+      "claim_id": "tracks-effective-date",
+      "fetched_at": "2026-07-06T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-09-01T21:07:41+00:00"
+    },
+    {
+      "claim": "The basic track (maslul basi) includes up to 10 direct-channel transactions plus up to 1 teller transaction per month.",
+      "source_url": "https://www.kolzchut.org.il/he/מסלולי_עמלות_במחיר_חודשי_קבוע_בחשבון_עובר_ושב_בבנק",
+      "raw_snippet": "המסלול הבסיסי מסלול זה כולל עד 10 פעולות בערוץ ישיר (ביצוע פעולות באינטרנט, במסופים, בתיבות אל-תור, בכספומט, הוראות קבע וכו' שאינן מבוצעות על ידי פקיד הבנק) ובנוסף עד פעולת פקיד אחת",
+      "claim_id": "basic-track-transactions",
+      "fetched_at": "2026-07-06T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim": "The basic track price is supervised and cannot exceed 10 NIS per month. (10 ש\"ח).",
+      "source_url": "https://www.kolzchut.org.il/he/מסלולי_עמלות_במחיר_חודשי_קבוע_בחשבון_עובר_ושב_בבנק",
+      "raw_snippet": "מחיר המסלול מפוקח ולא יכול לעלות על 10 ₪ בחודש",
+      "claim_id": "basic-track-price-cap",
+      "fetched_at": "2026-07-06T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim": "The expanded track (maslul murchav) includes up to 50 direct-channel transactions plus up to 10 teller transactions per month.",
+      "source_url": "https://www.kolzchut.org.il/he/מסלולי_עמלות_במחיר_חודשי_קבוע_בחשבון_עובר_ושב_בבנק",
+      "raw_snippet": "המסלול המורחב מסלול זה כולל עד 50 פעולות בערוץ ישיר ועד 10 פעולות פקיד",
+      "claim_id": "extended-track-transactions",
+      "fetched_at": "2026-07-06T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim": "Some banks also offer an expanded-plus track (maslul murchav plus) that adds bank-specific services on top of the expanded track.",
+      "source_url": "https://boi.org.il/information/fees/",
+      "raw_snippet": "חלק מהבנקים מציעים, בנוסף, גם מסלול מורחב פלוס הכולל את הפעולות במסלול המורחב ושירותים נוספים ייחודיים לכל בנק",
+      "claim_id": "extended-plus-track",
+      "fetched_at": "2026-07-06T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-09-01T21:07:41+00:00"
+    },
+    {
+      "claim": "Customers who perform the track volume without choosing a track may pay up to 2.5x (basic volume) or up to 5x (expanded volume) in fees at some banks.",
+      "source_url": "https://www.kolzchut.org.il/he/מסלולי_עמלות_במחיר_חודשי_קבוע_בחשבון_עובר_ושב_בבנק",
+      "raw_snippet": "מי שיבצעו את כמות הפעולות שנקבעה למסלול הבסיסי מבלי שבחרו במסלול הזה עלולים לשלם פי 2.5 על העמלות בחלק מהבנקים. מי שיבצעו את כמות הפעולות שנקבעה למסלול המורחב מבלי שבחרו במסלול הזה עלולים לשלם פי 5 על העמלות בחלק מהבנקים",
+      "superseded": true,
+      "superseded_note": "SUPERSEDED 2026-08-01. The skill deliberately no longer quotes any overpayment multiple; the instruction is to compare the user's own per-action total against the track price. Do NOT reinstate a multiple in the skill body.",
+      "claim_id": "no-track-overpay-multiple",
+      "fetched_at": "2026-07-06T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim": "A customer can switch tracks by notifying the bank; the switch takes effect on the 1st of the month following the month in which notice was given.",
+      "source_url": "https://www.kolzchut.org.il/he/מסלולי_עמלות_במחיר_חודשי_קבוע_בחשבון_עובר_ושב_בבנק",
+      "raw_snippet": "לקוח שרוצה לעבור בין מסלולי העמלות יכול להודיע על כך לבנק. המעבר בין המסלולים יתבצע ב-1 בחודש אחרי החודש שבו ניתנה ההודעה",
+      "claim_id": "switch-track-effective",
+      "fetched_at": "2026-07-06T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim": "Senior citizens (azrachim vatikim) and people with a determined disability of at least 40% are entitled to fee discounts.",
+      "source_url": "https://www.kolzchut.org.il/he/מסלולי_עמלות_במחיר_חודשי_קבוע_בחשבון_עובר_ושב_בבנק",
+      "raw_snippet": "אזרחים ותיקים ומי שנקבעה להם נכות בדרגה 40% לפחות זכאים להנחות בעמלות",
+      "claim_id": "senior-disability-discount",
+      "fetched_at": "2026-07-06T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim": "The Postal Bank is not obligated to offer the fee tracks.",
+      "source_url": "https://www.kolzchut.org.il/he/מסלולי_עמלות_במחיר_חודשי_קבוע_בחשבון_עובר_ושב_בבנק",
+      "raw_snippet": "בנק הדואר לא מחויב להציע את מסלולי העמלות שצוינו",
+      "claim_id": "post-bank-exempt",
+      "fetched_at": "2026-07-06T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim": "The fee tracks are anchored in Banking Rules (Customer Service)(Fees), section 4a.",
+      "source_url": "https://www.kolzchut.org.il/he/מסלולי_עמלות_במחיר_חודשי_קבוע_בחשבון_עובר_ושב_בבנק",
+      "raw_snippet": "כללי הבנקאות (שירות ללקוח)(עמלות) - סעיף 4א",
+      "claim_id": "tracks-legal-section-4a",
+      "fetched_at": "2026-07-06T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim": "The Bank of Israel publishes a fee-tracks calculator that compares the basic track, expanded track, or no track across banks to find the cheapest option.",
+      "source_url": "https://boi.org.il/information/fees/",
+      "raw_snippet": "מחשבון \"מסלולי עמלות\" יסייע לכם להשוות ולבחור באפשרות המתאימה והזולה ביותר - מסלול בסיסי, מסלול מורחב, או אי הצטרפות למסלול",
+      "claim_id": "boi-fee-track-calculator",
+      "fetched_at": "2026-07-06T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-09-01T21:07:41+00:00"
+    },
+    {
+      "claim": "The Bank of Israel promotes a reduced tariff for small businesses (esek katan), including widening the group of small businesses to which the reduced tariff applies.",
+      "source_url": "https://boi.org.il/information/fees/",
+      "raw_snippet": "במטרה לסייע לעסקים קטנים, מקודמים בטיוטה שני צעדים משמעותיים חדשים: הרחבת קבוצת העסקים הקטנים שהתעריפון המוזל יחול עליהם ושינוי ברירת המחדל בצירוף עסק קטן לתעריפון המוזל",
+      "claim_id": "esek-katan-reduced-tariff",
+      "fetched_at": "2026-07-06T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-09-01T21:07:41+00:00"
+    },
+    {
+      "claim": "Recurring-charge cancellation rights are governed by the Payment Services Law, 5779-2019.",
+      "source_url": "https://www.nevo.co.il/law_html/law01/502_043.htm",
+      "raw_snippet": "ביטול הרשאה לחיוב בידי המשלם 34. (א) המשלם רשאי לבטל הרשאה לחיוב, בכל עת, בהודעה לנותן שירותי תשלום למשלם או בהודעה למוטב",
+      "claim_id": "payment-services-law-name",
+      "fetched_at": "2026-07-06T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim": "Under Payment Services Law section 34(a), the payer may cancel a debit authorization at any time by notice to the payment service provider or to the beneficiary. (סעיף 34).",
+      "source_url": "https://www.nevo.co.il/law_html/law01/502_043.htm",
+      "raw_snippet": "המשלם רשאי לבטל הרשאה לחיוב, בכל עת, בהודעה לנותן שירותי תשלום למשלם או בהודעה למוטב; קיבל נותן שירותי תשלום למשלם הודעה מהמשלם כאמור, יודיע על כך למוטב בהקדם האפשרי ולא יאוחר משני ימי עסקים",
+      "claim_id": "payment-law-s34-cancel-anytime",
+      "fetched_at": "2026-07-06T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim": "For an ongoing consumer transaction, the business must stop charging within 3 business days of the cancellation notice (6 business days if the notice was sent by registered mail).",
+      "source_url": "https://www.kolzchut.org.il/he/ביטול_עסקה_מתמשכת",
+      "raw_snippet": "העוסק חייב להפסיק את החיוב בתוך 3 ימי עסקים מיום הודעת הביטול (או בתוך 6 ימי עסקים אם ההודעה נמסרה בדואר רשום), אלא אם כן הצרכן ציין תאריך מאוחר יותר",
+      "claim_id": "ongoing-transaction-stop-3-days",
+      "fetched_at": "2026-07-06T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim": "If a business keeps charging after the legal cutoff, the consumer is entitled to compensation without proof of damage of up to 10,000 NIS, plus a full refund from the date charging should have stopped. Compensation up to 10,000 ש\"ח without proof of damage.",
+      "source_url": "https://www.kolzchut.org.il/he/ביטול_עסקה_מתמשכת",
+      "raw_snippet": "במקרה שבו העסק ממשיך לגבות תשלום לאחר מועד הניתוק הקבוע בחוק, הצרכן זכאי לפיצוי ללא הוכחת נזק של עד 10,000 ₪, בנוסף להחזר כספי מלא מהמועד בו היה על העסק להפסיק את החיובים",
+      "claim_id": "ongoing-transaction-compensation",
+      "fetched_at": "2026-07-06T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim": "A general cancellation right allows cancelling within 14 calendar days from the date the transaction was made or from delivery of a written contract, whichever is later.",
+      "source_url": "https://www.kolzchut.org.il/he/ביטול_עסקה_מתמשכת",
+      "raw_snippet": "זכות הביטול הכללית, המאפשרת ביטול בתוך 14 ימים קלנדריים מיום עשיית העסקה או מיום מסירת חוזה בכתב, לפי המאוחר",
+      "claim_id": "general-cancellation-14-days",
+      "fetched_at": "2026-07-06T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim": "Credit and debit cards are governed by the Debit Cards Law, 5746-1986 (Hok Kartisei Chiyuv).",
+      "source_url": "https://he.wikisource.org/wiki/חוק_כרטיסי_חיוב",
+      "raw_snippet": "חוק כרטיסי חיוב, התשמ״ו–1986",
+      "claim_id": "credit-card-debit-law-name",
+      "fetched_at": "2026-07-06T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim": "Bank of Israel fee-tracks calculator page that compares basic, expanded, and no-track pricing.",
+      "source_url": "https://www.boi.org.il/information/מחשבונים-וכלים/עמלות/",
+      "raw_snippet": "מחשבון \"מסלולי עמלות\" יסייע לכם להשוות ולבחור באפשרות המתאימה והזולה ביותר",
+      "claim_id": "ref-url-boi-calc",
+      "fetched_at": "2026-07-06T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-09-01T21:07:41+00:00"
+    },
+    {
+      "claim": "Since 22.9.2021 an online bank switch completes within 7 business days of submission (extendable to 30 business days on request) and moves shekel and FX balances, standing orders and account debit authorizations, checks, and bank and non-bank card activity. Loans and credit including mortgages, deposits and savings plans, non-transferable securities, and safes or products pledged to the old bank do NOT transfer. The follow-me service runs 3 years. Bank of Jerusalem is excluded from the online switch.",
+      "source_url": "https://www.kolzchut.org.il/he/מעבר_בין_בנקים_באופן_מקוון_%28ניוד%29",
+      "raw_snippet": "הניוד יושלם בתוך 7 ימי עסקים מיום הגשת הבקשה",
+      "claim_id": "bank-switching-niud",
+      "fetched_at": "2026-08-01T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim": "Kol Zchut page on switching between banks online (niud) that documents the 7-business-day transfer, what moves, akev acharai, and the 22.9.2021 start date.",
+      "source_url": "https://www.kolzchut.org.il/he/מעבר_בין_בנקים_באופן_מקוון_%28ניוד%29",
+      "raw_snippet": "הניוד יושלם בתוך 7 ימי עסקים מיום הגשת הבקשה",
+      "claim_id": "ref-url-bank-switching",
+      "fetched_at": "2026-08-01T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim": "Exceeding the approved credit line in a current account (chariga mimisgeret) carries higher interest than the regular credit line; used as the reference link for the overdraft negotiation point.",
+      "source_url": "https://www.kolzchut.org.il/he/חריגה_ממסגרת_אשראי_בחשבון_עובר_ושב",
+      "raw_snippet": "במקרה של חריגה ממסגרת האשראי, הלקוח ישלם לבנק ריבית בסכומים גבוהים יותר ממה שהיה משלם אלמלא החריגה.",
+      "claim_id": "overdraft-higher-interest",
+      "fetched_at": "2026-08-01T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim": "Under the Payment Services Law 5779-2019 s.34(a) the payer may cancel a debit authorization (harshaa lechiyuv cheshbon) at any time by notice to the payment service provider or the beneficiary, and the provider must notify the beneficiary as soon as possible and no later than two business days.",
+      "source_url": "https://www.nevo.co.il/law_html/law01/502_043.htm",
+      "raw_snippet": "קיבל נותן שירותי תשלום למשלם הודעה מהמשלם כאמור, יודיע על כך למוטב בהקדם האפשרי ולא יאוחר משני ימי עסקים",
+      "verified_via": "browser",
+      "verified_at": "2026-08-01T00:00:00Z",
+      "claim_id": "harshaa-on-account-not-card",
+      "fetched_at": "2026-08-01T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim": "BoI circular 06-2851 caps the new 'nihul cheshbon tashlum' service at 10 NIS for the first 100 monthly operations, 5 NIS if only 0-2 operations were performed, and 1 NIS per operation above 100.",
+      "source_url": "https://www.boi.org.il/media/0cgabv01/h2851.pdf",
+      "raw_snippet": "העמלה בעד 100 הפעולות הראשונות בחודש תעמוד על סכום שלא יעלה על 10 שקלים חדשים. אולם, ככל שבוצעו בחשבון התשלום 0 עד 2 פעולות בחודש, סכום זה יהיה עד 5 שקלים חדשים; עבור כל פעולה נוספת מעל 100 פעולות, הכלולה בשירות זה, הסכום לא יעלה על 1 ש\"ח.",
+      "verified_via": "pdf",
+      "verified_at": "2026-08-01T00:00:00Z",
+      "claim_id": "boi-2851-payment-account-caps",
+      "fetched_at": "2026-08-01T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim": "The reform caps the immediate-debit (debit) card fee at 7 NIS, against a current market average of about 9 NIS.",
+      "source_url": "https://www.boi.org.il/media/0cgabv01/h2851.pdf",
+      "raw_snippet": "שולב ברפורמה מהלך לפיקוח על תעריף דמי כרטיס כך שלא יעלה על מחיר של 7 ש\"ח. התעריף המירבי שנקבע מאזן בין הרצון להוזיל את התעריף הממוצע הקיים כיום בשוק (כ-9 ש\"ח)",
+      "verified_via": "pdf",
+      "verified_at": "2026-08-01T00:00:00Z",
+      "claim_id": "boi-2851-debit-card-cap",
+      "fetched_at": "2026-08-01T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim": "The updated fee rules take effect 1 July 2027, with staged entry from 1 October 2026; banks may implement earlier.",
+      "source_url": "https://www.boi.org.il/media/0cgabv01/h2851.pdf",
+      "raw_snippet": "העדכונים לכללי העמלות יכנסו לתוקפם ביום 1 ביולי 2027; על אף האמור תאגיד בנקאי רשאי לפעול",
+      "verified_via": "pdf",
+      "verified_at": "2026-08-01T00:00:00Z",
+      "claim_id": "boi-2851-effective-date",
+      "fetched_at": "2026-08-01T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim": "Under the reform the default flips: all customers are enrolled in the new service automatically and need take no active step.",
+      "source_url": "https://www.boi.org.il/media/0cgabv01/h2851.pdf",
+      "raw_snippet": "שונתה ברירת המחדל, כך שכל הלקוחות יצורפו אוטומטית לשירות ולא יידרשו לפעולה אקטיבית מצדם",
+      "verified_via": "pdf",
+      "verified_at": "2026-08-01T00:00:00Z",
+      "claim_id": "boi-2851-auto-enrolment",
+      "fetched_at": "2026-08-01T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim": "Since September 2022 the expanded and expanded-plus tracks are price-supervised: tariffs cannot be raised without Bank of Israel approval.",
+      "source_url": "https://www.boi.org.il/media/0cgabv01/h2851.pdf",
+      "raw_snippet": "בשנת 2022 הוטל פיקוח על השירותים \"פעולה על ידי פקיד\", \"פעולה בערוץ ישיר\", \"מסלול מורחב\" ו\"מסלול מורחב פלוס\" ונקבע כי לא ניתן להעלות תעריפים ללא אישור בנק ישראל.",
+      "verified_via": "pdf",
+      "verified_at": "2026-08-01T00:00:00Z",
+      "claim_id": "expanded-track-supervised-2022",
+      "fetched_at": "2026-08-01T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim": "Escalation is two-step: the Bank of Israel states the first step is a complaint to the bank's or credit-card company's own public-complaints ombudsman, and only then an appeal to the Supervisor of Banks Public Inquiries unit. Handling of public complaints is governed by Proper Conduct of Banking Business Directive 308A.",
+      "source_url": "https://www.boi.org.il/information/public-enquiries-unit/ihaveaq/",
+      "raw_snippet": "השלב הראשון הוא הגשת תלונה לנציב תלונות הציבור בבנק או בחברת כרטיס האשראי.",
+      "verified_via": "browser",
+      "verified_at": "2026-08-01T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "claim_id": "boi-ombudsman-then-supervisor",
+      "fetched_at": "2026-08-01T00:00:00Z"
+    },
+    {
       "claim": "Cancellation of an ongoing transaction (עסקה מתמשכת) is governed by סעיף 13ד (and 14ט) of the Consumer Protection Law 5741-1981. Where the transaction can be made through the business's website, cancellation must also be possible through that website, via a prominent dedicated link.",
-      "claim_type": "regulation",
       "source_url": "https://www.kolzchut.org.il/he/ביטול_עסקה_מתמשכת",
       "raw_snippet": "בעסקה שניתן לבצע באמצעות אתר האינטרנט של העוסק, יש לאפשר גם את ביטול העסקה באמצעות האתר",
-      "source_fetched_at": "2026-08-01T00:00:00Z",
-      "confidence": "high",
       "appears_in": [
+        "references/cancellation-letter-templates.md"
+      ],
+      "claim_id": "consumer-protection-13d",
+      "fetched_at": "2026-08-01T00:00:00Z"
+    },
+    {
+      "claim": "Before the Supervisor of Banks Public Inquiries unit will handle a complaint, the complainant must exhaust the bank's or credit-card company's own ombudsman and receive a written answer within 45 days; in certain circumstances the ombudsman may extend to 60 days and must notify the complainant in writing. Responses are anchored in Proper Conduct of Banking Business Directive 308A.",
+      "source_url": "https://www.boi.org.il/media/vpdbgr12/%D7%90%D7%9E%D7%A0%D7%AA-%D7%A9%D7%99%D7%A8%D7%95%D7%AA-%D7%94%D7%99%D7%97%D7%99%D7%93%D7%94-%D7%9C%D7%A4%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A6%D7%99%D7%91%D7%95%D7%A8-%D7%95%D7%9C%D7%91%D7%A7%D7%A8%D7%94-%D7%A6%D7%A8%D7%9B%D7%A0%D7%99%D7%AA.pdf",
+      "raw_snippet": "יש למצות את הליך הבירור עם התאגיד הבנקאי",
+      "verified_via": "pdf",
+      "verified_at": "2026-08-01T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "claim_id": "boi-ombudsman-response-window",
+      "fetched_at": "2026-08-01T00:00:00Z"
+    },
+    {
+      "claim_id": "senior-disability-4-teller-actions",
+      "claim": "A senior, a person with 40%+ disability, or a customer holding no cash-withdrawal card gets 4 teller actions a month at the direct-channel price; the disability entitlement starts the 1st of the month after the certificate is presented",
+      "source_url": "https://he.wikisource.org/wiki/כללי_הבנקאות_(שירות_ללקוח)_(עמלות)",
+      "raw_snippet": "לקוח שאינו מחזיק כרטיס למשיכת מזומן, לקוח שהוא אדם עם מוגבלות ולקוח שהוא אזרח ותיק, זכאים ל־4 פעולות על ידי פקיד בחודש במחיר פעולה בערוץ ישיר. זכאות כאמור של אדם עם מוגבלות תחל ב־1 בחודש שלאחר הצגת תעודה או אישור כנדרש.",
+      "fetched_at": "2026-09-01T21:01:47+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "disability-40-percent-definition",
+      "claim": "\"Person with a disability\" for the fee rules means a customer who has presented the bank an MoD or Bituach Leumi certificate of 40% or more disability",
+      "source_url": "https://he.wikisource.org/wiki/כללי_הבנקאות_(שירות_ללקוח)_(עמלות)",
+      "raw_snippet": "”אדם עם מוגבלות“ – (תבוטל ביום 1.7.2027): לקוח שהציג לבנק אישור ממשרד הביטחון או מהמוסד לביטוח לאומי, כמשמעותו בחוק הביטוח הלאומי [נוסח משולב], התשנ״ה–1994 , ולפיו הוא סובל מנכות בשיעור של 40% או יותר;",
+      "fetched_at": "2026-09-01T21:01:47+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "rule-4a-b1-automatic-basic-track-enrolment",
+      "claim": "Rule 4a(b1): if a senior or person with a disability was charged more than the basic track would have cost in every month of a financial year, the bank must enroll them in the basic track by 1 March of the following year and notify them in writing with an opt-out",
+      "source_url": "https://he.wikisource.org/wiki/כללי_הבנקאות_(שירות_ללקוח)_(עמלות)",
+      "raw_snippet": "נגבו מלקוח שהוא אזרח ותיק או אדם עם מוגבלות, עמלות לפי פרט 1(א)(2) או (3) שבתוספת הראשונה , בסכום העולה על הסכום שהיה משלם בפועל אילו היה מצטרף למסלול הבסיסי, בכל חודש במהלך תקופה של שנת כספים, יחשב התאגיד הבנקאי את ההפרשים בין הסכומים האמורים; מצא התאגיד הבנקאי כי ההפרשים בכל חודש גבוהים מאפס, יצרפו התאגיד הבנקאי למסלול הבסיסי עד יום 1 במרס של השנה העוקבת",
+      "fetched_at": "2026-09-01T21:01:47+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "psl-34a-cancel-authorization-any-time",
+      "claim": "Payment Services Law s.34(a): the payer may cancel a debit authorization at any time by notice to the bank or the beneficiary; the bank notifies the beneficiary within two business days",
+      "source_url": "https://he.wikisource.org/wiki/חוק_שירותי_תשלום",
+      "raw_snippet": "34. ביטול הרשאה לחיוב בידי המשלם (א) המשלם רשאי לבטל הרשאה לחיוב, בכל עת, בהודעה לנותן שירותי תשלום למשלם או בהודעה למוטב; קיבל נותן שירותי תשלום למשלם הודעה מהמשלם כאמור, יודיע על כך למוטב בהקדם האפשרי ולא יאוחר משני ימי עסקים",
+      "fetched_at": "2026-09-01T21:01:47+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/payment-services-remedies.md",
         "references/cancellation-letter-templates.md"
       ]
     },
     {
-      "id": "boi-ombudsman-response-window",
-      "claim": "Before the Supervisor of Banks Public Inquiries unit will handle a complaint, the complainant must exhaust the bank's or credit-card company's own ombudsman and receive a written answer within 45 days; in certain circumstances the ombudsman may extend to 60 days and must notify the complainant in writing. Responses are anchored in Proper Conduct of Banking Business Directive 308A.",
-      "claim_type": "procedure",
-      "source_url": "https://www.boi.org.il/media/vpdbgr12/%D7%90%D7%9E%D7%A0%D7%AA-%D7%A9%D7%99%D7%A8%D7%95%D7%AA-%D7%94%D7%99%D7%97%D7%99%D7%93%D7%94-%D7%9C%D7%A4%D7%A0%D7%99%D7%95%D7%AA-%D7%94%D7%A6%D7%99%D7%91%D7%95%D7%A8-%D7%95%D7%9C%D7%91%D7%A7%D7%A8%D7%94-%D7%A6%D7%A8%D7%9B%D7%A0%D7%99%D7%AA.pdf",
-      "raw_snippet": "יש למצות את הליך הבירור עם התאגיד הבנקאי",
-      "source_fetched_at": "2026-08-01T00:00:00Z",
-      "verified_via": "pdf",
-      "verified_at": "2026-08-01T00:00:00Z",
-      "confidence": "high",
+      "claim_id": "psl-34c-24-month-dormancy",
+      "claim": "Payment Services Law s.34(c): an authorization unused for 24 months is no longer valid",
+      "source_url": "https://he.wikisource.org/wiki/חוק_שירותי_תשלום",
+      "raw_snippet": "שלא נעשה בה שימוש 24 חודשים ממועד אישור ההרשאה לפי סעיף 33 או ממועד החיוב האחרון שנעשה מכוחה, לפי המאוחר – אינה תקפה",
+      "fetched_at": "2026-09-01T21:01:47+00:00",
       "appears_in": [
         "SKILL.md",
-        "SKILL_HE.md"
+        "SKILL_HE.md",
+        "references/payment-services-remedies.md"
+      ]
+    },
+    {
+      "claim_id": "psl-35a-reverse-debit-3-business-days",
+      "claim": "Payment Services Law s.35(a): the payer may reverse a specific debit by notice within 3 business days of the debit; the bank refunds at debit-date value within 1 business day",
+      "source_url": "https://he.wikisource.org/wiki/חוק_שירותי_תשלום",
+      "raw_snippet": "35. ביטול חיוב מכוח הרשאה לחיוב, בידי המשלם (א) המשלם רשאי לבטל חיוב מסוים שחויב בו מכוח הרשאה לחיוב, בהודעה לנותן שירותי התשלום למשלם, ובלבד שההודעה כאמור תימסר לנותן שירותי התשלום לא יאוחר משלושה ימי עסקים ממועד החיוב; הודיע המשלם כאמור ישיב לו נותן שירותי התשלום למשלם את סכום החיוב, בערכו ביום החיוב, בתוך יום עסקים אחד ממועד ההודעה.",
+      "fetched_at": "2026-09-01T21:01:47+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/payment-services-remedies.md"
+      ]
+    },
+    {
+      "claim_id": "psl-37-exceeded-authorization",
+      "claim": "Payment Services Law s.37: where the bank debited beyond the authorization (expired authorization, above the permitted amount, or on a different date), it refunds the difference within one business day of discovering it or being notified, whichever is earlier",
+      "source_url": "https://he.wikisource.org/wiki/חוק_שירותי_תשלום",
+      "raw_snippet": "37. חריגה מהרשאה לחיוב חייב נותן שירותי תשלום למשלם את המשלם בחריגה מההרשאה לחיוב שניתנה לו, ישיב למשלם את ההפרש שבין הסכום שבו חויב המשלם ובין הסכום שנותן שירותי התשלום רשאי היה לחייבו על פי ההרשאה, בערכו ביום החיוב",
+      "fetched_at": "2026-09-01T21:01:47+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/payment-services-remedies.md"
+      ]
+    },
+    {
+      "claim_id": "psl-38a-unreasonable-debit-7-days",
+      "claim": "Payment Services Law s.38(a): a debit exceeding what the payer could reasonably expect is refunded within seven business days of the payer's notice",
+      "source_url": "https://he.wikisource.org/wiki/חוק_שירותי_תשלום",
+      "raw_snippet": "חויב משלם מכוח הרשאה לחיוב וסכום החיוב חרג מהסכום שהמשלם יכול היה לצפות שיחויב בו באופן סביר, בהתחשב בחיובים הקודמים שבוצעו מכוח אותה הרשאה ובנסיבות העניין, ישיב לו נותן שירותי התשלום למשלם את סכום החיוב, בערכו ביום החיוב; הסכום לפי סעיף קטן זה יושב בתוך שבעה ימי עסקים מיום הודעת המשלם על החיוב הלא סביר.",
+      "fetched_at": "2026-09-01T21:01:47+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/payment-services-remedies.md"
+      ]
+    },
+    {
+      "claim_id": "psl-38c-ceiling-exception",
+      "claim": "Payment Services Law s.38(c): s.38(a) does not apply at all where the bank enabled the payer, when approving the authorization under s.33, to cap the debit amount and set an expiry date",
+      "source_url": "https://he.wikisource.org/wiki/חוק_שירותי_תשלום",
+      "raw_snippet": "הוראות סעיף קטן (א) לא יחולו אם נותן שירותי התשלום למשלם איפשר למשלם, במסגרת אישור בקשת ההרשאה לפי סעיף 33 , להגביל את תקרת סכום החיוב בפעולות תשלום הנעשות מכוח ההרשאה ולקבוע את מועד פקיעת תוקפה של ההרשאה.",
+      "fetched_at": "2026-09-01T21:01:47+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/payment-services-remedies.md"
+      ]
+    },
+    {
+      "claim_id": "psl-6a-close-account-any-time",
+      "claim": "Payment Services Law s.6(a): the customer may end a payment-services contract at any time by notice; for payment-account management the contract ends five business days after the customer completes the closure steps set in the contract",
+      "source_url": "https://he.wikisource.org/wiki/חוק_שירותי_תשלום",
+      "raw_snippet": "סיים המשלם את חוזה שירותי התשלום לפי סעיף 6 או הוחזר אמצעי התשלום לרשותו של נותן שירותי התשלום למשלם",
+      "fetched_at": "2026-09-01T21:01:47+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/payment-services-remedies.md"
+      ]
+    },
+    {
+      "claim_id": "closure-fee-cap-40-nis",
+      "claim": "Total account-closure fees may not exceed 40 NIS, a cap that expressly includes cancelling debit authorizations and standing orders",
+      "source_url": "https://he.wikisource.org/wiki/כללי_הבנקאות_(שירות_ללקוח)_(עמלות)",
+      "raw_snippet": "סך כל העמלות שיגבה התאגיד הבנקאי בשל פעולות לסגירת חשבון המפורטות להלן לא יעלה על 40 ש״ח (לא כולל עמלות בעד שירות מסלול, החזר הוצאות מסלקת הבורסה, קורספונדנט ועמלות פירעון מוקדם): העברת ניירות ערך לחשבון אותו לקוח בתאגיד בנקאי אחר בארץ, העברת ניירות ערך זרים לחשבון אותו לקוח בתאגיד בנקאי אחר בארץ, העברה בנקאית לחשבון של אותו לקוח בתאגיד בנקאי אחר בארץ, העברת מטבע חוץ לחשבון של אותו לקוח בתאגיד בנקאי אחר בארץ, החזרת שיקים דחויים למפקיד אגב סגירת חשבונו בתאגיד הבנקאי, אישור יתרה לפני פירעון מוקדם, ביטול הרשאות לחיוב חשבון וביטול הוראות קבע.",
+      "fetched_at": "2026-09-01T21:02:20+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/payment-services-remedies.md",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "psl-enforcement-list-refund-duties",
+      "claim": "The Payment Services Law's enforcement schedule identifies the refund duties by section: failing to refund a cancelled debit breaches s.35(a), and failing to refund the difference breaches s.37",
+      "source_url": "https://he.wikisource.org/wiki/חוק_שירותי_תשלום",
+      "raw_snippet": "דרש לבצע פעולת תשלום מכוח ההרשאה שבוטלה, בניגוד להוראות סעיף 34(ב)(1) ; (13) לא השיב למשלם את סכום החיוב שבוטל, בניגוד להוראות סעיף 35(א) ; (14) לא השיב למשלם את סכום ההפרש, בניגוד להוראות סעיף 37 ;",
+      "fetched_at": "2026-09-01T21:04:51+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/payment-services-remedies.md"
+      ]
+    },
+    {
+      "claim_id": "psl-sections-35-37-38-clocks-secondary",
+      "claim": "Independent Israeli financial press summarises the same clocks: s.35 three business days to reverse a debit with refund within one business day, s.37 for a charge exceeding the authorised amount or date with the difference refunded within one business day, s.38 seven business days for an unreasonable debit",
+      "source_url": "https://www.bizportal.co.il/financialconsumerism/news/article/20038945",
+      "raw_snippet": "סעיף 35 נותן שלושה ימי עסקים לביטול חיוב מסוים והשבה תוך יום עסקים. סעיף 37 מטפל בחיוב שחרג מהסכום או מהמועד שנקבעו בהרשאה, והשבת ההפרש היא תוך יום עסקים. סעיף 38 מוסיף שבעה ימי עסקים להשבת חיוב שאינו סביר ביחס לחיובים קודמים באותו הסדר.",
+      "fetched_at": "2026-09-01T21:04:51+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/payment-services-remedies.md"
+      ]
+    },
+    {
+      "claim_id": "harshaa-identified-by-kod-mosad-asmachta-leumi",
+      "claim": "Israeli banks identify a debit authorization by the beneficiary's institution code, institution name and reference (asmachta), which the customer obtains from the beneficiary",
+      "source_url": "https://www.leumi.co.il/he/Articles/37386",
+      "raw_snippet": "פנו למוסד נותן השירות וקבלו ממנו קוד המוסד, שם המוסד, ואסמכתא (אם קיימת).",
+      "fetched_at": "2026-09-01T21:21:49+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/cancellation-letter-templates.md",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "harshaa-identified-by-kod-mosad-asmachta-mizrahi",
+      "claim": "A second bank confirms the same identifying fields for a debit authorization: institution code plus asmachta or identifying number, taken from the beneficiary's account",
+      "source_url": "https://www.mizrahi-tefahot.co.il/faq/bill/",
+      "raw_snippet": "ממלאים את הפרטים: קוד מוסד ואסמכתה או מספר מזהה. פרטים אלה מתקבלים מחשבון המוטב.",
+      "fetched_at": "2026-09-01T21:21:49+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/cancellation-letter-templates.md"
+      ]
+    },
+    {
+      "claim_id": "banks-offer-debit-ceiling-and-expiry-at-setup",
+      "claim": "Israeli banks offer a debit ceiling and an expiry date when a debit authorization is created, which is the condition that disapplies the Payment Services Law s.38(a) remedy under s.38(c)",
+      "source_url": "https://www.mizrahi-tefahot.co.il/faq/bill/",
+      "raw_snippet": "קובעים האם החיוב החודשי מוגבל בסכום או פעיל עד תאריך מסוים.",
+      "fetched_at": "2026-09-01T21:21:49+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/payment-services-remedies.md"
+      ]
+    },
+    {
+      "claim_id": "azrach-vatik-definition-chain",
+      "claim": "The fee rules do not state an age for azrach vatik; they define it by reference to the Senior Citizens Law 5750-1989, which in turn keys it to retirement age, so the qualifying age is not a flat number in these rules",
+      "source_url": "https://he.wikisource.org/wiki/כללי_הבנקאות_(שירות_ללקוח)_(עמלות)",
+      "raw_snippet": "”אזרח ותיק“ – (תבוטל ביום 1.7.2027): כמשמעותו בחוק האזרחים הותיקים, התש״ן–1989",
+      "fetched_at": "2026-09-01T22:06:50+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/domain-checklist.md"
       ]
     }
   ]

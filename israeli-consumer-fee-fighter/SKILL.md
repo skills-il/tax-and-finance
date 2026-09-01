@@ -18,7 +18,7 @@ Work in the tracks below depending on what the user needs. Ask which one applies
 
 ### A. Pick the cheaper bank fee track
 
-Israeli banks (except the Postal Bank) must offer two fixed-price tracks under Banking Rules (Customer Service)(Fees), 5768-2008, section 4a (in force since 1.4.14). A customer who picks no track is charged per action, which is often more expensive than a track for anyone with steady monthly activity. Do not quote the user a specific multiple: compare their own per-action total against the track price using the calculator in step 3.
+Israeli banks (except the Postal Bank) must offer two fixed-price tracks under Banking Rules (Customer Service)(Fees), 5768-2008, section 4a (in force since 1.4.14). A customer who picks no track is charged per action, which is often more expensive than a track for anyone with steady monthly activity. Do not quote the user a specific multiple: compare their own per-action total against the track price using the calculator in step 4.
 
 | Method | Direct-channel actions/month | Teller actions/month | Monthly price |
 |---|---|---|---|
@@ -31,10 +31,17 @@ Both expanded tracks came under price supervision in the Banking Order (Customer
 
 Decision steps:
 1. Ask the user for their typical monthly action count, split into direct-channel (internet, app, ATM, standing orders) and teller (peulat pakid). If they do not know, tell them to read it off recent statements or ask the bank.
-2. Check for a cheaper path first: seniors (azrachim vatikim) and people with 40%+ determined disability are entitled to fee discounts; a business may qualify as a small business (esek katan) for the reduced tariff. A discount can beat a track. **Never state a discount percentage, shekel amount, or age threshold yourself.** This skill does not carry those figures, and inventing one is worse than omitting it. Have the user read the discount terms off their bank's published tariff or ask the bank in writing which discounts their account qualifies for, then compare that answer against the track price.
-3. Run `scripts/fee_track_calculator.py` with the user's action counts and their bank's real per-action and track prices to compare all three methods. It adds estimated overage so an over-limit track is not recommended blindly.
-4. Confirm the result against the Bank of Israel fee-tracks calculator, which compares against every bank.
-5. To switch: notify the bank via site, phone, or branch. The switch takes effect on the 1st of the month after the notice. Use the request template in `references/cancellation-letter-templates.md` (template 4).
+2. Check for a cheaper path first. The senior and disability entitlement is set by the fee rules themselves, so it is identical at every bank and is **not** a percentage discount:
+   - **What it is:** a customer who is an azrach vatik, a person with a disability, or who holds no cash-withdrawal card gets **4 teller actions a month charged at the direct-channel price** (Banking Rules (Customer Service)(Fees), 5768-2008, First Schedule, item 1(a)(2) note). There is no published percentage or shekel discount. Do not invent one.
+   - **Senior = retirement age.** The fee rules give no age; they define azrach vatik by reference to the Senior Citizens Law, 5750-1989, which keys it to the Retirement Age Law, 5764-2004. That age differs by sex and birth date and has been re-staged more than once, so read it off that law rather than quoting a number.
+   - **Disability = a customer who has PRESENTED the bank a Ministry of Defense or Bituach Leumi certificate of 40%+ disability.** Presenting it is what creates the entitlement, which starts on the 1st of the month after presentation and is **not retroactive**. Tell the user to hand it in now rather than assume the bank knows.
+   - A business may separately qualify as a small business (esek katan) or osek murshe for the reduced tariff.
+
+   The entitlement is **not** an alternative to joining a track, and it does not discount the fixed track price. It reprices teller actions wherever they are billed per action under item 1(a)(2), which means both when the customer is on no track at all and on a track's teller OVERAGE. So it changes the arithmetic of all three options at once rather than adding a fourth. Do not reason about it by hand: pass `--entitled` to the calculator in step 4, which applies it to every method. For a low-volume eligible customer it routinely flips the recommendation.
+3. **Check the bank owed them an automatic track enrolment.** Under rule 4a(b1) (and 4a(b2) for a small business / osek murshe), if a senior, a person with a disability, or a small business was charged more every single month of a financial year than the basic track would have cost, the bank must compute the differences and **enroll them in the basic track by 1 March of the following year**, in writing, with the option to opt out. Banks do not always do this. Have the user ask what the comparison showed for the last completed year, and treat a missing enrolment as a complaint ground under section C. Note what the rule does and does not give: it obliges the bank to enroll the customer **going forward**, and does not on its own text award a refund of the prior year's excess. Ask for the refund anyway in the same letter, as a separate restitution request rather than as something the rule guarantees, so the complaint does not silently concede the past year.
+4. Run `scripts/fee_track_calculator.py` with the user's action counts and their bank's real per-action and track prices to compare all three methods. It adds estimated overage so an over-limit track is not recommended blindly.
+5. Confirm the result against the Bank of Israel fee-tracks calculator, which compares against every bank.
+6. To switch: notify the bank via site, phone, or branch. The switch takes effect on the 1st of the month after the notice. Use the request template in `references/cancellation-letter-templates.md` (template 4).
 
 ### B. Cancel a credit card or stop a recurring charge
 
@@ -52,11 +59,26 @@ Steps:
 
 - **Before cancelling a card:** settle any open installments (tashlumim) and any credit (kredit) revolving balance first. Cancellation can accelerate the remaining installments into a single immediate charge, or the issuer can block the cancellation until the balance is cleared.
 - **Cancel a credit card:** send a written cancellation request to the issuer (template 1 in `references/cancellation-letter-templates.md`). Ask for written confirmation and a list of the recurring charges billed to the card, so you can move each one to another payment method before the card dies.
-- **Stop a recurring debit:** under the Payment Services Law, 5779-2019, section 34(a), the payer may cancel a debit authorization at any time by notice to the bank or to the beneficiary. Use template 2. The bank must notify the beneficiary within two business days.
+- **Stop a recurring debit:** under the Payment Services Law, 5779-2019, s.34(a), the payer may cancel a debit authorization at any time by notice to the bank or to the beneficiary. Use template 2. The bank must notify the beneficiary within two business days.
 - **Cancel the debit is not the same as cancel the debt:** stopping the harshaa or the card charge only stops the payment instrument. The underlying contract survives, so the business can still invoice you or send the debt to collections. To end the obligation itself, also cancel the underlying transaction (template 3), not just the payment.
 - **Cancel an ongoing subscription (iska mitmasheshet):** the business must stop charging within 3 business days of the notice (6 business days if sent by registered mail). Use template 3. If the business keeps charging after the cutoff, the consumer is entitled to compensation without proof of damage of up to 10,000 NIS plus a full refund. A general 14-day cancellation right also applies to recent sign-ups.
 
 Always send by a channel that leaves a record (registered mail, email, or the company website) so the notice date is provable; the stop-charging clock runs from that date.
+
+**Getting back money already taken.** Stopping future charges is only half the job, and users routinely assume a wrong debit is gone for good. The Payment Services Law gives four separate remedies, all of them against the BANK rather than the business, each with its own clock. Full text and the exact wording to quote are in `references/payment-services-remedies.md`.
+
+**Check which mechanism took the money before picking a route, because these four cover only ONE of them.** Sections 34 to 38 are written about a harshaa lechiyuv, the authorization sitting on the bank account. They do **not** apply to a charge billed to a card number, which is the more common case for a gym, a streaming service, or an insurance policy. Sending the bank a s.35(a) demand about a card-billed subscription gets it refused, and the 3-business-day window is gone by the time the user finds out. For a card-billed charge the route is instead: dispute it with the card ISSUER (Cal / Max / Isracard, or the bank if it issued the card), and pursue the merchant under the ongoing-transaction rules above, where continuing to charge after a valid cancellation carries compensation without proof of damage of up to 10,000 NIS plus a full refund. Ask the user which one it is, and if they do not know, have them check whether the charge appears in the bank's list of active authorizations or only on the card statement.
+
+| Situation | Remedy | Deadline on the user |
+|---|---|---|
+| One specific debit the user simply wants reversed | s.35(a): notify the bank, which refunds at the debit-date value **within 1 business day** | **3 business days from the debit.** Tight, so act immediately |
+| Charge exceeded the authorization: expired authorization, more than the permitted amount, or on the wrong date | s.37: the bank refunds the difference **within 1 business day** of discovering it or being told | **None.** The bank must also refund it if it finds the overrun itself |
+| Debit far larger than the user could reasonably expect given prior debits | s.38(a): refund **within 7 business days** of notice | Notify promptly |
+| Authorization unused for 24 months | s.34(c): it is **no longer valid** and the bank must notify both sides | None |
+
+s.38 has a trap worth flagging before relying on it: under s.38(c) the remedy **does not apply at all** if the bank offered the user the ability to set a debit ceiling and an expiry date when the authorization was approved. Most banks now offer exactly that, so s.38 is the weakest of the four. Tell users to set the ceiling (tikra) when creating any authorization, which both caps the exposure and turns a later overrun into a s.37 case, where there is no deadline.
+
+**Closing the account is not free, but it is capped.** Total closure fees may not exceed 40 NIS, and that cap explicitly covers cancelling debit authorizations and standing orders, so a bank may not bill those separately on closure. The customer may end the account contract at any time under Payment Services Law s.6(a), but the bank may require the steps set out in the contract first, and the five-business-day clock only starts once those are done. That is the lever a stalling bank uses, so frame it as "complete their checklist, then the clock runs," not "they cannot refuse."
 
 ### C. Negotiate fees down
 
@@ -81,32 +103,27 @@ Produce the letter (from `references/cancellation-letter-templates.md`), the neg
 
 Since 22 September 2021 every Israeli can move their current account to a cheaper bank through a free, fully online switch. The customer only opens an account at the new bank and asks it to run the switch; the process completes within 7 business days from submission, and the customer may request an extension of up to 30 business days. It transfers the shekel and foreign-currency balances, the standing orders (horaot keva) and current-account authorizations, checks, and both bank and non-bank credit-card activity. After the move, an "akev acharai" ("follow me") service forwards charges and credits that still land in the old account to the new one for 3 years.
 
+That 3-year window expires, and the first cohort's is expiring now: anyone who switched between 22.9.2021 and 21.9.2023 loses auto-forwarding from **21.9.2026**. If the user switched in that period, tell them to update their employer, Bituach Leumi, and every standing beneficiary with the new account details before that date, or incoming payments and outgoing charges start failing silently.
+
 Tell the user plainly what does NOT come across, because this is where niud surprises people: loans and credit (including mortgages), deposits and savings plans, non-transferable securities, and safe-deposit boxes or products pledged to the old bank all stay behind and need a separate arrangement with the previous bank. Bank of Jerusalem customers cannot use the online switch at all.
 
 This is the single biggest fee-cut lever for many people: instead of negotiating one commission at a time, they land at the bank the Bank of Israel calculator shows as cheapest for their profile. It also solves the standing-order problem in section B automatically. Because niud moves the horaot keva for you, a user who is switching banks does NOT need to re-set-up each authorization by hand; they only need to update card-billed charges with each merchant (those follow the card, not the account). When a user's real problem is a bank that is simply expensive across the board, route them to niud, not to a track switch.
 
 ### E. The 2027 fee reform (coming, not yet in force)
 
-Bank of Israel Supervisor of Banks circular 06-2851 of 21 June 2026 replaces the whole track system described in section A. Do NOT advise the user as though it already applies: the updated fee rules take effect on 1 July 2027, with a staged entry from 1 October 2026, and banks may adopt the new model earlier if they choose. Until a given bank switches, section A is still the operative advice for that customer.
+Bank of Israel Supervisor of Banks circular 06-2851 of 21 June 2026 replaces the whole track system in section A. Do NOT advise the user as though it already applies: the updated fee rules take effect on 1 July 2027, with a staged entry from 1 October 2026, and banks may adopt earlier if they choose. Until a given bank switches, section A remains the operative advice for that customer.
 
-What changes on the effective date:
+The headline changes: the three tracks are replaced by one supervised service, "nihul cheshbon tashlum", capped at 10 NIS for the first 100 operations a month (5 NIS for an account with 0 to 2 operations, 1 NIS per operation beyond 100); enrolment becomes automatic instead of opt-in; the teller-versus-direct distinction disappears; a separate 7 NIS cap covers the immediate-debit card fee; and the senior and disability definitions are deleted, taking the section A entitlement and the 4a(b1) true-up with them. `references/2027-fee-reform.md` has the full list with the circular's own wording.
 
-- The basic / expanded / expanded-plus tracks are abolished and replaced by a single supervised service, "nihul cheshbon tashlum" (payment-account management), bundling the common day-to-day operations.
-- Price caps: up to 10 NIS for the first 100 operations a month; up to 5 NIS if the account ran only 0 to 2 operations that month; up to 1 NIS for each additional operation beyond 100.
-- The default flips: every customer is enrolled automatically and no longer has to actively choose a track. This removes the main trap in section A, where a customer who never picked a track silently paid per action.
-- The teller-versus-direct-channel distinction disappears, because the new service covers both.
-- A separate supervised cap of 7 NIS applies to the immediate-debit (debit) card fee, against a current market average of about 9 NIS. It replaces the 2015 arrangement that waived the fee for 36 months for customers holding a credit card alongside, and it applies to cards issued before the change too.
-- The rules delete the defined terms "azrach vatik" (senior) and "adam im mugbalut" (person with a disability). Check the discounts in section A against the bank's post-reform tariff rather than assuming they carry over unchanged.
+To tell which regime applies to a specific user before 1.7.2027, have them check the effective date on their bank's published tariff, or ask the bank in writing whether it has adopted the payment-account-management service. Do not infer it from the date alone: adoption is per-bank until the deadline.
 
-To tell which regime applies to a specific user before 1.7.2027, have them check the effective date printed on their bank's published tariff (taarifon), or ask the bank in writing whether it has adopted the payment-account-management service yet. Do not infer it from the date alone: adoption is per-bank until the deadline.
-
-When the user's question is about what they pay today, answer from section A. Raise this section when they ask what is changing, or when a bank tells them their track is being discontinued.
+When the user asks what they pay today, answer from section A. Raise this section when they ask what is changing, or when a bank says their track is being discontinued.
 
 ## Examples
 
 **Cancel a barely-used credit card.** User has a second credit card they rarely use but pay an annual fee on. First tell them to settle any open installments or credit balance so the cancellation is not blocked or accelerated. Produce template 1 addressed to the issuer, request written confirmation, and request the list of recurring charges billed to that card. Warn them to move each card-billed charge (e.g. streaming, gym, insurance) to another payment method before the card dies, or those charges bounce. Note that any harshaa lechiyuv sits on their bank account, not on the card, so it keeps running untouched and is handled separately at the bank.
 
-**Switch a heavy-transaction account to a fixed track.** User does about 40 direct-channel and 3 teller actions a month and pays per action. Run `scripts/fee_track_calculator.py --direct 40 --teller 3` with their tariff numbers; the expanded track beats paying per action at that volume. Give them template 4 to join the expanded track from the 1st of next month, and note the switch timing.
+**Switch a heavy-transaction account to a fixed track.** User does about 40 direct-channel and 3 teller actions a month and pays per action. Run the calculator with their tariff numbers; every flag is required, so a bare `--direct 40 --teller 3` exits with an argparse error: `scripts/fee_track_calculator.py --direct 40 --teller 3 --direct-fee 1.30 --teller-fee 6.50 --basic-price 10 --expanded-price 26`. At that volume the expanded track beats paying per action. Give them template 4 to join the expanded track from the 1st of next month, and note the switch timing.
 
 **Negotiate down a specific commission.** User is charged a monthly account-management fee higher than the basic track cap. Script: cite that the basic track is supervised at max 10 NIS, ask to be moved to it, and check senior/disability eligibility. Provide the written request and tell them to confirm against the Bank of Israel calculator.
 
@@ -114,23 +131,27 @@ When the user's question is about what they pay today, answer from section A. Ra
 
 | MCP | What It Adds |
 |-----|-------------|
-| [Kolzchut (All-Rights)](https://agentskills.co.il/he/mcps/government-services/kolzchut) | Looks up the current text of the fee, discount, and cancellation rights this skill cites, so entitlements are read live instead of from a snapshot |
-| [Asher MCP](https://agentskills.co.il/he/mcps/tax-and-finance/asher) | Local-first aggregator for Israeli banks and credit-card issuers; pulls the user's actual fee charges so step 1 uses real action counts rather than an estimate |
-| [Israeli Bank MCP](https://agentskills.co.il/he/mcps/tax-and-finance/israeli-bank) | Fetches transactions from the major banks and card issuers, useful for spotting recurring charges and standing orders the user forgot about |
+| [Kolzchut (All-Rights)](https://agentskills.co.il/he/mcp/kolzchut) | Looks up the current text of the fee, discount, and cancellation rights this skill cites, so entitlements are read live instead of from a snapshot |
+| [Asher MCP](https://agentskills.co.il/he/mcp/asher) | Local-first aggregator for Israeli banks and credit-card issuers; pulls the user's actual fee charges so step 1 uses real action counts rather than an estimate |
+| [Israeli Bank MCP](https://agentskills.co.il/he/mcp/israeli-bank) | Fetches transactions from the major banks and card issuers, useful for spotting recurring charges and standing orders the user forgot about |
 
 Use these to source the user's real numbers. The fee amounts and rights in this skill still need to be confirmed against the bank's published tariff and the Bank of Israel rules.
 
 ## Gotchas
 
-- **Do not assume US tactics map to Israel.** "Threaten to leave and they will cave" is not the lever here. The real leverage is the regulated fee tracks, the discount eligibilities, and the one-click bank switch (niud). Ground every negotiation in those, not in bluffing.
-- **A harshaa lechiyuv is not on the card.** A standing debit authorization is set up at the bank, on the account, and pulls straight from the account. Cancelling or replacing a card does NOT stop it. To stop it, notify the bank (or under section 34(a) stop the debit at any time), or let a niud move it for you. Do not tell the user a card cancellation ends it.
+- **Do not assume US tactics map to Israel.** "Threaten to leave and they will cave" is not the lever. The leverage is the regulated tracks, the entitlements, and the one-click switch (niud). Ground negotiation in those, not bluffing.
+- **A harshaa lechiyuv is not on the card.** A standing debit authorization is set up at the bank, on the account, and pulls straight from the account. Cancelling or replacing a card does NOT stop it. To stop it, notify the bank (or under s.34(a) stop the debit at any time), or let a niud move it for you. Do not tell the user a card cancellation ends it.
 - **Card-billed subscriptions fail when the card dies.** A subscription billed to the card number (streaming, gym, insurance) is the opposite case: it is tied to the card, so cancelling or replacing the card makes it FAIL. The fix is to update the payment method with each merchant before the old card stops, not to cancel anything at the bank.
 - **Stopping the debit does not cancel the debt.** Killing the harshaa or the card charge only stops the payment. The contract lives on and the business can still invoice or send you to collections. Always also cancel the underlying transaction (iska mitmasheshet) when the goal is to end the service, not just stop the money.
 - **Settle installments before cancelling a card.** Open tashlumim or a kredit balance can be accelerated into one immediate charge, or block the cancellation entirely, if you cancel the card first.
 - **Do not quote a stale NIS fee.** Fee amounts change and vary by bank. The basic-track cap (10 NIS) is set by order, but the expanded-track price and all per-action fees come from each bank's current tariff. Direct the user to the current tariff and the Bank of Israel calculator before acting on any number.
 - **Do not confuse the two tracks.** Basic = up to 10 direct + up to 1 teller. Expanded = up to 50 direct + up to 10 teller. Both are price-supervised, so the difference is the included volume, not whether a cap applies. Recommending the wrong one wastes money; check the user's actual action split.
+- **The senior/disability entitlement is not a percentage.** It is 4 teller actions a month at the direct-channel price, set uniformly by the fee rules. There is no published percentage or shekel discount, and a bank quoting one is describing its own voluntary offer, not the regulated entitlement. Never invent a percentage or a flat senior age.
+- **There is no soldier, student, youth, or new-immigrant fee discount in the rules.** Grep the fee rules and these populations do not appear: the only categories are seniors, people with a 40%+ disability certificate, customers holding no cash-withdrawal card, and small businesses. Anything a bank offers a soldier or a student is a voluntary commercial benefit in its own tariff that it can withdraw at will, so present it as a bank offer to confirm, never as a legal right.
+- **The refund routes do not cover card-billed charges.** s.34 to s.38 are written about a harshaa lechiyuv on the account. A gym or streaming charge billed to the card number has no s.35 route, and sending the bank one burns the 3-business-day clock. Establish the mechanism first, then pick the remedy.
+- **Do not promise the s.38 refund.** The "unreasonably large debit" remedy is switched off entirely by s.38(c) if the bank offered a debit ceiling and expiry when the authorization was set up, which most now do. Route the user to s.37 (exceeded authorization, no deadline) or s.35 (any debit, 3 business days) instead, and have them set a ceiling on every new authorization.
 - **The Postal Bank is exempt** from offering the tracks, so this analysis may not apply there.
-- **A track only covers the basic current-account actions it lists.** Overdraft interest, foreign-currency, and securities fees stay per the tariff and are not solved by joining a track, but they are often the biggest overpayment and are negotiable on their own (section C).
+- **A track covers only the basic current-account actions it lists.** Overdraft interest, foreign-currency and securities fees stay per the tariff, are not solved by a track, and are often the biggest overpayment. Negotiate them separately (section C).
 
 ## Reference Links
 
@@ -142,14 +163,19 @@ Use these to source the user's real numbers. The fee amounts and rights in this 
 | Overdraft (chariga mimisgeret): higher interest on a current account | Kol Zchut | https://www.kolzchut.org.il/he/חריגה_ממסגרת_אשראי_בחשבון_עובר_ושב |
 | Fixed monthly fee tracks (limits, discounts, switching) | Kol Zchut | https://www.kolzchut.org.il/he/מסלולי_עמלות_במחיר_חודשי_קבוע_בחשבון_עובר_ושב_בבנק |
 | Cancelling an ongoing transaction (3/6-day stop, compensation) | Kol Zchut | https://www.kolzchut.org.il/he/ביטול_עסקה_מתמשכת |
-| Payment Services Law 5779-2019 (cancel debit authorization) | Nevo | https://www.nevo.co.il/law_html/law01/502_043.htm |
+| Payment Services Law 5779-2019, sections 34-38 (cancel authorization, reverse a debit, exceeded authorization) | Wikisource (full text) | https://he.wikisource.org/wiki/חוק_שירותי_תשלום |
+| Banking Rules (Customer Service)(Fees) 5768-2008: tracks, the 4-teller-action entitlement, rule 4a(b1) true-up | Wikisource (consolidated) | https://he.wikisource.org/wiki/כללי_הבנקאות_(שירות_ללקוח)_(עמלות) |
 | Banking (Customer Service) Law 5741-1981 | Nevo | https://www.nevo.co.il/law_html/law01/047_016.htm |
+
+Nevo blocks automated fetching, so it will look unreachable to an agent while opening normally in a browser. The two Wikisource entries carry the same statutory text and are readable either way, so prefer them when you need to quote a section.
 
 ## Bundled Resources
 
 - `references/domain-checklist.md` - full coverage contract (core / advanced / out of scope) with sources.
 - `references/fee-tracks-comparison.md` - the three billing methods, decision rule, and switching mechanics.
 - `references/cancellation-letter-templates.md` - four ready-to-fill Hebrew + English letters (cancel card, stop debit, cancel subscription, request track/discount).
+- `references/payment-services-remedies.md` - the four Payment Services Law refund routes with verbatim statutory text, their clocks, and the s.38(c) exception.
+- `references/2027-fee-reform.md` - the circular 06-2851 changes, dates, and price caps, and what the reform does to the section A entitlements.
 - `scripts/fee_track_calculator.py` - compares no-track vs basic vs expanded using the user's own action counts and bank tariff numbers (`--example` for a worked run).
 
 ### Ready-to-send templates (copy and fill the brackets)
@@ -161,4 +187,6 @@ The four letters live in `references/cancellation-letter-templates.md`: cancel a
 - **User does not know their monthly action count:** tell them to read recent account statements or ask the bank via site/phone; the calculator needs the direct-channel vs teller split.
 - **The bank refuses to switch the track or apply a discount:** put the request in writing (template 4), reference the regulation and their eligibility, and note that the one-click switch (niud) lets them move to a cheaper bank if needed. If the bank still stonewalls, file a free complaint with the Public Complaints unit at the Supervisor of Banks (yechidat pniyot hatsibur, Pikuach al HaBankim) at the Bank of Israel.
 - **A charge continues after cancellation:** confirm the notice date and channel; if past the 3/6 business-day cutoff, the up-to-10,000-NIS compensation and full refund apply. If it was a card-billed charge, check the payment method is actually removed at the merchant, not just the card. Escalate to the Bank of Israel banking supervision (Public Complaints unit) or the consumer protection authority.
+- **The user wants money already debited back:** first establish it was a harshaa lechiyuv on the account and not a card-billed charge, because the four statutory routes cover only the former. Then pick the route by cause, not by which is most generous. Within 3 business days of the debit, s.35 reverses any debit at all. If the charge broke the authorization's terms (expired, over the permitted amount, wrong date), s.37 applies with no deadline on the user. Only fall back to s.38 after checking the bank did not offer a ceiling at setup, which disables it. See `references/payment-services-remedies.md`.
+- **The bank says it cannot cancel the authorization from a letter:** the right under s.34(a) is exercised by notice to the bank, and the bank's own form is a convenience, not a precondition. Send the notice anyway, then use the bank's online channel too if it has one. Supply the beneficiary institution code (kod mosad) and the asmachta, the same fields the banks require to identify an authorization when it is created (Leumi and Mizrahi-Tefahot both publish exactly these), rather than the business's trading name alone.
 - **A calculator result looks off:** the per-action and track prices are user inputs from a specific bank's tariff; recheck them against the current tariff and the Bank of Israel fee-tracks calculator, which is authoritative.

@@ -36,12 +36,20 @@ Sincerely,
 
 ## 2. Stop a recurring charge / cancel a debit authorization (Hebrew)
 
+**Before sending:** an authorization is identified by the beneficiary's **kod mosad** (institution code) plus the **asmachta** (reference number). Those are the fields Israeli banks require to set one up (Leumi and Mizrahi-Tefahot both publish exactly this list), so a cancellation letter naming only "the gym" can be refused as unidentifiable. Both appear on the authorization confirmation and on the bank's list of active authorizations (site or app, under "harshaot lechiyuv ve-horaot keva"). If the kod mosad is genuinely unavailable, give the beneficiary name plus the date and amount of the last debit as a fallback. Most banks also let the customer cancel directly in the site or app, which is faster; send the letter as well so the notice date under section 34(a) is fixed.
+
 לכבוד [הבנק / חברת האשראי],
 הנדון: ביטול הרשאה לחיוב חשבון
 
-אני, [שם מלא], ת"ז [מספר], בעל/ת חשבון [מספר], מבקש/ת לבטל את ההרשאה לחיוב לטובת [שם המוטב / העסק], מזהה הרשאה [אם ידוע].
+אני, [שם מלא], ת"ז [מספר], בעל/ת חשבון [מספר] בסניף [מספר], מבקש/ת לבטל את ההרשאה לחיוב לטובת [שם המוטב / העסק], קוד מוסד [מספר], אסמכתה / מספר מזהה [מספר].
 
-לפי חוק שירותי תשלום, התשע"ט-2019, סעיף 34, אני רשאי/ת לבטל הרשאה לחיוב בכל עת. אבקש להפסיק כל חיוב עתידי מכוח הרשאה זו ולשלוח לי אישור בכתב.
+[אם קוד המוסד אינו ידוע: החיוב האחרון מכוח הרשאה זו בוצע בתאריך [תאריך] בסכום [סכום] ש"ח.]
+
+לפי חוק שירותי תשלום, התשע"ט-2019, סעיף 34(א), אני רשאי/ת לבטל הרשאה לחיוב בכל עת בהודעה לנותן שירותי התשלום, ואין הדבר מותנה בשימוש בטופס מסוים. אבקש להפסיק כל חיוב עתידי מכוח הרשאה זו בהתאם למועדים שבסעיף 34(ב), ולשלוח לי אישור בכתב על הביטול ועל מועדו.
+
+[אם כבר בוצע חיוב שיש להשיב: כמו כן אני מבקש/ת השבה של החיוב מיום [תאריך] בסך [סכום] ש"ח, לפי סעיף [35(א) / 37] לחוק.]
+
+לתשובה: [דוא"ל] / [טלפון]. אודה לתשובה בתוך 14 ימים.
 
 בכבוד רב,
 [שם] [תאריך] [חתימה]
@@ -51,9 +59,15 @@ Sincerely,
 To [bank / card company],
 Re: Cancellation of debit authorization
 
-I, [full name], ID [number], holder of account [number], request to cancel the debit authorization in favor of [beneficiary / business], authorization ID [if known].
+I, [full name], ID [number], holder of account [number] at branch [number], request to cancel the debit authorization in favor of [beneficiary / business], institution code (kod mosad) [number], reference (asmachta) [number].
 
-Under the Payment Services Law, 5779-2019, section 34, I may cancel a debit authorization at any time. Please stop any future charge under this authorization and send me written confirmation.
+[If the institution code is unavailable: the last debit under this authorization was made on [date] in the amount of [amount] NIS.]
+
+Under the Payment Services Law, 5779-2019, section 34(a), I may cancel a debit authorization at any time by notice to the payment service provider, and this is not conditional on using any particular form. Please stop all future charges under this authorization within the timeframes in section 34(b) and send me written confirmation of the cancellation and its date.
+
+[If a debit must also be refunded: I further request a refund of the debit of [date] in the amount of [amount] NIS, under section [35(a) / 37] of the Law.]
+
+Reply to: [email] / [phone]. I would appreciate a response within 14 days.
 
 Sincerely,
 [name] [date] [signature]
