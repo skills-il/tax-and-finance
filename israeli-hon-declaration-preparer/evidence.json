@@ -562,6 +562,14 @@
       "source_url": "https://www.gov.il/BlobFolder/dynamiccollectorresultitem/represent-info-050525-1/he/IncomeTax_represent-info-050525-1.pdf",
       "raw_snippet": "החל מהיום הגשת הצהרת הון תתבצע במערכת המקוונת ,או על גבי טופס 1219ידני בגרסתו החדשה באמצעות הגשה למשרדי השומה או במערכת הפניות .על מנת להקל בהטמעת הטופס החדש בקרב הנישומים והמייצגים תתאפשר הגשת הצהרת הון על גבי טופס 1219בנוסחו הקודם עד ליום .30/6/2025",
       "confidence": "high"
+    },
+    {
+      "id": "ita-support-channel",
+      "claim": "Circular 2025-000538 names the Tax Authority information and online services centre as the contact for transmission problems.",
+      "claim_type": "feature",
+      "source_url": "https://www.gov.il/BlobFolder/dynamiccollectorresultitem/represent-info-050525-1/he/IncomeTax_represent-info-050525-1.pdf",
+      "raw_snippet": "מרכז המידע והשירותים המקוונים של רשות המיסים בטלפונים 02-5656400 :או . *4954 לסיום ,אנו עושים בימים אלה צעד משמעותי ביותר במימוש יעדי רשות המיסים .נמשיך לפעול לשיפור וייעול",
+      "confidence": "high"
     }
   ]
 }

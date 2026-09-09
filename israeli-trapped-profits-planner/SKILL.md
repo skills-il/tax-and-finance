@@ -180,7 +180,17 @@ before relying on a classification.
 
 Two different income quantities appear in one formula: taxable income in the first term, gross income inside the bracket, and the bracket is net of payments to a related company. It is not "the portion above a 25% margin". Attribution is pro rata to each active shareholder's share in the rights to the company's profits.
 
-Paragraph (1) has only two conditions: activity income below thirty million shekels multiplied by the number of controlling shareholders (a controlling shareholder and their relative counting as one), and a profitability rate exceeding 25%.
+Paragraph (1) has only two conditions: activity income below thirty million shekels multiplied by the
+number of controlling shareholders (a controlling shareholder and their relative counting as one),
+and a profitability rate exceeding 25%.
+
+**Two gaps in this limb that this skill does not close, and you must not paper over.** First, the
+profitability rate is a gating condition and this skill does not state its numerator and denominator,
+so it cannot tell you whether the limb bites; establish the definition from the consolidated Ordinance
+or route it out. Second, the four-or-more-employees exclusion survived the amendment, but this skill
+does not state its terms and does not resolve whether it reaches this new excess-profitability limb or
+only the pre-existing ones. Both are live questions for a company sitting near either line, and a
+confident answer here would be invented rather than sourced.
 
 **The NIS 750,000 in section 62A is not a condition of paragraph (1).** It sits in the exclusion at 62A(a1)(2)(c), which is framed negatively, is gated on the company having a substantial holder, and offers two independent escapes. One of them aggregates accumulated profits **across all companies** in which that person is a substantial holder. So a person with several companies, each individually below the figure but jointly above it, fails the aggregate escape while passing a naive per-company test. Do not flatten this into "accumulated profits must exceed 750,000".
 

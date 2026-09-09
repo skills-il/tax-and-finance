@@ -29,6 +29,12 @@ Ask the user for:
 - **The declaration date (yom ha'hatzhara)**, printed in the form's header as "a report on property and liabilities as at ___". Every balance, statement and wallet snapshot in the pack must be as at that date.
 - Whether this is a first declaration or a later one, and if later, the previous declaration's date and its net-capital figure.
 
+**An extension can be requested, and asking is routine.** Section 188(z) contemplates that after an
+initial filing date is set, "at that person's request a later date was subsequently set", which is
+the statutory footing for a request to defer. It is usually the first move when the pack cannot be
+assembled by the date on the letter. Note the consequence the same provision attaches: if you then
+file after the later date, the monthly fine runs at the higher rate from that later date.
+
 **The deadline is a later-of, and it is a floor on what the assessor may set, not a clock from the letter.** Section 135(1)(a) provides that for a capital report no date may be set earlier than the end of 120 days from the date the declaration must relate to, or from the date of the demand, whichever is later. Read the actual date on the demand; do not compute 120 days from receipt and treat that as the deadline.
 
 ### Step 2: Fix whose assets are in scope
@@ -61,7 +67,14 @@ These are the form's own general instructions and they override intuition. Getti
 
 Two class-specific rules that contradict what users expect:
 
-- **Pension, gemel, hishtalmut, life insurance and savings plans (section 6):** the shekel amount is the sum of all deposits, without taking into account interest, linkage or other gains. Not the fund's current balance. Ask for deposit history, not a balance screenshot.
+- **Pension, gemel, hishtalmut, life insurance and savings plans (section 6):** the shekel amount is
+  the sum of all deposits, without taking into account interest, linkage or other gains. Not the
+  fund's current balance. Ask for deposit history, not a balance screenshot.
+  **The form says "all deposits" and does not say whose.** A salaried filer's statement shows three
+  streams, employee, employer and severance, and the instructions do not distinguish them anywhere.
+  The readings can differ by roughly a factor of two for a long-tenured employee, so do not silently
+  pick one. Present the streams separately, say that the form does not resolve which are included,
+  and have the user confirm the treatment with their representative before the figure is fixed.
 - **Securities and mutual funds (section 7):** recorded at the amount actually invested, per the statements of the institution holding the portfolio. One line per portfolio per institution.
 
 ### Step 4: Walk the form section by section and build the worksheet
@@ -170,7 +183,7 @@ The form asks for identifiers these servers can resolve. Use them to fill fields
 3. **Converting foreign currency at the declaration date.** General rule 12 uses the representative rate on the day of payment or receipt. Using the declaration-date rate shifts every foreign asset by an arbitrary amount.
 4. **Treating 120 days as a clock from the demand letter.** It is the later of 120 days from the demand and 120 days from the date the declaration relates to, and it is a floor on what the assessor may set. Read the date off the letter.
 5. **Netting balances.** General rule 13 forbids offsetting debtors against creditors even against the same institution, and general rule 7 requires an unpaid balance to appear as a liability while the asset appears at full price. Both instincts point the wrong way.
-6. **Quoting a current shekel figure for the late-filing fine.** Section 188(h) re-indexes the amounts in section 188 every 1 January to the previous year's index, so the nominal figures in the Ordinance are not current amounts. State the mechanism and route the user to the Tax Authority for the figure.
+6. **Quoting a current shekel figure for the late-filing fine.** Section 188(h) re-indexes the amounts in section 188 every 1 January to the previous year's index, so the nominal figures in the Ordinance are not current amounts. State the mechanism and route the user to the Tax Authority information and online services centre, on 02-5656400 or *4954, for the figure in force.
 7. **Assuming the online channel is compulsory.** The Tax Authority states that at this stage using the digital system is permissive and not mandatory.
 
 ## Reference Links
@@ -194,8 +207,17 @@ Work through the explanation classes first: gifts and inheritances sitting at 1 
 
 ### "The user only knows what an asset is worth, not what it cost"
 
-Ask for the acquisition documents, the purchase contract, the deposit records. Do not estimate a cost and do not substitute a value. Where the asset was inherited or received as a gift, the answer is 1 shekel regardless.
+Ask for the acquisition documents, the purchase contract, the deposit records. Do not estimate a cost
+and do not substitute a value. Where the asset was inherited or received as a gift, the answer is
+1 shekel regardless.
+
+For an asset bought decades ago the documents are rarely in a drawer, and a refusal without a route
+is where users invent a number. Send them to look for the file rather than to guess: the purchase
+contract held by the lawyer who handled the transaction, the land-registry extract for a property,
+and their own tax file at the assessing office. If the cost genuinely cannot be reconstructed, that
+is a question for their representative to take to the assessor, not a gap for the skill to fill with
+an estimate.
 
 ### "An old-wording form was already filed after June 2025"
 
-The circular permitted the previous wording only until 30 June 2025 and does not say what happens to a later submission on it. Do not guess the consequence. Route the user to the Tax Authority information centre.
+The circular permitted the previous wording only until 30 June 2025 and does not say what happens to a later submission on it. Do not guess the consequence. Route the user to the Tax Authority information and online services centre, on 02-5656400 or *4954.
