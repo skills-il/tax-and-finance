@@ -1,0 +1,19 @@
+# POSITIVE (should trigger)
+P1 כמה מס רווחים כלואים החברה שלי חייבת
+P2 how much should I distribute before year end to avoid the 2% tax
+P3 מה זה חברת ארנק ואיך יודעים אם אני נחשב כזו
+P4 what is the magen kaspi and does it apply per company
+P5 does section 62A apply to my consulting company
+P6 our company distributed a dividend in 2025, are we covered for 2026
+# NEGATIVE (should NOT trigger)
+N1 should I pay myself salary or dividend this year      -> excluded by: "Do NOT use for comparing profit-extraction methods (use israeli-corporate-tax-strategy)"
+N2 when is my company annual return due                   -> excluded by: "or for filing the annual return (use israeli-tax-returns)"
+N3 I need to file a capital declaration                   -> NOT excluded by any explicit clause in
+#    this description. Separated only by topic disjointness: this skill's description is entirely
+#    about company distributions and never uses capital-declaration vocabulary. The reciprocal
+#    boundary IS explicit in israeli-hon-declaration-preparer. Recorded honestly rather than
+#    claimed as an exclusion. Revisit if routing collisions are observed in production.
+# EDGE
+E1 is my company a chevrat me'atim                        -> YES, the entity gate is step 1
+E2 should we liquidate to escape the tax                  -> PARTIAL, answer is that the route closed; do not advise
+E3 is this distribution lawful under the Companies Law    -> NO, solvency is counsel's question

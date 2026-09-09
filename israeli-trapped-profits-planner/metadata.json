@@ -1,0 +1,77 @@
+{
+  "author": "skills-il",
+  "version": "1.0.0",
+  "category": "tax-and-finance",
+  "tags": {
+    "he": [
+      "רווחים-כלואים",
+      "חברת-ארנק",
+      "חברת-מעטים",
+      "תיקון-277",
+      "סעיף-62א",
+      "דיבידנד",
+      "ישראל"
+    ],
+    "en": [
+      "trapped-profits",
+      "wallet-company",
+      "closely-held-company",
+      "amendment-277",
+      "section-62a",
+      "dividend",
+      "israel"
+    ]
+  },
+  "display_name": {
+    "he": "מתכנן רווחים כלואים",
+    "en": "Israeli Trapped Profits Planner"
+  },
+  "display_description": {
+    "he": "אינו ייעוץ מס. מחשב את החשיפה של חברת מעטים לשני המסלולים שתיקון 277 יצר: תוספת המס של 2% על רווחים עודפים שלא חולקו לפי סעיף 81ב, וייחוס הכנסות החברה לבעל מניות פעיל לפי סעיף 62א. הסקיל מחשב את הרווחים העודפים, בודק את שלושת המגנים ולוקח את הגבוה מביניהם, בודק את שלוש חלופות הפטור כל אחת על הבסיס הנכון שלה (6% מהרווחים הנצברים, 50% מהרווחים העודפים, ומבחן ההפסדים של 10%), מחיל את מסלול ה-20% ואת ההגנות שנרכשו ב-2025, ואומר איפה מדווחים (טופס 1214 עם נספח 2ב). השתמשו כשיש לחברה רווחים שלא חולקו וצריך לדעת מה החשיפה, כשמחליטים כמה לחלק לפני סוף השנה, או כשבודקים סיווג כחברת ארנק. לא לשימוש עבור השוואת דרכי משיכת רווחים (israeli-corporate-tax-strategy).",
+    "en": "Not tax advice. Computes a closely-held Israeli company's exposure under the two Amendment 277 regimes: the Section 81B 2% addition to tax on undistributed excess profits, and Section 62A attribution of company income to an active shareholder. Works out excess profits, tests all three shields and takes the highest, checks the three statutory escapes on their correct and different bases (6% of accumulated profits, 50% of excess profits, the 10% loss test), applies the transitional 20% route and the protection bands earned in 2025, and names the reporting vehicle (Form 1214 with Annex 2B). Use when a chevrat me'atim has retained earnings and you need its 2% exposure, are deciding how much to distribute before year end, or are testing Section 62A wallet-company classification. Do NOT use for comparing profit-extraction methods (use israeli-corporate-tax-strategy) or for filing the annual return (use israeli-tax-returns)."
+  },
+  "supported_agents": [
+    "claude-code",
+    "cursor",
+    "github-copilot",
+    "windsurf",
+    "opencode",
+    "codex",
+    "openclaw",
+    "antigravity",
+    "gemini-cli",
+    "grok-build",
+    "chatgpt",
+    "claude-ai",
+    "claude-desktop",
+    "manus",
+    "gemini-spark",
+    "grok"
+  ],
+  "volatility": "legislative",
+  "authoritative_sources": [
+    {
+      "url": "https://www.gov.il/BlobFolder/policy/professional-directives-191025/he/IncomeTax_professional-directives-080226.pdf",
+      "type": "regulator",
+      "language": "he"
+    },
+    {
+      "url": "https://fs.knesset.gov.il/25/law/25_lsr_5396731.pdf",
+      "type": "statute",
+      "language": "he"
+    },
+    {
+      "url": "https://www.gov.il/BlobFolder/dynamiccollectorresultitem/represent-info-231225-1/he/spokesman_announcment_pa231225-1.pdf",
+      "type": "regulator",
+      "language": "he"
+    }
+  ],
+  "domain_checklist_version": 1,
+  "openclaw": {
+    "requires": {
+      "bins": [],
+      "env": []
+    },
+    "emoji": "🏦"
+  }
+}

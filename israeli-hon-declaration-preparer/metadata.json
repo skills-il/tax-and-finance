@@ -1,0 +1,77 @@
+{
+  "author": "skills-il",
+  "version": "1.0.0",
+  "category": "tax-and-finance",
+  "tags": {
+    "he": [
+      "הצהרת-הון",
+      "טופס-1219",
+      "מס-הכנסה",
+      "השוואת-הון",
+      "פקיד-שומה",
+      "נכסים",
+      "ישראל"
+    ],
+    "en": [
+      "capital-declaration",
+      "form-1219",
+      "income-tax",
+      "capital-comparison",
+      "assessing-officer",
+      "assets",
+      "israel"
+    ]
+  },
+  "display_name": {
+    "he": "הכנת הצהרת הון",
+    "en": "Israeli Capital Declaration Preparer"
+  },
+  "display_description": {
+    "he": "אינו ייעוץ מס ואינו הצהרה שהוגשה. מכין ערכת עבודה להצהרת הון (טופס 1219) אחרי שפקיד השומה דרש אותה בכתב. הסקיל עובר על כל סוגי הנכסים וההתחייבויות שהטופס מבקש, אומר לפי איזה סכום לרשום כל אחד מהם (עלות ולא שווי שוק, נכס שהתקבל בירושה או במתנה נרשם ב-1 ש\"ח, קופות גמל ופנסיה לפי סך ההפקדות בלבד), בונה את רשימת המסמכים לכל סעיף, ומשווה את הגידול בהון מאז ההצהרה הקודמת מול ההכנסות שדווחו, כדי שתראו פער בלתי מוסבר לפני ההגשה ולא אחריה. השתמשו כשקיבלתם דרישה להצהרת הון, כשאתם לא בטוחים איזה נכסים צריך להצהיר, כשאתם ממלאים טופס 1219, או כשצריך להסביר גידול בהון. לא לשימוש עבור הדוח השנתי (israeli-tax-returns) או תכנון משיכת רווחים מחברה (israeli-corporate-tax-strategy).",
+    "en": "Not tax advice and not a filed declaration. Builds a Declaration of Capital (hatzharat hon, Form 1219) preparation pack after Reshut HaMisim demands one under Section 135. Enumerates every asset and liability class the form requires, gives the valuation basis per class (cost rather than market value, inherited or gifted assets at 1 shekel, pension and gemel at total deposits only), assembles the per-section document checklist, and reconciles the growth since your previous declaration against declared income so an unexplained gap is visible before you file. Use when you received a hatzharat hon demand, need to know which assets must be declared, are filling Form 1219, or must explain a capital increase to the assessor. Do NOT use for the annual return (use israeli-tax-returns), profit-extraction planning (use israeli-corporate-tax-strategy), or the trapped-profits regime (use israeli-trapped-profits-planner)."
+  },
+  "supported_agents": [
+    "claude-code",
+    "cursor",
+    "github-copilot",
+    "windsurf",
+    "opencode",
+    "codex",
+    "openclaw",
+    "antigravity",
+    "gemini-cli",
+    "grok-build",
+    "chatgpt",
+    "claude-ai",
+    "claude-desktop",
+    "manus",
+    "gemini-spark",
+    "grok"
+  ],
+  "volatility": "legislative",
+  "authoritative_sources": [
+    {
+      "url": "https://www.gov.il/BlobFolder/service/itc1219/he/Service_Pages_Income_tax_itc1219.pdf",
+      "type": "form",
+      "language": "he"
+    },
+    {
+      "url": "https://www.gov.il/BlobFolder/dynamiccollectorresultitem/represent-info-050525-1/he/IncomeTax_represent-info-050525-1.pdf",
+      "type": "regulator",
+      "language": "he"
+    },
+    {
+      "url": "https://www.gov.il/BlobFolder/legalinfo/law_pkudat_mas_hachnasa/he/LegalInformation_kesher_%D7%A4%D7%A7%D7%95%D7%93%D7%AA%20%D7%9E%D7%A1%20%D7%94%D7%9B%D7%A0%D7%A1%D7%94%20%5B%D7%A0%D7%95%D7%A1%D7%97%20%D7%97%D7%93%D7%A9%5D%20-%20%D7%9C%D7%90%20%D7%9E%D7%A8%D7%95%D7%91%D7%93.pdf",
+      "type": "statute",
+      "language": "he"
+    }
+  ],
+  "domain_checklist_version": 1,
+  "openclaw": {
+    "requires": {
+      "bins": [],
+      "env": []
+    },
+    "emoji": "📑"
+  }
+}

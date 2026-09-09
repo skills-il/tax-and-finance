@@ -1,0 +1,335 @@
+{
+  "skill_slug": "israeli-trapped-profits-planner",
+  "schemaVersion": "1.0",
+  "generated_at": "2026-09-09",
+  "claims": [
+    {
+      "id": "s81b-escapes-intro",
+      "claim": "Circular 7/2025 para 3.6: under section 81B(b) the addition to tax shall not be imposed in the following cases.",
+      "claim_type": "feature",
+      "source_url": "https://www.gov.il/BlobFolder/policy/professional-directives-191025/he/IncomeTax_professional-directives-080226.pdf",
+      "raw_snippet": "בהתאם להוראות סעיף 81ב(ב) לפקודה ,תוספת המס לא תוטל במקרים הבאים:",
+      "confidence": "high"
+    },
+    {
+      "id": "escape1-loss-10pct",
+      "claim": "Escape 1: the company current losses in the examined year under sections 28, 29 and 92 exceed 10% of the accumulated profits of the close company at the end of the preceding tax year.",
+      "claim_type": "percentage",
+      "source_url": "https://www.gov.il/BlobFolder/policy/professional-directives-191025/he/IncomeTax_professional-directives-080226.pdf",
+      "raw_snippet": "3.6.1הפסדיה השוטפים של החברה בשנת המס הנבדקת לפי סעיפים  29 ,28ו 92-לפקודה, עולים על  10%מסכום הרווחים הנצברים של חברת המעטים בתום שנת המס הקודמת.",
+      "confidence": "high"
+    },
+    {
+      "id": "escape1-net-loss-clarification",
+      "claim": "The net loss, after offsetting losses from the company other sources, must reduce the accumulated profits by at least 10%.",
+      "claim_type": "percentage",
+      "source_url": "https://www.gov.il/BlobFolder/policy/professional-directives-191025/he/IncomeTax_professional-directives-080226.pdf",
+      "raw_snippet": "למען הסר ספק מובהר כי על מנת להימנע מתשלום התוספת למס ,נדרש כי סכום ההפסד נטו  -לאחר קיזוז הפסדים ממקורות אחרים של החברה ,יפחית את הרווחים הנצברים של החברה בשיעור של  10%לפחות.",
+      "confidence": "high"
+    },
+    {
+      "id": "escape2-50pct-excess",
+      "claim": "Escape 2, the 50% alternative: taxed dividends distributed to shareholders, not being a dividend to which section 126(b) applies, exceed 50% of the EXCESS profits at the end of the preceding tax year. Named chalufat 50% and the dividend alternative for excess profits.",
+      "claim_type": "percentage",
+      "source_url": "https://www.gov.il/BlobFolder/policy/professional-directives-191025/he/IncomeTax_professional-directives-080226.pdf",
+      "raw_snippet": "3.6.2סכום הדיבידנדים ששולם מס בשל חלוקתם ,שחברת המעטים חילקה לבעלי מניותיה, שהוא אינו דיבידנד שחלות עליו הוראות סעיף (126ב) לפקודה ,עולה על  50%מסכום הרווחים העודפים של חברת המעטים לתום שנת המס הקודמת (להלן\" :חלופת \"50% ו/או \"חלופת דיבידנד בגין הרווחים העודפים\").",
+      "confidence": "high"
+    },
+    {
+      "id": "escape2-no-dividend-deduction",
+      "claim": "In the 50% alternative the dividends distributed during the tax year must NOT be deducted from the total excess profits of the close company.",
+      "claim_type": "feature",
+      "source_url": "https://www.gov.il/BlobFolder/policy/professional-directives-191025/he/IncomeTax_professional-directives-080226.pdf",
+      "raw_snippet": "יודגש כי בחלופת ה 50%-אין לנכות מסך הרווחים העודפים של חברת המעטים את סכום הדיבידנדים שחולקו מהם בשנת המס.",
+      "confidence": "high"
+    },
+    {
+      "id": "escape3-6pct-accumulated",
+      "claim": "Escape 3, the 6% alternative: taxed dividends distributed to shareholders are at a rate of 6% or more of the ACCUMULATED profits at the end of the preceding tax year. Named chalufat 6% and the dividend alternative for accumulated profits.",
+      "claim_type": "percentage",
+      "source_url": "https://www.gov.il/BlobFolder/policy/professional-directives-191025/he/IncomeTax_professional-directives-080226.pdf",
+      "raw_snippet": "3.6.3סכום הדיבידנדים ששולם מס בשל חלוקתם ,שחברת המעטים חילקה לבעלי מניותיה הוא בשיעור של  6%או יותר מסכום הרווחים הנצברים של חברת המעטים לתום שנת המס הקודמת (להלן\" :חלופת  \"6%ו/או \"חלופת דיבידנד בגין הרווחים הנצברים\") .בסעיף זה\" ,דיבידנדים ששולם מס בשל חלוקתם\"  -אחד מאלה:",
+      "confidence": "high"
+    },
+    {
+      "id": "taxed-dividend-limb-a",
+      "claim": "Definition limb (a): a dividend, other than a dividend not included in the recipient income by reason of section 126(b). (Hebrew: סעיף 126)",
+      "claim_type": "law",
+      "source_url": "https://www.gov.il/BlobFolder/policy/professional-directives-191025/he/IncomeTax_professional-directives-080226.pdf",
+      "raw_snippet": "3.6.3.1דיבידנד ,למעט דיבידנד שלא נכלל בהכנסת מקבל הדיבידנד בשל הוראות סעיף (126ב) לפקודה.",
+      "confidence": "high"
+    },
+    {
+      "id": "taxed-dividend-limb-b",
+      "claim": "Definition limb (b): a dividend excluded from the recipient income under section 126(b) in respect of which the distributing company elected that tax be paid at the highest rate applicable under sections 125B and 121B.",
+      "claim_type": "law",
+      "source_url": "https://www.gov.il/BlobFolder/policy/professional-directives-191025/he/IncomeTax_professional-directives-080226.pdf",
+      "raw_snippet": "3.6.3.2דיבידנד שלא נכלל בהכנסת מקבל הדיבידנד בשל הוראות סעיף (126ב) לפקודה, ושלגביו בחרה החברה המחלקת שבשל חלוקתו ישולם מס בשיעור הגבוה ביותר החל על תשלום דיבידנד לפי סעיפים 125ב ו121-ב לפקודה ,בהתאם להוראות שקבע שר האוצר לפי פסקת משנה (ג).",
+      "confidence": "high"
+    },
+    {
+      "id": "s81b-charge-2pct",
+      "claim": "Section 81B, the charging section: a close company is liable to an addition to tax, for every tax year, at a rate of 2% of the excess profits as computed under section 81C, after deducting the dividend distributed during the tax year.",
+      "claim_type": "percentage",
+      "source_url": "https://www.gov.il/BlobFolder/policy/professional-directives-191025/he/IncomeTax_professional-directives-080226.pdf",
+      "raw_snippet": "תוספת למס ,לכל שנת מס ,בשיעור של  2%מסכום הרווחים העודפים של חברת המעטים ,כפי",
+      "confidence": "high"
+    },
+    {
+      "id": "shield3-prose",
+      "claim": "Shield 3, the magen nechasim, is the cost of the company assets LESS the cost of special assets, LESS share capital including premium and reserves, LESS a loan received from a related party, PLUS investment in a held body corporate at cost.",
+      "claim_type": "feature",
+      "source_url": "https://www.gov.il/BlobFolder/policy/professional-directives-191025/he/IncomeTax_professional-directives-080226.pdf",
+      "raw_snippet": "✓ עלות נכסי החברה בניכוי :עלות נכסים מיוחדים ,הון מניות (לרבות פרמיה ,קרנות וכד'), הלוואה שהתקבלה מצד קשור ובתוספת השקעה בחבר בני אדם מוחזק במונחי עלות (להלן: \"מגן הנכסים\"). המגן הכספי ,מגן ההוצאות ומגן הנכסים יקראו להלן ביחד\" :המגנים\". דוגמה לציר זמן ליישום סעיף 81ג (שנת המס :)2025",
+      "confidence": "high"
+    },
+    {
+      "id": "shields-highest-of",
+      "claim": "The shields are the highest of the magen kaspi, magen hotzaot and magen nechasim, as computed at the end of the tax year.",
+      "claim_type": "feature",
+      "source_url": "https://www.gov.il/BlobFolder/policy/professional-directives-191025/he/IncomeTax_professional-directives-080226.pdf",
+      "raw_snippet": "(הגבוה מבין המגן הכספי ,מגן הוצאות ומגן הנכסים) כפי שיחושבו לתום שנת המס .2025",
+      "confidence": "high"
+    },
+    {
+      "id": "taxable-accumulated-defn",
+      "claim": "Taxable accumulated profits equal the difference between accumulated profits and exempt accumulated profits.",
+      "claim_type": "feature",
+      "source_url": "https://www.gov.il/BlobFolder/policy/professional-directives-191025/he/IncomeTax_professional-directives-080226.pdf",
+      "raw_snippet": "2.14רווחים נצברים חייבים שווים להפרש שבין הרווחים הנצברים ובין הרווחים הנצברים הפטורים:",
+      "confidence": "high"
+    },
+    {
+      "id": "s81d-not-deductible",
+      "claim": "Under section 81D, amounts paid as the addition to tax under section 81B are not allowed as a deduction.",
+      "claim_type": "law",
+      "source_url": "https://www.gov.il/BlobFolder/policy/professional-directives-191025/he/IncomeTax_professional-directives-080226.pdf",
+      "raw_snippet": "בהתאם להוראות סעיף 81ד לפקודה ,סכומים ששולמו כתוספת למס לפי סעיף 81ב לפקודה ,לא",
+      "confidence": "high"
+    },
+    {
+      "id": "s81f-no-advances",
+      "claim": "Under section 81F(b), the advance-payment provisions do not apply to the addition to tax.",
+      "claim_type": "law",
+      "source_url": "https://www.gov.il/BlobFolder/policy/professional-directives-191025/he/IncomeTax_professional-directives-080226.pdf",
+      "raw_snippet": "בהתאם להוראות סעיף 81ו(ב) לפקודה ההוראות בדבר תשלום מקדמות לפי סימן א' לפרק שני",
+      "confidence": "high"
+    },
+    {
+      "id": "trans-20pct-route",
+      "claim": "A company that distributes a dividend in each of the tax years 2025 to 2030 at a rate of 20% of the profits remaining from commencement-day profits is not liable to the 2% on those profits.",
+      "claim_type": "percentage",
+      "source_url": "https://www.gov.il/BlobFolder/policy/professional-directives-191025/he/IncomeTax_professional-directives-080226.pdf",
+      "raw_snippet": "חברה שתחלק דיבידנד בכל אחת משנות המס  2025עד  2030בשיעור של  20%מרווחים שנותרו",
+      "confidence": "high"
+    },
+    {
+      "id": "determining-period",
+      "claim": "The Determining Period runs to 30 November 2025.",
+      "claim_type": "date",
+      "source_url": "https://www.gov.il/BlobFolder/policy/professional-directives-191025/he/IncomeTax_professional-directives-080226.pdf",
+      "raw_snippet": "עד  30בנובמבר ( 2025להלן\" :התקופה הקובעת\"):",
+      "confidence": "high"
+    },
+    {
+      "id": "trans-6pct-example",
+      "claim": "Transitional example: the company may elect to distribute 6% of the accumulated profits as at 31.12.2026, without deducting exempt profits and the shields.",
+      "claim_type": "percentage",
+      "source_url": "https://www.gov.il/BlobFolder/policy/professional-directives-191025/he/IncomeTax_professional-directives-080226.pdf",
+      "raw_snippet": "לחלק  6%מהרווחים הנצברים ליום ( 31.12.2026ללא ניכוי רווחים פטורים ומגנים) .בשנת 2028",
+      "confidence": "high"
+    },
+    {
+      "id": "s62a-22-months",
+      "claim": "Amendment 277 replaced the section 62A(a)(3) single-client window: for at least 30 months out of four years becomes at least 22 months out of three years.",
+      "claim_type": "threshold",
+      "source_url": "https://fs.knesset.gov.il/25/law/25_lsr_5396731.pdf",
+      "raw_snippet": "שנים ,ובלבד שבתום  30החודשים\" יבוא \"במשך  22חודשים לפחות ,מתוך",
+      "confidence": "high"
+    },
+    {
+      "id": "s62a-25pct-or-more",
+      "claim": "Amendment 277 substituted, in section 62A(a), a holder who holds directly or indirectly 25% or more of one of the means of control in the other body corporate.",
+      "claim_type": "percentage",
+      "source_url": "https://fs.knesset.gov.il/25/law/25_lsr_5396731.pdf",
+      "raw_snippet": "יבוא \"שמחזיק ,במישרין או בעקיפין ,ב־ 25%או יותר באחד מאמצעי",
+      "confidence": "high"
+    },
+    {
+      "id": "ita-worked-example",
+      "claim": "ITA worked example: in 2025 a close company had taxable income of NIS 1,000,000 on which it paid corporate tax at 23%.",
+      "claim_type": "currency",
+      "source_url": "https://www.gov.il/BlobFolder/dynamiccollectorresultitem/represent-info-231225-1/he/spokesman_announcment_pa231225-1.pdf",
+      "raw_snippet": "בשנת  – 2025לחברת מעטים הכנסה חייבת בסך  ,₪ 1,000,000בגינם שלמה מס חברות (,)23%",
+      "confidence": "high"
+    },
+    {
+      "id": "ita-field-084",
+      "claim": "New field 084 on the individual return: income transferred to me under section 62A(a), dividend alternative.",
+      "claim_type": "form-number",
+      "source_url": "https://www.gov.il/BlobFolder/dynamiccollectorresultitem/represent-info-231225-1/he/spokesman_announcment_pa231225-1.pdf",
+      "raw_snippet": "• שדה חדש*  - 084הכנסה מועברת אלי לפי סעיף 62א(א) \"חלופת דיבידנד\" .במקביל הסכום ירשם",
+      "confidence": "high"
+    },
+    {
+      "id": "magen-kaspi-anti-splitting",
+      "claim": "The magen kaspi is divided equally among the held close companies where the controlling shareholder, alone or with a relative, controls further close companies, unless the company notifies a different division; the other held companies notify the assessing officer on the section 131 return that they waive their pro-rata share. Control here means holding 50% or more of the means of control.",
+      "claim_type": "feature",
+      "source_url": "https://www.gov.il/BlobFolder/policy/professional-directives-191025/he/IncomeTax_professional-directives-080226.pdf",
+      "raw_snippet": "קביעת מגן זה כאמור ,עשויה הייתה ליצור תמריץ לתכנון מס ,בו יפצל בעל מניות את פעילותו בין מספר רב של חברות לצורך ניצול המגן הכספי .לכן נקבע כי במידה ובעל השליטה (לבדו או ביחד עם קרובו) הינו יחיד ששולט בחברות מעטים נוספות ,המגן הכספי יחולק בין החברות המוחזקות באופן שווה אלא אם כן הודיעה חברת המעטים על אופן חלוקה אחר .יתר חברות המעטים המוחזקות יודיעו לפקיד השומה בעת הגשת הדו\"ח לפי סעיף  131לפקודה ,על ויתור חלקן היחסי במגן הכספי ,וכי הם לא בחרו בו בשנת המס .לעניין זה יראו שליטה כהחזקה בשיעור  50%ומעלה",
+      "confidence": "high"
+    },
+    {
+      "id": "form-1214-nispach-2b",
+      "claim": "Annex 2B is attached as an annex to Form 1214 of the close company, being the report under the Income Tax (Dividends on which Tax was Paid in respect of their Distribution) Regulations 5785-2025.",
+      "claim_type": "form-number",
+      "source_url": "https://www.gov.il/BlobFolder/policy/professional-directives-250126-1/he/IncomeTax_professional-directives-250126-1.pdf",
+      "raw_snippet": "נספח 2ב  -יצורף כנספח לטופס  1214של חברת המעטים דו\"ח של חברת מעטים בהתאם לתקנה (2ג) ו/או (4א)( )3לתקנות מס הכנסה (דיבידנדים ששולם מס בשל חלוקתם) ,התשפ\"ה ( 2025-להלן\" :התקנות\")",
+      "confidence": "high"
+    },
+    {
+      "id": "law-s5a-20pct-route",
+      "claim": "Section 5(a) of the Law: a close company with undistributed accumulated profits on the eve of commencement day that distributed taxed dividends of 20% or more of its profits remaining from commencement day, in a year of tax years 2025 to 2030, has its excess profits for that year reduced by those remaining profits. (Hebrew: סעיף 5)",
+      "claim_type": "percentage",
+      "source_url": "https://fs.knesset.gov.il/25/law/25_lsr_5396731.pdf",
+      "raw_snippet": "דיבידנדים ששולם מס בשל חלוקתם לבעלי מניותיה בשנה משנות המס  2025עד ,2030 בשיעור של  20%או יותר מסכום רווחיה שנותרו מיום התחילה ,יחולו לגביה באותה שנת המס הוראות אלה: ( )1סכום הרווחים העודפים בשנת המס יופחת בגובה הרווחים שנותרו מרווחי יום התחילה;",
+      "confidence": "high"
+    },
+    {
+      "id": "law-s5b-bands",
+      "claim": "Section 5(b) of the Law: a Determining Period distribution of between 35% and 60% extends the provisions to 2026; between 60% and 75% to 2026 and 2027; between 75% and 90% to 2026 through 2028; 90% or more to 2026 through 2029.",
+      "claim_type": "percentage",
+      "source_url": "https://fs.knesset.gov.il/25/law/25_lsr_5396731.pdf",
+      "raw_snippet": "( )1חולק בתקופה הקובעת דיבידנד בשיעור שבין  35%ובין  - 60%יחולו ההוראות בשנת המס ;2026 ( )2חולק בתקופה הקובעת דיבידנד בשיעור שבין  60%ובין  - 75%יחולו ההוראות בשנות המס  2026ו־;2027 ( )3חולק בתקופה הקובעת דיבידנד בשיעור שבין  75%ובין  - 90%יחולו ההוראות בשנות המס  2026עד ;2028",
+      "confidence": "high"
+    },
+    {
+      "id": "s62a-a1-formula",
+      "claim": "Section 62A(a1)(1): taxable income from labour-intensive personal-exertion activity of a close company, less 25% of the difference between that activity income and payments to a related company, is treated as the section 2(1) personal-exertion taxable income of an individual active shareholder pro rata to his share in the rights to the company profits, where both conditions hold: activity income below thirty million shekels multiplied by the number of controlling shareholders, a controlling shareholder and his relative per section 76(d)(1) counting as one; and a profitability rate exceeding 25%. (Hebrew: סעיף 76)",
+      "claim_type": "threshold",
+      "source_url": "https://fs.knesset.gov.il/25/law/25_lsr_5396731.pdf",
+      "raw_snippet": "בהפחתת סכום השווה למכפלה של  25%בסכום המתקבל מההפרש שבין ההכנסה מפעילות עתירת יגיעה אישית של חברת המעטים ובין תשלומים לחברה קשורה תיחשב כהכנסתו החייבת מיגיעה אישית של יחיד בעל מניות פעיל בה ,לפי סעיף  ,)1(2בהתאם לחלקו היחסי של בעל המניות האמור בזכויות לרווחי חברת המעטים, בהתקיים כל אלה: (א) ההכנסה מפעילות עתירת יגיעה אישית של חברת המעטים בשנת המס נמוכה מהמכפלה של  30מיליון שקלים חדשים במספר בעלי השליטה בחברת המעטים באותה שנה; לעניין זה ,בעל שליטה וקרובו ,כהגדרתו בסעיף (76ד)( ,)1יימנו כאחד; (ב) בשנת המס ,שיעור הרווחיות של חברת המעטים עלה על .25% ()2 על אף האמור בפסקה (- )1 (א) נחשב חלק מההכנסה החייבת מפעילות עתירת יגיעה אישית של חברת המעטים כהכנסתו החייבת של בעל שליטה",
+      "confidence": "high"
+    },
+    {
+      "id": "s62a-a1-2c-750k",
+      "claim": "Section 62A(a1)(2)(c): paragraph (1) does not apply to a close company having a substantial holder if it is proved to the assessing officer that none of its substantial holders is a profit-holding holder, or where both conditions hold, the second being that accumulated profits at the end of the preceding tax year did not exceed NIS 750 thousand.",
+      "claim_type": "currency",
+      "source_url": "https://fs.knesset.gov.il/25/law/25_lsr_5396731.pdf",
+      "raw_snippet": "המהותיים בה אינו מחזיק בעל רווחים ,או בהתקיים שני אלה: ( )1אין בין בעלי השליטה בה יחיד שהוא בעל שליטה בחברה אחרת; לעניין זה ,חברה לא פעילה כמשמעותה בסעיף 342מא לחוק החברות לא תיחשב כחברה אחרת, ובלבד שאין לה רווחים נצברים; ( )2סכום הרווחים הנצברים ,כהגדרתם בסעיף (77א),",
+      "confidence": "high"
+    },
+    {
+      "id": "s81f-a-not-corporate-tax",
+      "claim": "Section 81F(a): the addition to tax is treated as corporate tax, provided that for computing tax under the Ordinance it is not regarded as part of corporate tax, so it is paid over and above the section 126(a) rate and cannot be credited against the company corporate tax.",
+      "claim_type": "law",
+      "source_url": "https://www.gov.il/BlobFolder/policy/professional-directives-191025/he/IncomeTax_professional-directives-080226.pdf",
+      "raw_snippet": "בהתאם להוראות סעיף 81ו(א) לפקודה \"דין התוספת למס כדין מס חברות ,ובלבד שלעניין חישוב המס לפי הפקודה ,לא יראו את התוספת למס כחלק ממס חברות\" .כלומר התוספת למס תשולם מעבר למס הקבוע בסעיף (126א) לפקודה ולא ניתן לזכות את התוספת למס כנגד מס החברות שחל על החברה.",
+      "confidence": "high"
+    },
+    {
+      "id": "election-and-16-january",
+      "claim": "Where the election of a section 81B(b)(2) or (3) distribution alternative is reported, the distribution is deemed made on the last day of the examined tax year, and the date for paying the tax on the dividend follows regulation 13 for a December distribution, that is by 16 January of the year following the examined year.",
+      "claim_type": "date",
+      "source_url": "https://www.gov.il/BlobFolder/policy/professional-directives-191025/he/IncomeTax_professional-directives-080226.pdf",
+      "raw_snippet": "במקרה זה ,החלוקה תיחשב לחלוקה שבוצעה ביום האחרון של שנת המס הנבדקת ובכל מקרה המועד לתשלום סכום המס בשל חלוקת הדיבידנד יהיה בהתאם לקבוע בתקנה  13לתקנות הניכוי בשל תשלום דיבידנד בחודש דצמבר .קרי ,עד ל 16-לחודש ינואר של השנה העוקבת לשנת המס הנבדקת .כך לדוגמה ,דוח לפי סעיף  131לפקודה לשנת  2025אשר יוגש בתאריך  31.8.26יאפשר לחברה לדווח על חלוקה שתיוחס לשנת המס  2025עד ליום  .31.8.26ככל שהחברה דיווחה על",
+      "confidence": "high"
+    },
+    {
+      "id": "law-s5c-5pct-2025-only",
+      "claim": "Section 5(c) of the Law: a close company is not liable to the addition to tax in 2025 where the taxed dividends distributed to shareholders in the Determining Period are 5% or more of accumulated profits at the end of the preceding tax year, provided the tax on the distribution was paid by the distributing company by 31 December 2025.",
+      "claim_type": "percentage",
+      "source_url": "https://fs.knesset.gov.il/25/law/25_lsr_5396731.pdf",
+      "raw_snippet": "(ג) על אף האמור בסעיף 81ב(א) לפקודה ,כנוסחו בחוק זה ,חברת מעטים לא תהיה חייבת בתשלום תוספת למס בשנת  2025אם סכום הדיבידנדים ששולם מס בשל חלוקתם שחברת המעטים חילקה לבעלי מניותיה בתקופה הקובעת הוא בשיעור של 5%או יותר מסכום הרווחים הנצברים של חברת המעטים בתום שנת המס הקודמת, ובלבד שהמס בשל חלוקת הדיבידנדים שולם עד יום י\"א בטבת התשפ\"ו ( 31בדצמבר )2025על ידי החברה מחלקת הדיבידנד.",
+      "confidence": "high"
+    },
+    {
+      "id": "form-856-withholding-report",
+      "claim": "Form 856 is the withholding report used in this regime for reporting the dividend payment, and is distinct from the trapped-profits declaration which rides on form 1214 with Annex 2B. (Hebrew: טופס 856)",
+      "claim_type": "form-number",
+      "source_url": "https://www.gov.il/BlobFolder/policy/professional-directives-250126-1/he/IncomeTax_professional-directives-250126-1.pdf",
+      "raw_snippet": "בוצעה לאחר המועד החוקי ו/או לאחר מועד הארכה הניתנת להגשת דוח  ,856יוגש דוח  856נוסף לאחר פניה למוקד הניכויים ובו יצוין כי מדובר בדוח  856נוסף לאור חלוקת דיבידנד כאמור בסעיף 81ב(ב)( )3לפקודה והתקנות מכוחו .הדוח יוגש במוקדם מבין מועד הגשת הדוח לשנה הנבדקת ובין",
+      "confidence": "high"
+    },
+    {
+      "id": "shield1-magen-kaspi-750k",
+      "claim": "Shield 1, the magen kaspi, is a flat sum of NIS 750,000.",
+      "claim_type": "currency",
+      "source_url": "https://www.gov.il/BlobFolder/policy/professional-directives-191025/he/IncomeTax_professional-directives-080226.pdf",
+      "raw_snippet": "✓ סך של ( ₪ 750,000להלן\" :מגן כספי\").",
+      "confidence": "high"
+    },
+    {
+      "id": "s81c-cited-in-circular",
+      "claim": "The circular computes excess profits under section 81C of the Ordinance. (Hebrew: סעיף 81ג)",
+      "claim_type": "law",
+      "source_url": "https://www.gov.il/BlobFolder/policy/professional-directives-191025/he/IncomeTax_professional-directives-080226.pdf",
+      "raw_snippet": "פטורים\" ו\"רווחים נצברים חייבים\" .סעיף 81ג לפקודה מגדיר בין היתר את המונחים \"חבר בני אדם מוחזק\"\" ,נכסי החברה\" ו\"נכסים מיוחדים\".",
+      "confidence": "high"
+    },
+    {
+      "id": "determining-period-paid-and-received",
+      "claim": "The Determining Period condition requires the dividend income to have been BOTH paid by the distributing company AND received by the recipient within the period from commencement day to 30 November 2025.",
+      "claim_type": "date",
+      "source_url": "https://fs.knesset.gov.il/25/law/25_lsr_5396731.pdf",
+      "raw_snippet": "בסעיף קטן (א) (בסעיף קטן זה  -ההוראות) גם בשנות המס כמפורט להלן ,ובלבד שההכנסה מדיבידנד שולמה על ידי החברה מחלקת הדיבידנד והתקבלה בידי מקבלה בתקופה שמיום התחילה עד יום י' בכסלו התשפ\"ו ( 30בנובמבר ( )2025בסעיף זה -",
+      "confidence": "high"
+    },
+    {
+      "id": "special-assets-classes",
+      "claim": "Special assets comprise securities, financial assets, intangible assets, rights in land, loans and cash equivalents, as detailed in the circular.",
+      "claim_type": "feature",
+      "source_url": "https://www.gov.il/BlobFolder/policy/professional-directives-191025/he/IncomeTax_professional-directives-080226.pdf",
+      "raw_snippet": "2.16הנכסים המיוחדים כוללים ניירות ערך ,נכסים פיננסים ,נכסים בלתי מוחשיים ,זכויות במקרקעין ,הלוואות ושווי מזומן ,והכל בהתאם למפורט להלן:",
+      "confidence": "high"
+    },
+    {
+      "id": "loan-vs-customer-indicia",
+      "claim": "Indicia that a customers balance is really a loan: a credit period longer than usual for that type of transaction, interest or linkage charged on the unsettled balance, a structure of fixed payments over time, and the provision of security or guarantees.",
+      "claim_type": "feature",
+      "source_url": "https://www.gov.il/BlobFolder/policy/professional-directives-191025/he/IncomeTax_professional-directives-080226.pdf",
+      "raw_snippet": "2.17.1מתן תקופת אשראי ארוכה מהרגיל לסוג דומה של עסקאות. 2.17.2הטלת ריבית או הפרשי הצמדה על היתרה הבלתי מסולקת. 2.17.3מבנה תשלומים  -תשלומים קבועים לאורך זמן יהוו אינדיקציה להלוואה. 2.17.4העמדת בטוחות או ערבויות.",
+      "confidence": "high"
+    },
+    {
+      "id": "route-35pct-intercompany",
+      "claim": "The 35% route: withholding at 35% of the dividend distributed by the close company, under which the dividend is treated as if distributed indirectly to all its shareholders with a deemed dividend imputed to each.",
+      "claim_type": "percentage",
+      "source_url": "https://www.gov.il/BlobFolder/policy/professional-directives-250126-1/he/IncomeTax_professional-directives-250126-1.pdf",
+      "raw_snippet": ".1.10.1ניכוי מס במקור בשיעור של  35%מסכום הדיבידנד המחולק על ידי חברת המעטים. במסלול זה יראו את הדיבידנד המחולק לבעלי מניות חברת המעטים כאילו חולק לכל בעלי מניותיה בעקיפין תוך זקיפה של הכנסה מדיבידנד רעיוני לכל אחד מבעלי המניות",
+      "confidence": "high"
+    },
+    {
+      "id": "law-s5b-lead-in",
+      "claim": "Section 5(b) opens 'without derogating from subsection (a)' and provides that where the company distributed the stated share of its commencement-day accumulated profits, the provisions in paragraphs (1) and (2) of subsection (a) apply to it ALSO in the tax years listed. The band is therefore an independent trigger for the same benefit, not a requirement additional to the annual distribution.",
+      "claim_type": "law",
+      "source_url": "https://fs.knesset.gov.il/25/law/25_lsr_5396731.pdf",
+      "raw_snippet": "(ב) בלי לגרוע מהוראות סעיף קטן (א) ,חברת מעטים שערב יום התחילה היו לה רווחים נצברים שטרם חולקו ,והיא חילקה דיבידנד לבעלי מניותיה בשיעור מרווחיה הנצברים ביום התחילה כמפורט להלן ,יחולו לגביה ההוראות שבפסקאות ( )1ו–()2 בסעיף קטן (א) (בסעיף קטן זה  -ההוראות) גם בשנות המס כמפורט להלן ,ובלבד שההכנסה מדיבידנד שולמה על ידי החברה מחלקת הדיבידנד והתקבלה בידי מקבלה בתקופה שמיום התחילה עד יום י' בכסלו התשפ\"ו ( 30בנובמבר ( )2025בסעיף זה -",
+      "confidence": "high"
+    },
+    {
+      "id": "law-s5a-1-benefit",
+      "claim": "The benefit in section 5(a)(1) is that the amount of excess profits in the tax year is reduced by the amount of the profits remaining from commencement-day profits.",
+      "claim_type": "feature",
+      "source_url": "https://fs.knesset.gov.il/25/law/25_lsr_5396731.pdf",
+      "raw_snippet": "( )1סכום הרווחים העודפים בשנת המס יופחת בגובה הרווחים שנותרו מרווחי יום התחילה;",
+      "confidence": "high"
+    },
+    {
+      "id": "law-s5a-2-reduces-50pct-denominator",
+      "claim": "Section 5(a)(2): for a company in the 20% route, section 81B(b)(2) (the 50% escape) is read with the words 'less the profits remaining from the profits at the end of tax year 2024' appended, that quantity being the company's excess profits at the end of 2024 less profits already distributed to shareholders as taxed dividends. The denominator of the 50% test is therefore reduced.",
+      "claim_type": "law",
+      "source_url": "https://fs.knesset.gov.il/25/law/25_lsr_5396731.pdf",
+      "raw_snippet": "( )2יקראו את סעיף 81ב(ב)( )2לפקודה ,כנוסחו בחוק זה ,כך שבסופו יבוא \"בהפחתת הרווחים שנותרו מרווחי תום שנת המס  ;2024לעניין זה\" ,רווחים שנותרו מרווחי תום שנת המס  - \"2024סכום הרווחים העודפים של חברת מעטים בתום שנת  2024בניכוי רווחים שחילקה חברת המעטים מהרווחים האמורים לבעלי מניותיה כדיבידנדים ששולם מס בשל חלוקתם\". (ב) בלי לגרוע מהוראות סעיף קטן (א) ,חברת מעטים שערב יום התחילה היו לה רווחים נצברים שטרם חולקו ,והיא חילקה דיבידנד לבעלי מניותיה בשיעור מרווחיה הנצברים ביום התחילה כמפורט להלן ,יחולו לגביה ההוראות שבפסקאות ( )1ו–()2",
+      "confidence": "high"
+    },
+    {
+      "id": "profit-holding-holder-aggregation",
+      "claim": "A profit-holding holder (machzik baal revachim) is a holder for whom, ACROSS ALL COMPANIES in which he is a substantial holder, TOGETHER, accumulated profits as defined in section 77(a) at the end of the preceding tax year did not exceed NIS 750 thousand. The test therefore aggregates across companies rather than applying per company.",
+      "claim_type": "currency",
+      "source_url": "https://fs.knesset.gov.il/25/law/25_lsr_5396731.pdf",
+      "raw_snippet": "לעניין פסקת משנה זו - \"מחזיק בעל רווחים\"  -מחזיק שבכל החברות שהוא מחזיק מהותי בהן ,יחד ,סכום הרווחים הנצברים ,כהגדרתם בסעיף (77א) ,בסוף שנת המס הקודמת לא עלה על 750 אלף שקלים חדשים; \"מחזיק מהותי\"  -יחיד תושב ישראל ,שמחזיק ,במישרין או בעקיפין ,לבדו או יחד עם אחר ,ב־ 30%לפחות מסוג כלשהו של אמצעי השליטה בחברת מעטים; לעניין זה, \"יחד עם אחר\"  -כהגדרתו בסעיף .88",
+      "confidence": "high"
+    }
+  ]
+}

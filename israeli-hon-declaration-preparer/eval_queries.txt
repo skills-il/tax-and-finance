@@ -1,0 +1,15 @@
+# POSITIVE (should trigger)
+P1 קיבלתי דרישה להצהרת הון מפקיד השומה, מאיפה מתחילים
+P2 I got a demand to file a capital declaration, which assets do I have to declare
+P3 איך רושמים דירה שקיבלתי בירושה בהצהרת הון
+P4 how do I value my pension fund for form 1219
+P5 ההון שלי גדל מאז ההצהרה הקודמת ואני צריך להסביר את זה
+P6 what documents do I need to attach to a hatzharat hon
+# NEGATIVE (should NOT trigger)
+N1 מתי צריך להגיש את הדוח השנתי שלי                    -> excluded by: "Do NOT use for the annual return (use israeli-tax-returns)"
+N2 should I take a dividend or a salary from my company -> excluded by: "profit-extraction planning (use israeli-corporate-tax-strategy)"
+N3 how much trapped-profits tax does my company owe     -> excluded by: "or the trapped-profits regime (use israeli-trapped-profits-planner)"
+# EDGE
+E1 do I have to declare my crypto wallet                -> YES, section 4 is a declarable class
+E2 I am an oleh, do I report my apartment abroad        -> YES, and the answer is the ten-year exemption
+E3 how much tax will I owe on the unexplained gap       -> NO, pricing an assessment is out of scope
