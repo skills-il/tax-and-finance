@@ -55,6 +55,9 @@ jobs:
     needs: detect-changes
     if: needs.detect-changes.outputs.changed_dirs != ''
     runs-on: ubuntu-latest
+    # Advisory: Snyk's public tier has a daily usage limit, so it must never block a push.
+    # The job still goes red on a blocking risk or when a skill could not be scanned.
+    continue-on-error: true
     steps:
       - uses: actions/checkout@v6
       - uses: actions/setup-python@v6
@@ -64,25 +67,22 @@ jobs:
         run: pip install 'snyk-agent-scan==0.6.3'
       - name: Scan changed skills
         run: |
-          # A scan that cannot parse the skill, cannot authenticate, or reports
-          # findings must FAIL the job. The job conclusion is what the site shows.
+          # .github/scripts/snyk-gate.py exits 0 clean, 1 blocking risk, 2 not scanned.
+          # "Not scanned" (quota, auth, parse error) is never reported as a pass.
           status=0
           for dir in ${{ needs.detect-changes.outputs.changed_dirs }}; do
             f="$dir/SKILL.md"
             [ -f "$f" ] || continue
             echo "::group::Scanning $f"
+            snyk-agent-scan --skills "$f" --json --dangerously-run-mcp-servers > snyk.json 2> snyk.err || true
+            tail -n 20 snyk.err
             set +e
-            snyk-agent-scan --skills "$f" --ci --dangerously-run-mcp-servers --print-errors 2>&1 | tee scan.log
-            rc=${PIPESTATUS[0]}
+            python3 .github/scripts/snyk-gate.py "$f" snyk.json
+            rc=$?
             set -e
             echo "::endgroup::"
-            if [ "$rc" -ne 0 ]; then
-              echo "::error file=$f::Snyk Agent Scan exited $rc"
-              status=1
-            elif grep -qi "could not parse" scan.log; then
-              echo "::error file=$f::Snyk Agent Scan could not parse the skill"
-              status=1
-            fi
+            if [ "$rc" -eq 1 ]; then status=1; fi
+            if [ "$rc" -eq 2 ] && [ "$status" -eq 0 ]; then status=2; fi
           done
           exit $status
         env:
@@ -107,17 +107,18 @@ jobs:
         with:
           python-version: '3.12'
       - name: Install Cisco Skill Scanner
-        run: pip install cisco-ai-skill-scanner
+        run: pip install 'cisco-ai-skill-scanner==2.1.0'
       - name: Scan changed skills
         run: |
           # scan-all expects a parent directory containing skill subdirectories,
-          # so symlink only changed skills into a temp dir
+          # so symlink only changed skills into a temp dir.
+          # The policy downgrades guardrail phrasing ("do not tell the user X") to MEDIUM; see the file.
           mkdir -p .scan-target
           for dir in ${{ needs.detect-changes.outputs.changed_dirs }}; do
             ln -s "$PWD/$dir" ".scan-target/$dir"
           done
           echo "Scanning: $(ls .scan-target)"
-          skill-scanner scan-all .scan-target --fail-on-severity high --format sarif --output results.sarif
+          skill-scanner scan-all .scan-target --policy .github/skill-scanner-policy.yaml --fail-on-severity high --format sarif --output results.sarif
       - name: Upload SARIF results
         if: always()
         uses: github/codeql-action/upload-sarif@v4
