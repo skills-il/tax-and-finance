@@ -1,0 +1,20 @@
+{
+  "cycles": [
+    {
+      "version": "1.0.1",
+      "date": "2026-09-13",
+      "lessons": [
+        "Fixed: Form 8621 USD 25,000 exception had borrowed an 'any disposal day' condition from the unrelated section 1297(f)(2) deemed-election passage; the evidence snippet was a real quote from the wrong section, so --check-sources passed. Check a snippet's SECTION context, not only its presence.",
+        "Fixed: Rev. Proc. 2020-17 5.03(4) is disjunctive with a percentage-of-earned-income limb; skill and script had treated it as dollar-only and conjunctive.",
+        "Fixed: 5.03(4)/5.04(3) conversion uses the Treasury Bureau of the Fiscal Service year-end rate, not Bank of Israel.",
+        "Fixed (Expert CRITICAL): wrapper rows implied no Form 8621 exposure; added grantor-trust look-through (Reg. 1.1291-1(b)(8)(iii)(D)), Rev. Proc. 2020-17 not affecting other reporting, Reg. 1.1298-1(c)(4) routed to preparer.",
+        "Fixed (Expert MAJOR): USD 5,000 indirect exception, 5.03(5)/5.04(4) penalty limb, no-QEF condition, aggregate carve-outs.",
+        "Fixed (Expert iteration 2 CRITICAL, introduced by the repair): the USD 5,000 exception was first written as applying to wrapper holdings; Reg. 1.1298-1(c)(2)(i)(A)(2) limits it to stock held through another PFIC. The repair of one finding created a new wrong claim, which only a re-review of the repair caught.",
+        "Open: whether the US-Israel treaty brings Israeli pension funds within Reg. 1.1298-1(c)(4) was deliberately NOT asserted; source the treaty text and technical explanation next cycle before stating an answer.",
+        "Open: whether Israeli income tax on an early keren hishtalmut withdrawal is a 'penalty' under 5.03(5) has no IRS guidance; left as the preparer question.",
+        "Open reading: 5.04(3) 'USD 10,000 annually or USD 200,000 lifetime' is screened disjunctively; Expert round 1 judged this defensible.",
+        "Legal gate low note: English description phrase 'or is deciding what to buy' could be reworded; description changes trigger the 5.7 holdout gate, so deferred."
+      ]
+    }
+  ]
+}

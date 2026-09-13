@@ -20,18 +20,39 @@ source, and no secondary source was used for a value.
       source: Instructions for Form 8621
       why core: the actual legal test, as opposed to "Israeli funds are PFICs" folklore.
 
-- [ ] The Form 8621 de minimis FILING exception: USD 25,000, or USD 50,000 on a joint return,
-      measured on the last day of the tax year AND on any disposal day. Plus the two limits on
-      it, that it is an exception to filing only and does not change taxation or other duties.
-      source: Instructions for Form 8621
+- [ ] The Form 8621 Part I USD 25,000 exception, per section 1291 fund: aggregate value of ALL
+      PFIC stock on the last day of the tax year is USD 25,000 or less (combined USD 50,000 on a
+      joint return), AND no excess distribution from that fund, AND no gain recognized on
+      disposing of its stock. Plus the limits on it: it relieves Part I only and does not change
+      taxation or other duties. (Corrected 2026-09-13: v1.0.0 had borrowed an "any disposal
+      day" condition from the unrelated section 1297(f)(2) deemed-election passage.)
+      source: Instructions for Form 8621, Exceptions to Filing Part I
       why core: routinely omitted, and its omission manufactures a filing duty that does not
       exist for smaller holders.
 
 - [ ] The section 1291 default regime: excess distribution rules, and the entire gain on
       disposition treated as an excess distribution. Elections exist (QEF, mark-to-market) and
-      are a preparer's call; a QEF election needs fund-supplied data Israeli funds rarely give.
+      are a preparer's call; a QEF election depends on a PFIC Annual Information Statement from the fund.
       source: Instructions for Form 8621
       why core: explains WHY PFIC status matters rather than merely asserting that it does.
+
+- [ ] The USD 5,000 Part I exception, limited to a fund owned THROUGH ANOTHER PFIC (per fund,
+      same no-excess-distribution, no-gain and no-QEF conditions; it does not reach stock held
+      through a grantor-trust wrapper), and the aggregate carve-outs and no-QEF condition of the
+      USD 25,000 exception. (Scope corrected 2026-09-13 after Expert iteration 2.)
+      source: Instructions for Form 8621; Treas. Reg. 1.1298-1(c)(2)
+
+- [ ] LOOK-THROUGH for wrapper products: an owner of a grantor trust is treated as owning the
+      stock it holds, so a pension, gemel or hishtalmut can carry indirect PFIC stock; Rev.
+      Proc. 2020-17 does not affect other reporting; Reg. 1.1298-1(c)(4) foreign pension fund
+      exception depends on the treaty and is routed to a preparer. (Added 2026-09-13 after
+      Expert review found the wrapper rows implied no Form 8621 exposure.)
+      source: Treas. Reg. 1.1291-1(b)(8)(iii)(D) and 1.1298-1(c)(4); Rev. Proc. 2020-17
+
+- [ ] The 5.03(5) and 5.04(4) PENALTY limb: a plan passes if penalties apply to earlier
+      withdrawals, so whether Israeli tax on early keren hishtalmut withdrawal is a penalty is
+      the live question.
+      source: Rev. Proc. 2020-17 sections 5.03(5) and 5.04(4)
 
 - [ ] Revenue Procedure 2020-17 SCOPE: an exemption from section 6048 information reporting
       ONLY, not from taxation.
@@ -47,7 +68,8 @@ source, and no secondary source was used for a value.
 
 - [ ] Section 5.03 criteria in FULL, enumerated as their own rows (Step C.1), not summarised:
       the exclusive-purpose test, (1) local tax favour, (2) local reporting, (3) earned-income
-      contributions only, (4) the USD 50,000 annual or USD 1,000,000 lifetime limits, (5) the
+      contributions only, (4) a percentage-of-earned-income cap OR the USD 50,000 annual OR
+      USD 1,000,000 lifetime limit (disjunctive), (5) the
       withdrawal condition and its narrow carve-out, (6) employer nondiscrimination.
       source: Rev. Proc. 2020-17 section 5.03
       why core: criterion (5) decides most Israeli cases and a summarised checklist hides it.
@@ -63,8 +85,10 @@ source, and no secondary source was used for a value.
       filers.
       source: the IRS pages for each form
 
-- [ ] The USD conversion duty, since every criterion is a dollar limit applied to shekel
-      contributions, and the answer can flip year to year on the rate alone.
+- [ ] The USD conversion duty for the 5.03(4) dollar limbs and 5.04(3), at the rate the
+      Revenue Procedure fixes: US Treasury Bureau of the Fiscal Service rate on the last day of
+      the tax year. The answer can flip year to year on the rate alone.
+      source: Rev. Proc. 2020-17 sections 5.03(4) and 5.04(3)
 
 - [ ] The epistemic frame: the IRS has never issued guidance naming Israeli products, so the
       output is a screen and never a classification.

@@ -14,11 +14,11 @@
     },
     {
       "id": "pfic-de-minimis",
-      "claim": "Form 8621 filing is excepted where the PFIC stock owned by the US person is worth USD 25,000 or less, or USD 50,000 or less on a joint return, on the last day of the tax year and on any disposal day (בעברית: טופס 8621, פטור הסכום הנמוך)",
+      "claim": "A shareholder is not required to complete Part I of Form 8621 for a section 1291 fund if the aggregate value of all PFIC stock is USD 25,000 or less on the last day of the tax year (combined USD 50,000 on a joint return), no excess distribution was received from that fund, and no gain was recognized on disposing of its stock (בעברית: טופס 8621, חריג 25,000 הדולר בחלק I)",
       "claim_type": "threshold",
       "source_url": "https://www.irs.gov/pub/irs-pdf/i8621.pdf",
-      "raw_snippet": "The stock of the foreign corporation that is owned by the U.S. person (including stock owned indirectly) has a value of $25,000 or less ($50,000 or less in the case of a joint return) on the last day of the U.S. person's tax year and on any day during the tax year on which the U.S. person disposes o",
-      "source_fetched_at": "2026-08-23T00:00:00Z",
+      "raw_snippet": "to complete Part I with respect to a specific section 1291 fund if the shareholder meets the $25,000 exception on the last day of the shareholder’s tax year and the shareholder does not receive an excess distribution from, or recognize gain on the sale or disposition of the stock of, the section 1291 fund. For purposes of determining whether a shareholder satisfies the $25,000 threshold, the shareholder takes into account all PFIC stock (QEFs, section 1291 funds, and PFIC stock subject to a section 1296 mark-to-market election) owned directly or indirectly other than PFIC stock owned through another U.S. person or PFIC stock owned through another PFIC. Shareholders filing a joint return have a combined threshold of $50,000 instead of $25,000 for purposes of this exception.",
+      "source_fetched_at": "2026-09-13T00:00:00Z",
       "confidence": "high"
     },
     {
@@ -50,7 +50,7 @@
     },
     {
       "id": "rp2017-503-retirement",
-      "claim": "A tax-favored foreign retirement trust under section 5.03 must operate exclusively or almost exclusively to provide pension or retirement benefits, be tax-favored locally, be reported to local tax authorities, accept only earned-income contributions, and be limited to USD 50,000 or less annually or USD 1,000,000 or less lifetime (בעברית: סעיף 5.03)",
+      "claim": "A tax-favored foreign retirement trust under section 5.03 must operate exclusively or almost exclusively to provide pension or retirement benefits and meet the listed requirements, starting with being tax-favored locally (בעברית: סעיף 5.03)",
       "claim_type": "threshold",
       "source_url": "https://www.irs.gov/pub/irs-drop/rp-20-17.pdf",
       "raw_snippet": ".03 Tax-Favored Foreign Retirement Trust. For purposes of this revenue procedure, a tax-favored foreign retirement trust means a foreign trust for U.S. tax purposes that is created, organized, or otherwise established under the laws of a foreign jurisdiction (the trust’s jurisdiction) as a trust, plan, fund, scheme, or other arrangement (collectively, a trust) to operate exclusively or almost exclusively to provide, or to earn income for the provision of, pension or retirement benefits and ancillary or incidental benefits, and that meets the following requirements established by the laws of the trust’s jurisdiction. (1) The trust is generally exempt from income tax or is otherwise tax-favored under the laws of the trust’s jurisdiction. For purposes of this revenue procedure, a trust is tax-favored if it meets any one or more of the following conditions: (i) contributions to the trust that would otherwise be subject to tax are deductible or excluded from income, are taxed at a reduced rate, give rise to a tax credit, or are otherwise eligible for another tax benefit (such as a government subsidy or contribution); and (ii) taxation of investment income earned by the trust is deferred until distribution or the investment income is ta",
@@ -109,6 +109,141 @@
       "source_url": "https://www.irs.gov/forms-pubs/about-form-8621",
       "raw_snippet": "Form 8621, Information Return by a Shareholder of a Passive Foreign Investment Company or Qualified Electing Fund | Internal Revenue Service Skip to main content An official website of the United Stat",
       "source_fetched_at": "2026-08-23T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "rp2017-503-4-contribution-limits",
+      "claim": "Section 5.03(4) is met if contributions are limited by a percentage of earned income, OR subject to an annual limit of USD 50,000 or less, OR a lifetime limit of USD 1,000,000 or less, converted at the US Treasury Bureau of the Fiscal Service rate on the last day of the tax year (בעברית: תנאי 5.03(4))",
+      "claim_type": "threshold",
+      "source_url": "https://www.irs.gov/pub/irs-drop/rp-20-17.pdf",
+      "raw_snippet": "(4) Contributions to the trust are limited by a percentage of earned income of the participant, are subject to an annual limit of $50,000 or less to the trust, or are subject to a lifetime limit of $1,000,000 or less to the trust. These contribution limits are determined using the U.S. Treasury Bureau of Fiscal Service foreign currency conversion rate on the last day of the tax year",
+      "source_fetched_at": "2026-09-13T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "rp2017-503-6-nondiscrimination",
+      "claim": "Section 5.03(6) requires an employer-maintained trust to be nondiscriminatory across a wide range of employees (בעברית: תנאי 5.03(6))",
+      "claim_type": "legal_reference",
+      "source_url": "https://www.irs.gov/pub/irs-drop/rp-20-17.pdf",
+      "raw_snippet": "(6) In the case of an employer-maintained trust, (i) the trust is nondiscriminatory insofar as a wide range of employees, including rank and file employees",
+      "source_fetched_at": "2026-09-13T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "rp2017-504-3-contribution-limits",
+      "claim": "Section 5.04(3) limits contributions to USD 10,000 or less annually or USD 200,000 or less lifetime, converted at the US Treasury Bureau of the Fiscal Service rate on the last day of the tax year, with no percentage-of-income limb (בעברית: תנאי 5.04(3))",
+      "claim_type": "threshold",
+      "source_url": "https://www.irs.gov/pub/irs-drop/rp-20-17.pdf",
+      "raw_snippet": "(3) Contributions to the trust are limited to $10,000 or less annually or $200,000 or less on a lifetime basis, determined using the U.S. Treasury Bureau of Fiscal Service foreign currency conversion rate on the last day of the tax year",
+      "source_fetched_at": "2026-09-13T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "treasury-reporting-rates-page",
+      "claim": "The US Treasury Reporting Rates of Exchange dataset publishes the government's exchange rates for foreign currencies used for reporting (source of the year-end rate for Rev. Proc. 2020-17 limits)",
+      "claim_type": "url",
+      "source_url": "https://fiscaldata.treasury.gov/datasets/treasury-reporting-rates-exchange/treasury-reporting-rates-of-exchange",
+      "raw_snippet": "The Treasury Reporting Rates of Exchange dataset provides the U.S. government's authoritative exchange rates",
+      "source_fetched_at": "2026-09-13T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "rp2017-503-2-3-reporting-earned-income",
+      "claim": "Section 5.03(2) requires annual information reporting to the local tax authority and 5.03(3) permits only contributions from income earned from personal services (בעברית: תנאים 5.03(2) ו-5.03(3))",
+      "claim_type": "legal_reference",
+      "source_url": "https://www.irs.gov/pub/irs-drop/rp-20-17.pdf",
+      "raw_snippet": "(2) Annual information reporting with respect to the trust (or of its participants or beneficiaries) is provided, or is otherwise available, to the relevant tax authorities in the trust’s jurisdiction. (3) Only contributions with respect to income earned from the performance of personal services are permitted.",
+      "source_fetched_at": "2026-09-13T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "rp2017-504-4-withdrawal-condition",
+      "claim": "Section 5.04(4) requires withdrawals to be conditioned on the provision of medical, disability or educational benefits, or penalties to apply to earlier withdrawals (בעברית: תנאי 5.04(4))",
+      "claim_type": "legal_reference",
+      "source_url": "https://www.irs.gov/pub/irs-drop/rp-20-17.pdf",
+      "raw_snippet": "(4) Withdrawals, distributions, or payments from the trust are conditioned upon the provision of medical, disability, or educational benefits, or apply penalties to withdrawals, distributions, or payments made before such conditions are met.",
+      "source_fetched_at": "2026-09-13T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "qef-annual-information-statement",
+      "claim": "For each year a QEF election applies, the PFIC must provide shareholders with a PFIC Annual Information Statement (בעברית: בחירת QEF)",
+      "claim_type": "legal_reference",
+      "source_url": "https://www.irs.gov/pub/irs-pdf/i8621.pdf",
+      "raw_snippet": "For each year of the PFIC ending in a tax year of a shareholder to which the QEF election applies, the PFIC must provide the shareholders with a PFIC Annual Information Statement.",
+      "source_fetched_at": "2026-09-13T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "keren-hishtalmut-6-year-withdrawal",
+      "claim": "A keren hishtalmut can be withdrawn after 3 years for training or after retirement age, or after 6 years from the start of deposits at any age and for any purpose (בעברית: קרן השתלמות, משיכה אחרי 6 שנים)",
+      "claim_type": "eligibility",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%A7%D7%A8%D7%9F_%D7%94%D7%A9%D7%AA%D7%9C%D7%9E%D7%95%D7%AA",
+      "raw_snippet": "לאחר 6 שנים מתחילת ההפקדות לקרן, וזאת בכל גיל ולכל מטרה",
+      "source_fetched_at": "2026-09-13T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "grantor-trust-pfic-lookthrough",
+      "claim": "Under Treas. Reg. 1.1291-1(b)(8)(iii)(D), a person treated under sections 671 through 679 as owner of a trust that holds stock is considered to own that stock (בעברית: תקנה 1.1291-1, הערת שקיפות)",
+      "claim_type": "legal_reference",
+      "source_url": "https://www.ecfr.gov/api/renderer/v1/content/enhanced/current/title-26?part=1&section=1.1291-1",
+      "raw_snippet": "Grantor trusts. If a foreign or domestic trust directly or indirectly owns stock, a person that is treated under sections 671 through 679 as the owner of any portion of the trust that holds an interest in the stock is considered to own the interest in the stock held by that portion of the trust.",
+      "source_fetched_at": "2026-09-13T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "rp2017-no-effect-other-reporting",
+      "claim": "Revenue Procedure 2020-17 does not affect reporting obligations under section 6038D or any other provision of US law",
+      "claim_type": "legal_reference",
+      "source_url": "https://www.irs.gov/pub/irs-drop/rp-20-17.pdf",
+      "raw_snippet": "This revenue procedure does not affect any reporting obligations under section 6038D or under any other provision of U.S. law",
+      "source_fetched_at": "2026-09-13T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "reg-1298-1-c4-foreign-pension-fund",
+      "claim": "Treas. Reg. 1.1298-1(c)(4) excepts Form 8621 filing for PFIC stock held through an arrangement treated as a foreign pension fund under a US income tax treaty, if under the treaty its income is taxed to the shareholder only when paid (בעברית: תקנה 1.1298-1(c)(4))",
+      "claim_type": "legal_reference",
+      "source_url": "https://www.ecfr.gov/api/renderer/v1/content/enhanced/current/title-26?part=1&section=1.1298-1",
+      "raw_snippet": "Exception for PFIC stock held through certain foreign pension funds. A shareholder who is a member or beneficiary of, or participant in, a plan, trust, scheme, or other arrangement that is treated as a foreign pension fund (or equivalent) under an income tax treaty to which the United States is a party and that owns, directly or indirectly, an interest in a PFIC is not required under section 1298(f) and these regulations to file Form 8621 (or successor form) with respect to the PFIC interest if, pursuant to the applicable income tax treaty, the income earned by the foreign pension fund may be taxed as the income of the shareholder only when and to the extent the income is paid to, or for the benefit of, the shareholder.",
+      "source_fetched_at": "2026-09-13T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "reg-1298-1-c2-no-qef",
+      "claim": "The USD 25,000 exception requires that no section 1295 QEF election has been made for the section 1291 fund",
+      "claim_type": "legal_reference",
+      "source_url": "https://www.ecfr.gov/api/renderer/v1/content/enhanced/current/title-26?part=1&section=1.1298-1",
+      "raw_snippet": "An election under section 1295 has not been made to treat the section 1291 fund as a qualified electing fund with respect to the shareholder.",
+      "source_fetched_at": "2026-09-13T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "pfic-indirect-5000-exception",
+      "claim": "A shareholder is not required to complete Part I for indirect ownership of a specific section 1291 fund worth USD 5,000 or less on the last day of the tax year, absent an excess distribution or gain on disposition",
+      "claim_type": "threshold",
+      "source_url": "https://www.irs.gov/pub/irs-pdf/i8621.pdf",
+      "raw_snippet": "Exception if the value of shareholder’s indirect PFIC stock is $5,000 or less. A shareholder is not required to complete Part I with respect to indirect ownership of a specific section 1291 fund if the shareholder meets the $5,000 exception with respect to the section 1291 fund on the last day of the shareholder’s tax year and the shareholder does not receive an excess distribution from, or recognize gain on the sale or disposition of the stock of, the section 1291 fund.",
+      "source_fetched_at": "2026-09-13T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "rp2017-503-5-penalty-limb",
+      "claim": "Section 5.03(5) is also met if penalties apply to withdrawals made before retirement age, disability or death",
+      "claim_type": "legal_reference",
+      "source_url": "https://www.irs.gov/pub/irs-drop/rp-20-17.pdf",
+      "raw_snippet": "or penalties apply to withdrawals, distributions, or payments made before such conditions are met.",
+      "source_fetched_at": "2026-09-13T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "reg-1298-1-c2-5000-scope",
+      "claim": "The USD 5,000 exception in Treas. Reg. 1.1298-1(c)(2)(i)(A)(2) applies only to section 1291 fund stock indirectly owned under section 1298(a)(2)(B) and 1.1291-1(b)(8)(ii)(B), i.e. through another PFIC",
+      "claim_type": "legal_reference",
+      "source_url": "https://www.ecfr.gov/api/renderer/v1/content/enhanced/current/title-26?part=1&section=1.1298-1",
+      "raw_snippet": "The section 1291 fund stock is indirectly owned by the shareholder under section 1298(a)(2)(B) and § 1.1291-1(b)(8)(ii)(B) , and the value of the section 1291 fund stock indirectly owned by the shareholder is $5,000 or less",
+      "source_fetched_at": "2026-09-13T00:00:00Z",
       "confidence": "high"
     }
   ]
