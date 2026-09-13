@@ -11,6 +11,7 @@ on:
     paths:
       - '**/SKILL.md'
       - '**/scripts/**'
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -30,14 +31,15 @@ jobs:
       - name: Find changed skill directories
         id: changed
         run: |
-          if [ "${{ github.event_name }}" = "pull_request" ]; then
-            BASE="origin/${{ github.base_ref }}"
-          elif [ "${{ github.event.before }}" = "0000000000000000000000000000000000000000" ]; then
-            # First push -- scan all skill directories
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] || \
+             [ "${{ github.event.before }}" = "0000000000000000000000000000000000000000" ]; then
+            # Manual run or first push -- scan all skill directories
             DIRS=$(find . -maxdepth 2 -name 'SKILL.md' -not -path './.github/*' | sed 's|/SKILL.md||;s|^\./||' | sort | tr '\n' ' ')
             echo "dirs=$DIRS" >> "$GITHUB_OUTPUT"
-            echo "First push -- scanning all: $DIRS"
+            echo "Scanning all: $DIRS"
             exit 0
+          elif [ "${{ github.event_name }}" = "pull_request" ]; then
+            BASE="origin/${{ github.base_ref }}"
           else
             BASE="${{ github.event.before }}"
           fi
@@ -55,17 +57,34 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
-      - name: Install mcp-scan
-        run: pip install 'mcp-scan==0.3.39'
-      - name: Run mcp-scan on changed SKILL.md files
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Install Snyk Agent Scan
+        run: pip install 'snyk-agent-scan==0.6.3'
+      - name: Scan changed skills
         run: |
+          # A scan that cannot parse the skill, cannot authenticate, or reports
+          # findings must FAIL the job. The job conclusion is what the site shows.
+          status=0
           for dir in ${{ needs.detect-changes.outputs.changed_dirs }}; do
-            if [ -f "$dir/SKILL.md" ]; then
-              echo "::group::Scanning $dir/SKILL.md"
-              mcp-scan "$dir/SKILL.md"
-              echo "::endgroup::"
+            f="$dir/SKILL.md"
+            [ -f "$f" ] || continue
+            echo "::group::Scanning $f"
+            set +e
+            snyk-agent-scan --skills "$f" --ci --dangerously-run-mcp-servers --print-errors 2>&1 | tee scan.log
+            rc=${PIPESTATUS[0]}
+            set -e
+            echo "::endgroup::"
+            if [ "$rc" -ne 0 ]; then
+              echo "::error file=$f::Snyk Agent Scan exited $rc"
+              status=1
+            elif grep -qi "could not parse" scan.log; then
+              echo "::error file=$f::Snyk Agent Scan could not parse the skill"
+              status=1
             fi
           done
+          exit $status
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
       - name: Post scan results
@@ -73,7 +92,7 @@ jobs:
         run: |
           gh pr comment ${{ github.event.pull_request.number }} --body "## Security Scan Complete
 
-          Snyk mcp-scan has finished scanning changed skills. Check workflow logs for details."
+          Snyk Agent Scan has finished scanning changed skills. Check workflow logs for details."
         env:
           GH_TOKEN: ${{ github.token }}
 
@@ -98,7 +117,7 @@ jobs:
             ln -s "$PWD/$dir" ".scan-target/$dir"
           done
           echo "Scanning: $(ls .scan-target)"
-          skill-scanner scan-all .scan-target --fail-on-severity high --format sarif --output results.sarif || true
+          skill-scanner scan-all .scan-target --fail-on-severity high --format sarif --output results.sarif
       - name: Upload SARIF results
         if: always()
         uses: github/codeql-action/upload-sarif@v4
