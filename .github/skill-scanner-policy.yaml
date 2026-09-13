@@ -1,0 +1,12 @@
+# Cisco Skill Scanner policy for skills-il category repos.
+# Merged onto the scanner's default (balanced) policy; only overrides live here.
+policy_name: skills-il
+policy_version: '1.0'
+preset_base: balanced
+severity_overrides:
+- rule_id: PROMPT_INJECTION_CONCEALMENT
+  severity: MEDIUM
+  reason: skills-il skills use "do not tell the user X" as a safety guardrail (for example, do not tell the user they can skip a lawyer). Every hit in the 2026-09-14 full-catalog scan was this form. Kept visible in code scanning, not blocking.
+- rule_id: YARA_prompt_injection_generic
+  severity: MEDIUM
+  reason: fires on the same "do not tell the user" guardrail phrasing. Snyk Agent Scan, Tank and SkillSpector also check prompt injection. Kept visible in code scanning, not blocking.
