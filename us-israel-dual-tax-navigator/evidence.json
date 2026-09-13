@@ -140,7 +140,7 @@
     },
     {
       "id": "treaty-savings-clause",
-      "claim": "Under the US-Israel income tax treaty the Article 6 paragraph 3 savings clause lets a Contracting State tax its citizens as if the Convention had not come into effect, subject to paragraph 4 carve-outs preserving Article 10 (Grants), Article 21 (Social Security Payments), Article 26 (Relief from Double Taxation), Article 27 (Nondiscrimination) and Article 28 (Mutual Agreement Procedure) (בעברית: סעיף 6 לאמנה, וסעיף 26 בין החריגים)",
+      "claim": "Article 6(3) savings clause (סעיף 6): each state may tax its citizens as if the Convention had not come into effect",
       "claim_type": "law",
       "source_url": "https://www.irs.gov/pub/irs-trty/israel.pdf",
       "raw_snippet": "3. Notwithstanding any provisions of this Convention except paragraph (4), a Contracting State may tax its residents (as determined under Article 3 (Fiscal Residence) and its citizens as if this Convention had not come into effect. 4. The provisions of paragraph (3) shall not affect: (a) The benefits conferred by a Contracting State under Articles 10 (Grants), 21 (Social Security Payments), 26 (Relief from Double Taxation), 27 (Nondiscrimination) , and 28 (Mutual Agreement Procedure)",
@@ -266,10 +266,10 @@
     },
     {
       "id": "passport-denial",
-      "claim": "Seriously delinquent tax debt can lead to passport denial or revocation",
+      "claim": "The IRS notifies the State Department of certified seriously delinquent tax debt; the State Department is generally prohibited from issuing or renewing a passport and may revoke a valid one",
       "claim_type": "regulatory",
       "source_url": "https://www.irs.gov/publications/p54",
-      "raw_snippet": "The IRS is required to notify the State Department of taxpayers certified as owing a seriously delinquent tax debt",
+      "raw_snippet": "The IRS is required to notify the State Department of taxpayers certified as owing a seriously delinquent tax debt. The State Department is generally prohibited from issuing or renewing a passport to a taxpayer with seriously delinquent tax debt. If you currently have a valid passport, the State Department may revoke your passport or limit your ability to travel",
       "source_fetched_at": "2026-09-13T00:00:00Z",
       "confidence": "high"
     },
@@ -486,6 +486,69 @@
       "claim_type": "regulatory",
       "source_url": "https://www.irs.gov/individuals/international-taxpayers/streamlined-filing-compliance-procedures",
       "raw_snippet": "did not result from willful conduct on their part. The streamlined procedures are designed to provide to taxpayers in such situations with a streamlined procedure for filing amended or delinquent returns",
+      "source_fetched_at": "2026-09-13T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "il-relief-postponed-to-2026-09-30",
+      "claim": "Notice 2025-53: affected taxpayers have until 30 September 2026 to file tax returns and make tax payments",
+      "claim_type": "regulatory",
+      "source_url": "https://www.irs.gov/pub/irs-drop/n-25-53.pdf",
+      "raw_snippet": "Affected taxpayers have until September 30, 2026 to file tax returns, make tax payments, and perform certain time-sensitive acts",
+      "source_fetched_at": "2026-09-13T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "il-relief-affected-principal-residence",
+      "claim": "Affected taxpayers include individuals whose principal residence is in Israel, the West Bank or Gaza, and those whose preparer or necessary records are located there",
+      "claim_type": "regulatory",
+      "source_url": "https://www.irs.gov/pub/irs-drop/n-25-53.pdf",
+      "raw_snippet": "Any individual whose principal residence, and any business entity or sole proprietor whose principal place of business, is located in the State of Israel, the West Bank or Gaza (covered area); - Any individual affiliated with a recognized government or philanthropic organization and who is assisting in the covered area, such as a relief worker; - Any individual, business entity or sole proprietor, or estate or trust whose tax return preparer or records necessary to meet a deadline for postponed acts are located in the covered area",
+      "source_fetched_at": "2026-09-13T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "il-relief-automatic-or-hotline",
+      "claim": "IRS applies relief automatically by prior-return address; affected taxpayers outside the covered area call the disaster hotline",
+      "claim_type": "regulatory",
+      "source_url": "https://www.irs.gov/pub/irs-drop/n-25-53.pdf",
+      "raw_snippet": "The IRS automatically identifies taxpayers whose principal residence or principal place of business is located in the covered area based on previously filed returns and applies relief. Affected taxpayers whose principal residence or principal place of business is not located in the covered area should call the IRS disaster hotline",
+      "source_fetched_at": "2026-09-13T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "il-relief-acts-listed",
+      "claim": "The postponed acts listed are filing and paying income, estate, gift, GST, excise and employment taxes, among others",
+      "claim_type": "regulatory",
+      "source_url": "https://www.irs.gov/pub/irs-drop/n-25-53.pdf",
+      "raw_snippet": "These acts include, but are not limited to: - Filing any return of income tax, estate tax, gift tax, generation-skipping transfer tax, excise tax (other than firearms tax), harbor maintenance tax, or employment tax; - Paying any income tax, estate tax, gift tax, generation-skipping transfer tax, excise tax (other than firearms tax), harbor maintenance tax, or employment tax, or any installment of those taxes; - Making contributions to a qualified retirement plan; - Filing a petition with the Tax Court; - Filing a claim for credit or refund of any tax; and - Bringing suit upon a claim for credit or refund of any tax. This is not an exhaustive list.",
+      "source_fetched_at": "2026-09-13T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "il-relief-section-7508A",
+      "claim": "Notice 2025-53 provides relief under section 7508A of the Internal Revenue Code",
+      "claim_type": "regulatory",
+      "source_url": "https://www.irs.gov/pub/irs-drop/n-25-53.pdf",
+      "raw_snippet": "This notice provides relief under section 7508A of the Internal Revenue Code 1 for persons that the Secretary of the Treasury has determined to be affected by the terroristic action in the State of Israel throughout 2024 and 2025",
+      "source_fetched_at": "2026-09-13T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "il-relief-window",
+      "claim": "Acts due on 30 September 2025 and before 30 September 2026 are postponed until 30 September 2026",
+      "claim_type": "regulatory",
+      "source_url": "https://www.irs.gov/pub/irs-drop/n-25-53.pdf",
+      "raw_snippet": "Any taxpayer acts that are due to be performed on September 30, 2025, and before September 30, 2026, are postponed until September 30, 2026",
+      "source_fetched_at": "2026-09-13T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "treaty-6-4-carveouts",
+      "claim": "Article 6(4)(a) preserves benefits under Article 10 (Grants), Article 21 (Social Security Payments), Article 26 (Relief from Double Taxation, סעיף 26), Article 27 (Nondiscrimination) and Article 28 (Mutual Agreement Procedure)",
+      "claim_type": "regulatory",
+      "source_url": "https://www.irs.gov/pub/irs-trty/israel.pdf",
+      "raw_snippet": "4. The provisions of paragraph (3) shall not affect: (a) The benefits conferred by a Contracting State under Articles 10 (Grants), 21 (Social Security Payments), 26 (Relief from Double Taxation), 27 (Nondiscrimination) , and 28 (Mutual Agreement Procedure)",
       "source_fetched_at": "2026-09-13T00:00:00Z",
       "confidence": "high"
     }

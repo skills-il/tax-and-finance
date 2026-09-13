@@ -17,6 +17,15 @@
         "Judge round 4 removals: dropped 'same account reported on both FBAR and 8938', 'Israeli employer summary has no US equivalent', 'payment dates drive the credit year' (cash vs accrual), the 'often files MFS / HOH' generalisation, and the domestic-filer 4868 row in the script. Re-source before restoring.",
         "Process: the Judge ran 5 rounds because each round surfaced PRE-EXISTING unsourced claims from v1.0.x, created without a Judge. The next cycle should start with a full-body unjustified-claim sweep."
       ]
+    },
+    {
+      "version": "1.1.1",
+      "date": "2026-09-13",
+      "lessons": [
+        "Post-ship Judge found the deadline tables silently assumed standard dates while IRS Notice 2025-53 postpones Israel-resident deadlines to 30 Sep 2026. Added a scoped caveat. Re-check for a successor notice on every update, since the relief window has been rolled forward annually (2023-71, 2024-72, 2025-53).",
+        "Passport snippet extended to Pub 54's refusal/revocation text.",
+        "The FBAR is not in Notice 2025-53's list of postponed acts; FinCEN-side Israel relief was not located. Source it if it exists."
+      ]
     }
   ]
 }

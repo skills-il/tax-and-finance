@@ -127,6 +127,11 @@ def build(args):
     for date, item, mech in deadlines(args.abroad):
         out.append(f"  {date:<12} {item:<52} {mech}")
     out.append("  An extension to file is not an extension to pay. Interest runs from 15 April.")
+    out.append("  Israel relief: IRS Notice 2025-53 gives affected taxpayers (e.g. principal")
+    out.append("  residence in Israel, the West Bank or Gaza) until 30 Sep 2026 for returns and")
+    out.append("  payments due on or after 30 Sep 2025 and before 30 Sep 2026. Its list of")
+    out.append("  postponed acts does not name the FBAR.")
+    out.append("  Check irs.gov for any later notice.")
     out.append("")
 
     if need:

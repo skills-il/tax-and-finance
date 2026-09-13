@@ -40,6 +40,13 @@ domestic row to an expat audience, which invents a duty the user does not have.
 
 Interest runs on unpaid tax from 15 April even under a valid filing extension.
 
+Israel relief (IRS Notice 2025-53): affected taxpayers, including any individual whose
+principal residence is in Israel, the West Bank or Gaza, have until 30 September 2026 for
+returns and payments due on or after 30 September 2025 and before 30 September 2026. Applied
+automatically by filing address; others call the IRS disaster hotline. The notice's list of
+postponed acts (stated to be non-exhaustive) does not name the FBAR. Dates on or after 30 September 2026 are
+outside it.
+
 ## Foreign earned income exclusion by tax year
 
 | Tax year | Amount | Authority |

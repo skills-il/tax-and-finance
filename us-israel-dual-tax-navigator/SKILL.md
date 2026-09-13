@@ -137,6 +137,18 @@ Two traps worth stating every time:
 2. Form 4868 has to be filed by the automatic 2 month extension date, not after it.
    A user who remembers in September has already missed the window for the October date.
 
+**Israel relief: check it before applying the dates above.** Under IRS Notice 2025-53,
+affected taxpayers have until 30 September 2026 to file tax returns and make tax payments
+that fall due on or after 30 September 2025 and before 30 September 2026. Affected taxpayers
+include any individual whose principal residence is in the State of Israel, the West Bank or
+Gaza, and also, for example, anyone whose tax return preparer or necessary records are
+located there. The IRS applies the relief automatically based on the address on previously
+filed returns; an affected taxpayer whose principal residence is outside that area must call
+the IRS disaster hotline to request it. The notice's list of postponed acts names returns and
+payments of income tax and other federal taxes and does not name the FBAR, which is filed to FinCEN, so
+confirm FBAR treatment separately. A date on or after 30 September 2026, such as 15 October
+2026, is outside this notice. Check irs.gov for any later notice before relying on a date.
+
 Align this against the user's Israeli deadline, but do not compute the Israeli return here.
 Hand the Israeli side to `israeli-tax-returns`.
 
@@ -354,6 +366,7 @@ Agent failure modes specific to this domain.
 | IRS, streamlined filing compliance procedures | https://www.irs.gov/individuals/international-taxpayers/streamlined-filing-compliance-procedures | The civil examination and criminal investigation bar |
 | IRS, foreign tax credit | https://www.irs.gov/individuals/international-taxpayers/foreign-tax-credit | That no credit is available on excluded income |
 | IRS Publication 54 | https://www.irs.gov/publications/p54 | Revocation and the 5 year bar, the same-year child credit bar, the qualification tests, the extension chain |
+| IRS Notice 2025-53 | https://www.irs.gov/pub/irs-drop/n-25-53.pdf | Israel relief: who is an affected taxpayer, which acts are postponed, the 30 September 2026 end date |
 | IRS Publication 501 | https://www.irs.gov/publications/p501 | The 1040 gross-income filing thresholds for the tax year |
 | Bittner v. United States | https://www.supremecourt.gov/opinions/22pdf/21-1195_h3ci.pdf | The non-willful FBAR maximum accrues per report |
 | IRS, streamlined foreign offshore procedures | https://www.irs.gov/individuals/international-taxpayers/u-s-taxpayers-residing-outside-the-united-states | The 330 day test, the 3 and 6 year lookbacks, and the penalty relief |
