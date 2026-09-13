@@ -1,7 +1,7 @@
 {
   "skill_slug": "us-israel-dual-tax-navigator",
   "schemaVersion": "1.0",
-  "generated_at": "2026-08-23",
+  "generated_at": "2026-09-13T00:00:00Z",
   "claims": [
     {
       "id": "fbar-threshold-10000",
@@ -143,8 +143,8 @@
       "claim": "Under the US-Israel income tax treaty the Article 6 paragraph 3 savings clause lets a Contracting State tax its citizens as if the Convention had not come into effect, subject to paragraph 4 carve-outs preserving Article 10 (Grants), Article 21 (Social Security Payments), Article 26 (Relief from Double Taxation), Article 27 (Nondiscrimination) and Article 28 (Mutual Agreement Procedure) (בעברית: סעיף 6 לאמנה, וסעיף 26 בין החריגים)",
       "claim_type": "law",
       "source_url": "https://www.irs.gov/pub/irs-trty/israel.pdf",
-      "raw_snippet": "ARTICLE 6 General Rules of Taxation 1. A resident of one of the Contracting States may be taxed by the other Contracting State on any income from sources within that other Contracting State and only on such income, subject to any limitations set forth in this Convention. For this purpose, the rules set forth in Article 4 (Source of Income) shall be applied to determine the source of income. 2. The provisions of this Convention shall not be construed to restrict in any manner any exclusion, exemption, deduction, credit, or other allowance now or hereafter accorded-- (a) By the laws of one of the Contracting States in the determination of the tax imposed by that Contracting State, or (b) By any other agreement between the Contracting States. 3. Notwithstanding any provisions of this Convention except paragraph (4), a Contracting State may tax its residents (as determined under Article 3 (Fiscal Residence) and its citizens as if this Convention had not come into effect. 4. The provisions of paragraph (3) shall not affect: (a) The benefits conferred by a Contracting State under Articles 10 (Grants), 21 (Social Security Payments), 26 (Relief from Double Taxation), 27 (Nondiscrimination) , and 28 (Mutual Agreement Procedure)",
-      "source_fetched_at": "2026-08-23T00:00:00Z",
+      "raw_snippet": "3. Notwithstanding any provisions of this Convention except paragraph (4), a Contracting State may tax its residents (as determined under Article 3 (Fiscal Residence) and its citizens as if this Convention had not come into effect. 4. The provisions of paragraph (3) shall not affect: (a) The benefits conferred by a Contracting State under Articles 10 (Grants), 21 (Social Security Payments), 26 (Relief from Double Taxation), 27 (Nondiscrimination) , and 28 (Mutual Agreement Procedure)",
+      "source_fetched_at": "2026-09-13T00:00:00Z",
       "confidence": "high"
     },
     {
@@ -163,6 +163,330 @@
       "source_url": "https://www.irs.gov/individuals/international-taxpayers/foreign-earned-income-exclusion",
       "raw_snippet": "on your worldwide income. However, you may qualify to exclude your foreign earnings from income up to an amount that is adjusted annually for inflation ($107,600 for 2020, $108,700 for 2021, $112,000 for 2022, and $120,000 for 2023). In addition, you can exclude or deduct certain foreign housing amounts. You may also be entitled to exclude from inc",
       "source_fetched_at": "2026-08-23T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "filing-threshold-single-2025",
+      "claim": "For tax year 2025 a single filer under 65 must file a 1040 if gross income was at least USD 15,750",
+      "claim_type": "regulatory",
+      "source_url": "https://www.irs.gov/publications/p501",
+      "raw_snippet": "single under 65 $15,750",
+      "source_fetched_at": "2026-09-13T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "filing-threshold-includes-excludable",
+      "claim": "For the filing-requirement test, gross income includes income that can be excluded under the foreign earned income exclusion",
+      "claim_type": "regulatory",
+      "source_url": "https://www.irs.gov/publications/p54",
+      "raw_snippet": "For purposes of determining whether you must file a return, gross income includes any income that you can exclude as foreign earned income or as a foreign housing amount",
+      "source_fetched_at": "2026-09-13T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "bittner-per-report",
+      "claim": "The non-willful FBAR maximum penalty accrues per report, not per account (Bittner v. United States)",
+      "claim_type": "regulatory",
+      "source_url": "https://www.supremecourt.gov/opinions/22pdf/21-1195_h3ci.pdf",
+      "raw_snippet": "Held: The BSA’s $10,000 maximum penalty for the nonwillful failure to file a compliant report accrues on a per-report",
+      "source_fetched_at": "2026-09-13T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "feie-blocks-actc",
+      "claim": "A filer who elects the foreign earned income exclusion cannot take the additional child tax credit for that year",
+      "claim_type": "regulatory",
+      "source_url": "https://www.irs.gov/publications/p54",
+      "raw_snippet": "Additional child tax credit. Similarly, if you've made a foreign earned income exclusion election, or foreign housing exclusion election, or taken the foreign housing deduction, you can't take the additional child tax credit",
+      "source_fetched_at": "2026-09-13T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "feie-and-ftc-same-year",
+      "claim": "Exclude up to the limitation, then take a foreign tax credit on the portion not excluded",
+      "claim_type": "regulatory",
+      "source_url": "https://www.irs.gov/publications/p54",
+      "raw_snippet": "lusion up to the limitation for the year. Then, you can take a foreign tax credit for any foreign taxes paid on the portion of the wage that wasn't excluded under the foreign earned income exclusion",
+      "source_fetched_at": "2026-09-13T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "feie-physical-presence-330",
+      "claim": "Physical presence test: 330 full days in a foreign country during 12 consecutive months",
+      "claim_type": "regulatory",
+      "source_url": "https://www.irs.gov/publications/p54",
+      "raw_snippet": "physically present in a foreign country (or countries) for 330 full days during a period of 12 consecutive months",
+      "source_fetched_at": "2026-09-13T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "feie-tax-home-tests",
+      "claim": "FEIE requires a foreign tax home, foreign personal-services income, and the physical presence or bona fide residence test",
+      "claim_type": "regulatory",
+      "source_url": "https://www.irs.gov/publications/p54",
+      "raw_snippet": "To qualify, you must have a tax home in a foreign country, earn income from personal services performed in a foreign country, and meet either the physical presence or bona fide residence test",
+      "source_fetched_at": "2026-09-13T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "two-month-statement",
+      "claim": "To use the automatic 2 month extension a statement must be attached to the return",
+      "claim_type": "regulatory",
+      "source_url": "https://www.irs.gov/publications/p54",
+      "raw_snippet": "To use this automatic 2-month extension, you must attach a statement to your income tax return explaining which situation listed earlier qualified you for the extension",
+      "source_fetched_at": "2026-09-13T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "4868-by-june-15",
+      "claim": "The additional 4 month extension is requested by the due date allowed by the automatic 2 month extension, June 15",
+      "claim_type": "regulatory",
+      "source_url": "https://www.irs.gov/publications/p54",
+      "raw_snippet": "additional 4 months by the due date allowed by the automatic 2-month extension (June 15 for calendar-year taxpayers)",
+      "source_fetched_at": "2026-09-13T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "late-pay-penalty-june-15",
+      "claim": "Late-payment penalties run from the extended due date for those qualifying for the 2 month extension; interest from April 15",
+      "claim_type": "regulatory",
+      "source_url": "https://www.irs.gov/publications/p54",
+      "raw_snippet": "You will owe interest on the unpaid amount from the original due date of the return (April 15 for calendar-year taxpayers). You may also be charged a penalty for paying the tax late unless you have reasonable cause for not paying your tax when due. Penalties for paying the tax late are assessed from the original due date of your return, unless you qualify for the automatic 2-month extension. In that situation, penalties for paying late are assessed from the extended due date",
+      "source_fetched_at": "2026-09-13T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "december-15-extension",
+      "claim": "Taxpayers out of the country can request a discretionary 2 month additional extension to December 15 by letter",
+      "claim_type": "regulatory",
+      "source_url": "https://www.irs.gov/publications/p54",
+      "raw_snippet": "can request a discretionary 2-month additional extension of time to file their income tax return (to December 15 for calendar-year taxpayers). How to request the additional extension. To request this extension, you must send the IRS a letter",
+      "source_fetched_at": "2026-09-13T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "passport-denial",
+      "claim": "Seriously delinquent tax debt can lead to passport denial or revocation",
+      "claim_type": "regulatory",
+      "source_url": "https://www.irs.gov/publications/p54",
+      "raw_snippet": "The IRS is required to notify the State Department of taxpayers certified as owing a seriously delinquent tax debt",
+      "source_fetched_at": "2026-09-13T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "sfo-red-marking",
+      "claim": "Write Streamlined Foreign Offshore in red at the top of each return and information return",
+      "claim_type": "regulatory",
+      "source_url": "https://www.irs.gov/individuals/international-taxpayers/u-s-taxpayers-residing-outside-the-united-states",
+      "raw_snippet": "\"Streamlined Foreign Offshore\" written in red to indicate that the returns are being submitted under these procedures",
+      "source_fetched_at": "2026-09-13T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "sfo-form-14653",
+      "claim": "Form 14653 certification must be completed and signed",
+      "claim_type": "regulatory",
+      "source_url": "https://www.irs.gov/individuals/international-taxpayers/u-s-taxpayers-residing-outside-the-united-states",
+      "raw_snippet": "Complete and sign a statement on the Certification by U.S. Person Residing Outside of the U.S. (Form 14653) PDF certifying",
+      "source_fetched_at": "2026-09-13T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "sfo-paper-only",
+      "claim": "Streamlined documents and payment must be sent in paper form to Austin; electronic submissions not accepted",
+      "claim_type": "regulatory",
+      "source_url": "https://www.irs.gov/individuals/international-taxpayers/u-s-taxpayers-residing-outside-the-united-states",
+      "raw_snippet": "must be sent in paper form (electronic submissions will not be accepted) to: Internal Revenue Service 3651 South I-H 35 Stop 6063 AUSC Attn: Streamlined Foreign Offshore Austin, TX 78741",
+      "source_fetched_at": "2026-09-13T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "sfo-fbar-other-reason",
+      "claim": "Delinquent FBARs are e-filed via BSA E-Filing selecting Other as the late reason and noting the Streamlined Filing Compliance Procedures",
+      "claim_type": "regulatory",
+      "source_url": "https://www.irs.gov/individuals/international-taxpayers/u-s-taxpayers-residing-outside-the-united-states",
+      "raw_snippet": "include a statement explaining that the FBARs are being filed as part of the Streamlined Filing Compliance Procedures. You are required to file these delinquent FBARs electronically using the FinCEN BSA E-Filing System . On the cover page of the electronic form, select “Other” as the reason for filing late",
+      "source_fetched_at": "2026-09-13T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "sfo-itin",
+      "claim": "A filer not eligible for an SSN submits an ITIN application with the streamlined package",
+      "claim_type": "regulatory",
+      "source_url": "https://www.irs.gov/individuals/international-taxpayers/u-s-taxpayers-residing-outside-the-united-states",
+      "raw_snippet": "If you are not eligible to have a Social Security number and do not already have an ITIN, submit an application for an ITIN",
+      "source_fetched_at": "2026-09-13T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "sfo-info-returns-examples",
+      "claim": "Streamlined returns include all required information returns such as Forms 3520, 5471 and 8938, for years whose due date has passed",
+      "claim_type": "regulatory",
+      "source_url": "https://www.irs.gov/individuals/international-taxpayers/u-s-taxpayers-residing-outside-the-united-states",
+      "raw_snippet": "for each of the most recent 3 years for which the U.S. tax return due date (or properly applied for extended due date) has passed, file delinquent or amended tax returns, together with all required information returns (e.g., Forms 3520, 5471, and 8938)",
+      "source_fetched_at": "2026-09-13T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "form-1040-return",
+      "claim": "The US individual income tax return is Form 1040",
+      "claim_type": "form",
+      "source_url": "https://www.irs.gov/individuals/international-taxpayers/u-s-taxpayers-residing-outside-the-united-states",
+      "raw_snippet": "submit a complete and accurate delinquent tax return using Form 1040, U.S. Individual Income Tax Return",
+      "source_fetched_at": "2026-09-13T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "filing-threshold-mfj-mfs-2025",
+      "claim": "TY2025 filing threshold: MFJ both under 65 USD 31,500; MFS any age USD 5",
+      "claim_type": "regulatory",
+      "source_url": "https://www.irs.gov/publications/p501",
+      "raw_snippet": "married filing jointly *** under 65 (both spouses) $31,500 65 or older (one spouse) $33,100 65 or older (both spouses) $34,700 married filing separately any age $5",
+      "source_fetched_at": "2026-09-13T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "sfo-exam-bar",
+      "claim": "A taxpayer under IRS civil examination for any year cannot use the streamlined procedures",
+      "claim_type": "regulatory",
+      "source_url": "https://www.irs.gov/individuals/international-taxpayers/streamlined-filing-compliance-procedures",
+      "raw_snippet": "If the IRS has initiated a civil examination of taxpayer's returns for any taxable year, regardless of whether the examination relates to undisclosed foreign financial assets, the taxpayer will not be eligible to use the streamlined procedures",
+      "source_fetched_at": "2026-09-13T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "sfo-ci-bar",
+      "claim": "A taxpayer under IRS Criminal Investigation is ineligible for streamlined",
+      "claim_type": "regulatory",
+      "source_url": "https://www.irs.gov/individuals/international-taxpayers/streamlined-filing-compliance-procedures",
+      "raw_snippet": "a taxpayer under criminal investigation by IRS Criminal Investigation is also ineligible to use the streamlined procedures",
+      "source_fetched_at": "2026-09-13T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "feie-2023-120000",
+      "claim": "TY2023 FEIE amount is USD 120,000 (Rev. Proc. 2022-38 .39)",
+      "claim_type": "regulatory",
+      "source_url": "https://www.irs.gov/pub/irs-drop/rp-22-38.pdf",
+      "raw_snippet": "For taxable years beginning in 2023, the foreign earned income exclusion amount under § 911(b)(2)(D)(i) is $120,000",
+      "source_fetched_at": "2026-09-13T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "feie-2024-126500",
+      "claim": "TY2024 FEIE amount is USD 126,500 (Rev. Proc. 2023-34 .39)",
+      "claim_type": "regulatory",
+      "source_url": "https://www.irs.gov/pub/irs-drop/rp-23-34.pdf",
+      "raw_snippet": "For taxable years beginning in 2024, the foreign earned income exclusion amount under § 911(b)(2)(D)(i) is $126,500",
+      "source_fetched_at": "2026-09-13T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "omb-m-26-11-freeze",
+      "claim": "OMB M-26-11 (17 April 2026): no 2026 inflation multiplier; agencies continue using 2025 civil penalty amounts",
+      "claim_type": "regulatory",
+      "source_url": "https://www.whitehouse.gov/wp-content/uploads/2026/04/M-26-11-Cancellation-of-Penalty-Inflation-Adjustments-for-2026-Regarding-the-Federal-Civil-Penalties-Inflation-Adjustment-Act-Improvements-Act-of-2015.pdf",
+      "raw_snippet": "there will be no updated cost-of-living adjustment multiplier for 2026 and agencies will continue using the 2025 civil monetary penalty",
+      "source_fetched_at": "2026-09-13T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "sfo-joint-both-spouses",
+      "claim": "For joint return filers both spouses must meet the non-residency requirement",
+      "claim_type": "regulatory",
+      "source_url": "https://www.irs.gov/individuals/international-taxpayers/u-s-taxpayers-residing-outside-the-united-states",
+      "raw_snippet": "for joint return filers, both spouses must meet the applicable non-residency requirement described below",
+      "source_fetched_at": "2026-09-13T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "feie-revoke-ruling",
+      "claim": "Re-choosing a revoked exclusion within 5 years requires IRS approval by requesting a ruling",
+      "claim_type": "regulatory",
+      "source_url": "https://www.irs.gov/publications/p54",
+      "raw_snippet": "If you revoked a choice and within 5 years again wish to choose the same exclusion, you must apply for IRS approval. You do this by requesting a ruling from the IRS",
+      "source_fetched_at": "2026-09-13T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "dec-15-letter",
+      "claim": "15 December discretionary extension is in addition to the 6 month extension, by letter sent by 15 October",
+      "claim_type": "regulatory",
+      "source_url": "https://www.irs.gov/publications/p54",
+      "raw_snippet": "In addition to the 6-month extension, taxpayers who are out of the country can request a discretionary 2-month additional extension of time to file their income tax return (to December 15 for calendar-year taxpayers). How to request the additional extension. To request this extension, you must send the IRS a letter explaining the reasons why you need the additional 2 months. Send the letter by the extended due date (October 15 for calendar-year taxpayers)",
+      "source_fetched_at": "2026-09-13T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "form-2555-feie",
+      "claim": "Form 2555 is filed with the return to elect the exclusions",
+      "claim_type": "regulatory",
+      "source_url": "https://www.irs.gov/publications/p54",
+      "raw_snippet": "you must file Form 2555 by attaching it to your federal income tax return, Form 1040",
+      "source_fetched_at": "2026-09-13T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "worldwide-income-abroad",
+      "claim": "US citizens and resident aliens abroad are subject to tax on worldwide income; the rules are generally the same in the US or abroad",
+      "claim_type": "regulatory",
+      "source_url": "https://www.irs.gov/individuals/international-taxpayers/us-citizens-and-resident-aliens-abroad",
+      "raw_snippet": "the rules for filing income, estate, and gift tax returns and paying estimated tax are generally the same whether you are in the United States or abroad. You are subject to tax on worldwide income from all sources",
+      "source_fetched_at": "2026-09-13T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "green-card-holder-abroad",
+      "claim": "Green card holders living abroad are covered by the same filing rules",
+      "claim_type": "regulatory",
+      "source_url": "https://www.irs.gov/individuals/international-taxpayers/us-citizens-and-resident-aliens-abroad",
+      "raw_snippet": "If you are a U.S. citizen or resident alien (including a green card holder) and you live in a foreign country, and you are",
+      "source_fetched_at": "2026-09-13T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "8938-fbar-file-one-or-both",
+      "claim": "Filers must check each form and determine whether to file Form 8938, FinCEN Form 114, or both; the FBAR is not filed with the IRS",
+      "claim_type": "regulatory",
+      "source_url": "https://www.irs.gov/businesses/comparison-of-form-8938-and-fbar-requirements",
+      "raw_snippet": "Unlike Form 8938, the FBAR (FinCEN Form 114) is not filed with the IRS. It must be filed directly with the office of Financial Crimes Enforcement Network (FinCEN), a bureau of the Department of the Treasury, separate from the IRS. Individuals and domestic entities must check the requirements and relevant reporting thresholds of each form and determine if they should file Form 8938 or FinCEN Form 114, or both",
+      "source_fetched_at": "2026-09-13T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "8938-penalties-own-regime",
+      "claim": "Form 8938 carries its own penalty regime (up to 10,000 plus continuation penalties)",
+      "claim_type": "regulatory",
+      "source_url": "https://www.irs.gov/businesses/comparison-of-form-8938-and-fbar-requirements",
+      "raw_snippet": "Penalties Up to $10,000 for failure to disclose and an additional $10,000 for each 30 days of non-filing after IRS notice of a failure to disclose, for a potential maximum penalty of $60,000",
+      "source_fetched_at": "2026-09-13T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "fbar-signature-authority",
+      "claim": "FBAR covers accounts with financial interest in, signature authority or other authority over, such as bank, brokerage and mutual fund accounts",
+      "claim_type": "regulatory",
+      "source_url": "https://www.irs.gov/newsroom/details-on-reporting-foreign-bank-and-financial-accounts",
+      "raw_snippet": "Financial interest in, signature authority or other authority over one or more accounts, such as bank accounts, brokerage accounts and mutual funds",
+      "source_fetched_at": "2026-09-13T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "sfo-non-willful-definition",
+      "claim": "Streamlined requires that the failures resulted from non-willful conduct, defined as negligence, inadvertence, mistake or a good faith misunderstanding of the law",
+      "claim_type": "regulatory",
+      "source_url": "https://www.irs.gov/individuals/international-taxpayers/u-s-taxpayers-residing-outside-the-united-states",
+      "raw_snippet": "and such failures resulted from non-willful conduct. Non-willful conduct is conduct that is due to negligence, inadvertence, or mistake or conduct that is the result of a good faith misunderstanding of the requirements of the law",
+      "source_fetched_at": "2026-09-13T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "sfc-designed-non-willful",
+      "claim": "The streamlined procedures are designed for taxpayers whose failures did not result from willful conduct",
+      "claim_type": "regulatory",
+      "source_url": "https://www.irs.gov/individuals/international-taxpayers/streamlined-filing-compliance-procedures",
+      "raw_snippet": "did not result from willful conduct on their part. The streamlined procedures are designed to provide to taxpayers in such situations with a streamlined procedure for filing amended or delinquent returns",
+      "source_fetched_at": "2026-09-13T00:00:00Z",
       "confidence": "high"
     }
   ]

@@ -27,7 +27,14 @@ F8938 = {
     (False, True): (100_000, 150_000),
 }
 
-FEIE = {2025: 130_000, 2026: 132_900}
+FEIE = {2023: 120_000, 2024: 126_500, 2025: 130_000, 2026: 132_900}
+
+# Pub 501, tax year 2025, filer(s) under 65. MFS is USD 5 at ANY age.
+FILING_THRESHOLD_2025 = {
+    "single": "single USD 15,750",
+    "mfj": "married filing jointly USD 31,500",
+    "mfs": "married filing separately USD 5 (any age)",
+}
 
 FBAR_PENALTY = {"non_willful": (10_000, 16_536), "willful": (100_000, 165_353)}
 
@@ -44,16 +51,16 @@ def f8938_required(assets_year_end, assets_peak, lives_abroad, mfj):
 
 def deadlines(lives_abroad):
     rows = [
-        ("15 April", "1040 due; tax owed payable", "Payment date regardless of extension"),
+        ("15 April", "1040 due; interest on unpaid tax runs from here", "Regardless of extension"),
         ("15 April", "FBAR due", "Filed to FinCEN"),
     ]
     if lives_abroad:
         rows += [
-            ("15 June", "1040 on the automatic 2 month abroad extension", "Automatic"),
-            ("15 October", "1040 if Form 4868 filed BEFORE 15 June", "Must be requested in time"),
+            ("15 June", "1040 and payment on the 2 month abroad extension", "Automatic, attach statement"),
+            ("15 October", "1040 if Form 4868 filed BY 15 June", "Must be requested in time"),
         ]
     else:
-        rows += [("15 October", "1040 if Form 4868 filed", "Must be requested")]
+        rows += [("--", "Extension rules for US residents are out of scope", "See irs.gov")]
     rows += [("15 October", "FBAR extended date", "Automatic")]
     return rows
 
@@ -68,6 +75,16 @@ def build(args):
                f"Residence: {'outside the US' if args.abroad else 'in the US'}")
     out.append("")
 
+    out.append("-- Form 1040 --")
+    out.append("  Required only if gross income, INCLUDING income the exclusion would remove,")
+    out.append("  meets the filing threshold for status and age (Pub 501). This script does")
+    if args.year == 2025:
+        out.append("  not test it. TY2025 under 65: " + FILING_THRESHOLD_2025[args.status] + ".")
+    else:
+        out.append(f"  not test it. Look up the TY{args.year} row in Pub 501 for that year.")
+    out.append("  The FBAR below can apply even when no 1040 is required.")
+    out.append("")
+
     out.append("-- FBAR (FinCEN 114) --")
     need = fbar_required(args.peak_accounts)
     out.append(f"  Peak aggregate across ALL foreign accounts: USD {args.peak_accounts:,}")
@@ -75,7 +92,7 @@ def build(args):
     out.append(f"  REQUIRED: {'YES' if need else 'no'}")
     if not need:
         out.append("  Note: this is an aggregate PEAK test. Confirm the figure includes kupat")
-        out.append("        gemel, keren hishtalmut, dormant accounts and signature-authority")
+        out.append("        gemel and keren hishtalmut (preparer to confirm), dormant and signature-authority")
         out.append("        accounts, and is the highest point in the year, not year end.")
     out.append("")
 
@@ -90,9 +107,8 @@ def build(args):
     out.append("")
 
     if need and need8938:
-        out.append("  Both are triggered. They are INDEPENDENT duties with separate penalties;")
-        out.append("  filing one does not satisfy the other, and the same account is normally")
-        out.append("  reported on both.")
+        out.append("  Both are triggered. They are SEPARATE forms with separate penalties;")
+        out.append("  filing one does not satisfy the other.")
         out.append("")
 
     if args.year in FEIE:
@@ -117,7 +133,8 @@ def build(args):
         nw_s, nw_a = FBAR_PENALTY["non_willful"]
         w_s, w_a = FBAR_PENALTY["willful"]
         out.append("-- FBAR exposure if not filed --")
-        out.append(f"  Non-willful, per violation: USD {nw_s:,} statutory, USD {nw_a:,} adjusted")
+        out.append(f"  Non-willful, per REPORT:    USD {nw_s:,} statutory, USD {nw_a:,} adjusted")
+        out.append("                              (per report, not per account: Bittner, 2023)")
         out.append(f"  Willful, per violation:     USD {w_s:,} statutory, USD {w_a:,} adjusted,")
         out.append("                              or 50% of the account balance, WHICHEVER IS")
         out.append("                              GREATER. On a large account the 50% prong")
@@ -142,6 +159,8 @@ def main():
     p.add_argument("--assets-peak", type=int, default=0)
     p.add_argument("--example", action="store_true", help="run a worked example")
     a = p.parse_args()
+    if min(a.peak_accounts, a.assets_year_end, a.assets_peak) < 0:
+        p.error("balances cannot be negative")
 
     if a.example:
         a.year, a.status, a.abroad = 2025, "mfj", True

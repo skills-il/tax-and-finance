@@ -7,14 +7,13 @@ before relying on it. Nothing here is tax advice.
 
 | Form | Filed to | Filed with | Trigger |
 |---|---|---|---|
-| 1040 | IRS | Standalone | Being a US person, regardless of residence or of tax owed |
+| 1040 | IRS | Standalone | A US person whose gross income (INCLUDING income the exclusion would remove) meets the filing threshold for status and age; TY2025 (Pub 501): single under 65 USD 15,750; MFJ both under 65 USD 31,500; MFS any age USD 5. Owing zero tax does not remove the duty. |
 | FinCEN 114 (FBAR) | FinCEN, BSA E-Filing System | Separately from the return | Aggregate of ALL foreign financial accounts exceeds USD 10,000 at ANY point in the year |
 | 8938 (FATCA) | IRS | With the 1040 | Specified foreign financial assets over the threshold for the filer's residence and status |
 | 1116 | IRS | With the 1040 | Claiming the Foreign Tax Credit |
 | 2555 | IRS | With the 1040 | Claiming the Foreign Earned Income Exclusion |
 
-FBAR and 8938 are independent. Filing one does not satisfy the other, and the same account is
-commonly reported on both, each with its own penalty.
+FBAR and 8938 are separate forms: check each form's requirements and file one, the other, or both. Each form has its own penalty regime.
 
 ## Form 8938 thresholds, all four sub-dimensions
 
@@ -32,10 +31,11 @@ domestic row to an expat audience, which invents a duty the user does not have.
 
 | Date | Item | Automatic? |
 |---|---|---|
-| 15 April | 1040 due; any tax owed is payable | Payment date regardless of extensions |
+| 15 April | 1040 due; interest on unpaid tax runs from here | Interest date regardless of extensions |
 | 15 April | FBAR due | |
-| 15 June | 1040, on the 2 month abroad extension | Yes, no request needed |
-| 15 October | 1040, only if Form 4868 filed before 15 June | No, must be requested in time |
+| 15 June | 1040 and payment, on the 2 month abroad extension; late-payment penalties run from here | Yes, attach a statement to the return |
+| 15 October | 1040, only if Form 4868 filed by 15 June | No, must be requested in time |
+| 15 December | 1040, discretionary extension on top of the Form 4868 extension | No, letter sent by 15 October |
 | 15 October | FBAR extended date | Yes, no request needed |
 
 Interest runs on unpaid tax from 15 April even under a valid filing extension.
@@ -44,6 +44,8 @@ Interest runs on unpaid tax from 15 April even under a valid filing extension.
 
 | Tax year | Amount | Authority |
 |---|---|---|
+| 2023 | USD 120,000 | Rev. Proc. 2022-38, item .39, under section 911(b)(2)(D)(i) |
+| 2024 | USD 126,500 | Rev. Proc. 2023-34, item .39, under section 911(b)(2)(D)(i) |
 | 2025 | USD 130,000 | Rev. Proc. 2024-40, item .39, under section 911(b)(2)(D)(i) |
 | 2026 | USD 132,900 | Rev. Proc. 2025-32, item .39, under section 911(b)(2)(D)(i) |
 
@@ -53,9 +55,9 @@ Do NOT source this from the IRS FEIE landing page, which lists only 2020 through
 
 | | Exclusion (2555) | Credit (1116) |
 |---|---|---|
+| Qualification | Foreign tax home plus bona fide residence or 330 full days in 12 consecutive months | Israeli tax paid |
 | Reaches earned income | Yes, up to the cap | Yes |
-| Reaches investment income | No | Yes |
-| Can carry forward | No | Yes |
+| Additional child tax credit in the same year | Blocked | Available |
 | Usable on income the other covers | No, they cannot be combined on the same income | No |
 | Revocation risk | Yes, see below | Taking it on excluded income can revoke the exclusion |
 
@@ -68,14 +70,15 @@ prior choice.
 
 | Violation | Statutory | Inflation adjusted | Authority |
 |---|---|---|---|
-| Non-willful, per violation | USD 10,000 | USD 16,536 | 31 USC 5321(a)(5)(B)(i) |
+| Non-willful, per report (Bittner v. United States, 2023), not per account | USD 10,000 | USD 16,536 | 31 USC 5321(a)(5)(B)(i) |
 | Willful, per violation | USD 100,000 | USD 165,353 | 31 USC 5321(a)(5)(C)(i)(I) |
 
 For a willful violation the penalty is the GREATER of the adjusted amount or 50 percent of the
 account balance at the violation date. On a large account the percentage prong dominates.
 
 Temporal note: these amounts are adjusted for inflation annually, but no annual inflation
-adjustment was made for calendar year 2026, so the amounts above remain operative. Re-check
+adjustment was made for calendar year 2026 (OMB Memorandum M-26-11, 17 April 2026), so the
+amounts above remain operative. Re-check
 the table rather than assuming a newer figure exists.
 
 ## Streamlined Foreign Offshore Procedures
@@ -84,13 +87,15 @@ the table rather than assuming a newer figure exists.
 |---|---|
 | Non-residency | In one or more of the most recent 3 years for which the due date has passed: no US abode AND physically outside the US at least 330 full days. Both spouses on a joint return. |
 | Non-willfulness | The failure must have been non-willful. This is a state-of-mind judgement for counsel, not for this skill. |
-| Returns | Most recent 3 years, delinquent or amended, with all required information returns |
-| FBARs | Most recent 6 years |
+| Returns | Most recent 3 years whose due date has passed, delinquent or amended, with all required information returns (e.g. Forms 3520, 5471, 8938) |
+| FBARs | Most recent 6 years whose FBAR due date has passed, e-filed via BSA E-Filing with reason "Other" |
+| Mechanics | "Streamlined Foreign Offshore" in red on each return; signed Form 14653; paper submission to the IRS Austin address (electronic not accepted); ITIN application if not SSN-eligible |
 | Payment | Full tax and interest remitted with the submission |
 | Relief | No failure-to-file, failure-to-pay, accuracy-related, information-return, or FBAR penalties |
 
-Where the returns are already correct and only FBARs are missing, the lighter delinquent-FBAR
-submission procedure may be the better fit.
+Not available to a taxpayer under IRS civil examination for any year or under IRS Criminal
+Investigation. Designed for failures that did not result from willful conduct; the route choice belongs to
+a licensed preparer or counsel.
 
 ## Treaty
 

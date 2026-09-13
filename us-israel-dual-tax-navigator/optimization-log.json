@@ -1,0 +1,22 @@
+{
+  "cycles": [
+    {
+      "version": "1.1.0",
+      "date": "2026-09-13",
+      "lessons": [
+        "First fresh-context Expert Review (never ran at creation). It returned 5 CRITICAL, all fixed from primary text: 1040 gross-income threshold, Bittner per-report non-willful FBAR penalty, streamlined mechanics, same-year FEIE bar on the additional child tax credit, FEIE qualification tests.",
+        "Expert MAJOR deferred: section 6013(g) election to treat a nonresident alien spouse as resident, plus MFS vs HOH for a US person married to an Israeli. Stage 2 collects spouse status but never uses it.",
+        "Expert MAJOR deferred: route choice detail (IRS Criminal Investigation Voluntary Disclosure Practice for willfulness risk; delinquent FBAR and delinquent international information return procedures and their preconditions). Neither is on the streamlined page, so each needs its own source.",
+        "Expert MAJOR deferred: state filing residue from an unsevered US state domicile (a Should-cover row, still absent).",
+        "Discretionary deferred over the batch cap: name tofes 106 / tofes 867 plus child SSNs and passport entry/exit dates in the document pack; make filing_map.py require an explicit --abroad/--in-us choice rather than defaulting to the domestic row; add FEIE caps for 2019 to 2024 for catch-up years; test the 1040 threshold in the script.",
+        "Judge round 2: removed the 'foreign tax credit can carry forward' claim (no IRS page fetched supports it) and the named delinquent-FBAR submission procedure (IRS page 404). Re-source both before re-adding.",
+        "Expert round 2 CRITICAL fixed: the filing threshold now carries MFJ 31,500 and MFS USD 5 at any age, not only single 15,750.",
+        "Judge round 3: removed the unsourced 'credit reaches investment income / exclusion does nothing for investment income' comparison, the Israeli-vs-US effective-rate generalisation, and the 'no totalization agreement' aside (owned by american-freelancer-israel-tax). Softened kupat gemel / keren hishtalmut FBAR treatment to 'preparer to confirm'. Re-source any of these before restoring.",
+        "Expert iter-4 MAJOR deferred: restore the warning that FEIE never reaches pensions, social security, interest, dividends or capital gains, sourced to the Form 2555 instructions Part IV text.",
+        "Expert iter-4 minor deferred: say the Form 1116 limit applies per income category (passive vs general), and word gemel/hishtalmut FBAR inclusion as 'include provisionally until the preparer confirms'.",
+        "Judge round 4 removals: dropped 'same account reported on both FBAR and 8938', 'Israeli employer summary has no US equivalent', 'payment dates drive the credit year' (cash vs accrual), the 'often files MFS / HOH' generalisation, and the domestic-filer 4868 row in the script. Re-source before restoring.",
+        "Process: the Judge ran 5 rounds because each round surfaced PRE-EXISTING unsourced claims from v1.0.x, created without a Judge. The next cycle should start with a full-body unjustified-claim sweep."
+      ]
+    }
+  ]
+}

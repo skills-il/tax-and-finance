@@ -58,8 +58,8 @@ topic list. Every value below is cited to a primary source, per the primary-sour
       why core: the abroad thresholds are 4x the domestic ones and guides routinely quote
       the domestic row to an expat audience.
 
-- [ ] 8938 and FBAR are INDEPENDENT duties with separate penalties. Filing one never
-      satisfies the other, and the same account is commonly reported on both.
+- [ ] 8938 and FBAR are separate forms with separate penalty regimes: the IRS says to check
+      each form and file one, the other, or both.
       source: https://www.irs.gov/businesses/comparison-of-form-8938-and-fbar-requirements
       why core: users routinely believe FBAR "covers it".
 
@@ -104,13 +104,32 @@ topic list. Every value below is cited to a primary source, per the primary-sour
       rates.
       why core: every number the user has is in shekels.
 
+- [ ] 1040 filing threshold (added v1.1.0): the 1040 duty turns on gross income, INCLUDING
+      excludable foreign earned income, against the Pub 501 threshold; TY2025 single under 65
+      USD 15,750. An FBAR duty can exist with no 1040 duty.
+      source: https://www.irs.gov/publications/p501 ; https://www.irs.gov/publications/p54
+
+- [ ] FBAR non-willful penalty accrues per report, not per account (Bittner v. United States,
+      598 U.S. ___ (2023)).
+      source: https://www.supremecourt.gov/opinions/22pdf/21-1195_h3ci.pdf
+
+- [ ] Streamlined mechanics: red "Streamlined Foreign Offshore" marking, Form 14653, paper-only
+      submission, FBARs e-filed with reason "Other", ITIN application, and all information
+      returns (3520, 5471, 8938).
+      source: https://www.irs.gov/individuals/international-taxpayers/u-s-taxpayers-residing-outside-the-united-states
+
+- [ ] FEIE qualification (foreign tax home, bona fide residence or 330 days in 12 months) and
+      the same-year bar on the additional child tax credit.
+      source: https://www.irs.gov/publications/p54
+
 ## Should cover (advanced / edge cases)
 
 - [ ] Which Israeli filing the user is aligning against and that the Israeli tax
       year is the calendar year, so the two systems share a year boundary but not deadlines.
       Defer the Israeli mechanics to `israeli-tax-returns`.
-- [ ] Delinquent FBAR submission procedure where returns are correct and only FBARs are
-      missing, which is a lighter route than streamlined.
+- [ ] Alternative IRS compliance routes to streamlined (removed from the body 2026-09-13: the
+      IRS delinquent-FBAR procedure page URL returned 404 and no primary text was captured;
+      re-source before re-adding).
 - [ ] The document pack: what to hand an Israeli accountant vs a US preparer, and what only
       exists on one side (tofes 106, tofes 867, US 1099/W-2 equivalents).
 - [ ] Married-to-a-non-US-spouse filing status choices and why MFS is common in Israel.
@@ -118,9 +137,14 @@ topic list. Every value below is cited to a primary source, per the primary-sour
 
 ## Out of scope (explicit, with rationale)
 
+Re-litigated 2026-09-13: every row below still passes both tests (a user may ask, but each
+has a dedicated sibling skill or is reserved to counsel). The streamlined section now flags
+that information returns from the PFIC/trust skill are part of the same package.
+
+
 - Per-product PFIC and foreign-trust classification of Israeli savings vehicles -- this is a
   distinct job with a distinct trigger. Related skill: `us-person-israeli-investment-check`.
-- Self-employment tax, SECA, and the absent totalization agreement -- distinct audience and
+- Self-employment tax, SECA, and cross-system social security contributions -- distinct audience and
   distinct math. Related skill: `american-freelancer-israel-tax`.
 - Israeli-side return preparation and submission to Reshut HaMisim. Related skill:
   `israeli-tax-returns`.
