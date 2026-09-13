@@ -50,7 +50,11 @@ Three conditions have to hold together. Check each rather than assuming:
 2. The income is self-employment income, not salary. An osek patur or osek murshe invoicing
    clients is self-employed. A sachir on a tlush is not, and the analysis is different.
 3. Net earnings from self-employment are USD 400 or more, which is the threshold at which the
-   tax applies.
+   tax applies. On the form itself the test runs AFTER the 92.35 percent factor: Schedule SE
+   line 4c says "If less than $400, stop; you don't owe self-employment tax". Crossing USD 400
+   also creates a US filing obligation on its own, even when every dollar of income tax is
+   excluded, which is why many users are behind on returns, not just on payments. Filing
+   mechanics belong to `us-israel-dual-tax-navigator`.
 
 Then state the two facts that make this different from every other country's expats:
 
@@ -70,6 +74,11 @@ hardest to believe, so state it plainly and cite it.
 The result: Bituach Leumi and Israeli income tax on one side, US self-employment tax on the
 other, with the exclusion or the credit reaching only the US INCOME tax and never the SE tax.
 
+**The income tax treaty does not help either.** Users ask this next. The US-Israel convention
+covers, for the United States, "the Federal income taxes imposed by the Internal Revenue
+Code", and its saving clause lets the United States tax its citizens as if the convention had
+not come into effect. It is not a social security agreement.
+
 ### Stage 2: Project the SE tax
 
 The computation, in the order Schedule SE performs it:
@@ -80,7 +89,7 @@ The computation, in the order Schedule SE performs it:
 | 2 | Multiply by 92.35 percent (0.9235) | Schedule SE line 4a |
 | 3 | Apply 12.4 percent for social security, up to the year's wage base | Rate is 12.4 percent of the 15.3 percent total |
 | 4 | Apply 2.9 percent for Medicare, with no cap | Remainder of the 15.3 percent |
-| 5 | Add Additional Medicare Tax above the threshold for the filing status | See the threshold table below |
+| 5 | Separately, Additional Medicare Tax of 0.9 percent above the filing-status threshold | Form 8959, NOT Schedule SE. See the threshold table below |
 
 The combined rate is 15.3 percent, being 12.4 percent for social security and 2.9 percent for
 Medicare. Note that the 15.3 percent applies to the reduced base from step 2, not to the full
@@ -88,9 +97,16 @@ net earnings, which is why a rough estimate using 15.3 percent of net earnings s
 overstates the bill.
 
 **The social security wage base is annual and it changes.** For 2025 the maximum amount of
-self-employment income subject to social security tax is USD 176,100. Look up the figure for
-the year you are computing rather than reusing this one. The Medicare portion has no cap, so
-income above the base is still charged at 2.9 percent.
+self-employment income subject to social security tax is USD 176,100. For 2026 the maximum
+amount of earned income (wages and net earnings from self-employment) subject to social
+security tax is USD 184,500, published in the 2026 Form 1040-ES before that year's Schedule SE
+instructions exist. Use the figure for the year you are computing, never a prior year's. The
+Medicare portion has no cap, so income above the base is still charged at 2.9 percent.
+
+The base is shared with wages. If the user also has social security wages on a US Form W-2,
+Schedule SE subtracts them from the base (lines 8a and 9) and applies 12.4 percent only to the
+smaller of the SE amount or what remains. Skipping this overstates the bill for anyone with
+US wages.
 
 **Additional Medicare Tax thresholds:**
 
@@ -100,20 +116,63 @@ income above the base is still charged at 2.9 percent.
 | Married filing separately | USD 125,000 |
 | Single, head of household, or qualifying surviving spouse | USD 200,000 |
 
-Where the user has both wages and self-employment income, the threshold applying to the
-self-employment income is reduced by the wages. Flag this rather than computing it.
+This 0.9 percent is computed on Form 8959, not on Schedule SE, so report it as its own line
+next to the SE tax rather than inside it. Where the user has Medicare wages as well, the
+threshold applying to the self-employment income is reduced by those wages. On a joint return
+the threshold is tested against both spouses' Medicare wages and self-employment income
+combined, so ask for the spouse's figures before saying the tax is not triggered.
+
+Wages above the threshold are taxed too, on Form 8959 Part I, separately from the
+self-employment part. An employer withholds only on wages above USD 200,000 that it pays,
+regardless of filing status, so a married user filing separately with wages above USD
+125,000, or a couple whose combined wages pass USD 250,000, can owe it with nothing withheld.
+Use box 5 Medicare wages for this, not the box 3 and 7 social security wages used for the wage base; the two figures can differ.
 
 **One relief that does exist.** The employer-equivalent portion of SE tax is deductible in
-figuring adjusted gross income. Be precise about what that does: it reduces INCOME tax only.
+figuring adjusted gross income: Schedule SE line 13 takes 50 percent of line 12, the SE tax,
+and the Additional Medicare Tax is not part of it. Be precise about what that does: it reduces
+INCOME tax only.
 It does not reduce net earnings from self-employment and it does not reduce the SE tax itself.
 Users routinely hear "it is deductible" and assume the bill shrinks. It does not.
 
 ### Stage 3: Set up the payment cycle
 
 US tax on self-employment income is not withheld by anyone, so it is paid in quarterly
-estimated instalments during the year rather than in one lump at filing. Explain that the
-filing deadline and the payment deadline are different things, and that the automatic
-extension available to filers abroad extends filing, not payment.
+estimated instalments during the year rather than in one lump at filing. SE tax counts toward
+the estimated-tax test, so a user whose US income tax is fully excluded can still be
+under-paid purely because of SE tax.
+
+**2026 schedule, from Form 1040-ES:**
+
+| Payment | Due |
+|---|---|
+| 1st | April 15, 2026 |
+| 2nd | June 15, 2026 |
+| 3rd | Sept. 15, 2026 |
+| 4th | Jan. 15, 2027 |
+
+The periods are not equal quarters, so say which instalment is next from today's date. The
+fourth is not required if the 2026 return is filed by February 1, 2027 with the whole balance
+paid.
+
+**Who must pay and how much avoids a penalty.** Estimated tax is generally required where the
+user expects to owe at least USD 1,000 for the year. Paying the smaller of 90 percent of the
+current year's tax or 100 percent of the prior year's tax (for 2026, the 2025 return, which
+must cover all 12 months) avoids the penalty. If the prior year's adjusted gross income was
+more than USD 150,000 (USD 75,000 married filing separately), the 100 percent becomes 110
+percent. Explain these tests and let the preparer apply them; they depend on the whole return,
+not the SE figure alone.
+
+**Catching up later does not erase earlier penalties.** Per Form 1040-ES, the penalty is
+imposed on each underpayment for the number of days it remains unpaid. A user who skipped the
+first three instalments and pays it all in January still owes the penalty on each missed one.
+
+**Extensions do not stop interest.** Per Publication 54, a US citizen or resident alien who
+qualifies (living outside the United States and Puerto Rico on the regular due date, see the
+publication for the full test) gets an automatic 2-month extension to file and pay federal
+income tax, but still pays interest on any tax not paid by the regular due date. The
+additional 4 months of time to file beyond that is not an extension of time to pay at all.
+None of this moves the quarterly instalment dates above.
 
 Practical framing that helps more than a lecture: convert the projected annual SE tax into a
 percentage of each invoice the user should set aside as they get paid, in shekels, so the
@@ -130,7 +189,7 @@ clearly that choosing among them is not something this skill does.
 |---|---|---|
 | Stay an osek and pay both | No restructuring | The full double charge every year |
 | Operate through an Israeli company | Income may be characterised as corporate profit and salary rather than self-employment earnings | Israeli corporate compliance, payroll, accounting cost, and a set of US anti-deferral rules for owning a foreign corporation that are their own significant problem |
-| Operate through a US entity | Changes the US characterisation | US filing obligations, possible Israeli tax residence of the entity, and cost |
+| Operate through a US entity | Whether anything changes depends on the entity type and its tax elections; do not assume forming one alters the SE tax | US filing obligations, possible Israeli tax residence of the entity, and cost |
 
 The middle option is the one most often suggested casually in forums and it is the one with
 the largest hidden US complexity, because a US person owning a foreign corporation can walk
@@ -141,8 +200,9 @@ incorporation as a clean fix.
 ### Stage 5: Produce the worksheet
 
 Output: the projected SE tax for the year with each step shown, the Additional Medicare Tax
-position, the amount to set aside per invoice, the quarterly instalment schedule, and a short
-list of questions for a preparer. State which year's wage base you used and where it came
+position as a separate Form 8959 line, the amount to set aside per invoice, the instalment
+dates still ahead, and a short list of questions for a preparer (including which safe-harbor
+test applies). State which year's wage base you used and where it came
 from.
 
 ## Do NOT use this skill for
@@ -194,6 +254,10 @@ from.
    worse. Present options, never a recommendation.
 7. **Confusing the filing extension with a payment extension.** Estimated payments are due
    during the year and interest runs regardless of any extension to file.
+8. **Folding Additional Medicare Tax into SE tax.** It is figured on Form 8959, and the line 13
+   half-deduction applies to the SE tax only.
+9. **Ignoring US wages.** Social security wages on a Form W-2 use up the wage base first, and a
+   spouse's income counts toward the joint Additional Medicare threshold.
 
 ## Reference Links
 
@@ -201,7 +265,11 @@ from.
 |---|---|---|
 | IRS, self-employment tax | https://www.irs.gov/businesses/small-businesses-self-employed/self-employment-tax-social-security-and-medicare-taxes | The 15.3 percent rate, its split, the USD 400 threshold, and the SE tax deduction |
 | Instructions for Schedule SE | https://www.irs.gov/pub/irs-pdf/i1040sse.pdf | The totalization country list, the rule that the exclusion does not reduce SE tax, the wage base, and the Additional Medicare Tax thresholds |
-| Schedule SE (form) | https://www.irs.gov/pub/irs-pdf/f1040sse.pdf | Line 4a and the 92.35 percent factor |
+| Schedule SE (form) | https://www.irs.gov/pub/irs-pdf/f1040sse.pdf | Line 4a and the 92.35 percent factor, line 4c, lines 8a to 10 (wages reduce the base), line 13 |
+| Form 1040-ES (current year) | https://www.irs.gov/pub/irs-pdf/f1040es.pdf | The current-year wage base, the instalment due dates, and the 90 / 100 / 110 percent tests |
+| Instructions for Form 8959 | https://www.irs.gov/pub/irs-pdf/i8959.pdf | Additional Medicare Tax, the wage reduction, and joint-return combination |
+| Publication 54 | https://www.irs.gov/pub/irs-pdf/p54.pdf | Extensions of time to file versus time to pay |
+| US-Israel income tax treaty | https://www.irs.gov/pub/irs-trty/israel.pdf | The taxes covered and the saving clause |
 | SSA International Programs | Named in the Schedule SE instructions (search "SSA International Programs") | Whether any new social security agreement has been entered into since the instructions were published |
 
 ## Troubleshooting

@@ -1,105 +1,524 @@
 {
-  "skill_slug": "american-freelancer-israel-tax",
   "schemaVersion": "1.0",
-  "generated_at": "2026-08-23",
+  "skill": "american-freelancer-israel-tax",
+  "generated_at": "2026-09-13T00:00:00Z",
   "claims": [
     {
-      "id": "se-rate-153",
+      "claim_id": "se-rate-153",
       "claim": "The self-employment tax rate is 15.3 percent, made up of 12.4 percent for social security and 2.9 percent for Medicare",
-      "claim_type": "percentage",
       "source_url": "https://www.irs.gov/businesses/small-businesses-self-employed/self-employment-tax-social-security-and-medicare-taxes",
       "raw_snippet": "Self-employment tax rate The self-employment tax rate is 15.3%. The rate consists of two parts: 12.4% for social security (old-age, survivors, and disability insurance) and 2.9% for Medicare (hospital insurance",
-      "source_fetched_at": "2026-08-23T00:00:00Z",
+      "fetched_at": "2026-08-23T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/se-tax-mechanics.md"
+      ],
+      "claim_type": "percentage",
       "confidence": "high"
     },
     {
-      "id": "se-400-threshold",
+      "claim_id": "se-400-threshold",
       "claim": "Self-employment tax applies where net earnings from self-employment were USD 400 or more",
-      "claim_type": "threshold",
       "source_url": "https://www.irs.gov/businesses/small-businesses-self-employed/self-employment-tax-social-security-and-medicare-taxes",
       "raw_snippet": "Your net earnings from self-employment (excluding church employee income) were $400 or more. You had church employee income of $108.28 or more. Generally, your net earnings from self-employment are su",
-      "source_fetched_at": "2026-08-23T00:00:00Z",
+      "fetched_at": "2026-08-23T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/se-tax-mechanics.md"
+      ],
+      "claim_type": "threshold",
       "confidence": "high"
     },
     {
-      "id": "se-9235-factor",
+      "claim_id": "se-9235-factor",
       "claim": "Schedule SE line 4a multiplies net earnings by 92.35 percent (0.9235) to reach the amount subject to self-employment tax",
-      "claim_type": "percentage",
       "source_url": "https://www.irs.gov/pub/irs-pdf/f1040sse.pdf",
       "raw_snippet": "4a If line 3 is more than zero, multiply line 3 by 92.35% (0.9235). Otherwise, enter amount from line 3 . 4a N",
-      "source_fetched_at": "2026-08-23T00:00:00Z",
+      "fetched_at": "2026-08-23T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/se-tax-mechanics.md"
+      ],
+      "claim_type": "percentage",
       "confidence": "high"
     },
     {
-      "id": "feie-does-not-reduce-se",
+      "claim_id": "feie-does-not-reduce-se",
       "claim": "Foreign earnings from self-employment cannot be reduced by the foreign earned income exclusion when computing self-employment tax, and a self-employed US citizen living outside the United States must in most cases pay SE tax",
-      "claim_type": "law",
       "source_url": "https://www.irs.gov/pub/irs-pdf/i1040sse.pdf",
       "raw_snippet": "U.S. Citizens or Resident Aliens Living Outside the United States If you are a self-employed U.S. citizen or resident alien living outside the United States, in most cases you must pay SE tax. Foreign earnings from self-employment can’t be reduced by your foreign earned income exclusion when computing SE tax. Exception. The Unit",
-      "source_fetched_at": "2026-08-23T00:00:00Z",
+      "fetched_at": "2026-08-23T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/se-tax-mechanics.md"
+      ],
+      "claim_type": "law",
       "confidence": "high"
     },
     {
-      "id": "totalization-country-list",
+      "claim_id": "totalization-country-list",
       "claim": "The United States has social security totalization agreements with 30 named countries and Israel is not among them, so the dual-taxation relief those agreements provide is unavailable to a US person self-employed in Israel",
-      "claim_type": "law",
       "source_url": "https://www.irs.gov/pub/irs-pdf/i1040sse.pdf",
       "raw_snippet": "The United States now has social security agreements with the following countries: Australia, Austria, Belgium, Brazil, Canada, Chile, the Czech Republic, Denmark, Finland, France, Germany, Greece, Hungary, Iceland, Ireland, Italy, Japan, Luxembourg, the Netherlands, Norway, Poland, Portugal, the Slovak Republic, Slovenia, South Korea, Spain, Sweden, Switzerland, the United Kingdom, and Uruguay. If you have questions about international social security agreements, or to see i",
-      "source_fetched_at": "2026-08-23T00:00:00Z",
+      "fetched_at": "2026-08-23T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/se-tax-mechanics.md"
+      ],
+      "claim_type": "law",
       "confidence": "high"
     },
     {
-      "id": "ss-wage-base-2025",
+      "claim_id": "ss-wage-base-2025",
       "claim": "For 2025 the maximum amount of self-employment income subject to social security tax is USD 176,100",
-      "claim_type": "currency",
       "source_url": "https://www.irs.gov/pub/irs-pdf/i1040sse.pdf",
       "raw_snippet": "Maximum income subject to social security tax. For 2025, the maximum amount of self-employment income subject to social security tax is $176,100. Reminders Form 1040-SS. ",
-      "source_fetched_at": "2026-08-23T00:00:00Z",
+      "fetched_at": "2026-08-23T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/se-tax-mechanics.md"
+      ],
+      "claim_type": "currency",
       "confidence": "high"
     },
     {
-      "id": "addl-medicare-thresholds",
+      "claim_id": "addl-medicare-thresholds",
       "claim": "Additional Medicare Tax threshold amounts are USD 250,000 married filing jointly, USD 125,000 married filing separately, and USD 200,000 single, head of household or qualifying surviving spouse",
-      "claim_type": "threshold",
       "source_url": "https://www.irs.gov/pub/irs-pdf/i1040sse.pdf",
       "raw_snippet": "Married filing jointly— $250,000 • Married filing separately— $125,000 • Single, Head of household, or Qualifying surviving spouse— $200,000 If you have both wages and self-employment income, the threshold amount for applying the Additional Medicare ",
-      "source_fetched_at": "2026-08-23T00:00:00Z",
+      "fetched_at": "2026-08-23T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/se-tax-mechanics.md"
+      ],
+      "claim_type": "threshold",
       "confidence": "high"
     },
     {
-      "id": "se-deduction-employer-equivalent",
+      "claim_id": "se-deduction-employer-equivalent",
       "claim": "The employer-equivalent portion of self-employment tax is deductible in figuring adjusted gross income, and that deduction affects only income tax, not net earnings from self-employment or the self-employment tax itself",
-      "claim_type": "law",
       "source_url": "https://www.irs.gov/businesses/small-businesses-self-employed/self-employment-tax-social-security-and-medicare-taxes",
       "raw_snippet": "Self-employment tax deduction You can deduct the employer-equivalent portion of your self-employment tax in figuring your adjusted gross income. This deduction only affects your income tax. It does not affect either your net earnings from self-employment or your self-employment t",
-      "source_fetched_at": "2026-08-23T00:00:00Z",
+      "fetched_at": "2026-08-23T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/se-tax-mechanics.md"
+      ],
+      "claim_type": "law",
       "confidence": "high"
     },
     {
-      "id": "ssa-international-referral",
+      "claim_id": "ssa-international-referral",
       "claim": "The Schedule SE instructions direct taxpayers to the SSA International Programs website to check whether any additional social security agreement has been entered into",
-      "claim_type": "url",
       "source_url": "https://www.irs.gov/pub/irs-pdf/i1040sse.pdf",
       "raw_snippet": "If you have questions about international social security agreements, or to see if any additional agreements have been entered into, you can go to the SSA’s International Programs website at SSA.gov/International. The website also provides contact information for questions about ",
-      "source_fetched_at": "2026-08-23T00:00:00Z",
+      "fetched_at": "2026-08-23T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/se-tax-mechanics.md"
+      ],
+      "claim_type": "url",
       "confidence": "high"
     },
     {
-      "id": "f8938-cross-ref",
+      "claim_id": "f8938-cross-ref",
       "claim": "Form 8938 thresholds for specified individuals living outside the US start at more than USD 200,000 on the last day or 300,000 at any time. Owned by the sibling skill and referenced here only as a scope boundary (בעברית: טופס 8938)",
-      "claim_type": "threshold",
       "source_url": "https://www.irs.gov/businesses/comparison-of-form-8938-and-fbar-requirements",
       "raw_snippet": "Specified individuals living outside the US: Unmarried individual (or married filing separately): Total value of assets was more than $200,000 on the last day of the tax year, or more than $300,000 at any time during the year. Married individual filing jointly: Total value of assets was more than $4",
-      "source_fetched_at": "2026-08-23T00:00:00Z",
+      "fetched_at": "2026-08-23T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/se-tax-mechanics.md"
+      ],
+      "claim_type": "threshold",
       "confidence": "high"
     },
     {
-      "id": "addl-medicare-rate-09",
+      "claim_id": "addl-medicare-rate-09",
       "claim": "A 0.9 percent Additional Medicare Tax may apply where the total on line 6 of all Schedules SE exceeds the threshold for the filing status",
-      "claim_type": "percentage",
       "source_url": "https://www.irs.gov/pub/irs-pdf/i1040sse.pdf",
       "raw_snippet": "Additional Medicare Tax A 0.9% Additional Medicare Tax may apply to you if the total amount on line 6 of all your Schedules SE exceeds one of the following threshold amounts (based on your filing status). • Married filing jointly— $250,000 • Married filing separately— $125,000 • Single, He",
-      "source_fetched_at": "2026-08-23T00:00:00Z",
+      "fetched_at": "2026-08-23T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/se-tax-mechanics.md"
+      ],
+      "claim_type": "percentage",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "ss-wage-base-2026",
+      "claim": "For 2026 the maximum earned income subject to social security tax is USD 184,500, published in the 2026 Form 1040-ES (בעברית: טופס 1040-ES)",
+      "source_url": "https://www.irs.gov/pub/irs-pdf/f1040es.pdf",
+      "raw_snippet": "Social security tax. For 2026, the maximum amount of earned income (wages and net earnings from self-employment) subject to the social security tax is $184,500.",
+      "fetched_at": "2026-09-13T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/se-tax-mechanics.md",
+        "scripts/se_tax_projection.py"
+      ],
+      "confidence": "high"
+    },
+    {
+      "claim_id": "es-due-dates-2026",
+      "claim": "2026 estimated tax instalments are due April 15, June 15, Sept. 15, 2026 and Jan. 15, 2027",
+      "source_url": "https://www.irs.gov/pub/irs-pdf/f1040es.pdf",
+      "raw_snippet": "April 15, 2026 June 15, 2026 Sept. 15, 2026 Jan. 15, 2027",
+      "fetched_at": "2026-09-13T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/se-tax-mechanics.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "claim_id": "es-jan-payment-exception",
+      "claim": "The January 15, 2027 payment is not required if the 2026 return is filed by February 1, 2027 with the entire balance paid",
+      "source_url": "https://www.irs.gov/pub/irs-pdf/f1040es.pdf",
+      "raw_snippet": "You don’t have to make the payment due January 15, 2027, if you file your 2026 tax return by February 1, 2027, and pay the entire balance due with your return.",
+      "fetched_at": "2026-09-13T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/se-tax-mechanics.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "claim_id": "es-1000-threshold",
+      "claim": "Estimated tax is generally required where at least USD 1,000 of tax is expected for 2026",
+      "source_url": "https://www.irs.gov/pub/irs-pdf/f1040es.pdf",
+      "raw_snippet": "You expect to owe at least $1,000 in tax for 2026",
+      "fetched_at": "2026-09-13T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/se-tax-mechanics.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "claim_id": "es-safe-harbor-90-100",
+      "claim": "Safe harbor: 90 percent of the 2026 tax or 100 percent of the 2025 tax, with the 2025 return covering all 12 months",
+      "source_url": "https://www.irs.gov/pub/irs-pdf/f1040es.pdf",
+      "raw_snippet": "90% of the tax to be shown on your 2026 tax return, or b. 100% of the tax shown on your 2025 tax return. Your 2025 tax return must cover all 12",
+      "fetched_at": "2026-09-13T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/se-tax-mechanics.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "claim_id": "es-110-high-income",
+      "claim": "Where 2025 AGI exceeded USD 150,000 (USD 75,000 MFS), 110 percent replaces 100 percent",
+      "source_url": "https://www.irs.gov/pub/irs-pdf/f1040es.pdf",
+      "raw_snippet": "If your adjusted gross income (AGI) for 2025 was more than $150,000 ($75,000 if your filing status for 2026 is married filing separately), substitute 110% for 100%",
+      "fetched_at": "2026-09-13T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/se-tax-mechanics.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "claim_id": "se-line-4c-400",
+      "claim": "Schedule SE line 4c stops the computation where the post-92.35-percent amount is below USD 400",
+      "source_url": "https://www.irs.gov/pub/irs-pdf/f1040sse.pdf",
+      "raw_snippet": "If less than $400, stop; you don’t owe self-employment tax",
+      "fetched_at": "2026-09-13T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/se-tax-mechanics.md",
+        "scripts/se_tax_projection.py"
+      ],
+      "confidence": "high"
+    },
+    {
+      "claim_id": "se-wages-reduce-base",
+      "claim": "Social security wages on Form W-2 are subtracted from the wage base and 12.4 percent applies to the smaller of line 6 or line 9",
+      "source_url": "https://www.irs.gov/pub/irs-pdf/f1040sse.pdf",
+      "raw_snippet": "9 Subtract line 8d from line 7. If zero or less, enter -0- her",
+      "fetched_at": "2026-09-13T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/se-tax-mechanics.md",
+        "scripts/se_tax_projection.py"
+      ],
+      "confidence": "high"
+    },
+    {
+      "claim_id": "se-line-10-smaller",
+      "claim": "Line 10 multiplies the smaller of line 6 or line 9 by 12.4 percent",
+      "source_url": "https://www.irs.gov/pub/irs-pdf/f1040sse.pdf",
+      "raw_snippet": "10 Multiply the smaller of line 6 or line 9 by 12.4% (0.124)",
+      "fetched_at": "2026-09-13T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "scripts/se_tax_projection.py"
+      ],
+      "confidence": "high"
+    },
+    {
+      "claim_id": "se-line-13-half",
+      "claim": "The deduction is 50 percent of line 12, the self-employment tax",
+      "source_url": "https://www.irs.gov/pub/irs-pdf/f1040sse.pdf",
+      "raw_snippet": "13 Deduction for one-half of self-employment tax. Multiply line 12 by 50% (0.50).",
+      "fetched_at": "2026-09-13T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/se-tax-mechanics.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "claim_id": "addl-medicare-form-8959",
+      "claim": "Additional Medicare Tax is figured on Form 8959 (בעברית: טופס 8959)",
+      "source_url": "https://www.irs.gov/pub/irs-pdf/i1040sse.pdf",
+      "raw_snippet": "Use Form 8959, Additional Medicare Tax, to figure thi",
+      "fetched_at": "2026-09-13T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/se-tax-mechanics.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "claim_id": "addl-medicare-wage-reduction",
+      "claim": "The Additional Medicare threshold on SE income is reduced, not below zero, by Medicare wages",
+      "source_url": "https://www.irs.gov/pub/irs-pdf/i8959.pdf",
+      "raw_snippet": "is reduced (but not below zero) by the total amount of Medicare wages received",
+      "fetched_at": "2026-09-13T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/se-tax-mechanics.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "claim_id": "addl-medicare-mfj-combined",
+      "claim": "On a joint return both spouses wages and SE income are combined against the USD 250,000 threshold",
+      "source_url": "https://www.irs.gov/pub/irs-pdf/i8959.pdf",
+      "raw_snippet": "combined wages and self-employment income of you and your spouse are going to be more than $250,000",
+      "fetched_at": "2026-09-13T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/se-tax-mechanics.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "claim_id": "p54-extension-not-payment",
+      "claim": "The additional 4 months of time to file is not an extension of time to pay",
+      "source_url": "https://www.irs.gov/pub/irs-pdf/p54.pdf",
+      "raw_snippet": "The additional 4 months of time to file (unlike the original 2-month extension) is not an extension of time to pay.",
+      "fetched_at": "2026-09-13T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/se-tax-mechanics.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "claim_id": "treaty-art1-income-taxes",
+      "claim": "The US-Israel convention covers, for the US, the federal income taxes",
+      "source_url": "https://www.irs.gov/pub/irs-trty/israel.pdf",
+      "raw_snippet": "The taxes which are the subject of this Convention are: (a) In the case of the United States, the Federal income taxes imposed by the Internal Revenue Code",
+      "fetched_at": "2026-09-13T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "claim_id": "treaty-saving-clause",
+      "claim": "Saving clause lets a state tax its citizens as if the convention had not come into effect",
+      "source_url": "https://www.irs.gov/pub/irs-trty/israel.pdf",
+      "raw_snippet": "a Contracting State may tax its residents (as determined under Article 3 (Fiscal Residence) and its citizens as if this Convention had not come into effect.",
+      "fetched_at": "2026-09-13T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "claim_id": "se-line-12-composition",
+      "claim": "Schedule SE line 12, the self-employment tax, is lines 10 and 11 only, so Additional Medicare Tax is not part of it or of the line 13 half-deduction",
+      "source_url": "https://www.irs.gov/pub/irs-pdf/f1040sse.pdf",
+      "raw_snippet": "12 Self-employment tax. Add lines 10 and 11.",
+      "fetched_at": "2026-09-13T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/se-tax-mechanics.md",
+        "scripts/se_tax_projection.py"
+      ],
+      "confidence": "high"
+    },
+    {
+      "claim_id": "es-line-9-se-tax",
+      "claim": "Self-employment tax is entered on line 9 of the Form 1040-ES estimated tax worksheet, so it counts toward the estimated-tax test",
+      "source_url": "https://www.irs.gov/pub/irs-pdf/f1040es.pdf",
+      "raw_snippet": "Line 9. Self-employment tax. If you and your spouse make joint estimated tax payments and both of you have self-employment income, figure the self-employment tax for each of you separately. Enter the total on line 9.",
+      "fetched_at": "2026-09-13T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "claim_id": "totalization-pay-where-you-live",
+      "claim": "Under a social security agreement a person generally pays social security and Medicare taxes to only the country where they live",
+      "source_url": "https://www.irs.gov/pub/irs-pdf/i1040sse.pdf",
+      "raw_snippet": "to only the country in which you live",
+      "fetched_at": "2026-09-13T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/se-tax-mechanics.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "claim_id": "p54-automatic-2-month",
+      "claim": "A qualifying US citizen or resident alien abroad gets an automatic 2-month extension to file and pay federal income tax",
+      "source_url": "https://www.irs.gov/pub/irs-pdf/p54.pdf",
+      "raw_snippet": "You are allowed an automatic 2-month extension to file your income tax return and pay federal income tax if you are a U.S. citizen or resident alien",
+      "fetched_at": "2026-09-13T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "claim_id": "p54-interest-from-regular-due-date",
+      "claim": "Even with an extension, interest runs on any tax not paid by the regular due date",
+      "source_url": "https://www.irs.gov/pub/irs-pdf/p54.pdf",
+      "raw_snippet": "Even if you are allowed an extension, you will have to pay interest on any tax not paid by the regular due date of your return.",
+      "fetched_at": "2026-09-13T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "claim_id": "p54-400-must-file",
+      "claim": "Net earnings from self-employment of USD 400 or more create a US filing obligation",
+      "source_url": "https://www.irs.gov/pub/irs-pdf/p54.pdf",
+      "raw_snippet": "If your net earnings from self-employment are $400 or more, you must file a return",
+      "fetched_at": "2026-09-13T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "claim_id": "es-penalty-per-underpayment",
+      "claim": "The underpayment penalty is imposed on each underpayment for the number of days it remains unpaid",
+      "source_url": "https://www.irs.gov/pub/irs-pdf/f1040es.pdf",
+      "raw_snippet": "The penalty is imposed on each underpayment for the number of days it remains unpaid.",
+      "fetched_at": "2026-09-13T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "claim_id": "f8959-part1-wages",
+      "claim": "Form 8959 Part I applies 0.9 percent to Medicare wages above the filing-status threshold",
+      "source_url": "https://www.irs.gov/pub/irs-pdf/f8959.pdf",
+      "raw_snippet": "Additional Medicare Tax on Medicare wages. Multiply line 6 by 0.9% (0.009).",
+      "fetched_at": "2026-09-13T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/se-tax-mechanics.md",
+        "scripts/se_tax_projection.py"
+      ],
+      "confidence": "high"
+    },
+    {
+      "claim_id": "f8959-box5",
+      "claim": "Part I starts from Medicare wages in Form W-2 box 5",
+      "source_url": "https://www.irs.gov/pub/irs-pdf/f8959.pdf",
+      "raw_snippet": "Medicare wages and tips from Form W-2, box 5.",
+      "fetched_at": "2026-09-13T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/se-tax-mechanics.md",
+        "scripts/se_tax_projection.py"
+      ],
+      "confidence": "high"
+    },
+    {
+      "claim_id": "f8959-total-lines",
+      "claim": "Total Additional Medicare Tax adds lines 7, 13 and 17",
+      "source_url": "https://www.irs.gov/pub/irs-pdf/f8959.pdf",
+      "raw_snippet": "Total Additional Medicare Tax Add lines 7, 13, and 17.",
+      "fetched_at": "2026-09-13T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/se-tax-mechanics.md",
+        "scripts/se_tax_projection.py"
+      ],
+      "confidence": "high"
+    },
+    {
+      "claim_id": "i8959-employer-withholding-200k",
+      "claim": "An employer withholds Additional Medicare Tax only on wages above USD 200,000 that it pays, regardless of filing status",
+      "source_url": "https://www.irs.gov/pub/irs-pdf/i8959.pdf",
+      "raw_snippet": "Your employer must withhold Additional Medicare Tax on wages it pays to you in excess of $200,000 for the calendar year, regardless of your filing status",
+      "fetched_at": "2026-09-13T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/se-tax-mechanics.md",
+        "scripts/se_tax_projection.py"
+      ],
+      "confidence": "high"
+    },
+    {
+      "claim_id": "se-line-8a-w2-boxes",
+      "claim": "Schedule SE line 8a takes social security wages from Form W-2 boxes 3 and 7",
+      "source_url": "https://www.irs.gov/pub/irs-pdf/f1040sse.pdf",
+      "raw_snippet": "8a Total social security wages and tips (total of boxes 3 and 7 on Form(s) W-2)",
+      "fetched_at": "2026-09-13T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "scripts/se_tax_projection.py"
+      ],
       "confidence": "high"
     }
   ]

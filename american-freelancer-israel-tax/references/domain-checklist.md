@@ -51,7 +51,24 @@ threshold and list below is cited to a primary source.
       why core: the imprecise version leads users to under-reserve.
 
 - [ ] The quarterly estimated payment cycle, and that a filing extension is not a payment
-      extension.
+      extension. Added 2026-09-13: the current-year due dates, the USD 1,000 requirement, and
+      the 90 / 100 / 110 percent safe-harbor tests, all from the current Form 1040-ES; the
+      filing-versus-payment extension wording from Publication 54.
+      source: Form 1040-ES (2026), Publication 54
+
+- [ ] The current-year wage base as soon as it is published (Form 1040-ES precedes the
+      Schedule SE instructions), and the rule that social security wages on a Form W-2 reduce
+      the base (Schedule SE lines 8a to 10). Added 2026-09-13.
+      source: Form 1040-ES (2026), Schedule SE
+
+- [ ] Additional Medicare Tax as a Form 8959 computation separate from Schedule SE line 12,
+      excluded from the line 13 half-deduction, reduced by Medicare wages, and combined across
+      spouses on a joint return. Added 2026-09-13.
+      source: Instructions for Schedule SE, Instructions for Form 8959, Schedule SE
+
+- [ ] Why the US-Israel income tax treaty does not help (it covers only federal income
+      taxes, and the saving clause lets the US tax its citizens regardless). Added 2026-09-13.
+      source: US-Israel income tax convention
 
 - [ ] The structural options presented as a comparison with costs, never as a recommendation,
       with the US anti-deferral exposure for owners of foreign corporations named as the

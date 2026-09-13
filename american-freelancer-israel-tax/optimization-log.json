@@ -1,0 +1,23 @@
+{
+  "cycles": [
+    {
+      "version": "1.1.0",
+      "date": "2026-09-13",
+      "lessons": [
+        "Description unchanged this cycle, so the 5.7 holdout was not run; eval_pass_rate carried from creation.",
+        "Deferred MAJOR: annualized income installment method (Form 2210) for lumpy freelance income not covered.",
+        "Deferred MAJOR: IRS currency-translation rule (yearly average rate vs spot) for shekel net earnings not stated; unverified this cycle.",
+        "Deferred MAJOR: Bituach Leumi creditability as a foreign INCOME tax (Pub 514 bars credit only for agreement countries) should route explicitly to us-israel-dual-tax-navigator.",
+        "Deferred MINOR: SSA may list 31 agreements vs the 30 printed in the 2025 Schedule SE instructions; ssa.gov 403 to curl, unverified. Re-check against the 2026 Schedule SE instructions when published.",
+        "Deferred MINOR: Schedule SE optional methods (line 4b) and that SE tax earns US social security credits.",
+        "Deferred MINOR: Form 2555 / bona fide residence named explicitly as not affecting SE tax; payment channels (Direct Pay, EFTPS).",
+        "Next cycle: add the 2027 wage base from the 2027 Form 1040-ES and roll the due-date table forward.",
+        "Deferred MAJOR (Expert M2, unverified): prior years filed without Schedule SE, e.g. after Streamlined Foreign Offshore for income tax only; add an instruction to ask and refer as a separate exposure once the Streamlined procedures page is read.",
+        "Applied this cycle from Expert: USD 400 filing obligation (Pub 54), per-underpayment penalty (1040-ES), US-entity row softened (unverified disregarded-entity specifics deliberately NOT asserted).",
+        "Arithmetic pass FAILED iteration 1 (Form 8959 Part I omitted; box 5 defaulting to box 3), PASSED iteration 2 after repair. Keep Part I and Part II separate on any future edit.",
+        "Deferred non-blocking script improvements from the arithmetic reviewer: print a NOTE when box 5 is given without box 3; gate the set-aside block on se_tax + part2 > 0 rather than total > 0.",
+        "Judge needed 3 rounds: first for uncited Pub 54 extension wording, second for W-2 box, Part V, Form 2210 attributions and a dropped Hebrew 'generally'. Cite every form part and box number, and diff Hebrew qualifiers against English."
+      ]
+    }
+  ]
+}
