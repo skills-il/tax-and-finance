@@ -5,7 +5,7 @@
 # Usage:
 #   export GROW_USER_ID="your-user-id"
 #   export GROW_PAGE_CODE="your-page-code"
-#   export GROW_API_KEY="your-api-key"  # optional
+#   export MESHULAM_API_KEY="your-api-key"  # optional
 #   export GROW_ENV="sandbox"           # or "production"
 #
 #   ./grow-payment-helper.sh create-payment 149.90 "Test payment" "https://example.com/success" "https://example.com/cancel"
@@ -31,19 +31,22 @@ fi
 API_BASE="${BASE_URL}/api/light/server/1.0"
 
 # Post a form request and exit non-zero if the API reports an error in the body.
-# GROW_API_KEY, when set, is sent as the X-API-KEY header; Grow returns HTTP 403
+# MESHULAM_API_KEY, when set, is sent as the X-API-KEY header; Grow returns HTTP 403
 # with the message "לא נשלח X-API-KEY" when a call that needs it is missing it.
 call_api() {
   local endpoint="$1"; shift
-  local -a auth=()
-  if [ -n "${GROW_API_KEY:-}" ]; then
-    auth=(-H "X-API-KEY: ${GROW_API_KEY}")
+  local body http host
+  if [ "${GROW_ENV:-sandbox}" = "production" ]; then host=secure; else host=sandbox; fi
+  if [ -n "${MESHULAM_API_KEY:-}" ] && [ "$host" = "secure" ]; then
+    body=$(curl -sS -w $'\n%{http_code}' -X POST "https://secure.meshulam.co.il/api/light/server/1.0/${endpoint}" -H "X-API-KEY: ${MESHULAM_API_KEY}" "$@") || {
+      echo "Error: request to ${endpoint} failed" >&2; exit 1; }
+  elif [ -n "${MESHULAM_API_KEY:-}" ]; then
+    body=$(curl -sS -w $'\n%{http_code}' -X POST "https://sandbox.meshulam.co.il/api/light/server/1.0/${endpoint}" -H "X-API-KEY: ${MESHULAM_API_KEY}" "$@") || {
+      echo "Error: request to ${endpoint} failed" >&2; exit 1; }
+  else
+    body=$(curl -sS -w $'\n%{http_code}' -X POST "${API_BASE}/${endpoint}" "$@") || {
+      echo "Error: request to ${endpoint} failed" >&2; exit 1; }
   fi
-
-  local body http
-  # ${auth[@]+"${auth[@]}"} keeps an empty array safe under `set -u` on bash 3.2.
-  body=$(curl -sS -w $'\n%{http_code}' -X POST "${API_BASE}/${endpoint}" ${auth[@]+"${auth[@]}"} "$@") || {
-    echo "Error: request to ${endpoint} failed" >&2; exit 1; }
   http="${body##*$'\n'}"
   body="${body%$'\n'*}"
 
