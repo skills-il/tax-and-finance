@@ -1,49 +1,29 @@
 # Israeli VAT Regulations Summary
 
 ## VAT Rate
-- Standard rate: **18%** (effective since January 1, 2025, per the 2025 Budget/Arrangements Law; unchanged for 2026-2027)
+- Standard rate: **18%** (effective since January 1, 2025; verify the rate in force before computing)
 - Previous rate: 17%, in force until 31 December 2024
-- Rate changes require Knesset legislation
 
 ## Registration Types
 
 ### Osek Morsheh (Licensed Dealer)
-- Annual turnover above ~122,833 NIS (updated periodically)
+- Annual turnover above ~122,833 NIS (2026 value, updated periodically), or any turnover for a group listed in section 13 of the VAT (Registration) Regulations
 - Must charge and collect VAT
 - Can claim input VAT deductions
 - Must file periodic VAT returns
 
 ### Osek Patur (Exempt Dealer)
-- Annual turnover below ~122,833 NIS
-- Cannot charge VAT on invoices
-- Cannot claim input VAT deductions
-- Files annual report only
-- Issues receipts, not tax invoices
+- Annual turnover below ~122,833 NIS; certain professions and activities must register as osek morsheh regardless of turnover (section 13 of the VAT (Registration) Regulations, https://www.nevo.co.il/law_html/law01/271_004.htm): confirm status with an accountant
+- Files an annual turnover declaration only, by 31 January
 
 ## Input VAT Deduction Rules
 
-### Fully Deductible
-- Office rent and utilities
-- Professional services (accounting, legal)
-- Raw materials and inventory
-- Business equipment and supplies
-- Professional training and education
-
 ### Partially Deductible
-- Vehicle expenses: 2/3 deductible (assumes 1/3 personal use)
-- Home office: Proportional to business use area
-- Mobile phone: Business use percentage
+- Mixed-use costs where the Director set no ratio: 2/3 if use is mainly business, 1/4 if mainly private (reg. 18(b)); vehicle running costs are an illustration only, verify with your accountant
 
 ### Non-Deductible
-- Entertainment and meals (with limited exceptions)
-- Gifts to clients
-- Fines and penalties
-- Personal expenses
-- Purchases without valid tax invoice
+- Buying or importing a private car (reg. 14; exceptions such as driving schools and car rental)
+- Entertainment (reg. 16; except entertaining a person from abroad)
 
 ## Special Cases
-- **Exports:** Zero-rated (0% VAT), but seller can still claim input VAT
-- **Financial services:** Exempt from VAT (Mas Sachir applies instead)
-- **Eilat zone:** No VAT applies (free trade zone)
-- **Real estate:** Complex rules depending on residential/commercial
-- **Non-profit (Amuta):** Subject to VAT on business activities
+See `special-cases.md`.

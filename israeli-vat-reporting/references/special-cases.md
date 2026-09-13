@@ -1,41 +1,20 @@
 # Israeli VAT Special Cases
 
 ## Zero-Rated Transactions (0% VAT)
-- Export of goods (physical shipment outside Israel)
-- Export of services to non-Israeli residents
-- Tourism services provided to foreign tourists
-- International transportation
-- Sales to Eilat zone businesses
+- Some services to tourists (for example lodging, car rental, hospitalisation)
+- Services to a foreign resident, except services the Minister of Finance excluded (VAT Law s.30(a)(5); a service is not treated as given to a foreign resident when, under the agreement, it is actually given in Israel to an Israeli resident as well)
+- Certain goods set by the Minister of Finance
 
-Important: Zero-rated means VAT at 0%, NOT exempt. Seller can still claim
-input VAT deductions on related purchases.
+Important: Zero-rated means VAT at 0%, NOT exempt. The seller does not charge VAT
+and can still deduct input VAT on related purchases.
 
 ## Exempt Transactions (No VAT)
-- Financial services (financial institutions pay Mas Sachar VeRevach instead of VAT)
-- Residential property rental (within the statutory ceiling, when let to an individual for residence)
-- A non-profit (malkar) or financial institution selling an asset it used (specific cases)
+- The seller charges only the base price, and cannot deduct the input VAT paid to produce that income.
+- Exemptions exist only where the law sets them. Verify any claimed exemption against the VAT Law before applying it.
 
-Note: unlike the EU, Israel has NO general VAT exemption for food, public transport, or medical/dental services, those are standard-rated (18%). Do not zero out output VAT on them. Verify any claimed exemption against the VAT Law before applying it.
+## Eilat
+Do not zero-rate a sale or skip VAT because a customer or delivery is in Eilat. Route Eilat cases to a tax adviser or accountant.
 
-Important: Exempt means no VAT charged AND no input VAT recovery on related
-purchases.
-
-## Eilat Free Trade Zone
-- Eilat is a VAT-free zone
-- No VAT on goods sold in Eilat
-- No VAT on services provided in Eilat
-- Goods transported from Eilat to rest of Israel: VAT applies
-- Businesses in Eilat can still be registered as Osek Morsheh
-
-## Mixed Transactions
-When a business has both taxable and exempt activities:
-- Input VAT must be apportioned
-- Use revenue-based or cost-based allocation method
-- Consult Tax Authority for approved methodology
-- Annual adjustment required
-
-## Reverse Charge (Self-Assessment)
-- Applies to services received from non-Israeli businesses
-- Israeli recipient must self-assess and pay VAT
-- Can usually claim as input VAT (net zero effect)
-- Must be reported on VAT return
+## Mixed Transactions and Reverse Charge
+- Mixed taxable and exempt activity: route to a tax adviser or accountant.
+- Services received from a foreign supplier: route to a tax adviser or accountant; this skill does not compute them.

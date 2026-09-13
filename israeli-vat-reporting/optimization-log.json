@@ -1,6 +1,30 @@
 {
   "cycles": [
     {
+      "version": "1.5.2",
+      "date": "2026-09-13",
+      "holdout_before": 1.0,
+      "holdout_after": 1.0,
+      "buckets": {
+        "improved": [],
+        "regressed": [],
+        "persistent_fail": [],
+        "stable_success": [
+          "holdout 3/3 for the Do NOT use for israeli-financial-reports clause (eval 2026-09-13)"
+        ]
+      },
+      "lessons": [
+        "NARROW release. Fixed verified live errors only: PCN874 threshold NIS 500,000 or double-entry books (was 5,000,000, copied from the outdated ITA new-dealer guide page), detailed filers monthly under s.67A(a), 23rd deadline for detailed filers and 19th online for others, osek patur declaration 31 January (was 31 March), private car purchase not deductible (reg. 14) with reg. 18(b) 2/3 or 1/4 for mixed-use costs, one sourced sentence that osek patur status is not turnover-only (VAT (Registration) Regulations s.13). CARRY resolved: calculate_vat.py net base, equipment vs other input VAT split, adjustments only in amount due, strict categories.",
+        "PARKED 1.6.0 WIP: results/israeli-vat-reporting-1.6.0-WIP.patch (full s.13 (1)-(8) enumeration, Eilat/reverse-charge routing, special-cases rewrite, 2027 threshold NIS 1,805,000, reg. 18(a) wording, Reference Links, domain-checklist.md). Its optimization-log carries the open items.",
+        "OPEN for 1.6.0 (CRITICAL): reg. 6A reverse rule covers only 6A(a)(1) (Kol Zchut list); current reg. 6A (Nevo 271_005, amended 1997) also has 6A(a)(2) professions. Quote both, apply the salaried recipient-pays rule to both.",
+        "OPEN for 1.6.0 (MAJOR): reverse rule missing the tax-invoice carve-out, the ALL-transactions condition and the 6A(b) salary declaration; the registration exemption appears only in Kol Zchut. Flag the Kol Zchut vs s.13(1) conflict for non-salaried 6A providers and route to an accountant.",
+        "OPEN for 1.6.0 (TRIM): reg13 snippet elides (5)/(6) definitions; reword the Kol Zchut omissions sentence; quote 6A(a)(1) wording; Osek Morsheh row 'or listed in s.13'; check Nevo #Seif14 anchor.",
+        "Lesson: for an enumerated statutory list, quote the regulation text, never an aggregator's rendering; Kol Zchut's s.13 list omitted three groups. Each eligibility repair surfaced a deeper layer (R5 turnover-only, R6 missing groups, R7 reg. 6A(a)(2)).",
+        "Overlap 0.785 SIMILAR with israeli-financial-reports, covered by the Do NOT use for clause.",
+        "Deferred minor: whole-shekel rounding unsourced (script computes in agorot); VAT-inclusive inputs unsupported; half-agora rounding edge (0.475 -> 0.47)."
+      ]
+    },
+    {
       "version": "1.4.1",
       "date": "2026-07-16",
       "lessons": [

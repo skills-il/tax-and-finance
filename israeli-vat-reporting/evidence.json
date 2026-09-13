@@ -1,11 +1,11 @@
 {
   "schemaVersion": "1.0",
   "skill": "israeli-vat-reporting",
-  "generated_at": "2026-05-31T00:00:00Z",
+  "generated_at": "2026-09-13T00:00:00Z",
   "claims": [
     {
       "claim_id": "vat-rate",
-      "claim": "Standard Israeli VAT rate is 18%, effective 1 January 2025; the rate was 17% until 31 December 2024.",
+      "claim": "Standard Israeli VAT rate is 18%, effective 1 January 2025.",
       "source_url": "https://www.kolzchut.org.il/he/%D7%9E%D7%A1_%D7%A2%D7%A8%D7%9A_%D7%9E%D7%95%D7%A1%D7%A3_(%D7%9E%D7%A2%22%D7%9E)",
       "raw_snippet": "סכום המע״מ מחושב בשיעור קבוע ממחיר העסקה או הסחורה, והחל מיום 01.01.2025 הוא עומד על 18% ממחיר הרכישה או השירות.",
       "fetched_at": "2026-05-31T00:00:00Z",
@@ -18,7 +18,7 @@
     },
     {
       "claim_id": "osek-patur-ceiling",
-      "claim": "The osek patur annual turnover ceiling is NIS 122,833 as of 01.01.2026 (was NIS 120,000 in 2025); updated annually by CPI.",
+      "claim": "The osek patur annual turnover ceiling is NIS 122,833 for 2026 (NIS 120,000 in 2025).",
       "source_url": "https://www.kolzchut.org.il/he/%D7%A2%D7%95%D7%A1%D7%A7_%D7%A4%D7%98%D7%95%D7%A8",
       "raw_snippet": "אסור שמחזור העסקאות השנתי (ולא הרווח!) בעסק יעבור את הסכום של 122,833 ₪ (נכון לשנת 2026) (120,000 ₪ בשנת 2025)",
       "fetched_at": "2026-05-31T00:00:00Z",
@@ -30,7 +30,7 @@
     },
     {
       "claim_id": "monthly-threshold",
-      "claim": "Monthly VAT reporting applies above an annual turnover threshold of NIS 1,775,000 (value as of 01.01.2026, set in the VAT Regulations and indexed annually); below it, bi-monthly reporting. The prior stale value quoted in older versions was NIS 1,500,000.",
+      "claim": "Monthly VAT reporting applies above an annual turnover of NIS 1,775,000 (value as of 01.01.2026); below it, bi-monthly reporting.",
       "source_url": "https://www.gov.il/he/pages/vat-to-the-new-dealer?chapterIndex=9",
       "raw_snippet": "עוסקים שמחזור עסקאותיהם בשנה הקובעת הינו מעל 1,775,000 ₪ (נכון ל – 1/1/2026) ידווחו את הדו\"ח למע\"מ כל חודש.",
       "fetched_at": "2026-05-31T00:00:00Z",
@@ -38,35 +38,28 @@
         "SKILL.md",
         "SKILL_HE.md",
         "references/reporting-calendar.md"
-      ]
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-09-13"
     },
     {
       "claim_id": "allocation-number-schedule",
-      "claim": "The Israel-invoice allocation-number (mispar haktzaa) requirement for input-VAT deduction applies above a pre-VAT transaction threshold that steps down: NIS 25,000 (May 2024), NIS 20,000 (Jan 2025), NIS 10,000 (Jan 2026), NIS 5,000 (from 1 June 2026, in effect now, on schedule). From 1 June 2026 a valid allocation number is the condition for the buyer to deduct input VAT on a B2B invoice above NIS 5,000 pre-VAT.",
+      "claim": "The allocation-number (mispar haktzaa) requirement for input-VAT deduction applies above a pre-VAT invoice threshold: NIS 20,000 (2025), NIS 10,000 (from 1 January 2026), NIS 5,000 (from 1 June 2026). A valid allocation number is a condition for the buyer to deduct input VAT above the threshold.",
       "source_url": "https://www.gov.il/he/service/request-assignment-number-for-tax-invoice",
       "raw_snippet": "מספרי הקצאה אלה יידרשו כתנאי לניכוי מס התשומות בעסקאות שמעל לתקרה שנקבעה בחוק (20,000 ₪ לשנת 2025) 10,000 החל מה-1 בינואר 2026 ו-5,000 ₪ החל מה-1 ביוני 2026.",
       "fetched_at": "2026-05-31T00:00:00Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ]
-    },
-    {
-      "claim_id": "detailed-report-pcn874",
-      "claim": "PCN874 (doch mefurat / detailed report) is a separate line-by-line invoice file distinct from the summary periodic return. Per the Israel Tax Authority new-dealer guide, from reporting period 9/2025 the detailed-report obligation applies to all businesses (self-employed and companies) with turnover above NIS 5,000,000; NPOs above NIS 20 million and financial institutions above NIS 4 million.",
-      "source_url": "https://www.gov.il/he/pages/vat-to-the-new-dealer?chapterIndex=11",
-      "raw_snippet": "חלה חובה על כלל העוסקים במשק, עצמאים וחברות, שמחזור עסקאותיהם עולה על 5,000,000",
-      "fetched_at": "2026-05-31T00:00:00Z",
-      "appears_in": [
-        "SKILL.md",
-        "SKILL_HE.md"
-      ]
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-09-13"
     },
     {
       "claim_id": "late-penalty",
       "claim": "Late filing of a periodic VAT return triggers late-payment fines, a debt fine, and linkage differentials and interest; an administrative fine under the Administrative Offences Law may also be imposed. Verify current-year amounts with the Tax Authority.",
       "source_url": "https://www.kolzchut.org.il/he/%D7%94%D7%92%D7%A9%D7%AA_%D7%93%D7%95%22%D7%97%D7%95%D7%AA_%D7%AA%D7%A7%D7%95%D7%A4%D7%AA%D7%99%D7%99%D7%9D_%D7%95%D7%AA%D7%A9%D7%9C%D7%95%D7%9D_%D7%9E%D7%A1_%D7%A2%D7%A8%D7%9A_%D7%9E%D7%95%D7%A1%D7%A3",
-      "raw_snippet": "איחור בהגשת הדו\"ח יגרור הטלת קנסות פיגורים, קנס חוב, והוספת הפרשי הצמדה וריבית.",
+      "raw_snippet": "איחור בהגשת הדו\"ח יגרור הטלת קנסות פיגורים, קנס חוב, והוספת הפרשי הצמדה וריבית. בנוסף עלולים להטיל על עוסק שהפר את חובתו להגיש את הדו\"ח במועד גם קנס מנהלי לפי חוק העבירות המנהליות.",
       "fetched_at": "2026-05-31T00:00:00Z",
       "appears_in": [
         "SKILL.md",
@@ -89,13 +82,266 @@
     },
     {
       "claim_id": "illustrative-figures",
-      "claim": "Filing deadlines: the periodic return is due within 15 days of the end of the reporting period; online filers may pay by the 19th; detailed-report filers transmit and pay no later than the 23rd. Other figures appearing in this skill are either sourced in the entries above or are illustrative worked-example amounts, not indexed constants: example output VAT 34,000 NIS / input 22,000 NIS / net 12,000 NIS / 12,000 ש\"ח; zero-rated exports 0%; and the threshold and ceiling values repeated across the files in both notations: 1,775,000 ש\"ח, 122,833 NIS, 122,833 ש\"ח, 10,000 ש\"ח, 20,000 ש\"ח, 25,000 ש\"ח, 5,000 ש\"ח, 5,000,000 ש\"ח.",
+      "claim": "Online filers not required to file the detailed report may report and pay by the 19th of the month. The worked-example amounts (output VAT 34,000 NIS / input 22,000 NIS / net 12,000 NIS / 12,000 ש\"ח) are illustrative, not facts.",
       "source_url": "https://www.gov.il/he/pages/vat-to-the-new-dealer?chapterIndex=9",
       "raw_snippet": "עוסקים אשר ידווחו וישלמו באופן מקוון יהיו רשאים לשלם את המס הנובע מהדו\"ח עד ה – 19 לחודש.",
       "fetched_at": "2026-05-31T00:00:00Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-09-13"
+    },
+    {
+      "claim_id": "detailed-report-500k",
+      "claim": "From 1 September 2025 (reporting period 9/2025) the detailed periodic VAT report (PCN874) is required from every dealer with annual turnover above NIS 500,000, or who must keep double-entry books.",
+      "source_url": "https://britcpa.co.il/hozrim/%D7%97%D7%95%D7%91%D7%AA-%D7%94%D7%92%D7%A9%D7%AA-%D7%93%D7%95%D7%97-%D7%AA%D7%A7%D7%95%D7%A4%D7%AA%D7%99-%D7%9E%D7%A4%D7%95%D7%A8%D7%98-%D7%9C%D7%9E%D7%A2%D7%9E-%D7%A2%D7%9C-%D7%99%D7%93%D7%99/",
+      "raw_snippet": "החל מיום 1 בספטמבר 2025, תחול חובת הגשת דיווח מפורט למע\"מ (pcn 874) על כל עוסק שמחזור עסקאותיו עולה על 500,000 ש\"ח בשנה, או שהוא חייב בניהול פנקסי חשבונות לפי שיטת החשבונאות הכפולה",
+      "fetched_at": "2026-09-13T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "detailed-report-individual-deferral",
+      "claim": "For a dealer who is an individual with turnover above NIS 500,000 the detailed-report obligation applies from period 1/2026; an individual whose 2025 input invoices were at least 90% by value invoices of up to NIS 5,000 each (pre-VAT) may apply to the regional VAT office to defer to 1 January 2027.",
+      "source_url": "https://britcpa.co.il/hozrim/%D7%97%D7%95%D7%91%D7%AA-%D7%94%D7%92%D7%A9%D7%AA-%D7%93%D7%95%D7%97-%D7%AA%D7%A7%D7%95%D7%A4%D7%AA%D7%99-%D7%9E%D7%A4%D7%95%D7%A8%D7%98-%D7%9C%D7%9E%D7%A2%D7%9E-%D7%A2%D7%9C-%D7%99%D7%93%D7%99/",
+      "raw_snippet": "רשאי להגיש בקשה למשרד אזורי (מע\"מ), בו הוא רשום כעוסק, לדחיית מועד חובת הדיווח ליום 1 בינואר 2027, במידה ושיעור של 90% לפחות מהסכום הכולל של חשבוניות מס התשומות, ביחס לדוחות שהוגשו על ידו בגין שנת 2025, מבוסס על חשבוניות מס, שסכום כל אחת מהן, ללא המע\"מ, אינו עולה על 5,000 ש\"ח",
+      "fetched_at": "2026-09-13T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "detailed-report-monthly-switch",
+      "claim": "A dealer who reported bi-monthly and becomes required to file the detailed report moves to monthly reporting and payment, under section 67A(a) of the VAT Law.",
+      "source_url": "https://www.amir-cpa.net/post/%D7%93%D7%99%D7%95%D7%95%D7%97-%D7%9E%D7%A4%D7%95%D7%A8%D7%98-%D7%9C%D7%9E%D7%A2-%D7%9E-%D7%9C%D7%A2%D7%A6%D7%9E%D7%90%D7%99-%D7%9E-2026-%D7%97%D7%95%D7%91%D7%95%D7%AA-%D7%95%D7%94%D7%A7%D7%9C%D7%95%D7%AA",
+      "raw_snippet": "זאת, בהתאם לסעיף 67א(א) לחוק מע\"מ",
+      "fetched_at": "2026-09-13T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "online-19-non-detailed",
+      "claim": "The 19th online filing/payment date applies to dealers not required to file the detailed report.",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%94%D7%92%D7%A9%D7%AA_%D7%93%D7%95%22%D7%97%D7%95%D7%AA_%D7%AA%D7%A7%D7%95%D7%A4%D7%AA%D7%99%D7%99%D7%9D_%D7%95%D7%AA%D7%A9%D7%9C%D7%95%D7%9D_%D7%9E%D7%A1_%D7%A2%D7%A8%D7%9A_%D7%9E%D7%95%D7%A1%D7%A3",
+      "raw_snippet": "עוסקים שלא חייבים להגיש דיווח מפורט ומשדרים את הדו\"ח התקופתי באופן מקוון, רשאים לדווח ולשלם לא יאוחר מה-19 בחודש העוקב לתקופת הדו\"ח.",
+      "fetched_at": "2026-09-13T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/reporting-calendar.md"
+      ]
+    },
+    {
+      "claim_id": "osek-patur-declaration-31-jan",
+      "claim": "An osek patur must declare the previous year's turnover by 31 January each year.",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%A2%D7%95%D7%A1%D7%A7_%D7%A4%D7%98%D7%95%D7%A8",
+      "raw_snippet": "עוסק פטור חייב להצהיר למע\"מ עד ל-31 בינואר בכל שנה על מחזור עסקאותיו בשנת המס שחלפה",
+      "fetched_at": "2026-09-13T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/reporting-calendar.md",
+        "references/vat-regulations.md"
+      ]
+    },
+    {
+      "claim_id": "reg14-private-car",
+      "claim": "VAT Regulations reg. 14: input VAT paid on buying or importing a private car is not deductible (with listed exceptions). (Hebrew: תקנה 14 לתקנות מס ערך מוסף)",
+      "source_url": "https://www.nevo.co.il/law_html/law01/271_005.htm",
+      "raw_snippet": "מס תשומות ששולם על רכישתו או יבואו של רכב פרטי, לא יהיה ניתן לניכוי.",
+      "fetched_at": "2026-09-13T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/vat-regulations.md",
+        "scripts/calculate_vat.py"
+      ]
+    },
+    {
+      "claim_id": "reg14-exceptions",
+      "claim": "Reg. 14(b) exceptions include a car used solely for driving lessons in a driving school or for car rental by a car-rental business.",
+      "source_url": "https://www.nevo.co.il/law_html/law01/271_005.htm",
+      "raw_snippet": "ללימוד נהיגה בבית ספר לנהיגה; להשכרת רכב בידי מי שעסקו השכרת רכב;",
+      "fetched_at": "2026-09-13T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/vat-regulations.md"
+      ]
+    },
+    {
+      "claim_id": "reg16-entertainment",
+      "claim": "VAT Regulations reg. 16: input VAT on entertainment expenses is not deductible, except entertaining a person from abroad. (Hebrew: תקנה 16 לתקנות מס ערך מוסף)",
+      "source_url": "https://www.nevo.co.il/law_html/law01/271_005.htm",
+      "raw_snippet": "לא יהא ניתן לניכוי מס תשומות בשל הוצאות אירוח, פרט לניכוי מס תשומות על הוצאה לאירוח אדם מחוץ לארץ.",
+      "fetched_at": "2026-09-13T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/vat-regulations.md",
+        "scripts/calculate_vat.py"
+      ]
+    },
+    {
+      "claim_id": "reg18b-mixed-use",
+      "claim": "VAT Regulations reg. 18(b): where the Director set no ratio, 2/3 of input VAT is deductible if use is mainly business and 1/4 if mainly non-business. (Hebrew: תקנה 18 לתקנות מס ערך מוסף)",
+      "source_url": "https://www.nevo.co.il/law_html/law01/271_005.htm",
+      "raw_snippet": "רשאי העוסק לנכות שני שלישים ממס התשומות; (3) לא קבע המנהל את החלק היחסי ועיקר השימוש בנכס או בשירות הוא שלא לצרכי עסק, רשאי העוסק לנכות רבע ממס התשומות.",
+      "fetched_at": "2026-09-13T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/vat-regulations.md",
+        "scripts/calculate_vat.py"
+      ]
+    },
+    {
+      "claim_id": "ita-new-dealer-guide",
+      "claim": "The ITA guide for the new dealer (https://www.gov.il/he/pages/vat-to-the-new-dealer) covers reporting frequency and deadlines; detailed-report filers transmit and pay by the 23rd of the month. Its detailed-report threshold figure (5,000,000) is outdated.",
+      "source_url": "https://www.gov.il/he/pages/vat-to-the-new-dealer?chapterIndex=9",
+      "raw_snippet": "עוסקים החייבים בדיווח מפורט ישדרו וישלמו את המס הנובע מדו\"ח תקופתי מפורט לא יאוחר מיום   ה – 23 לחודש.",
+      "fetched_at": "2026-09-13T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-09-13"
+    },
+    {
+      "claim_id": "deadline-15th",
+      "claim": "The periodic return is due by the 15th of the month following the reporting period.",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%94%D7%92%D7%A9%D7%AA_%D7%93%D7%95%22%D7%97%D7%95%D7%AA_%D7%AA%D7%A7%D7%95%D7%A4%D7%AA%D7%99%D7%99%D7%9D_%D7%95%D7%AA%D7%A9%D7%9C%D7%95%D7%9D_%D7%9E%D7%A1_%D7%A2%D7%A8%D7%9A_%D7%9E%D7%95%D7%A1%D7%A3",
+      "raw_snippet": "יש להגיש את הדו\"ח לכל המאוחר עד 15 ימים אחרי תום תקופת הדיווח (עד ה-15 בחודש שלאחר תקופת הדו\"ח).",
+      "fetched_at": "2026-09-13T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/reporting-calendar.md"
+      ]
+    },
+    {
+      "claim_id": "online-1830",
+      "claim": "Online filing on the Tax Authority site is possible until the 19th of the following month at 18:30 (6:30 PM).",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%94%D7%92%D7%A9%D7%AA_%D7%93%D7%95%22%D7%97%D7%95%D7%AA_%D7%AA%D7%A7%D7%95%D7%A4%D7%AA%D7%99%D7%99%D7%9D_%D7%95%D7%AA%D7%A9%D7%9C%D7%95%D7%9D_%D7%9E%D7%A1_%D7%A2%D7%A8%D7%9A_%D7%9E%D7%95%D7%A1%D7%A3",
+      "raw_snippet": "ניתן להגיש דו\"ח תקופתי באתר רשות המסים עד ל-19 בחודש העוקב שאחרי מועד הדיווח בשעה 18:30.",
+      "fetched_at": "2026-09-13T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/reporting-calendar.md"
+      ]
+    },
+    {
+      "claim_id": "vat-registration-reg13",
+      "claim": "Section 13 of the VAT (Registration) Regulations requires the Director to register listed groups of dealers as osek morsheh even where turnover would otherwise qualify them as small (Nevo, https://www.nevo.co.il/law_html/law01/271_004.htm). (Hebrew: סעיף 13 לתקנות מס ערך מוסף (רישום))",
+      "source_url": "https://www.nevo.co.il/law_html/law01/271_004.htm",
+      "raw_snippet": "13. עוסק הנמנה על אחת מהקבוצות המנויות להלן ירשום אותו המנהל כעוסק מורשה גם אם על פי סכום מחזור עסקותיו או מספר המועסקים בעסק הוא היה נחשב כעוסק זעיר",
+      "fetched_at": "2026-09-13T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/vat-regulations.md"
+      ]
+    },
+    {
+      "claim_id": "ita-guide-outdated-5m",
+      "claim": "The ITA new-dealer guide page (chapter 11) still shows an outdated detailed-report threshold of NIS 5,000,000 (5,000,000 ₪), superseded by the NIS 500,000 threshold; the skill tells users not to rely on it.",
+      "source_url": "https://www.gov.il/he/pages/vat-to-the-new-dealer?chapterIndex=11",
+      "raw_snippet": "החל מהדיווח התקופתי 9/2025 חלה חובה על כלל העוסקים במשק, עצמאים וחברות, שמחזור עסקאותיהם עולה על 5,000,000 ₪",
+      "fetched_at": "2026-09-13T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-09-13"
+    },
+    {
+      "claim_id": "vat-rate-previous-17",
+      "claim": "The VAT rate was 17% until 31.12.2024.",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%9E%D7%A1_%D7%A2%D7%A8%D7%9A_%D7%9E%D7%95%D7%A1%D7%A3_(%D7%9E%D7%A2%22%D7%9E)",
+      "raw_snippet": "עד 31.12.2024 היה שיעור המע\"מ 17%",
+      "fetched_at": "2026-09-13T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/vat-regulations.md"
+      ]
+    },
+    {
+      "claim_id": "zero-rate-examples",
+      "claim": "Zero-rated (0%) examples: certain services to tourists (lodging, car rental, hospitalisation), certain services to a foreign resident, and certain goods set by the Minister of Finance.",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%9E%D7%A1_%D7%A2%D7%A8%D7%9A_%D7%9E%D7%95%D7%A1%D7%A3_(%D7%9E%D7%A2%22%D7%9E)",
+      "raw_snippet": "לדוגמה שירותים מסוימים לתייר (כגון: לינה, השכרת רכב, אשפוז), שירותים מסוימים לתושב חוץ וכן מכירה של טובין מסוימים ששר האוצר קבע.",
+      "fetched_at": "2026-09-13T00:00:00Z",
+      "appears_in": [
+        "references/special-cases.md",
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "exempt-no-input",
+      "claim": "On an exempt transaction the seller charges only the base price and cannot deduct input VAT.",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%9E%D7%A1_%D7%A2%D7%A8%D7%9A_%D7%9E%D7%95%D7%A1%D7%A3_(%D7%9E%D7%A2%22%D7%9E)",
+      "raw_snippet": "כאשר העסקה פטורה ממס, המוכר או ספק השירות לא יגבה מהלקוח מע\"מ אלא את מחיר הבסיס בלבד, והוא לא יוכל לקזז את מס התשומות",
+      "fetched_at": "2026-09-13T00:00:00Z",
+      "appears_in": [
+        "references/special-cases.md",
+        "references/vat-regulations.md"
+      ]
+    },
+    {
+      "claim_id": "vat-law-s30a5",
+      "claim": "VAT Law s.30(a)(5): a service to a foreign resident is zero-rated, except services the Minister of Finance excluded, and not where the service is actually given in Israel to an Israeli resident as well.",
+      "source_url": "https://www.nevo.co.il/law_html/law01/271_001.htm",
+      "raw_snippet": "מתן שירות לתושב חוץ, למעט שירות ששר האוצר קבע לעניין זה; לא יראו שירות כניתן לתושב חוץ כאשר נושא ההסכם הוא מתן השירות בפועל, נוסף על תושב החוץ, גם לתושב ישראל בישראל",
+      "fetched_at": "2026-09-13T00:00:00Z",
+      "appears_in": [
+        "references/special-cases.md"
+      ]
+    },
+    {
+      "claim_id": "vat-law-s67a",
+      "claim": "VAT Law section 67A (Hebrew: סעיף 67א לחוק מע\"מ) governs the detailed periodic report; a dealer required to file it reports monthly.",
+      "source_url": "https://www.nevo.co.il/law_html/law01/271_001.htm",
+      "raw_snippet": "67א. (א) על אף האמור בסעיף 67, עוסק החייב בדיווח מפורט כאמור בסעיף 69א(ז) יגיש למנהל דוח תקופתי לכל תקופה בת חודש שתחילתה אחד בחודש. (ב) (בוטל) (ג) עוסק שחוק זה הוחל לגביו לראשונה שלא באחד בחודש פלוני, תהא תקופת הדיווח הראשונה שלו לפי סעיף זה, התקופה שתחילתה ביום שבו הוחל לגביו החוק וסיומה בתום אותו",
+      "fetched_at": "2026-09-13T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "bimonthly-pairing-example",
+      "claim": "Bi-monthly periods are two-month pairs; for example, in May a bi-monthly reporter files for March and April, due by 15.05.",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%94%D7%92%D7%A9%D7%AA_%D7%93%D7%95%22%D7%97%D7%95%D7%AA_%D7%AA%D7%A7%D7%95%D7%A4%D7%AA%D7%99%D7%99%D7%9D_%D7%95%D7%AA%D7%A9%D7%9C%D7%95%D7%9D_%D7%9E%D7%A1_%D7%A2%D7%A8%D7%9A_%D7%9E%D7%95%D7%A1%D7%A3",
+      "raw_snippet": "בחודש מאי עליו להגיש דו\"ח על חודשים מרץ ואפריל ולדווח על כל העסקאות שבוצעו בין 01.03 - 30.04. יש להגיש את הדו\"ח לכל המאוחר עד 15.05.",
+      "fetched_at": "2026-09-13T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/reporting-calendar.md"
+      ]
+    },
+    {
+      "claim_id": "vat-law-s30a1-export",
+      "claim": "VAT Law section 30(a)(1): a sale of goods is zero-rated if an export declaration (or another document the Director approved) was filed and release was granted, excluding goods under section 33. Exports of goods are therefore zero-rated sales.",
+      "source_url": "https://www.nevo.co.il/law_html/law01/271_001.htm",
+      "raw_snippet": "30. (א) אלה עסקאות שהמס עליהן יהיה בשיעור אפס: (1) מכירת טובין – למעט טובין כאמור בסעיף 33 – אם הוגשו לגביהם הצהרת ייצוא או מסמך אחר שאישר לעניין זה המנהל, וניתנה לגביהם התרה;",
+      "fetched_at": "2026-09-13T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "scripts/calculate_vat.py"
       ]
     }
   ]
