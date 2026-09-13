@@ -24,6 +24,28 @@
         "Deferred MINOR: description says '25% on securities' without flagging 30%/surtax; Israel-US treaty portfolio-dividend cap specifics; 91(d)(2) sub-paragraph precision.",
         "Fixed reference bug: Friday closing time was 14:00 in tase-api.md, corrected to 13:50."
       ]
+    },
+    {
+      "version": "1.8.0",
+      "date": "2026-09-13",
+      "lessons": [
+        "CRITICAL fixed: MCP section was stale against tase-mcp v2.0.1 (repo moved to skills-il/mcps, npx github:skills-il/tase-mcp 404, 6 of 8 tool names never existed incl. a Maya tool). Verified by grepping tase-mcp/src/tools.ts, not the DB.",
+        "CRITICAL fixed (expert): inherited shares claimed market-value step-up; s.88 carries over the deceased's cost/date for deaths after 31.3.1981.",
+        "CRITICAL fixed (research+expert): Check Point is not TASE-listed and was the dual-listed worked example; Sapiens taken private (Dec 2025). Example moved to NICE (TASE API: ForeignMarket NASDAQ GSM).",
+        "CRITICAL hedged: pre-2003 linear-apportionment-at-marginal-rate claim is contested for TASE-traded securities (expert cites Amendment 132 transition taxing only post-2003 gain, but only via a summary). Removed the specific claim and routed; next cycle should source the 2002 regulations text from Nevo and state the rule.",
+        "CARRY resolved: foreign-tax-credit cap (deferred MAJOR since 1.6.0) added with bshcpa source.",
+        "Coverage added: bonds/makam 15% nominal, CPI-linked 25% real, ETFs 25% (Meitav guide).",
+        "Deferred MAJOR (discretionary cap 3): Israel-US treaty individual dividend WHT is 25% (not a lower rate) per expert, IRS treaty text not fetched; annual-return mechanics for foreign brokers (forms, FX per transaction, USD real-gain election); loss offset against 15%-rate interest nuance.",
+        "Deferred MINOR: Palo Alto Networks now TASE-listed (ticker CYBR, joined TA-35 Aug 2026) as a dual-listed example; TA-Banks5=164 vs TA-Bank=194 labelling; Friday close 13:50 vs 13:34 end of continuous trading conflict in secondary sources; Data Hub OAuth2 path still documented on openapi.tase.co.il; ESPP/RSU s.102 pointer; BOI rep rate published soon after 15:15 (bot-blocked, not captured).",
+        "persistent: description still says '25% on securities' without 30%/surtax; not changed this cycle to avoid the holdout gate.",
+        "CRITICAL fixed (expert r1, pre-existing since 1.5.0): FX movement on USD-denominated securities was called taxable; s.88 makes the exchange rate the index for an individual, so it is the exempt inflationary amount.",
+        "MAJOR fixed: Step 4 formula/Example 3 taxed nominal gain; now real_gain = net_gain - inflationary_amount. Taxable vs exempt mutual fund investor-level rates split.",
+        "Deferred MINOR: 721,560 threshold frozen 2025-2027 vs 'indexed each year' wording; preferred-enterprise 20% dividend; s.126(b) inter-company dividend exemption; online filing deadline; legal notice does not cover tax (legal gate low-severity note).",
+        "Judge r1: 6 weak citations re-sourced (index IDs and security numbers to TASE entity list; 25/30% to PwC real-gain sentence; agorot to POALIM page 'Last Price (0.01 ILS'). Unsourceable pre-existing claims removed or routed: T+1 settlement bullet, s.91(d) and other section numbers, 23% corporate row, '50+ treaties', April 30 deadline, Angels Law date, keren hishtalmut 'exempt or deferred', MCP auto-approve, BOI publication time, Maya API line, pre-open ~09:00 (judge says 09:25, not captured by us). Carry-forward limit (was deferred) fixed from PwC. Next cycle: re-add T+1 and pre-open 09:25 with a captured TASE source.",
+        "Expert r2 PASS (0 critical). Fixed: loss-offset table row + Example 3 step 4 now match carry-forward rule; 'net gain' -> real gain; garbled inflationary-adjustment row reworded.",
+        "Deferred MAJOR (expert r2): USD share with a real USD loss but a nominal shekel gain from FX yields no tax, not a deductible loss (s.88 exchange-rate index); consequence for loss offset not source-captured, add next cycle with the Ordinance text.",
+        "Deferred MINOR (expert r2): bonds table lacks a foreign-currency-linked / non-shekel TASE bond row; ETF row should say real gain."
+      ]
     }
   ]
 }

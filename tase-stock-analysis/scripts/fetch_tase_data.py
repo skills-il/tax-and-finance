@@ -40,8 +40,10 @@ INDICES = {
 
 # Well-known dual-listed Israeli companies (TASE + NASDAQ/NYSE), keyed by US ticker.
 # TASE security numbers are deliberately NOT hardcoded here: they are easy to
-# misattribute, they go stale (e.g. CyberArk/CYBR left the dual-listed set after its
-# 2026 merger into Palo Alto Networks), and the skill's own guidance is to never rely
+# misattribute, and the dual-listed set itself changes through mergers and
+# take-privates (for example Sapiens stopped trading after being taken private).
+# Check Point is NOT listed here on purpose: it trades only in the US and has no TASE
+# price. The skill's own guidance is to never rely
 # on security numbers from memory. Resolve the current TASE number live by company
 # name on the TASE market-data site before using it. Note that
 # market.tase.co.il/en/market_data/companies/ no longer resolves; the working shape is
@@ -51,7 +53,6 @@ INDICES = {
 # and reading back the company name.
 DUAL_LISTED_US_TICKERS = {
     "NICE": "NICE Ltd",
-    "CHKP": "Check Point Software",
     "TEVA": "Teva Pharmaceutical",
     "SPNS": "Sapiens International",
     "ICL": "ICL Group",
@@ -149,11 +150,10 @@ def generate_example() -> dict:
         "index": "TA-35",
         "date": datetime.now().strftime("%Y-%m-%d"),
         "components": [
-            # Spot-checked 2026-04 against market.tase.co.il:
+            # Security numbers confirmed 2026-09-13 against the TASE entity list; weights are placeholders:
             {"name": "Bank Hapoalim", "hebrew": "בנק הפועלים", "weight_pct": 6.29, "securities_no": "662577"},
             {"name": "Bank Leumi", "hebrew": "בנק לאומי", "weight_pct": 7.5, "securities_no": "604611"},
-            # The following weights/security numbers are approximate placeholders;
-            # verify before quoting. Several legacy entries here had wrong
+            # Weight below is a placeholder; verify before quoting. Several legacy entries here had wrong
             # security numbers (Check Point/Teva/NICE/ICL). Look up by name at
             # https://market.tase.co.il/en/market_data/security/662577 (swap the final
             # path segment) instead of trusting hardcoded numbers.

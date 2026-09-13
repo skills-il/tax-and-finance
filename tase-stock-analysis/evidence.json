@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0",
   "skill": "tase-stock-analysis",
-  "generated_at": "2026-08-10T00:00:00Z",
+  "generated_at": "2026-09-13T13:00:00Z",
   "claims": [
     {
       "claim_id": "tase-mon-fri",
@@ -35,43 +35,49 @@
     },
     {
       "claim_id": "tase-index-ids",
-      "claim": "TASE index IDs used in market.tase.co.il/en/market_data/index/{id}/ and the OpenAPI: TA-35=142, TA-125=137, TA-90=143, TA-Bank=194, TA-RealEstate=149, TA-Technology=169.",
-      "source_url": "https://market.tase.co.il/en/market_data/index/137/about",
-      "raw_snippet": "Index Name TA-125 Index Short Name TA-125 TASE Index Code 137 ISIN IL00BIDX1378 Blomberg Code TA-125 Reuters RIC .TA125",
+      "claim": "TASE index IDs: TA-35=142, TA-125=137, TA-90=143, TA-Bank=194, TA-RealEstate=149, TA-Technology=169",
+      "source_url": "https://api.tase.co.il/api/content/searchentities?lang=1",
+      "raw_snippet": "\"Id\": \"142\", \"Name\": \"TA-35\"",
       "fetched_at": "2026-08-10T00:00:00Z",
       "appears_in": [
         "references/tase-api.md",
         "scripts/fetch_tase_data.py"
       ],
-      "source_note": "Replaced 2026-08-10: the prior snippet was the bare token 'TA-125'. The passage above is the contiguous 'General' block of the index page, read via a headless browser (market.tase.co.il is a client-rendered SPA and returns only a shell to plain HTTP clients). It confirms TASE index code 137 = TA-125; the other five index-ID mappings in this claim are NOT carried by this page and each needs its own /index/{id}/about check."
+      "source_note": "TASE entity list fetched 2026-09-13 with browser headers (plain fetch 403). Index rows (SubTypeDesc \"Index\"): 137 TA-125, 142 TA-35, 143 TA-90, 194 TA-Bank, 149 TA-RealEstate, 169 TA-Technology. Snippet shown with json.dumps spacing.",
+      "verified_via": "browser",
+      "verified_at": "2026-09-13T15:00:00Z"
     },
     {
       "claim_id": "security-numbers",
-      "claim": "TASE securities numbers: 662577 = Bank Hapoalim (alpha symbol POLI), 604611 = Bank Leumi (alpha symbol LUMI). Alpha symbols are long-standing, not introduced in 2026.",
-      "source_url": "https://market.tase.co.il/en/market_data/security/662577/major_data",
-      "raw_snippet": "More About POALIM 662577 Add To Portfolio Ordinary Share Symbol : POLIMM",
+      "claim": "662577 is Bank Hapoalim (symbol POLI), 604611 is Bank Leumi (LUMI), 691212 is Discount (DSCT)",
+      "source_url": "https://api.tase.co.il/api/content/searchentities?lang=1",
+      "raw_snippet": "\"Id\": \"662577\", \"Name\": \"POALIM\", \"Smb\": \"POLI\"",
       "fetched_at": "2026-08-10T00:00:00Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
       ],
-      "source_note": "Replaced 2026-08-10: the prior snippet was the bare token 'POLI'. Read via a headless browser; the page title is 'Shares:POALIM 00662577 Major Data'. DISCREPANCY: the page renders the symbol as POLIMM, not POLI as this claim states, so the alpha symbol should be re-checked before being emitted to users. The 604611 = Bank Leumi / LUMI mapping is not covered by this page and needs its own check."
+      "source_note": "Same entity list: {\"Id\": \"604611\", \"Name\": \"LEUMI\", \"Smb\": \"LUMI\"}, {\"Id\": \"691212\", \"Name\": \"DISCOUNT\", \"Smb\": \"DSCT\"}.",
+      "verified_via": "browser",
+      "verified_at": "2026-09-13T15:00:00Z"
     },
     {
       "claim_id": "capital-gains-rates",
-      "claim": "Israeli capital gains tax on securities: 25% for individuals (Section 91(b)(1)), 30% where the seller is a 10%-or-more (substantial) shareholder (Section 91(b)(2)), corporate rate (23%) for Israeli companies (Section 126(a)); plus a separate surtax (mas yesef, Section 121B) of up to 5% (3% on all-source income, plus a further 2% from 2025 on capital-source income) above an annually indexed threshold of ILS 721,560 in 2026.",
+      "claim": "Real gain on shares bought from 2003 is taxed at 25% for individuals, 30% where the seller was a 10% or more shareholder at the sale or in the prior 12 months. Worked example 3 is arithmetic on that rate, assuming no CPI rise: 120,000 NIS sale minus 80,000 NIS cost = 40,000 NIS gain, times 25% = 10,000 NIS tax.",
       "source_url": "https://taxsummaries.pwc.com/israel/individual/income-determination",
       "raw_snippet": "The real gain, if any, realised upon the sale of shares purchased on or after 1 January 2003 is generally taxed at a rate of 25% for individuals. This rate is increased to 30% where the seller was a 10% or more shareholder at the date of sale or during any of the 12 months preceding the sale",
-      "fetched_at": "2026-08-10T00:00:00Z",
+      "fetched_at": "2026-09-13T15:00:00Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
-        "references/capital-gains.md"
-      ]
+        "references/capital-gains.md",
+        "references/domain-checklist.md"
+      ],
+      "source_note": "Same PwC page: \"Non-resident are exempt from tax on capital gains from a sale of shares of an Israeli company traded on the Israeli stock exchange or on a foreign stock exchange.\""
     },
     {
       "claim_id": "dividend-tax",
-      "claim": "Israeli dividend tax: 25% generally, 30% in the case of a 10%-or-more (substantial) shareholder, withheld at source (nikui b'makor). The surtax (mas yesef) applies separately to income above the annual threshold. Foreign-brokerage holders self-report on Form 1322 (capital gains) and Form 1301 (annual return). Israel has no annual tax-free capital-gains allowance.",
+      "claim": "Dividends are taxed at 25% for an individual and 30% for a 10% or more shareholder",
       "source_url": "https://taxsummaries.pwc.com/israel/individual/income-determination",
       "raw_snippet": "Dividends shall generally be subject to tax at the rate of 25% (or 30% in the case of a 10% or more shareholder).",
       "fetched_at": "2026-08-10T00:00:00Z",
@@ -109,25 +115,31 @@
     },
     {
       "claim_id": "maya-system",
-      "claim": "Maya (maya.tase.co.il) is the TASE disclosure system for immediate/periodic reports, shelf offerings, and insider trades.",
+      "claim": "Maya is TASE's online disclosure system for company announcements at maya.tase.co.il",
       "source_url": "https://maya.tase.co.il",
-      "raw_snippet": "maya",
-      "fetched_at": "2026-05-31T00:00:00Z",
+      "raw_snippet": "מאיה - מערכת אינטרנט להודעות",
+      "fetched_at": "2026-09-13T15:00:00Z",
       "appears_in": [
         "SKILL.md",
         "references/tase-api.md"
-      ]
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-09-13T15:00:00Z",
+      "source_note": "Rendered with Playwright 2026-09-13: redirects to https://maya.tase.co.il/he, title \"מאיה - מערכת אינטרנט להודעות | מאיה - אתר הבורסה\"; home page lists דוחות כספיים and הנפקות פתוחות."
     },
     {
       "claim_id": "illustrative-figures",
-      "claim": "Illustrative worked-example amounts and standard conventions (not all are indexed constants): example Teva sale gain 120,000-80,000=40,000 NIS, tax at 25% = 10,000 NIS; prices quoted in agorot (1/100 shekel); illustrative index weights and percentages (8.2%, 6.29%, 0.71%) flagged as placeholders.",
-      "source_url": "https://market.tase.co.il/en/market_data",
-      "raw_snippet": "Illustrative example amounts: 120,000 NIS 80,000 NIS 40,000 NIS 10,000 NIS 120,000 ש\"ח 80,000 ש\"ח 40,000 ש\"ח 10,000 ש\"ח 25% 30% 23% 5% 3% 2% 8.2% 6.29% 0.71% Section 91 Section 121 Section 126 סעיף 91 סעיף 121 סעיף 126 100 שקל NIS 2",
-      "fetched_at": "2026-05-31T00:00:00Z",
+      "claim": "TASE share prices are quoted in agorot (0.01 ILS), so divide by 100 to get NIS (100 agorot = 1 NIS)",
+      "source_url": "https://market.tase.co.il/en/market_data/security/662577/major_data",
+      "raw_snippet": "Last Price (0.01 ILS",
+      "fetched_at": "2026-09-13T15:00:00Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ]
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-09-13T15:00:00Z",
+      "source_note": "Rendered with Playwright 2026-09-13, title \"Shares:POALIM 00662577 Major Data | TASE Site\"; body \"Last Price (0.01 ILS\". Worked-example numbers (120,000 / 80,000 / 40,000 / 10,000 NIS) are arithmetic, not sourced facts."
     },
     {
       "claim_id": "tase-security-lookup",
@@ -168,6 +180,124 @@
       "source_url": "https://taxsummaries.pwc.com/israel/individual/income-determination",
       "raw_snippet": "As of 2025, the portion of an individual's taxable annual income from capital sources (e.g. capital gains, real estate appreciation, dividends, interest, CPI linkage differentials, rental income, passive royalties) exceeding a certain threshold (ILS 721,560 in 2026) is subject to an additional surtax of 2%. This is in addition to 3% surtax on an individual's annual taxable income from all sources exceeding a certain threshold (ILS 721,560 in 2026).",
       "fetched_at": "2026-08-10T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/capital-gains.md"
+      ]
+    },
+    {
+      "claim_id": "tase-mcp-v2",
+      "claim": "TASE MCP installs with npx -y @skills-il/tase-mcp (Node.js 18+), exposes 36 tools, needs an apikey registered per Data Hub product at datahubapi.tase.co.il, and unregistered products return HTTP 403",
+      "source_url": "https://raw.githubusercontent.com/skills-il/mcps/master/tase-mcp/README.md",
+      "raw_snippet": "Your API key must be **registered for a product** before you can call its endpoints; calling an unregistered endpoint returns **HTTP 403**.",
+      "fetched_at": "2026-09-13T12:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/domain-checklist.md"
+      ],
+      "source_note": "Same README also states 'npx -y @skills-il/tase-mcp', '- Node.js 18+' and '## Available tools (36)'; tool names verified by grepping tase-mcp/src/tools.ts in skills-il/mcps (no Maya tool)."
+    },
+    {
+      "claim_id": "tase-datahub-portal",
+      "claim": "The TASE Data Hub developer portal is https://datahubapi.tase.co.il (JS-rendered app; sign in, create an application, register products)",
+      "source_url": "https://datahubapi.tase.co.il",
+      "raw_snippet": "Developer Portal",
+      "fetched_at": "2026-09-13T12:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "source_note": "Page is a JS shell whose static text is 'Developer Portal'. The registration flow is quoted from the tase-mcp README (see tase-mcp-v2). Rendered with Playwright 2026-09-13; redirects to https://datahubapi.tase.co.il/login, page title \"Log In | Developer Portal\".",
+      "verified_via": "browser",
+      "verified_at": "2026-09-13T13:30:00Z"
+    },
+    {
+      "claim_id": "inherited-shares-s88",
+      "claim": "Inheritance is not a sale; for deaths after 31 March 1981 the heir takes the acquisition date (and original cost) that would have applied had the deceased sold the asset (Section 88 / סעיף 88 לפקודת מס הכנסה), no step-up",
+      "source_url": "https://www.hilan.co.il/מרכז-ידע/חקיקה/דיני-מיסים/פקודת-מס-הכנסה-נוסח-חדש-תשכא-1961/חלק-ה-רווחי-הון/",
+      "raw_snippet": "אם הנכס הגיע לנישום בדרך ירושה ממוריש שנפטר אחרי כ\"ה באדר ב' התשמ\"א (31 במרס 1981), או בדרך ויתורו של אחר על זכותו לרשת ירושה ממוריש כאמור - היום שהיה נקבע כיום הרכישה אילו מכר המוריש את הנכס;",
+      "fetched_at": "2026-09-13T13:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/capital-gains.md"
+      ],
+      "source_note": "Same page, s.88 definition of 'מכירה' ends 'אך למעט הורשה;'."
+    },
+    {
+      "claim_id": "bonds-funds-rates",
+      "claim": "Non-CPI-linked shekel bonds and makam 15% on nominal gain; CPI-linked bonds 25% on real gain; ETFs (kranot sal) 25%; exempt mutual funds 25% at investor level, taxable funds pay tax themselves",
+      "source_url": "https://www.meitav.co.il/trade/capital_market_guide/capital_market_tax",
+      "raw_snippet": "אגרות חוב צמודות למדד 25% אגרות חוב לא צמודות למדד ומק\"מ 15% קרנות נאמנות – חייבות (משלמות בעצמן את המס) 0% קרנות נאמנות – פטורות (הקרן לא משלמת מס) 25% קרנות סל 25%",
+      "fetched_at": "2026-09-13T13:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/capital-gains.md"
+      ],
+      "source_note": "Same page: '15% מס נגבה על על הרווח הנומינלי (ללא התחשבות במדד המחירים לצרכן בתקופת ההחזקה)' and '25% מס נגבה על הרווח הריאלי'."
+    },
+    {
+      "claim_id": "ftc-cap",
+      "claim": "The foreign tax credit is capped at the Israeli tax on that same foreign income; excess is not refunded and Section 205a allows a conditional carry-forward",
+      "source_url": "https://www.bshcpa.co.il/foreign-tax-credit-israel/",
+      "raw_snippet": "הזיכוי מוגבל לתקרת המס הישראלי על אותה הכנסת חוץ.",
+      "fetched_at": "2026-09-13T13:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/capital-gains.md"
+      ],
+      "source_note": "Same page: 'סעיף 205א לפקודה מאפשר, בתנאים מסוימים, להעביר את עודף הזיכוי לחמש שנות המס הב[אות]'."
+    },
+    {
+      "claim_id": "dual-listed-nice",
+      "claim": "NICE is TASE-listed with a NASDAQ foreign market; Teva and ICL are TASE-listed with NYSE",
+      "source_url": "https://api.tase.co.il/api/company/securitydata?securityId=273011&lang=1",
+      "raw_snippet": "\"CompanyName\":\"NICE\"",
+      "fetched_at": "2026-09-13T13:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "scripts/fetch_tase_data.py"
+      ],
+      "source_note": "Same response carries \"ForeignMarket\":\"NASDAQ GSM\". securityId=629014 returns TEVA / NYSE, 281014 returns ICL / NYSE. Endpoint needs a browser User-Agent and Referer market.tase.co.il. TASE entity list api.tase.co.il/api/content/searchentities?lang=1 (fetched same day) contains 'CHECK CAP' but no Check Point entry, supporting that Check Point has no TASE listing. Fetched 2026-09-13 with browser headers (plain fetch gets 403); JSON contains \"CompanyName\":\"NICE\" and \"ForeignMarket\":\"NASDAQ GSM\".",
+      "verified_via": "browser",
+      "verified_at": "2026-09-13T13:30:00Z"
+    },
+    {
+      "claim_id": "sapiens-delisted",
+      "claim": "Sapiens stopped trading on NASDAQ and TASE after the Advent take-private closed on 17 December 2025",
+      "source_url": "https://www.prnewswire.com/il/news-releases/sapiens-announces-leadership-appointments-following-closing-of-acquisition-by-advent-302644998.html",
+      "raw_snippet": "Sapiens common stock has ceased trading and will no longer be listed on NASDAQ and the Tel Aviv Stock Exchange.",
+      "fetched_at": "2026-09-13T13:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "scripts/fetch_tase_data.py"
+      ]
+    },
+    {
+      "claim_id": "fx-index-s88",
+      "claim": "For a security held by an individual denominated in or linked to a foreign currency, the exchange rate is treated as the index (Section 88 / סעיף 88), so FX-driven gain is the exempt inflationary amount",
+      "source_url": "https://www.hilan.co.il/מרכז-ידע/חקיקה/דיני-מיסים/פקודת-מס-הכנסה-נוסח-חדש-תשכא-1961/חלק-ה-רווחי-הון/",
+      "raw_snippet": "על אף האמור, לענין נייר ערך בידי יחיד, הנקוב במטבע חוץ או שערכו צמוד למטבע חוץ, יראו את שער המטבע כמדד;",
+      "fetched_at": "2026-09-13T14:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/capital-gains.md"
+      ],
+      "source_note": "Meitav guide concurs: 'בניירות ערך זרים, הרווח הריאלי לצורך חישוב מס קשור לערך מטבע הרכישה ולא למדד המחירים לצרכן.' Meitav table: 'קרנות נאמנות – חייבות (משלמות בעצמן את המס) 0%'."
+    },
+    {
+      "claim_id": "loss-offset-pwc",
+      "claim": "Capital losses offset all capital gains; securities losses also offset interest/dividends taxed at no more than 25%; carried-forward losses offset only capital gains",
+      "source_url": "https://taxsummaries.pwc.com/israel/individual/income-determination",
+      "raw_snippet": "(where the income was not subject to tax of more than 25%). Capital losses can generally be carried forward indefinitely and set off only against capital gains.",
+      "fetched_at": "2026-09-13T15:00:00Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",

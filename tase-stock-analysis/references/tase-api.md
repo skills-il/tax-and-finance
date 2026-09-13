@@ -33,16 +33,15 @@
 | TA-RealEstate | 149 | ת"א-נדל"ן |
 | TA-Technology | 169 | ת"א-טכנולוגיה |
 
-Verify a current ID by opening the index page (e.g. market.tase.co.il/en/market_data/index/137/about for TA-125) before hardcoding.
+IDs confirmed 2026-09-13 against the TASE entity list. Verify a current ID by opening the index page (e.g. market.tase.co.il/en/market_data/index/137/about for TA-125) before hardcoding.
 
 ## Maya (Disclosure) System
 - **URL:** https://maya.tase.co.il
 - **Search:** Filter by company, date range, report type
 - **Report types:** Immediate reports, periodic reports, shelf offerings, insider trades
-- **API:** Limited public API; scraping not recommended
 
 ## Market Hours (effective January 2026)
-- **Pre-open:** Monday-Friday from approximately 09:00
+- **Pre-open:** see the TASE trading and vacation schedule page for the current pre-opening time
 - **Continuous trading:** Monday-Thursday 09:59-17:14, Friday 09:59-13:50
 - **Closing auction:** Monday-Thursday pre-close 17:14-17:15, closing auction 17:24-17:25,
   end of Trading-at-Last 17:30. Friday pre-close 13:34-13:35, closing auction 13:44-13:45,
