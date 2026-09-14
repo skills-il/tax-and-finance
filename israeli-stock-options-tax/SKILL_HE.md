@@ -326,7 +326,6 @@
 | נוסח מלא של פקודת מס הכנסה, סעיף 102 נמצא בחלק ה1 | https://he.wikisource.org/wiki/פקודת_מס_הכנסה | דרישות חוקיות מדויקות לכל מסלול, נוסח מילולי של סעיף 102(א)-(ח) |
 | חוזרים מקצועיים רשות המסים | https://www.gov.il/he/departments/israel_tax_authority | חוזרים עדכניים בנושא סעיף 102 |
 | מדרגות מס PWC | https://taxsummaries.pwc.com/israel/individual/taxes-on-personal-income | מדרגות ושיעורים עדכניים |
-| מדריך מס 2026 CWS | https://www.cwsisrael.com/israeli-tax-changes-2026-complete-guide/ | שינויי מדרגות ומס יסף 2026 |
 | שיעורי ביטוח לאומי (עובדים שכירים) | https://www.btl.gov.il/Insurance/Rates/Pages/לעובדים%20שכירים.aspx | שיעורי דמי ביטוח לאומי ובריאות לעובד לפי קטגוריה |
 | מחשבון RSU ישראל | https://www.rsu-calculator.com/explanation | מתודולוגיה ודוגמאות חישוב RSU |
 

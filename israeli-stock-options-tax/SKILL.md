@@ -341,7 +341,6 @@ If the deal is a mix of cash + stock, the cash portion is taxed immediately and 
 | Income Tax Ordinance consolidated text (Hebrew), Section 102 is in Part E1 | https://he.wikisource.org/wiki/פקודת_מס_הכנסה | Exact legal requirements for each track, verbatim Section 102(a)-(h) |
 | ITA ESOP circulars | https://www.gov.il/he/departments/israel_tax_authority | Latest professional circulars on Section 102 |
 | PWC Israel Individual Tax | https://taxsummaries.pwc.com/israel/individual/taxes-on-personal-income | Current tax brackets and rates |
-| CWS Israel Tax Guide 2026 | https://www.cwsisrael.com/israeli-tax-changes-2026-complete-guide/ | 2026 bracket changes and surtax thresholds |
 | Bituach Leumi Rates (salaried employees) | https://www.btl.gov.il/Insurance/Rates/Pages/לעובדים%20שכירים.aspx | Current BL + health employee contribution rates by category |
 | RSU Calculator Israel | https://www.rsu-calculator.com/explanation | RSU taxation methodology and examples |
 
