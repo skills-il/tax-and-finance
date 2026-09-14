@@ -5,10 +5,10 @@
   "claims": [
     {
       "claim_id": "cardcom-credittype-values",
-      "claim": "The only CreditType values published by a vendor are 1 (single payment), 6 (issuer credit) and 8 (regular installments). Cardcom's own v11 API schema documents exactly these three, and Tranzila's current iframe parameter table publishes the identical set. Values 2, 3, 4, 5 and 9 appear in no current vendor parameter table.",
+      "claim": "Only CreditType values 1 (single payment), 6 (issuer credit) and 8 (regular installments) are published by a vendor: Tranzila's current iframe parameter table lists exactly these three, and Cardcom's v11 schema defaults CreditType to 1 and names 6 explicitly. Values 2, 3, 4, 5 and 9 appear in no current vendor parameter table.",
       "source_url": "https://secure.cardcom.solutions/swagger/v11/swagger.json",
-      "raw_snippet": "Tap transaction credit type: 1 - Single payment / 6 - Credit payments / 8 - Regular payments",
-      "fetched_at": "2026-08-27T07:18:23+00:00",
+      "raw_snippet": "Type of credit for the card, for israel cards only.  6 - israel credit for multiple payments",
+      "fetched_at": "2026-09-14T13:25:00+00:00",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",

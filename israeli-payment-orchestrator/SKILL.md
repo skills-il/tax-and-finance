@@ -101,7 +101,7 @@ def select_gateway(request: PaymentRequest, gateways: list) -> str:
 ### Step 5: Handle Installments (Tashlumim)
 The installment mode is carried in the **CreditType** field (`cred_type` on Tranzila's legacy surface), which is distinct from the transaction type (סוג עסקה).
 
-**Only three CreditType values are published by any vendor.** Cardcom's own v11 API schema documents `CreditType` as "1 - Single payment / 6 - Credit payments / 8 - Regular payments", and Tranzila's current parameter table publishes exactly the same three ("1 - Credit card, 6 - Credit, 8 - installments").
+**Only three CreditType values are published by any vendor.** Tranzila's current parameter table publishes exactly these three (`1` one payment, `6` credit installments, `8` installments). Cardcom's v11 API schema defaults `CreditType` to `1` and names only `6` explicitly ("6 - israel credit for multiple payments").
 
 | Type | Hebrew | CreditType | How It Works | Who Pays Interest |
 |------|--------|-----------|--------------|-------------------|

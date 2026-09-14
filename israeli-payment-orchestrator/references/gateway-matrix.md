@@ -164,7 +164,7 @@ CreditType is distinct from the transaction type (סוג עסקה) and from gate
 | 6 | Issuer credit | קרדיט | The card company finances; the customer repays it with interest |
 | 8 | Regular installments | תשלומים | Merchant is paid in full, the issuer collects monthly from the customer |
 
-**These three are the only values published by a vendor.** Cardcom's v11 schema documents `CreditType` as "1 - Single payment / 6 - Credit payments / 8 - Regular payments", and Tranzila's current iframe parameter table publishes the identical three.
+**These three are the only values published by a vendor.** Tranzila's current iframe parameter table publishes exactly these three. Cardcom's v11 schema defaults `CreditType` to `1` and names only `6` explicitly ("6 - israel credit for multiple payments").
 
 Values `2`, `3`, `4`, `5` and `9` circulate in third-party integration libraries and appeared in earlier versions of this file as a "canonical enum". They are in no current vendor parameter table, Cardcom's schema contains none of them, and Tranzila rejects them with an unauthorized-credit-type error. Club and issuer-loyalty programmes are a terminal and acquirer configuration, not a value your code selects.
 
