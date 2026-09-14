@@ -502,6 +502,7 @@ Codes outside this published table exist. `settleSuspendedTransaction` with an u
 | localhost in successUrl | Not allowed | Use a tunnel (ngrok) or deployed URL for testing |
 | iframe blank on HTTP | HTTPS required | Serve your page over HTTPS |
 | Apple Pay iframe fails | Domain not verified | Complete Apple domain verification via Grow dashboard |
+| Helper script exits with "GROW_API_KEY was renamed to MESHULAM_API_KEY" | Renamed environment variable. The bundled `scripts/grow-payment-helper.sh` used to read `GROW_API_KEY`; it now reads only `MESHULAM_API_KEY` and stops rather than silently calling the API without the key | Rename the variable in your shell profile, `.env` or CI secrets (`export MESHULAM_API_KEY=...`) and unset `GROW_API_KEY`. The value itself does not change |
 
 ## Reference Links
 

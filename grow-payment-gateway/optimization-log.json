@@ -39,6 +39,13 @@
         "Three response SHAPES break naive parsing and none were documented: err is an object OR the string 'unknown method'; err.id is itself an object on getTokenTransactionsByExternalIdentifiers (err.id.content holds the real message); and `status` comes back as a JSON string on some inputs and a number on others, so a strict === 1 is unsafe. The helper script had already coerced status to a string, meaning the shipped tool knew something the prose never taught.",
         "CARRY: reconciliation and missed-webhook policy, sandbox test cards, refunding a token charge (pageCode-keyed refund vs userId-keyed charge), cancelling a Grow-managed series, the Israeli invoice-allocation regime, and whether pageField[fullName]/[phone] are genuinely required on createPaymentProcess. All recorded in domain-checklist.md."
       ]
+    },
+    {
+      "version": "1.4.2",
+      "date": "2026-09-14",
+      "lessons": [
+        "Env var rename (Cisco CORRELATED_SENSITIVE_NETWORK_FLOW remediation) broke users on the old name. A fallback that reads both names re-triggers HIGH because the correlation analyzer unions provider tokens from every contributing env name and requires exactly one; shipped a migration error message plus a troubleshooting entry instead."
+      ]
     }
   ]
 }

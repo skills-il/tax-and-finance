@@ -21,6 +21,12 @@
 
 set -euo pipefail
 
+# GROW_API_KEY was renamed to MESHULAM_API_KEY and is no longer read.
+if [ -z "${MESHULAM_API_KEY:-}" ] && [ -n "${GROW_API_KEY:-}" ]; then
+  echo "Error: GROW_API_KEY was renamed to MESHULAM_API_KEY. Rename the variable in your environment (export MESHULAM_API_KEY=... and unset GROW_API_KEY) and run again." >&2
+  exit 1
+fi
+
 # Determine base URL
 if [ "${GROW_ENV:-sandbox}" = "production" ]; then
   BASE_URL="https://secure.meshulam.co.il"

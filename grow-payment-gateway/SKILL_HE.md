@@ -494,6 +494,7 @@ Grow מחזירה שגיאות בגוף התשובה עם `status: 0` ואובי
 | localhost ב-successUrl | לא מורשה | השתמשו בטונל (ngrok) או כתובת מפורסת לבדיקות |
 | iframe ריק ב-HTTP | HTTPS נדרש | הגישו את הדף שלכם דרך HTTPS |
 | iframe של Apple Pay נכשל | דומיין לא מאומת | השלימו אימות דומיין Apple דרך לוח הבקרה של Grow |
+| סקריפט העזר נעצר עם ההודעה "GROW_API_KEY was renamed to MESHULAM_API_KEY" | שם משתנה הסביבה השתנה. הסקריפט `scripts/grow-payment-helper.sh` קרא בעבר את `GROW_API_KEY`, ועכשיו הוא קורא רק את `MESHULAM_API_KEY` ועוצר במקום לפנות ל-API בלי המפתח | שנו את שם המשתנה בפרופיל ה-shell, בקובץ `.env` או בסודות של ה-CI (`export MESHULAM_API_KEY=...`) ומחקו את `GROW_API_KEY`. הערך עצמו לא משתנה |
 
 ## קישורי עזר
 
