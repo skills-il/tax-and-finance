@@ -4,11 +4,24 @@
       "version": "1.1.0",
       "date": "2026-07-26",
       "lessons": [
-        "Expert MAJOR deferred: IVCA-vs-NVCA Israeli seed documentation conventions noted in domain-checklist Should-cover but not yet written into SKILL.md.",
-        "Expert MAJOR deferred: VAT leg of SAFE treatment (income-tax leg is covered, VAT is not).",
-        "Expert MINOR deferred: FX/shekel runway exposure, reserve-duty operational risk, OFAC/sanctions customer screening.",
-        "Fetched-summary trap: a WebFetch summary of the Herzog IIA page invented 100%/120%/150% manufacturing-abroad tiers that do not appear in the page text. The real rules are: no approval under 10%, no liability increase up to 25%, max 1.5X (was 3X). Always read the raw page text for rate tables.",
-        "Subagent date error caught at verification: Encryption Order repeal took force 20 March 2025, not 21 March 2026."
+        "Fetched-summary trap: read raw page text for rate tables. [2026-09-15 note: the Herzog IIA page DOES show 100%/120%/150% liability tiers by share of manufacturing abroad; the skill's 1.5X maximum is consistent with them.]",
+        "Subagent date error caught at verification: Encryption Order repeal took force 20 March 2025, not 21 March 2026. [SUPERSEDED 2026-09-15: this 'correction' was itself wrong. The Reshumot gazette shows publication 20.11.2025 and commencement 21.3.2026. The subagent had been right.]"
+      ]
+    },
+    {
+      "version": "1.3.0",
+      "date": "2026-09-15",
+      "change": "Batch refresh. What was actually done: (1) CRITICAL Encryption Order dates corrected from the gazette (Kovetz Takanot 12093, published 20.11.2025, in force 21.3.2026, legacy licences to expiry or 21.11.2026), regulators named (DECA; Ministry of Economy Export Control Agency). (2) Legal BLOCK remedied: the PURSUE / PASS / NEEDS MORE verdict and all recommendation / conviction / check-size lines removed from SKILL.md, SKILL_HE.md, investment-memo-template.md and domain-checklist.md, replaced by a neutral summary of findings and open conditions. (3) Arithmetic: cap_table_math.py prorata with a post-money pool was wrong (ignored that the pool dilutes the new shares) and is fixed; post-money SAFE note corrected; stacked-SAFE on-top assumption stated; Step 4 manual no-shell route rewritten (ordered stacking with pool, post-money SAFE shares = 100 x s / (1 - s), factor defined, inside vs on-top assumption, pro-rata for both pool timings, worked example matching the script). (4) Added: Angels Law extension to 31.12.2026; section 92A rewritten from the Ordinance text on Nevo (capital-loss recognition up to NIS 5M, only TASE public offerings of R&D companies worth NIS 200M-1B; not a seed-round benefit); updated SAFE guidance window and USD 20M cap; Israeli deal-mechanics and operating-risk questions in SKILL.md Step 5 AND references/diligence-questions.md. (5) Sourcing: patents claims moved from a WIPO landing page to the Nevo statute text; section 102 non-employee rule sourced (Section 3(i)); unsourced '9-digit / paid extract / only way', 'controlling shareholders', 'mandatory filing from 1.1.2025' and 'Amendment 13 in force 2025' wording removed or softened. (6) Hebrew parity fixes and one consistent spelling of startup. (7) evidence.json migrated to canonical keys. (8) Arithmetic iteration 2 found a mixed-stack error in the manual post-money SAFE step (base must include pre-money SAFE shares); fixed, and the stacked-script bullet now states the script's pre-money-SAFE, on-top-only limitation. (9) Troubleshooting valuation line reworded to avoid a price-reasonableness conclusion (legal condition).",
+      "lessons": [
+        "Process lesson: a prior cycle 'corrected' a subagent's right date to a wrong one using a secondary law-firm page. When two secondary sources disagree on a statutory date, open the gazette (Reshumot) before choosing.",
+        "Process lesson: the first draft of this cycle's log claimed the new diligence questions were in diligence-questions.md before they were written. Log only what the diff contains.",
+        "Process lesson: a law-firm summary (KLF) described section 92A as a rollover extended to 2028 with a NIS 100M revenue ceiling; the statute text says capital-loss recognition for TASE public-offering investments with a NIS 200M-1B market-value band, and the March 2026 Arrangements Law has no 92A change. Two cycles in a row a secondary source was wrong on an Israeli statute; read Nevo or the gazette before encoding any statutory mechanism.",
+        "Deferred (unverified): a pending 2026 Israeli dual-use export control bill mentioned in a law-firm update; confirm status before adding a caveat.",
+        "Deferred (unverified): Angels Law cap and eligibility conditions: only the 31.12.2026 period end is verified on Nevo; conditions not encoded.",
+        "Deferred (unverified, possible correction): a search summary says Supreme Court case law lets an employee pursue service-invention compensation even after an express waiver; the skill currently says a claim stands 'unless the agreement contains an express waiver'. Check the leading ruling before the next cycle.",
+        "Deferred (unverified): section 104B / 103K flip rollover conditions; the skill only says to read the ruling's conditions.",
+        "Deferred MINOR: VAT leg of a SAFE with debt-like features; withholding on payments to foreign investors; angel's own exit tax and capital-loss offset; Securities Law private-placement exemption; FDI screening and merger notification on exit; R&D Encouragement Law 2026 credit bands; liquidation-preference worked numbers for no-shell hosts; stacked script cannot model post-money SAFEs or inside-the-pre-money conversion (manual text covers both).",
+        "Watch: legacy encryption licences lapse from 21 November 2026; the next cycle should confirm whether any extension was published."
       ]
     }
   ]

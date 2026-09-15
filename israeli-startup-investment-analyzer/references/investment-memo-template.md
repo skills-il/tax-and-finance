@@ -1,17 +1,18 @@
 # Investment Memo Template
 
 The skill produces a memo in this structure. Keep it tight: a screening memo is
-1 to 2 pages, a full pre-term-sheet memo is 3 to 5 pages. Lead with the verdict,
-then the evidence. Every number must trace to something the founder provided or a
+1 to 2 pages, a full pre-term-sheet memo is 3 to 5 pages. Lead with a neutral
+summary and the key open issues, then the evidence. The memo never states a
+verdict, a recommendation, a conviction level, or a suggested check size. Every number must trace to something the founder provided or a
 named public source. Mark anything you could not verify as an open question, do
 not paper over a gap with a guess.
 
 ---
 
-## 1. One-line summary and verdict
+## 1. One-line summary and key open issues
 - What the company does, in one sentence a non-expert understands.
 - Stage, round (SAFE / priced, seed / A), amount raising, on what pre/post.
-- Verdict: PURSUE / PASS / NEEDS MORE, with the single biggest reason.
+- The most important open issues: what the material establishes, what it does not, and what must be confirmed before any decision.
 
 ## 2. Snapshot
 | Field | Value |
@@ -88,8 +89,9 @@ Run the checklist in references/israeli-dd-landmines.md. Summarize findings:
   the classification, the issuing authority, and current licences per market
   (including any encryption licence and its expiry).
 - Option 102 plan: trustee track, pool health, any non-compliant grants, whether
-  the plan was filed for Tax Authority approval (mandatory from 1 January 2025),
-  and who is ineligible for 102 (consultants, contractors, controlling holders).
+  the plan was filed and approved under the rules that applied when it was adopted
+  (new plan-approval rules took effect 1 January 2025),
+  and who is ineligible for 102 (consultants, advisors and independent contractors fall under Section 3(i)).
 - Companies Registrar status (active vs "violating company"), a Registrar of
   Pledges search for charges over the IP, founder vesting and acceleration,
   founder secondary, and cap-table cleanliness.
@@ -109,6 +111,7 @@ regulatory, litigation, tax, privacy.
 - A sharp, prioritized list (see references/diligence-questions.md). The goal is to
   resolve the top 5 risks, not to send 40 generic questions.
 
-## 11. Recommendation
-- PURSUE / PASS / NEEDS MORE, the conditions that would change the verdict, and
-  (if relevant) suggested check size and what you would want to see before a term sheet.
+## 11. Summary of findings and open conditions
+- A neutral recap of what was verified, what was not, and which documents or answers
+  are still outstanding. No verdict, recommendation, conviction level or check size;
+  the decision belongs to the investor and their licensed advisers.

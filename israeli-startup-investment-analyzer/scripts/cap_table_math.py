@@ -91,9 +91,10 @@ def safe_conversion(safe_amount, valuation_cap, discount_pct, price_round_pre,
         result = {
             "conversion_basis": "post-money cap (ownership locked before new money dilutes it)",
             "safe_holder_pct_of_cap": cap_ownership,
-            "note": "Post-money SAFE: this percentage is fixed at the cap; the new round "
-                    "money dilutes founders and employees, not this holder, "
-                    "until the priced round closes.",
+            "note": "Post-money SAFE: this is the holder's share of the company right "
+                    "after the SAFEs convert and before the new money. The priced "
+                    "round's new money and any post-money pool then dilute this "
+                    "holder too.",
         }
         if discount_pct:
             result["discount_ignored"] = (
@@ -144,7 +145,11 @@ def stacked_safes(safes, price_round_pre, investment, new_pool_pct=0.0,
     safes: list of (amount, cap, discount_pct) tuples.
 
     Each SAFE converts at its own effective price, so each buys its own share
-    count. Modelling them one at a time against the same pre-money (the naive
+    count. Assumption: the SAFEs convert ON TOP of the pre-money (their shares
+    are added to the 100 notional pre-money shares), and every SAFE here is a
+    pre-money SAFE. If the term sheet converts them INSIDE the pre-money, the
+    new investor keeps investment / post-money instead; if a SAFE has a
+    post-money cap, work it by hand as SKILL.md Step 4 describes. Modelling them one at a time against the same pre-money (the naive
     approach) understates total dilution, which is exactly the trap the deck
     usually hides.
     """
@@ -251,7 +256,15 @@ def prorata(owned_pct, pre_money, investment, new_pool_pct=0.0,
     if scale < 0:
         raise ValueError("Pool plus new money exceeds the whole cap table; check --pool-pct")
 
-    adjusted_check = target * (1.0 - scale) * post_money
+    if pool_timing == "pre":
+        # New money is not diluted by a pre-money pool, so the shares you buy
+        # only have to replace what the pool and new money took from you.
+        adjusted_check = target * (1.0 - scale) * post_money
+    else:
+        # A post-money pool also dilutes the shares you buy in this round:
+        # (target*(1-f) + X/post)*(1-p) = target  =>  X = post*(target/(1-p) - target*(1-f)).
+        adjusted_check = post_money * (target / (1.0 - pool_frac)
+                                       - target * (1.0 - new_money_frac))
 
     if pool_frac:
         pool_note = ("A %s-money pool of %.4g%% dilutes you as an existing holder, "

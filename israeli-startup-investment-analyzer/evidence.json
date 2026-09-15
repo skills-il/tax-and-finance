@@ -1,109 +1,160 @@
 {
-  "skill_slug": "israeli-startup-investment-analyzer",
   "schemaVersion": "1.0",
-  "generated_at": "2026-07-26T15:48:13Z",
+  "skill": "israeli-startup-investment-analyzer",
+  "generated_at": "2026-09-15T19:00:00Z",
   "claims": [
     {
-      "id": "iia-royalty-rate",
+      "claim_id": "iia-royalty-rate",
       "claim": "Israel Innovation Authority conditional grants are repaid through royalties of 3% to 5% of annual revenues, continuing until repayment of the full grant plus annual interest (based on SOFR), and the funded R&D must be done in Israel.",
-      "claim_type": "percentage",
       "source_url": "https://innovationisrael.org.il/en/royalties-intellectual-property/",
-      "source_fetched_at": "2026-06-19T00:00:00Z",
       "raw_snippet": "Startups selected by the IIA investment committee receive a non-dilutive conditional grant, which is repaid only once the company generates revenue from the IIA-funded project. Repayment is made through royalties of 3%-5% of annual revenues, continuing until the repayment of the full grant amount, plus annual interest (based on SOFR). The baseline for receiving a grant form IIA is that the funded R&D is done in Israel.",
-      "confidence": "high"
+      "fetched_at": "2026-06-19T00:00:00Z",
+      "claim_type": "percentage",
+      "confidence": "high",
+      "verified_via": "browser",
+      "verified_at": "2026-09-15",
+      "note": "curl returns 403; rendered with Playwright 2026-09-15 and the snippet found verbatim in document.body.innerText.",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/israeli-dd-landmines.md"
+      ]
     },
     {
-      "id": "iia-knowhow-transfer-approval",
+      "claim_id": "iia-knowhow-transfer-approval",
       "claim": "Selling or transferring IIA-funded know-how outside Israel is subject to repayment and requires the Innovation Authority's approval, with a minimum repayment equal to the total IIA investment plus annual interest minus royalties already paid.",
-      "claim_type": "law",
       "source_url": "https://innovationisrael.org.il/en/royalties-intellectual-property/",
-      "source_fetched_at": "2026-06-19T00:00:00Z",
       "raw_snippet": "The sale or transfer of know-how outside of Israel is subject to repayment and IIA's approval. The repayment is determined by a formula that takes into account the grant, the sale price and R&D expenses, minus the royalties paid (see the formula below)*. In any case, the minimum repayment will equal the total amount of the IIA investment + annual interest, minus the royalties paid.",
-      "confidence": "high"
-    },
-    {
-      "id": "iia-redemption-cap",
-      "claim": "The repayment for transferring IIA-funded know-how outside Israel is capped at 6 times the grants plus interest, reduced to 3 times if the acquirer keeps the company's R&D jobs in Israel for at least three years.",
-      "claim_type": "threshold",
-      "source_url": "https://innovationisrael.org.il/en/royalties-intellectual-property/",
-      "source_fetched_at": "2026-06-19T00:00:00Z",
-      "raw_snippet": "Repayment Cap: The repayment for the transfer of know-how outside of Israel is capped and will not exceed x6 the grants + interest. If the acquiring company commits to keep the company's R&D jobs in Israel for at least three years, the repayment amount will not exceed three times (3X) the grants + interest.",
-      "confidence": "high"
-    },
-    {
-      "id": "iia-manufacturing-abroad",
-      "claim": "Relocating manufacturing of IIA-funded know-how abroad requires IIA approval and the maximum increased royalty liability is 1.5X of the funding and interest, reduced from 3X.",
-      "claim_type": "threshold",
-      "source_url": "https://herzoglaw.co.il/en/news-and-insights/the-israel-innovation-authority-iia-new-rules-regarding-transfer-of-manufacturing-outside-of-israel-and-the-interest-rate-on-iia-funding/",
-      "source_fetched_at": "2026-07-26T15:48:13Z",
-      "raw_snippet": "The maximum increased liability is now 1.5X of the funding and interest instead of 3X.",
-      "confidence": "high",
-      "note": "Interest is covered separately by iia-interest-formula-2024; the SOFR+0.71513% spread on this page applies only to files approved 1 Jul 2017 to 31 Dec 2023."
-    },
-    {
-      "id": "section-102-capital-gains-track",
-      "claim": "Under the Section 102 (Hebrew: סעיף 102) capital gains track, the gain on the sale of employee shares is taxed at a flat 25% capital gains rate instead of marginal rates that can approach 50%, conditioned on appointment of a trustee and a mandatory 24-month holding period from the grant date.",
-      "claim_type": "percentage",
-      "source_url": "https://www.rnc.co.il/employee-stock-options-israel/",
-      "source_fetched_at": "2026-06-19T00:00:00Z",
-      "raw_snippet": "Its primary benefit is straightforward: the gain realized by an employee upon the sale of shares is taxed as a capital gain at a flat rate of 25% , rather than at their marginal income tax rate, which can approach 50%. To qualify for this preferential treatment, companies must adhere to strict statutory requirements.",
-      "confidence": "high",
-      "verified_via": "source fetched and the passage copied verbatim from the cited page",
-      "verified_at": "2026-08-18",
-      "fetched_at": "2026-08-18"
-    },
-    {
-      "id": "individual-capital-gains-rate",
-      "claim": "Israeli individuals are taxed on a real capital gain at 25%, increased to 30% where the seller was a 10% or more shareholder, plus a 3% surtax on high annual income and an additional 2% surtax on income from capital sources above the threshold.",
-      "claim_type": "percentage",
-      "source_url": "https://taxsummaries.pwc.com/israel/individual/income-determination",
-      "source_fetched_at": "2026-06-19T00:00:00Z",
-      "raw_snippet": "Traded and non-traded securities acquired from 1 January 2003 and thereafter The real gain, if any, realised upon the sale of shares purchased on or after 1 January 2003 is generally taxed at a rate of 25% for individuals. This rate is increased to 30% where the seller was a 10% or more shareholder at the date of sale or during any of the 12 months preceding the sale; detailed definitional rules apply (hereinafter ‘10% or more shareholder’).",
-      "confidence": "high",
-      "verified_via": "source fetched and the passage copied verbatim from the cited page",
-      "verified_at": "2026-08-18",
-      "fetched_at": "2026-08-18"
-    },
-    {
-      "id": "corporate-tax-rate",
-      "claim": "Israel's standard corporate income tax rate is 23%, and a company's real capital gain is generally taxed at that same corporate tax rate.",
-      "claim_type": "percentage",
-      "source_url": "https://taxsummaries.pwc.com/israel/corporate/income-determination",
-      "source_fetched_at": "2026-06-19T00:00:00Z",
-      "raw_snippet": "The real gain is generally subject to tax at the corporate tax rate applicable in the year of the gain (23% in 2025).",
-      "confidence": "high"
-    },
-    {
-      "id": "preferred-technological-enterprise",
-      "claim": "A Preferred Technological Enterprise pays a reduced corporate tax rate of 7.5% on qualifying income in development area A and 12% elsewhere; a Preferred Enterprise pays 7.5% in development area A and 16% outside it.",
-      "claim_type": "percentage",
-      "source_url": "https://taxsummaries.pwc.com/israel/corporate/tax-credits-and-incentives",
-      "source_fetched_at": "2026-06-19T00:00:00Z",
-      "raw_snippet": "Additional types of income to be specified by the Ministry of Finance. Detailed definitional rules apply. Corporate tax rates Under the PTE regime, reduced corporate tax rates of 7.5% for operations in development area A or 12% for operations outside of development area A shall apply on qualifying income, subject to detailed rules. These corporate tax rates shall apply only with respect to the portion of intellectual property (IP) developed in Israel, based on a nexus approach.",
-      "confidence": "high",
-      "verified_via": "source fetched and the passage copied verbatim from the cited page",
-      "verified_at": "2026-08-18",
-      "fetched_at": "2026-08-18"
-    },
-    {
-      "id": "ita-safe-treatment",
-      "claim": "Under Israel Tax Authority guidelines a SAFE meeting the stated conditions is treated as an advance for shares: issuing shares on conversion is not a taxable event and no withholding applies at that time. The guidelines as published apply to SAFEs signed on or before 31 December 2024 or until the ITA publishes other guidelines, so confirm which version governs a SAFE being diligenced now.",
+      "fetched_at": "2026-06-19T00:00:00Z",
       "claim_type": "law",
+      "confidence": "high",
+      "verified_via": "browser",
+      "verified_at": "2026-09-15",
+      "note": "curl returns 403; rendered with Playwright 2026-09-15 and the snippet found verbatim in document.body.innerText.",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/israeli-dd-landmines.md"
+      ]
+    },
+    {
+      "claim_id": "iia-redemption-cap",
+      "claim": "The repayment for transferring IIA-funded know-how outside Israel is capped at 6 times the grants plus interest, reduced to 3 times if the acquirer keeps the company's R&D jobs in Israel for at least three years.",
+      "source_url": "https://innovationisrael.org.il/en/royalties-intellectual-property/",
+      "raw_snippet": "Repayment Cap: The repayment for the transfer of know-how outside of Israel is capped and will not exceed x6 the grants + interest. If the acquiring company commits to keep the company's R&D jobs in Israel for at least three years, the repayment amount will not exceed three times (3X) the grants + interest.",
+      "fetched_at": "2026-06-19T00:00:00Z",
+      "claim_type": "threshold",
+      "confidence": "high",
+      "verified_via": "browser",
+      "verified_at": "2026-09-15",
+      "note": "curl returns 403; rendered with Playwright 2026-09-15 and the snippet found verbatim in document.body.innerText.",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/israeli-dd-landmines.md"
+      ]
+    },
+    {
+      "claim_id": "iia-manufacturing-abroad",
+      "claim": "Relocating manufacturing of IIA-funded know-how abroad requires IIA approval and the maximum increased royalty liability is 1.5X of the funding and interest, reduced from 3X.",
+      "source_url": "https://herzoglaw.co.il/en/news-and-insights/the-israel-innovation-authority-iia-new-rules-regarding-transfer-of-manufacturing-outside-of-israel-and-the-interest-rate-on-iia-funding/",
+      "raw_snippet": "The maximum increased liability is now 1.5X of the funding and interest instead of 3X.",
+      "fetched_at": "2026-07-26T15:48:13Z",
+      "claim_type": "threshold",
+      "confidence": "high",
+      "note": "Interest is covered separately by iia-interest-formula-2024; the SOFR+0.71513% spread on this page applies only to files approved 1 Jul 2017 to 31 Dec 2023.",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/israeli-dd-landmines.md"
+      ]
+    },
+    {
+      "claim_id": "section-102-capital-gains-track",
+      "claim": "Under the Section 102 (Hebrew: סעיף 102) capital gains track, the gain on the sale of employee shares is taxed at a flat 25% capital gains rate instead of marginal rates that can approach 50%, conditioned on appointment of a trustee and a mandatory 24-month holding period from the grant date.",
+      "source_url": "https://www.rnc.co.il/employee-stock-options-israel/",
+      "raw_snippet": "Its primary benefit is straightforward: the gain realized by an employee upon the sale of shares is taxed as a capital gain at a flat rate of 25% , rather than at their marginal income tax rate, which can approach 50%. To qualify for this preferential treatment, companies must adhere to strict statutory requirements.",
+      "fetched_at": "2026-08-18",
+      "claim_type": "percentage",
+      "confidence": "high",
+      "verified_via": "source fetched and the passage copied verbatim from the cited page",
+      "verified_at": "2026-08-18",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/israeli-dd-landmines.md"
+      ]
+    },
+    {
+      "claim_id": "individual-capital-gains-rate",
+      "claim": "Israeli individuals are taxed on a real capital gain at 25%, increased to 30% where the seller was a 10% or more shareholder, plus a 3% surtax on high annual income and an additional 2% surtax on income from capital sources above the threshold.",
+      "source_url": "https://taxsummaries.pwc.com/israel/individual/income-determination",
+      "raw_snippet": "Traded and non-traded securities acquired from 1 January 2003 and thereafter The real gain, if any, realised upon the sale of shares purchased on or after 1 January 2003 is generally taxed at a rate of 25% for individuals. This rate is increased to 30% where the seller was a 10% or more shareholder at the date of sale or during any of the 12 months preceding the sale; detailed definitional rules apply (hereinafter ‘10% or more shareholder’).",
+      "fetched_at": "2026-08-18",
+      "claim_type": "percentage",
+      "confidence": "high",
+      "verified_via": "source fetched and the passage copied verbatim from the cited page",
+      "verified_at": "2026-08-18",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/israeli-dd-landmines.md"
+      ]
+    },
+    {
+      "claim_id": "corporate-tax-rate",
+      "claim": "Israel's standard corporate income tax rate is 23%, and a company's real capital gain is generally taxed at that same corporate tax rate.",
+      "source_url": "https://taxsummaries.pwc.com/israel/corporate/income-determination",
+      "raw_snippet": "The real gain is generally subject to tax at the corporate tax rate applicable in the year of the gain (23% in 2025).",
+      "fetched_at": "2026-06-19T00:00:00Z",
+      "claim_type": "percentage",
+      "confidence": "high",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/israeli-dd-landmines.md"
+      ]
+    },
+    {
+      "claim_id": "preferred-technological-enterprise",
+      "claim": "A Preferred Technological Enterprise pays a reduced corporate tax rate of 7.5% on qualifying income in development area A and 12% elsewhere; a Preferred Enterprise pays 7.5% in development area A and 16% outside it.",
+      "source_url": "https://taxsummaries.pwc.com/israel/corporate/tax-credits-and-incentives",
+      "raw_snippet": "Additional types of income to be specified by the Ministry of Finance. Detailed definitional rules apply. Corporate tax rates Under the PTE regime, reduced corporate tax rates of 7.5% for operations in development area A or 12% for operations outside of development area A shall apply on qualifying income, subject to detailed rules. These corporate tax rates shall apply only with respect to the portion of intellectual property (IP) developed in Israel, based on a nexus approach.",
+      "fetched_at": "2026-08-18",
+      "claim_type": "percentage",
+      "confidence": "high",
+      "verified_via": "source fetched and the passage copied verbatim from the cited page",
+      "verified_at": "2026-08-18",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/israeli-dd-landmines.md"
+      ]
+    },
+    {
+      "claim_id": "ita-safe-treatment",
+      "claim": "Under Israel Tax Authority guidelines a SAFE meeting the stated conditions is treated as an advance for shares: issuing shares on conversion is not a taxable event and no withholding applies at that time. The guidelines as published apply to SAFEs signed on or before 31 December 2024 or until the ITA publishes other guidelines, so confirm which version governs a SAFE being diligenced now.",
       "source_url": "https://meitar.com/en/media/ita-guidelines-regarding-the-tax-implications-of-safe-investments/",
-      "source_fetched_at": "2026-07-26T15:48:13Z",
       "raw_snippet": "The issuance of shares upon conversion of a SAFE will not be a taxable event, and the Israeli resident issuing company will not be subject to a withholding tax obligation at such time",
+      "fetched_at": "2026-07-26T15:48:13Z",
+      "claim_type": "law",
       "confidence": "high",
       "note": "Page is dated May 2023 and states the guidelines apply to SAFEs signed on or prior to December 31, 2024 (or until other guidelines are published by the ITA).",
       "verified_via": "browser",
-      "verified_at": "2026-07-26T15:48:13Z"
+      "verified_at": "2026-07-26T15:48:13Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/israeli-dd-landmines.md"
+      ]
     },
     {
-      "id": "surtax-two-layers-2026",
+      "claim_id": "surtax-two-layers-2026",
       "claim": "Israeli individuals pay a 3% surtax on annual taxable income above NIS 721,560 (ILS 721,560; 721,560 ש\"ח), resulting in a 50% maximum income tax rate.",
-      "claim_type": "percentage",
       "source_url": "https://taxsummaries.pwc.com/israel/individual/taxes-on-personal-income",
-      "source_fetched_at": "2026-07-26T15:33:20Z",
       "raw_snippet": "a 3% surtax applies on annual taxable income exceeding ILS 721,560, resulting in a 50% maximum income tax rate.",
+      "fetched_at": "2026-07-26T15:33:20Z",
+      "claim_type": "percentage",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
@@ -111,113 +162,99 @@
       "note": "Source writes the threshold as \"ILS 721,560\"; NIS and ILS denote the same currency."
     },
     {
-      "id": "iia-interest-formula-2024",
+      "claim_id": "iia-interest-formula-2024",
       "claim": "For IIA files approved from 1 January 2024 the interest is the higher of the Annual Interest (12-month Term SOFR) plus 1%, or 4%.",
-      "claim_type": "percentage",
       "source_url": "https://herzoglaw.co.il/en/news-and-insights/the-israel-innovation-authority-iia-new-rules-regarding-transfer-of-manufacturing-outside-of-israel-and-the-interest-rate-on-iia-funding/",
-      "source_fetched_at": "2026-07-26T15:33:20Z",
       "raw_snippet": "From Jan 1, 2024 The higher of: (i) “Annual Interest” plus 1%, (ii) 4%. “Annual Interest” = 12 months Term SOFR as published in the first trading day of each year by CME Group",
-      "appears_in": [
-        "SKILL.md",
-        "SKILL_HE.md"
-      ]
-    },
-    {
-      "id": "iia-manufacturing-thresholds",
-      "claim": "IIA approval is not needed if manufacturing abroad is less than 10%: the company notifies the IIA and the IIA is deemed to agree if it does not refuse within 30 days.",
+      "fetched_at": "2026-07-26T15:33:20Z",
       "claim_type": "percentage",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "iia-manufacturing-thresholds",
+      "claim": "IIA approval is not needed if manufacturing abroad is less than 10%: the company notifies the IIA and the IIA is deemed to agree if it does not refuse within 30 days.",
       "source_url": "https://herzoglaw.co.il/en/news-and-insights/the-israel-innovation-authority-iia-new-rules-regarding-transfer-of-manufacturing-outside-of-israel-and-the-interest-rate-on-iia-funding/",
-      "source_fetched_at": "2026-07-26T15:33:20Z",
       "raw_snippet": "IIA approval is not needed if the manufacturing abroad is less than 10%. In such a case, the company has to inform the IIA, and the IIA is considered as agreeing if it does not notify the company of its refusal within 30 days.",
+      "fetched_at": "2026-07-26T15:33:20Z",
+      "claim_type": "percentage",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
       ]
     },
     {
-      "id": "deca-export-control",
+      "claim_id": "deca-export-control",
       "claim": "Israel's Defense Export Controls Agency (DECA) at the Ministry of Defense administers registration and export/marketing licensing for controlled defence items under the Defense Export Control Law, 2007.",
-      "claim_type": "regulator",
       "source_url": "https://exportctrl.mod.gov.il/en",
-      "source_fetched_at": "2026-07-26T15:33:20Z",
       "raw_snippet": "DECA - Israel Defense Export Controls Agency | Ministry of Defense",
+      "fetched_at": "2026-07-26T15:33:20Z",
+      "claim_type": "regulator",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
       ]
     },
     {
-      "id": "encryption-order-repeal",
-      "claim": "The Encryption Order was repealed by two revocation orders published 20 November 2024, which entered into force on 20 March 2025.",
-      "claim_type": "regulation",
-      "source_url": "https://www.goldfarb.com/repeal-of-the-encryption-order-reform-of-israels-encryption-export-control-regime/",
-      "source_fetched_at": "2026-07-26T15:33:20Z",
-      "raw_snippet": "On November 20, 2024, two revocation orders were published: one repealing the Encryption Order and the other repealing the related control declaration. Both revocation orders entered into force on March 20, 2025, four months after their publication.",
-      "verified_via": "browser",
-      "verified_at": "2026-07-26T15:33:20Z",
-      "appears_in": [
-        "SKILL.md",
-        "SKILL_HE.md"
-      ]
-    },
-    {
-      "id": "patents-service-invention",
+      "claim_id": "patents-service-invention",
       "claim": "Under the Israeli Patents Law, 5727-1967, a service invention becomes the employer's property absent an agreement to the contrary (section 132). (סעיף 132 לחוק הפטנטים, תשכ\"ז-1967)",
+      "source_url": "https://www.nevo.co.il/law_html/law00/4539.htm",
+      "raw_snippet": "(להלן – אמצאת שירות), תקום לקנין מעבידו, אם אין ביניהם הסכם אחר לענין זה",
+      "fetched_at": "2026-07-26T15:33:20Z",
       "claim_type": "legal-reference",
-      "source_url": "https://www.wipo.int/wipolex/en/legislation/details/15167",
-      "source_fetched_at": "2026-07-26T15:33:20Z",
-      "raw_snippet": "An invention by an employee, arrived at in consequence of his service and during the period of his service (hereafter: service invention) shall, in the absence of an agreement to the contrary between him and his employer, become the employer's property",
-      "verified_via": "browser",
-      "verified_at": "2026-07-26T15:33:20Z",
+      "verified_via": "curl; snippet found in the stripped Nevo page text",
+      "verified_at": "2026-09-15",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
       ],
-      "note": "WIPO Lex record for Patents Law 5727-1967; the older /edocs/ PDF path now redirects to this landing page."
+      "note": "Nevo full text of Patents Law 5727-1967, section 132(א). Replaces the WIPO landing page, which carries no statute text."
     },
     {
-      "id": "special-pte-6pct",
+      "claim_id": "special-pte-6pct",
       "claim": "A Special Preferred Technological Enterprise pays a reduced corporate tax rate of 6% on qualifying income.",
-      "claim_type": "percentage",
       "source_url": "https://taxsummaries.pwc.com/israel/corporate/tax-credits-and-incentives",
-      "source_fetched_at": "2026-07-26T15:33:20Z",
       "raw_snippet": "Under the SPTE regime, a reduced corporate tax rate of 6% shall apply on qualifying income, subject to detailed qualifying rules.",
+      "fetched_at": "2026-07-26T15:33:20Z",
+      "claim_type": "percentage",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
       ]
     },
     {
-      "id": "section-102-plan-approval-2025",
+      "claim_id": "section-102-plan-approval-2025",
       "claim": "New Section 102 rules governing approval of equity incentive plans and reporting to the Israel Tax Authority come into effect on 1 January 2025, including electronic filing of the plan approval request.",
-      "claim_type": "regulation",
       "source_url": "https://herzoglaw.co.il/en/news-and-insights/new-and-amended-102-rules/",
-      "source_fetched_at": "2026-07-26T15:48:13Z",
       "raw_snippet": "The New Rules come into effect on January 1, 2025.",
-      "appears_in": [
-        "SKILL.md",
-        "SKILL_HE.md"
-      ]
-    },
-    {
-      "id": "pillar-two-rd-credit-2026",
-      "claim": "Israel legislated the Law for the Encouragement and Incentivization of Research and Development, 2026, introducing R&D tax credits in response to the OECD Pillar Two global minimum tax rules, applying to qualifying R&D expenses in tax years commencing on or after 1 January 2026.",
+      "fetched_at": "2026-07-26T15:48:13Z",
       "claim_type": "regulation",
-      "source_url": "https://taxsummaries.pwc.com/israel/corporate/tax-credits-and-incentives",
-      "source_fetched_at": "2026-07-26T15:48:13Z",
-      "raw_snippet": "applies to qualifying R&D expenses incurred in tax years commencing on or after 1 January 2026",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
       ]
     },
     {
-      "id": "defense-export-control-law",
+      "claim_id": "pillar-two-rd-credit-2026",
+      "claim": "Israel legislated the Law for the Encouragement and Incentivization of Research and Development, 2026, introducing R&D tax credits in response to the OECD Pillar Two global minimum tax rules, applying to qualifying R&D expenses in tax years commencing on or after 1 January 2026.",
+      "source_url": "https://taxsummaries.pwc.com/israel/corporate/tax-credits-and-incentives",
+      "raw_snippet": "applies to qualifying R&D expenses incurred in tax years commencing on or after 1 January 2026",
+      "fetched_at": "2026-07-26T15:48:13Z",
+      "claim_type": "regulation",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "defense-export-control-law",
       "claim": "Israel's Defense Export Control Law, 2007 governs control of exports of defence equipment, know-how and defence services, and DECA within the Ministry of Defense is responsible for regulating them.",
-      "claim_type": "legal-reference",
       "source_url": "https://exportctrl.mod.gov.il/en",
-      "source_fetched_at": "2026-07-26T15:48:13Z",
       "raw_snippet": "Since the enactment of the Defense Export Control Law (2007) it is the Defense Export Control Agency (DECA) within the ministry of defense which is responsible for regulating all aspects of control on exports of defense equipment, know-how and provision of defense related services.",
+      "fetched_at": "2026-07-26T15:48:13Z",
+      "claim_type": "legal-reference",
       "verified_via": "browser",
       "verified_at": "2026-07-26T15:48:13Z",
       "appears_in": [
@@ -226,12 +263,12 @@
       ]
     },
     {
-      "id": "surtax-capital-2pct",
+      "claim_id": "surtax-capital-2pct",
       "claim": "As of 2025 an additional 2% surtax applies to an individual's income from capital sources above a threshold (ILS 721,560 in 2026).",
-      "claim_type": "percentage",
       "source_url": "https://taxsummaries.pwc.com/israel/individual/taxes-on-personal-income",
-      "source_fetched_at": "2026-07-26T15:33:20Z",
       "raw_snippet": "exceeding a certain threshold (ILS 721,560 in 2026) is subject to an additional surtax of 2%.",
+      "fetched_at": "2026-07-26T15:33:20Z",
+      "claim_type": "percentage",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
@@ -239,53 +276,186 @@
       "note": "Source writes the threshold as \"ILS 721,560\"; NIS and ILS denote the same currency."
     },
     {
-      "id": "iia-royalty-no-increase-25pct",
+      "claim_id": "iia-royalty-no-increase-25pct",
       "claim": "There is no increase in the royalty payments liability for manufacturing outside Israel of up to 25% of the manufacturing involving IIA-funded knowhow.",
-      "claim_type": "percentage",
       "source_url": "https://herzoglaw.co.il/en/news-and-insights/the-israel-innovation-authority-iia-new-rules-regarding-transfer-of-manufacturing-outside-of-israel-and-the-interest-rate-on-iia-funding/",
-      "source_fetched_at": "2026-07-26T15:33:20Z",
       "raw_snippet": "The new rules provide that there will be no increase in the royalty payments liability for manufacturing outside of Israel of up to 25% of the manufacturing involving IIA-funded knowhow.",
+      "fetched_at": "2026-07-26T15:33:20Z",
+      "claim_type": "percentage",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
       ]
     },
     {
-      "id": "encryption-existing-licenses",
-      "claim": "Existing export licenses remain valid until their expiration date or until November 19, 2026, whichever is later; non-export encryption activity is exempt from licensing as of March 20, 2025.",
-      "claim_type": "regulation",
-      "source_url": "https://www.goldfarb.com/repeal-of-the-encryption-order-reform-of-israels-encryption-export-control-regime/",
-      "source_fetched_at": "2026-07-26T15:33:20Z",
-      "raw_snippet": "Existing export licenses will remain valid until their expiration date or until November 19, 2026, whichever is later.",
-      "verified_via": "browser",
-      "verified_at": "2026-07-26T15:33:20Z",
-      "appears_in": [
-        "SKILL.md",
-        "SKILL_HE.md"
-      ]
-    },
-    {
-      "id": "patents-remuneration-committee",
+      "claim_id": "patents-remuneration-committee",
       "claim": "Absent an agreement on employee remuneration for a service invention, the matter is decided by the compensation and royalties committee (section 134). (סעיף 134 לחוק הפטנטים)",
+      "source_url": "https://www.nevo.co.il/law_html/law00/4539.htm",
+      "raw_snippet": "באין הסכם הקובע אם זכאי העובד לתמורה בעד אמצאת שירות, ובאיזו מידה ובאילו תנאים, ייקבע הדבר על ידי הועדה לעניני פיצויים ותמלוגים",
+      "fetched_at": "2026-07-26T15:33:20Z",
       "claim_type": "legal-reference",
-      "source_url": "https://www.wipo.int/wipolex/en/legislation/details/15167",
-      "source_fetched_at": "2026-07-26T15:33:20Z",
-      "raw_snippet": "If there is no agreement that prescribes whether, to what extent and on what conditions the employee is entitled to remuneration for a service invention, then the matter shall be decided by the compensation and royalties committee established under Chapter Six.",
-      "verified_via": "browser",
-      "verified_at": "2026-07-26T15:33:20Z",
+      "verified_via": "curl; snippet found in the stripped Nevo page text",
+      "verified_at": "2026-09-15",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
       ],
-      "note": "WIPO Lex record for Patents Law 5727-1967; the older /edocs/ PDF path now redirects to this landing page."
+      "note": "Nevo full text of Patents Law 5727-1967, section 134."
     },
     {
-      "id": "spte-group-10bn",
+      "claim_id": "spte-group-10bn",
       "claim": "The SPTE regime requires the company to be part of a group of companies with aggregate annual revenues of at least ILS 10 billion.",
-      "claim_type": "percentage",
       "source_url": "https://taxsummaries.pwc.com/israel/corporate/tax-credits-and-incentives",
-      "source_fetched_at": "2026-07-26T15:33:20Z",
       "raw_snippet": "be part of a group of companies with aggregate annual revenues of at least ILS 10 billion",
+      "fetched_at": "2026-07-26T15:33:20Z",
+      "claim_type": "percentage",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "encryption-order-revocation-2025",
+      "claim": "The Encryption Order revocation (צו הפיקוח על מצרכים ושירותים (עיסוק באמצעי הצפנה) (ביטול), התשפ\"ו-2025) was signed 18 November 2025 and published in Kovetz Takanot 12093 on 20.11.2025; it takes effect four months after publication (March 2026).",
+      "source_url": "https://www.law.co.il/media/computer-law/use_of_encryption_means_declaration_revocation_2025.pdf",
+      "raw_snippet": "תחילתו של צו זה ארבעה חודשים מיום פרסומו",
+      "fetched_at": "2026-09-15T15:00:00Z",
+      "verified_via": "pdf",
+      "verified_at": "2026-09-15",
+      "note": "Reshumot PDF mirrored at law.co.il; pdftotext shows 'קובץ התקנות 12093, כ\"ט בחשוון התשפ\"ו, 20.11.2025' and signature 'כ\"ז בחשוון התשפ\"ו (18 בנובמבר 2025)'. Goldfarb's page dating publication to 20 Nov 2024 and force to 20 Mar 2025 conflicts with the gazette.",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/israeli-dd-landmines.md",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "encryption-legacy-licences-8-months",
+      "claim": "A licence granted under the Encryption Order and valid on the commencement date stays in force until its expiry or the end of eight months from commencement, whichever is later.",
+      "source_url": "https://www.law.co.il/media/computer-law/use_of_encryption_means_declaration_revocation_2025.pdf",
+      "raw_snippet": "שמונה חודשים מיום התחילה, לפי המאוחר",
+      "fetched_at": "2026-09-15T15:00:00Z",
+      "verified_via": "pdf",
+      "verified_at": "2026-09-15",
+      "note": "Section 3(a) הוראת מעבר of the revocation order.",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/israeli-dd-landmines.md",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "encryption-shibolet-summary",
+      "claim": "The Encryption Order revocation takes effect on 21 March 2026; exports for defence use are supervised by DECA (Ministry of Defense) and for other uses by the Export Control Agency (ECA) of the Ministry of Economy and Industry; legacy licences run to their expiry or 21.11.2026.",
+      "source_url": "https://www.shibolet.com/en/revocation-of-the-encryption-order/",
+      "raw_snippet": "The revocation will take effect on March 21, 2026, four months following its publication in Israel’s official legal gazette.",
+      "fetched_at": "2026-09-15T15:00:00Z",
+      "verified_via": "browser",
+      "verified_at": "2026-09-15",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "note": "Same page: 'This extension will be in place for 8 months from the date the revocation comes into force (11.21.2026)' and 'Export for any other use – will be under the supervision of the Export Control Agency within the Ministry of Economy and Industry'."
+    },
+    {
+      "claim_id": "ita-safe-updated-window",
+      "claim": "The updated ITA SAFE guidance applies to SAFEs signed between 1 January 2025 and 31 December 2026 and raised the allowed SAFE investment from NIS 40 million to USD 20 million.",
+      "source_url": "https://herzoglaw.co.il/en/news-and-insights/the-ita-publishes-an-updated-version-of-its-guidance-and-safe-harbor-for-safes/",
+      "raw_snippet": "The allowed investment amount through a SAFE has been increased from NIS 40 million to USD 20 million.",
+      "fetched_at": "2026-09-15T15:00:00Z",
+      "verified_via": "browser",
+      "verified_at": "2026-09-15",
+      "note": "Same page: 'the Updated Guidance applies to SAFEs signed between January 1, 2025, and December 31, 2026'; and the 2023 Guidance 'applied to SAFEs signed until December 31, 2024'.",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/israeli-dd-landmines.md",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "angels-law-extended-2026",
+      "claim": "The Angels Law temporary provision period runs until 31 December 2026.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/217877.htm",
+      "raw_snippet": "\" תקופת הוראת השעה \" – התקופה שמיום תחילתו של חוק זה עד יום כ\"א בטבת התשפ\"ז (31 בדצמבר 2026)",
+      "fetched_at": "2026-09-15T15:00:00Z",
+      "verified_via": "curl; snippet found in the stripped Nevo statute text",
+      "verified_at": "2026-09-15",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/israeli-dd-landmines.md",
+        "references/domain-checklist.md"
+      ],
+      "note": "Primary statute text replaces the KLF secondary summary."
+    },
+    {
+      "claim_id": "section-92a-capital-loss",
+      "claim": "Income Tax Ordinance section 92A (סעיף 92א): a qualifying investment in an R&D company of up to NIS 5 million is recognised as a capital loss, only where the investment was paid in a public offering on the Israeli stock exchange and the company's market value is between NIS 200 million and NIS 1 billion.",
+      "source_url": "https://www.nevo.co.il/law_html/law01/255_001.htm",
+      "raw_snippet": "סכום השקעה מזכה בחברת מחקר ופיתוח, עד לגובה של 5 מיליון שקלים חדשים (בסעיף זה – סכום ההשקעה המרבי), יוכר למשקיע כהפסד הון",
+      "fetched_at": "2026-09-15T19:00:00Z",
+      "verified_via": "curl; snippet found in the stripped Nevo Ordinance text",
+      "verified_at": "2026-09-15",
+      "note": "Same section: '(1) סכום ההשקעה שולם במסגרת הנפקה לציבור של החברה בבורסה בישראל במהלך התקופה הקובעת' and '(4) שווי השוק של החברה הוא בין 200 מיליון שקלים חדשים למיליארד שקלים חדשים'. Replaces a KLF summary (rollover, 2028, NIS 100M revenue ceiling) that the statute does not support.",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/israeli-dd-landmines.md",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "encryption-order-1974-regulators",
+      "claim": "The Order Governing the Control of Commodities and Services (Engagement in Encryption Items) - 1974 was revoked; B2B encryption products fall under DECA within the Ministry of Defense or the Export Control Agency within the Ministry of Economy and Industry.",
+      "source_url": "https://www.shibolet.com/en/revocation-of-the-encryption-order/",
+      "raw_snippet": "will now fall under the control of Defense Export Controls Agency (“ DECA” ) within the Ministry of Defense or the Export Control Agency within the Ministry of Economy and Industry",
+      "fetched_at": "2026-09-15T17:00:00Z",
+      "verified_via": "curl with a browser User-Agent; snippet found in stripped page text",
+      "verified_at": "2026-09-15",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/israeli-dd-landmines.md",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "iia-new-rules-applications-after-2023-10-25",
+      "claim": "The IIA manufacturing-abroad royalty liability rules apply to funding applications submitted to the IIA after 25 October 2023.",
+      "source_url": "https://herzoglaw.co.il/en/news-and-insights/the-israel-innovation-authority-iia-new-rules-regarding-transfer-of-manufacturing-outside-of-israel-and-the-interest-rate-on-iia-funding/",
+      "raw_snippet": "the new rules apply to funding applications that were submitted to the IIA after October 25, 2023",
+      "fetched_at": "2026-09-15T17:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/israeli-dd-landmines.md"
+      ]
+    },
+    {
+      "claim_id": "section-102-non-employees-3i",
+      "claim": "Section 102 is reserved for employees and office holders; options granted to external consultants, advisors or independent contractors are taxed by default under Section 3(i) (סעיף 3(ט) לפקודה).",
+      "source_url": "https://www.rnc.co.il/employee-stock-options-israel/",
+      "raw_snippet": "Section 102 is reserved for employees and office-holders. Options granted to external consultants, advisors, or independent contractors are taxed by default under Section 3(i).",
+      "fetched_at": "2026-09-15T17:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/investment-memo-template.md"
+      ]
+    },
+    {
+      "claim_id": "worked-example-stacked-safe",
+      "claim": "Illustrative Step 4 worked example computed by the skill's own cap_table_math.py stacked method (not an external figure): 10,000,000 pre, 2,000,000 new money, a 500,000 pre-money SAFE at an 8,000,000 cap and 20% discount, 10% pre-money pool gives existing holders 69.21%, the SAFE 4.95%, new money 15.84%, pool 10%; converting inside the pre-money leaves new money at 16.67% (2,000,000 / 12,000,000).",
+      "source_url": "https://raw.githubusercontent.com/skills-il/tax-and-finance/master/israeli-startup-investment-analyzer/scripts/cap_table_math.py",
+      "raw_snippet": "def stacked_safes(safes, price_round_pre, investment, new_pool_pct=0.0,",
+      "fetched_at": "2026-09-15T18:00:00Z",
+      "verified_via": "computation: `python3 scripts/cap_table_math.py stacked --price-pre 10000000 --invest 2000000 --safe 500000:8000000:20 --pool-pct 10` returns existing 69.21, all_safes 4.95, new_money 15.84, pool 10.00; hand-checked (share price 100,000; factor 0.8; 6.25 SAFE shares; 20 new shares; subtotal 126.25; pool 12.625)",
+      "verified_at": "2026-09-15",
+      "note": "Skill-internal illustrative arithmetic; provenance is the bundled script.",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"

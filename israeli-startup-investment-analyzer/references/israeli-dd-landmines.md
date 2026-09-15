@@ -109,15 +109,17 @@ What to check:
   Law, 2007 (via DECA at the Ministry of Defense) or dual-use licensing via the
   Ministry of Economy. Unlicensed sales are a criminal offence and make the
   reported revenue unlicensable, which an acquirer discounts to zero. The 1974
-  Encryption Order was repealed with effect from 20 March 2025: non-export
-  encryption activity no longer needs a licence, but export of encryption items,
-  know-how, or technology still does, now scoped to Wassenaar dual-use items and
-  routed by end user. Pre-existing export licences run until expiry or
-  19 November 2026, whichever is later. Ask for the classification, who issued
-  it, and current licences for every market sold into.
-- **Registrar of Pledges (רשם המשכונות).** Search by the 9-digit company number.
-  This is separate from the Companies Registrar extract and is the only way to
-  surface a floating charge over the IP.
+  Encryption Order was revoked by an order published in Reshumot on 20 November
+  2025, in force from 21 March 2026. Engagement in
+  encryption items other than export, and items outside the Wassenaar dual-use
+  list, no longer need an encryption licence; export of controlled encryption
+  items still does. A licence under the old order that was valid on the
+  commencement date stays in force until its own expiry or eight months after
+  commencement, whichever is later. Ask for the classification, who issued it,
+  and current licences for every market sold into.
+- **Registrar of Pledges (רשם המשכונות).** Search by the company number. This is
+  separate from the Companies Registrar extract and is where a floating charge
+  over the IP would be registered.
 - **Non-competes.** Do not assume a signed non-compete is key-person
   protection. Israeli enforceability turns on whether the employer has a
   protectable interest and is frequently litigated, so treat it as a question for
@@ -138,18 +140,33 @@ What to check:
   contributions, unused vacation, and contractor-misclassification exposure.
   Flag these as a purchase-price adjustment for larger teams.
 - **Data privacy (Amendment 13).** For any data-heavy startup, check compliance
-  with Israel's Privacy Protection Law Amendment 13 (in force 2025) and the
+  with Israel's Privacy Protection Law Amendment 13 and the
   enforcement powers it gives the Privacy Protection Authority. Non-compliance is
   a regulatory liability and a valuation adjustment.
 
 ## 6. SAFE tax treatment (context, not a red flag)
 
 Israeli SAFEs are common and generally benign tax-wise: under Israel Tax
-Authority guidelines (May 2023, updated 29 January 2025), a qualifying SAFE is
-treated as an advance payment for shares, so the conversion into shares is not a
-taxable event and the company has no withholding obligation at conversion; tax
-arises only on the later sale of the shares. Still confirm the specific SAFE was
-structured to meet the guideline conditions.
+Authority guidance a qualifying SAFE is treated as an advance payment for shares,
+so the conversion into shares is not a taxable event and the company has no
+withholding obligation at conversion. The 2023 guidance covered SAFEs signed
+until 31 December 2024; the updated guidance covers SAFEs signed between
+1 January 2025 and 31 December 2026 and raised the allowed SAFE investment from
+NIS 40 million to USD 20 million. Confirm the signing date, the amount, and that
+the specific SAFE meets the guidance conditions.
+
+## 6a. Investor tax benefits
+
+- The Angels Law benefit for private investors in qualifying R&D companies (a
+  temporary provision under the Law for the Encouragement of Knowledge-Intensive
+  Industry) was extended to 31 December 2026. Eligibility depends on the company
+  and the investment meeting its conditions; confirm with an accountant before
+  closing.
+- Section 92A is often summarised as a capital-gains rollover. The Ordinance text
+  is narrower: a qualifying investment of up to NIS 5 million in an R&D company
+  counts as a capital loss, only for money paid in a public offering on the Tel
+  Aviv Stock Exchange by a company with a market value between NIS 200 million
+  and NIS 1 billion. It does not fit a private seed round.
 
 ## 7. Tax incentive status (verify if claimed)
 

@@ -8,7 +8,7 @@ Detailed figures and sources live in evidence.json and references/israeli-dd-lan
 ## Must cover (core)
 
 ### Generic investment-memo dimensions
-- [ ] Memo structure and an explicit recommendation (pursue / pass / needs more) with conviction.
+- [ ] Memo structure with a neutral summary of findings and open conditions. No verdict, recommendation or conviction level (investment-advice exposure under the 1995 Investment Advice Law, see the legal-review gate).
 - [ ] Market sizing and timing: bottom-up TAM/SAM, why-now, flag top-down-only sizing.
 - [ ] Team and founders: founder-market fit, track record, team completeness, key-person risk.
 - [ ] Product and moat: what is built vs roadmap, defensibility (IP, data, network, switching cost).
@@ -41,7 +41,10 @@ Detailed figures and sources live in evidence.json and references/israeli-dd-lan
 - [ ] Employee-invention / IP-assignment compliance from every founder, employee, and contractor.
 - [ ] Service-invention waiver: an express waiver referencing Patents Law sections 132 and 134, not just a signed IP assignment. Without it the Compensation and Royalties Committee can award an employee compensation on the core patents. *Cite:* Patents Law 5727-1967 ss.132, 134.
 - [ ] IIA royalty rate determinants: which programme/track (R&D Fund, Tnufa, incubator, Magnet, BIRD/EUREKA), which grant years, whether an accelerated rate on manufacturing moved abroad has been triggered. A bare "3% to 5%" is not a coverage answer. *Cite:* IIA royalties page; Herzog IIA rules.
-- [ ] Export control: whether the product is a controlled defence or dual-use item, DECA registration, and current marketing/export licences per market, under the Defense Export Control Law, 2007. Includes the post-repeal encryption regime (repeal in force 20 March 2025, export still licensed, legacy licences to 19 November 2026). *Cite:* DECA; Goldfarb Gross Seligman encryption-order repeal.
+- [ ] Export control: whether the product is a controlled defence or dual-use item, DECA registration, and current marketing/export licences per market, under the Defense Export Control Law, 2007. Includes the post-repeal encryption regime (revocation published in Reshumot 20.11.2025, in force 21.3.2026, exports supervised by DECA or the Ministry of Economy's Export Control Agency, export still licensed, legacy licences to their expiry or eight months after commencement). *Cite:* DECA; Reshumot Kovetz Takanot 12093; Shibolet summary.
+- [ ] Investor tax benefits: Angels Law temporary provision extended to 31 Dec 2026; section 92A is a capital-loss recognition (up to NIS 5 million) limited to TASE public offerings of R&D companies worth NIS 200 million to 1 billion, not a seed-round rollover. *Cite:* Nevo, Income Tax Ordinance s.92A; Nevo, Angels Law.- [ ] SAFE tax window: updated ITA guidance covers SAFEs signed 1 Jan 2025 to 31 Dec 2026, cap USD 20 million. *Cite:* Herzog.
+- [ ] SAFE template and conversion mechanics (Israeli-law vs US template, pre- vs post-money cap, conversion inside or on top of the new pre-money) and which investor rights sit in the Articles / shareholders' agreement.
+- [ ] Operating risks: shekel burn vs dollar raise, reserve-duty key-person continuity, sanctions exposure of customers and resellers, IIA periodic reporting status.
 - [ ] Registrar of Pledges (רשם המשכונות) search by company number for floating charges over the IP, distinct from the Companies Registrar extract.
 - [ ] Founder secondary in the round: size, price relative to the primary, and characterisation risk (share sale vs employment income).
 - [ ] Non-compete enforceability: Israeli courts largely will not enforce absent a protectable interest, so non-competes are not key-person protection.

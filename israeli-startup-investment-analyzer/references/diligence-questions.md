@@ -68,6 +68,26 @@ generic form signals a tourist.
 - Do you claim Preferred / Preferred Technological Enterprise tax status, and do you meet
   the conditions?
 
+## Deal mechanics, tax windows and operating risks
+- Which SAFE template did earlier investors sign (an Israeli-law SAFE or a US template)?
+  Is each cap pre-money or post-money, and in this round do the SAFEs convert inside the
+  new pre-money or on top of it?
+- Which rights will I actually hold (pre-emptive rights, information rights, protective
+  provisions)? Are they in the Articles and the shareholders' agreement, or only in a
+  SAFE side letter?
+- When was each outstanding SAFE signed and for how much, and was it structured to meet
+  the Tax Authority's updated SAFE guidance for SAFEs signed between 1 January 2025 and
+  31 December 2026?
+- Does the company expect to qualify for the Angels Law investor benefit, and has an
+  accountant confirmed the conditions?
+- What share of the monthly burn is in shekels while the round is raised in dollars, and
+  how would a stronger shekel change the runway?
+- Which key people serve in reserve duty, and what is the continuity plan if they are
+  called up?
+- Does any customer, reseller or end user sit in a sanctioned jurisdiction, and how do you
+  screen for that?
+- For an IIA-funded company: are the periodic reports to the Innovation Authority up to date?
+
 ## Closing
 - What would you do with this round, and what milestone does it buy you to?
 - What is the biggest risk you would flag if you were me?
