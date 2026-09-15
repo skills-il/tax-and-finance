@@ -7,15 +7,17 @@ user asks to see/visualize the gaps. The text analysis never depends on it.
 Pipeline: provider (robust US + ".TA" fetch, USD/ILS rate) -> gap math ->
 viz.render_gap_chart (self-contained interactive HTML). A pair whose Tel-Aviv
 leg or price is unavailable from the free source is reported as skipped, never
-fabricated. A pair whose two legs are from different sessions is charted but
-marked NON-SYNCHRONOUS, because such a gap is an overnight move, not a live
-dislocation. A ~100x leg ratio is treated as an agorot/shekel scaling error
+fabricated. Every close-to-close pair is charted but marked NON-SYNCHRONOUS,
+because two daily closes are hours apart even on the same date, so the gap is
+not a live dislocation. A ~100x leg ratio is treated as an agorot/shekel scaling error
 and skipped. If the FX rate cannot be fetched and no --boi-rate is supplied, no
 gap can be computed and the run exits with guidance rather than inventing a rate.
 
 Usage:
-    python scripts/chart.py --pairs CHKP,NICE,TEVA --out gaps.html
-    python scripts/chart.py --pairs CHKP,NICE --boi-rate 3.65 --out gaps.html
+    python scripts/chart.py --pairs NICE,TEVA,CYBR --out gaps.html
+    python scripts/chart.py --pairs NICE,ESLT --boi-rate 3.05 --out gaps.html
+
+--pairs takes TASE symbols; the US ticker is resolved from registry.py.
 """
 
 from __future__ import annotations
@@ -25,9 +27,10 @@ import sys
 from pathlib import Path
 
 import provider
+import registry
 import viz
 
-DEFAULT_THRESHOLD = 2.0
+DEFAULT_THRESHOLD = 2.0  # registry default for liquid names; per-pair values win
 # A dual-listed ordinary and its US line should be within a few percent once
 # converted; a factor near 100 means the TASE leg is still in agorot (scaling
 # bug), so we refuse to chart it rather than show a fake ~100x gap.
@@ -36,16 +39,27 @@ SCALE_ERROR_LO = 0.02
 
 
 def compute_pair(
-    symbol: str, fx: float, ratio: float, threshold: float
+    symbol: str,
+    fx: float,
+    ratio: float | None = None,
+    threshold: float | None = None,
 ) -> viz.PairGap:
     """Fetch both legs and derive the currency-adjusted gap.
+
+    The US ticker, ratio and threshold come from registry.PAIRS, because the
+    TASE symbol and the US ticker can differ (TASE CYBR is US PANW). An
+    unregistered symbol raises instead of guessing. `ratio` / `threshold`
+    override the registry values only when supplied.
 
     Returns a PairGap carrying both legs' as-of dates and a synchronous flag.
     Raises if either leg is missing, or if the magnitude looks like an
     agorot/shekel scaling error, so the caller skips the pair honestly instead
     of charting a fabricated or nonsensical number.
     """
-    us_usd, us_date = provider.get_us_leg(symbol)
+    entry = registry.lookup(symbol)
+    ratio = entry.ratio if ratio is None else ratio
+    threshold = entry.threshold if threshold is None else threshold
+    us_usd, us_date = provider.get_us_leg(entry.us)
     tase_ils, tase_date, _currency = provider.get_tase_leg(symbol)
     us_in_ils = us_usd * fx * ratio
     if not us_in_ils:
@@ -66,7 +80,10 @@ def compute_pair(
         flagged=abs(gap_pct) > threshold,
         us_date=us_date,
         tase_date=tase_date,
-        synchronous=(us_date == tase_date),
+        # Two daily closes are never simultaneous: even on the same date the
+        # TASE close precedes the US close by hours, so a close-to-close gap
+        # always includes US-only moves. Never label one synchronous.
+        synchronous=False,
     )
 
 
@@ -77,7 +94,7 @@ def main() -> int:
     ap.add_argument(
         "--pairs",
         required=True,
-        help="comma-separated TASE symbols, e.g. CHKP,NICE,TEVA",
+        help="comma-separated TASE symbols from the registry, e.g. NICE,TEVA,CYBR",
     )
     ap.add_argument(
         "--boi-rate",
@@ -86,19 +103,10 @@ def main() -> int:
         help="USD/ILS representative rate; omit to fetch USDILS=X live",
     )
     ap.add_argument(
-        "--ratio",
-        "--adr",
-        dest="ratio",
-        type=float,
-        default=1.0,
-        help="conversion ratio, ordinary shares per US line (1 for dual-listed "
-        "ordinaries; only a true ADR differs, per its F-6)",
-    )
-    ap.add_argument(
         "--threshold",
         type=float,
-        default=DEFAULT_THRESHOLD,
-        help="abs(gap%%) that flags a pair (default 2.0)",
+        default=None,
+        help="override the per-pair registry threshold (abs gap %%)",
     )
     ap.add_argument("--out", default="dual-listed-gaps.html")
     a = ap.parse_args()
@@ -122,7 +130,7 @@ def main() -> int:
     dates: list[str] = []
     for sym in symbols:
         try:
-            pair = compute_pair(sym, fx, a.ratio, a.threshold)
+            pair = compute_pair(sym, fx, threshold=a.threshold)
             pairs.append(pair)
             dates.append(max(pair.us_date, pair.tase_date))
         except Exception as exc:  # per-pair: skip honestly, never fabricate
@@ -136,15 +144,34 @@ def main() -> int:
 
     nonsync = [p for p in pairs if not p.synchronous]
     for p in nonsync:  # surface the caveat on the CLI too, not only in the chart
+        detail = (
+            "different sessions, so the gap includes an overnight move"
+            if p.us_date != p.tase_date
+            else "same date, but the TASE close precedes the US close by hours"
+        )
         print(
             f"  note: {p.pair} legs are non-synchronous "
-            f"(TASE {p.tase_date} vs US {p.us_date}); gap is an overnight move, "
+            f"(TASE {p.tase_date} vs US {p.us_date}; {detail}); "
             f"not a live dislocation",
             file=sys.stderr,
         )
 
     as_of = max(dates)
-    doc = viz.render_gap_chart(pairs, unavailable, fx, fx_label, a.threshold, as_of)
+    if a.threshold is not None:
+        legend_threshold = a.threshold
+    else:
+        per_pair = {registry.lookup(p.pair).threshold for p in pairs}
+        legend_threshold = min(per_pair)
+        if len(per_pair) > 1:
+            print(
+                f"  note: thresholds differ per pair ({sorted(per_pair)}); the "
+                f"chart line is drawn at {legend_threshold}%, and a thinly traded "
+                f"name inside its own threshold stays unflagged even past the line",
+                file=sys.stderr,
+            )
+    doc = viz.render_gap_chart(
+        pairs, unavailable, fx, fx_label, legend_threshold, as_of
+    )
     Path(a.out).write_text(doc, encoding="utf-8")
     print(
         f"wrote {a.out} ({len(doc)} bytes, {len(pairs)} pairs charted, "

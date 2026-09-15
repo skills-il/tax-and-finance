@@ -1,15 +1,46 @@
 {
   "schemaVersion": "1.0",
   "skill": "dual-listed-arbitrage",
-  "generated_at": "2026-07-06T00:00:00Z",
+  "generated_at": "2026-09-15T14:00:00Z",
   "claims": [
     {
       "claim_id": "tase-trading-week-2026",
-      "claim": "The Tel Aviv Stock Exchange trades Monday-Friday (since 5 Jan 2026); the Friday session closes early (~14:00 Israel time), before the US open, so a Friday cross-listing comparison has no live overlap.",
+      "claim": "The Tel Aviv Stock Exchange trades Monday-Friday; the Friday session closes early, before the US open, so a Friday cross-listing comparison has no live overlap.",
       "source_url": "https://www.tase.co.il/en/content/knowledge_center/trading_vacation_schedule",
       "raw_snippet": "Trading hours on the Tel Aviv Stock Exchange are Monday through Friday as specified below",
-      "fetched_at": "2026-07-06T00:00:00Z",
-      "note": "JS-rendered page; verify via browser render (WebFetch returns the SPA shell).",
+      "fetched_at": "2026-09-15T11:00:00Z",
+      "verified_via": "browser",
+      "verified_at": "2026-09-15",
+      "note": "JS-rendered page; rendered with Playwright 2026-09-15.",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "tase-monday-thursday-preclose-1715",
+      "claim": "Monday to Thursday the TASE shares market enters the pre-closing phase at 17:14-17:15 Israel time (closing auction 17:24-17:25), which is why continuous trading is described as ending around 17:15.",
+      "source_url": "https://www.tase.co.il/en/content/knowledge_center/trading_vacation_schedule",
+      "raw_snippet": "Pre-closing phase 17:14-17:15 17:14-17:15 17:14-17:15 Closing trading phase 17:24-17:25",
+      "fetched_at": "2026-09-15T11:00:00Z",
+      "verified_via": "browser",
+      "verified_at": "2026-09-15",
+      "note": "Monday to Thursday Trading Schedule accordion table, rendered with Playwright.",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "tase-friday-preclose-1335",
+      "claim": "On Friday the TASE shares market enters pre-closing at 13:34-13:35 and TAL trading ends at 13:50, i.e. the session ends around 14:00 at the latest, before the US open.",
+      "source_url": "https://www.tase.co.il/en/content/knowledge_center/trading_vacation_schedule",
+      "raw_snippet": "Pre-closing phase 13:34-13:35 13:34-13:35 13:34-13:35 Closing trading phase 13:44-13:45 13:44-13:45 13:44-13:45 End of TAL trading phase 13:50",
+      "fetched_at": "2026-09-15T11:00:00Z",
+      "verified_via": "browser",
+      "verified_at": "2026-09-15",
+      "note": "Trading hours on Friday accordion table; derivatives end 14:00 per the same page.",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
@@ -17,10 +48,13 @@
     },
     {
       "claim_id": "boi-representative-rate",
-      "claim": "The Bank of Israel publishes a daily representative (sha'ar yatzig) exchange rate of the shekel against foreign currencies; the skill uses it, not an intraday indicative rate, for the headline USD/ILS conversion.",
+      "claim": "The Bank of Israel publishes a representative exchange rate of the shekel on each foreign-currency business day, based on the rate prevailing in the market when it is set; the page does not state a setting time, so the skill does not assert one.",
       "source_url": "https://www.boi.org.il/en/economic-roles/financial-markets/exchange-rates/",
-      "raw_snippet": "the Bank of Israel publishes the representative exchange rate of the shekel against foreign currencies",
-      "fetched_at": "2026-07-06T00:00:00Z",
+      "raw_snippet": "On each foreign currency business day in Israel, the Bank of Israel publishes the representative exchange rate of the shekel against foreign currencies. The representative rate is based on the rate prevailing in the market at the time it is set.",
+      "fetched_at": "2026-09-15T11:00:00Z",
+      "verified_via": "browser",
+      "verified_at": "2026-09-15",
+      "note": "Radware bot-block on curl/WebFetch; rendered with Playwright.",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
@@ -28,28 +62,101 @@
       ]
     },
     {
-      "claim_id": "default-alert-threshold",
-      "claim": "The default per-pair alert threshold is a skill-internal heuristic of 2% (written 2.0% in the pair registry and worked examples); a gap beyond it is flagged. This is a chosen default, not an external regulatory figure.",
-      "source_url": "https://raw.githubusercontent.com/skills-il/tax-and-finance/master/dual-listed-arbitrage/examples/01-single-pair-premium.md",
-      "raw_snippet": "with an ADR ratio of 1 and a 2.0% alert threshold.",
-      "fetched_at": "2026-07-06T00:00:00Z",
-      "note": "Skill-internal default, not an external fact; provenance is the skill's own worked example.",
+      "claim_id": "tase-dual-listed-list-52",
+      "claim": "The TASE market-data list of shares 'Dual Listed - Sec. Law' showed 52 records on 15 Sep 2026; the registry of 29 ratio-1 US pairs is drawn from it.",
+      "source_url": "https://market.tase.co.il/en/market_data/securities/data/all?dType=1&cl1=1&cl2=7",
+      "raw_snippet": "Market Data - Shares - Dual Listed – Sec. Law As of 15/09/2026 13:33 15 min delay Total 52 Records",
+      "fetched_at": "2026-09-15T10:33:00Z",
+      "verified_via": "browser",
+      "verified_at": "2026-09-15",
+      "note": "Live list; count changes over time. 29 = rows whose US leg matched at ratio 1 on Yahoo the same day.",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
+        "references/dual-listed-pairs.md",
+        "scripts/registry.py"
+      ]
+    },
+    {
+      "claim_id": "palo-alto-tase-symbol-cybr",
+      "claim": "Palo Alto Networks is dual-listed on TASE under the symbol CYBR (ISIN US6974351057); its US ticker is PANW.",
+      "source_url": "https://market.tase.co.il/en/market_data/securities/data/all?dType=1&cl1=1&cl2=7",
+      "raw_snippet": "PALO ALTO DL CYBR US6974351057 Ordinary Share",
+      "fetched_at": "2026-09-15T10:33:00Z",
+      "verified_via": "browser",
+      "verified_at": "2026-09-15",
+      "note": "Page 2 of the list. CYBR.TA 113,290 agorot vs PANW 373.94 USD x 3.0483 = ratio 0.99 on Yahoo.",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/dual-listed-pairs.md",
+        "scripts/registry.py",
+        "scripts/chart.py",
+        "examples/02-multi-pair-scan-chart.md"
+      ]
+    },
+    {
+      "claim_id": "check-point-nasdaq-only",
+      "claim": "Check Point Software (CHKP) is listed on Nasdaq only and has no TASE dual listing.",
+      "source_url": "https://finance.biggo.com/news/JrSAUpwBCbQUaHr3cUkk",
+      "raw_snippet": "Check Point Software Technologies (CHKP) clarified that it would maintain its listing solely on Nasdaq and has no current plans for a dual listing on TASE",
+      "fetched_at": "2026-09-15T11:30:00Z",
+      "note": "Corroborated: CHKP absent from the TASE Dual Listed list (52 records, 15 Sep 2026) and CHKP.TA has no Yahoo data.",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/dual-listed-pairs.md",
+        "examples/01-single-pair-premium.md"
+      ]
+    },
+    {
+      "claim_id": "teva-tase-ordinary",
+      "claim": "Teva is dual-listed on TASE as an ordinary share (TEVA) and its US line trades at ratio 1.",
+      "source_url": "https://market.tase.co.il/en/market_data/securities/data/all?dType=1&cl1=1&cl2=7",
+      "raw_snippet": "TEVA DL TEVA IL0006290147 Ordinary Share",
+      "fetched_at": "2026-09-15T10:33:00Z",
+      "verified_via": "browser",
+      "verified_at": "2026-09-15",
+      "note": "Ratio: TEVA.TA 11,810 agorot vs TEVA 38.72 USD x 3.0483 = 1.001 on Yahoo.",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/dual-listed-pairs.md",
+        "scripts/registry.py"
+      ]
+    },
+    {
+      "claim_id": "default-alert-threshold",
+      "claim": "Per-pair alert thresholds (2.0% for liquid large caps, 3.0% for thin names) are a skill-internal heuristic, not an external regulatory figure.",
+      "source_url": "https://raw.githubusercontent.com/skills-il/tax-and-finance/master/dual-listed-arbitrage/references/dual-listed-pairs.md",
+      "raw_snippet": "Never hardcode a pair from memory; the registry is the source of truth.",
+      "fetched_at": "2026-09-15T12:00:00Z",
+      "verified_via": "claim about the skill's own chosen default; provenance is the skill's registry",
+      "verified_at": "2026-09-15",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/dual-listed-pairs.md",
+        "scripts/registry.py",
         "examples/01-single-pair-premium.md"
       ]
     },
     {
       "claim_id": "illustrative-example-gaps",
-      "claim": "Worked-example gap figures (NICE -1.40%, TEVA -2.85%, ~2.9%, and the 'ILS' column label) are point-in-time yfinance snapshots shown for illustration and recomputed live at run time, not fixed current quotes.",
+      "claim": "Worked-example figures (NICE -1.40%, TEVA -2.85%, ~2.9%, 3.05 pinned rate, NICE 32160 agorot / 106.69 USD) are point-in-time snapshots shown for illustration and recomputed live at run time, not fixed current quotes.",
       "source_url": "https://raw.githubusercontent.com/skills-il/tax-and-finance/master/dual-listed-arbitrage/examples/gap-scan-he.md",
       "raw_snippet": "הפער חוצה את סף ה-2%: המניה בת\"א זולה בכ-2.9% מהמקבילה בניו יורק",
-      "fetched_at": "2026-07-06T00:00:00Z",
-      "note": "Illustrative point-in-time example output, not an asserted current value.",
+      "fetched_at": "2026-09-15T12:00:00Z",
+      "note": "Illustrative point-in-time output, not an asserted current value. NICE TASE 32,160 agorot on the TASE list 15 Sep 2026.",
       "appears_in": [
-        "examples/gap-scan-he.md"
-      ]
+        "examples/gap-scan-he.md",
+        "scripts/dual_diff.py",
+        "scripts/chart.py",
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "verified_via": "curl of the raw GitHub file (1,870 bytes, short by design, not JS-rendered); snippet found verbatim",
+      "verified_at": "2026-09-15"
     },
     {
       "claim_id": "viz-css-constants",
@@ -61,8 +168,90 @@
       "appears_in": [
         "scripts/viz.py"
       ],
-      "verified_via": "claim about the source itself; snippet is the cited page's own title, fetched to confirm the page exists and is what the claim says it is",
+      "verified_via": "claim about the source itself; snippet is the cited page's own title",
       "verified_at": "2026-08-19"
+    },
+    {
+      "claim_id": "nyse-core-session",
+      "claim": "The US core trading session runs 9:30 a.m. to 4:00 p.m. New York (Eastern) time.",
+      "source_url": "https://www.nyse.com/markets/hours-calendars",
+      "raw_snippet": "Core Trading Session: 9:30 a.m. to 4:00 p.m. ET",
+      "fetched_at": "2026-09-15T14:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "us-dst-dates",
+      "claim": "US daylight saving time begins on the second Sunday of March and ends on the first Sunday of November, so for a few weeks a year the US and Israel are on different clock settings.",
+      "source_url": "https://www.nist.gov/pml/time-and-frequency-division/popular-links/daylight-saving-time-dst",
+      "raw_snippet": "daylight saving time in the United States begins at 2:00 a.m. on the second Sunday of March",
+      "fetched_at": "2026-09-15T14:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "israel-dst-dates",
+      "claim": "Israeli daylight saving time runs from the Friday before the last Sunday in March until the last Sunday in October, different dates from the US.",
+      "source_url": "https://www.tase.co.il/en/content/knowledge_center/trading_vacation_schedule",
+      "raw_snippet": "Daylight Saving Time in Israel comes into effect on the Friday before the last Sunday in March, and lasts until the last Sunday in October.",
+      "fetched_at": "2026-09-15T14:00:00Z",
+      "verified_via": "browser",
+      "verified_at": "2026-09-15",
+      "note": "Rendered with Playwright under the Monday to Thursday Trading Schedule table.",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "teva-ads-one-ordinary",
+      "claim": "Teva's NYSE line is an American Depositary Share representing one ordinary share (ratio 1:1).",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/818686/000119312526034532/d93612d10k.htm",
+      "raw_snippet": "American Depositary Shares, each representing one Ordinary Share",
+      "fetched_at": "2026-09-15T14:00:00Z",
+      "note": "SEC requires a User-Agent header; curl with UA returns the text.",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/dual-listed-pairs.md",
+        "scripts/registry.py"
+      ],
+      "verified_via": "curl with a declared User-Agent (sec.gov returns 403 to anonymous fetchers); snippet found verbatim in the stripped page text",
+      "verified_at": "2026-09-15"
+    },
+    {
+      "claim_id": "teva-depositary-fees",
+      "claim": "Teva's deposit agreement charges fees for issuing and cancelling ADSs, so moving shares between the Tel-Aviv and US lines through the depositary carries its own cost. The skill names the fee category but not an amount.",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/0000818686/000119380518001336/e618055_ex99-a.htm",
+      "raw_snippet": "a fee not in excess of U.S. $5.00 per 100 ADSs (or fraction thereof) issued under the terms of the Deposit Agreement",
+      "fetched_at": "2026-09-15T14:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/domain-checklist.md"
+      ],
+      "verified_via": "curl with a declared User-Agent (sec.gov returns 403 to anonymous fetchers); snippet found verbatim in the stripped page text",
+      "verified_at": "2026-09-15"
+    },
+    {
+      "claim_id": "registry-yahoo-ratio-check",
+      "claim": "On 15 Sep 2026 the 29 registered pairs' TASE and US last closes agreed within a few percent at ratio 1 on Yahoo (USDILS 3.0483), while ALAR, BLRX, CANF, FRSX, PPBT, XTLB, TURB and CION did not; all those symbols appear on the TASE Dual Listed list. The cause of the mismatches is not verified.",
+      "source_url": "https://market.tase.co.il/en/market_data/securities/data/all?dType=1&cl1=1&cl2=7",
+      "raw_snippet": "Market Data - Shares - Dual Listed – Sec. Law As of 15/09/2026 13:33 15 min delay Total 52 Records",
+      "fetched_at": "2026-09-15T14:00:00Z",
+      "verified_via": "browser",
+      "verified_at": "2026-09-15",
+      "note": "Symbol membership from the rendered TASE list; ratios computed from yfinance last closes the same day (skill's own observation). Independently reproduced by the Independent Judge at USDILS 3.0479.",
+      "appears_in": [
+        "references/dual-listed-pairs.md",
+        "scripts/registry.py"
+      ]
     }
   ]
 }

@@ -5,7 +5,7 @@ The ratio is 1 for dual-listed ordinary shares (the same fungible security on
 both exchanges); pass a non-1 ratio ONLY for a genuine ADR, read from its F-6.
 
 Usage:
-    python scripts/dual_diff.py --pair CHKP --tase-agorot 145000 --us-usd 190.50 --boi-rate 3.65
+    python scripts/dual_diff.py --pair NICE --tase-agorot 32160 --us-usd 106.69 --boi-rate 3.05
 """
 import argparse, json, sys
 

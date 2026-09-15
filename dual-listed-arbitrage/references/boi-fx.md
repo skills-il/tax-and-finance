@@ -1,7 +1,10 @@
 # Bank of Israel Representative Rate (Sha'ar Yatzig)
 
 The headline USD/ILS conversion for dual-listed comparison MUST use the BoI
-representative rate, published each business day around 15:30 Israel time.
+representative rate. The Bank of Israel publishes it on each foreign-currency
+business day, based on the rate prevailing in the market at the time it is set.
+The BoI page does not state the setting time in its text, so do not assert one;
+check the BoI site. The rate has no binding legal status, it is an indicator.
 
 ## Why not intraday?
 Intraday quotes are indicative and vary by venue. The representative rate is

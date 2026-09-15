@@ -69,8 +69,9 @@ CX = (PX0 + PX1) / 2  # zero baseline (midpoint)
 class PairGap:
     """One charted pair: currency-adjusted gap and the legs it came from.
 
-    us_date / tase_date are each leg's as-of date; synchronous is False when they
-    differ, meaning the gap is an overnight move rather than a live dislocation.
+    us_date / tase_date are each leg's as-of date; synchronous is False for any
+    close-to-close comparison, because two daily closes are hours apart even on
+    the same date, so the gap is not a live dislocation.
     """
 
     pair: str
