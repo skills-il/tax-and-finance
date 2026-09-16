@@ -1,7 +1,7 @@
 {
   "skill_slug": "israeli-trapped-profits-planner",
   "schemaVersion": "1.0",
-  "generated_at": "2026-09-09",
+  "generated_at": "2026-09-16",
   "claims": [
     {
       "id": "s81b-escapes-intro",
@@ -33,7 +33,9 @@
       "claim_type": "percentage",
       "source_url": "https://www.gov.il/BlobFolder/policy/professional-directives-191025/he/IncomeTax_professional-directives-080226.pdf",
       "raw_snippet": "3.6.2סכום הדיבידנדים ששולם מס בשל חלוקתם ,שחברת המעטים חילקה לבעלי מניותיה, שהוא אינו דיבידנד שחלות עליו הוראות סעיף (126ב) לפקודה ,עולה על  50%מסכום הרווחים העודפים של חברת המעטים לתום שנת המס הקודמת (להלן\" :חלופת \"50% ו/או \"חלופת דיבידנד בגין הרווחים העודפים\").",
-      "confidence": "high"
+      "confidence": "high",
+      "fetched_at": "2026-09-16",
+      "appears_in": "SKILL.md, SKILL_HE.md"
     },
     {
       "id": "escape2-no-dividend-deduction",
@@ -41,7 +43,9 @@
       "claim_type": "feature",
       "source_url": "https://www.gov.il/BlobFolder/policy/professional-directives-191025/he/IncomeTax_professional-directives-080226.pdf",
       "raw_snippet": "יודגש כי בחלופת ה 50%-אין לנכות מסך הרווחים העודפים של חברת המעטים את סכום הדיבידנדים שחולקו מהם בשנת המס.",
-      "confidence": "high"
+      "confidence": "high",
+      "fetched_at": "2026-09-16",
+      "appears_in": "SKILL.md, SKILL_HE.md"
     },
     {
       "id": "escape3-6pct-accumulated",
@@ -49,7 +53,9 @@
       "claim_type": "percentage",
       "source_url": "https://www.gov.il/BlobFolder/policy/professional-directives-191025/he/IncomeTax_professional-directives-080226.pdf",
       "raw_snippet": "3.6.3סכום הדיבידנדים ששולם מס בשל חלוקתם ,שחברת המעטים חילקה לבעלי מניותיה הוא בשיעור של  6%או יותר מסכום הרווחים הנצברים של חברת המעטים לתום שנת המס הקודמת (להלן\" :חלופת  \"6%ו/או \"חלופת דיבידנד בגין הרווחים הנצברים\") .בסעיף זה\" ,דיבידנדים ששולם מס בשל חלוקתם\"  -אחד מאלה:",
-      "confidence": "high"
+      "confidence": "high",
+      "fetched_at": "2026-09-16",
+      "appears_in": "SKILL.md, SKILL_HE.md"
     },
     {
       "id": "taxed-dividend-limb-a",
@@ -73,7 +79,9 @@
       "claim_type": "percentage",
       "source_url": "https://www.gov.il/BlobFolder/policy/professional-directives-191025/he/IncomeTax_professional-directives-080226.pdf",
       "raw_snippet": "תוספת למס ,לכל שנת מס ,בשיעור של  2%מסכום הרווחים העודפים של חברת המעטים ,כפי",
-      "confidence": "high"
+      "confidence": "high",
+      "fetched_at": "2026-09-16",
+      "appears_in": "SKILL.md, SKILL_HE.md"
     },
     {
       "id": "shield3-prose",
@@ -89,7 +97,9 @@
       "claim_type": "feature",
       "source_url": "https://www.gov.il/BlobFolder/policy/professional-directives-191025/he/IncomeTax_professional-directives-080226.pdf",
       "raw_snippet": "(הגבוה מבין המגן הכספי ,מגן הוצאות ומגן הנכסים) כפי שיחושבו לתום שנת המס .2025",
-      "confidence": "high"
+      "confidence": "high",
+      "fetched_at": "2026-09-16",
+      "appears_in": "SKILL.md, SKILL_HE.md"
     },
     {
       "id": "taxable-accumulated-defn",
@@ -233,7 +243,9 @@
       "claim_type": "date",
       "source_url": "https://www.gov.il/BlobFolder/policy/professional-directives-191025/he/IncomeTax_professional-directives-080226.pdf",
       "raw_snippet": "במקרה זה ,החלוקה תיחשב לחלוקה שבוצעה ביום האחרון של שנת המס הנבדקת ובכל מקרה המועד לתשלום סכום המס בשל חלוקת הדיבידנד יהיה בהתאם לקבוע בתקנה  13לתקנות הניכוי בשל תשלום דיבידנד בחודש דצמבר .קרי ,עד ל 16-לחודש ינואר של השנה העוקבת לשנת המס הנבדקת .כך לדוגמה ,דוח לפי סעיף  131לפקודה לשנת  2025אשר יוגש בתאריך  31.8.26יאפשר לחברה לדווח על חלוקה שתיוחס לשנת המס  2025עד ליום  .31.8.26ככל שהחברה דיווחה על",
-      "confidence": "high"
+      "confidence": "high",
+      "fetched_at": "2026-09-16",
+      "appears_in": "SKILL.md, SKILL_HE.md"
     },
     {
       "id": "law-s5c-5pct-2025-only",
@@ -257,7 +269,9 @@
       "claim_type": "currency",
       "source_url": "https://www.gov.il/BlobFolder/policy/professional-directives-191025/he/IncomeTax_professional-directives-080226.pdf",
       "raw_snippet": "✓ סך של ( ₪ 750,000להלן\" :מגן כספי\").",
-      "confidence": "high"
+      "confidence": "high",
+      "fetched_at": "2026-09-16",
+      "appears_in": "SKILL.md, SKILL_HE.md"
     },
     {
       "id": "s81c-cited-in-circular",
@@ -281,7 +295,9 @@
       "claim_type": "feature",
       "source_url": "https://www.gov.il/BlobFolder/policy/professional-directives-191025/he/IncomeTax_professional-directives-080226.pdf",
       "raw_snippet": "2.16הנכסים המיוחדים כוללים ניירות ערך ,נכסים פיננסים ,נכסים בלתי מוחשיים ,זכויות במקרקעין ,הלוואות ושווי מזומן ,והכל בהתאם למפורט להלן:",
-      "confidence": "high"
+      "confidence": "high",
+      "fetched_at": "2026-09-16",
+      "appears_in": "SKILL.md, SKILL_HE.md"
     },
     {
       "id": "loan-vs-customer-indicia",
@@ -330,6 +346,286 @@
       "source_url": "https://fs.knesset.gov.il/25/law/25_lsr_5396731.pdf",
       "raw_snippet": "לעניין פסקת משנה זו - \"מחזיק בעל רווחים\"  -מחזיק שבכל החברות שהוא מחזיק מהותי בהן ,יחד ,סכום הרווחים הנצברים ,כהגדרתם בסעיף (77א) ,בסוף שנת המס הקודמת לא עלה על 750 אלף שקלים חדשים; \"מחזיק מהותי\"  -יחיד תושב ישראל ,שמחזיק ,במישרין או בעקיפין ,לבדו או יחד עם אחר ,ב־ 30%לפחות מסוג כלשהו של אמצעי השליטה בחברת מעטים; לעניין זה, \"יחד עם אחר\"  -כהגדרתו בסעיף .88",
       "confidence": "high"
+    },
+    {
+      "id": "special-asset-land-self-use",
+      "claim": "Circular 2.16.4.1: a right in land for self-use (that is, a fixed asset) in accordance with generally accepted accounting principles is excluded from special assets.",
+      "claim_type": "feature",
+      "source_url": "https://www.gov.il/BlobFolder/policy/professional-directives-191025/he/IncomeTax_professional-directives-080226.pdf",
+      "raw_snippet": "זכות במקרקעין לשם שימוש עצמי (כלומר רכוש קבוע) בהתאם לכללי",
+      "confidence": "high",
+      "fetched_at": "2026-09-16",
+      "appears_in": "SKILL.md, SKILL_HE.md, references/computation.md"
+    },
+    {
+      "id": "special-asset-land-group-use",
+      "claim": "Circular 2.16.4.1 continued: the self-use exclusion applies even where the right is in use by another entity in the group as defined in section 51XXIV (51כד) of the Encouragement of Capital Investments Law.",
+      "claim_type": "feature",
+      "source_url": "https://www.gov.il/BlobFolder/policy/professional-directives-191025/he/IncomeTax_professional-directives-080226.pdf",
+      "raw_snippet": "חשבונאות מקובלים ,אף אם הזכות מצויה בשימוש של ישות אחרת בקבוצה כהגדרתה בסעיף 51כד לחוק עידוד השקעות הון.",
+      "confidence": "high",
+      "fetched_at": "2026-09-16",
+      "appears_in": "SKILL.md, SKILL_HE.md, references/computation.md"
+    },
+    {
+      "id": "special-asset-leased-not-self-use",
+      "claim": "Circular 2.16.4.1 examples: a building or commercial asset leased to a third party (for example a mall) is not a right in land for self-use.",
+      "claim_type": "feature",
+      "source_url": "https://www.gov.il/BlobFolder/policy/professional-directives-191025/he/IncomeTax_professional-directives-080226.pdf",
+      "raw_snippet": "מלון שמוחזק ומופעל על ידי חברה .בניין או נכס מסחרי המושכר לצד ג' (למשל :קניון) לא ייחשב כזכות במקרקעין לשם שימוש עצמי.",
+      "confidence": "high",
+      "fetched_at": "2026-09-16",
+      "appears_in": "SKILL.md, SKILL_HE.md, references/computation.md"
+    },
+    {
+      "id": "special-asset-rental-building-53",
+      "claim": "Circular 2.16.4.2: a rental building as defined in section 53(a3) of the Encouragement of Capital Investments Law is excluded from special assets (Hebrew: סעיף 53(א3)).",
+      "claim_type": "feature",
+      "source_url": "https://www.gov.il/BlobFolder/policy/professional-directives-191025/he/IncomeTax_professional-directives-080226.pdf",
+      "raw_snippet": "בניין להשכרה כהגדרתו בסעיף (53א)( )3לחוק עידוד השקעות הון או בניין",
+      "confidence": "high",
+      "fetched_at": "2026-09-16",
+      "appears_in": "SKILL.md, SKILL_HE.md, references/computation.md"
+    },
+    {
+      "id": "special-asset-institutional-rental-53a",
+      "claim": "Circular 2.16.4.2 continued: or an institutional-rental building as defined in section 53A of that Law (Hebrew: סעיף 53א).",
+      "claim_type": "feature",
+      "source_url": "https://www.gov.il/BlobFolder/policy/professional-directives-191025/he/IncomeTax_professional-directives-080226.pdf",
+      "raw_snippet": "לשכירות מוסדית כהגדרתו בסעיף 53א(א)(3א )1לחוק האמור.",
+      "confidence": "high",
+      "fetched_at": "2026-09-16",
+      "appears_in": "SKILL.md, SKILL_HE.md, references/computation.md"
+    },
+    {
+      "id": "special-asset-cash-sale-apartments",
+      "claim": "Circular 2.16.5.1: cash or cash equivalents pledged or deposited under the obligation in a financial-accompaniment agreement as defined in the Sale (Apartments) (Assurance of Investments of Purchasers of Apartments) Law 5735-1974, as approved by the company's accountant, are excluded from special assets.",
+      "claim_type": "feature",
+      "source_url": "https://www.gov.il/BlobFolder/policy/professional-directives-191025/he/IncomeTax_professional-directives-080226.pdf",
+      "raw_snippet": "מזומן או שווי מזומן המשועבד או מופקד בהתאם לחובה הקבועה בהסכם",
+      "confidence": "high",
+      "fetched_at": "2026-09-16",
+      "appears_in": "SKILL.md, SKILL_HE.md, references/computation.md"
+    },
+    {
+      "id": "asset-shield-tax-cost",
+      "claim": "The asset shield is computed by business-inventory cost, the original-price balance under s.88 of the Ordinance, or the acquisition-value balance under s.47 of the Real Estate Taxation Law, as the case may be, and not as presented in the company's financial statements.",
+      "claim_type": "feature",
+      "source_url": "https://www.gov.il/BlobFolder/policy/professional-directives-191025/he/IncomeTax_professional-directives-080226.pdf",
+      "raw_snippet": "יובהר ,כי מגן הנכסים יחושב בהתאם לעלות המלאי העסקי ,יתרת המחיר המקורי כהגדרתה בסעיף 88 לפקודה או יתרת שווי הרכישה כהגדרתה בסעיף  47לחוק מיסוי מקרקעין ,לפי העניין ולא כפי שמוצג בדוחותיה הכספיים של החברה.",
+      "confidence": "high",
+      "fetched_at": "2026-09-16",
+      "appears_in": "SKILL.md, SKILL_HE.md, references/computation.md"
+    },
+    {
+      "id": "example3-land-inventory-8a",
+      "claim": "Circular worked example 3: note (3) describes the land inventory as rights in land to whose income section 8A(c) applies; the example's asset shield total is 3,000, and the land inventory is not among the deducted items.",
+      "claim_type": "feature",
+      "source_url": "https://www.gov.il/BlobFolder/policy/professional-directives-191025/he/IncomeTax_professional-directives-080226.pdf",
+      "raw_snippet": "( – )3זכויות במקרקעין שבחישוב ההכנסות הנובעות מהן חלות הוראות סעיף 8א(ג) לפקודה.",
+      "confidence": "high",
+      "fetched_at": "2026-09-16",
+      "appears_in": "references/computation.md"
+    },
+    {
+      "id": "example3-asset-shield-total",
+      "claim": "Circular worked example 3 arrives at a total asset shield of 3,000.",
+      "claim_type": "feature",
+      "source_url": "https://www.gov.il/BlobFolder/policy/professional-directives-191025/he/IncomeTax_professional-directives-080226.pdf",
+      "raw_snippet": "סך מגן הנכסים:",
+      "confidence": "high",
+      "fetched_at": "2026-09-16",
+      "appears_in": "references/computation.md"
+    },
+    {
+      "id": "payment-deadline-5-2",
+      "claim": "Circular 5.2: the addition to tax is paid by the date for filing the s.132 return (31 May or per an extension granted to the representative, the later) or by the end of the tax year following the tax year, the earlier (the payment date).",
+      "claim_type": "date",
+      "source_url": "https://www.gov.il/BlobFolder/policy/professional-directives-191025/he/IncomeTax_professional-directives-080226.pdf",
+      "raw_snippet": "תוספת המס ,תשולם עד למועד הגשת הדוח לפי סעיף  132לפקודה (בתאריך  31במאי או בהתאם לאורכה שניתנה למייצג ,לפי המאוחר) או עד לתום שנת המס שלאחר שנת המס ,לפי המוקדם",
+      "confidence": "high",
+      "fetched_at": "2026-09-16",
+      "appears_in": "SKILL.md, SKILL_HE.md"
+    },
+    {
+      "id": "interest-5-3",
+      "claim": "Circular 5.3: from the payment date until actual payment, linkage and interest differences as meant in section 159A(a) of the Ordinance are imposed on the addition to tax. (Hebrew: סעיף 159א(א))",
+      "claim_type": "feature",
+      "source_url": "https://www.gov.il/BlobFolder/policy/professional-directives-191025/he/IncomeTax_professional-directives-080226.pdf",
+      "raw_snippet": "הפרשי הצמדה וריבית כמשמעותם בסעיף (159א)(א) לפקודה.",
+      "confidence": "high",
+      "fetched_at": "2026-09-16",
+      "appears_in": "SKILL.md, SKILL_HE.md"
+    },
+    {
+      "id": "base-50pct-wording",
+      "claim": "Circular 3.6.2 measures the 50% alternative against the excess profits of the close company to the end of the preceding tax year.",
+      "claim_type": "percentage",
+      "source_url": "https://www.gov.il/BlobFolder/policy/professional-directives-191025/he/IncomeTax_professional-directives-080226.pdf",
+      "raw_snippet": "שהוא אינו דיבידנד שחלות עליו הוראות סעיף (126ב) לפקודה ,עולה על  50%מסכום הרווחים העודפים של חברת המעטים לתום שנת המס הקודמת (להלן\" :חלופת \"50%",
+      "confidence": "high",
+      "fetched_at": "2026-09-16",
+      "appears_in": "SKILL.md, SKILL_HE.md"
+    },
+    {
+      "id": "s81c-two-dates-and-expense-shield",
+      "claim": "Circular 4.1: excess profits are the difference between taxable accumulated profits at the end of the tax year preceding the examined year and the highest shield as computed at the end of the examined tax year.",
+      "claim_type": "feature",
+      "source_url": "https://www.gov.il/BlobFolder/policy/professional-directives-191025/he/IncomeTax_professional-directives-080226.pdf",
+      "raw_snippet": "סכום הרווחים העודפים ,עליהם מוטלת התוספת למס ,יחושב ,על פי סעיף 81ג לפקודה ,כהפרש שבין סכום הרווחים הנצברים החייבים לתום שנת המס שקדמה לשנת המס הנבדקת לבין הסכום הגבוה מבין אלה כפי שחושב לתום שנת המס הנבדקת:",
+      "confidence": "high",
+      "fetched_at": "2026-09-16",
+      "appears_in": "SKILL.md, SKILL_HE.md, references/computation.md"
+    },
+    {
+      "id": "expense-shield-average-two-preceding",
+      "claim": "Circular 4.1: the expense shield is the higher of tax-deductible expenses or the average of tax-deductible expenses in the tax year and the two tax years preceding it. The circular does not address a company with fewer than two preceding tax years.",
+      "claim_type": "feature",
+      "source_url": "https://www.gov.il/BlobFolder/policy/professional-directives-191025/he/IncomeTax_professional-directives-080226.pdf",
+      "raw_snippet": "✓ הגבוה מבין שני אלה :סכום ההוצאות המוכרות לצורך מס או ממוצע סכום ההוצאות המוכרות לצורך מס בשנת המס ובשתי שנות המס שקדמו לה (להלן\" :מגן הוצאות\").",
+      "confidence": "high",
+      "fetched_at": "2026-09-16",
+      "appears_in": "SKILL.md, SKILL_HE.md, references/computation.md"
+    },
+    {
+      "id": "special-asset-group-owner-operator",
+      "claim": "Circular 2.16.4.1: where one group company owns the right and another group company operates it, the asset is attributed to the owner; a hotel owned by company A and operated by group company B is not a special asset of A.",
+      "claim_type": "feature",
+      "source_url": "https://www.gov.il/BlobFolder/policy/professional-directives-191025/he/IncomeTax_professional-directives-080226.pdf",
+      "raw_snippet": "במקרים בהם הבעלות בזכות היא של חברה אחת בקבוצה אך מופעלת על ידי חברה אחרת בקבוצה ,הנכס ישויך לחברה שהיא הבעלים של הנכס. לדוגמה :בית מלון הוא בבעלות חברה א' והוא מופעל על ידי חברה ב' .חברות א' ו-ב' הן שתי ישויות באותה קבוצה כהגדרתה בסעיף 51כד לחוק עידוד השקעות הון .במקרה זה ,בית המלון לא ייחשב לנכס מיוחד של חברה א'.",
+      "confidence": "high",
+      "fetched_at": "2026-09-16",
+      "appears_in": "references/computation.md"
+    },
+    {
+      "id": "example3-fair-value-restated",
+      "claim": "Circular worked example 3 restates investment property shown at fair value (1,200) to its cost as acquisition-value balance (400) when computing the asset shield.",
+      "claim_type": "feature",
+      "source_url": "https://www.gov.il/BlobFolder/policy/professional-directives-191025/he/IncomeTax_professional-directives-080226.pdf",
+      "raw_snippet": "נדל\"ן להשקעה בעלות (יתרת שווי הרכישה):",
+      "confidence": "high",
+      "fetched_at": "2026-09-16",
+      "appears_in": "references/computation.md"
+    },
+    {
+      "id": "second-exempt-alt-no-asset-shield",
+      "claim": "Circular 2.13 citing section 81C(c): a taxpayer who chose the second exempt-profits alternative cannot use the asset shield when computing excess profits for the tax year.",
+      "claim_type": "feature",
+      "source_url": "https://www.gov.il/BlobFolder/policy/professional-directives-191025/he/IncomeTax_professional-directives-080226.pdf",
+      "raw_snippet": "סעיף 81ג(ג) לפקודה קובע כי נישום אשר בחר בחלופת הרווחים הפטורים השנייה ,לעניין חישוב \"הרווחים הנצברים הפטורים\" ,לא יוכל להשתמש ב\"-מגן הנכסים\" (כהגדרתה בסעיף 81ג לפקודה וסעיף  4לחוזר זה) בבואו לחשב את הרווחים העודפים לשנת המס.",
+      "confidence": "high",
+      "fetched_at": "2026-09-16",
+      "appears_in": "SKILL.md, SKILL_HE.md, references/computation.md"
+    },
+    {
+      "id": "expense-shield-deductible-only",
+      "claim": "Circular 4.3: the expense shield includes only expenses deductible for tax under Israeli tax law, and excludes expenses invested in assets on the balance sheet and not yet released to profit and loss.",
+      "claim_type": "feature",
+      "source_url": "https://www.gov.il/BlobFolder/policy/professional-directives-191025/he/IncomeTax_professional-directives-080226.pdf",
+      "raw_snippet": "מגן ההוצאות כולל רק הוצאות מוכרות לצורך מס לפי דיני המס בישראל כפי שנקבעו בדין ובפסיקה .מגן ההוצאות לא יכלול הוצאות שהושקעו בנכסים בדו\"ח על המצב הכספי וטרם הופשרו לדו\"ח רווח והפסד.",
+      "confidence": "high",
+      "fetched_at": "2026-09-16",
+      "appears_in": "SKILL.md, SKILL_HE.md, references/computation.md"
+    },
+    {
+      "id": "expense-shield-no-special-asset-costs",
+      "claim": "Circular 4.3: the expense shield excludes expenses for acquiring special assets or tied to acquiring them, for example depreciation on a special asset or financing costs from a loan that financed its acquisition.",
+      "claim_type": "feature",
+      "source_url": "https://www.gov.il/BlobFolder/policy/professional-directives-191025/he/IncomeTax_professional-directives-080226.pdf",
+      "raw_snippet": "בנוסף ,מגן ההוצאות לא יכלול הוצאות לרכישת נכסים מיוחדים או הוצאות שכרוכות ברכישת נכסים מיוחדים .לדוגמה :הוצאות פחת בגין נכס מיוחד או הוצאות מימון שנובעות מהלוואה שמימנה את עלות הרכישה של נכס מיוחד.",
+      "confidence": "high",
+      "fetched_at": "2026-09-16",
+      "appears_in": "SKILL.md, SKILL_HE.md, references/computation.md"
+    },
+    {
+      "id": "taxed-div-def-in-6pct-para",
+      "claim": "Circular 3.6.3: the definition of dividends on which tax was paid is given 'in this section', the 6% paragraph.",
+      "claim_type": "feature",
+      "source_url": "https://www.gov.il/BlobFolder/policy/professional-directives-191025/he/IncomeTax_professional-directives-080226.pdf",
+      "raw_snippet": "הקודמת (להלן\" :חלופת  \"6%ו/או \"חלופת דיבידנד בגין הרווחים הנצברים\") .בסעיף זה\" ,דיבידנדים ששולם מס בשל חלוקתם\"  -אחד מאלה:",
+      "confidence": "high",
+      "fetched_at": "2026-09-16",
+      "appears_in": "SKILL.md, SKILL_HE.md"
+    },
+    {
+      "id": "taxed-div-126b-election-6pct",
+      "claim": "Circular 3.6.3.2: a dividend excluded from the recipient's income under section 126(b) for which the distributing company elected tax at the highest rate under sections 125B and 121B.",
+      "claim_type": "feature",
+      "source_url": "https://www.gov.il/BlobFolder/policy/professional-directives-191025/he/IncomeTax_professional-directives-080226.pdf",
+      "raw_snippet": " 3.6.3.2דיבידנד שלא נכלל בהכנסת מקבל הדיבידנד בשל הוראות סעיף (126ב) לפקודה, ושלגביו בחרה החברה המחלקת שבשל חלוקתו ישולם מס בשיעור הגבוה ביותר החל על תשלום דיבידנד לפי סעיפים 125ב ו121-ב לפקודה ,בהתאם להוראות",
+      "confidence": "high",
+      "fetched_at": "2026-09-16",
+      "appears_in": "SKILL.md, SKILL_HE.md"
+    },
+    {
+      "id": "fifty-pct-excludes-126b",
+      "claim": "Circular 3.6.2: the 50% alternative counts taxed dividends that are not dividends to which section 126(b) applies.",
+      "claim_type": "feature",
+      "source_url": "https://www.gov.il/BlobFolder/policy/professional-directives-191025/he/IncomeTax_professional-directives-080226.pdf",
+      "raw_snippet": " 3.6.2סכום הדיבידנדים ששולם מס בשל חלוקתם ,שחברת המעטים חילקה לבעלי מניותיה, שהוא אינו דיבידנד שחלות עליו הוראות סעיף (126ב) לפקודה ,עולה על  50%מסכום",
+      "confidence": "high",
+      "fetched_at": "2026-09-16",
+      "appears_in": "SKILL.md, SKILL_HE.md"
+    },
+    {
+      "id": "trans-precondition-6-4",
+      "claim": "Circular 6.4: the transitional provisions apply only if the company distributed 50% of the excess profits accumulated from tax year 2025.",
+      "claim_type": "feature",
+      "source_url": "https://www.gov.il/BlobFolder/policy/professional-directives-191025/he/IncomeTax_professional-directives-080226.pdf",
+      "raw_snippet": "הוראות המעבר יחולו רק אם החברה חילקה  50%מסכום הרווחים העודפים שייצברו החל משנת המס .2025",
+      "confidence": "high",
+      "fetched_at": "2026-09-16",
+      "appears_in": "SKILL.md, SKILL_HE.md, references/transitional.md"
+    },
+    {
+      "id": "trans-remaining-profits-6-3",
+      "claim": "Circular 6.3: profits remaining from commencement-day profits are accumulated profits at 31.12.2024 less exempt profits, shields and dividends distributed to an individual shareholder.",
+      "claim_type": "feature",
+      "source_url": "https://www.gov.il/BlobFolder/policy/professional-directives-191025/he/IncomeTax_professional-directives-080226.pdf",
+      "raw_snippet": "\"רווחים שנותרו מרווחי יום התחילה\" :רווחים נצברים ליום  ,31.12.2024בניכוי :רווחים פטורים, מגנים ודיבידנד שחולק לבעל מניות יחיד .כלומר רווחים עודפים בניכוי דיבידנדים שחולקו לבעל מניות יחיד.",
+      "confidence": "high",
+      "fetched_at": "2026-09-16",
+      "appears_in": "SKILL.md, SKILL_HE.md, references/transitional.md"
+    },
+    {
+      "id": "trans-remaining-profits-6-8-2",
+      "claim": "Circular 6.8.2: for this purpose profits remaining from commencement-day profits are the close company's excess profits at the end of 2025 less profits distributed from them as taxed dividends.",
+      "claim_type": "feature",
+      "source_url": "https://www.gov.il/BlobFolder/policy/professional-directives-191025/he/IncomeTax_professional-directives-080226.pdf",
+      "raw_snippet": " 6.8.2לעניין זה\" ,רווחים שנותרו מרווחי יום התחילה\" הינם סכום הרווחים העודפים של חברת המעטים בתום שנת  2025בניכוי רווחים שחילקה חברת המעטים מהרווחים האמורים",
+      "confidence": "high",
+      "fetched_at": "2026-09-16",
+      "appears_in": "SKILL.md, SKILL_HE.md, references/transitional.md"
+    },
+    {
+      "id": "div-tax-date-5-4-16th-month",
+      "claim": "Circular 5.4: for a dividend under section 81B(b)(3)(a), the payment date follows the withholding regulations, that is by the 16th of the month following the distribution.",
+      "claim_type": "feature",
+      "source_url": "https://www.gov.il/BlobFolder/policy/professional-directives-191025/he/IncomeTax_professional-directives-080226.pdf",
+      "raw_snippet": "פי הקבוע בהוראות תקנות מס הכנסה )ניכוי מריבית מדיבידנד ומרווחים מסוימים) ,התשס\"ו- ( 2005להלן\" :תקנות ניכוי מריבית ומדיבידנד\") ,קרי ,עד ל 16-לחודש העוקב לחלוקה .בחלוקת",
+      "confidence": "high",
+      "fetched_at": "2026-09-16",
+      "appears_in": "SKILL.md, SKILL_HE.md"
+    },
+    {
+      "id": "div-tax-date-5-4-3b-december",
+      "claim": "Circular 5.4: for a section 81B(b)(3)(b) distribution to an intermediate company with 35% withheld, tax is due by 16 January of the year following the examined year, insofar as the distribution report is attributed to December.",
+      "claim_type": "feature",
+      "source_url": "https://www.gov.il/BlobFolder/policy/professional-directives-191025/he/IncomeTax_professional-directives-080226.pdf",
+      "raw_snippet": "וזאת ככל שהדיווח על חלוקת",
+      "confidence": "high",
+      "fetched_at": "2026-09-16",
+      "appears_in": "SKILL.md, SKILL_HE.md"
+    },
+    {
+      "id": "div-tax-date-5-4-december-attribution",
+      "claim": "Circular 5.4: the 16 January date for a (3)(b) distribution applies where the dividend report is attributed to December.",
+      "claim_type": "feature",
+      "source_url": "https://www.gov.il/BlobFolder/policy/professional-directives-191025/he/IncomeTax_professional-directives-080226.pdf",
+      "raw_snippet": "הדיבידנד יוחס לחודש דצמבר.",
+      "confidence": "high",
+      "fetched_at": "2026-09-16",
+      "appears_in": "SKILL.md, SKILL_HE.md"
     }
   ]
 }

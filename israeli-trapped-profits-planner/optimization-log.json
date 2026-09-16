@@ -1,0 +1,24 @@
+{
+  "cycles": [
+    {
+      "version": "1.1.0",
+      "date": "2026-09-16",
+      "changes": [
+        "Special-asset carve-outs (circular 2.16.4.1, 2.16.4.2, 2.16.5.1) and tax-cost basis of the asset shield",
+        "Payment date of the 2% addition (circular 5.2, 5.3) separated from the 16 January dividend-withholding date",
+        "50% base dating stated as unresolved; compute both",
+        "Numbered illustrative worked example for the 2% charge and both dividend escapes",
+        "Young-company magen hotzaot average flagged as undefined",
+        "Multi-year framing of escape pricing",
+        "Quick zero-exposure screen and Companies Law gotcha"
+      ],
+      "lessons": [
+        "Deferred: status of the section 62A replacement circular (draft of 20.11.2025) still unconfirmed as final",
+        "Deferred: Circular 8/2025 on section 76 not reviewed against this skill",
+        "Deferred: shareholder dividend rate and surtax still unsourced from primary text, so escape pricing quotes no rate",
+        "Deferred: splitting the magen kaspi in groups with partial holdings, beyond the equal division the circular states, is not modelled",
+        "circ.txt extraction differs from pdftotext output; evidence snippets were taken from the pdftotext layer of the same PDF so the source check can match them"
+      ]
+    }
+  ]
+}

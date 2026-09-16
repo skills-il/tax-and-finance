@@ -42,6 +42,56 @@ separate inputs and label them.
 
 The three are collectively the shields, and the computation subtracts only the highest.
 
+### Two rules that remove or shrink a shield
+
+- **Second exempt-profits alternative.** Under section 81C(c), as the circular states at 2.13, a
+  company that chose the second alternative for computing exempt accumulated profits cannot use the
+  magen nechasim when computing excess profits. Only the magen kaspi and the magen hotzaot remain.
+  Check which alternative was chosen before computing the asset shield at all.
+- **Magen hotzaot is tax-deductible expenses only** (circular 4.3). Excluded: expenses invested in
+  balance-sheet assets and not yet released to profit and loss; expenses for acquiring special
+  assets or tied to acquiring them, such as depreciation on a special asset or financing costs on a
+  loan that funded one.
+
+### The magen hotzaot for a young company
+
+The average runs over the tax year and the two preceding tax years. The circular does not say how to
+compute it for a company with fewer than two preceding tax years. Use the current-year deductible
+expenses as the floor (the first limb of the maximum is always defined) and flag the average as
+undefined rather than averaging over fewer years.
+
+### Special assets: the carve-outs (circular 2.16)
+
+The magen nechasim deducts the cost of special assets, so every exclusion below RAISES the shield.
+
+| Class | Excluded from special assets |
+|---|---|
+| Rights in land (2.16.4) | Land for self-use, that is a fixed asset under GAAP, even where it is in use by another entity in the group as defined in section 51XXIV of the Encouragement of Capital Investments Law (2.16.4.1). The circular's examples: the company's own office building, a hotel held and operated by the company. A building or commercial asset leased to a third party, for example a mall, is NOT self-use. Where one group company owns and another operates, the asset is attributed to the owner, and a hotel owned by A and operated by group company B is not a special asset of A. |
+| Rights in land (2.16.4) | A rental building under section 53(a3), or an institutional-rental building under section 53A, of the Encouragement of Capital Investments Law (2.16.4.2). |
+| Loans, deposits, cash (2.16.5) | Cash or cash equivalents pledged or deposited under the obligation in a financial-accompaniment agreement under the Sale (Apartments) (Assurance of Investments of Purchasers of Apartments) Law, as approved by the company's accountant (2.16.5.1). The circular lists further exclusions in 2.16.5.2 to 2.16.5.4; read them from the circular before relying on a loan or cash balance. |
+
+### Tax cost, not book value
+
+The circular states that the asset shield is computed by business-inventory cost, the original-price
+balance under section 88 of the Ordinance, or the acquisition-value balance under section 47 of the
+Real Estate Taxation Law, as the case may be, and not as presented in the financial statements. In
+its worked example 3, investment property shown at fair value of 1,200 is restated to its
+acquisition-value balance of 400 before the shield is computed.
+
+### What worked example 3 shows about land inventory
+
+Note (3) of the example describes the land inventory (2,700) as rights in land whose income falls
+under section 8A(c). The example's list of deducted items does not include it, and the arithmetic
+reaches a total asset shield of 3,000 with that inventory left inside the shield (10,700 adjusted
+assets, less 7,700 of deducted items). The circular does not state a general rule for 8A(c) land
+inventory in its carve-out list; state only that this is how the example treats it.
+
+### The 50% base and its dating
+
+Circular 3.6.2 measures the 50% alternative against excess profits "to the end of the preceding tax
+year", while the charging computation reads the shields at the end of the examined year. The circular
+does not resolve which year end the shields inside the 50% base are read at. Compute both and flag it.
+
 ### The anti-splitting rule
 
 Where the controlling shareholder, alone or together with a relative, is an individual who controls
@@ -80,3 +130,28 @@ The addition is not deductible from the company's taxable income, and although i
 corporate tax it is expressly not part of corporate tax for computing tax under the Ordinance. It
 therefore sits on top of the ordinary corporate rate and cannot be credited against it. Advance
 payment provisions do not apply to it.
+
+## Pricing an escape against the charge
+
+For a company whose profits will be distributed eventually, a distribution made to escape the 2%
+does not add the shareholder's dividend tax; it mostly brings that tax forward. The 2% is different:
+it is a permanent cost, and it repeats in every year the charge applies. The comparison is therefore:
+
+- **Cost of escaping:** the time value of paying the shareholder tax earlier; any difference in the
+  shareholder's rate or surtax between distributing now and distributing later; and the lost use of
+  the distributed cash inside the company.
+- **Cost of not escaping:** the sum of the 2% charges across every year the charge would apply, on
+  a base that changes as profits accumulate or are distributed.
+
+Neither side is presumed cheaper. Where the owners genuinely intend never to distribute, state that
+as an explicit assumption, because it is the only case in which the full dividend tax is an added
+cost. This skill quotes no shareholder rate or surtax; they come from the user's representative.
+
+## Which dividends count toward which escape
+
+The definition of "dividends on which tax was paid" (circular 3.6.3.1 and 3.6.3.2) sits in the 6%
+paragraph. It covers an ordinary dividend and a section 126(b) dividend for which the distributing
+company elected tax at the highest rate. The 50% paragraph (3.6.2) is worded to cover dividends that
+are not dividends to which section 126(b) applies. On the face of the circular, then, an elected
+126(b) dividend counts toward the 6% alternative, and whether it also counts toward the 50%
+alternative is unresolved. Flag it; do not rely on it to clear the 50% test.

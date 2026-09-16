@@ -2,6 +2,21 @@
 
 There is no year-varying rate table. There are two mechanisms plus one closed escape.
 
+## Precondition and a definitional conflict
+
+**Precondition (circular 6.4).** The circular states that the transitional provisions apply only if
+the company distributed 50% of the excess profits accumulated from tax year 2025. The condition is the
+circular's, not section 5's wording, and its effect on 2025 and on a company that earned a 5(b)
+band is unclear. Compute each mechanism below with and without it and flag the difference; never
+treat a company as disqualified on this ground alone.
+
+**Two definitions of "profits remaining from commencement-day profits".** Circular 6.3 defines them
+from accumulated profits at 31.12.2024, less exempt profits, shields and dividends distributed to an
+individual shareholder. Circular 6.8.2 defines them, for the 20% route, as excess profits at the end
+of 2025 less profits distributed from them as taxed dividends. The circular is internally
+inconsistent. Compute the reduction under both definitions, show both, and flag the conflict to the
+representative.
+
 ## Mechanism A: the annual distribution route, section 5(a)
 
 A close company with undistributed accumulated profits on the eve of commencement day that
