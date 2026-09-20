@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.6.0 - 2026-09-20
+
+Corrected the Regulation 2(a)(8) First Schedule income table, which was wrong in every cell. All 36 cells (nine household sizes across the 90 / 70 / 50 / 30 percent bands) and all four of the ten-or-more per-person increments were roughly 3 percent too high. Thresholds that are too high tell an eligible low-income household that it falls outside the band it actually qualifies for, so the error ran in the direction that costs users money. The corrected table for fiscal year 2026, tested on income earned in 2025, starts at up to 3,513 NIS for a single person in the 90 percent band and runs to 15,743 / 19,243 / 22,742 / 26,240 for nine persons, with 1,125 / 1,374 / 1,624 / 1,874 added per person from the tenth. The table appears in SKILL.md, SKILL_HE.md and references/arnona-discounts-guide.md, and the three copies are now generated from one list and diffed to prove they match.
+
+Sourced the rate tables. Every municipality block in scripts/arnona-calculator.py now carries the fiscal year of the tzav arnona it represents and a source, and the report prints both.
+
+Surfaced the national annual update. The 1.626 percent coefficient for fiscal year 2026 previously existed only in a reference file; it now appears in Step 2 of both skill files and in the calculator's report.
+
+Made the calculator honest about its own model. It keys the residential rate on zone alone, while a real tzav arnona keys it on zone and building classification code, a roughly two-fold spread inside a single zone. The report now states that limitation at the point of output rather than presenting the figure as the municipality's rate. Tel Aviv's 2026 tzav has five residential zones against the four modelled. Both are listed under a new "Known limitations and deferred work" section in the skill.
+
 ## 1.5.0 - 2026-08-19
 
 Rebuilt the whole discount surface directly from the consolidated text of the Arrangements in the State Economy Regulations (Arnona Discount) 5753-1993 and the Senior Citizens Law 5750-1989, rather than from secondary restatements. The skill previously covered eleven of the regulation's rows.

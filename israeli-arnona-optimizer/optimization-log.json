@@ -1,6 +1,25 @@
 {
   "cycles": [
     {
+      "version": "1.6.0",
+      "date": "2026-09-20",
+      "lessons": [
+        "CRITICAL FACT FIX: the Regulation 2(a)(8) First Schedule income table shipped in v1.5.0 was WRONG IN EVERY CELL. All 36 cells (9 household sizes x 4 discount bands) and all four 10+ per-person increments were roughly 3% too high. The direction of the error is the part that matters: thresholds that are too HIGH tell an eligible low-income household that its income is inside a band it is not, and in the boundary cases tell a household it does not qualify at all. For a month over a year this skill was talking people out of a discount they were entitled to.",
+        "The v1.5.0 cycle recorded the table as 'encoded in full ... read from the regulation itself', and evidence.json carried fourteen separate claims whose raw_snippets quoted the wrong digits as if verbatim from he.wikisource. A snippet that cannot exist on the cited page is worse than a missing one: it passed every self-consistency gate precisely because it looked verbatim. The fourteen claims are replaced by one claim re-verified by curl against the Kol-Zchut page HTML, sliced directly, with an independent corroboration of the 3,513 and 8,996 figures.",
+        "Correct 2026 table (income earned in 2025), 90/70/50/30: 1: 3,513 / 4,295 / 5,076 / 5,857. 2: 5,621 / 6,872 / 8,122 / 9,372. 3: 7,449 / 9,106 / 10,762 / 12,417. 4: 8,996 / 10,996 / 12,995 / 14,994. 5: 10,541 / 12,886 / 15,229 / 17,572. 6: 11,948 / 14,604 / 17,259 / 19,914. 7: 13,352 / 16,322 / 19,290 / 22,257. 8: 14,618 / 17,868 / 21,117 / 24,366. 9: 15,743 / 19,243 / 22,742 / 26,240. 10+ increments: 1,125 / 1,374 / 1,624 / 1,874.",
+        "The table lives in THREE files (SKILL.md, SKILL_HE.md, references/arnona-discounts-guide.md) and was wrong in all three identically, which is how a single bad read propagates. The three are now generated from one source list and diffed programmatically: 67 numbers each, zero diff.",
+        "CARRY RESOLVED from v1.5.0: RATE_TABLES is no longer undated and unsourced. Every one of the twelve municipality blocks now carries tzav_year and source, and TZAV_YEAR plus NATIONAL_UPDATE_COEFFICIENT_PCT sit at module level.",
+        "CARRY RESOLVED from v1.3.0: the 1.626% national update coefficient for 2026 existed only in references/arnona-rates-guide.md. It now appears in SKILL.md Step 2, SKILL_HE.md, and the calculator's own report footer. It is the single most-asked annual arnona question.",
+        "STRUCTURAL: the calculator models rate by ZONE only, but a real tzav keys on zone AND building classification code, a roughly two-fold spread inside one zone. Rather than present a point figure as the municipality's rate, the report footer now states the two-axis limitation, the fiscal year, and the per-municipality source at the point of output. Tel Aviv's 2026 tzav also has FIVE zones against the four modelled.",
+        "Deferred (MAJOR): the two-axis re-model, zone plus building classification code, and with it Tel Aviv's fifth zone. Both need the same re-read of the tzavei arnona, so they go together.",
+        "Deferred (MINOR): the nine municipalities other than Tel Aviv were not re-read against their 2026 tzavei arnona this cycle.",
+        "Deferred (MINOR), carried from v1.5.0: the calculator still models only the residential 45% limb of Reg. 3c, not the 39% other-property limb.",
+        "Verified clean this cycle, deliberately unchanged: 90-day hasaga, 60-day manager reply, 30-day vaadat erur, Reg. 13 empty-property ladder 100/66.66/50, Reg. 2(a)(6) oleh 90%, Reg. 2(a)(10) single parent 20%, Reg. 3c Gaza 45/39, Senior Citizens Law s.9.",
+        "Judge FAIL (provenance). BLOCKER: Step 2 stated three Tel Aviv 2026 figures (46.64, 139.60 and a 72.50 citywide residential average) with no evidence claim behind any of them, the same shape of unsourced numeric precision that failed this skill on the income table. Fetched the municipality's own חוברת צו הארנונה לשנת 2026 PDF: 46.64 and 139.60 are the true floor and ceiling of the residential tariff table (zones ה+ו and אא). The 72.50 citywide average is NOT in the tzav and no average is published there, so it was removed from SKILL.md and SKILL_HE.md rather than sourced, and both now tell the reader to read their own tzav. New claim tel-aviv-tzav-2026-residential-range carries the range with two contiguous slices.",
+        "arnona-income-table-2026-first-schedule carried a stitched pseudo-HTML snippet of which only 2 of 5 slices existed on the page; every figure was right but --check-sources could never have matched it. Re-fetched the Kol-Zchut page and replaced the snippet with the contiguous plain text of the single wikitable, which covers all nine household sizes, all four bands and all four 10+ increments, plus a source_note explaining that the figures sit in individual table cells."
+      ]
+    },
+    {
       "version": "1.5.0",
       "date": "2026-08-19",
       "lessons": [

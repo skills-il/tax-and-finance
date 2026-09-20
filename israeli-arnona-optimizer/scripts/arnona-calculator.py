@@ -25,12 +25,45 @@ from typing import Optional
 
 
 # ============================================================
-# Rate Tables (approximate, based on recent tzav arnona data)
+# Rate Tables
 # ============================================================
+#
+# TZAV_YEAR is the fiscal year these figures are meant to represent.
+# RATE_TABLES is INDICATIVE, not authoritative, and the limitation is
+# structural rather than a matter of the figures being a little stale:
+#
+#   A real tzav arnona sets the residential rate on TWO axes, the zone AND
+#   the building classification code (by building type and year of
+#   construction). Every entry below models the ZONE axis only. Within a
+#   single zone the spread between the cheapest and the dearest building
+#   class is roughly two-fold, so a single number per zone can be wrong in
+#   either direction for a specific flat.
+#
+# Each municipality block therefore carries "tzav_year" and "source". The
+# report header prints the year, and every report prints the two-axis
+# limitation, so no figure leaves this script presented as the
+# municipality's own rate. The authoritative number is on the tzav arnona
+# the municipality publishes each year, and on the bill itself.
+#
+# Adding the building-classification axis is the outstanding re-model; see
+# "Deferred" in SKILL.md.
+
+# Fiscal year these rate tables are meant to represent.
+TZAV_YEAR = 2026
+
+# National annual update coefficient for TZAV_YEAR (the "automatic pilot"
+# formula: half the CPI change plus half the public-sector wage-index
+# change). Applied by the state before any municipality-specific
+# above-formula increase, which needs ministerial approval.
+# Source: references/arnona-rates-guide.md, "Billing Cycle".
+NATIONAL_UPDATE_COEFFICIENT_PCT = 1.626
+
 
 # Structure: municipality -> zone -> usage_type -> rate_per_sqm_per_year (NIS)
 RATE_TABLES = {
     "tel-aviv": {
+        "tzav_year": TZAV_YEAR,
+        "source": "https://www.tel-aviv.gov.il/ (tzav arnona 2026); zone-only, 5 real zones + class codes",
         "name": "Tel Aviv-Yafo",
         "zone_system": "numbered (1-4)",
         "zones": {
@@ -61,6 +94,8 @@ RATE_TABLES = {
         },
     },
     "jerusalem": {
+        "tzav_year": TZAV_YEAR,
+        "source": "https://www.jerusalem.muni.il/ (tzav arnona 2026); zone-only",
         "name": "Jerusalem",
         "zone_system": "Hebrew letters (alef-heh / A-E)",
         "zones": {
@@ -97,6 +132,8 @@ RATE_TABLES = {
         },
     },
     "haifa": {
+        "tzav_year": TZAV_YEAR,
+        "source": "https://www.haifa.muni.il/ (tzav arnona 2026); zone-only",
         "name": "Haifa",
         "zone_system": "lettered (A-D)",
         "zones": {
@@ -127,6 +164,8 @@ RATE_TABLES = {
         },
     },
     "beer-sheva": {
+        "tzav_year": TZAV_YEAR,
+        "source": "https://www.beer-sheva.muni.il/ (tzav arnona 2026); zone-only",
         "name": "Beer Sheva",
         "zone_system": "numbered (1-3)",
         "zones": {
@@ -151,6 +190,8 @@ RATE_TABLES = {
         },
     },
     "netanya": {
+        "tzav_year": TZAV_YEAR,
+        "source": "https://www.netanya.muni.il/ (tzav arnona 2026); zone-only",
         "name": "Netanya",
         "zone_system": "numbered (1-3)",
         "zones": {
@@ -175,6 +216,8 @@ RATE_TABLES = {
         },
     },
     "rishon-lezion": {
+        "tzav_year": TZAV_YEAR,
+        "source": "https://www.rishonlezion.muni.il/ (tzav arnona 2026); zone-only",
         "name": "Rishon LeZion",
         "zone_system": "lettered (A-D)",
         "zones": {
@@ -205,6 +248,8 @@ RATE_TABLES = {
         },
     },
     "petah-tikva": {
+        "tzav_year": TZAV_YEAR,
+        "source": "https://www.petah-tikva.muni.il/ (tzav arnona 2026); zone-only",
         "name": "Petah Tikva",
         "zone_system": "numbered (1-3)",
         "zones": {
@@ -229,6 +274,8 @@ RATE_TABLES = {
         },
     },
     "ashdod": {
+        "tzav_year": TZAV_YEAR,
+        "source": "https://www.ashdod.muni.il/ (tzav arnona 2026); zone-only",
         "name": "Ashdod",
         "zone_system": "numbered (1-3)",
         "zones": {
@@ -253,6 +300,8 @@ RATE_TABLES = {
         },
     },
     "herzliya": {
+        "tzav_year": TZAV_YEAR,
+        "source": "https://www.herzliya.muni.il/ (tzav arnona 2026); zone-only",
         "name": "Herzliya",
         "zone_system": "lettered (A-C)",
         "zones": {
@@ -277,6 +326,8 @@ RATE_TABLES = {
         },
     },
     "raanana": {
+        "tzav_year": TZAV_YEAR,
+        "source": "https://www.raanana.muni.il/ (tzav arnona 2026); zone-only",
         "name": "Ra'anana",
         "zone_system": "lettered (A-C)",
         "zones": {
@@ -301,6 +352,8 @@ RATE_TABLES = {
         },
     },
     "ramat-gan": {
+        "tzav_year": TZAV_YEAR,
+        "source": "https://www.ramat-gan.muni.il/ (tzav arnona 2026); zone-only",
         "name": "Ramat Gan",
         "zone_system": "lettered (A-D)",
         "zones": {
@@ -331,6 +384,8 @@ RATE_TABLES = {
         },
     },
     "modiin": {
+        "tzav_year": TZAV_YEAR,
+        "source": "municipal tzav arnona 2026 (verify on the municipality site); zone-only",
         "name": "Modi'in-Maccabim-Re'ut",
         "zone_system": "numbered (1-3)",
         "zones": {
@@ -931,9 +986,25 @@ def format_result(result: ArnonaResult) -> str:
         f"Monthly equivalent:      {result.monthly_equivalent:,.2f} NIS",
         "",
         "=" * 60,
-        "NOTE: These rates are approximate estimates based on recent",
-        "municipal rate ordinances. Actual rates may vary. Always",
-        "verify with your municipality's official arnona department.",
+        "WHAT THIS NUMBER IS, AND WHAT IT IS NOT",
+        "=" * 60,
+        f"Rate table fiscal year: {TZAV_YEAR}",
+        f"Rate source for this municipality: {RATE_TABLES[result.municipality]['source']}",
+        "",
+        "This is an ESTIMATE, not your municipality's rate. The rate used",
+        "here is keyed on ZONE ONLY. A real tzav arnona keys the residential",
+        "rate on TWO axes, zone AND building classification code (building",
+        "type and year of construction). Within one zone the cheapest and",
+        "dearest classes differ by roughly two-fold, so this figure can be",
+        "wrong in either direction for your specific flat.",
+        "",
+        f"Rates rise every 1 January by the national update coefficient,",
+        f"which is {NATIONAL_UPDATE_COEFFICIENT_PCT}% for {TZAV_YEAR}, before any",
+        "above-formula municipal increase.",
+        "",
+        "The authoritative figures are the tzav arnona your municipality",
+        "publishes for the year, and the bill itself. Check both before",
+        "acting on anything printed above.",
         "=" * 60,
     ])
 

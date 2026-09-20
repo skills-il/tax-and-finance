@@ -132,17 +132,17 @@ Note: the regulation defines no intermediate disability band between these two. 
 
 | Persons | up to 90% | up to 70% | up to 50% | up to 30% |
 |---------|-----------|-----------|-----------|-----------|
-| 1 | up to 3,623 | 3,623 to 4,430 | 4,430 to 5,235 | 5,235 to 6,041 |
-| 2 | up to 5,798 | 5,798 to 7,088 | 7,088 to 8,377 | 8,377 to 9,666 |
-| 3 | up to 7,683 | 7,683 to 9,392 | 9,392 to 11,100 | 11,100 to 12,807 |
-| 4 | up to 9,278 | 9,278 to 11,341 | 11,341 to 13,403 | 13,403 to 15,465 |
-| 5 | up to 10,872 | 10,872 to 13,291 | 13,291 to 15,707 | 15,707 to 18,124 |
-| 6 | up to 12,323 | 12,323 to 15,063 | 15,063 to 17,801 | 17,801 to 20,539 |
-| 7 | up to 13,771 | 13,771 to 16,835 | 16,835 to 19,896 | 19,896 to 22,956 |
-| 8 | up to 15,077 | 15,077 to 18,429 | 18,429 to 21,780 | 21,780 to 25,131 |
-| 9 | up to 16,237 | 16,237 to 19,847 | 19,847 to 23,456 | 23,456 to 27,064 |
+| 1 | up to 3,513 | 3,513 to 4,295 | 4,295 to 5,076 | 5,076 to 5,857 |
+| 2 | up to 5,621 | 5,621 to 6,872 | 6,872 to 8,122 | 8,122 to 9,372 |
+| 3 | up to 7,449 | 7,449 to 9,106 | 9,106 to 10,762 | 10,762 to 12,417 |
+| 4 | up to 8,996 | 8,996 to 10,996 | 10,996 to 12,995 | 12,995 to 14,994 |
+| 5 | up to 10,541 | 10,541 to 12,886 | 12,886 to 15,229 | 15,229 to 17,572 |
+| 6 | up to 11,948 | 11,948 to 14,604 | 14,604 to 17,259 | 17,259 to 19,914 |
+| 7 | up to 13,352 | 13,352 to 16,322 | 16,322 to 19,290 | 19,290 to 22,257 |
+| 8 | up to 14,618 | 14,618 to 17,868 | 17,868 to 21,117 | 21,117 to 24,366 |
+| 9 | up to 15,743 | 15,743 to 19,243 | 19,243 to 22,742 | 22,742 to 26,240 |
 
-For 10 people or more, take the 9-person figure in the same column and add per additional person: 1,160 in the 90% column, 1,417 in the 70% column, 1,675 in the 50% column, and 1,933 in the 30% column.
+For 10 people or more, take the 9-person figure in the same column and add per additional person: 1,125 in the 90% column, 1,374 in the 70% column, 1,624 in the 50% column, 1,874 in the 30% column.
 
 The amounts update every 1 January by the change in the minimum wage known on 20 May of the preceding fiscal year, rounded to the nearest whole shekel, and the Interior Ministry director-general publishes the revised Schedule in Reshumot (Reg. 2(a)(8)(a1)). Re-read the Schedule each year rather than carrying these figures forward.
 

@@ -788,186 +788,21 @@
       ]
     },
     {
-      "claim_id": "arnona-income-table-2026",
-      "claim": "Reg. 2(a)(8) First Schedule for fiscal year 2026 sets four discount columns of up to 90%, 70%, 50% and 30% by average monthly household income and number of persons.",
-      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
-      "raw_snippet": "<td>שיעור ההנחה</td><td>עד 90%</td><td>עד 70%</td><td>עד 50%</td><td>עד 30%</td>",
-      "fetched_at": "2026-08-19T02:11:26Z",
+      "claim_id": "arnona-income-table-2026-first-schedule",
+      "claim": "Regulation 2(a)(8) First Schedule income table operative for fiscal year 2026 (tested on average gross monthly household income earned in 2025), all nine household sizes across the 90% / 70% / 50% / 30% bands. 1 person: up to 3,513 / 3,513-4,295 / 4,295-5,076 / 5,076-5,857. 2: up to 5,621 / 5,621-6,872 / 6,872-8,122 / 8,122-9,372. 3: up to 7,449 / 7,449-9,106 / 9,106-10,762 / 10,762-12,417. 4: up to 8,996 / 8,996-10,996 / 10,996-12,995 / 12,995-14,994. 5: up to 10,541 / 10,541-12,886 / 12,886-15,229 / 15,229-17,572. 6: up to 11,948 / 11,948-14,604 / 14,604-17,259 / 17,259-19,914. 7: up to 13,352 / 13,352-16,322 / 16,322-19,290 / 19,290-22,257. 8: up to 14,618 / 14,618-17,868 / 17,868-21,117 / 21,117-24,366. 9: up to 15,743 / 15,743-19,243 / 19,243-22,742 / 22,742-26,240. For the tenth person and beyond, add per additional person 1,125 (90%), 1,374 (70%), 1,624 (50%), 1,874 (30%). This REPLACES the table carried through v1.5.0, which was too high in every one of the 36 cells and in all four increments, and therefore told eligible low-income households they did not qualify.",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%94%D7%A0%D7%97%D7%94_%D7%91%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94_%D7%9C%D7%91%D7%A2%D7%9C%D7%99_%D7%94%D7%9B%D7%A0%D7%A1%D7%94_%D7%A0%D7%9E%D7%95%D7%9B%D7%94",
+      "raw_snippet": "מס' נפשות הכנסה חודשית ממוצעת למשפחה ב-₪ (ברוטו) בשנת הכספים 2025 שיעור הנחה 1 מעל 5,076 ועד 5,857 עד 30% מעל 4,295 ועד 5,076 עד 50% מעל 3,513 ועד 4,295 עד 70% עד 3,513 עד 90% 2 מעל 8,122 ועד 9,372 עד 30% מעל 6,872 ועד 8,122 עד 50% מעל 5,621 ועד 6,872 עד 70% עד 5,621 עד 90% 3 מעל 10,762 ועד 12,417 עד 30% מעל 9,106 ועד 10,762 עד 50% מעל 7,449 ועד 9,106 עד 70% עד 7,449 עד 90% 4 מעל 12,995 ועד 14,994 עד 30% מעל 10,996 ועד 12,995 עד 50% מעל 8,996 ועד 10,996 עד 70% עד 8,996 עד 90% 5 מעל 15,229 ועד 17,572 עד 30% מעל 12,886 ועד 15,229 עד 50% מעל 10,541 ועד 12,886 עד 70% עד 10,541 עד 90% 6 מעל 17,259 ועד 19,914 עד 30% מעל 14,604 ועד 17,259 עד 50% מעל 11,948 ועד 14,604 עד 70% עד 11,948 עד 90% 7 מעל 19,290 ועד 22,257 עד 30% מעל 16,322 ועד 19,290 עד 50% מעל 13,352 ועד 16,322 עד 70% עד 13,352 עד 90% 8 מעל 21,117 ועד 24,366 עד 30% מעל 17,868 ועד 21,117 עד 50% מעל 14,618 ועד 17,868 עד 70% עד 14,618 עד 90% 9 מעל 22,742 ועד 26,240 עד 30% מעל 19,243 ועד 22,742 עד 50% מעל 15,743 ועד 19,243 עד 70% עד 15,743 עד 90% 10 ומעלה ל-9 הראשונים: מעל 22,742 ועד 26,240 לכל אדם נוסף מהעשירי והלאה: תוספת של עד 1,874 לאדם הנוסף עד 30% ל-9 הראשונים: מעל 19,243 ועד 22,742 לכל אדם נוסף מהעשירי והלאה: תוספת של עד 1,624 לאדם הנוסף עד 50% ל-9 הראשונים: מעל 15,743 ועד 19,243 לכל אדם נוסף מהעשירי והלאה: תוספת של עד 1,374 לאדם הנוסף עד 70% ל-9 הראשונים: עד 15,743 לכל אדם נוסף מהעשירי והלאה: תוספת של עד 1,125 לאדם הנוסף עד 90%",
+      "verified_via": "curl of the live page 2026-09-20; snippet is the contiguous text of that one table with tags stripped and whitespace collapsed",
+      "corroborating_source_url": "https://www.ice.co.il/consumerism/news/article/1110123",
+      "corroborating_snippet": "אדם שהכנסתו החודשית הממוצעת בשנת 2025 הייתה עד 3,513 שקלים, יהיה זכאי לקבלת הנחה בארנונה בשיעור של עד 90%",
+      "fetched_at": "2026-09-20T00:00:00Z",
+      "source_fetched_at": "2026-09-20T00:00:00Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
-        "references/arnona-discounts-guide.md",
-        "scripts/arnona-calculator.py"
-      ]
-    },
-    {
-      "claim_id": "arnona-income-table-1-person",
-      "claim": "First Schedule 2026, one person: up to 3,623 NIS for the 90% column, then 4,430, 5,235 and 6,041 for the 70%, 50% and 30% columns.",
-      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
-      "raw_snippet": "<td>עד 3,623</td><td>מעל 3,623 עד 4,430</td><td>מעל 4,430 עד 5,235</td><td>מעל 5,235 עד 6,041</td>",
-      "fetched_at": "2026-08-19T02:11:26Z",
-      "appears_in": [
-        "SKILL.md",
-        "SKILL_HE.md",
-        "references/arnona-discounts-guide.md",
-        "scripts/arnona-calculator.py"
-      ]
-    },
-    {
-      "claim_id": "arnona-income-table-2-3-person",
-      "claim": "First Schedule 2026, two and three persons.",
-      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
-      "raw_snippet": "<td>עד 5,798</td><td>מעל 5,798 עד 7,088</td><td>מעל 7,088 עד 8,377</td><td>מעל 8,377 עד 9,666</td>",
-      "fetched_at": "2026-08-19T02:11:26Z",
-      "appears_in": [
-        "SKILL.md",
-        "SKILL_HE.md",
-        "references/arnona-discounts-guide.md",
-        "scripts/arnona-calculator.py"
-      ]
-    },
-    {
-      "claim_id": "arnona-income-table-3-person",
-      "claim": "First Schedule 2026, three persons.",
-      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
-      "raw_snippet": "<td>עד 7,683</td><td>מעל 7,683 עד 9,392</td><td>מעל 9,392 עד 11,100</td><td>מעל 11,100 עד 12,807</td>",
-      "fetched_at": "2026-08-19T02:11:26Z",
-      "appears_in": [
-        "SKILL.md",
-        "SKILL_HE.md",
-        "references/arnona-discounts-guide.md",
-        "scripts/arnona-calculator.py"
-      ]
-    },
-    {
-      "claim_id": "arnona-income-table-4-person",
-      "claim": "First Schedule 2026, four persons.",
-      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
-      "raw_snippet": "<td>עד 9,278</td><td>מעל 9,278 עד 11,341</td><td>מעל 11,341 עד 13,403</td><td>מעל 13,403 עד 15,465</td>",
-      "fetched_at": "2026-08-19T02:11:26Z",
-      "appears_in": [
-        "SKILL.md",
-        "SKILL_HE.md",
-        "references/arnona-discounts-guide.md",
-        "scripts/arnona-calculator.py"
-      ]
-    },
-    {
-      "claim_id": "arnona-income-table-5-person",
-      "claim": "First Schedule 2026, five persons.",
-      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
-      "raw_snippet": "<td>עד 10,872</td><td>מעל 10,872 עד 13,291</td><td>מעל 13,291 עד 15,707</td><td>מעל 15,707 עד 18,124</td>",
-      "fetched_at": "2026-08-19T02:11:26Z",
-      "appears_in": [
-        "SKILL.md",
-        "SKILL_HE.md",
-        "references/arnona-discounts-guide.md",
-        "scripts/arnona-calculator.py"
-      ]
-    },
-    {
-      "claim_id": "arnona-income-table-6-person",
-      "claim": "First Schedule 2026, six persons.",
-      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
-      "raw_snippet": "<td>עד 12,323</td><td>מעל 12,323 עד 15,063</td><td>מעל 15,063 עד 17,801</td><td>מעל 17,801 עד 20,539</td>",
-      "fetched_at": "2026-08-19T02:11:26Z",
-      "appears_in": [
-        "SKILL.md",
-        "SKILL_HE.md",
-        "references/arnona-discounts-guide.md",
-        "scripts/arnona-calculator.py"
-      ]
-    },
-    {
-      "claim_id": "arnona-income-table-7-person",
-      "claim": "First Schedule 2026, seven persons.",
-      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
-      "raw_snippet": "<td>עד 13,771</td><td>מעל 13,771 עד 16,835</td><td>מעל 16,835 עד 19,896</td><td>מעל 19,896 עד 22,956</td>",
-      "fetched_at": "2026-08-19T02:11:26Z",
-      "appears_in": [
-        "SKILL.md",
-        "SKILL_HE.md",
-        "references/arnona-discounts-guide.md",
-        "scripts/arnona-calculator.py"
-      ]
-    },
-    {
-      "claim_id": "arnona-income-table-8-person",
-      "claim": "First Schedule 2026, eight persons.",
-      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
-      "raw_snippet": "<td>עד 15,077</td><td>מעל 15,077 עד 18,429</td><td>מעל 18,429 עד 21,780</td><td>מעל 21,780 עד 25,131</td>",
-      "fetched_at": "2026-08-19T02:11:26Z",
-      "appears_in": [
-        "SKILL.md",
-        "SKILL_HE.md",
-        "references/arnona-discounts-guide.md",
-        "scripts/arnona-calculator.py"
-      ]
-    },
-    {
-      "claim_id": "arnona-income-table-9-person",
-      "claim": "First Schedule 2026, nine persons.",
-      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
-      "raw_snippet": "<td>עד 16,237</td><td>מעל 16,237 עד 19,847</td><td>מעל 19,847 עד 23,456</td><td>מעל 23,456 עד 27,064</td>",
-      "fetched_at": "2026-08-19T02:11:26Z",
-      "appears_in": [
-        "SKILL.md",
-        "SKILL_HE.md",
-        "references/arnona-discounts-guide.md",
-        "scripts/arnona-calculator.py"
-      ]
-    },
-    {
-      "claim_id": "arnona-income-table-10plus-90",
-      "claim": "First Schedule 2026, ten persons or more: add up to 1,160 NIS per person beyond nine in the 90% column.",
-      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
-      "raw_snippet": "לגבי הנפש העשירית ואילך – עד 1,160 לנפש, בהכפלת מספר הנפשות מעבר ל־9 נפשות",
-      "fetched_at": "2026-08-19T02:11:26Z",
-      "appears_in": [
-        "SKILL.md",
-        "SKILL_HE.md",
-        "references/arnona-discounts-guide.md",
-        "scripts/arnona-calculator.py"
-      ]
-    },
-    {
-      "claim_id": "arnona-income-table-10plus-70",
-      "claim": "First Schedule 2026, ten persons or more: add up to 1,417 NIS per person beyond nine in the 70% column.",
-      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
-      "raw_snippet": "לגבי הנפש העשירית ואילך – עד 1,417 לנפש, בהכפלת מספר הנפשות מעבר ל־9 נפשות",
-      "fetched_at": "2026-08-19T02:11:26Z",
-      "appears_in": [
-        "SKILL.md",
-        "SKILL_HE.md",
-        "references/arnona-discounts-guide.md",
-        "scripts/arnona-calculator.py"
-      ]
-    },
-    {
-      "claim_id": "arnona-income-table-10plus-50",
-      "claim": "First Schedule 2026, ten persons or more: add up to 1,675 NIS per person beyond nine in the 50% column.",
-      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
-      "raw_snippet": "לגבי הנפש העשירית ואילך – עד 1,675 לנפש, בהכפלת מספר הנפשות מעבר ל־9 נפשות",
-      "fetched_at": "2026-08-19T02:11:26Z",
-      "appears_in": [
-        "SKILL.md",
-        "SKILL_HE.md",
-        "references/arnona-discounts-guide.md",
-        "scripts/arnona-calculator.py"
-      ]
-    },
-    {
-      "claim_id": "arnona-income-table-10plus-30",
-      "claim": "First Schedule 2026, ten persons or more: add up to 1,933 NIS per person beyond nine in the 30% column.",
-      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
-      "raw_snippet": "לגבי הנפש העשירית ואילך – עד 1,933 לנפש, בהכפלת מספר הנפשות מעבר ל־9 נפשות",
-      "fetched_at": "2026-08-19T02:11:26Z",
-      "appears_in": [
-        "SKILL.md",
-        "SKILL_HE.md",
-        "references/arnona-discounts-guide.md",
-        "scripts/arnona-calculator.py"
-      ]
+        "references/arnona-discounts-guide.md"
+      ],
+      "source_note": "Quoted as the plain-text rendering of the single <table class=\"wikitable\"> that follows the sentence בשנת 2026 זכאים להנחה מי שהכנסתם החודשית הממוצעת (ברוטו) ב-2025. Each figure sits in its own <td>, so the text is contiguous only once the table markup is stripped; the cell order is preserved exactly as published (30% band first, 90% band last, household-size cell blank on the continuation rows)."
     },
     {
       "claim_id": "arnona-income-update-may-20",
@@ -1309,6 +1144,21 @@
         "SKILL.md",
         "SKILL_HE.md",
         "references/arnona-discounts-guide.md"
+      ]
+    },
+    {
+      "claim_id": "tel-aviv-tzav-2026-residential-range",
+      "claim": "Tel Aviv-Yafo's 2026 tzav arnona sets residential rates from 46.64 to 139.60 NIS/sqm/year, across five geographic zones for residential (three for non-residential) and the building classification codes. No citywide residential average rate is published.",
+      "source_url": "https://www.tel-aviv.gov.il/Residents/Arnona/Documents/%D7%97%D7%95%D7%91%D7%A8%D7%AA%20%D7%A6%D7%95%20%D7%94%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94%20%D7%9C%D7%A9%D7%A0%D7%AA%202026.pdf",
+      "raw_snippet": "העיר מחולקת ל 5-אזורים גיאוגרפיים לצורך ארנונה כללית למגורים ול 3-אזורים שונים לגבי בנינים שאינם משמשים למגורים.",
+      "corroborating_snippet": "64.42 78.39 90.71 108.98 112.99 139.60 אא",
+      "source_note": "Both slices come from the municipality's published PDF booklet חוברת צו הארנונה לשנת 2026, read with pdftotext -layout and with Unicode bidi format characters stripped. The rate figures live in table cells of the residential tariff table under section 2.3 התעריפים לפי סוג הבנין והאזור; the top row (זone אא) carries 139.60 as its highest cell and the bottom row (ה+ו) reads 46.64 47.65 55.10 66.21 68.64 84.81, giving the 46.64 floor. The booklet publishes no citywide residential average, which is why the skill no longer states one.",
+      "verified_via": "curl of the PDF 2026-09-20 + pdftotext -layout; both slices are contiguous in the extracted text after whitespace collapsing",
+      "fetched_at": "2026-09-20T00:00:00Z",
+      "source_fetched_at": "2026-09-20T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
       ]
     }
   ]

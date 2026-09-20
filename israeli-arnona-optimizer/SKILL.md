@@ -35,12 +35,16 @@ Use the arnona calculator script to compute the base annual arnona:
 python scripts/arnona-calculator.py --municipality "tel-aviv" --area 80 --zone 2 --usage residential
 ```
 
-The calculator applies the correct rate per sqm based on the municipality's published rate tables. Key rate structures:
+**Read this before quoting any figure the calculator prints.** The rates built into the script are indicative fiscal-year-2026 residential figures, carried in `RATE_TABLES` with a `tzav_year` and a `source` on every municipality block. They model the ZONE axis only. A real tzav arnona sets the rate on TWO axes, zone AND building classification code (by building type and year of construction), and within one zone the spread between the cheapest and the dearest class is roughly two-fold. So the script's output is an order-of-magnitude estimate, never the municipality's own rate for a specific flat. The script says so in its own output. The only authoritative number is the one on the tzav arnona the municipality publishes each year, and on the bill itself.
 
-- **Tel Aviv-Yafo**: Rates range from approximately 75 to 130 NIS/sqm/year for residential depending on zone (zones 1-4). Commercial rates are 2-4x higher.
-- **Jerusalem**: Rates range from approximately 55 to 95 NIS/sqm/year for residential. Divided into 5 zones using Hebrew letters alef through heh (א through ה).
-- **Haifa**: Rates range from approximately 50 to 90 NIS/sqm/year for residential. Lower overall compared to Tel Aviv.
-- **Beer Sheva**: Rates range from approximately 35 to 60 NIS/sqm/year for residential. Among the lowest for major cities.
+Indicative fiscal-year-2026 residential ranges:
+
+- **Tel Aviv-Yafo**: the 2026 tzav (the municipality's published `חוברת צו הארנונה לשנת 2026` on tel-aviv.gov.il) runs from 46.64 to 139.60 NIS/sqm/year for residential, across FIVE zones and the building classification codes. There is no single citywide residential rate, so read your own tzav rather than assuming an average. The script models four zones and no class axis, so treat its Tel Aviv figure as a midpoint, not a rate. Commercial rates are 2-4x higher.
+- **Jerusalem**: roughly 55 to 95 NIS/sqm/year for residential. Divided into 5 zones using Hebrew letters alef through heh (א through ה), each subdivided by building class.
+- **Haifa**: roughly 50 to 90 NIS/sqm/year for residential. Lower overall compared to Tel Aviv.
+- **Beer Sheva**: roughly 35 to 60 NIS/sqm/year for residential. Among the lowest for major cities.
+
+**The annual national update.** Arnona rates rise every 1 January by a government-set coefficient (the "automatic pilot" formula: half the change in the CPI plus half the change in the public-sector wage index). **For fiscal year 2026 the national arnona update coefficient is 1.626%.** It applies before any municipality-specific above-formula increase, which needs ministerial approval. This is the answer to "how much will my arnona go up this year" when no reclassification and no above-formula request is involved.
 
 Consult `references/arnona-rates-guide.md` for detailed rate tables and zone classification rules.
 
@@ -100,17 +104,17 @@ The senior entitlement runs for one flat only and goes to one senior only, even 
 
 | Persons | up to 90% | up to 70% | up to 50% | up to 30% |
 |---------|-----------|-----------|-----------|-----------|
-| 1 | up to 3,623 | 3,623 to 4,430 | 4,430 to 5,235 | 5,235 to 6,041 |
-| 2 | up to 5,798 | 5,798 to 7,088 | 7,088 to 8,377 | 8,377 to 9,666 |
-| 3 | up to 7,683 | 7,683 to 9,392 | 9,392 to 11,100 | 11,100 to 12,807 |
-| 4 | up to 9,278 | 9,278 to 11,341 | 11,341 to 13,403 | 13,403 to 15,465 |
-| 5 | up to 10,872 | 10,872 to 13,291 | 13,291 to 15,707 | 15,707 to 18,124 |
-| 6 | up to 12,323 | 12,323 to 15,063 | 15,063 to 17,801 | 17,801 to 20,539 |
-| 7 | up to 13,771 | 13,771 to 16,835 | 16,835 to 19,896 | 19,896 to 22,956 |
-| 8 | up to 15,077 | 15,077 to 18,429 | 18,429 to 21,780 | 21,780 to 25,131 |
-| 9 | up to 16,237 | 16,237 to 19,847 | 19,847 to 23,456 | 23,456 to 27,064 |
+| 1 | up to 3,513 | 3,513 to 4,295 | 4,295 to 5,076 | 5,076 to 5,857 |
+| 2 | up to 5,621 | 5,621 to 6,872 | 6,872 to 8,122 | 8,122 to 9,372 |
+| 3 | up to 7,449 | 7,449 to 9,106 | 9,106 to 10,762 | 10,762 to 12,417 |
+| 4 | up to 8,996 | 8,996 to 10,996 | 10,996 to 12,995 | 12,995 to 14,994 |
+| 5 | up to 10,541 | 10,541 to 12,886 | 12,886 to 15,229 | 15,229 to 17,572 |
+| 6 | up to 11,948 | 11,948 to 14,604 | 14,604 to 17,259 | 17,259 to 19,914 |
+| 7 | up to 13,352 | 13,352 to 16,322 | 16,322 to 19,290 | 19,290 to 22,257 |
+| 8 | up to 14,618 | 14,618 to 17,868 | 17,868 to 21,117 | 21,117 to 24,366 |
+| 9 | up to 15,743 | 15,743 to 19,243 | 19,243 to 22,742 | 22,742 to 26,240 |
 
-For 10 people or more, take the 9-person figure in the same column and add per additional person: 1,160 in the 90% column, 1,417 in the 70% column, 1,675 in the 50% column, 1,933 in the 30% column. These amounts update every 1 January by the change in the minimum wage known on 20 May of the preceding fiscal year, so re-read the First Schedule each year rather than carrying these figures forward.
+For 10 people or more, take the 9-person figure in the same column and add per additional person: 1,125 in the 90% column, 1,374 in the 70% column, 1,624 in the 50% column, 1,874 in the 30% column. These amounts update every 1 January by the change in the minimum wage known on 20 May of the preceding fiscal year, so re-read the First Schedule each year rather than carrying these figures forward.
 
 Run the calculator with discount flags:
 
@@ -239,6 +243,16 @@ Result: The agent drafts a formal appeal letter in Hebrew addressed to the Haifa
 - Arnona appeal deadlines are typically 90 days from the annual bill date. Agents may draft appeals after the deadline has passed, making them void.
 - Most rows in the discount regulation are CEILINGS a council chooses within, not amounts owed. Telling a resident "you get 40%" when the regulation says "up to 40%" sets them up for an argument with a clerk they cannot win. Say "up to", and name whether the row is discretionary or an entitlement.
 - There is NO national student discount and NO national large-family discount. Agents fill that gap with plausible round numbers, typically 50% and 30%. Neither has a paragraph behind it. If the user asks, say the national regulation is silent and point them at the municipal bylaw table.
+
+## Known limitations and deferred work
+
+Read these before presenting any calculator output as a figure.
+
+- **The calculator models rate by ZONE only.** A real tzav arnona keys the residential rate on zone AND building classification code (by building type and year of construction). Within one zone the spread between classes is roughly two-fold. The two-axis re-model is deferred; until it lands, the script's figure is an estimate and says so in its own output.
+- **Tel Aviv has FIVE residential zones in the 2026 tzav.** `RATE_TABLES` carries four. Deferred with the class-axis re-model, since both need the same re-read of the tzav.
+- **The nine municipalities other than Tel Aviv were not individually re-read against their 2026 tzavei arnona this cycle.** Assume the same zone-only modelling limitation applies to each.
+- **Regulation 3c is modelled on its residential 45% limb only**, not the 39% other-property limb.
+- **The First Schedule income table is read each year, never carried forward.** It updates every 1 January by the change in the minimum wage known on 20 May of the preceding fiscal year, and the Interior Ministry director-general publishes the revised Schedule in Reshumot. Carrying last year's numbers forward is exactly the failure this skill made through v1.5.0.
 
 ## Troubleshooting
 
