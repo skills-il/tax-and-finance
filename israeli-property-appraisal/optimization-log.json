@@ -1,6 +1,16 @@
 {
   "cycles": [
     {
+      "version": "1.3.2",
+      "date": "2026-09-20",
+      "lessons": [
+        "A frozen, counsel-supplied legal notice and the frontmatter clause that points at it are two different artefacts. The notice body was correct and untouchable; the failure was one level up, in the Hebrew frontmatter description, which carried the clause as a tail. Card, search and OG truncation eat the tail first, so the surviving opening words read as an offer to value property. Placement is part of the legal rule, not formatting. Check every mirror of a clause for placement, not just for presence.",
+        "A reserved-act word survives review when it is a tag. The prose was audited line by line and was clean, but the English tag list still carried the bare word 'valuation', which renders next to the skill name stripped of every qualifier the prose supplies. Audit tag lists as user-visible copy in a regulated domain, not as metadata.",
+        "A field that is always None is worse than a missing field: it advertises an adjustment axis the feed cannot supply. 'year_built' read from 'yearBuilt', which the Govmap street-deals payload has never returned. Dropped it and said plainly in both files that build year must come from the user or the permit.",
+        "Miscounting a parse failure as a business-rule rejection hides a schema change behind a normal-looking number. An unparseable dealDate was counted into 'too_old' and reported as 'outside the window'. It now has its own 'bad_date' counter and a line telling the reader this may mean the feed shape moved. A fixture with a reshaped date (28/06/2026) and an empty date proved the split: before, too_old=3; after, too_old=1 and bad_date=2."
+      ]
+    },
+    {
       "version": "1.1.2",
       "date": "2026-08-03",
       "lessons": [

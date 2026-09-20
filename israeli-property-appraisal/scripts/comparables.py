@@ -204,7 +204,7 @@ def filter_deals(rows, years):
     deals pass straight through here and are only flagged later by _flag_outliers.
     """
     cutoff = datetime.now() - timedelta(days=365 * years)
-    kept, dropped = [], {"non_residential": 0, "no_area": 0, "too_old": 0}
+    kept, dropped = [], {"non_residential": 0, "no_area": 0, "too_old": 0, "bad_date": 0}
     for r in rows:
         nature = (r.get("dealNatureDescription") or "").strip()
         if nature not in RESIDENTIAL_NATURES:
@@ -219,7 +219,9 @@ def filter_deals(rows, years):
         try:
             when = datetime.strptime(raw_date, "%Y-%m-%d")
         except ValueError:
-            dropped["too_old"] += 1
+            # Unparseable or missing date. Not "outside the window": counting it
+            # as too_old would hide a feed shape change behind a normal filter.
+            dropped["bad_date"] += 1
             continue
         if when < cutoff:
             dropped["too_old"] += 1
@@ -233,7 +235,6 @@ def filter_deals(rows, years):
                 "area": area,
                 "amount": amount,
                 "price_sqm": round(amount / area),
-                "year_built": r.get("yearBuilt"),
             }
         )
     kept.sort(key=lambda d: d["date"], reverse=True)
@@ -364,7 +365,9 @@ def main():
     print(f"גוש/חלקה: {('גוש ' + str(gush) + ' חלקה ' + str(helka)) if gush else 'לא נמצא (ראו הערת הכיסוי)'}")
     print(f"שכונה: {neigh or '-'} | יישוב: {settlement or '-'}")
     print(f"עסקאות במאגר: {total} | נמשכו: {len(rows)} | השוואה רלוונטית: {len(kept)}")
-    print(f"סוננו: לא-מגורים {dropped['non_residential']}, ללא שטח {dropped['no_area']}, מחוץ לחלון {dropped['too_old']}")
+    print(f"סוננו: לא-מגורים {dropped['non_residential']}, ללא שטח {dropped['no_area']}, מחוץ לחלון {dropped['too_old']}, תאריך לא קריא {dropped['bad_date']}")
+    if dropped["bad_date"]:
+        print("שימו לב: שורות עם תאריך לא קריא אינן עסקאות ישנות. ייתכן ששדות המקור השתנו.")
     if not kept:
         print("\nאין עסקאות מגורים בחלון הזמן הזה. הרחיבו עם --years, אל תמציאו מספר.")
         return 0

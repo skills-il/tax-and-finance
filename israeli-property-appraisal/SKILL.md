@@ -73,7 +73,7 @@ Raw shekels per square metre is not a valuation. The comparison approach adjusts
 - Condition and whether the unit has been renovated
 - Parking, and whether it is covered
 - Balcony, protected space (ממ"ד), storage
-- Building age and the year built
+- Building age and the year built, which the deal feed does not carry, so ask the user or check the permit
 - Orientation, view, and noise exposure
 - Unexercised building rights
 - The nature of the right, meaning full ownership against a lease from the Israel Land Authority
