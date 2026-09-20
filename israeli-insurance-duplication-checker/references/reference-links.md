@@ -13,7 +13,7 @@ Sources used to verify this skill's facts.
 | חוק ביטוח בריאות ממלכתי, תשנ"ד-1994 | ס' 10(ג)(1), the duty to accept any member into the kupa; and the Second Schedule dental items, under-18 and 72+ |
 | [מבקר המדינה, מערך הביטוח הסיעודי בישראל](https://library.mevaker.gov.il/sites/DigitalLibrary/Documents/2026/Population-Aging/2026-Population-Aging-102.pdf) | Scale of the סיעוד market, the two-tier group benefit, and that private policies are no longer sold |
 | [בנק ישראל, הוראת ניהול בנקאי תקין 451](https://www.boi.org.il/media/utld2tgp/451.pdf) | ס' 11: free choice of insurer, cancellation without fee, cap at the unpaid balance |
-| [משרד החינוך, פוליסת תאונות אישיות לתלמידים](https://meyda.education.gov.il/files/bituach/Personal-accidents/insurance_policy_2025-26.pdf) | The compulsory pupils' policy: 24/7 cover, premium, no deductible |
+| [משרד החינוך, פוליסת תאונות אישיות לתלמידים](https://meyda.education.gov.il/files/bituach/Personal-accidents/insurance_policy_2026-27.pdf) | The compulsory pupils' policy: 24/7 cover, premium, no deductible |
 | חוק לימוד חובה, תש"ט-1949 | ס' 6(ד1), the duty to insure every pupil through the local education authority |
 | חוק הפיקוח על שירותים פיננסיים (ביטוח), תשמ"א-1981 | ס' 60, the supervisor's power to investigate public complaints |
 | התקנון של קרן הפנסיה | The שאירים waiver, the under-21 orphan definition, underwriting on re-adding cover |

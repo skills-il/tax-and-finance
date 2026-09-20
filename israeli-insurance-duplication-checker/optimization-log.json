@@ -29,6 +29,23 @@
         "Deferred MINOR: the kupa tier list still has no evidence entry and will drift; it now carries an explicit 'no source of record' caveat.",
         "Not attempted: a fallback route for a user who does not know whether their employer policy is individual or group (payslip line, HR benefits page, insurer personal area). The skill asks the question but the answer gates the whole health section."
       ]
+    },
+    {
+      "version": "1.2.0",
+      "date": "2026-09-20",
+      "trigger": "scheduled update-skill review, verdict MAJOR",
+      "changes": [
+        "Corrected the central factual error: the skill claimed in six places (4 EN, 2 HE) that הר הביטוח does not list כתבי שירות. It does, together with the premium paid, and its own definition of a product is 'פוליסת ביטוח או כתב שירות'. Step E now starts FROM the file instead of working around it; only the non-insurance layer (standalone service-company subscriptions, card benefits, employer and utility bundles) is outside it. This sat on the skill's self-declared highest-yield audit line, so the old wording sent the user past exactly the cover most likely to be duplicated.",
+        "Added the הר הביטוח minor / deceased-relative / guardianship file types to Step A. The minor file is what carries the children's dental and personal-accident riders the household audit depends on.",
+        "מכבי: two tiers to new joiners (זהב, שלי); מכבי כסף relabelled a closed legacy tier (closed May 2012, held by members who joined by 30.04.2012) with the safe-cut consequence stated, since a cancelled מכבי כסף cannot be re-joined.",
+        "Pupils' personal-accident policy re-cited to the 2026/27 edition (1.9.2026-31.8.2027, איילון). Premium unchanged at 69 NIS, no deductible; only the URL and year label were stale."
+      ],
+      "lessons": [
+        "A 'the official tool does not show X' claim is the kind that quietly inverts an entire workflow step, and it is cheap to re-check against the tool's own landing copy. Re-read the source site's product definition, not just the skill's prose, when a step is built on an absence.",
+        "Judge PASS with two soft provenance findings, both fixed. 'held only by members who joined by 30.04.2012' was an inference: maccabi4u says only 'נסגרה למצטרפים חדשים במאי 2012'. All three files now say 'before it closed in May 2012'.",
+        "'one who cancels it cannot re-join, so it behaves like an underwritten layer' is absent from the cited page and it drives an operational exception to the safe-cut rule. Re-fetched the page: it publishes an upgrade path out of כסף (to זהב or שלי) and no route back in. The skill now states the one-way behaviour as an explicit corollary of that absence and tells the reader to confirm it with מכבי before advising a cut; the evidence claim records the same distinction.",
+        "DEFERRED (next cycle): the v1.1.0 compression took roughly 30 paragraphs out of the EN body while HE moved about 9, so EN prose is now tighter than HE and the two have drifted. HE also lost a concrete example EN kept: the spouse case where one partner's employer group life cover and the other's mortgage-linked life cover look like duplicates but are not. Re-harmonise EN and HE and restore that spouse example to SKILL_HE.md."
+      ]
     }
   ]
 }

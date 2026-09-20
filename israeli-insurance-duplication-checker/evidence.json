@@ -1,7 +1,7 @@
 {
   "skill_slug": "israeli-insurance-duplication-checker",
   "schemaVersion": "1.0",
-  "generated_at": "2026-08-13T16:00:00Z",
+  "generated_at": "2026-09-20T00:00:00Z",
   "notes": "Statutory snippets were sliced from the source text programmatically, not retyped. Sections 54(a)/(b) cite Nevo because the wikitext source wraps cross-references in templates, which drops the section numbers from the plain-text layer. PDF-sourced entries carry verified_via=pdf: the PDFs were downloaded, converted with pdftotext, and stripped of Unicode bidi controls (U+202A/B/C) before the snippet was located. Without that strip no Hebrew snippet matches.",
   "claims": [
     {
@@ -642,6 +642,70 @@
       "raw_snippet": "14 ש\"ח לקבלת מידע מלא אודות כל המוצרים והחסכונות הפנסיונים בכל הגופים המנהלים באופן חד פעמי",
       "confidence": "high",
       "verification_note": "Recorded deliberately alongside mislaka-fee-20. The SAME page gives two different amounts for the same one-off all-products request. The skill therefore quotes neither as settled and tells the agent to read the tariff at the point of request."
+    },
+    {
+      "id": "harb-lists-service-riders",
+      "claim": "הר הביטוח lists insurer-issued כתבי שירות alongside the policies, including the premium paid for each; a 'product' there is defined as a policy OR a כתב שירות",
+      "claim_type": "fact",
+      "source_url": "https://harb.cma.gov.il/Home/Index?agent=NotAgent",
+      "source_fetched_at": "2026-09-20T00:00:00Z",
+      "fetched_at": "2026-09-20T00:00:00Z",
+      "raw_snippet": "כל פוליסות הביטוח וכתבי השירות בחברות הביטוח השונות כולל הפרמיה המשולמת במקום אחד ... מוצר ביטוח - פוליסת ביטוח או כתב שירות בענפי הביטוח השונים (ביטוח כללי, ביטוח חיים וביטוח בריאות).",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/line-by-line-detail.md",
+        "references/domain-checklist.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "harb-additional-files",
+      "claim": "הר הביטוח opens files beyond the user's own: for a minor, for a deceased relative, and for a person under guardianship",
+      "claim_type": "fact",
+      "source_url": "https://harb.cma.gov.il/Home/Index?agent=NotAgent",
+      "source_fetched_at": "2026-09-20T00:00:00Z",
+      "fetched_at": "2026-09-20T00:00:00Z",
+      "raw_snippet": "כניסה לתיק נוסף תיק ביטוחים על שם קטין תיק ביטוחים על שם קרוב שנפטר תיק ביטוחים על שם אדם שתחת אפוטרופסות",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/domain-checklist.md"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "maccabi-kesef-closed-2012",
+      "claim": "מכבי כסף has been closed to new joiners since May 2012, so מכבי sells two tiers (זהב, שלי) to new joiners; existing members who joined before that closure still hold it, and מכבי publishes only an upgrade path out of כסף, not a route back in.",
+      "claim_type": "fact",
+      "source_url": "https://www.maccabi4u.co.il/new/insurance-plans/maccabi-gold-and-silver/maccabi_silver/",
+      "source_fetched_at": "2026-09-20T00:00:00Z",
+      "fetched_at": "2026-09-20T00:00:00Z",
+      "raw_snippet": "תוכנית \"מכבי כסף\" נסגרה למצטרפים חדשים במאי 2012. ממועד זה והלאה ניתן להצטרף ל\"מכבי זהב\" ו\"מכבי שלי\" בלבד או לבצע שדרוג מ\"מכבי כסף\" לתוכניות אלה",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/line-by-line-detail.md"
+      ],
+      "confidence": "high",
+      "source_note": "The page states the closure month only (\"מאי 2012\"); it gives no precise cut-off date, so the skill no longer states 30.04.2012. The page also does not say a member who cancels כסף cannot re-join. The skill now carries that as an explicit corollary drawn from the absence of any published re-join route, flagged for the reader to confirm with מכבי.",
+      "verified_via": "curl of the live page 2026-09-20; snippet is contiguous in the rendered text"
+    },
+    {
+      "id": "pupils-policy-2026-27",
+      "claim": "The compulsory pupils' personal-accident policy for 2026/27 runs 1.9.2026 to 31.8.2027, premium 69 NIS, no deductible, covering the child anywhere in Israel at any hour",
+      "claim_type": "fact",
+      "source_url": "https://meyda.education.gov.il/files/bituach/Personal-accidents/insurance_policy_2026-27.pdf",
+      "source_fetched_at": "2026-09-20T00:00:00Z",
+      "fetched_at": "2026-09-20T00:00:00Z",
+      "raw_snippet": "תקופת הביטוח: 1.9.2026 – 31.8.2027 ... 10. סכום הפרמיה ₪ 69 ... השתתפות עצמית אין ... היזק גופני שאירע במקום כלשהו בשטח מדינת ישראל והשטחים המוחזקים, בכל שעה משעות היממה בין שיש לה קשר לפעילות המוסד החינוכי ובין אם לא",
+      "appears_in": [
+        "references/line-by-line-detail.md",
+        "references/line-by-line-detail-he.md",
+        "references/reference-links.md",
+        "references/reference-links-he.md"
+      ],
+      "confidence": "high"
     }
   ]
 }

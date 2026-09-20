@@ -48,8 +48,11 @@ policy rather than being told a categorical rule.
   two exceptions that still need an audit: near-identical מחלות קשות condition
   lists (compare and cut on price), and שאירים cover for a member with no
   שאירים (a waiver exists, but re-adding it permits medical underwriting).
-- הר הביטוח holds no שב"ן data, no סיעוד, no service subscriptions and no card
-  benefits. The only official domain is `harb.cma.gov.il`. The pension internals
+- הר הביטוח holds no שב"ן data, no סיעוד, no standalone service-company
+  subscriptions and no card benefits. It DOES list the insurer-issued כתבי שירות
+  next to the policies, with the premium paid, so audit those from the file.
+  It also opens files for a minor, a deceased relative and a person under
+  guardianship. The only official domain is `harb.cma.gov.il`. The pension internals
   come from המסלקה הפנסיונית instead, at `swiftness.co.il`.
 - Run the inventory per ADULT. A household verdict from one file is unsafe.
 - Cancellation by the insured takes effect after three days, not fifteen. The
