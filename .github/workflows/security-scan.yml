@@ -121,7 +121,7 @@ jobs:
           skill-scanner scan-all .scan-target --policy .github/skill-scanner-policy.yaml --fail-on-severity high --format sarif --output results.sarif
       - name: Upload SARIF results
         if: always()
-        uses: github/codeql-action/upload-sarif@v4
+        uses: github/codeql-action/upload-sarif@v4.37.4
         with:
           sarif_file: results.sarif
           category: cisco-skill-scanner
