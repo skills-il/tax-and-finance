@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0",
   "skill": "israeli-insurance-comparator",
-  "generated_at": "2026-08-27T00:00:00Z",
+  "generated_at": "2026-09-24T19:54:41Z",
   "claims": [
     {
       "claim_id": "gov-calculators",
@@ -315,6 +315,20 @@
         "SKILL.md",
         "SKILL_HE.md"
       ]
+    },
+    {
+      "claim_id": "dira-cma-home-calculator",
+      "claim": "dira.cma.gov.il is the CMA's official home insurance calculator. It shows insurers' rates for structure, contents, or structure and contents, and those rates refer to the coverage in the standard home insurance policy (polisa tiknit), not a binding quote",
+      "source_url": "https://dira.cma.gov.il/",
+      "raw_snippet": "התעריפים המוצגים במחשבון זה מתייחסים לכיסויים ולסיכונים המכוסים בפוליסה התקנית לביטוח דירה.",
+      "fetched_at": "2026-09-24T19:54:41Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-09-24T19:54:41Z",
+      "note": "Page title 'מחשבון ביטוח דירה - רשות שוק ההון'; tabs 'ביטוח מבנה', 'ביטוח תכולה', 'ביטוח מבנה ותכולה'; terms state the binding information is the insurer's quote. curl gets a CloudFront 202/403 challenge; rendered in headless Chromium from an IL egress 2026-09-24."
     }
   ]
 }

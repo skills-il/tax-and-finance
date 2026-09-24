@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.3.1 - 2026-09-24
+
+Added the CMA's official home insurance calculator, dira.cma.gov.il, as the government baseline for home insurance in Step 3, in Example 2, and in the Reference Links, contributed by @Akiva5 (PR #24). Its prices are tied to the standard home insurance policy, so the skill treats them as a baseline, not a quote. Corrected the contents-cover term from "tochen" to "tchula" (תכולה), the term the CMA and insurers use.
+
 ## 1.3.0 - 2026-08-27
 
 Corrected four destination descriptions that sent users to the wrong place. govcarins.mof.gov.il is a comprehensive-insurance simulator for state employees priced off the annual state tender, not a general educational tool. The car.cma.gov.il troubleshooting entry described a licence-plate field and a registration wait that do not exist on that tool. The no-claims (shin-nun) record was attributed to HaPool, which is the residual-market insurer rather than a claims database; corrected to Har HaBituach, the insurer's own certificate, and INFOCAR. Maccabi's supplementary ladder has three tiers, with Kesef as the entry tier, not two with Zahav as the basic.

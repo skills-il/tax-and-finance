@@ -38,7 +38,7 @@ Determine which insurance product the user is comparing. Israeli insurance falls
 
 **Home Insurance (2 components):**
 - **Mivne (מבנה)** - Building structure coverage. Often required by mortgage lender.
-- **Tochen (תוכן)** - Contents coverage. Protects furniture, electronics, personal items.
+- **Tchula (תכולה)** - Contents coverage. Protects furniture, electronics, personal items.
 
 **Health Supplementary Insurance:**
 - **Bituach Mashlim (ביטוח משלים)** - Supplementary insurance from kupot cholim (health funds) beyond the basic basket of services.
@@ -92,7 +92,7 @@ Start with official government calculators for unbiased baseline pricing:
 3. Compare deductible amounts (hashtatfut atzmit) across insurers
 
 **For home insurance (bituach dira):**
-1. Navigate to **dira.cma.gov.il** - the CMA official home insurance calculator. This is the first stop for comparing home insurance: it compares insurers' prices for structure (mivne), contents (tchula), or structure and contents together
+1. Navigate to **dira.cma.gov.il** - the CMA official home insurance calculator. It compares insurers' prices for structure (mivne), contents (tchula), or both together
 2. The prices it shows are based on the standard home insurance policy (polisa tiknit), so treat them as a comparison baseline, not a final quote. Extensions, exclusions and the deductible on the policy actually offered can change the price
 
 ### Step 4: Use Private Comparison Platforms
@@ -252,10 +252,10 @@ Result: the user gets a side-by-side comparison of the cheapest 5 mandatory and 
 User says: "The bank says I need home insurance for my mortgage approval. My apartment is 85 sqm in Haifa, built in 2010."
 
 Actions:
-1. Explain the two components: mivne (structure) for the bank, tochen (contents) for personal protection
+1. Explain the two components: mivne (structure) for the bank, tchula (contents) for personal protection
 2. Establish the rebuild value (erech kinun). This is a valuation, not a rule of thumb: ask the insurer for its current rebuild-cost-per-sqm assumption, or commission a shamai. Do not settle on a per-sqm figure from memory, understating it triggers exactly the proportional reduction (klal yachasi) flagged below
 3. Note that the bank needs the policy assigned (meshuabed) to them as beneficiary
-4. Compare quotes from Harel, Migdal, Clal, Phoenix, and Menora via Shukabit
+4. Take the standard-policy baseline from dira.cma.gov.il, then compare quotes from Harel, Migdal, Clal, Phoenix, and Menora via Shukabit
 5. Check if the mortgage bank has a preferred insurer (sometimes offers discounted rates)
 6. Verify earthquake coverage has not been waived (normally included in a structure policy unless the owner opted out, provided by the insurer, not a central pool), and ask what the separate earthquake deductible is as a percentage of the sum insured
 7. Prompt the user to value their own contents, rather than assuming a typical household inventory
