@@ -91,6 +91,10 @@ Start with official government calculators for unbiased baseline pricing:
    - **Everyone else**: skip it. The numbers shown are not purchasable by them. Makif is fully market-priced (wide variance driven by underwriting), so real makif numbers come only from the private platforms or a direct insurer quote.
 3. Compare deductible amounts (hashtatfut atzmit) across insurers
 
+**For home insurance (bituach dira):**
+1. Navigate to **dira.cma.gov.il** - the CMA official home insurance calculator. This is the first stop for comparing home insurance: it compares insurers' prices for structure (mivne), contents (tchula), or structure and contents together
+2. The prices it shows are based on the standard home insurance policy (polisa tiknit), so treat them as a comparison baseline, not a final quote. Extensions, exclusions and the deductible on the policy actually offered can change the price
+
 ### Step 4: Use Private Comparison Platforms
 
 After getting the government baseline, check private platforms for potentially better deals. Tell the user how each platform is paid before they weigh its recommendation: some of these trade as licensed insurance agencies and earn commission on a sale, which is legitimate but is not neutrality. Where a platform's own site states its status, quote that; where it does not, say the arrangement is undisclosed rather than implying independence.
@@ -294,6 +298,7 @@ The kupot-channel long-term-care market is mid-transition and any 2026 compariso
 | Source | URL | What to Check |
 |--------|-----|---------------|
 | CMA hova tariff calculator | https://car.cma.gov.il/ | The regulated hova tariff, the vehicle types priced (incl. motorcycle), and the carrier list that HaPool heads |
+| CMA home insurance calculator | https://dira.cma.gov.il/ | Structure, contents, and structure-plus-contents prices by insurer, based on the standard policy |
 | Har HaBituach (CMA) | https://harb.cma.gov.il/ | Existing policies and premiums, duplicate-cover alerts, and your motor-property insurance history |
 | CMA Service Index | https://www.gov.il/he/pages/service_index_all | Which year's index is the latest published, and insurer service rankings |
 | CMA public enquiries | https://pe.cma.gov.il/ | How to file a complaint against an insurer |
