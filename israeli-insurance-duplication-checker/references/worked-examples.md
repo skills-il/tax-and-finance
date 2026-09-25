@@ -17,7 +17,7 @@ Tiering (Step B), splitting the individual policy into its benefit heads:
 | User | Individual policy, ניתוחים בחו"ל / השתלות | שיפוי | part of 214 | nothing | No | NOT A DUPLICATION |
 | User | Individual policy, מחלות קשות rider | פיצוי | part of 214 | nothing held | No | LEGITIMATE STACKING |
 | User | Employer group ניתוחים | שיפוי | 31 | rows 1, 2 | Group cover, ends with the job | CAPPED |
-| User | Group סיעוד (kupa) | פיצוי at home / שיפוי in institution | 44 | nothing held | Group, not underwritten | LEGITIMATE STACKING |
+| User | Group סיעוד (kupa) | פיצוי at home / שיפוי in institution | 44 | nothing held | Group, underwritten and age-tiered at first joining: not freely reversible | LEGITIMATE STACKING |
 
 What the agent should say. The 2013 purchase date means the שקל ראשון reform never touched this individual policy, and group cover updates only every few years, so the employer layer is very likely still first-shekel too. Confirm the employer policy rather than assuming, but this user is squarely in the population the reform left duplicating. Three separate שיפוי layers are stacked on one surgery, and the user can only recover the actual cost once. The catastrophic tail in row 3 is genuinely additional and must not be cut. Row 4 stacks and is not waste. Cut order is driven by the reversible column, not by premium: the employer row costs least and vanishes with the job anyway; the שב"ן row is the only one that can be re-bought, and the 2013 individual policy is the one that can never be replaced. Deliverable 2 puts the "what does row 2 add over rows 1 and 5" question to the insurer in writing before anything is cancelled.
 
@@ -48,8 +48,8 @@ Dani and Maya, two earners, two children aged 9 and 14, one mortgaged flat. Step
 | Dani | Standalone צד ג' bought separately | נכס/אחריות | 95 | row 1 | Yes, annual policy | **REAL WASTE** |
 | Dani + Maya | ביטוח מבנה tied to the mortgage | נכס | 88 | row 4 | Yes, 451 allows cancelling without fee against alternative cover | **REAL WASTE** |
 | Dani + Maya | מבנה section of a separate ביטוח דירה | נכס | included | row 3 | Yes | CAPPED |
-| Children (both) | Group dental via Dani's employer | שיפוי | 62 | rows 6, 7 | Group, ends with the job | CAPPED |
-| Children (both) | Group dental via Maya's employer | שיפוי | 58 | rows 5, 7 | Group, ends with the job | **REAL WASTE** |
+| Children (both) | Group dental via Dani's employer | שיפוי | 62 | rows 6, 7 | Group, ends with the job | **REAL WASTE** |
+| Children (both) | Group dental via Maya's employer | שיפוי | 58 | rows 5, 7 | Group, ends with the job | CAPPED |
 | Children (both) | Basket dental, both children under 18 | n/a, public | 0 | rows 5, 6 | n/a | NOT A DUPLICATION |
 | Children (both) | ביטוח תאונות אישיות לתלמידים (compulsory) | פיצוי | 69/yr each | row 9 | n/a, statutory | NOT A DUPLICATION |
 | Child (14) | Private personal-accident rider | פיצוי | 29 | row 8 | Underwritten | LEGITIMATE STACKING |
@@ -60,5 +60,6 @@ What this shows that examples 1 and 2 do not:
 - **Rows 3 and 4 are the mortgage overlap**, and the cut order is decided by the Reversible column, not by premium: Directive 451 lets the borrower cancel the bank-linked policy without any fee against alternative cover naming the bank as irrevocable beneficiary, so that is the layer that moves. Get the bank's written consent to release the charge BEFORE sending anything.
 - **Rows 5 to 7 are invisible from either parent's file alone.** The children are enrolled on both employers' dental plans, and dental is שיפוי, so the second plan recovers nothing beyond the actual invoice. Both children are also under 18, so the basket already covers general dental care with a small co-payment. Cut the more expensive of the two group plans, keep one, and only then ask whether either is worth its premium at all.
 - **Row 9 stacks and stays.** Fixed-sum cover pays cumulatively, so the private rider is not waste. But the parent should be told what row 8 already buys, 24/7 and anywhere in the country, before renewing it.
+- **Life cover across the two files is the false positive to avoid.** Suppose Dani's employer carries group life cover on Dani, and the mortgage file shows a life policy on Maya with the bank as irrevocable beneficiary. Read side by side they look like "two life policies", and an agent skimming both files will call one redundant. They are not: each insures a different life, and even two life policies on the SAME person are fixed-sum cover that pays cumulatively under ס' 54(א). Verdict: NOT A DUPLICATION. The mortgage policy may still be worth re-pricing under Directive 451, but that is a price question, not a duplication.
 
 Gaps found (deliverable 3): no סיעוד cover for either adult, and no אכ"ע identified for Maya. Name both as absences; recommend no product.

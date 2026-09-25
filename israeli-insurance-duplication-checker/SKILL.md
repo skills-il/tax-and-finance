@@ -1,6 +1,6 @@
 ---
 name: israeli-insurance-duplication-checker
-description: "Not insurance advice and not insurance marketing. Audits the insurance an Israeli household already pays for, across health, long-term care, dental, disability, life, personal accident, motor, home, mortgage, travel and service riders, and separates real duplication from cover that legitimately stacks. Use when a user asks whether they are paying twice for insurance, wants to cut insurance costs, mentions כפל ביטוחי, holds a שב\"ן plan alongside a private health policy, has surgery cover through an employer or professional group, pays for a private ביטוח סיעודי next to the kupa group policy, wonders whether a private אכ\"ע policy is redundant next to the pension fund, or asks which policy to cancel first. Do NOT use for comparing or buying new policies (israeli-insurance-comparator), for co-pays and costs inside the public health system (israeli-hmo-navigator), or for the pension savings product itself (israeli-pension-advisor)."
+description: "Not insurance or pension advice and not insurance or pension marketing. Audits the insurance an Israeli household already pays for, across health, long-term care, dental, disability, life, personal accident, motor, home, mortgage, travel and service riders, and separates real duplication from cover that legitimately stacks. Use when a user asks whether they are paying twice for insurance, wants to cut insurance costs, mentions כפל ביטוחי, holds a שב\"ן plan alongside a private health policy, has surgery cover through an employer or professional group, pays for a private ביטוח סיעודי next to the kupa group policy, wonders whether a private אכ\"ע policy is redundant next to the pension fund, or asks which policy to cancel first. Do NOT use for comparing or buying new policies (israeli-insurance-comparator), for co-pays and costs inside the public health system (israeli-hmo-navigator), or for the pension savings product itself (israeli-pension-advisor)."
 license: MIT
 ---
 
@@ -8,7 +8,7 @@ license: MIT
 
 ## Legal notice
 
-This skill is not insurance advice (ייעוץ ביטוחי) and not insurance marketing (שיווק ביטוחי), and it is not delivered by a licensed agent, advisor or marketer. It maps cover the user already holds and explains the statutory rules that decide whether two policies can pay twice for the same event. It does not recommend buying, replacing or surrendering a named product, does not exercise professional discretion, and does not replace a licensed agent or advisor, the insurer, or the kupat cholim. Nothing here is legal advice. Cancelling underwritten cover is irreversible in practice: state the conclusion, then tell the user to confirm it with the insurer or a licensed agent, and never let them cancel before replacement cover is confirmed active.
+This skill is a free information tool operated by an AI model. It is not insurance advice (ייעוץ ביטוחי), insurance marketing (שיווק ביטוחי), pension advice (ייעוץ פנסיוני) or pension marketing (שיווק פנסיוני), and no licensed agent, advisor or marketer is involved. It maps cover the user already holds, explains the statutory rules that decide whether two policies pay twice, and helps the user spot overlaps; whether to keep, cut or cancel anything is the user's own decision. It does not recommend buying a product, and what it says about cover inside a pension fund or ביטוח מנהלים is not a personal recommendation about any pension product. An AI model may err, omit data or reach a wrong conclusion. It "אינו מהווה תחליף לייעוץ המתחשב בנתונים ובצרכים המיוחדים של כל אדם", and relying on it is the user's sole responsibility. Nothing here is legal advice. Cancelling underwritten cover is irreversible in practice: confirm with the insurer, the fund or a licensed agent or advisor, and never cancel before replacement cover is active.
 
 ## Problem
 
@@ -30,7 +30,7 @@ A line with more than one benefit head splits into one row per benefit, each tie
 
 The statutory mechanics behind the table, which the agent should be able to state when challenged, are in `references/line-by-line-detail.md`: ס' 59 is asset-bound and is the ביטוח כפל provision (not ס' 56), extended to liability by ס' 67 and made non-derogable by ס' 64; ס' 54(ב) does NOT import ס' 59 into loss-based health cover, so what caps it is ס' 56(א); and ס' 54(א) routes fixed-sum cover to פרק ב', which has no כפל provision and no indemnity ceiling.
 
-## The safe-cut rule (the organising principle of every recommendation)
+## The safe-cut rule (the organising principle of every verdict)
 
 Cancel only the layer the user can BUY BACK.
 
@@ -49,7 +49,7 @@ Ask for, or have the user pull:
 1. הר הביטוח, the personal insurance file, from the ONLY official domain: `harb.cma.gov.il`, through the government identification system. It shows life, health, disability, motor and home policies, and also the insurer-issued כתבי שירות attached to them: "כל פוליסות הביטוח וכתבי השירות... כולל הפרמיה המשולמת". A product there is "פוליסת ביטוח או כתב שירות", so do not treat the service riders as invisible. The file is per-policyholder, so a spouse's policies will not appear.
    **It also opens "תיק ביטוחים על שם קטין" (where the children's riders from item 7 sit), "תיק ביטוחים על שם קרוב שנפטר" (the ריסק and mortgage-life lines), "תיק ביטוחים על שם אדם שתחת אפוטרופסות", and an authorised-agent view.** Ask which applies before calling a household line uninsured; a spouse still pulls their own file.
 2. המסלקה הפנסיונית, for what sits INSIDE the pension products: which bodies hold accounts, and the אכ"ע and שאירים cover attached to each. הר הביטוח does not open the pension savings products, so Step D cannot be answered without this. The official operator is `swiftness.co.il`, "האתר הרשמי של המסלקה הפנסיונית". An account is free and each request carries a small statutory fee. Do not quote a figure: the operator's own FAQ gives two amounts for the same one-off all-products request, "20 ₪ (כולל מע\"מ)" and "14 ש\"ח". Say it is a few shekels and to read the tariff shown at the point of request. The clearing house warns of "נסיונות להתחזות לגורמים מטעם המסלקה הפנסיונית", so treat any other site offering a free report as you treat the fake הר הביטוח domains.
-3. The kupa's personal area, for the שב"ן plan and tier, AND for the group ביטוח סיעודי, which is arranged by the kupa and will not appear in הר הביטוח either.
+3. The kupa's personal area, for the שב"ן plan and tier. The group ביטוח סיעודי is different: the insurer reports it to הר הביטוח layer by layer (reported since 1.1.2018, by layer since 1.6.2021), so check the file first.
 4. Payslip and the employer's benefits page, for group health, group אכ"ע, group dental, and any employer-bundled service plan.
 5. Credit-card benefit pages for every card held.
 6. Bank and card statements, scanned for small recurring charges: towing, home trades, windscreen, gadget cover, roadside subscriptions. The cheapest wins live here and no register lists them.
@@ -62,7 +62,7 @@ Use the table above, labelling each benefit שיפוי, פיצוי or נכס/א�
 
 ### Step C. Health
 
-Handle the reform correctly, because most secondary sources do not. It took effect in **June 2024**; February 2016 is only the purchase-date cutoff, so never call it a 2016 event. It applied to פוליסות פרט only, and the reversal window ran to 31 May 2025, though some insurers extended theirs, so check rather than assume it closed. **The GROUP market was affected far less and with delay**, because group policies update only every few years, so much group surgery cover is still מהשקל הראשון. Do NOT say group policies were never converted; have the user check. Anyone who bought individually before February 2016 was not caught either. Those two populations are this skill's core audience, so ask whether the policy is individual or group and when it was bought. Group cover also has a five-year statutory limit and a conversion right on leaving without fresh underwriting or אכשרה, at a far higher individual premium. Detail in `references/line-by-line-detail.md`.
+Handle the reform correctly, because most secondary sources do not. It took effect in **June 2024**; February 2016 is only the purchase-date cutoff, so never call it a 2016 event. It applied to פוליסות פרט only, and the reversal window ran to 31 May 2025, though some insurers extended theirs, so check rather than assume it closed. **The GROUP market was affected far less and with delay**, because group policies update only every few years, so much group surgery cover is still מהשקל הראשון. Do NOT say group policies were never converted; have the user check. Anyone who bought individually before February 2016 was not caught either. Those two populations are this skill's core audience, so ask whether the policy is individual or group and when it was bought. Detail in `references/line-by-line-detail.md`.
 
 Overlap by layer, once the track is known:
 
@@ -98,9 +98,9 @@ Almost every household has this and most do not know its shape. Ask even if the 
 
 Three things users conflate: **גמלת סיעוד from ביטוח לאומי** (statutory, under חוק הביטוח הלאומי פרק י', income-tested at household level, not a policy); **the kupa group policy** (the two-tier benefit above, under the 2015 group-LTC regulations and חוזר ביטוח 2016-1-3, bought "נוסף על גמלת הסיעוד של בט\"ל"); and **a legacy private policy**, held by about a million Israelis, "אשר נרכשו בעבר ואינם נמכרים יותר בשוק".
 
-That last sentence is the whole verdict. **An individual סיעוד policy cannot be repurchased at any price, because the product is no longer sold at all.** Not merely underwritten cover a sick user might fail to re-buy: a healthy user could not re-buy it either. Never put a legacy private סיעוד policy at the top of a cut list. Where group and private genuinely overlap and one must go, the reversible layer is the group one, because kupa membership is not underwritten.
+That last sentence is the whole verdict. **An individual סיעוד policy cannot be repurchased at any price, because the product is no longer sold at all.** Not merely underwritten cover a sick user might fail to re-buy: a healthy user could not re-buy it either. Never put a legacy private סיעוד policy at the top of a cut list. **The kupot group policy is not a free layer either.** Joining is "בכפוף לבדיקת מצבך הרפואי", and the benefit is fixed by age at FIRST joining: at home 5,000 / 4,100 / 3,200 and in an institution 10,000 / 6,500 / 4,500 a month, for a first join up to 49 / 50-59 / 60+. A member who leaves may be refused, or return on a lower tier. Since December 2023 the insurer carries no insurance risk: claims come only from the members' fund, which can run down. Where group and private genuinely overlap, neither layer is freely reversible, so keep both unless the insurer confirms re-entry terms in writing.
 
-Two things NOT to say: that the group policy is being wound up on a stated date (a January 2025 draft proposed it, never issued, dropped), and that גמלת סיעוד does or does not offset a policy payout, which the sources do not settle. Instead treat the arrangement as operating and send the user to confirm its status and their tier with their kupa. Scale figures and statutory hooks are in `references/line-by-line-detail.md`.
+Two things NOT to say: that the group policy is being wound up on a stated date (the January 2025 draft dates were withdrawn), and that גמלת סיעוד does or does not offset a policy payout, which the sources do not settle. Instead treat the arrangement as operating and send the user to confirm its status and their tier with their kupa. Scale figures and statutory hooks are in `references/line-by-line-detail.md`.
 
 ### Step E. Motor, home, mortgage and the service riders
 
@@ -115,11 +115,7 @@ Two things NOT to say: that the group policy is being wound up on a stated date 
 
 ### Step F. Travel
 
-- **Charging the trip to the card is generally not a condition on Israeli cards**, unlike the US and UK model. Treat that as a default, not a universal, and confirm it on the card.
-- Most Israeli cards give a DISCOUNT, not embedded cover, and anything not embedded needs activation before EVERY trip. The classic failure is assuming the card covers you and never activating it.
-- The six-month pre-existing-condition exclusion is regulatory, not underwriter discretion.
-- A standalone policy is genuinely needed on top of a card benefit for pre-existing conditions, pregnancy, extreme sports, long trips, ביטול נסיעה for non-medical reasons, high-value gear, and age 80 and over.
-- Do not invent per-card specifics; send the user to their card's benefit page. Travel policies do not appear in הר הביטוח. Detail in `references/line-by-line-detail.md`.
+Most Israeli card benefits are a discount that must be activated before EVERY trip, not embedded cover, and paying for the trip with the card is generally not a condition. Never invent card specifics; send the user to the card's benefit page. A standalone policy is still needed for pre-existing conditions (a regulatory six-month exclusion), pregnancy, extreme sports, long trips, non-medical ביטול נסיעה, high-value gear and age 80+. Trip policies of three months or less never reach הר הביטוח. Detail in `references/line-by-line-detail.md`.
 
 ### Step G. The ותק and אכשרה trap, before anyone cancels anything
 
@@ -166,12 +162,12 @@ Three end-to-end worked audits, with the map filled in and the arithmetic done, 
 
 | File | When to use it |
 |---|---|
-| `references/domain-checklist.md` | The coverage contract: tier rule, the audience the reform left behind, non-negotiables, and the do-not-assert list. Read before adding any figure. |
-| `references/worked-examples.md` | Three end-to-end audits with the map filled in and the אכ"ע arithmetic done. Read before producing a first map. |
-| `references/line-by-line-detail.md` | Long-form detail behind Steps C to H: statutory mechanics, the reform, אכ"ע offset wording, the סיעוד instruments, mortgage, travel, cancellation, map schema. |
-| `references/claims-and-escalation.md` | Full ס' 31 wording, the complaints route and the tolling analysis behind Step I. |
-| `references/reference-links.md` | The full source table with what each one settles. |
-| `references/cancellation-letter-he.md` | Deliverable 4 only. Hebrew cancellation template, pre-send checks, the שב"ן caveat, the mortgage irrevocable-beneficiary warning. Never emit for an unverified line. |
+| `references/domain-checklist.md` | Coverage contract and do-not-assert list. Read before adding any figure. |
+| `references/worked-examples.md` | Three filled-in audits. Read before a first map. |
+| `references/line-by-line-detail.md` | Detail behind Steps C to H and the map schema. |
+| `references/claims-and-escalation.md` | ס' 31 wording and the complaints route (Step I). |
+| `references/reference-links.md` | Full source table. |
+| `references/cancellation-letter-he.md` | Deliverable 4 only, never for an unverified line. |
 
 ## Recommended MCP Servers
 
@@ -191,7 +187,7 @@ These are agent failure modes, not user mistakes.
 
 1. **Treating every overlap as waste.** The most expensive error runs toward cancelling. Fixed-sum cover stacks by law, so a standalone ריסק plus a mortgage life policy plus שאירים in the pension all pay on the same death. Run the three-tier test before writing a single verdict.
 2. **Sending the user to the wrong הר הביטוח.** The only official domain is `harb.cma.gov.il`. Lookalikes exist (`harhabituach.org`, `harhabituach.co.il`, `har-bituach.org.il`); none is the government service, and `.org.il` is not a mark of a public body. The register is a last-month snapshot and its duplicate alert is not dispositive, so a missing alert is no evidence either way.
-3. **Assuming הר הביטוח is complete, or emptier than it is.** Missing: שב"ן data, סיעוד, travel policies, standalone service-company subscriptions, card benefits, and policies held by anyone but the בעל הפוליסה. Present, and routinely written off by mistake: the insurer-issued כתבי שירות, with the premium paid, which is why Step E starts from the file. Group cover is excluded only where the employer funds the entire premium AND the policy is written למבוטח לא מסוים, so the blanket claim that employer policies are absent is wrong.
+3. **Assuming הר הביטוח is complete, or emptier than it is.** Missing: שב"ן data, trip policies of three months or less, standalone service-company subscriptions, card benefits, and policies held by anyone but the בעל הפוליסה. Present, and routinely written off by mistake: the kupot group סיעוד, and the insurer-issued כתבי שירות with the premium paid, which is why Step E starts from the file. Excluded, among others: employer-funded health cover written למבוטח לא מסוים or inside a business package, and certain approved or pre-2006 group life policies.
 4. **Cancelling before the replacement is active, or cutting the underwritten layer first.** שב"ן must re-accept the user; a private policy will not, and a legacy private סיעוד policy cannot be re-bought at all. If unsure which layer is reversible, stop and ask.
 5. **Treating every fixed-sum line as sacred.** The mirror of Gotcha 1, costing money in the other direction. "It stacks, leave it alone" answers an agent trying to cancel a ריסק; it is not an audit. Two מחלות קשות policies with near-identical condition lists are a price comparison, not untouchable assets, and שאירים cover for a member with no שאירים buys a benefit that can never be paid. Run the argument both ways before writing LEGITIMATE STACKING.
 6. **Assigning a tier to a policy instead of a benefit.** A line with two benefit heads gets two rows. The group סיעוד policy pays פיצוי at home and שיפוי in an institution, so one verdict on it is wrong in one of the two worlds.
@@ -207,9 +203,7 @@ These are agent failure modes, not user mistakes.
 
 **The user wants past premiums refunded.** There is no retroactive refund duty for cover the user chose. The ס' 59(ב) reduction is prospective. Set the expectation before they make a demand they will lose.
 
-**Employer cover is about to end.** Raise the conversion right to an individual policy without fresh underwriting, flag that the individual premium is typically far above the subsidised group rate, and have them ask the insurer for the exact window rather than a number from this skill.
-
-**The user asks whether to cancel a private ביטוח סיעודי.** Establish first whether it is the kupa group policy or a legacy individual one. An individual policy cannot be repurchased at all, so it never tops a cut list. Split the row before judging it: the group benefit is פיצוי at home and שיפוי in an institution, two tiers, not one.
+**The user asks whether to cancel a private ביטוח סיעודי.** Establish first whether it is the kupa group policy or a legacy individual one. An individual policy cannot be repurchased at all, so it never tops a cut list; the group policy is underwritten and age-tiered at first joining, so it is not freely reversible either. Split the row before judging it: the group benefit is פיצוי at home and שיפוי in an institution, two tiers, not one.
 
 **The insurer refuses, or the two sides have corresponded for months.** The supervisor investigates conduct complaints through the authority's portal, but not a matter already before a court or arbitrator. Warn about the clock: three years, five for חיים, מחלות ואשפוז and סיעוד, and lodging the claim does not stop it running. Close to the deadline the next step is legal advice on timing, not another letter.
 

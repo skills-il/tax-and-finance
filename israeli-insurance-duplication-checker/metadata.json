@@ -4,8 +4,8 @@
     "en": "Israeli Insurance Duplication Checker"
   },
   "display_description": {
-    "he": "אינו ייעוץ ביטוחי ואינו שיווק ביטוחי. עושה סדר בביטוחים שכבר משלמים עליהם, ומראה איפה משלמים פעמיים על כיסוי שאפשר לממש רק פעם אחת, ואיפה דווקא כדאי להשאיר את שתי הפוליסות.",
-    "en": "Not insurance advice and not insurance marketing. Audits the insurance you already pay for and shows where you are charged twice for cover you can only collect once, and where two policies legitimately stack."
+    "he": "אינו ייעוץ ביטוחי או פנסיוני ואינו שיווק ביטוחי או פנסיוני. עושה סדר בביטוחים שכבר משלמים עליהם, ומראה איפה משלמים פעמיים על כיסוי שאפשר לממש רק פעם אחת, ואיפה דווקא כדאי להשאיר את שתי הפוליסות.",
+    "en": "Not insurance or pension advice and not insurance or pension marketing. Audits the insurance you already pay for and shows where you are charged twice for cover you can only collect once, and where two policies legitimately stack."
   },
   "tags": {
     "he": [
@@ -20,7 +20,7 @@
     ]
   },
   "author": "skills-il",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "category": "tax-and-finance",
   "supported_agents": [
     "claude-code",

@@ -48,9 +48,12 @@ policy rather than being told a categorical rule.
   two exceptions that still need an audit: near-identical מחלות קשות condition
   lists (compare and cut on price), and שאירים cover for a member with no
   שאירים (a waiver exists, but re-adding it permits medical underwriting).
-- הר הביטוח holds no שב"ן data, no סיעוד, no standalone service-company
+- הר הביטוח holds no שב"ן data, no travel policy of three months or less, no standalone service-company
   subscriptions and no card benefits. It DOES list the insurer-issued כתבי שירות
   next to the policies, with the premium paid, so audit those from the file.
+  It also carries the kupot group סיעוד, reported since 1.1.2018 and layer by layer
+  since 1.6.2021
+  (חוזר 2021-1-3); an older version of this skill said the opposite.
   It also opens files for a minor, a deceased relative and a person under
   guardianship. The only official domain is `harb.cma.gov.il`. The pension internals
   come from המסלקה הפנסיונית instead, at `swiftness.co.il`.
@@ -93,8 +96,11 @@ These were searched for this cycle and NOT established. Do not fill from memory.
 - Any date on which the kupot group סיעוד policy stops being sold or operated.
   A Ministry of Health draft letter of January 2025 proposed 1.7.2025 and
   1.1.2026; it never issued in final form, was not coordinated with the insurance
-  regulator, and was dropped. The June 2026 State Comptroller report treats the
-  arrangement as operating.
+  regulator. In September 2025 the Ministry withdrew those dates; its director-general
+  told the Knesset Health Committee he still wanted the kupot out by the end of
+  2026 (as reported by Calcalist, 7.9.2025; not a decision). The June 2026 State
+  Comptroller report treats the arrangement as operating, and Clalit's own page
+  gives its current policy term as running to 31.12.2026.
 - Whether receiving גמלת סיעוד from ביטוח לאומי offsets a policy payout.
 - Any successor arrangement to the group סיעוד policy.
 - That GROUP health policies were never auto-converted by the שקל ראשון reform.
@@ -105,8 +111,10 @@ These were searched for this cycle and NOT established. Do not fill from memory.
   their own card's benefit page.
 - A single fee figure for a מסלקה request: the operator's own FAQ gives both
   20 ₪ and 14 ש"ח for the same one-off all-products request.
-- Any reported cut to the at-home סיעוד benefit, or any change to the ADL
-  threshold. Single-sourced to press and law-firm material only.
+- Any reported cut to the at-home סיעוד benefit beyond what the June 2026
+  Comptroller report states. The ADL threshold IS now sourced there (4 of 6, or 3
+  including continence, from December 2024) and may be stated; other eligibility
+  routes may not.
 - A circular number or effective date for a תאונות אישיות uniform-policy reform.
 - The group-to-individual conversion window and terms, any retroactive premium
   refund for שב"ן-duplicating cover, and any group-health specific כפל rule.

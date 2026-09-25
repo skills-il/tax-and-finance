@@ -278,28 +278,6 @@
       "confidence": "high"
     },
     {
-      "id": "pupils-accident-24-7",
-      "claim": "The pupils' personal-accident policy covers injury anywhere in Israel at any hour, whether or not connected to school activity",
-      "claim_type": "policy-term",
-      "source_url": "https://meyda.education.gov.il/files/bituach/Personal-accidents/insurance_policy_2025-26.pdf",
-      "source_fetched_at": "2026-08-13T14:00:00Z",
-      "raw_snippet": "היזק גופני שאירע במקום כלשהו בשטח מדינת ישראל",
-      "verified_via": "pdf",
-      "verified_at": "2026-08-13T14:00:00Z",
-      "confidence": "high"
-    },
-    {
-      "id": "pupils-accident-premium-69",
-      "claim": "The 2025/26 pupils' personal-accident policy carries a premium of 69 NIS, listed as item 10 of the policy summary, with no deductible",
-      "claim_type": "amount",
-      "source_url": "https://meyda.education.gov.il/files/bituach/Personal-accidents/insurance_policy_2025-26.pdf",
-      "source_fetched_at": "2026-08-13T14:00:00Z",
-      "raw_snippet": "₪ 69 .10סכום הפרמיה",
-      "verified_via": "pdf",
-      "verified_at": "2026-08-13T14:00:00Z",
-      "confidence": "high"
-    },
-    {
       "id": "limitation-three-years",
       "claim": "The limitation period for an insurance-benefits claim is three years from the insured event",
       "claim_type": "law",
@@ -693,19 +671,384 @@
     },
     {
       "id": "pupils-policy-2026-27",
-      "claim": "The compulsory pupils' personal-accident policy for 2026/27 runs 1.9.2026 to 31.8.2027, premium 69 NIS, no deductible, covering the child anywhere in Israel at any hour",
+      "claim": "The compulsory pupils' personal-accident policy for 2026/27 runs 1.9.2026 to 31.8.2027",
       "claim_type": "fact",
       "source_url": "https://meyda.education.gov.il/files/bituach/Personal-accidents/insurance_policy_2026-27.pdf",
-      "source_fetched_at": "2026-09-20T00:00:00Z",
-      "fetched_at": "2026-09-20T00:00:00Z",
-      "raw_snippet": "תקופת הביטוח: 1.9.2026 – 31.8.2027 ... 10. סכום הפרמיה ₪ 69 ... השתתפות עצמית אין ... היזק גופני שאירע במקום כלשהו בשטח מדינת ישראל והשטחים המוחזקים, בכל שעה משעות היממה בין שיש לה קשר לפעילות המוסד החינוכי ובין אם לא",
+      "source_fetched_at": "2026-09-25T00:00:00Z",
+      "fetched_at": "2026-09-25T00:00:00Z",
       "appears_in": [
         "references/line-by-line-detail.md",
         "references/line-by-line-detail-he.md",
         "references/reference-links.md",
         "references/reference-links-he.md"
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "raw_snippet": "1.9.2026 – 31.8.2027 תקופת הביטוח:"
+    },
+    {
+      "id": "pupils-policy-2026-27-premium",
+      "claim": "The 2026/27 pupils' personal-accident policy premium is 69 NIS",
+      "claim_type": "fact",
+      "source_url": "https://meyda.education.gov.il/files/bituach/Personal-accidents/insurance_policy_2026-27.pdf",
+      "source_fetched_at": "2026-09-25T00:00:00Z",
+      "fetched_at": "2026-09-25T00:00:00Z",
+      "appears_in": [
+        "references/line-by-line-detail.md",
+        "references/line-by-line-detail-he.md",
+        "references/reference-links.md",
+        "references/reference-links-he.md"
+      ],
+      "confidence": "high",
+      "raw_snippet": "₪ 69 .10 סכום הפרמיה"
+    },
+    {
+      "id": "pupils-policy-2026-27-deductible",
+      "claim": "The 2026/27 pupils' personal-accident policy has no deductible",
+      "claim_type": "fact",
+      "source_url": "https://meyda.education.gov.il/files/bituach/Personal-accidents/insurance_policy_2026-27.pdf",
+      "source_fetched_at": "2026-09-25T00:00:00Z",
+      "fetched_at": "2026-09-25T00:00:00Z",
+      "appears_in": [
+        "references/line-by-line-detail.md",
+        "references/line-by-line-detail-he.md",
+        "references/reference-links.md",
+        "references/reference-links-he.md"
+      ],
+      "confidence": "high",
+      "raw_snippet": "אין השתתפות עצמית .8"
+    },
+    {
+      "id": "pupils-policy-2026-27-anywhere",
+      "claim": "The pupils' policy covers the child anywhere in Israel at any hour, whether or not connected to school activity",
+      "claim_type": "fact",
+      "source_url": "https://meyda.education.gov.il/files/bituach/Personal-accidents/insurance_policy_2026-27.pdf",
+      "source_fetched_at": "2026-09-25T00:00:00Z",
+      "fetched_at": "2026-09-25T00:00:00Z",
+      "appears_in": [
+        "references/line-by-line-detail.md",
+        "references/line-by-line-detail-he.md",
+        "references/reference-links.md",
+        "references/reference-links-he.md"
+      ],
+      "confidence": "high",
+      "raw_snippet": "היזק גופני שאירע במקום כלשהו בשטח מדינת ישראל"
+    },
+    {
+      "id": "harb-group-ltc-reported-from-2018",
+      "claim": "Insurers must report the kupot group LTC policy to הר הביטוח from 1 January 2018 (circular 2016-1-17 as amended by 2021-1-3).",
+      "claim_type": "fact",
+      "confidence": "high",
+      "source_fetched_at": "2026-09-25T00:00:00Z",
+      "fetched_at": "2026-09-25T00:00:00Z",
+      "source_url": "https://www.gov.il/BlobFolder/dynamiccollectorresultitem/2021-1-3/he/%D7%9E%D7%9E%D7%A9%D7%A7%20%D7%90%D7%99%D7%A0%D7%98%D7%A8%D7%A0%D7%98%D7%99%20%D7%9C%D7%90%D7%99%D7%AA%D7%95%D7%A8%20%D7%9E%D7%95%D7%A6%D7%A8%D7%99%20%D7%91%D7%99%D7%98%D7%95%D7%97.pdf",
+      "raw_snippet": "תחילתן של הוראות חוזר זה לעניין ביטוח סיעודי קבוצתי שנערך לחברי קופות חולים, ביום 1",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "id": "harb-ltc-detail-displayed",
+      "claim": "הר הביטוח displays the LTC benefit amount, benefit period and surrender values; group LTC is reported per layer.",
+      "claim_type": "fact",
+      "confidence": "high",
+      "source_fetched_at": "2026-09-25T00:00:00Z",
+      "fetched_at": "2026-09-25T00:00:00Z",
+      "source_url": "https://www.gov.il/BlobFolder/dynamiccollectorresultitem/2021-1-3/he/%D7%9E%D7%9E%D7%A9%D7%A7%20%D7%90%D7%99%D7%A0%D7%98%D7%A8%D7%A0%D7%98%D7%99%20%D7%9C%D7%90%D7%99%D7%AA%D7%95%D7%A8%20%D7%9E%D7%95%D7%A6%D7%A8%D7%99%20%D7%91%D7%99%D7%98%D7%95%D7%97.pdf",
+      "raw_snippet": "בהר הביטוח יוצגו נתונים מפורטים לגבי גובה הפיצוי, משך הפיצוי וגובה ערכי הסילוק",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "id": "harb-excludes-under-3-months",
+      "claim": "Insurance products written for three months or less are excluded from הר הביטוח reporting.",
+      "claim_type": "fact",
+      "confidence": "high",
+      "source_fetched_at": "2026-09-25T00:00:00Z",
+      "fetched_at": "2026-09-25T00:00:00Z",
+      "source_url": "https://www.gov.il/BlobFolder/dynamiccollectorresultitem/2021-1-3/he/%D7%9E%D7%9E%D7%A9%D7%A7%20%D7%90%D7%99%D7%A0%D7%98%D7%A8%D7%A0%D7%98%D7%99%20%D7%9C%D7%90%D7%99%D7%AA%D7%95%D7%A8%20%D7%9E%D7%95%D7%A6%D7%A8%D7%99%20%D7%91%D7%99%D7%98%D7%95%D7%97.pdf",
+      "raw_snippet": "מוצרי ביטוח שנערכו לתקופה שאינה עולה על שלושה חודשים",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/domain-checklist.md",
+        "references/line-by-line-detail.md",
+        "references/line-by-line-detail-he.md"
+      ]
+    },
+    {
+      "id": "harb-travel-needs-consent",
+      "claim": "Circular s.2(d): for travel insurance, subject to the policyholder's consent, only the policyholder is treated as the insured. The consent decides whose file shows the policy, not whether it is in scope; travel policies over three months are in scope.",
+      "claim_type": "fact",
+      "confidence": "high",
+      "source_fetched_at": "2026-09-25T00:00:00Z",
+      "fetched_at": "2026-09-25T00:00:00Z",
+      "source_url": "https://www.gov.il/BlobFolder/dynamiccollectorresultitem/2021-1-3/he/%D7%9E%D7%9E%D7%A9%D7%A7%20%D7%90%D7%99%D7%A0%D7%98%D7%A8%D7%A0%D7%98%D7%99%20%D7%9C%D7%90%D7%99%D7%AA%D7%95%D7%A8%20%D7%9E%D7%95%D7%A6%D7%A8%D7%99%20%D7%91%D7%99%D7%98%D7%95%D7%97.pdf",
+      "raw_snippet": "הוראות פסקה זו יחולו על ביטוח נסיעות לחו\"ל בכפוף",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/domain-checklist.md",
+        "references/line-by-line-detail.md",
+        "references/line-by-line-detail-he.md"
+      ]
+    },
+    {
+      "id": "ltc-group-4-of-6-adl",
+      "claim": "From the December 2024 amendment, kupot group LTC eligibility needs inability to perform a material part of at least four of six ADL (previously three).",
+      "claim_type": "fact",
+      "confidence": "high",
+      "source_fetched_at": "2026-09-25T00:00:00Z",
+      "fetched_at": "2026-09-25T00:00:00Z",
+      "source_url": "https://library.mevaker.gov.il/sites/DigitalLibrary/Documents/2026/Population-Aging/2026-Population-Aging-102.pdf",
+      "raw_snippet": "הזכאות תינתן רק למבוטחים שאינם מסוגלים לבצע בכוחות עצמם",
+      "appears_in": [
+        "references/line-by-line-detail.md",
+        "references/line-by-line-detail-he.md"
+      ]
+    },
+    {
+      "id": "ltc-continuation-duty-ends-2027",
+      "claim": "The insurer's duty to join members to a group continuation policy when the kupa policy is not renewed is cancelled from 1.1.2027.",
+      "claim_type": "fact",
+      "confidence": "high",
+      "source_fetched_at": "2026-09-25T00:00:00Z",
+      "fetched_at": "2026-09-25T00:00:00Z",
+      "source_url": "https://library.mevaker.gov.il/sites/DigitalLibrary/Documents/2026/Population-Aging/2026-Population-Aging-102.pdf",
+      "raw_snippet": "צירוף המבוטחים לפוליסת המשך קבוצתית ייכנס לתוקף",
+      "appears_in": [
+        "references/line-by-line-detail.md",
+        "references/line-by-line-detail-he.md"
+      ]
+    },
+    {
+      "id": "clalit-ltc-harel-to-2026",
+      "claim": "Clalit's group LTC policy through Harel was extended for 1.1.2025 to 31.12.2026.",
+      "claim_type": "fact",
+      "confidence": "high",
+      "source_fetched_at": "2026-09-26T00:00:00Z",
+      "fetched_at": "2026-09-26T00:00:00Z",
+      "source_url": "https://mushlam.clalit.co.il/he/gold/siudi/Pages/siudi_info.aspx",
+      "raw_snippet": "תקופת הביטוח החדשה תהיה החל מיום 1.1.2025 (מועד חידוש הפוליסה) ועד ליום 31.12.2026",
+      "appears_in": [
+        "references/line-by-line-detail.md",
+        "references/line-by-line-detail-he.md",
+        "references/domain-checklist.md"
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-09-26"
+    },
+    {
+      "id": "ltc-group-full-amount-under-49",
+      "claim": "The kupot group LTC amounts are paid in full only if the member joined before age 49; later joiners get reduced amounts.",
+      "claim_type": "fact",
+      "confidence": "high",
+      "source_fetched_at": "2026-09-26T00:00:00Z",
+      "fetched_at": "2026-09-26T00:00:00Z",
+      "source_url": "https://library.mevaker.gov.il/sites/DigitalLibrary/Documents/2026/Population-Aging/2026-Population-Aging-102.pdf",
+      "raw_snippet": "סכומים אלו משולמים אם גיל המבוטח במועד ההצטרפות לביטוח היה נמוך מ",
+      "appears_in": [
+        "references/line-by-line-detail.md",
+        "references/line-by-line-detail-he.md"
+      ]
+    },
+    {
+      "id": "ltc-wind-up-ultimatum-withdrawn",
+      "claim": "In September 2025 the Health Ministry DG withdrew the draft ultimatum dates and, as reported by Calcalist, told the Knesset Health Committee the kupot would leave the LTC field by end-2026 (a stated aim, not a decision).",
+      "claim_type": "fact",
+      "confidence": "high",
+      "source_fetched_at": "2026-09-26T00:00:00Z",
+      "fetched_at": "2026-09-26T00:00:00Z",
+      "source_url": "https://www.calcalist.co.il/local_news/article/h1ei0zo9ll",
+      "raw_snippet": "הבהיר כי קופות החולים ייצאו מהתחום עד סוף 2026",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/line-by-line-detail.md",
+        "references/line-by-line-detail-he.md",
+        "references/domain-checklist.md"
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-09-26"
+    },
+    {
+      "id": "ltc-group-underwritten-clalit",
+      "claim": "Joining the kupot group LTC policy (Clalit) is subject to a medical check at joining.",
+      "claim_type": "fact",
+      "confidence": "high",
+      "source_fetched_at": "2026-09-26T00:00:00Z",
+      "fetched_at": "2026-09-26T00:00:00Z",
+      "source_url": "https://mushlam.clalit.co.il/he/gold/siudi/Pages/siudi_info.aspx",
+      "raw_snippet": "ניתן להצטרף לביטוח הסיעודי בכל גיל ובכפוף לבדיקת מצבך הרפואי בעת ההצטרפות",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/line-by-line-detail.md",
+        "references/line-by-line-detail-he.md",
+        "references/worked-examples.md",
+        "references/worked-examples-he.md"
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-09-26"
+    },
+    {
+      "id": "ltc-group-age-tiers",
+      "claim": "Group LTC monthly benefit by age at first joining: at home 5,000 / 4,100 / 3,200; in an institution 10,000 / 6,500 / 4,500 (up to 49 / 50-59 / 60+).",
+      "claim_type": "fact",
+      "confidence": "high",
+      "source_fetched_at": "2026-09-26T00:00:00Z",
+      "fetched_at": "2026-09-26T00:00:00Z",
+      "source_url": "https://mushlam.clalit.co.il/he/gold/siudi/Pages/siudi_info.aspx",
+      "raw_snippet": "תגמול ביטוח חודשי למבוטח השוהה בבית (פיצוי) 5,000 ₪ 4,100 ₪ 3,200 ₪",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/line-by-line-detail.md",
+        "references/line-by-line-detail-he.md",
+        "references/worked-examples.md",
+        "references/worked-examples-he.md"
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-09-26"
+    },
+    {
+      "id": "ltc-group-age-tiers-institution",
+      "claim": "Institution tier amounts 10,000 / 6,500 / 4,500 by age at first joining.",
+      "claim_type": "fact",
+      "confidence": "high",
+      "source_fetched_at": "2026-09-26T00:00:00Z",
+      "fetched_at": "2026-09-26T00:00:00Z",
+      "source_url": "https://mushlam.clalit.co.il/he/gold/siudi/Pages/siudi_info.aspx",
+      "raw_snippet": "תגמול ביטוח חודשי למבוטח השוהה במוסד (שיפוי) * 10,000 ₪ 6,500 ₪ 4,500 ₪",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/line-by-line-detail.md",
+        "references/line-by-line-detail-he.md",
+        "references/worked-examples.md",
+        "references/worked-examples-he.md"
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-09-26"
+    },
+    {
+      "id": "ltc-group-underwritten-comptroller",
+      "claim": "The State Comptroller notes the kupot group LTC policies are underwritten.",
+      "claim_type": "fact",
+      "confidence": "high",
+      "source_fetched_at": "2026-09-26T00:00:00Z",
+      "fetched_at": "2026-09-26T00:00:00Z",
+      "source_url": "https://library.mevaker.gov.il/sites/DigitalLibrary/Documents/2026/Population-Aging/2026-Population-Aging-102.pdf",
+      "raw_snippet": "יצוין כי בפוליסו ת אלו קיים חיתום",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/line-by-line-detail.md",
+        "references/line-by-line-detail-he.md",
+        "references/worked-examples.md",
+        "references/worked-examples-he.md"
+      ]
+    },
+    {
+      "id": "ltc-no-insurer-risk-since-dec-2023",
+      "claim": "Since December 2023 insurers carry no insurance risk on the kupot group LTC funds; members bear the risk the fund is depleted.",
+      "claim_type": "fact",
+      "confidence": "high",
+      "source_fetched_at": "2026-09-26T00:00:00Z",
+      "fetched_at": "2026-09-26T00:00:00Z",
+      "source_url": "https://library.mevaker.gov.il/sites/DigitalLibrary/Documents/2026/Population-Aging/2026-Population-Aging-102.pdf",
+      "raw_snippet": "שחברות הביטוח אינן נושאות",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/line-by-line-detail.md",
+        "references/line-by-line-detail-he.md",
+        "references/worked-examples.md",
+        "references/worked-examples-he.md"
+      ]
+    },
+    {
+      "id": "ltc-adl-continence-alternative",
+      "claim": "Alternatively three ADLs where one is continence.",
+      "claim_type": "fact",
+      "confidence": "high",
+      "source_fetched_at": "2026-09-26T00:00:00Z",
+      "fetched_at": "2026-09-26T00:00:00Z",
+      "source_url": "https://library.mevaker.gov.il/sites/DigitalLibrary/Documents/2026/Population-Aging/2026-Population-Aging-102.pdf",
+      "raw_snippet": "או לחלופין שלוש פעולות כאשר אחת מהן היא שליטה בסוגרים",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/line-by-line-detail.md",
+        "references/line-by-line-detail-he.md",
+        "references/worked-examples.md",
+        "references/worked-examples-he.md"
+      ]
+    },
+    {
+      "id": "ltc-home-personal-care-proof",
+      "claim": "Home-stay claimants must prove they actually receive personal care for most hours of the day.",
+      "claim_type": "fact",
+      "confidence": "high",
+      "source_fetched_at": "2026-09-26T00:00:00Z",
+      "fetched_at": "2026-09-26T00:00:00Z",
+      "source_url": "https://library.mevaker.gov.il/sites/DigitalLibrary/Documents/2026/Population-Aging/2026-Population-Aging-102.pdf",
+      "raw_snippet": "בכפוף להמצאת אישור המוכיח כי המבוטח מסתייע בפועל בטיפול אישי לקבלת שירותי סיעוד",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/line-by-line-detail.md",
+        "references/line-by-line-detail-he.md",
+        "references/worked-examples.md",
+        "references/worked-examples-he.md"
+      ]
+    },
+    {
+      "id": "harb-2021-amendment-in-force",
+      "claim": "Circular 2021-1-3 (per-layer LTC reporting) took effect on 1 June 2021.",
+      "claim_type": "fact",
+      "confidence": "high",
+      "source_fetched_at": "2026-09-26T00:00:00Z",
+      "fetched_at": "2026-09-26T00:00:00Z",
+      "source_url": "https://www.gov.il/BlobFolder/dynamiccollectorresultitem/2021-1-3/he/%D7%9E%D7%9E%D7%A9%D7%A7%20%D7%90%D7%99%D7%A0%D7%98%D7%A8%D7%A0%D7%98%D7%99%20%D7%9C%D7%90%D7%99%D7%AA%D7%95%D7%A8%20%D7%9E%D7%95%D7%A6%D7%A8%D7%99%20%D7%91%D7%99%D7%98%D7%95%D7%97.pdf",
+      "raw_snippet": "תחילתן של הוראות חוזר זה ביום 1 ביוני",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "id": "harb-exclusion-health-employer",
+      "claim": "Excluded from הר הביטוח: health insurance fully funded by the policyholder or employer if written for an unspecified insured or within a business comprehensive policy.",
+      "claim_type": "fact",
+      "confidence": "high",
+      "source_fetched_at": "2026-09-26T00:00:00Z",
+      "fetched_at": "2026-09-26T00:00:00Z",
+      "source_url": "https://www.gov.il/BlobFolder/dynamiccollectorresultitem/2021-1-3/he/%D7%9E%D7%9E%D7%A9%D7%A7%20%D7%90%D7%99%D7%A0%D7%98%D7%A8%D7%A0%D7%98%D7%99%20%D7%9C%D7%90%D7%99%D7%AA%D7%95%D7%A8%20%D7%9E%D7%95%D7%A6%D7%A8%D7%99%20%D7%91%D7%99%D7%98%D7%95%D7%97.pdf",
+      "raw_snippet": "ביטוח בריאות שבעל הפוליסה או המעסיק של המבוטח מממן עבורו את מלוא דמי הביטוח, אם",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "id": "harb-exclusion-group-life",
+      "claim": "Excluded: certain approved group life policies, and group life policies marketed before 1 January 2006 and not renewed.",
+      "claim_type": "fact",
+      "confidence": "high",
+      "source_fetched_at": "2026-09-26T00:00:00Z",
+      "fetched_at": "2026-09-26T00:00:00Z",
+      "source_url": "https://www.gov.il/BlobFolder/dynamiccollectorresultitem/2021-1-3/he/%D7%9E%D7%9E%D7%A9%D7%A7%20%D7%90%D7%99%D7%A0%D7%98%D7%A8%D7%A0%D7%98%D7%99%20%D7%9C%D7%90%D7%99%D7%AA%D7%95%D7%A8%20%D7%9E%D7%95%D7%A6%D7%A8%D7%99%20%D7%91%D7%99%D7%98%D7%95%D7%97.pdf",
+      "raw_snippet": "פוליסות ביטוח חיים קבוצתיות ששווקו לפני",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     }
   ]
 }

@@ -19,13 +19,18 @@ There are three separate things, and users conflate all three:
 2. **The kupa group policy.** Arranged by the kupat cholim as בעלת הפוליסה for its members, under תקנות הפיקוח על שירותים פיננסיים (ביטוח) (ביטוח סיעודי קבוצתי לחברי קופת חולים), התשע"ו-2015 and חוזר ביטוח 2016-1-3. Terms are identical across kupot; the premium varies by kupa and by the insured's age. This is the two-tier benefit described above: פיצוי at home, שיפוי in an institution. These policies are bought "נוסף על גמלת הסיעוד של בט\"ל", not instead of it.
 3. **A legacy private policy.** About a million Israelis hold individual סיעוד cover "אשר נרכשו בעבר ואינם נמכרים יותר בשוק".
 
-That last sentence is the whole verdict. **An individual סיעוד policy cannot be repurchased at any price, because the product is no longer sold at all.** The safe-cut rule is at its absolute sharpest here: this is not merely underwritten cover that a sick user might fail to re-buy, it is cover that a perfectly healthy user could not re-buy either. Never put a legacy private סיעוד policy at the top of a cancellation list. If something has to go and the group and private policies genuinely overlap, the reversible layer is the group one, because kupa membership is not underwritten.
+That last sentence is the whole verdict. **An individual סיעוד policy cannot be repurchased at any price, because the product is no longer sold at all.** The safe-cut rule is at its absolute sharpest here: this is not merely underwritten cover that a sick user might fail to re-buy, it is cover that a perfectly healthy user could not re-buy either. Never put a legacy private סיעוד policy at the top of a cancellation list. The kupot group policy is not a free layer either: joining is "בכפוף לבדיקת מצבך הרפואי" and the benefit is fixed by age at FIRST joining (at home 5,000 / 4,100 / 3,200, in an institution 10,000 / 6,500 / 4,500 a month, for a first join up to 49 / 50-59 / 60+). A member who leaves may be refused or come back on a lower tier, so where group and private genuinely overlap neither layer is freely reversible; keep both unless the insurer confirms re-entry terms in writing.
 
 Scale, for context when a user asks whether this is really worth checking: "שוק הביטוח הסיעודי בישראל כולל כ-5 מיליון מבוטחים בביטוח סיעודי-קבוצתי דרך קופות החולים", about half the population.
 
 Two things NOT to say, because they are widely repeated and this skill does not have them sourced:
 
-- Do NOT tell the user the kupot group policy is being wound up on a stated date. A Ministry of Health draft letter circulated in January 2025 proposed halting new sales and then operation, never issued in final form, was not coordinated with the insurance regulator, and was dropped. Treat the arrangement as operating and tell the user to confirm current status with their kupa.
+- Do NOT tell the user the kupot group policy is being wound up on a stated date. A Ministry of Health draft letter circulated in January 2025 proposed halting new sales and then operation, never issued in final form and was not coordinated with the insurance regulator. In September 2025 the Ministry withdrew those dates; its director-general told the Knesset Health Committee, as reported by Calcalist, that he still wanted the kupot out by the end of 2026. Treat the arrangement as operating and tell the user to confirm current status with their kupa.
+- Where the kupot group policy stands in 2026, as far as this skill can source it:
+  - Eligibility was tightened from December 2024: a claim now needs inability to perform "חלק מהותי של לפחות ארבע מתוך שש פעולות ADL", or three where one is continence ("שלוש פעולות כאשר אחת מהן היא שליטה בסוגרים"), against three of six before. Independent use of aids no longer counts as inability. A claimant living at home must also prove they actually receive personal care for most hours of the day. This skill has not sourced any other eligibility route (for example cognitive frailty, תשישות נפש); check the policy wording rather than assume ADL is the only one.
+  - Since December 2023 the insurer carries no insurance risk: claims are paid only from the kupa's members' fund (קרן המבוטחים), which can be depleted, in which case members may get part of the benefit or none.
+  - The insurer's duty to move members into a group continuation policy if the kupa does not renew is cancelled from 1.1.2027.
+  - Clalit's current policy with הראל runs to 31.12.2026, so a Clalit member may see a different insurer name from 2027: ask the kupa who insures from then, and do not treat a new insurer name as a new or duplicate policy.
 - Do NOT assert that receiving גמלת סיעוד from ביטוח לאומי does or does not reduce a policy payout. The sources establish the two run in parallel; they do not settle the payout interaction. This is a question for the policy wording and the insurer.
 
 
@@ -63,7 +68,7 @@ Two related rules worth surfacing: at the point of sale the insurer must check t
 - The six-month pre-existing-condition exclusion is statutory, not underwriter discretion. It excludes "מחלה שבשלה היה המבוטח בטיפול או בהשגחה בעת צאתו לחוץ לארץ או במשך ששת החדשים שקדמו לצאתו".
 - A standalone policy is genuinely needed on top of a card benefit for: pre-existing conditions, pregnancy, extreme and winter sports, trips longer than the age-banded day caps, ביטול נסיעה for non-medical reasons (absent from every card product examined), high-value gear above the כבודה sub-limits, and ages 80 and over.
 - Do not invent per-card specifics. Give the user a checklist of what to verify on their own card's benefit page.
-- Travel policies do not appear in הר הביטוח.
+- Travel policies longer than three months are in scope for הר הביטוח; nothing written for three months or less is reported (חוזר 2021-1-3), so most trip policies will not be there.
 
 
 ## Statutory mechanics behind the three-tier table
@@ -127,5 +132,5 @@ Handle the reform correctly, because most secondary sources do not. It took effe
 - Most Israeli cards give a DISCOUNT, not embedded cover, though some premium tiers do embed it. Everything not embedded requires activation before every single trip, and the classic failure is believing the card covers you and never activating.
 - The six-month pre-existing-condition exclusion is statutory, not underwriter discretion.
 - A standalone policy is genuinely needed on top of a card benefit for pre-existing conditions, pregnancy, extreme and winter sports, trips beyond the age-banded day caps, ביטול נסיעה for non-medical reasons, high-value gear above the כבודה sub-limits, and ages 80 and over.
-- Do not invent per-card specifics; send the user to their own card's benefit page. Travel policies do not appear in הר הביטוח. Detail in `references/line-by-line-detail.md`.
+- Do not invent per-card specifics; send the user to their own card's benefit page. Travel policies longer than three months are in scope for הר הביטוח; nothing written for three months or less is reported (חוזר 2021-1-3), so most trip policies will not be there. Detail in `references/line-by-line-detail.md`.
 
