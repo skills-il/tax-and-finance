@@ -76,6 +76,140 @@ def is_vehicle_running_cost(description: str, category: int) -> bool:
         return True
     return bool(_tokens(description) & set(VEHICLE_RUNNING_COST_KEYWORDS))
 
+
+# Leasing or renting a vehicle. Regulation 14(a) bars input VAT on buying a
+# "רכב פרטי", and the ITA reads that as including its rental: interpretation
+# 1/2002 says the rental component of an operating lease is "אסור בניכוי עפ"י
+# תקנה 14(א)". Only a maintenance component the leasing company itemizes
+# separately is deductible, under Reg 18, and only up to 15% of the deal price.
+#
+# The script does NOT decide from free text whether an invoice is a lease.
+# Five review rounds showed every keyword rule trades one wrong-money case for
+# another (lessors whose name lacks "ליסינג", services bundled with "+" or
+# "לרבות", a fuel card that mentions the lease). The caller states it with
+# `vehicle_lease`. The text is used only to SPOT a likely lease that was not
+# stated: such an invoice is held at 0 and flagged INPUT NEEDED.
+LEASE_WORD_RE = re.compile(
+    r"(?<![\w\u0590-\u05FF])[והבלמשכ]{0,3}(?:ליסינג|ליס)(?![\w\u0590-\u05FF])"
+    r"|\bleas\w*"
+)
+VEHICLE_RENT_WORDS = (
+    "rental", "rent", "rented", "hire", "השכרת", "השכרה", "שכירות", "שכירת",
+    "שכור", "חכירת", "חכירה", "לשכירות", "בחכירה", "בשכירות", "חכור",
+    "בליסינג", "rentals",
+)
+VEHICLE_NOUNS = ("רכב", "לרכב", "הרכב", "ברכב", "רכבים", "vehicle", "car",
+                 "cars", "van", "טנדר", "מסחרית", "משאית", "truck", "jeep",
+                 "ג׳יפ", "ג'יפ")
+# A backstop only: suppliers whose name alone suggests a leasing or rental
+# company. Absence from this list proves nothing.
+KNOWN_LESSOR_NAME_WORDS = (
+    "אלדן", "eldan", "הרץ", "hertz", "סיקסט", "sixt", "אלבר", "albar",
+    "אוויס", "avis", "באדג'ט", "באדגט", "budget", "קל", "אוטו", "שלמה",
+    "europcar", "יוניון", "ניו", "קופל", "newcopel", "leaseplan", "leasys",
+    "קרסו",
+)
+# Multi-word lessor names, matched as phrases.
+KNOWN_LESSOR_NAME_PHRASES = ("קל אוטו", "שלמה רכב", "שלמה סיקסט", "ניו קופל",
+                             "ניו-קופל", "car rental", "rent a car")
+# Leasing of equipment or premises: not a vehicle, so no lease signal.
+NON_VEHICLE_LEASE_WORDS = (
+    "ציוד", "equipment", "מכונה", "מכונות", "machinery", "מחשב", "מחשבים",
+    "computer", "computers", "מדפסת", "printer", "מלגזה", "forklift",
+    "משרד", "משרדים", "office", "offices", "מחסן", "warehouse", "חנות",
+    "shop", "מבנה", "בניין", "בבניין", "building", "premises",
+)
+LEASE_MAINTENANCE_CAP = Decimal("0.15")
+
+# Regulation 1: for Reg 14, "רכב פרטי" includes a commercial vehicle whose
+# permitted total weight is up to 3,500 kg. Only a heavier one escapes.
+LIGHT_COMMERCIAL_MAX_KG = 3500
+
+
+def _has_vehicle_word(description: str) -> bool:
+    return bool(_tokens(description) & set(VEHICLE_RUNNING_COST_KEYWORDS))
+
+
+def lease_signal(invoice: dict[str, Any], description: str) -> bool:
+    """True when the invoice LOOKS like a vehicle lease or rental, or comes
+    from a supplier that looks like a leasing/rental company. Used only to
+    flag an invoice whose `vehicle_lease` was not stated, never to decide.
+
+    The supplier checks run FIRST, so an office word in the line ("חיוב
+    חודשי - משרד מכירות" from a lessor) cannot hide a lessor's invoice.
+    Lessor names match as whole words, so "אלברט" or "Davis" do not."""
+    desc = description.lower()
+    toks = _tokens(desc)
+    name = str(invoice.get("business_name", "")).lower()
+    name_toks = _tokens(name)
+    if LEASE_WORD_RE.search(name) or name_toks & set(VEHICLE_RENT_WORDS):
+        return True
+    if any(ph in name for ph in KNOWN_LESSOR_NAME_PHRASES):
+        return True
+    strong_names = set(KNOWN_LESSOR_NAME_WORDS) - {"קל", "אוטו", "שלמה", "ניו"}
+    if name_toks & strong_names:
+        return True
+    if toks & set(NON_VEHICLE_LEASE_WORDS) and not toks & set(VEHICLE_NOUNS):
+        return False
+    if LEASE_WORD_RE.search(desc):
+        return True
+    return bool(toks & set(VEHICLE_RENT_WORDS) and toks & set(VEHICLE_NOUNS))
+
+
+def strip_lessor_words(name: str) -> str:
+    """The supplier name without its lessor words, keeping ordinary vehicle
+    keywords a name legitimately carries (פז, סונול, דלק)."""
+    name = LEASE_WORD_RE.sub(" ", name.lower())
+    for ph in KNOWN_LESSOR_NAME_PHRASES:
+        name = name.replace(ph, " ")
+    return " ".join(t for t in re.findall(r"[\w\u0590-\u05FF']+", name)
+                    if t not in KNOWN_LESSOR_NAME_WORDS
+                    and t not in VEHICLE_RENT_WORDS)
+
+
+def is_lessor_name(name: str) -> bool:
+    return lease_signal({"business_name": name}, "") and bool(name.strip())
+
+
+def needs_vehicle_running_cost(invoice: dict[str, Any], description: str,
+                               category: int) -> bool:
+    """An invoice from a lessor-looking supplier marked vehicle_lease false,
+    whose line shows neither a vehicle nor a clearly non-vehicle item, cannot
+    be classified: a fuel card ("חיוב חודשי - כרטיס 4521") and a hotel stay
+    from "Budget Hotel" read the same. Ask instead of guessing."""
+    if invoice.get("vehicle_lease") is not False:
+        return False
+    if "vehicle_running_cost" in invoice:
+        return False
+    if not is_lessor_name(str(invoice.get("business_name", ""))):
+        return False
+    toks = _tokens(description.lower())
+    if toks & set(NON_VEHICLE_LEASE_WORDS):
+        return False
+    return not is_vehicle_running_cost(description, category)
+
+
+def lease_status(invoice: dict[str, Any], description: str) -> str:
+    """"lease" when stated true, "not_lease" when stated false, "unresolved"
+    when not stated but the invoice looks like one, else "not_lease"."""
+    if "vehicle_lease" in invoice:
+        return "lease" if invoice["vehicle_lease"] else "not_lease"
+    return "unresolved" if lease_signal(invoice, description) else "not_lease"
+
+
+def is_heavy_commercial(invoice: dict[str, Any]) -> bool:
+    """A commercial vehicle over 3,500 kg permitted weight, which is not a
+    "רכב פרטי" under Regulation 1. A `commercial_vehicle` flag with no weight
+    is NOT enough: a van or pickup at or under 3,500 kg is a private vehicle
+    for Reg 14, and granting it a full deduction was the old defect."""
+    if not invoice.get("commercial_vehicle", False):
+        return False
+    weight = invoice.get("vehicle_weight_kg")
+    try:
+        return weight is not None and float(weight) > LIGHT_COMMERCIAL_MAX_KG
+    except (TypeError, ValueError):
+        return False
+
 ALLOCATION_THRESHOLDS = [
     (date(2026, 6, 1), Decimal("5000")),
     (date(2026, 1, 1), Decimal("10000")),
@@ -356,6 +490,15 @@ def categorize_by_keywords(description: str, vendor_name: str = "") -> int:
     text = f"{description} {vendor_name}".lower()
     toks = _tokens(text)
 
+    # A car lease must not fall into Rent on the word "lease": Rent takes a
+    # full deduction, and vehicle-lease VAT is barred under Reg 14(a).
+    # A car lease must not fall into Rent on the word "lease". Decide from
+    # the DESCRIPTION only: a supplier that looks like a lessor may also bill
+    # office rent or equipment, and its name must not drag those lines onto
+    # the vehicle ladder (the supplier name only drives the INPUT NEEDED hold).
+    if lease_signal({"business_name": ""}, description):
+        return 9
+
     # Match on whole tokens, and only fall back to a substring for multi-word
     # keywords. A bare substring test put "רכבת" (train) and "cartridge" into
     # the vehicle category, which then dragged them onto the Regulation 18(b)
@@ -416,6 +559,15 @@ def determine_vat_deductibility(invoice: dict[str, Any]) -> dict[str, Any]:
         )
         return result
 
+    if invoice.get("vat_free_reimbursement", False):
+        result["total_vat"] = Decimal("0")
+        result["non_deductible_vat"] = Decimal("0")
+        result["rule_applied"] = (
+            "Lease reimbursement of insurance/licence fee: no VAT arises "
+            "(Reg 6, ITA interpretation 1/2002 s.4)"
+        )
+        return result
+
     if not type_info["vat_deductible"]:
         result["rule_applied"] = "Invoice type not eligible for VAT deduction"
         return result
@@ -447,10 +599,113 @@ def determine_vat_deductibility(invoice: dict[str, Any]) -> dict[str, Any]:
         )
         return result
 
-    # Vehicle expenses: 2/3 deductible on RUNNING costs of a non-commercial vehicle.
-    # VAT on buying/importing a private vehicle is fully non-deductible (Reg 14).
-    if (is_vehicle_running_cost(description, category)
-            and not invoice.get("commercial_vehicle", False)):
+    # Regulation 14(b) is VEHICLE-specific: a car dealer's unused stock car,
+    # or a vehicle used ONLY ("אך ורק") for driving lessons, car rental by a
+    # car-rental business, passenger transport or organised tours. The script
+    # cannot infer that from an invoice, so it must be stated per vehicle.
+    reg14b = bool(invoice.get("reg14b_exception", False))
+
+    def _reg18_fraction():
+        """Reg 18(b): the Director's determination governs; otherwise 2/3
+        where the main use is business and 1/4 where it is not or unknown."""
+        share = invoice.get("director_determined_business_share")
+        if share is not None:
+            return Decimal(str(share)), "the Director's determination (Reg 18(b)(1))"
+        mbu = invoice.get("mainly_business_use")
+        if mbu:
+            return Decimal(2) / Decimal(3), "2/3, main use is business (Reg 18(b)(2))"
+        if mbu is None:
+            return (Decimal(1) / Decimal(4),
+                    "1/4, main use NOT stated so the conservative limb applies "
+                    "(Reg 18(b)(3)); set mainly_business_use to resolve")
+        return Decimal(1) / Decimal(4), "1/4, main use is NOT business (Reg 18(b)(3))"
+
+    status = "not_lease" if (reg14b or is_heavy_commercial(invoice)) else \
+        lease_status(invoice, invoice.get("description", ""))
+
+    if needs_vehicle_running_cost(invoice, invoice.get("description", ""),
+                                  category):
+        result["rule_applied"] = (
+            "INPUT NEEDED: from a leasing/rental company, marked not a lease, "
+            "and the line does not show whether it is a vehicle cost. Held at "
+            "0. Set vehicle_running_cost true for a fuel card, tyres or other "
+            "vehicle cost (Reg 18), or false for anything else"
+        )
+        return result
+
+    if status == "unresolved":
+        result["rule_applied"] = (
+            "INPUT NEEDED: this looks like a vehicle lease or rental, or comes "
+            "from a leasing/rental company, and vehicle_lease was not stated. "
+            "Held at 0. Set vehicle_lease true for a lease/rental payment or "
+            "the leasing company's own maintenance (Reg 14(a) bar, 15% "
+            "maintenance path), or false for anything else, such as a fuel "
+            "card or a third-party garage bill (Reg 18)"
+        )
+        return result
+
+    # Vehicle lease or rental: the rental component is barred under Reg 14(a)
+    # (ITA interpretation 1/2002). A separately itemized maintenance component
+    # goes through Reg 18, capped at 15% of the WHOLE deal price, which is why
+    # a separate maintenance invoice needs `lease_deal_vat` (the VAT on the
+    # full deal) as the cap base rather than its own VAT.
+    if status == "lease":
+        maint = invoice.get("lease_maintenance_vat")
+        if maint is None:
+            result["rule_applied"] = (
+                "Vehicle lease/rental: input VAT not deductible, Reg 14(a) "
+                "covers renting a private vehicle (ITA interpretation 1/2002). "
+                "If the leasing company itemizes a qualifying "
+                "maintenance charge: pass its VAT as lease_maintenance_vat, and "
+                "when it is billed on its own invoice also pass lease_deal_vat "
+                "(VAT on the whole deal) as the 15% cap base"
+            )
+            return result
+        if ("lease_deal_vat" not in invoice
+                and abs(Decimal(str(maint))) > abs(vat_amount) * LEASE_MAINTENANCE_CAP):
+            # Maintenance above 15% of THIS invoice means the invoice is not the
+            # whole deal (a separate maintenance bill), so its own VAT is the
+            # wrong cap base. Do not guess a number.
+            result["rule_applied"] = (
+                "INPUT NEEDED: lease_maintenance_vat exceeds 15% of this "
+                "invoice's VAT. Pass lease_deal_vat, the VAT on the whole lease "
+                "deal, as the 15% cap base: for a single invoice carrying both "
+                "the rent and the maintenance that is simply this invoice's "
+                "VAT; for a separate maintenance invoice it is the VAT of the "
+                "whole deal. Held at 0"
+            )
+            return result
+        cap_base = Decimal(str(invoice.get("lease_deal_vat", vat_amount)))
+        # Cap on magnitudes, then restore the sign, so a credit invoice
+        # reverses exactly what the original deducted.
+        sign = Decimal(-1) if vat_amount < 0 else Decimal(1)
+        maint_vat = sign * min(abs(Decimal(str(maint))),
+                               abs(cap_base) * LEASE_MAINTENANCE_CAP,
+                               abs(vat_amount))
+        fraction, why = _reg18_fraction()
+        deductible = (maint_vat * fraction).quantize(
+            Decimal("0.01"), rounding=ROUNDING
+        )
+        result["deductible_vat"] = deductible
+        result["non_deductible_vat"] = vat_amount - deductible
+        result["deduction_rate"] = (
+            (deductible / vat_amount).quantize(Decimal("0.0001"))
+            if vat_amount else Decimal("0")
+        )
+        result["rule_applied"] = (
+            "Vehicle lease: rental component barred (Reg 14(a)); itemized "
+            "maintenance VAT, capped at 15%% of the deal price, deducted at %s"
+            % why
+        )
+        return result
+
+    # Vehicle running costs (fuel, repairs, parking) under Reg 18(b), for any
+    # vehicle that is a "רכב פרטי", which includes a commercial vehicle up to
+    # 3,500 kg. VAT on buying/importing one is fully non-deductible (Reg 14).
+    vrc = invoice.get("vehicle_running_cost")
+    if ((vrc is True or (vrc is None
+                         and is_vehicle_running_cost(description, category)))
+            and not is_heavy_commercial(invoice) and not reg14b):
         purchase_keywords = [
             "רכישת רכב", "קניית רכב", "vehicle purchase", "car purchase",
             "רכישה", "יבוא רכב",
@@ -572,6 +827,26 @@ def validate_invoice(invoice: dict[str, Any]) -> list[str]:
     issues: list[str] = []
     inv_num = invoice.get("invoice_number", "N/A")
 
+    if needs_vehicle_running_cost(invoice, invoice.get("description", ""),
+                                  invoice.get("category_code", 12)):
+        issues.append(
+            f"Invoice #{inv_num}: INPUT NEEDED, leasing/rental supplier marked "
+            "not a lease; set vehicle_running_cost true or false. Its VAT is "
+            "held at 0 until then"
+        )
+
+    # A likely vehicle lease with vehicle_lease unstated is held at 0 in the
+    # deduction; it must also fail validation so it cannot pass unnoticed.
+    if (not invoice.get("reg14b_exception", False)
+            and not is_heavy_commercial(invoice)
+            and lease_status(invoice, invoice.get("description", ""))
+            == "unresolved"):
+        issues.append(
+            f"Invoice #{inv_num}: INPUT NEEDED, looks like a vehicle lease or "
+            "rental (or a leasing/rental company). Set vehicle_lease true or "
+            "false; its VAT is held at 0 until then"
+        )
+
     # 1. Required fields
     required_fields = [
         "business_name", "business_number", "invoice_number", "date",
@@ -627,6 +902,7 @@ def validate_invoice(invoice: dict[str, Any]) -> list[str]:
     # a mismatch on a document that is perfectly correct.
     carries_no_vat = (
         invoice.get("foreign_supplier", False)
+        or invoice.get("vat_free_reimbursement", False)
         or invoice.get("invoice_type", "tax_invoice") in NO_ISRAELI_VAT_TYPES
     )
     if (stated_total is not None or stated_before is not None) and not carries_no_vat:
@@ -702,7 +978,8 @@ def validate_invoice(invoice: dict[str, Any]) -> list[str]:
                 and Decimal(str(net)) > threshold
                 and invoice.get("invoice_type", "tax_invoice") in (
                     "tax_invoice", "tax_invoice_receipt")
-                and not invoice.get("foreign_supplier", False)):
+                and not invoice.get("foreign_supplier", False)
+                and not invoice.get("vat_free_reimbursement", False)):
             issues.append(
                 f"Invoice #{inv_num}: missing allocation number "
                 f"(מספר הקצאה). Net {Decimal(str(net)).quantize(Decimal('0.01'))} "
@@ -740,10 +1017,16 @@ def process_invoice(invoice: dict[str, Any]) -> dict[str, Any]:
 
     # Auto-categorize if no category provided
     if "category_code" not in result:
-        result["category_code"] = categorize_by_keywords(
-            result.get("description", ""),
-            result.get("business_name", ""),
-        )
+        if result.get("vehicle_lease") is True:
+            result["category_code"] = 9
+        else:
+            result["category_code"] = 9 if result.get(
+                "vehicle_running_cost") is True else categorize_by_keywords(
+                result.get("description", ""),
+                strip_lessor_words(result.get("business_name", ""))
+                if result.get("vehicle_lease") is False
+                else result.get("business_name", ""),
+            )
 
     cat_code = result["category_code"]
     cat_info = EXPENSE_CATEGORIES.get(cat_code, EXPENSE_CATEGORIES[12])
@@ -774,8 +1057,12 @@ def process_invoice(invoice: dict[str, Any]) -> dict[str, Any]:
     # (a חשבונית עסקה awaiting its חשבונית מס). Only the first folds VAT into
     # the expense; the second must still split the amount.
     inv_type = result.get("invoice_type", "tax_invoice")
+    # A leasing company's reimbursement of compulsory insurance, comprehensive
+    # insurance or the licence fee on a lease over 12 months is not part of the
+    # rental price (Reg 6, ITA interpretation 1/2002 s.4) and carries no VAT.
     carries_no_vat = (
         result.get("foreign_supplier", False)
+        or result.get("vat_free_reimbursement", False)
         or inv_type in NO_ISRAELI_VAT_TYPES
     )
     if carries_no_vat:

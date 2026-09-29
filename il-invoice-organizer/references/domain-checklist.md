@@ -14,7 +14,11 @@ Generated: 2026-07-06 via CPA coverage audit + fact research on gov.il/taxes, ko
 
 - [ ] Blocked / partial input VAT: hospitality/entertainment (אירוח) blocked (תקנה 16, except foreign guest); purchase/import VAT on a private vehicle non-deductible (תקנה 14); running-cost apportionment 2/3 where the main use is business and 1/4 where it is not, subject to the Director's determination (תקנה 18(ב)), source: VAT Regulations 1976. [אירוח + vehicle purchase now enforced in the script v1.3.0; תקנה 18(ב) vehicle ladder implemented in the script v1.5.0; the general תקנה 18(א) taxable/exempt turnover split is still to add]
 
-- [ ] SHAAM allocation number (מספר הקצאה) required above the issue-date threshold (25k from 5-May-2024 / 20k 2025 / 10k Jan-2026 / 5k Jun-2026; 5,000 is the terminal step and nothing below it is legislated). Keyed to the invoice ISSUE date.
+- [ ] Vehicle LEASE / rental: the rental component is barred under תקנה 14(א) (ITA הוראת פרשנות 1/2002), a separately itemized maintenance component goes through תקנה 18 capped at 15% of the deal; "רכב פרטי" includes a commercial vehicle up to 3,500 kg (תקנה 1); תקנה 14(ב) exceptions. [covered v1.6.0, enforced in the script]
+
+- [ ] Charge date for services: §24 (on payment) with the §29(1א) exception (turnover over NIS 15M + תוספת י"א books, or related-party / unpriced / in-kind service: on giving the service). [covered v1.6.0]
+
+- [ ] SHAAM allocation number (מספר הקצאה) required above the issue-date threshold (none before 5-May-2024 / 25k from 5-May-2024 / 20k 2025 / 10k Jan-2026 / 5k Jun-2026; 5,000 is the terminal step and nothing below it is legislated). Keyed to the invoice ISSUE date.
 
 - [ ] Business-type recognition (Osek Murshe / Patur, HP, amuta, malkar) + Osek Patur ceiling 122,833 (2026), source: VAT Law §31 + annual index. [covered]
 

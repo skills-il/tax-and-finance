@@ -14,7 +14,7 @@ Working expense categories for Israeli business expense reporting. **The 1-12 nu
 | 6 | ביטוח | Insurance | Business insurance policies covering liability, property, professional indemnity, and inventory | ביטוח צד שלישי, ביטוח מקצועי, ביטוח מבנה, ביטוח מלאי / Liability, professional, property, inventory insurance |
 | 7 | חשמל ומים | Utilities | Electricity and water charges for business premises | חברת החשמל, תאגיד מים, ארנונה (בחלק מהמקרים) / IEC, water utility, municipal tax (in some cases) |
 | 8 | תקשורת | Communications | Telephone, mobile, internet, and other communication services | טלפון קווי, סלולר, אינטרנט, שירותי ענן / Landline, cellular, internet, cloud services |
-| 9 | הוצאות רכב | Vehicle expenses | All vehicle-related costs for business use | דלק, תחזוקה, ביטוח רכב, חניה, אגרות, ליסינג / Fuel, maintenance, vehicle insurance, parking, fees, leasing |
+| 9 | הוצאות רכב | Vehicle expenses | All vehicle-related costs for business use | דלק, תחזוקה, ביטוח רכב, חניה, אגרות, ליסינג (מע"מ הליסינג חסום, ראו למטה) / Fuel, maintenance, vehicle insurance, parking, fees, leasing (lease VAT is barred, see below) |
 | 10 | פחת | Depreciation | Depreciation on fixed assets, at the rate set by תקנות מס הכנסה (פחת) for the asset class | מחשבים, ריהוט, ציוד, כלי רכב. אל תנקבו בשיעור מהזיכרון, קראו אותו מהתקנות / Computers, furniture, equipment, vehicles. Read the rate off the regulations for the specific class; do not state one from memory |
 | 11 | הוצאות משרד | Office expenses | Day-to-day office supplies and small operational expenses | ציוד משרדי, נייר, טונר, דואר, ניקיון / Office supplies, paper, toner, postage, cleaning |
 | 12 | הוצאות אחרות | Other expenses | Expenses that do not fit the categories above | הוצאות ייצוג, הוצאות נסיעה, השתלמויות, מנויים / Representation, travel, training, subscriptions |
@@ -25,8 +25,9 @@ Working expense categories for Israeli business expense reporting. **The 1-12 nu
 
 | Rule / כלל | VAT / מע"מ | Income Tax / מס הכנסה |
 |------------|-----------|---------------------|
-| Commercial vehicle (רכב מסחרי) | 100% deductible / ניכוי מלא | 100% deductible / ניכוי מלא |
-| Non-commercial (רכב פרטי) | Running costs under Reg 18(b): the Director's determination if any, else 2/3 where the MAIN use is business and 1/4 where it is not; purchase VAT non-deductible under Reg 14(a) / 2/3 מהמע"מ על הוצאות שוטפות; מע"מ הרכישה אינו ניתן לניכוי | Per ceiling rules / לפי תקרה |
+| Commercial vehicle over 3,500 kg permitted weight (רכב מסחרי כבד) | Outside "רכב פרטי"; full deduction for business use, Reg 18(a) apportionment for mixed use / ניכוי מלא בשימוש עסקי | 100% deductible / ניכוי מלא |
+| Private vehicle, including a commercial vehicle up to 3,500 kg (רכב פרטי, כולל מסחרי עד 3,500 ק"ג, תקנה 1) | Running costs under Reg 18(b): the Director's determination if any, else 2/3 where the MAIN use is business and 1/4 where it is not; purchase VAT non-deductible under Reg 14(a) / 2/3 מהמע"מ על הוצאות שוטפות; מע"מ הרכישה אינו ניתן לניכוי | Per ceiling rules / לפי תקרה |
+| Operating lease or rental of a private vehicle (ליסינג תפעולי / השכרה) | NOT deductible: Reg 14(a) covers renting a private vehicle (ITA interpretation 1/2002). A qualifying maintenance component the leasing company itemizes separately is deductible under Reg 18, up to 15% of the deal price unless the ITA approved more; warranty repairs, self-insurance and a replacement car stay barred; insurance and licence-fee reimbursements on a lease over 12 months fall under Reg 6 and are not part of the rental price (comprehensive insurance only where the policy or receipt is in the lessee's name). Reg 14(b) applies per vehicle (a dealer's unused stock car, or a vehicle used ONLY for driving lessons, rental by a car-rental business, passenger transport or tours) / לא ניתן לניכוי, למעט רכיב תחזוקה מפורט עד 15% | Per ceiling rules / לפי תקרה |
 | Fixed monthly ceiling (תקרת הוצאות קבועה) | N/A | Updated annually by Tax Authority / מתעדכנת מדי שנה |
 
 ### Entertainment and Meals / הוצאות אירוח וכיבוד
@@ -106,15 +107,15 @@ The following expenses are generally not deductible for tax purposes:
 
 3. **Mixed-use expenses / הוצאות לשימוש מעורב:** When an expense serves both business and personal purposes, only the business portion is deductible. Documentation of business use percentage is required.
 
-4. **Allocation number (Israel Invoice model) / מספר הקצאה:** required on a B2B tax invoice above the threshold in force on the ISSUE date (NIS 25,000 from 5 May 2024, 20,000 in 2025, 10,000 from 1 Jan 2026, 5,000 from 1 Jun 2026; 5,000 is the terminal step and no further cut is legislated). Missing it does not invalidate the invoice: it blocks the BUYER's input-VAT deduction (כתנאי לניכוי מס התשומות).
+4. **Allocation number (Israel Invoice model) / מספר הקצאה:** required on a B2B tax invoice above the threshold in force on the ISSUE date (no requirement at all for an invoice issued before 5 May 2024; NIS 25,000 from 5 May 2024, 20,000 in 2025, 10,000 from 1 Jan 2026, 5,000 from 1 Jun 2026; 5,000 is the terminal step and no further cut is legislated). Missing it does not invalidate the invoice: it blocks the BUYER's input-VAT deduction (כתנאי לניכוי מס התשומות).
 
 5. **Record retention / שמירת מסמכים:** Under section 25(ג) of הוראות ניהול פנקסי חשבונות the accounting system must be kept for SEVEN years from the end of the tax year it relates to, OR SIX years from the date the return for that year was filed, whichever is LATER. A late-filed return therefore extends retention past seven years. Section 25(ד) sets a shorter class, at least three years from filing, for statistical documents, orders, internal records, scanned source documents, contracts and protocols. / לפי סעיף 25(ג) להוראות ניהול פנקסי חשבונות, מערכת החשבונות תישמר שבע שנים מתום שנת המס או שש שנים מיום הגשת הדוח, לפי המאוחר.
 
 6. **Osek Patur turnover ceiling 2026 / תקרת עוסק פטור 2026:** NIS 122,833 (raised from NIS 120,000 used in 2024 and 2025). Once crossed, the freelancer must convert to Osek Murshe from the date of breach. / 122,833 ש"ח מ-2026 (עלתה מ-120,000 ש"ח).
 
-7. **Invoice issuance window / חלון הנפקת חשבונית:** Section 46(א): within 14 days of מועד החיוב במס, the charge event under sections 22 to 29, which for a service is receipt of payment and for goods is delivery. It is NOT keyed to the taxable supply or to payment, whichever comes first. / סעיף 46(א): חשבונית תוצא תוך 14 יום ממועד החיוב במס, ולא ממועד האספקה. בשירות מועד החיוב הוא קבלת התמורה, ולכן נותן שירות על בסיס מזומן שטרם קיבל תשלום אינו באיחור.
+7. **Invoice issuance window / חלון הנפקת חשבונית:** Section 46(א): within 14 days of מועד החיוב במס, the charge event under sections 22 to 29, which for a service is generally receipt of payment (section 24) and for goods is delivery. Section 29(1א) moves a service to the time it is GIVEN where the provider's turnover exceeds NIS 15 million a year and it keeps books under תוספת י"א, and also where the price is affected by special relations between the parties, no price was set, or the consideration is not wholly in money. It is NOT keyed to the taxable supply or to payment, whichever comes first. / סעיף 46(א): חשבונית תוצא תוך 14 יום ממועד החיוב במס, ולא ממועד האספקה. בשירות מועד החיוב הוא בדרך כלל קבלת התמורה (סעיף 24), ולכן נותן שירות על בסיס מזומן שטרם קיבל תשלום אינו באיחור. לפי סעיף 29(1א), אצל נותן שירות שמחזורו עולה על 15 מיליון ש"ח בשנה ומנהל ספרים לפי תוספת י"א, החיוב חל עם נתינת השירות.
 
-8. **VAT rate stability 2026 / יציבות שיעור המע"מ 2026:** The Ministry of Finance proposed a rise to 19% from January 2026 as part of budget talks. The proposal was rejected; the rate remains 18% throughout 2026. / האוצר הציע 19% מינואר 2026. ההצעה נדחתה. השיעור נשאר 18%.
+8. **VAT rate / שיעור המע"מ:** 18%. No higher rate is in force; do not apply a floated rate that has not taken effect. / 18%, ואין בתוקף שיעור גבוה יותר.
 
 ## Sources / מקורות
 

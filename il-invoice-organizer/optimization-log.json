@@ -33,6 +33,18 @@
         "Process lesson: a signed quantity broke a rule written for unsigned ones. The blocking branch was correct for every positive deductible and inverted the meaning of a credit note. Check the sign before applying a 'set to zero' rule.",
         "RESOLVED this cycle: the hotel over-block, previously deferred, was fixed because a business-travel לינה is not אירוח under תקנה 16 and the under-claim was a wrong number."
       ]
+    },
+    {
+      "version": "1.6.0",
+      "date": "2026-09-29",
+      "lessons": [
+        "Lease classification from free text failed five expert rounds in a row: every keyword rule traded one wrong-money case for another (lessors without ליסינג in the name, bundling via '+'/'לרבות', 'כולל מע\"מ' on fuel receipts, fuel cards mentioning the lease). Resolved by an explicit REQUIRED field (vehicle_lease) with text used only as a spotter that holds at 0 and fails --validate. Apply the same pattern to any legal classification a script cannot read reliably from an invoice line.",
+        "A boolean flag that bypasses a whole rule set (commercial_vehicle) is a defect magnet: the legal category (Reg 1 'רכב פרטי' includes commercial up to 3,500 kg) was narrower than the flag. Key bypass flags on the statutory test, not on a label.",
+        "Income-tax treatment of vehicle and leasing costs (שווי שימוש, the fixed-expense ceilings) is still 'Standard full income tax deduction' in the script. Out of scope for this cycle; revisit.",
+        "osek-patur-ceiling-2026 evidence (kolzchut) is curl-blocked (403) and was not re-verified in a browser this cycle.",
+        "Deferred: exclusive-business full-deduction path for vehicle running costs (interpretation 1/2002 s.5(1)) is stated in prose but the script has no field for it; lessor-issued fuel card treated as Reg 18 running cost is a reading of s.5 the interpretation does not address expressly; 'דמי טיפול' (fine handling fee) treatment unverified.",
+        "Legal gate (low, pre-existing): SKILL.md English frontmatter description does not open with 'Not tax advice and not a filed return.' (metadata.json and SKILL_HE.md do). Deferred because a description edit triggers the Phase 5.7 holdout gate; do it next cycle, keep under 1023 chars."
+      ]
     }
   ]
 }

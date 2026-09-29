@@ -17,10 +17,10 @@
     },
     {
       "claim_id": "vat-rate-19-rejected",
-      "claim": "No rise above 18% is in force. A 2026-budget proposal to move to 19% did not take effect, and a source reviewed 29 June 2026 still gives 18% as the current rate.",
+      "claim": "The current Israeli VAT rate is 18%",
       "source_url": "https://taxsummaries.pwc.com/israel/corporate/other-taxes",
       "raw_snippet": "The 2025 current rate of VAT is 18%.",
-      "fetched_at": "2026-08-26T17:47:06Z",
+      "fetched_at": "2026-09-29T10:00:00Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
@@ -71,14 +71,12 @@
       "claim_id": "allocation-effect",
       "claim": "B2B tax invoices above the active SHAAM threshold without a valid allocation number are not eligible for VAT input deduction by the buyer",
       "source_url": "https://www.greeninvoice.co.il/magazine/israel-invoice/",
-      "raw_snippet": "מודל חשבוניות ישראל: מספר הקצאה (מדריך מעודכן ל-2026)",
-      "fetched_at": "2026-08-18",
+      "raw_snippet": "קבלת מספרי הקצאה מרשות המיסים עבור החשבוניות שמוציא העסק, שבלעדיו הלקוחות שלך לא יוכלו לקזז מע\"מ על ההוצאה",
+      "fetched_at": "2026-09-29T10:00:00Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ],
-      "verified_via": "navigational claim about the source itself; snippet is the cited page's own title, fetched to confirm the page exists and is what the claim says it is",
-      "verified_at": "2026-08-18"
+      ]
     },
     {
       "claim_id": "vehicle-2-3-rule",
@@ -95,53 +93,34 @@
       "claim_id": "osek-patur-restricted-professions",
       "claim": "Lawyers, doctors, architects, engineers, accountants (and a few others) cannot register as Osek Patur regardless of turnover",
       "source_url": "https://cpa-dray.com/en/blog/osek-patur-guide/",
-      "raw_snippet": "The Osek Patur Guide - Dray & Dray - Israel Tax Guides",
-      "fetched_at": "2026-08-18",
+      "raw_snippet": "Who cannot register as an Osek Patur? Professions, such as: • Architect • Engineer • Private detective • Lawyer • Accountant • Doctor",
+      "fetched_at": "2026-09-29T10:00:00Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ],
-      "verified_via": "navigational claim about the source itself; snippet is the cited page's own title, fetched to confirm the page exists and is what the claim says it is",
-      "verified_at": "2026-08-18"
+      ]
     },
     {
       "claim_id": "income-tax-annual-deadline",
-      "claim": "Individual income tax annual return (Doch Shnati) deadline: 30 April (paper) or 31 May (online); via מייצג (representative) can extend to November-December",
+      "claim": "The individual annual income tax return (Doch Shnati) is due 30 April, subject to extensions",
       "source_url": "https://taxsummaries.pwc.com/israel/individual/tax-administration",
-      "raw_snippet": "Israel - Individual - Tax administration",
-      "fetched_at": "2026-08-18",
+      "raw_snippet": "30 April is the prescribed filing due date, subject to extensions.",
+      "fetched_at": "2026-09-29T10:00:00Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ],
-      "verified_via": "navigational claim about the source itself; snippet is the cited page's own title, fetched to confirm the page exists and is what the claim says it is",
-      "verified_at": "2026-08-18"
-    },
-    {
-      "claim_id": "record-retention-7-years",
-      "claim": "Business records and invoices must be retained for 7 years per Israeli tax law; digital storage is allowed",
-      "source_url": "https://www.filerskeepers.co/product/israel-data-retention-schedule/",
-      "raw_snippet": "Israel data retention schedule - filerskeepers",
-      "fetched_at": "2026-08-18",
-      "appears_in": [
-        "SKILL.md",
-        "SKILL_HE.md"
-      ],
-      "verified_via": "navigational claim about the source itself; snippet is the cited page's own title, fetched to confirm the page exists and is what the claim says it is",
-      "verified_at": "2026-08-18"
+      ]
     },
     {
       "claim_id": "business-number-9-digits",
-      "claim": "Israeli business numbers are 9 digits and use a Luhn-like check-digit algorithm",
+      "claim": "An Israeli ID-based number (Mispar Zehut) is 9 digits, the last being a Luhn mod-10 check digit",
       "source_url": "https://lookuptax.com/docs/tax-identification-number/israel-tax-id-guide",
-      "raw_snippet": "Israel TIN Number Guide — Mispar Zehut, Osek Murshe & H.P. Company Number | LookupTax",
-      "fetched_at": "2026-08-18",
+      "raw_snippet": "Format: 9 digits total — a 1-digit prefix, 7 sequential digits, and a final check digit. Leading zeros are added to bring shorter legacy numbers to the full 9-digit length. The check digit is computed using the Luhn mod-10 algorithm",
+      "fetched_at": "2026-09-29T10:00:00Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ],
-      "verified_via": "navigational claim about the source itself; snippet is the cited page's own title, fetched to confirm the page exists and is what the claim says it is",
-      "verified_at": "2026-08-18"
+      ]
     },
     {
       "claim_id": "shaam-clearance-model",
@@ -158,23 +137,21 @@
     },
     {
       "claim_id": "airuach-input-vat-blocked-15a",
-      "claim": "Input VAT on business hospitality/entertainment (אירוח) is NOT deductible under תקנה 16 of the VAT Regulations 1976 (except hosting a guest from abroad). Employee-benefit inputs (meals/gifts) fall under תקנה 15א. Light in-house refreshments (כיבוד קל) are 80% deductible for income tax.",
-      "source_url": "https://www.bshcpa.co.il/כיבודים-ואירוח/",
-      "raw_snippet": "ע\"פ פקודת מס הכנסה, יותרו בניכוי רק 80% מההוצאות לכיבוד קל (שתייה קרה או חמה, עוגיות וכיוצא באלה) במקום העיסוק (במקום שבו מנהל הנישום, דרך קבע, את עיסוקו) של הנישום. בהודעת רשות המסים מיום 28 ביוני 2018 נאמר, שעמדת רשות המסים היא כי הסיפא של הגדרת \"כיבוד קל\" וכיוצא באלה יכולה לכלול גם פירות וירקות העונה. לפי חוזר מס הכנסה מס' 14/2000, יוכרו ההוצאות לכיבוד קל במקום העיסוק הן לאורחים המבקרים והן לעובדים.",
-      "fetched_at": "2026-08-18",
+      "claim": "Input VAT on business hospitality/entertainment (אירוח) is NOT deductible under תקנה 16 of the VAT Regulations 1976, except hosting a person from abroad",
+      "source_url": "https://he.wikisource.org/wiki/תקנות_מס_ערך_מוסף",
+      "raw_snippet": "לא יהא ניתן לניכוי מס תשומות בשל הוצאות אירוח, פרט לניכוי מס תשומות על הוצאה לאירוח אדם מחוץ לארץ",
+      "fetched_at": "2026-09-29T10:00:00Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ],
-      "verified_via": "cited page fetched and confirmed to contain \"80%\"; snippet replaced with the page's own wording around it",
-      "verified_at": "2026-08-18"
+      ]
     },
     {
       "claim_id": "vehicle-purchase-vat-nondeductible",
-      "claim": "Regulation 14(a) of the VAT Regulations 1976 forbids a dealer from deducting input VAT on the purchase or import of a 'private vehicle', even where the vehicle is used solely for business transactions (100% business use), except for the exceptions listed in Regulation 14(b).",
-      "source_url": "https://www.gov.il/he/pages/instructions-for-deduction-of-input-tax-for-vehicles-and-motorcycles",
-      "raw_snippet": "תקנה 14(א) לתקנות מס ערך מוסף, התשל\"ו - 1976 שתוקנה מכוח סעיף 44(1) לחוק, אוסרת על עוסק לנכות את מס התשומות עבור רכישה או יבוא של \"רכב פרטי\", גם אם הרכב משמש או נועד לשמש את העוסקים אך ורק לצורכי העסקאות לשימוש בעסק למעט החריגים המנויים בתקנה 14(ב) לתקנות.",
-      "fetched_at": "2026-08-11",
+      "claim": "Regulation 14(a) of the VAT Regulations 1976 forbids a dealer from deducting input VAT on the purchase or import of a 'private vehicle', even where the vehicle is used solely for business transactions (100% business use), except for the exceptions listed in Regulation 14(b). (תקנה 14)",
+      "source_url": "https://he.wikisource.org/wiki/תקנות_מס_ערך_מוסף",
+      "raw_snippet": "המס שהוטל על מכירת רכב פרטי לעוסק או על ייבוא רכב כאמור בידי עוסק לא יהיה ניתן לניכוי",
+      "fetched_at": "2026-09-29T10:00:00Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
@@ -194,9 +171,9 @@
     {
       "claim_id": "illustrative-worked-example-figures",
       "claim": "Worked-example figures are arithmetic derived from the verified 18% rate and the Regulation 18 fractions, not independent factual claims. Example 4: 2,340 NIS gross gives 356.95 NIS VAT; under Reg 18(b)(2) that is 237.97 NIS deductible and 118.98 NIS not; under Reg 18(b)(3) it is 89.24 NIS deductible and 267.71 NIS not. Example 2: 5,850 NIS gross gives 892.37 NIS VAT and 4,957.63 NIS net. Example 3 uses a 4 NIS rounding illustration. Category codes 1 to 12 are this skill's own numbering. תקנה 18",
-      "source_url": "https://www.gov.il/he/pages/vat-to-the-new-dealer",
-      "raw_snippet": "סכום המע״מ מחושב בשיעור קבוע ממחיר העסקה (נכון לינואר 2026 שיעור המע״מ הוא 18%).",
-      "fetched_at": "2026-08-11",
+      "source_url": "https://taxsummaries.pwc.com/israel/corporate/other-taxes",
+      "raw_snippet": "The 2025 current rate of VAT is 18%.",
+      "fetched_at": "2026-09-29T10:00:00Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
@@ -219,9 +196,9 @@
     {
       "claim_id": "mixed-use-two-thirds-rule",
       "claim": "The 2/3 input-VAT deduction rate comes from Regulation 18 on mixed use: where the Director has not fixed the relative share and the asset or service is used mainly for business, the dealer may deduct two thirds of the input VAT (and only a quarter where the main use is non-business).",
-      "source_url": "https://www.gov.il/he/pages/instructions-for-deduction-of-input-tax-for-vehicles-and-motorcycles",
-      "raw_snippet": "לא קבע המנהל את החלק היחסי, ועיקר השימוש בנכס או השירות הוא לצרכי עסק, רשאי העוסק לנכות שני שלישים ממס התשומות. לא קבע המנהל את החלק היחסי, ועיקר השימוש בנכס או בשירות הוא שלא לצרכי עסק, רשאי העוסק לנכות רבע ממס התשומות.",
-      "fetched_at": "2026-08-11",
+      "source_url": "https://he.wikisource.org/wiki/תקנות_מס_ערך_מוסף",
+      "raw_snippet": "לא קבע המנהל את החלק היחסי, ועיקר השימוש בנכס או בשירות הוא לצרכי עסק, רשאי העוסק לנכות שני שלישים ממס התשומות",
+      "fetched_at": "2026-09-29T10:00:00Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
@@ -230,11 +207,9 @@
     {
       "claim_id": "reg18-quarter-limb",
       "claim": "Regulation 18 sets the input-VAT split on mixed-use vehicle running costs. If the Director has fixed the non-business proportion, that stands. If not, a dealer whose MAIN use is for business may deduct two thirds; a dealer whose main use is NOT for business may deduct only a quarter.",
-      "source_url": "https://www.gov.il/he/pages/instructions-for-deduction-of-input-tax-for-vehicles-and-motorcycles",
-      "raw_snippet": "לא קבע המנהל את החלק היחסי, ועיקר השימוש בנכס או השירות הוא לצרכי עסק, רשאי העוסק לנכות שני שלישים ממס התשומות. לא קבע המנהל את החלק היחסי, ועיקר השימוש בנכס או בשירות הוא שלא לצרכי עסק, רשאי העוסק לנכות רבע ממס התשומות.",
-      "fetched_at": "2026-08-12",
-      "verified_via": "gov.il content API",
-      "verified_at": "2026-08-12",
+      "source_url": "https://he.wikisource.org/wiki/תקנות_מס_ערך_מוסף",
+      "raw_snippet": "לא קבע המנהל את החלק היחסי, ועיקר השימוש בנכס או בשירות הוא שלא לצרכי עסק, רשאי העוסק לנכות רבע ממס התשומות",
+      "fetched_at": "2026-09-29T10:00:00Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
@@ -375,7 +350,7 @@
     },
     {
       "claim_id": "osek-zair-two-year-lockout",
-      "claim": "Skipping the Osek Zair deduction in a year with business income bars it for the two following tax years as well",
+      "claim": "Section 87ה(ב): a small dealer who took the 30% deduction in one tax year, and in the following year had business income but did not take it, cannot take it in the two tax years after that year either",
       "source_url": "https://he.wikisource.org/w/index.php?title=%D7%A4%D7%A7%D7%95%D7%93%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94&action=raw",
       "raw_snippet": "לא יוכל לנכות את סכום הניכוי גם בשתי שנות המס שלאחר אותה שנת מס",
       "fetched_at": "2026-08-26T17:44:05Z",
@@ -467,9 +442,9 @@
     {
       "claim_id": "osek-patur-ceiling-2026",
       "claim": "The Osek Patur annual turnover ceiling is NIS 122,833 for 2026, up from NIS 120,000 in 2025",
-      "source_url": "https://www.kolzchut.org.il/he/%D7%A2%D7%95%D7%A1%D7%A7_%D7%A4%D7%98%D7%95%D7%A8",
-      "raw_snippet": "122,833 ₪ (נכון לשנת 2026) (120,000 ₪ בשנת 2025)",
-      "fetched_at": "2026-08-26T18:04:53Z",
+      "source_url": "https://www.eddiecpa.com/articles/תקרת-עוסק-פטור/",
+      "raw_snippet": "מגמה זו של הגדלת תקרת עוסק פטור משנה לשנה (מ-120,000 ₪ בשנים 2024-2025 ל-122,833 ₪ כיום)",
+      "fetched_at": "2026-09-29T10:30:00Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
@@ -508,8 +483,159 @@
         "SKILL.md",
         "SKILL_HE.md"
       ]
+    },
+    {
+      "claim_id": "vehicle-lease-rental-component-barred",
+      "claim": "VAT on the rental component of an operating lease of a private vehicle is not deductible under Regulation 14(a) (ITA interpretation 1/2002)",
+      "source_url": "https://www.gov.il/BlobFolder/policy/vat_11/he/vat_vatInterpretation_parshanut1_2002.pdf",
+      "raw_snippet": "מס התשומות המתייחס למרכיב של השכרת הרכב אסור בניכוי",
+      "fetched_at": "2026-09-29T08:00:00Z",
+      "verified_via": "pdf",
+      "verified_at": "2026-09-29T08:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/expense-categories.md",
+        "scripts/categorize_invoices.py"
+      ]
+    },
+    {
+      "claim_id": "vehicle-lease-maintenance-15pct",
+      "claim": "A maintenance component the leasing company defines separately is deductible, but the maintenance amount on which VAT may be offset may not exceed 15% of the total deal price",
+      "source_url": "https://www.gov.il/BlobFolder/policy/vat_11/he/vat_vatInterpretation_parshanut1_2002.pdf",
+      "raw_snippet": "הסכום המקסימלי לשירותי תחזוקה שהמס בגינם יהא ניתן לקיזוז לא יעלה על 15% מסה\"כ מחיר העסקה",
+      "fetched_at": "2026-09-29T08:00:00Z",
+      "verified_via": "pdf",
+      "verified_at": "2026-09-29T08:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/expense-categories.md",
+        "scripts/categorize_invoices.py"
+      ]
+    },
+    {
+      "claim_id": "private-vehicle-includes-light-commercial-3500",
+      "claim": "For Regulation 14, a 'private vehicle' includes a commercial vehicle whose permitted total weight does not exceed 3,500 kg",
+      "source_url": "https://he.wikisource.org/wiki/תקנות_מס_ערך_מוסף",
+      "raw_snippet": "ובלבד שמשקלו הכולל המותר של רכב מסחרי כאמור אינו עולה על 3,500 ק״ג",
+      "fetched_at": "2026-09-29T08:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/expense-categories.md",
+        "references/domain-checklist.md",
+        "scripts/categorize_invoices.py"
+      ]
+    },
+    {
+      "claim_id": "reg-14b-exceptions",
+      "claim": "Regulation 14(b) is vehicle-specific: it lifts the Reg 14(a) bar for a car dealer's stock vehicle not used other than for sale, and for a vehicle used ONLY for driving lessons, car rental by a car-rental business, passenger transport, or field tours",
+      "source_url": "https://he.wikisource.org/wiki/תקנות_מס_ערך_מוסף",
+      "raw_snippet": "בידי עוסק אחר אם הרכב משמש אך ורק לאחד מאלה",
+      "fetched_at": "2026-09-29T08:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/expense-categories.md",
+        "scripts/categorize_invoices.py"
+      ]
+    },
+    {
+      "claim_id": "service-charge-on-payment-s24",
+      "claim": "Section 24: for a service the VAT charge arises on receipt of the consideration (סעיף 24 לחוק מע\"מ)",
+      "source_url": "https://he.wikisource.org/wiki/חוק_מס_ערך_מוסף",
+      "raw_snippet": "בשירות חל החיוב במס עם קבלת התמורה ועל הסכום שהתקבל",
+      "fetched_at": "2026-09-29T08:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/expense-categories.md"
+      ]
+    },
+    {
+      "claim_id": "service-charge-s29-1a-15m",
+      "claim": "Section 29(1א): a service given by a dealer whose turnover exceeds NIS 15 million a year and who keeps books under schedule 11 is charged when the service is given (סעיף 29(1א) לחוק מע\"מ)",
+      "source_url": "https://he.wikisource.org/wiki/חוק_מס_ערך_מוסף",
+      "raw_snippet": "וכן בשירות שניתן על ידי עוסק שמחזור העסקאות שלו עולה על 15 מיליון שקלים חדשים בשנה",
+      "fetched_at": "2026-09-29T08:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/expense-categories.md",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "lease-maintenance-exclusions-and-reimbursements",
+      "claim": "Under ITA interpretation 1/2002, warranty repairs, self-insurance and a replacement car are an integral part of the rental and their input VAT is barred under Reg 14 even if itemized; insurance and licence-fee reimbursements on leases over 12 months fall under Reg 6 (תקנה 6) and are not part of the rental price; the 15% maintenance share may be exceeded only on an application approved by the ITA",
+      "source_url": "https://www.gov.il/BlobFolder/policy/vat_11/he/vat_vatInterpretation_parshanut1_2002.pdf",
+      "raw_snippet": "מרכיבים אלה מהווים חלק אינטגרלי של עסקת השכרת הרכב",
+      "fetched_at": "2026-09-29T09:00:00Z",
+      "verified_via": "pdf",
+      "verified_at": "2026-09-29T09:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/expense-categories.md",
+        "scripts/categorize_invoices.py"
+      ]
+    },
+    {
+      "claim_id": "allocation-start-5-may-2024",
+      "claim": "The allocation-number requirement started on 5 May 2024 at NIS 25,000; an invoice issued earlier carries no requirement",
+      "source_url": "https://www.edicomgroup.com/electronic-invoicing/israel",
+      "raw_snippet": "May 5, 2024 : Mandatory for invoices with a value above 25,000 NIS",
+      "fetched_at": "2026-09-29T10:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/expense-categories.md",
+        "references/domain-checklist.md",
+        "scripts/categorize_invoices.py"
+      ]
+    },
+    {
+      "claim_id": "lease-running-costs-reg18-s5",
+      "claim": "ITA interpretation 1/2002 section 5 (סעיף 5): input VAT on current running costs of a private vehicle (maintenance, fuel, servicing) is deductible proportionally under Reg 18; if the vehicle is used only for business, the full input VAT is deductible",
+      "source_url": "https://www.gov.il/BlobFolder/policy/vat_11/he/vat_vatInterpretation_parshanut1_2002.pdf",
+      "raw_snippet": "אם נעשה שימוש ברכב אך ורק לצורכי העסק, ניתן לנכות את מלוא מס התשומות",
+      "fetched_at": "2026-09-29T10:00:00Z",
+      "verified_via": "pdf",
+      "verified_at": "2026-09-29T10:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "scripts/categorize_invoices.py"
+      ]
+    },
+    {
+      "claim_id": "ita-vehicle-guide-page",
+      "claim": "The Israel Tax Authority's vehicle input-tax guide restates the Regulation 18 mixed-use rules for vehicles",
+      "source_url": "https://www.gov.il/he/pages/instructions-for-deduction-of-input-tax-for-vehicles-and-motorcycles",
+      "raw_snippet": "לא קבע המנהל את החלק היחסי, ועיקר השימוש בנכס או השירות הוא לצרכי עסק, רשאי העוסק לנכות שני שלישים ממס התשומות. לא קבע המנהל את החלק היחסי, ועיקר השימוש בנכס או בשירות הוא שלא לצרכי עסק, רשאי העוסק לנכות רבע ממס התשומות.",
+      "fetched_at": "2026-08-12",
+      "verified_via": "gov.il content API",
+      "verified_at": "2026-08-12",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "kibud-80-income-tax",
+      "claim": "Light in-house refreshments (כיבוד קל) are 80% deductible for income tax",
+      "source_url": "https://www.bshcpa.co.il/כיבודים-ואירוח/",
+      "raw_snippet": "ע\"פ פקודת מס הכנסה, יותרו בניכוי רק 80% מההוצאות לכיבוד קל (שתייה קרה או חמה, עוגיות וכיוצא באלה) במקום העיסוק (במקום שבו מנהל הנישום, דרך קבע, את עיסוקו) של הנישום. בהודעת רשות המסים מיום 28 ביוני 2018 נאמר, שעמדת רשות המסים היא כי הסיפא של הגדרת \"כיבוד קל\" וכיוצא באלה יכולה לכלול גם פירות וירקות העונה. לפי חוזר מס הכנסה מס' 14/2000, יוכרו ההוצאות לכיבוד קל במקום העיסוק הן לאורחים המבקרים והן לעובדים.",
+      "fetched_at": "2026-08-18",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "verified_via": "cited page fetched and confirmed to contain \"80%\"; snippet replaced with the page's own wording around it",
+      "verified_at": "2026-08-18"
     }
   ],
   "schemaVersion": "1.0",
-  "generated_at": "2026-08-26T18:04:53Z"
+  "generated_at": "2026-09-29T08:00:00Z"
 }

@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.6.0] - 2026-09-29
+
+### Fixed
+
+- **Car leasing was treated as a running cost.** The script put "ליסינג רכב" on the Regulation 18 ladder (2/3 or 1/4), and an English "car lease" matched the Rent keyword and took a FULL deduction. The Tax Authority's interpretation 1/2002 says the rental component of a private-vehicle lease is barred under Regulation 14(a). Lease and rental VAT is now zero. A maintenance component the leasing company itemizes separately (`lease_maintenance_vat`) goes through Regulation 18, capped at 15% of the deal price, as the interpretation provides.
+- **A light commercial vehicle took a full deduction.** `commercial_vehicle: true` bypassed every vehicle rule, but Regulation 1 defines "רכב פרטי" for Regulation 14 to include a commercial vehicle up to 3,500 kg. The flag now needs `vehicle_weight_kg` above 3,500 to leave the private-vehicle rules.
+- **The lease decision is an explicit field, not a guess.** `vehicle_lease` must be set for any invoice from a leasing or rental company. Five review rounds showed that every free-text rule trades one wrong-money case for another (lessors whose name lacks ליסינג, services bundled with "+" or "לרבות", a fuel card that mentions the lease). The text is now used only to spot a likely lease: without the field such an invoice is held at 0, marked INPUT NEEDED, and fails `--validate`. A car lease no longer falls into Rent on the word "lease".
+- The 15% maintenance cap can take the whole deal's VAT (`lease_deal_vat`) as its base when maintenance is billed on its own invoice, and the maintenance component honours the Director's determination.
+- Added `vat_free_reimbursement` for insurance and licence-fee reimbursements on a long lease, which carry no VAT (Reg 6, interpretation 1/2002 section 4). Stated which maintenance items stay barred even when itemized (warranty repairs, self-insurance, a replacement car).
+- Added `reg14b_exception`, documented as vehicle-specific: a dealer's unused stock car, or a vehicle used ONLY for driving lessons, car-rental business, passenger transport or tours.
+- **The service charge date omitted section 29(1א).** Section 24 (charge on payment) was stated as the rule for every service. A provider with turnover above NIS 15 million keeping books under schedule 11, and a related-party, unpriced or in-kind service, is charged when the service is given.
+- Stated explicitly that an invoice issued before 5 May 2024 carries no allocation-number requirement at all. The script already behaved this way; the text only implied it.
+
 ## [1.5.0] - 2026-08-26
 
 ### Fixed
