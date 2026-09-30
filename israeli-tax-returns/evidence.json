@@ -1084,7 +1084,7 @@
     },
     {
       "claim_id": "s188a-late-filing-fine",
-      "claim": "s.188(a): a fine of 500 NIS for every month of delay in filing the s.132 return (סעיף 188(א)). Section 188.",
+      "claim": "s.188(a): a fine for every month of delay in filing the s.132 return (סעיף 188(א)). Section 188. The 500 NIS in the text is a base amount.",
       "source_url": "https://www.nevo.co.il/law_html/law01/255_001.htm",
       "raw_snippet": "לא הגיש אדם דו\"ח במועד שנקבע בסעיף 132, יוטל עליו בעד כל חודש של פיגור קנס של 500 שקלים חדשים",
       "fetched_at": "2026-10-01T12:00:00Z",
@@ -1183,6 +1183,18 @@
         "SKILL.md",
         "SKILL_HE.md",
         "references/credit-points.md"
+      ]
+    },
+    {
+      "claim_id": "s188h-indexation",
+      "claim": "s.188(h) (סעיף 188(ח)): the amounts in s.188 are indexed every 1 January by the CPI rise of the previous year.",
+      "source_url": "https://www.nevo.co.il/law_html/law01/255_001.htm",
+      "raw_snippet": "ב-1 בינואר של כל שנת מס יתואמו הסכומים הנקובים בסעיף זה כפי שהיו ב-1 בינואר של שנת המס הקודמת, לפי שיעור עליית המדד בשנת המס הקודמת",
+      "fetched_at": "2026-10-01T15:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/troubleshooting.md"
       ]
     }
   ]

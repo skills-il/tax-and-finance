@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.10.2 - 2026-10-01
+
+- Dropped the 500 NIS late-filing fine figure: it is the statute's base amount, indexed every January under s.188(h), so the current fine is higher. The skill now points to the Tax Authority's current figure.
+
 ## 1.10.1 - 2026-10-01
 
 - Removed a non-existent '2.0 credit points' entry for a blind or 100% disabled filer. The actual relief is a Section 9(5) income exemption on personal-exertion income up to an annual ceiling (Form 101 box 2A).

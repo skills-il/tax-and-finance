@@ -240,7 +240,7 @@ CPA authorization (yipui koach) is granted by the taxpayer in the SHAAM portal, 
 - Form 1214: statutory 31 May, extended for 2025 returns to 30.7.2026 for companies filing without a representative
 - Request any extension BEFORE the original deadline
 
-**Deadline already missed:** file anyway, the obligation does not lapse. Section 188(a) sets a fine of 500 NIS for every month of delay, and unpaid tax keeps accruing linkage and interest. Whether a return handed to a representative after the deadline can still ride the quota schedule is for that representative to confirm; do not promise it.
+**Deadline already missed:** file anyway, the obligation does not lapse. Section 188(a) sets an indexed fine for every month of delay (s.188(h)); quote the Tax Authority's current figure, and unpaid tax keeps accruing linkage and interest. Whether a return handed to a representative after the deadline can still ride the quota schedule is for that representative to confirm; do not promise it.
 
 ## Examples
 

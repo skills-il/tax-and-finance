@@ -14,7 +14,7 @@ Solution: File immediately. Tax not paid within 60 days of the sale carries inte
 
 ### Error: "I missed the Form 1301 deadline"
 Cause: The 2025 deadline (30.6.2026 online) has passed and the filer is not on a representative's quota.
-Solution: File anyway, through the online service; the obligation does not lapse. Section 188(a) sets a fine of 500 NIS for every month of delay, and unpaid tax keeps accruing linkage and interest. Whether a return handed to a representative now can still use the quota schedule is for the representative to confirm.
+Solution: File anyway, through the online service; the obligation does not lapse. Section 188(a) sets a fine for every month of delay (the statute's base amount is indexed every January under s.188(h), so quote the current figure from the Tax Authority, not the statute), and unpaid tax keeps accruing linkage and interest. Whether a return handed to a representative now can still use the quota schedule is for the representative to confirm.
 
 ### Error: "Mikdamot rate seems too high"
 Cause: The Tax Authority's assessed rate is based on prior year income that may not reflect current business conditions.
@@ -40,7 +40,7 @@ Solution: Verify that the accounting software is updated to the latest Form 6111
 
 ### שגיאה: "פספסתי את מועד הגשת הדוח השנתי (טופס 1301)"
 סיבה: המועד לשנת 2025 (30.6.2026 במקוון) עבר, והמגיש אינו במכסה של מייצג.
-פתרון: מגישים בכל זאת דרך השירות המקוון, החובה לא פוקעת. סעיף 188(א) קובע קנס של 500 ש"ח לכל חודש של פיגור, ומס שלא שולם ממשיך לצבור הפרשי הצמדה וריבית. האם דוח שנמסר עכשיו למייצג עדיין נכנס להסדר המכסות, על המייצג לאשר.
+פתרון: מגישים בכל זאת דרך השירות המקוון, החובה לא פוקעת. סעיף 188(א) קובע קנס לכל חודש של פיגור (הסכום שבחוק מתואם למדד בכל ינואר לפי סעיף 188(ח), לכן יש לצטט את הסכום העדכני מרשות המסים ולא מהחוק), ומס שלא שולם ממשיך לצבור הפרשי הצמדה וריבית. האם דוח שנמסר עכשיו למייצג עדיין נכנס להסדר המכסות, על המייצג לאשר.
 
 ### שגיאה: "שיעור המקדמות נראה גבוה מדי"
 סיבה: שיעור רשות המסים מבוסס על הכנסת השנה הקודמת שעשויה לא לשקף את המצב העסקי הנוכחי.
