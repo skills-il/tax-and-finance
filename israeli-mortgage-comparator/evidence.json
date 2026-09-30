@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0",
   "skill": "israeli-mortgage-comparator",
-  "generated_at": "2026-08-19T02:42:16Z",
+  "generated_at": "2026-10-01T01:00:00Z",
   "claims": [
     {
       "claim_id": "directive-329-version",
@@ -137,7 +137,7 @@
     },
     {
       "claim_id": "fx-foreign-resident-s12-3",
-      "claim": "Directive 329 section 12.3 covers FX or FX-linked housing loans granted to a foreign resident; the directive has no separate LTV row keyed to residency. (Directive 329 Section 12.3; סעיף 12 להוראה 329).",
+      "claim": "Directive 329 section 12.3 covers FX or FX-linked housing loans granted to a foreign resident (a section-7 carve-out). LTV classification turns on Israeli citizenship through the section-1 dwelling definitions, not on a separate residency row. (Directive 329 Section 12.3; סעיף 12 להוראה 329).",
       "source_url": "https://www.boi.org.il/media/ez4npagt/329.pdf",
       "raw_snippet": "הלוואות לדיור במט\"ח או צמודות מט\"ח שניתנו לתושב חוץ",
       "fetched_at": "2026-08-19T02:42:16Z",
@@ -269,7 +269,7 @@
     },
     {
       "claim_id": "directive-203-reference",
-      "claim": "Directive 329 section 6 cross-references the reduced risk weights in Proper Conduct of Banking Business Directive 203 section 72. (Directive 329 Section 72; סעיף 72 להוראה 329).",
+      "claim": "Directive 329 section 6 cross-references the reduced risk weights in Proper Conduct of Banking Business Directive 203 section 72. (Directive 329 section 6, referring to Directive 203 section 72; סעיף 72 להוראה 203).",
       "source_url": "https://www.boi.org.il/media/ez4npagt/329.pdf",
       "raw_snippet": "להוראת ניהול בנקאי תקין מספר 203",
       "fetched_at": "2026-08-19T02:42:16Z",
@@ -332,7 +332,9 @@
         "SKILL.md",
         "SKILL_HE.md"
       ],
-      "source_note": "Host blocks non-browser clients (boi.org.il Radware, gov.il 403). Recorded as unreachable, not verified, on 2026-08-19: the shared Playwright browser was returning other sessions pages and could not be trusted for verification."
+      "source_note": "Host blocks non-browser clients (boi.org.il Radware, gov.il 403). Recorded as unreachable, not verified, on 2026-08-19: the shared Playwright browser was returning other sessions pages and could not be trusted for verification.",
+      "verified_via": "browser",
+      "verified_at": "2026-10-01"
     },
     {
       "claim_id": "boi-supervision-page",
@@ -344,25 +346,29 @@
         "SKILL.md",
         "SKILL_HE.md"
       ],
-      "source_note": "boi.org.il serves a Radware challenge to non-browser clients. Both URLs returned HTTP 200 in the Phase 3f link check on 2026-08-19. Recorded as unreachable, not verified."
+      "source_note": "boi.org.il serves a Radware challenge to non-browser clients. Both URLs returned HTTP 200 in the Phase 3f link check on 2026-08-19. Recorded as unreachable, not verified.",
+      "verified_via": "browser",
+      "verified_at": "2026-10-01"
     },
     {
       "claim_id": "boi-main-site",
       "claim": "The Bank of Israel publishes the current interest-rate decisions of the Monetary Committee.",
       "source_url": "https://www.boi.org.il",
-      "raw_snippet": "Bank of Israel",
+      "raw_snippet": "ריבית בנק ישראל",
       "fetched_at": "2026-08-19T02:42:16Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
       ],
-      "source_note": "boi.org.il serves a Radware challenge to non-browser clients. Both URLs returned HTTP 200 in the Phase 3f link check on 2026-08-19. Recorded as unreachable, not verified."
+      "source_note": "boi.org.il serves a Radware challenge to non-browser clients. Both URLs returned HTTP 200 in the Phase 3f link check on 2026-08-19. Recorded as unreachable, not verified.",
+      "verified_via": "browser",
+      "verified_at": "2026-10-01"
     },
     {
       "claim_id": "boi-creditdata",
-      "claim": "creditdata.org.il is the Bank of Israel credit-data register, where an individual can obtain a free annual credit report.",
+      "claim": "creditdata.org.il is the Bank of Israel credit data system site, where a free credit data report can be requested and the licensed credit bureaus are listed",
       "source_url": "https://www.creditdata.org.il",
-      "raw_snippet": "מאגר נתוני אשראי",
+      "raw_snippet": "מערכת נתוני אשראי של בנק ישראל",
       "fetched_at": "2026-08-19T02:42:16Z",
       "appears_in": [
         "SKILL.md",
@@ -395,7 +401,7 @@
     },
     {
       "claim_id": "illustrative-figures",
-      "claim": "Illustrative scenario figures used only in the worked examples, the mix templates and the troubleshooting prose. None is a regulated constant and none is asserted as a current market value. Example property and loan amounts: 2,500,000 NIS, 1,800,000 NIS, 1,500,000 NIS, 1,200,000 NIS, 1,050,000 NIS, 900,000 NIS, 700,000 NIS, 500,000 NIS, a projected 672,000 NIS linked balance, and 25,000 NIS of monthly income. Example and range costs: advisor 3,000-8,000 NIS, appraiser 1,500-3,000 NIS, appraisal 2,000 NIS, attorney 3,000 NIS, mortgage registration 200 NIS, attorney fee about 0.5% of price. Example rates and spreads: 4.5%, 3.8%, 0.3%, 0.5%, 0.65%, 0.7%, 0.2%, and stress deltas of 1% and 2%. Example inflation scenarios: 2%, 3%, 4%, and the 3-4% recent-years range. Illustrative mix weights: 17%, 27%, 33%, 34%, 40%, 50%. Example LTV outcomes: 25%, 30%, 72%. Early-repayment penalty magnitude given as a 0.5-2% range. Rule-of-thumb refinancing saving 0.3-0.5%. Hebrew-side renderings of the same ranges: 1,500-3,000 ש\"ח לשמאי, 3,000-8,000 ש\"ח ליועץ, 2,000 ש\"ח לשמאות, 3,000 ש\"ח לעורך דין, 200 ש\"ח לרישום משכנתא, 3 ש\"ח is not a figure in this skill and any such extraction is an artifact of splitting the 1,500-3,000 ש\"ח range.",
+      "claim": "Illustrative scenario figures used only in the worked examples, the mix templates and the troubleshooting prose. None is a regulated constant and none is asserted as a current market value. Example property and loan amounts: 2,500,000 NIS, 1,800,000 NIS, 1,500,000 NIS, 1,200,000 NIS, 1,050,000 NIS, 900,000 NIS, 700,000 NIS, 500,000 NIS, a projected 672,000 NIS linked balance, and 25,000 NIS of monthly income. Example and range costs: advisor 3,000-8,000 NIS, appraiser 1,500-3,000 NIS, appraisal 2,000 NIS, attorney 3,000 NIS, attorney fee about 0.5% of price. Example rates and spreads: 4.5%, 3.8%, 0.3%, 0.5%, 0.65%, 0.7%, 0.2%, and stress deltas of 1% and 2%. Example inflation scenarios: 2%, 3%, 4%. Illustrative mix weights: 17%, 27%, 33%, 34%, 40%, 50%. Example LTV outcomes: 25%, 30%, 72%, and about 78% on a hypothetical 2,300,000 NIS appraisal (1,800,000 / 2,300,000). Rule-of-thumb refinancing saving 0.3-0.5%. Hebrew-side renderings of the same ranges: 1,500-3,000 ש\"ח לשמאי, 3,000-8,000 ש\"ח ליועץ, 2,000 ש\"ח לשמאות, 3,000 ש\"ח לעורך דין, 3 ש\"ח is not a figure in this skill and any such extraction is an artifact of splitting the 1,500-3,000 ש\"ח range.",
       "source_url": "https://www.boi.org.il/media/ez4npagt/329.pdf",
       "raw_snippet": "מגבלות למתן הלוואות לדיור",
       "fetched_at": "2026-08-19T02:42:16Z",
@@ -417,6 +423,741 @@
         "SKILL_HE.md"
       ],
       "source_note": "Confirmed 2026-08-19 by direct curl: the endpoint returned {\"currentInterest\":3.5,\"nextInterestDate\":\"2026-09-01T00:00:00Z\",\"lastPublishedDate\":\"2026-07-12T08:59:20.943Z\"}. The gate reports it unreachable only because the JSON body is under its minimum-length heuristic for an HTML page."
+    },
+    {
+      "claim_id": "prime-margin-1-5",
+      "claim": "Prime is the Bank of Israel rate plus 1.5 percentage points (bank-published definition)",
+      "source_url": "https://www.mizrahi-tefahot.co.il/brokerage/index-table/",
+      "raw_snippet": "ריבית הפריים מחושבת לפי תוספת של 1.5% לריבית בנק ישראל",
+      "fetched_at": "2026-10-01T00:30:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-10-01"
+    },
+    {
+      "claim_id": "prime-margin-451-appendix6",
+      "claim": "The BoI explanation sheet for the approval in principle (Directive 451 Appendix 6) defines Prime as Bank of Israel rate + 1.5%",
+      "source_url": "https://www.boi.org.il/media/utld2tgp/451.pdf",
+      "raw_snippet": "(ריבית בנק ישראל )1.5% +",
+      "fetched_at": "2026-10-01T00:30:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "pti-aggregation-effective-1-10-2026",
+      "claim": "The Appendix A aggregation of loans on the same property applies from 1 October 2026; circular 2852 postponed it from 1 July 2026",
+      "source_url": "https://www.boi.org.il/media/hjrlkrse/h2852.pdf",
+      "raw_snippet": "1 באוקטובר 2026",
+      "fetched_at": "2026-10-01T00:30:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "pti-aggregation-original-1-7-2026",
+      "claim": "Circular 2840 originally set 1 July 2026 as the start date",
+      "source_url": "https://www.boi.org.il/media/hjrlkrse/h2852.pdf",
+      "raw_snippet": "1 ביולי 2026",
+      "fetched_at": "2026-10-01T00:30:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "ltv-value-lower-of",
+      "claim": "For LTV the property value may not exceed the lower of the appraisal and the cost in the purchase agreement (current BoI Q&A file on Directive 329 (Feb 2026) quoting reporting directive 876)",
+      "source_url": "https://www.boi.org.il/media/emunmobp/202601.pdf",
+      "raw_snippet": "יעלה על הנמוך מבין הערכת השמאי ועלות הנכס בהסכם הרכישה",
+      "fetched_at": "2026-10-01T00:30:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/offer-comparison-and-fees.md"
+      ]
+    },
+    {
+      "claim_id": "aip-24-days",
+      "claim": "Approval-in-principle terms hold for a period of not less than 24 days",
+      "source_url": "https://www.boi.org.il/media/utld2tgp/451.pdf",
+      "raw_snippet": "תקופה כאמור לא תפחת מ 24- ימים מיום מתן האישור העקרוני",
+      "fetched_at": "2026-10-01T00:30:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/offer-comparison-and-fees.md"
+      ]
+    },
+    {
+      "claim_id": "aip-5-business-days",
+      "claim": "The bank must answer a loan request in writing within 5 business days; no duty to give a reason for refusal is stated",
+      "source_url": "https://www.boi.org.il/media/utld2tgp/451.pdf",
+      "raw_snippet": "האם נענה לבקשה או לא נענה לבקשה, תוך 5 ימי עסקים מיום הגשתה",
+      "fetched_at": "2026-10-01T00:30:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/offer-comparison-and-fees.md"
+      ]
+    },
+    {
+      "claim_id": "aip-7-business-days",
+      "claim": "Exceptional cases: decision within 7 business days",
+      "source_url": "https://www.boi.org.il/media/utld2tgp/451.pdf",
+      "raw_snippet": "בתוך 7 ימי עסקים",
+      "fetched_at": "2026-10-01T00:30:00Z",
+      "appears_in": [
+        "references/offer-comparison-and-fees.md"
+      ]
+    },
+    {
+      "claim_id": "aip-no-costs",
+      "claim": "The approval in principle is given at a stage where no costs are charged",
+      "source_url": "https://www.boi.org.il/media/utld2tgp/451.pdf",
+      "raw_snippet": "זאת בשלב בו לא מושתות על מבקש ההלוואה עלויות כלשהן",
+      "fetched_at": "2026-10-01T00:30:00Z",
+      "appears_in": [
+        "references/offer-comparison-and-fees.md"
+      ]
+    },
+    {
+      "claim_id": "uniform-basket-1",
+      "claim": "Uniform basket 1 is 100% fixed non-linked",
+      "source_url": "https://www.boi.org.il/media/utld2tgp/451.pdf",
+      "raw_snippet": "100% קבועה לא צמודה",
+      "fetched_at": "2026-10-01T00:30:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/offer-comparison-and-fees.md"
+      ]
+    },
+    {
+      "claim_id": "uniform-basket-2",
+      "claim": "Uniform basket 2 includes 1/3 variable CPI-linked every 5 years on a government-bond base (with 1/3 fixed non-linked and 1/3 Prime)",
+      "source_url": "https://www.boi.org.il/media/utld2tgp/451.pdf",
+      "raw_snippet": "1/3 משתנה צמודה, כל 5 שנים",
+      "fetched_at": "2026-10-01T00:30:00Z",
+      "appears_in": [
+        "references/offer-comparison-and-fees.md"
+      ]
+    },
+    {
+      "claim_id": "uniform-basket-3",
+      "claim": "Uniform basket 3 is 1/2 fixed non-linked and 1/2 Prime",
+      "source_url": "https://www.boi.org.il/media/utld2tgp/451.pdf",
+      "raw_snippet": "1/2 משתנה פריים",
+      "fetched_at": "2026-10-01T00:30:00Z",
+      "appears_in": [
+        "references/offer-comparison-and-fees.md"
+      ]
+    },
+    {
+      "claim_id": "uniform-baskets-spitzer",
+      "claim": "Uniform baskets use the Spitzer repayment schedule",
+      "source_url": "https://www.boi.org.il/media/utld2tgp/451.pdf",
+      "raw_snippet": "בסלים האחידים, אופן התשלום יהיה לפי לוח שפיצר",
+      "fetched_at": "2026-10-01T00:30:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/offer-comparison-and-fees.md"
+      ]
+    },
+    {
+      "claim_id": "uniform-baskets-terms",
+      "claim": "Uniform baskets: borrower chooses one term of 10, 15, 20, 25 or 30 years",
+      "source_url": "https://www.boi.org.il/media/utld2tgp/451.pdf",
+      "raw_snippet": "15 שנים; 20 שנים; 25 שנים; 30 שנים",
+      "fetched_at": "2026-10-01T00:30:00Z",
+      "appears_in": [
+        "references/offer-comparison-and-fees.md"
+      ]
+    },
+    {
+      "claim_id": "insurance-external",
+      "claim": "The bank must tell the borrower they may insure directly, not through a bank-controlled agency",
+      "source_url": "https://www.boi.org.il/media/utld2tgp/451.pdf",
+      "raw_snippet": "שלא באמצעות תאגיד שהוא סוכן ביטוח הנשלט על ידי התאגיד הבנקאי",
+      "fetched_at": "2026-10-01T00:30:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/offer-comparison-and-fees.md"
+      ]
+    },
+    {
+      "claim_id": "insurance-30k",
+      "claim": "No insurance may be required on loans up to 30,000 NIS or balances not above that",
+      "source_url": "https://www.boi.org.il/media/utld2tgp/451.pdf",
+      "raw_snippet": "בסכומים עד 30,000 ש\"ח או שיתרתן אינה עולה על סכום זה",
+      "fetched_at": "2026-10-01T00:30:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/offer-comparison-and-fees.md"
+      ]
+    },
+    {
+      "claim_id": "appraisal-90-days",
+      "claim": "A bank may not unreasonably refuse another bank's appraisal made within 90 days",
+      "source_url": "https://www.boi.org.il/media/utld2tgp/451.pdf",
+      "raw_snippet": "ושלא חלפו 90 ימים ממועד הערכת הנכס",
+      "fetched_at": "2026-10-01T00:30:00Z",
+      "appears_in": [
+        "references/offer-comparison-and-fees.md"
+      ]
+    },
+    {
+      "claim_id": "appraisal-cost-lower",
+      "claim": "Appraisal cost charged at the lower of actual cost and the fee schedule",
+      "source_url": "https://www.boi.org.il/media/utld2tgp/451.pdf",
+      "raw_snippet": "לפי הסכום הנמוך ביניהם",
+      "fetched_at": "2026-10-01T00:30:00Z",
+      "appears_in": [
+        "references/offer-comparison-and-fees.md"
+      ]
+    },
+    {
+      "claim_id": "porting-s20",
+      "claim": "Mortgage porting: bank may not refuse except for reasonable cause and must give the reason",
+      "source_url": "https://www.boi.org.il/media/utld2tgp/451.pdf",
+      "raw_snippet": "תאגיד בנקאי לא יסרב לבקשת לווה לשעבד נכס חילופי במקום הנכס הממושכן להבטחת הלוואתו (גרירת משכנתא)",
+      "fetched_at": "2026-10-01T00:30:00Z",
+      "appears_in": [
+        "references/offer-comparison-and-fees.md"
+      ]
+    },
+    {
+      "claim_id": "partial-repayment-term",
+      "claim": "Partial early repayment shortens the loan term by default",
+      "source_url": "https://www.boi.org.il/media/utld2tgp/451.pdf",
+      "raw_snippet": "במקרה של פירעון מוקדם חלקי תוקטן תקופת ההלוואה",
+      "fetched_at": "2026-10-01T00:30:00Z",
+      "appears_in": [
+        "references/offer-comparison-and-fees.md"
+      ]
+    },
+    {
+      "claim_id": "erf-operational-60",
+      "claim": "Operational early-repayment fee up to 60 NIS",
+      "source_url": "https://www.boi.org.il/media/qy5cow0l/116.pdf",
+      "raw_snippet": "עמלה תפעולית שלא תעלה על 60 שקלים חדשים",
+      "fetched_at": "2026-10-01T00:30:00Z",
+      "appears_in": [
+        "SKILL_HE.md",
+        "references/offer-comparison-and-fees.md",
+        "SKILL.md"
+      ]
+    },
+    {
+      "claim_id": "erf-operational-indexable",
+      "claim": "The Supervisor may update the operational-fee amount",
+      "source_url": "https://www.boi.org.il/media/qy5cow0l/116.pdf",
+      "raw_snippet": "המפקח רשאי לעדכן מזמן לזמן את הסכום האמור בסעיף",
+      "fetched_at": "2026-10-01T00:30:00Z",
+      "appears_in": [
+        "references/offer-comparison-and-fees.md"
+      ]
+    },
+    {
+      "claim_id": "erf-notice-0-1pct",
+      "claim": "Short-notice fee: one tenth of a percent if under ten days' notice",
+      "source_url": "https://www.boi.org.il/media/qy5cow0l/116.pdf",
+      "raw_snippet": "נתן הלווה הודעה מוקדמת של פחות מעשרה ימים - עמלה בגובה עשירית האחוז מהסכום הנפרע",
+      "fetched_at": "2026-10-01T00:30:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/offer-comparison-and-fees.md"
+      ]
+    },
+    {
+      "claim_id": "erf-notice-death",
+      "claim": "Short-notice fee not charged on the borrower's death",
+      "source_url": "https://www.boi.org.il/media/qy5cow0l/116.pdf",
+      "raw_snippet": "נפטר הלווה",
+      "fetched_at": "2026-10-01T00:30:00Z",
+      "appears_in": [
+        "references/offer-comparison-and-fees.md"
+      ]
+    },
+    {
+      "claim_id": "erf-notice-45-days",
+      "claim": "Notice may not be given more than 45 days ahead",
+      "source_url": "https://www.boi.org.il/media/qy5cow0l/116.pdf",
+      "raw_snippet": "הודעה מוקדמת לא תינתן יותר מ– 45 ימים לפני המועד שקבע הלווה לביצוע הפירעון",
+      "fetched_at": "2026-10-01T00:30:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/offer-comparison-and-fees.md"
+      ]
+    },
+    {
+      "claim_id": "erf-average-rate",
+      "claim": "The capitalisation-fee benchmark is the average rate published by the Supervisor",
+      "source_url": "https://www.boi.org.il/media/qy5cow0l/116.pdf",
+      "raw_snippet": "הריבית האחרונה הידועה שפרסם המפקח",
+      "fetched_at": "2026-10-01T00:30:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/offer-comparison-and-fees.md"
+      ]
+    },
+    {
+      "claim_id": "erf-discount-20",
+      "claim": "Capitalisation fee reduced by 20% after 3 and before 5 years (ordinary loans)",
+      "source_url": "https://www.boi.org.il/media/qy5cow0l/116.pdf",
+      "raw_snippet": "נעשה הפירעון המוקדם בתום שלוש שנים או יותר, אך פחות מחמש שנים מיום מתן ההלוואה 20% - מסכום העמלה",
+      "fetched_at": "2026-10-01T00:30:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/offer-comparison-and-fees.md"
+      ]
+    },
+    {
+      "claim_id": "erf-discount-30",
+      "claim": "Capitalisation fee reduced by 30% after 5 years (ordinary loans)",
+      "source_url": "https://www.boi.org.il/media/qy5cow0l/116.pdf",
+      "raw_snippet": "נעשה הפירעון המוקדם בתום חמש שנים או יותר מיום מתן ההלוואה 30% - מסכום העמלה",
+      "fetched_at": "2026-10-01T00:30:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/offer-comparison-and-fees.md"
+      ]
+    },
+    {
+      "claim_id": "erf-cpi-average",
+      "claim": "CPI-linked loans: fee if repaid between the 1st and 15th of the month, amount times half the average CPI change over 12 indices",
+      "source_url": "https://www.boi.org.il/media/qy5cow0l/116.pdf",
+      "raw_snippet": "אם נעשה הפירעון המוקדם בין היום הראשון ליום החמישה עשר בחודש, לגבות עמלה בגובה הסכום הנפרע, כפול מחצית השיעור הממוצע של השינוי במדד",
+      "fetched_at": "2026-10-01T00:30:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/offer-comparison-and-fees.md"
+      ]
+    },
+    {
+      "claim_id": "erf-variable-no-cap-fee",
+      "claim": "No capitalisation fee where rate-change dates are unknown or set at least once a year",
+      "source_url": "https://www.boi.org.il/media/qy5cow0l/116.pdf",
+      "raw_snippet": "לאחת לשנה או לתדירות גבוהה יותר",
+      "fetched_at": "2026-10-01T00:30:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/offer-comparison-and-fees.md"
+      ]
+    },
+    {
+      "claim_id": "erf-reset-date-operational-only",
+      "claim": "Repayment on a rate-change date carries the operational fee only",
+      "source_url": "https://www.boi.org.il/media/qy5cow0l/116.pdf",
+      "raw_snippet": "נעשה הפירעון ביום שינוי הריבית, תיגבה עמלה כאמור בסעיף",
+      "fetched_at": "2026-10-01T00:30:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/offer-comparison-and-fees.md"
+      ]
+    },
+    {
+      "claim_id": "tabu-fee-188",
+      "claim": "Mortgage registration fee 188 NIS (Land Registry fee regulations, consolidated to 06-01-2026)",
+      "source_url": "https://www.nevo.co.il/law_html/law00/72910.htm",
+      "raw_snippet": "בעד רישום משכנתה או משכנתה נוספת, או הגדלת סכום ההלוואה – 188 שקלים חדשים",
+      "fetched_at": "2026-10-01T00:30:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-10-01"
+    },
+    {
+      "claim_id": "tabu-fee-payer",
+      "claim": "The mortgagor pays the mortgage-registration fee",
+      "source_url": "https://www.nevo.co.il/law_html/law00/72910.htm",
+      "raw_snippet": "בעד רישום משכנתה – הממשכן",
+      "fetched_at": "2026-10-01T00:30:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-10-01"
+    },
+    {
+      "claim_id": "reservist-exec-expiry",
+      "claim": "Execution Office reservist regulations expire 28 February 2027",
+      "source_url": "https://www.nevo.co.il/law_html/law00/237251.htm",
+      "raw_snippet": "תוקפן של תקנות אלה עד יום כ\"א באדר א' התשפ\"ז (28 בפברואר 2027)",
+      "fetched_at": "2026-10-01T00:30:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-10-01"
+    },
+    {
+      "claim_id": "reservist-exec-spouse",
+      "claim": "Protected persons include the reservist's spouse",
+      "source_url": "https://www.nevo.co.il/law_html/law00/237251.htm",
+      "raw_snippet": "ובן זוגו",
+      "fetched_at": "2026-10-01T00:30:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-10-01"
+    },
+    {
+      "claim_id": "reservist-exec-3-months",
+      "claim": "Protection period of three months from the start of reserve service",
+      "source_url": "https://www.nevo.co.il/law_html/law00/237251.htm",
+      "raw_snippet": "תקופה של שלושה חודשים שתחילתה במועד תחילת שירות המילואים",
+      "fetched_at": "2026-10-01T00:30:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-10-01"
+    },
+    {
+      "claim_id": "reservist-exec-lapse",
+      "claim": "Entitlement ends if the underlying temporary provision lapses",
+      "source_url": "https://www.nevo.co.il/law_html/law00/237251.htm",
+      "raw_snippet": "אם פקעה הוראת השעה, תסתיים תקופת הזכאות",
+      "fetched_at": "2026-10-01T00:30:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-10-01"
+    },
+    {
+      "claim_id": "directive-253-expiry",
+      "claim": "The Roaring Lion temporary directive 253 was extended to 31 May 2026",
+      "source_url": "https://www.boi.org.il/media/ob0mey35/h2846.pdf",
+      "raw_snippet": "31 במאי 2026",
+      "fetched_at": "2026-10-01T00:30:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "citizen-single-dwelling",
+      "claim": "A single dwelling (and a replacement dwelling) under Directive 329 is one purchased by an individual 'Israeli citizen' as defined in Land Taxation Law s.16A(a)(1)-(1b)",
+      "source_url": "https://www.boi.org.il/media/ez4npagt/329.pdf",
+      "raw_snippet": "הנרכשת על ידי יחיד אזרח ישראלי",
+      "fetched_at": "2026-10-01T01:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "investment-dwelling-residual",
+      "claim": "An investment dwelling is any dwelling that is not a single or replacement dwelling",
+      "source_url": "https://www.boi.org.il/media/ez4npagt/329.pdf",
+      "raw_snippet": "דירת מגורים שאינה דירה יחידה או דירה חליפית",
+      "fetched_at": "2026-10-01T01:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "foreign-resident-definition",
+      "claim": "Directive 329 defines a foreign resident as one who is not an Israeli citizen",
+      "source_url": "https://www.boi.org.il/media/ez4npagt/329.pdf",
+      "raw_snippet": "מי שאינו אזרח ישראלי",
+      "fetched_at": "2026-10-01T01:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "erf-directed-no-fee",
+      "claim": "No early-repayment fee may be charged on a directed (eligibility) loan",
+      "source_url": "https://www.boi.org.il/media/qy5cow0l/116.pdf",
+      "raw_snippet": "לא יתנה תאגיד בנקאי פירעון מוקדם של הלוואה מוכוונת בתשלום עמלה כלשהי",
+      "fetched_at": "2026-10-01T01:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/offer-comparison-and-fees.md"
+      ]
+    },
+    {
+      "claim_id": "erf-origination-computation",
+      "claim": "Alternative capitalisation computation where the average rate at origination was below the loan rate",
+      "source_url": "https://www.boi.org.il/media/qy5cow0l/116.pdf",
+      "raw_snippet": "אם שיעור הריבית הממוצעת במועד העמדת ההלוואה נמוך משיעור הריבית התקופתית החלה על ההלוואה במועד העמדת ההלוואה",
+      "fetched_at": "2026-10-01T01:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/offer-comparison-and-fees.md"
+      ]
+    },
+    {
+      "claim_id": "erf-lower-of",
+      "claim": "The bank charges the lower of the two capitalisation computations",
+      "source_url": "https://www.boi.org.il/media/qy5cow0l/116.pdf",
+      "raw_snippet": "לפי הנמוכה מביניהן",
+      "fetched_at": "2026-10-01T01:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/offer-comparison-and-fees.md"
+      ]
+    },
+    {
+      "claim_id": "erf-complementary-definition",
+      "claim": "A complementary loan is a bank loan to a person entitled to a directed loan, in addition to it and for the same purpose",
+      "source_url": "https://www.boi.org.il/media/qy5cow0l/116.pdf",
+      "raw_snippet": "שניתנה מאמצעיו של התאגיד הבנקאי למי שזכאי להלוואה מוכוונת, נוסף על ההלוואה המוכוונת ולאותה מטרה",
+      "fetched_at": "2026-10-01T01:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/offer-comparison-and-fees.md"
+      ]
+    },
+    {
+      "claim_id": "erf-complementary-10",
+      "claim": "Complementary-loan discount 10% from end of year 1",
+      "source_url": "https://www.boi.org.il/media/qy5cow0l/116.pdf",
+      "raw_snippet": "נעשה הפירעון המוקדם בתום שנה או יותר, אך פחות משנתיים מיום מתן ההלוואה",
+      "fetched_at": "2026-10-01T01:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/offer-comparison-and-fees.md"
+      ]
+    },
+    {
+      "claim_id": "erf-complementary-40",
+      "claim": "Complementary-loan discount 40% from end of year 4",
+      "source_url": "https://www.boi.org.il/media/qy5cow0l/116.pdf",
+      "raw_snippet": "נעשה הפירעון המוקדם בתום ארבע שנים או יותר מיום מתן ההלוואה 40% - מסכום העמלה",
+      "fetched_at": "2026-10-01T01:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/offer-comparison-and-fees.md"
+      ]
+    },
+    {
+      "claim_id": "erf-same-bank-refi-no-notice-fee",
+      "claim": "No short-notice fee on the part of a new loan the same bank gives for the repayment",
+      "source_url": "https://www.boi.org.il/media/qy5cow0l/116.pdf",
+      "raw_snippet": "נתן התאגיד הבנקאי הלוואה לצורך הפירעון המוקדם, לא תיגבה העמלה האמורה בפסקה זו לגבי סכום ההלוואה החדשה שנתן",
+      "fetched_at": "2026-10-01T01:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/offer-comparison-and-fees.md"
+      ]
+    },
+    {
+      "claim_id": "erf-offset-7b",
+      "claim": "When the average rate is above the loan rate, the negative capitalised amount is offset against other fees",
+      "source_url": "https://www.boi.org.il/media/qy5cow0l/116.pdf",
+      "raw_snippet": "ויתרת הסכום המהוון תקוזז",
+      "fetched_at": "2026-10-01T01:00:00Z",
+      "appears_in": [
+        "references/offer-comparison-and-fees.md"
+      ]
+    },
+    {
+      "claim_id": "insurance-life-up-to-loan",
+      "claim": "Life insurance may be required up to the loan amount",
+      "source_url": "https://www.boi.org.il/media/utld2tgp/451.pdf",
+      "raw_snippet": "בגבולות סכום ההלוואה שקיבל",
+      "fetched_at": "2026-10-01T01:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/offer-comparison-and-fees.md"
+      ]
+    },
+    {
+      "claim_id": "reservist-exec-extension",
+      "claim": "One further three-month extension if reserve service continues",
+      "source_url": "https://www.nevo.co.il/law_html/law00/237251.htm",
+      "raw_snippet": "תוארך תקופה זו בתקופה של שלושה חודשים נוספים",
+      "fetched_at": "2026-10-01T01:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-10-01"
+    },
+    {
+      "claim_id": "reservist-exec-alimony-excluded",
+      "claim": "The protection does not apply to alimony-judgment debts",
+      "source_url": "https://www.nevo.co.il/law_html/law00/237251.htm",
+      "raw_snippet": "ההגנה הקבועה בתקנת משנה (א) לא תחול על חייב בתיק לגביית חוב מזונות",
+      "fetched_at": "2026-10-01T01:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-10-01"
+    },
+    {
+      "claim_id": "mizrachi-largest",
+      "claim": "Mizrahi-Tefahot is the largest mortgage lender (about 37% market share in 2025 per the bank's own data, reported by Bizportal)",
+      "source_url": "https://www.bizportal.co.il/general/news/article/20036716",
+      "raw_snippet": "לפי נתוני הבנק, נתח השוק שלו במשכנתאות עמד בשנת 2025 על כ-37%",
+      "fetched_at": "2026-10-01T01:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "yahav-state-employees",
+      "claim": "Bank Yahav advertises benefits for state employees and teachers",
+      "source_url": "https://www.bank-yahav.co.il/",
+      "raw_snippet": "הטבות לעובדי מדינה",
+      "fetched_at": "2026-10-01T01:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "israeli-citizen-definition-ref",
+      "claim": "Directive 329 defines 'Israeli citizen' by reference to Land Taxation Law s.16A(a) paragraphs (1)-(1b) (סעיף 16א(א) לחוק מיסוי מקרקעין)",
+      "source_url": "https://www.boi.org.il/media/ez4npagt/329.pdf",
+      "raw_snippet": "16א(א) לחוק מיסוי מקרקעין, בפסקאות",
+      "fetched_at": "2026-10-01T01:30:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "s16a-registry",
+      "claim": "s.16A(a)(1): a person registered, or obliged to register, in the Israeli Population Registry",
+      "source_url": "https://he.wikisource.org/wiki/%D7%97%D7%95%D7%A7_%D7%9E%D7%99%D7%A1%D7%95%D7%99_%D7%9E%D7%A7%D7%A8%D7%A7%D7%A2%D7%99%D7%9F_(%D7%A9%D7%91%D7%97_%D7%95%D7%A8%D7%9B%D7%99%D7%A9%D7%94)",
+      "raw_snippet": "מי שרשום במרשם האוכלוסין בישראל או חייב להירשם בו",
+      "fetched_at": "2026-10-01T01:30:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "s16a-resident",
+      "claim": "s.16A(a)(1a): an individual who is an Israeli resident",
+      "source_url": "https://he.wikisource.org/wiki/%D7%97%D7%95%D7%A7_%D7%9E%D7%99%D7%A1%D7%95%D7%99_%D7%9E%D7%A7%D7%A8%D7%A7%D7%A2%D7%99%D7%9F_(%D7%A9%D7%91%D7%97_%D7%95%D7%A8%D7%9B%D7%99%D7%A9%D7%94)",
+      "raw_snippet": "יחיד שהוא תושב ישראל",
+      "fetched_at": "2026-10-01T01:30:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "s16a-law-of-return",
+      "claim": "s.16A(a)(1b): a person eligible under the Law of Return who is a resident of the Area",
+      "source_url": "https://he.wikisource.org/wiki/%D7%97%D7%95%D7%A7_%D7%9E%D7%99%D7%A1%D7%95%D7%99_%D7%9E%D7%A7%D7%A8%D7%A7%D7%A2%D7%99%D7%9F_(%D7%A9%D7%91%D7%97_%D7%95%D7%A8%D7%9B%D7%99%D7%A9%D7%94)",
+      "raw_snippet": "מי שזכאי לעלות לישראל לפי",
+      "fetched_at": "2026-10-01T01:30:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "s13-mod-guarantee",
+      "claim": "Section 13: no cap where a Ministry of Defence guarantee backed by a legal opinion is in place",
+      "source_url": "https://www.boi.org.il/media/ez4npagt/329.pdf",
+      "raw_snippet": "כאשר קיימת ערבות של משרד הביטחון",
+      "fetched_at": "2026-10-01T01:45:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/directive-329-special-cases.md"
+      ]
+    },
+    {
+      "claim_id": "s12-quarterly-proviso",
+      "claim": "Section 12 carve-outs apply only if the bank's quarterly variable-rate share stays within 66.66%",
+      "source_url": "https://www.boi.org.il/media/ez4npagt/329.pdf",
+      "raw_snippet": "שניתן להן אישר עקרוני במהלך כל רביע קלנדרי, אינו עולה על 66.66%",
+      "fetched_at": "2026-10-01T01:45:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "s4a-penalties-deducted",
+      "claim": "Section 4a: programme penalties are deducted from the apartment's value",
+      "source_url": "https://www.boi.org.il/media/ez4npagt/329.pdf",
+      "raw_snippet": "יש להפחית סכומים אלו משווי הדירה",
+      "fetched_at": "2026-10-01T01:45:00Z",
+      "appears_in": [
+        "references/directive-329-special-cases.md"
+      ]
+    },
+    {
+      "claim_id": "451-appraisal-copy",
+      "claim": "Directive 451 s.9(d): the bank gives the borrower a copy of the appraisal report it charged for",
+      "source_url": "https://www.boi.org.il/media/utld2tgp/451.pdf",
+      "raw_snippet": "ימסור לו העתק מדוח השומה",
+      "fetched_at": "2026-10-01T01:45:00Z",
+      "appears_in": [
+        "references/offer-comparison-and-fees.md"
+      ]
+    },
+    {
+      "claim_id": "451-partial-reduce-payments",
+      "claim": "Directive 451 s.15(a): on partial repayment the borrower may instead reduce the periodic payments",
+      "source_url": "https://www.boi.org.il/media/utld2tgp/451.pdf",
+      "raw_snippet": "רשאי הלווה להקטין את התשלומים התקופתיים",
+      "fetched_at": "2026-10-01T01:45:00Z",
+      "appears_in": [
+        "references/offer-comparison-and-fees.md"
+      ]
+    },
+    {
+      "claim_id": "451-basket-exemptions",
+      "claim": "Directive 451 s.4c(a)(3): uniform baskets not required for listed loan types",
+      "source_url": "https://www.boi.org.il/media/utld2tgp/451.pdf",
+      "raw_snippet": "לא נדרש להציג סלים אחידים בהלוואות הבאות",
+      "fetched_at": "2026-10-01T01:45:00Z",
+      "appears_in": [
+        "references/offer-comparison-and-fees.md"
+      ]
     }
   ]
 }

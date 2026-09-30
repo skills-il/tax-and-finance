@@ -1,6 +1,22 @@
 {
   "cycles": [
     {
+      "version": "1.4.0",
+      "date": "2026-10-01",
+      "lessons": [
+        "CARRY resolved: Prime = BoI rate + 1.5 pp is now captured from the BoI's own Directive 451 Appendix 6 explanation sheet (and Mizrahi's published definition). The out-of-scope row is closed.",
+        "CRITICAL fixed (coverage): Directive 451 was entirely absent although it is THE offer-comparison regime: three uniform baskets on every approval in principle, terms held for at least 24 days, printed total projected repayment and highest projected payment, external-insurance right, no insurance up to 30,000 NIS, appraisal reuse within 90 days, porting (s.20). Now in references/offer-comparison-and-fees.md with a pointer in Step 5.",
+        "CRITICAL fixed (wrong): early-repayment fee mechanics. Benchmark is the Supervisor's AVERAGE rate, not a market quote; the bank takes the LOWER of the 3(3) and 3(4) computations; directed loans carry no fee (s.2); ladders are 20/30 for ordinary loans and 10/20/30/40 for complementary loans, from each loan's exact execution date; short-notice fee has reset-date, same-bank-refinance and death exceptions; Prime has no capitalisation fee but can carry the operational fee. The first repair stated 20/30 unconditionally and omitted 3(4)/3(5); only the Judge and Expert caught that. Budget for the repair being wrong.",
+        "CRITICAL fixed (fabrication, Hebrew-only): SKILL_HE.md carried a gotcha about a 'פטור מעונש' fee of 0.5-2% of the balance with no English counterpart. No such fee exists. Diff EN/HE gotchas line by line every cycle; HE-only claims escape every EN-focused gate.",
+        "CRITICAL fixed (wrong, inherited from v1.3.0): 'the directive classifies by property, not residency' was wrong. Section 1 ties single/replacement dwellings to an individual 'Israeli citizen' as defined in Land Taxation Law s.16A(a)(1)-(1b) (registry, resident, or Law-of-Return Area resident). A first repair read it as plain citizenship, a false positive for permanent residents; the Expert caught it on re-review. Always open the cross-referenced definition.",
+        "CRITICAL fixed (arithmetic): the 'Aggressive' mix template was 34% Prime + 33% variable = 67%, breaching the s.7 cap of 66.66% inside a step that claims compliance. Now 33/33/34.",
+        "Fixed (wrong): reservist section claimed a standing statutory deferral right; rewritten around time-boxed BoI frameworks (directive 253 ran to 31.05.2026) and the Execution Office reservist regulations (reservist and spouse, 3 + 3 months, alimony excluded, expire by 28.02.2027). Also fixed: 'bank must give a rejection reason' (451 requires an answer in 5 business days, not a reason), 'licensed advisors', BDI described as a BoI bureau, Tabu fee now 188 NIS, LTV value = lower of appraisal and price (current BoI Q&A 202601.pdf), PTI aggregation effective 1.10.2026 (circular 2852), HE frontmatter metadata block removed, bank-roster superlatives removed.",
+        "Deferred (Expert MINOR/MAJOR, word cap): Directive 329 s.3 affidavit for classification; s.10 (LTV limit disapplied where over 50% of the loan is state funds); new-build purchases from a contractor (staged draws, construction-input index, Sale Law guarantees) logged as a re-litigated out-of-scope row; purchase-tax and closing costs reducing the cash available as equity in Example 1; Bank Jerusalem in the roster; a dated note on the May 2026 mortgage-advisor regulation bill (first reading only).",
+        "Deferred (legal-review, non-blocking): a '## Legal notice' section after the H1 was RECOMMENDED (Tier B, S2 x F1, verdict PASS). SKILL.md is at ~4,980 words against the 5,000 cap, so the next substantive addition must first move a section (Step 4 mixes or Troubleshooting) into references/.",
+        "Unverified this cycle: gov.il/he/Departments/Topics/dira and the mashkanta-calculator page are Cloudflare-blocked to curl and to a headless browser; kept from the previous cycle's verification."
+      ]
+    },
+    {
       "version": "1.3.0",
       "date": "2026-08-19",
       "holdout_before": 1.0,

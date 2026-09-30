@@ -15,7 +15,7 @@ number here is worse than no number. Fetch them at use time:
 | Variable | Where to get it | Note |
 |---|---|---|
 | Bank of Israel rate | `https://boi.org.il/PublicApi/GetInterest` returns the current rate and the next decision date as JSON. Human-readable equivalent at boi.org.il | The single most drift-prone input to every calculation below. Decisions land roughly every 6 weeks |
-| Prime rate | The bank's own published prime (ribit prime). Read it off the bank, do not compute it from a remembered margin | The margin over the BoI rate is set by the banks, not by regulation, so it is not stated here. Prime itself is uniform across banks; only each bank's discount or premium TO prime varies |
+| Prime rate | BoI rate + 1.5 percentage points. The Bank of Israel's own explanation sheet for the approval in principle (Directive 451, Appendix 6) defines Prime as "Bank of Israel rate + 1.5%". Confirm against the bank's published prime before quoting | Prime is uniform across banks; only each bank's discount or premium TO prime varies |
 | Purchase tax (mas rechisha) brackets | mas.gov.il, or the `israeli-real-estate` skill, which is the authoritative holder of the bracket table | Do not restate bracket figures from memory |
 
 The regulatory limits in Step 2 are different in kind: they are set by a published Bank of
@@ -26,11 +26,11 @@ their section numbers.
 
 ### Step 1: Understand the Israeli Mortgage System
 
-The Israeli mortgage system is unique. Unlike most countries where you take a single loan at one rate, Israeli mortgages are composed of multiple parallel tracks (maslulim), each with different interest rate mechanisms. A typical mortgage combines 3-5 tracks to balance risk and cost.
+Israeli mortgages are usually composed of several parallel tracks (maslulim), each with its own rate mechanism, combined to balance risk and cost.
 
 **The 5 main mortgage tracks:**
 
-1. **Prime (ריבית פריים)** - Variable rate linked to the banks' published prime rate, which tracks the Bank of Israel rate with a fixed margin the banks set. Changes whenever the central bank adjusts its rate. Expressed as "Prime minus X%" (e.g., Prime - 0.5%).
+1. **Prime (ריבית פריים)** - Variable rate linked to the prime rate, which is the Bank of Israel rate plus 1.5 percentage points. Changes whenever the central bank adjusts its rate. Expressed as "Prime minus X%" (e.g., Prime - 0.5%).
 
 2. **Fixed Non-Linked (קבועה לא צמודה)** - Fixed interest rate, not linked to CPI. The safest track: your payment never changes for the entire loan period. Typically the highest starting interest rate.
 
@@ -57,15 +57,21 @@ execute a housing loan at a financing rate exceeding the following rates":
 | Replacement dwelling (dira chalifit) | 70% | 2.2 |
 | Investment dwelling (dira le'hashkaa) | 50% | 2.3 |
 
+The **value** in the ratio is not the purchase price: it may not exceed the lower of the appraisal and the price in the purchase agreement (see `references/offer-comparison-and-fees.md` section 5). An appraisal below the price shrinks the maximum loan.
+
 Section 4 applies the same ceilings to the **aggregate**: a new loan plus the balance of earlier
 loans secured on the same apartment may not exceed them. Section 10a lets a bank decline to apply
 the section-4 aggregate limit on a non-purchase housing loan up to 70% LTV, provided the excess
 above 50% LTV does not exceed 200,000 NIS.
 
-The directive classifies by **property**, not by residency. It contains no separate LTV row for a
-foreign resident. Where a buyer's classification is not obvious (a foreign resident, a buyer
-between selling and buying), the classification is what to establish first, and the bank's own
-policy may be stricter than the directive in any case.
+**The buyer's status can decide the row.** Section 1 defines a single dwelling and a replacement
+dwelling as one bought by an individual "Israeli citizen", and an investment dwelling as any
+dwelling that is neither. "Israeli citizen" here is the Land Taxation Law s.16A(a)(1)-(1b)
+definition, which is wider than citizenship: anyone registered, or obliged to register, in the
+Population Registry, any individual Israeli resident, or a Law-of-Return-eligible resident of the
+Area. A buyer outside all three (typically a foreign national neither registered nor resident)
+falls in the **50%** row even for an only home. Otherwise establish the classification first (for
+example a buyer between selling and buying); the bank's own policy may be stricter in any case.
 
 **Payment-to-income (PTI), sections 5 and 6. Read these two together, because they are commonly
 reported backwards.**
@@ -88,7 +94,9 @@ reported backwards.**
   and not net.
 - The numerator includes repayments on the borrower's **other loans secured on the same property**
   whose remaining term exceeds 18 months, and the full approved facility is counted, not the drawn
-  amount.
+  amount. This aggregation, which also catches loans from another bank or a non-bank lender on the
+  same property, applies to loans given from **1.10.2026** (circular 2852 postponed it from
+  1.7.2026). It bites on equity and renovation top-ups taken against an already-mortgaged home.
 - A "fixed expense" is any commitment with more than 18 months remaining. **Alimony (mezonot)
   counts.** Rent paid by a borrower who will not live in the purchased apartment is deducted from
   income even if the lease has under 18 months left.
@@ -124,10 +132,9 @@ borrower a right to a loan, and clearing all of them does not make approval like
 certain. Anything this skill produces is general information that does not account for the
 individual's own data and needs, and is not a substitute for advice that does.
 
-**What the directive does NOT contain.** It sets no minimum number of tracks, and it prescribes no
-borrower stress test at any particular rate. Banks do run their own underwriting scenarios, but do
-not attribute a specific stress-test rate to Directive 329. Stress-testing your own affordability
-against a Prime increase remains sound practice; it is advice, not regulation.
+**What the directive does NOT contain.** No minimum number of tracks, and no borrower stress test at
+any particular rate. Stress-testing affordability against a Prime increase is sound advice, not
+regulation.
 
 ### Step 3: Gather User's Financial Details
 
@@ -140,7 +147,7 @@ Collect the following to enable accurate comparison:
 - **Purchase type**: first apartment, upgrade (selling existing and buying), or investment
 - **Employment type**: salaried (sachir), self-employed (atzmai), or mixed
 - **Existing debts**: car loans, credit cards, other obligations, flagging which have over 18 months remaining and which are secured on the same property
-- **Age of youngest borrower** (loan term + age cannot exceed 75 in most banks)
+- **Age of the oldest borrower**: each bank sets its own maximum age at final repayment. Directive 329 has no age cap, only the 30-year term cap in section 8, so ask each bank
 
 ### Step 4: Build Track Combinations for Comparison
 
@@ -152,9 +159,9 @@ Design 3-4 different track combinations that comply with Directive 329. The only
 - 33% Prime (variable, 20-25 years)
 
 **Aggressive Mix (lower initial payment, more risk):**
-- 34% Prime (20-25 years)
+- 33% Prime (20-25 years)
 - 33% Variable Non-Linked (every 5 years, 20-25 years)
-- 33% Fixed CPI-Linked (25-30 years)
+- 34% Fixed CPI-Linked (25-30 years)
 
 **Balanced Mix:**
 - 40% Fixed Non-Linked (20 years)
@@ -168,20 +175,22 @@ Design 3-4 different track combinations that comply with Directive 329. The only
 
 ### Step 5: Compare Across Banks
 
-Request quotes from at least 3-4 banks. The major mortgage lenders in Israel:
+Request an approval in principle (ishur ikroni) from at least 3-4 banks, ideally BEFORE signing the purchase agreement. Directive 451 makes these documents directly comparable: every approval shows three **uniform baskets** priced by that bank, plus the bank's own proposed mix, with the total projected repayment and the highest projected monthly payment already computed. Compare uniform basket against uniform basket first, then the proposed mixes. The terms hold for a period the bank states, at least 24 days. Full rules: `references/offer-comparison-and-fees.md`.
+
+The major mortgage lenders in Israel:
 
 **Tier 1 Banks (largest market share):**
-- **Bank Leumi (בנק לאומי)** - Historically competitive on fixed rates
-- **Bank Hapoalim (בנק הפועלים)** - Largest bank, strong in Prime deals
-- **Mizrachi-Tefahot (מזרחי-טפחות)** - Largest mortgage lender by volume, often best rates
+- **Bank Leumi (בנק לאומי)**
+- **Bank Hapoalim (בנק הפועלים)**
+- **Mizrachi-Tefahot (מזרחי-טפחות)** - Largest mortgage lender by volume. Size is not price; compare the offers
 
 **Tier 2 Banks:**
-- **Bank Discount (בנק דיסקונט)** - Sometimes offers aggressive rates to gain market share
-- **FIBI / Bank Benleumi (הבנק הבינלאומי)** - Competitive for specific profiles
-- **Bank Mercantile (בנק מרכנתיל)** - Subsidiary of Discount, sometimes has unique offers
+- **Bank Discount (בנק דיסקונט)**
+- **FIBI / Bank Benleumi (הבנק הבינלאומי)**
+- **Bank Mercantile (בנק מרכנתיל)** - Subsidiary of Discount
 
 **Specialized:**
-- **Bank Yahav (בנק יהב)** - Serves government and public sector employees; often has exclusive rates for eligible borrowers
+- **Bank Yahav (בנק יהב)** - Advertises dedicated benefits for state employees and teachers; ask whether they extend to its mortgages
 
 For each bank, create a comparison table:
 
@@ -198,7 +207,7 @@ For each bank, create a comparison table:
 For each track combination at each bank, calculate:
 
 **Per track:**
-- Monthly payment (using standard amortization formula)
+- Monthly payment (the Spitzer formula below; if an offer uses equal principal (keren shava), the first payment is higher and total interest lower, so compare like with like)
 - For CPI-linked tracks: project payments with assumed 2-3% annual inflation
 - For variable tracks: calculate current payment AND stress-test with +2% rate increase
 
@@ -221,7 +230,7 @@ Many borrowers focus only on the monthly payment, but the total cost of the mort
 1. **Total interest paid**: Sum of all interest payments over the loan lifetime for all tracks
 2. **CPI linkage cost**: For CPI-linked tracks, calculate the total inflation adjustment over the loan term using 2% and 3% annual inflation scenarios
 3. **Total cost = Principal + Total Interest + CPI Adjustments**
-4. **Early repayment penalty exposure**: Variable tracks are cheaper to exit early; fixed tracks carry penalties
+4. **Early repayment fee exposure**: Prime and tracks resetting at least annually carry no capitalisation fee; fixed tracks and 5-year variable tracks between resets can (Step 10)
 
 Create a summary comparison:
 
@@ -237,16 +246,9 @@ Create a summary comparison:
 
 ### Step 8: Consider Mortgage Advisor vs. Direct
 
-**Mortgage advisor (yoetz mashkantaot):**
-- Fee: typically 3,000-8,000 ILS (some charge percentage of loan)
-- Advantages: negotiates with multiple banks simultaneously, knows current market rates, handles paperwork
-- Best for: large mortgages where small rate differences matter significantly
-- Find licensed advisors at the Israel Association of Mortgage Advisors
+**Mortgage advisor (yoetz mashkantaot):** fee typically 3,000-8,000 ILS (some charge a percentage of the loan). Negotiates with several banks at once and handles paperwork; most worthwhile on large loans. Membership of an advisors' association is not a government licence; get the fee in writing and ask whether the advisor receives anything from a bank.
 
-**Direct bank negotiation:**
-- Free, but you do the comparison work yourself
-- Tip: Get a written offer (ishur ikroni) from one bank and use it to negotiate with others
-- Banks are more flexible near end-of-quarter when they need to meet targets
+**Direct negotiation:** free, but you do the comparison yourself. Use one bank's written approval in principle as leverage with the others; banks are often more flexible near end-of-quarter.
 
 ### Step 9: Understand Government Programs
 
@@ -254,17 +256,7 @@ Create a summary comparison:
 - Government subsidized housing lottery for eligible buyers. The program runs under the "Dira BeHanacha" (דירה בהנחה) umbrella; "Mechir LaMishtaken" (מחיר למשתכן) is the original track and "Mechir Matara" (מחיר מטרה) is the current flagship lottery variant, check gov.il for the active lottery
 - Discounted property prices; the size of the discount varies by project and is published per tender, so read it off the specific project rather than assuming a national figure
 - Eligibility based on housing history and marital status
-
-**How the bank values a discounted apartment (Directive 329, section 4a).** This changes the
-equity arithmetic and is routinely missed:
-- The bank may base the property value on an appraisal at loan-approval date, but **where the
-  appraisal exceeds 2.1 million NIS, the value must be set at 2.1 million NIS or the purchase
-  price, whichever is higher.** A higher appraisal does not buy a bigger loan.
-- Programme penalties (clawback of the benefit, agreed penalty) are deducted from the apartment's
-  value unless the bank's right ranks ahead of the state's.
-- The buyer must pay from their **own resources** at least **60,000 NIS** for an apartment
-  carrying a grant under Annex A of the Accountant General's "Mechir LaMishtaken" circular, or
-  **100,000 NIS** for any other apartment.
+- A first-home buyer should also obtain an eligibility certificate (teudat zakaut) for the government-directed loan and fold that portion into the mix; the gov.il calculator in Reference Links sizes it
 
 **Purchase tax (mas rechisha).** First-time buyers pay 0% up to a threshold, with graduated rates
 above it, and additional-property buyers pay a higher schedule from the first shekel. **The
@@ -272,45 +264,40 @@ bracket figures are deliberately not restated in this skill**, they live in `isr
 and on mas.gov.il, and duplicating them here creates a second place for them to go stale. Fetch
 them before quoting a number.
 
-**Public-sector and defence-system borrowers (section 13).** Loans a bank grants under agreements
-with government representatives to state employees, teaching staff, and defence-system
-beneficiaries are exempt from the directive's limits up to 50,000 NIS, and without that cap where
-a qualifying Ministry of Defence guarantee is in place. This is the lane Bank Yahav operates in.
+**Discounted-price apartments and public-sector lanes.** Directive 329 section 4a changes how the
+bank values a discounted apartment (a 2.1 million NIS valuation cap and a minimum of own funds), and
+section 13 exempts loans under government agreements with state employees, teachers and
+defence-system beneficiaries up to 50,000 NIS. Details: `references/directive-329-special-cases.md`.
 
 ### Step 10: Refinancing Analysis (Michzur)
 
 For users with existing mortgages considering refinancing:
 
 1. **Calculate current remaining balance** per track
-2. **Calculate early repayment penalties** per track:
-   - Fixed non-linked: penalty if current market rate is lower than your rate
-   - Fixed CPI-linked: penalty based on rate differential plus CPI adjustment
-   - Prime: no penalty (can be repaid anytime)
-   - Variable (at reset date): no penalty
-   - Variable (between reset dates): small penalty possible
+2. **Calculate early repayment fees** per track under the 2002 Banking Order (full table in `references/offer-comparison-and-fees.md` section 4):
+   - Directed (eligibility) loan: no early-repayment fee at all
+   - Fixed tracks: a capitalisation fee only if the Supervisor's published average rate is now below the loan's rate. Where the average rate at origination was also below the loan's rate, the bank takes the LOWER of the two statutory computations, which is often much smaller. Then discount it by elapsed time from each loan's exact execution date: 20% from 3 years, 30% from 5; a complementary loan (a bank loan given alongside a directed loan) gets 10/20/30/40% from years 1/2/3/4
+   - CPI-linked tracks: add the CPI-average fee if repaid between the 1st and the 15th of the month
+   - Prime, and tracks resetting at least annually: no capitalisation fee. On a reset date, only the operational fee
+   - 5-year variable track between reset dates: a capitalisation fee is possible
+   - One tenth of a percent if under ten days' notice was given, except on a reset date, on the part refinanced by the same bank, or on death
 3. **Get new rate quotes** from current bank and competitors
 4. **Calculate break-even point**: how many months until the new lower rate savings exceed the refinancing costs (penalties + new appraisal + legal fees)
 5. **Rule of thumb**: refinancing makes sense when you can save at least 0.3-0.5% on weighted average rate AND have at least 10+ years remaining
 
 ### Step 11: Required Insurance and Additional Costs
 
-Every Israeli mortgage requires:
+Directive 451 section 11 lets the bank require (not on loans of up to 30,000 NIS):
 
-**Life insurance (bituach chaim):**
-- Required for the full mortgage amount
-- Decreases as mortgage balance decreases
-- Compare bank-offered vs. external policies (external is often 30-50% cheaper)
-- Must be assigned (meshubad) to the mortgage bank
+- **Life insurance (bituach chaim)** up to the loan amount, with the bank as irrevocable beneficiary
+- **Property insurance (bituach mivne)** on the collateral; see the insurance comparator skill
 
-**Property insurance (bituach mivne):**
-- Required for the structure/building value
-- Must be assigned to the mortgage bank
-- See the insurance comparator skill for details
+The bank must tell you that you may buy both directly rather than through its own agency, so compare its quote against external policies.
 
 **Additional closing costs:**
 - Attorney fees: ~0.5% of property price + VAT
 - Appraiser (shamai): 1,500-3,000 ILS
-- Mortgage registration (reshum mashkanta): ~200 ILS
+- Mortgage registration (reshum mashkanta): 188 NIS per the Land Registry fee regulations (2026 consolidation, indexed), paid by the mortgagor
 - Purchase tax (mas rechisha): varies by buyer type and property value
 
 ## Examples
@@ -320,7 +307,7 @@ Every Israeli mortgage requires:
 User says: "I'm buying my first apartment for 2,500,000 ILS. I have 700,000 ILS saved for a down payment. My wife and I together earn 25,000 ILS net per month. We got offers from Leumi and Mizrachi-Tefahot."
 
 Actions:
-1. Calculate loan amount: 2,500,000 - 700,000 = 1,800,000 ILS (72% LTV, within the 75% first-apartment limit)
+1. Calculate loan amount: 2,500,000 - 700,000 = 1,800,000 ILS (72% LTV, within the 75% first-apartment limit), provided the appraisal comes in at or above the price; an appraisal of 2,300,000 would make it about 78% and force more equity
 2. Compute PTI against **disposable** income, not the 25,000 net figure: subtract fixed expenses with over 18 months remaining. Directive 329 section 5 forbids a loan above 50% PTI, and section 6 makes anything above 40% carry a 100% risk weight for the bank, so pricing worsens there. Aim materially below 40% and confirm the bank's own internal threshold, which is usually stricter
 3. Request the specific rate offers from both banks for each track
 4. Design 3 track combinations respecting Directive 329 section 7 (variable-rate portion, Prime included, at most 66.66%, so at least 33.34% fixed)
@@ -329,7 +316,7 @@ Actions:
 7. Stress-test: show what happens if Prime increases by 1% and if inflation averages 3%
 8. Recommend getting a third offer from Hapoalim or Discount to strengthen negotiation position
 
-Result: User receives a comprehensive comparison showing monthly payments, total costs, and risk profiles for each bank's offer across multiple track combinations, plus a recommended strategy for negotiation.
+Result: payments, total cost and risk for each bank's offer across several mixes, plus a negotiation plan.
 
 ### Example 2: Refinancing Decision
 
@@ -345,35 +332,40 @@ Actions:
 7. Determine break-even point (months until savings exceed costs)
 8. Consider: negotiate with Hapoalim first using Mizrachi's offer as leverage (retention departments often match)
 
-Result: User receives a detailed savings analysis showing monthly savings, total lifetime savings, break-even month, and whether refinancing is worthwhile after accounting for all penalties and costs.
+Result: monthly and lifetime savings, the break-even month, and whether refinancing pays after all fees and costs.
 
 ### Example 3: Investment Property Mortgage
 
 User says: "I want to buy a second apartment for investment (hashkaa) for 1,800,000 ILS in Beer Sheva. I already own my primary residence."
 
 Actions:
-1. Apply Directive 329 section 2.3 (investment dwelling): maximum LTV 50%, so the user needs at least 900,000 ILS of equity. Section 4 applies the same ceiling to the aggregate of any earlier loans secured on the same apartment
+1. Apply Directive 329 section 2.3 (investment dwelling): maximum LTV 50%, so the user needs at least 900,000 ILS of equity (more if the appraisal comes in below the price). Section 4 applies the same ceiling to the aggregate of any earlier loans secured on the same apartment
 2. Maximum loan: 900,000 ILS
 3. Note that an additional property is taxed on a higher purchase-tax schedule from the first shekel; fetch the current brackets from mas.gov.il or the `israeli-real-estate` skill rather than quoting a remembered figure
-4. Investment property mortgages often get slightly worse rates from banks
-5. Calculate rental yield to determine if the investment makes financial sense after mortgage payments
-6. Design track combinations optimized for investment (shorter terms often better for investment properties)
-7. Compare rates from 3+ banks, noting some banks are more friendly to investment property mortgages
+4. Calculate rental yield to determine if the investment makes financial sense after mortgage payments
+5. Design track combinations and compare approvals from 3+ banks
 
-Result: User receives the LTV constraint analysis, total acquisition cost (including higher purchase tax), mortgage payment projections vs. expected rental income, and a comparison of bank offers for investment property mortgages.
+Result: the LTV constraint, total acquisition cost including purchase tax, and payments against expected rent.
 
-## Reservist statutory mortgage protections
+## Reservist and wartime relief (temporary frameworks)
 
-A reservist (משרת מילואים) called up under Order 8 during an active conflict period is generally entitled to defer mortgage and loan payments (commonly up to about 3 months) without interest or fees. The exact terms and eligibility are set largely by the active-period relief framework and reservist-protection legislation:
+Do not tell a reservist they hold a standing right to defer mortgage payments: the deferrals seen so
+far came from time-limited arrangements, each with its own window:
 
-- Right to defer monthly payments without late fees during active reserve duty
-- Foreclosure freeze for the duration of active duty
-- The bank cannot demand penalty interest or accelerate the loan due to the deferral
-- Spouse / co-borrower may invoke the same protections when the reservist is the primary earner
+- **Bank of Israel relief frameworks (mitve).** Activated during conflict periods, with fixed
+  eligibility lists and expiry dates. The 2026 "Roaring Lion" measures, for example, were time-boxed: the
+  Supervisor's related temporary directive 253 was extended only to 31.05.2026. Before
+  quoting any framework, verify at boi.org.il or Kol-Zchut that one is currently active and that the
+  user is in a named group. Individual banks sometimes offer their own reservist deferrals; those are
+  bank offers, not entitlements.
+- **Execution Office protection.** Temporary regulations (Swords of Iron, reserve service) freeze
+  listed enforcement steps against a reservist AND their spouse for three months from the start of
+  service, extendable by up to three more months if service continues, on notice to the Execution
+  Office with the call-up order, subject to the registrar's discretion; alimony-judgment debts are
+  excluded. They expire no later than 28.02.2027 and end earlier if the underlying temporary
+  provision lapses. They restrict enforcement; they are not a payment deferral.
 
-Beyond the statutory reservist protections, the Bank of Israel periodically activates a temporary bank-relief framework (broader payment deferrals, fee waivers for war-zone evacuees and affected borrowers) during active conflict periods. These frameworks have specific eligibility windows and expiry dates that change as the security situation changes, so agents must **verify the current framework status and dates at boi.org.il before quoting** rather than assuming any particular framework is either active or lapsed. Reservist payment-deferral terms and eligibility are set largely by the active-period relief framework and periodic reservist legislation, so verify the current terms at boi.org.il or Kol-Zchut before quoting.
-
-War-displaced residents (מפונים) from Tkuma authority programs may have separate evacuee-specific arrangements; verify with the bank's social work / evacuee desk.
+War-displaced residents (mefunim) may have separate evacuee arrangements; verify with the bank.
 
 ## Gotchas
 - **The 50% PTI figure is a ceiling on the bank, not an allowance for the borrower.** Directive 329 section 5 forbids a bank from writing a loan above 50% payment-to-income. Agents may restate it as "you can borrow up to 50% of your income", which is both wrong in substance and dangerous. Most banks decline far below it.
@@ -381,7 +373,8 @@ War-displaced residents (מפונים) from Tkuma authority programs may have se
 - **PTI is measured against disposable income, not gross or net.** Agents routinely compute it off gross salary, which understates the ratio badly and produces an affordability answer the bank will not recognise.
 - Directive 329 sets **no minimum number of tracks**. Agents may assert that Israeli mortgages must contain at least two tracks; the directive says nothing of the sort. The real constraint is section 7's 66.66% cap on the variable-rate portion, which forces at least 33.34% into fixed tracks but does not otherwise dictate a track count.
 - **There is no Prime-specific cap in the directive in force.** The word "prime" does not appear in it. Agents may apply an obsolete one-third Prime rule.
-- The Israeli Prime rate is **not** the US Prime rate, and it is **not** the Bank of Israel rate itself. It is the BoI rate plus a fixed margin the banks publish. Agents routinely substitute the US figure, or quote the bare BoI rate as if it were Prime. Read the current Israeli prime off the bank.
+- The Israeli Prime rate is **not** the US Prime rate, and it is **not** the Bank of Israel rate itself. It is the BoI rate plus 1.5 percentage points. Agents routinely substitute the US figure, or quote the bare BoI rate as if it were Prime.
+- **Early-repayment fees are not a percentage of the balance.** The capitalisation fee depends on the gap between the loan's rate and the Supervisor's published average rate, and can be zero or large. Agents may invent a flat "penalty of X% of the balance"; compute it from the order's rules instead.
 - CPI-linked tracks (tzmudot madad) adjust the outstanding **principal** by the index, not just the interest payment. Agents may adjust only the interest.
 
 ## Reference Links
@@ -391,8 +384,10 @@ War-displaced residents (מפונים) from Tkuma authority programs may have se
 | Directive 329 (Limitations on Housing Loans), full text | https://www.boi.org.il/media/ez4npagt/329.pdf | LTV, PTI, variable-rate share, term, refinancing. The operative source for every limit in Step 2 |
 | Directive 329 landing page (version history) | https://www.boi.org.il/roles/supervisionregulation/nbt/nbt329/ | Which version is in force and which circular amended it |
 | Bank of Israel (BOI) | https://www.boi.org.il | Current BOI interest rate, Prime rate decisions, announcements |
-| BOI banking supervision | https://www.boi.org.il/en/economic-roles/supervision-and-regulation/supervision-of-the-banking-system/ | LTV limits, multi-track requirement, supervisory caps |
-| Bank of Israel credit data | https://www.creditdata.org.il | Free annual credit report lookup at the BOI credit bureau (BDI) |
+| BOI banking supervision | https://www.boi.org.il/en/economic-roles/supervision-and-regulation/supervision-of-the-banking-system/ | Index of supervisory directives and circulars |
+| Directive 451 (Procedures for Extending Housing Loans) | https://www.boi.org.il/media/utld2tgp/451.pdf | Approval in principle, uniform baskets, insurance, appraisal, porting |
+| Banking Order (Early Repayment of a Housing Loan), 2002 | https://www.boi.org.il/media/qy5cow0l/116.pdf | Every early-repayment fee a bank may charge |
+| Bank of Israel credit data system | https://www.creditdata.org.il | How to obtain your free credit data report, and the licensed credit bureaus |
 | Dira BeHanacha (umbrella: Mechir Matara, Mechir Mufhat, Mechir LaMishtaken, Dira LeHaskir) | https://www.gov.il/he/Departments/Topics/dira | Reduced-price apartment eligibility and entitlement rules |
 | Ministry of Construction housing-loan points calculator | https://www.gov.il/he/pages/mashkanta-calculator | Eligibility points and the size of the GOVERNMENT assistance loan. It is not a multi-track payment calculator, do not send users there to model a mix |
 
@@ -400,24 +395,24 @@ War-displaced residents (מפונים) from Tkuma authority programs may have se
 
 ### Error: "Bank rejected the mortgage application despite meeting LTV requirements"
 
-Cause: Banks evaluate more than just LTV. Common rejection reasons include: payment-to-income ratio exceeding the bank's internal threshold, which is typically well below the directive's 50% prohibition and often below the 40% risk-weight cliff, insufficient employment history (banks typically want 12+ months at current employer for salaried, 2+ years of tax returns for self-employed), negative credit history at the Bank of Israel credit bureau (BDI), or existing debt obligations that push the total debt ratio too high.
+Cause: Banks evaluate more than just LTV. Common rejection reasons include: payment-to-income ratio exceeding the bank's internal threshold, which is typically well below the directive's 50% prohibition and often below the 40% risk-weight cliff, insufficient employment history (banks typically want 12+ months at current employer for salaried, 2+ years of tax returns for self-employed), negative data in the Bank of Israel credit data system, or existing debt obligations that push the total debt ratio too high.
 
-Solution: Request a detailed rejection reason from the bank (they are required to provide one). Check your credit report at the Bank of Israel credit data system (available free once a year). If the issue is income ratio, consider a longer loan term to reduce monthly payments, adding a guarantor (arev), or increasing the down payment. If employment history is short, wait and reapply, or try a bank that has more flexible policies for your employment type. Some banks are more lenient with high-tech salaried employees even with shorter tenure.
+Solution: Ask the bank for its reason. Directive 451 requires a written answer within 5 business days, but not a reason for refusing, so the bank may decline to explain. Order your free credit report through the Bank of Israel credit data system. For an income-ratio problem: a longer term, a guarantor (arev), or a larger down payment. For short employment history: wait and reapply, or try a bank with a more flexible policy for your employment type.
 
 ### Error: "CPI-linked track costs are much higher than expected"
 
-Cause: Many borrowers underestimate the impact of CPI linkage on their mortgage. When inflation runs at 3-4% annually, the outstanding balance on CPI-linked tracks grows significantly. For example, a 500,000 ILS CPI-linked track at 3% inflation grows to ~672,000 ILS after 10 years before any principal payments. The "low interest rate" on CPI-linked tracks is misleading because it doesn't include the inflation cost.
+Cause: CPI linkage grows the outstanding principal, not just the interest. A 500,000 ILS CPI-linked track at 3% inflation grows to ~672,000 ILS after 10 years before any principal payments, so the "low rate" understates the cost.
 
-Solution: Always calculate the total cost of CPI-linked tracks under multiple inflation scenarios (2%, 3%, 4%). Compare the total cost (interest + CPI adjustments) against fixed non-linked tracks. In high-inflation environments (Israel averaged 3-4% in recent years), fixed non-linked tracks often end up cheaper despite their higher nominal interest rate. Consider reducing CPI exposure by allocating more to fixed non-linked and Prime tracks, keeping CPI exposure modest as a matter of judgement (note that section 7's 66.66% cap governs the VARIABLE-rate share, not CPI linkage, so there is no regulatory CPI ceiling to hide behind). Model this in a spreadsheet or a calculator that applies the index to the outstanding principal each period. Note that the gov.il "mashkanta calculator" is an eligibility-points calculator for the government assistance loan and will not model a track mix.
+Solution: Cost CPI-linked tracks under several inflation scenarios (2%, 3%, 4%) and compare total cost against fixed non-linked. Section 7's 66.66% cap governs the VARIABLE-rate share, not CPI linkage, so there is no regulatory CPI ceiling; how much linkage to hold is judgement. Use a model that applies the index to the principal each period. The gov.il "mashkanta calculator" is an eligibility-points calculator and will not model a mix.
 
 ### Error: "Early repayment penalty is unexpectedly high on fixed-rate track"
 
-Cause: In Israel, early repayment of fixed-rate mortgage tracks incurs a penalty if the current market rate for the same remaining term is lower than your locked rate. The penalty compensates the bank for the interest income they lose. The calculation is based on the differential between your rate and the current market rate, multiplied by the remaining balance and remaining term, discounted to present value. This can amount to tens of thousands of shekels on large fixed-rate tracks.
+Cause: On a fixed-rate track the capitalisation fee is the present-value gap between the payments at your rate and at the Supervisor's published average rate. When average rates have fallen below your rate, it can reach tens of thousands of shekels on a large balance.
 
-Solution: Check if your fixed-rate track is approaching a rate-reset date (for variable tracks) or if market rates have risen above your locked rate (in which case there's no penalty). Consider partial repayment strategies: pay off the Prime track first (no penalty ever), then variable tracks at their reset dates (no penalty on reset date). For fixed tracks, wait for a period when market rates rise above your locked rate, then refinance. Some newer mortgage agreements have capped penalties; check your original mortgage agreement (hskem halvaah) for the penalty clause.
+Solution: Recompute it with the 2002 Order's rules (`references/offer-comparison-and-fees.md` section 4): check the origination-date computation (the bank must take the lower), apply the elapsed-time discount for the loan type, repay a CPI-linked track after the 15th of the month, and give 10 to 45 days' notice. Repay the Prime track and variable tracks on their reset dates first, where no capitalisation fee applies. If average rates have risen above your rate, there is no capitalisation fee at all.
 
 ### Error: "Different banks show different Prime rates for the same period"
 
-Cause: The Prime rate itself is uniform across all banks (it tracks the Bank of Israel rate with a common published margin). However, the spread (the discount or premium to Prime) differs between banks and between borrowers. When a bank offers "Prime - 0.65%," the 0.65% discount is what varies. Some confusion arises because banks may quote an "effective rate" that combines the Prime rate with their spread, and the Prime rate itself changes periodically.
+Cause: Prime itself is uniform across banks (the Bank of Israel rate plus 1.5 percentage points). What differs is each bank's spread to Prime ("Prime - 0.65%"), and some banks quote an effective rate that folds the two together.
 
-Solution: Always compare the spread to Prime, not the effective rate. If Bank A offers P-0.5% and Bank B offers P-0.7%, Bank B is cheaper by 0.2% regardless of what the current Prime rate is. Track Bank of Israel rate decisions (announced roughly every 6 weeks) at boi.org.il. Remember that Prime track payments change with every rate decision, so stress-test your own affordability with Prime at +1% and +2%. This is prudent practice, not a Directive 329 requirement.
+Solution: Compare the spread, not the effective rate: P-0.7% beats P-0.5% by 0.2% whatever Prime is. Prime-track payments change with every rate decision, so stress-test affordability with Prime at +1% and +2% (prudent practice, not a Directive 329 requirement).
