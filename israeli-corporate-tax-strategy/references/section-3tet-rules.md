@@ -71,3 +71,12 @@ The Tax Authority may reclassify a shareholder loan as a deemed dividend when:
 | 2025 | 6.69% |
 
 The annual rate is set by regulation in December for the following tax year. Practitioners should confirm the current-year rate against the Tax Authority's annual circular before applying historical figures.
+
+## If the Tax Authority Questions a Shareholder Loan
+
+If the assessing officer (pakid shuma) challenges a shareholder loan:
+1. Present the formal loan agreement with interest terms
+2. Show repayment history or schedule
+3. Demonstrate business purpose for the loan
+4. If the loan was used for personal tax payment: be prepared for reclassification as dividend
+5. Consult with a tax advisor immediately

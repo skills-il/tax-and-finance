@@ -54,14 +54,14 @@ Note: The 50% top rate includes the base 47% rate plus 3% surtax (Section 121B).
 | 560,281 - 721,560 | 47% |
 | Above 721,560 | 52% |
 
-The 52% rate includes: 47% base + 3% surtax + 2% additional surtax on non-labor income (effective 2025).
+The 52% rate includes: 47% base + 3% surtax + 2% additional surtax on capital-source income (effective 2025). The 3% applies once TOTAL income passes 721,560; the extra 2% applies only on the part of CAPITAL income alone above 721,560, so the full 52% bites only when capital income by itself exceeds the threshold.
 
 ## Surtax (Mas Yesafim, Section 121B)
 
-- Threshold: **721,560 NIS** annual income (all sources combined)
-- Rate: **3%** on all income above threshold
-- Additional **2%** on non-labor income (dividends, interest, capital gains, rental) above threshold
-- Total surtax on non-labor income above threshold: **5%**
+- Threshold: **721,560 NIS** a year, frozen for 2025-2027
+- **3%** (s.121B(a)) on TOTAL taxable income above the threshold, all sources combined
+- **2% more** (s.121B(a1), added by Amendment 276, from tax year 2025, permanent) on capital-source income (dividends, interest, capital gains, rent) above the threshold, measured on that capital income ALONE. Salary does not use up the threshold for this limb. ITA execution instruction 5/2025, example 3.2: salary 400,000 plus dividends and interest of 700,000 owes the 3% but not the 2%, because capital income (700,000) is below 721,560.
+- Total surtax on capital income: **5%**, but only on the slice by which capital income itself exceeds 721,560
 
 ## Dividend Tax
 
@@ -71,7 +71,7 @@ The 52% rate includes: 47% base + 3% surtax + 2% additional surtax on non-labor 
 |-----------------|----------|
 | Non-controlling (under 10% holding) | 25% |
 | Controlling shareholder (10%+ holding, baal shlita) | 30% |
-| With surtax (above 721,560 threshold) | +3% + 2% = +5% |
+| With surtax | +3% once total income passes 721,560; +2% more once capital income alone passes 721,560 |
 
 ### Profits of a company holding a benefit track
 
@@ -102,9 +102,11 @@ the dividend to the foreign-resident body corporate within one year of receiving
 
 | Income Range | Employee NI | Employee Health | Employer NI |
 |-------------|------------|----------------|-------------|
-| Up to 7,703 NIS/month | 1.04% | 3.23% | 4.46% |
-| 7,703 - 51,910 NIS/month | 7.0% | 5.17% | 7.38% |
+| Up to 7,703 NIS/month | 1.02% | 3.23% | 4.46% |
+| 7,703 - 51,910 NIS/month | 6.79% | 5.17% | 7.38% |
 | Above 51,910 NIS/month | 0% (ceiling) | 0% (ceiling) | 0% (ceiling) |
+
+Employee total with health: 4.25% / 11.96% (BTL rate table, column 2, "בעל שליטה בחברת מעטים").
 
 ### Regular Employees (for comparison)
 
@@ -145,11 +147,32 @@ Liability sits on the individual, not the company. If the shareholder has non-em
 
 ## Trapped Profits / Closely-Held Company Reforms (Amendment 277, in force 2025)
 
-Amendment 277 to the Income Tax Ordinance restructured taxation of closely-held companies (chevrot meatim):
+Amendment 277 to the Income Tax Ordinance (enacted 31 December 2024, in force 1 January 2025) restructured taxation of closely-held companies (chevrot meatim, s.76(a)). The ITA explains it in circular 7/2025 and its update 1 (8 February 2026); reporting is in execution instruction 9/2026 (15 September 2026).
 
-- **2% additional corporate-tax surcharge** on excess undistributed retained earnings of a closely-held company. A protective cushion applies: the higher of a ~750,000 NIS fixed exemption, a deductible-expense shield, or an asset shield. **Safe harbor:** a company that distributes at least 6% of its accumulated profits during the year (reduced to 5% for 2025 only) avoids the surcharge entirely. This distribution lever, not the raw 2%, is the actual planning decision in retain-vs-distribute.
-- **Section 62A tightened.** The material-shareholder trigger stays at 10%+ holding of the closely-held company. What changed: the carve-out for a service provider who also holds a stake in the *client* (recipient) entity was raised from 10% to 25% (you must now hold 25%+ of the recipient to escape attribution, so mid-size 10-25% stakes that used to be safe are now caught); the single-client test was compressed to 22 months within 3 tax years (was 30 months within 4 tax years); and a new limb (Section 62A(a1)) attributes profits above a 25% margin on personal-effort revenue to the shareholder at marginal rates regardless of distribution.
-- **+2% surtax on non-labor income** above the 721,560 threshold (in addition to the standard 3% Section 121B surtax). Note: this 2% was enacted by the Economic Efficiency Law (Freezing of Tax Updates and Surtax) 5785-2024, a separate statute from Amendment 277, effective for tax year 2025 onward.
+### The 2% surcharge on undistributed profits (ss.81A-81F)
+
+- **Charge (s.81B(a)).** 2% a year on the company's excess profits (s.81C), after deducting dividends distributed in the year. It is treated like corporate tax but is not creditable against it (s.81F(a)) and is not deductible (s.81D). Israeli-resident companies only.
+- **Accumulated profits (s.77(a) as amended).** The LOWER of the tax-basis figure (taxable plus exempt income, less tax paid, dividends and unset losses, since incorporation) and the financial-statement alternative.
+- **Excess profits (s.81C).** Accumulated taxable profits minus exempt accumulated profits and minus the HIGHEST of: a monetary shield of **NIS 750,000** (shared among companies under common control), an expense shield (the higher of the tested year's recognised expenses or their average over that year and the two before it), or an asset shield (cost of company assets less "special assets", share capital and related items). Special assets include securities, financial assets including cash, intangibles, real-estate rights and loans, so a cash-rich company or one holding shareholder loans gets little asset shield. A company whose accumulated profits are under 750,000 does not even fill in the reporting appendix.
+- **No surcharge in a year where any exit in s.81B(b) is met:**
+  1. current losses exceed 10% of the accumulated profits at the end of the previous year;
+  2. taxed dividends exceed 50% of the excess profits at the end of the previous year (the "50% alternative");
+  3. taxed dividends are 6% or more of the accumulated profits at the end of the previous year (the "6% alternative").
+- **Which dividends count.** Any dividend distributed in the tested year counts, except an intercompany dividend exempt under s.126(b), which counts only if the paying company elects to withhold at the top dividend rate (35% in 2025) under the 2025 regulations explained in circular 02/2026. A dividend paid under the s.62A "dividend alternative" does not count toward the s.81B tests (execution instruction 9/2026). For the intercompany route, circular 02/2026 s.4.2 sets payment of the tax on a December distribution by 16 January of the following year.
+- **2025 transition (expired).** For 2025 only, taxed dividends of 5% of accumulated profits in the determining period sufficed, provided the tax was paid by 31/12/2025. From 2026 the 6% test applies. Circular 7/2025 s.6 also sets conditional transitional rules for profits accumulated before 2025; they carry distribution conditions of their own, so read them with the company's CPA before relying on them.
+- **Reporting.** Form 1214 with appendix 1281; the accumulated-profits figure goes to field 169.
+
+### Section 62A (personal-services companies)
+
+- The holder test moved from "material shareholder" (s.88) to "controlling holder" (בעל שליטה, s.75B(a)(3)): an Israeli resident holding 10%+ of any means of control, directly or indirectly.
+- **s.62A(a)(1), officer or management services to another company:** the exit now needs a 25%+ holding in the client on some day in the tax year (was 10%).
+- **One-client rule:** 70%+ of the company's income from one client over 22 months within 3 tax years (was 30 months within 4). The exclusion for a company employing four or more employees is unchanged.
+- **New s.62A(a1), excess profitability:** where profitability on personal-exertion activity exceeds 25%, taxable income above the 25% margin is attributed to the active shareholder under s.2(1) (Bituach Leumi applies, BL circular 1487). It does not apply where personal-exertion turnover is at least NIS 30 million times the number of controlling holders, or where the holder's accumulated profits across all his companies did not exceed NIS 750,000 at the end of the previous year.
+- A closely-held company that is a partner in a partnership: at a 10%+ partnership share the 25% margin rule applies; below 10%, 55% of its share is attributed to the individual.
+
+### Surtax on capital income
+
+The +2% surtax on capital-source income is a separate amendment (Amendment 276, s.121B(a1)); see the Surtax section above for how its threshold is measured.
 
 ## Benefit-Track Temporal Cohorts (which version of the table governs)
 

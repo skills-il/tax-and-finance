@@ -94,10 +94,10 @@
     },
     {
       "claim_id": "section-62a-amendment-277",
-      "claim": "Section 62A after Amendment 277 (effective 2025-01-01): material-shareholder trigger unchanged at 10%+ of the closely-held company; the exemption for a service provider holding a stake in the client/recipient entity was raised from 10% to 25%; single-client test compressed to 22 months within 3 tax years (was 30 months within 4 tax years); new limb (62A(a1)) attributes profit above a 25% margin on personal-effort revenue",
+      "claim": "Section 62A after Amendment 277 (effective 2025-01-01): the holder test changed from material shareholder (s.88) to controlling holder (s.75B(a)(3)), still 10%+ of any means of control; single-client window 22 months within 3 tax years; new s.62A(a1) 25% excess-profitability limb.",
       "source_url": "https://www.hashavim.co.il/articles/taxation/amendment-277-wallet-companies-qa/",
-      "raw_snippet": "מחזיק במישרין או בעקיפין ב-25% או יותר באחד מאמצעי השליטה",
-      "fetched_at": "2026-07-15T16:00:00Z",
+      "raw_snippet": "ובמקום \"בעל מניות מהותי כהגדרתו בסעיף 88\" יבוא \"בעל שליטה בה\"",
+      "fetched_at": "2026-10-01T10:00:00Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
@@ -477,8 +477,7 @@
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
-        "references/tax-rates-2026.md",
-        "scripts/tax_comparison.py"
+        "references/tax-rates-2026.md"
       ],
       "verified_via": "curl",
       "verified_at": "2026-08-19"
@@ -492,8 +491,7 @@
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
-        "references/tax-rates-2026.md",
-        "scripts/tax_comparison.py"
+        "references/tax-rates-2026.md"
       ],
       "verified_via": "fetched and read the cited page on 2026-08-09"
     },
@@ -870,10 +868,10 @@
     },
     {
       "claim_id": "section-64a-family",
-      "claim": "Section 64A Family Company election attributes profits to representative shareholder at marginal rates; election deadline November 30 or within 3 months of incorporation",
-      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
-      "raw_snippet": "הכנסה חייבת, לרבות שבח כמשמעותו בחוק מיסוי מקרקעין (בסעיף זה – הכנסה חייבת) והפסדים של חברה שחבריה הם קרובים לפי פסקאות (1) או (2) להגדרה \"קרוב\" בסעיף 88 (להלן – חברה משפחתית) ייחשבו מיום התאגדותה, לפי בקשתה שתומצא לפקיד השומה בתוך שלושה חודשים לאחר התאגדותה, כהכנסתו או הפסדו של החבר שהוא בעל הזכות לחלק הגדול ביותר ברווחים בחברה",
-      "fetched_at": "2026-08-11",
+      "claim": "Section 64A Family Company status attributes the company income to the representative member at marginal rates. The election is made by a request filed within three months after incorporation (the November 30 date is the withdrawal deadline, not the election deadline).",
+      "source_url": "https://www.hilan.co.il/מרכז-ידע/חקיקה/דיני-מיסים/פקודת-מס-הכנסה-נוסח-חדש-תשכא-1961/חלק-ד-חישוב-ההכנסה-במקרים-מיוחדים/",
+      "raw_snippet": "לפי בקשתה שתומצא לפקיד השומה בתוך שלושה חודשים לאחר התאגדותה",
+      "fetched_at": "2026-10-01T10:00:00Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
@@ -958,10 +956,10 @@
     },
     {
       "claim_id": "section-62a-25pct",
-      "claim": "Post-Amendment 277: holding 25%+ of the CLIENT/recipient entity exempts a service provider from Section 62A attribution; this exemption threshold was RAISED from 10% to 25% (the material-shareholder trigger itself stays at 10%+)",
+      "claim": "Post-Amendment 277, the exit from s.62A(a)(1) (officer or management services to another company) requires holding 25%+ of the client company on some day in the tax year, up from 10%.",
       "source_url": "https://www.hashavim.co.il/articles/taxation/amendment-277-wallet-companies-qa/",
-      "raw_snippet": "מחזיק במישרין או בעקיפין ב-25% או יותר באחד מאמצעי השליטה",
-      "fetched_at": "2026-07-15T16:00:00Z",
+      "raw_snippet": "לעומת אחרי התיקון, שאז עליו להחזיק 25% לפחות בחברה מקבלת השירות ביום כלשהו בשנת המס",
+      "fetched_at": "2026-10-01T10:00:00Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
@@ -993,10 +991,10 @@
     },
     {
       "claim_id": "trapped-profits-safe-harbor-6pct",
-      "claim": "Distributing at least 6% of accumulated profits during the year (reduced to 5% for 2025 only) is a safe harbor that avoids the 2% undistributed-profits surcharge",
-      "source_url": "https://www.bshcpa.co.il/%D7%A8%D7%95%D7%95%D7%97%D7%99%D7%9D-%D7%9C%D7%90-%D7%9E%D7%97%D7%95%D7%9C%D7%A7%D7%99%D7%9D/",
-      "raw_snippet": "6% מהרווחים",
-      "fetched_at": "2026-07-15T16:00:00Z",
+      "claim": "No 2% surcharge for a year in which dividends distributed in that year are 6% or more of the accumulated profits at the end of the previous tax year (s.81B(b), the 6% alternative); 5% applied for 2025 only.",
+      "source_url": "https://www.gov.il/BlobFolder/policy/professional-directives-191025/he/IncomeTax_professional-directives-080226.pdf",
+      "raw_snippet": "בשיעור של 6% או יותר מסכום הרווחים הנצברים של חברת המעטים לתום שנת המס",
+      "fetched_at": "2026-10-01T10:00:00Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
@@ -1230,10 +1228,10 @@
     },
     {
       "claim_id": "example-extraction-calculations",
-      "claim": "Worked-example intermediate amounts derived in extraction-methods.md from corporate/dividend/bracket/NI rates justified elsewhere: 107,800 NIS / 12,920 NIS / 137,533 NIS / 154,000 NIS / 155,194 NIS / 18,156 NIS / 18,960 NIS / 183,275 NIS / 186,270 NIS / 196,476 NIS / 19,250 NIS / 200,000 NIS / 230,500 NIS / 24,690 NIS / 25,765 NIS / 255,163 NIS / 266 NIS / 320,808 NIS / 46,000 NIS / 46,200 NIS / 47,394 NIS / 48,767 NIS / 500,000 NIS / 58,687 NIS / 58,943 NIS / 6,534 NIS / 123 NIS / 143 NIS / NIS 100,000",
+      "claim": "Worked-example intermediate amounts derived in extraction-methods.md from corporate/dividend/bracket/NI rates justified elsewhere: 107,800 NIS / 12,920 NIS / 137,533 NIS / 154,000 NIS / 155,194 NIS / 18,156 NIS / 18,960 NIS / 183,275 NIS / 186,270 NIS / 196,476 NIS / 19,250 NIS / 200,000 NIS / 230,500 NIS / 24,690 NIS / 25,765 NIS / 255,163 NIS / 266 NIS / 320,808 NIS / 46,000 NIS / 46,200 NIS / 47,394 NIS / 48,767 NIS / 500,000 NIS / 58,687 NIS / 58,943 NIS / 6,534 NIS / 123 NIS / 143 NIS / NIS 100,000 | v1.4.0 recomputation with controlling-shareholder employee NI (scripts/tax_comparison.py): Example 1 gross 188,770 NIS / employer NI 11,230 NIS / income tax 27,146 NIS / net income tax 20,612 NIS / employee NI+health 15,450 NIS / net 152,707 NIS / salary wins by 44,907 NIS; Example 2 employer cost 242,127 NIS / tax 28,458 NIS / employee NI+health 20,142 NIS / net salary 179,400 NIS / remaining 257,873 NIS / corporate 59,311 NIS / distributable 198,562 NIS / dividend tax 59,569 NIS / net dividend 138,993 NIS / total 318,393 NIS / saving 48,893 NIS; Example 3 management fees net 152,528 NIS.",
       "source_url": "https://www.kolzchut.org.il/he/%D7%9E%D7%93%D7%A8%D7%92%D7%95%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
       "raw_snippet": "107,800 NIS, 12,920 NIS, 137,533 NIS, 154,000 NIS, 155,194 NIS, 18,156 NIS, 18,960 NIS, 183,275 NIS, 186,270 NIS, 196,476 NIS, 19,250 NIS, 200,000 NIS, 230,500 NIS, 24,690 NIS, 25,765 NIS, 255,163 NIS, 266 NIS, 320,808 NIS, 46,000 NIS, 46,200 NIS, 47,394 NIS, 48,767 NIS, 500,000 NIS, 58,687 NIS, 58,943 NIS, 6,534 NIS, 123 NIS, 143 NIS, NIS 100,000",
-      "fetched_at": "2026-05-21T12:30:00Z",
+      "fetched_at": "2026-10-01T09:00:00Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
@@ -1243,7 +1241,7 @@
     },
     {
       "claim_id": "example-effective-rates",
-      "claim": "Worked-example effective rates derived from inputs above: 22.4% (small extraction net), 35.8% (medium mix), 49.95% (dividend with surtax), 51.95% (dividend with full surtax), 6.10% / 18.00% (self-employed combined), 4.27% / 12.17% (employee combined)",
+      "claim": "Worked-example effective rates derived from inputs above: 22.4% (small extraction net), 35.8% (medium mix), 49.95% (dividend with surtax), 51.95% (dividend with full surtax), 6.10% / 18.00% (self-employed combined), 4.27% / 12.17% (employee combined) | v1.4.0: 23.6% (Example 1 salary), 36.3% (Example 2 mix); controlling-shareholder employee combined 4.25% / 11.96%.",
       "source_url": "https://www.kolzchut.org.il/he/%D7%9E%D7%93%D7%A8%D7%92%D7%95%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
       "raw_snippet": "Effective rate: approximately",
       "fetched_at": "2026-05-21T12:30:00Z",
@@ -1628,6 +1626,266 @@
       ],
       "verified_via": "curl",
       "verified_at": "2026-08-19"
+    },
+    {
+      "claim_id": "controlling-employee-ni-1-02-6-79",
+      "claim": "A controlling-shareholder employee (BTL column 2) pays employee NI+health of 4.25% in the reduced band and 11.96% in the full band. Net of health (3.23% / 5.17%) the employee NI rate is 1.02% and 6.79%, not the regular employee 1.04% / 7.0%.",
+      "source_url": "https://www.btl.gov.il/Insurance/Rates/Pages/%D7%9C%D7%A2%D7%95%D7%91%D7%93%D7%99%D7%9D%20%D7%A9%D7%9B%D7%99%D7%A8%D7%99%D7%9D.aspx",
+      "raw_snippet": "טור 2 - בעל שליטה בחברת מעטים מי שמחזיק ב- 10% לפחות ממניות החברה או בזכות למנות מנהל. שמלאו לו 18 וטרם הגיע לגיל פרישה 8.71% (החל ב- 01.01.2025) 4.25% (החל ב- 01.01.2025) 4.46% (החל ב- 01.01.2025) 19.34% (החל ב- 01.02.2025) 11.96% (החל ב- 01.02.2025) 7.38%",
+      "fetched_at": "2026-10-01T09:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-rates-2026.md",
+        "references/extraction-methods.md",
+        "scripts/tax_comparison.py"
+      ]
+    },
+    {
+      "claim_id": "surtax-2pct-capital-income-alone",
+      "claim": "The 2% s.121B(a1) surtax is measured on capital-source income alone against the 721,560 threshold, not on total income. ITA execution instruction 5/2025 example 3.2: salary 400,000 plus 700,000 of dividends and interest owes the 3% but not the 2%, because capital income (700,000) is below 721,560. The 2% limb was added by Amendment 276.",
+      "source_url": "https://www.gov.il/BlobFolder/policy/inst-05-2025/he/IncomeTax_inst-05-2025.pdf",
+      "raw_snippet": "אין חיוב במס הנוסף החדש בשיעור של 2% בגין ההכנסות ממקור",
+      "fetched_at": "2026-10-01T09:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-rates-2026.md",
+        "scripts/tax_comparison.py"
+      ]
+    },
+    {
+      "claim_id": "trapped-profits-exit-10pct-losses",
+      "claim": "s.81B(b) exit 1: no surcharge where current losses exceed 10% of the accumulated profits at the end of the previous tax year (ITA circular 7/2025, update 1 of 8 February 2026).",
+      "source_url": "https://www.gov.il/BlobFolder/policy/professional-directives-191025/he/IncomeTax_professional-directives-080226.pdf",
+      "raw_snippet": "עולים על 10% מסכום הרווחים הנצברים של חברת המעטים בתום שנת המס הקודמת",
+      "fetched_at": "2026-10-01T09:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-rates-2026.md"
+      ]
+    },
+    {
+      "claim_id": "trapped-profits-exit-50pct",
+      "claim": "s.81B(b) exit 2: no surcharge where taxed dividends exceed 50% of the excess profits at the end of the previous tax year (the 50% alternative).",
+      "source_url": "https://www.gov.il/BlobFolder/policy/professional-directives-191025/he/IncomeTax_professional-directives-080226.pdf",
+      "raw_snippet": "עולה על 50% מסכום",
+      "fetched_at": "2026-10-01T09:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-rates-2026.md"
+      ]
+    },
+    {
+      "claim_id": "trapped-profits-exit-6pct-taxed-dividends",
+      "claim": "s.81B(b) exit 3: no surcharge where dividends on which tax was paid (\"dividend\" here means any dividend other than an s.126(b)-exempt intercompany dividend) are 6% or more of the accumulated profits at the end of the previous tax year.",
+      "source_url": "https://www.gov.il/BlobFolder/policy/professional-directives-191025/he/IncomeTax_professional-directives-080226.pdf",
+      "raw_snippet": "בשיעור של 6% או יותר מסכום הרווחים הנצברים של חברת המעטים לתום שנת המס",
+      "fetched_at": "2026-10-01T09:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-rates-2026.md"
+      ]
+    },
+    {
+      "claim_id": "trapped-profits-2025-5pct-transition",
+      "claim": "For 2025 only, a closely-held company owed no surcharge if taxed dividends in the determining period were 5% or more of accumulated profits, provided the tax was paid by 31/12/2025.",
+      "source_url": "https://www.gov.il/BlobFolder/policy/professional-directives-191025/he/IncomeTax_professional-directives-080226.pdf",
+      "raw_snippet": "מניותיה בתקופה הקובעת הוא בשיעור של 5% או יותר מסכום הרווחים הנצברים של חברת",
+      "fetched_at": "2026-10-01T09:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-rates-2026.md"
+      ]
+    },
+    {
+      "claim_id": "trapped-profits-sections-81a-81f",
+      "claim": "The surcharge sits in ss.81A-81F of the Ordinance: s.81B charges it, s.81D denies a deduction for it, s.81F(a) treats it like corporate tax without being creditable. It applies to Israeli-resident closely-held companies (s.76(a)).",
+      "source_url": "https://www.gov.il/BlobFolder/policy/professional-directives-191025/he/IncomeTax_professional-directives-080226.pdf",
+      "raw_snippet": "סכומים ששולמו כתוספת למס לפי סעיף",
+      "fetched_at": "2026-10-01T09:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-rates-2026.md",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "form-1214-appendix-1281",
+      "claim": "ITA execution instruction 9/2026 (15 September 2026): appendix 1281 to Form 1214 is the reporting tool for ss.81A-81F; accumulated profits go to field 169; no appendix is required below 750,000 of accumulated profits. A company within s.62A marks it on Form 1214.",
+      "source_url": "https://y-tax.co.il/undistributed-profits-closely-held-companies-2026/",
+      "raw_snippet": "נספח 1281 הוא כלי הדיווח המרכזי לחברות מעטים בהקשר של סעיפים 81א-81ו",
+      "fetched_at": "2026-10-01T09:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-rates-2026.md"
+      ]
+    },
+    {
+      "claim_id": "form-1214-62a-flag",
+      "claim": "A closely-held company within s.62A must mark it on Form 1214 (execution instruction 9/2026).",
+      "source_url": "https://y-tax.co.il/undistributed-profits-closely-held-companies-2026/",
+      "raw_snippet": "חברה העונה להגדרה ונכנסת לתחולת סעיף 62א תידרש לסמן זאת בטופס 1214",
+      "fetched_at": "2026-10-01T09:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "section-62a-controlling-holder-test",
+      "claim": "Amendment 277 replaced \"material shareholder as defined in s.88\" in s.62A with \"controlling holder\" (s.75B(a)(3)): an Israeli resident holding, directly or indirectly, alone or with another, 10% or more of any means of control.",
+      "source_url": "https://www.hashavim.co.il/articles/taxation/amendment-277-wallet-companies-qa/",
+      "raw_snippet": "ובמקום \"בעל מניות מהותי כהגדרתו בסעיף 88\" יבוא \"בעל שליטה בה\"",
+      "fetched_at": "2026-10-01T09:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-rates-2026.md"
+      ]
+    },
+    {
+      "claim_id": "section-62a-a1-client-25-scope",
+      "claim": "The 25% client-holding exit (formerly 10%) is the exit from s.62A(a)(1), the officer or management-services limb, tested on any day in the tax year.",
+      "source_url": "https://www.hashavim.co.il/articles/taxation/amendment-277-wallet-companies-qa/",
+      "raw_snippet": "לפני התיקון כדי לצאת מתחולת סעיף 62א(א)(1) לפקודה מספיק שבעל המניות יחזיק ב-10%",
+      "fetched_at": "2026-10-01T09:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-rates-2026.md"
+      ]
+    },
+    {
+      "claim_id": "section-62a-one-client-70pct-4-employees",
+      "claim": "One-client rule: 70% or more of the company income from one client, now over 22 months within 3 years (was 30 within 4); closely-held companies employing four or more employees stay excluded.",
+      "source_url": "https://www.apm.law/he/רווחים-לא-מחולקים-חברות-ארנק-ומס-יסף-ת/",
+      "raw_snippet": "ההחרגה לחברות מעטים המעסיקות ארבעה עובדים או יותר נותרה ללא שינוי",
+      "fetched_at": "2026-10-01T09:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-rates-2026.md"
+      ]
+    },
+    {
+      "claim_id": "section-62a-a1-30m-750k-exclusions",
+      "claim": "s.62A(a1) applies only where personal-exertion turnover is below NIS 30 million times the number of controlling holders and profitability exceeds 25%; a holder whose accumulated profits across all companies he holds did not exceed 750,000 at the end of the previous year is outside it. BL applies to the attributed income (BL circular 1487).",
+      "source_url": "https://www.hashavim.co.il/articles/taxation/amendment-277-wallet-companies-qa/",
+      "raw_snippet": "על הכנסתה מפעילות עתירת יגיעה אישית להיות נמוכה ממכפלת 30 מיליון כפול מספר בעלי השליטה בחברת המעטים",
+      "fetched_at": "2026-10-01T09:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-rates-2026.md"
+      ]
+    },
+    {
+      "claim_id": "family-company-election-3-months",
+      "claim": "Section 64A: a family company election is made on a request filed with the assessing officer within three months after incorporation.",
+      "source_url": "https://www.hilan.co.il/מרכז-ידע/חקיקה/דיני-מיסים/פקודת-מס-הכנסה-נוסח-חדש-תשכא-1961/חלק-ד-חישוב-ההכנסה-במקרים-מיוחדים/",
+      "raw_snippet": "לפי בקשתה שתומצא לפקיד השומה בתוך שלושה חודשים לאחר התאגדותה",
+      "fetched_at": "2026-10-01T09:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "family-company-withdrawal",
+      "claim": "Section 64A(b): a family company may withdraw by notice no later than a month before the start of a tax year; a company that withdraws cannot re-elect.",
+      "source_url": "https://www.hilan.co.il/מרכז-ידע/חקיקה/דיני-מיסים/פקודת-מס-הכנסה-נוסח-חדש-תשכא-1961/חלק-ד-חישוב-ההכנסה-במקרים-מיוחדים/",
+      "raw_snippet": "חברה משפחתית זכאית רשאית להודיע לפקיד השומה, לא יאוחר מחודש לפני תחילת שנת מס פלונית, שהיא חוזרת בה מבקשתה",
+      "fetched_at": "2026-10-01T09:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "trapped-profits-126b-election",
+      "claim": "An intercompany dividend exempt under s.126(b) counts toward the s.81B exits only if the paying company elects to have tax paid at the highest dividend rate under ss.125B and 121B (35% in 2025), per the 2025 regulations explained in circular 02/2026 of 25 January 2026; for a December distribution the tax is due by 16 January of the following year (circular 02/2026 s.4.2).",
+      "source_url": "https://www.gov.il/BlobFolder/policy/professional-directives-250126-1/he/IncomeTax_professional-directives-250126-1.pdf",
+      "raw_snippet": "אך החברה המחלקת בחרה לשלם בגינו את שיעור המס הגבוה ביותר החל על",
+      "fetched_at": "2026-10-01T10:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-rates-2026.md"
+      ]
+    },
+    {
+      "claim_id": "trapped-profits-accumulated-lower-of",
+      "claim": "Accumulated profits for s.81A follow s.77(a) as amended by Amendment 277: the LOWER of the tax alternative and the financial-statement alternative.",
+      "source_url": "https://www.gov.il/BlobFolder/policy/professional-directives-191025/he/IncomeTax_professional-directives-080226.pdf",
+      "raw_snippet": "כסכום הנמוך מבין שני אלה",
+      "fetched_at": "2026-10-01T10:00:00Z",
+      "appears_in": [
+        "references/tax-rates-2026.md"
+      ]
+    },
+    {
+      "claim_id": "trapped-profits-special-assets",
+      "claim": "Special assets, which reduce the asset shield, include securities, financial assets (including cash), intangibles, real-estate rights and loans; the expense shield is the higher of the tested year's recognised expenses or their average over that year and the two before it.",
+      "source_url": "https://www.gov.il/BlobFolder/policy/professional-directives-191025/he/IncomeTax_professional-directives-080226.pdf",
+      "raw_snippet": "הנכסים המיוחדים כוללים ניירות ערך",
+      "fetched_at": "2026-10-01T10:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-rates-2026.md"
+      ]
+    },
+    {
+      "claim_id": "section-62a-a1-company-750k",
+      "claim": "Alternative s.62A(a1) exclusion: the controlling holders do not control the client, and the closely-held company's own s.77(a) accumulated profits at the end of the previous year did not exceed 750,000.",
+      "source_url": "https://www.hashavim.co.il/articles/taxation/amendment-277-wallet-companies-qa/",
+      "raw_snippet": "ב. אין בעלי השליטה בחברת מעטים בעלי שליטה בחברה האחרת",
+      "fetched_at": "2026-10-01T10:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "section-62a-partnership-10-55",
+      "claim": "A closely-held company that is a partner: at a 10%+ partnership share the 25%-margin rule applies to the attributed partnership income; below 10%, 55% of the attributed income is taxed at the individual level.",
+      "source_url": "https://www.hashavim.co.il/articles/taxation/amendment-277-wallet-companies-qa/",
+      "raw_snippet": "55% מהכנסה החייבת של השותפות שיוחסה לחברה ימוסו במס שולי",
+      "fetched_at": "2026-10-01T10:00:00Z",
+      "appears_in": [
+        "references/tax-rates-2026.md"
+      ]
+    },
+    {
+      "claim_id": "derived-salary-marginal-top",
+      "claim": "Derived: marginal salary cost in the 47% band below the NI ceiling = (47% + 11.96% + 7.38%) / 1.0738 = about 61.8% (~62%); above the ceiling and the 721,560 threshold it is 50%.",
+      "source_url": "https://www.btl.gov.il/Insurance/Rates/Pages/%D7%9C%D7%A2%D7%95%D7%91%D7%93%D7%99%D7%9D%20%D7%A9%D7%9B%D7%99%D7%A8%D7%99%D7%9D.aspx",
+      "raw_snippet": "11.96% (החל ב- 01.02.2025) 7.38%",
+      "fetched_at": "2026-10-01T10:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "company-recipient-no-surtax",
+      "claim": "Section 121B surtax is imposed on an individual (יחיד) only, so a body-corporate shareholder receiving the s.51kaf-vav(2) 4% dividend pays no surtax.",
+      "source_url": "https://www.gov.il/BlobFolder/policy/inst-05-2025/he/IncomeTax_inst-05-2025.pdf",
+      "raw_snippet": "יחיד אשר הכנסתו החייבת ממקורות הוניים",
+      "fetched_at": "2026-10-01T10:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "scripts/tax_comparison.py"
+      ]
     }
   ]
 }

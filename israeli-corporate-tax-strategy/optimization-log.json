@@ -29,6 +29,28 @@
         "Fixed this cycle: the dividend withholding deposit date was the 15th, which is the pre-2018 text of reg. 13 and also the Bituach Leumi date. Correct date is the 16th, with Form 0102 due the same day (regs. 13 and 14(a), 2005 deduction regulations, replaced with effect 1.1.2018). The evidence file already carried the correct 16th claim against the SALARY regulations while the body still said 15th, so the two had silently diverged.",
         "Fixed this cycle, not reported: four legacy evidence entries were unverifiable. credit-point-base-2-25 and credit-point-women-0-5 carried English paraphrase snippets that are not on the cited kolzchut page (retargeted to Ordinance ss.34, 36, 36A); ni-ceiling-51910 and employee-ni-low-1-04 cited a Bituach Leumi PDF that 404s (retargeted to the live employee-rates page). All four now verify verbatim."
       ]
+    },
+    {
+      "version": "1.4.0",
+      "date": "2026-10-01",
+      "lessons": [
+        "CARRY resolved: analyze_management_fees() added to scripts/tax_comparison.py (self-employed NI, s.47A 52% of NI). Management company (corporate) fee route still not modelled; see below.",
+        "CARRY resolved: controlling-shareholder EMPLOYEE NI now 1.02%/6.79% (BTL column 2), not the regular 1.04%/7.0%.",
+        "CARRY resolved: Step 2 salary headline narrowed (~50% above the NI ceiling, ~62% in the 47% band below it); extraction-methods Example 1 recomputed against the script.",
+        "CARRY resolved: trapped-profits protective shield (750k / expense / asset, special assets) now surfaced in Step 8 and tax-rates-2026.md.",
+        "Fixed, found this cycle: calc_surtax let salary use up the 2% capital-income threshold. The 2% limb is measured on capital income ALONE (ITA execution instruction 5/2025 ex. 3.2).",
+        "Fixed, found by Expert: --dividend-rate 0.04 (foreign parent company) charged individual surtax on a body corporate; --company-recipient added.",
+        "Expert CRITICAL NOT adopted after primary-source check: 'dividend tax must be paid by 31/12 of the tested year for the 6%/50% exit'. Only the expired 2025 transition (circular 7/2025 s.6.11) had that condition; circular 02/2026 s.4.2 sets 16 January of the following year for a December distribution. Do not relitigate without a new primary source.",
+        "Expert MAJOR deferred: the script models only current-year pre-tax profit. A --retained-earnings mode (already-taxed, dividend rate + surtax only, multi-year pacing) would serve the common 'company has millions retained' question.",
+        "Expert MAJOR deferred: circular 7/2025 s.6 transitional rules for pre-2025 ('start-day') profits are conditional (20%/year plus a 50%-of-excess-profits condition); the claim was removed rather than stated incompletely. Consider a proper sourced treatment next cycle.",
+        "Expert MINOR re-logged: Section 77 forced-distribution numeric tests and the '5-year lookback' wording remain unsourced.",
+        "Expert MINOR: s.3(yod) described as 'lender deemed interest between related parties' in Step 5 but 'CPI-linked loans' in Gotcha 3; reconcile against the statute.",
+        "Expert MINOR: analyze_loan ignores credit points and BL on deemed work income; management fees through a management COMPANY (23% + dividend layer) not modelled; optimizer grid is 10,000 NIS.",
+        "Script limitation re-logged: --benefit-track applies one rate to the WHOLE profit; a qualifying-income share input would model the blended rate.",
+        "Legal gate (PASS_WITH_NOTICE) non-blocking: SKILL.md/SKILL_HE.md frontmatter description still says 'verifies compliance' / 'Prevents'; metadata display_description was reworded this cycle but the frontmatter was left to avoid a Phase 5.7 holdout run inside a batch. Reword with an eval next cycle.",
+        "Kolzchut (12 entries) is 403 to curl and to headless Playwright; values were cross-checked via wintax and the Judge this cycle. Consider re-sourcing brackets/credit point to a gov.il or nevo primary.",
+        "Open question carried: whether the trapped-profits 2% applies to an Encouragement-Law benefit-track company and how the 6% exit interacts with the 20% benefit-track dividend rate."
+      ]
     }
   ]
 }

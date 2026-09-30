@@ -14,13 +14,13 @@ Worked examples for each extraction method from an Israeli limited company (Chev
 
 ### Method A: Full Salary
 
-Gross salary approximately 186,270 NIS/year (after deducting employer NI from budget)
-- Income tax (progressive): approximately 24,690 NIS
+Gross salary approximately 188,770 NIS/year (the 200,000 budget less controlling-shareholder employer NI of about 11,230)
+- Income tax (progressive): approximately 27,146 NIS
 - Credit points reduction: -6,534 NIS
-- Net income tax: approximately 18,156 NIS
-- Employee NI+health: approximately 12,920 NIS
-- Net to shareholder: approximately 155,194 NIS
-- **Effective rate: approximately 22.4%**
+- Net income tax: approximately 20,612 NIS
+- Employee NI+health (controlling-shareholder rates, 4.25% / 11.96%): approximately 15,450 NIS
+- Net to shareholder: approximately 152,707 NIS
+- **Effective rate: approximately 23.6%**
 
 ### Method B: Full Dividend
 
@@ -30,7 +30,7 @@ Gross salary approximately 186,270 NIS/year (after deducting employer NI from bu
 - Net to shareholder: 107,800 NIS
 - **Effective rate: 46.1%**
 
-### Result: Salary wins by ~47,394 NIS
+### Result: Salary wins by ~44,907 NIS
 
 For amounts within the lower tax brackets, salary is significantly better.
 
@@ -38,21 +38,25 @@ For amounts within the lower tax brackets, salary is significantly better.
 
 ### Optimal Mix (Salary 228,000 + Dividend on Rest)
 
-Salary portion: 228,000 gross (employer cost approximately 244,837)
-- Employee tax: approximately 25,765 NIS (after credit points)
-- Employee NI: approximately 18,960 NIS
-- Net from salary: approximately 183,275 NIS
+Salary portion: 228,000 gross (employer cost approximately 242,127)
+- Employee tax: approximately 28,458 NIS (after credit points)
+- Employee NI+health: approximately 20,142 NIS
+- Net from salary: approximately 179,400 NIS
 
-Remaining profit: approximately 255,163 NIS
-- Corporate tax: 58,687 NIS
-- Distributable: 196,476 NIS
-- Dividend tax: 58,943 NIS
-- Net from dividend: approximately 137,533 NIS
+Remaining profit: approximately 257,873 NIS
+- Corporate tax: 59,311 NIS
+- Distributable: 198,562 NIS
+- Dividend tax: 59,569 NIS
+- Net from dividend: approximately 138,993 NIS
 
-Total net: approximately 320,808 NIS
-**Effective rate: approximately 35.8%**
+Total net: approximately 318,393 NIS
+**Effective rate: approximately 36.3%**
 
-Compared to pure dividend (46.1%) this saves approximately 48,767 NIS.
+Compared to pure dividend (46.1%, net 269,500) this saves approximately 48,893 NIS. These figures match `scripts/tax_comparison.py` to the shekel. Its 10,000-step optimizer lands near a 235,000 salary, within about 60 NIS of this hand-picked mix.
+
+## Example 3: Management Fees Instead of Salary (200,000 NIS)
+
+Billed by the shareholder personally as an osek murshe, with no business expenses and VAT reclaimed by the company, 200,000 of fees leaves about 152,528 NIS net, almost identical to salary: self-employed NI (7.70% / 18.00%) replaces employee plus employer NI, and 52% of the NI part is deductible (s.47A). Management fees only pull ahead when there are real business expenses to deduct. Run `python3 scripts/tax_comparison.py --profit 200000`.
 
 ## Key Decision Thresholds
 

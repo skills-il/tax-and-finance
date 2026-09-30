@@ -65,13 +65,22 @@ INCOME_TAX_BRACKETS = [
 NI_THRESHOLD_LOW = 7_703 * 12   # 92,436
 NI_THRESHOLD_HIGH = 51_910 * 12  # 622,920
 
-# Employee NI + Health rates (2026: NI 1.04%/7.0% per 2024 budget; health 3.23%/5.17% per 2025 amendment)
-EMPLOYEE_NI_LOW = 0.0104 + 0.0323  # 4.27%
-EMPLOYEE_NI_HIGH = 0.07 + 0.0517   # 12.17%
+# Employee NI + Health rates for a CONTROLLING-SHAREHOLDER employee (BTL rate table, column 2,
+# "בעל שליטה בחברת מעטים"): NI 1.02%/6.79%, health 3.23%/5.17%.
+# A regular employee pays NI 1.04%/7.0% instead; do not use those figures here.
+EMPLOYEE_NI_LOW = 0.0102 + 0.0323   # 4.25%
+EMPLOYEE_NI_HIGH = 0.0679 + 0.0517  # 11.96%
 
 # Employer NI rates (controlling shareholder)
 EMPLOYER_NI_LOW = 0.0446
 EMPLOYER_NI_HIGH = 0.0738
+
+# Self-employed NI + Health (management fees billed by the shareholder personally)
+SELF_EMPLOYED_NI_LOW, SELF_EMPLOYED_HEALTH_LOW = 0.0447, 0.0323    # 7.70%
+SELF_EMPLOYED_NI_HIGH, SELF_EMPLOYED_HEALTH_HIGH = 0.1283, 0.0517  # 18.00%
+# Section 47A: 52% of the self-employed NATIONAL INSURANCE contribution (not the health
+# contribution) is deductible for income tax.
+SELF_EMPLOYED_NI_DEDUCTIBLE_SHARE = 0.52
 
 
 def calc_income_tax(annual_income: float) -> float:
@@ -109,13 +118,15 @@ def calc_employer_ni(annual_salary: float) -> float:
 
 
 def calc_surtax(total_income: float, non_labor_income: float = 0) -> float:
-    if total_income <= SURTAX_THRESHOLD:
-        return 0.0
-    excess = total_income - SURTAX_THRESHOLD
-    surtax = excess * SURTAX_RATE
-    if non_labor_income > 0:
-        non_labor_excess = min(non_labor_income, excess)
-        surtax += non_labor_excess * SURTAX_NON_LABOR_RATE
+    """Section 121B surtax.
+
+    3% (s.121B(a)) on TOTAL taxable income above the threshold, plus 2% (s.121B(a1)) on the
+    part of CAPITAL-source income ALONE that exceeds the same threshold. The two limbs are
+    measured separately: salary does not use up the threshold for the 2% limb (ITA
+    execution instruction 5/2025, example 3.2).
+    """
+    surtax = max(0.0, total_income - SURTAX_THRESHOLD) * SURTAX_RATE
+    surtax += max(0.0, non_labor_income - SURTAX_THRESHOLD) * SURTAX_NON_LABOR_RATE
     return surtax
 
 
@@ -158,12 +169,15 @@ def analyze_salary(profit: float, credit_points: float, current_salary: float = 
 
 def analyze_dividend(profit: float, current_salary: float = 0,
                      corp_rate: float = CORPORATE_TAX_RATE,
-                     div_rate: float = DIVIDEND_TAX_CONTROLLING) -> dict:
+                     div_rate: float = DIVIDEND_TAX_CONTROLLING,
+                     company_recipient: bool = False) -> dict:
     corp_tax = profit * corp_rate
     distributable = profit - corp_tax
     div_tax = distributable * div_rate
     total_income = current_salary + distributable
-    surtax = calc_surtax(total_income, non_labor_income=distributable) - calc_surtax(current_salary)
+    # s.121B surtax applies to individuals only; a body-corporate shareholder pays none.
+    surtax = 0.0 if company_recipient else (
+        calc_surtax(total_income, non_labor_income=distributable) - calc_surtax(current_salary))
     total_tax = corp_tax + div_tax + surtax
     net = distributable - div_tax - surtax
     return {
@@ -177,11 +191,12 @@ def analyze_dividend(profit: float, current_salary: float = 0,
 def analyze_optimal_mix(profit: float, credit_points: float, current_salary: float = 0,
                         corp_rate: float = CORPORATE_TAX_RATE,
                         div_rate: float = DIVIDEND_TAX_CONTROLLING) -> dict:
-    best_net = 0
+    best_net = float("-inf")
     best_cost = 0
     step = 10_000
     cr = credit_points * CREDIT_POINT_ANNUAL
-    for salary_cost in range(step, int(profit), step):
+    # Grid over the salary budget, including both ends (all-dividend and all-salary).
+    for salary_cost in list(range(0, int(profit), step)) + [profit]:
         gross = solve_gross_salary(salary_cost, current_salary)
         total_sal = current_salary + gross
         emp_ni = calc_employer_ni(total_sal) - calc_employer_ni(current_salary)
@@ -234,19 +249,81 @@ def analyze_loan(amount: float, current_salary: float = 0) -> dict:
     }
 
 
+def calc_self_employed_ni(annual_income: float, salary_already_insured: float = 0) -> tuple:
+    """Self-employed NI and health on management-fee income, returned as (ni, health).
+
+    Approximation: salary already drawn is treated as filling the reduced band and the
+    ceiling first, so the fee is charged only on the room left under 51,910/month.
+    """
+    lo, hi = NI_THRESHOLD_LOW, NI_THRESHOLD_HIGH
+    start = min(salary_already_insured, hi)
+    end = min(salary_already_insured + annual_income, hi)
+    low_part = max(0.0, min(end, lo) - start)
+    high_part = max(0.0, end - max(start, lo))
+    ni = low_part * SELF_EMPLOYED_NI_LOW + high_part * SELF_EMPLOYED_NI_HIGH
+    health = low_part * SELF_EMPLOYED_HEALTH_LOW + high_part * SELF_EMPLOYED_HEALTH_HIGH
+    return ni, health
+
+
+def analyze_management_fees(profit: float, credit_points: float, current_salary: float = 0,
+                            business_expenses: float = 0) -> dict:
+    """Management fees billed by the shareholder personally as an osek murshe.
+
+    The company deducts the fee, so there is no corporate tax on it. VAT is ignored on the
+    assumption the company is itself an osek murshe and reclaims it. business_expenses are
+    the shareholder's own deductible costs against the fee. Section 62A attribution and
+    s.85A arm's-length limits are NOT modelled; check them first (Step 1a, Step 6).
+    """
+    fee = profit
+    business_profit = max(0.0, fee - business_expenses)
+    ni, health = calc_self_employed_ni(business_profit, current_salary)
+    taxable = business_profit - ni * SELF_EMPLOYED_NI_DEDUCTIBLE_SHARE
+    total_inc = current_salary + taxable
+    cr = credit_points * CREDIT_POINT_ANNUAL
+    net_tax = (max(0, calc_income_tax(total_inc) - cr)
+               - max(0, calc_income_tax(current_salary) - cr))
+    surtax = calc_surtax(total_inc) - calc_surtax(current_salary)
+    total_tax = net_tax + surtax + ni + health
+    net = business_profit - total_tax
+    return {
+        "method": "Management Fees (osek murshe)",
+        "total_tax": total_tax,
+        "net_to_shareholder": net,
+        "effective_rate": total_tax / profit * 100 if profit > 0 else 0,
+    }
+
+
 def fmt(n: float) -> str:
     return f"{n:,.0f}"
 
 
 def print_comparison(profit: float, credit_points: float, current_salary: float,
-                     track: str = "standard", div_rate_override: float = None):
+                     track: str = "standard", div_rate_override: float = None,
+                     company_recipient: bool = False):
     corp_rate, div_rate, label = BENEFIT_TRACKS[track]
     if div_rate_override is not None:
         div_rate = div_rate_override
+    if company_recipient:
+        # A body-corporate shareholder has no salary, credit points, fees or surtax:
+        # only the corporate layer and the dividend withholding are meaningful.
+        div = analyze_dividend(profit, 0, corp_rate, div_rate, company_recipient=True)
+        print("=" * 70)
+        print(f"  DIVIDEND TO A BODY-CORPORATE SHAREHOLDER (2026)")
+        print(f"  Regime: {label} -- corporate {corp_rate * 100:g}%, dividend {div_rate * 100:g}%")
+        print(f"  Company Profit: {fmt(profit)} NIS")
+        print("=" * 70)
+        print(f"  Total tax: {fmt(div['total_tax'])}  Net: {fmt(div['net_to_shareholder'])}  "
+              f"Rate: {div['effective_rate']:.1f}%")
+        print(f"  No s.121B surtax (individuals only). Salary, fees and loan routes do not apply.")
+        print(f"  Dividend rate used: {div_rate * 100:g}%. For an Israeli parent pass --dividend-rate 0 "
+              f"(s.126(b)); for a foreign parent pass the treaty or s.51kaf-vav rate.")
+        print(f"\n  Consult a licensed Israeli CPA before acting on these estimates.")
+        return
     sal = analyze_salary(profit, credit_points, current_salary)
     div = analyze_dividend(profit, current_salary, corp_rate, div_rate)
     opt = analyze_optimal_mix(profit, credit_points, current_salary, corp_rate, div_rate)
     loan = analyze_loan(profit, current_salary)
+    fees = analyze_management_fees(profit, credit_points, current_salary)
 
     print("=" * 70)
     print(f"  ISRAELI CORPORATE TAX STRATEGY COMPARISON (2026)")
@@ -261,7 +338,7 @@ def print_comparison(profit: float, credit_points: float, current_salary: float,
     print(f"\n{'Method':<35} {'Total Tax':>12} {'Net':>12} {'Rate':>8}")
     print("-" * 70)
 
-    for r in [sal, div, opt]:
+    for r in [sal, div, opt, fees]:
         print(f"  {r['method']:<33} {fmt(r['total_tax']):>12} "
               f"{fmt(r['net_to_shareholder']):>12} {r['effective_rate']:>7.1f}%")
 
@@ -271,7 +348,9 @@ def print_comparison(profit: float, credit_points: float, current_salary: float,
           f"({loan['effective_annual_rate']:.1f}% of principal)")
     print(f"    Note: Must be repaid or converted to dividend/salary")
 
-    methods = [sal, div, opt]
+    print(f"  (Management fees: no expenses deducted, VAT assumed reclaimed, s.62A not modelled)")
+
+    methods = [sal, div, opt, fees]
     best = max(methods, key=lambda x: x["net_to_shareholder"])
     worst = min(methods, key=lambda x: x["net_to_shareholder"])
     print(f"\n{'=' * 70}")
@@ -293,6 +372,10 @@ def main():
                         help="Encouragement-Law benefit track held by the company "
                              "(default: standard, 23%%). Use pte/pte-a/spte for technology "
                              "enterprises, pfe/pfe-a/spfe/spfe-a for industrial ones.")
+    parser.add_argument("--company-recipient", action="store_true",
+                        help="The shareholder is a body corporate (e.g. the foreign parent in the "
+                             "s.51kaf-vav(2) 4%% case): no surtax, dividend route only. Implied by "
+                             "--dividend-rate 0.04.")
     parser.add_argument("--dividend-rate", type=float, default=None,
                         help="Override the dividend withholding rate as a decimal, e.g. 0.25 for a "
                              "non-controlling shareholder or 0.04 for the s.51kaf-vav(2) "
@@ -303,9 +386,12 @@ def main():
         print("Error: --dividend-rate must be a decimal between 0 and 1")
         sys.exit(1)
 
+    company = args.company_recipient or (
+        args.dividend_rate is not None and abs(args.dividend_rate - DIVIDEND_TECH_FOREIGN_90) < 1e-9)
+
     if args.example:
         for p in [200_000, 500_000, 1_000_000]:
-            print_comparison(p, 2.25, 0, args.benefit_track, args.dividend_rate)
+            print_comparison(p, 2.25, 0, args.benefit_track, args.dividend_rate, company)
             print()
         return
 
@@ -317,7 +403,7 @@ def main():
         sys.exit(1)
 
     print_comparison(args.profit, args.credit_points, args.current_salary,
-                     args.benefit_track, args.dividend_rate)
+                     args.benefit_track, args.dividend_rate, company)
 
 
 if __name__ == "__main__":

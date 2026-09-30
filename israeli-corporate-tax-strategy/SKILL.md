@@ -10,7 +10,7 @@ compatibility: Works with Claude Code, OpenClaw, Cursor, Windsurf, Codex, GitHub
 
 ## Legal notice
 
-This is a free information tool operated by an AI model. It explains the rules and calculates from the figures you enter, but it does not examine your full circumstances and does not constitute tax advice. All of its outputs are produced automatically, with no involvement, review, or approval by a tax adviser or accountant, and an AI model may err, omit data, or present a wrong conclusion. The binding computation is the Tax Authority's and responsibility for reporting is yours. This tool is not a substitute for advice that takes account of the particular circumstances and needs of each person, and all use of its output is the user's sole responsibility.
+This is a free information tool operated by an AI model. It explains the rules and calculates from the figures you enter, but it does not examine your full circumstances and does not constitute tax advice. All of its outputs are produced automatically, with no involvement, review, or approval by a tax adviser or accountant, and an AI model may err, omit data, or present a wrong conclusion. Responsibility for reporting and paying the tax is yours, the binding computation is the Tax Authority's, and representation before the Tax Authority is reserved to those permitted by law. This tool is not a substitute for advice that takes account of the particular circumstances and needs of each person, and all use of its output is the user's sole responsibility.
 
 
 ## Problem
@@ -40,25 +40,23 @@ Before any analysis, collect these details. Each variable significantly affects 
 
 Before running any comparison, check whether Section 62A look-through applies. If it does, the salary-vs-dividend choice is largely moot.
 
-Section 62A (tightened by Amendment 277 to the Income Tax Ordinance, effective 2025-01-01) treats a closely-held company as a transparent pass-through when:
+Section 62A (tightened by Amendment 277 to the Income Tax Ordinance, effective 2025-01-01) attributes a closely-held company's income to its shareholder. Amendment 277 changed the holder test from "material shareholder" to "controlling holder" (בעל שליטה, s.75B(a)(3): an Israeli resident holding 10%+ of any means of control, directly or indirectly). Three routes:
 
-1. Revenue comes mainly from the personal services of a material shareholder (10%+ of the means of control; this trigger was NOT changed by Amendment 277).
-2. The shareholder works for a single substantial client over a meaningful window (22 months within 3 tax years; Amendment 277 tightened this from the prior 30 months within 4 tax years).
-3. Profits exceed a 25% margin on personal-effort revenue (the new excess-profitability limb, Section 62A(a1)).
+1. **Officer or management services to another company (s.62A(a)(1)).** Exit only if the individual holds 25%+ of the client on some day in the tax year (raised from 10%, so 10-25% stakes that used to be safe are now caught).
+2. **Services the individual would otherwise render as an employee**, including where 70%+ of the company's income comes from one client over 22 months within 3 tax years (formerly 30 months within 4). A company employing four or more employees stays excluded from the one-client rule.
+3. **Excess profitability (new s.62A(a1)).** Where profitability on personal-exertion activity exceeds 25%, the profit above that 25% margin is taxed to the active shareholder at marginal rates as work income, and Bituach Leumi applies to it. It does not reach a company whose personal-exertion turnover is at least NIS 30 million times the number of controlling holders. It also does not reach a holder whose accumulated profits across all his companies did not exceed NIS 750,000 at the end of the previous year, or a company whose own accumulated profits did not exceed NIS 750,000 where its controlling holders do not control the client.
 
-When these tests are met, profits above the 25% margin are deemed distributed to the shareholder and taxed at marginal rates regardless of the actual extraction method chosen. Salary-vs-dividend optimization saves nothing in this fact pattern, and planning shifts to documenting genuine business activity, expanding the client base, or restructuring.
+Where 62A applies, salary-vs-dividend optimization saves little, and planning shifts to documenting genuine business activity, expanding the client base, or restructuring. The company flags 62A on Form 1214 (execution instruction 9/2026).
 
-**Key exemption:** if the shareholder holds 25%+ of the *client* entity receiving the services, the personal-services attribution does not apply (they are treated as a genuine part-owner of the client, not a wallet company). Amendment 277 raised this exit threshold from the prior 10% to 25%, so mid-size stakes (10-25%) in the client that used to be safe now fall inside §62A.
-
-Common §62A triggers: solo consultants, freelance developers, lawyers/doctors operating through a personal Ltd, and "wallet companies" (chevrot arnak).
+Common §62A cases: solo consultants, freelance developers, and professionals working through a personal Ltd ("wallet companies", chevrot arnak).
 
 ### Step 1b: Benefit-Track Gate (Encouragement of Capital Investments Law)
 
 The 23% corporate rate and the 30% dividend rate are the STANDARD-company defaults. A company
 holding a status under the Law for Encouragement of Capital Investments, 5719-1959 pays neither,
 and modelling it at 23% roughly doubles the corporate layer. Ask before comparing: "does the
-company hold a Preferred, Special Preferred, or Technology Enterprise status?" Israeli software
-and tech companies are the population this most often catches.
+company hold a Preferred, Special Preferred, or Technology Enterprise status?" Software and tech
+companies are most often caught.
 
 | Track | Development Area A | Elsewhere | Dividend from that profit |
 |---|---|---|---|
@@ -82,7 +80,7 @@ Three rules that decide whether the headline rate is the right one:
    Amendment 68 s.39 and the superseded tables. Do NOT answer such a company from the table above.
 
 Pass the track to the comparison script with `--benefit-track` (`pte`, `pte-a`, `spte`, `pfe`,
-`pfe-a`, `spfe`, `spfe-a`); it defaults to `standard`. Use `--dividend-rate` for the 4% or the
+`pfe-a`, `spfe`, `spfe-a`); it defaults to `standard`. Use `--dividend-rate` for the 4% (treated as a body-corporate recipient, no surtax) or the
 non-controlling 25% case.
 
 ### Step 2: Understand the Extraction Methods
@@ -100,10 +98,10 @@ Israeli tax law provides four main ways for a controlling shareholder to extract
 
 | Method | Effective Rate (approximate) | Calculation |
 |--------|------------------------------|-------------|
-| Salary (top bracket) | ~55-60% | 50% income tax + employer NI 7.38% (on amount above ceiling, lower) |
-| Dividend | 46.1% (up to 49.95% with surtax) | 23% corporate + 30% on remainder (+ 5% surtax above 721,560) |
+| Salary (top bracket) | 50% above 721,560 (47% between the NI ceiling and 721,560); up to ~62% in the 47% band below the ceiling | 50% income tax above 721,560 with no NI above 51,910/month; below the ceiling add employee 11.96% and employer 7.38% |
+| Dividend | 46.1% (up to 49.95% with surtax) | 23% corporate + 30% on remainder (+3% above 721,560 total income, +2% more above 721,560 capital income, Step 3) |
 | Shareholder Loan | 6.53% annual deemed interest (taxed as income) | Not a real extraction, must eventually repay or convert |
-| Management Fees | ~50-55% + 18% VAT on gross | Similar to salary but with VAT and self-employed NI |
+| Management Fees | Similar to salary (~50% at the top) | Self-employed NI instead of employee + employer NI; VAT neutral when the company reclaims it |
 
 ### Step 3: Dividend Distribution Analysis
 
@@ -122,22 +120,14 @@ Effective total tax rate:         46.1%
 
 **Surtax impact (mas yesafim) for 2026:**
 
-If the shareholder's total annual income (including the dividend) exceeds 721,560 NIS:
-- Additional 3% surtax on the excess (Section 121B)
-- Additional 2% surtax on non-labor income above 721,560 NIS (effective 2025+)
-- Total additional: 5% on dividend portion above threshold
-- Effective rate climbs to ~49.95% on the portion above threshold
+The two limbs are measured SEPARATELY against the same 721,560 NIS threshold:
+- **3% (s.121B(a))** on TOTAL taxable income above 721,560, salary and dividend together.
+- **2% more (s.121B(a1), Amendment 276, from 2025)** on capital-source income (dividends, interest, capital gains, rent) above 721,560, measured on that capital income ALONE. Salary does not use up this threshold: 400,000 salary plus 700,000 of dividends and interest owes the 3% but not the 2% (ITA execution instruction 5/2025, example 3.2).
+- A dividend reaches the full 5% only on the slice by which capital income itself exceeds 721,560, where the combined rate is ~49.95%. Because both limbs reset every tax year, pacing a large distribution over several years so capital income stays under 721,560 avoids the 2% (and the 3% too when salary is low).
 
-**When dividend is optimal:**
-- Shareholder's salary already maximizes lower tax brackets
-- Amount is large enough that salary would push into 47%+ bracket anyway
-- Company has sufficient retained earnings (arvei rvaachim)
-- No Bituach Leumi advantage left (salary already above NI ceiling)
+The 46.1% figure prices CURRENT profit that still has to bear corporate tax. Distributing retained earnings that already bore it costs only the dividend rate plus any surtax.
 
-**When dividend is suboptimal:**
-- Shareholder draws no or low salary (wasting lower brackets and credit points)
-- Amount is moderate (under ~200,000 NIS) and salary brackets aren't fully utilized
-- Company needs the cash for operations (dividend is irreversible)
+**Dividend tends to win** when salary already fills the lower brackets and passes the NI ceiling, the amount would push salary into 47%+, and retained earnings (arvei rvaachim) are sufficient. **It tends to lose** when the shareholder draws little or no salary (unused brackets and credit points), the amount is moderate (under ~200,000 NIS), or the company needs the cash (a dividend is irreversible).
 
 ### Step 4: Salary Extraction Analysis
 
@@ -159,11 +149,11 @@ Salary (maskoret) is a deductible expense for the company, avoiding the 23% corp
 
 | Income Range | Employee NI | Employee Health | Employer NI |
 |-------------|------------|----------------|-------------|
-| Up to 7,703 NIS/month | 1.04% | 3.23% | 4.46% |
-| 7,703 - 51,910 NIS/month | 7.0% | 5.17% | 7.38% |
+| Up to 7,703 NIS/month | 1.02% | 3.23% | 4.46% |
+| 7,703 - 51,910 NIS/month | 6.79% | 5.17% | 7.38% |
 | Above 51,910 NIS/month | 0% (ceiling) | 0% (ceiling) | 0% (ceiling) |
 
-Note: Controlling shareholder employer NI rates (4.46%/7.38%) differ slightly from regular employees (4.51%/7.60%). The employee NI rate at the lower band is 1.04% (raised through 2024 budget measures) and health is 3.23%/5.17% (updated by the 2025 amendment).
+Note: both sides differ from a regular employee. Employer 4.46%/7.38% (regular 4.51%/7.60%); employee NI 1.02%/6.79% (regular 1.04%/7.0%), which with health makes 4.25%/11.96% (BTL rate table, column 2).
 
 **Tax credit points (nekudot zikui):**
 Each point reduces tax by 242 NIS/month (2,904 NIS/year, frozen 2025-2027). Base: 2.25 points for residents (additional points for women, children, new immigrants, etc.).
@@ -215,9 +205,7 @@ De minimis exemption: cumulative withdrawals stay outside §3(tet1) if balance i
 | Loan has no repayment schedule | Red flag for Tax Authority |
 | Company has retained earnings | Increases risk of deemed dividend reclassification |
 
-**When it makes sense:** a short-term need with a documented loan agreement and a repayment plan, or bridge financing until a dividend is approved, where the 6.53% deemed-interest cost beats the tax on the alternative.
-
-**When to avoid:** a long-term extraction need, a company with distributable retained earnings (the Tax Authority will challenge the loan structure), no written agreement or schedule, or an already-significant outstanding balance. See `references/section-3tet-rules.md` for the reclassification-risk detail.
+**Use it** as a documented short-term bridge (e.g. until a dividend is approved); **avoid it** for long-term extraction or without a written agreement and schedule. See `references/section-3tet-rules.md` for reclassification risk and for answering a Tax Authority challenge.
 
 **Deemed interest calculation example:**
 
@@ -228,17 +216,11 @@ Tax on deemed interest:  32,650 x marginal rate (e.g., 47%) = 15,346 NIS
 Net annual cost:         15,346 NIS (3.07% of loan)
 ```
 
-Compare with dividend on same 500,000: tax of ~230,500 NIS (46.1%). The loan defers this but accumulates cost annually.
+The loan defers the dividend tax but does not avoid it, and lending cash still requires profit that has already borne corporate tax.
 
 ### Step 6: Management Fees (Dmei Nihul)
 
-A shareholder can provide management services to the company through a separate business entity (osek murshe or a management company). This is an alternative extraction method.
-
-**How it works:**
-1. Shareholder (or their management company) invoices the company for management services
-2. Company deducts the fee as a business expense (no corporate tax)
-3. Fee is subject to income tax as business income + VAT (18%)
-4. If through a personal osek murshe: subject to self-employed NI rates
+The shareholder (as an osek murshe, or through a management company) invoices the company for management services. The company deducts the fee, so there is no corporate tax; the fee is business income plus VAT (18%), and a personal osek murshe pays self-employed NI. Check Step 1a first: a management company billing one client is a classic §62A case. The comparison script models this route for a personal osek murshe (VAT assumed reclaimed, no expenses deducted).
 
 **Self-employed NI rates (2026):**
 
@@ -253,10 +235,7 @@ Note: 52% of the NI amount is tax-deductible (Section 47A).
 
 **Disadvantages:** VAT (18%) on the gross fee (offset if the company is also an osek murshe), higher self-employed NI rates, the risk that the Tax Authority recharacterises "excessive" fees as disguised dividends, the overhead of a separate bookkept entity, and Section 85A transfer pricing, which requires the fee to reflect market rates.
 
-**When management fees work:**
-- Shareholder has legitimate business expenses to offset
-- Amount is reasonable relative to services provided
-- Properly documented with service agreements
+**When management fees work:** real business expenses to offset, a fee reasonable for the services, and a written service agreement.
 
 ### Step 7: Compare Strategies Side by Side
 
@@ -273,7 +252,6 @@ Use this framework to compare extraction methods for the user's specific situati
 | Reversible | No | No | Yes (repay loan) | No |
 | Tax Authority scrutiny | Low | Low | High | Medium |
 | Timing flexibility | Monthly | Board resolution | Immediate | Per invoice |
-| Minimum salary requirement | None (no statutory minimum; §32(9) is a reasonableness ceiling, not a floor, see Step 8) | None | None | None |
 
 **Common optimal combinations:**
 
@@ -293,22 +271,20 @@ Before recommending any strategy, verify these compliance requirements:
 | Loan agreement for shareholder loans | Written agreement with interest rate, repayment schedule, and signatures; track §3(tet1) end-of-following-year deadline |
 | "Reasonable salary" for controlling shareholder | No fixed statutory minimum. Section 32(9) ITO disallows the company's deduction of UNREASONABLE amounts paid to controlling shareholders (it caps excessive amounts; it is not a minimum-salary rule). The practical "reasonable salary" doctrine comes from case law plus §62A post-Amendment 277, which attributes personal-services profits above a 25% margin to the shareholder at marginal rates regardless of the salary actually drawn. |
 | §3(tet1) "use of asset" tracking | A controlling shareholder's personal use of company-owned apartments, vehicles (beyond limited business use), art, yachts, etc., accrues a deemed withdrawal under §3(tet1) at deemed annual usage value, even without any cash loan. Track these alongside cash-loan balances. |
-| §126(b) inter-company dividend exemption | Dividends paid between Israeli companies are exempt from corporate tax under §126(b). When a holding-company structure is involved, dividend planning differs from the single-tier model in this skill; consult on the structure. |
+| §126(b) inter-company dividend exemption | Dividends between Israeli companies are exempt under §126(b), so a holding-company structure needs its own analysis beyond this single-tier model. |
 | BL minimum for no-salary baal shlita | A controlling shareholder drawing zero salary still owes Bituach Leumi minimum (~NIS 266/month combined NI+health for someone with no other taxable income) paid directly by the individual |
 | Withholding tax on dividends | Company withholds at the applicable rate (30% controlling / 25% non-controlling / 20% or 4% on benefit-track profits) and pays the assessing officer by the **16th** of each month for the previous month, filing Form 102 by the same date (regs. 13 and 14(a), Income Tax Regulations (Deduction from Interest, Dividend and Certain Gains), 5766-2005, as replaced with effect from 1 January 2018). The 15th is the superseded pre-2018 date and is also the Bituach Leumi date, which is where the confusion comes from |
 | Form 856 reporting | Payments to shareholders must be reported |
 | Section 3(tet) reporting | Deemed interest must be reported on Form 126 |
-| Trapped-profits 2% surtax + safe harbor | Closely-held companies with excess undistributed earnings owe an additional 2% corporate tax under Amendment 277 (in force from 2025). Distributing at least 6% of accumulated profits during the year (5% for 2025 only) is a safe harbor that avoids the surcharge; weigh this modest distribution against the 2% annual drag |
+| Trapped-profits 2% surcharge (ss.81A-81F) | Amendment 277, from tax year 2025: a closely-held company owes 2% a year on excess accumulated profits, after a shield of the highest of NIS 750,000, an expense shield, or an asset shield (cash, securities and loans are "special assets" and do not shield). No surcharge in a year where ANY exit is met: dividends distributed in that year of 6%+ of the prior year-end accumulated profits, OR over 50% of the excess profits, OR current losses above 10% of accumulated profits. An intercompany dividend exempt under s.126(b) counts only if the payer elects to withhold at the top rate (circular 02/2026). The 5% rate was for 2025 only. Reported on Form 1214, appendix 1281 (execution instruction 9/2026) |
 | Section 77 deemed-distribution risk | Tax Authority may deem unreasonably accumulated retained earnings as distributed (5-year lookback); persistent retention without business purpose triggers this |
 | Transfer pricing for management fees | Fees must reflect arm's length market rates (Section 85A) |
 | VAT invoice for management fees | Must issue tax invoice (heshbonit mas) |
-| Surtax reporting | Include all income sources when calculating surtax threshold; the +2% non-labor surtax (effective 2025) applies separately to dividends, capital gains, interest, and rental |
+| Surtax reporting | Include all income sources for the 3% threshold; the +2% capital-income surtax (effective 2025) is measured on dividends, capital gains, interest, and rent ALONE against the same 721,560 |
 | Non-resident shareholder | Section 3(i)(1) withholding applies; treaty rates override domestic 25%/30% -- check the relevant tax treaty |
 | Encouragement-Law benefit track | Confirm the company's status and the year the approval or election was made before applying any rate. Corporate: 7.5%/16% (PFE), 5%/8% (SPFE), 7.5%/12% (PTE), 6% (SPTE). Dividend out of those profits: 20%, or 4% on technological income to a qualifying foreign company. Do not assume 23%/30%. See Step 1b |
 
-**Always recommend:**
-- Consult with a licensed Israeli CPA (roeh heshbon) or tax advisor (yoetz mas) before executing any strategy
-- The analysis provides a framework for informed discussion with professionals, not a substitute for professional advice
+**Always recommend** a licensed CPA (roeh heshbon) or tax advisor (yoetz mas) before executing any strategy.
 
 ## Gotchas
 
@@ -324,15 +300,13 @@ Before recommending any strategy, verify these compliance requirements:
 
 6. **Forgetting Bituach Leumi on salary.** When comparing salary vs dividend, agents often compare only income tax rates. Salary carries ~12% employee NI+health and ~7.38% employer NI (for controlling shareholders), which significantly changes the breakeven point. The NI ceiling (51,910 NIS/month for 2026) is also frequently missed.
 
-7. **Mixing up controlling shareholder NI rates.** Controlling shareholder employees (baalei shlita) have slightly different NI rates (employer: 4.46%/7.38%) than regular employees (4.51%/7.60%). Using regular rates for a baal shlita produces incorrect calculations and may trigger audit questions.
+7. **Mixing up controlling shareholder NI rates.** Controlling shareholder employees (baalei shlita) have different NI rates on both sides (employer 4.46%/7.38%, employee 1.02%/6.79%) than regular employees (employer 4.51%/7.60%, employee 1.04%/7.0%). Using regular rates for a baal shlita produces incorrect calculations and may trigger audit questions.
 
-8. **Ignoring the trapped-profits 2% safe harbor in the retain-vs-distribute decision.** Amendment 277 introduced an annual 2% corporate-tax surcharge on closely-held companies that accumulate excess retained earnings without distributing. Crucially, there is a **safe harbor**: distributing at least 6% of accumulated profits during the year (5% for 2025 only) avoids the surcharge entirely. So the real lever is "distribute 6% and the 2% vanishes", not "pay 2% forever". Agents that mention the surcharge but omit the safe harbor push owners to pay a 2% drag they could have escaped with a modest distribution.
+8. **Ignoring the trapped-profits 2% safe harbor in the retain-vs-distribute decision.** Amendment 277 introduced an annual 2% corporate-tax surcharge on closely-held companies that accumulate excess retained earnings without distributing. Crucially, a year with taxed dividends of at least 6% of the prior year-end accumulated profits (or over 50% of the excess profits) owes no surcharge at all, and companies under the NIS 750,000 shield owe nothing. So the real lever is "distribute 6% and the 2% vanishes", not "pay 2% forever". Agents that mention the surcharge but omit the safe harbor push owners to pay a 2% drag they could have escaped with a modest distribution.
 
 9. **Modelling a benefit-track company at 23% and 30%.** A Preferred Technology Enterprise outside Development Area A pays **12%** corporate tax and **20%** on the dividend, an effective 29.6% against the 46.1% the standard model produces. Agents that jump to the standard rates overstate the burden by more than half for exactly the population, Israeli software and tech companies, that asks this question most. Ask about Encouragement-Law status before running any comparison, and remember the reduced rate covers qualifying income only.
 
-10. **Answering a grandfathered company from the current table.** Benefit entitlement is selected by the approval or election date of the programme, not by the tax year. A company on a pre-2011 מפעל מוטב or מפעל מאושר approval, or a question about an earlier year, may be governed by a superseded schedule (Preferred Area A was 9% for 2014-2016; the benefit-track dividend rate was 15% until 2017). Confirming the current rate is correct does not make it the applicable one.
-
-11. **Treating §3(tet1) as a cash-loan-only rule.** Amendment 235 explicitly captures shareholder personal use of company-owned assets (apartment, vehicle beyond limited business use, art, yacht) at deemed annual usage value. A baal shlita living in a company-owned apartment without paying market rent accrues a deemed withdrawal even with zero cash loan. This is the single most-missed §3(tet1) trap in real ITA audits.
+10. **Treating §3(tet1) as a cash-loan-only rule.** Amendment 235 explicitly captures shareholder personal use of company-owned assets (apartment, vehicle beyond limited business use, art, yacht) at deemed annual usage value. A baal shlita living in a company-owned apartment without paying market rent accrues a deemed withdrawal even with zero cash loan. This is the single most-missed §3(tet1) trap in real ITA audits.
 
 ## Bundled Resources
 
@@ -371,7 +345,7 @@ If the user has received a tax assessment and needs to pay immediately using com
 1. **Short-term:** Shareholder loan with formal agreement is the fastest option (no board resolution needed, just a loan agreement)
 2. **Within 30 days:** Plan a dividend distribution with board resolution
 3. **Document everything:** Written loan agreement even for temporary borrowing
-4. **Repayment / conversion timing:** §3(tet) deemed-interest accrues from day one (cost = 6.53% × loan amount × marginal rate annually). §3(tet1) automatic reclassification triggers if the loan remains outstanding at the end of the tax year **following** the year of withdrawal. Most planners convert the loan to a dividend before the end of year N+1, accepting one year of 3(tet) interest if the cash-flow benefit justifies it.
+4. **Repayment / conversion timing:** §3(tet) deemed interest (6.53% × loan × marginal rate) accrues from day one, and §3(tet1) reclassifies the loan if still outstanding at the end of the tax year **following** the withdrawal. Most planners convert it to a dividend before the end of year N+1.
 
 ### "Which method should I use for a one-time large amount?"
 
@@ -383,13 +357,4 @@ For a one-time extraction of 500,000+ NIS:
 
 ### "We have a family company election -- does any of this still apply?"
 
-If the company has elected Family Company status (Section 64A), corporate-tax-layer planning collapses: profits are attributed directly to the "representative shareholder" at marginal rates, eliminating the 23% corporate tax. Salary-vs-dividend optimization in that case reduces to "how to characterize income most efficiently for surtax and BL". The election deadline is by November 30 of the tax year (or within 3 months of incorporation), so this is something to set up in advance, not retrofit mid-year.
-
-### "The Tax Authority questioned my shareholder loan"
-
-If the Tax Authority (pakid shuma) challenges a shareholder loan:
-1. Present the formal loan agreement with interest terms
-2. Show repayment history or schedule
-3. Demonstrate business purpose for the loan
-4. If loan was used for personal tax payment: be prepared for reclassification as dividend
-5. Consult with tax advisor immediately
+If the company has elected Family Company status (Section 64A), corporate-tax-layer planning collapses: profits are attributed directly to the "representative shareholder" at marginal rates, eliminating the 23% corporate tax. Salary-vs-dividend optimization in that case reduces to "how to characterize income most efficiently for surtax and BL". The election can only be made within 3 months of incorporation, so an existing company cannot adopt it now. Withdrawing requires notice no later than a month before the tax year begins, and a company that withdraws can never re-elect.
