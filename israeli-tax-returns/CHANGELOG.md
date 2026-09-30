@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.10.1 - 2026-10-01
+
+- Removed a non-existent '2.0 credit points' entry for a blind or 100% disabled filer. The actual relief is a Section 9(5) income exemption on personal-exertion income up to an annual ceiling (Form 101 box 2A).
+- Replaced an evidence entry whose snippet was a Cloudflare block page.
+
 ## 1.10.0 - 2026-10-01
 
 - Added the tax-year 2025 bracket table beside 2026 and the rule to use the brackets of the year being reported (2025 returns are what is filed in 2026).

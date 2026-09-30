@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0",
   "skill": "israeli-tax-returns",
-  "generated_at": "2026-10-01T12:00:00Z",
+  "generated_at": "2026-10-01T14:00:00Z",
   "claims": [
     {
       "claim_id": "income-tax-brackets-2026",
@@ -138,18 +138,14 @@
     },
     {
       "claim_id": "domain-terms-form-numbers-and-tokens",
-      "claim": "Hebrew form numbers, section references, suffixed-currency forms, and boundary references used across the skill (Form 102/Section 102 is named only in the 'Do NOT use for' boundary; disability credit is for 100% disability or blind)",
-      "source_url": "https://www.gov.il/he/departments/israel_tax_authority",
-      "raw_snippet": "Cloudflare Ray ID: a2d3a1069d87c224 • Your IP: Click to reveal 2a0d:6fc2:4ff0:2700:411e:545f:3be7:af04 • Performance & security by Cloudflare",
-      "fetched_at": "2026-08-18",
+      "claim": "Section 102 (employee share allocation) is named only in the 'Do NOT use for' boundary (Form 102/Section 102 routes to israeli-stock-options-tax).",
+      "source_url": "https://www.nevo.co.il/law_html/law01/255_001.htm",
+      "raw_snippet": "הקצאת מניות לעובדים 102. (א) בסעיף זה",
+      "fetched_at": "2026-10-01T14:00:00Z",
       "appears_in": [
         "SKILL.md",
-        "SKILL_HE.md",
-        "references/form-guide.md",
-        "references/tax-brackets-credits.md"
-      ],
-      "verified_via": "cited page fetched and confirmed to contain \"106\"; snippet replaced with the page's own wording around it",
-      "verified_at": "2026-08-18"
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "section-17-11-professional-fee-deduction",
@@ -1163,6 +1159,30 @@
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "s9-5-blind-disabled-exemption",
+      "claim": "A blind or 100% disabled individual gets an income exemption on personal-exertion income under Section 9(5) (סעיף 9(5)), not credit points; claimed on Form 101 part H box 2A. In some cases 90% disability suffices (s.9(5)(a), 'נכות של 90% לפחות').",
+      "source_url": "https://www.nevo.co.il/law_html/law01/255_001.htm",
+      "raw_snippet": "עיוור ונכה 100% (5) (א) הכנסה מיגיעתם האישית של עיוור או של נכה",
+      "fetched_at": "2026-10-01T14:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/credit-points.md"
+      ]
+    },
+    {
+      "claim_id": "form-101-box-2a-blind-disabled",
+      "claim": "Form 101 part H box 2A: 'I am 100% disabled / permanently blind', with a Ministry of Defence / Finance / pakid shuma certificate or a blind certificate issued after 1.1.94; part H is headed as a request for exemption or credit. (טופס 101 חלק ח' סעיף 2א)",
+      "source_url": "https://www.gov.il/BlobFolder/service/itc101/he/Service_Pages_Income_tax_annual-report-2024_itc101.pdf",
+      "raw_snippet": "אני נכה / 100% עיוור/ת לצמיתות",
+      "fetched_at": "2026-10-01T14:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/credit-points.md"
       ]
     }
   ]

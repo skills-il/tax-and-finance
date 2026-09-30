@@ -115,7 +115,7 @@ Each nekudot zikui point reduces the annual tax liability by 2,904 NIS (2026, 24
 | Academic degree (BA) | 1.0 | For as many tax years as the degree took, capped at 3. Section 40C |
 | Academic degree (MA) | 0.5 | Capped at 2 tax years. Section 40C |
 | Vocational studies certificate | 1.0 | Form 101 box 15 claims it alongside the academic credit, on a Form 119 declaration. Confirm the year count for vocational studies before quoting it |
-| Disability (100% or blind) | 2.0 | Permanent |
+| Blind, or 100% disabled (90% in some cases) | **Not credit points** | Section 9(5) income EXEMPTION on personal-exertion income up to the year's ceiling in the ITA booklet. Form 101 box 2A |
 
 **Section 44 institution credit (not a credit point):** where the filer paid to maintain a child, spouse, or parent who is completely paralysed, permanently bedridden, blind, or not of sound mind in a special institution, the credit is 35 percent of the part of the payments exceeding 12.5 percent of taxable income.
 
@@ -236,7 +236,7 @@ CPA authorization (yipui koach) is granted by the taxpayer in the SHAAM portal, 
 
 **Filing extensions:**
 - Form 1301, 2025 return, unrepresented: 30.6.2026 online (end of May 2026 on paper), already passed as of October 2026. The 2025 online filing service: https://www.gov.il/he/service/reporting-and-payment-2025-annual-tax-report-for-individuals
-- CPA-represented filers, 2025 returns (ITA representatives' arrangement of 28.4.2026): individuals 10% of the representative's files by 23.9.2026 (moved from 31.8.2026), 50% by 30.11.2026, 100% by **28.2.2027**; companies 10% by 29.10.2026, 40% by 31.12.2026, 100% by **31.3.2027**. Quotas can move again, so confirm the current stage before quoting a date
+- CPA-represented filers, 2025 returns (ITA representatives' arrangement of 28.4.2026): individuals 10% of the representative's files by 23.9.2026 (moved from 31.8.2026), 50% by 30.11.2026, 100% by **28.2.2027**; companies 10% by 29.10.2026, 40% by 31.12.2026, 100% by **31.3.2027**. Quotas can move again; confirm the current stage
 - Form 1214: statutory 31 May, extended for 2025 returns to 30.7.2026 for companies filing without a representative
 - Request any extension BEFORE the original deadline
 

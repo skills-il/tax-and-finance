@@ -220,7 +220,7 @@ Form 119, referenced by Form 101 box 15.
 
 | Who | Points | Source |
 |---|---|---|
-| 100% disabled or permanently blind | 2.0 | Form 101 box 2א, requires a Ministry of Defence / Finance / pakid shuma certificate or a blind certificate issued after 1.1.1994 |
+| Blind, or 100% disabled (90% in some cases) | **None: this is not a credit point.** It is a Section 9(5) exemption of personal-exertion income up to an annual ceiling published in each year's ITA booklet | Form 101 part H box 2א, requires a Ministry of Defence / Finance / pakid shuma certificate or a blind certificate issued after 1.1.1994. Corrected in v1.10.1: earlier versions listed 2.0 credit points, which does not exist |
 
 ## Section 11: yishuv mutav relief (a discount, not credit points)
 
