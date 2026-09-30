@@ -23,15 +23,15 @@ Determine which tax return or report the user needs to prepare. Israeli tax law 
 
 | Form | Hebrew Name | Who Files | Deadline | Frequency |
 |------|-------------|-----------|----------|-----------|
-| 1301 | דוח שנתי ליחיד | Individuals, sole proprietors, freelancers | June 30 for online filers; 29 May 2026 for paper filers (CPA-represented filers get the later quota extension) | Annual |
-| 135 | דוח שנתי מקוצר | Salaried individuals filing a short return to claim a refund | Within 6 years of the relevant tax year (Section 160 refund window) | Annual / on demand |
-| 1214 | דוח שנתי לחברה | Companies (Chevra Ba'am, Chevra Pratit) | May 31 (5 months after tax year end), extensions available | Annual |
+| 1301 | דוח שנתי ליחיד | Individuals, sole proprietors, freelancers | 2025 return: 30.6.2026 online, end of May 2026 on paper; CPA-represented filers follow the quota schedule, final stage 28.2.2027 (Step 9) | Annual |
+| 135 | דוח שנתי מקוצר | Salaried individuals filing a short return to claim a refund | Within 6 years after the end of the tax year (Section 160): the tax-year 2020 request closes 31.12.2026 | Annual / on demand |
+| 1214 | דוח שנתי לחברה | Companies (Chevra Ba'am, Chevra Pratit) | Statutory 31 May; 2025 returns got a general extension to 30.7.2026, and CPA-represented companies follow the quota schedule, final stage 31.3.2027 | Annual |
 | 126 | דוח מעסיק על משכורות | Employers reporting employee salaries and withholdings | April 30 | Annual |
 | 856 | דוח על תשלומים לספקים | Businesses reporting payments to suppliers/freelancers | April 30 | Annual |
-| 6111 | דוח כספי אחיד | Businesses with turnover above 300,000 NIS (incl. VAT) | Submitted with 1301 or 1214 | Annual |
+| 6111 | דוח כספי אחיד | Businesses and companies, except those with business turnover below 300,000 NIS (as defined in the bookkeeping instructions) | Submitted with 1301 or 1214 | Annual |
 | Mikdamot | מקדמות מס הכנסה | Self-employed and businesses with advance payment assessments | 15th of the month after the period | Bi-monthly |
-| Mas Shevach | הצהרת מס שבח | Anyone selling real estate in Israel | 30 days from sale date (40 days if requesting exemption) | Per transaction |
-| 1322/1325 | דוח רווח הון מניירות ערך | Anyone with capital gains from securities sales | 30 days from sale (or annual with Form 1301) | Per transaction or annual |
+| Mas Shevach | הצהרת מס שבח | Anyone selling real estate in Israel | Declaration within 30 days of the sale, exemption claims included; tax payable within 60 days of the sale | Per transaction |
+| 1322/1325, 1399 | דוח רווח הון | Anyone with capital gains | 1322/1325 are appendices to the annual Form 1301; a sale on which no tax was withheld is reported on Form 1399 within 30 days, with an advance payment (s.91(d)(1)) | Per transaction and annual |
 
 Ask the user:
 - Which return type do they need?
@@ -65,14 +65,7 @@ A separate exemption from filing the return **online** (Section 131(b2)(4)) appl
 - Form 1343: Depreciation and amortization schedule
 - Form 6111: Standardized financial statements (if turnover > 300,000 NIS, see Step 5)
 
-**Rental income tax tracks:**
-Israeli law offers three options for taxing residential rental income:
-
-| Track | Rate | Conditions |
-|-------|------|------------|
-| Exempt | 0% | Monthly rent below the exempt ceiling (5,654 NIS/month, 2025-2027, frozen, no longer indexed) |
-| Flat rate | 10% | On gross rent, no deductions allowed. Payment by January 31 of following year |
-| Marginal | Progressive rates (10%-50%) | Full deduction of expenses (depreciation, mortgage interest, maintenance). Filed with Form 1301 |
+**Rental income:** three tracks for residential rent (exempt below 5,654 NIS/month, a flat 10% on gross rent paid within 30 days after the tax year ends (s.122(a1)), or regular rates with expenses, which for a filer under 60 start at 31% because rent is not personal-exertion income). Conditions are in `references/tax-brackets-credits.md`.
 
 ### Step 2.5: Short Return for Salaried Refund-Seekers (Form 135)
 
@@ -86,13 +79,19 @@ were never credited.
   1301.
 - **Refund-claim window:** under Section 160 of the Income Tax Ordinance, a
   refund can be claimed for up to 6 years back. A filer in 2026 can still claim
-  refunds for tax years 2020-2025.
+  refunds for tax years 2020-2025, and the **tax-year 2020 request must be filed by
+  31.12.2026**, after which that year's refund is lost.
+- Compute each claimed year with THAT year's brackets and credit-point value from
+  its ITA annual booklet: 2,904 NIS is the value for 2024 through 2026, and years before 2024 differ.
+- File it online through the ITA service at https://www.gov.il/he/service/itc135,
+  which is fully online (documents included) for tax years 2019 onward and opens a
+  refund-only file, not an active tax file.
 - If the person has business income, foreign income, capital gains, or crosses
   the mandatory-filing thresholds, they must file the full Form 1301 instead.
 
 ### Step 2.6: Havraa-Day Reduction on Form 106 (Fields 011/012, tax years 2024-2025 only)
 
-For tax years 2024 and 2025 only, temporary legislation reduced employees' convalescence pay (dmei havra'a). It produces a value in Form 106 field 011/012 and at line 60 of Form 1301 for those two years, and those are exactly the returns being filed during 2026. **It is informational, not a deduction and not a credit:** the amount was already netted out of the gross salary in field 158, so entering it as a Part YB deduction double-counts the benefit and understates tax. A home or domestic employer is exempt from the reduction. The law was **not renewed** and expired with tax year 2025, so a 2026 form carrying such a value should be questioned rather than transcribed. Amounts, the half-day track, and the circular reference are in `references/form-guide.md`.
+The temporary havraa reduction puts a value in Form 106 field 011/012 and Form 1301 line 60 for tax years 2024 and 2025 only. **It is informational, not a deduction or a credit:** it was already netted out of gross salary (field 158), so entering it in Part YB double-counts it. The law was not renewed, so a 2026 form carrying such a value should be queried with the employer. Amounts and the half-day track are in `references/form-guide.md`.
 
 ### Step 3: Nekudot Zikui (Tax Credit Points) Calculation
 
@@ -141,28 +140,30 @@ Worked examples, the self-employed 5.5 / 11 / 16.5 percent structure, and the do
 
 ### Step 3.7: Return-Preparation and Professional Fee Deduction (Section 17(11))
 
-Fees paid to a CPA or tax advisor for preparing the return and handling the tax matter, including representation before the pakid shuma and in appeals, are deductible under Section 17(11), and are claimable by **salaried employees too**, not only the self-employed. For a pure salaried filer it is a contested area the assessor may disallow, so document it and have a CPA claim it: do not flatly tell a salaried filer the fee is non-deductible. The fee is deductible in the tax year it was actually **paid**, which is usually the year after the year the return reports. There is no dedicated Form 1301 field for it. Do NOT reduce field 158, the gross-salary line the Tax Authority cross-checks against Form 106. Carve-outs and placement detail are in `references/form-guide.md`.
+Fees paid to a CPA or tax advisor for the return are deductible under Section 17(11), for **salaried filers too** (a contested area for pure salaried filers, so document it), in the year they were **paid**. There is no dedicated Form 1301 field, and field 158 must not be reduced. Detail in `references/form-guide.md`.
 
 ### Step 4: Income Tax Brackets and Surtax
 
-Apply the progressive income tax rates to taxable income. Brackets for 2026 (brackets 1-2 and 6 frozen at 2025 values; brackets 3-5 expanded by the Economic Efficiency Law 2026 (Amendment 288 to the Income Tax Ordinance), approved March 31, 2026, retroactive to January 1, 2026):
+**Use the brackets of the tax YEAR being reported, never those of the year you are filing in.** A return filed during 2026 is almost always for tax year 2025, and a Form 135 refund claim can reach back to 2020. Brackets 3-5 differ between the two years:
 
-| Bracket | Annual Income Range (NIS) | Rate |
-|---------|--------------------------|------|
-| 1 | 0 - 84,120 | 10% |
-| 2 | 84,121 - 120,720 | 14% |
-| 3 | 120,721 - 228,000 | 20% |
-| 4 | 228,001 - 301,200 | 31% |
-| 5 | 301,201 - 560,280 | 35% |
-| 6 | 560,281 and above | 47% |
-| Surtax | Above 721,560 | 47% + surtax, see below |
+| Bracket | Tax year 2025 (NIS) | Tax year 2026 (NIS) | Rate |
+|---------|---------------------|---------------------|------|
+| 1 | 0 - 84,120 | 0 - 84,120 | 10% |
+| 2 | 84,121 - 120,720 | 84,121 - 120,720 | 14% |
+| 3 | 120,721 - 193,800 | 120,721 - 228,000 | 20% |
+| 4 | 193,801 - 269,280 | 228,001 - 301,200 | 31% |
+| 5 | 269,281 - 560,280 | 301,201 - 560,280 | 35% |
+| 6 | 560,281 and above | 560,281 and above | 47% |
+| Surtax | Above 721,560 | Above 721,560 | 47% + surtax, see below |
 
-Note the last two rows: 47% applies to every shekel above 560,280 and does not stop at 721,560. The surtax is charged ON TOP of the 47%, which is why the effective top rate is 50% and not 3%.
+2025 values are frozen at their 2024 levels (ITA 2025 annual booklet). The 2026 widening of brackets 3-5 is Amendment 288 (Economic Efficiency Law 2026, published 31.3.2026, retroactive to 1.1.2026). For tax years before 2025, take the values from that year's ITA annual booklet. 47% applies to every shekel above 560,280 and does not stop at 721,560: the surtax is charged ON TOP, which is why the effective top rate is 50%.
 
-**Surtax (mas yesafim), two-tier system from 2026:**
-- Employment and active income: 3% above 721,560 NIS (effective top rate: 50%)
-- Capital and passive income (dividends, interest, rent, capital gains): 5% above 721,560 NIS (3% base + 2% additional surcharge)
-- From 2026, Mas Shevach on investment properties is included in the surtax income calculation
+**These brackets are for personal-exertion income** (salary, business) and for all income of a filer aged 60 or over. Other income of a filer under 60, such as rent on the regular track or interest, starts at 31%: in 2025, 31% up to 269,280, then 35% and 47% (s.121(a)).
+
+**Surtax (mas yesafim), two tiers from tax year 2025** (Section 121B(a1), added by Amendment 276, in force 1.1.2025):
+- All taxable income above 721,560 NIS: 3% (effective top rate on employment income: 50%)
+- Taxable income from capital sources (anything other than salary and personal-exertion income) above 721,560 NIS, measured on the capital-source income alone: a further 2%, so 5% in total
+- Real-estate gain (shevach) is part of surtax income. For a **residential apartment** it counts only if the sale value exceeds 5,382,285 NIS (2025) AND the sale is not exempt, so an exempt single-residence sale never counts. This is long-standing law, not a 2026 change: a proposal to drop the apartment carve-out was removed from the final 2025 law.
 
 **Corporate tax rate:** 23% flat rate on taxable profits for companies (Chevra).
 
@@ -172,24 +173,16 @@ Note the last two rows: 47% applies to every shekel above 560,280 and does not s
 
 ### Step 5: Financial Statements Attachment (Form 6111)
 
-Required for any business (individual or corporate) with annual turnover exceeding 300,000 NIS (including VAT).
-
-Form 6111 reports financial data in the Tax Authority's standardized codes. Section A is profit and loss (revenue, cost of sales, operating expenses, financial items, depreciation, net profit, tax adjustments); Section B is the balance sheet (assets, liabilities, equity). All amounts in NIS, using the item codes published at misim.gov.il, matching the audited statements exactly, submitted via SHAAM. It is usually produced by the CPA's accounting software (Hashavshevet, iCount, Rivhit), which exports Form 6111 directly.
+Form 6111 reports the profit and loss and balance sheet in the Tax Authority's standardized item codes, matching the audited statements, and is usually exported by the CPA's accounting software. Who is exempt and the code list are in `references/form-guide.md` and the ITA's 6111 explanatory notes for the tax year.
 
 ### Step 6: Employer and Supplier Reports (Forms 126 and 856)
 
-**Form 126 (Annual Employer Salary Report):** employers file Form 126 by April 30 summarizing each employee's gross salary, tax withheld, Bituach Leumi and health tax, pension and keren hishtalmut contributions, benefits in kind, and exempt payments such as severance up to the exempt ceiling (dmei havra'a / convalescence pay is taxable salary, not an exempt payment). They must also issue Form 106 (annual salary summary) to each employee by March 1.
-
-**Form 856 (Annual Supplier Payments Report):** businesses report payments to non-employee recipients (freelancers, contractors, consultants, landlords) by April 30, listing each supplier's ID, gross payments, tax withheld at source, and payment type.
-
-See `references/form-guide.md` for the full per-field breakdown of both forms.
+Employers file Form 126 (annual salary report) and issue Form 106 to each employee by 31 March; businesses file Form 856 for payments to non-employee suppliers. Both are due 30 April. See `references/form-guide.md` for the full per-field breakdown of both forms.
 
 ### Step 7: Capital Gains Reports
 
 **Real Estate Capital Gains (Mas Shevach):**
-When selling real property in Israel, the seller must file a Mas Shevach declaration with Reshut HaMisim (Israel Tax Authority) via the misim.gov.il portal or real estate taxation offices (Misrad Misui Mekarkein) within:
-- 30 days from the sale date (standard)
-- 40 days from the sale date (if requesting an exemption)
+When selling real property in Israel, the seller must file a Mas Shevach declaration with Reshut HaMisim (Israel Tax Authority) via the misim.gov.il portal or real estate taxation offices (Misrad Misui Mekarkein) **within 30 days of the sale** (Section 73(a) of the Real Estate Taxation Law). An exemption claim is made inside that same declaration; there is no separate 40-day track. The tax itself is payable **within 60 days of the sale** (Section 90A), after which linkage and interest accrue.
 
 Calculation:
 
@@ -198,9 +191,11 @@ Sale price
 - Original purchase price (adjusted for inflation via CPI index)
 - Allowable deductions (purchase tax paid, legal fees, agent commission, renovation costs with receipts)
 = Real capital gain (shevach re'ali)
-x 25% tax rate
+x 25% tax rate (the rate for gain from 1.1.2012 on)
 = Mas Shevach payable
 ```
+
+For an individual who bought before 1.1.2012 the real gain is split linearly by period (s.48A(b1)): the part up to 7.11.2001 at the top Section 121 rate, the part from then to 1.1.2012 at up to 20%, and the rest at 25%. Do not apply a flat 25% to an older purchase.
 
 **Single apartment exemption (ptur dira yechida):**
 Full exemption from Mas Shevach if ALL conditions are met:
@@ -211,13 +206,13 @@ Full exemption from Mas Shevach if ALL conditions are met:
 - Partial exemption applies proportionally above the ceiling
 
 **Linear method (shita liniarit):**
-For properties purchased before January 7, 2014, only the portion of gain attributable to the period after that date is taxed at 25%. The pre-2014 portion may be exempt or taxed at a lower historical rate. A phase-out of this benefit was proposed by the Ministry of Finance in 2024; not yet enacted into law as of April 2026.
+For a qualifying residential apartment (dirat megurim mezaka) bought before 1 January 2014 that does not get the full exemption, the real gain attributable to the period up to 1.1.2014 is exempt and the rest is taxed at the regular rate (s.48A(b2)). A phase-out was proposed by the Ministry of Finance in 2024; the provision is still in the consolidated statute as of October 2026.
 
 **Securities Capital Gains (Forms 1322/1325):**
 Capital gains from selling stocks, bonds, mutual funds, and other securities:
 - 25% tax rate for individuals on traded securities
 - 30% tax rate if the seller holds 10% or more of the company
-- Report within 30 days of the sale, or include in the annual Form 1301
+- Every sale goes on the annual return (Forms 1322/1325). Where no tax was withheld at source (for example at a foreign broker), a Form 1399 report and advance payment are ALSO due within 30 days of the sale (s.91(d)(1)); the annual return does not replace them
 - Losses can offset gains from the same category within the tax year
 - Carry forward of capital losses to future years (capital losses only offset capital gains, not ordinary income)
 
@@ -240,9 +235,12 @@ Register at misim.gov.il with a teudat zehut or company number and two-factor cr
 CPA authorization (yipui koach) is granted by the taxpayer in the SHAAM portal, per client and per year, and lets the CPA submit returns, view assessments, and correspond with the Tax Authority.
 
 **Filing extensions:**
-- Form 1301: see Step 1 for the 2025-return deadlines. CPA clients usually get automatic extensions under the association quota agreement, often to 30 September or later
-- Form 1214: standard deadline 31 May, extensions available
+- Form 1301, 2025 return, unrepresented: 30.6.2026 online (end of May 2026 on paper), already passed as of October 2026. The 2025 online filing service: https://www.gov.il/he/service/reporting-and-payment-2025-annual-tax-report-for-individuals
+- CPA-represented filers, 2025 returns (ITA representatives' arrangement of 28.4.2026): individuals 10% of the representative's files by 23.9.2026 (moved from 31.8.2026), 50% by 30.11.2026, 100% by **28.2.2027**; companies 10% by 29.10.2026, 40% by 31.12.2026, 100% by **31.3.2027**. Quotas can move again, so confirm the current stage before quoting a date
+- Form 1214: statutory 31 May, extended for 2025 returns to 30.7.2026 for companies filing without a representative
 - Request any extension BEFORE the original deadline
+
+**Deadline already missed:** file anyway, the obligation does not lapse. Section 188(a) sets a fine of 500 NIS for every month of delay, and unpaid tax keeps accruing linkage and interest. Whether a return handed to a representative after the deadline can still ride the quota schedule is for that representative to confirm; do not promise it.
 
 ## Examples
 
@@ -258,21 +256,7 @@ Actions:
 5. Subtract nekudot zikui credit from tax liability
 6. Reconcile against mikdamot (advance payments) made during the year
 7. Prepare Form 6111 if turnover exceeds 300,000 NIS
-8. Result: Net tax due or refund amount, ready for SHAAM submission
-
-### Example 2: Company Filing Corporate Tax Return (Form 1214)
-
-User says: "Our company needs to file the annual report for the most recently closed tax year"
-
-Actions:
-1. Gather audited financial statements (profit and loss, balance sheet)
-2. Prepare Form 6111 (standardized financial statements attachment)
-3. Calculate taxable income: Net profit + non-deductible expenses (fines, entertainment above limits, excess car expenses) - exempt income
-4. Apply 23% corporate tax rate
-5. Reconcile against advance payments (mikdamot) made during the year
-6. Check closely held company rules: if applicable, verify 6% dividend distribution requirement to avoid 2% accumulated profits tax
-7. Prepare Form 126 (employer salary report) and Form 856 (supplier payments) as companion filings
-8. Submit all forms via SHAAM by May 31
+8. Result: net tax due or refund figures for the user to review and enter in SHAAM themselves
 
 ### Example 3: Real Estate Capital Gains Declaration (Mas Shevach)
 
@@ -288,36 +272,24 @@ Actions:
 7. The buyer also files a Mas Rechisha declaration (purchase tax) independently
 8. Result: Mas Shevach liability with supporting calculation breakdown
 
-### Example 4: Calculating Advance Tax Payments (Mikdamot)
-
-User says: "I started a new consulting business, how much mikdamot should I expect to pay?"
-
-Actions:
-1. Determine business type and projected annual turnover
-2. For new businesses, the Tax Authority assigns an initial percentage based on industry type and projected income
-3. Calculate bi-monthly payment: (bi-monthly revenue) x (assigned percentage rate)
-4. Explain the 6 bi-monthly payment dates (March 15, May 15, July 15, September 15, November 15, January 15)
-5. Note that the rate can be adjusted mid-year if actual income differs significantly from projections
-6. At year end, total mikdamot paid will be reconciled against actual tax liability on Form 1301
-7. Result: Estimated bi-monthly payment schedule with option to request rate adjustment
-
 ## Bundled Resources
 
 ### References
-- `references/form-guide.md` - Forms 1301, 1214, 126, 856, 6111, 1322, 1325: who files, deadlines, key fields. Consult for a specific form or to decide which forms apply.
+- `references/form-guide.md` - Forms 1301, 1214, 126, 856, 6111, 1322, 1325: who files, deadlines, key fields, plus worked examples for a company return (Form 1214) and for mikdamot. Consult for a specific form or to decide which forms apply.
 - `references/credit-points.md` - The full nekudot zikui schedule: every child age band, oleh, returning resident, discharged soldier, both combat-reserve regimes, netul yecholet, Section 44, Section 11. Consult before quoting any credit-point number.
 - `references/tax-brackets-credits.md` - 2026 brackets (1-2 and the 47% band frozen at 2025 values, 3-5 widened for 2026), nekudot zikui values and categories, surtax thresholds, corporate rates. Consult for any tax calculation.
 
 ## Gotchas
-- Form 1301 for tax year 2025, filed in 2026: 30 June online, 29 May on paper. April 30 is a legacy paper baseline, not the online deadline, and April 15 is American. Filers represented by a CPA get later extensions under the CPA-association quota agreement, often 30 September or later.
+- Form 1301 for tax year 2025, filed in 2026: 30 June online, end of May on paper. April 30 is the statutory baseline, not the extended date, and April 15 is American. A CPA-represented filer is on the representatives' quota schedule, final stage 28.2.2027, not on 30 June.
+- Brackets follow the tax year of the return. Computing a 2025 return on the widened 2026 brackets understates tax for anyone whose taxable income passes 193,800 NIS: 193,801-228,000 is 31% in 2025 against 20% in 2026, and 269,281-301,200 is 35% against 31%, so up to about 5,039 NIS.
 - Individuals file Form 1301, not a 1040. US form numbers and fields do not exist here.
-- Capital gains go on a separate schedule with their own rates (25% financial assets, up to 50% on real estate by holding period and property count). Do not apply one blanket rate.
+- Capital gains go on separate schedules with their own rates: 25% on most individuals' securities gains (30% for a 10% holder), and a Mas Shevach real gain split by purchase period (Step 7). Do not apply one blanket rate, and do not tax an under-60 filer's rent or interest from the 10% bracket.
 - The child credit-point schedule has SIX age bands, not three, and Form 101 part H has a separate box for each. A one-year-old is worth 4.5 points, not 2.5: quoting the flat "ages 1-5" band understates a parent's credit by 5,808 NIS. From age 6 the mother gets 2.0 and the father 1.0, so a single "per child" figure is wrong for one of them whichever you pick.
 - Combat-reserve points (Section 39B) run to a maximum of 4.0, not 1.0, and they are counted on the PREVIOUS tax year's days. There are two band tables: one for 2026-2027 starting at 30 days, a different permanent one from 2028 starting at 20 days. Picking the wrong table, or capping at 1.0, can understate a heavy reservist by 8,712 NIS.
 - A returning resident is not on the oleh credit-point track. Section 35(d) defines toshav chozer for this purpose as someone who resumed residency between 16.5.2010 and 30.9.2012 only. Telling a returnee they get "the same points as an oleh" invents an entitlement.
 - Discharged-soldier points (Section 39A) are worth up to 2.0 points a year for three years and are routinely never claimed, because nothing on the return prompts for them. Ask.
 - Nekudot zikui must be claimed annually and vary by status (marital, children, new oleh, discharged soldier, combat reservist). Do not assume a default count.
-- From 2026 Mas Shevach on a non-exempt investment property counts toward surtax income (5% above 721,560 NIS). Treating the two as separate under-reports the liability.
+- The 2% capital-income surtax started in tax year 2025, not 2026, and real-estate gain has long been part of surtax income (a residential apartment only above a 5,382,285 NIS sale value and only when not exempt). Treating Mas Shevach and surtax as separate under-reports the liability.
 - Return-preparation fees are deductible under Section 17(11) for SALARIED filers too, not only the self-employed. There is no dedicated Form 1301 field: keep the invoice and attach an explanation.
 - The havraa-reduction figure on Form 106/1301 (field 011/012, "מחיר יום ההבראה שהופחת ממשכורת העובד", tax years 2024-2025 only) is informational: it was already netted out of gross salary and is not income to the employee. Agents reasoning from the form's visual structure may wrongly treat it as a Part יב deduction and mis-state tax.
 
@@ -327,6 +299,9 @@ Actions:
 |--------|-----|---------------|
 | Israel Tax Authority (Reshut HaMisim) | https://www.gov.il/en/departments/israel_tax_authority | Forms, filing guides, announcements |
 | SHAAM online filing portal | https://www.misim.gov.il | Electronic submission of returns |
+| Form 1301 online service, tax year 2025 | https://www.gov.il/he/service/reporting-and-payment-2025-annual-tax-report-for-individuals | 2025 deadlines, online filing, 2025 PDFs |
+| Form 135 online refund service | https://www.gov.il/he/service/itc135 | Six-year refund window, online refund request |
+| ITA 2025 annual deductions booklet | https://www.gov.il/BlobFolder/generalpage/income-tax-annual-deductions-booklet/he/generalInformation_income-tax-yearly-deductions-booklet_yearly-deductions-booklet-2025.pdf | Tax-year 2025 brackets, surtax, credit-point value |
 | Kol-Zchut income tax brackets | https://www.kolzchut.org.il/he/מדרגות_מס_הכנסה | Current-year bracket thresholds |
 | Kol-Zchut tax credit points | https://www.kolzchut.org.il/he/נקודת_זיכוי | Nekudot zikui value and eligibility |
 | Kol-Zchut Mas Shevach calculation | https://www.kolzchut.org.il/he/חישוב_מס_שבח | Capital gains, exemptions, linear method |

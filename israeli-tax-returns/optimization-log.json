@@ -39,6 +39,22 @@
         "Watch item: israeli-payroll-calculator references/credit-points.md carries the same child credit-point table. It was correct this cycle and matched the statute exactly, but the two files can drift. Any future change to one must check the other.",
         "Phase 5.7 not run: the description was not modified this cycle."
       ]
+    },
+    {
+      "version": "1.10.0",
+      "date": "2026-10-01",
+      "lessons": [
+        "UNVERIFIED carried forward (2nd cycle): whether a pre-2022 oleh cohort is governed by a superseded s.35 schedule. Resolve from Reshumot or the Amendment 262 bill text.",
+        "Deferred over the batch discretionary cap (2nd cycle): spouse credit points ss.37/38/39 and the s.66 separate-computation interaction.",
+        "Expert MAJOR deferred, unverified (web-search budget exhausted): name the Mas Shevach seller declaration form (Form 7000 series per the expert, from memory) and the tax clearance (ishur misim) needed at closing.",
+        "Expert MAJOR deferred, unverified: the mandatory-filing list says any capital gain or a second employer forces a return; the Regulation 134A exemption may still cover fully-withheld gains and coordinated second jobs. Verify against the Exemption-from-Filing Regulations before rewording.",
+        "Expert MAJOR deferred: foreign-broker securities fall under a semi-annual advance regime not mentioned in Step 7.",
+        "Legal PASS_WITH_CHANGES deferred: display_description opens 'Prepare and file' right after 'not a filed return'; reword to 'helps you prepare your own returns for filing'. Requires the Phase 5.7 holdout because it is a description change.",
+        "Minor deferred: Example 1 assumes the filer is the father (mother gets 7.25 points); Example 3 labels the nominal gain 'real gain'; mikdamot follow VAT frequency (monthly reporters pay monthly); rental partial exemption between 1x and 2x the ceiling; chevra me'atim 2%/6% conditions unstated; automatic refund process for salaried employees.",
+        "Minor: form-guide describes Form 1325 as 'non-listed assets' while the 2025 ITA page titles it a securities sales summary by tax rate. Check.",
+        "Watch: paper 1301 deadline for 2025 is 31.5.2026 in the ITA notice of 23.4.2026 but 29.5.2026 on the service page; skill says 'end of May'.",
+        "Phase 5.7 not run: the SKILL.md description was not modified this cycle."
+      ]
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0",
   "skill": "israeli-tax-returns",
-  "generated_at": "2026-08-19T00:00:00Z",
+  "generated_at": "2026-10-01T12:00:00Z",
   "claims": [
     {
       "claim_id": "income-tax-brackets-2026",
@@ -87,31 +87,30 @@
     },
     {
       "claim_id": "mas-shevach-and-securities",
-      "claim": "Mas Shevach: 25% on real gain; single-apartment exemption ceiling 5,008,000 NIS (2024-2027), 18-month ownership; linear method for purchases before 7 January 2014; declaration within 30 days (40 if exemption requested). Securities capital gains 25% (30% for 10%+ holders)",
+      "claim": "Mas Shevach is 25% of the net real gain (the rate on gain from 1.1.2012 on).",
       "source_url": "https://www.kolzchut.org.il/he/חישוב_מס_שבח",
       "raw_snippet": "גובה המס עומד על 25% מתוך השבח הריאלי נטו",
       "fetched_at": "2026-06-16T23:25:00Z",
       "appears_in": [
         "SKILL.md",
-        "SKILL_HE.md",
-        "references/form-guide.md"
+        "SKILL_HE.md"
       ],
       "verified_via": "kolzchut page text read through the site MediaWiki API in a browser; snippet replaced with verbatim page text (the previous value was a generated summary)",
       "verified_at": "2026-08-15"
     },
     {
       "claim_id": "forms-and-deadlines",
-      "claim": "Forms: 1301, 135, 1214, 126, 856, 6111, 106, 1320, 1321, 1322, 1325, 1327, 1343. Deadlines: 1301 individual June 30 online / 29 May 2026 paper (2025 return; April 30 legacy baseline); 1214 May 31; 126 and 856 April 30; Form 106 to employees by March 1; 6111 turnover above 300,000 NIS; Section 160 6-year refund window; Section 131(a) mandatory-filing basis. Also covers: 242 ₪ Form 1214 Form 126 Form 1320 Form 1321 Form 1322 Form 1325 Form 1327 Form 1343 Form 135 Form 6111 Form 856 טופס 1214 טופס 126 טופס 1301 טופס 1320 טופס 1321 טופס 1322 טופס 1327 טופס 1343 טופס 135 טופס 6111 טופס 856 סעיף 102 סעיף 131 סעיף 160",
-      "source_url": "https://www.gov.il/he/departments/israel_tax_authority",
-      "raw_snippet": "Cloudflare Ray ID: a2d3a1069d87c224 • Your IP: Click to reveal 2a0d:6fc2:4ff0:2700:411e:545f:3be7:af04 • Performance & security by Cloudflare",
-      "fetched_at": "2026-08-18",
+      "claim": "Forms published for tax year 2025 on the ITA annual-report service page, including Form 6111 and Form 1399. Forms referenced in the skill: 1301, 135, 1214, 126, 856, 6111, 106, 1320, 1321, 1322, 1325, 1327, 1343, 1399. Also covers: 242 ₪ Form 1214 Form 126 Form 1320 Form 1321 Form 1322 Form 1325 Form 1327 Form 1343 Form 135 Form 6111 Form 856 טופס 1214 טופס 126 טופס 1301 טופס 1320 טופס 1321 טופס 1322 טופס 1327 טופס 1343 טופס 135 טופס 6111 טופס 856 סעיף 102 סעיף 131 סעיף 160 Section 131 (mandatory-filing basis, s.131(a)).",
+      "source_url": "https://www.gov.il/he/service/reporting-and-payment-2025-annual-tax-report-for-individuals",
+      "raw_snippet": "טופס 6111 - נספח לטופס הדו\"ח השנתי ליחיד ולחבר בני אדם לשנת 2025",
+      "fetched_at": "2026-10-01T12:00:00Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/form-guide.md"
       ],
-      "verified_via": "cited page fetched and confirmed to contain \"106\"; snippet replaced with the page's own wording around it",
-      "verified_at": "2026-08-18"
+      "verified_via": "browser",
+      "verified_at": "2026-10-01T12:00:00Z"
     },
     {
       "claim_id": "illustrative-example-figures",
@@ -656,6 +655,515 @@
       ],
       "verified_via": "Form 101 PDF read with pdftotext",
       "verified_at": "2026-08-19"
+    },
+    {
+      "claim_id": "brackets-2025-ita-annual-booklet",
+      "claim": "Tax year 2025 brackets (frozen at 2024 values): 20% band 120,721-193,800, 35% band 269,281-560,280, per the ITA 2025 annual deductions booklet. Using 2026 brackets on a 2025 return understates tax once taxable income passes 193,800 ₪ (193,800 ש\"ח). Derived arithmetic: 34,200 x 11% + 31,920 x 4% = 5,038.80, about 5,039 NIS maximum difference.",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-annual-deductions-booklet/he/generalInformation_income-tax-yearly-deductions-booklet_yearly-deductions-booklet-2025.pdf",
+      "raw_snippet": "מ - 120,721 עד - 193,800 20%",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-brackets-credits.md"
+      ],
+      "fetched_at": "2026-10-01T08:00:00Z"
+    },
+    {
+      "claim_id": "brackets-2025-band5",
+      "claim": "Tax year 2025: 35% applies from 269,281 to 560,280.",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-annual-deductions-booklet/he/generalInformation_income-tax-yearly-deductions-booklet_yearly-deductions-booklet-2025.pdf",
+      "raw_snippet": "מ - 269,281 עד - 560,280 35%",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-brackets-credits.md"
+      ],
+      "fetched_at": "2026-10-01T08:00:00Z"
+    },
+    {
+      "claim_id": "capital-surtax-2pct-2025-booklet",
+      "claim": "From tax year 2025 an individual pays a further 2% surtax on taxable income from capital sources above the Section 121B threshold (5% in total).",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-annual-deductions-booklet/he/generalInformation_income-tax-yearly-deductions-booklet_yearly-deductions-booklet-2025.pdf",
+      "raw_snippet": "2% על הכנסה חייבת ממקורות הוניים העולה על הסכום הקבוע בסעיף",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-brackets-credits.md",
+        "references/troubleshooting.md"
+      ],
+      "fetched_at": "2026-10-01T08:00:00Z"
+    },
+    {
+      "claim_id": "shevach-surtax-apartment-threshold-2025",
+      "claim": "For a residential apartment, real-estate gain counts toward surtax only if the sale value exceeds 5,382,285 NIS (2025) and the sale is not exempt.",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-annual-deductions-booklet/he/generalInformation_income-tax-yearly-deductions-booklet_yearly-deductions-booklet-2025.pdf",
+      "raw_snippet": "לשנת 2025 הינו 5,382,285",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-brackets-credits.md"
+      ],
+      "fetched_at": "2026-10-01T08:00:00Z"
+    },
+    {
+      "claim_id": "shevach-surtax-apartment-carveout",
+      "claim": "Section 121B definition of taxable income includes shevach; for a residential apartment only if the sale value exceeds 5,382,285 NIS and the sale is not exempt under any law; the bill's proposal to drop this was not enacted.",
+      "source_url": "https://www.capitax.co.il/content/2/3171",
+      "raw_snippet": "ואולם לגבי מכירת זכות במקרקעין בדירת מגורים כהגדרתה בחוק האמור – רק אם שווי מכירתה עולה על 5,382,285 שקלים חדשים והמכירה אינה פטורה ממס לפי כל דין",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-brackets-credits.md"
+      ],
+      "fetched_at": "2026-10-01T08:00:00Z"
+    },
+    {
+      "claim_id": "capital-surtax-effective-2025",
+      "claim": "The Economic Efficiency Law 2025 amendments (tax-update freeze and the surtax increase) apply from 1.1.2025.",
+      "source_url": "https://www.capitax.co.il/content/2/3171",
+      "raw_snippet": "נזכיר, כי חוק ההתייעלות כָּלל שני תיקונים שתחולתם ביום 1.1.2025: האחד , הקפאת עדכוני המס;",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-brackets-credits.md"
+      ],
+      "fetched_at": "2026-10-01T08:00:00Z"
+    },
+    {
+      "claim_id": "ordinance-121b-a1",
+      "claim": "Section 121B(a1): additional 2% on taxable income from capital sources above the Section 121B(a) amount.",
+      "source_url": "https://www.nevo.co.il/law_html/law01/255_001.htm",
+      "raw_snippet": "(א1) נוסף על האמור בסעיף קטן (א), יחיד אשר הכנסתו החייבת ממקורות הוניים בשנת המס עלתה על הסכום הקבוע באותו סעיף קטן, יהיה חייב במס נוסף על חלק הכנסתו החייבת ממקורות הוניים העולה על הסכום האמור, בשיעור של 2%",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-brackets-credits.md"
+      ],
+      "fetched_at": "2026-10-01T08:00:00Z"
+    },
+    {
+      "claim_id": "ordinance-160-refund-6-years",
+      "claim": "Section 160: a refund of overpaid tax requires the return for that year to be filed no later than six years after it.",
+      "source_url": "https://www.nevo.co.il/law_html/law01/255_001.htm",
+      "raw_snippet": "והדו\"ח לאותה שנה הוגש לא יאוחר מתום שש שנים אחריה",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "fetched_at": "2026-10-01T08:00:00Z"
+    },
+    {
+      "claim_id": "mas-shevach-declaration-30-days-s73",
+      "claim": "Section 73(a) Real Estate Taxation Law: the seller files the declaration within 30 days of the sale, including any claim to an exemption (item 7); there is no separate 40-day track. (סעיף 73(א) לחוק מיסוי מקרקעין)",
+      "source_url": "https://www.nevo.co.il/law_html/law01/276_002.htm",
+      "raw_snippet": "73. (א) המוכר זכות במקרקעין ימסור למנהל, בתוך 30 ימים מיום המכירה, הצהרה שבה יפרט את כל אלה",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/form-guide.md",
+        "references/tax-brackets-credits.md",
+        "references/troubleshooting.md"
+      ],
+      "fetched_at": "2026-10-01T08:00:00Z"
+    },
+    {
+      "claim_id": "mas-shevach-exemption-in-declaration",
+      "claim": "The Section 73(a) declaration itself itemises entitlement to an exemption or reduction.",
+      "source_url": "https://www.nevo.co.il/law_html/law01/276_002.htm",
+      "raw_snippet": "(7) זכאות לפטור או להנחה מהמס החל",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "fetched_at": "2026-10-01T08:00:00Z"
+    },
+    {
+      "claim_id": "mas-shevach-payment-60-days-s90a",
+      "claim": "Section 90A: Mas Shevach is payable within 60 days of the sale. (סעיף 90א)",
+      "source_url": "https://www.nevo.co.il/law_html/law01/276_002.htm",
+      "raw_snippet": "ישלם את המס המגיע ממנו בתוך 60 ימים מיום המכירה",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/form-guide.md",
+        "references/tax-brackets-credits.md",
+        "references/troubleshooting.md"
+      ],
+      "fetched_at": "2026-10-01T08:00:00Z"
+    },
+    {
+      "claim_id": "rep-quota-2025-schedule",
+      "claim": "ITA representatives' extension arrangement for tax year 2025 (28.4.2026): individuals 50% by 30.11.2026 and 100% by 28.2.2027; companies 40% by 31.12.2026 and 100% by 31.3.2027; stage A 10% originally 31.8.2026.",
+      "source_url": "https://www.gov.il/BlobFolder/dynamiccollectorresultitem/represent-info-280426-1/he/IncomeTax_represent-info-280426-1.pdf",
+      "raw_snippet": "ג שלב יום '‫א 28.2.2027 מכסה 100%",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/form-guide.md",
+        "references/tax-brackets-credits.md"
+      ],
+      "fetched_at": "2026-10-01T08:00:00Z"
+    },
+    {
+      "claim_id": "rep-quota-2025-companies",
+      "claim": "Companies: 40% by 31.12.2026, 100% by 31.3.2027.",
+      "source_url": "https://www.gov.il/BlobFolder/dynamiccollectorresultitem/represent-info-280426-1/he/IncomeTax_represent-info-280426-1.pdf",
+      "raw_snippet": "ג שלב יום ד ' 31.3.2027 מכסה 100%",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-brackets-credits.md"
+      ],
+      "fetched_at": "2026-10-01T08:00:00Z"
+    },
+    {
+      "claim_id": "rep-quota-2025-individuals-b",
+      "claim": "Individuals: 50% by 30.11.2026; companies stage B 40% by 31.12.2026.",
+      "source_url": "https://www.gov.il/BlobFolder/dynamiccollectorresultitem/represent-info-280426-1/he/IncomeTax_represent-info-280426-1.pdf",
+      "raw_snippet": "ב שלב יום ב ' 30.11.2026 מכסה 50%",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/form-guide.md"
+      ],
+      "fetched_at": "2026-10-01T08:00:00Z"
+    },
+    {
+      "claim_id": "rep-quota-2025-companies-b",
+      "claim": "Companies stage B: 40% by 31.12.2026.",
+      "source_url": "https://www.gov.il/BlobFolder/dynamiccollectorresultitem/represent-info-280426-1/he/IncomeTax_represent-info-280426-1.pdf",
+      "raw_snippet": "ב שלב יום ה ' 31.12.2026 מכסה 40%",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "fetched_at": "2026-10-01T08:00:00Z"
+    },
+    {
+      "claim_id": "rep-quota-stage-a-moved",
+      "claim": "ICPAS notice: the first quota for individuals and companies for tax year 2025 moved from 31.8.2026 to 23.9.2026.",
+      "source_url": "https://app.activetrail.com/S/eijietawxw3.htm",
+      "raw_snippet": "המיכסה הראשונה להגשת דוחות יחידים ו המיכסה הראשונה להגשת דוחות חברות במסגרת ההסדר לשנת המס 2025 תידחה מה- 31.8.2026 ל - 23.9.2026",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/form-guide.md"
+      ],
+      "fetched_at": "2026-10-01T08:00:00Z"
+    },
+    {
+      "claim_id": "rep-quota-companies-stage-a-29-10",
+      "claim": "ICPAS notice 24.9.2026: the first quota for companies for tax year 2025 moved to 29.10.2026.",
+      "source_url": "https://app.activetrail.com/S/eijietj333w.htm",
+      "raw_snippet": "המיכסה הראשונה להגשת דוחות חברות במסגרת ההסדר לשנת המס 2025 תידחה עד ליום חמישי ה- 29.10.2026",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "fetched_at": "2026-10-01T08:00:00Z"
+    },
+    {
+      "claim_id": "companies-2025-general-extension-july",
+      "claim": "ITA notice 23.4.2026: 2025 returns of companies, non-profits and controlling shareholders due 30.7.2026; paper individuals 31.5.2026 (the service page later shows 29.5.2026, hence 'end of May').",
+      "source_url": "https://www.gov.il/he/pages/pa230426-1",
+      "raw_snippet": "המועד להגשת הדו\"ח לחברות ומלכ\"רים ובעלי שליטה החייבים בהגשת דו\"ח לשנת 2025 הינו עד חמישי ה-30.7.2026",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-brackets-credits.md"
+      ],
+      "fetched_at": "2026-10-01T12:00:00Z",
+      "verified_via": "browser",
+      "verified_at": "2026-10-01T12:00:00Z"
+    },
+    {
+      "claim_id": "gov-1301-2025-deadlines",
+      "claim": "gov.il 2025 annual-report service: paper filers by 29.5.2026, online filers by 30.6.2026.",
+      "source_url": "https://www.gov.il/he/service/reporting-and-payment-2025-annual-tax-report-for-individuals",
+      "raw_snippet": "יחידים החייבים בהגשת דוח שאינו מקוון יגישו עד 29.5.2026. יחידים החייבים בהגשת דוח מקוון יגישו עד 30.6.2026.",
+      "verified_via": "browser",
+      "verified_at": "2026-10-01T08:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/form-guide.md",
+        "references/tax-brackets-credits.md"
+      ],
+      "fetched_at": "2026-10-01T08:00:00Z"
+    },
+    {
+      "claim_id": "gov-itc135-refund-2020-deadline",
+      "claim": "gov.il Form 135 service: refunds up to 6 years back; the tax-year 2020 request can be filed until 31.12.2026; fully online from tax year 2019; opens a refund-only file.",
+      "source_url": "https://www.gov.il/he/service/itc135",
+      "raw_snippet": "את הבקשה להחזר מס בגין שנת 2020 ניתן להגיש עד ל 31.12.2026",
+      "verified_via": "browser",
+      "verified_at": "2026-10-01T08:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "fetched_at": "2026-10-01T08:00:00Z"
+    },
+    {
+      "claim_id": "gov-itc135-online-2019",
+      "claim": "Fully online refund requests (documents included) from tax year 2019; the process does not open an active tax file.",
+      "source_url": "https://www.gov.il/he/service/itc135",
+      "raw_snippet": "החל משנת מס 2019 ניתן להגיש בקשה להחזר מס באופן מקוון מלא (כולל הגשת מסמכים)",
+      "verified_via": "browser",
+      "verified_at": "2026-10-01T08:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "fetched_at": "2026-10-01T08:00:00Z"
+    },
+    {
+      "claim_id": "ita-notice-paper-31-5-2026",
+      "claim": "ITA notice 23.4.2026: non-online individual returns for 2025 due 31.5.2026.",
+      "source_url": "https://www.gov.il/he/pages/pa230426-1",
+      "raw_snippet": "המועד להגשת הדו\"ח לשנת 2025 ליחידים החייבים בהגשת דו\"ח לשנת 2025 שאינו מקוון הינו עד יום ראשון ה-31.5.2026",
+      "fetched_at": "2026-10-01T12:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-10-01T12:00:00Z"
+    },
+    {
+      "claim_id": "s49a1-partial-exemption-ceiling",
+      "claim": "Single-apartment exemption: above a 5,008,000 NIS sale value the exemption covers only the part up to the ceiling (s.49A(a1)).",
+      "source_url": "https://www.nevo.co.il/law_html/law01/276_002.htm",
+      "raw_snippet": "עלה סכום שווי המכירה על 5,008,000 שקלים חדשים (בסעיף קטן זה – סכום התקרה)",
+      "fetched_at": "2026-10-01T12:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "s49b2-18-months",
+      "claim": "Single-apartment exemption requires ownership for at least 18 months since it became a residential apartment.",
+      "source_url": "https://www.nevo.co.il/law_html/law01/276_002.htm",
+      "raw_snippet": "והמוכר הוא בעל הזכות בה במשך 18 חודשים לפחות מיום שהיתה לדירת מגורים",
+      "fetched_at": "2026-10-01T12:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "s48a-transition-day-1-1-2014",
+      "claim": "'יום המעבר' for the linear exemption is 1 January 2014.",
+      "source_url": "https://www.nevo.co.il/law_html/law01/276_002.htm",
+      "raw_snippet": "\"יום המעבר\" – כ\"ט בטבת התשע\"ד (1 בינואר 2014)",
+      "fetched_at": "2026-10-01T12:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "s48a-b2-linear-exempt",
+      "claim": "s.48A(b2): for a qualifying residential apartment bought before 1.1.2014, the real gain up to that day is exempt. (סעיף 48א(ב2))",
+      "source_url": "https://www.nevo.co.il/law_html/law01/276_002.htm",
+      "raw_snippet": "(א) השבח הריאלי עד יום המעבר יהיה פטור ממס",
+      "fetched_at": "2026-10-01T12:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "s48a-b1-period-split",
+      "claim": "s.48A(b1): real gain up to 7.11.2001 at the top s.121 rate; from then to 1.1.2012 at up to 20%; remainder at the regular rate. (סעיף 48א(ב1))",
+      "source_url": "https://www.nevo.co.il/law_html/law01/276_002.htm",
+      "raw_snippet": "(א) על השבח הריאלי עד יום התחילה – בשיעור המס הגבוה ביותר הקבוע בסעיף 121 לפקודה; (ב) על השבח הריאלי לאחר יום התחילה ועד למועד השינוי – בשיעור כאמור בסעיף 121 לפקודה עד 20%",
+      "fetched_at": "2026-10-01T12:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "re-law-start-day-7-11-2001",
+      "claim": "'יום התחילה' is 7 November 2001.",
+      "source_url": "https://www.nevo.co.il/law_html/law01/276_002.htm",
+      "raw_snippet": "\"יום התחילה\" - כ\"א בחשון תשס\"ב (7 בנובמבר 2001)",
+      "fetched_at": "2026-10-01T12:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "re-law-change-date-1-1-2012",
+      "claim": "'מועד השינוי' is 1 January 2012.",
+      "source_url": "https://www.nevo.co.il/law_html/law01/276_002.htm",
+      "raw_snippet": "\"מועד השינוי\" – ו' בטבת התשע\"ב (1 בינואר 2012)",
+      "fetched_at": "2026-10-01T12:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "securities-25-30-substantial",
+      "claim": "Individual capital gains on securities at 25%, 30% for a substantial (10%) shareholder.",
+      "source_url": "https://www.nevo.co.il/law_html/law01/255_001.htm",
+      "raw_snippet": "ואם הוא יחיד – בשיעור של 25%, ואולם אם היה יחיד בעל מניות מהותי כהגדרתו בסעיף 88 – בשיעור של 30%",
+      "fetched_at": "2026-10-01T12:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "s91d1-30-day-report-advance",
+      "claim": "s.91(d)(1): a seller files a report within 30 days of the sale and pays an advance (Form 1399). (סעיף 91(ד)(1))",
+      "source_url": "https://www.nevo.co.il/law_html/law01/255_001.htm",
+      "raw_snippet": "נמכר נכס, יגיש המוכר לפקיד השומה, בתוך 30 ימים מיום המכירה, דוח בטופס שקבע המנהל",
+      "fetched_at": "2026-10-01T12:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "form-1399-2025",
+      "claim": "Form 1399 is the notice of sale of an asset and computation of tax, published for tax year 2025.",
+      "source_url": "https://www.gov.il/he/service/reporting-and-payment-2025-annual-tax-report-for-individuals",
+      "raw_snippet": "טופס 1399י - הודעה על מכירת נכס וחישוב המס המגיע לשנת המס 2025",
+      "fetched_at": "2026-10-01T12:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-10-01T12:00:00Z"
+    },
+    {
+      "claim_id": "s122a1-rental-10-payment",
+      "claim": "s.122(a1): the 10% rental tax is paid within 30 days after the end of the tax year. (סעיף 122(א1))",
+      "source_url": "https://www.nevo.co.il/law_html/law01/255_001.htm",
+      "raw_snippet": "מס כאמור בסעיף קטן (א) ישולם בתוך 30 ימים מתום שנת המס שבה היתה ליחיד הכנסה מדמי שכירות",
+      "fetched_at": "2026-10-01T12:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "s121a-non-exertion-31",
+      "claim": "s.121(a): income other than personal-exertion income starts at 31%; reduced bands apply to personal-exertion income and to individuals aged 60+.",
+      "source_url": "https://www.nevo.co.il/law_html/law01/255_001.htm",
+      "raw_snippet": "(1) על כל שקל חדש מ-301,200 השקלים החדשים הראשונים – 31%",
+      "fetched_at": "2026-10-01T12:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "s121b-exertion-and-60",
+      "claim": "Reduced rates apply to personal-exertion income and to an individual who turned 60.",
+      "source_url": "https://www.nevo.co.il/law_html/law01/255_001.htm",
+      "raw_snippet": "לגבי הכנסה חייבת בשנת המס מיגיעה אישית ולגבי הכנסה חייבת בשנת המס של יחיד שמלאו לו 60 שנים, יחולו שיעורים אלה",
+      "fetched_at": "2026-10-01T12:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "non-exertion-2025-269280",
+      "claim": "Tax year 2025 non-personal-exertion income: 31% up to 269,280.",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-annual-deductions-booklet/he/generalInformation_income-tax-yearly-deductions-booklet_yearly-deductions-booklet-2025.pdf",
+      "raw_snippet": "עד - 22,440 31% עד - 269,280 31%",
+      "fetched_at": "2026-10-01T12:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "s188a-late-filing-fine",
+      "claim": "s.188(a): a fine of 500 NIS for every month of delay in filing the s.132 return (סעיף 188(א)). Section 188.",
+      "source_url": "https://www.nevo.co.il/law_html/law01/255_001.htm",
+      "raw_snippet": "לא הגיש אדם דו\"ח במועד שנקבע בסעיף 132, יוטל עליו בעד כל חודש של פיגור קנס של 500 שקלים חדשים",
+      "fetched_at": "2026-10-01T12:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "s132-statutory-dates",
+      "claim": "s.132: statutory deadline 30 April; 31 May for double-entry bookkeepers and online self-filers.",
+      "source_url": "https://www.nevo.co.il/law_html/law01/255_001.htm",
+      "raw_snippet": "132. (א) דו\"ח לפי סעיף 131 יימסר לפקיד השומה לא יאוחר מיום 30 באפריל של כל שנה",
+      "fetched_at": "2026-10-01T12:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "s132-31-may",
+      "claim": "s.132(b)(1): double-entry books, report by 31 May.",
+      "source_url": "https://www.nevo.co.il/law_html/law01/255_001.htm",
+      "raw_snippet": "ימסור את הדו\"ח לפי אותו סעיף קטן, לא יאוחר מיום 31 במאי בכל שנה",
+      "fetched_at": "2026-10-01T12:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "s166b-126-856-30-april",
+      "claim": "s.166(b): employer Form 126 and withholder Form 856 filed online by 30 April after the tax year.",
+      "source_url": "https://www.nevo.co.il/law_html/law01/255_001.htm",
+      "raw_snippet": "(טופס 0126) ולגבי תשלום הכנסה חבת ניכוי (טופס 0856), באופן מקוון, עד יום 30 באפריל",
+      "fetched_at": "2026-10-01T12:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "form-106-31-march",
+      "claim": "Employer must give Form 106 by 31 March each year, or on the day employment ends.",
+      "source_url": "https://www.kolzchut.org.il/he/טופס_106",
+      "raw_snippet": "על המעסיק למסור לעובד את הטופס עד ה-31.03 של כל שנה, עבור שנת המס הקודמת",
+      "fetched_at": "2026-10-01T12:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-10-01T12:00:00Z"
+    },
+    {
+      "claim_id": "form-6111-exemption-300000",
+      "claim": "Form 6111 exemption for companies and small businesses with business turnover below 300,000 NIS as defined in the bookkeeping instructions.",
+      "source_url": "https://www.gov.il/BlobFolder/service/reporting-and-payment-2025-annual-tax-report-for-individuals/he/Service_Pages_Income_tax_annual-report-2026_6111-2025-clarification.pdf",
+      "raw_snippet": "חברות ובעלי עסקים קטנים בעלי מחזור עסקי הקטן מ ₪ 300,000 - כהגדרתו בהוראות מס הכנסה",
+      "fetched_at": "2026-10-01T12:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "credit-point-2024-ita-annual-booklet",
+      "claim": "Tax year 2024 credit-point value is 2,904 NIS a year (ITA 2024 annual booklet, chapter C), the same as 2025 and 2026.",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-annual-deductions-booklet/he/generalInformation_income-tax-yearly-deductions-booklet_yearly-deductions-booklet-2024.pdf",
+      "raw_snippet": "זיכוי נקודת 33 א 2,904 לשנה",
+      "fetched_at": "2026-10-01T13:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     }
   ]
 }

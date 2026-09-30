@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.10.0 - 2026-10-01
+
+- Added the tax-year 2025 bracket table beside 2026 and the rule to use the brackets of the year being reported (2025 returns are what is filed in 2026).
+- Corrected the surtax: the extra 2% on capital-source income applies from tax year 2025, measured on that income alone; real-estate gain on a residential apartment counts only above a 5,382,285 NIS sale value and only when not exempt.
+- Added that non-personal-exertion income (rent on the regular track, interest) of a filer under 60 starts at 31%.
+- Corrected Mas Shevach: one 30-day declaration including exemption claims (no 40-day track), payment within 60 days, period split for purchases before 2012, linear exemption day 1.1.2014 (was 7.1.2014).
+- Added the representatives' quota schedule for 2025 returns, the 30.7.2026 company extension, missed-deadline guidance (s.188(a)), the Form 135 online service and the 31.12.2026 cut-off for tax year 2020.
+- Corrected Form 106 to 31 March, the 10% rental payment to 30 days after year end, Form 1399 as the 30-day capital-gain report, and the self-employed pension example.
+
 ## 1.9.0 - 2026-08-19
 
 Corrected the nekudot zikui schedule against the Income Tax Ordinance, Form 101, and the ITA 2026 deductions booklet. Every figure below was verified at the primary source.

@@ -1,5 +1,21 @@
 # Israeli Income Tax Brackets and Tax Credits Reference
 
+## Income Tax Brackets (Tax Year 2025)
+
+Use these for a 2025 return, which is what is being filed during 2026. Values frozen at their 2024 levels (ITA 2025 annual deductions booklet).
+
+| Bracket | Annual Income Range (NIS) | Marginal Rate |
+|---------|--------------------------|---------------|
+| 1 | 0 - 84,120 | 10% |
+| 2 | 84,121 - 120,720 | 14% |
+| 3 | 120,721 - 193,800 | 20% |
+| 4 | 193,801 - 269,280 | 31% |
+| 5 | 269,281 - 560,280 | 35% |
+| 6 | 560,281 and above | 47% |
+| Surtax | Above 721,560 | 47% + surtax |
+
+For earlier tax years (a Form 135 refund claim can reach back six years), take the table from that year's ITA annual booklet.
+
 ## Income Tax Brackets (2026)
 
 These brackets apply to active income (employment, self-employment, business income) for Israeli tax residents. Brackets 3-5 were expanded by the Economic Efficiency Law 2026 (Amendment 288 to the Income Tax Ordinance, approved March 31, 2026, retroactive to January 1, 2026). Brackets 1-2 and 6 remain frozen at 2025 values.
@@ -17,7 +33,7 @@ These brackets apply to active income (employment, self-employment, business inc
 The 47% band does NOT stop at 721,560. It applies to every shekel above 560,280, and the
 surtax is charged ON TOP of it, which is why the effective top marginal rate is 50% rather
 than the surtax rate on its own. Reading the last two rows as consecutive bands
-under-reports tax on high earners by 44 points on every shekel above the threshold.
+under-reports tax on high earners by 47 points on every shekel above the threshold.
 
 **Note:** Brackets 1-2 and 6 are frozen (not inflation-adjusted). This effectively increases the real tax burden as wages rise with inflation.
 
@@ -35,14 +51,14 @@ under-reports tax on high earners by 44 points on every shekel above the thresho
 | Listed securities (individual) | 25% | Standard rate |
 | Listed securities (substantial shareholder 10%+) | 30% | Higher rate for controlling stakes |
 | Real estate (Mas Shevach) | 25% | On real gain after inflation adjustment |
-| Real estate (pre-2014 portion, linear method) | 0% or historical rate | Phase-out proposed by Ministry of Finance in 2024; not yet enacted as of April 2026 |
+| Real estate (qualifying apartment, gain up to 1.1.2014, linear method) | Exempt | s.48A(b2); still in the consolidated statute as of October 2026 |
 
-## Surtax (Mas Yesafim), Two-Tier System from 2026
+## Surtax (Mas Yesafim), Two-Tier System from Tax Year 2025
 
 - **Threshold:** Annual taxable income above 721,560 NIS (2025-2027, frozen)
-- **Employment and active income:** 3% on the excess above the threshold (effective top rate: 50%)
-- **Capital and passive income (dividends, interest, rent, capital gains):** 5% on the excess above the threshold (3% base + 2% additional surcharge)
-- **From 2026:** Mas Shevach on investment properties is included in the surtax income calculation
+- **All taxable income:** 3% on the excess above the threshold (effective top rate on employment income: 50%)
+- **Income from capital sources** (anything other than salary and personal-exertion income): a further 2% on the excess, so 5% in total. Section 121B(a1), added by Amendment 276 (Economic Efficiency Law 2025), in force from tax year 2025
+- **Real-estate gain (shevach)** is part of surtax income under the Section 121B definition. For a residential apartment it counts only if the sale value exceeds 5,382,285 NIS (2025) and the sale is not exempt, so an exempt single-residence sale never counts. This predates 2025; the proposal to drop the apartment carve-out was removed from the final 2025 law
 
 ## Nekudot Zikui (Tax Credit Points)
 
@@ -75,8 +91,8 @@ quoted:
 | Track | Tax Rate | Key Rules |
 |-------|----------|-----------|
 | Exempt | 0% | Monthly rent below ceiling (5,654 NIS/month, 2025-2027, frozen, no longer indexed). No expenses deductible. |
-| Flat rate | 10% | On gross rent. No expenses deductible. Must pay by January 31 of following year. |
-| Marginal | 10%-50% | Progressive rates. Full expense deduction (depreciation, mortgage interest, maintenance). Report with Form 1301. |
+| Flat rate | 10% | On gross rent. No expenses deductible. Pay within 30 days after the end of the tax year (s.122(a1)). |
+| Regular | From 31% under age 60 | Rent is not personal-exertion income, so a filer under 60 starts at 31% (s.121(a)); the 10%/14%/20% bands apply only from age 60. Full expense deduction (depreciation, mortgage interest, maintenance). Report with Form 1301. |
 
 ## Real Estate Tax Exemptions
 
@@ -88,22 +104,22 @@ quoted:
 - Partial exemption applies proportionally above the ceiling
 
 ### Linear Method (Shita Liniarit)
-- For properties purchased before January 7, 2014
-- Only the post-2014 portion of gain is taxed at 25%
-- Pre-2014 portion may be exempt or at historical lower rate
-- Phase-out proposed by Ministry of Finance in 2024; not yet enacted into law as of April 2026
+- For a qualifying residential apartment bought before 1 January 2014 that does not get the full exemption
+- The real gain up to 1.1.2014 is exempt; the rest is taxed at the regular rate (s.48A(b2))
+- Separately, any property bought before 1.1.2012 has its real gain split by period: up to 7.11.2001 at the top s.121 rate, then to 1.1.2012 at up to 20%, then 25% (s.48A(b1))
+- Phase-out proposed by the Ministry of Finance in 2024; the provision is still in the consolidated statute as of October 2026
 
 ## Key Filing Deadlines
 
 | Obligation | Deadline | Penalty for Late Filing |
 |------------|----------|------------------------|
-| Form 1301 (individual) | June 30 online filers / 29 May 2026 paper filers for the 2025 return (April 30 is the legacy paper baseline); CPA-represented filers get the later quota extension | Interest + linkage differences + potential fines |
-| Form 1214 (corporate) | May 31 | Interest + linkage differences + potential fines |
+| Form 1301 (individual) | 2025 return: 30.6.2026 online / end of May 2026 paper (statutory baseline 30 April); CPA-represented: quota schedule, final stage 28.2.2027 | Interest + linkage differences + potential fines |
+| Form 1214 (corporate) | Statutory 31 May; 2025 returns extended to 30.7.2026; CPA-represented: final stage 31.3.2027 | Interest + linkage differences + potential fines |
 | Form 126 (employer) | April 30 | Administrative fines |
-| Form 106 (to employees) | March 1 | Administrative fines |
+| Form 106 (to employees) | 31 March | Administrative fines |
 | Mikdamot | 15th of month after period | Interest on late payment |
-| Mas Shevach declaration | 30 days from sale | Interest + linkage + fines |
-| Rental income (10% track) | January 31 | Interest on late payment |
+| Mas Shevach declaration | 30 days from sale, exemption claims included; tax payable within 60 days | Interest + linkage + fines |
+| Rental income (10% track) | Within 30 days after the tax year ends | Interest on late payment |
 
 ## Section 46 donation credit (2026)
 

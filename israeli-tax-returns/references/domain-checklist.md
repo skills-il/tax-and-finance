@@ -50,17 +50,24 @@ credit-point schedule ship with three age bands when the statute has six. Where 
 | Form 6111 threshold and structure | ITA |
 | Spouse-related credit points ss.37, 38, 39 and the separate-computation rules in s.66 | ss.37-39, 66 |
 
+## Added 2026-10-01 (Must cover)
+
+- Brackets of the tax YEAR being reported, not the filing year: tax year 2025 (frozen at 2024 values, 20% band to 193,800) differs from 2026 (Amendment 288, 20% band to 228,000). Source: ITA 2025 annual booklet.
+- Two-tier surtax from tax year 2025 (s.121B(a1), Amendment 276), and the residential-apartment shevach carve-out (sale value above 5,382,285 NIS in 2025 and not exempt).
+- Representatives' quota schedule for 2025 returns (ITA letter 28.4.2026 plus the ICPAS stage-A moves), and the Form 135 six-year window with its 31.12.2026 cut-off for tax year 2020.
+- Mas Shevach: 30-day declaration for every seller including exemption claims (s.73(a)), 60-day payment (s.90A).
+
 ## Out of scope (explicit)
 
 | Item | Rationale | Re-litigated |
 |---|---|---|
-| VAT reporting | Covered by `israeli-vat-reporting`; a user asking about VAT is routed there by the description's "Do NOT use for" clause | 2026-08-19: still correct, a separate skill exists and is named |
-| Withholding tax mechanics | Covered by `israeli-tax-withholding` | 2026-08-19: still correct |
-| Payroll computation and payslip construction | Covered by `israeli-payroll-calculator`, which carries the same credit-point table; both must stay in step | 2026-08-19: still correct, and the two tables were reconciled against the statute in this cycle |
-| Crypto tax | Covered by `israeli-crypto-tax-reporter` | 2026-08-19: still correct |
-| Section 102 employee stock options | Covered by `israeli-stock-options-tax` | 2026-08-19: still correct |
-| The full per-yishuv s.11 rate and ceiling list | Roughly 500 rows that change annually; the skill points at chapter ח of the current booklet and tells the agent never to quote a rate from memory. A user WOULD ask "what is my yishuv's rate", and the honest answer is the current official list, not a frozen copy | 2026-08-19: re-opened and re-closed. Capturing it would guarantee staleness within a year; the pointer plus the 2026 changes is the better answer |
-| Bituach Leumi and health tax computation for the self-employed | A separate levy with its own base; the skill notes it affects advance-payment reconciliation and stops there | 2026-08-19: still correct |
+| VAT reporting | Covered by `israeli-vat-reporting`; a user asking about VAT is routed there by the description's "Do NOT use for" clause | 2026-10-01: still correct, a separate skill exists and is named |
+| Withholding tax mechanics | Covered by `israeli-tax-withholding` | 2026-10-01: still correct |
+| Payroll computation and payslip construction | Covered by `israeli-payroll-calculator`, which carries the same credit-point table; both must stay in step | 2026-10-01: still correct, and the two tables were reconciled against the statute in this cycle |
+| Crypto tax | Covered by `israeli-crypto-tax-reporter` | 2026-10-01: still correct |
+| Section 102 employee stock options | Covered by `israeli-stock-options-tax` | 2026-10-01: still correct |
+| The full per-yishuv s.11 rate and ceiling list | Roughly 500 rows that change annually; the skill points at chapter ח of the current booklet and tells the agent never to quote a rate from memory. A user WOULD ask "what is my yishuv's rate", and the honest answer is the current official list, not a frozen copy | 2026-10-01: re-checked, still out of scope (2026-08-19: re-opened and re-closed). Capturing it would guarantee staleness within a year; the pointer plus the 2026 changes is the better answer |
+| Bituach Leumi and health tax computation for the self-employed | A separate levy with its own base; the skill notes it affects advance-payment reconciliation and stops there | 2026-10-01: still correct |
 
 ## Authoritative sources
 

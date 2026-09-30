@@ -4,7 +4,7 @@
 
 ### Form 1301 - Annual Individual Tax Return (דוח שנתי ליחיד)
 - **Who files:** Individuals, sole proprietors, freelancers meeting filing criteria
-- **Deadline:** for the 2025 return (filed 2026), June 30 for online filers and 29 May 2026 for paper filers. April 30 is the legacy paper baseline from earlier years. CPA-represented filers get the later quota extension (often September 30 or later)
+- **Deadline:** for the 2025 return (filed 2026), 30.6.2026 for online filers and end of May 2026 for paper filers. April 30 is the statutory baseline. CPA-represented filers follow the representatives' quota schedule for 2025 returns: 10% by 23.9.2026, 50% by 30.11.2026, 100% by 28.2.2027
 - **Key sections:** Personal details, employment income, business income, rental income, capital/investment income, foreign income, deductions, tax credits
 - **Common appendices:** 1320 (P&L for self-employed), 1321 (non-business income), 1322/1325 (capital gains), 1327 (foreign income), 1343 (depreciation), 6111 (financial statements)
 
@@ -15,7 +15,7 @@
 
 ### Form 106 - Annual Salary Summary for Employee (טופס 106)
 - **Who issues:** Employers to each employee
-- **Deadline:** March 1 of the following year
+- **Deadline:** 31 March of the following year, or on the day employment ends
 - **Purpose:** Summarizes annual salary, benefits, deductions, and withholdings per employee. Used by employees when filing Form 1301.
 - **Temporary field 011/012 (tax years 2024-2025 only):** "מחיר יום ההבראה שהופחת ממשכורת העובד", the havraa-day reduction under the Havraa Freeze-and-Reduction Law (ITA circular 2025-000583). Full-time employee: one day reduced, floor 418 NIS / ceiling 471.4 NIS. A half-day reduction (floor 209 NIS / ceiling 235.7 NIS) applies to employees whose October-December 2024 average monthly salary was 6,150 NIS or less. Informational only, already netted out of gross salary and not income to the employee, so it is NOT a deduction or credit on Form 1301 (line 60). Home/domestic employers are exempt. Confirmed as of 27 July 2026: the temporary law was NOT renewed, so it expired with tax year 2025 and a 2026 Form 106 should carry no 011/012 value. It remains live work all the same, because the 2024 and 2025 returns are what is being filed during 2026.
 
@@ -25,7 +25,7 @@
 - **Who files:** All Israeli-registered companies
 - **Deadline:** May 31 (5 months after tax year end)
 - **Key sections:** Company details, income from operations, other income, tax-exempt income, non-deductible expenses, tax calculation at 23% rate
-- **Required attachment:** Form 6111 (if turnover exceeds 300,000 NIS)
+- **Required attachment:** Form 6111 (unless business turnover is below 300,000 NIS)
 
 ## Employer and Supplier Reports
 
@@ -42,7 +42,7 @@
 ## Financial Statements
 
 ### Form 6111 - Standardized Financial Statements (דוח כספי אחיד)
-- **Who files:** Businesses with turnover above 300,000 NIS (including VAT)
+- **Who files:** All business owners and companies, except (among other listed exceptions) companies and small businesses whose business turnover, as defined in the bookkeeping instructions, is below 300,000 NIS (ITA 2025 Form 6111 explanatory notes)
 - **Deadline:** Submitted alongside Form 1301 or 1214
 - **Content:** Standardized P&L and balance sheet using Tax Authority item codes
 - **Submission:** Electronic only, via SHAAM portal. Typically exported from accounting software (Hashavshevet, iCount, Rivhit).
@@ -51,17 +51,17 @@
 
 ### Form 1322 - Capital Gains from Listed Securities (רווח הון מניירות ערך רשומים)
 - **Who files:** Individuals and companies selling listed securities at a gain
-- **Deadline:** Within 30 days of sale, or with annual return
+- **Deadline:** appendix to the annual return. A sale on which no tax was withheld is reported separately on Form 1399 within 30 days, with an advance payment (s.91(d)(1))
 - **Tax rate:** 25% (30% for substantial shareholders holding 10%+)
 
 ### Form 1325 - Capital Gains from Non-Listed Assets (רווח הון מנכסים שאינם רשומים)
 - **Who files:** Individuals and companies with gains from non-listed securities, partnership interests, or other capital assets
-- **Deadline:** Within 30 days of sale, or with annual return
+- **Deadline:** appendix to the annual return. A sale on which no tax was withheld is reported separately on Form 1399 within 30 days, with an advance payment (s.91(d)(1))
 - **Tax rate:** 25% (30% for substantial shareholders)
 
 ### Mas Shevach Declaration - Real Estate Capital Gains (הצהרת מס שבח)
 - **Who files:** Anyone selling real estate in Israel
-- **Deadline:** 30 days from sale (40 days if requesting exemption)
+- **Deadline:** declaration within 30 days of the sale (Section 73(a)), exemption claims included; there is no separate 40-day track. Tax payable within 60 days of the sale (Section 90A)
 - **Filed with:** Reshut HaMisim (Israel Tax Authority) via the misim.gov.il portal or real estate taxation offices (Misrad Misui Mekarkein)
 - **Tax rate:** 25% on real gain (with inflation adjustment)
 - **Key exemptions:** Single apartment exemption (ptur dira yechida), linear method for pre-2014 purchases
@@ -79,16 +79,16 @@
 
 | Form | Standard Deadline | Extension Available |
 |------|-------------------|---------------------|
-| 1301 | June 30 online filers / 29 May 2026 paper filers (2025 return; April 30 is the legacy paper baseline) | Yes, via CPA quota (often September 30 or later) |
+| 1301 | 30.6.2026 online / end of May 2026 paper (2025 return; April 30 is the statutory baseline) | Yes, via the representatives' quota, final stage 28.2.2027 |
 | 135 | Within 6 years of the tax year (Section 160 refund window) | Not applicable, the 6-year window is the limit |
 | 1214 | May 31 | Yes, must request before deadline |
 | 126 | April 30 | Limited |
 | 856 | April 30 | Limited |
-| 106 | March 1 (to employees) | No |
+| 106 | 31 March (to employees) | No |
 | 6111 | With 1301/1214 | Same as parent form |
 | Mikdamot | 15th of month after period | No |
-| Mas Shevach | 30/40 days from sale | No |
-| 1322/1325 | 30 days from sale or annual | Yes, if included in annual return |
+| Mas Shevach | 30 days from sale (payment within 60) | No |
+| 1322/1325 | With the annual return (the 30-day report is Form 1399) | Yes, if included in annual return |
 
 
 ## Regulation 134A filing-exemption ceilings, tax year 2025
@@ -151,9 +151,10 @@ Pension contributions receive two separate tax benefits that must both be claime
 **Combined rule:** the same shekel cannot double-count. Self-employed filers typically structure deposits so that part qualifies for 45A (credit) and part for 47 (deduction) within the 16.5 percent combined ceiling.
 
 **Calculation example (self-employed, 300,000 NIS annual business income):**
-- Pension deposit: 33,000 NIS (11 percent of income)
-- Section 47 deduction: reduces taxable income by up to 33,000 NIS (marginal benefit depends on bracket)
-- Section 45A credit: 35 percent of up to 5.5 percent of income = up to 16,500 NIS eligible, so up to 5,775 NIS direct tax reduction
+- The two benefits need SEPARATE shekels: 11 percent of income (33,000 NIS) as the Section 47 deduction AND a further 5.5 percent (16,500 NIS) as the Section 45A credit base, so 16.5 percent of income deposited in total
+- Section 45A credit on that 16,500: 35 percent = 5,775 NIS direct tax reduction
+- A single 33,000 NIS deposit supports only one of the two, not both
+- The percentages apply only up to the annual qualifying-income ceiling, so for high earners the amounts are lower than 11 and 5.5 percent of total income
 - Always verify the exact current ceilings at kolzchut.org.il before quoting a number
 
 ### Step 3.6: Donation Credit (Section 46)
@@ -167,3 +168,61 @@ Donations to a recognized public institution qualify for a tax credit under Sect
 - **Company donors get the credit at the corporate rate (23 percent), not 35 percent.**
 - **Documentation:** keep the original donation receipts marked with the institution's 46 recognition; the ITA may require them.
 - Figures are indexed; re-check them for the return's tax year.
+
+## Worked Examples (moved from SKILL.md)
+
+### Worked example: Company Filing Corporate Tax Return (Form 1214)
+
+User says: "Our company needs to file the annual report for the most recently closed tax year"
+
+Actions:
+1. Gather audited financial statements (profit and loss, balance sheet)
+2. Prepare Form 6111 (standardized financial statements attachment)
+3. Calculate taxable income: Net profit + non-deductible expenses (fines, entertainment above limits, excess car expenses) - exempt income
+4. Apply 23% corporate tax rate
+5. Reconcile against advance payments (mikdamot) made during the year
+6. Check closely held company rules: if applicable, verify 6% dividend distribution requirement to avoid 2% accumulated profits tax
+7. Prepare Form 126 (employer salary report) and Form 856 (supplier payments) as companion filings
+8. Submit via SHAAM by the deadline in force (statutory 31 May; 30.7.2026 for unrepresented 2025 company returns; quota schedule if represented)
+
+### Worked example: Calculating Advance Tax Payments (Mikdamot)
+
+User says: "I started a new consulting business, how much mikdamot should I expect to pay?"
+
+Actions:
+1. Determine business type and projected annual turnover
+2. For new businesses, the Tax Authority assigns an initial percentage based on industry type and projected income
+3. Calculate bi-monthly payment: (bi-monthly revenue) x (assigned percentage rate)
+4. Explain the 6 bi-monthly payment dates (March 15, May 15, July 15, September 15, November 15, January 15)
+5. Note that the rate can be adjusted mid-year if actual income differs significantly from projections
+6. At year end, total mikdamot paid will be reconciled against actual tax liability on Form 1301
+7. Result: Estimated bi-monthly payment schedule with option to request rate adjustment
+
+## דוגמאות מחושבות (עברית)
+
+### דוגמה 2: חברה מגישה דוח שנתי (טופס 1214)
+
+המשתמש אומר: "החברה שלנו צריכה להגיש את הדוח השנתי לשנת המס האחרונה שנסגרה"
+
+פעולות:
+1. אספו דוחות כספיים מבוקרים (רווח והפסד, מאזן)
+2. הכינו טופס 6111 (דוח כספי אחיד)
+3. חשבו הכנסה חייבת: רווח נקי + הוצאות שאינן מוכרות (קנסות, אירוח מעל המותר, הוצאות רכב עודפות) - הכנסה פטורה
+4. החילו שיעור מס חברות 23%
+5. התאימו כנגד מקדמות ששולמו במהלך השנה
+6. תבדקו כללי חברת מעטים: אם רלוונטי, ודאו עמידה בדרישת חלוקת 6% דיבידנדים כדי להימנע ממס 2% על רווחים צבורים
+7. הכינו טופס 126 (דוח מעסיק) וטופס 856 (תשלומים לספקים) כטפסים נלווים
+8. הגישו דרך שע"מ עד המועד התקף (בחוק 31 במאי; לדוחות חברות 2025 ללא מייצג 30.7.2026; במכסה אם מיוצגים)
+
+### דוגמה 4: חישוב מקדמות מס
+
+המשתמש אומר: "פתחתי עסק ייעוץ חדש, כמה מקדמות אני צפוי לשלם?"
+
+פעולות:
+1. קבעו סוג עסק ומחזור שנתי צפוי
+2. לעסקים חדשים, רשות המסים קובעת אחוז ראשוני לפי סוג העסק וההכנסה הצפויה
+3. חשבו תשלום דו-חודשי: (הכנסה דו-חודשית) x (שיעור האחוז שנקבע)
+4. הסבירו את 6 מועדי התשלום הדו-חודשיים (15 במרץ, מאי, יולי, ספטמבר, נובמבר, ינואר)
+5. ציינו שניתן להתאים את השיעור באמצע השנה אם ההכנסה בפועל שונה משמעותית מהתחזית
+6. בסוף השנה, סך המקדמות ששולמו יותאם כנגד חבות המס בפועל בטופס 1301
+7. תוצאה: לוח תשלומים דו-חודשי משוער עם אפשרות לבקש התאמת שיעור
