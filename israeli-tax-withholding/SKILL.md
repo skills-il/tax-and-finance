@@ -20,14 +20,16 @@ Any form or text this tool produces is an automatic draft for your personal prep
 |-------------|--------|-------------|---------|
 | Services/assets (payee keeps acceptable books, no certificate) | shlumim avur sherutim o nechasim | 20% | reg. 1977 |
 | Services/assets (payee without acceptable books, no certificate) | shlumim avur sherutim o nechasim | 30% | reg. 1977 |
-| Services (companies, no certificate) | shlumim avur sherutim | 20-30% by tax-office classification | reg. 1977 |
+| Services (companies, no certificate) | shlumim avur sherutim | 20%, or 30% without acceptable books (reg. 2 draws no individual/company distinction) | reg. 1977 |
 | Rent (real estate, where the tenant deducts the rent as a business expense) | schar dira | 35% (uniform, no residential/commercial split) | reg. 1998 |
 | Royalties | tamlugim | No separate category in the 1977 regulations: a payment to a resident falls under the 20%/30% services-and-assets rule; a payment to a non-resident is withheld under section 170 | 170 |
-| Interest | ribit | 25% | 164 |
-| Dividends | dividendim | 25-30% | 164 |
-| Payments to non-residents | tishlumin letoshvei chutz | Set under section 170, commonly applied at 25%; requires ITA involvement, see note | 170 |
+| Interest | ribit | 25% to an individual (15% on a non-index-linked asset); the maximum rate to a company (the 23% corporate rate), and the maximum rate when a company pays its substantial shareholder, its employee or its supplier (reg. 6, the top section 121 rate for an individual) | reg. 2005 |
+| Dividends | dividendim | To an individual: 25%, 30% to a substantial shareholder. Company to an Israeli-resident company: withheld only where a limited rate applies under any law (reg. 2(א1)) | reg. 2005 |
+| Building and haulage work | avodot bniya vehovala | 20%; 17% or 15% with the assessing officer's written approval; 10 points higher without acceptable books | reg. 1973 |
+| Agricultural work / agricultural produce | avoda chaklait / tozeret chaklait | 20% / 5%; 10 points higher without acceptable books | reg. 1979 |
+| Payments to non-residents | tishlumin letoshvei chutz | **25% to an individual, the 23% corporate rate to a company**, unless the assessing officer sets another rate in writing; see Step 9 | 170 |
 
-For a service/asset payment with no certificate, the statutory default under the 1977 regulations is **20% where the payee keeps acceptable books** (reg. 2(a), the ordinary case) and **30% where the payee does not** (reg. 2(b), the penalty rate for an unverified/no-books payee, not a separate "high" rate; there is no ~47% service-withholding rate). Start from 20% and move to 30% only once you know the payee failed the books-and-returns test. A valid certificate brings the rate down further (often to 0-5%). Rent on real estate that the tenant deducts as a business expense is withheld at a uniform **35%** (there is no separate residential vs. commercial rate); a private residential tenant who cannot deduct the rent is generally not a withholding agent at all.
+For a service/asset payment with no certificate, the statutory default under the 1977 regulations is **20% where the payee keeps acceptable books** (reg. 2(a), the ordinary case) and **30% where the payee does not** (reg. 2(b), the penalty rate for an unverified/no-books payee, not a separate "high" rate; there is no ~47% service-withholding rate). Start from 20% and move to 30% only once you know the payee failed the books-and-returns test. A valid certificate from the assessing officer sets a reduced rate or an exemption for that payee. Rent on real estate that the tenant deducts as a business expense is withheld at a uniform **35%** (there is no separate residential vs. commercial rate); a private residential tenant who cannot deduct the rent is generally not a withholding agent at all.
 
 **Every category has two rates, not one.** The ITA states this as a general rule of the withholding regulations, not a quirk of the services category: "בתקנות לניכוי מס במקור מהכנסות שאינן שכר עבודה נקבעו שיעורים שונים למי שמנהלים ספרים קבילים ומגישים את הדו"ח במועד, ושיעורים גבוהים יותר לסרבנים." So a single quoted rate for any category is incomplete by construction. Always establish the payee's bookkeeping and filing status before quoting a number.
 
@@ -37,7 +39,13 @@ De-minimis: reg. 2(a) excludes a payment for an asset or service **whose value d
 A valid withholding certificate (ishur nikui mas bemakor) may reduce or eliminate
 the withholding:
 - Certificate shows: business name, TIN, approved rate, validity period
-- **Verify:** certificate year matches the current tax year
+- **Verify online, shortly before each payment.** Certificates are electronic
+  only and are not printed or mailed, and instruction 02/2026 puts the duty to
+  check them close to payment on the payer. Confirm today's date falls inside the
+  validity shown. Do not assume a calendar year: under that instruction the
+  certificates issued for 2026 run from 1.1.2026 (or their issue date, if later)
+  to 31.3.2027, with a 1.1.2026 to 31.3.2026 overlap in which the 2025
+  certificates stayed valid. A certificate cannot be back-dated
 - **Verify:** certificate is genuine, issued by the ITA
 - **Online lookup:** verify the payee's certificate status through the ITA's
   gmishurim service (see Reference Links)
@@ -52,8 +60,9 @@ VAT (if applicable): calculated separately on the full pre-withholding amount
 ```
 
 ### Step 4: Periodic Reporting and Payment (Form 102)
-- Amounts withheld must be reported and paid to the ITA periodically, monthly or
-  bi-monthly depending on your business size.
+- Supplier withholding is a monthly cycle: reg. 4 of the 1977 regulations
+  requires the return and the payment by the 16th of each month for the previous
+  month. Withhold at the time you pay, not when the invoice arrives.
 - **Form 102** is the periodic deductions report and payment. It summarises the
   wages/payments and the income tax (and, on the National Insurance side, the
   parallel 102) withheld in the period.
@@ -73,14 +82,24 @@ VAT (if applicable): calculated separately on the full pre-withholding amount
   suppliers and service providers. It is a detailed file listing every payee,
   the total paid, and the total withheld during the year, reconciled against the
   Form 102 deposits made through the year.
-- **Deadline:** April 30 of the year following the reporting year.
-- Workflow: deposit withheld amounts periodically via Form 102 -> at year end,
-  compile the per-payee detail file -> submit Form 856 by April 30. **For tax year 2025 the ITA extended the 126 and 856 deadline to 31 May 2026, with reports transmitted and approved online through 30 June 2026 treated as filed on time.** Extensions like this are announced most years, so check the current year before telling a user they are late.
+- **Deadline: 30 April, online.** Section 166(ב) of the Ordinance sets it by
+  statute for form 0856 (and 0126 for salaries): "באופן מקוון, עד יום 30 באפריל
+  שלאחר שנת המס". Reg. 5(a) of the 1977 regulations still carries an older
+  31 March date and names the per-payee 0851 cards. Check for an ITA extension
+  notice for the current year before telling a user they are late.
+- Workflow: deposit withheld amounts monthly via form 0852 / Form 102 -> at year
+  end, compile the per-payee detail file -> submit Form 856.
 - Form 856 is separate from the payee's own annual return; it is the payer's
   obligation as the withholding agent.
+- **Interest and dividends:** the payer gives the recipient, on request and by
+  20 March, a certificate on form 0867 (2005 regulations).
+- **Form 0857, the payee's annual certificate.** Reg. 6 of the 1977 regulations
+  requires the payer to give every payee a certificate on form 0857 of the
+  payments made and the tax withheld in the previous tax year, by 20 March.
+  Payees need it to credit the withholding on their own return.
 - **Form 126** is the salary-side counterpart: the annual report of employee
-  salaries and the tax withheld from them, filed alongside Form 856 (same April
-  30 baseline, commonly extended by ITA notice). A payer with both suppliers and
+  salaries and the tax withheld from them, filed alongside Form 856 on the same
+  30 April online date under section 166(ב). A payer with both suppliers and
   employees files both: 856 for suppliers/service providers, 126 for salaries.
 
 ### Step 6: Certificate Types
@@ -88,30 +107,44 @@ VAT (if applicable): calculated separately on the full pre-withholding amount
 |------------|--------|---------|
 | Ishur Nikui Mas BeMakor | ishur nikui mas bemakor | Reduced/zero withholding on payments |
 | Ishur Tium Mas | ishur tium mas | Tax coordination for multiple payers/employers |
-| Ishur Nikui Mas Rechisha | ishur nikui mas rechisha | Real estate purchase tax withholding |
+
+Withholding on the sale of real estate runs under the Land Taxation Law, not this
+regime, and is outside this skill.
 
 ### Step 7: How to Obtain a Certificate
 1. Apply through the ITA online services (the gmishurim system).
 2. Provide: TIN, financial statements, tax returns.
-3. Certificate valid for the current tax year (January-December).
-4. Renewal required annually.
+3. Validity is shown online. The 2026 certificates run to 31.3.2027, and
+   taxpayers with a clean file are renewed automatically without applying
+   (execution instruction 02/2026). A company taxed at the section 126(a) rate may
+   ask that withholding not exceed that rate.
+4. Check the dates each time rather than assuming a January-December year.
 
 ### Step 8: Who Is a Mandatory Withholder, and Which Payments Are Covered
 
-**There is no turnover threshold in the 1977 regulations.** Do not tell a user
-they are below one. The mechanism is different, and getting it wrong sends a
-payer who does owe withholding away believing they are exempt:
+**The size test is in the order, not in the regulations.** The 1977 regulations
+define the payments they cover by reference to צו מס הכנסה (קביעת תשלומים בעד
+שירותים או נכסים כהכנסה), תשל"ז-1977, and that order lists who is a withholding
+payer: the State and public bodies, government companies, financial
+institutions, hospitals and similar bodies, and any business **required to keep
+double-entry books or whose turnover exceeded the amount in Schedule A** to the
+order. Section 2א of the order then excludes payments by an individual, a
+partnership of individuals, or a company outside a group, where in each of the
+three relevant tax years turnover did not exceed the Schedule A amount AND they
+were not required to keep double-entry books. The last year shown in the
+consolidated Schedule A on Nevo is 2018, at 5,300,000 NIS; the amount is updated
+by order, so confirm the current figure. Check both limbs before telling a small
+payer they are outside the regime, and never on turnover alone:
 
 - Section 164 of the Ordinance imposes the duty, and the ITA describes the
-  scoping mechanism as an order, not a size test: "קביעת סוגי המנכים וסוגי
+  scoping mechanism as an order: "קביעת סוגי המנכים וסוגי
   התשלומים נעשית בצו של שר האוצר ובאישור ועדת הכספים של הכנסת", under which
   "נקבעה סדרה של תשלומים ומשלמים שחלה עליהם חובת הניכוי במקור". The withholding
   family is therefore an **open, order-by-order set**, not a closed list.
-- In the 1977 regulations "משלם" is simply a person who makes payments for
-  services or assets, with one carve-out: an individual or a partnership of
+- The 1977 regulations add one more exit: an individual or a partnership of
   individuals whom **the assessing officer has approved in writing** as not being
   a payer for a given tax year following a material contraction of their
-  business. The exit is an assessing-officer approval, not a revenue figure.
+  business.
 - Certain **recipients** are outside the regime under Schedule A to the same
   regulations (the State, Bank of Israel, a local authority, the State
   Comptroller, an association of towns, the National Insurance Institute, a
@@ -132,14 +165,57 @@ The ITA repeats the same list in its taxpayer guide, adding interest, dividends,
 work-injury and reserve-duty payments, indirect-damage compensation, and capital
 gains including traded securities.
 
-**Do not invent a rate for a category this skill does not price.** Agricultural
-work/produce and diamonds are confirmed statutory categories, but their operative
-rates sit in their own regulations under section 164 and are not reproduced here.
+**Do not invent a rate for a category this skill does not price.** Building and
+haulage (reg. 1973) and agricultural work/produce (reg. 1979) are now priced in
+Step 1 from their own regulations. Diamonds, insurance commission, and the fees of
+artists, lecturers, directors and sportspeople are confirmed statutory categories
+whose operative rates sit in their own regulations under section 164 and are not
+reproduced here.
 The ITA declines to publish a consolidated rate table at all and directs users to
 the live per-payee figure: "מידע זמין ומעודכן לגבי שיעורי ניכוי מס במקור יכולים
 המנכים והמנוכים לקבל ישירות מאתר רשות המסים." Query the payee's own rate by
 company/dealer number at the ITA lookup in Reference Links, and treat that result
 as authoritative over any table.
+
+### Step 9: Payments to Non-residents (Section 170)
+- **Rate.** Section 170(a) fixes it in the statute: 25% where the payee is an
+  individual, and the corporate rate under section 126 (23%) where the payee is a
+  company, "או שיעור אחר שיקבע להם פקיד השומה בהודעה בכתב". The assessing officer
+  may also allow payment with no withholding.
+- **Scope.** Section 170 covers income not already withheld under sections 161 and
+  164. Dividends and interest to a non-resident are withheld under the 2005
+  regulations instead (dividends 25%, or 30% to a substantial shareholder).
+- **The bank is a payer too.** Section 170 treats the financial institution
+  that transfers the payment as a payer, unless it holds an assessing-officer
+  approval exempting it, so the transferring bank carries the withholding duty
+  too.
+- **Deadline.** Tax withheld under section 170(a) is paid to the assessing
+  officer within 7 days of withholding, with a report (section 171). This is
+  not the monthly 16th cycle.
+- **Two relief routes, not one.** Form 2513/2 is a bank declaration for exempt
+  payment types only: investment in shares, real estate or tangible assets
+  abroad, loans, options, investment in a foreign partnership, and (since the
+  ITA letter of 15.12.2025) digital assets bought on a KYC exchange, for payees
+  resident in a treaty or CRS country. The form itself says every other payment
+  type goes through the ordinary route under execution instruction 34/93, i.e.
+  the assessing officer. Service fees, licences and royalties are in that second
+  group.
+- **Services performed wholly abroad.** Instruction 34/93 s.3.9 carries a relief
+  for services "שניתנו ובוצעו במלואם בחו"ל" by foreign providers; the ITA's
+  16.12.2025 supplement raised its cap to $250,000 per payer. That supplement is
+  titled as an update on "special companies" (חברות מיוחדות), an approval status
+  under 34/93, and it stresses that such a company stays liable for the tax if it
+  withheld less than required. Read the instruction's conditions before relying
+  on either.
+- **Payer bears the tax (gross-up).** If the contract fixes the net amount the
+  vendor receives and you pay the Israeli tax on top, the arithmetic is: tax =
+  net x rate / (1 - rate), e.g. 10,000 net at 23% gives 2,987.01 of tax on a
+  12,987.01 base. `--payer-bears-tax` computes it. This is arithmetic, not an
+  ITA instruction; confirm the base with an advisor or the assessing officer.
+- **Year-end accruals.** Under section 18(ה), an expense to a non-resident that is
+  subject to withholding under section 164 or 170 is deductible in its year only
+  if paid, or the tax withheld, no later than three months after year-end, and
+  the tax transferred within 7 days of withholding.
 
 ## Examples
 
@@ -151,40 +227,48 @@ books and files on time is 20% = 2,000 NIS withheld, 8,000 NIS net payment, plus
 7,000 NIS net) applies only where the payee cannot show the assessing officer
 that they kept acceptable books and filed their returns. Do not open at 30%: for
 an ordinary compliant freelancer that over-withholds by half. Recommend asking
-the freelancer for their withholding certificate, which usually brings the rate
-down to 0-5%, and check their status on the ITA lookup.
+the freelancer whether they hold a reduced-rate or exemption certificate, and
+check their status on the ITA lookup. A payment for a service worth no more than
+5,520 NIS is outside the duty altogether (the de-minimis in Step 1).
 
 ### Example 2: Certificate Check
 User says: "A vendor gave me a 0% withholding certificate, is it valid?"
-Result: Verify the certificate year, check the ITA gmishurim lookup, and confirm
-the vendor's TIN matches the certificate.
+Result: Check the payee on the ITA gmishurim lookup shortly before paying, confirm
+today falls inside the validity shown there and that the vendor's TIN matches.
+Certificates are electronic, so the online record, not a paper copy, decides.
 
 ### Example 3: Cross-border Payment
 User says: "I need to pay a US company for software licenses"
-Result: Withholding on a payment to a non-resident is set under section 170 and is commonly applied at 25%, but a reduced treaty rate is NOT automatic. Check if a tax
-treaty applies (the US-Israel treaty may reduce the rate). Recommend consulting a
-tax advisor for treaty benefits and the required documentation.
+Result: The payee is a company, so the section 170 default is the 23% corporate
+rate, not 25% (25% is the rate for a non-resident individual). The tax is paid to
+the assessing officer within 7 days of withholding (section 171). A reduced
+treaty rate is NOT automatic: it runs through the assessing officer under
+execution instruction 34/93, because software licences are not among the payment
+types the bank declaration form 2513/2 accepts. Whether a software payment is a
+royalty, a service or a purchase changes the treatment, so have a tax advisor
+classify it before relying on a treaty rate.
 
 ## Bundled Resources
 
 ### Scripts
-- `scripts/calculate_withholding.py` -- Calculates Israeli tax withholding (nikui mas bemakor) amounts for various payment types (services, rent, royalties, dividends, non-resident payments). Supports certificate-based reduced rates and outputs net payment plus VAT breakdown. Run: `python scripts/calculate_withholding.py --help`
+- `scripts/calculate_withholding.py` -- Calculates Israeli tax withholding (nikui mas bemakor) amounts for services (with and without books), rent, interest, dividends, building and haulage, agriculture, and non-resident payments split into `non_resident_individual` (25%) and `non_resident_company` (23%). Categories with no single sourced rate (royalties, company-to-company dividends, related-party interest, diamonds, insurance commission, prizes) return a routing message instead of a number. Applies the 5,520 NIS de-minimis to service/asset payments, drops the VAT line for interest, dividends and non-residents, grosses up with `--payer-bears-tax`, and supports certificate rates. Run: `python scripts/calculate_withholding.py --help`
 
 ### References
-- `references/withholding-rates.md` -- Default withholding rates by payment type under Section 164 (income payments) and Section 170 (special payments), including rates for individuals, companies, major shareholders, and non-residents. Consult when determining the correct default rate for a payment.
+- `references/withholding-rates.md` -- Default withholding rates by payment type under Section 164 (including rent) and Section 170 (non-residents), including rates for individuals, companies, major shareholders, and non-residents. Consult when determining the correct default rate for a payment.
 - `references/certificate-guide.md` -- Guide to Israeli withholding certificates: types (Ishur Nikui Mas BeMakor, Ishur Tium Mas), application process, validity periods, and verification through the ITA gmishurim service. Consult when a vendor presents a withholding certificate or when guiding users through the certificate application process.
 
 ## Recommended MCP Servers
 - **israel-law** -- look up the Income Tax Ordinance sections (164, 170) and the cash-use law text when you need the primary legal source behind a withholding rule.
 
 ## Gotchas
-- Israeli withholding rates are set by the regulations and by the ITA per business, not as one flat rate. With no certificate the service/asset default is **20% where the payee keeps acceptable books and 30% where they do not**; there is no ~47% service-withholding rate (that figure is not in the regulations, do not cite it). An established payee may hold a certificate for 0-5%. Do not hardcode a single rate.
+- Israeli withholding rates are set by the regulations and by the ITA per business, not as one flat rate. With no certificate the service/asset default is **20% where the payee keeps acceptable books and 30% where they do not**; there is no ~47% service-withholding rate (that figure is not in the regulations, do not cite it). An established payee may hold a reduced-rate or exemption certificate. Do not hardcode a single rate.
 - **The common case is 20%, not 30%.** The 30% figure is the sanction for a payee who could not prove acceptable books and timely returns. Defaulting to it silently over-withholds an ordinary compliant supplier by half and pushes them into a refund claim. `scripts/calculate_withholding.py --type services` uses 20%; use `--type services_no_books` for the sanction rate.
-- The skill prices only some of the section 164 categories. Agricultural work/produce, diamond processing and trading, artists, examiners, lecturers, directors and sportspeople are all statutory withholding categories whose rates are NOT in this skill. If asked about one, say the category exists, name the statute, and send the user to the per-payee lookup. Never estimate the rate.
-- Withholding exemption/reduction certificates (ishur nikui mas bemakor) expire annually and must be renewed. Do not rely on a certificate without checking its validity period.
-- When paying a foreign contractor, Israel requires withholding unless a tax treaty provides a reduced rate. Do not apply domestic rates to international payments or skip withholding entirely.
+- The skill prices only some of the section 164 categories. Diamond processing and trading, insurance commission, artists, examiners, lecturers, directors and sportspeople are all statutory withholding categories whose rates are NOT in this skill. If asked about one, say the category exists, name the statute, and send the user to the per-payee lookup. Never estimate the rate.
+- Withholding exemption/reduction certificates (ishur nikui mas bemakor) are time-limited but no longer track the calendar year: the 2026 certificates run to 31.3.2027. Read the dates on the certificate; do not tell a user it expired on 31 December.
+- When paying a foreign contractor, Israel requires withholding unless a tax treaty provides a reduced rate. Do not apply domestic rates to international payments or skip withholding entirely. And do not quote a flat 25%: that is the individual rate; a foreign company is withheld at the 23% corporate rate.
+- A payer who withholds and does not remit, or never withholds, is assessed for the tax itself (sections 167 and 173) and in suitable cases faces criminal sanctions (sections 218 or 219). Losing the expense deduction is on top of that, not instead of it.
 - Withholding on rent that the tenant deducts as a business expense is a uniform **35%**, there is NO separate residential vs. commercial rate, and no "30% residential" rate exists. A private residential tenant who cannot deduct the rent is generally not a withholding agent at all. The reduced/zero rate applies only with a valid certificate.
-- **2026 black-market legislation (Income Tax Circular 3/2026, effective for payments made from 1.1.2026):** an expense or input-VAT deduction is disallowed where the payer failed to withhold tax or to report it as required, or where the payment breached the Law for Reduction of the Use of Cash. The cash-use law caps cash at 6,000 NIS in ANY transaction where a dealer (osek) is a party, on either side (sections 2(א) and 2(ג)), so a dealer taking 10,000 in cash from a private consumer is already in breach. The 15,000 ceiling applies only when NEITHER side is a dealer. **And the ceiling is not the whole rule: permitted cash is the LOWER of the scheduled amount or 10% of the transaction price**, so on a 20,000 NIS deal the real cash limit is 2,000, not 6,000. Treat a missed withholding or a cash-law breach as a deduction risk, not just a reporting issue.
+- **2026 black-market legislation (Income Tax Circular 3/2026, 9.2.2026).** Three separate limbs, with different triggers and dates. (1) Section 32A: from payments made on 1.1.2026, an expense subject to withholding is allowed only if the withheld tax was actually transferred to the assessing officer, not just reported, unless the payee paid the tax, the tax was withheld under an assessing-officer approval, or no withholding duty applied; the rule does not apply to a mainly private expense such as a home rented with a business corner. (2) Section 32(16א): a cash-law breach disallows the expense only once a financial sanction has actually been imposed, for payments from 1.1.2026; the parallel VAT limb, section 38(א2), denies input VAT on invoices issued from 1.1.2026 on the same sanctioned-breach condition. **A withholding failure alone does not deny input VAT.** (3) Section 32(18): from expenses paid on 1.8.2025, no deduction without an allocation number where one is required; the threshold fell to 10,000 NIS from 1.1.2026 and to 5,000 NIS from 31.5.2026. The cash-use law caps cash at 6,000 NIS in ANY transaction where a dealer (osek) is a party, on either side (sections 2(א) and 2(ג)), so a dealer taking 10,000 in cash from a private consumer is already in breach. The 15,000 ceiling applies only when NEITHER side is a dealer. **And the ceiling is not the whole rule: permitted cash is the LOWER of the scheduled amount or 10% of the transaction price**, so on a 20,000 NIS deal the real cash limit is 2,000, not 6,000. Treat a missed withholding or a cash-law breach as a deduction risk, not just a reporting issue.
 
 ## Reference Links
 
@@ -196,13 +280,19 @@ tax advisor for treaty benefits and the required documentation.
 | ITA taxpayer guide, chapter 8 section 9 | `https://www.gov.il/BlobFolder/generalpage/income-tax-guide-knowyourright/he/Guides_IncomeTax_da-2025.pdf` | The two-tier rate rule, the order-based scoping of withholders, and the ITA's own list of withheld income types |
 | gmishurim direct lookup tool | `https://taxinfo.taxes.gov.il/gmishurim/firstPage.aspx` | Direct online check of a payee's withholding/bookkeeping status |
 | Income Tax Ordinance s.164/170 | `https://www.nevo.co.il/law_html/law01/255_001.htm` | Legal basis for withholding on services, rent, non-residents |
+| ITA Circular 3/2026 (black-money amendments) | `https://www.gov.il/BlobFolder/policy/professional-directives-090226-1/he/IncomeTax_professional-directives-090226-1.pdf` | The three disallowance limbs, their triggers and commencement dates |
+| ITA execution instruction 02/2026 | `https://www.gov.il/BlobFolder/policy/inst-02-2026/he/IncomeTax_inst-02-2026.pdf` | Certificate validity period and automatic renewal |
+| Form 2513/2 (bank declaration, non-resident) | `https://www.bankhapoalim.co.il/sites/default/files/media/PDFS/declaration_of_overseas_transfer_exemption_from_tax2513_2.pdf` | The closed list of payment types the declaration route accepts |
 | ITA publications index | `https://www.gov.il/he/collectors/publications?OfficeId=c0d8ba69-e309-4fe5-801f-855971774a90` | Current forms (856, 102, 0852), circulars and treaty publications. The two direct gov.il links this table used to carry, for form 856 and for the taxation agreements guide, both 404 as of 2026-08-19, so search here instead |
 
 ## Troubleshooting
 
 ### Error: "Certificate expired"
-Cause: withholding certificates are annual and expire December 31.
-Solution: ask the vendor for a renewed certificate for the current tax year.
+Cause: the validity shown for the certificate has passed. For the 2026
+certificates, instruction 02/2026 set validity to 31.3.2027, not to 31 December;
+read the dates for the current year's certificates rather than assuming either.
+Solution: check the payee's current status on the ITA lookup (clean files are
+renewed automatically), and ask the vendor for the new certificate if none shows.
 
 ### Error: "Wrong withholding rate applied"
 Cause: using the default rate when a certificate exists, or vice versa; or
@@ -215,11 +305,14 @@ service payment use 20% if the payee keeps acceptable books, 30% if they do not.
 Cause: the periodic deductions report (Form 102) was not filed by the 16th.
 Solution: file immediately. Penalties and indexation apply for late reporting and
 late payment of withheld amounts. Remember the separate annual Form 856
-reconciliation is due April 30.
+reconciliation (30 April, online, under section 166(ב)).
 
 ### Error: "Deduction disallowed by the tax office"
-Cause: under Circular 3/2026, an expense or input-VAT deduction is disallowed
-when the payer did not withhold or report as required, or breached the cash-use
-law (cash over 6,000 NIS, or over 10% of the transaction price if that is lower, in any transaction where a dealer is a party).
-Solution: withhold and report correctly on Form 102, keep the per-payee detail
-for Form 856, and pay above-threshold amounts by non-cash means.
+Cause: under Circular 3/2026, an expense subject to withholding is disallowed
+when the withheld tax was not both reported and transferred (section 32A, from
+1.1.2026). A cash-use breach (cash over 6,000 NIS, or over 10% of the transaction
+price if that is lower, in any transaction where a dealer is a party) disallows
+the expense and the input VAT only once a financial sanction has been imposed.
+Solution: withhold, report on form 0852 / Form 102 and actually pay the tax by the
+16th, keep the per-payee detail for Form 856, and pay above-threshold amounts by
+non-cash means.

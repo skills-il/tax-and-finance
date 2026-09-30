@@ -1,6 +1,23 @@
 {
   "cycles": [
     {
+      "version": "1.6.0",
+      "date": "2026-10-01",
+      "lessons": [
+        "CRITICAL FIX (reverses a v1.5.0 'fix'): v1.5.0 asserted there is no turnover threshold for becoming a withholder, because grep of the 1977 REGULATIONS for מחזור returned nothing. The size test lives in the 1977 ORDER the regulations point to (Nevo 255_373): payers with a double-entry duty or turnover above Schedule A, and s.2א excludes small single-entry payers on both limbs. Lesson: when a regulation defines its scope 'כמשמעותם בצו', open the order before concluding a test does not exist. Absence in one instrument is not absence in the scheme.",
+        "RESOLVED CARRY: s.170 is statutory 25% individual / 23% (s.126) company; calculator split. Also resolved: treaty-relief absolutism (Form 2513/2 closed list vs 34/93), Circular 3/2026 overstatement (three limbs, input VAT only on sanctioned cash breach), building/haulage and agriculture rates now sourced.",
+        "RESOLVED by removal: the treaty rate table (unverified two cycles). CARRY: rebuild it per treaty from gov.il treaty PDFs (US, UK, India first), one evidence entry per row; add India since services/royalties to Indian contractors are common.",
+        "CARRY (Expert MAJOR, deferred): special-company (חברה מיוחדת) regime under 34/93 is named but not walked through (form 615, ספר העברות לחו\"ל).",
+        "CARRY (Expert, deferred): reg. 5(b) mandatory machine filing, certificate limits for in-kind/barter payments (02/2026 s.4.7), mid-year revocation (s.19), listed-company dividend reg. 2(ג).",
+        "CARRY: current Schedule A turnover figure after 2018 not located (Nevo consolidated table stops at 2018, 5,300,000). WebSearch budget was exhausted this session.",
+        "CARRY: software payment classification (royalty vs service vs sale) is flagged for an advisor without a sourced rule; open the governing ITA circular next cycle.",
+        "PROCESS: the research subagent and the CPA gap auditor disagreed on Form 2513/2 scope (services vs capital-only). The form itself settled it: 'בטופס זה ניתן לדווח אך ורק על סוגי התשלום המפורטים ברשימה זו', capital types only. A reviewer's claim about a third-party form needs the form opened.",
+        "PROCESS: all four panel subagents went idle without delivering; each wrote its report once asked to write to a file. Ask for file output up front.",
+        "CARRY (arithmetic reviewer, totals only): the script still adds an 18% VAT line by default for rent_residential and agricultural_produce; residential leases and fresh produce were said to carry no VAT but that was not sourced this cycle. Withholding amounts are unaffected.",
+        "RESOLVED in-cycle: the 856 date. Reg. 5(a) reads 31 March, but Ordinance s.166(ב) sets 30 April online by statute; the first repair privileged the regulation and the judge caught it. Check the Ordinance before a regulation for any deadline."
+      ]
+    },
+    {
       "version": "1.5.0",
       "date": "2026-08-19",
       "lessons": [

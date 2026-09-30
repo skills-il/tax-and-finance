@@ -2,8 +2,9 @@
 
 ## Default Rates by Payment Type
 
-These are the no-certificate ITA defaults. A valid withholding certificate
-typically brings the rate down to 0-5%.
+These are the no-certificate defaults. A valid certificate from the assessing
+officer sets a reduced rate or an exemption for that payee; this file does not
+guess what that rate typically is.
 
 ### Section 164, Income Payments
 | Payment Type | Rate | Notes |
@@ -11,10 +12,14 @@ typically brings the rate down to 0-5%.
 | Services/assets (individual, acceptable books, no certificate) | 20% | Base rate under the 1977 regulations |
 | Services/assets (individual, no acceptable books, no certificate) | 30% | Penalty rate for an unverified / no-books payee |
 | Services (company, no certificate) | 20% base / 30% without acceptable books | reg. 2 draws no individual/company distinction. The 20-30% range often quoted reflects the assessing officer's classification on the certificate, not a different statutory default |
-| Interest | 25% | Bank and non-bank interest |
-| Dividends | 25% | Standard shareholders |
-| Dividends (major shareholder) | 30% | Substantial shareholder: holding 10% or more |
-| Gambling, lotteries and prizes | Not encoded | Withheld under s.164 by reference to s.2A. The substantive rate under s.124B is 35% with no exemption, relief, deduction, credit or offset. The operative withholding rate sits in its own regulations; look it up per payee. The 25% figure previously shown here was unsourced and has been removed |
+| Interest to an individual | 25% | 15% where the asset is not index-linked (regs. 4 and 5 of the 2005 regulations) |
+| Interest to a company | Maximum rate (23%) | Reg. 7 of the 2005 regulations; "maximum rate" for a company is the s.126(a) corporate rate |
+| Interest to a company's substantial shareholder, employee or supplier | Maximum rate | Reg. 6 of the 2005 regulations: the top s.121 rate for an individual. Shareholder-loan interest is the common case |
+| Dividends | 25% | To an individual, resident or non-resident. A company paying an Israeli-resident company withholds only where a limited rate applies under any law (reg. 2(א1)) |
+| Dividends (major shareholder) | 30% | Substantial shareholder: holding 10% or more, at any time in the 12 months before payment |
+| Building and haulage work | 20% | Regs. 1973, reg. 2(a). 17% (one to four sub-payees) or 15% (five or more) with the assessing officer's written approval, reg. 2(b). Without acceptable books reg. 2(c) sets "שיעור הגדול ב-10% מהשיעורים", i.e. 30% on the 20% base |
+| Agricultural work / agricultural produce | 20% / 5% | Regs. 1979. 10 points higher without acceptable books |
+| Gambling, lotteries and prizes | Not encoded | Withheld under s.164 by reference to s.2A. The substantive rate under s.124B is 35% with no exemption, relief, deduction, credit or offset, except an exemption under s.9(28) or a deduction under s.17(11). The operative withholding rate sits in its own regulations; look it up per payee. The 25% figure previously shown here was unsourced and has been removed |
 
 For a no-certificate service/asset payment, the statutory default is 20% where
 the payee keeps acceptable books (reg. 2(a), the ordinary case) and 30% where
@@ -27,14 +32,13 @@ ITA states it directly: "בתקנות לניכוי מס במקור מהכנסו�
 יותר לסרבנים." Treat any single-rate row below as the compliant-payee rate and
 establish the payee's status before applying it.
 
-### Section 170, Special Payments
+### Rent (s.164), royalties, non-residents (s.170) and unpriced categories
 | Payment Type | Rate | Notes |
 |-------------|------|-------|
-| Rent (real estate the tenant deducts as a business expense) | 35% | Uniform, no residential/commercial split; a private residential tenant who cannot deduct the rent is generally not a withholding agent |
+| Rent (real estate the tenant deducts as a business expense), s.164, 1998 regulations | 35% | Uniform, no residential/commercial split; a private residential tenant who cannot deduct the rent is generally not a withholding agent |
 | Royalties | See note | The 1977 regulations create no separate royalties rate. To a resident, use the 20%/30% services-and-assets default; to a non-resident, section 170 applies. The figure often quoted for royalties is simply the corporate tax rate applied to a non-resident company, not a distinct withholding category |
-| Payments to non-residents | Section 170 rate, commonly 25% | Treaty relief is NOT self-executing: a reduced rate or exemption needs prior approval from the assessing officer |
+| Payments to non-residents | 25% individual / 23% company | s.170(a), statutory, unless the assessing officer sets another rate in writing. Paid within 7 days of withholding (s.171). Covers income not withheld under s.161/164, so dividends and interest follow the 2005 regulations. Relief: Form 2513/2 bank declaration for its closed list of capital payment types only; everything else (services, licences, royalties) through the assessing officer under execution instruction 34/93 |
 | Insurance commissions | Not encoded | A statutory category (Ordinance s.166(c)(1), under s.164). The 20% figure in circulation is not verified against a primary source here, so it is not asserted. Look it up per payee |
-| Building and haulage work | Not encoded | Its own statutory category (Ordinance s.166(c)(5), under s.164) with its own regulations. The 30% figure previously shown here was unsourced and has been removed. For a plain service or asset payment to a contractor, use the 20%/30% services default |
 
 ## Thresholds
 
@@ -45,14 +49,19 @@ establish the payee's status before applying it.
   neither text states whether the amount is VAT-inclusive, so do not assert that
   either way. The figure is updated by ministerial notice; verify the current
   year.
-- **The 1977 regulations contain no turnover threshold for becoming a withholding agent.** Do not
-  tell a payer they are below one. Under s.164 the classes of withholders and of
-  payments are fixed by an order of the Finance Minister with Knesset Finance
-  Committee approval, so the family is open and order-by-order. In the 1977
-  regulations "משלם" is any person making service/asset payments, except an
-  individual or partnership of individuals whom the assessing officer has
-  approved **in writing** as not a payer for a given year after a material
-  contraction of their business.
+- **Who must withhold is set by the order, and it does include a size test.**
+  The 1977 regulations cover payments as defined in צו מס הכנסה (קביעת תשלומים
+  בעד שירותים או נכסים כהכנסה), תשל"ז-1977. That order lists the payers: the State
+  and public bodies, government companies, financial institutions, hospitals and
+  similar bodies, and any business required to keep double-entry books or whose
+  turnover exceeded the Schedule A amount. Section 2א of the order excludes
+  payments by an individual, a partnership of individuals or a company outside a
+  group where, in each of the three relevant years, turnover did not exceed the
+  Schedule A amount and there was no double-entry duty. The last year in the
+  consolidated Schedule A on Nevo is 2018, at 5,300,000 NIS; confirm the current
+  figure. The 1977 regulations add a further exit for an individual or
+  partnership of individuals whom the assessing officer approved **in writing**
+  as not a payer for a year after a material contraction of their business.
 - **Schedule A recipients are outside the regime**: the State, Bank of Israel, a
   local authority, the State Comptroller, an association of towns, the National
   Insurance Institute, a religious council, the Jewish Agency, the World Zionist
@@ -60,29 +69,19 @@ establish the payee's status before applying it.
   Hayesod, the Administrator General, a banking institution, an insurer, and a
   house-committee representation for common-property maintenance charges.
 
-## Tax Treaty Reduced Rates (Common)
-| Country | Dividends | Interest | Royalties |
-|---------|-----------|----------|-----------|
-| USA | 12.5-25% | 17.5% | 15% |
-| UK | 5% (holding 10%+) / 15% | 5% bank / 10% | **0%** |
-| Germany | 5% / 10% | 0% / 5% | 0% |
-| France | 10-15% | 10% | 10% |
-| Canada | 5% (holding 25%+) / 15% | 10% | 10% |
+## Tax Treaty Reduced Rates
 
-NOTE: Treaty rates require proper documentation and forms. Always verify the
-specific treaty provision before relying on a row. The gov.il treaty index URL
-this table used to cite, the taxation agreements guide page, returns
-404 as of 2026-08-19 and no replacement index was located this cycle, so these
-rows are carried forward from the v1.4.0 verification and are **not
-re-verified**. Treat them as a prompt to read the treaty, not as an authority.
+No treaty rate table is carried here any more. The table previous versions
+showed could not be re-verified against the treaty texts for two cycles (its only
+cited index page went dead), and some rows had already been found stale. A treaty
+rate the skill cannot source is exactly the kind of number an agent will quote
+confidently, so it was removed rather than carried a third time.
 
-## Withholding Certificate Rates
-Businesses can apply for reduced rates:
-- 0%, clean tax record, established business
-- 2%, most common reduced rate
-- 5%, standard reduced rate
-- 10%, moderate reduction
-- Custom rate based on tax assessment
+To find a rate: read the specific treaty (the ITA publishes each one as a PDF on
+gov.il, reachable from the ITA publications index), identify the article for the
+payment type (dividends, interest, royalties, business profits), and remember that
+the reduced rate is not self-executing: for services, licences and royalties it
+runs through the assessing officer under execution instruction 34/93.
 
 ## Reporting Forms
 - **Deadline: the 16th, not the 15th.** Reg. 4 of the 1977 regulations: "משלם
@@ -91,13 +90,17 @@ Businesses can apply for reduced rates:
   Bituach Leumi date, and BTL has its own separate form also called 102.
 - **Form 0852:** the per-payee periodic return reg. 4 names for service and asset
   payments, filed and paid on that same 16th.
-- **Form 102:** the periodic deductions report and payment (monthly or
-  bi-monthly), on the same 16th for income-tax deductions.
+- **Form 102:** the periodic deductions report and payment, on the same 16th
+  for income-tax deductions. Reg. 4 sets supplier withholding on a monthly cycle.
+- **Form 0857:** the annual certificate the payer gives each payee for the previous tax year, due by 20 March under reg. 6 of the 1977 regulations.
+- **Form 0867:** the certificate for interest and dividend recipients, on
+  request, by 20 March (2005 regulations).
 - **Form 856:** annual per-payee withholding reconciliation for supplier and
-  service-provider payments, due April 30 of the following year (commonly
-  extended by ITA notice, e.g. to end-May/June).
+  service-provider payments, online by 30 April under Ordinance s.166(ב). Reg.
+  5(a) of the 1977 regulations still carries an older 31 March date and names the
+  per-payee 0851 cards. Check for a current-year ITA extension notice.
 - **Form 126:** the salary-side annual withholding report (employees), filed
-  alongside Form 856 with the same April 30 baseline deadline. 856 covers
+  alongside Form 856. 856 covers
   suppliers/service-providers; 126 covers salaries, a payer with both files both.
 
 ## The full statutory category list (s.166(c), under s.164)
