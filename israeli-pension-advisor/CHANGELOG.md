@@ -1,5 +1,54 @@
 # Changelog
 
+## 2.6.0 - 2026-10-01
+
+- Tikun 190: removed the claim that a Bituach Leumi old-age pension counts toward
+  the minimum pension; it does not. The minimum-pension test (5,306 in 2026) is
+  applied when a lump sum is taken, not at deposit, and the monthly route needs
+  only age 60+. Added the first-38,412-per-year qualifying-pension tranche and the
+  death-before-75 / after-75 rules.
+- Kupat gemel lehashkaa: lump sum is taxed 25% on the real gain at any age, and a
+  monthly pension from 60 is exempt. The skill previously said "marginal rate".
+- Self-employed mandatory pension: the obligation runs to early-retirement age 60,
+  not legal retirement age; the new-business exemption is "fewer than 6 months
+  since first VAT registration at year end", not "the first calendar year"; added
+  the 55-on-01.01.2017 exemption and the correct statute (Economic Efficiency Law
+  2016, Chapter B). Script updated to match.
+- Employees: removed the false "deposits above 679 earn a deduction" rule; added
+  the employer-exclusion ceilings (34,423/month tagmulim salary cap, 45,600/year
+  severance) and the self-employed 5% vs 5.5% credit rule.
+- Form 161: silence defaults to rezef-kitzbah only when severance in kitzbah funds
+  is within the 405,900 default ceiling and there are no non-kupah grants.
+- Nayadut: the 10-business-day transfer deadline is now sourced to reg. 5(a) of
+  the 2008 Transfer Regulations, resolving a two-cycle carry.
+- Keren hishtalmut: early withdrawal by an employee taxes employer deposits AND
+  gains; withdrawal is also allowed after 3 years at retirement age.
+- Form 161ד renamed to its official title (fixation of rights, kibua zechuyot);
+  "gibush kitzbaot" removed.
+- New references/approaching-retirement.md: Bituach Leumi old-age pension income
+  test and deferral increment, the transition grant for women born 1960-1966,
+  commutation (hivun) rules, Form 161ד, and budget-pension routing.
+- Example 2 no longer ranks hishtalmut over pension; the ceilings are presented
+  neutrally.
+- Exempt-pension schedule attributed to Amendment 275 (December 2024).
+- Pension-adviser note corrected to the Pension Advice Law s.19(a)(2): an adviser
+  may take a distribution fee with the client's written consent; the "meshavek"
+  category and the "no commissions" claim were removed.
+- Heichum kitzbah window anchored to the eligibility age: the cut-off is about 35
+  for men but about 33 for women born 1970 or later (was a flat "under ~35").
+- Self-employed credit and deduction tiers now say they apply to a beneficiary
+  member (amit mutav, 26,436 NIS in 2026).
+- Form 161ג described as the request to revert a rezef election (not a route for
+  returning withdrawn severance); the unsourced "return with interest" route was
+  removed.
+- Added the 90-day deadline for the commutation exemption and the 300-day
+  unemployment entitlement for women born 1960+ aged 57+.
+- Examples 1, 3 and 4 and Step 8 reworded to explain options and trade-offs
+  without recommending a product or a choice for the user.
+- Moved the Section 14 sub-cases to references/tax-benefits.md and the Hebrew
+  cohort table and troubleshooting to references/, bringing both SKILL.md and
+  SKILL_HE.md under the 5,000-word cap with matching section counts.
+
 ## 2.5.0 - 2026-08-19
 
 - Tikun 190 lump-sum tax base corrected to the NOMINAL gain (15%) in the three

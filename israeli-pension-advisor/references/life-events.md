@@ -1,7 +1,7 @@
 # Pension at life events
 
 Detail for Step 9 of SKILL.md: divorce and pension splitting, relocation
-abroad, spousal attribution, aggregating pensions at retirement, and bridge
+abroad, spousal attribution, fixation of rights at retirement, and bridge
 pensions.
 
 **Divorce, pension split:** The Pension Savings Division between Separated Spouses Law (2014) lets an ex-spouse register the divorce decree directly with the pension fund or insurer. Once registered, the fund administers the agreed split (typically up to 50% of the accumulation during the marriage) and pays each ex-spouse separately at their respective retirements. No repeated court enforcement is needed. Register promptly: the fund may pay out before registration without splitting if it has no notice.
@@ -10,6 +10,6 @@ pensions.
 
 **Spousal attribution (nikuy zikkui):** Under Section 47 of the Income Tax Ordinance, a non-working spouse's pension/hishtalmut contributions can shift to the working spouse's credit ceiling, increasing the household's overall tax benefit. Often missed in single-earner households.
 
-**Combining multiple pensions at retirement (gibush kitzbaot):** Aggregate kitzbah from prior employers/funds into a single drawdown to maximize use of the kitzbah-mezakah exemption. Done via Form 161ד at retirement.
+**Fixation of rights at retirement (kibua zechuyot, Form 161ד):** The Tax Authority form "request for fixation of rights under Section 9A" allocates the lifetime exemption pool between the monthly pension and capital or severance grants. See `references/approaching-retirement.md`.
 
 **Bridge pension (pensia gisha):** Common in high-tech severance packages; lets an executive draw kitzbah from age 60 to 67 from a managed payout. Tax treatment varies by fund design.

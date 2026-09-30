@@ -132,7 +132,7 @@ FEMALE_RETIREMENT_AGE_BY_BIRTH_YEAR = {
     1968: 64 + 6 / 12,
     1969: 64 + 9 / 12,
 }
-FEMALE_RETIREMENT_AGE_PRE_1960 = 62.0   # born 1959 or earlier: flat 62
+FEMALE_RETIREMENT_AGE_PRE_1960 = 62.0   # born May 1947 to 1959: 62 (earlier cohorts are long retired and not modelled)
 FEMALE_RETIREMENT_AGE_1970_PLUS = 65.0  # born 1970 or later: flat 65
 MALE_RETIREMENT_AGE = 67.0
 
@@ -239,7 +239,7 @@ def project_retirement(
         "estimated_monthly_pension_net_est": round(monthly_pension_net, 2),
         "assumptions": (
             f"{annual_return*100:.1f}% annual real return; retirement at age "
-            f"{retirement_age}; deposit base {'the compulsory ceiling' if mandatory_only else 'full salary capped at the fund maximum determining salary'} "
+            f"{retirement_age:.2f}; deposit base {'the compulsory ceiling' if mandatory_only else 'full salary capped at the fund maximum determining salary'} "
             f"({insurable:,.0f} NIS/month of the {monthly_salary:,.0f} gross); "
             f"mekadem hamara ~{mekadem:.0f} (linear interpolation between two industry "
             f"anchors, not a published table; clamped to 150-260); tax estimated at 31% "
@@ -312,7 +312,7 @@ def main():
     )
     parser.add_argument(
         "--self-employed", action="store_true",
-        help="Calculate for self-employed (atzmai); first business year is exempt"
+        help="Calculate for self-employed (atzmai); see --first-business-year for the new-business exemption"
     )
     parser.add_argument(
         "--project", action="store_true",
@@ -329,7 +329,7 @@ def main():
     )
     parser.add_argument(
         "--first-business-year", action="store_true",
-        help="Apply self-employed first-year exemption (no mandatory pension obligation)"
+        help="Apply the new-business exemption: fewer than 6 months since first VAT registration as osek, measured at the end of the tax year (no mandatory pension obligation for that year)"
     )
     parser.add_argument(
         "--example", action="store_true", help="Show example calculation"
@@ -364,7 +364,7 @@ def main():
         if args.first_business_year:
             mandatory = 0.0
             note_first_year = (
-                "  Note: first calendar year of business is exempt from mandatory pension.\n"
+                "  Note: exempt this tax year: fewer than 6 months had passed since first VAT registration as osek at the end of the tax year.\n"
             )
         else:
             half_avg = AVG_WAGE / 2
@@ -402,7 +402,7 @@ def main():
         print(f"    Tax deduction ceiling:       {SELF_HISHTALMUT_DEDUCT:>10,} NIS/year")
         print(f"    Profit-exempt ceiling:       {SELF_HISHTALMUT_MAX:>10,} NIS/year")
         print()
-        print("  Obligation applies between age 21 and legal retirement age.")
+        print("  Obligation applies from age 21 until early-retirement age 60 (both tested at tax-year end);\n  anyone aged 55+ on 01.01.2017 is exempt.")
         print("  NOTE: Consult a licensed pension advisor (yoetz pensioni)")
         print("        for personalized recommendations.")
         return

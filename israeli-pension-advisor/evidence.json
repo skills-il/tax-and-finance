@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0",
   "skill": "israeli-pension-advisor",
-  "generated_at": "2026-08-19T03:33:44.716505+00:00",
+  "generated_at": "2026-10-01",
   "claims": [
     {
       "claim_id": "avg-wage-2026",
@@ -33,7 +33,7 @@
     },
     {
       "claim_id": "self-employed-pension-brackets-2026",
-      "claim": "Self-employed mandatory pension: 4.45% on net taxable income up to half average wage (6,884.50 NIS/month); 12.55% on income from half to full average wage (6,884.50 to 13,769 NIS/month); no obligation above full average wage; first year of business exempt; obligation applies age 21 to retirement age",
+      "claim": "Self-employed mandatory pension brackets: 4.45% up to half the average wage and 12.55% from half to the full average wage. (Age bounds and the new-business rule are sourced separately to the Economic Efficiency Law 2016.)",
       "source_url": "https://www.kolzchut.org.il/he/%D7%91%D7%99%D7%98%D7%95%D7%97_%D7%A4%D7%A0%D7%A1%D7%99%D7%95%D7%A0%D7%99_%D7%9C%D7%A2%D7%95%D7%91%D7%93_%D7%A2%D7%A6%D7%9E%D7%90%D7%99",
       "raw_snippet": "עבור חלק מההכנסה שעד חצי מ השכר הממוצע השנתי במשק (כלומר עבור 82,614 ₪ הראשונים בשנת המס, נכון ל-2026) יש להפקיד 4.45% מההכנסה.",
       "fetched_at": "2026-05-18T00:00:00Z",
@@ -216,15 +216,16 @@
     },
     {
       "claim_id": "section-14-mechanics",
-      "claim": "Section 14 of the Severance Pay Law (1963) releases the employer from supplementing severance if ongoing contributions cover the full liability at 8.33% of salary. The אישור כללי (General Approval, June 1998 and amendments) defines four real-world sub-cases: full 8.33% from day 1 on full salary; Section 14 on partial salary with the balance under the general law; Section 14 starting only after a delay (employer owes the gap at final salary for the pre-Section-14 period); and collective-agreement Section 14 where bonuses and retroactive raises sit outside the arrangement.",
-      "source_url": "https://www.kolzchut.org.il/he/%D7%97%D7%95%D7%91%D7%AA_%D7%91%D7%99%D7%98%D7%95%D7%97_%D7%A4%D7%A0%D7%A1%D7%99%D7%95%D7%A0%D7%99_%D7%9C%D7%A2%D7%95%D7%91%D7%93%D7%99%D7%9D",
-      "raw_snippet": "סעיף 14 לחוק פיצויי פיטורים תשכ\"ג-1963; אישור כללי לפי סעיף 14 (משרד העבודה, נוסח 30.6.1998)",
-      "fetched_at": "2026-05-18T00:00:00Z",
+      "claim": "Severance Pay Law s.14: a fund payment replaces severance only where a collective agreement or a ministerial approval (the General Approval) so provides. The four sub-cases in references/tax-benefits.md are explanatory structure, not quoted from this source.",
+      "source_url": "https://he.wikisource.org/wiki/חוק_פיצויי_פיטורים",
+      "raw_snippet": "תשלום לקופת תגמולים, לקרן פנסיה או לקרן כיוצא באלה, לא יבוא במקום פיצויי פיטורים אלא אם נקבע כך בהסכם הקיבוצי החל על המעסיק והעובד ובמידה שנקבע, או אם תשלום כאמור אושר על ידי שר העבודה ובמידה שאושר.",
+      "fetched_at": "2026-10-01",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/tax-benefits.md"
-      ]
+      ],
+      "note": "Re-sourced 2026-10-01: the previous Kol Zchut snippet was a self-authored summary and the page is WAF-blocked."
     },
     {
       "claim_id": "retirement-age-women-2026",
@@ -268,7 +269,7 @@
     },
     {
       "claim_id": "tikun-190-deposits",
-      "claim": "Tikun 190 (Amendment 190 to the Income Tax Ordinance, 2012) lets pensioners aged 60+ who draw a qualifying pension (kitzbah mezakah) of at least the minimum threshold (5,306 NIS/month in 2026) deposit funds into a kupat gemel le-kitzbah. Lump-sum withdrawal is taxed at 15% on the NOMINAL gain, against 25% on the REAL (CPI-adjusted) gain in comparable investment channels. The base is nominal, never real.",
+      "claim": "A Tikun 190 lump-sum withdrawal is taxed at 15% on the nominal gain, against 25% on the real gain in other savings channels.",
       "source_url": "https://www.analyst.co.il/articles/190_questions_and_answers/",
       "raw_snippet": "תשלום מס רווחי הון מופחת בשיעור של 15% נומינלי (במקום 25% ריאלי הנגבה באפיקי השקעה דומים)",
       "fetched_at": "2026-08-19T03:09:54.698772+00:00",
@@ -411,15 +412,18 @@
     },
     {
       "claim_id": "form-161d-retirement-settlement",
-      "claim": "Form 161ד (161D) is filed at retirement to settle the lifetime kitzbah-mezakah exemption calculation against severance the employee took during their career. Used during gibush kitzbaot at retirement to aggregate kitzbah from multiple prior employers.",
-      "source_url": "https://www.kolzchut.org.il/he/%D7%9E%D7%A9%D7%99%D7%9B%D7%AA_%D7%9B%D7%A1%D7%A4%D7%99_%D7%A4%D7%99%D7%A6%D7%95%D7%99%D7%99_%D7%A4%D7%99%D7%98%D7%95%D7%A8%D7%99%D7%9D_%D7%9E%D7%A7%D7%95%D7%A4%D7%AA_%D7%92%D7%9E%D7%9C_%D7%90%D7%95_%D7%9E%D7%94%D7%91%D7%99%D7%98%D7%95%D7%97_%D7%94%D7%A4%D7%A0%D7%A1%D7%99%D7%95%D7%A0%D7%99",
-      "raw_snippet": "טופס 161ד: יישוב חישוב פטור על קצבה מזכה בפרישה",
-      "fetched_at": "2026-05-18T00:00:00Z",
+      "claim": "Form 161ד is the Tax Authority's request for fixation of rights under Section 9A (kibua zechuyot).",
+      "source_url": "https://www.gov.il/BlobFolder/guide/2026-filling-out-form-161d/he/Guides_IncomeTax_filling-out-form-161d-2026.pdf",
+      "raw_snippet": "טופס 161ד - \"בקשה לקיבוע זכויות לפי סעיף 9א לפקודה\"",
+      "fetched_at": "2026-10-01",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/life-events.md"
-      ]
+      ],
+      "note": "Re-sourced 2026-10-01: the previous Kol Zchut snippet was a self-authored summary and the page is WAF-blocked.",
+      "verified_via": "pdf",
+      "verified_at": "2026-10-01"
     },
     {
       "claim_id": "disability-75-percent-takanon-achid",
@@ -434,13 +438,14 @@
     },
     {
       "claim_id": "kupat-gemel-hashkaa-cap-2026",
-      "claim": "Kupat gemel le-hashka'a (IRA-style, introduced 2016) annual deposit ceiling is 83,641 NIS per beneficiary for 2026, updated annually by the Capital Markets Authority.",
-      "source_url": "https://www.kolzchut.org.il/he/%D7%A7%D7%95%D7%A4%D7%AA_%D7%92%D7%9E%D7%9C_%D7%9C%D7%94%D7%A9%D7%A7%D7%A2%D7%94",
-      "raw_snippet": "תקרת הפקדה שנתית לקופת גמל להשקעה 2026: 83,641 ש\"ח לכל מוטב",
-      "fetched_at": "2026-05-18T00:00:00Z",
+      "claim": "Gemel Law s.22(a): total deposits across all of a member's investment provident fund accounts may not exceed 70,000 NIS (indexed; 83,641 NIS in 2026) per year.",
+      "source_url": "https://he.wikisource.org/wiki/חוק_הפיקוח_על_שירותים_פיננסיים_(קופות_גמל)",
+      "raw_snippet": "בשנת 2026, 83,641 ש״ח",
+      "fetched_at": "2026-10-01",
       "appears_in": [
         "references/pension-fund-types.md"
-      ]
+      ],
+      "note": "Re-sourced 2026-10-01: the previous Kol Zchut snippet was a self-authored summary and the page is WAF-blocked."
     },
     {
       "claim_id": "derived-figures",
@@ -470,7 +475,7 @@
     },
     {
       "claim_id": "kitzbah-mezakah-minimum-2026",
-      "claim": "Minimum qualifying pension (kitzbah mezakah minimit) for Tikun 190 deposit eligibility in 2026: approximately 5,306 NIS/month, equal to the minimum kitzbah amount in the unified regulations.",
+      "claim": "The minimum pension (סכום קצבה מזערי) is 5,306 NIS/month in 2026; it is the test applied when a pension is commuted or a Tikun 190 lump sum is withdrawn, not a condition at deposit.",
       "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf",
       "raw_snippet": "מרכיב התגמולים - סכום קצבה מזערי 5,306 לחודש",
       "fetched_at": "2026-08-19T03:09:54.698772+00:00",
@@ -545,17 +550,6 @@
       "claim": "Kol Zchut page on 'משיכת כספי פיצויי פיטורים מקופת גמל או מהביטוח הפנסיוני' details bittul pituyim, rezef zechuyot, and severance tax mechanics. Note: this page reflects the pre-2024 Form 161א flow; for the current unified Form 161 (Parts A/B/C, January 2024 onwards) see the gov.il Notice of Retirement page.",
       "source_url": "https://www.kolzchut.org.il/he/משיכת_כספי_פיצויי_פיטורים_מקופת_גמל_או_מהביטוח_הפנסיוני",
       "raw_snippet": "משיכת פיצויי פיטורים - דף סיכום על תהליך טופס 161א, רצף זכויות, וביטול פיצויים",
-      "fetched_at": "2026-05-18T00:00:00Z",
-      "appears_in": [
-        "SKILL.md",
-        "SKILL_HE.md"
-      ]
-    },
-    {
-      "claim_id": "reference-link-kolzchut-retirement-age",
-      "claim": "Kol Zchut page on 'גיל פרישה מעבודה' summarizes the male and female retirement ages and the 2032 target schedule.",
-      "source_url": "https://www.kolzchut.org.il/he/גיל_פרישה_מעבודה",
-      "raw_snippet": "גיל פרישה מעבודה - דף סיכום על גילי הפרישה הנוכחיים ולוח הזמנים ל-2032",
       "fetched_at": "2026-05-18T00:00:00Z",
       "appears_in": [
         "SKILL.md",
@@ -824,6 +818,603 @@
         "SKILL_HE.md"
       ],
       "note": "[Judge + Expert finding, 2026-08-19] gov.il/he/service/* returns HTTP 403 to plain fetches, so neither the day-count window nor the post-2024 'silence defaults to rezef-kitzbah' reversal could be verified this cycle. Rather than assert them, both were hedged in all six places they appeared across SKILL.md and SKILL_HE.md. This entry exists to record the open question, not to justify a figure. CARRY to next cycle."
+    },
+    {
+      "claim_id": "employer-tagmulim-ceiling-2026",
+      "claim": "Employer tagmulim deposits are exempt up to 7.5% of salary capped at 34,423 NIS/month (s.3(ה3) 'סכום התקרה', 2.5x average wage).",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf",
+      "raw_snippet": "תקרה להפרשות המעביד לקופת גמל לקצבה 3(ה3) 34,423 לחודש",
+      "fetched_at": "2026-10-01",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-benefits.md"
+      ],
+      "verified_via": "pdf",
+      "verified_at": "2026-10-01"
+    },
+    {
+      "claim_id": "employer-tagmulim-ceiling-statute",
+      "claim": "Statutory definition: the employer-deposit ceiling equals two and a half times the monthly average wage.",
+      "source_url": "https://he.wikisource.org/wiki/פקודת_מס_הכנסה",
+      "raw_snippet": "”סכום התקרה“ – סכום השווה לשתי פעמים וחצי השכר הממוצע במשק בחודש",
+      "fetched_at": "2026-10-01",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-benefits.md"
+      ]
+    },
+    {
+      "claim_id": "employer-severance-ceiling-2026",
+      "claim": "Employer severance deposits are exempt up to the lower of the salary or 45,600 NIS per year (2026).",
+      "source_url": "https://he.wikisource.org/wiki/פקודת_מס_הכנסה",
+      "raw_snippet": "בשנת 2026, 45,600 ש״ח",
+      "fetched_at": "2026-10-01",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-benefits.md"
+      ]
+    },
+    {
+      "claim_id": "default-rezef-kitzbah-ceiling-2026",
+      "claim": "The default rezef-kitzbah ceiling printed in the 2026 booklet is 405,900 NIS for the accumulation period; per s.9(7א)(ז1) the ceiling is the higher of that amount or the severance ceiling multiplied by years of service, so the skill says 'at least 405,900' and defers to the employer's Part A computation.",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf",
+      "raw_snippet": "רצף קצבה 7(9א)(ז1) 405,900 לתקופת הצבירה",
+      "fetched_at": "2026-10-01",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "verified_via": "pdf",
+      "verified_at": "2026-10-01"
+    },
+    {
+      "claim_id": "form161-default-conditional",
+      "claim": "Form 161: the employee may skip Part B and is treated as requesting rezef kitzbah only if the employer marked the severance does not exceed the default-rezef ceiling and there are no grants from non-kupah payers; otherwise Part B must be filled. The new form replaces 161 and 161א.",
+      "source_url": "https://www.gov.il/BlobFolder/service/notice-of-retirement/he/IncomeTax_employers-info-160423-1.pdf",
+      "raw_snippet": "באפשרות העובד לא למלא חלק זה ויראו כאילו הגיש בקשה לרצף קצבה ביחס לסכומים כאמור. אולם, בכל מקרה אחר, על העובד למלא את חלק זה",
+      "fetched_at": "2026-10-01",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "verified_via": "pdf",
+      "verified_at": "2026-10-01"
+    },
+    {
+      "claim_id": "form161-10-days",
+      "claim": "Tax Authority clarifications relayed by a CPA firm: the employer completes Part C at the earlier of the form's return or 10 days after handing it to the employee.",
+      "source_url": "https://britcpa.co.il/hozrim/פורסמו-הבהרות-של-רשות-המסים-לגבי-מילוי/",
+      "raw_snippet": "10 ימים מהיום שבו העביר המעסיק לעובד את הטופס החדש",
+      "fetched_at": "2026-10-01",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "nayadut-10-business-days",
+      "claim": "תקנה 5(א) of the 2008 Transfer Regulations: the transferring fund must transfer within 10 (ten) business days of a complete signed request; the Commissioner may extend by up to 20 further business days.",
+      "source_url": "https://he.wikisource.org/wiki/תקנות_הפיקוח_על_שירותים_פיננסיים_(קופות_גמל)_(העברת_כספים_בין_קופות_גמל)",
+      "raw_snippet": "בתוך עשרה ימי עסקים מהיום שבו הועברה לו בקשת העברה מפורטת, חתומה ומלאה",
+      "fetched_at": "2026-10-01",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "self-employed-age-bounds",
+      "claim": "Self-employed mandatory pension: exceptions for someone under 21, someone who reached early-retirement age (60), fewer than six months since first VAT registration as osek (all at tax-year end), and anyone aged 55 on the law's commencement (01.01.2017). Economic Efficiency Law 2016, Chapter B.",
+      "source_url": "https://he.wikisource.org/wiki/חוק_ההתייעלות_הכלכלית_(תיקוני_חקיקה_להשגת_יעדי_התקציב_לשנות_התקציב_2017_ו-2018)",
+      "raw_snippet": "עצמאי שמלאו לו 55 שנים ביום תחילתו של חוק זה",
+      "fetched_at": "2026-10-01",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-benefits.md",
+        "scripts/calculate_pension.py"
+      ]
+    },
+    {
+      "claim_id": "self-employed-new-business",
+      "claim": "New-business exemption: fewer than six months since first registration as osek under VAT Law s.52.",
+      "source_url": "https://he.wikisource.org/wiki/חוק_ההתייעלות_הכלכלית_(תיקוני_חקיקה_להשגת_יעדי_התקציב_לשנות_התקציב_2017_ו-2018)",
+      "raw_snippet": "טרם חלפו ששה חודשים מהמועד שבו העצמאי נרשם לראשונה כעוסק",
+      "fetched_at": "2026-10-01",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-benefits.md",
+        "scripts/calculate_pension.py"
+      ]
+    },
+    {
+      "claim_id": "early-retirement-age-60",
+      "claim": "Early retirement age is 60 for men and women (Retirement Age Law s.5).",
+      "source_url": "https://he.wikisource.org/wiki/חוק_גיל_פרישה",
+      "raw_snippet": "הוא גיל 60 לגבר ולאישה",
+      "fetched_at": "2026-10-01",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-benefits.md",
+        "scripts/calculate_pension.py"
+      ]
+    },
+    {
+      "claim_id": "s45a-self-employed-0.5pct",
+      "claim": "Section 45a(ו): the extra 0.5% credit for a self-employed member applies only if no preferred loss-of-work-capacity premiums were deducted under Section 32(14)(ב) (סעיף 32); otherwise the credit is 5%.",
+      "source_url": "https://he.wikisource.org/wiki/פקודת_מס_הכנסה",
+      "raw_snippet": "יזוכה ממס בשיעור של 35% מן הסכומים שהפקיד לקופת גמל לקצבה בעבור עצמו כעמית עצמאי ולא זוכה בשלהם ממס לפי סעיף קטן (ב), עד לשיעור של 0.5% מהכנסתו מעסק או ממשלח יד",
+      "fetched_at": "2026-10-01",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-benefits.md"
+      ]
+    },
+    {
+      "claim_id": "s32-lowc-3.5pct",
+      "claim": "Section 32(14)(ב) (סעיף 32): preferred loss-of-work-capacity premiums deductible up to 3.5% of income or salary.",
+      "source_url": "https://he.wikisource.org/wiki/פקודת_מס_הכנסה",
+      "raw_snippet": "בסכום של עד 3.5% מההכנסה",
+      "fetched_at": "2026-10-01",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-benefits.md"
+      ]
+    },
+    {
+      "claim_id": "employee-extra-5pct-485",
+      "claim": "Employees may deposit a further 5% from non-insured pay components, capped at 485 NIS in 2026 (Kol Zchut).",
+      "source_url": "https://www.kolzchut.org.il/he/הטבות_במס_הכנסה_בגין_הפקדות_עצמאיות_לביטוח_פנסיוני",
+      "raw_snippet": "העובד יכול להפקיד עוד 5% מתוך רכיבי השכר הלא מבוטחים ולא יותר מ-485 ₪ ב-2026.",
+      "fetched_at": "2026-10-01",
+      "appears_in": [
+        "references/tax-benefits.md"
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-10-01"
+    },
+    {
+      "claim_id": "s9a-schedule-tikun-275",
+      "claim": "סעיף 9א exempt-pension schedule re-split by Amendment 275 (Dec 2024): 57% 2025, 57.5% 2026, 62.5% 2027, 67% from 2028.",
+      "source_url": "https://www.gov.il/BlobFolder/policy/procedures-270125/he/IncomeTax_procedures-270125.pdf",
+      "raw_snippet": "במסגרת תיקון 275 לפקודת מס הכנסה (ס\"ח 3336, פורסם ביום 22.12.24), נקבע שהפעימה האחרונה בהגדלת שיעור הפטור הנוסף, שכאמור הייתה אמורה לעמוד בשנת המס 2025 על 15%, תפוצל על פני ארבע שנות מס",
+      "fetched_at": "2026-10-01",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-benefits.md"
+      ],
+      "verified_via": "pdf",
+      "verified_at": "2026-10-01"
+    },
+    {
+      "claim_id": "form161d-name",
+      "claim": "Form 161ד is the request for fixation of rights under סעיף 9א (Section 9A) (kibua zechuyot).",
+      "source_url": "https://www.gov.il/BlobFolder/guide/2026-filling-out-form-161d/he/Guides_IncomeTax_filling-out-form-161d-2026.pdf",
+      "raw_snippet": "טופס 161ד - \"בקשה לקיבוע זכויות לפי סעיף 9א לפקודה\"",
+      "fetched_at": "2026-10-01",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/life-events.md",
+        "references/approaching-retirement.md"
+      ],
+      "verified_via": "pdf",
+      "verified_at": "2026-10-01"
+    },
+    {
+      "claim_id": "tikun190-bl-not-counted",
+      "claim": "Tikun 190 minimum pension (5,306 in 2026) counts every pension source except Bituach Leumi and survivors' pensions.",
+      "source_url": "https://www.harel-group.co.il/long-term-savings/funding/information/190-amendment",
+      "raw_snippet": "קבלה בפועל של קצבה מינימלית (כ- 5,306 ₪, נכון לשנת 2026) מכל מקור פנסיוני למעט קצבת ביטוח לאומי וקצבת שאירים.",
+      "fetched_at": "2026-10-01",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-benefits.md",
+        "references/pension-fund-types.md"
+      ]
+    },
+    {
+      "claim_id": "tikun190-test-at-withdrawal",
+      "claim": "The pension level is checked at the withdrawal date, not at deposit.",
+      "source_url": "https://pensuni.com/?p=2795",
+      "raw_snippet": "את גובה הקצבה בודקים במועד המשיכה ולא במועד ההפקדה",
+      "fetched_at": "2026-10-01",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-benefits.md",
+        "references/pension-fund-types.md"
+      ]
+    },
+    {
+      "claim_id": "tikun190-first-38412",
+      "claim": "In a Tikun 190 deposit, 38,412 NIS (2026) is defined as qualifying pension.",
+      "source_url": "https://www.meitav.co.il/provident_pension/amendment_190/",
+      "raw_snippet": "סכום של 38,412 ש\"ח יוגדר כ\"קצבה מזכה\" (נכון לשנת 2026)",
+      "fetched_at": "2026-10-01",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-benefits.md",
+        "references/pension-fund-types.md"
+      ]
+    },
+    {
+      "claim_id": "tikun190-death-before-75",
+      "claim": "Beneficiaries receive principal and gains tax-free within 3 months of death; after that gains are taxed 25% real.",
+      "source_url": "https://www.harel-group.co.il/long-term-savings/funding/information/190-amendment",
+      "raw_snippet": "הקרן והרווחים עוברים למוטבים בפטור מלא מתשלום מס עד 3 חודשים מהפטירה",
+      "fetched_at": "2026-10-01",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-benefits.md"
+      ]
+    },
+    {
+      "claim_id": "tikun190-death-after-75",
+      "claim": "Individual who died after 75 before starting the recognised pension is treated as having commuted it.",
+      "source_url": "https://he.wikisource.org/wiki/פקודת_מס_הכנסה",
+      "raw_snippet": "יחיד שנפטר לאחר שמלאו לו 75 שנים וטרם החל לקבל קצבה מוכרת, יראו אותו כמי שהיוון את הקצבה המוכרת ערב פטירתו",
+      "fetched_at": "2026-10-01",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-benefits.md"
+      ]
+    },
+    {
+      "claim_id": "recognised-pension-exempt-60",
+      "claim": "Recognised pension received by an individual aged 60+ is exempt.",
+      "source_url": "https://he.wikisource.org/wiki/פקודת_מס_הכנסה",
+      "raw_snippet": "הקצבה המוכרת שמקבל אחד מאלה פטורה ממס",
+      "fetched_at": "2026-10-01",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/pension-fund-types.md",
+        "references/tax-benefits.md"
+      ]
+    },
+    {
+      "claim_id": "hashkaa-25pct",
+      "claim": "Kupat gemel lehashkaa: withdraw at 25% tax or move to a pension fund for an exempt pension.",
+      "source_url": "https://pensuni.com/?p=2795",
+      "raw_snippet": "חוסכים שיחסכו בקופת הגמל להשקעה יוכלו לבחור האם למשוך את הכספים במס של 25% או להעביר את הכספים לקרן הפנסיה לצורך קבלת קצבה הפטורה ממס.",
+      "fetched_at": "2026-10-01",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/pension-fund-types.md"
+      ]
+    },
+    {
+      "claim_id": "hishtalmut-3y-retirement-age",
+      "claim": "Hishtalmut exempt after 3 years for an employee who reached retirement age.",
+      "source_url": "https://he.wikisource.org/wiki/פקודת_מס_הכנסה",
+      "raw_snippet": "ולגבי עובד שהגיע לגיל הפרישה – אם חלפו 3 שנים ממועד התשלום הראשון לאותו חשבון",
+      "fetched_at": "2026-10-01",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/pension-fund-types.md",
+        "references/troubleshooting.md"
+      ]
+    },
+    {
+      "claim_id": "commutation-25pct-5y",
+      "claim": "Commutation allowed if the remaining pension is not below the minimum pension; otherwise up to 25% for up to five years.",
+      "source_url": "https://he.wikisource.org/wiki/חוק_הפיקוח_על_שירותים_פיננסיים_(קופות_גמל)",
+      "raw_snippet": "לפי שיעור מהקצבה שלה הוא זכאי מהקופה שלא יעלה על 25% ולתקופה שלא תעלה על חמש שנים",
+      "fetched_at": "2026-10-01",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/pension-fund-types.md",
+        "references/approaching-retirement.md"
+      ]
+    },
+    {
+      "claim_id": "bl-transition-grant-73.5",
+      "claim": "BL transition grant s.269א: pension income not above 73.5% of the average wage; born between 1960 and 1966.",
+      "source_url": "https://he.wikisource.org/wiki/חוק_הביטוח_הלאומי",
+      "raw_snippet": "אינה עולה על 73.5% מהשכר הממוצע",
+      "fetched_at": "2026-10-01",
+      "appears_in": [
+        "references/approaching-retirement.md"
+      ]
+    },
+    {
+      "claim_id": "bl-transition-grant-60000",
+      "claim": "BL transition grant: other income in the prior tax year not above 60,000 NIS.",
+      "source_url": "https://he.wikisource.org/wiki/חוק_הביטוח_הלאומי",
+      "raw_snippet": "לא עלתה על 60,000 שקלים חדשים",
+      "fetched_at": "2026-10-01",
+      "appears_in": [
+        "references/approaching-retirement.md"
+      ]
+    },
+    {
+      "claim_id": "bl-transition-grant-4000",
+      "claim": "BL transition grant amount for women born 1960 to 1962: 4,000 NIS.",
+      "source_url": "https://he.wikisource.org/wiki/חוק_הביטוח_הלאומי",
+      "raw_snippet": "מבוטחת שנולדה בין השנים 1960 ל־1962 – 4,000 שקלים חדשים",
+      "fetched_at": "2026-10-01",
+      "appears_in": [
+        "references/approaching-retirement.md"
+      ]
+    },
+    {
+      "claim_id": "bl-transition-grant-3000",
+      "claim": "BL transition grant amount for women born 1966: 3,000 NIS.",
+      "source_url": "https://he.wikisource.org/wiki/חוק_הביטוח_הלאומי",
+      "raw_snippet": "מבוטחת שנולדה בשנת 1966 – 3,000 שקלים חדשים",
+      "fetched_at": "2026-10-01",
+      "appears_in": [
+        "references/approaching-retirement.md"
+      ]
+    },
+    {
+      "claim_id": "bl-deferral-5pct",
+      "claim": "BL old-age pension increased by 5% for each deferral year.",
+      "source_url": "https://he.wikisource.org/wiki/חוק_הביטוח_הלאומי",
+      "raw_snippet": "ב־5% לכל שנה שבה היתה לו הכנסה כאמור",
+      "fetched_at": "2026-10-01",
+      "appears_in": [
+        "references/approaching-retirement.md"
+      ]
+    },
+    {
+      "claim_id": "self-employed-5pct-11640",
+      "claim": "Self-employed beneficiary member: 5% credit tier caps deposits at 11,640 NIS a year (2026).",
+      "source_url": "https://www.kolzchut.org.il/he/הטבות_במס_הכנסה_בגין_הפקדות_עצמאיות_לביטוח_פנסיוני",
+      "raw_snippet": "עד מקסימום הפקדות של 11,640 ₪ לשנה",
+      "fetched_at": "2026-10-01",
+      "verified_via": "browser",
+      "verified_at": "2026-10-01",
+      "appears_in": [
+        "references/tax-benefits.md"
+      ]
+    },
+    {
+      "claim_id": "amit-mutav-16pct",
+      "claim": "A 'beneficiary member' (amit mutav, s.47(a)(7)) is an individual for whom kitzbah deposits in the tax year were not less than 16% of the annual average wage; 26,436 NIS in 2026 per the Tax Authority booklet.",
+      "source_url": "https://he.wikisource.org/wiki/פקודת_מס_הכנסה",
+      "raw_snippet": "בסכום שלא פחת מ־16% מסך כל השכר הממוצע במשק באותה שנת מס",
+      "fetched_at": "2026-10-01",
+      "appears_in": [
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "amit-mutav-26436-booklet",
+      "claim": "Beneficiary-member threshold 26,436 NIS per year (2026).",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf",
+      "raw_snippet": "עמית מוטב (47א)(7) 26,436 לשנה",
+      "fetched_at": "2026-10-01",
+      "verified_via": "pdf",
+      "verified_at": "2026-10-01",
+      "appears_in": [
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "retirement-age-law-part-b",
+      "claim": "Retirement Age Law schedule, Part B (women): born May 1947 to December 1959 retire at 62; born January to December 1960 at 62 and 4 months.",
+      "source_url": "https://he.wikisource.org/wiki/חוק_גיל_פרישה",
+      "raw_snippet": "מאי 1947 עד דצמבר 1959",
+      "fetched_at": "2026-10-01",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/retirement-age-by-cohort.md",
+        "scripts/calculate_pension.py"
+      ]
+    },
+    {
+      "claim_id": "pension-advice-law-s19",
+      "claim": "Pension Advice Law 2005 סעיף 19(א)(2) (Section 19(a)(2)): a pension adviser may receive a distribution fee from an institutional body if the client agreed in advance and in writing.",
+      "source_url": "https://he.wikisource.org/wiki/חוק_הפיקוח_על_שירותים_פיננסיים_(ייעוץ,_שיווק_ומערכת_סליקה_פנסיוניים)",
+      "raw_snippet": "ובלבד שהלקוח שבעבורו בוצעה העסקה הסכים, מראש ובכתב, לקבלת העמלה בידי היועץ ולשיעורה",
+      "fetched_at": "2026-10-01",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "eligibility-age-definition",
+      "claim": "ITO s.9A: 'eligibility age' is the retirement age or the age at which the individual began receiving a qualifying pension, whichever is later.",
+      "source_url": "https://he.wikisource.org/wiki/פקודת_מס_הכנסה",
+      "raw_snippet": "”גיל הזכאות“ – גיל הפרישה או הגיל שבו החל יחיד לקבל קצבה מזכה, כולה או חלקה, לפי המאוחר",
+      "fetched_at": "2026-10-01",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-benefits.md"
+      ]
+    },
+    {
+      "claim_id": "commutation-90-days",
+      "claim": "ITO s.9A(ה)(1): the exemption on a commuted qualifying pension requires a request on the Director's form within 90 days of the first pension exemption.",
+      "source_url": "https://he.wikisource.org/wiki/פקודת_מס_הכנסה",
+      "raw_snippet": "לא יאוחר מתום 90 ימים מהיום שבו ניתן לו לראשונה פטור ממס בשל קצבה מזכה לפי סעיף זה",
+      "fetched_at": "2026-10-01",
+      "appears_in": [
+        "references/approaching-retirement.md"
+      ]
+    },
+    {
+      "claim_id": "unemployment-300-days-women",
+      "claim": "NI Law s.171(a)(1ג): women born on or after 1.1.1960 aged 57 to 60 are entitled to 300 days of unemployment benefit (counted over 18 months).",
+      "source_url": "https://he.wikisource.org/wiki/חוק_הביטוח_הלאומי",
+      "raw_snippet": "300 – אם היא מבוטחת שנולדה ביום א׳ בטבת התש״ך (1 בינואר 1960) או לאחריו, מלאו לה 57 שנים וטרם מלאו לה 60 שנים",
+      "fetched_at": "2026-10-01",
+      "appears_in": [
+        "references/approaching-retirement.md"
+      ]
+    },
+    {
+      "claim_id": "hishtalmut-early-gains-marginal",
+      "claim": "ITO s.125ג(ד)(5): interest paid from a keren hishtalmut before the s.9(16א) periods is taxed at the s.121 marginal rate.",
+      "source_url": "https://he.wikisource.org/wiki/פקודת_מס_הכנסה",
+      "raw_snippet": "הריבית שולמה מקרן השתלמות לפני שחלפו התקופות האמורות",
+      "fetched_at": "2026-10-01",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/troubleshooting.md"
+      ]
+    },
+    {
+      "claim_id": "hishtalmut-employer-money-work-income",
+      "claim": "ITO s.3(ה): employer hishtalmut payments are work income of the employee when received (unless exempt).",
+      "source_url": "https://he.wikisource.org/wiki/פקודת_מס_הכנסה",
+      "raw_snippet": "יראום כהכנסת עבודה של העובד בעת שקיבל אותם",
+      "fetched_at": "2026-10-01",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/troubleshooting.md"
+      ]
+    },
+    {
+      "claim_id": "hishtalmut-exempt-only-favoured",
+      "claim": "ITO s.9(16א): the exemption covers gains originating in the favoured deposit only.",
+      "source_url": "https://he.wikisource.org/wiki/פקודת_מס_הכנסה",
+      "raw_snippet": "וכן ריבית ורווחים אחרים שמקורם בהפקדה המוטבת",
+      "fetched_at": "2026-10-01",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-benefits.md"
+      ]
+    },
+    {
+      "claim_id": "tikun190-lump-sum-60",
+      "claim": "Tikun 190 lump-sum withdrawal requires age 60+ and receipt of the minimum pension (not counting BL).",
+      "source_url": "https://www.harel-group.co.il/long-term-savings/funding/information/190-amendment",
+      "raw_snippet": "משיכה חד-פעמית גיל 60 ומעלה",
+      "fetched_at": "2026-10-01",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "bl-age-men-70",
+      "claim": "NI Law s.245(a)(1): for a man the old-age pension age is seventy, or retirement age if his income does not exceed the maximum income.",
+      "source_url": "https://he.wikisource.org/wiki/חוק_הביטוח_הלאומי",
+      "raw_snippet": "בגבר – שבעים שנים ואם הכנסתו בשנת מס אינה עולה על ההכנסה המרבית – גיל הפרישה",
+      "fetched_at": "2026-10-01",
+      "appears_in": [
+        "references/approaching-retirement.md"
+      ]
+    },
+    {
+      "claim_id": "bl-income-test-60pct",
+      "claim": "NI Law s.245(b): above the maximum income the pension is reduced by 60% of the excess, but not below 10% of the pension.",
+      "source_url": "https://he.wikisource.org/wiki/חוק_הביטוח_הלאומי",
+      "raw_snippet": "בניכוי 60% מהסכום העולה על ההכנסה המרבית",
+      "fetched_at": "2026-10-01",
+      "appears_in": [
+        "references/approaching-retirement.md"
+      ]
+    },
+    {
+      "claim_id": "bl-income-test-10pct-floor",
+      "claim": "NI Law s.245(b): the reduced pension may not fall below 10% of the pension.",
+      "source_url": "https://he.wikisource.org/wiki/חוק_הביטוח_הלאומי",
+      "raw_snippet": "לא יפחת מסכום השווה ל־10% מסכום הקצבה",
+      "fetched_at": "2026-10-01",
+      "appears_in": [
+        "references/approaching-retirement.md"
+      ]
+    },
+    {
+      "claim_id": "bl-income-excludes-pensions",
+      "claim": "NI Law s.245(c): 'income' for the test excludes pensions paid under law, foreign law, collective agreement or employment contract.",
+      "source_url": "https://he.wikisource.org/wiki/חוק_הביטוח_הלאומי",
+      "raw_snippet": "הכנסה למעט הכנסה שמקורה בקצבה המשתלמת מכוח חיקוק",
+      "fetched_at": "2026-10-01",
+      "appears_in": [
+        "references/approaching-retirement.md"
+      ]
+    },
+    {
+      "claim_id": "bl-transition-grant-4-months",
+      "claim": "NI Law s.269A(a): the transition grant is paid for the four months following the woman's 62nd birthday.",
+      "source_url": "https://he.wikisource.org/wiki/חוק_הביטוח_הלאומי",
+      "raw_snippet": "בעד ארבעת החודשים העוקבים מיום שמלאו לה 62 שנים",
+      "fetched_at": "2026-10-01",
+      "appears_in": [
+        "references/approaching-retirement.md"
+      ]
+    },
+    {
+      "claim_id": "bl-transition-grant-24-months",
+      "claim": "NI Law s.269A(e): the grant is paid if not more than 24 months have passed from the month the entitling conditions arose.",
+      "source_url": "https://he.wikisource.org/wiki/חוק_הביטוח_הלאומי",
+      "raw_snippet": "ובלבד שטרם חלפו 24 חודשים מהחודש האמור",
+      "fetched_at": "2026-10-01",
+      "appears_in": [
+        "references/approaching-retirement.md"
+      ]
+    },
+    {
+      "claim_id": "general-approval-72pct",
+      "claim": "General Approval (Severance Pay Law s.14, 1998): where the employer pays only the pension contributions without the additional 2 1/3% (i.e. short of the full 8 1/3%), the payments replace only 72% of severance.",
+      "source_url": "https://he.wikisource.org/wiki/אישור_כללי_בדבר_תשלומי_מעבידים_לקרן_פנסיה_ולקופת_ביטוח_במקום_פיצויי_פיטורים",
+      "raw_snippet": "יבואו תשלומיו במקום 72% מפיצויי הפיטורים של העובד, בלבד",
+      "fetched_at": "2026-10-01",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-benefits.md"
+      ]
+    },
+    {
+      "claim_id": "rezef-pitzuyim-revert-2y",
+      "claim": "ITO s.9(7א)(ב)(ד): an employee who chose rezef-pitzuyim may revert from that choice within 2 years.",
+      "source_url": "https://he.wikisource.org/wiki/פקודת_מס_הכנסה",
+      "raw_snippet": "רשאי לחזור בו מבחירתו תוך שנתיים",
+      "fetched_at": "2026-10-01",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-benefits.md"
+      ]
+    },
+    {
+      "claim_id": "rezef-kitzbah-revert-any-time",
+      "claim": "ITO s.9(7א)(ז): an employee who chose rezef-kitzbah may revert by notice to the Director, with no time limit stated.",
+      "source_url": "https://he.wikisource.org/wiki/פקודת_מס_הכנסה",
+      "raw_snippet": "רשאי הוא לחזור בו על ידי הודעה למנהל",
+      "fetched_at": "2026-10-01",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tax-benefits.md"
+      ]
+    },
+    {
+      "claim_id": "bl-age-women-70",
+      "claim": "NI Law Table A1 Part D: women born May 1950 onward reach the unconditional old-age pension age at 70.",
+      "source_url": "https://he.wikisource.org/wiki/חוק_הביטוח_הלאומי",
+      "raw_snippet": "מאי 1950 ואילך",
+      "fetched_at": "2026-10-01",
+      "appears_in": [
+        "references/approaching-retirement.md"
+      ]
     }
   ]
 }

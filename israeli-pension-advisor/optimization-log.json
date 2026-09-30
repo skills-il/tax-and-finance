@@ -36,6 +36,23 @@
         "Expert MINOR deferred: projection freezes the 2026 exemption ratio (57.5%) and a flat 31% marginal rate over a multi-decade horizon.",
         "A prose correction is not landed until the SCRIPT implements it: the mandatory-ceiling fix sat in SKILL.md Step 2 for a cycle while the calculator still used 2x the average wage as dead-constant proof."
       ]
+    },
+    {
+      "version": "2.6.0",
+      "date": "2026-10-01",
+      "lessons": [
+        "RESOLVED CARRY: nayadut deadline sourced (10 business days, reg. 5(a), 2008 Transfer Regulations, via he.wikisource raw). Form 161 default found to be CONDITIONAL (405,900-plus ceiling, no non-kupah grants).",
+        "KEY FINDINGS: Tikun 190 had BL counting toward the minimum pension and a pension test at deposit (both wrong); kupat gemel lehashkaa taxed at 'marginal rate' (wrong, 25% real); self-employed obligation bounded at legal retirement age and 'first calendar year' exemption (both wrong); heichum cut-off ~35 applied to women (men's figure). None were visible to the evidence gate because the numbers were right; the RULES were wrong.",
+        "SOURCE NOTE: he.wikisource.org raw wikitext (index.php?title=...&action=raw) serves the Income Tax Ordinance, Gemel Law, NI Law, Retirement Age Law, Pension Advice Law and the s.14 General Approval as literal text, and --check-sources verifies it. Prefer it over Kol Zchut, which is Cloudflare-blocked even in headed Playwright.",
+        "DEBT: 8 pre-existing Kol Zchut evidence entries remain unreachable and several are self-authored summaries (section-47-spousal-attribution, disability-75-percent-takanon-achid, pension-contribution-timing, reference-link-*). Re-source them to wikisource statute text next cycle.",
+        "DEFERRED (Expert MAJOR): SKILL.md frontmatter description should open with 'Not pension advice.' (metadata display_description already does); needs the 5.7 holdout eval, so do it next cycle.",
+        "DEFERRED (Expert MAJOR): Should-cover items not yet covered: payout-track choice (guarantee period, survivor %, annuity factor), pension clearing house / Har HaKesef, tax coordination across pensions, pensioner fee caps, early retirement from a fund at 60, deposits past retirement age, controlling-shareholder hishtalmut rule. Put them in references/approaching-retirement.md.",
+        "DEFERRED (Expert MINOR): historical exempt-pension % table (43.5% 2012-15, 49% 2016-19, 52% 2020-24, 57% 2025) per ITO s.9A(ז); needs evidence entries.",
+        "DEFERRED (arith MINOR): employee credit example assumes a voluntary 7% employee rate (at 6% the credit is 203.70/month); heichum 1.35 reduction is CPI-linked to the eligibility year; script ignores --age for self-employed and does not cross-check --age vs --birth-year.",
+        "DEFERRED (legal F8): slug still reads 'pension-advisor'; consider a rename with redirect.",
+        "PROCESS: domain-checklist.md was bootstrapped but NOT shipped (it carried OPEN markers and contradicted fixed text); next cycle should bootstrap a clean one into references/.",
+        "SUBAGENT CHANNEL: all 11 opus subagents this cycle ended without a handback; every result was recovered from the file each was told to write. Always require a file deliverable."
+      ]
     }
   ]
 }
