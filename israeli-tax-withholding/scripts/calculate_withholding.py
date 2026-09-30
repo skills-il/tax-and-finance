@@ -134,9 +134,15 @@ DE_MINIMIS_TYPES = {"services", "services_with_books", "services_no_books",
 
 # Payments on which no Israeli VAT line belongs to the payee: interest and
 # dividends are not a supply, and a foreign supplier does not charge Israeli VAT.
+# Residential letting for up to 25 years is exempt (VAT Law s.31(1)), and
+# unprocessed fruit and vegetables of the types the Finance Minister set are
+# zero-rated (VAT Law s.30(a)(13)).
 NO_VAT_TYPES = {"interest", "interest_non_linked", "interest_company",
                 "dividends", "dividends_major",
-                "non_resident_individual", "non_resident_company"}
+                "non_resident_individual", "non_resident_company",
+                "rent_residential",
+                "agricultural_produce", "agricultural_produce_no_books"}
+PRODUCE_TYPES = {"agricultural_produce", "agricultural_produce_no_books"}
 
 
 @dataclass
@@ -151,6 +157,7 @@ class WithholdingResult:
     total_invoice: float
     certificate_rate: bool
     note: str = ""
+    de_minimis: bool = False
 
 
 def calculate_withholding(
@@ -197,18 +204,21 @@ def calculate_withholding(
         include_vat = payment_type not in NO_VAT_TYPES
 
     note = ""
+    de_minimis = False
     has_certificate = certificate_rate is not None
     rate = certificate_rate / 100 if has_certificate else DEFAULT_RATES[payment_type]
     # The de-minimis removes the duty itself, so it applies with or without a
     # certificate. Under gross-up it is tested on the net: if no duty applies,
     # nothing is grossed and the base equals the net.
     if payment_type in DE_MINIMIS_TYPES and amount <= DE_MINIMIS:
+        applicable_rate = rate
         rate = 0.0
+        de_minimis = True
         note = (f"De-minimis: a service or asset worth no more than {DE_MINIMIS:,} "
                 f"NIS is outside reg. 2(a). The test is the value of that service "
                 f"or asset, not one invoice of a larger engagement, and the "
                 f"regulation does not say whether the figure includes VAT.")
-        if payer_bears_tax and amount / (1 - DEFAULT_RATES[payment_type]) > DE_MINIMIS:
+        if payer_bears_tax and amount / (1 - applicable_rate) > DE_MINIMIS:
             note += (" Under gross-up the grossed value would exceed the "
                      "threshold; treat this band as uncertain.")
 
@@ -224,6 +234,11 @@ def calculate_withholding(
         withholding = round(amount * rate, 2)
         net_payment = round(amount - withholding, 2)
     vat = round(gross * VAT_RATE, 2) if include_vat else 0.0
+    if payment_type in PRODUCE_TYPES and not include_vat:
+        note = (note + " " if note else "") + (
+            "No VAT line: unprocessed fruit and vegetables of the types the "
+            "Finance Minister set are zero-rated (VAT Law s.30(a)(13)). Other "
+            "produce may carry VAT; pass --with-vat if so.")
     total_invoice = round(gross + vat, 2)
 
     return WithholdingResult(
@@ -236,12 +251,14 @@ def calculate_withholding(
         total_invoice=total_invoice,
         certificate_rate=has_certificate,
         note=note,
+        de_minimis=de_minimis,
     )
 
 
 def format_result(result: WithholdingResult) -> str:
     """Format withholding calculation for display."""
-    rate_source = "certificate" if result.certificate_rate else "default"
+    rate_source = ("de-minimis" if result.de_minimis
+                   else "certificate" if result.certificate_rate else "default")
     lines = [
         f"=== Israeli Tax Withholding Calculation ===",
         f"",
@@ -263,10 +280,15 @@ def format_result(result: WithholdingResult) -> str:
     ]
     if result.note:
         lines += [f"  NOTE: {result.note}"]
-    lines += [
-        f"  Withholding is on the pre-VAT amount. The VAT line assumes a payee",
-        f"  that charges VAT (an osek murshe); pass --no-vat otherwise.",
-    ]
+    if result.vat_amount:
+        lines += [
+            f"  Withholding is on the pre-VAT amount. The VAT line assumes a payee",
+            f"  that charges VAT (an osek murshe); pass --no-vat otherwise.",
+        ]
+    else:
+        lines += [
+            f"  No VAT line for this payment (pass --with-vat to add one).",
+        ]
     if result.payment_type in SEVEN_DAY_TYPES:
         lines += [
             f"  Section 170 withholding is paid to the assessing officer within",
@@ -306,6 +328,10 @@ def main():
     )
     parser.add_argument(
         "--no-vat", action="store_true", help="Exclude VAT calculation"
+    )
+    parser.add_argument(
+        "--with-vat", action="store_true",
+        help="Force a VAT line even for a type that omits it by default"
     )
     parser.add_argument(
         "--payer-bears-tax", action="store_true",
@@ -376,7 +402,7 @@ def main():
             args.payment_type,
             args.amount,
             args.certificate_rate,
-            False if args.no_vat else None,
+            False if args.no_vat else (True if args.with_vat else None),
             args.payer_bears_tax,
         )
     except ValueError as exc:

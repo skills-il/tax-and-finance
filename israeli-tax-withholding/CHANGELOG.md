@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.6.1 (2026-10-01)
+
+- Calculator: no VAT line by default on residential rent (exempt, VAT Law s.31(1)) or agricultural produce (unprocessed fruit and vegetables zero-rated, s.30(a)(13)); `--with-vat` forces one. Previously the "Total disbursed" figure overstated these payments by 18%.
+- Calculator: a de-minimis zero is labelled "(de-minimis)" rather than "(certificate)", and the gross-up band caveat uses the certificate rate when one is given.
+
 ## 1.6.0 (2026-10-01)
 
 - Corrected who must withhold. v1.5.0 said there is no turnover threshold; the regulations have none, but the 1977 order they rely on lists the payers (double-entry duty or turnover above its Schedule A, plus public bodies) and its s.2א excludes small single-entry payers on both limbs.

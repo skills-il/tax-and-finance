@@ -876,6 +876,30 @@
         "SKILL.md",
         "SKILL_HE.md"
       ]
+    },
+    {
+      "claim_id": "vat-s31-1-residential-rent-exempt",
+      "claim": "VAT Law Section 31(1) / סעיף 31(1): letting for residence for a period not exceeding 25 years (other than hotel accommodation) is an exempt transaction, so residential rent carries no VAT line.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/72813.htm",
+      "raw_snippet": "השכרה למגורים לתקופה שאינה עולה על 25 שנים, למעט השכרה לשם אירוח בבית מלון",
+      "fetched_at": "2026-10-01T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "scripts/calculate_withholding.py"
+      ]
+    },
+    {
+      "claim_id": "vat-s30a13-produce-zero-rate",
+      "claim": "VAT Law Section 30(a)(13) / סעיף 30(א)(13): the sale of fruit and vegetables of types set by the Finance Minister, on which no processing was done, is zero-rated.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/72813.htm",
+      "raw_snippet": "מכירת פירות וירקות מסוגים שקבע שר האוצר, שלא נעשה בהם כל עיבוד",
+      "fetched_at": "2026-10-01T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "scripts/calculate_withholding.py"
+      ]
     }
   ]
 }

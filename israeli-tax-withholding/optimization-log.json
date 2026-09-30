@@ -13,8 +13,8 @@
         "CARRY: software payment classification (royalty vs service vs sale) is flagged for an advisor without a sourced rule; open the governing ITA circular next cycle.",
         "PROCESS: the research subagent and the CPA gap auditor disagreed on Form 2513/2 scope (services vs capital-only). The form itself settled it: 'בטופס זה ניתן לדווח אך ורק על סוגי התשלום המפורטים ברשימה זו', capital types only. A reviewer's claim about a third-party form needs the form opened.",
         "PROCESS: all four panel subagents went idle without delivering; each wrote its report once asked to write to a file. Ask for file output up front.",
-        "CARRY (arithmetic reviewer, totals only): the script still adds an 18% VAT line by default for rent_residential and agricultural_produce; residential leases and fresh produce were said to carry no VAT but that was not sourced this cycle. Withholding amounts are unaffected.",
-        "RESOLVED in-cycle: the 856 date. Reg. 5(a) reads 31 March, but Ordinance s.166(ב) sets 30 April online by statute; the first repair privileged the regulation and the judge caught it. Check the Ordinance before a regulation for any deadline."
+        "RESOLVED in-cycle: the 856 date. Reg. 5(a) reads 31 March, but Ordinance s.166(ב) sets 30 April online by statute; the first repair privileged the regulation and the judge caught it. Check the Ordinance before a regulation for any deadline.",
+        "RESOLVED in 1.6.1 (same day): VAT line on residential rent (s.31(1) exempt) and agricultural produce (s.30(a)(13) zero-rated for listed unprocessed fruit/veg) suppressed by default. Lesson: a totals-only defect still tells a user to overpay; do not defer it as cosmetic."
       ]
     },
     {
