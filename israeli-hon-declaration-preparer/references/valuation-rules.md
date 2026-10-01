@@ -19,7 +19,7 @@ Source: https://www.gov.il/BlobFolder/service/itc1219/he/Service_Pages_Income_ta
 | 9 | Every asset or liability goes on a **separate line** | No aggregating several properties onto one row |
 | 10 | For private assets and liabilities with several co-owners, enter the amount according to **your share** | Contrast parts B and C, where entity figures go in whole and the share is applied at entity level |
 | 11 | Amounts in new shekels, no agorot, rounded | |
-| 12 | Foreign-currency amounts go in their own column and convert to shekels at the representative rate **on the day of payment or receipt** | Not the declaration-date rate. This is a common and invisible error |
+| 12 | Assets and liabilities **paid or received** in foreign currency: the foreign-currency amount goes in its own column and converts to shekels at the representative rate **on the day of payment or receipt** | Not the declaration-date rate for an item bought in foreign currency. The rule does not settle a foreign bank BALANCE, which section 3 asks for as it appears on the statement at the declaration date; surface that and route it |
 | 13 | Do not offset debtors against creditors, even where you are debtor and creditor to the same person or institution simultaneously | Netting hides a declarable asset and a declarable liability at once |
 | 14 | Where the form's space is insufficient, attach further sheets certified by your signature, write "annex attached" on the matching line, and mark on the annex which line it belongs to | |
 | 15 | Where there is more than one business for which no balance sheet was prepared, attach a further annex per business | Aggregated at field 760 |
@@ -29,7 +29,7 @@ Source: https://www.gov.il/BlobFolder/service/itc1219/he/Service_Pages_Income_ta
 | Section | Basis required |
 |---|---|
 | 6, life insurance, gemel, pension, hishtalmut, savings plans | The sum of **all deposits**, without taking into account interest, linkage or other gains. NOT the fund's current balance |
-| 7, securities and mutual funds | The amount **actually invested**, per the statements of the institution holding the portfolio. One line per portfolio per institution |
+| 7, securities and mutual funds | The amount **actually invested**, per the statements of the institution holding the portfolio. Rule 9 puts every asset on its own line (the explicit "each portfolio at a different institution on a separate line" wording is in part C section 5) |
 | 8, loans you gave | Principal terms only |
 | 13, liabilities to banks and financial institutions | Cost terms only |
 | Part B, shares in a company | **Par value** |

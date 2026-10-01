@@ -1,0 +1,17 @@
+{
+  "cycles": [
+    {
+      "version": "1.1.0",
+      "date": "2026-10-01",
+      "lessons": [
+        "Description not changed this cycle, so the 5.7 holdout was not run.",
+        "HE description (SKILL_HE.md frontmatter and metadata display_description.he) omits the trapped-profits exclusion the EN carries; fix next time the description is touched, with the holdout gate.",
+        "Deferred minors: leased or company car (part D s3 or nothing); passive minority stake in a private company (part B at par vs part A s7); the form's internal age wording ('שבשנת המס' header vs 'ביום' in the signature declaration); routing 'is my crypto or RSU sale taxable' to the annual-return skill.",
+        "Watch: whether the ITA publishes a transitional rule or a class exemption under s.131ג(ג) for the 1.1.2027 online-filing mandate; whether 2026 demands falling due in 2027 get guidance.",
+        "Watch: whether the ITA ever states how a foreign bank BALANCE is converted (rule 12 covers only items paid or received in FX).",
+        "Statutory evidence: the gov.il Ordinance PDF is a Jan-2023 consolidation; use Nevo for current text. s.135(1)(a1) wording rests on the Wikisource consolidation until a consolidation prints it after 1.1.2027.",
+        "Arithmetic lesson: a loan received is net-zero on field 800 and appreciation never enters it; reconciliation text must be checked against the identity, not against plausibility."
+      ]
+    }
+  ]
+}

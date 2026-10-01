@@ -1,29 +1,29 @@
 {
   "skill_slug": "israeli-hon-declaration-preparer",
   "schemaVersion": "1.0",
-  "generated_at": "2026-09-09",
+  "generated_at": "2026-10-01T12:00:00Z",
   "claims": [
     {
       "id": "s135-1a-demand-power",
       "claim": "Section 135(1)(a) empowers the assessing officer to demand in writing any report including a report on the capital and assets of the person, their spouse and their children. (Hebrew: סעיף 135)",
       "claim_type": "law",
-      "source_url": "https://www.gov.il/BlobFolder/legalinfo/law_pkudat_mas_hachnasa/he/LegalInformation_kesher_%D7%A4%D7%A7%D7%95%D7%93%D7%AA%20%D7%9E%D7%A1%20%D7%94%D7%9B%D7%A0%D7%A1%D7%94%20%5B%D7%A0%D7%95%D7%A1%D7%97%20%D7%97%D7%93%D7%A9%5D%20-%20%D7%9C%D7%90%20%D7%9E%D7%A8%D7%95%D7%91%D7%93.pdf",
-      "raw_snippet": "(( )1א) רשאי פקיד השומה לדרוש ממנו בהודעה בכתב למסור לו כל דו\"ח שיצויין בהודעה ,ובכלל זה דו\"ח על הונם ונכסיהם של אותו אדם ,או של בן זוגו ושל ילדיהם שהם זכאים בעדם לנקודות זיכוי או לנקודות קצבה או על נכסים שהוא משמש לגביהם כנאמנו של אדם אחר",
+      "source_url": "https://www.nevo.co.il/law_html/law01/255_001.htm",
+      "raw_snippet": "רשאי פקיד השומה לדרוש ממנו בהודעה בכתב למסור לו כל דו\"ח שיצויין בהודעה, ובכלל זה דו\"ח על הונם ונכסיהם של אותו אדם, או של בן זוגו ושל ילדיהם שהם זכאים בעדם לנקודות זיכוי או לנקודות קצבה או על נכסים שהוא משמש לגביהם כנאמנו של אדם אחר",
       "confidence": "high",
-      "verified_via": "pdf",
-      "verified_at": "2026-09-09",
-      "verification_note": "PDF downloaded from this exact URL (HTTP 200, 10.8 MB) and the snippet confirmed present in its pdftotext text layer. The gate fetcher intermittently returns HTTP 000 on this file because of its size."
+      "verified_via": "browser",
+      "verified_at": "2026-10-01",
+      "verification_note": "Re-anchored 2026-10-01 from the 2023 gov.il Ordinance PDF (predates Amendment 272) to the Nevo consolidation headed \"נוסח עדכני נכון ליום: 27-09-2026\"; page fetched with curl, decoded, snippet confirmed in the text."
     },
     {
       "id": "s135-120-days-later-of",
       "claim": "For a capital report no date may be set earlier than the end of 120 days from the date the declaration must relate to or from the date of demand, whichever is later.",
       "claim_type": "threshold",
-      "source_url": "https://www.gov.il/BlobFolder/legalinfo/law_pkudat_mas_hachnasa/he/LegalInformation_kesher_%D7%A4%D7%A7%D7%95%D7%93%D7%AA%20%D7%9E%D7%A1%20%D7%94%D7%9B%D7%A0%D7%A1%D7%94%20%5B%D7%A0%D7%95%D7%A1%D7%97%20%D7%97%D7%93%D7%A9%5D%20-%20%D7%9C%D7%90%20%D7%9E%D7%A8%D7%95%D7%91%D7%93.pdf",
-      "raw_snippet": "כל דו\"ח לפי פסקה זו יימסר לפקיד השומה במועד שפורש בהודעה ובלבד שלגבי דו\"ח על הון לא ייקבע מועד שהוא לפני תום 120יום מהמועד שהצהרת ההון צריכה להתייחס אליו או מיום הדרישה ,לפי המאוחר",
+      "source_url": "https://www.nevo.co.il/law_html/law01/255_001.htm",
+      "raw_snippet": "כל דו\"ח לפי פסקה זו יימסר לפקיד השומה במועד שפורש בהודעה ובלבד שלגבי דו\"ח על הון לא ייקבע מועד שהוא לפני תום 120 יום מהמועד שהצהרת ההון צריכה להתייחס אליו או מיום הדרישה, לפי המאוחר",
       "confidence": "high",
-      "verified_via": "pdf",
-      "verified_at": "2026-09-09",
-      "verification_note": "PDF downloaded from this exact URL (HTTP 200, 10.8 MB) and the snippet confirmed present in its pdftotext text layer. The gate fetcher intermittently returns HTTP 000 on this file because of its size."
+      "verified_via": "browser",
+      "verified_at": "2026-10-01",
+      "verification_note": "Re-anchored 2026-10-01 from the 2023 gov.il Ordinance PDF (predates Amendment 272) to the Nevo consolidation headed \"נוסח עדכני נכון ליום: 27-09-2026\"; page fetched with curl, decoded, snippet confirmed in the text."
     },
     {
       "id": "form-scope-children-under-18",
@@ -45,45 +45,45 @@
       "id": "s135-statutory-scope-credit-points",
       "claim": "The statute defines the children in scope as those for whom credit points or allowance points are claimed, not by a flat age.",
       "claim_type": "law",
-      "source_url": "https://www.gov.il/BlobFolder/legalinfo/law_pkudat_mas_hachnasa/he/LegalInformation_kesher_%D7%A4%D7%A7%D7%95%D7%93%D7%AA%20%D7%9E%D7%A1%20%D7%94%D7%9B%D7%A0%D7%A1%D7%94%20%5B%D7%A0%D7%95%D7%A1%D7%97%20%D7%97%D7%93%D7%A9%5D%20-%20%D7%9C%D7%90%20%D7%9E%D7%A8%D7%95%D7%91%D7%93.pdf",
-      "raw_snippet": "ובכלל זה דו\"ח על הונם ונכסיהם של אותו אדם ,או של בן זוגו ושל ילדיהם שהם זכאים בעדם לנקודות זיכוי או לנקודות קצבה",
+      "source_url": "https://www.nevo.co.il/law_html/law01/255_001.htm",
+      "raw_snippet": "ובכלל זה דו\"ח על הונם ונכסיהם של אותו אדם, או של בן זוגו ושל ילדיהם שהם זכאים בעדם לנקודות זיכוי או לנקודות קצבה",
       "confidence": "high",
-      "verified_via": "pdf",
-      "verified_at": "2026-09-09",
-      "verification_note": "PDF downloaded from this exact URL (HTTP 200, 10.8 MB) and the snippet confirmed present in its pdftotext text layer. The gate fetcher intermittently returns HTTP 000 on this file because of its size."
+      "verified_via": "browser",
+      "verified_at": "2026-10-01",
+      "verification_note": "Re-anchored 2026-10-01 from the 2023 gov.il Ordinance PDF (predates Amendment 272) to the Nevo consolidation headed \"נוסח עדכני נכון ליום: 27-09-2026\"; page fetched with curl, decoded, snippet confirmed in the text."
     },
     {
       "id": "s135-spouse-opt-out",
       "claim": "A filer may exclude the spouse's capital and assets if a declaration signed by that spouse is attached stating they will file a separate report, and then the report is due when the spouse's report is due.",
       "claim_type": "law",
-      "source_url": "https://www.gov.il/BlobFolder/legalinfo/law_pkudat_mas_hachnasa/he/LegalInformation_kesher_%D7%A4%D7%A7%D7%95%D7%93%D7%AA%20%D7%9E%D7%A1%20%D7%94%D7%9B%D7%A0%D7%A1%D7%94%20%5B%D7%A0%D7%95%D7%A1%D7%97%20%D7%97%D7%93%D7%A9%5D%20-%20%D7%9C%D7%90%20%D7%9E%D7%A8%D7%95%D7%91%D7%93.pdf",
-      "raw_snippet": "ואולם רשאי אותו אדם לא לכלול בדו\"ח את הונו ונכסיו של בן זוגו ,אם צירף הצהרה חתומה בידי אותו בן זוג כי יגיש דו\"ח נפרד על הונו ונכסיו; הוגשה הצהרה כאמור ,יוגש הדו\"ח במועד שבו חייב בן הזוג להגיש את הדו\"ח כאמור",
+      "source_url": "https://www.nevo.co.il/law_html/law01/255_001.htm",
+      "raw_snippet": "ואולם רשאי אותו אדם לא לכלול בדו\"ח את הונו ונכסיו של בן זוגו, אם צירף הצהרה חתומה בידי אותו בן זוג כי יגיש דו\"ח נפרד על הונו ונכסיו",
       "confidence": "high",
-      "verified_via": "pdf",
-      "verified_at": "2026-09-09",
-      "verification_note": "PDF downloaded from this exact URL (HTTP 200, 10.8 MB) and the snippet confirmed present in its pdftotext text layer. The gate fetcher intermittently returns HTTP 000 on this file because of its size."
+      "verified_via": "browser",
+      "verified_at": "2026-10-01",
+      "verification_note": "Re-anchored 2026-10-01 from the 2023 gov.il Ordinance PDF (predates Amendment 272) to the Nevo consolidation headed \"נוסח עדכני נכון ליום: 27-09-2026\"; page fetched with curl, decoded, snippet confirmed in the text."
     },
     {
       "id": "s135-trustee-assets",
       "claim": "The demand power reaches assets in respect of which the person acts as trustee for another person.",
       "claim_type": "law",
-      "source_url": "https://www.gov.il/BlobFolder/legalinfo/law_pkudat_mas_hachnasa/he/LegalInformation_kesher_%D7%A4%D7%A7%D7%95%D7%93%D7%AA%20%D7%9E%D7%A1%20%D7%94%D7%9B%D7%A0%D7%A1%D7%94%20%5B%D7%A0%D7%95%D7%A1%D7%97%20%D7%97%D7%93%D7%A9%5D%20-%20%D7%9C%D7%90%20%D7%9E%D7%A8%D7%95%D7%91%D7%93.pdf",
+      "source_url": "https://www.nevo.co.il/law_html/law01/255_001.htm",
       "raw_snippet": "או על נכסים שהוא משמש לגביהם כנאמנו של אדם אחר",
       "confidence": "high",
-      "verified_via": "pdf",
-      "verified_at": "2026-09-09",
-      "verification_note": "PDF downloaded from this exact URL (HTTP 200, 10.8 MB) and the snippet confirmed present in its pdftotext text layer. The gate fetcher intermittently returns HTTP 000 on this file because of its size."
+      "verified_via": "browser",
+      "verified_at": "2026-10-01",
+      "verification_note": "Re-anchored 2026-10-01 from the 2023 gov.il Ordinance PDF (predates Amendment 272) to the Nevo consolidation headed \"נוסח עדכני נכון ליום: 27-09-2026\"; page fetched with curl, decoded, snippet confirmed in the text."
     },
     {
       "id": "s135-1b-ten-year-exemption",
-      "claim": "Section 135(1)(b) exempts a person who first became an Israeli resident or a veteran returning resident under s.14(a) from reporting capital and assets outside Israel for ten years, with two carve-outs, the second dated 1 January 2007. (Hebrew: סעיף 97)",
+      "claim": "Section 135(1)(b) (text as it stood before Amendment 272) gave a first-time resident or veteran returning resident a ten-year exemption from reporting capital and assets outside Israel. Still applies only to those who became such residents before 1 January 2026. Carve-out tied to an asset received under s.97(a)(5) (Hebrew: סעיף 97(א)(5)) from 1 January 2007.",
       "claim_type": "date",
       "source_url": "https://www.gov.il/BlobFolder/legalinfo/law_pkudat_mas_hachnasa/he/LegalInformation_kesher_%D7%A4%D7%A7%D7%95%D7%93%D7%AA%20%D7%9E%D7%A1%20%D7%94%D7%9B%D7%A0%D7%A1%D7%94%20%5B%D7%A0%D7%95%D7%A1%D7%97%20%D7%97%D7%93%D7%A9%5D%20-%20%D7%9C%D7%90%20%D7%9E%D7%A8%D7%95%D7%91%D7%93.pdf",
       "raw_snippet": "(ב) על אף הוראות פסקת משנה (א) ,יחיד שהיה לתושב ישראל לראשונה או לתושב חוזר ותיק ,כאמור בסעיף (14א) ,לא יהא חייב בהגשת דוח על הונו ונכסיו שמחוץ לישראל ,במשך עשר שנים מהמועד שהיה לתושב ישראל כאמור; הוראות פסקת משנה זו לא יחולו על הון ונכסים שלגבי הכנסות שנבעו מהם ,כולן או חלקן ,ביקש היחיד ,לפי הוראות סעיף קטן (א) של סעיף ,14כי לא יחולו הוראות הסעיף הקטן האמור ,ועל נכס שהגיע לידי היחיד בפטור ממס לפי סעיף (97א)( – )5החל ביום י\"א בטבת התשס\"ז (1 בינואר ;)2007",
       "confidence": "high",
       "verified_via": "pdf",
       "verified_at": "2026-09-09",
-      "verification_note": "PDF downloaded from this exact URL (HTTP 200, 10.8 MB) and the snippet confirmed present in its pdftotext text layer. The gate fetcher intermittently returns HTTP 000 on this file because of its size."
+      "verification_note": "PDF downloaded from this exact URL (HTTP 200, 10.8 MB) and the snippet confirmed present in its pdftotext text layer. The gate fetcher intermittently returns HTTP 000 on this file because of its size. 2026-10-01: this is the pre-Amendment-272 text, kept on the 2023 PDF deliberately because that is the text still governing pre-2026 residents. The current consolidation shows (ב) (נמחקה)."
     },
     {
       "id": "gen-rule-3-cost-not-value",
@@ -271,7 +271,7 @@
     },
     {
       "id": "part-b-shares-at-par",
-      "claim": "Part B: record your investment and your shares at par value.",
+      "claim": "In part B, the company vehicle (field 400) asks for the investment and shares at par value; the business and partnership vehicles ask for capital and current account balances.",
       "claim_type": "feature",
       "source_url": "https://www.gov.il/BlobFolder/service/itc1219/he/Service_Pages_Income_tax_itc1219.pdf",
       "raw_snippet": "-רשום את השקעתך ואת המניות שלך בערך הנקוב.",
@@ -361,78 +361,78 @@
       "id": "s143-preparer-declaration",
       "claim": "Section 143: a person who assists another for payment in preparing a report, notice, form or other document for the purposes of the Ordinance must declare on that document that they assisted in preparing it.",
       "claim_type": "law",
-      "source_url": "https://www.gov.il/BlobFolder/legalinfo/law_pkudat_mas_hachnasa/he/LegalInformation_kesher_%D7%A4%D7%A7%D7%95%D7%93%D7%AA%20%D7%9E%D7%A1%20%D7%94%D7%9B%D7%A0%D7%A1%D7%94%20%5B%D7%A0%D7%95%D7%A1%D7%97%20%D7%97%D7%93%D7%A9%5D%20-%20%D7%9C%D7%90%20%D7%9E%D7%A8%D7%95%D7%91%D7%93.pdf",
-      "raw_snippet": ".143אדם המסייע לאחר ,תמורת תשלום ,לערוך דו\"ח ,הודעה ,טופס או מסמך אחר לצורך פקודה זו ,חייב להצהיר על אותה תעודה כי הוא סייע בעריכתה.",
+      "source_url": "https://www.nevo.co.il/law_html/law01/255_001.htm",
+      "raw_snippet": "אדם המסייע לאחר, תמורת תשלום, לערוך דו\"ח, הודעה, טופס או מסמך אחר לצורך פקודה זו, חייב להצהיר על אותה תעודה כי הוא סייע בעריכתה",
       "confidence": "high",
-      "verified_via": "pdf",
-      "verified_at": "2026-09-09",
-      "verification_note": "PDF downloaded from this exact URL (HTTP 200, 10.8 MB) and the snippet confirmed present in its pdftotext text layer. The gate fetcher intermittently returns HTTP 000 on this file because of its size."
+      "verified_via": "browser",
+      "verified_at": "2026-10-01",
+      "verification_note": "Re-anchored 2026-10-01 from the 2023 gov.il Ordinance PDF (predates Amendment 272) to the Nevo consolidation headed \"נוסח עדכני נכון ליום: 27-09-2026\"; page fetched with curl, decoded, snippet confirmed in the text."
     },
     {
       "id": "s224-assistant-liability",
       "claim": "Section 224: a person who assisted another to prepare a report, notice or other document knowing it contains incorrect information is treated as having committed the offences under ss.215 to 217 and 220.",
       "claim_type": "law",
-      "source_url": "https://www.gov.il/BlobFolder/legalinfo/law_pkudat_mas_hachnasa/he/LegalInformation_kesher_%D7%A4%D7%A7%D7%95%D7%93%D7%AA%20%D7%9E%D7%A1%20%D7%94%D7%9B%D7%A0%D7%A1%D7%94%20%5B%D7%A0%D7%95%D7%A1%D7%97%20%D7%97%D7%93%D7%A9%5D%20-%20%D7%9C%D7%90%20%D7%9E%D7%A8%D7%95%D7%91%D7%93.pdf",
-      "raw_snippet": ".224מי שסייע לאחר לערוך דו\"ח ,הודעה או מסמך אחר לצורך פקודה זו ,כשהוא יודע שאותו דו\"ח ,הודעה או מסמך כולל ידיעה לא נכונה ,או אדם שהתייצב כנציגו של נישום ומסר ידיעה לצורך פקודה זו כשהוא יודע שאינה נכונה ,יראוהו ,לענין הסעיפים 215-217ו220- כאילו עשה את הדברים האמורים.",
+      "source_url": "https://www.nevo.co.il/law_html/law01/255_001.htm",
+      "raw_snippet": "מי שסייע לאחר לערוך דו\"ח, הודעה או מסמך אחר לצורך פקודה זו, כשהוא יודע שאותו דו\"ח, הודעה או מסמך כולל ידיעה לא נכונה",
       "confidence": "high",
-      "verified_via": "pdf",
-      "verified_at": "2026-09-09",
-      "verification_note": "PDF downloaded from this exact URL (HTTP 200, 10.8 MB) and the snippet confirmed present in its pdftotext text layer. The gate fetcher intermittently returns HTTP 000 on this file because of its size."
+      "verified_via": "browser",
+      "verified_at": "2026-10-01",
+      "verification_note": "Re-anchored 2026-10-01 from the 2023 gov.il Ordinance PDF (predates Amendment 272) to the Nevo consolidation headed \"נוסח עדכני נכון ליום: 27-09-2026\"; page fetched with curl, decoded, snippet confirmed in the text."
     },
     {
       "id": "s155-burden-of-proof",
       "claim": "Section 155: the burden of proving that the assessment is excessive lies on the appellant, unless the appellant kept acceptable books, in which case the assessing officer or the Director must justify their decision. (Hebrew: סעיף 155)",
       "claim_type": "law",
-      "source_url": "https://www.gov.il/BlobFolder/legalinfo/law_pkudat_mas_hachnasa/he/LegalInformation_kesher_%D7%A4%D7%A7%D7%95%D7%93%D7%AA%20%D7%9E%D7%A1%20%D7%94%D7%9B%D7%A0%D7%A1%D7%94%20%5B%D7%A0%D7%95%D7%A1%D7%97%20%D7%97%D7%93%D7%A9%5D%20-%20%D7%9C%D7%90%20%D7%9E%D7%A8%D7%95%D7%91%D7%93.pdf",
-      "raw_snippet": ".155חובת הראיה כי השומה היא מופרזת תהיה על המערער; אולם אם המערער ניהל פנקסים קבילים ,ובערעור על פי סעיף (130ח) כאשר פנקסי החשבונות בוקרו על ידי רואה חשבון וחוות דעתו על הדו\"חות הכספיים על פיהם היתה ללא הסתייגות או בהסתייגות שלדעת בית המשפט אין לה נפקות לענין קבילות הפנקסים ,חייבים פקיד השומה או המנהל ,לפי הענין ,להצדיק את החלטתם.",
+      "source_url": "https://www.nevo.co.il/law_html/law01/255_001.htm",
+      "raw_snippet": "חובת הראיה כי השומה היא מופרזת תהיה על המערער; אולם אם המערער ניהל פנקסים קבילים",
       "confidence": "high",
-      "verified_via": "pdf",
-      "verified_at": "2026-09-09",
-      "verification_note": "PDF downloaded from this exact URL (HTTP 200, 10.8 MB) and the snippet confirmed present in its pdftotext text layer. The gate fetcher intermittently returns HTTP 000 on this file because of its size."
+      "verified_via": "browser",
+      "verified_at": "2026-10-01",
+      "verification_note": "Re-anchored 2026-10-01 from the 2023 gov.il Ordinance PDF (predates Amendment 272) to the Nevo consolidation headed \"נוסח עדכני נכון ליום: 27-09-2026\"; page fetched with curl, decoded, snippet confirmed in the text."
     },
     {
       "id": "s188z-fine",
       "claim": "Section 188(z): failure to file a report under s.135(1) on time attracts a fine of 200 shekels for each month of delay, rising to 400 shekels per month from a later date granted at the taxpayer's own request where the report was filed after that later date.",
       "claim_type": "currency",
-      "source_url": "https://www.gov.il/BlobFolder/legalinfo/law_pkudat_mas_hachnasa/he/LegalInformation_kesher_%D7%A4%D7%A7%D7%95%D7%93%D7%AA%20%D7%9E%D7%A1%20%D7%94%D7%9B%D7%A0%D7%A1%D7%94%20%5B%D7%A0%D7%95%D7%A1%D7%97%20%D7%97%D7%93%D7%A9%5D%20-%20%D7%9C%D7%90%20%D7%9E%D7%A8%D7%95%D7%91%D7%93.pdf",
-      "raw_snippet": "(ז) לא הגיש אדם במועד דו\"ח על סעיף ,)1(135יוטל עליו ,בעד כל חודש של פיגור, קנס של 200שקלים חדשים; אולם אם נקבע לו בתחילה מועד להגשת הדו\"ח לפי סעיף ,)1(135ועל פי בקשת אותו אדם נקבע לו לאחר מכן מועד מאוחר יותר להגשת הדו\"ח (להלן - המועד המאוחר) ,ואותו אדם הגיש את הדו\"ח לאחר המועד המאוחר ,יוטל עליו קנס של 400 שקלים חדשים בעד כל חודש של פיגור החל במועד המאוחר.",
+      "source_url": "https://www.nevo.co.il/law_html/law01/255_001.htm",
+      "raw_snippet": "לא הגיש אדם במועד דו\"ח על סעיף 135(1), יוטל עליו, בעד כל חודש של פיגור, קנס של 200 שקלים חדשים",
       "confidence": "high",
-      "verified_via": "pdf",
-      "verified_at": "2026-09-09",
-      "verification_note": "PDF downloaded from this exact URL (HTTP 200, 10.8 MB) and the snippet confirmed present in its pdftotext text layer. The gate fetcher intermittently returns HTTP 000 on this file because of its size."
+      "verified_via": "browser",
+      "verified_at": "2026-10-01",
+      "verification_note": "Re-anchored 2026-10-01 from the 2023 gov.il Ordinance PDF (predates Amendment 272) to the Nevo consolidation headed \"נוסח עדכני נכון ליום: 27-09-2026\"; page fetched with curl, decoded, snippet confirmed in the text."
     },
     {
       "id": "s188e-full-month",
       "claim": "Section 188(e): in that section, month means a full month.",
       "claim_type": "law",
-      "source_url": "https://www.gov.il/BlobFolder/legalinfo/law_pkudat_mas_hachnasa/he/LegalInformation_kesher_%D7%A4%D7%A7%D7%95%D7%93%D7%AA%20%D7%9E%D7%A1%20%D7%94%D7%9B%D7%A0%D7%A1%D7%94%20%5B%D7%A0%D7%95%D7%A1%D7%97%20%D7%97%D7%93%D7%A9%5D%20-%20%D7%9C%D7%90%20%D7%9E%D7%A8%D7%95%D7%91%D7%93.pdf",
-      "raw_snippet": "(ה) בסעיף זה\" ,חודש\" -חודש מלא.",
+      "source_url": "https://www.nevo.co.il/law_html/law01/255_001.htm",
+      "raw_snippet": "חודש מלא. (ו) אדם החייב לנכות מס במקור",
       "confidence": "high",
-      "verified_via": "pdf",
-      "verified_at": "2026-09-09",
-      "verification_note": "PDF downloaded from this exact URL (HTTP 200, 10.8 MB) and the snippet confirmed present in its pdftotext text layer. The gate fetcher intermittently returns HTTP 000 on this file because of its size."
+      "verified_via": "browser",
+      "verified_at": "2026-10-01",
+      "verification_note": "Re-anchored 2026-10-01 from the 2023 gov.il Ordinance PDF (predates Amendment 272) to the Nevo consolidation headed \"נוסח עדכני נכון ליום: 27-09-2026\"; page fetched with curl, decoded, snippet confirmed in the text."
     },
     {
       "id": "s188h-annual-indexation",
       "claim": "Section 188(h): on 1 January of each tax year the amounts stated in the section as they stood on 1 January of the preceding tax year are adjusted by the rate of the index increase in the preceding tax year.",
       "claim_type": "law",
-      "source_url": "https://www.gov.il/BlobFolder/legalinfo/law_pkudat_mas_hachnasa/he/LegalInformation_kesher_%D7%A4%D7%A7%D7%95%D7%93%D7%AA%20%D7%9E%D7%A1%20%D7%94%D7%9B%D7%A0%D7%A1%D7%94%20%5B%D7%A0%D7%95%D7%A1%D7%97%20%D7%97%D7%93%D7%A9%5D%20-%20%D7%9C%D7%90%20%D7%9E%D7%A8%D7%95%D7%91%D7%93.pdf",
-      "raw_snippet": "(ח) ב 1-בינואר של כל שנת מס יתואמו הסכומים הנקובים בסעיף זה כפי שהיו ב1- בינואר של שנת המס הקודמת ,לפי שיעור עליית המדד בשנת המס הקודמת",
+      "source_url": "https://www.nevo.co.il/law_html/law01/255_001.htm",
+      "raw_snippet": "(ח) ב-1 בינואר של כל שנת מס יתואמו הסכומים הנקובים בסעיף זה",
       "confidence": "high",
-      "verified_via": "pdf",
-      "verified_at": "2026-09-09",
-      "verification_note": "PDF downloaded from this exact URL (HTTP 200, 10.8 MB) and the snippet confirmed present in its pdftotext text layer. The gate fetcher intermittently returns HTTP 000 on this file because of its size."
+      "verified_via": "browser",
+      "verified_at": "2026-10-01",
+      "verification_note": "Re-anchored 2026-10-01 from the 2023 gov.il Ordinance PDF (predates Amendment 272) to the Nevo consolidation headed \"נוסח עדכני נכון ליום: 27-09-2026\"; page fetched with curl, decoded, snippet confirmed in the text."
     },
     {
       "id": "s189b-fine-vs-prosecution",
       "claim": "Section 189(b): if a criminal charge is brought for failing to file a report, no fine under s.188 is payable for that offence, and a fine already paid is refunded.",
       "claim_type": "law",
-      "source_url": "https://www.gov.il/BlobFolder/legalinfo/law_pkudat_mas_hachnasa/he/LegalInformation_kesher_%D7%A4%D7%A7%D7%95%D7%93%D7%AA%20%D7%9E%D7%A1%20%D7%94%D7%9B%D7%A0%D7%A1%D7%94%20%5B%D7%A0%D7%95%D7%A1%D7%97%20%D7%97%D7%93%D7%A9%5D%20-%20%D7%9C%D7%90%20%D7%9E%D7%A8%D7%95%D7%91%D7%93.pdf",
-      "raw_snippet": "(ב) הוגשה נגד אדם תביעה פלילית על אי הגשת דו\"ח ,לא יחוייב בתשלום קנס לפי סעיף 188על אותה עבירה ,ואם שילם קנס כאמור -יוחזר לו",
+      "source_url": "https://www.nevo.co.il/law_html/law01/255_001.htm",
+      "raw_snippet": "הוגשה נגד אדם תביעה פלילית על אי הגשת דו\"ח, לא יחוייב בתשלום קנס לפי סעיף 188 על אותה עבירה",
       "confidence": "high",
-      "verified_via": "pdf",
-      "verified_at": "2026-09-09",
-      "verification_note": "PDF downloaded from this exact URL (HTTP 200, 10.8 MB) and the snippet confirmed present in its pdftotext text layer. The gate fetcher intermittently returns HTTP 000 on this file because of its size."
+      "verified_via": "browser",
+      "verified_at": "2026-10-01",
+      "verification_note": "Re-anchored 2026-10-01 from the 2023 gov.il Ordinance PDF (predates Amendment 272) to the Nevo consolidation headed \"נוסח עדכני נכון ליום: 27-09-2026\"; page fetched with curl, decoded, snippet confirmed in the text."
     },
     {
       "id": "form-warning-box-penalties",
@@ -446,34 +446,34 @@
       "id": "s215-residual-offence",
       "claim": "Section 215: a person who contravenes the Ordinance or a regulation under it, where no other express penalty is prescribed, is liable to one year's imprisonment or a fine under s.61(a)(2) of the Penal Law.",
       "claim_type": "law",
-      "source_url": "https://www.gov.il/BlobFolder/legalinfo/law_pkudat_mas_hachnasa/he/LegalInformation_kesher_%D7%A4%D7%A7%D7%95%D7%93%D7%AA%20%D7%9E%D7%A1%20%D7%94%D7%9B%D7%A0%D7%A1%D7%94%20%5B%D7%A0%D7%95%D7%A1%D7%97%20%D7%97%D7%93%D7%A9%5D%20-%20%D7%9C%D7%90%20%D7%9E%D7%A8%D7%95%D7%91%D7%93.pdf",
-      "raw_snippet": ".215אדם שעבר על פקודה זו או על תקנה שהותקנה לפיה ,ולא נקבע לאותה עבירה עונש מפורש אחר ,דינו – מאסר שנה או קנס כאמור בסעיף (61א)( )2לחוק העונשין ,התשל\"ז1977-",
+      "source_url": "https://www.nevo.co.il/law_html/law01/255_001.htm",
+      "raw_snippet": "אדם שעבר על פקודה זו או על תקנה שהותקנה לפיה, ולא נקבע לאותה עבירה עונש מפורש אחר, דינו – מאסר שנה",
       "confidence": "high",
-      "verified_via": "pdf",
-      "verified_at": "2026-09-09",
-      "verification_note": "PDF downloaded from this exact URL (HTTP 200, 10.8 MB) and the snippet confirmed present in its pdftotext text layer. The gate fetcher intermittently returns HTTP 000 on this file because of its size."
+      "verified_via": "browser",
+      "verified_at": "2026-10-01",
+      "verification_note": "Re-anchored 2026-10-01 from the 2023 gov.il Ordinance PDF (predates Amendment 272) to the Nevo consolidation headed \"נוסח עדכני נכון ליום: 27-09-2026\"; page fetched with curl, decoded, snippet confirmed in the text."
     },
     {
       "id": "s216-1-non-compliance",
       "claim": "Section 216(1): a person who without sufficient reason fails to comply with a requirement contained in a notice given to them under the Ordinance is liable to one year's imprisonment or a fine under s.61(a)(2).",
       "claim_type": "law",
-      "source_url": "https://www.gov.il/BlobFolder/legalinfo/law_pkudat_mas_hachnasa/he/LegalInformation_kesher_%D7%A4%D7%A7%D7%95%D7%93%D7%AA%20%D7%9E%D7%A1%20%D7%94%D7%9B%D7%A0%D7%A1%D7%94%20%5B%D7%A0%D7%95%D7%A1%D7%97%20%D7%97%D7%93%D7%A9%5D%20-%20%D7%9C%D7%90%20%D7%9E%D7%A8%D7%95%D7%91%D7%93.pdf",
-      "raw_snippet": ".216אדם אשר בלי סיבה מספקת עבר אחת העבירות המנויות להלן ,דינו – מאסר שנה או קנס כאמור בסעיף (61א)( )2לחוק העונשין ,או שני העונשים כאחד: ( )1לא קיים דרישה הכלולה בהודעה שניתנה לו לפי פקודה זו;",
+      "source_url": "https://www.nevo.co.il/law_html/law01/255_001.htm",
+      "raw_snippet": "לא קיים דרישה הכלולה בהודעה שניתנה לו לפי פקודה זו",
       "confidence": "high",
-      "verified_via": "pdf",
-      "verified_at": "2026-09-09",
-      "verification_note": "PDF downloaded from this exact URL (HTTP 200, 10.8 MB) and the snippet confirmed present in its pdftotext text layer. The gate fetcher intermittently returns HTTP 000 on this file because of its size."
+      "verified_via": "browser",
+      "verified_at": "2026-10-01",
+      "verification_note": "Re-anchored 2026-10-01 from the 2023 gov.il Ordinance PDF (predates Amendment 272) to the Nevo consolidation headed \"נוסח עדכני נכון ליום: 27-09-2026\"; page fetched with curl, decoded, snippet confirmed in the text."
     },
     {
       "id": "s220-wilful-evasion",
-      "claim": "Section 220: a person who wilfully, intending to evade tax, omits income from a report or makes a false statement or record in a report is liable to seven years' imprisonment or a fine under s.61(a)(4) plus twice the concealed income.",
+      "claim": "Section 220: a person who wilfully, intending to evade tax, omits income from a report or makes a false statement or record in a report is liable to seven years' imprisonment or a fine under s.61(a)(4) plus twice the concealed income. (Hebrew: סעיף 220)",
       "claim_type": "law",
-      "source_url": "https://www.gov.il/BlobFolder/legalinfo/law_pkudat_mas_hachnasa/he/LegalInformation_kesher_%D7%A4%D7%A7%D7%95%D7%93%D7%AA%20%D7%9E%D7%A1%20%D7%94%D7%9B%D7%A0%D7%A1%D7%94%20%5B%D7%A0%D7%95%D7%A1%D7%97%20%D7%97%D7%93%D7%A9%5D%20-%20%D7%9C%D7%90%20%D7%9E%D7%A8%D7%95%D7%91%D7%93.pdf",
-      "raw_snippet": ".220אדם אשר במזיד ,בכוונה להתחמק ממס או לעזור לאדם אחר להתחמק ממס ,עבר אחת העבירות המנויות להלן ,דינו -מאסר שבע שנים או קנס כאמור בסעיף (61א)( )4לחוק העונשין ופי שניים מסכום ההכנסה שהעלים ,שהתכוון להעלים או שעזר להעלים ,או שני הענשים כאחד; ואלו הן: ( )1השמיט מתוך דו\"ח על פי הפקודה כל הכנסה שיש לכללה בדו\"ח; ( )2מסר בדו\"ח על פי הפקודה אמרה או תרשומת כוזבות;",
+      "source_url": "https://www.nevo.co.il/law_html/law01/255_001.htm",
+      "raw_snippet": "אדם אשר במזיד, בכוונה להתחמק ממס או לעזור לאדם אחר להתחמק ממס, עבר אחת העבירות המנויות להלן, דינו – מאסר שבע שנים",
       "confidence": "high",
-      "verified_via": "pdf",
-      "verified_at": "2026-09-09",
-      "verification_note": "PDF downloaded from this exact URL (HTTP 200, 10.8 MB) and the snippet confirmed present in its pdftotext text layer. The gate fetcher intermittently returns HTTP 000 on this file because of its size."
+      "verified_via": "browser",
+      "verified_at": "2026-10-01",
+      "verification_note": "Re-anchored 2026-10-01 from the 2023 gov.il Ordinance PDF (predates Amendment 272) to the Nevo consolidation headed \"נוסח עדכני נכון ליום: 27-09-2026\"; page fetched with curl, decoded, snippet confirmed in the text."
     },
     {
       "id": "circular-digital-optional",
@@ -570,6 +570,116 @@
       "source_url": "https://www.gov.il/BlobFolder/dynamiccollectorresultitem/represent-info-050525-1/he/IncomeTax_represent-info-050525-1.pdf",
       "raw_snippet": "מרכז המידע והשירותים המקוונים של רשות המיסים בטלפונים 02-5656400 :או . *4954 לסיום ,אנו עושים בימים אלה צעד משמעותי ביותר במימוש יעדי רשות המיסים .נמשיך לפעול לשיפור וייעול",
       "confidence": "high"
+    },
+    {
+      "id": "amend272-s135-1b-deleted-from-2026",
+      "claim": "Amendment 272 to the Income Tax Ordinance repealed s.134ב and deleted s.135(1)(b), applying to whoever became a first-time resident or veteran returning resident from 1 January 2026 onward. Section 135א1 was added by the same amendment. The application rule is in the amendment's own section 12(a) (Hebrew: סעיף 12(א) לחוק התיקון).",
+      "claim_type": "law",
+      "source_url": "https://fs.knesset.gov.il/25/law/25_lsr_4303082.pdf",
+      "raw_snippet": "החל מיום י\"ב בטבת התשפ\"ו",
+      "verified_via": "pdf",
+      "verified_at": "2026-10-01",
+      "verification_note": "Sefer HaChukim 3205 (7.4.2024) p.786. pdftotext of the two-column PDF: \"ביטול סעיף 134ב ... 134ב לפקודה - בטל\"; \"פסקת משנה (ב) - תימחק\" under \"תיקון סעיף 135\"; s.12(א) תחולה: \"יחולו על מי שהיה לתושב ישראל לראשונה או שהיה לתושב חוזר ותיק, כאמור בסעיף 14(א), החל מיום י\"ב בטבת התשפ\"ו (1 בינואר 2026) ואילך\". Cross-checked: Nevo current consolidation shows \"(ב) (נמחקה)\" and \"134ב. (בוטל)\"."
+    },
+    {
+      "id": "nevo-s135-1b-deleted",
+      "claim": "The current consolidation shows s.135(1)(b) deleted.",
+      "claim_type": "law",
+      "source_url": "https://www.nevo.co.il/law_html/law01/255_001.htm",
+      "raw_snippet": "לפי המאוחר; וכן רשאי פקיד השומה",
+      "verified_via": "browser",
+      "verified_at": "2026-10-01",
+      "verification_note": "Nevo, current to 27-09-2026: s.135(1)(a) ends and is followed directly by \"(ב) (נמחקה) (2) רשאי פקיד השומה\". Also s.135א1 present: \"135א1. (א) בלי לגרוע מהוראות פרק זה, פקיד השומה רשאי לדרוש בהודעה בכתב מחבר בני אדם\"."
+    },
+    {
+      "id": "nevo-s135a1-foreign-company",
+      "claim": "Section 135א1 lets the assessing officer demand a report from a body of persons not treated as resident because its control and management in Israel are exercised by a first-time resident or veteran returning resident. (Hebrew: סעיף 135א1)",
+      "claim_type": "law",
+      "source_url": "https://www.nevo.co.il/law_html/law01/255_001.htm",
+      "raw_snippet": "פקיד השומה רשאי לדרוש בהודעה בכתב מחבר בני אדם",
+      "verified_via": "browser",
+      "verified_at": "2026-10-01",
+      "verification_note": "Nevo consolidation current to 27-09-2026."
+    },
+    {
+      "id": "nevo-s131g-vav-not-filed",
+      "claim": "Section 131ג(ו): a report that had to be filed online and was not filed that way is treated as not filed. (Hebrew: סעיף 131ג)",
+      "claim_type": "law",
+      "source_url": "https://www.nevo.co.il/law_html/law01/255_001.htm",
+      "raw_snippet": "דוח, מסמך או טופס שהיתה חובה להגישם באופן מקוון ולא הוגשו בדרך זו, יראו אותם כאילו לא הוגשו",
+      "verified_via": "browser",
+      "verified_at": "2026-10-01",
+      "verification_note": "Nevo consolidation current to 27-09-2026. s.131ג(ב) there already lists 135(1)(א1)."
+    },
+    {
+      "id": "order-135-1-a1-from-2027",
+      "claim": "Order of 3 September 2026 (Kovetz HaTakanot 12523, 6.9.2026, p.2616) brings s.135(1)(a1) into force for an individual's capital report on 1 January 2027. (What (a1) requires is evidenced separately by wikisource-s135-1-a1-text.)",
+      "claim_type": "law",
+      "source_url": "https://olaw.org.il/takanot/takanot-12523.pdf",
+      "raw_snippet": "ונכסיו של יחיד ,ביום כ\"ב בטבת התשפ\"ז",
+      "verified_via": "pdf",
+      "verified_at": "2026-10-01",
+      "verification_note": "pdftotext of the Reshumot print (mirror of Kovetz HaTakanot 12523): \"תחילתו של סעיף 135(1)(א1) לפקודה, כנוסחו בסעיף 15(5) לחוק, לעניין דוח על הונו ונכסיו של יחיד, ביום כ\"ב בטבת התשפ\"ז (1 בינואר 2027)\". Signed \"כ\"א באלול התשפ\"ו (3 בספטמבר 2026)\", בצלאל סמוטריץ' שר האוצר. No transitional provision in the order."
+    },
+    {
+      "id": "rules-2026-online-capital-declaration",
+      "claim": "Income Tax Rules (Online Reporting of a Capital Declaration Report) 5786-2026: filer identified in the system; representative identifies with an approved electronic certificate and attaches a scan of the output signed by the taxpayer; filing complete only once a receipt is displayed; an infected file is treated as never transmitted.",
+      "claim_type": "law",
+      "source_url": "https://olaw.org.il/takanot/takanot-12479.pdf",
+      "raw_snippet": "באמצעות תעודה אלקטרונית מאושרת",
+      "verified_via": "pdf",
+      "verified_at": "2026-10-01",
+      "verification_note": "Kovetz HaTakanot 12479 (19.7.2026) pp.2440-2441, signed 13.7.2026 by the ITA Director. Text layer: s.2(ב) \"זיהוי המדווח יתבצע באמצעות תעודה אלקטרונית מאושרת\"; s.4 \"הוא לא ייקלט, ויראו אותו כאילו לא שודר\"; s.5(ב) scan \"חתומה בחתימה ידנית או בחתימה אלקטרונית מאובטחת, של החייב בהגשה\"; s.6 \"הגשת הדוח באופן מקוון תושלם רק לאחר שיוצג אישור כאמור\"."
+    },
+    {
+      "id": "part-c-s5-one-line-per-portfolio",
+      "claim": "The per-portfolio-per-institution separate-line instruction appears in part C section 5, not part A section 7.",
+      "claim_type": "form",
+      "source_url": "https://www.gov.il/BlobFolder/service/itc1219/he/Service_Pages_Income_tax_itc1219.pdf",
+      "raw_snippet": "-כל תיק ני\"ע המתנהל במוסד שונה יופיע בשורה נפרדת.",
+      "verified_via": "pdf",
+      "verified_at": "2026-10-01",
+      "verification_note": "pdftotext -layout of the form; appears once, in the part C section 5 instruction block."
+    },
+    {
+      "id": "s11-household-contents-cost",
+      "claim": "Section 11 asks for the cost of the household contents.",
+      "claim_type": "form",
+      "source_url": "https://www.gov.il/BlobFolder/service/itc1219/he/Service_Pages_Income_tax_itc1219.pdf",
+      "raw_snippet": "רשום את עלות תכולת הבית הכוללת מוצרים בני קיימא בבית ,ריהוט ,מוצרי חשמל",
+      "verified_via": "pdf",
+      "verified_at": "2026-10-01",
+      "verification_note": "pdftotext -layout of the form."
+    },
+    {
+      "id": "circular-view-submitted",
+      "claim": "The online system lets the filer view digital capital declarations already submitted.",
+      "claim_type": "regulator",
+      "source_url": "https://www.gov.il/BlobFolder/dynamiccollectorresultitem/represent-info-050525-1/he/IncomeTax_represent-info-050525-1.pdf",
+      "raw_snippet": "צפייה בהצהרות הון דיגיטליות שהוגשו",
+      "verified_via": "pdf",
+      "verified_at": "2026-10-01",
+      "verification_note": "pdftotext of circular 2025-000538."
+    },
+    {
+      "id": "wikisource-s135-1-a1-text",
+      "claim": "Section 135(1)(a1), in force from 1.1.2027: a capital report under (a) is filed by its due date ONLINE, under the Director's s.131ג(ד) rules, and s.131ג applies. Taken from the Wikisource consolidation because the official consolidation (Nevo) does not print a provision before it is in force; corroborated by s.131ג(ב) in Nevo, which already lists 135(1)(א1).",
+      "claim_type": "law",
+      "source_url": "https://he.wikisource.org/wiki/%D7%A4%D7%A7%D7%95%D7%93%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
+      "raw_snippet": "דוח כאמור בפסקת משנה (א) יוגש במועד שנקבע באותה פסקת משנה, באופן מקוון",
+      "verified_via": "browser",
+      "verified_at": "2026-10-01",
+      "verification_note": "Wikisource raw wikitext fetched 2026-10-01: \"(א1) (החל מיום 1.1.2027): דוח כאמור בפסקת משנה (א) יוגש במועד שנקבע באותה פסקת משנה, באופן מקוון, בהתאם להוראות שקבע המנהל לפי סעיף 131ג(ד), והוראות סעיף 131ג יחולו;\". Origin: s.15(5) of the Economic Efficiency Law 2015-2016 (ס\"ח התשע\"ו p.219), as the KT 12523 order cites. Secondary consolidation, flagged as such in references/penalties-and-offences.md."
+    },
+    {
+      "id": "wikisource-s135-1b-temporal-note",
+      "claim": "The Wikisource consolidation annotates s.135(1)(b) as deleted only for those who became first-time or veteran returning residents from 2026.",
+      "claim_type": "law",
+      "source_url": "https://he.wikisource.org/wiki/%D7%A4%D7%A7%D7%95%D7%93%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
+      "raw_snippet": "נמחקה לעניין מי שהיה לתושב ישראל לראשונה או שהיה לתושב חוזר ותיק",
+      "verified_via": "browser",
+      "verified_at": "2026-10-01",
+      "verification_note": "Wikisource raw wikitext fetched 2026-10-01: \"(ב) (נמחקה לעניין מי שהיה לתושב ישראל לראשונה או שהיה לתושב חוזר ותיק החל משנת 2026)\". Primary basis: Amendment 272 s.12(א)."
     }
   ]
 }

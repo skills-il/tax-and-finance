@@ -1,6 +1,6 @@
 # Penalties and offences attaching to a capital declaration
 
-Source: the Income Tax Ordinance as published by gov.il, and the warning box on form 1219.
+Source: the Income Tax Ordinance (current consolidation on Nevo, checked 2026-10-01), and the warning box on form 1219.
 
 ## The form's own warning
 
@@ -28,6 +28,18 @@ the fine on a repeat offence and triple it on a further repeat. No amount is sta
 regulations were not read as a primary source during authoring, and secondary sources gave
 irreconcilable figures. Any single number would be incomplete without the escalation rule in any
 case.
+
+## A paper filing can count as no filing, from 1 January 2027
+
+**Section 131ג(ו):** a report, document or form that had to be filed online and was not filed that
+way is treated as not filed. A Finance Minister's order of 3 September 2026 brings section
+135(1)(a1) into force for an individual's capital declaration on 1 January 2027, from which date the
+declaration must be filed online (the wording of (a1) is taken from a consolidated text, since the
+official consolidation does not print a provision before it is in force; section 131ג(ב) already
+lists it among the online-filing provisions). A paper declaration handed in on or after that date is
+therefore treated as not filed, which is the route into the section 188(z) fine. Whether it also
+grounds a section 216(1) charge is an inference this reference does not make. The order has no
+transitional rule for a demand issued in 2026 that falls due in 2027.
 
 ## Fine and prosecution do not stack
 

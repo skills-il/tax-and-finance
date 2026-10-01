@@ -18,7 +18,7 @@ Scope per the form: the filer, the spouse, and children who had not yet reached 
 | 4 | Digital assets (Bitcoin, Ethereum, Litecoin, NFT) | asset type, quantity, purchase date, wallet address, cost. If held via a service provider such as an exchange, annex the account number and files showing balances of all digital assets as at the declaration date | 40 |
 | 5 | Cash not held at a bank or financial institution | currency, foreign amount, shekel amount | 50 |
 | 6 | Life insurance, gemel funds, pension funds, hishtalmut funds and savings plans, in Israel and abroad | account type, country, institution, holder, currency, amounts. Valued at **total deposits**, ignoring interest, linkage and other gains | 60 |
-| 7 | Securities and mutual funds in Israel and abroad | security type, country, institution, holder, account number, bank number, branch number, currency, amounts. At the amount actually invested. One line per portfolio per institution | 70 |
+| 7 | Securities and mutual funds in Israel and abroad | security type, country, institution, holder, account number, bank number, branch number, currency, amounts. At the amount actually invested. One line per asset (general rule 9); the per-portfolio-per-institution wording belongs to part C section 5 | 70 |
 | 8 | Debtors: loans you gave to others | debtor name, relationship (family member, friend, other), ID or company number, year the debt arose, currency, amounts. Principal only | 80 |
 | 9 | Vehicles including watercraft and aircraft | type, purchase date, licence or registration number, cost. The new form no longer asks for make and model | 90 |
 | 10 | Jewellery, gold, diamonds, collectibles and art, including coin, stamp and antique collections | item type, purchase date, cost | 100 |
@@ -40,8 +40,9 @@ your percentage share.
 | Partnership | 350 | 360 | 370 | 380 | 390 = 350+360+370-380 |
 | Company, cooperative or other corporation | 400 | 410 | 420 | 430 | 440 = 400+410+420-430 |
 
-Rules: record your investment and your shares **at par value**. If you owe the company, record the
-current-account balance as a **negative** number. Amounts paid on account of shares not yet
+Rules: for a business and a partnership, enter the **balance** of your capital and current accounts.
+Only the company vehicle asks you to record your investment and shares **at par value**. Where you
+owe the entity, the current-account balance is a **negative** number. Amounts paid on account of shares not yet
 allotted are added to the loans-to-company amount. One annex per additional entity, summed into
 **450**. **460** = 340+390+440+450.
 

@@ -42,7 +42,14 @@ pages, which enumerate every section explicitly.
   a preparer that always merges the spouse is wrong for separated or separately-assessed couples.
 - [ ] Assets held as trustee for another: s.135(1)(a) reaches "נכסים שהוא משמש לגביהם כנאמנו
   של אדם אחר" - why core: an entire declarable class outside the taxpayer's own ownership.
-- [ ] Ten-year exemption for עולה חדש / תושב חוזר ותיק: s.135(1)(b) - a person who first became
+- [ ] TEMPORAL SPLIT (added 2026-10-01): Amendment 272 (ס"ח 3205, 2024) s.6 deleted s.135(1)(b)
+  and s.12(א) applies the deletion to whoever became a first-time resident or veteran returning
+  resident "החל מיום י"ב בטבת התשפ"ו (1 בינואר 2026) ואילך". So the exemption below survives only
+  for those who became such residents on or before 31.12.2025; for 2026 arrivals foreign assets are
+  declared in full. The skill must ASK the residency date before applying the exemption. The same
+  amendment added s.135א1 (report from a foreign company controlled from Israel by such a resident):
+  corporate, out of scope, route out.
+- [ ] Ten-year exemption for עולה חדש / תושב חוזר ותיק (pre-2026 residents only, see above): s.135(1)(b) - a person who first became
   an Israeli resident, or a veteran returning resident under s.14(a), is NOT required to file a
   report on capital and assets OUTSIDE Israel for ten years from the date they became resident.
   Two carve-outs: income the individual elected out of under s.14(a), and an asset received
@@ -70,7 +77,9 @@ pages, which enumerate every section explicitly.
 - [ ] No offsetting debtors against creditors: "אין לקזז חייבים כנגד זכאים, גם אם הנך חייב
   וזכאי בעת ובעונה אחת כלפי אותו אדם/מוסד" (rule 13) - why core: netting hides a declarable
   asset and a declarable liability at once.
-- [ ] Foreign currency: enter the foreign-currency amount in its own column and convert to
+- [ ] Foreign currency (rule 12 governs items PAID OR RECEIVED in FX; a foreign bank BALANCE under
+  S3 is "כפי שמופיע בתדפיס הבנק נכון ליום שלגביו נערכה הצהרת ההון" and the form names no rate for
+  it, so surface and route that case; added 2026-10-01): enter the foreign-currency amount in its own column and convert to
   shekels "לפי השער היציג ליום התשלום או הקבלה" - the representative rate on the PAYMENT OR
   RECEIPT date, NOT the declaration date (rule 12) - why core: converting at the declaration-date
   rate is a plausible-looking mistake that shifts every foreign asset.
@@ -117,7 +126,8 @@ pages, which enumerate every section explicitly.
 - [ ] S7 השקעה בניירות ערך וקרנות נאמנות בארץ ובחו"ל. Fields: security type, country,
   institution, account holder, account number, bank number, branch number, currency, amounts.
   Valuation: the amount actually INVESTED; "נתוני העלות יוזנו בהתאם לתדפיסי המוסד בו מתנהל תיק
-  ני"ע". Separate line per portfolio per institution. Annex: institution statements.
+  ני"ע". One line per asset (rule 9); the explicit per-portfolio-per-institution line rule is
+  part C S5's wording, not part A S7's. Annex: institution statements.
   Total -> field 70. Cost-only reporting for securities was an explicit change in the new form.
 - [ ] S8 חייבים - הלוואות שנתתי לאחרים (loans the taxpayer GAVE). Fields: debtor name,
   relationship (family member / friend / other), ID or ח.פ, year the debt arose, currency,
@@ -260,9 +270,11 @@ pages, which enumerate every section explicitly.
   document that they assisted; s.224 treats a knowing assistant as if they had committed the
   offences under ss.215-217 and 220 themselves.
 - [ ] The reconciliation the skill exists to perform: closing net capital (field 800) minus the
-  previous declaration's net capital (part D S4), less declared income and other legitimate
-  sources (gifts, inheritances, loans received, non-taxable receipts), plus living expenses
-  over the period, equals the gap. Source for the method and for the ITA's use of average
+  previous declaration's net capital (part D S4), less income net of tax and other legitimate
+  sources that MOVE field 800 (money gifted or inherited, proceeds of selling an inherited asset,
+  exempt realised gains, scope changes), plus living expenses over the period, equals the gap.
+  A declared loan received is net-zero on field 800 and is NOT an explanation of the net gap
+  (corrected 2026-10-01; full table in references/reconciliation.md). Source for the method and for the ITA's use of average
   living-expense tables matched to the taxpayer's profile: Hebrew Wikipedia הצהרת הון.
 - [ ] Burden of proof on appeal sits on the TAXPAYER: s.155 - "חובת הראיה כי השומה היא מופרזת
   תהיה על המערער; אולם אם המערער ניהל פנקסים קבילים ... חייבים פקיד השומה או המנהל, לפי הענין,
@@ -291,7 +303,8 @@ pages, which enumerate every section explicitly.
 
 - [ ] Digital filing route and its rules: ITA opened the online capital-declaration system on
   05/05/2025 at http://secapp.taxes.gov.il/sh-haz-hon. Circular 2025-000538 is explicit that at
-  that stage use of the system is "בגדר רשות ולא חובה", OPTIONAL not mandatory, though filing
+  that stage use of the system is "בגדר רשות ולא חובה", OPTIONAL not mandatory (UNTIL 31.12.2026,
+  see the 2026-10-01 row below), though filing
   that way gets faster handling. Attachments can be uploaded per section with a note against
   each; at the end there is a documents screen listing the documents required by the sections
   the filer actually completed, marking whether each was supplied; a consolidated single file,
@@ -299,6 +312,17 @@ pages, which enumerate every section explicitly.
   Accepted file types: Pdf, Jpg, Excel, Word. Source: circular 2025-000538 ss.2.1, 2.2.
   Why: the output pack should be shaped to those file types and the per-section attachment
   model, and the documents screen is effectively the ITA's own coverage checklist.
+- [ ] MANDATORY ONLINE FILING FROM 1.1.2027 (added 2026-10-01; MUST cover): צו ההתייעלות
+  הכלכלית ... (תחילתו של סעיף 135(1)(א1) לפקודת מס הכנסה), התשפ"ו-2026, ק"ת 12523 (6.9.2026)
+  p.2616: "תחילתו של סעיף 135(1)(א1) לפקודה ... לעניין דוח על הונו ונכסיו של יחיד, ביום כ"ב
+  בטבת התשפ"ז (1 בינואר 2027)". s.131ג(ו): "דוח, מסמך או טופס שהיתה חובה להגישם באופן מקוון ולא
+  הוגשו בדרך זו, יראו אותם כאילו לא הוגשו." Binding mechanics: כללי מס הכנסה (דיווח מקוון של דוח
+  הצהרת הון), התשפ"ו-2026, ק"ת 12479 (19.7.2026) pp.2440-2441: identification in the system; a
+  representative identifies by approved electronic certificate and attaches a scan of the system
+  output signed by the taxpayer (s.5(ב)); filing complete only once a receipt is displayed (s.6); a
+  virus-infected file "לא ייקלט, ויראו אותו כאילו לא שודר" (s.4). No transitional rule for a 2026
+  demand falling due in 2027 (UNRESOLVED; route to the ITA). Whether any class of individuals is
+  exempted under s.131ג(ג): not found, UNVERIFIED.
 - [ ] The system also offers automatic calculations, draft saving, flexible addition of
   sections, immediate submission confirmation, viewing of previously submitted digital
   declarations, and adding missing documents AFTER the submission date. Why: "you can add a
@@ -342,14 +366,18 @@ pages, which enumerate every section explicitly.
   periodically and NOT published inside form 1219. Why: the skill should collect the user's
   ACTUAL living expenses and flag the comparison, and must NOT hard-code a table of amounts it
   cannot source to a current ITA or CBS publication.
-- [ ] What counts as an acceptable explanation for a capital increase: gifts, inheritances and
-  loans received during the examined period are the standard legitimate sources; recurring
+- [ ] What counts as an acceptable explanation for a capital increase: gifts and inheritances
+  received during the examined period are standard legitimate sources; a loan received explains
+  where specific cash came from (line-by-line pass) but not the net increase (corrected 2026-10-01); recurring
   triggers for scrutiny are omitted assets (foreign and digital especially), undocumented
   transfers, and inconsistencies between successive filings.
-- [ ] Gifts and loans received: form 1219 has NO "gifts" section. A gift or inheritance surfaces
-  as an ASSET entered at 1 shekel under general rule 2; a loan received surfaces in part A S14
-  (or part C S16 for the business) with lender identity, relationship, ID and year the debt
-  arose. The documentary burden lands on the ANNEXES, not on a form line. IMPORTANT NEGATIVE
+- [ ] Gifts and loans received: form 1219 has NO "gifts" section. A gifted or inherited NON-MONETARY
+  asset is entered at 1 shekel under general rule 2; gifted or inherited MONEY sits at its balance
+  in S3, and gifted money already spent sits inside the cost of what it bought (corrected
+  2026-10-01). A loan received surfaces in part A S14 and is NET-ZERO on field 800 (asset and
+  liability rise together), so it never explains a net increase (see references/reconciliation.md).
+  The S14 line, or the part C loans-from-others line for the business, carries lender identity,
+  relationship, ID and year the debt arose. The documentary burden lands on the ANNEXES, not on a form line. IMPORTANT NEGATIVE
   FINDING: NO statutory shekel threshold for documenting a gift or loan was found in form 1219,
   circular 2025-000538, or s.135. DO NOT ASSERT ONE.
 - [ ] Two different share mechanics in one form: in part A, jointly-owned private assets go in
@@ -367,8 +395,10 @@ pages, which enumerate every section explicitly.
   Source: circular 2025-000538 s.1. Why: a data-gathering checklist copied from an older guide
   will make the user chase fields nobody wants.
 - [ ] The "1 shekel" convention interacts badly with the comparison: an inherited apartment sits
-  in closing capital at 1 shekel while the cash it later generates sits at full value. The skill
-  should surface this as an EXPLANATION LINE rather than as a gap. Why: a naive reconciliation
+  in closing capital at 1 shekel while the proceeds of SELLING it sit at full value. The skill
+  should surface sale proceeds (net of tax and selling costs) as an EXPLANATION LINE rather than
+  as a gap. An inherited asset still held explains 1 shekel; RENT from it is income, already in the
+  income line, and must not be counted again (corrected 2026-10-01). Why: a naive reconciliation
   will flag a phantom increase on exactly the fact pattern the 1 shekel rule exists to handle.
 - [ ] Trustee, guardian and power-of-attorney holdings appear in TWO places with different
   meanings: s.135(1)(a) makes assets held as trustee for another demandable as part of the
@@ -376,6 +406,8 @@ pages, which enumerate every section explicitly.
   merge them: one is a reportable asset, the other is a disclosure about someone else's asset.
 
 ## Out of scope (explicit, with rationale)
+
+All rows re-litigated 2026-10-01: each still out of scope; rationale refreshed where noted.
 
 - Computing the tax due on an unexplained capital gap. That is an ASSESSMENT, made by the
   assessor and contested on appeal. The skill reconciles and surfaces the gap; it does not
@@ -393,6 +425,9 @@ pages, which enumerate every section explicitly.
 - Voluntary-disclosure (גילוי מרצון) procedure. Separate ITA track with its own conditions and
   consequences; advising on it where a gap exists is precisely where a licensed professional is
   required.
+  RE-LITIGATED 2026-10-01: users with a never-reported foreign account or wallet DO ask. The advice
+  stays out, but the skill now carries a stop-and-consult trigger before filing (Step 5). No claim is
+  made about whether the route is open to someone already holding a demand.
 - FATCA and CRS reporting under ss.135ב-135ז. Adjacent section numbers, unrelated obligation,
   imposed on financial institutions rather than the declarant. Do not let section-number
   proximity pull this in.
@@ -407,6 +442,8 @@ pages, which enumerate every section explicitly.
 - Determining residency status, or whether someone qualifies as a תושב חוזר ותיק. The ten-year
   foreign-asset exemption in s.135(1)(b) turns on that status, but establishing it is a separate
   determination the skill should flag and route out.
+  RE-LITIGATED 2026-10-01: stays out, but the skill must now ask the DATE residency began, since the
+  exemption exists only for those resident before 1.1.2026 (Amendment 272).
 
 ## Known bad figures (from message 3)
 
@@ -427,7 +464,11 @@ pages, which enumerate every section explicitly.
 - Describing an inherited or gifted asset as declared at its value. General rule 2: 1 shekel.
   Rule 8 extends it to any asset whose acquisition cost is under 1 shekel.
 - "Online filing has been mandatory since May 2025." Circular 2025-000538 says the opposite in
-  terms. What became mandatory is the new VERSION of form 1219, not the online channel.
+  terms. What became mandatory is the new VERSION of form 1219, not the online channel. BUT from
+  1 January 2027 online filing IS mandatory for individuals (order, ק"ת 12523). The mirror-image
+  error, "online is optional" stated without a date, becomes wrong on that date.
+- "Olim never report foreign assets for ten years" stated without a date. Wrong for anyone who
+  became a first-time or veteran returning resident from 1.1.2026 (Amendment 272).
 - "There is no separate mortgage section, so a mortgage is not reported." Mortgages ARE
   reported, in part A S13, which names them expressly.
 - TOOLING HAZARD, not a published source: a WebFetch summary of circular 2025-000538 produced
@@ -440,6 +481,13 @@ pages, which enumerate every section explicitly.
   such threshold exists in the primary sources. Treat any figure of that shape as unsourced.
 
 ## Authoritative sources (partial, message 3 truncated)
+
+- 2026-10-01 RE-ANCHOR: the gov.il Ordinance PDF below was created 15.01.2023 and predates
+  Amendment 272; it still prints s.135(1)(b). Use the Nevo consolidation
+  (https://www.nevo.co.il/law_html/law01/255_001.htm, "נוסח עדכני נכון ליום: 27-09-2026") for current
+  text, Amendment 272 (https://fs.knesset.gov.il/25/law/25_lsr_4303082.pdf), the order
+  (https://olaw.org.il/takanot/takanot-12523.pdf) and the rules
+  (https://olaw.org.il/takanot/takanot-12479.pdf).
 
 - https://www.gov.il/BlobFolder/service/itc1219/he/Service_Pages_Income_tax_itc1219.pdf - the
   form (7 pages) plus 8 pages of official filling instructions. Verify here: every section
