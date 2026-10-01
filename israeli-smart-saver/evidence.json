@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0",
   "skill": "israeli-smart-saver",
-  "generated_at": "2026-05-31T00:00:00Z",
+  "generated_at": "2026-10-01T14:28:30.598805+00:00",
   "claims": [
     {
       "claim_id": "consumer-law-sections",
@@ -46,7 +46,7 @@
     },
     {
       "claim_id": "credit-card-companies",
-      "claim": "The three major Israeli credit card companies are Cal (Visa Cal), Max (formerly Leumi Card, rebranded 2019 after the Warburg Pincus acquisition), and Isracard (which operates American Express and the Hever club).",
+      "claim": "Leumi Card rebranded as Max.",
       "source_url": "https://en.globes.co.il/en/article-leumi-card-to-rebrand-as-max-1001269742",
       "raw_snippet": "Leumi Card to rebrand as Max",
       "fetched_at": "2026-08-10T00:00:00Z",
@@ -82,23 +82,23 @@
     },
     {
       "claim_id": "consumer-council",
-      "claim": "The Israel Consumer Council (consumers.org.il) covers consumer rights, the cooling-off period, and complaint filing.",
+      "claim": "The Israel Consumer Council (consumers.org.il) offers complaint filing (הגשת תלונה).",
       "source_url": "https://www.consumers.org.il",
-      "raw_snippet": "is enabled for purposes of website accessibility 18/08/2026 אודות המועצה פייסבוק ערוץ יוטיוב English مجلس المستهلك הגשת תלונה צור קשר פורום המועצה מכתבים להורדה חוק הפקדון מידע כללי שירותים ומידע פרסומים חוק ומשפט חינוך לצרכנות מי אנחנו?",
-      "fetched_at": "2026-08-18",
+      "raw_snippet": "הגשת תלונה",
+      "fetched_at": "2026-10-01T14:28:30.598805+00:00",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
       ],
-      "verified_via": "source re-fetched and decoded correctly (PDF via pdftotext, HTML with its declared encoding); snippet copied from the result",
-      "verified_at": "2026-08-18"
+      "verified_via": "source re-fetched 2026-10-01 and decoded with its declared windows-1255 charset; snippet is the 'הגשת תלונה' menu item",
+      "verified_at": "2026-10-01T14:29:28.935329+00:00"
     },
     {
       "claim_id": "zap-price-comparison",
-      "claim": "Zap.co.il is the leading Israeli price-comparison site for electronics and appliances.",
+      "claim": "Zap (zap.co.il) is an Israeli price-comparison site.",
       "source_url": "https://www.zap.co.il",
-      "raw_snippet": "zap",
-      "fetched_at": "2026-05-31T00:00:00Z",
+      "raw_snippet": "זאפ השוואת מחירים",
+      "fetched_at": "2026-10-01T14:08:59.106670+00:00",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
@@ -106,15 +106,15 @@
     },
     {
       "claim_id": "illustrative-figures",
-      "claim": "Illustrative example amounts, discount rates and typical ranges (not regulated facts), used in worked examples and guidance: cashback rates 2-8% / 2-10% / 5-15%; example 1,000 NIS purchase with 3% card + 5% platform + 10% gift-card stacking saving ~172 NIS (~17%); example monthly savings 200 NIS = 2,400 NIS/year, 300-800 NIS/month; subscription costs 10-500 NIS; seasonal discounts 10-70%; telecom plans 30-150 NIS/month; interest-free tashlumim up to 12 months; gift-card discounts 5-15%; example phone 120 NIS vs MVNO ~40-45 NIS saving 80 NIS/month = 960 NIS/year. Includes the illustrative 8,000 ₪ per month spending threshold in the card-choice table.",
-      "source_url": "https://www.gov.il/he/departments/consumer_protection_authority",
-      "raw_snippet": "Illustrative ranges (not regulated): 20% 30% 40% 50% 60% 80% 1,000 שקל 100 שקל 120 שקל 150 שקל 172 ש\"ח 2,400 שקל 200 שקל 27 ש\"ח 30 שקל 27 NIS 30 NIS 35 NIS 35 שקל 40 NIS 40 שקל 100 NIS 400 שקל 45 ש\"ח 45 שקל 50 שקל 500 שקל 80 שקל 800 שקל 960 שקל",
-      "fetched_at": "2026-08-10T00:00:00Z",
+      "claim": "Illustrative example amounts and indicative ranges (not regulated facts, framed in the skill as hypothetical, indicative or general experience): hypothetical stacking example on a 1,000 NIS appliance with a BuyMe card bought at 10% off for 900 NIS, 3% card cashback = 27 NIS, 5% platform usually 0 (or on 1,000 NIS where tracked), realistic total 127 NIS (12.7%) or 100 NIS; example monthly savings 200 NIS = 2,400 NIS/year; indicative subscription costs 10-500 NIS and savings 10-80%; seasonal discounts 10-70% (general retail experience, in references/seasonal-sales-calendar.md); indicative carrier ranges 50-150 NIS/month; example phone 120 NIS; illustrative 8,000 ₪ per month card-choice threshold. Figures: 20% 30% 40% 50% 60% 70% 80% 12.7% 1,000 NIS, 900 NIS, 100 NIS, 120 NIS, 127 NIS, 150 NIS, 2,400 NIS, 200 NIS, 27 NIS, 30 NIS, 35 NIS, 50 NIS, 400 NIS, 500 NIS, 80 NIS. 60 NIS.",
+      "source_url": "https://raw.githubusercontent.com/skills-il/tax-and-finance/master/israeli-smart-saver/SKILL.md",
+      "raw_snippet": "Add up monthly savings x 12.",
+      "fetched_at": "2026-10-01T14:09:35.485332+00:00",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
       ],
-      "source_note": "Deep link substituted 2026-08-10 for the bare zap.co.il homepage. This entry is not a quotation: it records example amounts, discount rates and typical ranges used inside the skill's worked examples. They are illustrative arithmetic, not published figures, and no URL can substantiate them; the Consumer Protection and Fair Trade Authority page is given as the topical anchor."
+      "source_note": "Self-reference by design (changed 2026-10-01). These are editorial, hypothetical or indicative figures that the skill itself labels as such ('hypothetical rates, for the arithmetic only', 'Indicative', 'general retail experience, not a published source'). No external page can substantiate them, so the anchor is the skill's own published text rather than a regulator page that does not contain them. This entry is NOT evidence that any of these figures is a fact."
     },
     {
       "claim_id": "cpl-14tet-channels",
@@ -225,7 +225,7 @@
     },
     {
       "claim_id": "golan-published-plans",
-      "claim": "Golan Telecom publishes entry plans at 34.90 NIS for 300GB, 39 NIS for 400GB, 49 NIS for a 750GB 5G plan and 59 NIS for 1500GB.",
+      "claim": "Golan Telecom publishes entry plans at 34.90 NIS for 300GB, 39 NIS for 400GB, 49 NIS for a 750GB 5G plan and 59 NIS for 1500GB. The 300GB and 400GB prices are 12-month promotions ('תוקף מבצע 12 חודשים').",
       "source_url": "https://www.golantelecom.co.il/offers",
       "raw_snippet": "גלישה 300GB שיחות בינלאומיות 240 דקות תוקף מבצע 12 חודשים תוקף מבצע - 12 חודשים 90. 34 ₪ לחודש",
       "fetched_at": "2026-08-26T23:27:12.064492+00:00",
@@ -249,16 +249,17 @@
     },
     {
       "claim_id": "boi-fee-reform-dates",
-      "claim": "The new payment-account service takes effect in July 2027, with banks free to start earlier, and the supervised debit-card fee of at most 7 NIS takes effect in October 2026.",
-      "source_url": "https://www.boi.org.il/publications/pressreleases/21-06-2026/",
-      "raw_snippet": "שיטת התשלום החדשה תיכנס לתוקפה ביולי 2027, תאגידים בנקאים שיהיו מעוניינים בכך יוכלו להקדים מועד זה.",
-      "fetched_at": "2026-08-26T23:27:12.064492+00:00",
+      "claim": "The new payment-account fee caps take effect on 1 July 2027 (banks may start earlier); the supervision order capping the immediate-debit card fee takes effect on 1 October 2026.",
+      "source_url": "https://www.boi.org.il/media/okzf1f5j/h2851.pdf",
+      "raw_snippet": "צו הפיקוח על דמי כרטיס חיוב מיידי יכנס לתוקפו ביום 1 באוקטובר 2026.",
+      "fetched_at": "2026-10-01T13:47:44.257181+00:00",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
       ],
-      "verified_via": "browser",
-      "verified_at": "2026-08-26T23:27:12.064492+00:00"
+      "verified_via": "pdf",
+      "verified_at": "2026-10-01T13:47:44.257181+00:00",
+      "source_note": "Circular ח-06-2851 (PDF linked from the 21-06-2026 press release), s.36ב(1); s.36א gives 1 July 2027 for the fee-rule updates: 'העדכונים לכללי העמלות יכנסו לתוקפם ביום 1 ביולי 2027; על אף האמור תאגיד בנקאי רשאי לפעול בהתאם לעדכונים האמורים, קודם למועד זה'. pdftotext reverses RTL numerals; read in logical order."
     },
     {
       "claim_id": "voucher-regs-notices",
@@ -303,13 +304,15 @@
       "claim_id": "boi-banking-customer-info",
       "claim": "The Bank of Israel publishes banking-customer service information, including fee comparisons, for the public.",
       "source_url": "https://www.boi.org.il/en/information-and-service-to-the-public/banking-customer-service-information/",
-      "raw_snippet": "Banking customer service information",
-      "fetched_at": "2026-08-26T23:35:26.582222+00:00",
+      "raw_snippet": "Banking Customer Service & Information",
+      "fetched_at": "2026-10-01T13:51:49.587718+00:00",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
       ],
-      "source_note": "boi.org.il serves a Radware bot-challenge page to plain fetches; the URL is the Bank of Israel public banking-customer information page and returns HTTP 200."
+      "source_note": "boi.org.il serves a Radware bot-challenge page to plain fetches; the URL is the Bank of Israel public banking-customer information page and returns HTTP 200.",
+      "verified_via": "browser",
+      "verified_at": "2026-10-01T13:51:49.587718+00:00"
     },
     {
       "claim_id": "cpl-14he-distance-cancel-fee",
@@ -358,6 +361,332 @@
         "SKILL.md",
         "SKILL_HE.md"
       ]
+    },
+    {
+      "claim_id": "boi-debit-exemption-parallel",
+      "claim": "The existing three-year debit-card fee exemption for customers who also hold a credit card continues in parallel until 1 July 2027; the new cap applies to all cards including those issued before.",
+      "source_url": "https://www.boi.org.il/media/okzf1f5j/h2851.pdf",
+      "raw_snippet": "ההסדר הקיים היום, הקבוע בהערה לצד השירות ימשך במקביל עד ליום 1 יולי 2027 כיוון שביטולו דורש זמן הערכות.",
+      "verified_via": "pdf",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "fetched_at": "2026-10-01T13:47:44.257181+00:00",
+      "verified_at": "2026-10-01T13:47:44.257181+00:00"
+    },
+    {
+      "claim_id": "boi-banned-fees-oct-2026",
+      "claim": "From 1 October 2026 banks may not charge for a cheque returned for a technical reason, locating accounts, or handling inheritances and estates.",
+      "source_url": "https://www.boi.org.il/publications/pressreleases/21-06-2026/",
+      "raw_snippet": "שירותים שנאסר לגבות בגינם עמלות  חיוב מושך בהחזרת שיק מסיבה טכנית, איתור חשבונות, טיפול בירושות ועיזבונות.",
+      "verified_via": "browser",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "source_note": "Date from circular PDF s.36ב(2): 'ביטול שירותים ... יכנס לתוקפו ביום 1 באוקטובר 2026'.",
+      "fetched_at": "2026-10-01T13:47:44.257181+00:00",
+      "verified_at": "2026-10-01T13:47:44.257181+00:00"
+    },
+    {
+      "claim_id": "boi-public-enquiries-unit",
+      "claim": "Bank of Israel public enquiries unit (היחידה לפניות הציבור ולבקרה צרכנית) handles banking complaints.",
+      "source_url": "https://www.boi.org.il/publications/pressreleases/21-06-2026/",
+      "raw_snippet": "היחידה לפניות הציבור ולבקרה צרכנית",
+      "verified_via": "browser",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "fetched_at": "2026-10-01T13:47:44.257181+00:00",
+      "verified_at": "2026-10-01T13:47:44.257181+00:00"
+    },
+    {
+      "claim_id": "cpl-13a-fixed-term-notice",
+      "claim": "Section 13א: a discounted-price period is a fixed-term transaction; notice period is 60 to 30 days before the end; end date on invoices in the last three months; SMS 21 days before; a continuation clause has no effect.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/70305.htm",
+      "raw_snippet": "\" תקופת ההודעה \" – התקופה החלה בין שישים הימים שלפני מועד סיום העסקה או ההתחייבות, לבין שלושים הימים שלפני אותו מועד.",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "source_note": "Also 13א(ב)(2) 'שלושה חודשים לפני מועד סיום', (ב)(3) 'במסרון ... 21 ימים לפני', (ג)(1) 'לתנאי בחוזה הקובע כי ההתקשרות בין הצדדים תימשך לאחר מועד סיום העסקה או ההתחייבות, לא יהיה תוקף'.",
+      "fetched_at": "2026-10-01T13:47:44.257181+00:00"
+    },
+    {
+      "claim_id": "cpl-13a-d-exceptions",
+      "claim": "13א(ד)(2): a discount-period deal may continue only if post-promotion amounts were stated in writing at signing and written notice was given; 13א(ד)(1) with the Third Schedule (telephony, gas) allows continuation with written notice.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/70305.htm",
+      "raw_snippet": "סכומי התשלומים שיחולו לאחר מועד סיום העסקה או ההתחייבות ננקבו באופן ברור ומפורט במסמך בכתב שנמסר לצרכן בעת ההתקשרות בין העוסק לצרכן",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "source_note": "Third Schedule: 'תוספת שלישית (סעיף 13א) 1. שירות טלפוניה כהגדרתו בחוק התקשורת. 2. שירות להספקת גז שנותן ספק גז לצרכן גז.'",
+      "fetched_at": "2026-10-01T13:47:44.257181+00:00"
+    },
+    {
+      "claim_id": "cpl-31a-2alef",
+      "claim": "Section 31א(א)(2א): continued charging in a fixed-term transaction in breach of 13א grounds statutory damages.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/70305.htm",
+      "raw_snippet": "(2א) בעסקה לתקופה קצובה – ביקש צרכן כי עוסק יפסיק לחייבו בתשלומים לאחר מועד סיום העסקה או ההתחייבות לפי סעיף 13א(ג)",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "fetched_at": "2026-10-01T13:47:44.257181+00:00"
+    },
+    {
+      "claim_id": "cpl-14het-a-definition",
+      "claim": "Section 14ח(א) defines a gift card (תו קנייה) to exclude a card meant for one particular type of product or service only.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/70305.htm",
+      "raw_snippet": "למעט כרטיס או מסמך המיועד לשימוש בעבור סוג מסוים של מוצר או שירות בלבד.",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/cashback-platforms-guide.md"
+      ],
+      "fetched_at": "2026-10-01T13:47:44.257181+00:00"
+    },
+    {
+      "claim_id": "cpl-13d1-indexation",
+      "claim": "Section 13ד1(ג): the amounts in subsection (א) (16 NIS, 50 NIS) are CPI-updated every 1 January from 1 January 2013.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/70305.htm",
+      "raw_snippet": "הסכומים האמורים בסעיף קטן (א) יעודכנו ב-1 בינואר בכל שנה, החל ביום י\"ט בטבת התשע\"ג (1 בינואר 2013)",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "fetched_at": "2026-10-01T13:47:44.257181+00:00"
+    },
+    {
+      "claim_id": "cellcom-energy-flat",
+      "claim": "Cellcom Energy publishes a 7.5% discount Sunday to Thursday at all hours, and a 15% discount from 23:00 to 07:00 all week.",
+      "source_url": "https://cellcom.co.il/production/Private/1/energy3/",
+      "raw_snippet": "7.5% הנחה בימי א'-ה' בכל שעות היממה",
+      "verified_via": "browser",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "fetched_at": "2026-10-01T13:47:44.257181+00:00",
+      "verified_at": "2026-10-01T13:47:44.257181+00:00",
+      "source_note": "Same page: '15% הנחה בכל ימות השבוע מ23:00 עד 07:00'."
+    },
+    {
+      "claim_id": "payback-is-max",
+      "claim": "PayBack (pay-back.co.il) is Max's cashback service.",
+      "source_url": "https://www.pay-back.co.il/",
+      "raw_snippet": "PayBack של max - קאשבק - בואו לצבור החזר כספי בכל קנייה",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/cashback-platforms-guide.md"
+      ],
+      "fetched_at": "2026-10-01T13:47:44.257181+00:00"
+    },
+    {
+      "claim_id": "yours-local-authority-club",
+      "claim": "Yours.co.il is the welfare club for local-authority employees.",
+      "source_url": "https://www.yours.co.il/",
+      "raw_snippet": "שלך - המועדון לרווחת עובדי הרשויות המקומיות",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/cashback-platforms-guide.md"
+      ],
+      "fetched_at": "2026-10-01T13:47:44.257181+00:00"
+    },
+    {
+      "claim_id": "boi-debit-cap-7",
+      "claim": "The supervised monthly immediate-debit card fee may not exceed 7 NIS.",
+      "source_url": "https://www.boi.org.il/publications/pressreleases/21-06-2026/",
+      "raw_snippet": "שולב ברפורמה מהלך לפיקוח על תעריף דמי כרטיס כך שלא יעלה על מחיר של 7 ש\"ח.",
+      "verified_via": "browser",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "fetched_at": "2026-10-01T14:08:59.106670+00:00",
+      "verified_at": "2026-10-01T14:08:59.106670+00:00"
+    },
+    {
+      "claim_id": "cpl-13a-unconditional-exclusion",
+      "claim": "The 13א(א) definition of a fixed-term transaction excludes a price cut for a limited period without any condition.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/70305.htm",
+      "raw_snippet": "למעט עסקה שבמהלכה, לתקופה מוגבלת ובלא כל תנאי, הוזיל העוסק את מחיר הטובין או השירותים, או הציע הטבה אחרת",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "fetched_at": "2026-10-01T14:08:59.106670+00:00"
+    },
+    {
+      "claim_id": "cpl-13a-four-month-waiver",
+      "claim": "13א(ד)(2)(ב): no notice is required where the end date falls no later than four months from the engagement, and the consumer may then end the deal after that date without any charge.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/70305.htm",
+      "raw_snippet": "ואולם לא תהיה חובה לתת הודעה כאמור, אם מועד סיום העסקה או ההתחייבות חל לא יאוחר מארבעה חודשים ממועד ההתקשרות בעסקה",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "source_note": "Continues: 'והצרכן יהיה רשאי להודיע על סיום ההתקשרות בינו לבין העוסק, לאחר מועד סיום העסקה או ההתחייבות, בלי שיחויב בתשלום כלשהו בשל סיום ההתקשרות.'",
+      "fetched_at": "2026-10-01T14:08:59.106670+00:00"
+    },
+    {
+      "claim_id": "voucher-regs-specific-voucher",
+      "claim": "Payment Services (Exemption) Regulations 3(א)(4)(א)-(ב): a voucher for a specific product or service with no amount printed has a minimum validity of two years where more than 50 NIS was paid, and is excluded from the renewal right.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/208503.htm",
+      "raw_snippet": "לגבי אמצעי תשלום שהוא שובר לרכישת מוצר או שירות מסוים שלא נקוב סכום כספי בצידו – לא יוגבל תוקף אמצעי התשלום לתקופה שתפחת משנתיים ובלבד שהסכום ששולם בעבור אמצעי תשלום כאמור עולה על 50 שקלים חדשים",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/cashback-platforms-guide.md"
+      ],
+      "fetched_at": "2026-10-01T14:08:59.106670+00:00"
+    },
+    {
+      "claim_id": "voucher-regs-transitional-100",
+      "claim": "Regulation 4(ג): for instruments issued before the 2026 amendment, the notice duty applies only where the balance exceeds 100 NIS.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/208503.htm",
+      "raw_snippet": "תחול תקנה 3(א)(4)(ד) לתקנות העיקריות ובלבד שהסכום הצבור באמצעי התשלום עולה על 100 שקלים חדשים",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "fetched_at": "2026-10-01T14:08:59.106670+00:00"
+    },
+    {
+      "claim_id": "cpl-31a-c-50000",
+      "claim": "Section 31א(ג)(1): for a repeated or continuing breach a court may award exemplary damages above 10,000 NIS up to 50,000 NIS.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/70305.htm",
+      "raw_snippet": "פיצויים לדוגמה בסכום העולה על 10,000 שקלים חדשים ובלבד שאינו עולה על 50,000 שקלים חדשים",
+      "fetched_at": "2026-10-01T14:11:26.298904+00:00",
+      "appears_in": [
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "voucher-regs-1500-cap",
+      "claim": "Payment Services (Exemption) Regulations reg 2(א)(1)(ב): the exempt instrument holds at most 1,500 NIS and is not reloadable.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/208503.htm",
+      "raw_snippet": "הסכום המרבי שניתן לצבור בו הוא 1,500 שקלים חדשים, והוא אינו ניתן לטעינה חוזרת של ערך צבור",
+      "fetched_at": "2026-10-01T14:11:26.298904+00:00",
+      "appears_in": [
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "cpl-31a-b-written-request",
+      "claim": "Section 31א(ב): no 31א claim without a prior written request (electronic included); for para (2ב) a 14ט notice suffices except an oral one under 14ט(א)(1).",
+      "source_url": "https://www.nevo.co.il/law_html/law00/70305.htm",
+      "raw_snippet": "לא תוגש נגד עוסק תביעה לפיצויים לדוגמה לפי סעיף קטן (א), אלא לאחר שהצרכן שלח או מסר בקשה לפי אותו סעיף קטן, בכתב, לרבות באמצעות תקשורת אלקטרונית",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/subscription-audit-template.md",
+        "references/consumer-law-details.md"
+      ],
+      "source_note": "Continues: 'לעניין פסקה (2ב), די אם הצרכן מסר הודעת ביטול לפי סעיף 14ט(א), למעט פסקה (1) שבו'.",
+      "fetched_at": "2026-10-01T14:28:30.598805+00:00"
+    },
+    {
+      "claim_id": "cpl-13b-b1-annual-statement",
+      "claim": "סעיף 13ב(ב1) / Section 13ב(ב1): in a continuous deal the business sends each March an annual statement of the previous year's charges and unpaid balance; the burden of proving a further debt is on the business.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/70305.htm",
+      "raw_snippet": "בעסקה מתמשכת ישלח העוסק לצרכן, למענו, בחודש מרס בכל שנה, הודעה ובה פירוט חיובים שנתי",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "source_note": "(ב1)(2): 'נטל ההוכחה כי לצרכן חוב נוסף על הסכומים הכלולים בפירוט החיובים השנתי הוא על העוסק'.",
+      "fetched_at": "2026-10-01T14:28:30.598805+00:00"
+    },
+    {
+      "claim_id": "cpl-18b-six-minutes",
+      "claim": "סעיף 18ב / Section 18ב(א1): a Second Schedule business whose phone service uses automatic call routing must give a professional human answer for fault handling, billing and ending the engagement within six minutes, with no forced voicemail; regulators may approve deviations.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/70305.htm",
+      "raw_snippet": "משך ההמתנה לקבלת מענה אנושי מקצועי בסוגי השירותים המפורטים בפסקה (1) לא יעלה על שש דקות מתחילת השיחה, והצרכן לא יופנה לשירות השארת הודעה, אלא אם כן בחר בכך",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/domain-checklist.md"
+      ],
+      "source_note": "Second Schedule: telephony, mobile and internet-access licensees, cable and satellite licensees, gas supplier, 'בעל רישיון ספק שירות חיוני כמשמעותו בחוק משק החשמל', water supplier.",
+      "fetched_at": "2026-10-01T14:28:30.598805+00:00"
+    },
+    {
+      "claim_id": "cpl-14he-a-no-fee",
+      "claim": "Section 14ה(א): cancellation for a defect, mismatch, non-delivery on time or other breach: refund within 14 days and no cancellation fee at all.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/70305.htm",
+      "raw_snippet": "ולא יגבה מהצרכן דמי ביטול כלשהם",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/consumer-law-details.md"
+      ],
+      "fetched_at": "2026-10-01T14:28:30.598805+00:00"
+    },
+    {
+      "claim_id": "cpl-14gimel-g-2-continuous",
+      "claim": "Section 14ג(ג)(2): a distance-sale service may be cancelled within 14 days; for a continuous deal whether or not the service has begun.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/70305.htm",
+      "raw_snippet": "בעסקה מתמשכת – בין אם הוחל במתן השירות ובין אם לאו, ובעסקה שאינה עסקה מתמשכת – בתנאי שביטול כאמור ייעשה לפחות שני ימים",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/subscription-audit-template.md"
+      ],
+      "fetched_at": "2026-10-01T14:28:30.598805+00:00"
+    },
+    {
+      "claim_id": "cpl-4gimel-returns-policy",
+      "claim": "סעיף 4ג / Section 4ג(ג): if a business posts no returns notice, its policy is presumed to allow returns of goods not due to a defect.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/70305.htm",
+      "raw_snippet": "חזקה כי מדיניותו לגבי החזרת טובין שלא עקב פגם היא מתן אפשרות לצרכן להחזיר לו את הטובין",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/consumer-law-details.md",
+        "references/cashback-platforms-guide.md"
+      ],
+      "fetched_at": "2026-10-01T14:28:30.598805+00:00"
+    },
+    {
+      "claim_id": "voucher-regs-scope-dates",
+      "claim": "Payment Services (Exemption) Regulations: regs 2-3 apply to instruments issued from 14 April 2022 (reg 4(ב)) and are in force until 14 July 2028 (reg 5).",
+      "source_url": "https://www.nevo.co.il/law_html/law00/208503.htm",
+      "raw_snippet": "תחילתן של תקנות 2 ו-3 ביום י\"ג בניסן התשפ\"ב (14 באפריל 2022), והן יחולו לגבי אמצעי תשלום שהונפק מיום זה ואילך",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/consumer-law-details.md",
+        "references/cashback-platforms-guide.md"
+      ],
+      "source_note": "Reg 5: 'תוקפן של תקנות 2 ו-3 ... עד יום כ' בתמוז התשפ\"ח (14 ביולי 2028)'.",
+      "fetched_at": "2026-10-01T14:28:30.598805+00:00"
+    },
+    {
+      "claim_id": "voucher-regs-3a5-refund",
+      "claim": "Reg 3(א)(5): where a merchant notifies cancellation of a purchase made with the instrument, the refund is returned as a balance on that instrument.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/208503.htm",
+      "raw_snippet": "יאפשר נותן שירותי התשלום את השבת התשלום למשלם עקב ביטול העסקה בהתאם להודעת המוטב, כיתרה לאמצעי התשלום שבאמצעותו בוצע התשלום",
+      "appears_in": [
+        "references/consumer-law-details.md"
+      ],
+      "fetched_at": "2026-10-01T14:28:30.598805+00:00"
+    },
+    {
+      "claim_id": "cpl-fourth-schedule-timeshare",
+      "claim": "Fourth Schedule item 1 (timeshare): written notice; effective at the end of the annual period; no cancellation fee, but if performance began the proportional price and 50% of the remainder if assignment was not restricted.",
+      "source_url": "https://www.nevo.co.il/law_html/law00/70305.htm",
+      "raw_snippet": "50% מהסכום שנותר ממחיר יחידת הנופש לאחר ניכוי הסכום לפי פסקה (1), ובלבד שהעוסק לא הגביל את זכותו של הצרכן להמחות את זכויותיו",
+      "appears_in": [
+        "references/consumer-law-details.md",
+        "references/domain-checklist.md"
+      ],
+      "fetched_at": "2026-10-01T14:28:30.598805+00:00"
     }
   ]
 }

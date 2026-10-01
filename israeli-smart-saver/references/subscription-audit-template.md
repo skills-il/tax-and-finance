@@ -58,7 +58,8 @@ Use this template to track all recurring expenses. Fill in each row, then evalua
 - [ ] Send the cancellation notice through one of the channels the business must accept under s.14ט(א) (phone or in person, registered mail, email, fax, or the website's home-page cancellation link required by s.14ט(ב))
 - [ ] Get written confirmation of cancellation and keep the proof of sending
 - [ ] Diarise the s.13ד(ג) deadline: the contract ends within three business days of the notice, six if sent by registered mail, and charges must stop from then
-- [ ] Set a reminder to verify no further charges appear; if they do, s.31א allows statutory damages up to 10,000 NIS with no proof of loss
+- [ ] Set a reminder to verify no further charges appear; if they do, s.31א allows statutory damages up to 10,000 NIS with no proof of loss, but only after a written request (an oral cancellation notice does not count, s.31א(ב)), so prefer email, the website link or registered mail
+- [ ] If the subscription was signed online or by phone in the last 14 days, it can also be cancelled as a distance sale with a refund (s.14ג(ג)(2))
 - [ ] Check which cancellation regime applies: the 14-day cooling-off right covers door-to-door (s.14) and distance/online (s.14ג) transactions, NOT every subscription. A gym membership runs on s.13א1 and the Fourth Schedule instead
 
 
