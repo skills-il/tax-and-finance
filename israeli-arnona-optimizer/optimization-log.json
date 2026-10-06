@@ -1,6 +1,28 @@
 {
   "cycles": [
     {
+      "version": "1.7.0",
+      "date": "2026-10-07",
+      "lessons": [
+        "CRITICAL FACT FIX: every rate in scripts/arnona-calculator.py was invented. The v1.6.0 'tzav_year' and 'source' labels pointed at municipality home pages and gave fake provenance to figures nobody had read; verify-evidence had shipped red (9 unjustified URLs) because of it. Replaced with the full fiscal-2026 residential tables of eleven cities, read from each city's own tzav PDF (sources in RATE_TABLES, cells checked against the PDF text). Lesson: a 'source' field is a claim; a home page is not a source for a number.",
+        "STRUCTURE: no city keys residential arnona on zone alone. Tel Aviv keys on zone x building type (by year of completion) x flat-vs-villa at 140 sqm; Haifa on zone x class x size band (the band reprices the whole flat); Ashdod has one zone and marginal tiers; Herzliya has 7 zones. The calculator now takes --type and lists candidate rows when it is missing.",
+        "The v1.6.0 evidence note for Tel Aviv read the tzav rows (building types) as zones. RTL tables in pdftotext layout output come out column-reversed; render the page image before encoding a table.",
+        "NEW: fiscal-2027 First Schedule published 28.7.2026 (KT 12490, erratum KT 12499 fixes the 3-person 90% cell to 7,683). Wikisource's consolidated text now shows it under a header naming income year 2026, which reads like 'fiscal 2026'. The 2026 table (3,513 row) was re-verified cell by cell against KT 12366 and is correct.",
+        "FACT FIX: the objection example cited 'Section 3(a) of the Arnona Regulations (Takanot HaSdrei Nisui...)'. The grounds are s.3(a) of the 1976 Objection Law. Also: silence for 60 days = deemed acceptance (s.4); filing does not suspend payment; discount refusals are not objection grounds.",
+        "FACT FIX from review: the coverage audit asserted two-year instalment plans for arnona arrears; Interest Law s.4(b) covers only Schedule levies. A reviewer's claim copied into the skill was wrong; the expert caught it against the statute. Verify audit claims before encoding.",
+        "AMBIGUITY: Reg. 14f / 2(a)(4) 'more than four family members living with the holder'. Kol Zchut reads it as 5+ people in the flat; the script applies 5+ and notes the other reading. Not settled by a primary source; revisit if a ruling or MoI circular is found.",
+        "Deferred (MAJOR, description gate): the description and display_description still say 'draft appeal letters to arnona committees', list 'students' among discounts to verify, and 'covers all major municipalities'. Fix next cycle together with the Phase 5.7 holdout eval.",
+        "Deferred (MAJOR, legal owner): the legal notice is the generic tax template ('binding computation is the Tax Authority's'); arnona is a municipal levy. Needs the legal-review owner to adapt the template; verify_legal.py passes as is.",
+        "Deferred (MAJOR, scope reopened): each of the eleven tzav PDFs has a discounts chapter (actual percentage per row, deadline, prepayment terms). Capture them next cycle; Haifa's is at work/tzav/haifa2026.clean.txt pp.29-41 of the PDF.",
+        "Deferred (MAJOR): urban-renewal replacement-flat discount, Taxes (Collection) Ordinance enforcement, Arrangements Law s.12(f), Haifa Kiryat Haim and Ramat Gan Kfar Azar sub-tables, Modiin and other cities, non-residential tariffs.",
+        "Deferred (MINOR): joint custody and maintenance paid in the income test; objection s.3(c) and s.7A; administrative-court appeal deadline (Netanya tzav says 45 days, unverified against statute); Jerusalem's 2026 discount deadline 31.8.2026 and its already-published 2027 tzav.",
+        "Removed as unsourced: municipality phone numbers and emails, '740k to 840k households', 'retroactive 6 months', student 'under 30', large-family 'four children', '30-60 days' processing, and a catch-all evidence entry that listed numbers with no source behind them.",
+        "Review panel: judge 3 rounds (FAIL, FAIL on one claim text, PASS 164/164), expert 2 rounds (3 CRITICAL in r1 all fixed, PASS r2), arithmetic 3 rounds (r1 MAJOR area rounding fixed, PASS r2 and r3).",
+        "Deferred (MAJOR, from expert r2): no shekel figure for the average wage behind the senior 30% and s.13A tests. Kol Zchut gives 13,623 NIS for January 2026 (pension limits 3,345.87 / 5,273.53); verify against the BL or CBS primary figure before stating it.",
+        "Deferred (MINOR): size-defined building types in Petah Tikva, Rishon LeZion, Netanya and Jerusalem are not area-gated in the calculator; the type descriptions tell the user to read it off the bill."
+      ]
+    },
+    {
       "version": "1.6.0",
       "date": "2026-09-20",
       "lessons": [

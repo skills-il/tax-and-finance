@@ -1,178 +1,60 @@
 # Arnona Rate Structure Guide
 
-## Overview
+Every figure in this file was read from the municipality's own published tzav arnona (צו ארנונה) for fiscal year 2026. The source PDF for each city is in the `source` field of `RATE_TABLES` in `scripts/arnona-calculator.py`, which carries the full residential table for each city. This guide explains how each city keys its rates.
 
-Arnona (municipal property tax) is the primary revenue source for Israeli local authorities. Rates are set annually by each municipality through a "tzav arnona" (arnona ordinance), which must be approved by the Interior Ministry and Finance Ministry. Rates are updated each year, typically increasing by a government-approved percentage (the annual arnona update rate).
+## How a residential rate is set
 
-## Rate Determination Factors
+A council sets the arnona for a building per square metre, "taking into account the type of the building, its use and its location" (Arrangements in the State Economy Regulations (General Arnona in Local Authorities) 5767-2007, reg. 4(1)). Every city in this guide keys its residential rate on at least two axes:
 
-Arnona rates are determined by four primary factors:
+1. **Zone (azor)**, a geographic area set by map or street list.
+2. **Building type or size class**, which each city defines differently: by year of completion (Tel Aviv), by building quality (Jerusalem, Haifa, Rishon LeZion, Ramat Gan), or by flat size (Petah Tikva, Herzliya, Raanana, Haifa's regular class).
 
-1. **Municipality**: Each local authority sets its own rates within government guidelines
-2. **Zone (azor)**: Geographic zone within the municipality affecting the rate tier
-3. **Usage type (sug shimush)**: Residential, commercial, office, industrial, or other classifications
-4. **Property area (shetach)**: Total built area in square meters
+So a single "rate for zone 2" does not exist. The bill shows the zone, the type code and the charged area. Read all three off the bill before computing anything.
 
-## Zone Classifications by Municipality
+## Fiscal-2026 residential tables, by city
 
-### Tel Aviv-Yafo
+| City | How it keys residential rates | Lowest to highest NIS/sqm/year |
+|------|-------------------------------|-------------------------------|
+| Tel Aviv-Yafo | Zones 1 to 5 (4 and 5 pay the same). Building type אא / כא / ח+א / ב+ג / ד / ה+ו, set by building description and year of completion. In zones 1 and 2 a flat of up to 140 sqm pays less than a villa or a larger flat | 46.64 to 139.60 |
+| Jerusalem | Zones א to ד, crossed with building type 1 to 4 (type 1: a building with a flat of 120 sqm or more; type 2: stone, concrete or blocks). Flats first charged from 1.1.2020 pay one set of rates in every zone | 46.35 to 129.91 |
+| Haifa | Zones א' to ד', crossed with class מ-1 to מ-6, crossed with flat size. The regular class מ-2 pays by band: up to 75, 76 to 100, over 100 sqm. Kiryat Haim has its own table | 43.12 to 125.59 (41.07 in Kiryat Haim) |
+| Beer Sheva | Zones א to ג; zones א and ב have a lower rate for a flat of up to 57 sqm | 47.78 to 58.28 |
+| Netanya | Zones 1 to 3, crossed with type א to ה (by elevator and flat size) | 41.05 to 94.85 |
+| Rishon LeZion | Zones א' to ד', crossed with type אא / א / ב / ג | 42.50 to 77.10 |
+| Petah Tikva | Zones א to ג (street list), crossed with a size-based type אא to ד | 43.39 to 84.96 |
+| Ashdod | ONE residential zone for the whole city. The first 75 sqm pay 43.62, each further sqm pays 65.19 | 43.62 to 65.19 (91.13 for a resort unit) |
+| Ramat Gan | Zones א'+, א', ב', ג', ד', crossed with type א+ to ד | 44.59 to 135.53 |
+| Herzliya | Zones א to ז, crossed with type 1 to 7 (house or flat, and size) | 42.63 to 142.31 |
+| Raanana | Zones 1 and 2, crossed with a size-based type 1 to 5 | 44.74 to 63.92 |
 
-Tel Aviv uses numbered zones (1 through 4):
+**A typical flat** (an ordinary flat, not a villa, penthouse or hotel unit) usually sits well inside each city's range. Examples from the tables: Tel Aviv zone 2, type ב+ג, flat up to 140 sqm: 72.89. Jerusalem zone ב, type 2: 86.34. Haifa zone ב', regular class, 76 to 100 sqm: 78.79. Beer Sheva zone ב, over 57 sqm: 50.45.
 
-| Zone | Description | Typical Neighborhoods |
-|------|-------------|----------------------|
-| Zone 1 | Premium | Lev Ha'Ir (city center), Rothschild area, Neve Tzedek, Sarona |
-| Zone 2 | High | North Tel Aviv, Ramat Aviv, Basel area, Old North |
-| Zone 3 | Medium | Florentin, Shapira, Neve Sha'anan, Kiryat Shalom |
-| Zone 4 | Standard | Yaffo (Jaffa), Ajami, southern neighborhoods |
+**Jerusalem zone ד.** The Interior Ministry director-general and the Finance Minister approved, on 14 and 15 December 2025, charging zone ד types 1 and 2 at the zone ג rates (91.07 and 64.23) for 2026. The tzav booklet published on the municipality site in September 2026 still prints 74.46 and 46.35 for those cells. The calculator shows both; the bill decides.
 
-**Residential rates (approximate, per sqm/year):**
+Modiin and the other local authorities are not tabulated. For them, and for every non-residential property, take the rate from that authority's tzav or from the bill and pass it to the calculator with `--rate-per-sqm`.
 
-| Zone | Rate (NIS/sqm/year) |
-|------|---------------------|
-| Zone 1 | 120-130 |
-| Zone 2 | 90-100 |
-| Zone 3 | 75-85 |
-| Zone 4 | 65-75 |
+## Usage types
 
-**Commercial rates (approximate, per sqm/year):**
+Each tzav sets separate tables for residential, offices / services / commerce, industry, crafts, hotels, banks, agricultural land and occupied land (קרקע תפוסה). Non-residential rates are not carried here because each city's tables are long and keyed differently; read the city's own tzav. A council may not change a property's type or classification during the year in a way that affects the arnona, unless the property's actual use changed (2007 regs, reg. 5(a)).
 
-| Zone | Rate (NIS/sqm/year) |
-|------|---------------------|
-| Zone 1 | 350-450 |
-| Zone 2 | 280-350 |
-| Zone 3 | 200-280 |
-| Zone 4 | 150-200 |
+## Billing cycle and the annual update
 
-### Jerusalem
+- **Fiscal year**: 1 January to 31 December. Payment dates are set by each council. Haifa 2026, for example, takes six payments on the 1st of January, March, May, July, September and November, or twelve monthly standing-order payments on the 1st of each month.
+- **Annual update**: rates rise every 1 January by a national coefficient, half the change in the CPI plus half the change in the public-sector wage (Arrangements Law 5753-1992, s.7). The Interior Ministry publishes it: **1.626% for 2026, 3.05% for 2027**.
+- **Above-formula increases**: a council can raise a rate beyond the coefficient, or change a zone's definition, only with an exceptional approval from the Interior and Finance ministers (Jerusalem's 2026 zone ד change is one). So an increase larger than the coefficient means an approved exceptional increase, a reclassification, a measured area change, or a lost discount.
 
-Jerusalem uses Hebrew letter zones (alef through heh):
+## Area calculation rules
 
-| Zone | Description | Typical Neighborhoods |
-|------|-------------|----------------------|
-| Alef (A) | Premium | Rehavia, Talbiyeh, German Colony, Yemin Moshe |
-| Bet (B) | High | Katamon, Baka, Arnona, Nayot |
-| Gimel (C) | Medium | Kiryat Moshe, Givat Shaul, Ramot |
-| Dalet (D) | Standard | Pisgat Ze'ev, Neve Ya'akov, Gilo |
-| Heh (E) | Basic | Peripheral neighborhoods |
+The national rules:
 
-**Residential rates (approximate, per sqm/year):**
+1. Area is computed in square metres, and the arnona is the area times the rate per square metre (Arrangements Law s.8(b1)(1)).
+2. Any part of a square metre is rounded to the nearest whole metre; exactly half a metre rounds DOWN (s.8(b1)(2)). A council that already used a different method (charging part-metres proportionally, or rounding down) may keep it (s.8(b1)(3)); Jerusalem, for example, charges the area to two decimal places. The area on the bill governs.
+3. A property's area carries over from the previous year unless an error is found in the calculation "that is not the result of a different calculation method" (2007 regs, reg. 3(b)). Area added by construction during use is added (reg. 3(c)).
 
-| Zone | Rate (NIS/sqm/year) |
-|------|---------------------|
-| Alef | 85-95 |
-| Bet | 70-80 |
-| Gimel | 60-70 |
-| Dalet | 50-60 |
-| Heh | 45-55 |
+What counts as area (wall-to-wall or external walls, balconies, storage rooms, stairs, galleries) is set by each city's tzav, not by national law, and cities differ. Example, Haifa 2026 residential: everything inside the unit measured wall to wall, INCLUDING balconies, even unroofed ones, internal stairs, service rooms, sheds and galleries 1.80 m high or more. A standard shelter, and the shared areas of an ordinary building, are not charged. Ancillary buildings serving the flat count toward its size band. Do not assume "gross area" or "a reduced rate for balconies" for any city; read its "שיטת המדידה" section.
 
-### Haifa
+## Important notes
 
-Haifa uses zones based on the Carmel geography:
-
-| Zone | Description | Typical Neighborhoods |
-|------|-------------|----------------------|
-| Zone A | Upper Carmel | Central Carmel, Denya, Ahuza |
-| Zone B | Mid-Carmel | French Carmel, Neve Sha'anan, Romema |
-| Zone C | Lower city | Hadar, Wadi Nisnas, German Colony |
-| Zone D | Industrial/port | Kiryat area, port zone |
-
-**Residential rates (approximate, per sqm/year):**
-
-| Zone | Rate (NIS/sqm/year) |
-|------|---------------------|
-| Zone A | 80-90 |
-| Zone B | 65-75 |
-| Zone C | 50-60 |
-| Zone D | 40-50 |
-
-### Beer Sheva
-
-Beer Sheva uses numbered zones:
-
-| Zone | Description | Typical Neighborhoods |
-|------|-------------|----------------------|
-| Zone 1 | Premium | City center, new developments |
-| Zone 2 | Standard | Established neighborhoods, Ramot |
-| Zone 3 | Peripheral | Neve Ze'ev, older neighborhoods |
-
-**Residential rates (approximate, per sqm/year):**
-
-| Zone | Rate (NIS/sqm/year) |
-|------|---------------------|
-| Zone 1 | 50-60 |
-| Zone 2 | 40-50 |
-| Zone 3 | 35-40 |
-
-### Other Major Cities (Approximate Residential Ranges)
-
-| Municipality | Rate Range (NIS/sqm/year) | Zone System |
-|-------------|--------------------------|-------------|
-| Netanya | 55-85 | Numbered (1-3) |
-| Rishon LeZion | 60-90 | Lettered (A-D) |
-| Petah Tikva | 55-80 | Numbered (1-3) |
-| Ashdod | 45-70 | Numbered (1-3) |
-| Herzliya | 70-110 | Lettered (A-C) |
-| Ra'anana | 75-105 | Lettered (A-C) |
-| Kfar Saba | 65-90 | Numbered (1-3) |
-| Bat Yam | 55-75 | Numbered (1-3) |
-| Holon | 55-80 | Numbered (1-3) |
-| Rehovot | 55-80 | Lettered (A-C) |
-| Modiin | 60-85 | Numbered (1-3) |
-| Ramat Gan | 70-100 | Lettered (A-D) |
-| Givatayim | 75-100 | Lettered (A-C) |
-| Bnei Brak | 55-75 | Numbered (1-3) |
-
-## Usage Types
-
-### Residential (Megurim)
-- Standard living quarters
-- Lowest rate tier
-- Includes apartments, houses, penthouses
-- Auxiliary areas (storage, balconies) billed at reduced rates (typically 50-70% of main area rate)
-
-### Commercial (Mishari)
-- Shops, restaurants, retail spaces
-- Typically 2-4x residential rates
-- Higher zones command significantly higher commercial rates
-
-### Office (Misrad)
-- Professional offices, co-working spaces
-- Typically 1.5-3x residential rates
-- Some municipalities classify offices differently from commercial
-
-### Industrial (Taasia)
-- Factories, workshops, warehouses
-- Rates vary widely by municipality and specific industrial classification
-- Some industrial zones have special reduced rates to encourage employment
-
-### Special Classifications
-- **Agricultural land**: Usually exempt or minimal rates
-- **Non-profit organizations**: May qualify for reduced rates (requires approval)
-- **Government buildings**: Generally exempt
-- **Embassies/diplomatic**: Exempt under international law
-- **Religious institutions**: Partial or full exemption depending on use
-
-## Billing Cycle
-
-- **Annual assessment**: Arnona is assessed annually, effective January 1
-- **Billing frequency**: Bimonthly (6 bills per year)
-- **Payment dates**: Typically the 15th of every odd month (January, March, May, July, September, November)
-- **Annual update**: Rates increase annually by a government-set coefficient (the "automatic pilot" formula: half the CPI change + half the public-sector wage-index change). For 2026 the national arnona update coefficient is 1.626%. Historically it has run roughly 1.5-3%.
-- **Extraordinary increases**: Municipalities can request above-formula increases with ministerial approval
-
-## Area Calculation Rules
-
-1. **Main area**: All roofed and enclosed living space, measured by external walls (gross area)
-2. **Balconies**: Open balconies are commonly charged at a reduced rate and enclosed balconies (sealed with windows) at the full rate, but the exact treatment is set by each municipality's own tariff, so check the local tariff rather than assuming a fixed fraction.
-3. **Storage rooms (machsan)**: Usually charged at a reduced rate, set by each municipality's own tariff
-4. **Parking spaces**: Some municipalities charge for covered parking spaces
-5. **Common areas**: Not charged individually (covered by the building's commercial classification if applicable)
-6. **Rounding**: Most municipalities round up to the nearest whole sqm
-
-## Important Notes
-
-- Rates shown are approximate and based on recent rate ordinances. Always verify with the specific municipality.
-- Rates are updated annually. The figures in this guide should be cross-referenced with the current year's tzav arnona.
-- New construction may have different rate classifications for the first few years.
-- Mixed-use properties (e.g., ground floor commercial, upper floors residential) are billed separately for each usage area.
+- These are fiscal-2026 figures. A tzav is reissued every year; re-read the current one at the start of each year.
+- New buildings are often charged on a different type than older ones in the same zone (Tel Aviv by year of completion, Jerusalem's post-2020 rates).
+- Mixed-use properties are charged separately for each part according to its use.

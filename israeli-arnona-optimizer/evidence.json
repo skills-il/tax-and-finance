@@ -1,25 +1,74 @@
 {
   "schemaVersion": "1.0",
   "skill": "israeli-arnona-optimizer",
-  "generated_at": "2026-08-19T02:11:26Z",
+  "generated_at": "2026-10-07T00:00:00Z",
   "claims": [
     {
-      "claim_id": "hasaga-deadlines",
-      "claim": "Arnona objection (hasaga) must be filed with the arnona manager within 90 days of receiving the payment demand (Local Authorities (Objection to Arnona Assessment) Law 1976, section 3). The manager must respond within 60 days (section 4). An appeal (erur) to the appeals committee is filed within 30 days of the manager's decision (section 6); further appeal goes to the Administrative Court.",
-      "source_url": "https://www.nevo.co.il/law_html/law01/p213_058.htm",
-      "raw_snippet": "חוק הרשויות המקומיות (ערר על קביעת ארנונה כללית), התשל\"ו-1976: השגה תוך תשעים ימים מיום קבלת הודעת התשלום; המנהל ישיב תוך שישים יום; ערר לוועדת הערר תוך 30 יום מקבלת ההחלטה.",
-      "fetched_at": "2026-06-07T00:00:00Z",
+      "claim_id": "hasaga-deadlines-p1",
+      "claim": "Local Authorities (Arnona Objection) Law 5736-1976 (סעיף 3, סעיף 4, סעיף 6): s.3(a) objection to the arnona manager within 90 days of receiving the payment notice, on four grounds: (1) not in the zone stated, (2) error in the property's type, size or use, (3) not the holder, (4) controlling-shareholder ground; s.4 the manager answers within 60 days, failing which the objection is deemed accepted unless the appeals committee extended by up to 30 days; s.6 appeal to the appeals committee within 30 days, then to the administrative court.",
+      "source_url": "https://he.wikisource.org/wiki/חוק_הרשויות_המקומיות_(ערר_על_קביעת_ארנונה_כללית)",
+      "raw_snippet": "מי שחוייב בתשלום ארנונה כללית רשאי תוך תשעים ימים מיום קבלת הודעת התשלום להשיג עליה לפני מנהל הארנונה על יסוד טענה מטענות אלה",
+      "fetched_at": "2026-10-07T00:00:00Z",
       "appears_in": [
         "SKILL.md",
-        "SKILL_HE.md"
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md"
+      ]
+    },
+    {
+      "claim_id": "hasaga-deadlines-p2",
+      "claim": "Local Authorities (Arnona Objection) Law 5736-1976 (סעיף 3, סעיף 4, סעיף 6): s.3(a) objection to the arnona manager within 90 days of receiving the payment notice, on four grounds: (1) not in the zone stated, (2) error in the property's type, size or use, (3) not the holder, (4) controlling-shareholder ground; s.4 the manager answers within 60 days, failing which the objection is deemed accepted unless the appeals committee extended by up to 30 days; s.6 appeal to the appeals committee within 30 days, then to the administrative court.",
+      "source_url": "https://he.wikisource.org/wiki/חוק_הרשויות_המקומיות_(ערר_על_קביעת_ארנונה_כללית)",
+      "raw_snippet": "הנכס שבשלו נדרש התשלום אינו מצוי באזור כפי שנקבע בהודעת התשלום",
+      "fetched_at": "2026-10-07T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md"
+      ]
+    },
+    {
+      "claim_id": "hasaga-deadlines-p3",
+      "claim": "Local Authorities (Arnona Objection) Law 5736-1976 (סעיף 3, סעיף 4, סעיף 6): s.3(a) objection to the arnona manager within 90 days of receiving the payment notice, on four grounds: (1) not in the zone stated, (2) error in the property's type, size or use, (3) not the holder, (4) controlling-shareholder ground; s.4 the manager answers within 60 days, failing which the objection is deemed accepted unless the appeals committee extended by up to 30 days; s.6 appeal to the appeals committee within 30 days, then to the administrative court.",
+      "source_url": "https://he.wikisource.org/wiki/חוק_הרשויות_המקומיות_(ערר_על_קביעת_ארנונה_כללית)",
+      "raw_snippet": "נפלה בהודעת התשלום שמשיגים עליה טעות בציון סוג הנכס, גדלו או השימוש בו",
+      "fetched_at": "2026-10-07T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md"
+      ]
+    },
+    {
+      "claim_id": "hasaga-deadlines-p4",
+      "claim": "Local Authorities (Arnona Objection) Law 5736-1976 (סעיף 3, סעיף 4, סעיף 6): s.3(a) objection to the arnona manager within 90 days of receiving the payment notice, on four grounds: (1) not in the zone stated, (2) error in the property's type, size or use, (3) not the holder, (4) controlling-shareholder ground; s.4 the manager answers within 60 days, failing which the objection is deemed accepted unless the appeals committee extended by up to 30 days; s.6 appeal to the appeals committee within 30 days, then to the administrative court.",
+      "source_url": "https://he.wikisource.org/wiki/חוק_הרשויות_המקומיות_(ערר_על_קביעת_ארנונה_כללית)",
+      "raw_snippet": "לא השיב מנהל הארנונה תוך ששים יום – ייחשב הדבר כאילו החליט לקבל את ההשגה",
+      "fetched_at": "2026-10-07T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md"
+      ]
+    },
+    {
+      "claim_id": "hasaga-deadlines-p5",
+      "claim": "Local Authorities (Arnona Objection) Law 5736-1976 (סעיף 3, סעיף 4, סעיף 6): s.3(a) objection to the arnona manager within 90 days of receiving the payment notice, on four grounds: (1) not in the zone stated, (2) error in the property's type, size or use, (3) not the holder, (4) controlling-shareholder ground; s.4 the manager answers within 60 days, failing which the objection is deemed accepted unless the appeals committee extended by up to 30 days; s.6 appeal to the appeals committee within 30 days, then to the administrative court.",
+      "source_url": "https://he.wikisource.org/wiki/חוק_הרשויות_המקומיות_(ערר_על_קביעת_ארנונה_כללית)",
+      "raw_snippet": "תוך שלושים יום מיום שנמסרה לו התשובה, לערור עליה לפני ועדת ערר",
+      "fetched_at": "2026-10-07T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md"
       ]
     },
     {
       "claim_id": "oleh-discount",
-      "claim": "Oleh chadash arnona discount: up to 90% on up to 100 sqm of the primary residence, for 12 months that may be chosen within the first 24 months from the date registered as an oleh (teudat oleh / population-registry date). The 12 discounted months need not be the first consecutive 12.",
-      "source_url": "https://www.nevo.co.il/law_html/law01/297_032.htm",
-      "raw_snippet": "תקנות הסדרים במשק המדינה (הנחה מארנונה): עולה זכאי להנחה של עד 90% על עד 100 מ\"ר ל-12 חודשים מתוך 24 החודשים הראשונים ממועד הרישום כעולה.",
-      "fetched_at": "2026-06-07T00:00:00Z",
+      "claim": "Reg. 2(a)(6): an oleh may be given up to 90% on 100 sqm for 12 months out of the 24 starting on registration as an oleh in the population registry; an oleh-citizen certificate holder likewise from the date of status.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
+      "raw_snippet": "עולה – הנחה שאינה עולה על 90 אחוזים לגבי 100 מטרים רבועים בלבד משטח הנכס למשך 12 חודשים מתוך 24 החודשים המתחילים ביום שנרשם במרשם האוכלוסין כעולה",
+      "fetched_at": "2026-10-07T00:00:00Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
@@ -29,7 +78,7 @@
     },
     {
       "claim_id": "senior-discount",
-      "claim": "Senior (vatik) arnona discount is by pension/income status, not age band: 25% (discretionary) for a recipient of an old-age/survivors/work-injury pension with no income test; 30% (mandatory) income-tested where household income is up to the national average wage (about NIS 13,566/month as of January 2026, updated annually); up to 100% for a senior who also receives an income supplement (hashlamat hachnasa) within the income limit. Applies to the first 100 sqm.",
+      "claim": "Senior (vatik) arnona discount is by pension and income status, not by age band: up to 25% (discretionary, Reg. 2(a)(1)(a)) for an old-age, survivors or work-injury pension recipient with no income test; 30% (mandatory) where the senior's own total income is within the average wage, or the combined income of everyone living there within 150% of it where more than one senior lives in the flat; 100% for a senior who also receives income support. Applies to the first 100 sqm.",
       "source_url": "https://www.kolzchut.org.il/he/%D7%94%D7%A0%D7%97%D7%94_%D7%91%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94_%D7%9C%D7%90%D7%96%D7%A8%D7%97%D7%99%D7%9D_%D7%95%D7%AA%D7%99%D7%A7%D7%99%D7%9D",
       "raw_snippet": "הנחה בשיעור של עד 25% עשויה להינתן לאזרחים ותי",
       "fetched_at": "2026-06-07T00:00:00Z",
@@ -56,42 +105,58 @@
       ]
     },
     {
-      "claim_id": "arnona-2026-income-test-reform",
-      "claim": "Effective 1 January 2026 the income-tested arnona discounts were reformed: eligibility is computed on the 12-month average income only (the 3-month option removed), against a per-capita threshold table indexed to the minimum wage and household size, with certain Bituach Leumi benefits (child allowances, old-age/survivors pensions) excluded from counted income; eligibility widened from roughly 740,000 to 840,000 households while the top band stays 90%. Exact per-capita thresholds are published annually by the Ministry of Interior; verify the current table.",
+      "claim_id": "arnona-2026-income-test-reform-p1",
+      "claim": "For 2026 the income-tested discount table was indexed to the minimum wage and household size, and the Attorney General's office refused to extend the temporary order on computing average income, so it is computed on 12 months only.",
       "source_url": "https://www.gov.il/he/pages/news-30-04-26",
-      "raw_snippet": "משרד הפנים פרסם את תקנות ההנחות בארנונה לפי מבחן הכנסה לשנת 2026, לאחר השלמת הליך הערות הציבור ובחינת ההתייחסויות שהתקבלו, לצד עדכונים מקצועיים נוספים.",
+      "raw_snippet": "טבלת ההנחות שפורסמה מבוססת על עדכון מנגנון מבחן ההכנסה והצמדתו לשכר המינימום במשק, תוך התחשבות במספר הנפשות במשק הבית.",
       "fetched_at": "2026-08-16",
       "appears_in": [
         "SKILL.md",
-        "SKILL_HE.md"
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md"
       ],
-      "verified_via": "Ministry of Interior news page (official gov.il); re-pointed after the previous topic page began returning /he/error",
-      "verified_at": "2026-08-16"
+      "verified_via": "browser",
+      "verified_at": "2026-10-07"
+    },
+    {
+      "claim_id": "arnona-2026-income-test-reform-p2",
+      "claim": "For 2026 the income-tested discount table was indexed to the minimum wage and household size, and the Attorney General's office refused to extend the temporary order on computing average income, so it is computed on 12 months only.",
+      "source_url": "https://www.gov.il/he/pages/news-30-04-26",
+      "raw_snippet": "ונקבע כי “ההכנסה החודשית הממוצעת” לחישוב ההנחה, תחושב על בסיס ממוצע ההכנסה של 12 חודשים בלבד.",
+      "fetched_at": "2026-08-16",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md"
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-10-07"
     },
     {
       "claim_id": "update-coefficient-2026",
-      "claim": "שיעור עדכון הארנונה לשנת 2026 הוא 1.626%, לפי טבלת שיעורי העדכון שמפרסם משרד הפנים. באותה טבלה כבר פורסם שיעור העדכון לשנת 2027: 3.05%.",
+      "claim": "National arnona update coefficient published by the Interior Ministry under s.7 of the Arrangements Law: 1.626% for 2026 and 3.05% for 2027 (half the CPI change plus half the public-sector wage change).",
       "source_url": "https://www.gov.il/he/pages/tax",
       "raw_snippet": "שיעורי העדכון בשנים 2007-2027 שנה שיעור העדכון 2027 3.05% 2026 1.626% 2025 5.29% 2024 2.68% 2023 1.37% 2022 1.92% 2021 1",
       "fetched_at": "2026-08-16",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
-        "references/arnona-rates-guide.md"
+        "references/arnona-rates-guide.md",
+        "scripts/arnona-calculator.py"
       ],
       "verified_via": "Ministry of Interior arnona page (official gov.il), 2007-2027 coefficient table",
-      "verified_at": "2026-08-16"
+      "verified_at": "2026-10-07",
+      "corroborating_snippet": "ע\"פ סעיף 7 לחוק הסדרים במשק המדינה (תיקוני חקיקה להשגת יעדי התקציב), התשנ\"ג - 1992 שיעור העדכון לשנת 2027 נקבע בהתאם לנוסחה הבאה"
     },
     {
       "claim_id": "reference-urls-and-examples",
-      "claim": "Reference URLs and illustrative example figures. Example calc figures (Tel Aviv zone 2 ~95 NIS/sqm, 85 sqm -> ~8,075 NIS/yr -> ~1,346 bimonthly; Jerusalem zone bet ~72 NIS/sqm, 70 sqm -> ~5,040 NIS/yr; Haifa ~65 NIS/sqm, 13 sqm discrepancy -> ~845 NIS) are illustrative estimates, not official rates. Covers these references: https://www.kolzchut.org.il/he/ארנונה https://www.gov.il/he/departments/topics/property_tax_arnona https://www.btl.gov.il/benefits/Disability/Pages/default.aspx https://www.tel-aviv.gov.il/ https://www.jerusalem.muni.il/. Also covers: 130 ₪ 1346 ₪ 2500 ₪ 3500 ₪ 3750 ₪ 4375 ₪ 4536 ₪ 4875 ₪ 504 ₪ 5200 ₪ 5375 ₪ 60 ₪ 6100 ₪ 6800 ₪ 7500 ₪ 84 ₪ 90 ₪ 3% *2404 *6195 *6226 *6230 Section 3 סעיף 3",
+      "claim": "Kol Zchut arnona hub, cited in Reference Links as a plain-language guide to arnona obligations, discounts and appeal rights.",
       "source_url": "https://www.kolzchut.org.il/he/%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94",
       "raw_snippet": "הפורטל מרכז מידע לגבי הקלות שונות בתשלום ארנונה, בהתאם לסוגי הזכאויות.",
       "fetched_at": "2026-08-18",
       "appears_in": [
         "SKILL.md",
-        "SKILL_HE.md",
-        "references/arnona-rates-guide.md"
+        "SKILL_HE.md"
       ],
       "verified_via": "Kol Zchut page read through the site's MediaWiki API from inside a loaded page, which passes the WAF a plain fetch does not",
       "verified_at": "2026-08-18"
@@ -672,7 +737,7 @@
     },
     {
       "claim_id": "arnona-single-discount-17a",
-      "claim": "Reg. 17(a): where several discounts apply, only one is given, the highest of them, and no discount is given to an additional holder of the property.",
+      "claim": "(תקנה 17) Reg. 17(a): where several discounts apply, only one is given, the highest of them, and no discount is given to an additional holder of the property.",
       "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
       "raw_snippet": "תינתן לזכאי להנחה, הנחה אחת בלבד, הגבוהה מביניהן, ולא תינתן כל הנחה למחזיק נוסף בנכס שלגביו ניתנה הנחה",
       "fetched_at": "2026-08-19T02:11:26Z",
@@ -711,7 +776,7 @@
     },
     {
       "claim_id": "arnona-payment-condition-20",
-      "claim": "Reg. 20: no discount is given unless the year's arnona balance was paid in one advance payment, by standing order, or under another payment arrangement satisfactory to the local authority.",
+      "claim": "(תקנה 20) Reg. 20: no discount is given unless the year's arnona balance was paid in one advance payment, by standing order, or under another payment arrangement satisfactory to the local authority.",
       "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
       "raw_snippet": "לא תינתן הנחה לפי תקנות אלה אלא אם כן שולמה יתרת הארנונה הכללית שהוטלה על הנכס באותה שנת כספים בתשלום אחד מראש, בהוראת קבע",
       "fetched_at": "2026-08-19T02:11:26Z",
@@ -802,7 +867,8 @@
         "SKILL_HE.md",
         "references/arnona-discounts-guide.md"
       ],
-      "source_note": "Quoted as the plain-text rendering of the single <table class=\"wikitable\"> that follows the sentence בשנת 2026 זכאים להנחה מי שהכנסתם החודשית הממוצעת (ברוטו) ב-2025. Each figure sits in its own <td>, so the text is contiguous only once the table markup is stripped; the cell order is preserved exactly as published (30% band first, 90% band last, household-size cell blank on the continuation rows)."
+      "source_note": "Quoted as the plain-text rendering of the single <table class=\"wikitable\"> that follows the sentence בשנת 2026 זכאים להנחה מי שהכנסתם החודשית הממוצעת (ברוטו) ב-2025. Each figure sits in its own <td>, so the text is contiguous only once the table markup is stripped; the cell order is preserved exactly as published (30% band first, 90% band last, household-size cell blank on the continuation rows).",
+      "verified_at": "2026-09-20"
     },
     {
       "claim_id": "arnona-income-update-may-20",
@@ -1148,17 +1214,940 @@
     },
     {
       "claim_id": "tel-aviv-tzav-2026-residential-range",
-      "claim": "Tel Aviv-Yafo's 2026 tzav arnona sets residential rates from 46.64 to 139.60 NIS/sqm/year, across five geographic zones for residential (three for non-residential) and the building classification codes. No citywide residential average rate is published.",
+      "claim": "Tel Aviv-Yafo fiscal-2026 tzav: residential rates keyed on five zones (columns 1, 2, 3, 4-5; zones 1 and 2 split between flats of up to 140 sqm and villas or flats over 140 sqm) and on building-type rows אא, כא, ח+א, ב+ג, ד, ה+ו set by building description and year of completion. Range 46.64 to 139.60 NIS/sqm/year. Zone 2, type ב+ג, flat up to 140 sqm: 72.89 NIS per sqm. Example: 85 x 72.89 = 6,195.65 NIS a year (about 6,196 NIS), 1,032.61 NIS per two-month bill. 2027 projection at 3.05%: about 6,385 NIS.",
       "source_url": "https://www.tel-aviv.gov.il/Residents/Arnona/Documents/%D7%97%D7%95%D7%91%D7%A8%D7%AA%20%D7%A6%D7%95%20%D7%94%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94%20%D7%9C%D7%A9%D7%A0%D7%AA%202026.pdf",
-      "raw_snippet": "העיר מחולקת ל 5-אזורים גיאוגרפיים לצורך ארנונה כללית למגורים ול 3-אזורים שונים לגבי בנינים שאינם משמשים למגורים.",
-      "corroborating_snippet": "64.42 78.39 90.71 108.98 112.99 139.60 אא",
-      "source_note": "Both slices come from the municipality's published PDF booklet חוברת צו הארנונה לשנת 2026, read with pdftotext -layout and with Unicode bidi format characters stripped. The rate figures live in table cells of the residential tariff table under section 2.3 התעריפים לפי סוג הבנין והאזור; the top row (זone אא) carries 139.60 as its highest cell and the bottom row (ה+ו) reads 46.64 47.65 55.10 66.21 68.64 84.81, giving the 46.64 floor. The booklet publishes no citywide residential average, which is why the skill no longer states one.",
-      "verified_via": "curl of the PDF 2026-09-20 + pdftotext -layout; both slices are contiguous in the extracted text after whitespace collapsing",
-      "fetched_at": "2026-09-20T00:00:00Z",
-      "source_fetched_at": "2026-09-20T00:00:00Z",
+      "raw_snippet": "64.42 78.39 90.71 108.98 112.99 139.60 אא 64.13 78.06 90.29 108.49 112.49 138.97 כא 61.09 74.34 86.01 103.33 107.12 132.35 ח+א 54.05 63.01 72.89 87.56 90.78 112.16 ב+ג 49.15 54.79 63.38 76.14 78.94 97.54 ד 46.64 47.65 55.10 66.21 68.64 84.81 ה+ו",
+      "fetched_at": "2026-10-07T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "scripts/arnona-calculator.py",
+        "references/arnona-rates-guide.md"
+      ],
+      "corroborating_snippet": "העיר מחולקת לצורך ארנונה כללית למגורים ל 5-אזורים בהתאם למפה לעיל.",
+      "source_note": "Rows are building types and columns are zones. Reading the layout text left to right the columns are: zone 4-5, zone 3, zone 2 flat up to 140 sqm, zone 2 villa or flat over 140, zone 1 flat up to 140, zone 1 villa or flat over 140. The v1.6.0 note read the rows as zones, which was wrong.",
+      "verified_at": "2026-10-07"
+    },
+    {
+      "claim_id": "tzav-2026-jerusalem",
+      "claim": "Jerusalem fiscal-2026 tzav: zones א-ד crossed with building types 1-4 (type 1 a building with a flat of 120 sqm or more; type 2 stone, concrete or blocks). Range 46.35 to 129.91. Zone ב type 2: 86.34 NIS per sqm (70 sqm: 6,043.80 NIS a year; with 90% on all 70 sqm, 604.38 NIS). Flats first charged from 1.1.2020 pay the zone א row in every zone. Zone ד prints 74.46 / 46.35 for types 1 / 2.",
+      "source_url": "https://www.jerusalem.muni.il/media/dl0hvk34/%D7%A6%D7%95-%D7%9E%D7%99%D7%A1%D7%99%D7%9D-%D7%9E%D7%9C%D7%90-2026-%D7%9E%D7%A2%D7%95%D7%93%D7%9B%D7%9F-%D7%9C%D7%90%D7%AA%D7%A8.pdf",
+      "raw_snippet": "סוגי בנין תת סיווג (מחיר למ\"ר) 4 3 2 1 אזור 46.35 75.70 107.65 129.91 א 46.35 56.28 86.34 118.04 ב 46.35 46.35 64.23 91.07 ג 46.35 46.35 46.35 74.46 ד",
+      "fetched_at": "2026-10-07T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "scripts/arnona-calculator.py",
+        "references/arnona-rates-guide.md"
+      ],
+      "verified_via": "pdf",
+      "verified_at": "2026-10-07",
+      "source_note": "The municipality CDN returns 403 to a bare request; fetched with browser request headers and read with pdftotext."
+    },
+    {
+      "claim_id": "tzav-2026-haifa",
+      "claim": "Haifa fiscal-2026 tzav (outside Kiryat Haim): zones א'-ד' x class מ-1..מ-6 x flat size. Regular class מ-2 by band: up to 75 sqm 90.07/68.46/47.52/43.12; 76-100 sqm 103.94/78.79/53.62/43.12; over 100 sqm 119.57/90.50/63.13/44.68 (zones א'/ב'/ג'/ד'). Luxury מ-1 over 100 sqm: 125.59/115.64/90.79 per additional sqm. Floor 43.12 (41.07 in Kiryat Haim), top 125.59. Example: 13 sqm x 78.79 NIS = about 1,024 NIS a year.",
+      "source_url": "https://www.haifa.muni.il/wp-content/uploads/2021/08/%D7%A6%D7%95-%D7%9E%D7%A1%D7%99%D7%9D-2026-%D7%A1%D7%95%D7%A4%D7%99-%D7%9C%D7%90%D7%97%D7%A8-%D7%90%D7%99%D7%A9%D7%95%D7%A8-%D7%94%D7%A9%D7%A8%D7%99%D7%9D-%D7%9E%D7%95%D7%A0%D7%92%D7%A9-PDFUA-12.pdf",
+      "raw_snippet": "63.13 90.50 119.57 לדירה ששטחה עד 100מ\"ר מ - 1בניין משובח 90.79 115.64 125.59 לדירה ששטחה מעל 100מ\"ר לכל מ - 1בניין משובח מ\"ר נוסף 90.79 115.64 125.59 לכל מ\"ר יחידת מגורים במלון דירות 44.68 63.13 90.50 119.57 לדירה ששטחה מעל 100מ\"ר מ - 2בניין רגיל 43.12 53.62 78.79 103.94 לדירה ששטחה 76עד 100מ\"ר מ - 2בניין רגיל 43.12 47.52 68.46 90.07 לדירה ששטחה עד 75מ\"ר",
+      "fetched_at": "2026-10-07T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "scripts/arnona-calculator.py",
+        "references/arnona-rates-guide.md"
+      ]
+    },
+    {
+      "claim_id": "tzav-2026-beer-sheva",
+      "claim": "Beer Sheva fiscal-2026 tzav: residential zones א/ב/ג at 58.28/50.45/48.64; flats up to 57 sqm in zones א/ב at 51.94/47.78. Range 47.78 to 58.28.",
+      "source_url": "https://www.beer-sheva.muni.il/Residents/Arnona/Documents/%D7%A6%D7%95%D7%95%D7%99-%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94/%D7%A6%D7%95%20%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94%20%D7%9C%D7%A9%D7%A0%D7%AA%202026.pdf",
+      "raw_snippet": "אזור ג אזור ב אזור א אזור 121-123 101-102 111-112 קוד סיווג 48.64 50.45 58.28 תעריף אזור ב אזור א מגורים עד 57מ\"ר 103 113 קוד סיווג 47.78 51.94 תעריף",
+      "fetched_at": "2026-10-07T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "scripts/arnona-calculator.py",
+        "references/arnona-rates-guide.md"
+      ]
+    },
+    {
+      "claim_id": "tzav-2026-netanya",
+      "claim": "Netanya fiscal-2026 tzav: zones 1-3 x types א-ה. Zone 1: 94.85/88.49/79.23/65.51/48.66; zone 2: 78.42/68.14/61.63/56.44/44.93; zone 3: 56.15/51.50/47.71/41.05/41.05. Range 41.05 to 94.85.",
+      "source_url": "https://www.netanya.muni.il/DocLib1/zavmisim26.pdf",
+      "raw_snippet": "94.85 211 א 1 88.49 212 ב 1 79.23 213 ג 1 65.51 214 ד 1 48.66 215 ה 1 78.42 221 א 2 68.14 222 ב 2 61.63 223 ג 2 56.44 224 ד 2 44.93 225 ה 2 56.15 231 א 3 51.50 232 ב 3 47.71 233 ג 3 41.05 234 ד 3 41.05 235 ה 3 108.46 906 דירות מיוחדות 3",
+      "fetched_at": "2026-10-07T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "scripts/arnona-calculator.py",
+        "references/arnona-rates-guide.md"
+      ]
+    },
+    {
+      "claim_id": "tzav-2026-rishon-lezion",
+      "claim": "Rishon LeZion fiscal-2026 tzav: zones א'-ד' x types אא/א/ב/ג. Zones א', ג', ד': 77.10/69.69/47.92/42.50; zone ב': 71.65/52.58/42.50/42.50. Range 42.50 to 77.10.",
+      "source_url": "https://www.rishonlezion.muni.il/Residents/arnona/ArnonaOrders/%D7%A6%D7%95_%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94_2026.pdf",
+      "raw_snippet": "ג' ב' א' אזור/סוג אא' 42.50 47.92 69.69 77.10 א' 42.50 42.50 52.58 71.65 ב' 42.50 47.92 69.69 77.10 ג' 42.50 47.92 69.69 77.10 ד'",
+      "fetched_at": "2026-10-07T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "scripts/arnona-calculator.py",
+        "references/arnona-rates-guide.md"
+      ]
+    },
+    {
+      "claim_id": "tzav-2026-petah-tikva",
+      "claim": "Petah Tikva fiscal-2026 tzav: zones א-ג x size-based types אא/א/ב/ג/ד. Zone א: 84.96/79.26/62.89/56.27/43.39; zone ב: 74.58/69.65/57.00/50.41/43.39; zone ג: 48.54/44.71/43.39/43.39/43.39. Range 43.39 to 84.96.",
+      "source_url": "https://api.petah-tikva.muni.il/media/vovfqold/%D7%A6%D7%95-%D7%9E%D7%99%D7%A1%D7%99%D7%9D-2026-%D7%97%D7%95%D7%A7%D7%99-%D7%A7%D7%99%D7%99%D7%9D-%D7%A1%D7%95%D7%A4%D7%99-pdfua.pdf",
+      "raw_snippet": "ד ג ב א אזור/סוג אא 43.39 56.27 62.89 79.26 84.96 א 43.39 50.41 57.00 69.65 74.58 ב 43.39 43.39 43.39 44.71 48.54 ג",
+      "fetched_at": "2026-10-07T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "scripts/arnona-calculator.py",
+        "references/arnona-rates-guide.md"
+      ]
+    },
+    {
+      "claim_id": "tzav-2026-ashdod",
+      "claim": "Ashdod fiscal-2026 tzav: one residential zone; up to 75 sqm at 43.62 per sqm, each further sqm from 76 at 65.19; resort unit 91.13.",
+      "source_url": "https://www.ashdod.muni.il/media/16515460/%D7%A6%D7%95-%D7%94%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94-%D7%9C%D7%A9%D7%A0%D7%AA-2026-%D7%90%D7%95%D7%A9%D7%A8-%D7%91%D7%9E%D7%95%D7%A2%D7%A6%D7%AA-%D7%94%D7%A2%D7%99%D7%A8-%D7%91%D7%AA%D7%90%D7%A8%D7%99%D7%9A-25-06-25-pdfua.pdf",
+      "raw_snippet": "שעורי הארנונה -שטח המבנה 101 43.62 א .עד 75מ\"ר ; לכל מ\"ר 103 104 100 65.19 ב .מ 76-מ\"ר ומעלה ; לכל מ\"ר נוסף 91.13 ג .דירת/יחידת נופש לכל מ\"ר (*) 43.62 ד .בתי אבות",
+      "fetched_at": "2026-10-07T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "scripts/arnona-calculator.py",
+        "references/arnona-rates-guide.md"
+      ]
+    },
+    {
+      "claim_id": "tzav-2026-ramat-gan",
+      "claim": "Ramat Gan fiscal-2026 tzav: zones א'+, א', ב', ג', ד' x types א+, א, ב, ג, ד. Type א+: 135.53/111.15/93.79/82.17/71.09; type א: 112.99/92.66/83.35/69.66/60.25; type ב (zones א'-ד'): 77.64/64.56/50.91/46.60; type ג: 57.29/46.54/44.59/44.59; type ד: 44.59. Range 44.59 to 135.53.",
+      "source_url": "https://cms-media.ramat-gan.muni.il/media/lchlofwg/tzav-arnona-2026.pdf",
+      "raw_snippet": "א .בניני מגורים סוג הנכס אזור א'+ אזור א' אזור ב' אזור ג' אזור ד' א+ 135.53 111.15 93.79 82.17 71.09 א 112.99 92.66 83.35 69.66 60.25 ב 77.64 64.56 50.91 46.60 ג 57.29 46.54 44.59 44.59 ד 44.59 44.59 44.59 44.59",
+      "fetched_at": "2026-10-07T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "scripts/arnona-calculator.py",
+        "references/arnona-rates-guide.md"
+      ]
+    },
+    {
+      "claim_id": "tzav-2026-herzliya",
+      "claim": "Herzliya fiscal-2026 tzav: zones א-ז x types 1-7; zone א and type 1 at 142.31; types 2-7 in zone ב' 101.57/92.35/76.66/76.66/57.25/42.63 down to zone ו' 93.28/84.83/70.44/70.44/52.64/42.63; zone ז' 42.63. Range 42.63 to 142.31.",
+      "source_url": "https://herzliya.muni.il/uploads/n/1771243430.8638.pdf",
+      "raw_snippet": "142.31ש\"ח למ\"ר דירה באזור א' מכל הסוגים • 142.31ש\"ח למ\"ר דירה מסוג 1בכל האזורים • סוג 7 סוג 6 סוג 5 סוג 4 סוג 3 סוג 2 אזור 42.63 57.25 76.66 76.66 92.35 101.57 אזור ב' 42.63 56.33 75.50 75.50 90.87 99.93 אזור ג' 42.63 55.15 73.89 73.89 89.00 97.81 אזור ד' 42.63 53.44 71.56 71.56 86.16 94.72 אזור ה' 42.63 52.64 70.44 70.44 84.83 93.28 אזור ו' 42.63 42.63 42.63 42.63 42.63 42.63 אזור ז'",
+      "fetched_at": "2026-10-07T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "scripts/arnona-calculator.py",
+        "references/arnona-rates-guide.md"
+      ]
+    },
+    {
+      "claim_id": "tzav-2026-raanana",
+      "claim": "Raanana fiscal-2026 tzav: zones 1 and 2 x size types. 141 sqm or more 63.92/51.97; 121-140 62.25/50.63; 86-120 54.62/48.42; up to 85 48.42/48.42; huts and caravans 44.74; zone-2 type 5 55.73. Range 44.74 to 63.92.",
+      "source_url": "https://www.raanana.muni.il/wp-content/uploads/2025/12/%D7%A6%D7%95-%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94-2026.pdf",
+      "raw_snippet": "63.92 111 1 1 דירה ששטחה מ 141 -מ\"ר ואינה כלולה בסוג 5 51.97 121 1 2 62.25 111 1 1 דירה ששטחה מ 121 -מ\"ר ועד 140מ\"ר ואינה כלולה בסוג 5 50.63 121 1 2 54.62 111 2 1 דירה ששטחה מ 86 -ועד 120מ\"ר 48.42 121 2 2 48.42 111 3 1 דירה ששטחה עד 85מ\"ר 48.42 121 3 2",
+      "fetched_at": "2026-10-07T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "scripts/arnona-calculator.py",
+        "references/arnona-rates-guide.md"
+      ]
+    },
+    {
+      "claim_id": "tzav-2026-haifa-other-classes",
+      "claim": "Haifa fiscal-2026 classes מ-3 to מ-6: partly underground over 75 sqm 65.25/48.94/43.12/43.12, up to 75 sqm 56.42/43.12; simple over 75 sqm 48.94 in zone א' else 43.12; ancillary and basement 43.12.",
+      "source_url": "https://www.haifa.muni.il/wp-content/uploads/2021/08/%D7%A6%D7%95-%D7%9E%D7%A1%D7%99%D7%9D-2026-%D7%A1%D7%95%D7%A4%D7%99-%D7%9C%D7%90%D7%97%D7%A8-%D7%90%D7%99%D7%A9%D7%95%D7%A8-%D7%94%D7%A9%D7%A8%D7%99%D7%9D-%D7%9E%D7%95%D7%A0%D7%92%D7%A9-PDFUA-12.pdf",
+      "raw_snippet": "43.12 43.12 48.94 65.25 לדירה ששטחה מעל 75מ\"ר מ - 3בניין תת קרקעי בחלקו 43.12 43.12 43.12 56.42 לדירה ששטחה עד 75מ\"ר מ - 3בניין תת קרקעי בחלקו 43.12 43.12 43.12 48.94 לדירה ששטחה מעל 75מ\"ר מ - 4בניין פשוט 43.12 43.12 43.12 43.12 לדירה ששטחה עד 75מ\"ר מ - 4בניין פשוט 43.12 43.12 43.12 43.12 לדירה ששטחה מעל 75מ\"ר מ - 5בנייני עזר - הצמודים לדירה 43.12 43.12 43.12 43.12 לדירה ששטחה עד 75מ\"ר מ - 5בנייני עזר - הצמודים לדירה 43.12 43.12 43.12 43.12 מעל 75מ\"ר מ - 6בניין פשוט תת קרקעי בחלקו/ מרתף 43.12 43.12 43.12 43.12 עד 75מ\"ר מ - 6",
+      "fetched_at": "2026-10-07T00:00:00Z",
+      "appears_in": [
+        "scripts/arnona-calculator.py"
+      ]
+    },
+    {
+      "claim_id": "tzav-2026-haifa-measurement",
+      "claim": "Haifa measures residential area wall to wall inside the unit, including balconies (even unroofed), internal stairs, service rooms, sheds and galleries 1.80 m or higher; rounds to the nearest whole sqm with half rounding down; ancillary buildings count toward the size band; a standard shelter and the shared areas of an ordinary building are not charged.",
+      "source_url": "https://www.haifa.muni.il/wp-content/uploads/2021/08/%D7%A6%D7%95-%D7%9E%D7%A1%D7%99%D7%9D-2026-%D7%A1%D7%95%D7%A4%D7%99-%D7%9C%D7%90%D7%97%D7%A8-%D7%90%D7%99%D7%A9%D7%95%D7%A8-%D7%94%D7%A9%D7%A8%D7%99%D7%9D-%D7%9E%D7%95%D7%A0%D7%92%D7%A9-PDFUA-12.pdf",
+      "raw_snippet": "בשטח הבניין יימדד כל השטח מקיר אל קיר ,שבתוך יחידת הבניין ,כולל חדרי מגורים ,חדרי שירות ,בנייני עזר ,כניסות ,פינות אוכל ,פרוזדורים ,מדרגות פנימיות ,הול ,מרפסות ,לרבות מרפסות לא מקורות ,יציעים שגובהם 1.80מ' או יותר ,סככות ,חדרי כביסה ,כל שטח מקורה אחר ,ובבריכה -כל השטח הבנוי ,גם אם אינו מקורה.",
+      "fetched_at": "2026-10-07T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-rates-guide.md"
+      ],
+      "corroborating_snippet": "לצורך סיווג גודל הבניין ייכלל בשטחו כל בניין בין שהוא צמוד ובין שאינו צמוד לבניין והמשמש את יחידת הדיור."
+    },
+    {
+      "claim_id": "tzav-2026-haifa-deadline-payment",
+      "claim": "Haifa 2026: discount applications by 31/3/2026, or within 90 days of the charge or of recognition, later only for special reasons; six payments on 1.1, 1.3, 1.5, 1.7, 1.9, 1.11 or 12 monthly standing-order payments on the 1st; 2% for paying in full by 31/12/2025, 1% by 31/1/2026.",
+      "source_url": "https://www.haifa.muni.il/wp-content/uploads/2021/08/%D7%A6%D7%95-%D7%9E%D7%A1%D7%99%D7%9D-2026-%D7%A1%D7%95%D7%A4%D7%99-%D7%9C%D7%90%D7%97%D7%A8-%D7%90%D7%99%D7%A9%D7%95%D7%A8-%D7%94%D7%A9%D7%A8%D7%99%D7%9D-%D7%9E%D7%95%D7%A0%D7%92%D7%A9-PDFUA-12.pdf",
+      "raw_snippet": "בקשה להנחה לשנת 2026יש להגיש לא יאוחר מיום ,31/3/2026או בתוך 90ימים ממועד החיוב בארנונה ,או בתוך 90ימים מהמועד שהוכר כזכאי להנחה על פי דין. ב .בקשות להנחה שתוגשנה לאחר המועדים הנקובים לעיל לא יידונו ,זולת אם יובאו טעמים מיוחדים לאי הגשת הבקשה במועד.",
+      "fetched_at": "2026-10-07T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-rates-guide.md",
+        "references/arnona-discounts-guide.md"
+      ],
+      "corroborating_snippet": "למשלם הארנונה במלואה עד 31/12/2025תינתן הנחה בשיעור של .2% ב .למשלם הארנונה במלואה עד 31/1/2026תינתן הנחה בשיעור של .1% .5הסדר תשלומים א .המעדיף לשלם לפי הסדר תשלומים ,ישלם את הארנונה ב 6 -תשלומים בתאריכים: ,1/9/2026 ,1/7/2026 ,1/5/2026 ,1/3/2026 ,1/1/2026ו.1/11/2026 - ב .תשלום \"בהוראת קבע\" יבוצע ע\"י מתן הוראה להעביר לחשבון הבנק של העירייה תשלומים במועדים המפורטים בסעיף א' לעיל או ב 12-תשלומים חודשיים רצופים, בכל 1-לחודש"
+    },
+    {
+      "claim_id": "tzav-2026-jerusalem-types-new-flats",
+      "claim": "Jerusalem: type 1 is a building with a flat of 120 sqm or more, type 2 a building of stone, concrete or blocks; flats first charged, completed or occupied from 1.1.2020 pay 129.91/107.65/75.70/46.35 in every zone א-ד.",
+      "source_url": "https://www.jerusalem.muni.il/media/dl0hvk34/%D7%A6%D7%95-%D7%9E%D7%99%D7%A1%D7%99%D7%9D-%D7%9E%D7%9C%D7%90-2026-%D7%9E%D7%A2%D7%95%D7%93%D7%9B%D7%9F-%D7%9C%D7%90%D7%AA%D7%A8.pdf",
+      "raw_snippet": "דירות מגורים חדשות אשר חויבו החל מיום 1.1.2020ואילך\"* - לכל יחידת שטח כפי שהוגדרה בנספח ג 3/והוטלה ארנונה לראשונה החל מיום 1.1.2020 ואילך ,ו/או הסתיימה בנייתה החל מיום 1.1.2020ואילך ,ו/או אוכלסה החל מיום 1.1.2020 ואילך ו/או קיבלה אישור אכלוס החל מיום ,1.1.2020תחויב בשעורים המפורטים בטבלה הבאה לפי האזורים וסוגי הבניין כמפורט בנספח ג.1/ סוגי בנין תת סיווג (מחיר למ\"ר): סוג בנין 4 3 2 1 אזור 46.35 75.70 107.65 129.91 א' -ד'",
+      "fetched_at": "2026-10-07T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "scripts/arnona-calculator.py",
+        "references/arnona-rates-guide.md"
+      ],
+      "corroborating_snippet": "סוג :1בנין אשר בו דירה אחת או יותר ששטחה (שטח היחידה) 120מ\"ר ומעלה. סוג :2בנין אשר בו דירה אחת או יותר הבנוי מאבן ,בטון או בלוקים.",
+      "verified_via": "pdf",
+      "verified_at": "2026-10-07"
+    },
+    {
+      "claim_id": "jerusalem-zone-dalet-ministers-approval-p1",
+      "claim": "On 14-15.12.2025 the Interior Ministry director-general and the Finance Minister approved Jerusalem's council decision changing the zone definition for 2026: zone ד types 1 and 2 (74.46 and 46.35) to be charged at zone ג rates (91.07 and 64.23). The September 2026 booklet (tzav-2026-jerusalem) still prints the old zone ד cells.",
+      "source_url": "https://www.jerusalem.muni.il/media/odfo5ec5/%D7%91%D7%A7%D7%A9%D7%94-%D7%9C%D7%94%D7%A2%D7%9C%D7%90%D7%94-%D7%97%D7%A8%D7%99%D7%92%D7%94-%D7%9C%D7%A9%D7%A0%D7%AA-2026-%D7%95%D7%90%D7%99%D7%A9%D7%95%D7%A8-%D7%94%D7%A9%D7%A8%D7%99%D7%9D.pdf",
+      "raw_snippet": "אישור חריג להטלת ארנונה בשנת 2026",
+      "fetched_at": "2026-10-07T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "scripts/arnona-calculator.py",
+        "references/arnona-rates-guide.md"
+      ],
+      "verified_via": "image",
+      "verified_at": "2026-10-07",
+      "source_note": "Image-only PDF, 3 pages. Page 2 (request table, signed by the city treasurer) and page 3 (approval signed by Israel Ozen 14/12/2025 and Bezalel Smotrich 15.12.2025) were rendered to PNG and read; the snippet is a transcription of those two pages."
+    },
+    {
+      "claim_id": "jerusalem-zone-dalet-ministers-approval-p2",
+      "claim": "On 14-15.12.2025 the Interior Ministry director-general and the Finance Minister approved Jerusalem's council decision changing the zone definition for 2026: zone ד types 1 and 2 (74.46 and 46.35) to be charged at zone ג rates (91.07 and 64.23). The September 2026 booklet (tzav-2026-jerusalem) still prints the old zone ד cells.",
+      "source_url": "https://www.jerusalem.muni.il/media/odfo5ec5/%D7%91%D7%A7%D7%A9%D7%94-%D7%9C%D7%94%D7%A2%D7%9C%D7%90%D7%94-%D7%97%D7%A8%D7%99%D7%92%D7%94-%D7%9C%D7%A9%D7%A0%D7%AA-2026-%D7%95%D7%90%D7%99%D7%A9%D7%95%D7%A8-%D7%94%D7%A9%D7%A8%D7%99%D7%9D.pdf",
+      "raw_snippet": "הרינו מחליטים לאשר את החלטת המועצה לשינוי הגדרת אזור/ העלאה חריגה בארנונה",
+      "fetched_at": "2026-10-07T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "scripts/arnona-calculator.py",
+        "references/arnona-rates-guide.md"
+      ],
+      "verified_via": "image",
+      "verified_at": "2026-10-07",
+      "source_note": "Image-only PDF, 3 pages. Page 2 (request table, signed by the city treasurer) and page 3 (approval signed by Israel Ozen 14/12/2025 and Bezalel Smotrich 15.12.2025) were rendered to PNG and read; the snippet is a transcription of those two pages."
+    },
+    {
+      "claim_id": "jerusalem-zone-dalet-ministers-approval-p3",
+      "claim": "On 14-15.12.2025 the Interior Ministry director-general and the Finance Minister approved Jerusalem's council decision changing the zone definition for 2026: zone ד types 1 and 2 (74.46 and 46.35) to be charged at zone ג rates (91.07 and 64.23). The September 2026 booklet (tzav-2026-jerusalem) still prints the old zone ד cells.",
+      "source_url": "https://www.jerusalem.muni.il/media/odfo5ec5/%D7%91%D7%A7%D7%A9%D7%94-%D7%9C%D7%94%D7%A2%D7%9C%D7%90%D7%94-%D7%97%D7%A8%D7%99%D7%92%D7%94-%D7%9C%D7%A9%D7%A0%D7%AA-2026-%D7%95%D7%90%D7%99%D7%A9%D7%95%D7%A8-%D7%94%D7%A9%D7%A8%D7%99%D7%9D.pdf",
+      "raw_snippet": "1 אזור ד' 74.46 1 אזור ג' סוג בניין 1 91.07",
+      "fetched_at": "2026-10-07T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "scripts/arnona-calculator.py",
+        "references/arnona-rates-guide.md"
+      ],
+      "verified_via": "image",
+      "verified_at": "2026-10-07",
+      "source_note": "Image-only PDF, 3 pages. Page 2 (request table, signed by the city treasurer) and page 3 (approval signed by Israel Ozen 14/12/2025 and Bezalel Smotrich 15.12.2025) were rendered to PNG and read; the snippet is a transcription of those two pages."
+    },
+    {
+      "claim_id": "jerusalem-zone-dalet-ministers-approval-p4",
+      "claim": "On 14-15.12.2025 the Interior Ministry director-general and the Finance Minister approved Jerusalem's council decision changing the zone definition for 2026: zone ד types 1 and 2 (74.46 and 46.35) to be charged at zone ג rates (91.07 and 64.23). The September 2026 booklet (tzav-2026-jerusalem) still prints the old zone ד cells.",
+      "source_url": "https://www.jerusalem.muni.il/media/odfo5ec5/%D7%91%D7%A7%D7%A9%D7%94-%D7%9C%D7%94%D7%A2%D7%9C%D7%90%D7%94-%D7%97%D7%A8%D7%99%D7%92%D7%94-%D7%9C%D7%A9%D7%A0%D7%AA-2026-%D7%95%D7%90%D7%99%D7%A9%D7%95%D7%A8-%D7%94%D7%A9%D7%A8%D7%99%D7%9D.pdf",
+      "raw_snippet": "1 אזור ד' 46.35 1 אזור ג' סוג בניין 2 64.23",
+      "fetched_at": "2026-10-07T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "scripts/arnona-calculator.py",
+        "references/arnona-rates-guide.md"
+      ],
+      "verified_via": "image",
+      "verified_at": "2026-10-07",
+      "source_note": "Image-only PDF, 3 pages. Page 2 (request table, signed by the city treasurer) and page 3 (approval signed by Israel Ozen 14/12/2025 and Bezalel Smotrich 15.12.2025) were rendered to PNG and read; the snippet is a transcription of those two pages."
+    },
+    {
+      "claim_id": "first-schedule-2026-reshumot",
+      "claim": "Fiscal-2026 First Schedule as published in Kovetz HaTakanot 12366 (20.4.2026), header income year 2025: 1 person 3,513 / 4,295 / 5,076 / 5,857 ... (same table as arnona-income-table-2026-first-schedule). The amendment adds Reg. 2(a)(8)(a1) minimum-wage indexation and Reg. 22a.",
+      "source_url": "https://olaw.org.il/takanot/takanot-12366.pdf",
+      "raw_snippet": "הכנסה חודשית ממוצעת בשקלים חדשים בשנת הכספים 2025 1 עד 3,513 מעל 3,513עד 4,295 מעל 4,295עד 5,076 מעל 5,076עד 5,857",
+      "fetched_at": "2026-10-07T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md",
+        "scripts/arnona-calculator.py"
+      ]
+    },
+    {
+      "claim_id": "first-schedule-2027-reshumot-p1",
+      "claim": "Fiscal-2027 First Schedule (in force 1 January 2027, tests calendar-2026 income), notice in Kovetz HaTakanot 12490 of 28.7.2026: 1: 3,623/4,430/5,235/6,041; 2: 5,798/7,088/8,377/9,666; 3: 7,683 (as corrected)/9,392/11,100/12,807; 4: 9,278/11,341/13,403/15,465; 5: 10,872/13,291/15,707/18,124; 6: 12,323/15,063/17,801/20,539; 7: 13,771/16,835/19,896/22,956; 8: 15,077/18,429/21,780/25,131; 9: 16,237/19,847/23,456/27,064; per person from the tenth 1,160/1,417/1,675/1,933.",
+      "source_url": "https://olaw.org.il/takanot/takanot-12490.pdf",
+      "raw_snippet": "הכנסה חודשית ממוצעת בשקלים חדשים בשנת הכספים 2026 1 עד 3,623 מעל 3,623עד 4,430 מעל 4,430עד 5,235 מעל 5,235עד 6,041 2 עד 5,798 מעל 5,798עד 7,088 מעל 7,088עד 8,377 מעל 8,377עד 9,666 3 עד 7,734 מעל 7,734עד 9,392 מעל 9,392עד 11,100 מעל 11,100עד 12,807 4 עד 9,278 מעל 9,278עד 11,341 מעל 11,341עד 13,403 מעל 13,403עד 15,465 5 עד 10,872 מעל 10,872עד 13,291 מעל 13,291עד 15,707 מעל 15,707עד 18,124 6 עד 12,323 מעל 12,323עד 15,063 מעל 15,063עד 17,801 מעל 17,801עד 20,539 7 עד 13,771 מעל 13,771עד 16,835 מעל 16,835עד 19,896 מעל 19,896עד 22,956 8 עד 15,077 מעל 15,077עד 18,429 מעל 18,429עד 21,780 מעל 21,780עד 25,131 9 עד 16,237 מעל 16,237עד 19,847 מעל 19,847עד 23,456 מעל 23,456עד 27,064",
+      "fetched_at": "2026-10-07T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md",
+        "scripts/arnona-calculator.py"
+      ],
+      "corroborating_snippet": "עקב השינוי בשכר המינימום שהיה ידוע ביום ד' בסיוון התשפ\"ו ( 20במאי )2026 לעומת שכר המינימום שהיה ידוע בכ\"ב באייר התשפ\"ה ( 20במאי ,)2025מיום כ\"ב בטבת התשפ\"ז ( 1בינואר )2027נוסח התוספת הראשונה לתקנות יהיה כמפורט להלן:"
+    },
+    {
+      "claim_id": "first-schedule-2027-reshumot-p2",
+      "claim": "Fiscal-2027 First Schedule (in force 1 January 2027, tests calendar-2026 income), notice in Kovetz HaTakanot 12490 of 28.7.2026: 1: 3,623/4,430/5,235/6,041; 2: 5,798/7,088/8,377/9,666; 3: 7,683 (as corrected)/9,392/11,100/12,807; 4: 9,278/11,341/13,403/15,465; 5: 10,872/13,291/15,707/18,124; 6: 12,323/15,063/17,801/20,539; 7: 13,771/16,835/19,896/22,956; 8: 15,077/18,429/21,780/25,131; 9: 16,237/19,847/23,456/27,064; per person from the tenth 1,160/1,417/1,675/1,933.",
+      "source_url": "https://olaw.org.il/takanot/takanot-12490.pdf",
+      "raw_snippet": "לגבי הנפש העשירית ואילך -עד 1,160לנפש, בהכפלת מספר הנפשות מעבר ל– 9נפשות ( )2לגבי הנפש העשירית ואילך -עד 1,417לנפש, בהכפלת מספר הנפשות מעבר ל־ 9נפשות ( )2לגבי הנפש העשירית ואילך -עד 1,675לנפש, בהכפלת מספר הנפשות מעבר ל־ 9נפשות ( )2לגבי הנפש העשירית ואילך -עד 1,933לנפש",
+      "fetched_at": "2026-10-07T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md",
+        "scripts/arnona-calculator.py"
+      ],
+      "corroborating_snippet": "עקב השינוי בשכר המינימום שהיה ידוע ביום ד' בסיוון התשפ\"ו ( 20במאי )2026 לעומת שכר המינימום שהיה ידוע בכ\"ב באייר התשפ\"ה ( 20במאי ,)2025מיום כ\"ב בטבת התשפ\"ז ( 1בינואר )2027נוסח התוספת הראשונה לתקנות יהיה כמפורט להלן:"
+    },
+    {
+      "claim_id": "first-schedule-2027-erratum-p1",
+      "claim": "Kovetz HaTakanot 12499 corrects the 3-person row of the fiscal-2027 table: 90% band up to 7,683 (the notice printed 7,734), and cancels the earlier erratum in 12495.",
+      "source_url": "https://olaw.org.il/takanot/takanot-12499.pdf",
+      "raw_snippet": "בשנת הכספים 2026 עד 7,683 מעל 7,683עד 9,392",
+      "fetched_at": "2026-10-07T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md",
+        "scripts/arnona-calculator.py"
+      ]
+    },
+    {
+      "claim_id": "first-schedule-2027-erratum-p2",
+      "claim": "Kovetz HaTakanot 12499 corrects the 3-person row of the fiscal-2027 table: 90% band up to 7,683 (the notice printed 7,734), and cancels the earlier erratum in 12495.",
+      "source_url": "https://olaw.org.il/takanot/takanot-12499.pdf",
+      "raw_snippet": "תיקון הטעות שפורסם בקובץ התקנות ,12495התשפ\"ו ,עמ' - 2519בטל.",
+      "fetched_at": "2026-10-07T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md",
+        "scripts/arnona-calculator.py"
+      ]
+    },
+    {
+      "claim_id": "gaza-3c-extension-retroactive-p1",
+      "claim": "Reg. 3c was extended from 2024 to 2026 by an amendment signed 22.10.2025 with commencement 1 January 2025, i.e. published late and applied retroactively. No 2027 extension appeared in Reshumot through 6.10.2026.",
+      "source_url": "https://olaw.org.il/takanot/takanot-12072.pdf",
+      "raw_snippet": "בתקנה 3ג(א) ,במקום \" \"2024יבוא \".\"2026",
+      "fetched_at": "2026-10-07T00:00:00Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "gaza-3c-extension-retroactive-p2",
+      "claim": "Reg. 3c was extended from 2024 to 2026 by an amendment signed 22.10.2025 with commencement 1 January 2025, i.e. published late and applied retroactively. No 2027 extension appeared in Reshumot through 6.10.2026.",
+      "source_url": "https://olaw.org.il/takanot/takanot-12072.pdf",
+      "raw_snippet": "תחילתן של תקנות אלה ביום א' בטבת התשפ\"ה ( 1בינואר .)2025 ל' בתשרי התשפ\"ו ( 22באוקטובר )2025",
+      "fetched_at": "2026-10-07T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "interest-law-1980-p1",
+      "claim": "Local Authorities (Interest and Linkage on Compulsory Payments) Law 5740-1980: arrears charges are linked interest at 0.5% a month or another rate the ministers set (s.1), on a payment not made within 30 days (s.2); payments go to the earliest debt first (s.3); an arnona instalment plan of up to one year from the charge, each payment linked (s.4(a)), cancelled after two missed instalments (s.4(e)); the two-year plans of s.4(b) cover only the Schedule levies, not arnona.",
+      "source_url": "https://he.wikisource.org/wiki/חוק_הרשויות_המקומיות_(ריבית_והפרשי_הצמדה_על_תשלומי_חובה)",
+      "raw_snippet": "ריבית צמודה בשיעור של 0.5% לחודש, או בשיעור אחר כפי שקבעו שר הפנים ושר האוצר",
+      "fetched_at": "2026-10-07T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "interest-law-1980-p2",
+      "claim": "Local Authorities (Interest and Linkage on Compulsory Payments) Law 5740-1980: arrears charges are linked interest at 0.5% a month or another rate the ministers set (s.1), on a payment not made within 30 days (s.2); payments go to the earliest debt first (s.3); an arnona instalment plan of up to one year from the charge, each payment linked (s.4(a)), cancelled after two missed instalments (s.4(e)); the two-year plans of s.4(b) cover only the Schedule levies, not arnona.",
+      "source_url": "https://he.wikisource.org/wiki/חוק_הרשויות_המקומיות_(ריבית_והפרשי_הצמדה_על_תשלומי_חובה)",
+      "raw_snippet": "תשלום חובה שלא שולם תוך 30 ימים מהמועד שנקבע לשילומו ישולם בתוספת תשלומי פיגורים",
+      "fetched_at": "2026-10-07T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "interest-law-1980-p3",
+      "claim": "Local Authorities (Interest and Linkage on Compulsory Payments) Law 5740-1980: arrears charges are linked interest at 0.5% a month or another rate the ministers set (s.1), on a payment not made within 30 days (s.2); payments go to the earliest debt first (s.3); an arnona instalment plan of up to one year from the charge, each payment linked (s.4(a)), cancelled after two missed instalments (s.4(e)); the two-year plans of s.4(b) cover only the Schedule levies, not arnona.",
+      "source_url": "https://he.wikisource.org/wiki/חוק_הרשויות_המקומיות_(ריבית_והפרשי_הצמדה_על_תשלומי_חובה)",
+      "raw_snippet": "ייזקף תחילה כנגד תשלום החובה שמועד החיוב שלו הוא המוקדם ביותר",
+      "fetched_at": "2026-10-07T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "interest-law-1980-p4",
+      "claim": "Local Authorities (Interest and Linkage on Compulsory Payments) Law 5740-1980: arrears charges are linked interest at 0.5% a month or another rate the ministers set (s.1), on a payment not made within 30 days (s.2); payments go to the earliest debt first (s.3); an arnona instalment plan of up to one year from the charge, each payment linked (s.4(a)), cancelled after two missed instalments (s.4(e)); the two-year plans of s.4(b) cover only the Schedule levies, not arnona.",
+      "source_url": "https://he.wikisource.org/wiki/חוק_הרשויות_המקומיות_(ריבית_והפרשי_הצמדה_על_תשלומי_חובה)",
+      "raw_snippet": "במשך תקופה שלא תעלה על שנה ממועד החיוב בהם",
+      "fetched_at": "2026-10-07T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "interest-law-1980-p5",
+      "claim": "Local Authorities (Interest and Linkage on Compulsory Payments) Law 5740-1980: arrears charges are linked interest at 0.5% a month or another rate the ministers set (s.1), on a payment not made within 30 days (s.2); payments go to the earliest debt first (s.3); an arnona instalment plan of up to one year from the charge, each payment linked (s.4(a)), cancelled after two missed instalments (s.4(e)); the two-year plans of s.4(b) cover only the Schedule levies, not arnona.",
+      "source_url": "https://he.wikisource.org/wiki/חוק_הרשויות_המקומיות_(ריבית_והפרשי_הצמדה_על_תשלומי_חובה)",
+      "raw_snippet": "הסדר תשלומים לתקופה שלא תעלה על שנתיים",
+      "fetched_at": "2026-10-07T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "interest-law-1980-p6",
+      "claim": "Local Authorities (Interest and Linkage on Compulsory Payments) Law 5740-1980: arrears charges are linked interest at 0.5% a month or another rate the ministers set (s.1), on a payment not made within 30 days (s.2); payments go to the earliest debt first (s.3); an arnona instalment plan of up to one year from the charge, each payment linked (s.4(a)), cancelled after two missed instalments (s.4(e)); the two-year plans of s.4(b) cover only the Schedule levies, not arnona.",
+      "source_url": "https://he.wikisource.org/wiki/חוק_הרשויות_המקומיות_(ריבית_והפרשי_הצמדה_על_תשלומי_חובה)",
+      "raw_snippet": "לא פרע אדם במועד שני תשלומים על פי הסדר תשלומים שנעשה עמו, יתבטל ההסדר",
+      "fetched_at": "2026-10-07T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "arrangements-law-12g-per-child",
+      "claim": "Arrangements Law 5753-1992 s.12(g) (סעיף 12(ז)): any arnona discount for a residence of a holder's child, including a foster child, for whom a disability benefit is paid is computed for EACH entitled child, even over 18 without a prior disabled-child benefit, with a total not exceeding 90%.",
+      "source_url": "https://he.wikisource.org/wiki/חוק_הסדרים_במשק_המדינה_(תיקוני_חקיקה_להשגת_יעדי_התקציב)",
+      "raw_snippet": "סכום ההנחה יחושב בעד כל אחד מהזכאים לגמלה אף אם הוא מעל גיל 18 ולא השתלמה בעדו גמלת ילד נכה, ובלבד ששיעורה הכולל לא יעלה על 90%",
+      "fetched_at": "2026-10-07T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md",
+        "scripts/arnona-calculator.py"
+      ]
+    },
+    {
+      "claim_id": "arrangements-law-8b1-rounding",
+      "claim": "Arrangements Law s.8(b1): area is computed in square metres and arnona is area times the rate per sqm; any part of a sqm rounds to the nearest whole metre, half a metre rounds down.",
+      "source_url": "https://he.wikisource.org/wiki/חוק_הסדרים_במשק_המדינה_(תיקוני_חקיקה_להשגת_יעדי_התקציב)",
+      "raw_snippet": "בחישוב שטחו של נכס לפי פסקה (1) יעוגל כל חלק של מטר רבוע למטר השלם הקרוב; מחצית מטר רבוע תעוגל כלפי מטה",
+      "fetched_at": "2026-10-07T00:00:00Z",
+      "appears_in": [
+        "references/arnona-rates-guide.md"
+      ]
+    },
+    {
+      "claim_id": "municipalities-ordinance-holder-325-330-p1",
+      "claim": "Municipalities Ordinance (פקודת העיריות, סעיף 325, סעיף 330): s.1 a holder is a person actually holding the property as owner, tenant or otherwise; s.325 a person who ceases to be owner or holder must notify the municipality in writing and is not liable for further arnona after the notice; s.330 a destroyed building, or one damaged so it cannot be lived in and nobody lives in it, is exempt for three years from written notice, then charged the minimum amount for five years.",
+      "source_url": "https://he.wikisource.org/wiki/פקודת_העיריות",
+      "raw_snippet": "אדם המחזיק למעשה בנכס כבעל או כשוכר או בכל אופן אחר",
+      "fetched_at": "2026-10-07T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md"
+      ]
+    },
+    {
+      "claim_id": "municipalities-ordinance-holder-325-330-p2",
+      "claim": "Municipalities Ordinance (פקודת העיריות, סעיף 325, סעיף 330): s.1 a holder is a person actually holding the property as owner, tenant or otherwise; s.325 a person who ceases to be owner or holder must notify the municipality in writing and is not liable for further arnona after the notice; s.330 a destroyed building, or one damaged so it cannot be lived in and nobody lives in it, is exempt for three years from written notice, then charged the minimum amount for five years.",
+      "source_url": "https://he.wikisource.org/wiki/פקודת_העיריות",
+      "raw_snippet": "ימסור הוא או נציגו הודעה על כך בכתב לעיריה ולאחר מכן לא יהיה חייב בשיעורי ארנונה נוספים",
+      "fetched_at": "2026-10-07T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md"
+      ]
+    },
+    {
+      "claim_id": "municipalities-ordinance-holder-325-330-p3",
+      "claim": "Municipalities Ordinance (פקודת העיריות, סעיף 325, סעיף 330): s.1 a holder is a person actually holding the property as owner, tenant or otherwise; s.325 a person who ceases to be owner or holder must notify the municipality in writing and is not liable for further arnona after the notice; s.330 a destroyed building, or one damaged so it cannot be lived in and nobody lives in it, is exempt for three years from written notice, then charged the minimum amount for five years.",
+      "source_url": "https://he.wikisource.org/wiki/פקודת_העיריות",
+      "raw_snippet": "עם מסירת ההודעה לא יהיה חייב בשיעורי ארנונה נוספים בשלוש השנים שממועד מסירת ההודעה",
+      "fetched_at": "2026-10-07T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md"
+      ]
+    },
+    {
+      "claim_id": "municipalities-ordinance-holder-325-330-p4",
+      "claim": "Municipalities Ordinance (פקודת העיריות, סעיף 325, סעיף 330): s.1 a holder is a person actually holding the property as owner, tenant or otherwise; s.325 a person who ceases to be owner or holder must notify the municipality in writing and is not liable for further arnona after the notice; s.330 a destroyed building, or one damaged so it cannot be lived in and nobody lives in it, is exempt for three years from written notice, then charged the minimum amount for five years.",
+      "source_url": "https://he.wikisource.org/wiki/פקודת_העיריות",
+      "raw_snippet": "יהיה חייב בארנונה לגבי אותו בניין בחמש השנים שמתום אותה תקופה, בסכום המזערי",
+      "fetched_at": "2026-10-07T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md"
+      ]
+    },
+    {
+      "claim_id": "regs-2007-area-classification-p1",
+      "claim": "General Arnona Regulations 5767-2007: reg. 3(b) area carries over from the previous year unless an error is found that is not the result of a different calculation method; reg. 3(c) area added by construction is added; reg. 4(1) a building is charged per sqm taking into account its type, use and location; reg. 5(a) no mid-year change of type or classification affecting the amount unless the actual use changed.",
+      "source_url": "https://he.wikisource.org/wiki/תקנות_הסדרים_במשק_המדינה_(ארנונה_כללית_ברשויות_המקומיות)",
+      "raw_snippet": "זולת אם נתגלתה טעות בחישוב השטח, שאינה תוצאה של שיטת חישוב שונה",
+      "fetched_at": "2026-10-07T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-rates-guide.md"
+      ]
+    },
+    {
+      "claim_id": "regs-2007-area-classification-p2",
+      "claim": "General Arnona Regulations 5767-2007: reg. 3(b) area carries over from the previous year unless an error is found that is not the result of a different calculation method; reg. 3(c) area added by construction is added; reg. 4(1) a building is charged per sqm taking into account its type, use and location; reg. 5(a) no mid-year change of type or classification affecting the amount unless the actual use changed.",
+      "source_url": "https://he.wikisource.org/wiki/תקנות_הסדרים_במשק_המדינה_(ארנונה_כללית_ברשויות_המקומיות)",
+      "raw_snippet": "ייתוסף לשטחו של בנין, לצורך הטלת ארנונה כללית, כל שטח אשר ניתוסף לו בפועל כתוצאה מבניה",
+      "fetched_at": "2026-10-07T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-rates-guide.md"
+      ]
+    },
+    {
+      "claim_id": "regs-2007-area-classification-p3",
+      "claim": "General Arnona Regulations 5767-2007: reg. 3(b) area carries over from the previous year unless an error is found that is not the result of a different calculation method; reg. 3(c) area added by construction is added; reg. 4(1) a building is charged per sqm taking into account its type, use and location; reg. 5(a) no mid-year change of type or classification affecting the amount unless the actual use changed.",
+      "source_url": "https://he.wikisource.org/wiki/תקנות_הסדרים_במשק_המדינה_(ארנונה_כללית_ברשויות_המקומיות)",
+      "raw_snippet": "לכל מטר רבוע, בהתחשב בסוג הבנין, שימושו והמקום שבו הוא נמצא",
+      "fetched_at": "2026-10-07T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-rates-guide.md"
+      ]
+    },
+    {
+      "claim_id": "regs-2007-area-classification-p4",
+      "claim": "General Arnona Regulations 5767-2007: reg. 3(b) area carries over from the previous year unless an error is found that is not the result of a different calculation method; reg. 3(c) area added by construction is added; reg. 4(1) a building is charged per sqm taking into account its type, use and location; reg. 5(a) no mid-year change of type or classification affecting the amount unless the actual use changed.",
+      "source_url": "https://he.wikisource.org/wiki/תקנות_הסדרים_במשק_המדינה_(ארנונה_כללית_ברשויות_המקומיות)",
+      "raw_snippet": "ואולם רשאית היא לשנות סיווג נכס אם בפועל השתנה השימוש בו",
+      "fetched_at": "2026-10-07T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-rates-guide.md"
+      ]
+    },
+    {
+      "claim_id": "reg-3-standing-order-reg-4-applications-p1",
+      "claim": "Discount Regulations (תקנה 3, תקנה 4): Reg. 3 a council may give up to 2% to a holder paying by standing order; Reg. 4(a) applications on Form 1 are required for paragraphs 2(3)-(6), (8)-(10) and Reg. 3; Reg. 4(b) a person entitled under 2(1), (2) or (7) who was not given the discount, or given a wrong rate, may also apply.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
+      "raw_snippet": "המועצה רשאית לקבוע הנחה עד 2 אחוזים מסכום הארנונה הכללית שהוטלה באותה שנת כספים על מחזיק שנתן הוראת קבע",
+      "fetched_at": "2026-10-07T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md"
+      ]
+    },
+    {
+      "claim_id": "reg-3-standing-order-reg-4-applications-p2",
+      "claim": "Discount Regulations (תקנה 3, תקנה 4): Reg. 3 a council may give up to 2% to a holder paying by standing order; Reg. 4(a) applications on Form 1 are required for paragraphs 2(3)-(6), (8)-(10) and Reg. 3; Reg. 4(b) a person entitled under 2(1), (2) or (7) who was not given the discount, or given a wrong rate, may also apply.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
+      "raw_snippet": "לא ניתנה הנחה או חלה טעות בקביעת שיעור ההנחה לזכאי לפי",
+      "fetched_at": "2026-10-07T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md"
+      ]
+    },
+    {
+      "claim_id": "reg-3-standing-order-reg-4-applications-p3",
+      "claim": "Discount Regulations (תקנה 3, תקנה 4): Reg. 3 a council may give up to 2% to a holder paying by standing order; Reg. 4(a) applications on Form 1 are required for paragraphs 2(3)-(6), (8)-(10) and Reg. 3; Reg. 4(b) a person entitled under 2(1), (2) or (7) who was not given the discount, or given a wrong rate, may also apply.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
+      "raw_snippet": "רשאי גם הוא להגיש בקשה כאמור",
+      "fetched_at": "2026-10-07T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md"
+      ]
+    },
+    {
+      "claim_id": "vatikim-one-spouse",
+      "claim": "Senior Citizens Law s.9(c)(3): the discount is given even where only one of the spouses living in the flat is a senior citizen.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%97%D7%95%D7%A7_%D7%94%D7%90%D7%96%D7%A8%D7%97%D7%99%D7%9D_%D7%94%D7%95%D7%AA%D7%99%D7%A7%D7%99%D7%9D",
+      "raw_snippet": "ההנחה תינתן גם כאשר רק אחד מבני הזוג המתגוררים באותה דירת מגורים הוא אזרח ותיק",
+      "fetched_at": "2026-10-07T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md"
+      ]
+    },
+    {
+      "claim_id": "kz-oleh-previous-municipality-p1",
+      "claim": "An oleh who lived in another local authority first attaches confirmation from it that they did not receive the oleh discount there; filing an objection does not exempt from paying the arnona.",
+      "source_url": "https://www.kolzchut.org.il/he/הנחה_בארנונה_לעולים_חדשים",
+      "raw_snippet": "מי שהתגוררו ברשות מקומית אחרת לפני כן, יצרפו אישור מאותה רשות על כך שלא קיבלו בה הנחה כעולים חדשים",
+      "fetched_at": "2026-10-07T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md"
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-10-07",
+      "source_note": "Kol Zchut is Cloudflare-protected for plain fetches; read in Playwright with location.href asserted, text saved at work/kz/הנחה_בארנונה_לעולים_חדשים.txt."
+    },
+    {
+      "claim_id": "kz-oleh-previous-municipality-p2",
+      "claim": "An oleh who lived in another local authority first attaches confirmation from it that they did not receive the oleh discount there; filing an objection does not exempt from paying the arnona.",
+      "source_url": "https://www.kolzchut.org.il/he/הנחה_בארנונה_לעולים_חדשים",
+      "raw_snippet": "הגשת ההשגה לא פוטרת מתשלום הארנונה.",
+      "fetched_at": "2026-10-07T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md"
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-10-07",
+      "source_note": "Kol Zchut is Cloudflare-protected for plain fetches; read in Playwright with location.href asserted, text saved at work/kz/הנחה_בארנונה_לעולים_חדשים.txt."
+    },
+    {
+      "claim_id": "kz-income-support-pre-2003",
+      "claim": "Income-support recipients who began receiving it before 2003 with no break of 6 consecutive months may get up to 70%.",
+      "source_url": "https://www.kolzchut.org.il/he/הנחה_בארנונה_למקבלי_גמלת_הבטחת_הכנסה",
+      "raw_snippet": "מקבלי הבטחת הכנסה שהתחילו לקבל את הגמלה לפני 2003 ולא הייתה הפסקה של 6 חודשים רצופים בזכאותם לגמלה.",
+      "fetched_at": "2026-10-07T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md"
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-10-07",
+      "source_note": "Kol Zchut is Cloudflare-protected for plain fetches; read in Playwright with location.href asserted, text saved at work/kz/הנחה_בארנונה_למקבלי_גמלת_הבטחת_הכנסה.txt."
+    },
+    {
+      "claim_id": "kz-mezonot-pre-2003",
+      "claim": "BL maintenance (mezonot) recipients who began before 2003 with no 6-month break may get up to 70%.",
+      "source_url": "https://www.kolzchut.org.il/he/הנחה_בארנונה_למקבלי_קצבת_מזונות",
+      "raw_snippet": "מי שהתחילו לקבל קצבת מזונות מהמוסד לביטוח לאומי לפני 2003 ולא הייתה הפסקה של 6 חודשים רצופים בזכאותם לקצבה עד היום.",
+      "fetched_at": "2026-10-07T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md"
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-10-07",
+      "source_note": "Kol Zchut is Cloudflare-protected for plain fetches; read in Playwright with location.href asserted, text saved at work/kz/הנחה_בארנונה_למקבלי_קצבת_מזונות.txt."
+    },
+    {
+      "claim_id": "kz-prisoner-of-zion-income-based-p1",
+      "claim": "A Prisoner of Zion on an income-based benefit who received income support for at least 6 months before the claim is entitled to 100% on up to 100 sqm, mandatorily; otherwise up to 66%.",
+      "source_url": "https://www.kolzchut.org.il/he/הנחה_בארנונה_לאסיר_ציון_המקבל_תגמול_על_פי_הכנסה",
+      "raw_snippet": "זכאים להנחה של 100% בתשלום ארנונה על דירת מגוריהם.",
+      "fetched_at": "2026-10-07T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md"
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-10-07",
+      "source_note": "Kol Zchut is Cloudflare-protected for plain fetches; read in Playwright with location.href asserted, text saved at work/kz/הנחה_בארנונה_לאסיר_ציון_המקבל_תגמול_על_פי_הכנסה.txt."
+    },
+    {
+      "claim_id": "kz-prisoner-of-zion-income-based-p2",
+      "claim": "A Prisoner of Zion on an income-based benefit who received income support for at least 6 months before the claim is entitled to 100% on up to 100 sqm, mandatorily; otherwise up to 66%.",
+      "source_url": "https://www.kolzchut.org.il/he/הנחה_בארנונה_לאסיר_ציון_המקבל_תגמול_על_פי_הכנסה",
+      "raw_snippet": "ההנחה ניתנת עד לשטח של 100 מ\"ר.",
+      "fetched_at": "2026-10-07T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md"
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-10-07",
+      "source_note": "Kol Zchut is Cloudflare-protected for plain fetches; read in Playwright with location.href asserted, text saved at work/kz/הנחה_בארנונה_לאסיר_ציון_המקבל_תגמול_על_פי_הכנסה.txt."
+    },
+    {
+      "claim_id": "kz-prisoner-of-zion-income-based-p3",
+      "claim": "A Prisoner of Zion on an income-based benefit who received income support for at least 6 months before the claim is entitled to 100% on up to 100 sqm, mandatorily; otherwise up to 66%.",
+      "source_url": "https://www.kolzchut.org.il/he/הנחה_בארנונה_לאסיר_ציון_המקבל_תגמול_על_פי_הכנסה",
+      "raw_snippet": "הרשות המקומית מחויבת לתת הנחה זו על-פי החוק.",
+      "fetched_at": "2026-10-07T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md"
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-10-07",
+      "source_note": "Kol Zchut is Cloudflare-protected for plain fetches; read in Playwright with location.href asserted, text saved at work/kz/הנחה_בארנונה_לאסיר_ציון_המקבל_תגמול_על_פי_הכנסה.txt."
+    },
+    {
+      "claim_id": "kz-old-age-for-disabled-p1",
+      "claim": "Old-age-pension-for-the-disabled recipients are entitled to 100% on up to 100 sqm where total income is within the average wage, or 150% of it for everyone living in the flat.",
+      "source_url": "https://www.kolzchut.org.il/he/הנחה_בארנונה_למקבלי_קצבת_זיקנה_לנכה",
+      "raw_snippet": "מקבלי קצבת זיקנה לנכה זכאים להנחה בארנונה בשיעור 100% בהתאם לתנאים.",
+      "fetched_at": "2026-10-07T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md"
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-10-07",
+      "source_note": "Kol Zchut is Cloudflare-protected for plain fetches; read in Playwright with location.href asserted, text saved at work/kz/הנחה_בארנונה_למקבלי_קצבת_זיקנה_לנכה.txt."
+    },
+    {
+      "claim_id": "kz-old-age-for-disabled-p2",
+      "claim": "Old-age-pension-for-the-disabled recipients are entitled to 100% on up to 100 sqm where total income is within the average wage, or 150% of it for everyone living in the flat.",
+      "source_url": "https://www.kolzchut.org.il/he/הנחה_בארנונה_למקבלי_קצבת_זיקנה_לנכה",
+      "raw_snippet": "ההנחה ניתנת עבור שטח של עד 100 מ\"ר מדירת מגוריהם.",
+      "fetched_at": "2026-10-07T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md"
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-10-07",
+      "source_note": "Kol Zchut is Cloudflare-protected for plain fetches; read in Playwright with location.href asserted, text saved at work/kz/הנחה_בארנונה_למקבלי_קצבת_זיקנה_לנכה.txt."
+    },
+    {
+      "claim_id": "kz-limitation-7-years-p1",
+      "claim": "By case law a local authority may not collect arnona debt after 7 years where it took no collection step in that period, unless it did not know of the ground for collection.",
+      "source_url": "https://www.kolzchut.org.il/he/התיישנות_חוב_ארנונה_בחלוף_7_שנים",
+      "raw_snippet": "רשות מקומית לא רשאית לגבות חוב ארנונה אם עברו 7 שנים מהמועד שהחוב נוצר והיא לא נקטה פעולה לגביית החוב בתקופה זו",
+      "fetched_at": "2026-10-07T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-10-07",
+      "source_note": "Kol Zchut is Cloudflare-protected for plain fetches; read in Playwright with location.href asserted, text saved at work/kz/התיישנות_חוב_ארנונה_בחלוף_7_שנים.txt."
+    },
+    {
+      "claim_id": "kz-limitation-7-years-p2",
+      "claim": "By case law a local authority may not collect arnona debt after 7 years where it took no collection step in that period, unless it did not know of the ground for collection.",
+      "source_url": "https://www.kolzchut.org.il/he/התיישנות_חוב_ארנונה_בחלוף_7_שנים",
+      "raw_snippet": "רשות שלא נקטה בפעולות גבייה כי לא ידעה על העילה לגבייה, רשאית לגבות את החוב גם כעבור 7 שנים",
+      "fetched_at": "2026-10-07T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-10-07",
+      "source_note": "Kol Zchut is Cloudflare-protected for plain fetches; read in Playwright with location.href asserted, text saved at work/kz/התיישנות_חוב_ארנונה_בחלוף_7_שנים.txt."
+    },
+    {
+      "claim_id": "kz-iran-war-unfit-homes-p1",
+      "claim": "Municipalities exempt, automatically, homes damaged in the war with Iran (operation Am KeLavi) that the municipal engineer certified unfit and whose residents were evacuated; Kol Zchut says it does not yet apply to operation Sha'agat HaAri.",
+      "source_url": "https://www.kolzchut.org.il/he/פטור_מארנונה_עבור_בתים_ודירות_שנפגעו_במלחמה_מול_איראן_ולא_ראויים_למגורים",
+      "raw_snippet": "הרשויות המקומיות יעניקו פטור מארנונה עבור בתים ודירות שנפגעו במהלך המלחמה מול איראן (מבצע עם כלביא), ושדייריהם פונו כי המקום לא ראוי למגורים.",
+      "fetched_at": "2026-10-07T00:00:00Z",
+      "appears_in": [
+        "references/arnona-discounts-guide.md"
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-10-07",
+      "source_note": "Kol Zchut is Cloudflare-protected for plain fetches; read in Playwright with location.href asserted, text saved at work/kz/פטור_מארנונה_עבור_בתים_ודירות_שנפגעו_במלחמה_מול_איראן_ולא_ראויים_למגורים.txt."
+    },
+    {
+      "claim_id": "kz-iran-war-unfit-homes-p2",
+      "claim": "Municipalities exempt, automatically, homes damaged in the war with Iran (operation Am KeLavi) that the municipal engineer certified unfit and whose residents were evacuated; Kol Zchut says it does not yet apply to operation Sha'agat HaAri.",
+      "source_url": "https://www.kolzchut.org.il/he/פטור_מארנונה_עבור_בתים_ודירות_שנפגעו_במלחמה_מול_איראן_ולא_ראויים_למגורים",
+      "raw_snippet": "הפטור יינתן באופן אוטומטי על ידי הרשות המקומית ללא צורך בהגשת בקשה מיוחדת.",
+      "fetched_at": "2026-10-07T00:00:00Z",
+      "appears_in": [
+        "references/arnona-discounts-guide.md"
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-10-07",
+      "source_note": "Kol Zchut is Cloudflare-protected for plain fetches; read in Playwright with location.href asserted, text saved at work/kz/פטור_מארנונה_עבור_בתים_ודירות_שנפגעו_במלחמה_מול_איראן_ולא_ראויים_למגורים.txt."
+    },
+    {
+      "claim_id": "kz-reservist-pay-exclusion-2024-2025",
+      "claim": "The council may exclude reserve-service pay from income for the arnona income test for 2024 and 2025 only.",
+      "source_url": "https://www.kolzchut.org.il/he/הנחה_בארנונה_לבעלי_הכנסה_נמוכה",
+      "raw_snippet": "הרשות המקומית רשאית לא לכלול גם תשלום עבור שירות מילואים בחישוב ההכנסה להנחה בארנונה בשנים 2024 ו-2025.",
+      "fetched_at": "2026-10-07T00:00:00Z",
+      "appears_in": [
+        "references/arnona-discounts-guide.md"
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-10-07",
+      "source_note": "Kol Zchut is Cloudflare-protected for plain fetches; read in Playwright with location.href asserted, text saved at work/kz/הנחה_בארנונה_לבעלי_הכנסה_נמוכה.txt."
+    },
+    {
+      "claim_id": "municipalities-ordinance-326",
+      "claim": "Municipalities Ordinance s.326 (פקודת העיריות, סעיף 326): on a sale or transfer, or a lease of a year or more, the seller, transferor or landlord must notify the municipality naming the buyer or tenant; until then they are liable for the arnona the buyer or tenant does not pay; on a lease shorter than one year the landlord is liable.",
+      "source_url": "https://he.wikisource.org/wiki/פקודת_העיריות",
+      "raw_snippet": "כל עוד לא ניתנה הודעה כאמור, יהיו המוכר, המעביר או המשכיר חייבים בארנונה שהקונה, הנעבר או השוכר היו חייבים לשלם ולא שילמו; בהשכרה לתקופה הקצרה משנה אחת, יהיה המשכיר חייב בארנונה",
+      "fetched_at": "2026-10-07T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md"
+      ]
+    },
+    {
+      "claim_id": "vatikim-13a-low-pension",
+      "claim": "Senior Citizens Law s.13A (סעיף 13א): benefits given to an income-support recipient also go to a single senior whose pension income is at most 24.3% of the average wage, or a senior with a spouse whose joint pension income is at most 38.3%, who would otherwise be entitled to income support; only for seniors first insured from the comprehensive-pension extension order onward; Bituach Leumi checks eligibility.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%97%D7%95%D7%A7_%D7%94%D7%90%D7%96%D7%A8%D7%97%D7%99%D7%9D_%D7%94%D7%95%D7%AA%D7%99%D7%A7%D7%99%D7%9D",
+      "raw_snippet": "לאזרח ותיק שהוא יחיד והכנסתו מפנסיה אינה עולה על 24.3% מהשכר הממוצע, ואלמלא הכנסה זו היה זכאי לגמלה לפי",
+      "fetched_at": "2026-10-07T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md"
+      ],
+      "corroborating_snippet": "לאזרח ותיק שיש עמו בן זוג וסך הכנסתו מפנסיה והכנסת בן זוגו מפנסיה אינו עולה על 38.3% מהשכר הממוצע"
+    },
+    {
+      "claim_id": "vatikim-9e-reporting",
+      "claim": "Senior Citizens Law s.9(e)(1): a senior on automatic renewal who stops meeting a condition reports it in writing within two months; s.9(e)(2) a municipality that learns of it otherwise gives two months to respond before cancelling.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%97%D7%95%D7%A7_%D7%94%D7%90%D7%96%D7%A8%D7%97%D7%99%D7%9D_%D7%94%D7%95%D7%AA%D7%99%D7%A7%D7%99%D7%9D",
+      "raw_snippet": "ידווח על כך לרשות המקומית, בכתב, בתוך חודשיים מהמועד שבו חדל להתקיים לגביו התנאי",
+      "fetched_at": "2026-10-07T00:00:00Z",
+      "appears_in": [
+        "references/arnona-discounts-guide.md"
+      ]
+    },
+    {
+      "claim_id": "income-3-month-temporary-order-2025",
+      "claim": "For fiscal 2025 only, a temporary order let an employee's average income be measured over October to December of the preceding year instead of 12 months; it was not extended to 2026.",
+      "source_url": "https://he.wikisource.org/w/index.php?oldid=2961492",
+      "raw_snippet": "בשכיר – ממוצע ההכנסה החודשית בשלושת החודשים אוקטובר, נובמבר ודצמבר שלפני שנת הכספים שבעדה נדרשת ההנחה",
+      "fetched_at": "2026-10-07T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md"
+      ]
+    },
+    {
+      "claim_id": "interest-law-linkage-refund",
+      "claim": "Interest Law 5740-1980 (חוק הריבית): arnona under a payment arrangement is linked to the CPI from the November index before the charge date (s.1, definition of linkage differences para (1)); an arnona instalment plan may run up to one year from the charge, each payment with linkage (s.4(a)); the two-year plans in s.4(b) apply to the payments listed in the Schedule (pipe, sewage, road, pavement and drainage levies), not arnona; an overpayment not refunded within 30 days of a written notice carries linkage plus 0.5% a month (s.6(a)).",
+      "source_url": "https://he.wikisource.org/wiki/חוק_הרשויות_המקומיות_(ריבית_והפרשי_הצמדה_על_תשלומי_חובה)",
+      "raw_snippet": "לענין ארנונה כללית המשתלמת על פי הסדר תשלומים – עדכון הארנונה לפי שיעור השינוי של המדד מן המדד שפורסם בחודש נובמבר שקדם ליום החיוב",
+      "fetched_at": "2026-10-07T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md"
+      ],
+      "corroborating_snippet": "רשות מקומית רשאית לקבוע לתשלומי החובה המפורטים"
+    },
+    {
+      "claim_id": "interest-law-refund-6a",
+      "claim": "Interest Law s.6(a): an overpayment not refunded within 30 days of the payer's written notice is refunded with linkage plus linked interest of 0.5% a month.",
+      "source_url": "https://he.wikisource.org/wiki/חוק_הרשויות_המקומיות_(ריבית_והפרשי_הצמדה_על_תשלומי_חובה)",
+      "raw_snippet": "ובתוספת ריבית צמודה בשיעור של 0.5% לחודש מיום שילומו של תשלום היתר עד יום החזרתו",
+      "fetched_at": "2026-10-07T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "reg-14c-indexed-2025",
+      "claim": "Reg. 14c turnover cap: 240,000 NIS (2003 terms), 327,191.24 NIS for 2025 per the regulation's own note, CPI-linked each fiscal year.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%94%D7%A1%D7%93%D7%A8%D7%99%D7%9D_%D7%91%D7%9E%D7%A9%D7%A7_%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94_(%D7%94%D7%A0%D7%97%D7%94_%D7%9E%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94)",
+      "raw_snippet": "הוא עוסק שמחזור העסקאות שלו בכל עסקיו אינו עולה על 240,000 שקלים חדשים",
+      "fetched_at": "2026-10-07T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/arnona-discounts-guide.md"
+      ],
+      "corroborating_snippet": "(מתואם לשנת 2003; בשנת 2025, 327,191.24 ש״ח)"
+    },
+    {
+      "claim_id": "kz-90sqm-five-people",
+      "claim": "Kol Zchut reads the 90 sqm cap as applying to a flat with five or more people living in it.",
+      "source_url": "https://www.kolzchut.org.il/he/פטור_מארנונה_לחיילים_בשירות_חובה_וחיילים_משוחררים",
+      "raw_snippet": "בדירות שמתגוררים בהן 5 אנשים או יותר ניתן פטור על 90 מ\"ר משטח הדירה.",
+      "fetched_at": "2026-10-07T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "scripts/arnona-calculator.py"
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-10-07",
+      "source_note": "Kol Zchut is Cloudflare-protected for plain fetches; read in Playwright with location.href asserted, text saved at work/kz/פטור_מארנונה_לחיילים_בשירות_חובה_וחיילים_משוחררים.txt."
+    },
+    {
+      "claim_id": "tzav-2026-netanya-types",
+      "claim": "Netanya type definitions: א penthouse, private house over 100 sqm, nursing home; ב elevator flat over 110 sqm, row houses, private house up to 100 sqm; ג elevator flat 81-110 sqm or non-elevator flat over 110; ד elevator flat up to 80 sqm or non-elevator flat up to 110; ה below the entrance level or other.",
+      "source_url": "https://www.netanya.muni.il/DocLib1/zavmisim26.pdf",
+      "raw_snippet": "הגדרות סוג נכס א( דירה שהיא דירת גג )פנטהאוז(. א ב( בית מגורים פרטי חד משפחתי או דו משפחתי אשר שטחו עולה על 100מ\"ר. ג( בית אבות לרבות מעון חוסים א( דירת מגורים בבית משותף אשר בו מותקנת מעלית ושטחה עולה על 110מ\"ר ב ב( בנינים צמודי קרקע טוריים מעל 2יחידות דיור. בית פרטי חד משפחתי או דו משפחתי עד 100מ\"ר )כולל(. ג( א( דירת מגורים בבית משותף אשר בו מותקנת מעלית ושטחה בין 81-110מ\"ר )כולל(. ג ב( דירת מגורים בבית משותף שאין בו מעלית ואשר שטחה עולה על 110מ\"ר. א( דירת מגורים בבית משותף אשר בו מותקנת מעלית ושטחה עד 80מ\"ר)כולל(. ד ב( דירת מגורים בבית משותף אשר אין בו מעלית ושטחה עד 110מ\"ר )כולל( א( דירת מגורים בבית משותף שהגדרתה מתאימה לזו של דירת מגורים סוג ד' ,אך חדרי המגורים ה נמצאים מתחת למפלס הכניסה הקבועה לבניין. ב( כל יתר דירות המגורים שאינן נכללות בסוגים א'-ד'.",
+      "fetched_at": "2026-10-07T00:00:00Z",
+      "appears_in": [
+        "scripts/arnona-calculator.py"
+      ]
+    },
+    {
+      "claim_id": "tzav-2026-jerusalem-five-persons",
+      "claim": "Jerusalem's 2026 council decision applies the 90 sqm cap to a family of 5 or more persons (70 sqm up to 4), for the persecution-pension and soldier rows.",
+      "source_url": "https://www.jerusalem.muni.il/media/d2xnscek/%D7%93%D7%95%D7%97-%D7%9E%D7%95%D7%A2%D7%A6%D7%94-%D7%9E%D7%A1-21-22-%D7%94%D7%98%D7%9C%D7%AA-%D7%90%D7%A8%D7%A0%D7%95%D7%A0%D7%94-%D7%9C%D7%A9%D7%A0%D7%AA-2026.pdf",
+      "raw_snippet": "משפחה עד 4נפשות (כולל) -הנחה לגבי 70מ\"ר משטח הדירה. • משפחה בת 5נפשות ומעלה -הנחה לגבי 90מ\"ר משטח הדירה.",
+      "fetched_at": "2026-10-07T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "scripts/arnona-calculator.py"
+      ],
+      "verified_via": "pdf",
+      "verified_at": "2026-10-07",
+      "source_note": "Council report on the 2026 arnona decision (saved as work/r2/jlm_d2x.pdf); the municipality CDN needs browser request headers."
+    },
+    {
+      "claim_id": "tzav-2026-jerusalem-area-two-decimals",
+      "claim": "Jerusalem's 2026 tzav defines the area unit as each sqm plus any part of it to exactly two decimal places, rounding a part above 0.5 to a whole metre only where exact data is missing.",
+      "source_url": "https://www.jerusalem.muni.il/media/dl0hvk34/%D7%A6%D7%95-%D7%9E%D7%99%D7%A1%D7%99%D7%9D-%D7%9E%D7%9C%D7%90-2026-%D7%9E%D7%A2%D7%95%D7%93%D7%9B%D7%9F-%D7%9C%D7%90%D7%AA%D7%A8.pdf",
+      "raw_snippet": "יחידת שטח פירושה כל מטר מרובע (להלן -מ\"ר) בתוספת חלק ממנו ,אם קיים, א. בדיוק של שתי ספרות אחרי הנקודה העשרונית",
+      "fetched_at": "2026-10-07T00:00:00Z",
+      "appears_in": [
+        "references/arnona-rates-guide.md",
+        "scripts/arnona-calculator.py"
+      ],
+      "verified_via": "pdf",
+      "verified_at": "2026-10-07"
+    },
+    {
+      "claim_id": "arrangements-law-8b1-3-other-method",
+      "claim": "Arrangements Law s.8(b1)(3): a council that before amendment 16 (2017) charged part-metres proportionally by centimetre, or rounded down, may keep that different calculation method.",
+      "source_url": "https://he.wikisource.org/wiki/חוק_הסדרים_במשק_המדינה_(תיקוני_חקיקה_להשגת_יעדי_התקציב)",
+      "raw_snippet": "כך שכל חלק של מטר רבוע חויב באופן יחסי לפי מספר הסנטימטרים או כך שכל חלק של מטר רבוע עוגל למטר השלם כלפי מטה",
+      "fetched_at": "2026-10-07T00:00:00Z",
+      "appears_in": [
+        "references/arnona-rates-guide.md",
+        "scripts/arnona-calculator.py"
       ]
     }
   ]
