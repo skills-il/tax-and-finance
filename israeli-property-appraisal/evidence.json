@@ -1,7 +1,7 @@
 {
   "skill_slug": "israeli-property-appraisal",
   "schemaVersion": "1.0",
-  "generated_at": "2026-07-30",
+  "generated_at": "2026-10-07",
   "claims": [
     {
       "id": "hashbacha-rate-half",
@@ -92,15 +92,15 @@
       "verified_at": "2026-07-30"
     },
     {
-      "id": "tama38-5-percent",
-      "claim": "Where the betterment arises from TAMA 38 (seismic strengthening) there is a partial exemption and the levy is 5% of the betterment rather than 50%",
+      "id": "kolzchut-tama38-5-percent-not-statutory",
+      "claim": "Kolzchut states a flat 5% levy for TAMA 38. The skill reports this only as a secondary-source figure the statute does not support (see tama38-exempt-quarter-beyond-2-5-floors).",
       "claim_type": "percentage",
       "source_url": "https://www.kolzchut.org.il/he/פטור_מהיטל_השבחה",
-      "source_fetched_at": "2026-07-30T13:07:53Z",
+      "source_fetched_at": "2026-10-07T00:40:00Z",
       "raw_snippet": "כאשר ההשבחה נובעת מתמ\"א 38 (חיזוק מבנים מפני נזקי רעידות אדמה) קיים פטור חלקי מהיטל השבחה, כך שההיטל עומד על 5% משיעור ההשבחה, ולא על 50%.",
       "confidence": "high",
       "verified_via": "browser",
-      "verified_at": "2026-07-30"
+      "verified_at": "2026-10-07"
     },
     {
       "id": "objection-two-routes",
@@ -495,14 +495,12 @@
     },
     {
       "id": "nadlan-mcp-returns-deal-rows",
-      "claim": "The nadlan MCP's get_valuation_comparables returns individual deal rows (with gushNum/parcelNum, area, amount, date, rooms, floor, dealNatureDescription), not only aggregates, and accepts address/years_back/min_area/max_area/min_rooms/max_rooms/min_floor/max_floor/radius_meters/deal_type.",
+      "claim": "The nadlan MCP's get_valuation_comparables returns individual deal rows (with gushNum/parcelNum, area, amount, date, rooms, floor, dealNatureDescription), not only aggregates, and accepts address/years_back/property_type/min_rooms/max_rooms/min_area/max_area/min_floor/max_floor/radius_meters/max_comparables. It has no deal_type parameter.",
       "claim_type": "tool_behaviour",
-      "source_url": "https://github.com/nitzpo/nadlan-mcp/blob/master/API_REFERENCE.md",
-      "source_fetched_at": "2026-08-02T15:48:54+00:00",
-      "raw_snippet": "#### `get_valuation_comparables`\n\nGet comparable properties for valuation analysis.\n\n**Parameters:**\n- `address` (string, required): Address to find comparables for\n- `years_back` (int, default: 2): Years to look back\n- `property_type` (string, optional): Filter by property type\n- `min_rooms` (float, optional): Minimum rooms\n- `max_area` (float, optional): Maximum area\n- `radius_meters` (int, default: 100): Search radius\n\n**Returns:** JSON with filtered comparable deals and statistics",
-      "confidence": "high",
-      "verified_via": "live_probe",
-      "verified_at": "2026-08-02T15:48:54+00:00"
+      "source_url": "https://raw.githubusercontent.com/nitzpo/nadlan-mcp/master/API_REFERENCE.md",
+      "source_fetched_at": "2026-10-07T00:40:00Z",
+      "raw_snippet": "- `min_floor` (int, optional): Minimum floor\n- `max_floor` (int, optional): Maximum floor\n- `radius_meters` (int, default: 100): Search radius\n- `max_comparables` (int, default: 50): Max comparables to return",
+      "confidence": "high"
     },
     {
       "id": "nadlan-mcp-not-residential-filtered",
@@ -558,6 +556,231 @@
       "confidence": "high",
       "verified_via": "curl",
       "verified_at": "2026-08-11"
+    },
+    {
+      "id": "tama38-exempt-quarter-beyond-2-5-floors",
+      "claim": "Third Addendum s.19(b)(10)(a): betterment from a TAMA 38 permit is exempt, except the part from added floor area beyond 2.5 extended typical floors, which is levied at a quarter of the betterment.",
+      "claim_type": "percentage",
+      "source_url": "https://he.wikisource.org/wiki/חוק_התכנון_והבניה",
+      "raw_snippet": "תכנית המתאר הארצית לחיזוק מבנים קיימים מפני רעידות אדמה (תמ״א 38); ואולם על החלק מההשבחה שמקורו בתוספת שטחי בנייה בשיעור שטחה של קומה טיפוסית מורחבת או חלקה, מעבר ל־2.5 קומות טיפוסיות מורחבות, כאמור בסעיף 14א(א)(2) לתכנית האמורה, יחול היטל השבחה ששיעורו רבע ההשבחה",
+      "source_fetched_at": "2026-10-07T00:40:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "seismic-resilience-plans-quarter",
+      "claim": "Third Addendum s.19(b)(10a)(a): a permit under a seismic-resilience plan (chapter 3, sign 4, introduced by Amendment 139 of 2022 to replace TAMA 38) is levied at a quarter of the betterment.",
+      "claim_type": "percentage",
+      "source_url": "https://he.wikisource.org/wiki/חוק_התכנון_והבניה",
+      "raw_snippet": "רעידת אדמה כאמור בסימן ד׳ לפרק ג׳, יחול היטל בשיעור רבע ההשבחה",
+      "source_fetched_at": "2026-10-07T00:40:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "amendment-139-2022",
+      "claim": "The TAMA 38 replacement track was introduced by Planning and Building Law Amendment 139, 2022 (התשפ\"ב).",
+      "claim_type": "legal_reference",
+      "source_url": "https://he.wikisource.org/wiki/חוק_התכנון_והבניה",
+      "raw_snippet": "חוק התכנון והבנייה (תיקון מס׳ 139), התשפ״ב–2022",
+      "source_fetched_at": "2026-10-07T00:40:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "local-authority-eighth-or-nil",
+      "claim": "Third Addendum s.19(b2)(1): the local authority may set the quarter-rate part of the levy under s.19(b)(10a) to nil or to an eighth of the betterment.",
+      "claim_type": "percentage",
+      "source_url": "https://he.wikisource.org/wiki/חוק_התכנון_והבניה",
+      "raw_snippet": "כי לא תחול חובת תשלום היטל על החלק מההשבחה החייב בהיטל ששיעורו רבע ההשבחה כאמור בסיפה של אותה פסקה, או שתחול עליו חובת תשלום היטל ששיעורו שמינית ההשבחה",
+      "source_fetched_at": "2026-10-07T00:40:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "objection-does-not-suspend-payment",
+      "claim": "Third Addendum s.14(e) (סעיף 14): an appeal or objection does not hold up realisation of the rights only where the levy has been paid; a person seeking a permit for their own or a relative's home may post a guarantee for the disputed amount instead.",
+      "claim_type": "legal_reference",
+      "source_url": "https://he.wikisource.org/wiki/חוק_התכנון_והבניה",
+      "raw_snippet": "הגשת ערר או ערעור לפי סעיף זה לא תעכב את מימוש הזכויות במקרקעין, אם החייב בהיטל שילם את ההיטל; ואולם לגבי מי שמבקש היתר בניה לצורכי מגוריו או מגורי קרובו והגיש ערר או ערעור כאמור, לא תעכב ההגשה את מתן ההיתר, אם נתן ערובה לתשלום סכום ההיטל השנוי במחלוקת",
+      "source_fetched_at": "2026-10-07T00:40:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "levy-refund-with-arrears",
+      "claim": "Third Addendum s.17 (סעיף 17): where the levy is reduced or cancelled, amounts paid in excess are refunded with arrears payments (indexation and interest under the Indexation Law).",
+      "claim_type": "legal_reference",
+      "source_url": "https://he.wikisource.org/wiki/חוק_התכנון_והבניה",
+      "raw_snippet": "על הפחתת החיוב בהיטל או על ביטולו, יוחזרו הסכומים ששולמו מעבר למגיע, בתוספת תשלומי פיגורים",
+      "source_fetched_at": "2026-10-07T00:40:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "reexamination-track-90000",
+      "claim": "Third Addendum s.14(b1) (סעיף 14): where only the amount is disputed and the charge does not exceed 90,000 NIS (90000 ₪), the payer may ask the local committee to re-examine it within the s.14(a) deadlines, attaching a valuation by a licensed land appraiser.",
+      "claim_type": "threshold",
+      "source_url": "https://he.wikisource.org/wiki/חוק_התכנון_והבניה",
+      "raw_snippet": "אינו עולה על 90,000 שקלים חדשים (בסעיף קטן זה – השומה המקורית), רשאי, אם אין הוא חולק על החיוב כשלעצמו, לפנות לוועדה המקומית בבקשה לשוב ולבחון את סכום החיוב; פנייה כאמור תיעשה בתוך המועדים הקבועים בסעיף קטן (א), ותצורף אליה שומה שנערכה על ידי שמאי מקרקעין",
+      "source_fetched_at": "2026-10-07T00:40:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "third-addendum-s19-exemptions",
+      "claim": "Third Addendum s.19 (סעיף 19) is the exemptions section (\"פטור מהיטל\"), whose subsection (b) lists the betterment on which no levy is charged.",
+      "claim_type": "legal_reference",
+      "source_url": "https://he.wikisource.org/wiki/חוק_התכנון_והבניה",
+      "raw_snippet": "לא תחול חובת תשלום היטל בשל השבחה שהיא אחת מאלה",
+      "source_fetched_at": "2026-10-07T00:40:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "nadlan-mcp-radius-street-disabled",
+      "claim": "In the nadlan MCP, get_deals_by_radius and get_street_deals are disabled by default (config flags default \"false\") and, being disabled, are not registered as tools.",
+      "claim_type": "tool_behaviour",
+      "source_url": "https://raw.githubusercontent.com/nitzpo/nadlan-mcp/master/nadlan_mcp/config.py",
+      "raw_snippet": "os.getenv(\"TOOL_GET_DEALS_BY_RADIUS_ENABLED\", \"false\")",
+      "source_fetched_at": "2026-10-07T00:40:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "seismic-other-lot-half-remainder",
+      "claim": "Third Addendum s.19(b)(10a)(b): on an 'other lot' only the share proportional to floor area added there is at a quarter, and the rest of the betterment is at half.",
+      "claim_type": "percentage",
+      "source_url": "https://he.wikisource.org/wiki/חוק_התכנון_והבניה",
+      "source_fetched_at": "2026-10-07T01:10:00Z",
+      "raw_snippet": "ועל יתרת ההשבחה יחול היטל בשיעור מחצית ההשבחה",
+      "confidence": "high"
+    },
+    {
+      "id": "seismic-strengthening-conditional-plan",
+      "claim": "Third Addendum s.19(b)(10a)(c): a plan usable only subject to strengthening the building, including demolition and rebuilding, is levied at a quarter only on the part that would have been at a quarter under (10a)(a), with the rest at half.",
+      "claim_type": "percentage",
+      "source_url": "https://he.wikisource.org/wiki/חוק_התכנון_והבניה",
+      "source_fetched_at": "2026-10-07T01:10:00Z",
+      "raw_snippet": "בין בדרך של חיזוק או חיזוק ועיבוי ובין בדרך הריסת הבניין כולו ובנייתו מחדש, תחול חובת תשלום היטל השבחה בשיעור רבע ההשבחה",
+      "confidence": "high"
+    },
+    {
+      "id": "seismic-not-pinui-binui",
+      "claim": "Third Addendum s.19(b)(10a)(e): the seismic-resilience paragraph does not apply to a plan in a pinui-binui compound.",
+      "claim_type": "legal_reference",
+      "source_url": "https://he.wikisource.org/wiki/חוק_התכנון_והבניה",
+      "source_fetched_at": "2026-10-07T01:10:00Z",
+      "raw_snippet": "הוראות פסקה זו לא יחולו על תכנית במתחם פינוי ובינוי",
+      "confidence": "high"
+    },
+    {
+      "id": "reexamination-14-days",
+      "claim": "Third Addendum s.14(b1)(2)(a): the local committee's appraiser decides the re-examination request within 14 days of receiving it (the decision date).",
+      "claim_type": "deadline",
+      "source_url": "https://he.wikisource.org/wiki/חוק_התכנון_והבניה",
+      "source_fetched_at": "2026-10-07T01:10:00Z",
+      "raw_snippet": "והוא יחליט בה בתוך 14 ימים מהמועד שבו הועברה אליו (בפסקה זו – המועד להחלטה)",
+      "confidence": "high"
+    },
+    {
+      "id": "reexamination-30-day-fallback",
+      "claim": "Third Addendum s.14(b1)(2)(d): if the appraiser does not decide by the decision date, decides not to reduce, or reduces and the payer disagrees, the appeals-committee and deciding-appraiser routes apply but with 30 days from the decision date instead of the s.14(a) periods.",
+      "claim_type": "deadline",
+      "source_url": "https://he.wikisource.org/wiki/חוק_התכנון_והבניה",
+      "source_fetched_at": "2026-10-07T01:10:00Z",
+      "raw_snippet": "אולם במקום התקופות המנויות בסעיף קטן (א), ימנו 30 ימים מהמועד להחלטה",
+      "confidence": "high"
+    },
+    {
+      "id": "reexamination-triggers",
+      "claim": "Third Addendum s.14(b1)(2)(d)(2): the fallback applies where the appraiser decided not to reduce or reduced and the payer disputes it.",
+      "claim_type": "legal_reference",
+      "source_url": "https://he.wikisource.org/wiki/חוק_התכנון_והבניה",
+      "source_fetched_at": "2026-10-07T01:10:00Z",
+      "raw_snippet": "החליט שלא להפחית את גובה החיוב או שהחליט להפחית את גובה החיוב כאמור בפסקת משנה (ג) והחייב חולק על החלטתו",
+      "confidence": "high"
+    },
+    {
+      "id": "reexamination-threshold-date",
+      "claim": "Third Addendum s.14(b1)(1): the 90,000 NIS threshold is measured on the charge updated to the date the assessment (or assessment table) was made.",
+      "claim_type": "threshold",
+      "source_url": "https://he.wikisource.org/wiki/חוק_התכנון_והבניה",
+      "source_fetched_at": "2026-10-07T01:10:00Z",
+      "raw_snippet": "וגובה החיוב המעודכן למועד עריכת השומה או לוח השומה",
+      "confidence": "high"
+    },
+    {
+      "id": "appeals-committee-name-45-days",
+      "claim": "Third Addendum s.14(a): an assessment under s.4 is appealed to the appeals committee for compensation and betterment levy within 45 days of the assessment reaching the payer.",
+      "claim_type": "deadline",
+      "source_url": "https://he.wikisource.org/wiki/חוק_התכנון_והבניה",
+      "source_fetched_at": "2026-10-07T01:10:00Z",
+      "raw_snippet": "ניתן לערור לפני ועדת ערר לפיצויים ולהיטל השבחה, בתוך 45 ימים מיום שבו הובאה השומה לידיעת החייב",
+      "confidence": "high"
+    },
+    {
+      "id": "appeals-committee-one-year-table",
+      "claim": "Third Addendum s.14(a): an assessment table under s.5 may be appealed to the appeals committee within one year of its display (so the one-year period applies to the liability route too).",
+      "claim_type": "deadline",
+      "source_url": "https://he.wikisource.org/wiki/חוק_התכנון_והבניה",
+      "source_fetched_at": "2026-10-07T01:10:00Z",
+      "raw_snippet": "ניתן לערור לפני ועדת ערר לפיצויים ולהיטל השבחה בתוך שנה ממועד הצגת לוח השומה",
+      "confidence": "high"
+    },
+    {
+      "id": "appeals-committee-per-district",
+      "claim": "Planning and Building Law s.12ו: each district has an appeals committee for compensation and betterment levy.",
+      "claim_type": "legal_reference",
+      "source_url": "https://he.wikisource.org/wiki/חוק_התכנון_והבניה",
+      "source_fetched_at": "2026-10-07T01:10:00Z",
+      "raw_snippet": "לכל מחוז תהיה ועדת ערר לפיצויים ולהיטל השבחה",
+      "confidence": "high"
+    },
+    {
+      "id": "nadlan-valuation-comparables-call",
+      "claim": "nadlan MCP get_valuation_comparables calls client.find_recent_deals_for_address without a deal_type, so the client default applies.",
+      "claim_type": "tool_behaviour",
+      "source_url": "https://raw.githubusercontent.com/nitzpo/nadlan-mcp/master/nadlan_mcp/fastmcp_server.py",
+      "source_fetched_at": "2026-10-07T01:10:00Z",
+      "raw_snippet": "address, years_back, radius=radius_meters, max_deals=max_comparables",
+      "confidence": "high"
+    },
+    {
+      "id": "nadlan-client-dealtype-2-default",
+      "claim": "nadlan MCP GovmapClient.find_recent_deals_for_address defaults deal_type to 2 (second hand), passed to the API as dealType, so get_valuation_comparables always requests resales (dealType=2).",
+      "claim_type": "tool_behaviour",
+      "source_url": "https://raw.githubusercontent.com/nitzpo/nadlan-mcp/master/nadlan_mcp/govmap/client.py",
+      "source_fetched_at": "2026-10-07T01:10:00Z",
+      "raw_snippet": "deal_type: Deal type filter (1=first hand/new, 2=second hand/used, default: 2)",
+      "confidence": "high"
+    },
+    {
+      "id": "reexamination-21-day-acceptance",
+      "claim": "Third Addendum s.14(b1)(2)(c): where the committee's appraiser reduces the charge, the payer has 21 days from receiving the reduced assessment to say whether they agree.",
+      "claim_type": "deadline",
+      "source_url": "https://he.wikisource.org/wiki/חוק_התכנון_והבניה",
+      "source_fetched_at": "2026-10-07T01:25:00Z",
+      "raw_snippet": "בתוך 21 ימים מהמועד שהועברה לו השומה, אם הוא מסכים לה",
+      "confidence": "high"
+    },
+    {
+      "id": "agreed-assessment-chief-appraiser",
+      "claim": "Third Addendum s.14(b1)(3): an agreed assessment is sent by the local committee to the Chief Government Appraiser for review.",
+      "claim_type": "legal_reference",
+      "source_url": "https://he.wikisource.org/wiki/חוק_התכנון_והבניה",
+      "source_fetched_at": "2026-10-07T01:25:00Z",
+      "raw_snippet": "תעביר הוועדה המקומית את השומה המוסכמת לבדיקה של השמאי הממשלתי הראשי",
+      "confidence": "high"
+    },
+    {
+      "id": "chief-appraiser-21-day-refusal",
+      "claim": "Third Addendum s.14(b1)(4): the Chief Government Appraiser may give notice within 21 days that they do not approve the agreed assessment.",
+      "claim_type": "deadline",
+      "source_url": "https://he.wikisource.org/wiki/חוק_התכנון_והבניה",
+      "source_fetched_at": "2026-10-07T01:25:00Z",
+      "raw_snippet": "בתוך 21 ימים מיום שקיבל לבדיקתו את השומה המוסכמת, כי הוא אינו מאשר את השומה המוסכמת",
+      "confidence": "high"
+    },
+    {
+      "id": "chief-appraiser-refusal-30-days",
+      "claim": "Third Addendum s.14(b1)(4): on such a refusal the regular routes apply with 30 days counted from the Chief Government Appraiser's notice.",
+      "claim_type": "deadline",
+      "source_url": "https://he.wikisource.org/wiki/חוק_התכנון_והבניה",
+      "source_fetched_at": "2026-10-07T01:25:00Z",
+      "raw_snippet": "ימנו 30 ימים מיום שהודיע השמאי הממשלתי הראשי כאמור",
+      "confidence": "high"
     }
   ]
 }

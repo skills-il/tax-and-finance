@@ -30,7 +30,7 @@
     ]
   },
   "author": "skills-il",
-  "version": "1.3.2",
+  "version": "1.3.3",
   "category": "tax-and-finance",
   "supported_agents": [
     "claude-code",
@@ -78,6 +78,11 @@
     {
       "url": "https://www.gov.il/BlobFolder/dynamiccollectorresultitem/assessor-standardization-db_19/he/land_assessor_shameim_19.pdf",
       "type": "regulator",
+      "language": "he"
+    },
+    {
+      "url": "https://he.wikisource.org/wiki/חוק_התכנון_והבניה",
+      "type": "statute",
       "language": "he"
     }
   ],

@@ -21,15 +21,17 @@ This file is the coverage contract. A future `update-skill` run re-reads it and 
 - [ ] The three triggering events, enumerated in full, plan approval, relief, non-conforming use. Why core: users commonly believe only a plan counts
 - [ ] Calculated at plan approval, paid at realisation. Why core: explains a levy surfacing decades later, and the indexation that follows
 - [ ] The pre-1975 cutoff for plans. Why core: eliminates whole classes of old-plan claims
-- [ ] The exemption list, each with its condition, including the residential building or expansion exemption with its total-area limit and its multi-year occupancy condition, the protected-space exemption for the minimum required area, and the reduced rate where the betterment arises from seismic strengthening. Why core: an exemption removes the bill entirely and is checked before arguing amount
+- [ ] The exemption list, each with its condition, including the residential building or expansion exemption with its total-area limit and its multi-year occupancy condition, the protected-space exemption for the minimum required area, and the seismic-strengthening treatment: TAMA 38 exempt except a quarter beyond 2.5 extended typical floors, and the replacement seismic-resilience track at a quarter with its half-rate remainder cases, its pinui-binui exclusion and the local authority's power to reduce. Why core: an exemption removes the bill entirely and is checked before arguing amount
 - [ ] The two sub-rules of the residential exemption that people get wrong, the limit is total post-expansion area rather than area added, and breaching the occupancy condition revives the debt. Why core: the arithmetic, not the existence, is where money is lost
 - [ ] The exemption request deadline to the local committee. Why core: a missed window
-- [ ] The two objection routes and the split between them, whether the levy is owed goes to the district appeals committee, the amount goes to a deciding appraiser. Why core: the highest-value single fact; filing in the wrong forum forfeits the deadline
+- [ ] The two objection routes and the split between them, whether the levy is owed goes to the appeals committee for compensation and betterment levy (one per district), the amount goes to a deciding appraiser. Why core: the highest-value single fact; filing in the wrong forum forfeits the deadline
 - [ ] Both objection deadlines, including the alternative period running from display of the assessment table. Why core: unrecoverable if missed
 - [ ] How a deciding appraiser is appointed and the document deadlines that follow. Why core: the procedural path the user must actually walk
 - [ ] The appeal chain after a deciding appraiser's decision, through the appeals committee for compensation and betterment levy and on to the administrative affairs court. Why core: users assume the decision is final or assume court is next, and both are wrong
 - [ ] The deciding-appraiser fee, as a full marginal band table with its floor, ceiling and VAT treatment, plus the default equal split and the appraiser's power to vary it. Why core: the go/no-go economics of challenging at all
 - [ ] The advisory-appraiser fee range. Why core: the cost of the other forum
+- [ ] Paying while disputing: an objection does not hold up realisation provided the levy is paid (or, for an own-home permit, a guarantee is given), and over-payments are refunded with arrears payments (Third Addendum s.14(e), s.17). Why core: a seller who withholds payment while disputing stalls the sale
+- [ ] The up-to-90,000 re-examination track at the local committee and its 30-day fallback deadline (Third Addendum s.14(b1)). Why core: the cheapest route for small charges, with a deadline that differs from the regular 45 days
 - [ ] Correction of a factual error as distinct from an objection. Why core: cheapest fix, and users burn the objection window on typos
 - [ ] The output is not a shuma, and a binding position needs a licensed appraiser. Why core: stated at creation and repeated at the drafting step
 
@@ -56,15 +58,15 @@ This file is the coverage contract. A future `update-skill` run re-reads it and 
 - Income-capitalisation valuation of commercial and income-producing property, institutional commercial valuation; this skill targets residential comparable-transactions work
 - Expropriation and compensation for expropriated land, its own statutory scheme and forums
 - Compensation where a plan reduces property value, the mirror mechanism to the levy, with a different claim route; deliberately excluded to keep the skill's scope on the levy and the bank appraisal
-- Percentage figures for urban-renewal levy variants beyond the seismic-strengthening rate recorded in evidence.json, the secondary sources reviewed during research disagreed with each other and none was confirmed against the statute, so no figure is stated rather than a plausible guess
+- Percentage figures for urban-renewal levy variants beyond the TAMA 38 and seismic-resilience rates in Third Addendum s.19(b)(10) and (10a), notably pinui-binui plans, whose rate the Third Addendum leaves partly to local-authority zoning decisions; the skill routes those to the plan and the statute rather than stating a figure (reviewed 2026-10-07)
 
 ## Authoritative sources
 
 - https://www.kolzchut.org.il/he/היטל_השבחה, rate, triggering events, payment timing, cutoff date, who is liable
-- https://www.kolzchut.org.il/he/פטור_מהיטל_השבחה, the exemption list, area limits, occupancy condition, seismic-strengthening rate, request deadline
+- https://www.kolzchut.org.il/he/פטור_מהיטל_השבחה, the exemption list, area limits, occupancy condition, request deadline. Its flat 5% TAMA 38 figure is NOT supported by the statute; use the Third Addendum for seismic rates
 - https://www.kolzchut.org.il/he/השגה_על_היטל_השבחה, forum split, deadlines, procedure, appeal chain
 - https://www.nevo.co.il/law_html/law01/500_077.htm, deciding and advisory appraiser fee regulations: band table, floor, ceiling, VAT, cost split
 - https://www.boi.org.il/media/brep4lzt/329_12.pdf, Directive 329: loan-to-value caps, repayment-to-income cap, measurement basis
 - https://www.gov.il/BlobFolder/dynamiccollectorresultitem/assessor-standardization-db_19/he/land_assessor_shameim_19.pdf, Standard 19: conservative valuation for credit collateral. Read with pdftotext, the text layer does not survive a plain fetch
 - https://www.gov.il/he/departments/topics/land_assessor/govil-landing-page, Land Appraisers Council: licensing, registers, complaints. Blocks automated fetching, open in a browser
-- חוק התכנון והבנייה, התוספת השלישית, the primary statute behind the levy. Read directly before changing any levy figure in this skill
+- https://he.wikisource.org/wiki/חוק_התכנון_והבניה, חוק התכנון והבנייה, התוספת השלישית, the primary statute behind the levy (s.14 routes, deadlines and payment, s.17 refunds, s.19 exemptions and seismic rates). Read directly before changing any levy figure in this skill

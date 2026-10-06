@@ -1,6 +1,20 @@
 {
   "cycles": [
     {
+      "version": "1.3.3",
+      "date": "2026-10-07",
+      "lessons": [
+        "The legal-review gate passed the diff but first BLOCKed the whole skill on a pre-existing DB-only surface: live when_to_apply item 5 read 'draft an objection letter or counter-appraisal' / 'לנסח מכתב השגה או שומה נגדית', re-advertising the instrument the 1.3.0 remedy removed. Held until the owner approved replacement wording, applied on dev and prod 2026-10-07; the gate then passed. Enriched fields are invisible to every repo gate; read them in the legal gate every cycle.",
+        "A secondary source can be wrong on a rate for the whole life of a skill. Kolzchut states a flat 5% for TAMA 38; the Third Addendum s.19(b)(10)(a) exempts TAMA 38 except a quarter beyond 2.5 extended typical floors. Every gate passed because the evidence snippet faithfully quoted the wrong page. For levy rates, cite the statute, not Kolzchut.",
+        "Adding a cheap procedural track drags its own deadlines in: the s.14(b1) 90,000 track reopens the regular routes with 30 days from the decision date, and an accepted reduction still goes to the Chief Government Appraiser (21 days, then 30 days). The first draft omitted both; the expert caught them in rounds 1 and 2.",
+        "A py_compile check on the oldest supported Python belongs in CI: a backslash in an f-string expression killed the whole script on Python <=3.11 for at least one release.",
+        "Deferred Should-cover (expert r1 M4): s.10 committee certificate for registration, s.10(a1) mortgage exception, s.7(b) partial realisation.",
+        "Deferred minor: CGA deemed approval on silence; late committee decision does not restart the 30 days; s.14(b1) also covers an assessment table; (b2) can reduce the (10a)(c) half-rate remainder; chair's extension power; TAMA 38 (10)(b)/(c) detail.",
+        "Held for counsel (legal-adjacent wording, not changed): Step 3 'defensible range' and adjustments walk-through vs the notice's 'אינו מבצע את ההתאמות השמאיות'; Step 7 'Draft the letter' heading and 'the adjustments claimed and why, and the resulting range'; 'counter-comparables'; 'what a property is worth' trigger; the slug; tag 'שמאי מכריע'.",
+        "STILL OPEN from 1.1.x: procedural windows (21/30/45/60 days) in betterment-levy.md lack evidence entries; nadlan MCP install_command row; nadlan.gov.il coverage-gap probe."
+      ]
+    },
+    {
       "version": "1.3.2",
       "date": "2026-09-20",
       "lessons": [

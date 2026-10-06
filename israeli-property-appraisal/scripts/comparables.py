@@ -154,6 +154,19 @@ def resolve_polygon(addr_id):
     return polygon_id, data.get("neigh_name"), data.get("setl_name")
 
 
+def _row_key(r):
+    # Dedupe on objectid. If the feed ever drops or renames it, every key would be
+    # None, page 2 onward would read as "nothing new", and the run would silently
+    # report page 1 only. Fall back to a composite of the deal's own fields instead.
+    oid = r.get("objectid")
+    if oid is not None:
+        return ("id", oid)
+    # Two genuinely distinct sales can share every field here (identical developer
+    # units sold the same day at the same price), so fetch_deals warns when it is used.
+    return ("row", r.get("dealDate"), r.get("dealAmount"), r.get("assetArea"),
+            r.get("floorNo"), r.get("assetRoomNum"))
+
+
 def fetch_deals(polygon_id, page_size=2000):
     """Step 4: polygon_id -> all deal rows.
 
@@ -182,18 +195,22 @@ def fetch_deals(polygon_id, page_size=2000):
     except (TypeError, ValueError):
         total = 0
     rows = list(first["data"])
-    seen = {r.get("objectid") for r in rows}
+    seen = {_row_key(r) for r in rows}
     while len(rows) < total:
         page = _request(f"{url}?offset={len(rows)}&limit={page_size}")
         batch = page.get("data") or []
-        fresh = [r for r in batch if r.get("objectid") not in seen]
+        fresh = [r for r in batch if _row_key(r) not in seen]
         if not fresh:
             # totalCount can exceed the number of distinct objectids the endpoint
             # will actually serve (it counts duplicate rows). Stop and report the
             # real fetched count rather than looping forever or inventing rows.
             break
-        seen.update(r.get("objectid") for r in fresh)
+        seen.update(_row_key(r) for r in fresh)
         rows.extend(fresh)
+    if any(r.get("objectid") is None for r in rows):
+        print("WARNING: some deal rows carry no objectid, so duplicates were removed on "
+              "the deal's own fields. Identical sales on the same day may have been "
+              "merged, and the feed's shape may have changed.", file=sys.stderr)
     return rows, total
 
 
@@ -385,7 +402,10 @@ def main():
     if flagged:
         print(f"({flagged} עסקאות סומנו חריגות ולא נכנסו לחציון. הן מסומנות ב-! בטבלה)")
     print()
-    print(f"{'תאריך':<12}{'חדרים':>7}{'מ\"ר':>8}{'מחיר':>14}{'ש\"ח/מ\"ר':>11}  סוג")
+    # Labels are hoisted out of the f-string: a backslash inside an f-string
+    # expression is a SyntaxError before Python 3.12, which killed the whole script.
+    sqm_label, per_sqm_label = 'מ"ר', 'ש"ח/מ"ר'
+    print(f"{'תאריך':<12}{'חדרים':>7}{sqm_label:>8}{'מחיר':>14}{per_sqm_label:>11}  סוג")
     for d in kept[:40]:
         rooms = d["rooms"] if d["rooms"] is not None else "-"
         mark = "!" if d["outlier"] else " "
