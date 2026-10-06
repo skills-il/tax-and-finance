@@ -1,6 +1,6 @@
 {
   "author": "skills-il",
-  "version": "1.6.0",
+  "version": "1.7.0",
   "category": "tax-and-finance",
   "tags": {
     "he": [
@@ -73,7 +73,7 @@
       "language": "he"
     },
     {
-      "url": "https://secapp.taxes.gov.il",
+      "url": "https://secapp.taxes.gov.il/srbksOpentik/",
       "type": "regulator",
       "language": "he"
     },

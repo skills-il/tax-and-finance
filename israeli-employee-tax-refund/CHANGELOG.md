@@ -2,6 +2,28 @@
 
 All notable changes to this skill are documented here.
 
+## [1.7.0] - 2026-10-07
+
+### Fixed
+
+- Section 39B reserve-duty credit points (Amendment 283): restricted to COMBAT reserve service as confirmed by the IDF, and to tax years 2026 onward (for service in 2025). The ITA announcement of 18.12.2025 sets the benefit in force from 1.1.2026 as a two-year temporary order (2026-2027), with the minimum dropping to 20 days from tax year 2028. The skill previously applied the points to any reservist and told a 2024 reservist to claim them on the 2025 refund, which the law does not allow. The estimator now declines to add the points for a claim year before 2026 and says why.
+- The supporting document for Section 39B is the IDF confirmation of combat service and days served, not Form 3010.
+- Yishuv mutav credit: the estimator computed the credit as a percentage of the TAX on capped income. Section 11 grants the locality rate on earned INCOME up to the locality ceiling (Kol Zchut worked example: 11% of 168,000 NIS is 18,480 NIS), floored so it cannot take tax below zero. This understated the credit for every periphery resident.
+- Form 101: entitlements are claimed in part ח of the form, not part ז (SKILL.md, SKILL_HE.md, references).
+- Severance routing: every Form 161 event was sent to Form 1301. The ITA lists Form 161 as a routine Form 135 attachment for anyone who left a job, so only taxable severance or a spreading request now routes to israeli-tax-returns.
+- Refund interest: linkage plus 4% applies to EVERY refund from the end of the claim year (Section 160(a)), not only to a late one.
+- Example 1: the "normal withholding leaves about 800 NIS owed" figure was not derived from the example's facts; with a Form 101 at each job in turn the year comes out at about 105 NIS back.
+- מענק עבודה (negative income tax) was described as a Bituach Leumi claim; the Tax Authority pays it and takes the claim online.
+- Troubleshooting for a failed online login pointed to a gov.il identity; the refund system uses the Tax Authority's own login (ID number plus a permanent user code, or a smart card). The cause is now marked as unconfirmed.
+- Section 44 and the yishuv mutav claim now name the forms the ITA lists (116א, 1312א).
+
+### Changed
+
+- Submission channels rewritten from the current gov.il Form 135 service page: the online system opens a refund-only file at secapp.taxes.gov.il/srbksOpentik, and a paper Form 135 is submitted through the ITA public-inquiries system or a service point. A married couple files one request.
+- Married couples (Expert MAJOR carried since 1.3.0): the tax is computed per spouse on salary (Section 66(a)(1) and 66(c)(1)), so the skill and the estimator now say to run one estimate per spouse and never sum both salaries.
+- One refund request per tax year; a married claimant attaches the spouse's income documents and a registered-spouse declaration; reserve-duty points are shown as "up to" because credit points only reduce tax to zero; the estimator flags income above the mas yesafim threshold.
+- Example 2 now routes a 2025 reservist to Form 101 part ח section 16 before 31.12.2026 for an in-year payslip correction (online tax coordination with two or more employers), with a refund request for tax year 2026 from January 2027 for the rest.
+
 ## [1.6.0] - 2026-08-26
 
 ### Fixed

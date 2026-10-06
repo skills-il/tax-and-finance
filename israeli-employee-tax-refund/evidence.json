@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0",
   "skill": "israeli-employee-tax-refund",
-  "generated_at": "2026-08-19T02:16:32.021031+00:00",
+  "generated_at": "2026-10-06T21:56:13Z",
   "claims": [
     {
       "claim_id": "credit-point-value-2026",
@@ -51,18 +51,18 @@
     },
     {
       "claim_id": "section-39b-miluim-points",
-      "claim": "Reserve duty credit points under Section 39B ITO per Amendment 283 התשפ\"ו-2025: 30-39 days = 0.5 pts (1,452 ₪), 40-49 = 0.75 pts (2,178 ₪), 50-54 = 1.0 pt (2,904 ₪), each additional 5 days = +0.25 pt (+726 ₪), maximum 4.0 pts (11,616 ₪)",
+      "claim": "Combat reservists who served at least 30 days in 2025 get Section 39B credit points in tax year 2026 (Amendment 283 התשפ\"ו-2025); table 30-39=0.5 (1,452), 40-49=0.75 (2,178), 50-54=1 (2,904), +0.25 (+726) per 5 days, max 4 (11,616)",
       "source_url": "https://www.kolzchut.org.il/he/%D7%A0%D7%A7%D7%95%D7%93%D7%95%D7%AA_%D7%96%D7%99%D7%9B%D7%95%D7%99_%D7%9E%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94_%D7%9C%D7%9C%D7%95%D7%97%D7%9E%D7%99_%D7%9E%D7%99%D7%9C%D7%95%D7%90%D7%99%D7%9D",
-      "raw_snippet": "פקודת מס הכנסה - סעיף 39ב",
-      "fetched_at": "2026-05-18T00:00:00Z",
+      "raw_snippet": "לוחמי מילואים ששירתו לפחות 30 ימים בשנת 2025 זכאים לנקודות זיכוי במס הכנסה בשנת המס 2026",
+      "fetched_at": "2026-10-04",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/2026-rates.md",
         "references/domain-checklist.md"
       ],
-      "verified_via": "kolzchut page text read through the site MediaWiki API in a browser; snippet replaced with verbatim page text (the previous value was a generated summary)",
-      "verified_at": "2026-08-15"
+      "verified_via": "kolzchut page wikitext read through the site MediaWiki API in headed Chrome (Cloudflare blocks curl); snippet found verbatim",
+      "verified_at": "2026-10-04"
     },
     {
       "claim_id": "section-46-digital-reporting-2026",
@@ -277,17 +277,17 @@
     },
     {
       "claim_id": "online-refund-portal",
-      "claim": "secapp.taxes.gov.il is the Israeli Tax Authority online refund portal for employees (השכיר המקוון); landing page at gov.il/he/pages/sa300821-2",
-      "source_url": "https://www.kolzchut.org.il/he/%D7%94%D7%97%D7%96%D7%A8_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
-      "raw_snippet": "אפשר לבקש החזר עד 6 שנים לאחר תום שנת המס שעבורה מבקשים את ההחזר",
-      "fetched_at": "2026-05-18T00:00:00Z",
+      "claim": "The online refund route opens a refund-only file in the ITA computer system (secapp.taxes.gov.il/srbksOpentik, linked from the Form 135 service page); it does not open an active tax file.",
+      "source_url": "https://www.gov.il/he/service/itc135",
+      "raw_snippet": "פתיחת תיק במערכת המחשב לצורך הגשת בקשה להחזר מס",
+      "fetched_at": "2026-10-06T21:56:13Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/domain-checklist.md"
       ],
-      "verified_via": "kolzchut page text read through the site MediaWiki API in a browser; snippet replaced with verbatim page text (the previous value was a generated summary)",
-      "verified_at": "2026-08-15"
+      "verified_via": "rendered in headed Chrome (Playwright) 2026-10-07; URL line asserted; snippet found in page innerText; the page links 'למערכת לפתיחת תיק להחזר מס' to https://secapp.taxes.gov.il/srbksOpentik/#/mainPage",
+      "verified_at": "2026-10-06T21:56:13Z"
     },
     {
       "claim_id": "tiyum-mas-prospective",
@@ -313,7 +313,9 @@
         "SKILL.md",
         "SKILL_HE.md",
         "references/document-requirements.md"
-      ]
+      ],
+      "verified_via": "rendered in headed Chrome (Playwright) 2026-10-07 (Cloudflare blocks curl); URL line asserted; snippet found verbatim in page innerText",
+      "verified_at": "2026-10-06T21:57:49Z"
     },
     {
       "claim_id": "btl-under-withholding-salary-refund-origin",
@@ -387,16 +389,18 @@
     },
     {
       "claim_id": "section-44-institution-credit-2026",
-      "claim": "Section 44 ITO: credit of 35% of the amount paid for a relative's institutional care above 12.5% of the applicant's income, provided the disabled relative's annual taxable income is under 188,000 NIS (single) or 301,000 NIS (couple) in 2026. Filed on Form 116.",
-      "source_url": "https://www.kolzchut.org.il/en/Income_Tax_Credit_for_a_Parent_or_Spouse_Living_in_an_Institution",
-      "raw_snippet": "הזיכוי הוא בשיעור 35% מההפרש בין הסכום ששולם עבור שהיית הקרוב במוסד, לבין 12.5% מההכנסה של המבקש. הזיכוי מותנה בכך שההכנסה השנתית החייבת במס של הקרוב עם המוגבלות היא עד 188,000 ₪ או עד 301,000 ₪ לבני הזוג (נכון לשנת 2026). יש למלא טופס 116.",
-      "fetched_at": "2026-07-06T00:00:00Z",
+      "claim": "Section 44 ITO: credit of 35% of the amount paid for a relative's institutional care above 12.5% of the applicant's taxable income; the relative's income limit is 188,000 NIS (301,000 NIS for a couple). Claimed by employees on Form 116א.",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%96%D7%99%D7%9B%D7%95%D7%99_%D7%91%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94_%D7%A2%D7%91%D7%95%D7%A8_%D7%94%D7%97%D7%96%D7%A7%D7%AA_%D7%94%D7%95%D7%A8%D7%94_%D7%90%D7%95_%D7%91%D7%9F_%D7%96%D7%95%D7%92_%D7%91%D7%9E%D7%95%D7%A1%D7%93",
+      "raw_snippet": "הזיכוי הוא בגובה 35% מההפרש בין הסכום ששילמו עבור החזקת הקרוב במוסד, לבין 12.5% מהכנסתם החייבת במס.",
+      "fetched_at": "2026-10-06T21:56:13Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/document-requirements.md",
         "references/domain-checklist.md"
-      ]
+      ],
+      "verified_via": "rendered in headed Chrome (Playwright) 2026-10-07; URL line asserted; snippet found in page innerText",
+      "verified_at": "2026-10-06T21:56:13Z"
     },
     {
       "claim": "The Israel Tax Authority monthly deductions booklet for tax year 2021 sets the value of an income-tax credit point at 218 NIS per month (2,616 NIS a year, i.e. 12 x 218).",
@@ -459,7 +463,7 @@
       "fetched_at": "2026-08-11T00:00:00Z"
     },
     {
-      "claim": "Monthly tax brackets and the 219 NIS credit point for tax year 2020 come from a secondary source because the Israel Tax Authority no longer serves the 2020 deductions booklet; the estimator flags 2020 results as secondary-sourced.",
+      "claim": "Monthly tax brackets for tax year 2020 come from a secondary source (Kol Zchut past-data page) because the Israel Tax Authority no longer serves the 2020 deductions booklet; the estimator flags 2020 results as secondary-sourced. The 2020 credit-point value is sourced separately (credit-point-2020-219).",
       "claim_type": "rate",
       "source_url": "https://www.kolzchut.org.il/he/מדרגות_מס_הכנסה_-_נתוני_עבר",
       "raw_snippet": "מדרגות המס להכנסה מיגיעה אישית לשנת 2020",
@@ -468,7 +472,9 @@
         "scripts/estimate_refund.py"
       ],
       "claim_id": "historical-brackets-2020-secondary",
-      "fetched_at": "2026-08-01T00:00:00Z"
+      "fetched_at": "2026-08-01T00:00:00Z",
+      "verified_via": "rendered in headed Chrome (Playwright) 2026-10-07 (Cloudflare blocks curl); URL line asserted; snippet found verbatim in page innerText",
+      "verified_at": "2026-10-06T21:57:49Z"
     },
     {
       "claim": "From tax year 2025 the Economic Efficiency Law published on 26 December 2024 adds a further 2% surtax, on top of the tax fixed in Section 121B(a), on taxable income from capital sources above the amount fixed in that section. Section 121B(a) itself charges 3% above 721,560 NIS. No such capital-source addition existed for 2020-2024.",
@@ -556,15 +562,17 @@
     },
     {
       "claim_id": "btl-site-root",
-      "claim": "The Bituach Leumi site at https://www.btl.gov.il is the National Insurance Institute's portal, referenced in this skill for ordering annual certificates and for the earned-income grant.",
+      "claim": "The Bituach Leumi site at https://www.btl.gov.il is the National Insurance Institute's portal, referenced in this skill for ordering annual benefit confirmations.",
       "source_url": "https://www.btl.gov.il",
-      "raw_snippet": "הביטוח הלאומי מלווה אותך במהלך חייך, מלידה ועד שיבה טובה, ומעניק לך מגוון זכויות סוציאליות המותאמות למצבים המשתנים במהלך החיים.",
-      "fetched_at": "2026-05-18T00:00:00Z",
+      "raw_snippet": "לצידך ברגעים החשובים של החיים",
+      "fetched_at": "2026-10-06T21:56:13Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/document-requirements.md"
-      ]
+      ],
+      "verified_via": "rendered in headed Chrome (Playwright) 2026-10-07; URL line asserted; snippet found in page innerText",
+      "verified_at": "2026-10-06T21:56:13Z"
     },
     {
       "claim_id": "section-47-employment-5-percent",
@@ -619,10 +627,10 @@
       "claim_id": "ref-link-bshcpa-annual-return",
       "claim": "Further-reading pointer on the annual-return obligation for salaried employees.",
       "source_url": "https://www.bshcpa.co.il/%D7%93%D7%95%D7%97-%D7%A9%D7%A0%D7%AA%D7%99-%D7%A9%D7%9B%D7%99%D7%A8/",
-      "raw_snippet": "דוח שנתי לשכיר 2025: המדריך המלא לחובות דיווח והחזרי מס",
-      "fetched_at": "2026-08-15",
-      "verified_via": "playwright navigation (page title read); cited only as a further-reading pointer, not as the source of any figure",
-      "verified_at": "2026-08-15",
+      "raw_snippet": "דוח שנתי לשכיר 2025: חובות דיווח ומיצוי זכויות",
+      "fetched_at": "2026-10-06T21:56:13Z",
+      "verified_via": "rendered in headed Chrome (Playwright) 2026-10-07; URL line asserted; snippet found in page innerText",
+      "verified_at": "2026-10-06T21:56:13Z",
       "appears_in": [
         "SKILL.md",
         "references/domain-checklist.md"
@@ -680,12 +688,12 @@
     },
     {
       "claim_id": "ref-itc135-service",
-      "claim": "Refund request via the short return, Form 135 (טופס 135), on the Tax Authority online service. Form 135 sits alongside Form 101 (טופס 101), Form 161 (טופס 161) and Form 3010 (טופס 3010) in the refund process.",
+      "claim": "The ITA Form 135 (טופס 135) service page, בקשה להחזר מס, lists the attachments for a refund request, including a copy of Form 161 for anyone who left a workplace.",
       "source_url": "https://www.gov.il/he/service/itc135",
-      "raw_snippet": "בקשה להחזר מס - דו",
-      "fetched_at": "2026-08-15",
-      "verified_via": "gov.il content API (page title)",
-      "verified_at": "2026-08-15",
+      "raw_snippet": "למי שפרשו ממקום העבודה - העתק מטופס 161.",
+      "fetched_at": "2026-10-06T21:56:13Z",
+      "verified_via": "rendered in headed Chrome (Playwright) 2026-10-07; URL line asserted; snippet found in page innerText",
+      "verified_at": "2026-10-06T21:56:13Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
@@ -708,12 +716,12 @@
     },
     {
       "claim_id": "ref-secapp-taxes",
-      "claim": "מערכת השירותים המקוונים המאובטחת של רשות המסים, שדרכה מוגשת הבקשה.",
-      "source_url": "https://secapp.taxes.gov.il",
-      "raw_snippet": "secapp.taxes.gov.il",
-      "fetched_at": "2026-08-15",
-      "verified_via": "curl with a browser user agent (HTTP 200; the app serves no title tag)",
-      "verified_at": "2026-08-15",
+      "claim": "secapp.taxes.gov.il/srbksOpentik is the ITA system for opening a refund-only file, reached from the Form 135 service page.",
+      "source_url": "https://www.gov.il/he/service/itc135",
+      "raw_snippet": "למעבר למערכת לפתיחת תיק להחזר מס",
+      "fetched_at": "2026-10-06T21:56:13Z",
+      "verified_via": "rendered in headed Chrome (Playwright) 2026-10-07; URL line asserted; snippet found in page innerText; link href resolves to https://secapp.taxes.gov.il/srbksOpentik/#/mainPage",
+      "verified_at": "2026-10-06T21:56:13Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
@@ -1708,6 +1716,497 @@
       "appears_in": [
         "references/document-requirements.md"
       ]
+    },
+    {
+      "claim_id": "s39b-combat-schedule-ita",
+      "claim": "Section 39B points are for COMBAT reserve service in the previous tax year: 0.5 point for 30-39 days, 0.75 for 40-49, 1 for 50+, plus 0.25 per further 5 days beyond 50, capped at 4 points; 2026 point value 2,904 NIS",
+      "source_url": "https://www.gov.il/he/pages/sa181225-2",
+      "raw_snippet": "יחיד ששירת שירות מילואים כלוחם בשנת המס הקודמת יובאו בחשבון 0.5 נקודת זיכוי אם שירת לפחות 30 יום ועד 39 ימים, 0.75 נקודת זיכוי אם שירת בין 40 ל49 ימים, ונקודת זיכוי אחת אם שירת 50 ימים ומעלה",
+      "fetched_at": "2026-10-04",
+      "verified_via": "rendered in headed Chrome (Playwright); location.href asserted; snippet found verbatim in page innerText (non-breaking spaces normalised)",
+      "verified_at": "2026-10-04",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md",
+        "references/domain-checklist.md",
+        "scripts/estimate_refund.py"
+      ]
+    },
+    {
+      "claim_id": "s39b-effective-2026-temporary-order",
+      "claim": "Section 39B points take effect from 1 January 2026, as a two-year temporary order covering tax years 2026 and 2027, so no Section 39B points exist for tax year 2025 or earlier",
+      "source_url": "https://www.gov.il/he/pages/sa181225-2",
+      "raw_snippet": "במסגרת החוק נקבעה הוראת שעה למשך שנתיים, לתקופה שמתחילה ב-1 בינואר 2026 עד יום 31 בדצמבר 2027",
+      "fetched_at": "2026-10-04",
+      "verified_via": "rendered in headed Chrome (Playwright); location.href asserted; snippet found verbatim in page innerText (non-breaking spaces normalised)",
+      "verified_at": "2026-10-04",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md",
+        "references/domain-checklist.md",
+        "references/document-requirements.md",
+        "scripts/estimate_refund.py"
+      ]
+    },
+    {
+      "claim_id": "s39b-announcement-date",
+      "claim": "ITA announcement of the Section 39B reservist points published 18.12.2025",
+      "source_url": "https://www.gov.il/he/pages/sa181225-2",
+      "raw_snippet": "תאריך פרסום: 18.12.2025",
+      "fetched_at": "2026-10-04",
+      "verified_via": "rendered in headed Chrome (Playwright); location.href asserted; snippet found verbatim in page innerText (non-breaking spaces normalised)",
+      "verified_at": "2026-10-04",
+      "appears_in": [
+        "references/2026-rates.md"
+      ]
+    },
+    {
+      "claim_id": "s39b-form-101-part-8",
+      "claim": "Salaried reservists claim Section 39B points prospectively on Form 101 part ח section 16 with the IDF confirmation of combat service",
+      "source_url": "https://www.gov.il/he/pages/sa181225-2",
+      "raw_snippet": "שכירים – לדווח בטופס 101 בתחילת שנת המס (חלק ח', סעיף 16) בצירוף האישור",
+      "fetched_at": "2026-10-04",
+      "verified_via": "rendered in headed Chrome (Playwright); location.href asserted; snippet found verbatim in page innerText (non-breaking spaces normalised)",
+      "verified_at": "2026-10-04",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "s39b-idf-combat-confirmation",
+      "claim": "The document required is an IDF confirmation of combat reserve service and the number of days served in the previous year",
+      "source_url": "https://www.gov.il/he/pages/sa181225-2",
+      "raw_snippet": "לקבל אישור מצה\"ל המעיד על שירות מילואים כלוחם ועל מספר ימי השירות שבוצעו בשנה החולפת",
+      "fetched_at": "2026-10-04",
+      "verified_via": "rendered in headed Chrome (Playwright); location.href asserted; snippet found verbatim in page innerText (non-breaking spaces normalised)",
+      "verified_at": "2026-10-04",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/document-requirements.md"
+      ]
+    },
+    {
+      "claim_id": "s39b-from-2028-20-days",
+      "claim": "From tax year 2028 the Section 39B minimum drops to 20 days of service in the previous year, earning 0.75 point, plus 0.25 per further 5 days, up to 4 points",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%A0%D7%A7%D7%95%D7%93%D7%95%D7%AA_%D7%96%D7%99%D7%9B%D7%95%D7%99_%D7%9E%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94_%D7%9C%D7%9C%D7%95%D7%97%D7%9E%D7%99_%D7%9E%D7%99%D7%9C%D7%95%D7%90%D7%99%D7%9D",
+      "raw_snippet": "משנת המס 2028 מי ששירתו 20 ימים בשנה הקודמת יקבלו 0.75 נקודת זיכוי, ועל כל 5 ימים נוספים יקבלו עוד 0.25 נקודת זיכוי, עד ל-4 נקודות זיכוי בסך הכל",
+      "fetched_at": "2026-10-04",
+      "verified_via": "kolzchut page wikitext read through the site MediaWiki API in headed Chrome (Cloudflare blocks curl); snippet found verbatim",
+      "verified_at": "2026-10-04",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md",
+        "references/domain-checklist.md",
+        "scripts/estimate_refund.py"
+      ]
+    },
+    {
+      "claim_id": "yishuv-credit-is-pct-of-income",
+      "claim": "The yishuv mutav credit is the locality rate times earned income up to the ceiling (11% of 168,000 = 18,480 NIS), deducted from the tax",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%96%D7%99%D7%9B%D7%95%D7%99_%D7%9E%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94_%D7%9C%D7%AA%D7%95%D7%A9%D7%91%D7%99%D7%9D_%D7%91%D7%A4%D7%A8%D7%99%D7%A4%D7%A8%D7%99%D7%94",
+      "raw_snippet": "הכנסתו מעבודה עלתה על התקרה ולכן הוא קיבל זיכוי של 11% מ-168,000 ₪, שהם 18,480 ₪",
+      "fetched_at": "2026-10-04",
+      "verified_via": "kolzchut page wikitext read through the site MediaWiki API in headed Chrome (Cloudflare blocks curl); snippet found verbatim",
+      "verified_at": "2026-10-04",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md",
+        "scripts/estimate_refund.py"
+      ]
+    },
+    {
+      "claim_id": "yishuv-credit-floors-at-zero",
+      "claim": "When the yishuv credit (18% of 222,000 = 39,960 NIS) exceeds the tax, the tax due is 0; the credit does not create a negative tax",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%96%D7%99%D7%9B%D7%95%D7%99_%D7%9E%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94_%D7%9C%D7%AA%D7%95%D7%A9%D7%91%D7%99%D7%9D_%D7%91%D7%A4%D7%A8%D7%99%D7%A4%D7%A8%D7%99%D7%94",
+      "raw_snippet": "מכיוון שגובה הזיכוי היה גבוה מסכום המס המקורי, סכום המס שהעובד נדרש לשלם היה 0 ₪",
+      "fetched_at": "2026-10-04",
+      "verified_via": "kolzchut page wikitext read through the site MediaWiki API in headed Chrome (Cloudflare blocks curl); snippet found verbatim",
+      "verified_at": "2026-10-04",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md",
+        "scripts/estimate_refund.py"
+      ]
+    },
+    {
+      "claim_id": "yishuv-example-18pct-222000",
+      "claim": "Kol Zchut second worked example: 18% of 222,000 NIS is a 39,960 NIS credit",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%96%D7%99%D7%9B%D7%95%D7%99_%D7%9E%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94_%D7%9C%D7%AA%D7%95%D7%A9%D7%91%D7%99%D7%9D_%D7%91%D7%A4%D7%A8%D7%99%D7%A4%D7%A8%D7%99%D7%94",
+      "raw_snippet": "קיבל זיכוי בסך 18% מ-222,000 ₪, שהם 39,960 ₪",
+      "fetched_at": "2026-10-04",
+      "verified_via": "kolzchut page wikitext read through the site MediaWiki API in headed Chrome (Cloudflare blocks curl); snippet found verbatim",
+      "verified_at": "2026-10-04",
+      "appears_in": [
+        "references/2026-rates.md"
+      ]
+    },
+    {
+      "claim_id": "form135-online-refund-file",
+      "claim": "The online route opens a refund-only file at secapp.taxes.gov.il/srbksOpentik (linked from gov.il/he/service/itc135), not an active income-tax file, and documents are uploaded",
+      "source_url": "https://www.gov.il/he/service/itc135",
+      "raw_snippet": "פתיחת תיק במערכת המחשב לצורך הגשת בקשה להחזר מס (פעולה זו אינה פותחת תיק פעיל במס הכנסה, אלא מאפשרת קליטת בקשות להחזרי מס בלבד)",
+      "fetched_at": "2026-10-04",
+      "verified_via": "rendered in headed Chrome (Playwright); location.href asserted; snippet found verbatim in page innerText (non-breaking spaces normalised); the page's 'להגשת הבקשה' link resolves to https://secapp.taxes.gov.il/srbksOpentik/#/mainPage",
+      "verified_at": "2026-10-04",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "form135-manual-public-inquiries",
+      "claim": "A printed Form 135 can be submitted through the ITA public-inquiries system (go.gov.il/InfoCenter) or physically at a tax office service point, keeping a stamped copy",
+      "source_url": "https://www.gov.il/he/service/itc135",
+      "raw_snippet": "ניתן להגיש את הבקשה להחזר מס ואת המסמכים הרלוונטיים, באמצעות מערכת פניות לציבור.",
+      "fetched_at": "2026-10-04",
+      "verified_via": "rendered in headed Chrome (Playwright); location.href asserted; snippet found verbatim in page innerText (non-breaking spaces normalised); the 'מערכת פניות לציבור' link resolves to https://go.gov.il/InfoCenter",
+      "verified_at": "2026-10-04",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "form135-couple-one-form",
+      "claim": "Spouses filing a refund request enter both spouses' incomes on the same form",
+      "source_url": "https://www.gov.il/he/service/itc135",
+      "raw_snippet": "אם מדובר בבני זוג המגישים את הבקשה להחזר מס, יש למלא את ההכנסות של שני בני הזוג באותו הטופס.",
+      "fetched_at": "2026-10-04",
+      "verified_via": "rendered in headed Chrome (Playwright); location.href asserted; snippet found verbatim in page innerText (non-breaking spaces normalised)",
+      "verified_at": "2026-10-04",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "form135-six-years-2020-2025",
+      "claim": "In 2026 a refund request can be filed for tax years 2020-2025; 2020 closes 31.12.2026",
+      "source_url": "https://www.gov.il/he/service/itc135",
+      "raw_snippet": "לדוגמה: בשנת 2026 ניתן להגיש בקשה להחזר מס בגין השנים 2020-2025.",
+      "fetched_at": "2026-10-04",
+      "verified_via": "rendered in headed Chrome (Playwright); location.href asserted; snippet found verbatim in page innerText (non-breaking spaces normalised)",
+      "verified_at": "2026-10-04",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md"
+      ]
+    },
+    {
+      "claim_id": "tax-brackets-2026-booklet",
+      "claim": "2026 brackets after the bracket-widening law: 10% to 7,010/month (84,120/yr), 14% to 10,060 (120,720), 20% to 19,000 (228,000), 31% to 25,100 (301,200), 35% to 46,690 (560,280), 47% above",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf",
+      "raw_snippet": "להלן שיעורי המס לשנת 2026 (לאחר חוק ריווח מדרגות מס הכנסה)",
+      "fetched_at": "2026-10-04",
+      "verified_via": "pdf: ITA 2026 deductions booklet, chapter ב table read via pdftotext -layout on 2026-10-04 (rows 10%/84,120, 14%/120,720, 20%/19,000/228,000, 31%/25,100/301,200, 35%/46,690/560,280, 47%)",
+      "verified_at": "2026-10-04",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md",
+        "scripts/estimate_refund.py"
+      ]
+    },
+    {
+      "claim_id": "s39b-effective-1-jan-2026-section-ref",
+      "claim": "Combat reservists' credit points under סעיף 39ב take effect from 1 January 2026",
+      "source_url": "https://www.gov.il/he/pages/sa181225-2",
+      "raw_snippet": "רשות המסים מודיעה כי משרתי מילואים לוחמים יהיו זכאים למתן נקודות זיכוי שייכנסו לתוקף החל מ-1 בינואר 2026 בהתאם לסעיף 39ב לפקודת מס הכנסה.",
+      "fetched_at": "2026-10-04",
+      "verified_via": "rendered in headed Chrome (Playwright); location.href asserted; snippet found in page innerText after collapsing a double space",
+      "verified_at": "2026-10-04",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "form101-part-8-credit-claims",
+      "claim": "Credit-point and exemption entitlements are claimed in part (section) ח of Form 101, not part ז",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%98%D7%95%D7%A4%D7%A1_101",
+      "raw_snippet": "בסעיף ח' יש לסמן ב- √ את משבצת מס' 10",
+      "fetched_at": "2026-10-06T21:37:06Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md",
+        "references/domain-checklist.md"
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-10-06T21:37:06Z"
+    },
+    {
+      "claim_id": "s66a1-separate-computation-salary",
+      "claim": "Section 66(a)(1) ITO lets the non-registered spouse claim a separate tax computation on income from personal exertion including salary (סעיף 66(א)(1) לפקודה)",
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "raw_snippet": "רשאי בן זוג שאיננו בן זוג רשום לתבוע כי ייעשה חישוב נפרד של המס על הכנסתו מיגיעה אישית בעסק או משלח יד או מעבודה",
+      "fetched_at": "2026-10-06T21:37:06Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "scripts/estimate_refund.py"
+      ]
+    },
+    {
+      "claim_id": "s66c1-credit-points-each-spouse",
+      "claim": "Under Section 66(c)(1) ITO, in a separate computation each spouse gets their own deductions, credits and credit points (ss.34, 35, 36, 45A, 47) plus the s.10 and s.11 benefits (סעיף 66(ג)(1) לפקודה)",
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "raw_snippet": "הזכאות לניכויים, לזיכויים ולנקודות זיכוי לפי סעיפים 34, 35, 36, 45א, 47, 47א ו-121א, ההטבה במס על פי סעיף 10 וההנחה במס על פי סעיף 11 יהיו לכל אחד מבני הזוג",
+      "fetched_at": "2026-10-06T21:37:06Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "scripts/estimate_refund.py"
+      ]
+    },
+    {
+      "claim_id": "section-44-income-limit-188000",
+      "claim": "Section 44 institution credit: the relative's annual income must not exceed 188,000 NIS (301,000 NIS for a couple), stated for 2024-2027",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%96%D7%99%D7%9B%D7%95%D7%99_%D7%91%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94_%D7%A2%D7%91%D7%95%D7%A8_%D7%94%D7%97%D7%96%D7%A7%D7%AA_%D7%94%D7%95%D7%A8%D7%94_%D7%90%D7%95_%D7%91%D7%9F_%D7%96%D7%95%D7%92_%D7%91%D7%9E%D7%95%D7%A1%D7%93",
+      "raw_snippet": "הכנסותיהם לא עלו על 188,000 ₪ בשנה (נכון לשנים 2027-2024)",
+      "fetched_at": "2026-10-06T21:56:13Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "verified_via": "rendered in headed Chrome (Playwright) 2026-10-07; URL line asserted; snippet found in page innerText",
+      "verified_at": "2026-10-06T21:56:13Z"
+    },
+    {
+      "claim_id": "form-116a-institution",
+      "claim": "The ITA Form 135 page requires Form 116א for both the disabled-child credit and the institution-care credit",
+      "source_url": "https://www.gov.il/he/service/itc135",
+      "raw_snippet": "זיכוי בשל תשלומים להחזקת קרוב במוסד - יש לצרף טופס 116א וקבלות על פי המפורט בדף השירות.",
+      "fetched_at": "2026-10-06T21:56:13Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/document-requirements.md"
+      ],
+      "verified_via": "rendered in headed Chrome (Playwright) 2026-10-07; URL line asserted; snippet found in page innerText",
+      "verified_at": "2026-10-06T21:56:13Z"
+    },
+    {
+      "claim_id": "credit-point-2020-219",
+      "claim": "The 2020 credit point was worth 219 NIS a month, 2,628 NIS a year (used by the estimator for tax year 2020)",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%A0%D7%A7%D7%95%D7%93%D7%AA_%D7%96%D7%99%D7%9B%D7%95%D7%99",
+      "raw_snippet": "2020\t2,628 ₪\t219 ₪",
+      "fetched_at": "2026-10-06T21:56:13Z",
+      "appears_in": [
+        "scripts/estimate_refund.py"
+      ],
+      "verified_via": "rendered in headed Chrome (Playwright) 2026-10-07; URL line asserted; snippet found in page innerText",
+      "verified_at": "2026-10-06T21:56:13Z"
+    },
+    {
+      "claim_id": "form161-attachment-on-leaving",
+      "claim": "The ITA lists a copy of Form 161 as a routine Form 135 attachment for anyone who left a workplace, so an ordinary departure stays on the Form 135 track",
+      "source_url": "https://www.gov.il/he/service/itc135",
+      "raw_snippet": "למי שפרשו ממקום העבודה - העתק מטופס 161.",
+      "fetched_at": "2026-10-06T21:56:13Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/document-requirements.md"
+      ],
+      "verified_via": "rendered in headed Chrome (Playwright) 2026-10-07; URL line asserted; snippet found in page innerText",
+      "verified_at": "2026-10-06T21:56:13Z"
+    },
+    {
+      "claim_id": "form1312a-yishuv",
+      "claim": "A yishuv mutav claim on Form 135 needs the local-authority residence confirmation plus Form 1312א",
+      "source_url": "https://www.gov.il/he/service/itc135",
+      "raw_snippet": "למבקשים זיכוי ממס בשל מקום מגורים ומרכז חיים - אישור מהרשות המקומית על המגורים ביישוב. יש לצרף טופס 1312א.",
+      "fetched_at": "2026-10-06T21:56:13Z",
+      "appears_in": [
+        "SKILL_HE.md",
+        "references/document-requirements.md"
+      ],
+      "verified_via": "rendered in headed Chrome (Playwright) 2026-10-07; URL line asserted; snippet found in page innerText",
+      "verified_at": "2026-10-06T21:56:13Z"
+    },
+    {
+      "claim_id": "spouse-income-documents",
+      "claim": "A refund request attaches income confirmations for the applicant and the spouse from all sources",
+      "source_url": "https://www.gov.il/he/service/itc135",
+      "raw_snippet": "אישורים על הכנסות מגישי הבקשה והכנסות בן או בת הזוג מכל המקורות",
+      "fetched_at": "2026-10-06T21:56:13Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/document-requirements.md"
+      ],
+      "verified_via": "rendered in headed Chrome (Playwright) 2026-10-07; URL line asserted; snippet found in page innerText",
+      "verified_at": "2026-10-06T21:56:13Z"
+    },
+    {
+      "claim_id": "registered-spouse-declaration",
+      "claim": "Married couples choose a registered spouse and attach a declaration of that choice",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%94%D7%97%D7%96%D7%A8_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
+      "raw_snippet": "זוגות נשואים צריכים לבחור אחד מהם כבן הזוג הרשום (שייצג את שניהם מול רשות המיסים) - יש לצרף הצהרה בדבר בחירת בן זוג רשום.",
+      "fetched_at": "2026-10-06T21:56:13Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/document-requirements.md"
+      ],
+      "verified_via": "rendered in headed Chrome (Playwright) 2026-10-07; URL line asserted; snippet found in page innerText",
+      "verified_at": "2026-10-06T21:56:13Z"
+    },
+    {
+      "claim_id": "separate-request-per-year",
+      "claim": "A refund for more than one tax year needs a separate request for each year, with that year's documents",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%94%D7%97%D7%96%D7%A8_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
+      "raw_snippet": "מי שמבקשים החזר מס עבור יותר משנת מס אחת צריכים להגיש בקשה נפרדת להחזר עבור כל אחת מהשנים, ולצרף אליה את האישורים הרלוונטיים לאותה שנה.",
+      "fetched_at": "2026-10-06T21:56:13Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "verified_via": "rendered in headed Chrome (Playwright) 2026-10-07; URL line asserted; snippet found in page innerText",
+      "verified_at": "2026-10-06T21:56:13Z"
+    },
+    {
+      "claim_id": "s160a-linkage-interest-every-refund",
+      "claim": "Section 160(a): every refund is paid with linkage differences and interest from the end of the tax year (or the payment date, if later) until the refund date",
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "raw_snippet": "שיוחזר לו תשלום היתר בתוספת הפרשי הצמדה וריבית כמשמעותם בסעיף 159א(א) מתום שנת המס שלגביה הוגש הדו\"ח או מיום התשלום, לפי המאוחר, ועד ליום ההחזר",
+      "fetched_at": "2026-10-06T21:56:13Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "refund-interest-4pct",
+      "claim": "Linkage plus 4% annual interest is added to an income-tax refund",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%94%D7%97%D7%96%D7%A8_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
+      "raw_snippet": "להחזר המס מתווספים הפרשי הצמדה וריבית של 4% לשנה.",
+      "fetched_at": "2026-10-06T21:56:13Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "verified_via": "rendered in headed Chrome (Playwright) 2026-10-07; URL line asserted; snippet found in page innerText",
+      "verified_at": "2026-10-06T21:56:13Z"
+    },
+    {
+      "claim_id": "credit-points-floor-zero",
+      "claim": "Credit points reduce income tax at most down to zero",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%A0%D7%A7%D7%95%D7%93%D7%AA_%D7%96%D7%99%D7%9B%D7%95%D7%99",
+      "raw_snippet": "נקודות זיכוי מקטינות את גובה מס ההכנסה שצריכים לשלם, ולכל היותר עד למצב שבו גובה המס הנדרש הוא אפס.",
+      "fetched_at": "2026-10-06T21:56:13Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "scripts/estimate_refund.py"
+      ],
+      "verified_via": "rendered in headed Chrome (Playwright) 2026-10-07; URL line asserted; snippet found in page innerText",
+      "verified_at": "2026-10-06T21:56:13Z"
+    },
+    {
+      "claim_id": "employer-in-year-correction",
+      "claim": "While the tax year is open, an employee can have the employer correct the year's tax through the payslip, even after employment ended",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%94%D7%97%D7%96%D7%A8_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
+      "raw_snippet": "ניתן לדרוש זאת מהמעסיק גם אם בינתיים הסתיימה ההעסקה של העובד, וזאת בתנאי ששנת המס טרם הסתיימה",
+      "fetched_at": "2026-10-06T21:56:13Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "verified_via": "rendered in headed Chrome (Playwright) 2026-10-07; URL line asserted; snippet found in page innerText",
+      "verified_at": "2026-10-06T21:56:13Z"
+    },
+    {
+      "claim_id": "s39b-two-employers-tax-coordination",
+      "claim": "A reservist working for two or more employers takes the Section 39B points through online tax coordination",
+      "source_url": "https://www.gov.il/he/pages/sa181225-2",
+      "raw_snippet": "שכיר העובד בשני מקומות או יותר באמצעות תיאום מס במערכת המקוונת לתיאומי המס.",
+      "fetched_at": "2026-10-06T21:56:13Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "verified_via": "rendered in headed Chrome (Playwright) 2026-10-07; URL line asserted; snippet found in page innerText",
+      "verified_at": "2026-10-06T21:56:13Z"
+    },
+    {
+      "claim_id": "srbks-opentik-login",
+      "claim": "https://secapp.taxes.gov.il/srbksOpentik/ is the online refund-only file system; it redirects to the ITA digital-services login (identity number plus permanent user code or smart card)",
+      "source_url": "https://secapp.taxes.gov.il/srbksOpentik/",
+      "raw_snippet": "כניסה לשירותי הדיגיטל",
+      "fetched_at": "2026-10-06T21:56:47Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "metadata.json"
+      ],
+      "verified_via": "rendered in headed Chrome (Playwright) 2026-10-07; final URL https://secapp.taxes.gov.il/taxes-login/login/general (login wall); the itc135 page links this system as 'למערכת לפתיחת תיק להחזר מס'",
+      "verified_at": "2026-10-06T21:56:47Z"
+    },
+    {
+      "claim_id": "maanak-avoda-paid-by-ita",
+      "claim": "מענק עבודה (negative income tax) is paid by the Tax Authority, not Bituach Leumi",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%9E%D7%A2%D7%A0%D7%A7_%D7%A2%D7%91%D7%95%D7%93%D7%94_(%D7%9E%D7%A2%D7%A0%D7%A7_%D7%94%D7%9B%D7%A0%D7%A1%D7%94,_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94_%D7%A9%D7%9C%D7%99%D7%9C%D7%99)",
+      "raw_snippet": "רשות המסים משלמת מענק עבודה",
+      "fetched_at": "2026-10-06T22:06:28Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "verified_via": "rendered in headed Chrome (Playwright) 2026-10-07 by the round-2 judge; URL line asserted; snippet found verbatim",
+      "verified_at": "2026-10-06T22:06:28Z"
+    },
+    {
+      "claim_id": "maanak-avoda-online-claim",
+      "claim": "The מענק עבודה claim is filed online through the Tax Authority site",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%9E%D7%A2%D7%A0%D7%A7_%D7%A2%D7%91%D7%95%D7%93%D7%94_(%D7%9E%D7%A2%D7%A0%D7%A7_%D7%94%D7%9B%D7%A0%D7%A1%D7%94,_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94_%D7%A9%D7%9C%D7%99%D7%9C%D7%99)",
+      "raw_snippet": "אפשר להגיש תביעה מקוונת באמצעות אתר רשות המסים.",
+      "fetched_at": "2026-10-06T22:06:28Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "verified_via": "rendered in headed Chrome (Playwright) 2026-10-07 by the round-2 judge; URL line asserted; snippet found verbatim",
+      "verified_at": "2026-10-06T22:06:28Z"
+    },
+    {
+      "claim_id": "ita-login-permanent-code",
+      "claim": "The ITA digital-services login used by the refund system takes an ID number plus a permanent user code, or a smart card",
+      "source_url": "https://secapp.taxes.gov.il/srbksOpentik/",
+      "raw_snippet": "קוד משתמש קבוע",
+      "fetched_at": "2026-10-06T22:08:08Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "verified_via": "rendered in headed Chrome (Playwright) 2026-10-07; final URL https://secapp.taxes.gov.il/taxes-login/login/general; snippet found verbatim",
+      "verified_at": "2026-10-06T22:08:08Z"
+    },
+    {
+      "claim_id": "ita-login-register-new-code",
+      "claim": "Users can register or issue a new permanent code on the ITA login page",
+      "source_url": "https://secapp.taxes.gov.il/srbksOpentik/",
+      "raw_snippet": "הרשמה או הפקת קוד קבוע חדש",
+      "fetched_at": "2026-10-06T22:08:08Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "verified_via": "rendered in headed Chrome (Playwright) 2026-10-07; final URL https://secapp.taxes.gov.il/taxes-login/login/general; snippet found verbatim",
+      "verified_at": "2026-10-06T22:08:08Z"
     }
   ]
 }

@@ -70,6 +70,11 @@ SUPPORTED_YEARS = sorted(BRACKETS_BY_YEAR_MONTHLY)
 # The ITA no longer serves the 2020 and 2021 booklets, so those two years are deliberately absent:
 # the estimator warns and declines to disqualify rather than guessing a minimum.
 SECTION_46_CREDIT_RATE = 0.35
+
+# Section 39B (Amendment 283): COMBAT reserve service only, points in the tax year after the
+# service. The 30/40/50-day schedule is a temporary order for tax years 2026 and 2027.
+MILUIM_FIRST_TAX_YEAR = 2026
+MILUIM_LAST_SCHEDULE_YEAR = 2027
 SECTION_46_MIN_BY_YEAR = {2022: 190, 2023: 200, 2024: 207, 2025: 207, 2026: 207}
 SECTION_46_CEILING_BY_YEAR = {
     2022: 9517000, 2023: 10019808, 2024: 10354816, 2025: 10354816, 2026: 10354816,
@@ -145,6 +150,12 @@ def estimate(
 
     gross_tax = annual_tax_under_brackets(salary_annual, BRACKETS_BY_YEAR_MONTHLY[year])
     gross_tax += surtax(salary_annual, year)
+    if surtax(salary_annual, year) > 0:
+        notes.append(
+            "Income is above the mas yesafim threshold. Check whether this year carries a Form 1301 "
+            "filing obligation; if it does, the refund belongs inside Form 1301 (israeli-tax-returns), "
+            "not Form 135."
+        )
 
     total_points = points + miluim_points_bonus
     credit_value = total_points * CREDIT_POINT_ANNUAL_BY_YEAR[year]
@@ -180,22 +191,21 @@ def estimate(
             "resident silently understates the refund."
         )
     if yishuv_pct > 0:
-        # The locality ceiling caps the INCOME the credit applies to, not the credit amount.
-        # Compute tax on income up to the ceiling, then take the percentage of that.
+        # Section 11 credit = the locality's rate x earned INCOME up to the locality ceiling
+        # (Kol Zchut worked example: 11% x 168,000 = 18,480 NIS). It is a percentage of
+        # income, not of tax; the max(0, ...) below stops it taking the tax under zero.
         if yishuv_ceiling and yishuv_ceiling > 0:
             capped_income = min(salary_annual, yishuv_ceiling)
-            tax_on_capped = annual_tax_under_brackets(capped_income, BRACKETS_BY_YEAR_MONTHLY[year])
-            base_for_yishuv = max(0.0, tax_on_capped - credit_value - donation_credit)
-            yishuv_credit = base_for_yishuv * (yishuv_pct / 100.0)
+            yishuv_credit = capped_income * (yishuv_pct / 100.0)
             if salary_annual > yishuv_ceiling:
                 notes.append(
-                    f"Yishuv mutav credit applied to tax on income up to the locality ceiling of "
-                    f"{yishuv_ceiling:,.0f} NIS, not to the full {salary_annual:,.0f} NIS."
+                    f"Yishuv mutav credit computed on income up to the locality ceiling of "
+                    f"{yishuv_ceiling:,.0f} NIS, not on the full {salary_annual:,.0f} NIS."
                 )
         else:
-            yishuv_credit = max(0.0, gross_tax - credit_value - donation_credit) * (yishuv_pct / 100.0)
+            yishuv_credit = salary_annual * (yishuv_pct / 100.0)
             notes.append(
-                "Yishuv mutav credit applied to the WHOLE tax bill because no --yishuv-ceiling was given. "
+                "Yishuv mutav credit applied to the WHOLE salary because no --yishuv-ceiling was given. "
                 "Each locality has its own annual earned-income ceiling; above it the credit does not apply, "
                 "so this OVERSTATES the credit for anyone earning more than their locality's ceiling. "
                 "Look the ceiling up in chapter ח of that year's ITA deductions booklet and pass it."
@@ -219,6 +229,11 @@ def estimate(
         "The Tax Authority's calculation uses month-by-month withholding histories that "
         "this estimator does not see, and may differ."
     )
+    notes.append(
+        "This models ONE taxpayer. For a married couple, run it once per spouse with that spouse's "
+        "own Form 106 figures and credit points (separate computation on salary, Section 66(a)(1) "
+        "and 66(c)(1) ITO); never sum both salaries into one --salary."
+    )
 
     return RefundEstimate(
         tax_due_estimate=tax_due_estimate,
@@ -235,14 +250,30 @@ def main() -> int:
     parser.add_argument("--salary", type=float, required=True, help="Annual taxable salary in NIS (sum across all employers).")
     parser.add_argument("--withheld", type=float, required=True, help="Total tax withheld in NIS (sum of field 042 across all Form 106 documents).")
     parser.add_argument("--points", type=float, default=2.25, help="Base credit points for the year (default 2.25 = Israeli resident male; female resident gets 2.75; add child/oleh/single-parent/Section 39B miluim points separately).")
-    parser.add_argument("--miluim-days", type=int, default=0, help="Reserve duty days served in the prior tax year.")
+    parser.add_argument("--miluim-days", type=int, default=0, help="COMBAT reserve duty days served in the year before --year (Section 39B; counts only for tax year 2026 onward).")
     parser.add_argument("--donations", type=float, default=0.0, help="Total Section 46 donations in NIS.")
     parser.add_argument("--yishuv-pct", type=float, default=0.0, help="Yishuv mutav credit percentage for the locality (0 if not an eligible resident).")
-    parser.add_argument("--yishuv-ceiling", type=float, default=0.0, help="Annual earned-income ceiling for that locality. Without it the credit is applied to the whole tax bill and is overstated for anyone earning above the ceiling.")
+    parser.add_argument("--yishuv-ceiling", type=float, default=0.0, help="Annual earned-income ceiling for that locality. Without it the credit is computed on the whole salary and is overstated for anyone earning above the ceiling.")
     args = parser.parse_args()
 
     miluim_bonus = 0.0
     days = args.miluim_days
+    miluim_note = None
+    if days > 0 and args.year < MILUIM_FIRST_TAX_YEAR:
+        # Section 39B points first apply in tax year 2026 (for 2025 service); there is
+        # nothing to add for an earlier claim year.
+        days = 0
+        miluim_note = (
+            f"Section 39B reserve-duty points start with tax year {MILUIM_FIRST_TAX_YEAR} "
+            f"(for service in {MILUIM_FIRST_TAX_YEAR - 1}); none were added to {args.year}."
+        )
+    elif days > 0 and args.year > MILUIM_LAST_SCHEDULE_YEAR:
+        days = 0
+        miluim_note = (
+            f"The 30-day Section 39B schedule covers tax years {MILUIM_FIRST_TAX_YEAR}-"
+            f"{MILUIM_LAST_SCHEDULE_YEAR} only; from 2028 the minimum drops to 20 days. "
+            "No reserve-duty points were added."
+        )
     if days >= 50:
         miluim_bonus = 1.0 + max(0, (days - 50) // 5) * 0.25
         miluim_bonus = min(miluim_bonus, 4.0)
@@ -271,8 +302,14 @@ def main() -> int:
     print(f"Tax withheld (sum of field 042): {args.withheld:,.0f} ₪")
     print(f"Tax due estimate: {result.tax_due_estimate:,.0f} ₪")
     print(f"Estimated refund range: {result.refund_low:,.0f} - {result.refund_high:,.0f} ₪")
+    if miluim_note:
+        result.notes.insert(0, miluim_note)
     if miluim_bonus > 0:
-        print(f"Reserve duty bonus applied: {miluim_bonus} points = {miluim_bonus * CREDIT_POINT_ANNUAL_BY_YEAR[args.year]:,.0f} ₪")
+        print(
+            f"Reserve duty bonus applied: {miluim_bonus} points, worth up to "
+            f"{miluim_bonus * CREDIT_POINT_ANNUAL_BY_YEAR[args.year]:,.0f} ₪ "
+            "(credit points only reduce tax to zero, so the usable part can be less)"
+        )
     print("\nNotes:")
     for n in result.notes:
         print(f"- {n}")

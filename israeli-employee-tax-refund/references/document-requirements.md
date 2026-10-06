@@ -9,6 +9,7 @@ This is the per-trigger document checklist the skill walks the user through in S
   If the employer will not issue one, has closed, or the year is an old one, do NOT stop: all Form 106s from every employer for the last 6 years can be downloaded from the taxpayer's personal area on the ITA site, and the employer's duty to issue one survives bankruptcy. The employer must hand it over by 31.03 each year, or on the last day of employment if the job ended. Caveat: the ITA-side withholding summary is built from employer reporting and does not reliably carry the keren hishtalmut fields (218 / 219), so where a keren hishtalmut trigger is in play, still chase the original Form 106 or the fund's own certificate before relying on it.
 - תעודת זהות (front + ספח).
 - אישור ניהול חשבון בנק (bank account confirmation) for the refund payout. Issued by the bank, valid for 90 days typically.
+- Married claimants: income confirmations for the spouse from all sources (both incomes go on the same form), plus a declaration choosing the registered spouse (בן זוג רשום).
 
 ## Per-trigger documents
 
@@ -16,6 +17,7 @@ This is the per-trigger document checklist the skill walks the user through in S
 
 - All Form 106 documents for the year, one per employer.
 - If a תיאום מס was filed mid-year, attach the האישור (it reduces the refund but must be disclosed).
+- On leaving a job, a copy of Form 161 (the ITA lists it as a Form 135 attachment for anyone who left a workplace).
 
 ### 2. Partial year / unemployment
 
@@ -25,10 +27,11 @@ This is the per-trigger document checklist the skill walks the user through in S
 
 - Bituach Leumi דמי לידה annual confirmation.
 
-### 4. Military reserve duty
+### 4. Combat reserve duty (Section 39B)
 
-- טופס 3010 (אישור על ימי מילואים) from the reserve unit's mishak (administrative officer).
-- Must list total days served in the relevant tax year.
+- The IDF confirmation (אישור מצה"ל) that the service was performed AS A COMBAT SOLDIER, with the number of days served in the year before the claim year. This is the document the Tax Authority names for Section 39B.
+- An ordinary confirmation of reserve days that does not state combat service does not establish the entitlement.
+- Points count from tax year 2026 (for service in 2025). There is nothing to claim for 2025 or earlier tax years.
 
 ### 5. Section 46 donations
 
@@ -40,11 +43,12 @@ This is the per-trigger document checklist the skill walks the user through in S
 
 - אישור תושבות (residence confirmation) from the local authority, for each tax year, confirming 12+ consecutive months of residence.
 - Each year must be confirmed separately.
+- Form 1312א, which the ITA lists as a required Form 135 attachment for this credit.
 
 ### 7. New immigrant credit points (Section 35)
 
 - תעודת עולה issued by the Aliyah and Integration Ministry.
-- Date of aliyah on the certificate determines the credit-point schedule (3 / 2 / 1 over the first ~3.5 years).
+- Date of aliyah on the certificate determines the credit-point schedule, which differs for arrivals before and from 1.1.2022 (see `references/2026-rates.md`).
 
 ### 8. Section 40g academic studies credit
 
@@ -95,7 +99,7 @@ This is the per-trigger document checklist the skill walks the user through in S
 
 ### 17. Section 44 maintaining a relative in an institution
 
-- Form 116 (institution credit).
+- Form 116א (institution credit; the ITA uses the same form number for both relative credits).
 - Institution payment receipts for the tax year.
 - The disabled relative's income confirmation (to verify the 2026 income cap of 188,000 / 301,000 ₪).
 

@@ -27,7 +27,11 @@ For prior tax years, look up the brackets that applied to that year on kolzchut.
 
 ## Reserve duty credit points (Section 39B, Amendment 283 התשפ"ו-2025)
 
-| Days in tax year | Points | Annual value |
+Combat reserve service only (שירות מילואים כלוחם), as confirmed by the IDF. The schedule below is a temporary order for tax years 2026 and 2027, counting days served in the PREVIOUS year (2025 service for tax year 2026, 2026 service for tax year 2027). The ITA announcement of 18.12.2025 states the benefit takes effect from 1 January 2026, so there are no Section 39B points for tax year 2025 or earlier. From tax year 2028 the minimum drops to 20 days of combat service (0.75 point at 20 days, then 0.25 per further 5 days, still capped at 4).
+
+Salaried claimants can take the points prospectively by giving the employer Form 101 (part ח, section 16) with the IDF confirmation; anything not taken through payroll is claimed by refund request after the tax year ends.
+
+| Days in the previous year | Points | Annual value |
 |------------------|--------|--------------|
 | 30 - 39 | 0.5 | 1,452 ₪ |
 | 40 - 49 | 0.75 | 2,178 ₪ |
@@ -35,7 +39,7 @@ For prior tax years, look up the brackets that applied to that year on kolzchut.
 | Each additional 5 days | +0.25 | +726 ₪ |
 | Maximum | 4.0 | 11,616 ₪ |
 
-Points are realized in the tax year AFTER the service.
+Points are realized in the tax year AFTER the service. 110 days or more reaches the 4-point cap.
 
 ## Section 46 donations
 
@@ -128,6 +132,8 @@ Returning residents (תושב חוזר) generally do NOT qualify for Section 35.
 
 Eligibility requires the taxpayer's centre of life in the locality for at least 12 continuous months, and the credit applies only to הכנסה חייבת מיגיעה אישית (earned income). The rate and the annual ceiling are set PER LOCALITY, not nationally.
 
+How it is computed: the credit is the locality's rate multiplied by the earned INCOME up to the ceiling, then deducted from the tax. It is not a percentage of the tax. Kol Zchut's worked example: a resident of an 11% locality with a 168,000 ₪ ceiling who earned more than the ceiling received 11% of 168,000 ₪, a credit of 18,480 ₪. The credit cannot take the tax below zero; in Kol Zchut's second example an 18% credit on 222,000 ₪ (39,960 ₪) exceeded the tax and the tax due was 0 ₪.
+
 The authoritative table is chapter ח of the Israel Tax Authority deductions booklet for 2026, which lists every eligible locality with its 2026 rate and 2026 ceiling. Localities added, or whose rate or ceiling changed, are printed in bold there. Read the value for the user's specific locality from that table. Do not interpolate from a nearby locality.
 
 The ITA calls this יישוב מוטב (yishuv mutav); older material and parts of this skill say yishuv mezakeh. They are the same benefit under section 11 ITO.
@@ -213,7 +219,7 @@ Eligibility is narrow. Section 10(ב) confines the benefit to **industrial plant
 
 ## Credit-point entitlements the employer rarely applies at source
 
-Every row below is claimable on the annual refund and appears as a claim box in part ז of Form 101.
+Every row below is claimable on the annual refund and appears as a claim box in part ח of Form 101.
 
 | Entitlement | Points | Anchor |
 |---|---|---|
