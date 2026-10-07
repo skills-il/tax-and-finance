@@ -18,6 +18,7 @@ This is the per-trigger document checklist the skill walks the user through in S
 - All Form 106 documents for the year, one per employer.
 - If a תיאום מס was filed mid-year, attach the האישור (it reduces the refund but must be disclosed).
 - On leaving a job, a copy of Form 161 (the ITA lists it as a Form 135 attachment for anyone who left a workplace).
+- Intake before estimating: the start and end dates at each employer, any months on BTL benefits in between, whether Form 101 at the second job declared the first job's income, and any תיאום מס certificate. Without these the estimate cannot tell over-withholding from a correctly coordinated year.
 
 ### 2. Partial year / unemployment
 
@@ -26,6 +27,10 @@ This is the per-trigger document checklist the skill walks the user through in S
 ### 3. Maternity / paternity leave
 
 - Bituach Leumi דמי לידה annual confirmation.
+
+### Reserve-duty pay (תגמולי מילואים)
+
+- Ask whether the pay came through the employer (then it is already in Form 106) or from BTL. The ITA lists BTL confirmations for unemployment, work injury and miluim pay among the refund attachments.
 
 ### 4. Combat reserve duty (Section 39B)
 
@@ -58,17 +63,19 @@ This is the per-trigger document checklist the skill walks the user through in S
 
 ### 9. Single parent / alimony payer
 
-- Court judgment (פסק דין) establishing single-parent status or ordering alimony payments.
+- Single-parent status follows from family status and who the children live with; attach the ספח of the teudat zehut. For a ילד להורה אחד the ספח shows the child registered with one parent, or attach the other parent's death certificate.
+- A court judgment matters only for a split-upkeep claim (s.40(ב)(2)) or for maintenance paid to a former spouse (s.40א).
 - Bank transfer records confirming the alimony was actually paid.
 
 ### 10. Section 9(5) disability
 
-- Medical-board determination (החלטת ועדה רפואית) of qualifying disability.
-- Subsequent ratification by the Tax Authority's disability committee (חוקרי נכות).
+- The protocol of the medical committee that set the disability percentage (BTL protocols can be downloaded from the personal area).
+- The ITA exemption request form, and for employees the last payslip from each employer.
+- With no qualifying determination yet: apply to the ITA medical committee, which sits at Bituach Leumi. The test before 15.11.2021 differs from the current one, see `references/2026-rates.md`.
 
 ### 11. Sections 45A and 47 (life insurance and pension)
 
-- אישור הפקדה שנתי from each pension fund, kupat gemel, or life insurance provider.
+- אישור הפקדה שנתי from each pension fund, kupat gemel, or life insurance provider. Pension earns 35% and life insurance 25%, within the per-year caps in `references/2026-rates.md`.
 - Distinguish between employer-side deposits (already in Form 106) and self-deposits (only the latter generate the extra benefit).
 
 ### 12. Keren hishtalmut early withdrawal
@@ -78,12 +85,13 @@ This is the per-trigger document checklist the skill walks the user through in S
 
 ### 13. Child credit points mismatch
 
-- Updated 101 form for the relevant year showing the correct number of children.
+- Updated 101 form for the relevant year showing the correct number of children, and each child's birth year (the points depend on the claim year's regime, see the child table in `references/2026-rates.md`).
+- If the mother moved a birth-year point to the next year: Form 116ד for both years.
 - Custody documents (court judgment) if relevant.
 
-### 14. One-time bonus / 13th salary bracket spike
+### 14. Bonus / 13th salary
 
-- The Form 106 already reflects the bonus; no extra document. The refund surfaces in the annual reconciliation once the bonus month is spread across the year.
+- No extra document. Regulation 4 withholds on irregular pay by adding one twelfth of it to that month's salary and multiplying the extra tax by 12. A bonus paid in a month whose pay is above the year's average (commission, seasonal overtime, part-year work, two employers) is over-withheld; one paid in a low-pay month can leave tax owed. The annual reconciliation settles both.
 
 ### 15. Discharged soldier / national-service graduate credit points
 
@@ -93,8 +101,8 @@ This is the per-trigger document checklist the skill walks the user through in S
 
 ### 16. Section 45(a) נטול יכולת child / spouse
 
-- Form 116א (בקשה לזיכוי ממס בגין קרוב עם מוגבלות).
-- Medical certification of the paralysis / blindness / intellectual-developmental disability.
+- If the child receives גמלת ילד נכה: the points can go through Form 101 at the employer, with BTL's confirmation of the allowance for the year. For a closed year, claim them in the refund request.
+- Otherwise: Form 116א (בקשה לזיכוי ממס בגין קרוב עם מוגבלות), filed every year, with medical certification of the paralysis / blindness / intellectual-developmental disability where required.
 - Note: cannot be combined with the Section 44 institution credit (trigger 17) for the same child.
 
 ### 17. Section 44 maintaining a relative in an institution

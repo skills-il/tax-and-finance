@@ -62,6 +62,24 @@
         "PROCESS: SKILL.md body sits at the 5,000-word cap; this cycle trimmed duplicated text to fit. Next cycle should move the Step 4 trigger table detail or Troubleshooting into references before adding content.",
         "PROCESS: the earlier killed run's partial edits were reviewed as a draft; the reported miluim NameError was not reproducible at HEAD or in the draft (all day bands ran)."
       ]
+    },
+    {
+      "version": "1.8.0",
+      "date": "2026-10-07",
+      "lessons": [
+        "RESOLVED: child credit points per claim year (2020-21, 2022-23 temporary order, 2024+), estimator --child-ages / --parent-side mother|father|sole; s.40(ב)(1ב) sole parent gets both columns plus one point per family (found by Expert + Arithmetic r1, missed by the brief).",
+        "RESOLVED: s.35 month bands, s.40ד 2018-2022 one-year rule, s.45 Form 101 route via גמלת ילד נכה, s.45א 25%/35% and per-year pension caps, s.46 2020-2021 minimum/ceiling with an exceeds-the-minimum test, Amendment 283 verified (ספר החוקים 3461, 23.11.2025).",
+        "RESOLVED: s.9(5) test by date (before 15.11.2021: 100% single impairment), per-year ceilings 2020-2025, part-year pro-rating, real filing documents.",
+        "RESOLVED: unsourced refund-offset claim removed; s.160א hold described instead (initially 90 days, extendable). Unsourced BTL under-withholding and miluim-via-employer claims removed.",
+        "RESOLVED: regulation 4 (not 6) for bonuses; a bonus over-withholds when it lands in an above-average pay month and can under-withhold in a low-pay month.",
+        "BRIEF ERROR CAUGHT: item 14 said 2021 rests on ICPAS + Kol-Zchut; the ITA still serves the 2021 booklet as itc_itc_necuyim2021-1.pdf, so the primary label was right.",
+        "CARRY-STALE CLOSED: איחוד תיקים / cross-file and creditor offsets moved to domain-checklist out of scope (not researched to a primary source); job-change intake questions added; second ordinary-withholding example closed by decision.",
+        "DEFERRED (description edit needs the Phase 5.7 holdout): frontmatter/metadata description still says 'using 2026 brackets' and 'fills Form 135'; legal-review asked to soften 'fills Form 135' and add the tax prefix to frontmatter descriptions.",
+        "DEFERRED (Expert MAJOR/MINOR): estimator has no yishuv months input for s.11(ב)(4) part-year residents; shift-work caps for 2021 (lapse 6.7.2021) and 2023-2025 not tabled; Step 7 routes any same-year capital gains to Form 1301 (over-routing, advisory); Bituach Leumi contributions over the insurable ceiling are refunded by BTL, not Form 135 (unverified); no Form 116ד deferral flag in the estimator.",
+        "STILL OPEN from 1.5.0: s.11(b1) southern confrontation-line reconciliation; aliya temporary-order ITA circular.",
+        "PROCESS: SKILL.md body ~4,980 words after moving s.44 detail and two troubleshooting entries to references; SKILL_HE.md ~6,550 words (warning only). Next cycle should trim the Hebrew file and move Step 4 trigger detail to references.",
+        "SCREENER: legal-review r1 lists conditions for the public /tools refund screener page (neutral name, 'ייתכן שמגיע לכם', tax notice above start and result at 30% type, no 'we file Form 135', gov.il links only); the page needs its own gate run."
+      ]
     }
   ]
 }

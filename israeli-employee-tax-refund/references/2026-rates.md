@@ -27,7 +27,7 @@ For prior tax years, look up the brackets that applied to that year on kolzchut.
 
 ## Reserve duty credit points (Section 39B, Amendment 283 התשפ"ו-2025)
 
-Combat reserve service only (שירות מילואים כלוחם), as confirmed by the IDF. The schedule below is a temporary order for tax years 2026 and 2027, counting days served in the PREVIOUS year (2025 service for tax year 2026, 2026 service for tax year 2027). The ITA announcement of 18.12.2025 states the benefit takes effect from 1 January 2026, so there are no Section 39B points for tax year 2025 or earlier. From tax year 2028 the minimum drops to 20 days of combat service (0.75 point at 20 days, then 0.25 per further 5 days, still capped at 4).
+Combat reserve service only (שירות מילואים כלוחם), as confirmed by the IDF. The schedule below is a temporary order for tax years 2026 and 2027, counting days served in the PREVIOUS year (2025 service for tax year 2026, 2026 service for tax year 2027). The ITA announcement of 18.12.2025 states the benefit takes effect from 1 January 2026, so there are no Section 39B points for tax year 2025 or earlier. From tax year 2028 the permanent rule applies: 0.75 point at 20 days of combat service, then 0.25 per further 5 days beyond 20, still capped at 4. Amendment 283 was published in ספר החוקים 3461 on 23.11.2025 and added section 39ב (ITA 2026 deductions booklet).
 
 Salaried claimants can take the points prospectively by giving the employer Form 101 (part ח, section 16) with the IDF confirmation; anything not taken through payroll is claimed by refund request after the tax year ends.
 
@@ -45,15 +45,17 @@ Points are realized in the tax year AFTER the service. 110 days or more reaches 
 
 Both the minimum and the maximum are index-adjusted every year, so a claim for an earlier year must use that year's figures, not 2026's.
 
-| Tax year | Minimum donation to qualify | Maximum eligible for credit |
+| Tax year | Minimum (the year's total must exceed it) | Maximum eligible for credit |
 |---|---|---|
+| 2020 | 190 ₪ | 9,350,000 ₪ |
+| 2021 | 190 ₪ | 9,294,000 ₪ |
 | 2022 | 190 ₪ | 9,517,000 ₪ |
 | 2023 | 200 ₪ | 10,019,808 ₪ |
 | 2024 | 207 ₪ | 10,354,816 ₪ |
 | 2025 | 207 ₪ | 10,354,816 ₪ |
 | 2026 | 207 ₪ | 10,354,816 ₪ |
 
-The ITA no longer serves the 2020 and 2021 deductions booklets, so those two years' minimums are not verified here. Look them up in that year's booklet before disqualifying a small donation from 2020 or 2021.
+2021 is read from the ITA 2021 booklet, which gov.il still serves under the file name `itc_itc_necuyim2021-1.pdf`. The ITA no longer serves the 2020 booklet; the 2020 row is read from a mirror copy of it (prisha.co.il, "לחודש ינואר 2020 ואילך").
 
 | Parameter | 2026 value |
 |-----------|------------|
@@ -74,7 +76,9 @@ The ITA no longer serves the 2020 and 2021 deductions booklets, so those two yea
 
 ## Statutory processing time
 
-Refund must be paid within one year from the assessment date, or two years from the end of the tax year, whichever is later. Late refunds accrue הצמדה (CPI linkage) plus 4% annual interest.
+Refund must be paid within one year from the assessment date, or two years from the end of the tax year, whichever is later. Every refund carries הצמדה (CPI linkage) plus 4% annual interest from the end of the claim year (s.160(a)).
+
+If the assessing officer orders the request examined, s.160א lets the ITA hold up to half the refund, or the disputed amount if lower, initially for up to 90 days from receipt; the hold can run longer if a best-judgment assessment is made or an objection is filed. Whether a creditor or another authority can reach the refund (an attachment, a collection proceeding) is outside this skill: do not promise either way, and send the user to the tax office.
 
 ## Section 9(5): Disability exemption ceilings (2026, in force through 2027)
 
@@ -91,7 +95,21 @@ Qualifying threshold. The test changed on 15.11.2021 and BOTH regimes are still 
 
 Current regime (determinations from 15.11.2021): at least **90%** disability under one of the qualifying laws. Where that 90% is reached by a weighted calculation across several impairments, one impairment must be at least **40%**. In נכות כללית this means the MEDICAL disability percentage, not the incapacity degree (דרגת אי כושר), which is a different rating and does not by itself qualify.
 
-Pension limb, and the pre-15.11.2021 general test: for recipients of a disability pension under חוק הנכים or חוק התגמולים לנפגעי פעולות איבה, the qualifying degrees are 100% on a single impairment, or at least 90% on a weighted calculation provided it would reach 100% on an ordinary calculation.
+Pension limb (from 15.11.2021): for recipients of a disability pension under חוק הנכים or חוק התגמולים לנפגעי פעולות איבה, the qualifying degrees are 100% on a single impairment, or at least 90% on a weighted calculation provided it would reach 100% on an ordinary calculation.
+
+Before 15.11.2021 (so tax year 2020 and most of 2021): 100% on a single impairment, or at least 90% on a weighted calculation of several impairments. A single impairment below 100% did NOT qualify then, so do not screen in a 2020 or early-2021 claim on that basis.
+
+Ceilings by claim year (income from work, NIS a year):
+
+| Tax year | 365 days or more | 185-364 days, or work plus non-work income |
+|---|---|---|
+| 2020 | 618,000 | 74,040 |
+| 2021 | 614,400 | 73,560 |
+| 2022 | 409,200 (628,800 for a חוק הנכים / נפגעי פעולות איבה pensioner) | 75,360 |
+| 2023 | 430,800 (661,200 for such a pensioner) | 79,320 |
+| 2024-2025 | 445,200 (684,000 for such a pensioner) | 81,960 |
+
+A determination of 365 days or more that starts mid-year pro-rates both the exempt income and the ceilings by the days covered over 365. To file: the protocol of the medical committee that set the percentage, the ITA exemption request form, and for employees the last payslip from each employer. Someone with no qualifying determination yet applies to the ITA medical committee, which sits at Bituach Leumi.
 
 Grandfathering: anyone who met the pre-15.11.2021 conditions but not the current ones keeps the exemption for as long as they continue to meet the old conditions, as does anyone who applied for a determination by 01.12.2021.
 
@@ -105,16 +123,20 @@ Do NOT tell a user with a 90% determination that they fall short of the threshol
 
 For olim arriving 1.1.2022 or later (post-Amendment 262 of 7.5.2022):
 
-| Period from aliyah | Points/month | Annual rate |
+| Months from aliyah | Points per month | Points in the band |
 |---|---|---|
 | Months 1-12 | 1/12 | 1 |
-| Months 13-30 | 1/4 | 3 |
+| Months 13-30 | 1/4 | 4.5 |
 | Months 31-42 | 1/6 | 2 |
 | Months 43-54 | 1/12 | 1 |
+
+The credit is given per month spent in Israel inside the band, so a tax year usually straddles two bands: add up each month's fraction for the months that fall in that year. Read the bands by MONTH number, never as "year 1, year 2": months 13-30 (18 months at 1/4, an annual rate of 3 points) run from the second year into the middle of the third.
 
 Total: 8.5 credit points across 54 months (4.5 years).
 
 For pre-2022 arrivals: 4.5 / 2 / 1 across 18 / 12 / 12 months (total 7.5 points, 42 months).
+
+At the oleh's request, a continuous absence from Israel of at least 6 months and at most 3 years is left out of the 54-month (or 42-month) count (s.35(ג)), which pushes the remaining points later.
 
 Returning residents (תושב חוזר) generally do NOT qualify for Section 35. Most returnees use the 10-year foreign-income exemption instead (returnees who were abroad 10+ consecutive years are exempt on all foreign-source income for 10 years). Veteran returning residents (תושב חוזר ותיק, after 10+ years abroad) have a separate Milchan-amendment benefit track that is out of scope here.
 
@@ -122,10 +144,10 @@ Returning residents (תושב חוזר) generally do NOT qualify for Section 35.
 
 | Degree + graduation cohort | Points |
 |---|---|
-| Bachelor's, 2014-2022 graduates | 1 point for one tax year (claimant's choice: graduation year or year after) |
+| Bachelor's, 2014-2022 graduates | 1 point for one tax year: the tax year after completion, or the one after that, at the claimant's choice |
 | Bachelor's, 2023+ graduates | 1 point per study year, capped at 3 years (so a 3-year B.A. = 3 points spread over 3 years) |
-| Master's, 2014-2022 graduates | 0.5 point for one tax year |
-| Master's, 2023+ graduates | 0.5 point per year for 2 years |
+| Master's, 2014-2022 graduates | 0.5 point for one tax year, chosen the same way |
+| Master's, 2023+ graduates | 0.5 point per study year, for at most 2 tax years |
 | Professional degrees with mandatory internship (e.g., medicine) | Same bachelor's points but the claimant may defer the start to the year after internship completion |
 
 ## Section 11: Yishuv mutav (preferred-locality) credit, 2026
@@ -177,6 +199,8 @@ Two separate regimes that are NOT in that table:
 - **Eilat and Chevel Eilot**: 10% on earned income produced in the area, up to 268,560 NIS, under section 11 of the Eilat Free Trade Zone Law (not section 11 ITO).
 - **Security forces**: 5% of the special salary, up to 178,320 NIS, under section 11(c) ITO.
 
+Part-year residents: someone who became or stopped being a resident during the year gets the credit pro-rated to the period of residence, provided they were resident for at least 12 consecutive months (s.11(ב)(4)). A resident of a locality that dropped off the list keeps the credit, at the prior year's score, for the year it dropped and the year after, if resident throughout (s.11(ב)(4א)). The estimator assumes a full year of residence.
+
 Evacuee note: residents of localities evacuated under government decisions following the war keep the benefit while the locality remains defined as evacuated, subject to the Tax Authority's employer guidance. Follow the current ITA guidance rather than assuming the status persists.
 
 ## Aliya exemption temporary order (חוק עידוד עלייה לישראל וחזרה אליה (הוראת שעה), התשפ"ו-2026)
@@ -215,7 +239,7 @@ Section 10 ITO empowers the Finance Minister to set a tax benefit for second- an
 | Maximum credit, section 10(ב) | 12,540 ₪ per tax year |
 | Income ceiling, section 10(ג) | 143,040 ₪ per tax year |
 
-Eligibility is narrow. Section 10(ב) confines the benefit to **industrial plants whose main activity in the tax year is productive activity** within the meaning of חוק עידוד התעשיה (מסים), התשכ"ט-1969, as designated by the Finance Minister. A shift worker in retail, security, or healthcare is outside it. Earlier years use their own figures: for 2022 the maximum credit was 11,520 ₪ against an income ceiling of 131,520 ₪.
+Eligibility is narrow. Section 10(ב) confines the benefit to **industrial plants whose main activity in the tax year is productive activity** within the meaning of חוק עידוד התעשיה (מסים), התשכ"ט-1969, as designated by the Finance Minister. A shift worker in retail, security, or healthcare is outside it. Earlier years use their own figures: for 2022 the maximum credit was 11,520 ₪ against an income ceiling of 131,520 ₪, and for 2020 11,340 ₪ against 129,120 ₪. For other years read that year's booklet (the 2021 booklet states the cap only up to 6.7.2021).
 
 ## Credit-point entitlements the employer rarely applies at source
 
@@ -223,13 +247,13 @@ Every row below is claimable on the annual refund and appears as a claim box in 
 
 | Entitlement | Points | Anchor |
 |---|---|---|
-| Single parent (הורה במשפחה חד-הורית) not entitled under section 37 | The full child schedule (2.5 birth year, 4.5 to age 2, 3.5 at 3, 2.5 at 4 and 5, 2 from 6 to the year before 18, 0.5 in the year the child turns 18) | s.40(ב)(1) |
-| Child of a single parent (ילד להורה אחד) where that parent already claims the row above | One ADDITIONAL point | s.40(ב)(1ב) |
+| Single parent (הורה במשפחה חד-הורית) not entitled under section 37 | The mother column of the claim year's child table below (for 2024 on: 2.5 birth year, 4.5 to age 2, 3.5 at 3, 2.5 at 4 and 5, 2 from 6 to the year before 18, 0.5 in the year the child turns 18) | s.40(ב)(1) |
+| Child of a single parent (ילד להורה אחד: the other parent died or is not registered) where that parent already claims the row above | One additional point (one per family, not per child) AND the other parent's child points for each child (the father column of the claim year's table; before 2024 only for children under 6, plus the 6-12 point in 2022-2023) | s.40(ב)(1ב), s.40(ג)(2) |
 | Parents living apart: the parent entitled under s.40(ב)(1) | One additional point | s.40(ב)(2) |
 | Parents living apart, maintenance split: the parent NOT entitled under s.40(ב)(1) | One point, or a fraction matching their share of the child's upkeep | s.40(ב)(2) |
 | Divorced person paying maintenance to a former spouse and married to someone else | 1 point | s.40א |
 | Individual aged 16 or 17 | 1 point | s.40ב |
-| Completion of vocational studies with a תעודת מקצוע | 1 point per study year, capped at 3 tax years, from the year after studies end | s.40ד |
+| Completion of vocational studies with a תעודת מקצוע | Completed 2023 or later: 1 point per study year, capped at 3 tax years, from the year after studies end. Completed 2018-2022: 1 point for one tax year, the year after completion or the one after that | s.40ד |
 
 Two rules that decide which row applies:
 
@@ -242,21 +266,71 @@ Two rules that decide which row applies:
 |-----------|-----------------|
 | Israeli resident (base) | 2.25 |
 | Female resident (additional 0.5) | 2.75 |
-| Each child up to age 5 (2024+ schedule, per parent) | 2.5 in birth year, 4.5 age 1, 4.5 age 2, 3.5 age 3, 2.5 age 4, 2.5 age 5 |
-| Each child age 6 to the year before 18 (to mother, post-2022) | 2 |
-| Each child in the tax year they turn 18 (mother, or a single parent) | 0.5. The father's schedule stops at the year before, with no maturity-year point |
-| Each child age 6 to the year before 18 (to father) | 1 |
-| Each child age 6-17 (pre-2022) | 1 (mother) / 0 (father) |
-| Single parent (הורה במשפחה חד-הורית) not entitled under s.37 | The full child schedule above (2.5 / 4.5 / 3.5 / 2.5 / 2 / 0.5), NOT the father's reduced one |
-| Child of a single parent (ילד להורה אחד) | 1 additional point to that parent, on top of the row above |
+| Each child | Per the claim year's table in "Child credit points by claim year" below. Never apply the 2024 values to an earlier year |
+| Single parent (הורה במשפחה חד-הורית) not entitled under s.37 | The mother column of that table, NOT the father's |
+| Child of a single parent (ילד להורה אחד), single-parent family only | 1 additional point (per family) PLUS the father column of the claim year's child table for each child; use `--parent-side sole` |
 | Parents living apart: the parent entitled under s.40(ב)(1) | 1 additional point |
 | Parents living apart, upkeep split: the parent NOT entitled under s.40(ב)(1) | 1 point, or the fraction matching their share of the upkeep |
 | Divorced, paying maintenance to a former spouse, and remarried (s.40א) | 1 |
 | Individual aged 16 or 17 (s.40ב) | 1 |
-| Vocational certificate, תעודת מקצוע (s.40ד) | 1 point per study year, capped at 3 tax years, from the year after studies end. Alternative to the academic points, not cumulative; s.40ה lets the claimant pick the larger |
-| New immigrant, post-2022 arrival (s.35) | 1 point year 1, 3 points years 1.5-2.5, 2 points year 3, 1 point year 4 |
-| Master's graduate (2023+) | 0.5 point per year for 2 years after graduation |
+| Vocational certificate, תעודת מקצוע (s.40ד) | Completed 2023 on: 1 point per study year, capped at 3 tax years, from the year after studies end. Completed 2018-2022: 1 point for one tax year (the year after completion or the one after). Alternative to the academic points, not cumulative; s.40ה lets the claimant pick the larger |
+| New immigrant, arrival 2022 or later (s.35) | By month from aliyah: 1/12 point a month in months 1-12, 1/4 in months 13-30, 1/6 in months 31-42, 1/12 in months 43-54 (8.5 points in all) |
+| Master's graduate (2023+) | 0.5 point per study year, for at most 2 tax years |
 | Bachelor's graduate (2023+) | 1 point per study year, capped at 3 years |
 | Discharged soldier / national-service graduate (s.39א) | 2 points/year for full service (23+ months men, 22+ months women), 1 point/year for shorter service, over the 36 months from the month after discharge |
-| Parent of a נטול יכולת child (s.45(א)) | 2 points/year per child, including the spouse's child; claimed on Form 116א, never applied at source |
+| Parent of a נטול יכולת child (s.45(א)) | 2 points/year per child, including the spouse's child. Through Form 101 at the employer when the child receives גמלת ילד נכה (attach BTL's confirmation for the year); otherwise Form 116א to the ITA, filed every year |
 
+## Child credit points by claim year (s.66(ג)(4)-(5), s.40(ב))
+
+"Age" is the age the child REACHES during the tax year: 0 is the birth year, 18 is the maturity year (שנת בגרות). "Mother" means the mother, or the parent the children live with when the parents are separated, and also a single parent under s.40(ב)(1). "Father" is the other parent. Points per child per year:
+
+| Age in the tax year | 2020-2021 (mother / father) | 2022-2023 (mother / father) | 2024 on (mother / father) |
+|---|---|---|---|
+| 0 (birth year) | 1.5 / 1.5 | 1.5 / 1.5 | 2.5 / 2.5 |
+| 1 | 2.5 / 2.5 | 2.5 / 2.5 | 4.5 / 4.5 |
+| 2 | 2.5 / 2.5 | 2.5 / 2.5 | 4.5 / 4.5 |
+| 3 | 2.5 / 2.5 | 2.5 / 2.5 | 3.5 / 3.5 |
+| 4-5 | 2.5 / 2.5 | 2.5 / 2.5 | 2.5 / 2.5 |
+| 6-12 | 1 / 0 | 2 / 1 | 2 / 1 |
+| 13-17 | 1 / 0 | 1 / 0 | 2 / 1 |
+| 18 (maturity year) | 0.5 / 0 | 0.5 / 0 | 0.5 / 0 |
+
+Sources: in the 2021 text of the Ordinance the father's points cover only children under 6 (פעוטות); a temporary order for 1.1.2022-31.12.2023 added one point per parent for a child under 13 who is not a toddler; the ITA 2024 booklet announces the extra point for ages 13-17 from tax year 2024; Kol-Zchut gives the early-years increase from 2024 and the 1.5 / 2.5 values for 2017-2023. A single parent in 2022-2023 got the 6-12 extra point through a parallel temporary order in s.40.
+
+Choices and claims:
+
+- The mother may move ONE birth-year point to the following tax year (s.66(ג)(4)(א1)), with Form 116ד filed in both years. It helps when she had little income in the birth year.
+- A ילד להורה אחד (the other parent died or is not registered in the population register), where that parent heads a single-parent family under s.40(ב)(1) (not married and not living with a partner): the parent gets the mother column, the father column as well, and one more point per family (s.40(ב)(1ב)). Use `--parent-side sole`. A widowed parent who remarried is NOT in this row: the new spouse takes the father column (s.66(ג)(6) / (4א)). If only some of the children qualify (siblings whose other parent is alive and registered), pass only the qualifying children to `--child-ages` with `--parent-side sole`, and add the other children's mother-column points (from the table above for that claim year) to `--points` in the same run.
+- The estimator applies this table through `--child-ages` and `--parent-side` (mother, father or sole). For married parents, "mother" is the mother; the custodial reading applies only when the parents live apart.
+- Employers apply what Form 101 tells them, so the father's early-years points and a birth after Form 101 was filed are the commonest misses.
+
+## Section 45א: pension and life-insurance credits
+
+| Deposit | Credit |
+|---|---|
+| קופת גמל לקצבה (pension), employee's own deposit | 35% |
+| Life insurance (death risk only) | 25% |
+
+For an employee, the deposits that earn a credit are capped at 7% of "qualifying income" (הכנסה מזכה, s.47), and life insurance plus survivors' cover together at 5% of it. The qualifying-income ceiling on salary comes from each year's ITA booklet; the annual cap is 7% of twelve months of it (Kol-Zchut prints the same caps for 2021-2026):
+
+| Tax year | Qualifying income, per month | Annual cap on credited deposits |
+|---|---|---|
+| 2020 | 8,800 ₪ | 7,392 ₪ |
+| 2021 | 8,700 ₪ | 7,308 ₪ |
+| 2022 | 8,900 ₪ | 7,476 ₪ |
+| 2023 | 9,400 ₪ | 7,896 ₪ |
+| 2024 | 9,700 ₪ | 8,148 ₪ |
+| 2025 | 9,700 ₪ | 8,148 ₪ |
+| 2026 | 9,700 ₪ | 8,148 ₪ |
+
+An employee's own contributions deducted from salary earn the 35% credit up to the cap. An employee who ALSO deposited privately, outside payroll, may get an additional benefit only if part of the salary had no pension contributions (Kol-Zchut, ss.45א and 47). The estimator does not model this credit; compute it by hand or use the ITA simulator.
+
+## Section 44: relative in an institution (not a credit point)
+
+35% of the amount paid above 12.5% of the claimant's taxable income, if the relative's annual income is under 188,000 ₪ (301,000 ₪ for a couple) for 2024-2027, or 182,000 ₪ (291,000 ₪) for 2023. Claimed on Form 116א. It excludes the s.45 points for the same child; compute both and keep the larger.
+
+## Troubleshooting notes moved from SKILL.md
+
+**Section 46 approval expired during the year.** Approvals are issued for a defined period. If the institution's approval expired before the donation, the donation does not qualify. Ask for the institution's confirmation that its approval was active on the donation date.
+
+**Section 9(5) estimate looks wrong.** Check the claim year, the duration band, the income source (the pension limb has a higher ceiling) and the qualifying basis against the Section 9(5) part above. From 15.11.2021 a 90% medical determination qualifies (with one impairment at 40% or more if weighted), so do not turn such a user away for being under 100%; before that date a single impairment needed 100%. A Bituach Leumi incapacity degree alone never qualifies. Outside those bands, route the user to a Roeh Cheshbon.

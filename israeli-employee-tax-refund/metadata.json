@@ -1,6 +1,6 @@
 {
   "author": "skills-il",
-  "version": "1.7.0",
+  "version": "1.8.0",
   "category": "tax-and-finance",
   "tags": {
     "he": [
@@ -98,5 +98,5 @@
       "language": "he"
     }
   ],
-  "domain_checklist_version": 4
+  "domain_checklist_version": 5
 }

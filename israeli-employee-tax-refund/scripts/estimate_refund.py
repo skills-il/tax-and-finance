@@ -10,13 +10,23 @@ real review may differ once supporting documents are evaluated.
 Usage:
     python estimate_refund.py --year 2026 --salary 282000 --withheld 47200 \
         --points 2.75 --miluim-days 0 --donations 0 --yishuv-pct 0
+    python estimate_refund.py --year 2022 --salary 150000 --withheld 20000 \
+        --points 2.75 --child-ages 0,7,14 --parent-side mother
 
 Pass --year to select that tax year's bracket table, credit-point value and
 surtax threshold. Supported years are 2020 through 2026, which covers the
 six-year retroactive window under Section 160 ITO. An unsupported year is
 rejected rather than silently computed against another year's brackets.
-2021-2026 come from the Israel Tax Authority deductions booklets; 2020 is
-secondary-sourced and the estimator says so in its notes.
+2021-2026 come from the Israel Tax Authority deductions booklets served on
+gov.il (2021 under the file name itc_itc_necuyim2021-1.pdf); 2020 matches a
+mirror copy of the ITA 2020 booklet and Kol-Zchut's history table, and the
+estimator flags it in its notes.
+
+--child-ages adds the child credit points for the claim year's own regime
+(2020-2021, 2022-2023 temporary order, 2024 onward), so a 2024 table is never
+applied to a 2022 claim. Pass the age each child REACHES during the tax year
+(0 = birth year, 18 = the year the child turns 18) and --parent-side
+(mother / father / sole). --year is required.
 """
 from __future__ import annotations
 import argparse
@@ -30,9 +40,9 @@ from dataclasses import dataclass
 # the separate surtax, not a bracket in its own right.
 #
 # 2021-2026 read from the Israel Tax Authority "לוח עזר לחישוב מס הכנסה ממשכורת
-# ושכר עבודה" booklet PDFs (pdftotext text layer). 2020 is from a secondary source
-# (Kol-Zchut historical table) because the ITA no longer serves the 2020 booklet;
-# the estimator warns when 2020 is used.
+# ושכר עבודה" booklet PDFs (pdftotext text layer). The ITA no longer serves the 2020
+# booklet; the 2020 rows match a mirror copy of it (prisha.co.il) and Kol-Zchut's
+# history table, and the estimator warns when 2020 is used.
 BRACKETS_BY_YEAR_MONTHLY = {
     2020: [(6330, 0.10), (9080, 0.14), (14580, 0.20), (20260, 0.31), (42160, 0.35), (float("inf"), 0.47)],
     2021: [(6290, 0.10), (9030, 0.14), (14490, 0.20), (20140, 0.31), (41910, 0.35), (float("inf"), 0.47)],
@@ -66,19 +76,51 @@ SUPPORTED_YEARS = sorted(BRACKETS_BY_YEAR_MONTHLY)
 
 # Section 46 donation credit. The minimum qualifying donation AND the annual ceiling are both
 # index-adjusted every tax year, so applying 2026's figures to a 2022 claim silently disqualifies
-# a donation that did qualify. Values read from that year's ITA deductions booklet text layer.
-# The ITA no longer serves the 2020 and 2021 booklets, so those two years are deliberately absent:
-# the estimator warns and declines to disqualify rather than guessing a minimum.
+# a donation that did qualify. Values read from that year's ITA deductions booklet text layer
+# (2020 from the mirror copy of the 2020 booklet).
 SECTION_46_CREDIT_RATE = 0.35
 
 # Section 39B (Amendment 283): COMBAT reserve service only, points in the tax year after the
 # service. The 30/40/50-day schedule is a temporary order for tax years 2026 and 2027.
 MILUIM_FIRST_TAX_YEAR = 2026
 MILUIM_LAST_SCHEDULE_YEAR = 2027
-SECTION_46_MIN_BY_YEAR = {2022: 190, 2023: 200, 2024: 207, 2025: 207, 2026: 207}
+SECTION_46_MIN_BY_YEAR = {2020: 190, 2021: 190, 2022: 190, 2023: 200, 2024: 207, 2025: 207, 2026: 207}
 SECTION_46_CEILING_BY_YEAR = {
-    2022: 9517000, 2023: 10019808, 2024: 10354816, 2025: 10354816, 2026: 10354816,
+    2020: 9350000, 2021: 9294000, 2022: 9517000, 2023: 10019808,
+    2024: 10354816, 2025: 10354816, 2026: 10354816,
 }
+
+
+def child_points(year: int, age: int, side: str) -> float:
+    """Credit points for ONE child in tax year `year` (s.66(ג)(4)-(5), s.40(ב)).
+
+    `age` is the age the child reaches during the tax year: 0 = birth year,
+    18 = maturity year (שנת בגרות). `side` is "mother" (the mother, or the
+    parent the children live with, including a single parent under
+    s.40(ב)(1)) or "father" (the other parent). Three regimes:
+      2020-2021: birth year 1.5 each; ages 1-5 2.5 each; 6-17 mother 1 / father 0.
+      2022-2023: as above, but ages 6-12 mother 2 / father 1 (temporary order).
+      2024 on:   2.5 / 4.5 / 4.5 / 3.5 / 2.5 / 2.5 each for ages 0-5;
+                 6-17 mother 2 / father 1.
+    Maturity year: 0.5 to the mother side only, in every regime.
+    """
+    if side not in ("mother", "father"):
+        raise ValueError("side must be 'mother' or 'father'")
+    if age < 0 or age > 18:
+        return 0.0
+    if age == 18:
+        return 0.5 if side == "mother" else 0.0
+    if year >= 2024:
+        if age <= 5:
+            return {0: 2.5, 1: 4.5, 2: 4.5, 3: 3.5, 4: 2.5, 5: 2.5}[age]
+        return 2.0 if side == "mother" else 1.0
+    if age == 0:
+        return 1.5
+    if age <= 5:
+        return 2.5
+    if 2022 <= year <= 2023 and age <= 12:
+        return 2.0 if side == "mother" else 1.0
+    return 1.0 if side == "mother" else 0.0
 
 
 @dataclass
@@ -161,24 +203,14 @@ def estimate(
     credit_value = total_points * CREDIT_POINT_ANNUAL_BY_YEAR[year]
 
     donation_credit = 0.0
-    section_46_min = SECTION_46_MIN_BY_YEAR.get(year)
-    section_46_ceiling = SECTION_46_CEILING_BY_YEAR.get(year, 10354816)
-    if donations_annual > 0 and section_46_min is None:
-        # No primary-sourced minimum for this year. Grant the credit rather than disqualify,
-        # and say so, because a wrongly-applied later-year minimum wipes out a real entitlement.
-        notes.append(
-            f"Section 46 minimum donation for {year} is not in this table (the ITA no longer publishes "
-            f"the {year} deductions booklet). The credit was applied WITHOUT the minimum test. Look the "
-            f"{year} minimum up before relying on this figure for a donation under about 200 NIS."
-        )
-        eligible = min(donations_annual, section_46_ceiling, salary_annual * 0.30)
-        donation_credit = eligible * SECTION_46_CREDIT_RATE
-    elif section_46_min is not None and donations_annual >= section_46_min:
+    section_46_min = SECTION_46_MIN_BY_YEAR[year]
+    section_46_ceiling = SECTION_46_CEILING_BY_YEAR[year]
+    if donations_annual > section_46_min:
         eligible = min(donations_annual, section_46_ceiling, salary_annual * 0.30)
         donation_credit = eligible * SECTION_46_CREDIT_RATE
     elif donations_annual > 0:
         notes.append(
-            f"Donations of {donations_annual:,.0f} NIS are below the {year} Section 46 minimum of "
+            f"Donations of {donations_annual:,.0f} NIS do not exceed the {year} Section 46 minimum of "
             f"{section_46_min} NIS, so no donation credit was applied."
         )
 
@@ -246,10 +278,12 @@ def estimate(
 
 def main() -> int:
     parser = argparse.ArgumentParser(description="Estimate Israeli employee tax refund.")
-    parser.add_argument("--year", type=int, default=2026, help="Tax year (default 2026).")
+    parser.add_argument("--year", type=int, required=True, help="Tax year being claimed (required: each year has its own brackets, point value and rules).")
     parser.add_argument("--salary", type=float, required=True, help="Annual taxable salary in NIS (sum across all employers).")
     parser.add_argument("--withheld", type=float, required=True, help="Total tax withheld in NIS (sum of field 042 across all Form 106 documents).")
-    parser.add_argument("--points", type=float, default=2.25, help="Base credit points for the year (default 2.25 = Israeli resident male; female resident gets 2.75; add child/oleh/single-parent/Section 39B miluim points separately).")
+    parser.add_argument("--points", type=float, default=2.25, help="Credit points for the year EXCLUDING children and Section 39B (default 2.25 = Israeli resident male; female resident gets 2.75; add oleh/single-parent/degree points here).")
+    parser.add_argument("--child-ages", type=str, default="", help="Comma-separated ages each child REACHES during --year (0 = birth year, 18 = year the child turns 18). Adds that year's own child points.")
+    parser.add_argument("--parent-side", choices=["mother", "father", "sole"], default="mother", help="mother = the mother (for parents living apart, the parent the children live with; also a single parent under s.40(b)(1)); father = the other parent; sole = a single parent under s.40(b)(1) (not married, not living with a partner) whose child's other parent died or is not registered (s.40(b)(1b)): both columns plus one point per family. Do not use after remarriage; list only the qualifying children.")
     parser.add_argument("--miluim-days", type=int, default=0, help="COMBAT reserve duty days served in the year before --year (Section 39B; counts only for tax year 2026 onward).")
     parser.add_argument("--donations", type=float, default=0.0, help="Total Section 46 donations in NIS.")
     parser.add_argument("--yishuv-pct", type=float, default=0.0, help="Yishuv mutav credit percentage for the locality (0 if not an eligible resident).")
@@ -282,12 +316,36 @@ def main() -> int:
     elif days >= 30:
         miluim_bonus = 0.5
 
+    child_total = 0.0
+    child_note = None
+    if args.child_ages.strip():
+        try:
+            ages = [int(a) for a in args.child_ages.split(",") if a.strip()]
+        except ValueError:
+            print("error: --child-ages takes whole numbers, e.g. 0,7,14", file=sys.stderr)
+            return 1
+        if args.parent_side == "sole":
+            per_child = [child_points(args.year, a, "mother") + child_points(args.year, a, "father") for a in ages]
+        else:
+            per_child = [child_points(args.year, a, args.parent_side) for a in ages]
+        child_total = sum(per_child)
+        sole_extra = args.parent_side == "sole" and any(0 <= a <= 18 for a in ages)
+        if sole_extra:
+            child_total += 1.0  # s.40(b)(1b): one additional point per family
+        child_note = (
+            f"Child points for {args.year} ({args.parent_side} side): "
+            + ", ".join(f"age {a} = {pt:g}" for a, pt in zip(ages, per_child))
+            + (" plus 1 point per family for a sole parent" if sole_extra else "")
+            + f"; total {child_total:g}. The mother may move one birth-year point to the next tax year "
+            "(s.66(ג)(4)(א1)); this run keeps it in the birth year."
+        )
+
     try:
         result = estimate(
             year=args.year,
             salary_annual=args.salary,
             withheld_annual=args.withheld,
-            points=args.points,
+            points=args.points + child_total,
             miluim_points_bonus=miluim_bonus,
             donations_annual=args.donations,
             yishuv_pct=args.yishuv_pct,
@@ -304,6 +362,8 @@ def main() -> int:
     print(f"Estimated refund range: {result.refund_low:,.0f} - {result.refund_high:,.0f} ₪")
     if miluim_note:
         result.notes.insert(0, miluim_note)
+    if child_note:
+        result.notes.insert(0, child_note)
     if miluim_bonus > 0:
         print(
             f"Reserve duty bonus applied: {miluim_bonus} points, worth up to "

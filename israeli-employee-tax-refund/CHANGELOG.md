@@ -2,6 +2,36 @@
 
 All notable changes to this skill are documented here.
 
+## [1.8.0] - 2026-10-07
+
+### Fixed
+
+- Child credit points now follow the CLAIM year. The skill applied the 2024 table to every year and said the 6-17 point had applied "since 2022". The Ordinance has three regimes inside the refund window: 2020-2021 (birth year 1.5, ages 1-5 2.5 per parent, ages 6-17 mother 1 and father 0), 2022-2023 (a temporary order gave ages 6-12 mother 2 and father 1), and 2024 on (2.5 / 4.5 / 4.5 / 3.5 / 2.5 / 2.5 for ages 0-5, ages 6-17 mother 2 and father 1). Per-year table in the rates reference; the estimator gains `--child-ages` and `--parent-side`. The mother's option to move one birth-year point to the next year (Form 116ד) is added.
+- Section 35 oleh schedule: the defaults table described the post-2022 bands as "year 1, years 1.5-2.5, year 3, year 4". The statute runs by month: 1/12 a month in months 1-12, 1/4 in months 13-30, 1/6 in months 31-42, 1/12 in months 43-54.
+- Section 40ד vocational certificates: completions in 2018-2022 get one point for one tax year (the year after completion or the one after), per the statute's transitional text; only 2023+ completions get a point per study year up to 3. Academic 2014-2022 graduates likewise choose the year after completion or the one after, not "graduation year or year after".
+- Section 45 disabled-child points were described as "never applied at source". When the child receives גמלת ילד נכה they go through Form 101; otherwise Form 116א, filed every year.
+- Removed the claim that a refund is first offset against income-tax, Bituach Leumi, maintenance or הוצאה לפועל debts: no provision was found. Replaced with what s.160א does provide (the ITA may hold up to half the refund, or the disputed amount, for up to 90 days while the request is examined).
+- Bonus / 13th salary: the trigger cited Regulation 6 and said a bonus pushes the month into the top band. Regulation 4 spreads irregular pay over twelve months, so a bonus is not a refund trigger on its own; it is kept as a note inside the part-year and two-employer triggers.
+- Section 45א: life insurance earns 25%, pension 35%, within 7% of qualifying income. Per-year pension caps added (7,392 / 7,308 / 7,476 / 7,896 / 8,148 NIS for 2020-2026) from each year's ITA booklet.
+- Section 46: the 2020 and 2021 minimum (190 NIS) and ceilings (9,350,000 and 9,294,000 NIS) are now sourced, and the estimator applies the minimum test to every year. The credit requires the year's total to EXCEED the minimum, as the booklet words it.
+- Bituach Leumi: the claim that BTL "typically under-withholds" on maternity and unemployment pay, and that miluim pay is "usually" paid through the employer, were unsourced. The skill now tells the agent to add both legs and to ask how the miluim pay arrived.
+- Refund interest in the rates reference said "late refunds"; it applies to every refund (s.160(a)), matching SKILL.md.
+- ילד להורה אחד (the other parent died or is not registered): the skill gave only "one additional point". s.40(ב)(1ב) also gives that parent the other parent's child points for each child (before 2024 only for children under 6, plus the 6-12 point in 2022-2023). A widowed parent of a 2-year-old in 2024 is owed 10 points, not 5.5. The estimator gains `--parent-side sole`.
+- Section 9(5): the 90% test was applied without a date. Before 15.11.2021 a single impairment needed 100% (90% only on a weighted calculation), so 2020 and most of 2021 follow the old test. Per-year ceilings for 2020-2023, part-year pro-rating and the real filing documents (committee protocol, ITA request form, last payslip) replace a non-existent "ratification" step.
+- Bonus / 13th salary: regulation 4 still over-withholds when the bonus lands in a month whose pay is above the year's average (commission, seasonal overtime), not only with two employers or part-year work.
+- Trigger 5 said donations of "≥ 207"; the total must exceed the minimum. Master's (2023+) is half a point per study year, at most 2 years.
+- Yishuv mutav: part-year residents get a pro-rated credit after 12 consecutive months (s.11(ב)(4)), and a dropped locality keeps its credit for that year and the next (s.11(ב)(4א)).
+- The s.160א hold is initially up to 90 days and can be extended; the reference now says so. A sentence denying that a refund can be reached by creditors was replaced by "outside this skill, ask the tax office".
+- The estimator now requires `--year`, so a 2020-2025 claim is never silently computed on 2026 rules.
+
+### Changed
+
+- Added the ITA's free anonymous refund simulator (2020-2025) as the route to an exact figure.
+- The 2021 ITA booklet is still served (under a different file name), so 2021 remains primary-sourced; 2020 is read from a mirror copy of the ITA 2020 booklet. Stale "no longer served" wording corrected.
+- Amendment 283 (ספר החוקים 3461, 23.11.2025) verified as the law that added s.39ב; the 2028 permanent formula (0.75 at 20 days, plus 0.25 per 5 days) is spelled out.
+- Job-change intake questions added (carried since 1.3.0). איחוד תיקים and a second ordinary-withholding example are now explicitly out of scope in the domain checklist, with reasons.
+- SKILL.md held under the 5,000-word cap by moving the Section 44 detail and two troubleshooting entries to the rates reference.
+
 ## [1.7.0] - 2026-10-07
 
 ### Fixed

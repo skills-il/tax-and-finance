@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0",
   "skill": "israeli-employee-tax-refund",
-  "generated_at": "2026-10-06T21:56:13Z",
+  "generated_at": "2026-10-07T06:00:00Z",
   "claims": [
     {
       "claim_id": "credit-point-value-2026",
@@ -152,13 +152,12 @@
     },
     {
       "claim_id": "section-40-children-credit",
-      "claim": "Section 40 ITO credit points for children (2024+ enhanced schedule, applies to each parent): birth year 2.5, age 1 = 4.5, age 2 = 4.5, age 3 = 3.5, age 4 = 2.5, age 5 = 2.5. For ages 6-17: mother gets 2 points (since 2022, was 1), father gets 1 point (since 2022, was 0). Sections 64-66 ITO govern single-parent and alimony provisions",
+      "claim": "Kol-Zchut child-to-5 page: the 1.5-point early-years benefit is worth 4,356 NIS a year and 363 NIS a month at the 2026 point value",
       "source_url": "https://www.kolzchut.org.il/he/%D7%A0%D7%A7%D7%95%D7%93%D7%95%D7%AA_%D7%96%D7%99%D7%9B%D7%95%D7%99_%D7%9E%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94_%D7%9C%D7%94%D7%95%D7%A8%D7%94_%D7%9C%D7%99%D7%9C%D7%93_%D7%A2%D7%93_%D7%92%D7%99%D7%9C_5",
       "raw_snippet": "שווי ההטבה הוא 4,356 ₪ לשנה ו-363 ₪ לחודש",
       "fetched_at": "2026-05-18T00:00:00Z",
       "appears_in": [
-        "SKILL.md",
-        "SKILL_HE.md"
+        "references/domain-checklist.md"
       ],
       "verified_via": "kolzchut page text read through the site MediaWiki API in a browser; snippet replaced with verbatim page text (the previous value was a generated summary)",
       "verified_at": "2026-08-15"
@@ -316,19 +315,6 @@
       ],
       "verified_via": "rendered in headed Chrome (Playwright) 2026-10-07 (Cloudflare blocks curl); URL line asserted; snippet found verbatim in page innerText",
       "verified_at": "2026-10-06T21:57:49Z"
-    },
-    {
-      "claim_id": "btl-under-withholding-salary-refund-origin",
-      "claim": "ביטוח לאומי מנכה לרוב פחות מס מדמי הלידה ממה שהיה צריך, ולכן חלק זה עלול להותיר את המקבלת בחבות מס; ההחזר מגיע בדרך כלל מצד המשכורת ולא מצד הביטוח הלאומי.",
-      "source_url": "https://finbizacademy.co.il/baby_born/",
-      "raw_snippet": "כדאי לדעת שלרוב ביטוח לאומי מנכה פחות מס מדמי הלידה ממה שהיה צריך",
-      "fetched_at": "2026-08-15",
-      "appears_in": [
-        "SKILL.md",
-        "SKILL_HE.md"
-      ],
-      "verified_via": "source article read in a browser",
-      "verified_at": "2026-08-15"
     },
     {
       "claim_id": "halat-unpaid-leave",
@@ -600,14 +586,15 @@
     },
     {
       "claim_id": "withholding-regulations-1993",
-      "claim": "תקנה 6 לתקנות מס הכנסה (ניכוי ממשכורת ומשכר עבודה), תשנ\"ג-1993 היא ההסדר שלפיו המעסיק מנכה מס מדי חודש. Regulation 6 of these regulations governs the monthly employer withholding computation.",
-      "source_url": "https://www.nevo.co.il/law_html/law01/255_163.htm",
-      "raw_snippet": "תקנות מס הכנסה (ניכוי ממשכורת ומשכר עבודה), תשנ\"ג-1993",
-      "fetched_at": "2026-08-15",
-      "verified_via": "regulations located on nevo and their title confirmed verbatim",
-      "verified_at": "2026-08-15",
+      "claim": "תקנה 4 (Regulation 4) Regulation 4 of תקנות מס הכנסה (ניכוי ממשכורת ומשכר עבודה), התשנ\"ג-1993 governs withholding on irregular pay (משכורת בלתי קבועה, including a bonus or 13th salary): the employer withholds 12 times the extra tax that results from adding one twelfth of the irregular pay to that month's salary.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94_(%D7%A0%D7%99%D7%9B%D7%95%D7%99_%D7%9E%D7%9E%D7%A9%D7%9B%D7%95%D7%A8%D7%AA_%D7%95%D7%9E%D7%A9%D7%9B%D7%A8_%D7%A2%D7%91%D7%95%D7%93%D7%94)",
+      "raw_snippet": "מעביד המשלם לעובד משכורת בלתי קבועה, ינכה ממנה, בעת התשלום, מס בסכום השווה להפרש המס המוכפל ב־12",
+      "fetched_at": "2026-10-07T03:00:00Z",
       "appears_in": [
-        "SKILL_HE.md"
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/document-requirements.md",
+        "references/domain-checklist.md"
       ]
     },
     {
@@ -2207,6 +2194,928 @@
       ],
       "verified_via": "rendered in headed Chrome (Playwright) 2026-10-07; final URL https://secapp.taxes.gov.il/taxes-login/login/general; snippet found verbatim",
       "verified_at": "2026-10-06T22:08:08Z"
+    },
+    {
+      "claim_id": "withholding-reg4-one-twelfth",
+      "claim": "Under regulation 4 the extra tax is computed by adding one twelfth of the irregular pay to that month's salary, so a bonus is withheld at that month's marginal rate rather than in the top band",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94_(%D7%A0%D7%99%D7%9B%D7%95%D7%99_%D7%9E%D7%9E%D7%A9%D7%9B%D7%95%D7%A8%D7%AA_%D7%95%D7%9E%D7%A9%D7%9B%D7%A8_%D7%A2%D7%91%D7%95%D7%93%D7%94)",
+      "raw_snippet": "לבין המס שיש לנכותו ממשכורת החודש לאותו חודש, בתוספת החלק השנים־עשר מהמשכורת הבלתי קבועה",
+      "fetched_at": "2026-10-07T03:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/document-requirements.md"
+      ]
+    },
+    {
+      "claim_id": "child-2021-father-toddlers-only",
+      "claim": "In the 2021 text of the Ordinance (tax years 2020-2021) the father gets child points only for children under 6 (פעוטות): 1.5 in the birth year and 2.5 a year to the year the child turns 5; nothing at ages 6-17",
+      "source_url": "https://he.wikisource.org/w/index.php?title=%D7%A4%D7%A7%D7%95%D7%93%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94&oldid=1088975",
+      "raw_snippet": "הגבר יהא זכאי, כנגד המס החל על הכנסתו מיגיעה אישית, לנקודות זיכוי בעד כל אחד מילדיו שהם פעוטות",
+      "fetched_at": "2026-10-07T03:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md",
+        "references/domain-checklist.md",
+        "scripts/estimate_refund.py"
+      ]
+    },
+    {
+      "claim_id": "child-2021-father-2-5-to-5",
+      "claim": "2020-2021: father 2.5 points a year from the year after birth to the year the child turns 5",
+      "source_url": "https://he.wikisource.org/w/index.php?title=%D7%A4%D7%A7%D7%95%D7%93%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94&oldid=1088975",
+      "raw_snippet": "נקודות זיכוי החל בשנת המס שלאחר שנת לידתו של הפעוט ועד לשנת המס שבה מלאו לו חמש שנים",
+      "fetched_at": "2026-10-07T03:00:00Z",
+      "appears_in": [
+        "references/2026-rates.md",
+        "scripts/estimate_refund.py"
+      ]
+    },
+    {
+      "claim_id": "child-2021-mother-1-to-17",
+      "claim": "2020-2021: mother 1 point a year for each child from the year after birth to the year before the maturity year (ages 6-17 total 1)",
+      "source_url": "https://he.wikisource.org/w/index.php?title=%D7%A4%D7%A7%D7%95%D7%93%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94&oldid=1088975",
+      "raw_snippet": "נקודת זיכוי אחת בעד כל אחד מילדיה החל בשנת המס שלאחר שנת לידתו ועד לשנת המס שקדמה לשנת בגרותו",
+      "fetched_at": "2026-10-07T03:00:00Z",
+      "appears_in": [
+        "references/2026-rates.md",
+        "scripts/estimate_refund.py",
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "child-2021-mother-extra-1-5",
+      "claim": "2020-2021: mother 1.5 extra points on top of the 1 point from the year after birth to age 5, so 2.5 at ages 1-5",
+      "source_url": "https://he.wikisource.org/w/index.php?title=%D7%A4%D7%A7%D7%95%D7%93%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94&oldid=1088975",
+      "raw_snippet": "נקודות זיכוי נוספות על נקודת הזיכוי לפי פסקת משנה (ב), בעד כל אחד מילדיה החל בשנת המס שלאחר שנת לידתו ועד לשנת המס שבה מלאו לו חמש שנים",
+      "fetched_at": "2026-10-07T03:00:00Z",
+      "appears_in": [
+        "references/2026-rates.md",
+        "scripts/estimate_refund.py"
+      ]
+    },
+    {
+      "claim_id": "child-2022-2023-temp-order-dates",
+      "claim": "The extra child point for ages 6-12 was a temporary order from 1.1.2022 to 31.12.2023",
+      "source_url": "https://he.wikisource.org/w/index.php?title=%D7%A4%D7%A7%D7%95%D7%93%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94&oldid=2763699",
+      "raw_snippet": "הוראת שעה מיום 1.1.2022 עד יום 31.12.2023",
+      "fetched_at": "2026-10-07T03:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md",
+        "references/domain-checklist.md",
+        "scripts/estimate_refund.py"
+      ]
+    },
+    {
+      "claim_id": "child-2022-father-6-12",
+      "claim": "2022-2023 temporary order: the father gets 1 point for each child under 13 who is not a toddler (ages 6-12)",
+      "source_url": "https://he.wikisource.org/w/index.php?title=%D7%A4%D7%A7%D7%95%D7%93%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94&oldid=2763699",
+      "raw_snippet": "לנקודת זיכוי בעד כל אחד מילדיו אשר בשנת 2022 טרם מלאו לו שלוש עשרה שנים והוא אינו פעוט",
+      "fetched_at": "2026-10-07T03:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md",
+        "references/domain-checklist.md",
+        "scripts/estimate_refund.py"
+      ]
+    },
+    {
+      "claim_id": "child-2022-mother-6-12",
+      "claim": "2022-2023 temporary order: the mother gets 1 additional point (2 in all) for each child under 13 who is not a toddler (ages 6-12)",
+      "source_url": "https://he.wikisource.org/w/index.php?title=%D7%A4%D7%A7%D7%95%D7%93%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94&oldid=2763699",
+      "raw_snippet": "נקודת זיכוי אחת נוספת על נקודות הזיכוי לפי פסקת משנה (ב), בשנת 2022 – בעד כל אחד מילדיה, אשר בשנת 2022 טרם מלאו לו שלוש עשרה שנים",
+      "fetched_at": "2026-10-07T03:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md",
+        "references/domain-checklist.md",
+        "scripts/estimate_refund.py"
+      ]
+    },
+    {
+      "claim_id": "child-paot-definition",
+      "claim": "A פעוט is a child who has not turned 6 in the tax year",
+      "source_url": "https://he.wikisource.org/w/index.php?title=%D7%A4%D7%A7%D7%95%D7%93%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94&oldid=2763699",
+      "raw_snippet": "ילד שטרם מלאו לו שש שנים בשנת המס",
+      "fetched_at": "2026-10-07T03:00:00Z",
+      "appears_in": [
+        "references/2026-rates.md"
+      ]
+    },
+    {
+      "claim_id": "child-single-parent-2022-temp",
+      "claim": "2022-2023 (s.40(ג)(1)): a parent entitled under s.40(ב)(1) got one additional point per child aged 6-12, so a single parent follows the mother column",
+      "source_url": "https://he.wikisource.org/w/index.php?title=%D7%A4%D7%A7%D7%95%D7%93%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94&oldid=2763699",
+      "raw_snippet": "תובא בחשבון, נוסף על נקודות הזיכוי האמורות באותו סעיף קטן, בשנת 2022 – נקודת זיכוי אחת נוספת בשל כל ילד",
+      "fetched_at": "2026-10-07T03:00:00Z",
+      "appears_in": [
+        "references/2026-rates.md"
+      ]
+    },
+    {
+      "claim_id": "child-single-parent-schedule-2021",
+      "claim": "Before 2024 a single parent under s.40(ב)(1) followed the same schedule as the mother (1.5 / 2.5 / 1 / 0.5)",
+      "source_url": "https://he.wikisource.org/w/index.php?title=%D7%A4%D7%A7%D7%95%D7%93%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94&oldid=1088975",
+      "raw_snippet": "ונקודת זיכוי אחת בשל כל ילד החל בשנת המס שבה מלאו לו שש שנים, ועד לשנת המס שקדמה לשנת בגרותו",
+      "fetched_at": "2026-10-07T03:00:00Z",
+      "appears_in": [
+        "references/2026-rates.md"
+      ]
+    },
+    {
+      "claim_id": "child-2024-13-17",
+      "claim": "From tax year 2024 an extra point is given to a parent for each child aged 13 to 17 (ITA 2024 booklet)",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2024.pdf",
+      "raw_snippet": "החל משנת המס 2024 תובא בחישוב המס נקודת זיכוי נוספת להורה בעבור כל ילד",
+      "fetched_at": "2026-10-07T03:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md",
+        "references/domain-checklist.md",
+        "scripts/estimate_refund.py"
+      ]
+    },
+    {
+      "claim_id": "child-2024-13-17-ages",
+      "claim": "The 2024 extra point covers a child who turned 13 and has not yet turned 18 in the tax year",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2024.pdf",
+      "raw_snippet": "שבשנת המס מלאו לו 13 שנים וטרם מלאו לו 18 שנים",
+      "fetched_at": "2026-10-07T03:00:00Z",
+      "appears_in": [
+        "references/2026-rates.md"
+      ]
+    },
+    {
+      "claim_id": "child-current-father-6-17",
+      "claim": "Current text (2024 on): the father gets 1 point per child from the year the child turns 6 to the year before the maturity year",
+      "source_url": "https://he.wikisource.org/wiki/%D7%A4%D7%A7%D7%95%D7%93%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
+      "raw_snippet": "נקודת זיכוי אחת בעד כל אחד מילדיו החל בשנת המס שבה מלאו לו שש שנים ועד לשנת המס שקדמה לשנת בגרותו",
+      "fetched_at": "2026-10-07T03:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md",
+        "references/domain-checklist.md",
+        "scripts/estimate_refund.py"
+      ]
+    },
+    {
+      "claim_id": "child-current-mother-6-17",
+      "claim": "Current text (2024 on): the mother gets 2 points per child from the year the child turns 6 to the year before the maturity year",
+      "source_url": "https://he.wikisource.org/wiki/%D7%A4%D7%A7%D7%95%D7%93%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
+      "raw_snippet": "ושתי נקודות זיכוי בעד כל אחד מילדיה החל בשנת המס שבה מלאו לו שש שנים ועד לשנת המס שקדמה לשנת בגרותו",
+      "fetched_at": "2026-10-07T03:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md",
+        "references/domain-checklist.md",
+        "scripts/estimate_refund.py"
+      ]
+    },
+    {
+      "claim_id": "child-2024-early-years-kz",
+      "claim": "Kol-Zchut: from 2024 the early-years points are 2.5 in the birth year, 4.5 at ages 1 and 2, 3.5 at 3, and 2.5 at 4 and 5; from 2017 to 2023 they were 1.5 in the birth year and 2.5 at ages 1-5",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%A0%D7%A7%D7%95%D7%93%D7%95%D7%AA_%D7%96%D7%99%D7%9B%D7%95%D7%99_%D7%9E%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94_%D7%9C%D7%94%D7%95%D7%A8%D7%94_%D7%9C%D7%A4%D7%A2%D7%95%D7%98_(%D7%9E%D7%AA%D7%97%D7%AA_%D7%9C%D7%92%D7%99%D7%9C_6)",
+      "raw_snippet": "החל משנת 2024, יינתנו נקודות זיכוי נוספות להורים לילדים עד גיל 6 שנים.",
+      "fetched_at": "2026-10-07T03:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md",
+        "references/domain-checklist.md",
+        "scripts/estimate_refund.py"
+      ],
+      "verified_via": "rendered in headed Chrome (Playwright, channel chrome) 2026-10-07; URL line asserted; snippet found in page innerText (Cloudflare blocks curl)",
+      "verified_at": "2026-10-07T03:00:00Z"
+    },
+    {
+      "claim_id": "child-2017-2023-birth-1-5-kz",
+      "claim": "Kol-Zchut: from 2017 to 2023 inclusive, 1.5 points in the birth year",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%A0%D7%A7%D7%95%D7%93%D7%95%D7%AA_%D7%96%D7%99%D7%9B%D7%95%D7%99_%D7%9E%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94_%D7%9C%D7%94%D7%95%D7%A8%D7%94_%D7%9C%D7%A4%D7%A2%D7%95%D7%98_(%D7%9E%D7%AA%D7%97%D7%AA_%D7%9C%D7%92%D7%99%D7%9C_6)",
+      "raw_snippet": "בשנת המס שבה נולד הילד יינתנו 1.5 נקודות זיכוי.",
+      "fetched_at": "2026-10-07T03:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md",
+        "references/domain-checklist.md",
+        "scripts/estimate_refund.py"
+      ],
+      "verified_via": "rendered in headed Chrome (Playwright, channel chrome) 2026-10-07; URL line asserted; snippet found in page innerText (Cloudflare blocks curl)",
+      "verified_at": "2026-10-07T03:00:00Z"
+    },
+    {
+      "claim_id": "child-birth-point-deferral",
+      "claim": "The mother may choose to have one of her birth-year points counted in the birth year or in the following tax year (s.66(ג)(4)(א1))",
+      "source_url": "https://he.wikisource.org/wiki/%D7%A4%D7%A7%D7%95%D7%93%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
+      "raw_snippet": "בשנת הלידה, תובא בחשבון בשנת המס שבה נולד הילד או בשנת המס שלאחריה",
+      "fetched_at": "2026-10-07T03:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md",
+        "references/domain-checklist.md",
+        "scripts/estimate_refund.py"
+      ]
+    },
+    {
+      "claim_id": "child-form-116d",
+      "claim": "The birth-year point deferral is claimed with Form 116ד, filled in the birth year and in the following year",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%A0%D7%A7%D7%95%D7%93%D7%95%D7%AA_%D7%96%D7%99%D7%9B%D7%95%D7%99_%D7%9E%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94_%D7%9C%D7%94%D7%95%D7%A8%D7%94_%D7%9C%D7%99%D7%9C%D7%93_%D7%A2%D7%93_%D7%92%D7%99%D7%9C_18",
+      "raw_snippet": "יש למלא את טופס 116ד בשנת הלידה (שבה מתבקשת דחייה בניצול נקודת הזיכוי) וגם בשנה שלאחר מכן",
+      "fetched_at": "2026-10-07T03:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md",
+        "references/domain-checklist.md",
+        "references/document-requirements.md"
+      ],
+      "verified_via": "rendered in headed Chrome (Playwright, channel chrome) 2026-10-07; URL line asserted; snippet found in page innerText (Cloudflare blocks curl)",
+      "verified_at": "2026-10-07T03:00:00Z"
+    },
+    {
+      "claim_id": "s40d-2018-2022-one-year",
+      "claim": "Section 40ד: for vocational studies completed 2018-2022 the point is given for one tax year, the year after completion or the one after, at the claimant's choice",
+      "source_url": "https://he.wikisource.org/wiki/%D7%A4%D7%A7%D7%95%D7%93%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
+      "raw_snippet": "לגבי מי שסיים לימודים בתקופה משנת 2018 ועד שנת 2022, יחול נוסח זה",
+      "fetched_at": "2026-10-07T03:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md"
+      ]
+    },
+    {
+      "claim_id": "s40d-one-tax-year",
+      "claim": "The 2018-2022 version of s.40ד counts the point for a single tax year",
+      "source_url": "https://he.wikisource.org/wiki/%D7%A4%D7%A7%D7%95%D7%93%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
+      "raw_snippet": "נקודת זיכוי כאמור בסעיף זה תובא בחשבון במשך שנת מס אחת",
+      "fetched_at": "2026-10-07T03:00:00Z",
+      "appears_in": [
+        "references/2026-rates.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "s45-form101-gimlat-yeled-nache",
+      "claim": "Parents whose child receives גמלת ילד נכה can get the s.45 points directly from the employer through Form 101",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%A0%D7%A7%D7%95%D7%93%D7%95%D7%AA_%D7%96%D7%99%D7%9B%D7%95%D7%99_%D7%9E%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94_%D7%91%D7%A2%D7%93_%D7%99%D7%9C%D7%93_%D7%90%D7%95_%D7%91%D7%95%D7%92%D7%A8_%D7%A2%D7%9D_%D7%9E%D7%95%D7%92%D7%91%D7%9C%D7%95%D7%AA",
+      "raw_snippet": "הורים שילדם מקבל גמלת ילד נכה יכולים לקבל את נקודות הזיכוי ישירות מהמעסיק, ללא צורך לפנות למשרדי מס הכנסה.",
+      "fetched_at": "2026-10-07T03:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md",
+        "references/document-requirements.md",
+        "references/domain-checklist.md"
+      ],
+      "verified_via": "rendered in headed Chrome (Playwright, channel chrome) 2026-10-07; URL line asserted; snippet found in page innerText (Cloudflare blocks curl)",
+      "verified_at": "2026-10-07T03:00:00Z"
+    },
+    {
+      "claim_id": "s45-116a-every-year",
+      "claim": "The s.45 credit request (Form 116א) is filed anew every year",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%A0%D7%A7%D7%95%D7%93%D7%95%D7%AA_%D7%96%D7%99%D7%9B%D7%95%D7%99_%D7%9E%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94_%D7%91%D7%A2%D7%93_%D7%99%D7%9C%D7%93_%D7%90%D7%95_%D7%91%D7%95%D7%92%D7%A8_%D7%A2%D7%9D_%D7%9E%D7%95%D7%92%D7%91%D7%9C%D7%95%D7%AA",
+      "raw_snippet": "יש להגיש בקשת זיכוי ממס בכל שנה מחדש.",
+      "fetched_at": "2026-10-07T03:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md",
+        "references/document-requirements.md",
+        "references/domain-checklist.md"
+      ],
+      "verified_via": "rendered in headed Chrome (Playwright, channel chrome) 2026-10-07; URL line asserted; snippet found in page innerText (Cloudflare blocks curl)",
+      "verified_at": "2026-10-07T03:00:00Z"
+    },
+    {
+      "claim_id": "s160a-hold-half-refund",
+      "claim": "סעיף 160א (Section 160א): Section 160א: if the assessing officer orders the report examined, the refund may be held up to half the amount due or the disputed amount, whichever is lower",
+      "source_url": "https://he.wikisource.org/wiki/%D7%A4%D7%A7%D7%95%D7%93%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
+      "raw_snippet": "עד גובה מחצית מהסכום המגיע לנישום כאמור או עד גובה הסכום השנוי במחלוקת, לפי הנמוך מביניהם, אם הורה פקיד השומה לבדוק את הדוח",
+      "fetched_at": "2026-10-07T03:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "s160a-90-days",
+      "claim": "The s.160א hold runs initially up to 90 days from receipt of the report",
+      "source_url": "https://he.wikisource.org/wiki/%D7%A4%D7%A7%D7%95%D7%93%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
+      "raw_snippet": "יחול עד 90 ימים ממועד קבלת הדוח",
+      "fetched_at": "2026-10-07T03:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "s45a-life-25",
+      "claim": "Section 45א(א): a 25% credit on life-insurance premiums",
+      "source_url": "https://he.wikisource.org/wiki/%D7%A4%D7%A7%D7%95%D7%93%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
+      "raw_snippet": "יחיד יזוכה ממס ב־25% מן הסכומים ששילמו הוא או בן זוגו בשנת המס",
+      "fetched_at": "2026-10-07T03:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md",
+        "references/domain-checklist.md",
+        "references/document-requirements.md"
+      ]
+    },
+    {
+      "claim_id": "s45a-cap-7pct",
+      "claim": "For an individual with employment income the credited deposits are capped at 7% of qualifying income",
+      "source_url": "https://he.wikisource.org/wiki/%D7%A4%D7%A7%D7%95%D7%93%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
+      "raw_snippet": "לעניין יחיד שהיתה לו בשנת המס הכנסת עבודה – 7% מהכנסתו המזכה",
+      "fetched_at": "2026-10-07T03:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "s45a-life-5pct",
+      "claim": "Life insurance and survivors' cover together are capped at 5% of qualifying income",
+      "source_url": "https://he.wikisource.org/wiki/%D7%A4%D7%A7%D7%95%D7%93%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
+      "raw_snippet": "ובשל הכנסה שאינה מעבודה, לא יעלה על 5% מהכנסתו המזכה של היחיד",
+      "fetched_at": "2026-10-07T03:00:00Z",
+      "appears_in": [
+        "references/2026-rates.md"
+      ]
+    },
+    {
+      "claim_id": "qi-2020-8800",
+      "claim": "2020 qualifying income on salary (s.47(א)(1)(1)) was 8,800 NIS a month; annual pension cap 7% x 12 x 8,800 = 7,392 NIS",
+      "source_url": "https://www.prisha.co.il/UserFiles/File/pdf/hoz/parameters2020.pdf",
+      "raw_snippet": "לחודש 8,800 הכנסה מזכה שהיא הכנסת עבודה",
+      "fetched_at": "2026-10-07T03:00:00Z",
+      "appears_in": [
+        "references/2026-rates.md",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "qi-2021-8700",
+      "claim": "2021 qualifying income on salary was 8,700 NIS a month; annual pension cap 7,308 NIS",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/itc_itc_necuyim2021-1.pdf",
+      "raw_snippet": "לחודש 8,700 הכנסה מזכה שהיא הכנסת עבודה",
+      "fetched_at": "2026-10-07T03:00:00Z",
+      "appears_in": [
+        "references/2026-rates.md",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "qi-2022-8900",
+      "claim": "2022 qualifying income on salary was 8,900 NIS a month; annual pension cap 7,476 NIS",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2022.pdf",
+      "raw_snippet": "לחודש 8,900 הכנסה מזכה שהיא הכנסת עבודה",
+      "fetched_at": "2026-10-07T03:00:00Z",
+      "appears_in": [
+        "references/2026-rates.md",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "qi-2023-9400",
+      "claim": "2023 qualifying income on salary was 9,400 NIS a month; annual pension cap 7,896 NIS",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2023.pdf",
+      "raw_snippet": "לחודש 9,400 תקרת הכנסה מזכה",
+      "fetched_at": "2026-10-07T03:00:00Z",
+      "appears_in": [
+        "references/2026-rates.md",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "qi-2024-9700",
+      "claim": "2024 qualifying income on salary was 9,700 NIS a month; annual pension cap 8,148 NIS",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2024.pdf",
+      "raw_snippet": "לחודש 9,700 תקרת הכנסה מזכה",
+      "fetched_at": "2026-10-07T03:00:00Z",
+      "appears_in": [
+        "references/2026-rates.md",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "qi-2025-9700",
+      "claim": "2025 qualifying income on salary was 9,700 NIS a month",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2025.pdf",
+      "raw_snippet": "לחודש 9,700",
+      "fetched_at": "2026-10-07T03:00:00Z",
+      "appears_in": [
+        "references/2026-rates.md"
+      ]
+    },
+    {
+      "claim_id": "pension-caps-kz-2021-2026",
+      "claim": "Kol-Zchut: an employee may deposit and earn the credit on up to 8,148 NIS a year for 2026 (7,308 for 2021), and in any case no more than 7% of salary",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%96%D7%99%D7%9B%D7%95%D7%99_%D7%9E%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94_%D7%91%D7%92%D7%99%D7%9F_%D7%94%D7%A4%D7%A8%D7%A9%D7%95%D7%AA_%D7%9C%D7%91%D7%99%D7%98%D7%95%D7%97_%D7%A4%D7%A0%D7%A1%D7%99%D7%95%D7%A0%D7%99",
+      "raw_snippet": "נכון ל-2026, הסכום המקסימלי שעובד יכול להפריש ולזכות בהטבת המס הוא 8,148 ₪ לשנה (בממוצע 679 ₪ לחודש) ובכל מקרה לא יותר מ-7% מהשכר",
+      "fetched_at": "2026-10-07T03:00:00Z",
+      "appears_in": [
+        "references/2026-rates.md",
+        "references/domain-checklist.md"
+      ],
+      "verified_via": "rendered in headed Chrome (Playwright, channel chrome) 2026-10-07; URL line asserted; snippet found in page innerText (Cloudflare blocks curl)",
+      "verified_at": "2026-10-07T03:00:00Z"
+    },
+    {
+      "claim_id": "pension-private-deposit-uninsured",
+      "claim": "Kol-Zchut: an employee who also deposited privately, outside payroll, may get an additional benefit if there are salary components with no pension contributions",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%96%D7%99%D7%9B%D7%95%D7%99_%D7%9E%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94_%D7%91%D7%92%D7%99%D7%9F_%D7%94%D7%A4%D7%A8%D7%A9%D7%95%D7%AA_%D7%9C%D7%91%D7%99%D7%98%D7%95%D7%97_%D7%A4%D7%A0%D7%A1%D7%99%D7%95%D7%A0%D7%99",
+      "raw_snippet": "עובד שהפריש לפנסיה גם באופן עצמאי (שלא דרך השכר) עשוי להיות זכאי להטבת מס נוספת, אם יש לו רכיבים בשכר שעבורם לא מועברים הפרשות לביטוח הפנסיוני",
+      "fetched_at": "2026-10-07T03:00:00Z",
+      "appears_in": [
+        "references/2026-rates.md"
+      ],
+      "verified_via": "rendered in headed Chrome (Playwright, channel chrome) 2026-10-07; URL line asserted; snippet found in page innerText (Cloudflare blocks curl)",
+      "verified_at": "2026-10-07T03:00:00Z"
+    },
+    {
+      "claim_id": "s46-min-2020",
+      "claim": "2020 Section 46 minimum: a total exceeding 190 NIS",
+      "source_url": "https://www.prisha.co.il/UserFiles/File/pdf/hoz/parameters2020.pdf",
+      "raw_snippet": "לשנה 190 סכום מזערי, סכום העולה על",
+      "fetched_at": "2026-10-07T03:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md",
+        "references/domain-checklist.md",
+        "scripts/estimate_refund.py"
+      ]
+    },
+    {
+      "claim_id": "s46-ceiling-2020",
+      "claim": "2020 Section 46 maximum: 9,350,000 NIS",
+      "source_url": "https://www.prisha.co.il/UserFiles/File/pdf/hoz/parameters2020.pdf",
+      "raw_snippet": "9,350,000 לשנה סכום מרבי",
+      "fetched_at": "2026-10-07T03:00:00Z",
+      "appears_in": [
+        "references/2026-rates.md",
+        "references/domain-checklist.md",
+        "scripts/estimate_refund.py"
+      ]
+    },
+    {
+      "claim_id": "s46-min-2021",
+      "claim": "2021 Section 46 minimum: a total exceeding 190 NIS",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/itc_itc_necuyim2021-1.pdf",
+      "raw_snippet": "לשנה 190 סכום מזערי, סכום העולה על",
+      "fetched_at": "2026-10-07T03:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md",
+        "references/domain-checklist.md",
+        "scripts/estimate_refund.py"
+      ]
+    },
+    {
+      "claim_id": "s46-ceiling-2021",
+      "claim": "2021 Section 46 maximum: 9,294,000 NIS",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/itc_itc_necuyim2021-1.pdf",
+      "raw_snippet": "9,294,000 לשנה סכום מרבי",
+      "fetched_at": "2026-10-07T03:00:00Z",
+      "appears_in": [
+        "references/2026-rates.md",
+        "references/domain-checklist.md",
+        "scripts/estimate_refund.py"
+      ]
+    },
+    {
+      "claim_id": "booklet-2021-served",
+      "claim": "The ITA still serves the 2021 deductions booklet (itc_itc_necuyim2021-1.pdf); its 2021 brackets start 10% up to 6,290 a month / 75,480 a year, matching the estimator",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/itc_itc_necuyim2021-1.pdf",
+      "raw_snippet": "עד 75,480 10% עד 6,290",
+      "fetched_at": "2026-10-07T03:00:00Z",
+      "appears_in": [
+        "scripts/estimate_refund.py",
+        "references/2026-rates.md",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "booklet-2020-mirror",
+      "claim": "A mirror copy of the ITA 2020 deductions booklet is hosted at prisha.co.il (title page: for January 2020 onward)",
+      "source_url": "https://www.prisha.co.il/UserFiles/File/pdf/hoz/parameters2020.pdf",
+      "raw_snippet": "לחודש ינואר 2020 ואילך",
+      "fetched_at": "2026-10-07T03:00:00Z",
+      "appears_in": [
+        "scripts/estimate_refund.py",
+        "references/2026-rates.md",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "s39b-added-by-283",
+      "claim": "Amendment 283 added section 39ב to the Ordinance (ITA 2026 booklet)",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf",
+      "raw_snippet": "במסגרתו נוסף סעיף 39ב לפקודת מס הכנסה",
+      "fetched_at": "2026-10-07T03:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "s44-cap-2024-2027",
+      "claim": "Section 44/45 relative income ceiling: 188,000 NIS for an individual and 301,000 NIS for a couple in 2024-2027",
+      "source_url": "https://he.wikisource.org/wiki/%D7%A4%D7%A7%D7%95%D7%93%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
+      "raw_snippet": "בשנים 2024–2027, 188,000 ש״ח ליחיד, 301,000 ש״ח לזוג",
+      "fetched_at": "2026-10-07T03:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md",
+        "references/domain-checklist.md",
+        "references/document-requirements.md"
+      ]
+    },
+    {
+      "claim_id": "s35-18-months-quarter",
+      "claim": "Section 35(א)(1א): for olim from 2022, 1/4 point a month for the 18 months after the first 12 (months 13-30)",
+      "source_url": "https://he.wikisource.org/wiki/%D7%A4%D7%A7%D7%95%D7%93%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
+      "raw_snippet": "נקודת זיכוי לכל חודש משמונה־עשר החודשים שלאחריהם",
+      "fetched_at": "2026-10-07T03:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md"
+      ]
+    },
+    {
+      "claim_id": "s35-per-month-in-israel",
+      "claim": "The s.35 credit is given for a tax year by the number of months the oleh lived in Israel in that year",
+      "source_url": "https://he.wikisource.org/wiki/%D7%A4%D7%A7%D7%95%D7%93%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
+      "raw_snippet": "לפי מספר החדשים שהעולה ישב בישראל באותה שנה",
+      "fetched_at": "2026-10-07T03:00:00Z",
+      "appears_in": [
+        "references/2026-rates.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "ita-simulator-anonymous",
+      "claim": "The ITA employee refund simulator gives an anonymous simulation of an income-tax report to see whether a refund is due for a given year",
+      "source_url": "https://www.gov.il/he/service/simulator-employee",
+      "raw_snippet": "הסימולטור מאפשר הדמיה אנונימית של דוח למס הכנסה לצורך קבלת החזר מס",
+      "fetched_at": "2026-10-07T03:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "ita-simulator-audience",
+      "claim": "The simulator is for employees and pensioners who are not obliged to file annual returns",
+      "source_url": "https://www.gov.il/he/service/simulator-employee",
+      "raw_snippet": "הסימולטור מיועד לאוכלוסיית השכירים והגמלאים שאינם חייבים בהגשת דוחות שנתיים למס הכנסה",
+      "fetched_at": "2026-10-07T03:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "ita-simulator-no-login",
+      "claim": "The Form 135 page: the ITA site has a tax simulator to check the computation, with no identification needed",
+      "source_url": "https://www.gov.il/he/service/itc135",
+      "raw_snippet": "באתר רשות המסים קיימת הדמיית מס (סימולטור) המסייעת בבדיקת חישוב המס. אין צורך להזדהות.",
+      "fetched_at": "2026-10-07T03:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "ita-simulator-years-2020-2025",
+      "claim": "The simulator application offers tax years 2020 to 2025",
+      "source_url": "https://secapp.taxes.gov.il/shSimulatorMas/main.aspx",
+      "raw_snippet": "סימולטור לחישוב מס הכנסה שנתי לשכירים",
+      "fetched_at": "2026-10-07T03:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "verified_via": "rendered in headed Chrome (Playwright, channel chrome) 2026-10-07; URL line asserted; title found and the year selector lists 2025, 2024, 2023, 2022, 2021, 2020",
+      "verified_at": "2026-10-07T03:00:00Z"
+    },
+    {
+      "claim_id": "itc135-btl-miluim-confirmations",
+      "claim": "The ITA Form 135 page lists BTL confirmations on unemployment, work injury and miluim pay among the documents to attach",
+      "source_url": "https://www.gov.il/he/service/itc135",
+      "raw_snippet": "אישורים על דמי אבטלה, דמי פגיעה בעבודה, תגמולי מילואים או תקבולים אחרים מהמוסד לביטוח לאומי",
+      "fetched_at": "2026-10-07T03:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/document-requirements.md"
+      ]
+    },
+    {
+      "claim_id": "s160a-extension",
+      "claim": "The s.160א hold can be extended by a further 90 days after a best-judgment assessment, and further if an objection is filed",
+      "source_url": "https://he.wikisource.org/wiki/%D7%A4%D7%A7%D7%95%D7%93%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
+      "raw_snippet": "למשך 90 ימים נוספים",
+      "fetched_at": "2026-10-07T06:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "s40b1b-other-parent-points",
+      "claim": "s.40(ב)(1ב) current: the parent of a ילד להורה אחד also gets the s.40(ב)(1א) points (the other parent column) for each child",
+      "source_url": "https://he.wikisource.org/wiki/%D7%A4%D7%A7%D7%95%D7%93%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
+      "raw_snippet": "וכן יובאו בחשבון כנגד הכנסתו של ההורה כאמור, על אף הוראות פסקה (1א), גם נקודות הזיכוי לפי אותה פסקה",
+      "fetched_at": "2026-10-07T06:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md",
+        "scripts/estimate_refund.py"
+      ]
+    },
+    {
+      "claim_id": "s40b1b-one-extra-point",
+      "claim": "s.40(ב)(1ב): one additional point for the parent of a ילד להורה אחד",
+      "source_url": "https://he.wikisource.org/wiki/%D7%A4%D7%A7%D7%95%D7%93%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
+      "raw_snippet": "תובא בחשבון כנגד הכנסתו מיגיעה אישית של אותו הורה, נקודת זיכוי אחת נוספת",
+      "fetched_at": "2026-10-07T06:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md",
+        "scripts/estimate_refund.py"
+      ]
+    },
+    {
+      "claim_id": "s40b1b-2021-toddlers-only",
+      "claim": "Before 2024, s.40(ב)(1ב) added the (1א) points only for a child under 6",
+      "source_url": "https://he.wikisource.org/w/index.php?title=%D7%A4%D7%A7%D7%95%D7%93%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94&oldid=1088975",
+      "raw_snippet": "היה ילדו של אותו הורה פעוט, יובאו בחשבון כנגד הכנסתו של ההורה כאמור, על אף הוראות פסקה (1א), גם נקודות הזיכוי לפי אותה פסקה",
+      "fetched_at": "2026-10-07T06:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md",
+        "scripts/estimate_refund.py"
+      ]
+    },
+    {
+      "claim_id": "s40g2-2022-sole-6-12",
+      "claim": "2022-2023 (s.40(ג)(2)): a single parent who would get the (1א) points for a toddler got one point per child aged 6-12",
+      "source_url": "https://he.wikisource.org/w/index.php?title=%D7%A4%D7%A7%D7%95%D7%93%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94&oldid=2763699",
+      "raw_snippet": "הורה במשפחה חד־הורית לילד אשר אילו היה פעוט היה זכאי בשלו לנקודות זיכוי לפי סעיף קטן (ב)(1א)",
+      "fetched_at": "2026-10-07T06:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md",
+        "scripts/estimate_refund.py"
+      ]
+    },
+    {
+      "claim_id": "sole-parent-point-per-family-kz",
+      "claim": "Kol-Zchut: the \"הורה אחד\" point is one point regardless of the number of children, on top of the per-child points",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%A0%D7%A7%D7%95%D7%93%D7%95%D7%AA_%D7%96%D7%99%D7%9B%D7%95%D7%99_%D7%9E%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94_%D7%9C%22%D7%94%D7%95%D7%A8%D7%94_%D7%90%D7%97%D7%93%22_%D7%A2%D7%91%D7%95%D7%A8_%D7%92%D7%99%D7%93%D7%95%D7%9C_%D7%99%D7%9C%D7%93%D7%99%D7%95",
+      "raw_snippet": "זכאים לנקודת זיכוי אחת על הכנסה מיגיעה אישית בגין גידול ילדיהם (ללא קשר למספר הילדים)",
+      "fetched_at": "2026-10-07T06:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md",
+        "scripts/estimate_refund.py"
+      ],
+      "verified_via": "rendered in headed Chrome (Playwright, channel chrome) 2026-10-07; URL line asserted; snippet found in page innerText (Cloudflare blocks curl)",
+      "verified_at": "2026-10-07T06:00:00Z"
+    },
+    {
+      "claim_id": "s11b4-part-year",
+      "claim": "s.11(ב)(4): someone who became or stopped being a resident during the year gets the credit pro-rated to the residence period, provided 12 consecutive months of residence",
+      "source_url": "https://he.wikisource.org/wiki/%D7%A4%D7%A7%D7%95%D7%93%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
+      "raw_snippet": "זכאי לזיכוי ממס כאמור בסעיף קטן זה באופן יחסי לתקופת תושבותו ביישוב, ובלבד שהיה תושב היישוב 12 חודשים רצופים לפחות",
+      "fetched_at": "2026-10-07T06:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md"
+      ]
+    },
+    {
+      "claim_id": "s11b4a-dropped-locality",
+      "claim": "s.11(ב)(4א): a resident of a locality that stopped being a preferred locality keeps the credit in that year and the next, at the prior year score",
+      "source_url": "https://he.wikisource.org/wiki/%D7%A4%D7%A7%D7%95%D7%93%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
+      "raw_snippet": "תושב של יישוב שחדל להיות יישוב מוטב, זכאי בשנת המס שבה חדל היישוב להיות יישוב מוטב",
+      "fetched_at": "2026-10-07T06:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md"
+      ]
+    },
+    {
+      "claim_id": "s35g-absence",
+      "claim": "s.35(ג): at the oleh's request a continuous absence of 6 months to 3 years is not counted in the 54 (or 42) months",
+      "source_url": "https://he.wikisource.org/wiki/%D7%A4%D7%A7%D7%95%D7%93%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
+      "raw_snippet": "תקופת היעדרות רצופה מהארץ שאיננה פחותה מששה חדשים ואיננה עולה על שלוש שנים",
+      "fetched_at": "2026-10-07T06:00:00Z",
+      "appears_in": [
+        "references/2026-rates.md"
+      ]
+    },
+    {
+      "claim_id": "s44-cap-2023",
+      "claim": "Section 44/45 relative income ceiling for 2023: 182,000 NIS for an individual, 291,000 for a couple",
+      "source_url": "https://he.wikisource.org/wiki/%D7%A4%D7%A7%D7%95%D7%93%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
+      "raw_snippet": "בשנת 2023, 182,000 ש״ח ליחיד, 291,000 ש״ח לזוג",
+      "fetched_at": "2026-10-07T06:00:00Z",
+      "appears_in": [
+        "references/2026-rates.md"
+      ]
+    },
+    {
+      "claim_id": "s40g-master-two-years",
+      "claim": "s.40ג(ב): master's half point for as many tax years as study years, at most 2",
+      "source_url": "https://he.wikisource.org/wiki/%D7%A4%D7%A7%D7%95%D7%93%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
+      "raw_snippet": "ובלא יותר משתי שנות מס בעבור לימודי תואר אקדמי שני",
+      "fetched_at": "2026-10-07T06:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md"
+      ]
+    },
+    {
+      "claim_id": "shift-2020-cap",
+      "claim": "2020 shift-work credit: up to 11,340 NIS against an income ceiling of 129,120 NIS",
+      "source_url": "https://www.prisha.co.il/UserFiles/File/pdf/hoz/parameters2020.pdf",
+      "raw_snippet": "לשנה 11,340 סכום הזיכוי המרבי בגין שכר המשמרות",
+      "fetched_at": "2026-10-07T06:00:00Z",
+      "appears_in": [
+        "references/2026-rates.md"
+      ]
+    },
+    {
+      "claim_id": "shift-2020-ceiling",
+      "claim": "2020 shift-work income ceiling 129,120 NIS",
+      "source_url": "https://www.prisha.co.il/UserFiles/File/pdf/hoz/parameters2020.pdf",
+      "raw_snippet": "129,120 לשנה אשר לאחר צירופו למשכורת אינו עולה על",
+      "fetched_at": "2026-10-07T06:00:00Z",
+      "appears_in": [
+        "references/2026-rates.md"
+      ]
+    },
+    {
+      "claim_id": "shift-2021-until-6-7",
+      "claim": "The 2021 booklet states the shift-work credit cap only up to 6.7.2021",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/itc_itc_necuyim2021-1.pdf",
+      "raw_snippet": "סכום הזיכוי המרבי בגין שכר המשמרות (עד ליום 11,280 )6.7.2021 לשנה",
+      "fetched_at": "2026-10-07T06:00:00Z",
+      "appears_in": [
+        "references/2026-rates.md"
+      ]
+    },
+    {
+      "claim_id": "s95-before-15-11-2021",
+      "claim": "Kol-Zchut: before 15.11.2021 the exemption required 100% on a single impairment or at least 90% on a weighted calculation of several impairments",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%A4%D7%98%D7%95%D7%A8_%D7%9E%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94_%D7%9C%D7%90%D7%A0%D7%A9%D7%99%D7%9D_%D7%A2%D7%9D_%D7%A0%D7%9B%D7%95%D7%AA",
+      "raw_snippet": "לפני 15.11.2021 הזכאות לפטור ניתנה למי שנקבעה להם דרגת נכות לפי החוקים שצוינו לפני כן באחד מהשיעורים הבאים:",
+      "fetched_at": "2026-10-07T06:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md",
+        "references/document-requirements.md"
+      ],
+      "verified_via": "rendered in headed Chrome (Playwright, channel chrome) 2026-10-07; URL line asserted; snippet found in page innerText (Cloudflare blocks curl)",
+      "verified_at": "2026-10-07T06:00:00Z"
+    },
+    {
+      "claim_id": "s95-pension-limb-proviso",
+      "claim": "Kol-Zchut: the proviso that a weighted 90% must reach 100% on an ordinary calculation applies to the post-2021 pension limb (חוק הנכים / נפגעי פעולות איבה)",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%A4%D7%98%D7%95%D7%A8_%D7%9E%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94_%D7%9C%D7%90%D7%A0%D7%A9%D7%99%D7%9D_%D7%A2%D7%9D_%D7%A0%D7%9B%D7%95%D7%AA",
+      "raw_snippet": "90% לפחות בחישוב משוקלל של כמה ליקויים (ובתנאי שהיו מסתכמים ב-100% לפחות בחישוב רגיל)",
+      "fetched_at": "2026-10-07T06:00:00Z",
+      "appears_in": [
+        "references/2026-rates.md"
+      ],
+      "verified_via": "rendered in headed Chrome (Playwright, channel chrome) 2026-10-07; URL line asserted; snippet found in page innerText (Cloudflare blocks curl)",
+      "verified_at": "2026-10-07T06:00:00Z"
+    },
+    {
+      "claim_id": "s95-ceilings-2020-2021",
+      "claim": "Kol-Zchut prior-year 9(5) ceilings: 2020 618,000 (74,040 for 185-364 days or with non-work income); 2021 614,400 (73,560)",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%A4%D7%98%D7%95%D7%A8_%D7%9E%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94_%D7%9C%D7%90%D7%A0%D7%A9%D7%99%D7%9D_%D7%A2%D7%9D_%D7%A0%D7%9B%D7%95%D7%AA",
+      "raw_snippet": "משנת 2022 נקבעת בנפרד תקרת ההכנסה מיגיעה אישית למי שנקבעה להם נכות ל-365 יום לפחות ומקבלים קצבת נכות לפי חוק הנכים",
+      "fetched_at": "2026-10-07T06:00:00Z",
+      "appears_in": [
+        "references/2026-rates.md",
+        "SKILL_HE.md"
+      ],
+      "verified_via": "rendered in headed Chrome (Playwright, channel chrome) 2026-10-07; URL line asserted; snippet found in page innerText (Cloudflare blocks curl); table rows read: 2021 614,400 / 73,560; 2020 618,000 / 74,040",
+      "verified_at": "2026-10-07T06:00:00Z"
+    },
+    {
+      "claim_id": "s95-ceilings-2022-2023",
+      "claim": "Kol-Zchut prior-year 9(5) ceilings: 2022 409,200 (628,800 for a pensioner) and 75,360; 2023 430,800 (661,200) and 79,320",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%A4%D7%98%D7%95%D7%A8_%D7%9E%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94_%D7%9C%D7%90%D7%A0%D7%A9%D7%99%D7%9D_%D7%A2%D7%9D_%D7%A0%D7%9B%D7%95%D7%AA",
+      "raw_snippet": "430,800 ₪ - בשאר המקרים",
+      "fetched_at": "2026-10-07T06:00:00Z",
+      "appears_in": [
+        "references/2026-rates.md",
+        "SKILL_HE.md"
+      ],
+      "verified_via": "rendered in headed Chrome (Playwright, channel chrome) 2026-10-07; URL line asserted; snippet found in page innerText (Cloudflare blocks curl); table rows read: 2023 661,200 / 430,800 / 79,320; 2022 628,800 / 409,200 / 75,360",
+      "verified_at": "2026-10-07T06:00:00Z"
+    },
+    {
+      "claim_id": "s95-prorate-part-year",
+      "claim": "A 365-day-plus determination starting mid-year pro-rates the ceilings and the exempt income by days over 365",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%A4%D7%98%D7%95%D7%A8_%D7%9E%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94_%D7%9C%D7%90%D7%A0%D7%A9%D7%99%D7%9D_%D7%A2%D7%9D_%D7%A0%D7%9B%D7%95%D7%AA",
+      "raw_snippet": "כל התקרות באותה שנה יחושבו להם באופן חלקי, לפי היחס בין מספר הימים שנקבעה בהם נכות בשנה זו לבין 365 ימים.",
+      "fetched_at": "2026-10-07T06:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2026-rates.md"
+      ],
+      "verified_via": "rendered in headed Chrome (Playwright, channel chrome) 2026-10-07; URL line asserted; snippet found in page innerText (Cloudflare blocks curl)",
+      "verified_at": "2026-10-07T06:00:00Z"
+    },
+    {
+      "claim_id": "s95-filing-documents",
+      "claim": "To file the 9(5) exemption: the medical committee protocol, the ITA exemption request form and, for employees, the last payslip from each employer",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%A4%D7%98%D7%95%D7%A8_%D7%9E%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94_%D7%9C%D7%90%D7%A0%D7%A9%D7%99%D7%9D_%D7%A2%D7%9D_%D7%A0%D7%9B%D7%95%D7%AA",
+      "raw_snippet": "פרוטוקול הוועדה הרפואית שקבעה את הנכות",
+      "fetched_at": "2026-10-07T06:00:00Z",
+      "appears_in": [
+        "references/2026-rates.md",
+        "references/document-requirements.md"
+      ],
+      "verified_via": "rendered in headed Chrome (Playwright, channel chrome) 2026-10-07; URL line asserted; snippet found in page innerText (Cloudflare blocks curl); also read: טופס בקשה לפטור ממס; לשכירים - תלוש שכר אחרון מכל מעסיק",
+      "verified_at": "2026-10-07T06:00:00Z"
+    },
+    {
+      "claim_id": "s95-ita-committee-at-btl",
+      "claim": "Someone without a qualifying determination applies to the ITA medical committee, held at Bituach Leumi",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%A4%D7%98%D7%95%D7%A8_%D7%9E%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94_%D7%9C%D7%90%D7%A0%D7%A9%D7%99%D7%9D_%D7%A2%D7%9D_%D7%A0%D7%9B%D7%95%D7%AA",
+      "raw_snippet": "מי שעדיין לא נקבעו להם אחוזי הנכות שמזכים בפטור צריכים לפנות לוועדה רפואית של מס הכנסה, שמתקיימת במוסד לביטוח לאומי.",
+      "fetched_at": "2026-10-07T06:00:00Z",
+      "appears_in": [
+        "references/2026-rates.md",
+        "references/document-requirements.md"
+      ],
+      "verified_via": "rendered in headed Chrome (Playwright, channel chrome) 2026-10-07; URL line asserted; snippet found in page innerText (Cloudflare blocks curl)",
+      "verified_at": "2026-10-07T06:00:00Z"
+    },
+    {
+      "claim_id": "s66c6-man-married-widow",
+      "claim": "s.66(ג)(6): a man who married a widow gets the father-column child points for each of her children, so a remarried widow is not a sole parent for s.40(ב)(1ב)",
+      "source_url": "https://he.wikisource.org/wiki/%D7%A4%D7%A7%D7%95%D7%93%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
+      "raw_snippet": "בחישוב המס של גבר שנישא לאלמנה יובאו בחשבון נקודות זיכוי בעד כל אחד מילדיה, כאמור בפסקה (5)",
+      "fetched_at": "2026-10-07T08:00:00Z",
+      "appears_in": [
+        "references/2026-rates.md",
+        "SKILL_HE.md",
+        "scripts/estimate_refund.py"
+      ]
+    },
+    {
+      "claim_id": "s40b1-single-parent-family",
+      "claim": "s.40(ב)(1): the single-parent-family schedule applies to a parent of a single-parent family not entitled under s.37 (not married)",
+      "source_url": "https://he.wikisource.org/wiki/%D7%A4%D7%A7%D7%95%D7%93%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
+      "raw_snippet": "שהוא הורה במשפחה חד־הורית שהיו לו ילדים שבשנת המס טרם מלאו להם תשע־עשרה שנה ושכלכלתם היתה עליו, אך אינו זכאי לנקודת זיכוי לפי",
+      "fetched_at": "2026-10-07T08:00:00Z",
+      "appears_in": [
+        "references/2026-rates.md",
+        "SKILL_HE.md",
+        "scripts/estimate_refund.py"
+      ]
     }
   ]
 }
