@@ -166,10 +166,52 @@ ________________________  תאריך: __________
 - **Currency / מטבע:** USD. השער הקובע לחיוב הוא שער יציג של בנק ישראל ביום הוצאת החשבונית. The reference rate is the Bank of Israel daily reference rate on the invoice date.
 - **VAT:** Zero-rated under VAT Law section 30(a)(5) (service to a foreign resident).
 
-> **Before using this template, check the section 30(a)(5) exception.** The zero rate does NOT apply where the subject of the agreement is that the service is actually rendered, in addition to the foreign customer, also to an Israeli resident in Israel, an Israeli-majority partnership, or a company treated as an Israeli resident (the classic case: a foreign parent contracting for work delivered to its Israeli subsidiary). Ask who receives the service, not who pays. If the answer is not clearly "only the foreign resident", quote "plus VAT if applicable" instead of 0% and check with an accountant. Keep the contract, proof of foreign residency and the foreign-currency payment record.
+> **Before using this template, check the section 30(a)(5) exception and the section 30(c) test (the foreign resident must be outside Israel with no business or activity in Israel).** The zero rate does NOT apply where the subject of the agreement is that the service is actually rendered, in addition to the foreign customer, also to an Israeli resident in Israel, an Israeli-majority partnership, or a company treated as an Israeli resident (the classic case: a foreign parent contracting for work delivered to its Israeli subsidiary). Ask who receives the service, not who pays. If the answer is not clearly "only the foreign resident", quote "plus VAT if applicable" instead of 0% and check with an accountant. Keep the contract, proof of foreign residency and the foreign-currency payment record.
 
 ## Acceptance / חתימת קבלת ההצעה
 
 ________________________  Date / תאריך: __________
 {client_name}
 ```
+
+---
+
+## Template 5: Monthly retainer (oseik morshe)
+
+A retainer is a standing monthly fee for a defined block of hours or a defined service. Three clauses carry most of the disputes, so spell each one out: when each monthly invoice is issued (it anchors the "shotef" count), the minimum term and the notice to end it, and what happens to hours not used in the month.
+
+```markdown
+# הצעת מחיר לריטיינר חודשי {quote_number}
+
+**{issuer_name}** | עוסק מורשה {oseik_number}
+טלפון {phone} | אימייל {email}
+
+**לכבוד:** {client_name} ({client_id_label} {client_id})
+**תאריך הוצאה:** {issue_date}
+**תוקף ההצעה עד:** {validity_date}
+
+## היקף השירות
+
+| פריט | היקף חודשי | מחיר חודשי |
+|---|---|---|
+| {service_description} | עד {hours_per_month} שעות | {monthly_fee} ₪ |
+
+**סה"כ לחודש לפני מע"מ:** {monthly_fee} ₪
+**מע"מ 18%:** {monthly_vat} ₪
+**סה"כ לחודש:** {monthly_total} ₪
+
+## תנאי עבודה
+
+- **מועד חיוב:** חשבונית תופק ב-1 לכל חודש עבור החודש השוטף.
+- **תנאי תשלום:** שוטף + 30 ימים מהנפקת החשבונית, כמוסכם בין הצדדים.
+- **תקופה מינימלית:** {minimum_months} חודשים. לאחר מכן כל צד רשאי לסיים בהודעה מראש של {notice_days} ימים.
+- **שעות שלא נוצלו:** {unused_hours_rule}
+- **שעות מעבר להיקף:** יחויבו בנפרד לפי {hourly_rate} ₪ + מע"מ לשעה, באישור מראש.
+
+## חתימת קבלת ההצעה
+
+________________________  תאריך: __________
+{client_name}
+```
+
+For an oseik patur issuer, use the Template 3 header, drop every VAT line and every "+ מע"מ", and replace "חשבונית" with "חשבונית עסקה". For `{unused_hours_rule}` pick one wording and keep it consistent across months, for example "אינן עוברות לחודש הבא" or "עוברות לחודש הבא בלבד ואינן ניתנות להחזר". The statutory date and interest rules in `payment-terms-law.md` apply to each monthly invoice separately when the client sits on one of the statutory rows.

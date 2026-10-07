@@ -1,7 +1,7 @@
 {
   "skill_slug": "israeli-price-quote-generator",
   "schemaVersion": "1.0",
-  "generated_at": "2026-08-26T22:25:34.758748+00:00",
+  "generated_at": "2026-10-06T23:36:25.185548+00:00",
   "claims": [
     {
       "id": "vat-rate-2026",
@@ -10,7 +10,9 @@
       "source_url": "https://taxsummaries.pwc.com/israel/corporate/other-taxes",
       "source_fetched_at": "2026-05-19T00:00:00Z",
       "raw_snippet": "The 2025 current rate of VAT is 18%.",
-      "confidence": "high"
+      "confidence": "high",
+      "claim_id": "vat-rate-2026",
+      "fetched_at": "2026-05-19T00:00:00Z"
     },
     {
       "id": "oseik-patur-threshold-2026",
@@ -19,7 +21,9 @@
       "source_url": "https://www.kolzchut.org.il/he/עוסק_פטור",
       "source_fetched_at": "2026-05-19T00:00:00Z",
       "raw_snippet": "רק מי שמחזור ההכנסות השנתי שלו מהעסק (לא הרווח) אינו עולה על 122,833 ₪ (נכון לשנת 2026) רשאי להיות עוסק פטור",
-      "confidence": "high"
+      "confidence": "high",
+      "claim_id": "oseik-patur-threshold-2026",
+      "fetched_at": "2026-05-19T00:00:00Z"
     },
     {
       "id": "oseik-patur-invoice-rule",
@@ -29,7 +33,8 @@
       "source_fetched_at": "2026-08-26T22:27:14.408583+00:00",
       "raw_snippet": "העוסק הפטור אינו גובה מס ערך מוסף (מע\"מ) מלקוחותיו ולכן הוא אינו רשאי להוציא חשבוניות מס בגין עסקאותיו. כדי לגבות את התשלום מלקוחותיו, עוסק פטור מוציא דרישת תשלום (\"חשבונית עסקה\"), שבה הוא מורה ללקוח כמה עליו לשלם. בעת קבלת התשלום עוסק פטור מוציא קבלה בלבד.",
       "confidence": "high",
-      "fetched_at": "2026-08-26T22:27:14.408583+00:00"
+      "fetched_at": "2026-08-26T22:27:14.408583+00:00",
+      "claim_id": "oseik-patur-invoice-rule"
     },
     {
       "id": "oseik-patur-no-vat",
@@ -39,7 +44,8 @@
       "source_fetched_at": "2026-08-26T22:27:14.408583+00:00",
       "raw_snippet": "עוסק פטור הוא עצמאי שאינו גובה מס ערך מוסף (מע\"מ) מלקוחותיו",
       "confidence": "high",
-      "fetched_at": "2026-08-26T22:27:14.408583+00:00"
+      "fetched_at": "2026-08-26T22:27:14.408583+00:00",
+      "claim_id": "oseik-patur-no-vat"
     },
     {
       "id": "late-payment-law-name",
@@ -48,7 +54,9 @@
       "source_url": "https://www.nevo.co.il/law_html/law00/144599.htm",
       "source_fetched_at": "2026-05-19T00:00:00Z",
       "raw_snippet": "חוק מוסר תשלומים לספקים, תשע\"ז-2017",
-      "confidence": "high"
+      "confidence": "high",
+      "claim_id": "late-payment-law-name",
+      "fetched_at": "2026-05-19T00:00:00Z"
     },
     {
       "id": "late-payment-state-authority",
@@ -57,7 +65,9 @@
       "source_url": "https://www.nevo.co.il/law_html/law00/144599.htm",
       "source_fetched_at": "2026-05-19T00:00:00Z",
       "raw_snippet": "לא יאוחר מ-45 ימים מהמועד שבו הומצא למזמין החשבון",
-      "confidence": "high"
+      "confidence": "high",
+      "claim_id": "late-payment-state-authority",
+      "fetched_at": "2026-05-19T00:00:00Z"
     },
     {
       "id": "late-payment-b2b",
@@ -66,7 +76,9 @@
       "source_url": "https://www.nevo.co.il/law_html/law00/144599.htm",
       "source_fetched_at": "2026-05-19T00:00:00Z",
       "raw_snippet": "לא יאוחר מ-45 ימים מתום החודש שבו הומצא לו החשבון",
-      "confidence": "high"
+      "confidence": "high",
+      "claim_id": "late-payment-b2b",
+      "fetched_at": "2026-05-19T00:00:00Z"
     },
     {
       "id": "late-payment-local-authority",
@@ -75,7 +87,9 @@
       "source_url": "https://www.kolzchut.org.il/he/המועד_האחרון_לתשלום_תמורה_לספקים_עבור_סחורה_או_שירות",
       "source_fetched_at": "2026-05-19T00:00:00Z",
       "raw_snippet": "יש לשלם את התמורה תוך 45 ימים מתום החודש שבו הומצא החשבון",
-      "confidence": "high"
+      "confidence": "high",
+      "claim_id": "late-payment-local-authority",
+      "fetched_at": "2026-05-19T00:00:00Z"
     },
     {
       "id": "contracts-law-name",
@@ -84,7 +98,9 @@
       "source_url": "https://www.nevo.co.il/law_html/law00/71888.htm",
       "source_fetched_at": "2026-05-19T00:00:00Z",
       "raw_snippet": "חוק החוזים (חלק כללי), תשל\"ג-1973",
-      "confidence": "high"
+      "confidence": "high",
+      "claim_id": "contracts-law-name",
+      "fetched_at": "2026-05-19T00:00:00Z"
     },
     {
       "id": "contract-formation",
@@ -93,7 +109,9 @@
       "source_url": "https://www.nevo.co.il/law_html/law00/71888.htm",
       "source_fetched_at": "2026-05-19T00:00:00Z",
       "raw_snippet": "חוזה נכרת בדרך של הצעה וקיבול לפי הוראות פרק זה",
-      "confidence": "high"
+      "confidence": "high",
+      "claim_id": "contract-formation",
+      "fetched_at": "2026-05-19T00:00:00Z"
     },
     {
       "id": "offer-irrevocability",
@@ -102,7 +120,9 @@
       "source_url": "https://www.nevo.co.il/law_html/law00/71888.htm",
       "source_fetched_at": "2026-05-19T00:00:00Z",
       "raw_snippet": "קבע המציע שהצעתו היא ללא חזרה, או שקבע מועד לקיבולה, אין הוא רשאי לחזור בו ממנה לאחר שנמסרה לניצע",
-      "confidence": "high"
+      "confidence": "high",
+      "claim_id": "offer-irrevocability",
+      "fetched_at": "2026-05-19T00:00:00Z"
     },
     {
       "id": "quote-binding",
@@ -111,19 +131,20 @@
       "source_url": "https://www.greeninvoice.co.il/magazine/hazat-mechir/",
       "source_fetched_at": "2026-05-19T00:00:00Z",
       "raw_snippet": "הצעת מחיר היא מסמך מחייב",
-      "confidence": "high"
+      "confidence": "high",
+      "claim_id": "quote-binding",
+      "fetched_at": "2026-05-19T00:00:00Z"
     },
     {
       "id": "shotef-30-meaning",
       "claim": "Shotef+30 means end of invoice month + 30 days, not 30 days from invoice date",
       "claim_type": "feature",
       "source_url": "https://hyp.co.il/blog/current-month-plus-30-days/",
-      "source_fetched_at": "2026-05-19T00:00:00Z",
-      "raw_snippet": "שוטף פלוס 30 - מה זה ואיך נערכים בהתאם? - Hyp - פתרונות תשלום",
+      "source_fetched_at": "2026-10-06T23:54:13.122906+00:00",
+      "raw_snippet": "המשמעות הפשוטה של \"שוטף\" היא \"תחילתו של החודש הבא\"",
       "confidence": "medium",
-      "verified_via": "navigational claim about the source itself; snippet is the cited page's own title, fetched to confirm the page exists and is what the claim says it is",
-      "verified_at": "2026-08-18",
-      "fetched_at": "2026-08-18"
+      "fetched_at": "2026-10-06T23:54:13.122906+00:00",
+      "claim_id": "shotef-30-meaning"
     },
     {
       "id": "esek-zair-30-percent-deduction",
@@ -138,7 +159,8 @@
         "SKILL.md",
         "SKILL_HE.md",
         "references/vat-and-oseik-status.md"
-      ]
+      ],
+      "claim_id": "esek-zair-30-percent-deduction"
     },
     {
       "id": "vat-law-section-30-export",
@@ -147,7 +169,9 @@
       "source_url": "https://taxsummaries.pwc.com/israel/corporate/other-taxes",
       "source_fetched_at": "2026-05-19T00:00:00Z",
       "raw_snippet": "Exports of goods and certain services and various other transactions are zero-rated",
-      "confidence": "high"
+      "confidence": "high",
+      "claim_id": "vat-law-section-30-export",
+      "fetched_at": "2026-05-19T00:00:00Z"
     },
     {
       "id": "oseik-patur-vat-prohibition",
@@ -157,7 +181,8 @@
       "source_fetched_at": "2026-08-26T22:27:14.408583+00:00",
       "raw_snippet": "העוסק הפטור אינו גובה מס ערך מוסף (מע\"מ) מלקוחותיו ולכן הוא אינו רשאי להוציא חשבוניות מס בגין עסקאותיו. כדי לגבות את התשלום מלקוחותיו, עוסק פטור מוציא דרישת תשלום (\"חשבונית עסקה\"), שבה הוא מורה ללקוח כמה עליו לשלם. בעת קבלת התשלום עוסק פטור מוציא קבלה בלבד.",
       "confidence": "high",
-      "fetched_at": "2026-08-26T22:27:14.408583+00:00"
+      "fetched_at": "2026-08-26T22:27:14.408583+00:00",
+      "claim_id": "oseik-patur-vat-prohibition"
     },
     {
       "id": "contracts-law-section-5-acceptance",
@@ -166,7 +191,9 @@
       "source_url": "https://www.nevo.co.il/law_html/law00/71888.htm",
       "source_fetched_at": "2026-05-19T00:00:00Z",
       "raw_snippet": "הקיבול יהיה בהודעת הניצע שנמסרה למציע",
-      "confidence": "high"
+      "confidence": "high",
+      "claim_id": "contracts-law-section-5-acceptance",
+      "fetched_at": "2026-05-19T00:00:00Z"
     },
     {
       "id": "contracts-law-section-7-presumption",
@@ -175,19 +202,20 @@
       "source_url": "https://www.nevo.co.il/law_html/law00/71888.htm",
       "source_fetched_at": "2026-05-19T00:00:00Z",
       "raw_snippet": "הצעה שאין בה אלא כדי לזכות את הניצע, חזקה עליו שקיבל אותה",
-      "confidence": "high"
+      "confidence": "high",
+      "claim_id": "contracts-law-section-7-presumption",
+      "fetched_at": "2026-05-19T00:00:00Z"
     },
     {
       "id": "contracts-law-section-8-reasonable-time",
       "claim": "Under Section 8 (סעיף 8) of the Contracts Law, when no acceptance period is stated, the offer must be accepted within a reasonable time",
       "claim_type": "law",
       "source_url": "https://www.nevo.co.il/law_html/law00/71888.htm",
-      "source_fetched_at": "2026-05-19T00:00:00Z",
-      "raw_snippet": "חוק החוזים (חלק כללי), תשל\"ג-1973",
+      "source_fetched_at": "2026-10-06T23:54:13.122906+00:00",
+      "raw_snippet": "אין לקבל הצעה אלא תוך התקופה שנקבעה לכך בהצעה, ובאין תקופה כזאת – תוך זמן סביר",
       "confidence": "high",
-      "verified_via": "claim about the source itself; snippet is the cited page's own title, fetched to confirm the page exists and is what the claim says it is",
-      "verified_at": "2026-08-19",
-      "fetched_at": "2026-08-19"
+      "fetched_at": "2026-10-06T23:54:13.122906+00:00",
+      "claim_id": "contracts-law-section-8-reasonable-time"
     },
     {
       "id": "contracts-law-section-3a-revocation",
@@ -196,28 +224,31 @@
       "source_url": "https://www.nevo.co.il/law_html/law00/71888.htm",
       "source_fetched_at": "2026-05-19T00:00:00Z",
       "raw_snippet": "המציע רשאי לחזור בו מן ההצעה בהודעה לניצע, ובלבד שהודעת החזרה נמסרה לניצע לפני שנתן הודעת קיבול",
-      "confidence": "high"
+      "confidence": "high",
+      "claim_id": "contracts-law-section-3a-revocation",
+      "fetched_at": "2026-05-19T00:00:00Z"
     },
     {
       "id": "interest-and-linkage-law",
       "claim": "Statutory late-payment interest is set by Chok Psikat Ribit veHatzmada 5721-1961 (the Interest and Linkage Law)",
       "claim_type": "law",
       "source_url": "https://www.nevo.co.il/law_html/law00/144599.htm",
-      "source_fetched_at": "2026-05-19T00:00:00Z",
-      "raw_snippet": "חוק מוסר תשלומים לספקים, תשע\"ז-2017",
+      "source_fetched_at": "2026-10-06T23:54:13.122906+00:00",
+      "raw_snippet": "ויחולו הוראות חוק פסיקת ריבית והצמדה, בשינויים המחויבים",
       "confidence": "high",
-      "verified_via": "claim about the source itself; snippet is the cited page's own title, fetched to confirm the page exists and is what the claim says it is",
-      "verified_at": "2026-08-19",
-      "fetched_at": "2026-08-19"
+      "fetched_at": "2026-10-06T23:54:13.122906+00:00",
+      "claim_id": "interest-and-linkage-law"
     },
     {
       "id": "income-tax-section-164-withholding",
-      "claim": "Under Section 164 (סעיף 164) of the Income Tax Ordinance, a payer who is a registered tax-deduction agent must withhold tax at source from payments to suppliers, unless the supplier presents a valid אישור פטור מניכוי מס במקור",
+      "claim": "Income Tax Ordinance s.164 is the withholding-at-source provision; the services order makes payments for services income for s.164",
       "claim_type": "law",
-      "source_url": "https://www.gov.il/he/departments/topics/withholding_certificate",
-      "source_fetched_at": "2026-05-19T00:00:00Z",
-      "raw_snippet": "סעיף 164 לפקודת מס הכנסה מחייב ניכוי במקור מתשלומים לספקים",
-      "confidence": "medium"
+      "source_url": "https://he.wikisource.org/wiki/%D7%A6%D7%95_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94_%28%D7%A7%D7%91%D7%99%D7%A2%D7%AA_%D7%AA%D7%A9%D7%9C%D7%95%D7%9E%D7%99%D7%9D_%D7%91%D7%A2%D7%93_%D7%A9%D7%99%D7%A8%D7%95%D7%AA%D7%99%D7%9D_%D7%90%D7%95_%D7%A0%D7%9B%D7%A1%D7%99%D7%9D_%D7%9B%D7%94%D7%9B%D7%A0%D7%A1%D7%94%29",
+      "source_fetched_at": "2026-10-06T23:36:25.185548+00:00",
+      "raw_snippet": "תשלומים בעד שירותים או נכסים יהיו הכנסה לענין סעיף 164 לפקודה",
+      "confidence": "medium",
+      "claim_id": "income-tax-section-164-withholding",
+      "fetched_at": "2026-10-06T23:36:25.185548+00:00"
     },
     {
       "id": "cancellation-tier-percentages",
@@ -227,7 +258,8 @@
       "source_fetched_at": "2026-08-26T22:25:34.758748+00:00",
       "raw_snippet": "פיצויים מוסכמים 15. (א) הסכימו הצדדים מראש על שיעור פיצויים (להלן – פיצויים מוסכמים), יהיו הפיצויים כמוסכם, ללא הוכחת נזק",
       "confidence": "low",
-      "fetched_at": "2026-08-26T22:25:34.758748+00:00"
+      "fetched_at": "2026-08-26T22:25:34.758748+00:00",
+      "claim_id": "cancellation-tier-percentages"
     },
     {
       "id": "cancellation-clause-tiers-not-automatic",
@@ -237,7 +269,8 @@
       "source_fetched_at": "2026-08-26T22:25:34.758748+00:00",
       "raw_snippet": "הסכימו הצדדים מראש על שיעור פיצויים (להלן – פיצויים מוסכמים), יהיו הפיצויים כמוסכם, ללא הוכחת נזק; אולם רשאי בית המשפט להפחיתם אם מצא שהפיצויים נקבעו ללא כל יחס סביר לנזק שניתן היה לראותו מראש בעת כריתת החוזה כתוצאה מסתברת של ההפרה.",
       "confidence": "medium",
-      "fetched_at": "2026-08-26T22:25:34.758748+00:00"
+      "fetched_at": "2026-08-26T22:25:34.758748+00:00",
+      "claim_id": "cancellation-clause-tiers-not-automatic"
     },
     {
       "id": "bit-paybox-fees-2025",
@@ -245,14 +278,17 @@
       "claim_type": "feature",
       "source_url": "https://www.bitpay.co.il/he/private-faq",
       "source_fetched_at": "2026-08-26T22:34:50.360154+00:00",
-      "raw_snippet": "כספים שיתקבלו מעל התקרה החינמית ועד 100,000₪ בשנה קלנדרית, יחויב בעמלת \" קבלת תשלום (מעבר לסף פעילות של ₪25,000 בשנה)\" בשיעור של 0.8%",
+      "raw_snippet": "בגין קבלת כספים מעל לסכום מצטבר של ₪25,000 בשנה קלנדרית תיגבה עמלת \"קבלת תשלום (מעבר לסף פעילות של 25,000 ₪ בשנה)\" בשיעור 0.8%",
       "confidence": "medium",
       "fetched_at": "2026-08-26T22:34:50.360154+00:00",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/domain-checklist.md"
-      ]
+      ],
+      "claim_id": "bit-paybox-fees-2025",
+      "verified_via": "browser",
+      "verified_at": "2026-10-06"
     },
     {
       "id": "bit-annual-p2p-cap",
@@ -268,7 +304,9 @@
         "SKILL.md",
         "SKILL_HE.md",
         "references/domain-checklist.md"
-      ]
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-10-06"
     },
     {
       "id": "mtl-3a-two-bases",
@@ -506,6 +544,218 @@
         "SKILL.md",
         "SKILL_HE.md"
       ]
+    },
+    {
+      "claim_id": "vat-30c-foreign-resident",
+      "claim": "For VAT Law section 30, a foreign resident counts only when outside Israel with no business or activity in Israel (s.30(c))",
+      "claim_type": "law",
+      "source_url": "https://he.wikisource.org/wiki/%D7%97%D7%95%D7%A7_%D7%9E%D7%A1_%D7%A2%D7%A8%D7%9A_%D7%9E%D7%95%D7%A1%D7%A3",
+      "raw_snippet": "תושב חוץ כהגדרתו בסעיף 1 כשהוא נמצא מחוץ לישראל ואין לו עסקים או פעילות בישראל",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/vat-and-oseik-status.md",
+        "scripts/quote_builder.py"
+      ],
+      "fetched_at": "2026-10-06T23:36:25.185548+00:00",
+      "source_fetched_at": "2026-10-06T23:36:25.185548+00:00",
+      "confidence": "high",
+      "id": "vat-30c-foreign-resident"
+    },
+    {
+      "claim_id": "oseik-patur-ceiling-statute",
+      "claim": "VAT Law s.1: oseik patur ceiling 120,000 in 2024 and 2025, 122,833 in 2026",
+      "claim_type": "currency",
+      "source_url": "https://he.wikisource.org/wiki/%D7%97%D7%95%D7%A7_%D7%9E%D7%A1_%D7%A2%D7%A8%D7%9A_%D7%9E%D7%95%D7%A1%D7%A3",
+      "raw_snippet": "בשנת 2026, 122,833",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/vat-and-oseik-status.md",
+        "scripts/quote_builder.py"
+      ],
+      "fetched_at": "2026-10-06T23:36:25.185548+00:00",
+      "source_fetched_at": "2026-10-06T23:36:25.185548+00:00",
+      "confidence": "high",
+      "id": "oseik-patur-ceiling-statute"
+    },
+    {
+      "claim_id": "oseik-patur-ceiling-indexation",
+      "claim": "VAT Law s.126(a): the oseik patur amount is indexed every 1 January to the CPI published by 15 December",
+      "claim_type": "law",
+      "source_url": "https://he.wikisource.org/wiki/%D7%97%D7%95%D7%A7_%D7%9E%D7%A1_%D7%A2%D7%A8%D7%9A_%D7%9E%D7%95%D7%A1%D7%A3",
+      "raw_snippet": "יותאמו ב־1 בינואר של כל שנה לעליית מדד המחירים לצרכן",
+      "appears_in": [
+        "references/vat-and-oseik-status.md"
+      ],
+      "fetched_at": "2026-10-06T23:36:25.185548+00:00",
+      "source_fetched_at": "2026-10-06T23:36:25.185548+00:00",
+      "confidence": "high",
+      "id": "oseik-patur-ceiling-indexation"
+    },
+    {
+      "claim_id": "oseik-patur-excluded-occupations",
+      "claim": "Regulation 13 of the VAT (Registration) Regulations requires listed occupations (lawyers, accountants, engineers, architects, doctors, translators, management consultants and others) to register as oseik morshe regardless of turnover",
+      "claim_type": "law",
+      "source_url": "https://www.kolzchut.org.il/he/עוסק_פטור",
+      "raw_snippet": "והם לא יכולים להירשם כעוסק פטור, גם אם מחזור עסקאותיהם השנתי נמוך מ-122,833 ₪ (נכון לשנת 2026), וזאת בהתאם לסעיף 13 לתקנות מס ערך מוסף (רישום)",
+      "verified_via": "browser",
+      "verified_at": "2026-10-06",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/domain-checklist.md"
+      ],
+      "fetched_at": "2026-10-06T23:36:25.185548+00:00",
+      "source_fetched_at": "2026-10-06T23:36:25.185548+00:00",
+      "confidence": "high",
+      "id": "oseik-patur-excluded-occupations"
+    },
+    {
+      "claim_id": "oseik-patur-excluded-occupations-list",
+      "claim": "The regulation 13 list includes management consultant, engineer, translator, lawyer, accountant, doctor, architect",
+      "claim_type": "law",
+      "source_url": "https://www.kolzchut.org.il/he/עוסק_פטור",
+      "raw_snippet": "יועץ לניהול, יועץ מדעי, יועץ מס, כלכלן, מהנדס, מודד, מנהל חשבונות, מתורגמן, עורך דין, רואה חשבון או שמאי",
+      "verified_via": "browser",
+      "verified_at": "2026-10-06",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "fetched_at": "2026-10-06T23:36:25.185548+00:00",
+      "source_fetched_at": "2026-10-06T23:36:25.185548+00:00",
+      "confidence": "high",
+      "id": "oseik-patur-excluded-occupations-list"
+    },
+    {
+      "claim_id": "allocation-threshold-before-vat",
+      "claim": "The 5,000 NIS allocation-number threshold from 01.06.2026 is measured before VAT",
+      "claim_type": "currency",
+      "source_url": "https://www.greeninvoice.co.il/magazine/israel-invoice/",
+      "raw_snippet": "מחייבת קבלת מספר הקצאה מרשות המיסים עבור כל חשבונית שהעסק מפיק בסכום גבוה מ-5,000 ₪ (לפני מע\"מ)",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "scripts/quote_builder.py"
+      ],
+      "fetched_at": "2026-10-06T23:36:25.185548+00:00",
+      "source_fetched_at": "2026-10-06T23:36:25.185548+00:00",
+      "confidence": "high",
+      "id": "allocation-threshold-before-vat"
+    },
+    {
+      "claim_id": "allocation-retro-needs-client-number",
+      "claim": "A retroactive allocation-number request requires the original invoice to carry the customer ח\"פ or oseik number",
+      "claim_type": "law",
+      "source_url": "https://www.greeninvoice.co.il/magazine/israel-invoice/",
+      "raw_snippet": "החשבונית המקורית חייבת לכלול ח״פ או מספר עוסק של הלקוח",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "fetched_at": "2026-10-06T23:36:25.185548+00:00",
+      "source_fetched_at": "2026-10-06T23:36:25.185548+00:00",
+      "confidence": "high",
+      "id": "allocation-retro-needs-client-number"
+    },
+    {
+      "claim_id": "paybox-receipt-caps",
+      "claim": "PayBox's FAQ lists fee-free receipts up to 100,000 NIS/year on PayBox Plus and 50,000 NIS/year on Basic",
+      "claim_type": "currency",
+      "source_url": "https://www.payboxapp.com/faq?section=s-paybox_plans&subsection=plus_plan&question=plus_receive_limit",
+      "raw_snippet": "במסלול PayBox Plus אפשר לקבל עד 100,000 ש\"ח בשנה ללא עמלות.",
+      "verified_via": "browser",
+      "verified_at": "2026-10-06",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/domain-checklist.md"
+      ],
+      "fetched_at": "2026-10-06T23:36:25.185548+00:00",
+      "source_fetched_at": "2026-10-06T23:36:25.185548+00:00",
+      "confidence": "high",
+      "id": "paybox-receipt-caps"
+    },
+    {
+      "claim_id": "paybox-basic-cap",
+      "claim": "PayBox Basic: up to 50,000 NIS/year without fees",
+      "claim_type": "currency",
+      "source_url": "https://www.payboxapp.com/faq?section=s-paybox_plans&subsection=basic_plan&question=basic_receive_limit",
+      "raw_snippet": "במסלול Basic אפשר לקבל עד 50,000 ש\"ח בשנה ללא עמלות.",
+      "verified_via": "browser",
+      "verified_at": "2026-10-06",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "fetched_at": "2026-10-06T23:36:25.185548+00:00",
+      "source_fetched_at": "2026-10-06T23:36:25.185548+00:00",
+      "confidence": "high",
+      "id": "paybox-basic-cap"
+    },
+    {
+      "claim_id": "withholding-individual-excluded",
+      "claim": "The withholding order excludes payments by an individual not required to record them in business books, so a private client is not a withholding payer",
+      "claim_type": "law",
+      "source_url": "https://he.wikisource.org/wiki/%D7%A6%D7%95_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94_%28%D7%A7%D7%91%D7%99%D7%A2%D7%AA_%D7%AA%D7%A9%D7%9C%D7%95%D7%9E%D7%99%D7%9D_%D7%91%D7%A2%D7%93_%D7%A9%D7%99%D7%A8%D7%95%D7%AA%D7%99%D7%9D_%D7%90%D7%95_%D7%A0%D7%9B%D7%A1%D7%99%D7%9D_%D7%9B%D7%94%D7%9B%D7%A0%D7%A1%D7%94%29",
+      "raw_snippet": "ולמעט תשלומים ששילם יחיד שלגביהם לא חלה חובת רישום בספרי העסק שלו",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "scripts/quote_builder.py"
+      ],
+      "fetched_at": "2026-10-06T23:36:25.185548+00:00",
+      "source_fetched_at": "2026-10-06T23:36:25.185548+00:00",
+      "confidence": "high",
+      "id": "withholding-individual-excluded"
+    },
+    {
+      "claim_id": "bit-home-fee-date",
+      "claim": "Bit's home page dates the 0.8% receipt fee from 1.5.26 while its FAQ footer says 1.1.25, so the skill states the rate and not the start date",
+      "claim_type": "percentage",
+      "source_url": "https://www.bitpay.co.il/he",
+      "raw_snippet": "החל מיום 1.5.26, בגין קבלת כספים מעל לסכום מצטבר של ₪25,000 בשנה קלנדרית",
+      "verified_via": "browser",
+      "verified_at": "2026-10-06",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "fetched_at": "2026-10-06T23:36:25.185548+00:00",
+      "source_fetched_at": "2026-10-06T23:36:25.185548+00:00",
+      "confidence": "high",
+      "id": "bit-home-fee-date"
+    },
+    {
+      "claim_id": "withholding-payer-list-israeli",
+      "id": "withholding-payer-list-israeli",
+      "claim": "The withholding order's payer list is Israeli public bodies and Israeli businesses (state, local authorities, companies keeping double-entry books, etc.), so a foreign client with no Israeli presence is usually not a payer under it",
+      "claim_type": "law",
+      "source_url": "https://he.wikisource.org/wiki/%D7%A6%D7%95_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94_%28%D7%A7%D7%91%D7%99%D7%A2%D7%AA_%D7%AA%D7%A9%D7%9C%D7%95%D7%9E%D7%99%D7%9D_%D7%91%D7%A2%D7%93_%D7%A9%D7%99%D7%A8%D7%95%D7%AA%D7%99%D7%9D_%D7%90%D7%95_%D7%A0%D7%9B%D7%A1%D7%99%D7%9D_%D7%9B%D7%94%D7%9B%D7%A0%D7%A1%D7%94%29",
+      "raw_snippet": "סכומים המשתלמים על ידי המדינה, רשות מקומית, איגוד ערים",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "fetched_at": "2026-10-06T23:54:13.122906+00:00",
+      "source_fetched_at": "2026-10-06T23:54:13.122906+00:00",
+      "confidence": "medium"
+    },
+    {
+      "claim_id": "vat-registration-reg-13",
+      "id": "vat-registration-reg-13",
+      "claim": "תקנה 13 לתקנות מס ערך מוסף (רישום): listed occupations (lawyer, accountant, engineer, architect, interpreter, management consultant, doctor and others) are registered as oseik morshe regardless of turnover",
+      "claim_type": "law",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%9E%D7%A1_%D7%A2%D7%A8%D7%9A_%D7%9E%D7%95%D7%A1%D7%A3_%28%D7%A8%D7%99%D7%A9%D7%95%D7%9D%29",
+      "raw_snippet": "ירשום אותו המנהל כעוסק מורשה גם אם על פי סכום מחזור עסקותיו",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "fetched_at": "2026-10-06T23:54:35.975826+00:00",
+      "source_fetched_at": "2026-10-06T23:54:35.975826+00:00",
+      "confidence": "high"
     }
   ]
 }

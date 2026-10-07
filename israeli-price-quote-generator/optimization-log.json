@@ -40,6 +40,21 @@
         "Expert MAJOR deferred: no retainer template exists. The Bundled Resources promise was corrected to describe the four templates that do exist; adding a retainer template (monthly invoicing anchor, minimum term, unused-hours rollover) is the next content increment.",
         "Expert MINOR deferred: render_html wraps markdown in <pre> instead of converting it, so the A4 table CSS is effectively dead. Either convert the markdown or drop the promise of a printable HTML quote."
       ]
+    },
+    {
+      "version": "1.3.0",
+      "date": "2026-10-07",
+      "lessons": [
+        "Verified current, NO change: VAT 18% (rate set by order under VAT Law s.2; a 19% idea was rejected for 2026 and nothing is enacted or tabled for 2027; Treasury drafted no 2027 budget before the autumn 2026 elections); oseik patur 122,833 for 2026 (VAT Law s.1 annotation; indexed every 1 January); esek za'ir from 1.1.2024 with a 30% normative deduction; allocation thresholds 25k/20k/10k/5k, the 5,000 is before VAT, no further step-down scheduled; Late Payment Law s.3/s.4 unchanged (nevo current to 06-07-2025). Recheck the 2027 VAT rate and the 2027 patur ceiling (published mid/late December) next cycle.",
+        "CRITICAL fixed: the script printed '+ מע\"מ' in the scope-change clause on an oseik patur quote (and on zero-rated export quotes, in ₪ on USD quotes). Constraint for every future cycle: run the script for a patur issuer and grep the output for מע\"מ; only the 'אינני חייב מע\"מ' disclaimer may appear.",
+        "CRITICAL fixed: foreign-client quotes carried the Israeli Late Payment Law clause, Israeli withholding line and Bit; there was no foreign or consumer tier and a morshe quote to a foreign client defaulted to 18% silently. Added tiers consumer/foreign, a client-type question in Step 1, and warnings.",
+        "Judge corrected the writer: the first draft argued an unregistered foreign company is not an 'esek' because oseik morshe is registration-based; that ignores the turnover-based oseik patur limb. Now stated as unsettled. Lesson: a textual inference from one definition limb is not a source.",
+        "Arithmetic reviewer found VAT computed on the UNROUNDED subtotal (printed VAT not 18% of the printed base) and rows not summing to the subtotal. Now per-line rounding, VAT on the rounded subtotal. The old comment claiming per-line rounding 'drifts on PCN874' was unsourced.",
+        "Added s.30(c) foreign-resident test (no business or activity in Israel), reg. 13 occupations barred from patur (wikisource primary), PayBox caps restored from payboxapp.com question URLs (SPA, needs a headed browser), s.164 evidence moved from gov.il to the withholding order on wikisource. kolzchut needs a HEADED Playwright browser (headless gets a 192-char challenge page): helper at .batch-1004/<slug>/work/pw/check.mjs.",
+        "Resolved CARRY items from 1.2.0: retainer template (Template 5), render_html now emits real HTML, PayBox figure restored, s.164 fetchable source.",
+        "Deferred (discretionary cap): bilingual HE/EN rendering in the script (Template 4 exists in references); the withholding line is still printed for small Israeli b2b payers that the order's s.2א excludes (conditional wording, harmless); English legal notice has a duplicated 'not a substitute' sentence, fix the next time the notice is touched (counsel-template text, do not paraphrase casually).",
+        "SKILL.md body is at 4,983 words (cap 5,000). Next cycle must move content to references before adding any."
+      ]
     }
   ]
 }

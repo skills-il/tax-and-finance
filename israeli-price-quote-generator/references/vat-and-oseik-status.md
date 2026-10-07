@@ -12,7 +12,7 @@
 
 **122,833 ₪** per calendar year (turnover, not profit).
 
-- CPI-indexed annually by the Tax Authority
+- CPI-indexed every 1 January (VAT Law section 126(a)), so the 2027 figure appears only after the mid-December CPI
 - Was 120,000 ₪ in 2024 and 2025
 - A freelancer crossing the threshold mid-year must visit the regional VAT office to convert to oseik morshe
 
@@ -44,7 +44,7 @@ When an oseik morshe sells services to a non-resident customer outside Israel, t
 - The issuer can still claim input VAT on related expenses (this is the value of being zero-rated vs exempt)
 - Mark the line clearly: "0% VAT, export of services per VAT Law §30(a)(5)"
 
-**The exception that catches Israeli freelancers.** Section 30(a)(5) zero-rates a service to a foreign resident "למעט שירות ששר האוצר קבע לענין זה", and then adds: "לא יראו שירות כניתן לתושב חוץ כאשר נושא ההסכם הוא מתן השירות בפועל, נוסף על תושב החוץ, גם לתושב ישראל בישראל, לשותפות שרוב הזכויות בה הן של שותפים תושבי ישראל או לחברה שלענין פקודת מס הכנסה רואים אותה כתושבת ישראל". So where the agreement's subject is that the service is actually rendered to an Israeli resident as well as the foreign customer (the classic case being a foreign parent contracting for work delivered to its Israeli subsidiary), the zero rate does NOT apply, however the invoice is addressed and however the payment arrives. Ask who receives the service, not who pays. Keep the contract, the proof of foreign residency and the foreign-currency payment record: the zero rate must be documented.
+**The exception that catches Israeli freelancers.** Section 30(a)(5) zero-rates a service to a foreign resident "למעט שירות ששר האוצר קבע לענין זה", and then adds: "לא יראו שירות כניתן לתושב חוץ כאשר נושא ההסכם הוא מתן השירות בפועל, נוסף על תושב החוץ, גם לתושב ישראל בישראל, לשותפות שרוב הזכויות בה הן של שותפים תושבי ישראל או לחברה שלענין פקודת מס הכנסה רואים אותה כתושבת ישראל". So where the agreement's subject is that the service is actually rendered to an Israeli resident as well as the foreign customer (the classic case being a foreign parent contracting for work delivered to its Israeli subsidiary), the zero rate does NOT apply, however the invoice is addressed and however the payment arrives. Ask who receives the service, not who pays. Section 30(c) adds a second test: for section 30 a foreign resident counts only "כשהוא נמצא מחוץ לישראל ואין לו עסקים או פעילות בישראל", so a foreign company with an Israeli branch, office or other activity is outside the zero rate. Keep the contract, the proof of foreign residency and the foreign-currency payment record: the zero rate must be documented.
 
 ## When the freelancer crosses the threshold
 
@@ -52,7 +52,7 @@ If the freelancer is currently oseik patur and the quote being drafted would pus
 
 1. **Deferring the work into the next calendar year does not automatically keep the issuer under the ceiling.** The ceiling is measured on מחזור עסקאות for the tax year, and when a transaction is attributed to a year depends on the issuer's reporting basis and on the type of supply, which differs between services and goods. Do not present late invoicing as a way to stay under 122,833 ₪; a wrong attribution is corrected retroactively. Where timing is the deciding factor, send the user to their accountant.
 2. **Status conversion is required** before issuing the future חשבונית עסקה if the work delivers + gets paid before year-end and pushes them over the cap.
-3. **The user must visit the regional מע\"מ office** to convert. Until conversion, they cannot legally charge VAT.
+3. **The user must visit the regional מע\"מ office** to convert. Do not promise the client a VAT-free price for work that will cross the ceiling: quote it "plus VAT if the status changes before invoicing", and confirm with an accountant from which transaction VAT applies.
 
 The skill should flag the threshold-crossing scenario but not block the quote, the freelancer needs the quote to land the work, then handle the status change.
 

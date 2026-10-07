@@ -7,6 +7,10 @@ This is the Late Payment to Suppliers Law (often called by its Hebrew shorthand 
 
 **It does not simply void every longer term.** For a business payer (section 3(g)) and for a budgeted body or university (section 3(e)) the statutory date applies "אלא אם כן קבעו הצדדים באופן מפורש בחוזה מועד אחר לתשלום", and another date is permitted where it is required by the special character of the engagement or is not "בלתי הוגן באופן חריג" (exceptionally unfair). A 3(e) payer additionally needs CEO approval, must disclose the other date in the tender, and must report the engagement to the Small and Medium Business Agency. For state authorities (3(a) and 3(b)) and local authorities (3(f)) the statute does not offer the same express opt-out.
 
+## Who the law does not cover
+
+Section 3 has rows only for public bodies and for an "עסק". A private individual hiring a freelancer (a wedding, a renovation, private lessons) is on no row, so a quote to a consumer should state the agreed term and cite no statutory date. Whether the law binds a foreign payer is unsettled. "עסק" is defined by reference to VAT Law statuses, one of which (עוסק פטור) turns on turnover rather than registration, so the definition alone does not settle it, and territoriality and the contract's governing law also bear on it. No case law is cited here, so treat a foreign client's payment date as a matter for the contract.
+
 ## The payer tiers
 
 Which row applies is decided by the definitions in section 2, not by how large the client feels. "עסק" means a financial institution, an oseik morshe or an oseik patur, and expressly EXCLUDES a corporation at least half-owned by a local authority, a water corporation, Mifal HaPayis and the sports-betting council. "רשות מדינה" is a closed list: the President's office, the Knesset, the State Comptroller, Bank of Israel, the Israel Securities Authority and Bituach Leumi.
@@ -88,11 +92,11 @@ Section 4(c) preserves every other remedy the supplier has for non-payment.
 
 Suggested clause (Hebrew, drop into the quote):
 
-> **תנאי תשלום:** שוטף + 30 ימים מהנפקת החשבונית, כמוסכם בין הצדדים. בהיעדר הסכמה אחרת, חוק מוסר תשלומים לספקים, התשע"ז-2017 קובע שוטף + 45 בעסקה בין עסקים. איחור מעבר למועד שבחוק נושא ריבית שקלית, ובחלוף 30 ימים נוספים גם דמי פיגורים, לפי חוק פסיקת ריבית והצמדה, התשכ"א-1961.
+> **תנאי תשלום:** שוטף + 30 ימים מהנפקת החשבונית, כמוסכם בין הצדדים. בהיעדר הסכמה אחרת, חוק מוסר תשלומים לספקים, התשע"ז-2017 קובע שוטף + 45 בעסקה בין עסקים. איחור מעבר למועד שבחוק נושא ריבית שקלית, ובחלוף 30 ימים נוספים גם דמי פיגורים, לפי חוק פסיקת ריבית והצמדה, התשכ"א-1961, בהתקשרות שבה למזמין הייתה עדיפות בעיצוב תנאי החוזה (סעיף 4(ב) לחוק).
 
 English equivalent (for bilingual quotes):
 
-> **Payment terms:** Net end-of-month + 30 days from invoice issuance ("shotef + 30"), as agreed between the parties. Absent another agreed date, the Late Payment to Suppliers Law 5777-2017 sets end-of-month + 45 days for business-to-business transactions. Delay beyond the statutory date accrues shekel interest, and after a further 30 days arrears charges as well, per the Interest and Linkage Law 5721-1961.
+> **Payment terms:** Net end-of-month + 30 days from invoice issuance ("shotef + 30"), as agreed between the parties. Absent another agreed date, the Late Payment to Suppliers Law 5777-2017 sets end-of-month + 45 days for business-to-business transactions. Delay beyond the statutory date accrues shekel interest, and after a further 30 days arrears charges as well, per the Interest and Linkage Law 5721-1961, in an engagement where the payer had superiority in shaping the contract terms (section 4(b)).
 
 ## Defaults this skill uses
 
@@ -101,3 +105,4 @@ English equivalent (for bilingual quotes):
 - **Statutory date for a budgeted body / university client:** shotef + 45, opt-out possible with CEO approval
 - **Statutory date for a state authority client:** 45 days from invoice, or 30 days from month-end, depending on the contract's counting basis (85/70 for construction)
 - **Statutory date for a local authority client:** 45 days from month-end (80 for construction; externally-financed portion up to 150 days)
+- **Private individual or foreign client (script tiers `consumer` / `foreign`):** no statutory date is cited; the quote states the agreed term only
