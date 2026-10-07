@@ -252,7 +252,7 @@ No MCP server is required to draft a quote. After acceptance, the natural next s
 
 | Issue | Cause | Fix |
 |---|---|---|
-| VAT calculation off by one agorah | Floating-point rounding | Round subtotal × 0.18 to 2 decimals using banker's rounding (Python's `round()` or `Decimal.quantize(Decimal('0.01'), ROUND_HALF_EVEN)`) |
+| VAT calculation off by one agorah | Floating-point rounding | Round subtotal × 0.18 to 2 decimals, rounding an exact half agora up (`Decimal.quantize(Decimal('0.01'), ROUND_HALF_UP)`; Python's `round()` rounds halves to even and can differ by one agora) |
 | Client says "I'll pay in 60 days" | The contract is silent, or the client wants to write a longer term in | Section 3(g) gives shotef + 45 as the default when the contract says nothing, so silence favours the supplier. If the client insists on writing shotef + 60 into the contract, it is not void on its face, it is challengeable as "exceptionally unfair", so negotiate it rather than telling the client it has no effect. |
 | Client is a foreign company, wants USD | Currency conversion exposure | Use the FX clause from Step 6, peg to Bank of Israel שער יציג at invoice date, not quote date. Spell out which date in the quote. |
 | User crossed the 122,833 ₪ ceiling mid-year | Must upgrade to oseik morshe | The skill should flag this (the script does, given `ytd_turnover`). Don't promise a VAT-free price for work that crosses the ceiling: quote it "plus VAT if the status changes before invoicing" and confirm with an accountant from which transaction VAT applies. Don't backdate. |

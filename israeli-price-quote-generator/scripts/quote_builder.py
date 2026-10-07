@@ -54,7 +54,7 @@ import json
 import re
 import sys
 from datetime import date, timedelta
-from decimal import ROUND_HALF_EVEN, Decimal
+from decimal import ROUND_HALF_UP, Decimal
 
 VAT_RATE = Decimal("0.18")
 OSEIK_PATUR_THRESHOLD_2026 = Decimal("122833")
@@ -107,7 +107,7 @@ def cell(text) -> str:
 
 def money(x: Decimal) -> str:
     """Format Decimal as Israeli-style number with two decimals and commas."""
-    q = x.quantize(Decimal("0.01"), rounding=ROUND_HALF_EVEN)
+    q = x.quantize(Decimal("0.01"), rounding=ROUND_HALF_UP)
     return f"{q:,.2f}"
 
 
@@ -143,11 +143,11 @@ def compute_totals(lines, charges_vat):
                 f"line item {line.get('description', '(no description)')!r} has a discount "
                 f"({discount}) larger than the line amount ({gross})"
             )
-        line_total = (gross - discount).quantize(Decimal("0.01"), rounding=ROUND_HALF_EVEN)
+        line_total = (gross - discount).quantize(Decimal("0.01"), rounding=ROUND_HALF_UP)
         subtotal += line_total
         line_outputs.append({**line, "line_total": line_total, "discount_amount": discount})
     vat = (
-        (subtotal * VAT_RATE).quantize(Decimal("0.01"), rounding=ROUND_HALF_EVEN)
+        (subtotal * VAT_RATE).quantize(Decimal("0.01"), rounding=ROUND_HALF_UP)
         if charges_vat
         else Decimal("0.00")
     )
@@ -420,7 +420,9 @@ def render_markdown(spec, line_outputs, subtotal, vat, total, charges_vat):
     clauses = spec.get("clauses") or {}
     if statutory:
         out.append(
-            "- **ניכוי במקור:** התשלום כפוף להצגת אישור פטור מניכוי מס במקור בתוקף; "
+            # Small payers (s.2א of the withholding order) do not withhold at all,
+            # so the line is conditional on the payer actually being a withholder.
+            "- **ניכוי במקור:** ככל שהמזמין חייב בניכוי מס במקור, התשלום כפוף להצגת אישור פטור מניכוי מס במקור בתוקף; "
             "אחרת ינוכה לפי השיעור החל על הספק. הניכוי אינו מקטין את סכום החשבונית, "
             "רק את המזומן שמתקבל ביום התשלום."
         )

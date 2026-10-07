@@ -19,7 +19,7 @@ Generated: 2026-05-19, revised 2026-10-07, via research on: mas.gov.il, btl.gov.
 
 ## Should cover (advanced)
 
-- [x] **VAT rounding convention** (agorot, 2 decimal places), banker's rounding to avoid 0.005 inconsistencies.
+- [x] **VAT rounding convention** (agorot, 2 decimal places), each line rounded, VAT on the rounded subtotal, an exact half agora rounded up.
 - [x] **VAT-exempt services (export to non-resident)**: 0% under VAT Law §30(a)(5), still appears on the return.
 - [x] **The §30(c) foreign-resident test**: for section 30 a foreign resident counts only when outside Israel with no business or activity in Israel. Source: VAT Law on he.wikisource.
 - [x] **The §30(a)(5) dual-beneficiary exception**: not zero-rated where the agreement's subject is that the service is actually rendered, in addition to the foreign resident, also to an Israeli resident in Israel, an Israeli-majority partnership or a company treated as an Israeli resident.

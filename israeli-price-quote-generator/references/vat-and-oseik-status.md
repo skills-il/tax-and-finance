@@ -66,4 +66,4 @@ vat = round(subtotal * 0.18, 2)
 total = round(subtotal + vat, 2)
 ```
 
-Use banker's rounding (ROUND_HALF_EVEN) in code to avoid 0.005 → 0.01 vs 0.005 → 0.00 inconsistencies.
+Round an exact half agora up (ROUND_HALF_UP) in code, the rounding a client checking the figures by hand expects; Python's `round()` rounds halves to even and can differ by one agora.
