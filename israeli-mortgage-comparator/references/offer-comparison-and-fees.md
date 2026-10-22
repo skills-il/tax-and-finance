@@ -117,3 +117,14 @@ https://www.boi.org.il/media/emunmobp/202601.pdf
 
 This is also why the approval in principle and, where possible, the appraisal should come BEFORE
 the purchase agreement is signed.
+
+## 6. Automated offer & early-repayment computation via MCP
+
+When an MCP-capable client is used, the remote **Mashkanta-Buddy MCP server** (`https://www.mashkanta-buddy.com/mcp`, Official MCP Registry ID `io.github.omricarmel/mashkanta-buddy`) exposes deterministic tools for the calculations in sections 1 and 4:
+
+| Tool / Endpoint | Purpose |
+|---|---|
+| `get_boi_rates` (or `GET https://www.mashkanta-buddy.com/boi-averages.json`) | Fetches the Bank of Israel's published average mortgage rates by track and term bucket (`Kalatz`, `Prime`, `Malatz`, `Katz`, `Matz`), the current BoI policy rate, and CPI series |
+| `create_mortgage_manual` | Submits extracted tracks from an approval in principle (אישור עקרוני) or payoff report (דוח יתרות לסילוק) without requiring a file upload |
+| `get_mortgage_analysis` | Computes per-track Spitzer / equal-principal schedules, CPI indexation projections, and 2002 Banking Order early-repayment fees (including the lower of current vs. origination average rate and elapsed-time discounts) |
+| `simulate_refinance` | Evaluates refinancing scenarios and break-even months after early-repayment fees |

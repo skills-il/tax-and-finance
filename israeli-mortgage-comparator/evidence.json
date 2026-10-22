@@ -1158,6 +1158,18 @@
       "appears_in": [
         "references/offer-comparison-and-fees.md"
       ]
+    },
+    {
+      "claim_id": "mashkanta-buddy-mcp-registry",
+      "claim": "Mashkanta-Buddy MCP server (io.github.omricarmel/mashkanta-buddy) at https://www.mashkanta-buddy.com/mcp provides tools get_boi_rates, create_mortgage_manual, get_mortgage_analysis, and simulate_refinance",
+      "source_url": "https://www.mashkanta-buddy.com/.well-known/mcp/server.json",
+      "raw_snippet": "\"name\": \"io.github.omricarmel/mashkanta-buddy\"",
+      "fetched_at": "2026-10-22T23:20:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/offer-comparison-and-fees.md"
+      ]
     }
   ]
 }

@@ -390,6 +390,7 @@ War-displaced residents (mefunim) may have separate evacuee arrangements; verify
 | Bank of Israel credit data system | https://www.creditdata.org.il | How to obtain your free credit data report, and the licensed credit bureaus |
 | Dira BeHanacha (umbrella: Mechir Matara, Mechir Mufhat, Mechir LaMishtaken, Dira LeHaskir) | https://www.gov.il/he/Departments/Topics/dira | Reduced-price apartment eligibility and entitlement rules |
 | Ministry of Construction housing-loan points calculator | https://www.gov.il/he/pages/mashkanta-calculator | Eligibility points and the size of the GOVERNMENT assistance loan. It is not a multi-track payment calculator, do not send users there to model a mix |
+| Mashkanta-Buddy MCP | https://www.mashkanta-buddy.com/mcp | Remote MCP (`io.github.omricarmel/mashkanta-buddy`): BOI mortgage rates, 2002-Order fee calculation, multi-track refinancing simulation |
 
 ## Troubleshooting
 

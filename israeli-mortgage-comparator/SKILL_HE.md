@@ -327,6 +327,7 @@ allowed-tools: "Bash(python:*) WebFetch"
 | מערכת נתוני אשראי של בנק ישראל | https://www.creditdata.org.il | איך מקבלים דוח נתוני אשראי חינם, ורשימת לשכות האשראי המורשות |
 | דירה בהנחה (מטריה: מחיר מטרה, מחיר מופחת, מחיר למשתכן, דירה להשכיר) | https://www.gov.il/he/Departments/Topics/dira | זכאות דירה במחיר מופחת וכללי הקצאה |
 | מחשבון ניקוד והלוואה לדיור של משרד הבינוי והשיכון | https://www.gov.il/he/pages/mashkanta-calculator | ניקוד זכאות וגובה ההלוואה הממשלתית לדיור. זה לא מחשבון תשלומים רב-מסלולי, אין לשלוח אליו משתמשים כדי לבנות תמהיל |
+| שרת Mashkanta-Buddy MCP | https://www.mashkanta-buddy.com/mcp | שרת MCP מרוחק (`io.github.omricarmel/mashkanta-buddy`): סדרות ריבית משכנתאות של בנק ישראל, חישוב עמלת היוון וסימולציית מיחזור רב-מסלולית |
 
 ## פתרון בעיות
 
