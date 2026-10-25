@@ -23,6 +23,19 @@ customer holding no cash-withdrawal card should pass --entitled: the first 4
 teller actions a month are then priced at the direct-channel fee, which can
 change which billing method wins for a low-volume account.
 
+With no track, a bank may charge the higher of the actual per-action total or
+a monthly minimum fee of up to one teller action's price (First Schedule, note 3
+to item 1(a)(2)). Pass the bank's minimum as --min-fee so a near-dormant account
+is not shown as almost free.
+
+Count direct-channel actions by the rule's list (First Schedule item 1(a)(3)):
+clearing-house credits such as salary or pension, the credit-card debit to the
+account, authorization and standing-order debits, transfers, voucher payments,
+cheques drawn and deposited, and machine cash deposits and withdrawals.
+Internet and IVR information queries are free and not counted. Cheque or cash
+deposits made at a teller because the bank offers no reasonable direct channel
+for them count as --direct (item 1(a)(2) note 2, basic-track note 3).
+
 Simplification to be aware of: real tariffs price different direct-channel
 action types differently; this model uses one flat direct-channel fee.
 
@@ -70,9 +83,13 @@ def teller_charge(teller, direct_fee, teller_fee, entitled):
     return discounted * direct_fee + (teller - discounted) * teller_fee
 
 
-def per_action_cost(direct, teller, direct_fee, teller_fee, entitled=False):
-    """Monthly cost with no track: every action is billed separately."""
-    return direct * direct_fee + teller_charge(teller, direct_fee, teller_fee, entitled)
+def per_action_cost(direct, teller, direct_fee, teller_fee, entitled=False, min_fee=0.0):
+    """Monthly cost with no track: every action is billed separately.
+
+    The bank may instead charge a monthly minimum (min_fee) when that is higher.
+    """
+    total = direct * direct_fee + teller_charge(teller, direct_fee, teller_fee, entitled)
+    return max(total, min_fee)
 
 
 def track_cost(direct, teller, direct_fee, teller_fee, price, direct_limit, teller_limit,
@@ -99,8 +116,8 @@ def track_cost(direct, teller, direct_fee, teller_fee, price, direct_limit, tell
 
 
 def recommend(direct, teller, direct_fee, teller_fee, basic_price, expanded_price,
-              entitled=False):
-    per_action = per_action_cost(direct, teller, direct_fee, teller_fee, entitled)
+              entitled=False, min_fee=0.0):
+    per_action = per_action_cost(direct, teller, direct_fee, teller_fee, entitled, min_fee)
     basic_cost, basic_note = track_cost(direct, teller, direct_fee, teller_fee,
                                         basic_price, BASIC_DIRECT_LIMIT, BASIC_TELLER_LIMIT,
                                         entitled)
@@ -109,7 +126,9 @@ def recommend(direct, teller, direct_fee, teller_fee, basic_price, expanded_pric
                                               EXPANDED_TELLER_LIMIT, entitled)
 
     options = [
-        ("No track (per action)", per_action, "billed per action"),
+        ("No track (per action)", per_action,
+         "billed per action" + (" (monthly minimum %.2f applied if higher)" % min_fee
+                                if min_fee else "")),
         ("Basic track", basic_cost, basic_note),
         ("Expanded track", expanded_cost, expanded_note),
     ]
@@ -128,7 +147,9 @@ def recommend(direct, teller, direct_fee, teller_fee, basic_price, expanded_pric
 
     # Ties resolve to the earliest option in list order, i.e. "No track".
     # Deliberate: do not move a customer onto a track for a zero saving.
-    cheapest = min(options, key=lambda o: o[1])
+    # Compare in whole agorot so float noise (19 * 0.6 vs 6 + 9 * 0.6) cannot
+    # break a tie the wrong way.
+    cheapest = min(options, key=lambda o: round(o[1], 2))
     lines.append("")
     lines.append("Recommendation: %s at about %.2f NIS/month." % (cheapest[0], cheapest[1]))
     # Round once, then derive the annual figure, so the two printed numbers reconcile.
@@ -140,9 +161,17 @@ def recommend(direct, teller, direct_fee, teller_fee, basic_price, expanded_pric
         ))
         lines.append("(Benchmarked against paying per action. If you are already on a track,")
         lines.append("compare against your current track price instead.)")
+    if not min_fee:
+        lines.append("")
+        lines.append("Note: no --min-fee given. On no track the bank may charge a monthly minimum")
+        lines.append("of up to one teller action's price; check the tariff and pass --min-fee.")
+    if entitled and max(0, teller - BASIC_TELLER_LIMIT) > 0:
+        lines.append("")
+        lines.append("Note: track overage applies the 4-action entitlement to overage teller")
+        lines.append("actions under rule 4a(c); confirm the bank bills overage that way.")
     lines.append("")
-    lines.append("This is an estimate. Verify with the Bank of Israel fee-tracks calculator")
-    lines.append("and your bank's current tariff before switching.")
+    lines.append("This is an estimate. Your bank's current tariff controls; the Bank of Israel")
+    lines.append("calculator is useful for comparing banks but its stored prices may be dated.")
     return "\n".join(lines)
 
 
@@ -158,6 +187,9 @@ def main():
                         help="customer is a senior, has presented a 40%%+ disability "
                              "certificate, or holds no cash-withdrawal card: prices the "
                              "first 4 teller actions a month at the direct-channel fee")
+    parser.add_argument("--min-fee", type=float, default=0.0,
+                        help="optional: the bank's monthly minimum fee when on no track "
+                             "(may not exceed one teller action's price)")
     parser.add_argument("--example", action="store_true", help="run a worked example")
     args = parser.parse_args()
 
@@ -177,7 +209,8 @@ def main():
     for name, value in (("--direct", args.direct), ("--teller", args.teller),
                         ("--direct-fee", args.direct_fee), ("--teller-fee", args.teller_fee),
                         ("--basic-price", args.basic_price),
-                        ("--expanded-price", args.expanded_price)):
+                        ("--expanded-price", args.expanded_price),
+                        ("--min-fee", args.min_fee)):
         if value < 0:
             parser.error("%s cannot be negative (got %s)" % (name, value))
 
@@ -187,8 +220,14 @@ def main():
               "complaint ground (see section C of the skill).\n"
               % (args.basic_price, BASIC_PRICE_CAP))
 
+    if args.min_fee > args.teller_fee:
+        print("WARNING: --min-fee %.2f exceeds one teller action (%.2f NIS), which the\n"
+              "fee rules do not allow as a monthly minimum. Re-read the tariff; if the bank\n"
+              "really charges this, that is a complaint ground.\n"
+              % (args.min_fee, args.teller_fee))
+
     print(recommend(args.direct, args.teller, args.direct_fee, args.teller_fee,
-                    args.basic_price, args.expanded_price, args.entitled))
+                    args.basic_price, args.expanded_price, args.entitled, args.min_fee))
 
 
 if __name__ == "__main__":

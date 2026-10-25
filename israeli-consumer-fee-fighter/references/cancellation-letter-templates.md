@@ -81,7 +81,7 @@ Sincerely,
 
 אני, [שם מלא], ת"ז [מספר], לקוח/ה מספר [אם יש], מודיע/ה בזאת על ביטול העסקה המתמשכת שלי [תיאור השירות].
 
-הביטול נעשה מכוח סעיף 13ד לחוק הגנת הצרכן, התשמ"א-1981. אבקש להפסיק את החיוב בהתאם למועדים הקבועים בחוק (עד 3 ימי עסקים ממועד הודעה זו, או עד 6 ימי עסקים אם נשלחה בדואר רשום). לפי החוק ניתן לבטל גם באותו ערוץ שבו בוצעה ההצטרפות וגם דרך מסך הביטול באתר העסק. אבקש אישור בכתב על הביטול ועל מועד הפסקת החיוב.
+הביטול נעשה מכוח סעיף 13ד לחוק הגנת הצרכן, התשמ"א-1981. אבקש להפסיק את החיוב בהתאם למועדים הקבועים בחוק (עד 3 ימי עסקים ממועד הודעה זו, או עד 6 ימי עסקים אם נשלחה בדואר רשום). לפי סעיף 14ט(א) לחוק, העסק חייב לאפשר ביטול בין היתר בדואר רשום, בדואר אלקטרוני ובאינטרנט כשאפשר להתקשר בעסקה דרכו. אבקש אישור בכתב על הביטול ועל מועד הפסקת החיוב, והשבה של כל חיוב שייגבה אחרי מועד זה.
 
 בכבוד רב,
 [שם] [תאריך] [חתימה]
@@ -93,21 +93,37 @@ Re: Ongoing-transaction cancellation notice
 
 I, [full name], ID [number], customer no. [if any], hereby give notice of cancellation of my ongoing subscription [describe the service].
 
-Please stop charging within the periods set by law (within 3 business days of this notice, or within 6 business days if sent by registered mail). Please send written confirmation of the cancellation and the date charging stops.
+This cancellation is made under section 13D of the Consumer Protection Law, 5741-1981. Please stop charging within the periods set by law (within 3 business days of this notice, or within 6 business days if sent by registered mail). Under section 14T(a) of the Law the business must accept a cancellation by, among other channels, registered mail, email, and the internet where the deal can be made online. Please send written confirmation of the cancellation and the date charging stops, and refund any charge collected after that date.
 
 Sincerely,
 [name] [date] [signature]
 
 ---
 
-## 4. Request a fee track / discount review (Hebrew)
+## 4. Request a fee track / entitlement review (Hebrew)
 
 לכבוד [הבנק],
-הנדון: בקשה להצטרפות למסלול עמלות [בסיסי / מורחב] ובדיקת זכאות להנחה
+הנדון: בקשה להצטרפות למסלול עמלות [בסיסי / מורחב] ובדיקת זכאות בעמלות
 
 אני, [שם מלא], ת"ז [מספר], בעל/ת חשבון [מספר], מבקש/ת להצטרף למסלול [בסיסי / מורחב] החל מה-1 בחודש הבא.
 
-כמו כן, אבקש לבדוק את זכאותי להנחה בעמלות [אזרח ותיק / נכות 40% ומעלה / עסק קטן] ולעדכן אותי איזו אפשרות היא הזולה ביותר עבור היקף הפעולות שלי.
+כמו כן, אבקש להחיל את זכאותי בעמלות [אזרח ותיק / אדם עם מוגבלות שהציג אישור נכות 40% ומעלה / לקוח שאינו מחזיק כרטיס למשיכת מזומן / עסק קטן] ולעדכן אותי איזו אפשרות היא הזולה ביותר עבור היקף הפעולות שלי.
+
+[לאזרח ותיק, לאדם עם מוגבלות או לעסק קטן: לפי כלל 4א(ב1) / 4א(ב2) לכללי הבנקאות (שירות ללקוח)(עמלות), אבקש לדעת מה הראתה ההשוואה לשנת [שנה] בין העמלות שנגבו ממני לבין מחיר המסלול, ומדוע לא צורפתי למסלול עד 1 במרס. אבקש גם השבה של ההפרשים שנגבו בשנה זו, כדרישה נפרדת.]
 
 בכבוד רב,
 [שם] [תאריך] [חתימה]
+
+## 4. Request a fee track / entitlement review (English)
+
+To [bank],
+Re: Request to join the [basic / expanded] fee track and to apply my fee entitlement
+
+I, [full name], ID [number], holder of account [number], request to join the [basic / expanded] track from the 1st of next month.
+
+Please also apply my fee entitlement as [a senior citizen / a person with a disability who has presented a 40%+ disability certificate / a customer holding no cash-withdrawal card / a small business], and tell me which option is cheapest for my volume of actions.
+
+[Senior, disability or small business: under rule 4a(b1) / 4a(b2) of the Banking Rules (Customer Service)(Fees), please tell me what the comparison for [year] between the fees charged to me and the track price showed, and why I was not enrolled in the track by 1 March. I also request restitution of the differences charged in that year, as a separate request.]
+
+Sincerely,
+[name] [date] [signature]

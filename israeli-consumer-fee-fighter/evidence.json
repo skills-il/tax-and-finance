@@ -1,7 +1,7 @@
 {
   "skill_slug": "israeli-consumer-fee-fighter",
   "schemaVersion": "1.0",
-  "generated_at": "2026-09-01T22:42:30+00:00",
+  "generated_at": "2026-10-25T12:21:00+00:00",
   "claims": [
     {
       "claim": "The parent consumer-banking law is Banking (Customer Service) Law, 5741-1981 (Hok HaBankaut (Sherut LaLakoach), TASHMA-1981).",
@@ -111,7 +111,7 @@
       ]
     },
     {
-      "claim": "Senior citizens (azrachim vatikim) and people with a determined disability of at least 40% are entitled to fee discounts.",
+      "claim": "Kol Zchut confirms seniors and people with a 40%+ disability have a fee entitlement (the page loosely calls it \"הנחות\"; the operative rule is the First Schedule note to item 1(a)(2), 4 teller actions at the direct-channel price, which is not a percentage discount).",
       "source_url": "https://www.kolzchut.org.il/he/מסלולי_עמלות_במחיר_חודשי_קבוע_בחשבון_עובר_ושב_בבנק",
       "raw_snippet": "אזרחים ותיקים ומי שנקבעה להם נכות בדרגה 40% לפחות זכאים להנחות בעמלות",
       "claim_id": "senior-disability-discount",
@@ -157,17 +157,17 @@
       "verified_at": "2026-09-01T21:07:41+00:00"
     },
     {
-      "claim": "The Bank of Israel promotes a reduced tariff for small businesses (esek katan), including widening the group of small businesses to which the reduced tariff applies.",
-      "source_url": "https://boi.org.il/information/fees/",
-      "raw_snippet": "במטרה לסייע לעסקים קטנים, מקודמים בטיוטה שני צעדים משמעותיים חדשים: הרחבת קבוצת העסקים הקטנים שהתעריפון המוזל יחול עליהם ושינוי ברירת המחדל בצירוף עסק קטן לתעריפון המוזל",
+      "claim": "Fee rules rule 2(b): a fee charged to a small business for a full-tariff service may not exceed the fee charged for the same service to a corporation that is not a small business, except fees for card-clearing services",
+      "source_url": "https://he.wikisource.org/wiki/כללי_הבנקאות_(שירות_ללקוח)_(עמלות)",
+      "raw_snippet": "תחושב באופן שלא תעלה על סכום או שיעור העמלה הנגבית בעד אותו שירות מתאגיד שאינו עסק קטן, למעט עמלה בעד שירות סליקה של עסקאות בכרטיס חיוב",
       "claim_id": "esek-katan-reduced-tariff",
-      "fetched_at": "2026-07-06T00:00:00Z",
+      "fetched_at": "2026-10-25T12:21:00+00:00",
       "appears_in": [
         "SKILL.md",
-        "SKILL_HE.md"
-      ],
-      "verified_via": "browser",
-      "verified_at": "2026-09-01T21:07:41+00:00"
+        "SKILL_HE.md",
+        "references/fee-tracks-comparison.md",
+        "references/domain-checklist.md"
+      ]
     },
     {
       "claim": "Recurring-charge cancellation rights are governed by the Payment Services Law, 5779-2019.",
@@ -203,14 +203,16 @@
       ]
     },
     {
-      "claim": "If a business keeps charging after the legal cutoff, the consumer is entitled to compensation without proof of damage of up to 10,000 NIS, plus a full refund from the date charging should have stopped. Compensation up to 10,000 ש\"ח without proof of damage.",
-      "source_url": "https://www.kolzchut.org.il/he/ביטול_עסקה_מתמשכת",
-      "raw_snippet": "במקרה שבו העסק ממשיך לגבות תשלום לאחר מועד הניתוק הקבוע בחוק, הצרכן זכאי לפיצוי ללא הוכחת נזק של עד 10,000 ₪, בנוסף להחזר כספי מלא מהמועד בו היה על העסק להפסיק את החיובים",
+      "claim": "If a business keeps charging after the cancellation cutoff, a court may award exemplary damages without proof of damage of up to 10,000 NIS (Consumer Protection Law s.31a(a)(2b)); the later charges are refundable. (סעיף 31א לחוק הגנת הצרכן)",
+      "source_url": "https://he.wikisource.org/wiki/חוק_הגנת_הצרכן",
+      "raw_snippet": "רשאי בית המשפט לפסוק, בשל אותה הפרה, פיצויים שאינם תלויים בנזק (בסעיף זה – פיצויים לדוגמה), בסכום שלא יעלה על 10,000 שקלים חדשים",
       "claim_id": "ongoing-transaction-compensation",
-      "fetched_at": "2026-07-06T00:00:00Z",
+      "fetched_at": "2026-10-25T12:03:40+00:00",
       "appears_in": [
         "SKILL.md",
-        "SKILL_HE.md"
+        "SKILL_HE.md",
+        "references/payment-services-remedies.md",
+        "references/domain-checklist.md"
       ]
     },
     {
@@ -218,17 +220,6 @@
       "source_url": "https://www.kolzchut.org.il/he/ביטול_עסקה_מתמשכת",
       "raw_snippet": "זכות הביטול הכללית, המאפשרת ביטול בתוך 14 ימים קלנדריים מיום עשיית העסקה או מיום מסירת חוזה בכתב, לפי המאוחר",
       "claim_id": "general-cancellation-14-days",
-      "fetched_at": "2026-07-06T00:00:00Z",
-      "appears_in": [
-        "SKILL.md",
-        "SKILL_HE.md"
-      ]
-    },
-    {
-      "claim": "Credit and debit cards are governed by the Debit Cards Law, 5746-1986 (Hok Kartisei Chiyuv).",
-      "source_url": "https://he.wikisource.org/wiki/חוק_כרטיסי_חיוב",
-      "raw_snippet": "חוק כרטיסי חיוב, התשמ״ו–1986",
-      "claim_id": "credit-card-debit-law-name",
       "fetched_at": "2026-07-06T00:00:00Z",
       "appears_in": [
         "SKILL.md",
@@ -249,7 +240,7 @@
       "verified_at": "2026-09-01T22:42:30+00:00"
     },
     {
-      "claim": "Since 22.9.2021 an online bank switch completes within 7 business days of submission (extendable to 30 business days on request) and moves shekel and FX balances, standing orders and account debit authorizations, checks, and bank and non-bank card activity. Loans and credit including mortgages, deposits and savings plans, non-transferable securities, and safes or products pledged to the old bank do NOT transfer. The follow-me service runs 3 years. Bank of Jerusalem is excluded from the online switch.",
+      "claim": "Since 22.9.2021 an online bank switch completes within 7 business days of submission (extendable to 30 business days on request) and moves shekel and FX balances, standing orders and account debit authorizations, checks, and bank and non-bank card activity. Loans and credit including mortgages, deposits and savings plans, non-transferable securities, and safes or products pledged to the old bank do NOT transfer. The follow-me service runs 3 years from the switch. Bank of Jerusalem is excluded from the online switch.",
       "source_url": "https://www.kolzchut.org.il/he/מעבר_בין_בנקים_באופן_מקוון_%28ניוד%29",
       "raw_snippet": "הניוד יושלם בתוך 7 ימי עסקים מיום הגשת הבקשה",
       "claim_id": "bank-switching-niud",
@@ -260,7 +251,7 @@
       ]
     },
     {
-      "claim": "Kol Zchut page on switching between banks online (niud) that documents the 7-business-day transfer, what moves, akev acharai, and the 22.9.2021 start date.",
+      "claim": "Kol Zchut page on switching between banks online (niud) documenting the 7-business-day transfer, what moves, and akev acharai forwarding.",
       "source_url": "https://www.kolzchut.org.il/he/מעבר_בין_בנקים_באופן_מקוון_%28ניוד%29",
       "raw_snippet": "הניוד יושלם בתוך 7 ימי עסקים מיום הגשת הבקשה",
       "claim_id": "ref-url-bank-switching",
@@ -637,6 +628,622 @@
         "SKILL.md",
         "SKILL_HE.md",
         "references/fee-tracks-comparison.md"
+      ]
+    },
+    {
+      "claim_id": "kz-ongoing-refund-full",
+      "claim": "Kol Zchut: charges after the cutoff are refundable in full from the date charging should have stopped",
+      "source_url": "https://www.kolzchut.org.il/he/ביטול_עסקה_מתמשכת",
+      "raw_snippet": "בנוסף להחזר כספי מלא מהמועד בו היה על העסק להפסיק את החיובים",
+      "fetched_at": "2026-10-25T12:03:40+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "cpl-13d-c-contract-ends-3-6-days",
+      "claim": "CPL s.13d(c): an ongoing-transaction contract ends within 3 business days of a cancellation notice, 6 if by registered mail",
+      "source_url": "https://he.wikisource.org/wiki/חוק_הגנת_הצרכן",
+      "raw_snippet": "חוזה בעסקה מתמשכת יסתיים בתוך שלושה ימי עסקים מיום שנמסרה הודעת ביטול",
+      "fetched_at": "2026-10-25T12:03:40+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/payment-services-remedies.md",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "cpl-31a-2b-ongoing-transaction-ground",
+      "claim": "CPL s.31a(a)(2b): continuing to charge after an ongoing-transaction cancellation notice, contrary to s.13d(c), is an exemplary-damages ground",
+      "source_url": "https://he.wikisource.org/wiki/חוק_הגנת_הצרכן",
+      "raw_snippet": "ביקש צרכן לבטל עסקה מתמשכת באמצעות הודעת ביטול",
+      "fetched_at": "2026-10-25T12:03:40+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/payment-services-remedies.md",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "cpl-31a-c-up-to-50000",
+      "claim": "CPL s.31a(c)(1): up to 50,000 NIS for a repeat, continuing or aggravated breach",
+      "source_url": "https://he.wikisource.org/wiki/חוק_הגנת_הצרכן",
+      "raw_snippet": "פיצויים לדוגמה בסכום העולה על 10,000 שקלים חדשים ובלבד שאינו עולה על 50,000 שקלים חדשים, אם מצא כי ההפרה היא הפרה חוזרת או הפרה נמשכת",
+      "fetched_at": "2026-10-25T12:03:40+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/payment-services-remedies.md",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "cpl-31a-b-prior-written-notice",
+      "claim": "CPL s.31a(b): a suit requires a prior written request; for (2b) a cancellation notice under s.14t(a) suffices except paragraph (1), the oral channel (סעיף 31א(ב) לחוק הגנת הצרכן; הודעה לפי סעיף 14ט)",
+      "source_url": "https://he.wikisource.org/wiki/חוק_הגנת_הצרכן",
+      "raw_snippet": "לא תוגש נגד עוסק תביעה לפיצויים לדוגמה לפי סעיף קטן (א), אלא לאחר שהצרכן שלח או מסר בקשה לפי אותו סעיף קטן, בכתב",
+      "fetched_at": "2026-10-25T12:03:40+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/payment-services-remedies.md",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "cpl-14t-a-1-oral",
+      "claim": "CPL s.14t(a)(1): the oral channel (phone or in person) is paragraph (1)",
+      "source_url": "https://he.wikisource.org/wiki/חוק_הגנת_הצרכן",
+      "raw_snippet": "בעל פה – בטלפון או בהודעה בעל פה במקום העסק",
+      "fetched_at": "2026-10-25T12:03:40+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/payment-services-remedies.md"
+      ]
+    },
+    {
+      "claim_id": "psl-55-repeals-debit-cards-law",
+      "claim": "Payment Services Law s.55 repealed the Debit Cards Law 5746-1986",
+      "source_url": "https://he.wikisource.org/wiki/חוק_שירותי_תשלום",
+      "raw_snippet": "חוק כרטיסי חיוב, התשמ״ו–1986 – בטל.",
+      "fetched_at": "2026-10-25T12:03:40+00:00",
+      "appears_in": [
+        "references/domain-checklist.md",
+        "metadata.json"
+      ]
+    },
+    {
+      "claim_id": "psl-s1-harshaa-includes-payment-instrument",
+      "claim": "PSL s.1 defines a harshaa lechiyuv as an authorization to charge the payment account or via the payer's payment instrument",
+      "source_url": "https://he.wikisource.org/wiki/חוק_שירותי_תשלום",
+      "raw_snippet": "”הרשאה לחיוב“ – הרשאה שנותן המשלם לנותן שירותי תשלום למשלם לבצע פעולת תשלום מחשבון התשלום שלו או באמצעות אמצעי התשלום שלו",
+      "fetched_at": "2026-10-25T12:03:40+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/payment-services-remedies.md",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "psl-17-stop-guaranteed-payment-non-supply",
+      "claim": "PSL s.17(a): where goods/service not supplied (or the merchant permanently stopped supplying) and the payer notified the merchant of cancellation, the issuer stops executing the payment order and charging from the payer's notice (סעיף 17 לחוק שירותי תשלום)",
+      "source_url": "https://he.wikisource.org/wiki/חוק_שירותי_תשלום",
+      "raw_snippet": "יפסיק נותן שירותי התשלום למשלם את ביצוע הוראת התשלום ואת חיוב המשלם מכוחה החל ממועד מסירת ההודעה על ידי המשלם",
+      "fetched_at": "2026-10-25T12:03:40+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/payment-services-remedies.md",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "psl-17-b-15-days-reasons",
+      "claim": "PSL s.17(b): the issuer may re-charge if the conditions were not met, with written reasons at least 15 days before",
+      "source_url": "https://he.wikisource.org/wiki/חוק_שירותי_תשלום",
+      "raw_snippet": "נותן שירותי התשלום למשלם ימסור למשלם הודעה בכתב המפרטת את הנימוקים לחיוב, 15 ימים לפחות לפני החיוב בפועל",
+      "fetched_at": "2026-10-25T12:03:40+00:00",
+      "appears_in": [
+        "references/payment-services-remedies.md"
+      ]
+    },
+    {
+      "claim_id": "kz-17-credit-card-instalments-no-refund",
+      "claim": "Kol Zchut: s.17 applies to credit transactions such as credit cards, stops the remaining instalments, and does not refund amounts already paid",
+      "source_url": "https://www.kolzchut.org.il/he/ביטול_עסקה_בתשלומים_עקב_מוצר_או_שירות_שלא_סופקו",
+      "raw_snippet": "נותן שירותי התשלום יעצור את התשלומים הבאים, אך לא יחזיר לאדם את הסכומים שכבר שילם במסגרת העסקה.",
+      "fetched_at": "2026-10-25T12:03:40+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/payment-services-remedies.md"
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-10-25T12:03:40+00:00"
+    },
+    {
+      "claim_id": "kz-17-applies-credit-cards",
+      "claim": "Kol Zchut: the s.17 entry covers any credit transaction, most commonly by credit card",
+      "source_url": "https://www.kolzchut.org.il/he/ביטול_עסקה_בתשלומים_עקב_מוצר_או_שירות_שלא_סופקו",
+      "raw_snippet": "השימוש הנפוץ ביותר הוא באמצעות כרטיסי אשראי",
+      "fetched_at": "2026-10-25T12:03:40+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-10-25T12:03:40+00:00"
+    },
+    {
+      "claim_id": "psl-28-increased-amount-8-days",
+      "claim": "PSL s.28(a): an amount increased without authorization on a payment order given via the merchant is refunded within 8 business days of the payer's notice (סעיף 28 לחוק שירותי תשלום)",
+      "source_url": "https://he.wikisource.org/wiki/חוק_שירותי_תשלום",
+      "raw_snippet": "סכום ההפרש יושב כאמור בהקדם האפשרי אך לא יאוחר משמונה ימי עסקים מיום הודעת המשלם",
+      "fetched_at": "2026-10-25T12:03:40+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/payment-services-remedies.md",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "psl-29-missing-document-30-days",
+      "claim": "PSL s.29(b): for a payment transaction with a missing document, a payer notifying within 30 days gets a refund within 8 business days (סעיף 29 לחוק שירותי תשלום)",
+      "source_url": "https://he.wikisource.org/wiki/חוק_שירותי_תשלום",
+      "raw_snippet": "בתוך 30 ימים מיום שמסר לו הודעה על החיוב, כי הוא לא ביצע את פעולת התשלום או כי הסכום לחיוב הוגדל בלא הרשאה",
+      "fetched_at": "2026-10-25T12:03:40+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/payment-services-remedies.md",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "fees-cancel-before-6-debits",
+      "claim": "Fee rules First Schedule item 1(a)(3) note: cancelling an authorization or standing order before at least 6 debits lets the bank charge up to 6 direct-channel actions",
+      "source_url": "https://he.wikisource.org/wiki/כללי_הבנקאות_(שירות_ללקוח)_(עמלות)",
+      "raw_snippet": "במקרה של ביטול הרשאה לחיוב חשבון או הוראת קבע לפני שהוצגו 6 חיובים לפחות – התאגיד הבנקאי רשאי לגבות עמלה בגובה של עד 6 פעולות בערוץ ישיר",
+      "fetched_at": "2026-10-25T12:03:40+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/payment-services-remedies.md",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "fees-note2-no-direct-channel-deposits",
+      "claim": "Fee rules item 1(a)(2) note 2: where the bank offers no reasonable direct channel for cheque or cash deposits, the teller fee for those is capped at the direct-channel fee",
+      "source_url": "https://he.wikisource.org/wiki/כללי_הבנקאות_(שירות_ללקוח)_(עמלות)",
+      "raw_snippet": "במקרה שהתאגיד הבנקאי אינו מעמיד לרשות הלקוחות אפשרות סבירה לבצע פעולות של הפקדת שיקים או הפקדת מזומן בערוץ ישיר",
+      "fetched_at": "2026-10-25T12:03:40+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "fees-note3-monthly-minimum",
+      "claim": "Fee rules item 1(a)(2) note 3: the bank may charge the higher of the actual per-action total or a minimum fee not exceeding one teller action",
+      "source_url": "https://he.wikisource.org/wiki/כללי_הבנקאות_(שירות_ללקוח)_(עמלות)",
+      "raw_snippet": "עמלת מינימום בסכום שאינו עולה על מחיר של פעולה אחת על ידי פקיד",
+      "fetched_at": "2026-10-25T12:03:40+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/fee-tracks-comparison.md",
+        "references/domain-checklist.md",
+        "scripts/fee_track_calculator.py"
+      ]
+    },
+    {
+      "claim_id": "fees-credit-allocation-unused-quarter",
+      "claim": "Fee rules First Schedule item 3(a)(1): credit allocation fee charged to an individual only when the line is unused in the quarter; partial use, higher of quarterly interest or fee",
+      "source_url": "https://he.wikisource.org/wiki/כללי_הבנקאות_(שירות_ללקוח)_(עמלות)",
+      "raw_snippet": "עמלה זו תיגבה מיחיד במקרה של אי־ניצול מסגרת האשראי ברבעון. במקרה של ניצול חלקי של המסגרת, לקוח יחיד יחויב בריבית הרבעונית או בעמלה, לפי הגבוה מביניהן",
+      "fetched_at": "2026-10-25T12:03:40+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "fees-early-adoption-in-full",
+      "claim": "Consolidated fee rules: a bank may adopt the amended rules before 1.7.2027 only if it applies them in full",
+      "source_url": "https://he.wikisource.org/wiki/כללי_הבנקאות_(שירות_ללקוח)_(עמלות)",
+      "raw_snippet": "ובלבד שיפעל לפי הכללים במלואם",
+      "fetched_at": "2026-10-25T12:03:40+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2027-fee-reform.md"
+      ]
+    },
+    {
+      "claim_id": "fees-debit-36-month-waiver",
+      "claim": "Fee rules: no debit-card fee for 36 months from issue for a customer holding a valid credit card from the same bank",
+      "source_url": "https://he.wikisource.org/wiki/כללי_הבנקאות_(שירות_ללקוח)_(עמלות)",
+      "raw_snippet": "תאגיד בנקאי לא יגבה עמלה זו בעד כרטיס חיוב מיידי שהונפק ללקוח שברשותו כרטיס אשראי בתוקף שהונפק על ידי אותו תאגיד בנקאי וזאת לתקופה של 36 חודשים",
+      "fetched_at": "2026-10-25T12:03:40+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2027-fee-reform.md"
+      ]
+    },
+    {
+      "claim_id": "rule-4a-b2-basic-or-expanded",
+      "claim": "Rule 4a(b2): a small business / osek murshe is enrolled in the basic or expanded track by the higher average difference, by 1 March",
+      "source_url": "https://he.wikisource.org/wiki/כללי_הבנקאות_(שירות_ללקוח)_(עמלות)",
+      "raw_snippet": "יצרפו למסלול הבסיסי או המורחב, בהתאם לממוצע ההפרשים הגבוה יותר, עד יום 1 במרס של השנה העוקבת",
+      "fetched_at": "2026-10-25T12:03:40+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "boi-2851-debit-order-1-10-2026",
+      "claim": "Circular 06-2851 s.36(b)(1): the immediate-debit card fee supervision order takes effect 1 October 2026",
+      "source_url": "https://www.boi.org.il/media/0cgabv01/h2851.pdf",
+      "raw_snippet": "צו הפיקוח על דמי כרטיס חיוב מיידי יכנס לתוקפו ביום 1 באוקטובר",
+      "fetched_at": "2026-10-25T12:03:40+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2027-fee-reform.md",
+        "references/domain-checklist.md"
+      ],
+      "verified_via": "pdf",
+      "verified_at": "2026-10-25T12:03:40+00:00"
+    },
+    {
+      "claim_id": "boi-2851-debit-all-cards",
+      "claim": "Circular 06-2851: the debit-card arrangement applies to all cards including those issued before",
+      "source_url": "https://www.boi.org.il/media/0cgabv01/h2851.pdf",
+      "raw_snippet": "ההסדר החדש יחול על כל הכרטיסים לרבות אלו שהונפקו לפני כניסת התיקון לתוקף",
+      "fetched_at": "2026-10-25T12:03:40+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2027-fee-reform.md"
+      ],
+      "verified_via": "pdf",
+      "verified_at": "2026-10-25T12:03:40+00:00"
+    },
+    {
+      "claim_id": "boi-2851-waiver-parallel-to-7-2027",
+      "claim": "Circular 06-2851: the existing debit-card waiver continues in parallel until 1 July 2027",
+      "source_url": "https://www.boi.org.il/media/0cgabv01/h2851.pdf",
+      "raw_snippet": "ימשך במקביל עד ליום",
+      "fetched_at": "2026-10-25T12:03:40+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2027-fee-reform.md",
+        "references/domain-checklist.md"
+      ],
+      "verified_via": "pdf",
+      "verified_at": "2026-10-25T12:03:40+00:00"
+    },
+    {
+      "claim_id": "boi-2851-abolished-services-1-10-2026",
+      "claim": "Circular 06-2851 s.36(b)(2): abolition of the technical cheque-return, account location and estates services takes effect 1 October 2026",
+      "source_url": "https://www.boi.org.il/media/0cgabv01/h2851.pdf",
+      "raw_snippet": "ביטול שירותים \"חיוב מושך בהחזרת שיק מסיבה טכנית\", \"איתור חשבונות\" ו\"טיפול",
+      "fetched_at": "2026-10-25T12:03:40+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/2027-fee-reform.md"
+      ],
+      "verified_via": "pdf",
+      "verified_at": "2026-10-25T12:03:40+00:00"
+    },
+    {
+      "claim_id": "niud-5a-transitional-31-7-2029",
+      "claim": "Bank-switching rules 5a (transitional): for a switch before 21.9.2026, forwarding runs until 31.7.2029 instead of 3 years",
+      "source_url": "https://he.wikisource.org/wiki/כללי_הבנקאות_(שירות_ללקוח)_(העברת_פעילות_פיננסית_של_לקוח_בין_בנקים)",
+      "raw_snippet": "ועד יום י״ט באב התשפ״ט (31 ביולי 2029)",
+      "fetched_at": "2026-10-25T12:03:40+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/fee-tracks-comparison.md",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "kz-niud-forwarding-31-7-2029",
+      "claim": "Kol Zchut: those who switched before 21.09.2026 get automatic forwarding until 31.07.2029",
+      "source_url": "https://www.kolzchut.org.il/he/מעבר_בין_בנקים_באופן_מקוון_%28ניוד%29",
+      "raw_snippet": "למי שניידו את חשבון הבנק לפני 21.09.2026, שירות הניתוב האוטומטי יופעל עד 31.07.2029",
+      "fetched_at": "2026-10-25T12:03:40+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/domain-checklist.md"
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-10-25T12:03:40+00:00"
+    },
+    {
+      "claim_id": "kz-niud-half-yearly-report",
+      "claim": "Kol Zchut: during forwarding the customer receives a half-yearly report of parties not yet updated",
+      "source_url": "https://www.kolzchut.org.il/he/מעבר_בין_בנקים_באופן_מקוון_%28ניוד%29",
+      "raw_snippet": "במהלך תקופת הניתוב הלקוח יקבל דו\"ח אחת לחצי שנה",
+      "fetched_at": "2026-10-25T12:03:40+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/domain-checklist.md"
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-10-25T12:03:40+00:00"
+    },
+    {
+      "claim_id": "niud-3-8-bank-card-authorization",
+      "claim": "Bank-switching rules 3(8): an authorization to charge a card issued by the original bank is a transferable activity",
+      "source_url": "https://he.wikisource.org/wiki/כללי_הבנקאות_(שירות_ללקוח)_(העברת_פעילות_פיננסית_של_לקוח_בין_בנקים)",
+      "raw_snippet": "הרשאה לחיוב כרטיס חיוב שהונפק ללקוח על ידי הבנק המקורי העומדת בתוקף במועד ביצוע העברת הפעילות",
+      "fetched_at": "2026-10-25T12:03:40+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/fee-tracks-comparison.md",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "niud-start-22-9-2021",
+      "claim": "Bank-switching rules editorial note: s.5B1 of the Banking (Customer Service) Law came into force on 22.9.2021",
+      "source_url": "https://he.wikisource.org/wiki/כללי_הבנקאות_(שירות_ללקוח)_(העברת_פעילות_פיננסית_של_לקוח_בין_בנקים)",
+      "raw_snippet": "נדחתה ליום 22.9.2021",
+      "fetched_at": "2026-10-25T12:21:00+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/fee-tracks-comparison.md",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "niud-2-5-b-debit-balance",
+      "claim": "Bank-switching rules 2(5)(b): a debit balance moves only if it does not exceed the available balance, including the approved free credit line, at the receiving bank",
+      "source_url": "https://he.wikisource.org/wiki/כללי_הבנקאות_(שירות_ללקוח)_(העברת_פעילות_פיננסית_של_לקוח_בין_בנקים)",
+      "raw_snippet": "יתרת חוב, לרבות הלוואה שאינה חלק ממסגרת האשראי של הלקוח בחשבון, שאינה עולה על היתרה הפנויה, לרבות מסגרת האשראי המאושרת הפנויה בחשבון הלקוח בבנק הקולט",
+      "fetched_at": "2026-10-25T12:21:00+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "niud-2-6-loan",
+      "claim": "Bank-switching rules 2(6): an existing loan requires an agreement on continued repayment and adequate collateral",
+      "source_url": "https://he.wikisource.org/wiki/כללי_הבנקאות_(שירות_ללקוח)_(העברת_פעילות_פיננסית_של_לקוח_בין_בנקים)",
+      "raw_snippet": "אם קיימת בחשבון בבנק המקורי הלוואה, יש לגביה הסכמה עם הלקוח בדבר המשך פירעונה ויש כנגדה ביטחונות מספקים",
+      "fetched_at": "2026-10-25T12:21:00+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "niud-4-b-securities-12",
+      "claim": "Bank-switching rules 4(b): Israeli securities move within 12 business days",
+      "source_url": "https://he.wikisource.org/wiki/כללי_הבנקאות_(שירות_ללקוח)_(העברת_פעילות_פיננסית_של_לקוח_בין_בנקים)",
+      "raw_snippet": "תתבצע לכל המאוחר בתוך 12 ימי עסקים מהיום שבו הוגשה בקשת לקוח תקינה להעברת הפעילות",
+      "fetched_at": "2026-10-25T12:21:00+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "niud-4-c-securities-15",
+      "claim": "Bank-switching rules 4(c): foreign securities move within 15 business days",
+      "source_url": "https://he.wikisource.org/wiki/כללי_הבנקאות_(שירות_ללקוח)_(העברת_פעילות_פיננסית_של_לקוח_בין_בנקים)",
+      "raw_snippet": "תתבצע לכל המאוחר בתוך 15 ימי עסקים מהיום שבו הוגשה בקשת לקוח תקינה להעברת הפעילות",
+      "fetched_at": "2026-10-25T12:21:00+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "fees-direct-list-clearing-credit",
+      "claim": "Fee rules item 1(a)(3) direct-channel list includes a credit to the account through the clearing house",
+      "source_url": "https://he.wikisource.org/wiki/כללי_הבנקאות_(שירות_ללקוח)_(עמלות)",
+      "raw_snippet": "זיכוי חשבון באמצעות מסלקה",
+      "fetched_at": "2026-10-25T12:21:00+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/fee-tracks-comparison.md",
+        "scripts/fee_track_calculator.py",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "fees-direct-list-card-debit",
+      "claim": "Item 1(a)(3) list includes a credit-card debit to the account",
+      "source_url": "https://he.wikisource.org/wiki/כללי_הבנקאות_(שירות_ללקוח)_(עמלות)",
+      "raw_snippet": "(1) זיכוי חשבון באמצעות מסלקה (2) חיוב בכרטיס אשראי",
+      "fetched_at": "2026-10-25T12:21:00+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/fee-tracks-comparison.md",
+        "scripts/fee_track_calculator.py"
+      ]
+    },
+    {
+      "claim_id": "fees-direct-list-authorization-debit",
+      "claim": "Item 1(a)(3) list includes a debit under an authorization or standing order",
+      "source_url": "https://he.wikisource.org/wiki/כללי_הבנקאות_(שירות_ללקוח)_(עמלות)",
+      "raw_snippet": "חיוב על פי הרשאה לחיוב חשבון או הוראת קבע",
+      "fetched_at": "2026-10-25T12:21:00+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/fee-tracks-comparison.md",
+        "scripts/fee_track_calculator.py"
+      ]
+    },
+    {
+      "claim_id": "fees-direct-list-info-query-7th",
+      "claim": "Item 1(a)(3) list includes an information query from the 7th in the month",
+      "source_url": "https://he.wikisource.org/wiki/כללי_הבנקאות_(שירות_ללקוח)_(עמלות)",
+      "raw_snippet": "שאילתת מידע בכל נושא (החל בשאילתה השביעית בחודש)",
+      "fetched_at": "2026-10-25T12:21:00+00:00",
+      "appears_in": [
+        "references/fee-tracks-comparison.md"
+      ]
+    },
+    {
+      "claim_id": "fees-no-fee-internet-ivr-debit-card",
+      "claim": "Item 1(a)(3) note: no fee for information queries via internet or IVR, or for an immediate-debit card transaction",
+      "source_url": "https://he.wikisource.org/wiki/כללי_הבנקאות_(שירות_ללקוח)_(עמלות)",
+      "raw_snippet": "אין לגבות את העמלה בעד שאילתות מידע באמצעות האינטרנט, מענה טלפוני ממוחשב (IVR) או בעד פעולת חיוב בכרטיס חיוב מיידי",
+      "fetched_at": "2026-10-25T12:21:00+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/fee-tracks-comparison.md",
+        "scripts/fee_track_calculator.py",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "fees-track-internet-ivr-not-counted",
+      "claim": "Basic-track note 2: internet and IVR queries are not counted toward the track and not charged",
+      "source_url": "https://he.wikisource.org/wiki/כללי_הבנקאות_(שירות_ללקוח)_(עמלות)",
+      "raw_snippet": "לא יימנו במניין הפעולות הכלולות במסלול ואין לגבות עמלה בעדן",
+      "fetched_at": "2026-10-25T12:21:00+00:00",
+      "appears_in": [
+        "references/fee-tracks-comparison.md"
+      ]
+    },
+    {
+      "claim_id": "fees-track-note3-deposits-deemed-direct",
+      "claim": "Basic-track note 3: where no reasonable direct channel for cheque or cash deposits exists, those count as direct-channel actions",
+      "source_url": "https://he.wikisource.org/wiki/כללי_הבנקאות_(שירות_ללקוח)_(עמלות)",
+      "raw_snippet": "ייחשבו פעולות אלה כפעולות בערוץ ישיר",
+      "fetched_at": "2026-10-25T12:21:00+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/fee-tracks-comparison.md",
+        "scripts/fee_track_calculator.py",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "fees-track-note4-mid-month",
+      "claim": "Basic-track note 4: if the customer transfers the activity or closes the account mid-month, the bank may charge the full track cost for that month",
+      "source_url": "https://he.wikisource.org/wiki/כללי_הבנקאות_(שירות_ללקוח)_(עמלות)",
+      "raw_snippet": "במקרה שבו העביר לקוח את הפעילות בחשבון או סגר את חשבונו במהלך החודש, רשאי התאגיד הבנקאי לחייבו בעלות הכוללת של המסלול לאותו חודש",
+      "fetched_at": "2026-10-25T12:21:00+00:00",
+      "appears_in": [
+        "references/fee-tracks-comparison.md",
+        "references/2027-fee-reform.md"
+      ]
+    },
+    {
+      "claim_id": "fees-no-setup-fee-individual-credit-line",
+      "claim": "Fee rules item 3(a)(2) note: no fee may be charged to individuals for setting up a credit line",
+      "source_url": "https://he.wikisource.org/wiki/כללי_הבנקאות_(שירות_ללקוח)_(עמלות)",
+      "raw_snippet": "אין לגבות עמלה על העמדת מסגרת אשראי ללקוחות יחידים",
+      "fetched_at": "2026-10-25T12:21:00+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "boi-calculator-prices-dated",
+      "claim": "BoI fee-tracks calculator page dates its stored bank prices (as of 20/12/2022 when checked 2026-10-25)",
+      "source_url": "https://www.boi.org.il/information/מחשבונים-וכלים/עמלות/",
+      "raw_snippet": "הסכומים מעודכנים על פי תעריפוני הבנקים נכון ליום 20/12/2022",
+      "fetched_at": "2026-10-25T12:21:00+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/fee-tracks-comparison.md",
+        "scripts/fee_track_calculator.py"
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-10-25T12:21:00+00:00"
+    },
+    {
+      "claim_id": "kz-exit-fee-reasonable",
+      "claim": "Kol Zchut: cancellation follows the contract terms and a merchant (other than a telecom company) may charge an agreed, reasonable exit fee",
+      "source_url": "https://www.kolzchut.org.il/he/ביטול_עסקה_מתמשכת",
+      "raw_snippet": "העוסק (למעט חברת תקשורת) רשאי לגבות \"קנס יציאה\" בסכום עליו הוסכם בחוזה ההתקשרות, ובלבד שמדובר בסכום סביר בנסיבות",
+      "fetched_at": "2026-10-25T12:21:00+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/payment-services-remedies.md",
+        "references/domain-checklist.md"
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-10-25T12:21:00+00:00"
+    },
+    {
+      "claim_id": "cpl-14g-distance-sale-14-days",
+      "claim": "CPL s.14ג (סעיף 14ג): a distance sale of a service may be cancelled within 14 days",
+      "source_url": "https://he.wikisource.org/wiki/חוק_הגנת_הצרכן",
+      "raw_snippet": "בשירות – בתוך ארבעה עשר ימים מיום עשיית העסקה",
+      "fetched_at": "2026-10-25T12:21:00+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "cpl-14t-a-channels",
+      "claim": "CPL s.14ט: cancellation channels include registered mail, email and internet; a site where the deal can be made must carry a dedicated cancellation link on its home page",
+      "source_url": "https://he.wikisource.org/wiki/חוק_הגנת_הצרכן",
+      "raw_snippet": "ייצור עוסק בדף הראשי של אתר האינטרנט שלו קישור ייעודי שבאמצעותו ניתן לשלוח הודעת ביטול",
+      "fetched_at": "2026-10-25T12:21:00+00:00",
+      "appears_in": [
+        "references/cancellation-letter-templates.md"
+      ]
+    },
+    {
+      "claim_id": "psl-38d-two-conditions",
+      "claim": "PSL s.38(d): contracting out of 38(a) requires both 15 days advance notice of the amount and direct consent to the bank",
+      "source_url": "https://he.wikisource.org/wiki/חוק_שירותי_תשלום",
+      "raw_snippet": "המידע על סכום החיוב יימסר למשלם 15 ימים לפחות לפני מועד ביצוע החיוב",
+      "fetched_at": "2026-10-25T12:21:00+00:00",
+      "appears_in": [
+        "references/payment-services-remedies.md"
+      ]
+    },
+    {
+      "claim_id": "cpl-13d1-overcharge-10-4-21",
+      "claim": "CPL s.13ד1: merchant investigates an overcharge claim within 10 business days, refunds within 4 with interest and an indexed expenses payment, reasoned answer within 21 business days",
+      "source_url": "https://he.wikisource.org/wiki/חוק_הגנת_הצרכן",
+      "raw_snippet": "יברר העוסק את טענתו בתוך עשרה ימי עסקים",
+      "fetched_at": "2026-10-25T12:21:00+00:00",
+      "appears_in": [
+        "references/payment-services-remedies.md",
+        "references/domain-checklist.md"
       ]
     }
   ]

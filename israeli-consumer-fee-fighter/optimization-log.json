@@ -27,6 +27,38 @@
         "Method recorded so it is not re-opened: the soldier/student/youth/new-immigrant negative was established by ENUMERATING the First Schedule's categories, not by searching for population names. A statutory negative proved by keyword search is not safe; this one was not.",
         "SELF-CAUGHT, and it is the same failure class as fabricating a figure: I applied verified_via=\"browser\" to SIX evidence entries in one write after browser-checking ONE page. Five were genuinely on that page. The sixth (ref-url-boi-calc) cited a DIFFERENT URL, the calculator page, and its snippet was never on that URL at all, so the annotation was a verification record for a check that had not been run. No gate catches this, because verified_via is prose rather than an extractable claim: verify-evidence.py reads it as a status to trust, and --check-sources SKIPS the entry precisely because it is annotated. Annotate URLs ONE AT A TIME and never apply a verification status across a group. Corrected by actually opening the calculator page, which incidentally corroborated the entitlement: the BoI's own calculator asks the three category questions (cash-withdrawal card, azrach vatik, and recognised BY THE BANK at 40%+ disability), now cited as boi-calculator-models-three-entitlement-categories."
       ]
+    },
+    {
+      "version": "1.3.0",
+      "date": "2026-10-25",
+      "holdout_before": 0.667,
+      "holdout_after": 1.0,
+      "buckets": {
+        "improved": [
+          "I cancelled my gym membership in August but my card keeps getting charged every month. How do I recover my money?"
+        ],
+        "regressed": [],
+        "persistent_fail": [],
+        "stable_success": [
+          "קניתי מקרר בחנות והתחרטתי, תנסח לי הודעת ביטול עסקה",
+          "My bank took an FX commission twice on one purchase abroad, can I make them reverse it?"
+        ]
+      },
+      "lessons": [
+        "STALE fixed: niud forwarding for switches before 21.9.2026 was EXTENDED to 31.7.2029 (bank-switching rules 5a, amendment 5787). v1.2.1 told the first cohort they lost forwarding on 21.9.2026. A dated 'expiring now' claim needs a re-check on every cycle after its date passes.",
+        "STALE fixed: circular 06-2851 is partly in force since 1.10.2026 (debit-card fee cap 7 NIS/month, three abolished charges; the 36-month same-bank waiver runs in parallel to 1.7.2027). Section E and the reform reference said 'not yet in force'.",
+        "RETRACTED-CLAIM SWEEP, again: the 'discount' framing the v1.2.x cycles banned in section A survived in section C's negotiation script, troubleshooting and template 4 in both languages, and the repealed Debit Cards Law 5746-1986 was still listed as a live source in the checklist and metadata authoritative_sources. Grep the WHOLE folder plus metadata.json for retracted vocabulary, not just the section that was fixed.",
+        "CARD ROUTES rewritten after reading PSL s.1: the definition of harshaa lechiyuv reaches an authorization charged via the payer's payment instrument, so the v1.2.0 flat claim 'ss.34-38 do not apply to a card' was unsupported. Card charges now get merchant (CPL 13d(c), 31a damages, non-oral prior notice), issuer (ss.34-35 contested, s.29 30-day claim, s.17 unsupplied instalments, s.28 increased amount) in parallel.",
+        "CRITICAL from Expert fixed: actions must be counted by the statutory item 1(a)(3) list (clearing credits, card debit, authorization debits, cheques, machine cash), with internet/IVR queries uncounted. Counting by channel misclassified pensioners.",
+        "Calculator: added --min-fee (note 3), fixed a float tie that moved a customer onto a track for zero saving, documented the note-2 deposit reclassification. Arithmetic reviewer PASS on r2 over 153k grid cases.",
+        "Also found unprompted from the primary text: an individual may not be charged for setting up a credit line (the skill said 'setup fees'), cancelling an authorization before 6 debits can cost up to 6 direct fees, and the 'reduced tariff for small business' was the 2022 draft that 06-2851 replaced; rule 2(b) caps small-business fees at the large-corporation price, card clearing excepted.",
+        "BoI fee-tracks calculator stores bank prices dated 20/12/2022 (checked 2026-10-25). The skill no longer calls it authoritative; re-check the date each cycle.",
+        "Deferred (Expert MINOR): harshaa lechiyuv vs horaat keva are still used interchangeably, and template 2 invokes s.34 for both; a payer-initiated standing order is revoked at the bank and is not a s.34/35/37 case. Fix next cycle.",
+        "Deferred (Expert MINOR): remaining niud eligibility bars (third-party guarantee 2(4), matching owners 2(2), 3-month re-switch bar 2(1)(b), excluded account types 2(3)); 14-day distance-sale cancellation fee (5% or 100 NIS) and proportional payment; remote non-mandatory ATM pricing footnote.",
+        "Deferred (Arithmetic advisory): with --entitled and teller deposits reclassified as --direct under note 2, the script gives all 4 entitlement slots to the other teller actions; a bank could argue the deposits used them first. Text does not settle it.",
+        "SETTLED, do not re-litigate: rule 4a(b1)/(b2) text says the bank must ENROL by 1 March ('יצרפו ... עד יום 1 במרס'); the 4-teller entitlement note attaches to item 1(a)(2) only, while 4a(b1) compares fees under items (2) or (3).",
+        "RESOLVED this cycle: frontmatter description now triggers on charges that continued after cancelling. Found by the value-add gate, not by a reviewer: on the first run the skill was never loaded for the gym case (1 turn, answered from memory, 0.00). Holdout on the frontmatter 0.667 -> 1.0 (gate ACCEPT, eval2 queries); display_description holdout 1.0 -> 1.0 ('discounts' -> 'fee entitlements'). Value-add after the fix: with 0.92 vs without 0.32, delta +0.60, PASS. The debit-card case scored 1.00 for both arms on the second run (search found the waiver), so it no longer discriminates."
+      ]
     }
   ]
 }
