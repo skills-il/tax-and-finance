@@ -1,0 +1,1042 @@
+{
+  "skill_slug": "israeli-tax-coordination",
+  "schemaVersion": "1.0",
+  "generated_at": "2026-10-27",
+  "claims": [
+    {
+      "claim_id": "svc-free-online",
+      "claim": "The Tax Authority online service lets salaried employees do tax coordination online, free of charge",
+      "claim_type": "feature",
+      "source_url": "https://www.gov.il/he/service/tax-coordination-online",
+      "source_fetched_at": "2026-10-27T12:00:00Z",
+      "raw_snippet": "שירות זה מאפשר לשכירים או לבעלי עסק זעיר לבצע תיאום מס באופן מקוון, בקלות ובלי לצאת מהבית. השירות ניתן ללא תשלום.",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "svc-current-year-refund-6y",
+      "claim": "Coordination is for the current tax year only; over-payment found after year end is claimed by a refund request up to 6 years back from the end of the tax year",
+      "claim_type": "date",
+      "source_url": "https://www.gov.il/he/service/tax-coordination-online",
+      "source_fetched_at": "2026-10-27T12:00:00Z",
+      "raw_snippet": "ניתן לערוך תיאום מס לשנה הנוכחית בלבד אם בתום השנה יתברר כי שיעור המס ששולם בפועל היה גבוה מהסכום הנדרש, ניתן להגיש בקשה להחזר מס עד שש שנים אחורה מתום שנת המס",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "svc-who-online",
+      "claim": "Who may use the online system: employees with salary from more than one employer, employees asking for tax relief, micro-business owners",
+      "claim_type": "feature",
+      "source_url": "https://www.gov.il/he/service/tax-coordination-online",
+      "source_fetched_at": "2026-10-27T12:00:00Z",
+      "raw_snippet": "מי יכול לערוך תיאום מס באופן מקוון שכירים - המקבלים שכר מיותר ממעסיק אחד שכירים המבקשים הקלה בחישוב המס בעלי עסק זעיר",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "svc-excluded",
+      "claim": "Excluded from the online system, must go to the assessing office by appointment: people at eligibility age without kibua zchuyot, 9 or more income sources, early medical withdrawal from a kupat gemel, kibbutz residents",
+      "claim_type": "threshold",
+      "source_url": "https://www.gov.il/he/service/tax-coordination-online",
+      "source_fetched_at": "2026-10-27T12:00:00Z",
+      "raw_snippet": "מי לא יכול לערוך תיאום מס באופן מקוון מי שהגיעו לגיל הזכאות ולא ערכו קיבוע זכויות בעלי 9 מקורות הכנסה או יותר מי שביצעו משיכה מוקדמת מקופת גמל בשל הוצאות רפואיות מי שגרים בקיבוץ במקרים אלו יש לפנות למשרד פקיד השומה המשויך למקום מגוריך יש לתאם תור מראש",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "svc-prepare",
+      "claim": "Prepare the deductions-file numbers of the employers or payers, and preferably a payslip from each payer (gross monthly salary, one-off payments)",
+      "claim_type": "feature",
+      "source_url": "https://www.gov.il/he/service/tax-coordination-online",
+      "source_fetched_at": "2026-10-27T12:00:00Z",
+      "raw_snippet": "מספרי תיקי ניכויים של המעסיקים או המשלמים רצוי: תלוש שכר מכל מעסיק או משלם, כדי שהנתונים יהיו זמינים (כמו השכר החודשי בברוטו ותשלומים חד פעמיים)",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "svc-certificates",
+      "claim": "The system computes expected annual income and issues certificates, which the user gives to the employers or payers",
+      "claim_type": "feature",
+      "source_url": "https://www.gov.il/he/service/tax-coordination-online",
+      "source_fetched_at": "2026-10-27T12:00:00Z",
+      "raw_snippet": "המערכת תחשב את סכום ההכנסה השנתי הצפוי לך ותפיק את האישורים בהתאם. את האישורים יש לתת למעסיקים או למשלמים",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "svc-extension-letter",
+      "claim": "If an extension letter for a coordination arrived, no new coordination is needed for the following year; the letter is in the letters page of the personal area",
+      "claim_type": "feature",
+      "source_url": "https://www.gov.il/he/service/tax-coordination-online",
+      "source_fetched_at": "2026-10-27T12:00:00Z",
+      "raw_snippet": "אם קיבלת מכתב הארכת תוקף לתיאום מס משנת מס מסוימת, אין צורך לערוך תיאום מס חדש לשנת המס שבאה אחריה המכתב נמצא בעמוד המכתבים באזור האישי ברשות המסים",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "svc-turnaround",
+      "claim": "Some certificates are issued immediately; others go to office review and arrive within a few business days",
+      "claim_type": "feature",
+      "source_url": "https://www.gov.il/he/service/tax-coordination-online",
+      "source_fetched_at": "2026-10-27T12:00:00Z",
+      "raw_snippet": "יש אישורים הניתנים באופן מידי, ומיד לאחר יצירת הבקשה תיאום המס יופק באופן אוטומטי ויופיע באזור האישי במקרים אחרים התיאום יעבור לבדיקת המשרד וכשיינתן אישור, הוא יתקבל תוך כמה ימי עבודה",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "svc-update-in-year",
+      "claim": "An existing coordination can be updated in the same system during the tax year",
+      "claim_type": "feature",
+      "source_url": "https://www.gov.il/he/service/tax-coordination-online",
+      "source_fetched_at": "2026-10-27T12:00:00Z",
+      "raw_snippet": "ניתן לעדכן את התיאום במערכת תיאום המס יש להזין את פרטי השינוי המבוקש",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "svc-representative",
+      "claim": "The coordination system allows authorising a representative (meyatzeg), per the rules",
+      "claim_type": "feature",
+      "source_url": "https://www.gov.il/he/service/tax-coordination-online",
+      "source_fetched_at": "2026-10-27T12:00:00Z",
+      "raw_snippet": "במערכת לתיאום מס אפשר להסמיך מייצג או מייצגת לעריכת תיאום המס, בהתאם לכללים.",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "svc-form116-link",
+      "claim": "The gov.il coordination service page links Form 116 (request for relief and coordination of withholding) at this URL",
+      "claim_type": "url",
+      "source_url": "https://www.gov.il/he/service/tax-coordination-online",
+      "source_fetched_at": "2026-10-27T12:00:00Z",
+      "raw_snippet": "טופס בקשה להקלה ולתיאום בחישוב ניכויי המס (טופס 116)\",\"alt\":null,\"id\":null,\"url\":\"https://www.gov.il/BlobFolder/service/tax-coordination-online/he/Service_Pages_Income_tax_annual-report-2024_itc116-2024.pdf\"",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "svc-url",
+      "claim": "Official service page URL for online tax coordination",
+      "claim_type": "url",
+      "source_url": "https://www.gov.il/he/service/tax-coordination-online",
+      "source_fetched_at": "2026-10-27T12:00:00Z",
+      "raw_snippet": "עריכת תיאום מס באופן מקוון",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "guide-47",
+      "claim": "With income from several payers and no coordination, the non-main employer or payer must withhold maximal tax (47%). Coordination prevents over-payment during the year",
+      "claim_type": "percentage",
+      "source_url": "https://www.gov.il/he/departments/guides/income-tax-guide-for--tax-relief-and-tax-coordination",
+      "source_fetched_at": "2026-10-27T12:00:00Z",
+      "raw_snippet": "אם יש לכם הכנסות ממספר משלמים ואינכם עורכים תיאום מס, על המעסיק או המשלם שאינו העיקרי, לנכות מס מרבי מהכנסתכם (47%). תיאום המס ימנע תשלום מס עודף במהלך שנת המס. שיעור המס הנקבע בתיאום המס אינו סופי. חישוב המס הסופי ייקבע רק לאחר הגשת דו''ח שנתי.",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "guide-main-employer",
+      "claim": "On Form 101 the employee states the main workplace, where credit points and tax brackets are given; reliefs are given by the main employer only",
+      "claim_type": "feature",
+      "source_url": "https://www.gov.il/he/departments/guides/income-tax-guide-for--tax-relief-and-tax-coordination",
+      "source_fetched_at": "2026-10-27T12:00:00Z",
+      "raw_snippet": "יש לציין בטופס מהו מקום העבודה העיקרי שלכם, בו ניתנות לכם נקודות הזיכוי ומדרגות המס. הקלות במס יינתנו על ידי המעסיק העיקרי בלבד.",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "guide-online-no-cap",
+      "claim": "The online application suits all income and relief types, with no limit on times per year and no income ceiling; certificates for each payer can be printed, saved or sent",
+      "claim_type": "feature",
+      "source_url": "https://www.gov.il/he/departments/guides/income-tax-guide-for--tax-relief-and-tax-coordination",
+      "source_fetched_at": "2026-10-27T12:00:00Z",
+      "raw_snippet": "מתאים לכל סוגי ההכנסות וההקלות, ללא הגבלה על מספר הפעמים בשנה, וללא תקרת הכנסה.",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "guide-116-office",
+      "claim": "At the assessing office: fill Form 116 with supporting documents; submit at the information desk with an addressed envelope or by a MYVISIT appointment; list all income sources and each payer deductions-file number, including taxable BL payments that replace salary such as unemployment pay",
+      "claim_type": "form-number",
+      "source_url": "https://www.gov.il/he/departments/guides/income-tax-guide-for--tax-relief-and-tax-coordination",
+      "source_fetched_at": "2026-10-27T12:00:00Z",
+      "raw_snippet": "יש למלא את כל הפרטים הנדרשים בטופס בקשה להקלה ולתיאום בחישוב ניכויי המס על ידי פקיד השומה טופס 116 ולצרף אישורים ומסמכים מאמתים, כמצוין בטופס. ניתן להגיש את הבקשה באחת מהדרכים הבאות: להגיש בצירוף מעטפה עם שמכם והכתובת אליה אתם מעוניינים שיישלח תיאום המס, בעמדת המודיעין. קביעת תור במערכת זימון תורים MYVISIT. בבקשה לתיאום מס יש לציין את כל מקורות ההכנסה ואת מספר תיק הניכויים של כל מעסיק או משלם ויש לדווח גם על הכנסות מחליפות שכר (כגון: דמי אבטלה וקצבאות מהמוסד לביטוח לאומי החייבות במס).",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "guide-file-office",
+      "claim": "If you have an income-tax file, coordination is done at the office handling it; otherwise at the assessing office of your residence area",
+      "claim_type": "feature",
+      "source_url": "https://www.gov.il/he/departments/guides/income-tax-guide-for--tax-relief-and-tax-coordination",
+      "source_fetched_at": "2026-10-27T12:00:00Z",
+      "raw_snippet": "אם יש לכם תיק במס הכנסה, ייערך תיאום המס במשרד השומה בו מתנהל תיקכם, אחרת - במשרד השומה באזור מגוריכם.",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "guide-documents",
+      "claim": "Documents: Form 116 or the online income report incl. deductions file and expected annual salary from each payer; last payslip from each payer for a manual request; BL employer-continuity confirmation for a non-working period; BL payment proof for unemployment or maternity; combat reserve-duty confirmation; kibua zchuyot approval; pensioners without an exemption percentage attach Form 161",
+      "claim_type": "form-number",
+      "source_url": "https://www.gov.il/he/departments/guides/income-tax-guide-for--tax-relief-and-tax-coordination",
+      "source_fetched_at": "2026-10-27T12:00:00Z",
+      "raw_snippet": "טופס 116 מלא וחתום / דיווח הכנסות במערכת תיאומי מס - כולל תיק ניכויים ושכר שנתי צפוי מכל משלם. תלוש שכר אחרון מכל משלם במקרה של בקשה ידנית. במקרה וישנה תקופה שבה לא עבדת במהלך השנה השוטפת יש לצרף אישור רצף מעסיקים מביטוח לאומי. במקרה והייתם בתקופת אבטלה / חופשת לידה - יש להעביר אסמכתא על התשלום מביטוח לאומי.",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "guide-pension-161",
+      "claim": "Pensioners without a set pension exemption percentage attach Form 161 to the pension slips; kibua zchuyot is requested on Form 161ד",
+      "claim_type": "form-number",
+      "source_url": "https://www.gov.il/he/departments/guides/income-tax-guide-for--tax-relief-and-tax-coordination",
+      "source_fetched_at": "2026-10-27T12:00:00Z",
+      "raw_snippet": "גמלאים שלא נקבע להם אחוז פטור מהקצבה יצרפו לתלושי הקצבה גם את הודעת מעביד על פרישה מעבודה של עובד (טופס 161) הכוללת אישורים על פיצויים, מענקי פרישה, ימי מחלה, חודשי הסתגלות ואחרים. מי שהגיע לגיל פרישה בשנת 2012 ואילך מומלץ לערוך \"קיבוע זכויות\" בהתאם לבקשה שתוגש על גבי טופס 161ד",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "guide-validity-2026",
+      "claim": "A coordination certificate for the employer is valid for a whole year, until 31.12.2026; a change in the underlying data during the year requires a new coordination. After the bracket widening, anyone whose 2026 income exceeds 193,800 NIS benefits and must now coordinate for 2026; those who already coordinated for 2026 had it corrected by the Tax Authority and it waits in the personal area",
+      "claim_type": "date",
+      "source_url": "https://www.gov.il/he/departments/guides/income-tax-guide-for--tax-relief-and-tax-coordination",
+      "source_fetched_at": "2026-10-27T12:00:00Z",
+      "raw_snippet": "אישור למעסיק על תיאום מס תקף לשנה שלמה, כלומר עד ליום 31.12.2026. אם במהלך השנה חל שינוי בנתונים ששימשו בסיס להקלה במס או לתיאום המס, יש לערוך תיאום מס חדש. בעקבות ריווח מדרגות המס, מי שהכנסתו בשנת 2026 עולה על 193,800 ₪ יושפע לחיוב מריווח המדרגות (הקטנת חבות המס) וצריך תיאום מס- כעת עליו לבצע תיאום מס לשנת 2026. מי שכבר ערך תיאום מס לשנת 2026, רשות המסים תיקנה ותיאום המס מחכה באזור האישי.",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "guide-extension-use",
+      "claim": "If the Tax Authority extended your certificates for another year and nothing changed, you may give the extended certificates to the employers",
+      "claim_type": "feature",
+      "source_url": "https://www.gov.il/he/departments/guides/income-tax-guide-for--tax-relief-and-tax-coordination",
+      "source_fetched_at": "2026-10-27T12:00:00Z",
+      "raw_snippet": "אם קיבלתם מרשות המסים הודעה על הארכת תוקף האישורים שבידיכם לשנה נוספת ולא חל שינוי בהכנסותיכם או בנתונים האישיים שלכם, תוכלו להשתמש באישורים שתוקפם הוארך ולהעבירם למעסיקים הרלוונטיים.",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "notice-2026",
+      "claim": "Tax Authority notice of 30.03.2026: employees who coordinated during 2026 need not update because of the bracket widening; expected annual income below 193,800 is unaffected; above it the Tax Authority updates proactively; 2025 coordinations were extended until 13.5.2026",
+      "claim_type": "date",
+      "source_url": "https://www.gov.il/he/pages/sa300326-2",
+      "source_fetched_at": "2026-10-27T12:00:00Z",
+      "raw_snippet": "שכירים שביצעו תיאום מס במהלך שנת 2026, אינם נדרשים לעדכן את תיאום המס בעקבות ריווח המדרגות. אם הכנסתם השנתית הצפויה נמוכה מ-193,800 אלף ₪ - הם לא יושפעו מהחקיקה. אם הכנסתם השנתית הצפויה גבוהה מ-193,800 אלף ₪ - רשות המסים תבצע עבורם את העדכון הנדרש באופן יזום.",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "notice-extension",
+      "claim": "The 30.03.2026 notice extended the 2025 coordinations until 13.5.2026, and told employees who must coordinate for 2026 to do so",
+      "claim_type": "date",
+      "source_url": "https://www.gov.il/he/pages/sa300326-2",
+      "source_fetched_at": "2026-10-27T12:00:00Z",
+      "raw_snippet": "שכירים שלא ביצעו תיאום מס בשנת 2026 על אף שהם נדרשים לו, בעקבות הודעות רשות המסים על הארכת תוקפם של תיאומי המס משנת 2025 - נדרשים לבצע תיאום מס לשנת 2026. יש להמתין עם ביצוע תיאום המס עד שתתקבל הודעה במערכת תיאומי המס על עדכון המערכת בהתאם לחקיקה החדשה. בשל חג הפסח יתכן עיכוב בעדכון המערכת ולכן החליטה רשות המסים על הארכת תוקפם של תיאומי המס משנת 2025 - עד ל-13.5.2026.",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "notice-date",
+      "claim": "The notice title and publication date 30.03.2026",
+      "claim_type": "date",
+      "source_url": "https://www.gov.il/he/pages/sa300326-2",
+      "source_fetched_at": "2026-10-27T12:00:00Z",
+      "raw_snippet": "\"תאריך פרסום\":[{\"title\":\"30.03.2026\",\"alt\":null,\"id\":\"metaData_publishDate\"",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "booklet26-brackets",
+      "claim": "2026 brackets on personal-exertion income (after the bracket-widening law), monthly: 10% up to 7,010; 14% 7,011 to 10,060; 20% 10,061 to 19,000; 31% 19,001 to 25,100; 35% 25,101 to 46,690; 47% above. Annual: 84,120 / 84,121 to 120,720 / 120,721 to 228,000 / 228,001 to 301,200 / 301,201 to 560,280 / 47% above",
+      "claim_type": "currency",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf",
+      "source_fetched_at": "2026-10-27T12:00:00Z",
+      "raw_snippet": "10% 84,120 עד- 10% 7,010 עד- 14% 120,720 84,121עד- מ- 14% 10,060 7,011עד- מ- 20% 228,000 120,721עד- מ- 20% 19,000 10,061עד- מ- 31% 301,200 228,001עד- מ- 31% 25,100 19,001עד- מ- 35% 560,280 301,201עד- מ- 35% 46,690 25,101עד- מ- 47% מכל שקל נוסף 47% מכל שקל נוסף",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "booklet26-amendment",
+      "claim": "On 31.3.2026 section 121 of the Income Tax Ordinance was amended so that from 1 January 2026 the 20%, 31% and 35% brackets change (retroactive widening)",
+      "claim_type": "date",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf",
+      "source_fetched_at": "2026-10-27T12:00:00Z",
+      "raw_snippet": "ביום 31.3.2026תוקן סעיף 121לפקודת מס הכנסה ונקבע כי החל ביום 1בינואר 2026ישתנו מדרגות מס הכנסה כדלהלן:",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "booklet26-surtax",
+      "claim": "Section 121B surtax: 3% on taxable income above 721,560 NIS a year (60,130 NIS a month); an employer paying a salary above 60,130 a month withholds the extra 3% in addition",
+      "claim_type": "percentage",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf",
+      "source_fetched_at": "2026-10-27T12:00:00Z",
+      "raw_snippet": "על פי סעיף 121ב לפקודה ,יחיד אשר הכנסתו החייבת בשנת המס עלתה על ₪ 721,560 ( ₪ 60,130לחודש) ,יהיה חייב במס נוסף על חלק הכנסתו החייבת העולה על הסכום הנ\"ל ,בשיעור של .3% \"הכנסה חייבת\" -כהגדרתה בסעיף 121ב לפקודה. מעסיק אשר משלם משכורת העולה על ₪ 60,130לחודש ( ₪ 721,560לשנה) ינכה ,בנוסף לשיעורי המס עפ\"י סעיף 121לפקודה ,גם את המס הנוסף עפ\"י סעיף 121ב לפקודה בשיעור של .3%מעסיק אשר משלם משכורת שחלה עליה תקנה 6לתקנות מס הכנסה (ניכוי ממשכורת ומשכר",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "booklet26-credit",
+      "claim": "2026 credit point (section 33A) is 242 NIS a month",
+      "claim_type": "currency",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf",
+      "source_fetched_at": "2026-10-27T12:00:00Z",
+      "raw_snippet": "לחודש 242 נקודת זיכוי 33א",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "booklet26-freeze",
+      "claim": "A 2024 law freezes the indexation of amounts on 1 January of tax years 2025 to 2027",
+      "claim_type": "date",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf",
+      "source_fetched_at": "2026-10-27T12:00:00Z",
+      "raw_snippet": "אשר קובע כי ב־ 1 בינואר של שנות המס 2025 עד 2027 לא יתואמו הסכומים שאמורים",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "booklet25-brackets",
+      "claim": "2025 brackets, monthly: 10% up to 7,010; 14% 7,011 to 10,060; 20% 10,061 to 16,150; 31% 16,151 to 22,440; 35% 22,441 to 46,690; 47% above. Annual: 84,120 / 120,720 / 193,800 / 269,280 / 560,280",
+      "claim_type": "currency",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2025.pdf",
+      "source_fetched_at": "2026-10-27T12:00:00Z",
+      "raw_snippet": "10% 84,120 עד- 10% 7,010 עד- 14% 120,720 עד- 84,121 מ- 14% 10,060 עד- 7,011 מ- 20% 193,800 120,721עד- מ- 20% 16,150 עד- 10,061 מ- 31% 269,280 193,801עד- מ- 31% 22,440 עד- 16,151 מ- 35% 560,280 269,281עד- מ- 35% 46,690 עד- 22,441 מ- 47% מכל שקל נוסף 47% מכל שקל נוסף",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "booklet25-surtax-credit",
+      "claim": "2025 surtax threshold 721,560 NIS a year (60,130 a month) at 3%, and the 2025 credit point is 242 NIS a month",
+      "claim_type": "currency",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2025.pdf",
+      "source_fetched_at": "2026-10-27T12:00:00Z",
+      "raw_snippet": "על פי סעיף 121ב לפקודה ,יחיד אשר הכנסתו החייבת בשנת המס עלתה על ₪ 721,560 ( ₪ 60,130לחודש) ,יהיה חייב במס נוסף על חלק הכנסתו החייבת העולה על הסכום הנ\"ל ,בשיעור",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "booklet25-credit",
+      "claim": "2025 credit point 242 NIS a month",
+      "claim_type": "currency",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2025.pdf",
+      "source_fetched_at": "2026-10-27T12:00:00Z",
+      "raw_snippet": "לחודש 242 נקודת זיכוי 33א",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "f101-section-he",
+      "claim": "Form 101 section ה: choose \"I ask to receive credit points and tax brackets against this income, I do not receive them in other income\" or \"I receive credit points and tax brackets in other income, so I am not entitled to them against this income\"",
+      "claim_type": "form-number",
+      "source_url": "https://www.gov.il/BlobFolder/service/itc101/he/Service_Pages_Income_tax_annual-report-2024_itc101.pdf",
+      "source_fetched_at": "2026-10-27T12:00:00Z",
+      "raw_snippet": "❑ אבקש לקבל נקודות זיכוי ומדרגות מס כנגד הכנסתי זו )סעיף ד( .איני מקבל/ת אותן בהכנסה אחרת)(7 ❑ אני מקבל/ת נקודות זיכוי ומדרגות מס בהכנסה אחרת ועל כן איני זכאי/ת להן כנגד הכנסה זו )(8",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "f101-notes-7-8",
+      "claim": "Form 101 notes (7) and (8): in those cases the employer is barred from withholding by the deductions table and must withhold maximal tax under the regulations from all its payments",
+      "claim_type": "form-number",
+      "source_url": "https://www.gov.il/BlobFolder/service/itc101/he/Service_Pages_Income_tax_annual-report-2024_itc101.pdf",
+      "source_fetched_at": "2026-10-27T12:00:00Z",
+      "raw_snippet": ") (7אם העובד לא מילא משבצת זו -המעסיק מנוע מלנכות מס לפי לוח הניכויים ויש לנכות מס מירבי לפי התקנות מכל תשלומי המעסיק. ) (8אם העובד מילא משבצת זו -המעסיק מנוע מלנכות מס לפי לוח הניכויים ויש לנכות מס מירבי לפי התקנות מכל תשלומי המעסיק.",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "f101-referral",
+      "claim": "If section ה does not mark \"I have no other income from salary, pension or stipend\", the employee is referred to the assessing officer for tax coordination",
+      "claim_type": "form-number",
+      "source_url": "https://www.gov.il/BlobFolder/service/itc101/he/Service_Pages_Income_tax_annual-report-2024_itc101.pdf",
+      "source_fetched_at": "2026-10-27T12:00:00Z",
+      "raw_snippet": "אם לא סומן בחלק ה כי \"אין לי הכנסות אחרות ממשכורת ,מקצבה וממלגה\" העובד יופנה לפקיד השומה לעריכת תיאום מס.",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "f101-section-tet",
+      "claim": "Form 101 section ט (request for coordination): box 1 no income since start of tax year (maternity and unemployment pay are taxable income), box 2 additional salary income per table, box 3 the assessing officer approved coordination per attached certificate",
+      "claim_type": "form-number",
+      "source_url": "https://www.gov.il/BlobFolder/service/itc101/he/Service_Pages_Income_tax_annual-report-2024_itc101.pdf",
+      "source_fetched_at": "2026-10-27T12:00:00Z",
+      "raw_snippet": "ט .אני מבקש/ת תיאום מס מהסיבות הבאות )סמן/י √ בריבוע המתאים(",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "f101-tet-boxes",
+      "claim": "Form 101 section ט boxes 1 to 3",
+      "claim_type": "form-number",
+      "source_url": "https://www.gov.il/BlobFolder/service/itc101/he/Service_Pages_Income_tax_annual-report-2024_itc101.pdf",
+      "source_fetched_at": "2026-10-27T12:00:00Z",
+      "raw_snippet": "❏ 1לא היתה לי הכנסה מתחילת שנת המס הנוכחית עד לתחילת עבודתי אצל מעסיק זה. הערות .1 :יש להמציא הוכחה כגון :אישור משטרת הגבולות בגין שהייה בחו\"ל ,אישור מחלה וכיו\"ב .בהעדר הוכחה יש לפנות לפקיד השומה. .2דמי לידה ודמי אבטלה הינם הכנסה חייבת. ❏ 2יש לי הכנסות נוספות ממשכורת) (1כמפורט להלן:",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "f101-tet-box3",
+      "claim": "Form 101 section ט box 3",
+      "claim_type": "form-number",
+      "source_url": "https://www.gov.il/BlobFolder/service/itc101/he/Service_Pages_Income_tax_annual-report-2024_itc101.pdf",
+      "source_fetched_at": "2026-10-27T12:00:00Z",
+      "raw_snippet": "❏ 3פקיד השומה אישר תיאום לפי אישור מצורף.",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "f101-note3",
+      "claim": "Form 101 note (3): the employee may choose the workplace whose salary counts as salary for an additional job",
+      "claim_type": "feature",
+      "source_url": "https://www.gov.il/BlobFolder/service/itc101/he/Service_Pages_Income_tax_annual-report-2024_itc101.pdf",
+      "source_fetched_at": "2026-10-27T12:00:00Z",
+      "raw_snippet": ") (3משכורת בעד משרה נוספת -משכורת בעד עבודה של יותר מ 5 -שעות ביום ,נוסף למשכורת ו/או בנוסף לקצבה החייבת במס ממקום אחר .העובד רשאי לבחור את מקום העבודה בו תחשב משכורתו כ\"משכורת בעד משרה נוספת\".",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "f101-note1-stipend",
+      "claim": "Form 101 note (1): \"salary\" includes pension and stipend; \"stipend\" includes a grant, prize or exemption from payment given to a student or researcher",
+      "claim_type": "feature",
+      "source_url": "https://www.gov.il/BlobFolder/service/itc101/he/Service_Pages_Income_tax_annual-report-2024_itc101.pdf",
+      "source_fetched_at": "2026-10-27T12:00:00Z",
+      "raw_snippet": ")\" (1עובד\" יחיד המקבל משכורת\" .מעסיק\" אדם המשלם משכורת\" .משכורת\" הכנסת עבודה ,קיצבה ,מענק עקב פרישה או מוות ,מילגה וכיו\"ב. \"עבודה\" לרבות קבלת משכורת\" .מלגה\" לרבות מענק ,פרס או פטור מתשלום שניתן לסטודנט או לחוקר.",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "f101-note4",
+      "claim": "Form 101 note (4): partial salary is withheld at the maximal rate unless it is the only income",
+      "claim_type": "feature",
+      "source_url": "https://www.gov.il/BlobFolder/service/itc101/he/Service_Pages_Income_tax_annual-report-2024_itc101.pdf",
+      "source_fetched_at": "2026-10-27T12:00:00Z",
+      "raw_snippet": "ממשכורת חלקית ינוכה מס בשיעור מירבי אלא אם כן זו הכנסה יחידה שאז ינוכה מס לפי לוח הניכויים.",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "f101-note6",
+      "claim": "Form 101 note (6): an exempt Bituach Leumi allowance and a fully exempt survivors pension are not reported as other income",
+      "claim_type": "feature",
+      "source_url": "https://www.gov.il/BlobFolder/service/itc101/he/Service_Pages_Income_tax_annual-report-2024_itc101.pdf",
+      "source_fetched_at": "2026-10-27T12:00:00Z",
+      "raw_snippet": "אין לדווח על קצבה פטורה מביטוח לאומי וקצבת שאירים שכולה פטורה.",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "f101-url",
+      "claim": "Form 101 PDF linked from the gov.il Form 101 service page (edition updated 11.2025)",
+      "claim_type": "url",
+      "source_url": "https://www.gov.il/BlobFolder/service/itc101/he/Service_Pages_Income_tax_annual-report-2024_itc101.pdf",
+      "source_fetched_at": "2026-10-27T12:00:00Z",
+      "raw_snippet": "ה .פרטים על הכנסות אחרות",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "f116-edition",
+      "claim": "Form 116 as linked from the coordination service page is the edition updated 12.2024; it is a request for relief and coordination of withholding by the assessing officer or a representative",
+      "claim_type": "form-number",
+      "source_url": "https://www.gov.il/BlobFolder/service/tax-coordination-online/he/Service_Pages_Income_tax_annual-report-2024_itc116-2024.pdf",
+      "source_fetched_at": "2026-10-27T12:00:00Z",
+      "raw_snippet": "ה”א ,אגף בכיר טכנולוגיות דיגיטליות ומידע )מעודכן ל (12.2024 -",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "kz-certs-5days",
+      "claim": "Kolzchut: certificates are issued for each employer or pension payer; usually immediately, and where office handling is needed within 5 business days",
+      "claim_type": "threshold",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%AA%D7%99%D7%90%D7%95%D7%9D_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
+      "source_fetched_at": "2026-10-27T12:00:00Z",
+      "raw_snippet": "יופקו אישורים עבור כל אחד מהמעסיקים או משלמי הפנסיה. ברוב המקרים אישורי תיאום המס יתקבלו באופן מיידי. במקרים שמצריכים טיפול משרדי, האישורים יופקו בתוך 5 ימי עבודה והפונים יקבלו הודעה על כך.",
+      "confidence": "high",
+      "verified_via": "browser",
+      "verified_at": "2026-10-27",
+      "verified_note": "Playwright MCP browser: page textContent read on 2026-10-27, snippet copied verbatim (kolzchut returns 403 to curl)"
+    },
+    {
+      "claim_id": "kz-free",
+      "claim": "Kolzchut: tax coordination is a short free process you can do yourself, no need to pay bodies that charge for it",
+      "claim_type": "feature",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%AA%D7%99%D7%90%D7%95%D7%9D_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
+      "source_fetched_at": "2026-10-27T12:00:00Z",
+      "raw_snippet": "תיאום מס הוא תהליך קצר וחינמי שאפשר לבצע לבד ואין צורך לפנות לגופים שגובים תשלום על השירות.",
+      "confidence": "high",
+      "verified_via": "browser",
+      "verified_at": "2026-10-27",
+      "verified_note": "Playwright MCP browser: page textContent read on 2026-10-27, snippet copied verbatim (kolzchut returns 403 to curl)"
+    },
+    {
+      "claim_id": "kz-nonoverlap",
+      "claim": "Kolzchut: several income sources in the year require coordination even without overlapping periods, e.g. maternity pay at the start of the year then work, or unemployment pay then work",
+      "claim_type": "feature",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%AA%D7%99%D7%90%D7%95%D7%9D_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
+      "source_fetched_at": "2026-10-27T12:00:00Z",
+      "raw_snippet": "שכירים שהיו להם כמה מקורות הכנסה במהלך שנת המס, גם אם לא היו בתקופות חופפות. לדוגמה עובדת שהייתה בחופשת לידה מתחילת שנת המס וקיבלה דמי לידה באותה שנה. למרות שההכנסות לא היו בתקופות חופפות, היא צריכה לערוך תיאום מס בגלל ההכנסה מדמי הלידה וההכנסה מהעבודה (עליה למסור את תיאום המס למעסיק כשתחזור לעבודה). מקבל דמי אבטלה שחזר לעבוד באותה שנה (במקום עבודה חדש או במקום הקודם) צריך לערוך תיאום מס בגלל ההכנסה מדמי האבטלה וההכנסה מהעבודה.",
+      "confidence": "high",
+      "verified_via": "browser",
+      "verified_at": "2026-10-27",
+      "verified_note": "Playwright MCP browser: page textContent read on 2026-10-27, snippet copied verbatim (kolzchut returns 403 to curl)"
+    },
+    {
+      "claim_id": "kz-pensioners",
+      "claim": "Kolzchut: pensioners who also earn a salary, or have several pension payers, need coordination",
+      "claim_type": "feature",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%AA%D7%99%D7%90%D7%95%D7%9D_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
+      "source_fetched_at": "2026-10-27T12:00:00Z",
+      "raw_snippet": "גמלאים שגם מועסקים כשכירים ומקבלים משכורת בנוסף לקצבת הפנסיה. גמלאים עם הכנסות ממספר משלמי פנסיה.",
+      "confidence": "high",
+      "verified_via": "browser",
+      "verified_at": "2026-10-27",
+      "verified_note": "Playwright MCP browser: page textContent read on 2026-10-27, snippet copied verbatim (kolzchut returns 403 to curl)"
+    },
+    {
+      "claim_id": "kz-midyear-refund",
+      "claim": "Kolzchut: coordination can be done at any point in the tax year (until 31 December); after the certificate reaches the employer, the next payslip recalculates and the excess withheld in earlier months returns in the net pay without a refund request",
+      "claim_type": "date",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%AA%D7%99%D7%90%D7%95%D7%9D_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
+      "source_fetched_at": "2026-10-27T12:00:00Z",
+      "raw_snippet": "ניתן לבצע תיאום מס מקוון ברשות המסים בכל שלב במהלך שנת המס (עד 31 בדצמבר). לאחר הצגת אישור תיאום המס המעודכן למעסיק, המערכת תבצע חישוב מחדש של המס בתלוש השכר הקרוב, והמס העודף שנוכה בחודשים הקודמים יוחזר ישירות לנטו במשכורת, ללא צורך בהגשת בקשה להחזר מס.",
+      "confidence": "high",
+      "verified_via": "browser",
+      "verified_at": "2026-10-27",
+      "verified_note": "Playwright MCP browser: page textContent read on 2026-10-27, snippet copied verbatim (kolzchut returns 403 to curl)"
+    },
+    {
+      "claim_id": "kz-bl-separate",
+      "claim": "Kolzchut: coordination with the Tax Authority covers income tax withholding only and does not update Bituach Leumi; a separate BL deductions coordination is needed",
+      "claim_type": "feature",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%AA%D7%99%D7%90%D7%95%D7%9D_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
+      "source_fetched_at": "2026-10-27T12:00:00Z",
+      "raw_snippet": "תיאום מס מול רשות המסים נוגע רק לניכוי מס הכנסה ואינו כולל עדכון למוסד לביטוח לאומי. צריך לפנות במקביל גם למוסד לביטוח לאומי כדי לעשות תיאום ניכויי ביטוח לאומי לשכירים.",
+      "confidence": "high",
+      "verified_via": "browser",
+      "verified_at": "2026-10-27",
+      "verified_note": "Playwright MCP browser: page textContent read on 2026-10-27, snippet copied verbatim (kolzchut returns 403 to curl)"
+    },
+    {
+      "claim_id": "kz-stale-dates",
+      "claim": "Known lagging figure: Kolzchut still shows temporary 2025 extensions to 13.05.2026 (pension) and 13.04.2026 (others), with 47% retroactively from the start of 2026 afterwards; the later gov.il notice set 13.5.2026",
+      "claim_type": "date",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%AA%D7%99%D7%90%D7%95%D7%9D_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
+      "source_fetched_at": "2026-10-27T12:00:00Z",
+      "raw_snippet": "מקבלי קצבת פנסיה מקבלים הארכה זמנית עד 13.05.2026 בשאר המקרים מקבלים הארכה זמנית עד 13.04.2026 לאחר מועדים אלה, למי שלא יערכו תיאום מס חדש יופחת מס בשיעור 47% רטרואקטיבית מתחילת 2026.",
+      "confidence": "high",
+      "verified_via": "browser",
+      "verified_at": "2026-10-27",
+      "verified_note": "Playwright MCP browser: page textContent read on 2026-10-27, snippet copied verbatim (kolzchut returns 403 to curl)"
+    },
+    {
+      "claim_id": "kz-bl-rules",
+      "claim": "Kolzchut BL page: with several employers BL and health dues are deducted at the full rate; BL does not initiate the check; requests within 7 years from end of the tax year; eligible if monthly income at the main employer is below 7,703 NIS or total monthly income above 51,910 NIS (2026); BL dues are computed monthly, each month separately",
+      "claim_type": "threshold",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%94%D7%97%D7%96%D7%A8_%D7%93%D7%9E%D7%99_%D7%91%D7%99%D7%98%D7%95%D7%97_%D7%9C%D7%90%D7%95%D7%9E%D7%99_%D7%95%D7%93%D7%9E%D7%99_%D7%91%D7%99%D7%98%D7%95%D7%97_%D7%91%D7%A8%D7%99%D7%90%D7%95%D7%AA_%D7%9C%D7%A9%D7%9B%D7%99%D7%A8%D7%99%D7%9D",
+      "source_fetched_at": "2026-10-27T12:00:00Z",
+      "raw_snippet": "כאשר לעובדים או למקבלי פנסיה מוקדמת יש כמה מעסיקים או משלמי פנסיה, מנכים להם דמי ביטוח לאומי ודמי ביטוח בריאות בשיעור המלא. מי שנוכו להם דמי ביטוח גבוהים מדי יכולים להגיש בקשה לתיאום והחזר דמי ביטוח (המוסד לביטוח לאומי לא יוזם את בדיקת הזכאות ותשלום ההחזר). יש להגיש את הבקשה בתוך 7 שנים מתום שנת המס שההחזר מבוקש עבורה.",
+      "confidence": "high",
+      "verified_via": "browser",
+      "verified_at": "2026-10-27",
+      "verified_note": "Playwright MCP browser: page textContent read on 2026-10-27, snippet copied verbatim (kolzchut returns 403 to curl)"
+    },
+    {
+      "claim_id": "kz-bl-thresholds",
+      "claim": "BL coordination thresholds 2026: main-employer monthly income below 7,703 NIS, or total monthly income above 51,910 NIS (maximum insurable income); BL dues computed monthly",
+      "claim_type": "currency",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%94%D7%97%D7%96%D7%A8_%D7%93%D7%9E%D7%99_%D7%91%D7%99%D7%98%D7%95%D7%97_%D7%9C%D7%90%D7%95%D7%9E%D7%99_%D7%95%D7%93%D7%9E%D7%99_%D7%91%D7%99%D7%98%D7%95%D7%97_%D7%91%D7%A8%D7%99%D7%90%D7%95%D7%AA_%D7%9C%D7%A9%D7%9B%D7%99%D7%A8%D7%99%D7%9D",
+      "source_fetched_at": "2026-10-27T12:00:00Z",
+      "raw_snippet": "הכנסתם החודשית אצל המעסיק העיקרי או אצל משלם הפנסיה העיקרי נמוכה מ-7,703 ₪ (נכון ל-2026). הכנסתם החודשית מכל המעסיקים או משלמי הפנסיה גבוהה מ-51,910 ₪ (ההכנסה המירבית החייבת בדמי ביטוח, נכון ל-2026).",
+      "confidence": "high",
+      "verified_via": "browser",
+      "verified_at": "2026-10-27",
+      "verified_note": "Playwright MCP browser: page textContent read on 2026-10-27, snippet copied verbatim (kolzchut returns 403 to curl)"
+    },
+    {
+      "claim_id": "kz-bl-high-form",
+      "claim": "Above 51,910 NIS: BL coordination form for high incomes plus Form 100 from every income source, emailed to maxbituch@nioi.gov.il",
+      "claim_type": "form-number",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%94%D7%97%D7%96%D7%A8_%D7%93%D7%9E%D7%99_%D7%91%D7%99%D7%98%D7%95%D7%97_%D7%9C%D7%90%D7%95%D7%9E%D7%99_%D7%95%D7%93%D7%9E%D7%99_%D7%91%D7%99%D7%98%D7%95%D7%97_%D7%91%D7%A8%D7%99%D7%90%D7%95%D7%AA_%D7%9C%D7%A9%D7%9B%D7%99%D7%A8%D7%99%D7%9D",
+      "source_fetched_at": "2026-10-27T12:00:00Z",
+      "raw_snippet": "יש למלא טופס בקשה לתיאום דמי ביטוח לבעלי הכנסות גבוהות מההכנסה המירבית ולצרף - טופס 100 מכל מקורות ההכנסה בשנה הנוכחית. המחאה מבוטלת או אישור מהבנק עם פרטי החשבון שאליו יועבר ההחזר יש לשלוח את המסמכים בדוא\"ל לכתובת maxbituch@nioi.gov.il",
+      "confidence": "high",
+      "verified_via": "browser",
+      "verified_at": "2026-10-27",
+      "verified_note": "Playwright MCP browser: page textContent read on 2026-10-27, snippet copied verbatim (kolzchut returns 403 to curl)"
+    },
+    {
+      "claim_id": "kz-credit-base",
+      "claim": "Kolzchut: basic entitlement 2.25 credit points per resident; point value 242 NIS a month (2,904 a year) as of 2026",
+      "claim_type": "currency",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%A0%D7%A7%D7%95%D7%93%D7%95%D7%AA_%D7%96%D7%99%D7%9B%D7%95%D7%99_%D7%9E%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
+      "source_fetched_at": "2026-10-27T12:00:00Z",
+      "raw_snippet": "הזכות הבסיסית עומדת על 2.25 נקודות לכל תושב, כששווי נקודה, נכון ל-2026 הוא 242 ₪ לחודש, שהם 2,904 ₪ לשנה שלמה.",
+      "confidence": "high",
+      "verified_via": "browser",
+      "verified_at": "2026-10-27",
+      "verified_note": "Playwright MCP browser: page textContent read on 2026-10-27, snippet copied verbatim (kolzchut returns 403 to curl)"
+    },
+    {
+      "claim_id": "btl-a-low-main",
+      "claim": "BTL 2026 employer letter: BL dues coordination for a salaried worker with two or more employers whose income at the MAIN employer is below the reduced collection bracket (7,703 NIS gross)",
+      "claim_type": "feature",
+      "source_url": "https://www.btl.gov.il/Insurance/HozrimBituah/Hozrim/%d7%90%d7%99%d7%92%d7%a8%d7%aa%20%d7%9c%d7%9e%d7%a2%d7%a1%d7%99%d7%a7%20%d7%9c%d7%a9%d7%a0%d7%aa%202026.pdf",
+      "source_fetched_at": "2026-10-27T12:00:00Z",
+      "raw_snippet": "א .תיאום דמי ביטוח לעובד שכיר ו/או מקבל פנסיה מוקדמת משני מעסיקים/משלמי פנסיה ומעלה שהכנסתו אצל המעסיק העיקרי נמוכה ממדרגת גבייה מופחתת ( ₪ 7,703ברוטו)",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "btl-cert-letter",
+      "claim": "The worker receives the current-year BL coordination certificate as a letter from Bituach Leumi and must give it to the secondary employer or pension payer",
+      "claim_type": "feature",
+      "source_url": "https://www.btl.gov.il/Insurance/HozrimBituah/Hozrim/%d7%90%d7%99%d7%92%d7%a8%d7%aa%20%d7%9c%d7%9e%d7%a2%d7%a1%d7%99%d7%a7%20%d7%9c%d7%a9%d7%a0%d7%aa%202026.pdf",
+      "source_fetched_at": "2026-10-27T12:00:00Z",
+      "raw_snippet": "ביטוח לשנה הנוכחית) ,העובד יקבל את האישור במכתב מהביטוח הלאומי ,את המכתב עליו להגיש למעסיק המשני/משלם הפנסיה.",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "btl-644",
+      "claim": "Without internet access the worker gives the secondary employer Form BL/644 declaring income at the main employer; the secondary employer enters that income in payroll",
+      "claim_type": "feature",
+      "source_url": "https://www.btl.gov.il/Insurance/HozrimBituah/Hozrim/%d7%90%d7%99%d7%92%d7%a8%d7%aa%20%d7%9c%d7%9e%d7%a2%d7%a1%d7%99%d7%a7%20%d7%9c%d7%a9%d7%a0%d7%aa%202026.pdf",
+      "source_fetched_at": "2026-10-27T12:00:00Z",
+      "raw_snippet": "עובד/מקבל פנסיה מוקדמת שאין ברשותו גישה לאינטרנט ,יגיש למעסיק המשני/משלם הפנסיה טופס בל - 644/שבו יצהיר על גובה הכנסתו אצל המעסיק העיקרי. עפ\"י מכתב הביטוח הלאומי/הצהרה בטופס בל 644/יזין המעסיק המשני/משלם הפנסיה בתוכנת השכר שאיתה הוא עובד ,את סכום הכנסתו של העובד אצל המעסיק העיקרי.",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "btl-b-max",
+      "claim": "Section B: BL coordination when total income from all employers exceeds the maximum insurable income (51,910 NIS gross)",
+      "claim_type": "feature",
+      "source_url": "https://www.btl.gov.il/Insurance/HozrimBituah/Hozrim/%d7%90%d7%99%d7%92%d7%a8%d7%aa%20%d7%9c%d7%9e%d7%a2%d7%a1%d7%99%d7%a7%20%d7%9c%d7%a9%d7%a0%d7%aa%202026.pdf",
+      "source_fetched_at": "2026-10-27T12:00:00Z",
+      "raw_snippet": "ב .תיאום דמי ביטוח לעובד שכיר ו/או מקבל פנסיה מוקדמת משני מעסיקים/משלמי פנסיה ומעלה שהכנסתו הכוללת מכלל המעסיקים/משלמי הפנסיה עולה על ההכנסה המרבית ( ₪ 51,910ברוטו)",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "btl-full-rate",
+      "claim": "The secondary employer always deducts BL and health dues at the full rate unless the worker presents a certificate for the current year",
+      "claim_type": "feature",
+      "source_url": "https://www.btl.gov.il/Insurance/HozrimBituah/Hozrim/%d7%90%d7%99%d7%92%d7%a8%d7%aa%20%d7%9c%d7%9e%d7%a2%d7%a1%d7%99%d7%a7%20%d7%9c%d7%a9%d7%a0%d7%aa%202026.pdf",
+      "source_fetched_at": "2026-10-27T12:00:00Z",
+      "raw_snippet": "על המעסיק המשני/משלם הפנסיה המוקדמת לנכות תמיד משכר העובד או ממקבל הפנסיה המוקדמת ,דמי ביטוח לאומי ודמי ביטוח בריאות בשיעור המלא (ולא יותר מדמי ביטוח לאומי ודמי ביטוח מקסימליים המנוכים מהעובד /מקבל פנסיה מוקדמת) ,אלא אם הציג העובד/משלם הפנסיה אישור עבור השנה הנוכחית.",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "btl-prior-years",
+      "claim": "Prior-year BL coordination requests are made on the BL website; if all wage data is in BL systems the coordination is immediate and the result arrives within a few days",
+      "claim_type": "feature",
+      "source_url": "https://www.btl.gov.il/Insurance/HozrimBituah/Hozrim/%d7%90%d7%99%d7%92%d7%a8%d7%aa%20%d7%9c%d7%9e%d7%a2%d7%a1%d7%99%d7%a7%20%d7%9c%d7%a9%d7%a0%d7%aa%202026.pdf",
+      "source_fetched_at": "2026-10-27T12:00:00Z",
+      "raw_snippet": "במידה וכל נתוני השכר נמצאים במערכות הביטוח הלאומי התיאום יתבצע באופן מידי ,והודעה על תוצאות החישוב תישלח לעובד תוך כמה ימים.",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "guide-form101",
+      "claim": "Form 101 (טופס 101) is the employee card every employee fills at the start of work and at the start of each tax year; tax reliefs from the employer are requested on it",
+      "claim_type": "form-number",
+      "source_url": "https://www.gov.il/he/departments/guides/income-tax-guide-for--tax-relief-and-tax-coordination",
+      "source_fetched_at": "2026-10-27T12:00:00Z",
+      "raw_snippet": "בקשה לקבלת הטבת מס על ידי המעסיק, תוגש על גבי כרטיס עובד (טופס 101) שממלא כל עובד עם תחילת עבודתו וכן בתחילת כל שנת מס",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "svc-login",
+      "claim": "Entering the online coordination system requires registration and identification in the Tax Authority personal area",
+      "claim_type": "feature",
+      "source_url": "https://www.gov.il/he/service/tax-coordination-online",
+      "source_fetched_at": "2026-10-27T12:00:00Z",
+      "raw_snippet": "הכניסה למערכת דורשת רישום והזדהות ב אזור האישי ברשות המסים",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "f101-edition",
+      "claim": "The Form 101 PDF linked from gov.il is the edition updated 11.2025",
+      "claim_type": "date",
+      "source_url": "https://www.gov.il/BlobFolder/service/itc101/he/Service_Pages_Income_tax_annual-report-2024_itc101.pdf",
+      "source_fetched_at": "2026-10-27T12:00:00Z",
+      "raw_snippet": "ר”י , אגף בכיר טכנולוגיות דיגיטליות ומידע )מעודכן ל (11.2025 -",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "nevo-s34-36-36a",
+      "claim": "Income Tax Ordinance: s.34 two credit points for a resident; s.36 a quarter point; s.36A half a credit point for a woman. Basic: 2.25 points for a man, 2.75 for a woman (סעיף 34, סעיף 36, סעיף 36א)",
+      "claim_type": "law",
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "source_fetched_at": "2026-10-27T13:00:00Z",
+      "raw_snippet": "34. בחישוב המס של יחיד שהיה תושב ישראל בשנת המס יובאו בחשבון שתי נקודות זיכ",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "nevo-s36-36a",
+      "claim": "s.36 a quarter credit point for a resident; s.36A half a credit point in computing the tax of a woman (סעיף 36, סעיף 36א)",
+      "claim_type": "law",
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "source_fetched_at": "2026-10-27T13:00:00Z",
+      "raw_snippet": "36. בחישוב המס של יחיד תושב ישראל תובא בחשבון ¼ נקודת זיכוי כזיכוי נסיעה. זיכוי לאשה 36א. בחישוב המס של אשה תובא בחשבון ½ נקודת זיכוי. זיכוי",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "nevo-s39b",
+      "claim": "s.39B: for a combat reservist, points in the tax year after the service year: half a point for 30 to 39 days, three quarters for 40 to 49, one point for 50 or more, plus a quarter point per 5 further days, capped at 4 points",
+      "claim_type": "law",
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "source_fetched_at": "2026-10-27T13:00:00Z",
+      "raw_snippet": "39ב. (א) בחישוב המס לשנת המס של יחיד ששירת שירות מילואים כלוחם בשנת המס שקדמה לה (להלן - שנת המס הקודמת), יובאו בחשבון נקודות זיכוי כמפורט להלן: (1) ½ נקודת זיכוי - אם שירת שירות מילואים כלוחם בין 30 ל-39 ימים בשנת המס הקודמת; (2) ¾ נקודת זיכוי - אם שירת שירות מילואים כלוחם בין 40 ל-49 ימים בשנת המס הקודמת; (3) נקודת זיכוי אחת - אם שירת שירות מילואים כלוחם 50 ימים ומעלה בשנת המס הקודמת; (4) תוספת ¼ נקודת זיכוי בעד כל חמישה ימים נוספים ששירת שירות מילואים כלוחם מעבר ל-50 הימים האמורים בפסקה (3), ובלבד שסך נקודות הזיכוי לפי סעיף זה לא יעלה על 4 נקודות זיכוי. (ב) בסעיף זה - \" לוחם \" - לפי פקודות",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "f101-header-change",
+      "claim": "Form 101 is filled at the start of work and at the start of each tax year; it is the employer's basis for tax relief and coordination; a change must be declared within a week",
+      "claim_type": "form-number",
+      "source_url": "https://www.gov.il/BlobFolder/service/itc101/he/Service_Pages_Income_tax_annual-report-2024_itc101.pdf",
+      "source_fetched_at": "2026-10-27T13:00:00Z",
+      "raw_snippet": "טופס זה ימולא על-ידי כל עובד עם תחילת עבודתו ,וכן בתחילת כל שנת מס )אא\"כ המנהל אישר אחרת( .הטופס מהווה אסמכתא למעסיק למתן הקלות במס ולעריכת תיאומי מס בחישוב משכורת) (1העובד .אם חל שינוי בפרטים -יש להצהיר על כך תוך שבוע ימים.",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "f101-section-zayin",
+      "claim": "Form 101 section ז: changes during the year, including changes linked to the relief request",
+      "claim_type": "form-number",
+      "source_url": "https://www.gov.il/BlobFolder/service/itc101/he/Service_Pages_Income_tax_annual-report-2024_itc101.pdf",
+      "source_fetched_at": "2026-10-27T13:00:00Z",
+      "raw_snippet": "ז .ש י נויים במהלך השנה )כולל שינויים הקשורים לבקשה להקלה בחישוב המס מעבר לדף(",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "f101-section-chet-list",
+      "claim": "Form 101 section ח is where an exemption or credit is requested; item 1 resident, item 2א 100% disabled or permanently blind (items 3, 4, 11, 14-16 are in separate entries)",
+      "claim_type": "form-number",
+      "source_url": "https://www.gov.il/BlobFolder/service/itc101/he/Service_Pages_Income_tax_annual-report-2024_itc101.pdf",
+      "source_fetched_at": "2026-10-27T13:00:00Z",
+      "raw_snippet": "ח .אני מבקש/ת פטור או זיכוי ממס מהסיבות הבאות )סמן/י √ בריבוע המתאים( ❏ 1אני תושב/ת ישראל. 2א ❏ אני נכה / 100%עיוור/ת לצמיתות .מצורף אישור משרד הביטחון/האוצר/פקיד השומה/תעודת עיוור שהוצאה לאחר .1.1.94",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "f101-chet-2a-referral",
+      "claim": "Form 101 section ח item 2א (100% disabled or permanently blind): if section ה does not mark \"no other income from salary, pension or stipend\", the employee is referred to the assessing officer for coordination (סעיף 2א בחלק ח; סעיף 9(5))",
+      "claim_type": "form-number",
+      "source_url": "https://www.gov.il/BlobFolder/service/itc101/he/Service_Pages_Income_tax_annual-report-2024_itc101.pdf",
+      "source_fetched_at": "2026-10-27T13:00:00Z",
+      "raw_snippet": "2א ❏ אני נכה / 100%עיוור/ת לצמיתות .מצורף אישור משרד הביטחון/האוצר/פקיד השומה/תעודת עיוור שהוצאה לאחר .1.1.94 אם לא סומן בחלק ה כי \"אין לי הכנסות אחרות ממשכורת ,מקצבה וממלגה\" העובד יופנה לפקיד השומה לעריכת תיאום מס.",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "f101-chet-3-settlement",
+      "claim": "Form 101 section ח item 3: permanent resident of a qualifying settlement with no other centre of life; Form 1312א attached",
+      "claim_type": "form-number",
+      "source_url": "https://www.gov.il/BlobFolder/service/itc101/he/Service_Pages_Income_tax_annual-report-2024_itc101.pdf",
+      "source_fetched_at": "2026-10-27T13:00:00Z",
+      "raw_snippet": ".אני ובני משפחתי מדרגה ראשונה, ❏ 3אני תושב/ת קבוע/ה בישוב מזכה ) (13מתאריך ואין לי \"מרכז חיים\" נוסף .מצורף אישור של הרשות ע\"ג טופס 1312א. מתגוררים ביישוב",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "f101-chet-4-oleh",
+      "claim": "Form 101 section ח item 4: new immigrant from a date, oleh certificate required",
+      "claim_type": "form-number",
+      "source_url": "https://www.gov.il/BlobFolder/service/itc101/he/Service_Pages_Income_tax_annual-report-2024_itc101.pdf",
+      "source_fetched_at": "2026-10-27T13:00:00Z",
+      "raw_snippet": ".חובה לצרף :תעודת עולה. ❏ 4אני עולה חדש/ה מתאריך",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "f101-chet-14-15-16",
+      "claim": "Form 101 section ח items 14 to 16: discharged soldier or national service; academic degree, internship or vocational studies (Form 119); combat reservist days in the previous tax year with an IDF confirmation (טופס 119; סעיף 16 בחלק ח)",
+      "claim_type": "form-number",
+      "source_url": "https://www.gov.il/BlobFolder/service/itc101/he/Service_Pages_Income_tax_annual-report-2024_itc101.pdf",
+      "source_fetched_at": "2026-10-27T13:00:00Z",
+      "raw_snippet": ". תאריך סיום השירות ❏ 14אני חייל/ת משוחרר/ת /שירתתי בשירות לאומי .תאריך תחילת השירות מצורף צילום של תעודת שחרור/סיום שירות. ❏ 15בגין סיום לימודים לתואר אקדמי ,סיום התמחות או סיום לימודי מקצוע .מצורפת הצהרה בטופס .119 ❏ 16שירתתי כלוחם/לוחמת מילואים סה”כ ____ימי מילואים בשנת המס הקודמת .מצורף אישור מצה\"ל על זכאות בעד שירות מילואים כלוחם.",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "f101-chet-11-disabled-child",
+      "claim": "Form 101 section ח item 11: parent of a child with disabilities under 19 receiving גמלת ילד נכה from BL",
+      "claim_type": "form-number",
+      "source_url": "https://www.gov.il/BlobFolder/service/itc101/he/Service_Pages_Income_tax_annual-report-2024_itc101.pdf",
+      "source_fetched_at": "2026-10-27T13:00:00Z",
+      "raw_snippet": "ילדים עם מוגבלות שטרם מלאו להם 19שנים ,בגינם אני מקבל/ת גמלת ילד נכה מהמוסד לביטוח לאומי .מצורף ❏ 11אני הורה ל אישור גמלת ילד נכה מהמוסד לביטוח לאומי לשנה נוכחית .בן זוגי אינו מקבל נקודות זיכוי אלה .לילדיי ,בגינם אני מבקש את נקודות הזיכוי ,אין הכנסות בשנה הנוכחית.",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "f101-tet-box2",
+      "claim": "Form 101 section ט box 2: I have additional salary income as detailed (employer, deductions file, income type, monthly income, tax withheld)",
+      "claim_type": "form-number",
+      "source_url": "https://www.gov.il/BlobFolder/service/itc101/he/Service_Pages_Income_tax_annual-report-2024_itc101.pdf",
+      "source_fetched_at": "2026-10-27T13:00:00Z",
+      "raw_snippet": "❏ 2יש לי הכנסות נוספות ממשכורת) (1כמפורט להלן: המס שנוכה הכנסה חודשית סוג ההכנסה ה מ ש כ ו ר ת )(1 המעסיק/משלם",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "f101-note2",
+      "claim": "Form 101 note (2): monthly salary means pay for work of at least 18 days a month",
+      "claim_type": "form-number",
+      "source_url": "https://www.gov.il/BlobFolder/service/itc101/he/Service_Pages_Income_tax_annual-report-2024_itc101.pdf",
+      "source_fetched_at": "2026-10-27T13:00:00Z",
+      "raw_snippet": "-משכורת בעד עבודה של לא פחות מ 18 -יום בחודש. ) (2משכורת חודש",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "f101-note5-daily",
+      "claim": "Form 101 note (5): שכר עבודה is withheld by the daily table unless it is the only income",
+      "claim_type": "form-number",
+      "source_url": "https://www.gov.il/BlobFolder/service/itc101/he/Service_Pages_Income_tax_annual-report-2024_itc101.pdf",
+      "source_fetched_at": "2026-10-27T13:00:00Z",
+      "raw_snippet": "-משכורת בעד עבודה של פחות מ 18 -יום בחודש אך לא פחות מ 8 -שעות בשבוע .משכר עבודה ינוכה מס לפי לוח יומי אלא אם כן זו הכנסה יחידה שאז ינוכה ) (5שכר עבודה מס לפי לוח הניכויים.",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "booklet26-daily",
+      "claim": "2026 daily table for a daily worker: 10% up to 280.40; 14% to 402.40; 20% to 760.00; 31% to 1,004.00; 35% to 1,867.60; 47% above",
+      "claim_type": "currency",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf",
+      "source_fetched_at": "2026-10-27T13:00:00Z",
+      "raw_snippet": "10% 280.40 עד- 14% 402.40 עד- מ280.41 - 20% 760.00 עד- מ402.41 - 31% 1,004.00 עד- מ760.01 - 35% 1,867.60 עד- מ1,004.01 - 47% מכל אגורה נוספת",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "booklet26-9a",
+      "claim": "2026: qualifying pension ceiling 9,430 NIS a month (s.9A(a)); exempt ceiling 5,422 NIS a month at 57.5% (סעיף 9א)",
+      "claim_type": "currency",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf",
+      "source_fetched_at": "2026-10-27T13:00:00Z",
+      "raw_snippet": "לחודש 9,430 תקרת \"קיצבה מזכה\" 9א(א) תקרת הפטור ל\"קיצבה מזכה\" 9א(ב) - לחודש 5,422 בשיעור 57.5%",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "booklet26-9a-steps",
+      "claim": "Amendment 275, s.9A(ז): maximum pension exemption 57% in 2025, 57.5% in 2026, 62.5% in 2027, 67% from 2028",
+      "claim_type": "percentage",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf",
+      "source_fetched_at": "2026-10-27T13:00:00Z",
+      "raw_snippet": "שיעור הפטור המרבי שנות המס 57% 2025 57.5% 2026 62.5% 2027 67% 2028ואילך",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "booklet26-9-29",
+      "claim": "2026 exemption ceiling for a researcher's stipend under s.9(29): 109,000 NIS a year",
+      "claim_type": "currency",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf",
+      "source_fetched_at": "2026-10-27T13:00:00Z",
+      "raw_snippet": "לשנה 109,000 תקרת הפטור למלגה אצל חוקר )29(9",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "booklet26-9-5-blind",
+      "claim": "2026 s.9(5)(א)(1) (סעיף 9(5)) exempt personal-exertion income ceiling 684,000 NIS a year for a blind or disabled person who is entitled to a monthly benefit under the Disabled Persons law or the hostile-action victims law (the booklet footnote), disability set for more than a year",
+      "claim_type": "currency",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf",
+      "source_fetched_at": "2026-10-27T13:00:00Z",
+      "raw_snippet": "לשנה 684,000 תקרת הכנסה פטורה לעיוור ונכה מיגיעה אישית* -יותר משנה ()5(9א)()1 *זכאים לתגמול חודשי לפי חוק הנכים (תגמולים ושיקום) ,התשי\"ט- 1959או לפי חוק התגמולים לנפגעי פעולות איבה ,התש\"ל.1970-",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "booklet26-9-5-disabled",
+      "claim": "2026 s.9(5)(א1)(1) exempt personal-exertion income ceiling 445,200 NIS a year (booklet row \"לנכה\"); per the Ordinance (א1) the tier covers a blind or disabled person NOT entitled to that monthly benefit, 90%+ with 40%+ from one impairment, disability set for more than a year",
+      "claim_type": "currency",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf",
+      "source_fetched_at": "2026-10-27T13:00:00Z",
+      "raw_snippet": "לשנה 445,200 תקרת הכנסה פטורה לנכה מיגיעה אישית -יותר משנה ()5(9א)(א)1()1",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "booklet26-olim",
+      "claim": "Temporary order: exemption on personal-exertion income for an oleh or veteran returning resident who arrived between 5/11/2025 and 31/12/2026, up to an annual ceiling; 600,000 NIS for tax year 2026; a circular with the conditions is to be published",
+      "claim_type": "currency",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf",
+      "source_fetched_at": "2026-10-27T13:00:00Z",
+      "raw_snippet": "הוראת השעה מקנה פטור ממס לעולה חדש או לתושב חוזר ותיק שהגיע לישראל בתקופה שבין ה 5/11/2025 -ל 31/12/2026-על הכנסתו מיגיעה אישית (הכנסות מעסק וממשכורת) ועד לתקרה השנתית הקבועה בחוק. ההטבה קבועה בסעיף (2א) להוראת השעה והיא תינתן במהלך חמש שנות מס ,החל משנת המס 2026ועד ,2030בהתאם לתקרות הפטור הבאות: שנת מס תקרת הפטור (בש\"ח) 2026 600,000",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "booklet26-olim-circular",
+      "claim": "A circular detailing the conditions for applying the olim temporary order will be published later",
+      "claim_type": "feature",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf",
+      "source_fetched_at": "2026-10-27T13:00:00Z",
+      "raw_snippet": "חוזר שבו יפורטו כלל התנאים והסוגיות הנוגעות ליישום החוק יפורסם בהמשך.",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "booklet26-39b",
+      "claim": "On 23.11.2025 Amendment 283 was published (ספר החוקים 3461), adding s.39B: credit points for combat reserve service",
+      "claim_type": "law",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf",
+      "source_fetched_at": "2026-10-27T13:00:00Z",
+      "raw_snippet": "ביום 23.11.2025פורסם בספר החוקים 3461חוק לתיקון פקודת מס הכנסה (מס' ,)283 התשפ\"ו 2025 -במסגרתו נוסף סעיף 39ב לפקודת מס הכנסה ,שתכליתו מתן נקודות זיכוי בעד שירות מילואים כלוחם.",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "booklet26-settlements",
+      "claim": "2026 settlement changes: Kedem Arava (10%, ceiling 180,000), Yonadav (7%, 146,640), Batron (12%, 213,240) added in January; a 2026-2029 temporary order changed rates and ceilings for parts of Hevel Tkuma and added Ashkelon",
+      "claim_type": "currency",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf",
+      "source_fetched_at": "2026-10-27T13:00:00Z",
+      "raw_snippet": ".1במהלך חודש ינואר נוספו לרשימת היישובים המוטבים שלושת ישובים הבאים : שיעור 10%תקרה 180,000 )1קדם ערבה תקרה 146,640 שיעור 7% )2יונדב תקרה 213,240 שיעור 12% )3בתרון .2חוק הטבות מס ליישובים (תיקוני חקיקה) ,התשפ\"ו - ( 2026הוראת שעה) בהתאם לחוק נקבעה הוראת שעה לתיקון פקודת מס הכנסה לשנים 2026עד 2029לפיה נעשו שינויים המשפיעים על שיעורי ההטבה והתקרות לחלק מיישובי חבל תקומה וכמו כן ,במסגרת הוראת השעה נוספה העיר אשקלון לרשימת היישובים המוטבים.",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "booklet26-mixed-urban",
+      "claim": "Mixed-urban settlement temporary order 2026 to 2029: 12% credit up to income of 226,560 NIS, Nof HaGalil added",
+      "claim_type": "currency",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf",
+      "source_fetched_at": "2026-10-27T13:00:00Z",
+      "raw_snippet": ".3חוק עידוד יישוב עירוני מעורב (הוראת שעה) ,התשפ\"ו 2026 - בהתאם לחוק נקבעה הוראת שעה לתיקון פקודת מס הכנסה לשנים 2026עד 2029לפיה מי שהיה במשך כל שנת המס תושב ביישוב עירוני מעורב מוטב כהגדרתו בחוק יהיה זכאי באותה שנה לזיכוי ממס בשיעור 12%עד לתקרת הכנסה של 226,560שקלים חדשים. במסגרת הוראת שעה זו נוסף הישוב נוף הגליל לרשימת הישובים המוטבים.",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "svc-relief-list",
+      "claim": "The online service accepts relief requests for: credit points for children, new immigrants, residents of a qualifying settlement, children with disabilities, an academic degree or vocational studies, a donation to a public institution, discharged soldiers, national-service graduates, single-parent families",
+      "claim_type": "feature",
+      "source_url": "https://www.gov.il/he/service/tax-coordination-online",
+      "source_fetched_at": "2026-10-27T13:00:00Z",
+      "raw_snippet": "ניתן לבקש הקלה בחישוב המס במקרים הבאים: נקודות זיכוי עבור ילדים עולים חדשים תושבי יישוב המזכה בהנחה במס ילדים עם מוגבלות זכאות לתואר אקדמי או לימודי מקצוע תרומה למוסד ציבורי חיילים משוחררים בוגרי שירות לאומי משפחה חד הורית",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "nevo-s66-woman-children",
+      "claim": "Ordinance s.66(ג)(4) (סעיף 66): a woman (spouse) gets half a point under s.36A plus, against her personal-exertion income, for each child: 2.5 points in the birth year, 4.5 in each year from the year after birth until the year the child turns 2, 3.5 in the year the child turns 3, 2.5 in the years the child turns 4 and 5, 2 points from the year the child turns 6 until the year before maturity, and half a point in the maturity year",
+      "claim_type": "law",
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "source_fetched_at": "2026-10-27T14:00:00Z",
+      "raw_snippet": "(4) האשה תהא זכאית ל-1/2 נקודת זיכוי לפי סעיף 36א, ובנוסף וכנגד המס החל על הכנסתה מיגיעה אישית - לנקודות זיכוי בעד ילדיה כלהלן: (א) ½2 נקודות זיכוי בעד כל אחד מילדיה בשנת לידתו, ו-½ נקודת זיכוי בעד כל אחד מילדיה בשנת בגרותו, ½4 נקודות זיכוי בעד כל אחד מילדיה החל בשנת המס שלאחר שנת לידתו ועד לשנת המס שבה מלאו לו שנתיים, ½3 נקודות זיכוי בעד כל אחד מילדיה בשנת המס שבה מלאו לו שלוש שנים, ½2 נקודות זיכוי בעד כל אחד מילדיה בשנות המס שבהן מלאו לו ארבע שנים וחמש שנים, ושתי נקודות זיכוי בעד כל אחד מילדיה החל בשנת המס שבה מלאו לו שש שנים ועד לשנת המס שקדמה לשנת בגרותו;",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "nevo-s66-man-children",
+      "claim": "Ordinance s.66(ג)(5) (סעיף 66): a man gets, against his personal-exertion income, for each child: 2.5 points in the birth year, 4.5 from the year after birth until the year the child turns 2, 3.5 in the year the child turns 3, 2.5 in the years the child turns 4 and 5, and 1 point from the year the child turns 6 until the year before maturity",
+      "claim_type": "law",
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "source_fetched_at": "2026-10-27T14:00:00Z",
+      "raw_snippet": "(5) הגבר יהא זכאי, כנגד המס החל על הכנסתו מיגיעה אישית, לנקודות זיכוי בעד כל אחד מילדיו, כלהלן: (א) ½2 נקודות זיכוי בשנת לידתו של הילד; (ב) ½4 נקודות זיכוי בשל כל ילד החל בשנת המס שלאחר לידתו ועד לשנת המס שבה מלאו לו שנתיים, ½3 נקודות זיכוי בשנת המס שבה מלאו לו שלוש שנים, ו-½2 נקודות זיכוי בשנות המס שבהן מלאו לו ארבע שנים וחמש שנים; (ג) נקודת זיכוי אחת בעד כל אחד מילדיו החל בשנת המס שבה מלאו לו שש שנים ועד לשנת המס שקדמה לשנת בגרותו;",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "nevo-s40b1-single-parent",
+      "claim": "Ordinance s.40(ב)(1) (סעיף 40): a single parent gets a separate, larger child-point schedule (in addition to the s.40(א) allowance points)",
+      "claim_type": "law",
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "source_fetched_at": "2026-10-27T14:00:00Z",
+      "raw_snippet": "(ב) (1) בחישוב המס של יחיד תושב ישראל שהוא הורה במשפחה חד-הורית שהיו לו ילדים שבשנת המס טרם מלאו להם תשע עשרה שנה ושכלכלתם היתה עליו, אך אינו זכאי לנקודת זיכוי לפי סעיף 37, יובאו בחשבון, בנוסף לנקודות הקיצבה לפי סעיף קטן (א), בשל ילדיו כאמור הנמצאים אצלו, ½2 נקודות זיכוי בשל כל ילד בשנת לידתו ו-½ נקודת זיכוי בשל כל ילד בשנת בגרותו,",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "nevo-s9-29",
+      "claim": "Ordinance s.9(29) (סעיף 9(29)): a stipend given to a student or researcher during the study period is exempt; for a researcher, up to the ceiling amount",
+      "claim_type": "law",
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "source_fetched_at": "2026-10-27T14:00:00Z",
+      "raw_snippet": "(29) מלגה שניתנת לסטודנט או לחוקר בתקופת לימודיו במוסד לימוד ומחקר, ולגבי חוקר - עד לסכום התקרה;",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "nevo-s9-29-definition",
+      "claim": "s.9(29): \"מלגה\" is a grant, prize or exemption from payment given to a student or researcher during the studies, provided no consideration is given for it by the student or researcher; \"תמורה\" includes any undertaking to provide a service to the grantor or fill a role there",
+      "claim_type": "law",
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "source_fetched_at": "2026-10-27T14:00:00Z",
+      "raw_snippet": "\" מלגה \" - מענק, פרס או פטור מתשלום שניתן לסטודנט או לחוקר, במישרין או בעקיפין, באופן חד-פעמי או עתי, בתקופת לימודיו, למימון שכר הלימוד או לצורך קיומו בתקופת לימודיו, והכל בלבד שלא ניתנת בעדם כל תמורה מצד הסטודנט או החוקר והם ניתנו בתקופת הלימודים;",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "nevo-s9-29-tmura",
+      "claim": "s.9(29): \"consideration\" includes any undertaking of the student or researcher to provide a service to the grantor or to fill a role there",
+      "claim_type": "law",
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "source_fetched_at": "2026-10-27T14:00:00Z",
+      "raw_snippet": "\" תמורה \" - לרבות כל התחייבות של הסטודנט או החוקר למתן שירות כלשהו לנותן המלגה או למילוי תפקיד בו;",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "nevo-s9-5-a",
+      "claim": "s.9(5)(א) (סעיף 9(5)): exempt personal-exertion income of a blind person, or of a disabled person entitled to a monthly benefit under the Disabled Persons law or the hostile-action victims law with 100% disability (or 90% by combined calculation); the full ceiling applies when the disability is set for 365 days or more, a lower one for 185 to 364 days",
+      "claim_type": "law",
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "source_fetched_at": "2026-10-27T14:00:00Z",
+      "raw_snippet": "(5) (א) הכנסה מיגיעתם האישית של עיוור או של נכה שזכאי לתגמול חודשי לפי חוק הנכים (תגמולים ושיקום), התשי\"ט-1959 [נוסח משולב] או לפי חוק התגמולים לנפגעי פעולות איבה, התש\"ל-1970, ונקבעה לו נכות של 100%, או נכות של 90% לפחות מחמת שלקה באיברים שונים והאחוז האמור הוא תוצאה של חישוב מיוחד של הליקוי באיברים השונים שבלעדיו היה נקבע אחוז נכות של 100% לפחות, כמפורט להלן: (1) נקבעה נכות כאמור לתקופה של 365 ימים או יותר - הכנסה עד לסכום של 501,500 שקלים חדשים; (2) נקבעה נכות כאמור לתקופה שבין 185 ימים לבין 364 ימים - הכנסה עד לסכום של 60,120 שקלים חדשים;",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "nevo-s9-5-a1",
+      "claim": "s.9(5)(א1): a blind person or a disabled person NOT entitled to the monthly benefit under the laws in (א), with at least 90% disability and at least 40% from one impairment, for a period of 365 days or more",
+      "claim_type": "law",
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "source_fetched_at": "2026-10-27T14:00:00Z",
+      "raw_snippet": "(א1) הכנסה מיגיעתם האישית של עיוור או של נכה שאינו זכאי לתגמול חודשי לפי החוקים האמורים בפסקת משנה (א) רישה, שנקבעה לו נכות של 90% לפחות, אף אם נכות כאמור נקבעה מחמת שלקה באיברים שונים והאחוז האמור הוא תוצאה של חישוב מיוחד של הליקוי באיברים השונים, ובלבד שנקבעה לו נכות בשיעור של 40% לפחות בשל ליקוי אחד, כמפורט להלן: (1) נקבעה נכות כאמור לתקופה של 365 ימים או יותר",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "booklet26-chapter-het",
+      "claim": "The 2026 booklet attaches the list of qualifying localities in chapter ח",
+      "claim_type": "feature",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf",
+      "source_fetched_at": "2026-10-27T14:00:00Z",
+      "raw_snippet": "מצורפת בפרק ח רשימת היישובים המוטבים לשנת .2026",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "f101-chet-12-alimony",
+      "claim": "Form 101 section ח item 12: alimony to a former spouse, filled by someone who remarried, with the court judgment attached",
+      "claim_type": "form-number",
+      "source_url": "https://www.gov.il/BlobFolder/service/itc101/he/Service_Pages_Income_tax_annual-report-2024_itc101.pdf",
+      "source_fetched_at": "2026-10-27T14:00:00Z",
+      "raw_snippet": "❏ 12בגין מזונות לבן/בת זוגי לשעבר .ימולא ע\"י מי שנישא בשנית .מצורף פסק דין.",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "btl-cert-website",
+      "claim": "The current-year BL coordination certificate is produced on the BL website (דמי ביטוח, תיאום דמי ביטוח, הפקת אישור לתיאום דמי ביטוח לשנה הנוכחית)",
+      "claim_type": "feature",
+      "source_url": "https://www.btl.gov.il/Insurance/HozrimBituah/Hozrim/%d7%90%d7%99%d7%92%d7%a8%d7%aa%20%d7%9c%d7%9e%d7%a2%d7%a1%d7%99%d7%a7%20%d7%9c%d7%a9%d7%a0%d7%aa%202026.pdf",
+      "source_fetched_at": "2026-10-27T14:00:00Z",
+      "raw_snippet": "ניתן להפיק אישור באתר הביטוח הלאומי (דמי ביטוח - תיאום דמי ביטוח - הפקת אישור לתיאום דמי ביטוח לשנה הנוכחית) ,העובד יקבל את האישור במכתב מהביטוח הלאומי ,את המכתב עליו להגיש",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "btl-letter-651",
+      "claim": "The BTL employer letter for 2026 is form בל/651 (01.2026); the worker declaration for coordination without internet is form בל/644",
+      "claim_type": "form-number",
+      "source_url": "https://www.btl.gov.il/Insurance/HozrimBituah/Hozrim/%d7%90%d7%99%d7%92%d7%a8%d7%aa%20%d7%9c%d7%9e%d7%a2%d7%a1%d7%99%d7%a7%20%d7%9c%d7%a9%d7%a0%d7%aa%202026.pdf",
+      "source_fetched_at": "2026-10-27T14:00:00Z",
+      "raw_snippet": "אגרת למעסיק לשנת 2026 בל)01.2026( 651/",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "guide-officer-sets-rate",
+      "claim": "In a coordination by the assessing officer, the officer sets the annual tax rate to withhold from all of your income; the certificates wait in the coordination application",
+      "claim_type": "feature",
+      "source_url": "https://www.gov.il/he/departments/guides/income-tax-guide-for--tax-relief-and-tax-coordination",
+      "source_fetched_at": "2026-10-27T14:00:00Z",
+      "raw_snippet": "פקיד השומה יקבע בהתאם לנתוניכם, את שיעור המס השנתי שיש לנכות מכלל הכנסותיכם.",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "kz-miluim-several",
+      "claim": "Kolzchut: a reservist working at several workplaces receives the reserve pay for the main employer's salary through that employer, and files a personal claim for the salary from the other employers",
+      "claim_type": "feature",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%AA%D7%A9%D7%9C%D7%95%D7%9D_%D7%A2%D7%91%D7%95%D7%A8_%D7%A9%D7%99%D7%A8%D7%95%D7%AA_%D7%9E%D7%99%D7%9C%D7%95%D7%90%D7%99%D7%9D_%D7%9C%D7%A9%D7%9B%D7%99%D7%A8%D7%99%D7%9D",
+      "source_fetched_at": "2026-10-27T14:00:00Z",
+      "raw_snippet": "אני עובד בכמה מקומות עבודה ויצאתי למילואים. איך אקבל את התשלום? את התשלום על השכר שמשלם המעסיק הראשי מקבלים דרך אותו מעסיק. על השכר משאר המעסיקים צריכים להגיש תביעה אישית ולצרף תלושי שכר מכל מקומות העבודה (כולל מהמעסיק הראשי).",
+      "confidence": "high",
+      "verified_via": "browser",
+      "verified_at": "2026-10-27",
+      "verified_note": "Playwright MCP browser: page textContent read on 2026-10-27, snippet copied verbatim (kolzchut returns 403 to curl)"
+    },
+    {
+      "claim_id": "kz-miluim-tax",
+      "claim": "Kolzchut: Bituach Leumi transfers the reserve payment after deducting income tax; for a personal claim BL deducts only health dues from it",
+      "claim_type": "feature",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%AA%D7%A9%D7%9C%D7%95%D7%9D_%D7%A2%D7%91%D7%95%D7%A8_%D7%A9%D7%99%D7%A8%D7%95%D7%AA_%D7%9E%D7%99%D7%9C%D7%95%D7%90%D7%99%D7%9D_%D7%9C%D7%A9%D7%9B%D7%99%D7%A8%D7%99%D7%9D",
+      "source_fetched_at": "2026-10-27T14:00:00Z",
+      "raw_snippet": "המוסד לביטוח לאומי מעביר את התשלום אחרי שהוא מפחית ממנו מס הכנסה. למי שמקבלים את התשלום דרך המעסיק, דמי ביטוח לאומי ודמי ביטוח בריאות מופחתים מהתשלום על-ידי המעסיק. למי שמגישים תביעה אישית: המוסד לביטוח לאומי מפחית מהתשלום רק דמי ביטוח בריאות.",
+      "confidence": "high",
+      "verified_via": "browser",
+      "verified_at": "2026-10-27",
+      "verified_note": "Playwright MCP browser: page textContent read on 2026-10-27, snippet copied verbatim (kolzchut returns 403 to curl)"
+    },
+    {
+      "claim_id": "nevo-s9-29-study-period",
+      "claim": "s.9(29) study period: as defined by the institution, but for a master's degree no more than four tax years from the start of that degree, for a doctorate no more than eight tax years; for a researcher the research period, no more than 12 years",
+      "claim_type": "law",
+      "source_url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "source_fetched_at": "2026-10-27T15:00:00Z",
+      "raw_snippet": "\" תקופת הלימודים \" - (1) לגבי סטודנט - תקופת הלימודים של סטודנט שהוגדרה בתקנון המוסד להשכלה גבוהה לגבי סוג הלימודים האמור, ולגבי המנויים להלן, תקופת הלימודים לא תעלה על - (א) לגבי מי שלומד לתואר אקדמי שני - תקופה של ארבע שנות מס מהיום שהחל את לימודיו לתואר האמור; (ב) לגבי מי שלומד לתואר אקדמי שלישי - תקופה של שמונה שנות מס מהיום שהחל את לימודיו לתואר האמור; (2) לגבי חוקר - תקופת המחקר כפי שהוגדרה על ידי המוסד המחקרי או המכון למחקר תורני, ובלבד שלא תעלה על 12 שנים;",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "kz-child-points-2026",
+      "claim": "Kolzchut (child credit points, page updated 11.2.2026): from 2024, 2.5 points in the birth year, 4.5 in the years the child turns 1 and 2, 3.5 in the year turning 3, 2.5 in the years turning 4 and 5; worked 2026 example: a mother of children turning 2 and 8 has 9.25 points, the father 7.75",
+      "claim_type": "law",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%A0%D7%A7%D7%95%D7%93%D7%95%D7%AA_%D7%96%D7%99%D7%9B%D7%95%D7%99_%D7%9E%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94_%D7%9C%D7%94%D7%95%D7%A8%D7%94_%D7%9C%D7%99%D7%9C%D7%93_%D7%A2%D7%93_%D7%92%D7%99%D7%9C_5",
+      "source_fetched_at": "2026-10-27T15:00:00Z",
+      "raw_snippet": "החל משנת 2024: בשנת המס שבה נולד הילד יינתנו 2.5 נקודות זיכוי. בשנת המס שבה תמלא לילד שנה אחת ובשנת המס שבה יימלאו לילד שנתיים, יינתנו 4.5 נקודות זיכוי בכל שנה. בשנת המס שבה יימלאו לילד שלוש שנים, יינתנו 3.5 נקודות זיכוי. בשנת המס שבה יימלאו לילד ארבע שנים ובשנת המס שבה יימלאו לילד חמש שנים, יינתנו 2.5 נקודות זיכוי בכל שנה.",
+      "confidence": "high",
+      "verified_via": "browser",
+      "verified_at": "2026-10-27",
+      "verified_note": "Playwright MCP browser: page textContent read on 2026-10-27, snippet copied verbatim (kolzchut returns 403 to curl)"
+    },
+    {
+      "claim_id": "kz-child-points-2026-example",
+      "claim": "Kolzchut 2026 worked example: parents with a child turning 2 and a child turning 8 in 2026; the mother has 9.25 points (4.5 + 2 + 2.25 + 0.5), the father 7.75",
+      "claim_type": "law",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%A0%D7%A7%D7%95%D7%93%D7%95%D7%AA_%D7%96%D7%99%D7%9B%D7%95%D7%99_%D7%9E%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94_%D7%9C%D7%94%D7%95%D7%A8%D7%94_%D7%9C%D7%99%D7%9C%D7%93_%D7%A2%D7%93_%D7%92%D7%99%D7%9C_5",
+      "source_fetched_at": "2026-10-27T15:00:00Z",
+      "raw_snippet": "זוג הורים הטרוסקסואלים עם שני ילדים שבשנת 2026 ילד אחד יהיה בן שנתיים וילד אחד בן 8 מספר נקודות הזיכוי של האם יהיה 9.25 לפי החישוב הבא: על הילד שיחגוג שנתיים בשנת 2026 - 4.5 נקודות. על הילד שיחגוג 8 שנים בשנת 2026 - 2 נקודות המוענקות עבור ילדים בגיל 17-6. בנוסף האם תקבל 2.25 נקודות זיכוי כתושבת ישראל ועוד 0.5 נקודת זיכוי כאישה.",
+      "confidence": "high",
+      "verified_via": "browser",
+      "verified_at": "2026-10-27",
+      "verified_note": "Playwright MCP browser: page textContent read on 2026-10-27, snippet copied verbatim (kolzchut returns 403 to curl)"
+    },
+    {
+      "claim_id": "btl-b-no-exempt",
+      "claim": "Case B (total above the maximum insurable income): the secondary employer may not exempt the worker from BL and health dues without a BL approval",
+      "claim_type": "feature",
+      "source_url": "https://www.btl.gov.il/Insurance/HozrimBituah/Hozrim/%d7%90%d7%99%d7%92%d7%a8%d7%aa%20%d7%9c%d7%9e%d7%a2%d7%a1%d7%99%d7%a7%20%d7%9c%d7%a9%d7%a0%d7%aa%202026.pdf",
+      "source_fetched_at": "2026-10-27T15:00:00Z",
+      "raw_snippet": "על המעסיק המשני ,חל איסור - לפטור את העובד מתשלום דמי ביטוח לאומי ודמי ביטוח בריאות ללא אישור מאת הביטוח הלאומי.",
+      "confidence": "high"
+    },
+    {
+      "claim_id": "svc-self-report",
+      "claim": "In the online system the user reports income from salary, pension and other income; the system computes the expected annual income and issues the certificates",
+      "claim_type": "feature",
+      "source_url": "https://www.gov.il/he/service/tax-coordination-online",
+      "source_fetched_at": "2026-10-27T15:00:00Z",
+      "raw_snippet": "לאחר ההתחברות למערכת ניתן יהיה לדווח על ההכנסות שלך ממשכורת, קצבה והכנסה אחרת, כולל הכנסה מעסק זעיר המערכת תחשב את סכום ההכנסה השנתי הצפוי לך ותפיק את האישורים בהתאם.",
+      "confidence": "high"
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "author": "skills-il",
+  "version": "1.0.0",
+  "category": "tax-and-finance",
+  "tags": {
+    "he": [
+      "תיאום-מס",
+      "שכיר",
+      "שתי-עבודות",
+      "טופס-101",
+      "טופס-116",
+      "נקודות-זיכוי",
+      "מדרגות-מס",
+      "פנסיה",
+      "ביטוח-לאומי",
+      "רשות-המסים"
+    ],
+    "en": [
+      "tax-coordination",
+      "teum-mas",
+      "employee",
+      "two-jobs",
+      "form-101",
+      "form-116",
+      "credit-points",
+      "tax-brackets",
+      "pension",
+      "reshut-hamisim"
+    ]
+  },
+  "display_name": {
+    "he": "תיאום מס לשכירים",
+    "en": "Israeli Tax Coordination"
+  },
+  "display_description": {
+    "he": "אינו ייעוץ מס. לשכירים עם שתי עבודות, משכורת ופנסיה, או משכורת ודמי לידה, אבטלה או מלגה. הסקיל ממליץ לאיזה משלם לתת את נקודות הזיכוי בטופס 101, מחשב כמה מס עודף נלקח כשהמשלם השני מנכה 47% לעומת המס השנתי לפי מדרגות 2026, מסביר אם להגיש בשירות המקוון החינמי של רשות המסים או בטופס 116 אצל פקיד השומה, מה עושים עם האישורים, ומזכיר שתיאום מול ביטוח לאומי הוא הליך נפרד. כך אפשר להפסיק לשלם חודשים של מס מיותר במקום לחכות להחזר. השתמשו בו כשמתחילים עבודה שנייה, כשיוצאים לפנסיה וממשיכים לעבוד, או כשרואים 47% מס בתלוש. לא מתאים להחזר מס על שנים שעברו, לפרילנסרים ועוסקים, לדוח שנתי או לחישוב נטו של עבודה אחת.",
+    "en": "Not tax advice. For salaried Israelis with two jobs, a salary and a pension, or a salary plus maternity pay, unemployment pay or a stipend. Recommends which payer gets the credit points on Form 101, estimates the over-withholding when the second payer withholds 47% versus the annual liability on the 2026 brackets, explains whether to file through the Tax Authority's free online service or Form 116 at the assessing office, what to do with the certificates, and flags that Bituach Leumi coordination is a separate process. Can stop months of excess withholding instead of waiting for a refund. Use when starting a second job, retiring and still working, or seeing 47% tax on a payslip. Do NOT use for refunds for past years (israeli-employee-tax-refund), freelancer or osek withholding (israeli-tax-withholding), annual returns (israeli-tax-returns), or net salary of a single job (israeli-payroll-calculator)."
+  },
+  "supported_agents": [
+    "claude-code",
+    "cursor",
+    "github-copilot",
+    "windsurf",
+    "opencode",
+    "codex",
+    "openclaw",
+    "antigravity",
+    "gemini-cli",
+    "grok-build",
+    "chatgpt",
+    "claude-ai",
+    "claude-desktop",
+    "manus",
+    "gemini-spark",
+    "grok"
+  ],
+  "openclaw": {
+    "requires": {
+      "bins": [],
+      "env": []
+    },
+    "emoji": "🧾"
+  },
+  "volatility": "legislative",
+  "authoritative_sources": [
+    {
+      "url": "https://www.gov.il/he/service/tax-coordination-online",
+      "type": "regulator",
+      "language": "he"
+    },
+    {
+      "url": "https://www.gov.il/he/departments/guides/income-tax-guide-for--tax-relief-and-tax-coordination",
+      "type": "regulator",
+      "language": "he"
+    },
+    {
+      "url": "https://www.gov.il/BlobFolder/generalpage/income-tax-monthly-deductions-booklet/he/generalInformation_income-tax-monthly-deductions-booklet_monthly-deductions-booklet-2026.pdf",
+      "type": "regulator",
+      "language": "he"
+    },
+    {
+      "url": "https://www.gov.il/BlobFolder/service/itc101/he/Service_Pages_Income_tax_annual-report-2024_itc101.pdf",
+      "type": "regulator",
+      "language": "he"
+    },
+    {
+      "url": "https://www.btl.gov.il/Insurance/HozrimBituah/Hozrim/%d7%90%d7%99%d7%92%d7%a8%d7%aa%20%d7%9c%d7%9e%d7%a2%d7%a1%d7%99%d7%a7%20%d7%9c%d7%a9%d7%a0%d7%aa%202026.pdf",
+      "type": "regulator",
+      "language": "he"
+    },
+    {
+      "url": "https://www.kolzchut.org.il/he/%D7%AA%D7%99%D7%90%D7%95%D7%9D_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
+      "type": "rights-database",
+      "language": "he"
+    },
+    {
+      "url": "https://www.nevo.co.il/law_html/law00/84255.htm",
+      "type": "legislation",
+      "language": "he"
+    }
+  ],
+  "domain_checklist_version": 1
+}

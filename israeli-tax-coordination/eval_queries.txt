@@ -1,0 +1,21 @@
+# Eval queries for israeli-tax-coordination
+# Format: split | expected | query | matching or EXCLUDING phrase in the description
+# split: train (seven queries) / holdout (three queries), a seventy-thirty split
+
+train | trigger | I started a second job in the evenings and they took 47% tax from my first payslip there. What do I do? | "47% tax on a second salary", "second job"
+train | trigger | איך עושים תיאום מס? אני עובדת בשתי עבודות במקביל | "תיאום מס", "שתי עבודות"
+train | trigger | I'm retired, get a pension from Migdal and also work part time. Which one should get my credit points on Form 101? | "salary plus pension", "Form 101 credit points"
+train | trigger | חזרתי מחופשת לידה לעבודה, צריך לעשות משהו מול מס הכנסה בגלל דמי הלידה? | "taxable Bituach Leumi payment (maternity, unemployment)", "דמי לידה"
+train | no-trigger | I worked two jobs in 2023 and never did tax coordination, can I get the extra tax back? | EXCLUDED by "Do NOT use for refunds for past years (israeli-employee-tax-refund)"
+train | no-trigger | אני עוסק פטור, לקוח מנכה לי מס במקור מהחשבונית. איך מורידים את זה? | EXCLUDED by "freelancer or osek withholding (israeli-tax-withholding)" / HE "לניכוי במקור לפרילנסרים ועוסקים"
+train | edge-trigger | I earn 50,000 a month at one company and 20,000 at another. Is coordination even worth it? | "two or more payers", "estimates the over-withholding ... versus the annual liability"; skill answers that it saves nothing and the surtax is under-withheld
+
+holdout | trigger | Got unemployment benefits Jan to April then found a new job. HR says I need teum mas, what is that and how do I file it online? | "teum mas", "unemployment", "free online service"
+holdout | no-trigger | What will my net salary be on 18,000 gross at a single employer? | EXCLUDED by "net salary of a single job (israeli-payroll-calculator)"
+holdout | edge-trigger | I did the tax coordination, do I also need to tell Bituach Leumi about my second employer? | "flags the separate Bituach Leumi coordination"
+
+# Results (manual sense check, 2026-10-27, final description):
+# train: 7/7 correct (4 positive triggers matched, 2 negatives excluded by named phrases, 1 edge routed correctly) = 100%
+# holdout: 3/3 correct (1 positive, 1 negative excluded, 1 edge) = 100%
+# Positive trigger rate overall: 5/5 positive + 2/2 edge = 100%
+# Round 1 recheck (2026-10-27): description changed ('Can stop', 'versus the annual liability'); all trigger and exclusion phrases still present. train 7\/7, holdout 3\/3.
