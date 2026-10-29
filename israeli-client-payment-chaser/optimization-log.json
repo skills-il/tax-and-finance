@@ -32,6 +32,22 @@
         "Funding lesson: both additions were paid for by moving content OUT rather than by cutting new material. The Shabbat rule existed as three partial prose repetitions (Step 3, MCP table, Troubleshooting) and is now one deterministic spec in references/legal-escalation.md covering candle-lighting and nightfall offsets, the recipient's city, chol hamoed, erev chag, non-Jewish recipients and a conservative Sunday-Thursday fallback when no calendar source is available. Steps 6 and 7 were restating the reference file almost verbatim and were condensed. That is the right order of operations when the cap binds.",
         "Still logged, not taken: M4 the opening phone call to check whether the invoice ever entered the client's payment run, which the Expert rates highest outcome-change per word in the whole document and which is about 30 words. Take it first next cycle. Also: Step 4 says the demand letter goes at 30-60 days past due while Step 3 and the templates say +60 or more, so align the three; metadata display_description still says 'michtav hitchayvut', a letter of UNDERTAKING, where the frontmatter correctly says Michtav Drisha; allowed-tools is space-separated where a comma is expected; and enforcement could name עיקול צד ג' explicitly, note that fees and interest accrue onto the file balance, and mention איחוד תיקים."
       ]
+    },
+    {
+      "version": "1.8.0",
+      "date": "2026-10-29",
+      "lessons": [
+        "RESOLVED carries from 1.7.1: opening phone call (Step 3); demand-letter timing aligned to due+60 everywhere; michtav hitchayvut corrected in display_description (EN+HE); small-claims fee now cited to reg. 6(a); third-party attachment (sec. 44), fees accruing on the file (sec. 9) and file consolidation (sec. 74b-74c) added; consumer branch now actionable (Contracts Law sec. 41).",
+        "NOT CHANGED, by design: allowed-tools is space-delimited per the Agent Skills spec; the 1.7.1 lesson asking for commas was wrong.",
+        "The biggest defect this cycle was in the reference file 1.7.1 claimed to have swept: debtor-only venue, an absolute 30-day enforcement wait, 'simple interest', a points-of-law appeal, the local-authority clock keyed to issue, and a sunset Shabbat start all survived there. Sweeping SKILL.md is not sweeping the skill: grep every reference file for each corrected rule.",
+        "Sec. 4(b) of the suppliers law (interest only where the business client had the advantage in shaping the terms) was missing for several cycles while every reviewer checked the 30-day dmei pigurim split. Read the whole section, not the clause you came for.",
+        "The first draft of the new fixed-sum route (sec. 81a1) read the statute without the Execution Regulations and was wrong twice: the warning has a prescribed Form 19a (reg. 109a) and the evidence must be signed by the debtor (reg. 109d1). A route defined by an Act is usually completed by regulations; open them before writing procedure.",
+        "Trimming to stay under the 5,000-word cap caused one regression (insolvency freeze narrowed to companies), caught only by re-dispatching the expert on the repair.",
+        "Deferred: Interpretation Law rest-day rollover of a statutory due date; sec. 81a3 default interest from filing in a fixed-sum file; Small Claims reg. 7(b1)/11/12 self-filer duties and set-aside; withholding-at-source rates and threshold (route to accountant only, not verified); the Enforcement Office shortened track for debts up to 25,000 NIS (gov.il JS page not evidenced); the description does not open with a short legal clause (legal-review says the legal domain takes no prefix).",
+        "Form numbers for opening a judgment file (206) and a notes file (205) were found by research but deliberately not added; the skill points to the Authority's forms instead.",
+        "Phase 5.7 holdout not run: the frontmatter description is unchanged; only a one-term correction in display_description. Overlap gate with --self: clear.",
+        "Value-add (search baseline, 4 workflow cases): with=0.97 without=0.34 delta=+0.62, PASS."
+      ]
     }
   ]
 }

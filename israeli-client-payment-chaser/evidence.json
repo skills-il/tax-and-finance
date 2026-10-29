@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0",
   "skill": "israeli-client-payment-chaser",
-  "generated_at": "2026-09-01T22:38:41+00:00",
+  "generated_at": "2026-10-29T19:00:00Z",
   "claims": [
     {
       "claim_id": "payment-ethics-law-terms",
@@ -29,15 +29,17 @@
     },
     {
       "claim_id": "small-claims-court",
-      "claim": "Small Claims Court: ceiling 39,900 NIS as of January 2026; filing fee 1% of the claim, minimum 50 NIS.",
+      "claim": "The Small Claims ceiling is 39,900 NIS as of January 2026 (Kol-Zchut)",
       "source_url": "https://www.kolzchut.org.il/he/הגשת_תביעה_קטנה",
-      "raw_snippet": "תביעה כספית בסכום של עד 39,900 ₪ (נכון לינואר 2026)...אגרה בגובה של 1% מסכום התביעה, ובכל מקרה לא פחות מ-50 ₪",
-      "fetched_at": "2026-06-16T22:55:00Z",
+      "raw_snippet": "תביעה כספית בסכום של עד 39,900 ₪ (נכון לינואר 2026)",
+      "fetched_at": "2026-10-29T16:30:00Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/legal-escalation.md"
-      ]
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-10-29"
     },
     {
       "claim_id": "enforcement-and-interest-reform",
@@ -49,18 +51,6 @@
         "SKILL.md",
         "SKILL_HE.md",
         "references/legal-escalation.md"
-      ]
-    },
-    {
-      "claim_id": "illustrative-example-figures",
-      "claim": "Hypothetical scenario amounts and percentages used in Examples and reminder templates (not live figures)",
-      "source_url": "internal-illustrative-example",
-      "raw_snippet": "Illustrative figures: total outstanding 47,500 NIS; invoice 22,000 NIS; buckets 18,000 NIS, 12,000 NIS, 8,500 NIS, 15,000 NIS; outstanding 53,500 NIS; forecast 35,000 NIS; collection rate 78%; demand-letter deadline 14 days. Hebrew forms 47,500 ש\"ח, 22,000 ש\"ח, 18,000 ש\"ח, 12,000 ש\"ח, 8,500 ש\"ח, 15,000 ש\"ח, 53,500 ש\"ח, 35,000 ש\"ח",
-      "fetched_at": "2026-06-16T22:55:00Z",
-      "appears_in": [
-        "SKILL.md",
-        "SKILL_HE.md",
-        "references/reminder-templates.md"
       ]
     },
     {
@@ -80,29 +70,33 @@
     {
       "claim": "The Small Claims process does not require representation by a lawyer; representation is barred by default and the court may permit it on request.",
       "source_url": "https://www.kolzchut.org.il/he/הגשת_תביעה_קטנה",
-      "raw_snippet": "ההליך בבית המשפט לתביעות קטנות אינו דורש ייצוג על-ידי עורך דין",
+      "raw_snippet": "להגשת התביעה לא נדרש ייצוג על ידי עורך דין. במקרים חריגים בית המשפט יכול לאשר לצדדים להיות מיוצגים על-ידי עורך דין.",
       "claim_id": "small-claims-no-lawyer-required",
-      "fetched_at": "2026-07-26T00:00:00Z",
+      "fetched_at": "2026-10-29T16:30:00Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ]
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-10-29"
     },
     {
       "claim": "The Small Claims Court monetary ceiling is 39,900 NIS as of January 2026.",
       "source_url": "https://www.kolzchut.org.il/he/הגשת_תביעה_קטנה",
       "raw_snippet": "תביעה כספית בסכום של עד 39,900 ₪ (נכון לינואר 2026)",
       "claim_id": "small-claims-ceiling-2026",
-      "fetched_at": "2026-07-26T00:00:00Z",
+      "fetched_at": "2026-10-29T16:30:00Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ]
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-10-29"
     },
     {
-      "claim": "The Small Claims filing fee is 1% of the claim amount, and in any case not less than 50 NIS.",
-      "source_url": "https://www.kolzchut.org.il/he/הגשת_תביעה_קטנה",
-      "raw_snippet": "אגרה בגובה של 1% מסכום התביעה, ובכל מקרה לא פחות מ-50 ₪",
+      "claim": "The Small Claims filing fee is 1% of the claim amount and never less than 50 NIS (reg. 6(a)(1)-(2))",
+      "source_url": "https://he.wikisource.org/wiki/תקנות_שיפוט_בתביעות_קטנות_(סדרי_דין)",
+      "raw_snippet": "לא תפחת האגרה בשום מקרה מ־50 שקלים חדשים",
       "claim_id": "small-claims-fee",
       "fetched_at": "2026-07-26T00:00:00Z",
       "appears_in": [
@@ -133,37 +127,30 @@
       ]
     },
     {
-      "claim": "A small-claims plaintiff must declare the number of small claims filed in the past year; filing more than five in the same court in a year lets the court transfer the case to Magistrate Court. It is not an absolute cap.",
-      "source_url": "https://www.nevo.co.il/law_html/law00/98563.htm",
-      "raw_snippet": "מספר התביעות הקטנות שהגיש במהלך השנה האחרונה",
-      "claim_id": "small-claims-five-per-year",
-      "fetched_at": "2026-07-26T00:00:00Z",
-      "appears_in": [
-        "SKILL.md",
-        "SKILL_HE.md"
-      ]
-    },
-    {
       "claim": "Normalized restatement in the skill's own ש\"ח notation of the figures quoted above from kolzchut: the Small Claims ceiling of 39,900 ש\"ח and the minimum filing fee of 50 ש\"ח. No new claim is introduced; kolzchut prints these with the shekel sign.",
       "source_url": "https://www.kolzchut.org.il/he/הגשת_תביעה_קטנה",
-      "raw_snippet": "תביעה כספית בסכום של עד 39,900 ₪ (נכון לינואר 2026)...לא פחות מ-50 ₪",
+      "raw_snippet": "תביעה כספית בסכום של עד 39,900 ₪ (נכון לינואר 2026)",
       "claim_id": "small-claims-notation",
-      "fetched_at": "2026-07-26T00:00:00Z",
+      "fetched_at": "2026-10-29T16:30:00Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ]
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-10-29"
     },
     {
       "claim": "Only private individuals, including an osek murshe or osek patur, may file a small claim. A company, partnership or amuta may not file in this court.",
       "source_url": "https://www.kolzchut.org.il/he/הגשת_תביעה_קטנה",
       "raw_snippet": "חברה בע\"מ, שותפות או עמותה לא יוכלו להגיש תביעה לבית משפט זה",
       "claim_id": "small-claims-individuals-only",
-      "fetched_at": "2026-07-26T00:00:00Z",
+      "fetched_at": "2026-10-29T16:30:00Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"
-      ]
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-10-29"
     },
     {
       "claim_id": "url-hebcal",
@@ -192,38 +179,12 @@
       ]
     },
     {
-      "claim_id": "ref-boi-prime-rate",
-      "claim": "The Bank of Israel publishes the monetary-policy rate. This is NOT the statutory late-payment rate and the skill cites it only to warn against that conflation.",
-      "source_url": "https://www.boi.org.il/information/interestrates/primerates/",
-      "raw_snippet": "information/interestrates/primerates",
-      "fetched_at": "2026-08-17",
-      "verified_via": "same-origin fetch from a loaded boi.org.il page (HTTP 200, 71KB, no error markers)",
-      "verified_at": "2026-08-17",
-      "appears_in": [
-        "SKILL.md",
-        "SKILL_HE.md"
-      ]
-    },
-    {
       "claim_id": "ref-israelpost",
       "claim": "Israel Post, cited for registered-mail service used to send a formal demand.",
       "source_url": "https://www.israelpost.co.il",
       "raw_snippet": "israelpost.co.il",
       "fetched_at": "2026-08-17",
       "verified_via": "cited as a navigational pointer to the postal operator",
-      "verified_at": "2026-08-17",
-      "appears_in": [
-        "SKILL.md",
-        "SKILL_HE.md"
-      ]
-    },
-    {
-      "claim_id": "ref-kolzchut-supplier-payment",
-      "claim": "המועד האחרון לתשלום תמורה לספקים עבור סחורה או שירות בכל-זכות.",
-      "source_url": "https://www.kolzchut.org.il/he/המועד_האחרון_לתשלום_תמורה_לספקים_עבור_סחורה_או_שירות",
-      "raw_snippet": "המועד האחרון לתשלום תמורה לספקים עבור סחורה או שירות",
-      "fetched_at": "2026-08-17",
-      "verified_via": "kolzchut page existence confirmed through the site MediaWiki API in a browser",
       "verified_at": "2026-08-17",
       "appears_in": [
         "SKILL.md",
@@ -488,6 +449,933 @@
       "source_url": "https://he.wikisource.org/wiki/חוק_חדלות_פירעון_ושיקום_כלכלי",
       "raw_snippet": "אלא אם כן הוגשה שלא במועד או שלא כללה את כל הפרטים והמסמכים כנדרש לפי סעיף 210(ו)",
       "fetched_at": "2026-09-01T22:38:41+00:00",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "moser-s4b-business-upper-hand",
+      "claim": "Sec. 4(b): against a private business (3(z)) or budgeted body, sec. 4(a) interest and dmei pigurim apply only where the purchaser had the upper hand in shaping the contract terms (סעיף 4)",
+      "source_url": "https://he.wikisource.org/wiki/חוק_מוסר_תשלומים_לספקים",
+      "raw_snippet": "רק בהתקשרות שבה היתה לאותו גוף או עסק, לפי העניין, עדיפות בעיצוב תנאי החוזה",
+      "fetched_at": "2026-10-29T16:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/legal-escalation.md",
+        "references/reminder-templates.md"
+      ]
+    },
+    {
+      "claim_id": "moser-s4c-other-remedies",
+      "claim": "Sec. 4(c): sec. 4 does not detract from any other remedy the supplier has for late payment",
+      "source_url": "https://he.wikisource.org/wiki/חוק_מוסר_תשלומים_לספקים",
+      "raw_snippet": "אין בהוראות סעיף זה כדי לגרוע מזכותו של ספק לכל סעד אחר שהוא זכאי לו לפי דין בשל אי תשלום התמורה במועד",
+      "fetched_at": "2026-10-29T16:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/legal-escalation.md"
+      ]
+    },
+    {
+      "claim_id": "moser-s3z-agreed-term-test",
+      "claim": "Sec. 3(z): a different payment date against a private business must be set expressly and only if required by the special nature of the engagement or not exceptionally unfair; no numeric cap",
+      "source_url": "https://he.wikisource.org/wiki/חוק_מוסר_תשלומים_לספקים",
+      "raw_snippet": "אלא אם כן הדבר נדרש בשל אופייה המיוחד של ההתקשרות או שהוא אינו מועד בלתי הוגן באופן חריג",
+      "fetched_at": "2026-10-29T16:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/legal-escalation.md"
+      ]
+    },
+    {
+      "claim_id": "moser-s7-no-contracting-out",
+      "claim": "Sec. 7: the law cannot be contracted out of except in the supplier's favour",
+      "source_url": "https://he.wikisource.org/wiki/חוק_מוסר_תשלומים_לספקים",
+      "raw_snippet": "אין להתנות על הוראות חוק זה אלא לטובת הספק",
+      "fetched_at": "2026-10-29T16:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/legal-escalation.md"
+      ]
+    },
+    {
+      "claim_id": "moser-s3f-local-authority-construction-80",
+      "claim": "Sec. 3(f)(1): a local authority pays construction work within 80 days from the end of the month of submission",
+      "source_url": "https://he.wikisource.org/wiki/חוק_מוסר_תשלומים_לספקים",
+      "raw_snippet": "לא יאוחר מ־80 ימים מתום החודש שבו הומצא לו החשבון",
+      "fetched_at": "2026-10-29T16:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/legal-escalation.md"
+      ]
+    },
+    {
+      "claim_id": "moser-s3h-returned-invoice",
+      "claim": "Sec. 3(h): a returned deficient invoice is treated as not submitted; 23 business days review window",
+      "source_url": "https://he.wikisource.org/wiki/חוק_מוסר_תשלומים_לספקים",
+      "raw_snippet": "ויראו זאת כאילו החשבון לא הומצא למזמין",
+      "fetched_at": "2026-10-29T16:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/legal-escalation.md"
+      ]
+    },
+    {
+      "claim_id": "moser-s3h-23-business-days",
+      "claim": "Sec. 3(h): the review window for the 3(z) private-business case is 23 business days from submission",
+      "source_url": "https://he.wikisource.org/wiki/חוק_מוסר_תשלומים_לספקים",
+      "raw_snippet": "23 ימי עסקים ממועד המצאת החשבון",
+      "fetched_at": "2026-10-29T16:00:00Z",
+      "appears_in": [
+        "references/legal-escalation.md"
+      ]
+    },
+    {
+      "claim_id": "moser-s3i-submission-methods",
+      "claim": "Sec. 3(i): valid submission includes an electronic message with an electronic delivery confirmation (and registered mail with delivery confirmation, fax, purchaser system)",
+      "source_url": "https://he.wikisource.org/wiki/חוק_מוסר_תשלומים_לספקים",
+      "raw_snippet": "עם אישור מסירה שניתן באמצעי אלקטרוני",
+      "fetched_at": "2026-10-29T16:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/legal-escalation.md"
+      ]
+    },
+    {
+      "claim_id": "interest-s2b-default-from-filing",
+      "claim": "Interest Law sec. 2(b): court-awarded interest runs by default from the day the claim was filed; the court may set an earlier date not before the cause of action",
+      "source_url": "https://he.wikisource.org/wiki/חוק_פסיקת_ריבית_והצמדה",
+      "raw_snippet": "מיום הגשת התביעה ועד מועד הפירעון",
+      "fetched_at": "2026-10-29T16:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/legal-escalation.md"
+      ]
+    },
+    {
+      "claim_id": "interest-s2d-unnamed-is-shekel",
+      "claim": "Interest Law sec. 2(d): an award of interest not naming a type is deemed ribit shkalit only",
+      "source_url": "https://he.wikisource.org/wiki/חוק_פסיקת_ריבית_והצמדה",
+      "raw_snippet": "יראו כאילו פסקה ריבית שקלית בלבד",
+      "fetched_at": "2026-10-29T16:00:00Z",
+      "appears_in": [
+        "references/legal-escalation.md"
+      ]
+    },
+    {
+      "claim_id": "interest-s4a-annual-capitalisation",
+      "claim": "Interest Law sec. 4a(b)(1): accrued daily interest is added to the updated principal once every 12 months",
+      "source_url": "https://he.wikisource.org/wiki/חוק_פסיקת_ריבית_והצמדה",
+      "raw_snippet": "אחת ל־12 חודשים",
+      "fetched_at": "2026-10-29T16:00:00Z",
+      "appears_in": [
+        "references/legal-escalation.md"
+      ]
+    },
+    {
+      "claim_id": "interest-s5a-quarterly-from-3-months",
+      "claim": "Interest Law sec. 5a(a): dmei pigurim added every three months starting three months after the due date",
+      "source_url": "https://he.wikisource.org/wiki/חוק_פסיקת_ריבית_והצמדה",
+      "raw_snippet": "דמי פיגורים יתווספו מדי שלושה חודשים החל מתום שלושה חודשים ממועד הפירעון",
+      "fetched_at": "2026-10-29T16:00:00Z",
+      "appears_in": [
+        "references/legal-escalation.md"
+      ]
+    },
+    {
+      "claim_id": "interest-s6a-contract-interest",
+      "claim": "Interest Law sec. 6(a): no interest under the law where the agreement sets late-payment interest",
+      "source_url": "https://he.wikisource.org/wiki/חוק_פסיקת_ריבית_והצמדה",
+      "raw_snippet": "אין לפסוק ריבית לפי חוק זה אם נקבעה בהסכם בין בעלי הדין",
+      "fetched_at": "2026-10-29T16:00:00Z",
+      "appears_in": [
+        "references/legal-escalation.md"
+      ]
+    },
+    {
+      "claim_id": "interest-s6c-contract-late-charges",
+      "claim": "Interest Law sec. 6(c): no dmei pigurim under the law where the agreement sets late-payment charges",
+      "source_url": "https://he.wikisource.org/wiki/חוק_פסיקת_ריבית_והצמדה",
+      "raw_snippet": "לא יתווספו דמי פיגורים לפי חוק זה אם נקבעה בהסכם בין בעלי הדין",
+      "fetched_at": "2026-10-29T16:00:00Z",
+      "appears_in": [
+        "references/legal-escalation.md"
+      ]
+    },
+    {
+      "claim_id": "courts-s60a-individual-and-assignment",
+      "claim": "Courts Law sec. 60(a): small claims court hears a claim filed by an individual, excluding assigned claims; 2026 ceiling 39,900",
+      "source_url": "https://he.wikisource.org/wiki/חוק_בתי_המשפט",
+      "raw_snippet": "ובלבד שהתביעות אינן לפי זכות שהומחתה או שהוסבה",
+      "fetched_at": "2026-10-29T16:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/legal-escalation.md"
+      ]
+    },
+    {
+      "claim_id": "courts-s63a-representation-leave",
+      "claim": "Courts Law sec. 63(a): lawyer representation in small claims only with court leave and for special reasons",
+      "source_url": "https://he.wikisource.org/wiki/חוק_בתי_המשפט",
+      "raw_snippet": "רק ברשות בית המשפט ומטעמים מיוחדים שיירשמו",
+      "fetched_at": "2026-10-29T16:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/legal-escalation.md"
+      ]
+    },
+    {
+      "claim_id": "courts-s64-appeal-by-leave",
+      "claim": "Courts Law sec. 64: appeal to the District Court only with leave of a District Court judge",
+      "source_url": "https://he.wikisource.org/wiki/חוק_בתי_המשפט",
+      "raw_snippet": "אם ניתנה רשות לכך מאת שופט של בית המשפט המחוזי",
+      "fetched_at": "2026-10-29T16:00:00Z",
+      "appears_in": [
+        "references/legal-escalation.md"
+      ]
+    },
+    {
+      "claim_id": "sc-reg6a-fee-1pct-min50-round5",
+      "claim": "Small Claims regs reg. 6(a): fee 1% of claim value, not less than 50 NIS, rounded up to a multiple of 5 (תקנה 6)",
+      "source_url": "https://he.wikisource.org/wiki/תקנות_שיפוט_בתביעות_קטנות_(סדרי_דין)",
+      "raw_snippet": "יעוגל כלפי מעלה לסכום שהוא מכפלה של 5 שקלים",
+      "fetched_at": "2026-10-29T16:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/legal-escalation.md"
+      ]
+    },
+    {
+      "claim_id": "sc-reg6a-fee-1pct",
+      "claim": "Small Claims regs reg. 6(a)(1): fee of 1% of the claim value",
+      "source_url": "https://he.wikisource.org/wiki/תקנות_שיפוט_בתביעות_קטנות_(סדרי_דין)",
+      "raw_snippet": "אגרה של 1% משווי התביעה",
+      "fetched_at": "2026-10-29T16:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/legal-escalation.md"
+      ]
+    },
+    {
+      "claim_id": "sc-reg2-venue",
+      "claim": "Small Claims regs reg. 2(a): venue list applies notwithstanding any agreement; (2)-(4) deleted (תקנה 2)",
+      "source_url": "https://he.wikisource.org/wiki/תקנות_שיפוט_בתביעות_קטנות_(סדרי_דין)",
+      "raw_snippet": "על אף האמור בכל הסכם שבין בעלי הדין",
+      "fetched_at": "2026-10-29T16:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/legal-escalation.md"
+      ]
+    },
+    {
+      "claim_id": "sc-reg4b-defence-30-days",
+      "claim": "Small Claims regs reg. 4(b): defendant summoned to file a defence within 30 days of service",
+      "source_url": "https://he.wikisource.org/wiki/תקנות_שיפוט_בתביעות_קטנות_(סדרי_דין)",
+      "raw_snippet": "להגיש כתב הגנה תוך 30 יום מיום המצאת ההזמנה",
+      "fetched_at": "2026-10-29T16:00:00Z",
+      "appears_in": [
+        "references/legal-escalation.md"
+      ]
+    },
+    {
+      "claim_id": "sc-reg10-default-judgment",
+      "claim": "Small Claims regs reg. 10: no defence in time, judgment on the claim alone",
+      "source_url": "https://he.wikisource.org/wiki/תקנות_שיפוט_בתביעות_קטנות_(סדרי_דין)",
+      "raw_snippet": "יתן בית המשפט פסק דין על יסוד כתב התביעה בלבד",
+      "fetched_at": "2026-10-29T16:00:00Z",
+      "appears_in": [
+        "references/legal-escalation.md"
+      ]
+    },
+    {
+      "claim_id": "sc-reg16a-leave-to-appeal-30-days",
+      "claim": "Small Claims regs reg. 16(a): request for leave to appeal within 30 days for proceedings opened from 11.4.2025 (15 days earlier)",
+      "source_url": "https://he.wikisource.org/wiki/תקנות_שיפוט_בתביעות_קטנות_(סדרי_דין)",
+      "raw_snippet": "הוא 30 ימים מיום מתן פסק הדין או ההחלטה",
+      "fetched_at": "2026-10-29T16:00:00Z",
+      "appears_in": [
+        "references/legal-escalation.md"
+      ]
+    },
+    {
+      "claim_id": "exec-81a1-fixed-sum-qualifies",
+      "claim": "Execution Law sec. 81a1(a): fixed-sum claim from an express contract or undertaking with written evidence",
+      "source_url": "https://he.wikisource.org/wiki/חוק_ההוצאה_לפועל",
+      "raw_snippet": "תביעה על סכום כסף קצוב הבאה מכוח חוזה או התחייבות מפורשים, שיש עליה ראיה בכתב",
+      "fetched_at": "2026-10-29T16:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/legal-escalation.md",
+        "references/reminder-templates.md"
+      ]
+    },
+    {
+      "claim_id": "exec-81a1-75000-cap",
+      "claim": "Execution Law sec. 81a1(a): the fixed-sum route is capped at 75,000 NIS on the day of filing",
+      "source_url": "https://he.wikisource.org/wiki/חוק_ההוצאה_לפועל",
+      "raw_snippet": "ובלבד שסכום התביעה אינו עולה על 75,000 שקלים חדשים ביום הגשתה",
+      "fetched_at": "2026-10-29T16:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/legal-escalation.md",
+        "references/reminder-templates.md"
+      ]
+    },
+    {
+      "claim_id": "exec-81a1-b1-registered-warning",
+      "claim": "Sec. 81a1(b1): the creditor serves a warning of intention by registered mail with delivery confirmation",
+      "source_url": "https://he.wikisource.org/wiki/חוק_ההוצאה_לפועל",
+      "raw_snippet": "בדואר רשום עם אישור מסירה, התראה בדבר כוונתו",
+      "fetched_at": "2026-10-29T16:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/legal-escalation.md",
+        "references/reminder-templates.md"
+      ]
+    },
+    {
+      "claim_id": "exec-81a1-b2-refusal-deemed-served",
+      "claim": "Sec. 81a1(b2): a debtor who refuses the warning or to sign is deemed served",
+      "source_url": "https://he.wikisource.org/wiki/חוק_ההוצאה_לפועל",
+      "raw_snippet": "יראו את הנתבע כמי שהומצאה לו ההתראה כדין",
+      "fetched_at": "2026-10-29T16:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/legal-escalation.md"
+      ]
+    },
+    {
+      "claim_id": "exec-81a1-c-thirty-days",
+      "claim": "Sec. 81a1(c)(1): file only after 30 days from service of the warning",
+      "source_url": "https://he.wikisource.org/wiki/חוק_ההוצאה_לפועל",
+      "raw_snippet": "לא תוגש בקשה לביצוע תביעה על סכום קצוב ללשכת ההוצאה לפועל אלא בתום שלושים ימים",
+      "fetched_at": "2026-10-29T16:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/legal-escalation.md",
+        "references/reminder-templates.md"
+      ]
+    },
+    {
+      "claim_id": "exec-81a1-c2-new-warning-after-year",
+      "claim": "Sec. 81a1(c)(2): after a year, a new warning is required",
+      "source_url": "https://he.wikisource.org/wiki/חוק_ההוצאה_לפועל",
+      "raw_snippet": "ימציא לנתבע התראה חדשה",
+      "fetched_at": "2026-10-29T16:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/legal-escalation.md"
+      ]
+    },
+    {
+      "claim_id": "exec-81a1-d-objection-30-days",
+      "claim": "Sec. 81a1(d): debtor may object within 30 days of service of the azhara; objection goes to court",
+      "source_url": "https://he.wikisource.org/wiki/חוק_ההוצאה_לפועל",
+      "raw_snippet": "בתוך שלושים ימים מיום המצאת האזהרה",
+      "fetched_at": "2026-10-29T16:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/legal-escalation.md"
+      ]
+    },
+    {
+      "claim_id": "exec-81a-c1-notes-objection-30",
+      "claim": "Sec. 81a(c1): objection period in a notes file is 30 days from service of the azhara",
+      "source_url": "https://he.wikisource.org/wiki/חוק_ההוצאה_לפועל",
+      "raw_snippet": "המועד להגשת התנגדות לביצוע הבקשה יהיה שלושים ימים מיום המצאת האזהרה",
+      "fetched_at": "2026-10-29T16:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/legal-escalation.md"
+      ]
+    },
+    {
+      "claim_id": "exec-81a-g-cash-law-cheque",
+      "claim": "Sec. 81a(g): a cheque barred from payment under sec. 5 of the Cash Reduction Law cannot be filed as a note without the fixed-sum warning rules",
+      "source_url": "https://he.wikisource.org/wiki/חוק_ההוצאה_לפועל",
+      "raw_snippet": "לא תוגש בקשה לביצוע שטר שהוא שיק שאסור לפרעו",
+      "fetched_at": "2026-10-29T16:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/legal-escalation.md"
+      ]
+    },
+    {
+      "claim_id": "cash-law-sched2-payee-name",
+      "claim": "Cash Reduction Law second schedule item (1): a cheque without the payee name may not be paid",
+      "source_url": "https://he.wikisource.org/wiki/חוק_לצמצום_השימוש_במזומן",
+      "raw_snippet": "שם הנפרע אינו נקוב בשיק",
+      "fetched_at": "2026-10-29T16:00:00Z",
+      "appears_in": [
+        "references/legal-escalation.md"
+      ]
+    },
+    {
+      "claim_id": "exec-6b2-late-filing-shekel-only",
+      "claim": "Sec. 6(b2): a judgment or note filed more than a year after it could have been carries only ribit shkalit for the gap",
+      "source_url": "https://he.wikisource.org/wiki/חוק_ההוצאה_לפועל",
+      "raw_snippet": "בחלוף שנה מהמועד שבו היה אפשר להגישה לביצוע בלשכת ההוצאה לפועל",
+      "fetched_at": "2026-10-29T16:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/legal-escalation.md"
+      ]
+    },
+    {
+      "claim_id": "exec-7a-azhara-20-days",
+      "claim": "Sec. 7(a): azhara period of 20 days from service",
+      "source_url": "https://he.wikisource.org/wiki/חוק_ההוצאה_לפועל",
+      "raw_snippet": "והכל בתוך תקופה של 20 ימים מיום המצאת האזהרה",
+      "fetched_at": "2026-10-29T16:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/legal-escalation.md"
+      ]
+    },
+    {
+      "claim_id": "exec-7e-earlier-action",
+      "claim": "Sec. 7(e): no execution before azhara service and its period, unless the registrar finds circumstances justify earlier action",
+      "source_url": "https://he.wikisource.org/wiki/חוק_ההוצאה_לפועל",
+      "raw_snippet": "זולת אם ראה רשם ההוצאה לפועל שנסיבות הענין מצדיקות נקיטת הליך לפני כן",
+      "fetched_at": "2026-10-29T16:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/legal-escalation.md"
+      ]
+    },
+    {
+      "claim_id": "exec-7c-restrictions-need-full-service",
+      "claim": "Sec. 7(c): restrictions only if the debtor appeared or the azhara was served by full service",
+      "source_url": "https://he.wikisource.org/wiki/חוק_ההוצאה_לפועל",
+      "raw_snippet": "אלא אם כן התייצב החייב בפני רשם ההוצאה לפועל",
+      "fetched_at": "2026-10-29T16:00:00Z",
+      "appears_in": [
+        "references/legal-escalation.md"
+      ]
+    },
+    {
+      "claim_id": "exec-44-third-party-three-months",
+      "claim": "Sec. 44: third-party attachment covers assets held on service or arriving within three months; report within 10 days",
+      "source_url": "https://he.wikisource.org/wiki/חוק_ההוצאה_לפועל",
+      "raw_snippet": "שיגיעו לידו תוך שלושה חדשים מאותו יום",
+      "fetched_at": "2026-10-29T16:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/legal-escalation.md"
+      ]
+    },
+    {
+      "claim_id": "exec-44-report-10-days",
+      "claim": "Sec. 44(b): the third party reports within ten days of service",
+      "source_url": "https://he.wikisource.org/wiki/חוק_ההוצאה_לפועל",
+      "raw_snippet": "תוך עשרה ימים מהמצאת הצו",
+      "fetched_at": "2026-10-29T16:00:00Z",
+      "appears_in": [
+        "references/legal-escalation.md"
+      ]
+    },
+    {
+      "claim_id": "exec-66b-a3-evader-route",
+      "claim": "Sec. 66b(a)(3): an evading debtor, six months from full service of the azhara and debts above 2,500 NIS (or a year and above 500)",
+      "source_url": "https://he.wikisource.org/wiki/חוק_ההוצאה_לפועל",
+      "raw_snippet": "חלפו שישה חודשים ממועד המצאת האזהרה לחייב בהמצאה מלאה, והחוב הפסוק או החובות הפסוקים במצטבר עולים על 2,500 שקלים חדשים",
+      "fetched_at": "2026-10-29T16:00:00Z",
+      "appears_in": [
+        "references/legal-escalation.md"
+      ]
+    },
+    {
+      "claim_id": "exec-9-fees-on-debtor",
+      "claim": "Sec. 9: fees are paid up front by the creditor, charged to the debtor as part of the debt, and bear ribit shkalit",
+      "source_url": "https://he.wikisource.org/wiki/חוק_ההוצאה_לפועל",
+      "raw_snippet": "האגרות וההוצאות לנקיטת ההליכים יחולו על החייב, ודינן לענין ההוצאה לפועל כדין החוב הפסוק",
+      "fetched_at": "2026-10-29T16:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/legal-escalation.md"
+      ]
+    },
+    {
+      "claim_id": "exec-9a-creditor-pays-first",
+      "claim": "Sec. 9(a): fees are paid by the creditor before the step is taken",
+      "source_url": "https://he.wikisource.org/wiki/חוק_ההוצאה_לפועל",
+      "raw_snippet": "ישולמו על ידי הזוכה לפני נקיטתו",
+      "fetched_at": "2026-10-29T16:00:00Z",
+      "appears_in": [
+        "references/legal-escalation.md"
+      ]
+    },
+    {
+      "claim_id": "exec-74b-consolidation",
+      "claim": "Sec. 74b: a debtor may apply to consolidate all files",
+      "source_url": "https://he.wikisource.org/wiki/חוק_ההוצאה_לפועל",
+      "raw_snippet": "חייב רשאי לבקש איחודם של כל התיקים התלויים ועומדים נגדו",
+      "fetched_at": "2026-10-29T16:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/legal-escalation.md"
+      ]
+    },
+    {
+      "claim_id": "exec-74c-proceedings-continue",
+      "claim": "Sec. 74c(a): proceedings continue until a consolidation order is made",
+      "source_url": "https://he.wikisource.org/wiki/חוק_ההוצאה_לפועל",
+      "raw_snippet": "לא ייפסקו ולא יושהו בשל כך ההליכים נגד החייב כל עוד לא ניתן צו לאיחוד תיקים",
+      "fetched_at": "2026-10-29T16:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/legal-escalation.md"
+      ]
+    },
+    {
+      "claim_id": "exec-fees-judgment-fixed-sum-1pct",
+      "claim": "Execution fee regs schedule (a)(1): judgment or fixed-sum file fee 1% of value at filing with an indexed minimum",
+      "source_url": "https://he.wikisource.org/wiki/תקנות_ההוצאה_לפועל_(אגרות,_שכר_והוצאות)",
+      "raw_snippet": "בקשה לביצוע תביעה על סכום קצוב ובקשה לביצוע של פסק־דין",
+      "fetched_at": "2026-10-29T16:00:00Z",
+      "appears_in": [
+        "references/legal-escalation.md"
+      ]
+    },
+    {
+      "claim_id": "exec-fees-notes-1-25pct",
+      "claim": "Execution fee regs schedule (a)(6): notes file fee 1.25% of value at filing with an indexed minimum",
+      "source_url": "https://he.wikisource.org/wiki/תקנות_ההוצאה_לפועל_(אגרות,_שכר_והוצאות)",
+      "raw_snippet": "1.25% מהשווי בעת הגשת הבקשה",
+      "fetched_at": "2026-10-29T16:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/legal-escalation.md"
+      ]
+    },
+    {
+      "claim_id": "exec-fees-protocol",
+      "claim": "Execution fee regs reg. 2a: a protocol fee is paid with these requests",
+      "source_url": "https://he.wikisource.org/wiki/תקנות_ההוצאה_לפועל_(אגרות,_שכר_והוצאות)",
+      "raw_snippet": "בתוספת, תשולם אגרת פרוטוקול לפי פרט (ה) שבתוספת.",
+      "fetched_at": "2026-10-29T16:00:00Z",
+      "appears_in": [
+        "references/legal-escalation.md"
+      ]
+    },
+    {
+      "claim_id": "court-fees-reg4-credit",
+      "claim": "Court Fees regs reg. 4: where a note or fixed-sum file goes to court on an accepted objection, the Enforcement Office fee paid is deducted (תקנה 4 לתקנות בתי המשפט (אגרות))",
+      "source_url": "https://he.wikisource.org/wiki/תקנות_בתי_המשפט_(אגרות)",
+      "raw_snippet": "בניכוי הסכום ששולם בלשכת ההוצאה לפועל עם הגשת הבקשה",
+      "fetched_at": "2026-10-29T16:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/legal-escalation.md"
+      ]
+    },
+    {
+      "claim_id": "insolvency-319g-temporary-stay",
+      "claim": "Insolvency Law sec. 319ג / 319יז (2026 amendment): a company or individual without an opening order may seek a temporary stay of proceedings for a debt arrangement",
+      "source_url": "https://he.wikisource.org/wiki/חוק_חדלות_פירעון_ושיקום_כלכלי",
+      "raw_snippet": "רשאי להגיש לבית המשפט בקשה לצו עיכוב הליכים זמני",
+      "fetched_at": "2026-10-29T16:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "insolvency-319-stay-freezes",
+      "claim": "Under the temporary stay, proceedings against the debtor are frozen",
+      "source_url": "https://he.wikisource.org/wiki/חוק_חדלות_פירעון_ושיקום_כלכלי",
+      "raw_snippet": "יוקפאו ההליכים נגד",
+      "fetched_at": "2026-10-29T16:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "limitation-s15a-war-freeze",
+      "claim": "Limitation Law sec. 15a: for a non-land claim not yet lapsed on 25.1.2024, the period 7.10.2023 to 6.4.2024 is not counted",
+      "source_url": "https://he.wikisource.org/wiki/חוק_ההתיישנות",
+      "raw_snippet": "בחישוב תקופת ההתיישנות של תביעה בשאינו מקרקעין",
+      "fetched_at": "2026-10-29T16:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "limitation-s15a-dates",
+      "claim": "Sec. 15a excludes 7.10.2023 to 6.4.2024 from the count",
+      "source_url": "https://he.wikisource.org/wiki/חוק_ההתיישנות",
+      "raw_snippet": "(7 באוקטובר 2023) עד יום כ״ז באדר ב׳ התשפ״ד (6 באפריל 2024)",
+      "fetched_at": "2026-10-29T16:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "interest-amendment9-commencement-2025-01-01",
+      "claim": "Interest Law Amendment 9 commencement postponed to 1 January 2025 by order (KT 11484, 26.9.2024)",
+      "source_url": "https://olaw.org.il/takanot/takanot-11484.pdf",
+      "raw_snippet": "יום תחילת החוק המתקן יידחה בשלושה חודשים",
+      "fetched_at": "2026-10-29T16:00:00Z",
+      "appears_in": [
+        "references/legal-escalation.md"
+      ],
+      "verified_via": "pdf",
+      "verified_at": "2026-10-29"
+    },
+    {
+      "claim_id": "exec-regs-109d1-signed-by-debtor",
+      "claim": "Execution Regs reg. 109ד1(a): the supporting document for a fixed-sum claim must be a contract, agreement or written evidence signed by the defendant by hand or by approved electronic signature (תקנה 109ד1)",
+      "source_url": "https://he.wikisource.org/wiki/תקנות_ההוצאה_לפועל",
+      "raw_snippet": "חוזה, הסכם או כל ראיה בכתב חתומה בידי הנתבע, בחתימת ידו או בחתימה אלקטרונית מאושרת",
+      "fetched_at": "2026-10-29T19:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/legal-escalation.md",
+        "references/reminder-templates.md"
+      ]
+    },
+    {
+      "claim_id": "exec-regs-109d1-may-refuse",
+      "claim": "Reg. 109ד1(d): the office manager may refuse a request without the required documents",
+      "source_url": "https://he.wikisource.org/wiki/תקנות_ההוצאה_לפועל",
+      "raw_snippet": "רשאי שלא לקבל בקשה לביצוע תביעה שלא צורפו לה המסמכים",
+      "fetched_at": "2026-10-29T19:00:00Z",
+      "appears_in": [
+        "references/legal-escalation.md"
+      ]
+    },
+    {
+      "claim_id": "exec-regs-109a-form-19a",
+      "claim": "Reg. 109א(a): the sec. 81a1 warning must prominently include the Form 19א wording and set out the amount, main facts incl. contract details, the date it arose, and supporting documents (תקנה 109א, טופס 19א)",
+      "source_url": "https://he.wikisource.org/wiki/תקנות_ההוצאה_לפועל",
+      "raw_snippet": "תכלול באופן בולט לעין את האמור בנוסח ההתראה",
+      "fetched_at": "2026-10-29T19:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/legal-escalation.md",
+        "references/reminder-templates.md"
+      ]
+    },
+    {
+      "claim_id": "exec-regs-109a-particulars",
+      "claim": "Reg. 109א(a) particulars of the warning",
+      "source_url": "https://he.wikisource.org/wiki/תקנות_ההוצאה_לפועל",
+      "raw_snippet": "ותפרט את סכום התביעה, את העובדות העיקריות המהוות את עילת התביעה, לרבות פרטי החוזה, ההתחייבות או החיקוק שמכוחם נוצרה, ואת מועד התהוותה",
+      "fetched_at": "2026-10-29T19:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/legal-escalation.md"
+      ]
+    },
+    {
+      "claim_id": "exec-regs-109ya-debtor-details",
+      "claim": "Reg. 109יא(a): no fixed-sum proceedings, including service of the azhara, without confirmation of the debtor details",
+      "source_url": "https://he.wikisource.org/wiki/תקנות_ההוצאה_לפועל",
+      "raw_snippet": "לא יינקטו הליכים לביצוע תביעה על סכום קצוב, לרבות המצאת אזהרה, אלא באחד מאלה",
+      "fetched_at": "2026-10-29T19:00:00Z",
+      "appears_in": [
+        "references/legal-escalation.md"
+      ]
+    },
+    {
+      "claim_id": "exec-81a1-e2-no-early-action",
+      "claim": "Sec. 81a1(e)(2): notwithstanding sec. 7(e), no execution of a fixed-sum claim before service of the azhara and the end of its period",
+      "source_url": "https://he.wikisource.org/wiki/חוק_ההוצאה_לפועל",
+      "raw_snippet": "לא יוחל בביצוע תביעה על סכום קצוב אלא לאחר המצאת האזהרה ולאחר שחלפה התקופה שנקבעה בה",
+      "fetched_at": "2026-10-29T19:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/legal-escalation.md"
+      ]
+    },
+    {
+      "claim_id": "exec-81a1-b1-lawyer-personal-service",
+      "claim": "Sec. 81a1(b1): if registered-mail service fails and the creditor has a lawyer, the lawyer may serve personally",
+      "source_url": "https://he.wikisource.org/wiki/חוק_ההוצאה_לפועל",
+      "raw_snippet": "יוכל עורך הדין להמציא את ההתראה באמצעות מסירה אישית",
+      "fetched_at": "2026-10-29T19:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/legal-escalation.md"
+      ]
+    },
+    {
+      "claim_id": "exec-81a2-no-lawyer-fees",
+      "claim": "Sec. 81a2: a note or fixed-sum claim that could have been executed and is filed in court earns no lawyer-fee award unless a temporary remedy or special circumstances",
+      "source_url": "https://he.wikisource.org/wiki/חוק_ההוצאה_לפועל",
+      "raw_snippet": "לא יהיה התובע זכאי לכך שייפסק לזכותו שכר טרחת עורך דין בבית המשפט בשל תביעתו",
+      "fetched_at": "2026-10-29T19:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/legal-escalation.md"
+      ]
+    },
+    {
+      "claim_id": "exec-6d2-population-registry",
+      "claim": "Sec. 6(d)(2): a request against a debtor registered in the Population Registry is not accepted if the details do not match",
+      "source_url": "https://he.wikisource.org/wiki/חוק_ההוצאה_לפועל",
+      "raw_snippet": "לא תתקבל בקשה נגד חייב שפרטיו רשומים במרשם האוכלוסין",
+      "fetched_at": "2026-10-29T19:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/legal-escalation.md"
+      ]
+    },
+    {
+      "claim_id": "exec-69d-limited-means",
+      "claim": "Sec. 69d: a debtor declared of limited means gets an interim payments order and may be subjected to restrictions (exit, restricted customer, payment card; no corporation)",
+      "source_url": "https://he.wikisource.org/wiki/חוק_ההוצאה_לפועל",
+      "raw_snippet": "הכריז רשם ההוצאה לפועל על חייב מוגבל באמצעים, יתן צו תשלומים לפי בקשתו",
+      "fetched_at": "2026-10-29T19:00:00Z",
+      "appears_in": [
+        "references/legal-escalation.md"
+      ]
+    },
+    {
+      "claim_id": "contracts-s41-no-agreed-date",
+      "claim": "Contracts (General Part) Law sec. 41: an obligation with no agreed date is performed a reasonable time after contracting, on a date the creditor notified a reasonable time in advance",
+      "source_url": "https://he.wikisource.org/wiki/חוק_החוזים_(חלק_כללי)",
+      "raw_snippet": "חיוב שלא הוסכם על מועד קיומו, יש לקיים זמן סביר לאחר כריתת החוזה, במועד שעליו הודיע הנושה לחייב זמן סביר מראש",
+      "fetched_at": "2026-10-29T19:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "moser-def-business-vat",
+      "claim": "Suppliers Law sec. 2: \"business\" means a financial institution, osek murshe or osek patur as defined in the VAT Law (with exceptions)",
+      "source_url": "https://he.wikisource.org/wiki/חוק_מוסר_תשלומים_לספקים",
+      "raw_snippet": "מוסד כספי, עוסק מורשה או עוסק פטור כהגדרתם",
+      "fetched_at": "2026-10-29T19:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/legal-escalation.md"
+      ]
+    },
+    {
+      "claim_id": "moser-s3e1-budgeted-body",
+      "claim": "Sec. 3(e)(1): a budgeted or statutory body pays within 45 days from the end of the month of submission unless a different date is set with the director-general's approval",
+      "source_url": "https://he.wikisource.org/wiki/חוק_מוסר_תשלומים_לספקים",
+      "raw_snippet": "מזמין שהוא מוסד להשכלה גבוהה מתוקצב, גוף מתוקצב או גוף אחר שהוקם לפי דין",
+      "fetched_at": "2026-10-29T19:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/legal-escalation.md"
+      ]
+    },
+    {
+      "claim_id": "moser-s3f2-external-funding",
+      "claim": "Sec. 3(f)(2): a local authority may defer the externally funded share to 10 business days after the funding arrives, given written notice at contracting, and no later than 150 days from submission",
+      "source_url": "https://he.wikisource.org/wiki/חוק_מוסר_תשלומים_לספקים",
+      "raw_snippet": "שהתשלום הנדחה ישולם לא יאוחר מ־150 ימים מהיום שבו הומצא החשבון לרשות המקומית",
+      "fetched_at": "2026-10-29T19:00:00Z",
+      "appears_in": [
+        "references/legal-escalation.md"
+      ]
+    },
+    {
+      "claim_id": "moser-s3f2-ten-business-days",
+      "claim": "Sec. 3(f)(2): deferral until the end of 10 business days from receipt of the external funding",
+      "source_url": "https://he.wikisource.org/wiki/חוק_מוסר_תשלומים_לספקים",
+      "raw_snippet": "עד תום 10 ימי עסקים מיום קבלת המימון החיצוני",
+      "fetched_at": "2026-10-29T19:00:00Z",
+      "appears_in": [
+        "references/legal-escalation.md"
+      ]
+    },
+    {
+      "claim_id": "moser-s12c-health-institutions",
+      "claim": "Sec. 12(c): the law does not apply to transactions between health institutions and suppliers for National Health Insurance services",
+      "source_url": "https://he.wikisource.org/wiki/חוק_מוסר_תשלומים_לספקים",
+      "raw_snippet": "חוק זה לא יחול על עסקאות בין מוסדות בריאות לספקים",
+      "fetched_at": "2026-10-29T19:00:00Z",
+      "appears_in": [
+        "references/legal-escalation.md"
+      ]
+    },
+    {
+      "claim_id": "moser-s3h2-late-return",
+      "claim": "Sec. 3(h)(2): a return after the review period means payment within 10 business days from the original due date, excluding the time until a corrected invoice",
+      "source_url": "https://he.wikisource.org/wiki/חוק_מוסר_תשלומים_לספקים",
+      "raw_snippet": "ישלם המזמין את התמורה הקבועה בחשבון לא יאוחר מ־10 ימי עסקים מתום המועד האחרון לתשלום החשבון",
+      "fetched_at": "2026-10-29T19:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/legal-escalation.md"
+      ]
+    },
+    {
+      "claim_id": "moser-s3h-construction-60",
+      "claim": "Sec. 3(h)(2)(b): the review period for construction transactions is 60 days",
+      "source_url": "https://he.wikisource.org/wiki/חוק_מוסר_תשלומים_לספקים",
+      "raw_snippet": "60 ימים ממועד המצאת החשבון",
+      "fetched_at": "2026-10-29T19:00:00Z",
+      "appears_in": [
+        "references/legal-escalation.md"
+      ]
+    },
+    {
+      "claim_id": "moser-s3h3-agreed-rules",
+      "claim": "Sec. 3(h)(3): a business or 3(e) body may agree different return rules subject to the fairness test",
+      "source_url": "https://he.wikisource.org/wiki/חוק_מוסר_תשלומים_לספקים",
+      "raw_snippet": "רשאים הצדדים לקבוע הוראות אחרות מההוראות שבפסקה האמורה",
+      "fetched_at": "2026-10-29T19:00:00Z",
+      "appears_in": [
+        "references/legal-escalation.md"
+      ]
+    },
+    {
+      "claim_id": "insolvency-s29-freeze",
+      "claim": "Insolvency Law sec. 29: freezing proceedings against a company means no collection proceedings for past debts can be opened or continued, and no legal proceeding without court approval",
+      "source_url": "https://he.wikisource.org/wiki/חוק_חדלות_פירעון_ושיקום_כלכלי",
+      "raw_snippet": "לא יהיה ניתן לפתוח בהליכי גבייה של חובות עבר נגד התאגיד או להמשיך בהליכי גבייה שטרם הושלמו",
+      "fetched_at": "2026-10-29T19:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "insolvency-s29-legal-proceedings",
+      "claim": "Sec. 29(5): no legal proceeding against the company without approval of the court that gave the order",
+      "source_url": "https://he.wikisource.org/wiki/חוק_חדלות_פירעון_ושיקום_כלכלי",
+      "raw_snippet": "לא יהיה ניתן לפתוח או להמשיך בכל הליך משפטי נגד התאגיד, אלא באישור בית המשפט",
+      "fetched_at": "2026-10-29T19:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "limitation-s9-acknowledgment",
+      "claim": "Limitation Law sec. 9: a written acknowledgment, or part performance, restarts the limitation period",
+      "source_url": "https://he.wikisource.org/wiki/חוק_ההתיישנות",
+      "raw_snippet": "תתחיל תקופת ההתיישנות מיום ההודאה; ומעשה שיש בו משום ביצוע מקצת הזכות, דינו כהודאה",
+      "fetched_at": "2026-10-29T19:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "vat-regs-24a-bad-debt",
+      "claim": "VAT Regulations reg. 24a: bad debt (chov avud); a dealer issuing a credit note for a bad debt files a written notice with supporting documents (תקנה 24א)",
+      "source_url": "https://he.wikisource.org/wiki/תקנות_מס_ערך_מוסף",
+      "raw_snippet": "עוסק המוציא הודעת זיכוי, בשל חוב אבוד, יגיש למנהל, בנוסף לה, הודעה בכתב שיצורפו לה מסמכים התומכים בעובדות המפורטות בהודעה",
+      "fetched_at": "2026-10-29T19:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "courts-s60b-transfer",
+      "claim": "Courts Law sec. 60(b): the court may transfer an unsuitable claim, or one by a claimant who already filed more than five claims that year in that court",
+      "source_url": "https://he.wikisource.org/wiki/חוק_בתי_המשפט",
+      "raw_snippet": "אם ראה שהתביעה הוגשה בידי תובע שכבר הגיש באותה שנה באותו בית משפט יותר מחמש תביעות",
+      "fetched_at": "2026-10-29T19:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/legal-escalation.md"
+      ]
+    },
+    {
+      "claim_id": "moser-s12d-recovery-authority",
+      "claim": "Sec. 12(d): sec. 3(f) does not apply to a local authority in recovery",
+      "source_url": "https://he.wikisource.org/wiki/חוק_מוסר_תשלומים_לספקים",
+      "raw_snippet": "לא יחולו על רשות מקומית בהבראה",
+      "fetched_at": "2026-10-29T19:30:00Z",
+      "appears_in": [
+        "references/legal-escalation.md"
+      ]
+    },
+    {
+      "claim_id": "moser-s10a-budgeted-bodies-state-terms",
+      "claim": "Sec. 10(a): sec. 3(a) and (b) apply to sec. 3(e) bodies a year after commencement unless otherwise determined",
+      "source_url": "https://he.wikisource.org/wiki/חוק_מוסר_תשלומים_לספקים",
+      "raw_snippet": "בתום שנה מיום התחילה, אלא אם כן נקבע אחרת",
+      "fetched_at": "2026-10-29T20:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/legal-escalation.md"
+      ]
+    },
+    {
+      "claim_id": "insolvency-s121a3-individual-freeze",
+      "claim": "Insolvency Law sec. 121(a)(3): on an opening order for an individual, proceedings are frozen and restrictions imposed in collection proceedings lapse",
+      "source_url": "https://he.wikisource.org/wiki/חוק_חדלות_פירעון_ושיקום_כלכלי",
+      "raw_snippet": "ואם הוטלו הגבלות על היחיד במסגרת הליכי גבייה – ההגבלות בטלות;",
+      "fetched_at": "2026-10-29T20:10:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "vat-regs-24a-c-window",
+      "claim": "VAT Regs reg. 24a(c): the bad-debt credit note is issued after six months and within three years from the tax invoice date (תקנה 24א)",
+      "source_url": "https://he.wikisource.org/wiki/תקנות_מס_ערך_מוסף",
+      "raw_snippet": "לאחר שחלפו שישה חודשים מהמועד שבו הוצאה חשבונית המס שבשלה נוצר החוב וכל עוד לא חלפו שלוש שנים מן המועד האמור",
+      "fetched_at": "2026-10-29T20:10:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "vat-regs-24a-d-excluded-periods",
+      "claim": "VAT Regs reg. 24a(d): time between filing a court claim to collect the debt and final judgment, and time in liquidation or bankruptcy proof-of-claim proceedings, is not counted (תקנה 24א)",
+      "source_url": "https://he.wikisource.org/wiki/תקנות_מס_ערך_מוסף",
+      "raw_snippet": "פרק הזמן שבין יום הגשת תביעה לבית המשפט לגביית החוב ובין יום היות פסק הדין לפסק דין חלוט",
+      "fetched_at": "2026-10-29T21:00:00Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md"

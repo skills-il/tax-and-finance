@@ -1,5 +1,34 @@
 # Changelog
 
+## 1.8.0 - 2026-10-29
+
+### Fixed
+
+- Statutory interest under the Payment Ethics to Suppliers Law was asserted on every business invoice. Sec. 4(b) limits it, against a private business or a budgeted body, to engagements where the client had the advantage in shaping the terms. Step 1, Step 3, Step 4, the Gotchas and the demand-letter template now condition it, and the letter falls back to the neutral formula. The claim that linkage attaches automatically is removed: sec. 4 attaches none.
+- "The law caps how far an agreed term can be pushed out" was wrong for a private business. There is no fixed cap; a later date must be express and pass the special-nature or not-exceptionally-unfair test (sec. 3(z)). An express longer term is now honoured rather than chased.
+- references/legal-escalation.md still contradicted the skill after 1.7.1: venue fixed to the debtor's city, an absolute 30-day enforcement wait, "simple interest" (the Interest Law capitalises annually, sec. 4a(b)), an appeal described as limited to points of law (it is by leave, sec. 64, within 30 days for proceedings opened from 11.4.2025), the local-authority clock keyed to issue rather than submission, and a sunset Shabbat start. All corrected. No repealed venue limb is presented as live.
+- The Gotchas still said an enforcement file cannot be opened until 30 days after judgment; the date set in the judgment governs (sec. 6(b)).
+- חייב מוגבל באמצעים was described as constraining the creditor. It is a separate debtor status with its own restrictions (sec. 69d).
+- SKILL_HE.md had drifted a full cycle behind SKILL.md (examples, reports, Shabbat rule, interest). It is now a faithful mirror.
+- The display description called the letter a "michtav hitchayvut" (a letter of undertaking); it is a michtav drisha.
+
+### Added
+
+- The court-free fixed-sum route (Execution Law sec. 81a1): up to 75,000 NIS, evidence signed by the debtor (reg. 109d1), a warning in the prescribed Form 19א wording (reg. 109a) served by registered mail with delivery confirmation, filing only 30 days after service, a 30-day objection window, and no early action (sec. 81a1(e)(2)). Open to a company claimant.
+- Proof and return of submission (sec. 3(i), 3(h)(1)-(3)), budgeted and statutory bodies (sec. 3(e)(1)), the VAT-status definition of a business, external funding (3(f)(2)) and the sec. 12 exclusions.
+- Consumer branch: no date is due until the creditor names one a reasonable time ahead (Contracts Law sec. 41); court interest runs from filing by default.
+- A phone call to accounts payable before the first written reminder; a payment and withholding check before every reminder.
+- Enforcement mechanics: third-party attachment (sec. 44), fees charged to the debtor with interest (sec. 9), file consolidation (sec. 74b-74c), the evader route to restrictions (sec. 66b(a)(3)), late filing (sec. 6(b2)), the debtor-details requirement (sec. 6(d)(2)), and the lawyer-fee rule for suing on a claim that could have gone to the Enforcement Office (sec. 81a2).
+- Enforcement fees: 1% for a judgment or fixed-sum file, 1.25% for a notes file, plus a protocol fee; credited against the court fee if an objection is accepted (Court Fees reg. 4).
+- The insolvency freeze (sec. 29) and the temporary stay without an opening order (sec. 319ג, 319יז).
+- Limitation: the Swords of Iron freeze (sec. 15a) and the restart on acknowledgment or part payment (sec. 9).
+- references/domain-checklist.md.
+
+### Changed
+
+- The demand letter goes out at due date + 60 in every file (it was "30 to 60" in one place), with a dated deadline at least 21 days after the letter date. It is no longer described as the fixed-sum warning.
+- The small-claims fee is now cited to reg. 6(a) (1%, at least 50 NIS, rounded up to a multiple of 5).
+
 ## 1.7.1 - 2026-09-02
 
 ### Fixed
