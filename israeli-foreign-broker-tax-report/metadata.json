@@ -1,0 +1,57 @@
+{
+  "author": "skills-il",
+  "version": "1.0.0",
+  "category": "tax-and-finance",
+  "tags": {
+    "he": [
+      "ברוקר-זר",
+      "רווחי-הון",
+      "מניות-בחו\"ל",
+      "דיווח-מס",
+      "שער-יציג",
+      "דיבידנד"
+    ],
+    "en": [
+      "foreign-broker",
+      "capital-gains",
+      "foreign-shares",
+      "tax-reporting",
+      "exchange-rate",
+      "dividends"
+    ]
+  },
+  "display_name": {
+    "he": "דוח מס לחשבון בברוקר זר",
+    "en": "Israeli Foreign Broker Tax Report"
+  },
+  "display_description": {
+    "he": "אינו ייעוץ מס ואינו דוח שהוגש. יש לכם חשבון באינטראקטיב ברוקרס, eToro, שוואב או פידליטי? הסקיל לוקח את הדוח השנתי של הברוקר והופך אותו לנתוני עבודה בשקלים: רווח או הפסד לכל עסקה לפי השער היציג של בנק ישראל ביום הקנייה וביום המכירה, הפרדה בין רווח ריאלי לסכום אינפלציוני, שורות לטפסים 1325, 1322 ו-1324, קיזוז הפסדים, זיכוי על המס שנוכה בארה\"ב מהדיבידנדים ורשימת נקודות פתוחות. השתמשו בו כשאתם צריכים לדווח על מניות בחו\"ל ולא יודעים איזה שער ואיזה תאריך נכונים. הוא חוסך טעויות יקרות: שער של הברוקר במקום שער יציג, קיזוז הפסד שנוצר רק מירידת הדולר, ושכחת הדיווח החצי שנתי. לא מיועד לדוח השנתי המלא, לקריפטו, לאופציות לעובדים, לאזרחי ארה\"ב, ולא נותן המלצות קנייה או מכירה.",
+    "en": "Not tax advice and not a filed return. Have an account at Interactive Brokers, eToro, Schwab or Fidelity? This skill takes the broker's annual statement and turns it into shekel working figures: gain or loss per trade at the Bank of Israel representative rate of the purchase day and the sale day, the split between real gain and inflationary amount, lines for Forms 1325, 1322 and 1324, loss offsets, the credit for US tax withheld on dividends, and a list of open items. Use it when you need to report foreign shares and are not sure which rate and which date apply. It prevents costly mistakes: the broker's FX rate instead of the representative rate, offsetting a loss that only came from a falling dollar, and missing the half-year report. Not for the full annual return, crypto, employee options, US citizens, and it never recommends buying or selling."
+  },
+  "supported_agents": [
+    "claude-code",
+    "cursor",
+    "github-copilot",
+    "windsurf",
+    "opencode",
+    "codex",
+    "antigravity",
+    "gemini-cli",
+    "grok-build",
+    "chatgpt",
+    "claude-ai",
+    "claude-desktop",
+    "manus",
+    "gemini-spark",
+    "grok"
+  ],
+  "volatility": "legislative",
+  "authoritative_sources": [
+    { "url": "https://he.wikisource.org/wiki/פקודת_מס_הכנסה", "type": "statute", "language": "he" },
+    { "url": "https://he.wikisource.org/wiki/כללי_מס_הכנסה_(המרה_לשקלים_חדשים_של_סכומים_שמקורם_מחוץ_לישראל)", "type": "regulation", "language": "he" },
+    { "url": "https://www.gov.il/he/service/reporting-and-payment-2025-annual-tax-report-for-individuals", "type": "regulator", "language": "he" },
+    { "url": "https://www.boi.org.il/roles/markets/exchangerates/", "type": "regulator", "language": "he" },
+    { "url": "https://www.irs.gov/pub/irs-trty/israel.pdf", "type": "treaty", "language": "en" }
+  ],
+  "domain_checklist_version": 1
+}

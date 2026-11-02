@@ -1,0 +1,1889 @@
+{
+ "schemaVersion": "1.0",
+ "skill": "israeli-foreign-broker-tax-report",
+ "generated_at": "2026-11-02T00:00:00Z",
+ "claims": [
+  {
+   "claim_id": "s88-index-currency",
+   "claim": "Section 88 of the Income Tax Ordinance (definition of \"מדד\", index): for a security held by an individual that is denominated in foreign currency or linked to it, the currency rate is treated as the index. So the cost of a foreign-broker share is adjusted by the change in the exchange rate, not by the CPI.",
+   "claim_type": "law",
+   "source_url": "https://he.wikisource.org/wiki/פקודת_מס_הכנסה",
+   "raw_snippet": "על אף האמור, לענין נייר ערך בידי יחיד, הנקוב במטבע חוץ או שערכו צמוד למטבע חוץ, יראו את שער המטבע כמדד",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "s88-inflationary-amount",
+   "claim": "Section 88 defines the inflationary amount (סכום אינפלציוני) as the part of the capital gain equal to the excess of the adjusted original-price balance over the original-price balance, and real capital gain as the capital gain less the inflationary amount.",
+   "claim_type": "law",
+   "source_url": "https://he.wikisource.org/wiki/פקודת_מס_הכנסה",
+   "raw_snippet": "חלק ריווח ההון השווה לסכום שבו עולה יתרת המחיר המקורי המתואם על יתרת המחיר המקורי",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "s88-real-gain",
+   "claim": "Section 88: real capital gain (ריווח הון ריאלי) is the capital gain less the inflationary amount.",
+   "claim_type": "law",
+   "source_url": "https://he.wikisource.org/wiki/פקודת_מס_הכנסה",
+   "raw_snippet": "ריווח הון ריאלי“ - ריווח ההון פחות הסכום האינפלציוני",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "s88-capital-loss-nominal",
+   "claim": "Section 88 defines a capital loss (הפסד הון) as the amount by which the original-price balance exceeds the consideration, a nominal measure.",
+   "claim_type": "law",
+   "source_url": "https://he.wikisource.org/wiki/פקודת_מס_הכנסה",
+   "raw_snippet": "הפסד הון“ - הסכום שבו עולה יתרת המחיר המקורי על התמורה",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "s88-adjusted-price",
+   "claim": "Section 88: the adjusted original-price balance is the original price multiplied by the index on the sale day and divided by the index on the purchase day.",
+   "claim_type": "law",
+   "source_url": "https://he.wikisource.org/wiki/פקודת_מס_הכנסה",
+   "raw_snippet": "כפול במדד ביום המכירה ומחולק במדד ביום הרכישה",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "s88-substantial-shareholder",
+   "claim": "Section 88: a substantial shareholder (בעל מניות מהותי) holds at least 10% of any type of means of control in a body of persons, directly or indirectly, alone or together with another.",
+   "claim_type": "threshold",
+   "source_url": "https://he.wikisource.org/wiki/פקודת_מס_הכנסה",
+   "raw_snippet": "מי שמחזיק, במישרין או בעקיפין, לבדו או יחד עם אחר, ב־10% לפחות באחד או יותר מסוג כלשהו של אמצעי השליטה בחבר־בני־אדם",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "s88-change-date",
+   "claim": "Section 88: the change date (מועד השינוי) is 1 January 2012.",
+   "claim_type": "date",
+   "source_url": "https://he.wikisource.org/wiki/פקודת_מס_הכנסה",
+   "raw_snippet": "מועד השינוי“ - יום ו׳ בטבת התשע״ב (1 בינואר 2012)",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "s1-bourse-includes-foreign",
+   "claim": "Section 1 of the Ordinance defines \"בורסה\" (exchange) to include a securities exchange outside Israel approved under the law of its country, and a regulated market in or outside Israel.",
+   "claim_type": "law",
+   "source_url": "https://he.wikisource.org/wiki/פקודת_מס_הכנסה",
+   "raw_snippet": "או בורסה לניירות ערך מחוץ לישראל, שקיבלה אישור מידי מי שרשאי לתיתו על פי דין במדינה שבה היא מתנהלת, וכן שוק מוסדר, בישראל או מחוץ לישראל",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "s91b1-25",
+   "claim": "Section 91(b)(1): an individual pays tax on real capital gain at a rate not exceeding 25%, and the capital gain is treated as the top layer of taxable income.",
+   "claim_type": "percentage",
+   "source_url": "https://he.wikisource.org/wiki/פקודת_מס_הכנסה",
+   "raw_snippet": "יחיד יהיה חייב במס על רווח הון ריאלי כאמור בסעיף 121, בשיעור שלא יעלה על 25%, ויראו את רווח ההון כשלב הגבוה ביותר בסולם הכנסתו החייבת",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "s91b2-30",
+   "claim": "Section 91(b)(2): real capital gain on the sale of a security in a body of persons by an individual who is a substantial shareholder at the time of sale or at any time in the 12 months before it is taxed at a rate not exceeding 30%.",
+   "claim_type": "percentage",
+   "source_url": "https://he.wikisource.org/wiki/פקודת_מס_הכנסה",
+   "raw_snippet": "במכירת נייר ערך בחבר־בני־אדם שבו המוכר הוא יחיד שהוא בעל מניות מהותי במועד מכירתו של נייר הערך או במועד כלשהו ב־12 החודשים שקדמו למכירה, יחויב במס בשיעור שלא יעלה על 30%",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "s91b3-15-unlinked-bonds",
+   "claim": "Section 91(b)(3)(a): capital gain on a bond, commercial paper or loan not linked to the index is taxed at up to 15% (20% for a substantial shareholder), and the whole gain is treated as real.",
+   "claim_type": "percentage",
+   "source_url": "https://he.wikisource.org/wiki/פקודת_מס_הכנסה",
+   "raw_snippet": "רווח הון במכירת איגרת חוב, נייר ערך מסחרי, מילווה או הלוואה, שאינם צמודים למדד, יחויב במס בשיעור שלא יעלה על 15%, או של 20% לענין בעל מניות מהותי",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "s91d2c-semiannual",
+   "claim": "Section 91(d)(2c)(b) (סעיף 91): where tax was not withheld at source on a traded-security sale and the seller must file a return under Section 131 (סעיף 131), the capital-gain report is filed on 31 July and 31 January for sales in the six months before, with an advance payment of the tax.",
+   "claim_type": "date",
+   "source_url": "https://he.wikisource.org/wiki/פקודת_מס_הכנסה",
+   "raw_snippet": "לא נוכה המס כאמור בפסקת משנה (1) והמוכר חייב בהגשת דוח לפי סעיף 131, יוגש הדוח על רווח ההון, על אף האמור בפסקה (1) או (1א), לפי העניין, ביום 31 ביולי וביום 31 בינואר של כל שנת מס, בשל מכירה של ניירות ערך בששת החודשים שקדמו לחודש שבו חל יום הדיווח",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "s91d2c-a-withheld-exempt",
+   "claim": "Section 91(d)(2c)(a): the 30-day sale report of section 91(d) does not apply to a gain on a traded security if tax was withheld under Section 164 at the time of sale.",
+   "claim_type": "law",
+   "source_url": "https://he.wikisource.org/wiki/פקודת_מס_הכנסה",
+   "raw_snippet": "הוראות סעיף קטן זה לא יחולו על רווח הון במכירת נייר ערך הרשום למסחר בבורסה או במכירת יחידה, אם במועד המכירה נוכה מס מרווח ההון לפי סעיף 164",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "s92-loss-order",
+   "claim": "Section 92(a)(1) (סעיף 92): a capital loss is set off first against real capital gain, and each shekel of the remainder against three and a half shekels of chargeable inflationary amount.",
+   "claim_type": "law",
+   "source_url": "https://he.wikisource.org/wiki/פקודת_מס_הכנסה",
+   "raw_snippet": "יקוזז תחילה כנגד ריווח ההון הריאלי וכל שקל חדש של היתרה יקוזז כנגד שלושה וחצי שקלים חדשים של סכום אינפלציוני חייב",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "s92-foreign-first",
+   "claim": "Section 92(a)(3): a capital loss on the sale of an asset outside Israel is set off first against capital gain outside Israel.",
+   "claim_type": "law",
+   "source_url": "https://he.wikisource.org/wiki/פקודת_מס_הכנסה",
+   "raw_snippet": "אולם הפסד הון מנכס כאמור יקוזז תחילה כנגד רווח הון מחוץ לישראל",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "s92-securities-vs-div-int",
+   "claim": "Section 92(a)(4): a capital loss on a security in the tax year is also set off against interest or dividend paid on that security, and against interest or dividend on other securities provided the rate on them does not exceed the rate in sections 125B(1) or 125C(b) for an individual.",
+   "claim_type": "law",
+   "source_url": "https://he.wikisource.org/wiki/פקודת_מס_הכנסה",
+   "raw_snippet": "הכנסה מריבית או מדיבידנד ששולמו בשל אותו נייר ערך",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "s92b-carry-forward",
+   "claim": "Section 92(b): a loss not set off is carried to following years in succession against capital gain only, provided a return was filed for the loss year under sections 131 and 132; a foreign-asset loss carried forward is set first against foreign capital gain.",
+   "claim_type": "law",
+   "source_url": "https://he.wikisource.org/wiki/פקודת_מס_הכנסה",
+   "raw_snippet": "יקוזז כנגד ריווח הון בלבד כאמור בסעיף קטן (א) בשנות המס הבאות בזו אחר זו לאחר השנה שבה היה ההפסד, ובלבד שהוגש לפקיד השומה דוח לשנת המס שבה היה ההפסד",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "s121b-3pct",
+   "claim": "Section 121B(a): an individual whose taxable income exceeds the threshold pays an additional 3% on the part above it; the threshold for 2024 through 2027 is NIS 721,560.",
+   "claim_type": "currency",
+   "source_url": "https://he.wikisource.org/wiki/פקודת_מס_הכנסה",
+   "raw_snippet": "2027, 721,560 ש״ח",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "s121b-3pct-text",
+   "claim": "Section 121B(a) charges the surtax at 3% on the part of taxable income above the threshold.",
+   "claim_type": "percentage",
+   "source_url": "https://he.wikisource.org/wiki/פקודת_מס_הכנסה",
+   "raw_snippet": "יהיה חייב במס נוסף על חלק הכנסתו החייבת העולה על 640,000 שקלים חדשים",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ],
+   "note": "The 3% sits in the same sentence; the 640,000 is the 2017 base figure, not used by this skill."
+  },
+  {
+   "claim_id": "s121b-2pct",
+   "claim": "Section 121B(a1): an individual whose capital-source taxable income exceeds the same threshold pays a further 2% on the capital-source income above it.",
+   "claim_type": "percentage",
+   "source_url": "https://he.wikisource.org/wiki/פקודת_מס_הכנסה",
+   "raw_snippet": "יהיה חייב במס נוסף על חלק הכנסתו החייבת ממקורות הוניים העולה על הסכום האמור, בשיעור של 2%",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "s121b-b-no-advance",
+   "claim": "Section 121B(b): the section 91(d) advance-payment rules do not apply to income chargeable to the surtax under subsections (a) or (a1).",
+   "claim_type": "law",
+   "source_url": "https://he.wikisource.org/wiki/פקודת_מס_הכנסה",
+   "raw_snippet": "על הכנסה החייבת במס נוסף לפי סעיפים קטנים (א) או (א1) לא יחולו הוראות סעיף 91(ד) לעניין מקדמות",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "s121b-e-excludes-inflationary",
+   "claim": "Section 121B(e): taxable income for the surtax excludes the inflationary amount as defined in section 88.",
+   "claim_type": "law",
+   "source_url": "https://he.wikisource.org/wiki/פקודת_מס_הכנסה",
+   "raw_snippet": "הכנסה חייבת כהגדרתה בסעיף 1 וכמשמעותה בסעיף 89, למעט סכום אינפלציוני",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "s125b-dividend-25",
+   "claim": "Section 125B (סעיף 125ב): dividend in the hands of an individual is taxed at 25%, or 30% for a substantial shareholder in the paying company at the time or in the preceding 12 months.",
+   "claim_type": "percentage",
+   "source_url": "https://he.wikisource.org/wiki/פקודת_מס_הכנסה",
+   "raw_snippet": "דיבידנד בידי יחיד - 25%",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "s125b-dividend-30",
+   "claim": "Section 125B(2): dividend received by an individual who was a substantial shareholder in the paying company at the time or in the 12 months before is taxed at 30%.",
+   "claim_type": "percentage",
+   "source_url": "https://he.wikisource.org/wiki/פקודת_מס_הכנסה",
+   "raw_snippet": "בעל מניות מהותי כהגדרתו בסעיף 88 בחבר־בני־אדם ששילם את הדיבידנד - 30%",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "s125c-interest",
+   "claim": "Section 125C (סעיף 125ג): for interest, the \"index\" of an asset denominated in or linked to foreign currency is the currency rate; an individual pays up to 25% on interest (s.125C(b)); 15% applies to interest on an asset not linked to the index (s.125C(c)(1)).",
+   "claim_type": "law",
+   "source_url": "https://he.wikisource.org/wiki/פקודת_מס_הכנסה",
+   "raw_snippet": "ובנכס שערכו צמוד למטבע חוץ או שהוא נקוב במטבע חוץ - שער המטבע",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "s125c-b-25",
+   "claim": "Section 125C(b): an individual is taxed on interest income at a rate not exceeding 25%.",
+   "claim_type": "percentage",
+   "source_url": "https://he.wikisource.org/wiki/פקודת_מס_הכנסה",
+   "raw_snippet": "יחיד חייב במס על הכנסה מריבית בשיעור שלא יעלה על 25%",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "s125c-c-15",
+   "claim": "Section 125C(c)(1): interest on an asset not linked to the index is taxed at 15% for an individual.",
+   "claim_type": "percentage",
+   "source_url": "https://he.wikisource.org/wiki/פקודת_מס_הכנסה",
+   "raw_snippet": "תחויב הכנסתו של היחיד מריבית במס בשיעור של 15%",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "s200-ftc",
+   "claim": "Section 200 (סעיף 200): foreign taxes, translated to shekels, paid on foreign income chargeable in Israel are allowed as a credit against Israeli taxes.",
+   "claim_type": "law",
+   "source_url": "https://he.wikisource.org/wiki/פקודת_מס_הכנסה",
+   "raw_snippet": "מסי־חוץ, כשהם מתורגמים לשקלים חדשים, ששולמו על הכנסות חוץ החייבות במס בישראל, יותרו בזיכוי כנגד מסי־ישראל",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "s204b-cap",
+   "claim": "Section 204(b) (סעיף 204): for foreign income taxed in Israel at a special rate, the credit may not exceed the Israeli tax on that income.",
+   "claim_type": "law",
+   "source_url": "https://he.wikisource.org/wiki/פקודת_מס_הכנסה",
+   "raw_snippet": "החייבות במס בשיעור מס מיוחד, לא יעלה על סכום המס החל בישראל על אותן הכנסות",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "s205a-excess",
+   "claim": "Section 205A: excess foreign tax credit may be used against tax on foreign income from the same source in the five following years, indexed.",
+   "claim_type": "law",
+   "source_url": "https://he.wikisource.org/wiki/פקודת_מס_הכנסה",
+   "raw_snippet": "בשל הכנסות שיופקו מחוץ לישראל מאותו המקור בחמש השנים הבאות בזו אחר זו",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "conv-rep-rate-def",
+   "claim": "Income Tax Rules (Conversion to New Shekels of Amounts Originating Outside Israel), 2003, rule 1: the representative rate of a currency on a day is the rate the Bank of Israel published that day, or if none was published that day, the last rate published before it.",
+   "claim_type": "law",
+   "source_url": "https://he.wikisource.org/wiki/כללי_מס_הכנסה_(המרה_לשקלים_חדשים_של_סכומים_שמקורם_מחוץ_לישראל)",
+   "raw_snippet": "כפי שפרסם בנק ישראל באותו יום, ואם לא פרסם שער באותו יום - השער האחרון שפרסם לפני אותו יום",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "conv-rule7-capital-gain",
+   "claim": "Conversion Rules 2003, rule 7: for capital gain, the original price is converted at the representative rate on the purchase day or the payment date, whichever is earlier, and the consideration at the representative rate on the sale day or the day payment is received, whichever is earlier.",
+   "claim_type": "law",
+   "source_url": "https://he.wikisource.org/wiki/כללי_מס_הכנסה_(המרה_לשקלים_חדשים_של_סכומים_שמקורם_מחוץ_לישראל)",
+   "raw_snippet": "מחירו המקורי של נכס, יתורגם לשקלים חדשים לפי שערו היציג של המטבע ביום הרכישה או במועד התשלום, לפי המוקדם",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "conv-rule7-consideration",
+   "claim": "Conversion Rules 2003, rule 7(2): consideration is converted at the representative rate on the sale day or the day payment is received, whichever is earlier.",
+   "claim_type": "law",
+   "source_url": "https://he.wikisource.org/wiki/כללי_מס_הכנסה_(המרה_לשקלים_חדשים_של_סכומים_שמקורם_מחוץ_לישראל)",
+   "raw_snippet": "תמורה תתורגם לשקלים חדשים, לפי שערו היציג של המטבע ביום המכירה של הנכס או ביום קבלת התשלום, לפי המוקדם",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "conv-rule3-passive",
+   "claim": "Conversion Rules 2003, rule 3(a): passive income (dividends, interest) is converted at the representative rate on the day it was paid or received.",
+   "claim_type": "law",
+   "source_url": "https://he.wikisource.org/wiki/כללי_מס_הכנסה_(המרה_לשקלים_חדשים_של_סכומים_שמקורם_מחוץ_לישראל)",
+   "raw_snippet": "הכנסה פסיבית, תתורגם לשקלים חדשים לפי שערו היציג של המטבע, ביום שבו שולמה ההכנסה או שהתקבלה",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "conv-rule6-foreign-tax",
+   "claim": "Conversion Rules 2003, rule 6: foreign taxes paid during or before the tax year in which the income is chargeable are converted at the representative rate on the payment day.",
+   "claim_type": "law",
+   "source_url": "https://he.wikisource.org/wiki/כללי_מס_הכנסה_(המרה_לשקלים_חדשים_של_סכומים_שמקורם_מחוץ_לישראל)",
+   "raw_snippet": "מסי חוץ ששולמו במדינת החוץ יתורגמו לשקלים חדשים לפי שערו היציג של המטבע",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "conv-rule8-loss-ils",
+   "claim": "Conversion Rules 2003, rule 8: a shekel loss incurred outside Israel that may be carried forward is not translated back to foreign currency and is carried forward in shekels.",
+   "claim_type": "law",
+   "source_url": "https://he.wikisource.org/wiki/כללי_מס_הכנסה_(המרה_לשקלים_חדשים_של_סכומים_שמקורם_מחוץ_לישראל)",
+   "raw_snippet": "לא יתורגם למטבע חוץ ויועבר לשנים הבאות בשקלים חדשים",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "conv-rules-name",
+   "claim": "The conversion rules are named כללי מס הכנסה (המרה לשקלים חדשים של סכומים שמקורם מחוץ לישראל), התשס\"ד-2003, and Form 1324 cites them for converting foreign income.",
+   "claim_type": "law",
+   "source_url": "https://www.gov.il/BlobFolder/service/reporting-and-payment-2025-annual-tax-report-for-individuals/he/Service_Pages_Income_tax_annual-report-2026_1324-2025.pdf",
+   "raw_snippet": "בהתאם לכללי מס הכנסה )המרה לשקלים חדשים של סכומים שמקורם מחוץ לישראל(",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "calc-reg5-fifo",
+   "claim": "Income Tax Regulations (Computing Capital Gain on the Sale of a Traded Security...), 2002, regulation 5 (תקנה 5): identical securities bought at different times are treated, for original price and purchase day, as sold in order of purchase from first to last, unless the seller proves to the assessing officer the purchase day and price of a specific security.",
+   "claim_type": "law",
+   "source_url": "https://he.wikisource.org/wiki/תקנות_מס_הכנסה_(חישוב_רווח_הון_במכירת_נייר_ערך_הנסחר_בבורסה,_מילווה_המדינה_או_יחידה_בקרן_נאמנות)",
+   "raw_snippet": "יראו אותם, לענין המחיר המקורי ויום הרכישה, כנמכרים על פי סדר רכישתם, מהראשון עד האחרון, זולת אם הוכיח המוכר לפקיד השומה את יום הרכישה והמחיר המקורי של נייר ערך מסוים",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "calc-identical-per-manager",
+   "claim": "Regulation 1 of the same regulations: \"identical securities\" are foreign securities of the same type and issuer when managed by one portfolio manager.",
+   "claim_type": "law",
+   "source_url": "https://he.wikisource.org/wiki/תקנות_מס_הכנסה_(חישוב_רווח_הון_במכירת_נייר_ערך_הנסחר_בבורסה,_מילווה_המדינה_או_יחידה_בקרן_נאמנות)",
+   "raw_snippet": "או ניירות ערך זרים מאותו סוג ושל אותו מנפיק, והכל אם הם מנוהלים בידי מנהל תיק ניירות ערך אחד",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "calc-reg6-expenses",
+   "claim": "Regulation 6 (תקנה 6): expenses (management and custody fees for securities activity) incurred in the tax year are deductible from the consideration in computing capital gain on securities.",
+   "claim_type": "law",
+   "source_url": "https://he.wikisource.org/wiki/תקנות_מס_הכנסה_(חישוב_רווח_הון_במכירת_נייר_ערך_הנסחר_בבורסה,_מילווה_המדינה_או_יחידה_בקרן_נאמנות)",
+   "raw_snippet": "בחישוב רווח ההון במכירת ניירות ערך יותרו בניכוי מהתמורה ההוצאות שהוצאו באותה שנת מס",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "calc-expenses-def",
+   "claim": "Regulation 1: \"expenses\" means management and custody fees for actions in securities.",
+   "claim_type": "law",
+   "source_url": "https://he.wikisource.org/wiki/תקנות_מס_הכנסה_(חישוב_רווח_הון_במכירת_נייר_ערך_הנסחר_בבורסה,_מילווה_המדינה_או_יחידה_בקרן_נאמנות)",
+   "raw_snippet": "דמי ניהול ודמי משמורת בשנות המס החל במועד הקובע ואילך, בעד פעולות בניירות ערך",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "exempt-security-needs-withholding",
+   "claim": "Filing-exemption regulations 1988, regulation 1: \"income from a security\" qualifies for the filing exemption only if it was exempt or the full tax was withheld and the amount does not exceed Schedule F.",
+   "claim_type": "law",
+   "source_url": "https://he.wikisource.org/wiki/תקנות_מס_הכנסה_(פטור_מהגשת_דין_וחשבון)",
+   "raw_snippet": "נוכה ממנה מלוא המס לפי הוראות הפקודה וסכומה אינו עולה על הסכום הקבוע בתוספת ו׳",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "exempt-foreign-income-advance",
+   "claim": "Filing-exemption regulations, regulation 1: \"foreign income\" qualifies only if it does not exceed the Schedule D amount and an advance tax payment (מקדמת מס) was paid on it.",
+   "claim_type": "law",
+   "source_url": "https://he.wikisource.org/wiki/תקנות_מס_הכנסה_(פטור_מהגשת_דין_וחשבון)",
+   "raw_snippet": "שולמה בשלה מקדמת מס, ולענין הכנסה כאמור שאינה ממכירת נייר ערך של חברה תושבת ישראל הנסחרת בבורסה או ממכירת נייר ערך זר",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "exempt-schedule-d",
+   "claim": "Schedule D of the filing-exemption regulations: NIS 375,000 for tax years 2023 to 2026.",
+   "claim_type": "currency",
+   "source_url": "https://he.wikisource.org/wiki/תקנות_מס_הכנסה_(פטור_מהגשת_דין_וחשבון)",
+   "raw_snippet": "בשנים 2023-2026, 375,000 ש״ח",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "exempt-reg3-foreign-assets",
+   "claim": "Filing-exemption regulations, regulation 3(a)(6)(b) and (7): the exemption does not apply if the individual, spouse or minor child held foreign assets (or foreign bank balances) worth NIS 2,086,000 or more on any day in 2023 to 2026.",
+   "claim_type": "currency",
+   "source_url": "https://he.wikisource.org/wiki/תקנות_מס_הכנסה_(פטור_מהגשת_דין_וחשבון)",
+   "raw_snippet": "בשנים 2023-2026, 2,086,000 ש״ח",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "exempt-reg3-foreign-assets-text",
+   "claim": "Regulation 3(a)(6)(b): other foreign assets whose value on any day of the tax year is at or above the threshold remove the filing exemption.",
+   "claim_type": "law",
+   "source_url": "https://he.wikisource.org/wiki/תקנות_מס_הכנסה_(פטור_מהגשת_דין_וחשבון)",
+   "raw_snippet": "נכסי חוץ אחרים ששוויים ביום כלשהו בשנת המס הוא 1,500,000 שקלים חדשים",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ],
+   "note": "1,500,000 is the 2003 base; the indexed figure is in exempt-reg3-foreign-assets."
+  },
+  {
+   "claim_id": "exempt-reg3-foreign-company",
+   "claim": "Regulation 3(a)(6)(a): a right in a non-resident body corporate removes the exemption, except a company whose securities are traded on an exchange.",
+   "claim_type": "law",
+   "source_url": "https://he.wikisource.org/wiki/תקנות_מס_הכנסה_(פטור_מהגשת_דין_וחשבון)",
+   "raw_snippet": "זכות בחבר בני אדם תושב חוץ, למעט בחברה שניירות הערך שלה נסחרים בבורסה",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "exempt-reg3-surtax",
+   "claim": "Regulation 3(a)(8): an individual liable to the section 121B surtax is not exempt from filing.",
+   "claim_type": "law",
+   "source_url": "https://he.wikisource.org/wiki/תקנות_מס_הכנסה_(פטור_מהגשת_דין_וחשבון)",
+   "raw_snippet": "הוא או בן זוגו חייבים במס נוסף בהתאם לסעיף 121ב לפקודה",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "f1322-foreign-no-withholding",
+   "claim": "Form 1322 (2025) explanation 2b: an individual from whose securities the full tax was not withheld at source (such as securities sold abroad not through the withholding agents) fills Appendix C1, Form 1325 (טופס 1325), and carries its totals to Form 1322.",
+   "claim_type": "form-number",
+   "source_url": "https://www.gov.il/BlobFolder/service/reporting-and-payment-2025-annual-tax-report-for-individuals/he/Service_Pages_Income_tax_annual-report-2026_1322-2025-ACC.pdf",
+   "raw_snippet": "כגון ני\"ע שנמכרו בחו\"ל שלא דרך המנכים",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "f1322-form1325",
+   "claim": "Form 1322 explanation 2b: such individuals fill Appendix C1 (Form 1325) and transfer its totals to Appendix C (Form 1322).",
+   "claim_type": "form-number",
+   "source_url": "https://www.gov.il/BlobFolder/service/reporting-and-payment-2025-annual-tax-report-for-individuals/he/Service_Pages_Income_tax_annual-report-2026_1322-2025-ACC.pdf",
+   "raw_snippet": "הסיכומים מנספח ג1 יועברו לנספח זה",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "f1322-foreign-asset-separate",
+   "claim": "Form 1322 note 3: to claim credit for foreign taxes under sections 203/204, fill a separate form for all security sales eligible for relief, plus Appendix D of the annual return.",
+   "claim_type": "form-number",
+   "source_url": "https://www.gov.il/BlobFolder/service/reporting-and-payment-2025-annual-tax-report-for-individuals/he/Service_Pages_Income_tax_annual-report-2026_1322-2025-ACC.pdf",
+   "raw_snippet": "על מנת לקבל זיכוי בשל מיסי חוץ ,לפי סעיפים 204/203 לפקודה ,יש למלא",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "f1322-half-year-forms",
+   "claim": "Form 1322 note 6: separate forms are filed for transactions without withholding that require a half-year advance-payment report, one for January to June 2025 and one for July to December 2025; the filer records transaction code 65 and in code 56 the end date of the period, 30.6.2025 or 31.12.2025.",
+   "claim_type": "form-number",
+   "source_url": "https://www.gov.il/BlobFolder/service/reporting-and-payment-2025-annual-tax-report-for-individuals/he/Service_Pages_Income_tax_annual-report-2026_1322-2025-ACC.pdf",
+   "raw_snippet": "על המשדר לרשום סמל עסקה 65 ובקוד 56 תאריך תום התקופה ממנה נבעו הרווחים 30.6.2025 או .31.12.2025",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "f1322-rates",
+   "claim": "Form 1322 (2025) lists individual rates on traded-security gains: 15% unlinked bonds, 20% for a substantial shareholder on those, 25% real gain, 30% substantial shareholder, and 35% on the part of the real gain on foreign securities for the period from purchase to 31.12.2004, computed by days held.",
+   "claim_type": "percentage",
+   "source_url": "https://www.gov.il/BlobFolder/service/reporting-and-payment-2025-annual-tax-report-for-individuals/he/Service_Pages_Income_tax_annual-report-2026_1322-2025-ACC.pdf",
+   "raw_snippet": "חלק רווח הון ריאלי מני\"ע שהיו ני\"ע זרים ,לגבי התקופה מיום הרכישה ועד ליום .31.12.2004",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "f1322-25-foreign-from-2005",
+   "claim": "Form 1322: 25% applies to the part of the real gain on foreign securities for the period from 1.1.2005 to the sale date.",
+   "claim_type": "date",
+   "source_url": "https://www.gov.il/BlobFolder/service/reporting-and-payment-2025-annual-tax-report-for-individuals/he/Service_Pages_Income_tax_annual-report-2026_1322-2025-ACC.pdf",
+   "raw_snippet": "חלק רווח הון ריאלי מני\"ע שהיו ני\"ע זרים לגבי התקופה מיום 1.1.2005 ועד ליום המכירה",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "f1322-35-label",
+   "claim": "Form 1322 lists a 35% income column (code 44).",
+   "claim_type": "percentage",
+   "source_url": "https://www.gov.il/BlobFolder/service/reporting-and-payment-2025-annual-tax-report-for-individuals/he/Service_Pages_Income_tax_annual-report-2026_1322-2025-ACC.pdf",
+   "raw_snippet": "הכנסה בשיעור 35%",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "f1322-loss-rules",
+   "claim": "Form 1322 note 10: a current-year capital loss on a security can be set off against any capital gain and against interest or dividend on that or other securities provided the rate on the interest or dividend does not exceed 25%; a carried-forward securities loss from 2006 onward can be set against any capital gain but not against interest and dividend.",
+   "claim_type": "law",
+   "source_url": "https://www.gov.il/BlobFolder/service/reporting-and-payment-2025-annual-tax-report-for-individuals/he/Service_Pages_Income_tax_annual-report-2026_1322-2025-ACC.pdf",
+   "raw_snippet": "הפסד הון מועבר מנייר ערך ,שנוצר משנת המס 2006 ואילך ,ניתן לקזזו בשנת המס 2025 כנגד כל רווח הון .לא ניתן לקזז ההפסד הון כאמור כנגד ריבית ודיבידנד",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "f1322-loss-current-25",
+   "claim": "Form 1322: current-year securities loss can offset interest or dividend provided the rate on them does not exceed 25%.",
+   "claim_type": "percentage",
+   "source_url": "https://www.gov.il/BlobFolder/service/reporting-and-payment-2025-annual-tax-report-for-individuals/he/Service_Pages_Income_tax_annual-report-2026_1322-2025-ACC.pdf",
+   "raw_snippet": "מריבית או דיבידנד בשל ניירות ערך אחרים ובלבד ששיעור המס החל על הריבית או הדיבידנד אינו עולה על .25%",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "f1322-field-256",
+   "claim": "Form 1322 note 11: the total of sales is transferred to field 256 of Form 1301 (טופס 1301).",
+   "claim_type": "form-number",
+   "source_url": "https://www.gov.il/BlobFolder/service/reporting-and-payment-2025-annual-tax-report-for-individuals/he/Service_Pages_Income_tax_annual-report-2026_1322-2025-ACC.pdf",
+   "raw_snippet": "סכום המכירות מועבר לשדה 256 בטופס ,1327/135/1301",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "f1322-title",
+   "claim": "Form 1322 is Appendix C of the annual return: capital gain from traded securities for tax year 2025.",
+   "claim_type": "form-number",
+   "source_url": "https://www.gov.il/BlobFolder/service/reporting-and-payment-2025-annual-tax-report-for-individuals/he/Service_Pages_Income_tax_annual-report-2026_1322-2025-ACC.pdf",
+   "raw_snippet": "סחירים* לשנת המס 2025",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "f1322-relative-1399",
+   "claim": "Form 1322: a sale to a relative is not reported on this form but on Form 1399י or Form 1399ח.",
+   "claim_type": "law",
+   "source_url": "https://www.gov.il/BlobFolder/service/reporting-and-payment-2025-annual-tax-report-for-individuals/he/Service_Pages_Income_tax_annual-report-2026_1322-2025-ACC.pdf",
+   "raw_snippet": "אם המכירה היא לקרוב (כהגדרתו בסעיף 88לפקודה) אין למלא טופס זה ,ויש להגיש הודעה",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "f1325-cols",
+   "claim": "Form 1325 (2025) columns: original price (a), 1 + index rise rate (b), adjusted price (a x b = c), consideration (d), real capital gain (d - c), capital loss (d - a).",
+   "claim_type": "form-number",
+   "source_url": "https://www.gov.il/BlobFolder/service/reporting-and-payment-2025-annual-tax-report-for-individuals/he/Service_Pages_Income_tax_annual-report-2026_1325-2025.pdf",
+   "raw_snippet": "מחיר מתואם תאריך המכירה",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "f1325-index-currency",
+   "claim": "Form 1325 explanation 4: for an individual, if the security is denominated in or linked to foreign currency, the currency rate is treated as the index.",
+   "claim_type": "law",
+   "source_url": "https://www.gov.il/BlobFolder/service/reporting-and-payment-2025-annual-tax-report-for-individuals/he/Service_Pages_Income_tax_annual-report-2026_1325-2025.pdf",
+   "raw_snippet": "ואולם לגבי יחיד ,אם נייר הערך נקוב במטבע חוץ או שערכו צמוד למטבע חוץ ,יראו את שער המטבע כמדד",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "f1325-original-price-fees",
+   "claim": "Form 1325 explanation 3: original price is the amount paid for the security plus transaction commissions, excluding periodic fees.",
+   "claim_type": "law",
+   "source_url": "https://www.gov.il/BlobFolder/service/reporting-and-payment-2025-annual-tax-report-for-individuals/he/Service_Pages_Income_tax_annual-report-2026_1325-2025.pdf",
+   "raw_snippet": "מחיר מקורי - סכום שהוצא לרכישת נייר הערך",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "f1325-consideration-fees",
+   "claim": "Form 1325 explanation 5: consideration is net of transaction commissions, excluding periodic fees.",
+   "claim_type": "law",
+   "source_url": "https://www.gov.il/BlobFolder/service/reporting-and-payment-2025-annual-tax-report-for-individuals/he/Service_Pages_Income_tax_annual-report-2026_1325-2025.pdf",
+   "raw_snippet": "תמורה - תמורה כהגדרתה בסעיף 88 לפקודה בניכוי עמלות התנועה",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "f1325-chronological",
+   "claim": "Form 1325 asks for full identification of each security sold in the chronological order of sales, and a separate form for each tax rate.",
+   "claim_type": "form-number",
+   "source_url": "https://www.gov.il/BlobFolder/service/reporting-and-payment-2025-annual-tax-report-for-individuals/he/Service_Pages_Income_tax_annual-report-2026_1325-2025.pdf",
+   "raw_snippet": "יש למלא טופס נפרד עבור כל רווח הון בשיעור מס שונה",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "f1325-title",
+   "claim": "Form 1325 is Appendix C1: capital gain from traded securities for tax year 2025.",
+   "claim_type": "form-number",
+   "source_url": "https://www.gov.il/BlobFolder/service/reporting-and-payment-2025-annual-tax-report-for-individuals/he/Service_Pages_Income_tax_annual-report-2026_1325-2025.pdf",
+   "raw_snippet": "רווח הון מניירות ערך סחירים לשנת המס 2025",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "f1324-title",
+   "claim": "Form 1324 (טופס 1324) is Appendix D: income from abroad and tax paid on it, tax year 2025; it must be attached to an annual return that includes foreign income.",
+   "claim_type": "form-number",
+   "source_url": "https://www.gov.il/BlobFolder/service/reporting-and-payment-2025-annual-tax-report-for-individuals/he/Service_Pages_Income_tax_annual-report-2026_1324-2025.pdf",
+   "raw_snippet": "הכנסות מחו\"ל ומס ששולם עליהן לשנת המס 2025",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "f1324-dividend-row",
+   "claim": "Form 1324 has a row for dividend and other income taxed at 25%, whose amount is also included in fields 141, 241, 341 of Form 1301; on the 2025 form the row carries field 462 (income) and 431 (foreign tax).",
+   "claim_type": "form-number",
+   "source_url": "https://www.gov.il/BlobFolder/service/reporting-and-payment-2025-annual-tax-report-for-individuals/he/Service_Pages_Income_tax_annual-report-2026_1324-2025.pdf",
+   "raw_snippet": "מדיבידנד והכנסות אחרות) - (6מס בשיעור 25%",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "f1324-dividend-1301",
+   "claim": "Form 1324: the 25% dividend amount is included in fields 341, 241, 141 of Form 1301.",
+   "claim_type": "form-number",
+   "source_url": "https://www.gov.il/BlobFolder/service/reporting-and-payment-2025-annual-tax-report-for-individuals/he/Service_Pages_Income_tax_annual-report-2026_1324-2025.pdf",
+   "raw_snippet": "הסכום צורף להכנסות בשדות 341 ,241 ,141בטופס (1301",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "f1324-dividend-fields",
+   "claim": "Form 1324 (2025) row codes as laid out on the form: 462 and 431 for the 25% dividend row; 439 and 422 for total sales of traded-security capital gain as recorded on Form 1322.",
+   "claim_type": "form-number",
+   "source_url": "https://www.gov.il/BlobFolder/service/reporting-and-payment-2025-annual-tax-report-for-individuals/he/Service_Pages_Income_tax_annual-report-2026_1324-2025.pdf",
+   "raw_snippet": "431 462 מדיבידנד והכנסות אחרות",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "f1324-sales-1322",
+   "claim": "Form 1324 has a capital-gain line for total sales from traded-security gains as recorded on Form 1322.",
+   "claim_type": "form-number",
+   "source_url": "https://www.gov.il/BlobFolder/service/reporting-and-payment-2025-annual-tax-report-for-individuals/he/Service_Pages_Income_tax_annual-report-2026_1324-2025.pdf",
+   "raw_snippet": "סך המכירות מרווח הון מני\"ע סחירים )כפי שנרשם בטופס (1322",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "f1324-interest-25",
+   "claim": "Form 1324 has interest rows at 15% and a row for interest from securities, deposits and savings plans at 25%.",
+   "claim_type": "form-number",
+   "source_url": "https://www.gov.il/BlobFolder/service/reporting-and-payment-2025-annual-tax-report-for-individuals/he/Service_Pages_Income_tax_annual-report-2026_1324-2025.pdf",
+   "raw_snippet": "מריבית מני\"ע מפקדונות ומתוכניות חיסכון",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "f1324-interest-15",
+   "claim": "Form 1324 interest row taxed at 15%.",
+   "claim_type": "percentage",
+   "source_url": "https://www.gov.il/BlobFolder/service/reporting-and-payment-2025-annual-tax-report-for-individuals/he/Service_Pages_Income_tax_annual-report-2026_1324-2025.pdf",
+   "raw_snippet": "מריבית ,הפרשי הצמדה ,דמי ניכיון -מס בשיעור 15%",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "f1324-proof",
+   "claim": "Form 1324 note 4: foreign tax is reported on the basis of attached certificates only.",
+   "claim_type": "law",
+   "source_url": "https://www.gov.il/BlobFolder/service/reporting-and-payment-2025-annual-tax-report-for-individuals/he/Service_Pages_Income_tax_annual-report-2026_1324-2025.pdf",
+   "raw_snippet": "על-סמך אישורים מצורפים בלבד",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "f1324-excess-credit",
+   "claim": "Form 1324 note 5: the foreign tax column includes excess credit from tax years 2020 to 2024 not yet used, per section 205A.",
+   "claim_type": "law",
+   "source_url": "https://www.gov.il/BlobFolder/service/reporting-and-payment-2025-annual-tax-report-for-individuals/he/Service_Pages_Income_tax_annual-report-2026_1324-2025.pdf",
+   "raw_snippet": "כולל עודף זיכוי שנוצר בשנות מס 2024 - 2020וטרם נוצל ,כאמור בסעיף 205א לפקודה",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "f1344-title",
+   "claim": "Form 1344 reports losses carried forward from a previous tax year to 2025.",
+   "claim_type": "form-number",
+   "source_url": "https://www.gov.il/he/service/reporting-and-payment-2025-annual-tax-report-for-individuals",
+   "raw_snippet": "טופס 1344 - דיווח על הפסדים מועברים משנת מס קודמת לשנת 2025",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ],
+   "verified_via": "browser",
+   "verified_at": "2026-11-02"
+  },
+  {
+   "claim_id": "f1301-service",
+   "claim": "The Tax Authority service page for the 2025 annual report (Form 1301) lists Forms 1322, 1324, 1325, 1326 and 1344 for download.",
+   "claim_type": "form-number",
+   "source_url": "https://www.gov.il/he/service/reporting-and-payment-2025-annual-tax-report-for-individuals",
+   "raw_snippet": "טופס 1322 - רווחי הון מניירות ערך סחירים (הנסחרים בבורסה) 2025",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ],
+   "verified_via": "browser",
+   "verified_at": "2026-11-02"
+  },
+  {
+   "claim_id": "f1326-not-for",
+   "claim": "Form 1326 (Appendix C2) is for securities to which the transitional provisions of the repeal of section 6 of the Inflationary Adjustments Law apply; Form 1325 is not for those.",
+   "claim_type": "form-number",
+   "source_url": "https://www.gov.il/BlobFolder/service/reporting-and-payment-2025-annual-tax-report-for-individuals/he/Service_Pages_Income_tax_annual-report-2026_1325-2025.pdf",
+   "raw_snippet": "הטופס אינו מיועד לניירות ערך שחלות עליהם הוראות המעבר לביטול סעיף 6 לחוק התיאומים",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "surtax-2pct-from-2025",
+   "claim": "Tax Authority execution instruction 5/2025: the 2% surtax on capital-source income (Section 121B(a1), סעיף 121ב) applies from tax year 2025 onward; for 2024 only the 3% limb applies.",
+   "claim_type": "date",
+   "source_url": "https://www.gov.il/BlobFolder/policy/inst-05-2025/he/IncomeTax_inst-05-2025.pdf",
+   "raw_snippet": "החל משנת המס 2025 ואילך, יחיד אשר",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "surtax-2pct-commencement",
+   "claim": "Tax Authority execution instruction 5/2025: the amendment that added Section 121B(a1) (the 2% limb) applies to income produced or received from 1 January 2025. Secondary confirmations: PwC Israel, Shibolet, BSH summaries of the 2025 Arrangements Law.",
+   "claim_type": "date",
+   "source_url": "https://www.gov.il/BlobFolder/policy/inst-05-2025/he/IncomeTax_inst-05-2025.pdf",
+   "raw_snippet": "תחילתו של התיקון לחוק יחול ביחס להכנסה שהופקה או התקבלה ביום 1 בינואר 2025",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "treaty-art15-14-2",
+   "claim": "US-Israel treaty Article 15(1)(b): the exemption does not cover gains from property described in Article 14(2) (royalties).",
+   "claim_type": "law",
+   "source_url": "https://www.irs.gov/pub/irs-trty/israel.pdf",
+   "raw_snippet": "The gain is from the sale, exchange or other disposition of property described in paragraph (2) of Article 14 (Royalties)",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "s91d6-withheld-as-advance",
+   "claim": "Section 91(d)(6): an amount withheld under sections 93(b4), 164 and 170 on the capital gain is treated as a payment on account of the advance and may be set off against it, given a written certificate of the withholding.",
+   "claim_type": "law",
+   "source_url": "https://he.wikisource.org/wiki/פקודת_מס_הכנסה",
+   "raw_snippet": "יראוהו כתשלום על חשבון המקדמה שהנישום חייב בה והוא יהיה זכאי לקזזו מהמקדמה, ובלבד שיש בידו אישור בכתב בדבר הניכוי",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "s91d3-linkage",
+   "claim": "Section 91(d)(3): an advance not paid on time, or underpaid, bears linkage differentials and interest under section 159A(a) on the shortfall from the end of the 30 days.",
+   "claim_type": "law",
+   "source_url": "https://he.wikisource.org/wiki/פקודת_מס_הכנסה",
+   "raw_snippet": "בתשלום הפרשי הצמדה וריבית כמשמעותם בסעיף 159א(א) על ההפרש שבין הסכום ששילם לבין סכום המס שהוא חייב בו",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "s125c-discount",
+   "claim": "Section 125C: \"interest\" includes discount (דמי ניכיון), so a Treasury bill discount is interest income.",
+   "claim_type": "law",
+   "source_url": "https://he.wikisource.org/wiki/פקודת_מס_הכנסה",
+   "raw_snippet": "”ריבית“ - לרבות דמי ניכיון",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "f1322-separate-spouse-inherited",
+   "claim": "Form 1322 note 5: securities received by inheritance or owned by one spouse a year before the marriage need a separate form.",
+   "claim_type": "form-number",
+   "source_url": "https://www.gov.il/BlobFolder/service/reporting-and-payment-2025-annual-tax-report-for-individuals/he/Service_Pages_Income_tax_annual-report-2026_1322-2025-ACC.pdf",
+   "raw_snippet": "יש למלא לגביהם טופס בנפרד",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "f1322-867",
+   "claim": "Form 1322 explanation 2a: for an individual whose traded securities were not in business books and from whom the full tax was withheld, the figure is taken from Form 867 (Forms 867A and 867B, טופס 867) issued by the withholding agents.",
+   "claim_type": "form-number",
+   "source_url": "https://www.gov.il/BlobFolder/service/reporting-and-payment-2025-annual-tax-report-for-individuals/he/Service_Pages_Income_tax_annual-report-2026_1322-2025-ACC.pdf",
+   "raw_snippet": "יילקח מטופס 867א+ב המתקבלים מהמנכים",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "f1322-ownership-box",
+   "claim": "Form 1322 has an ownership box (שייכות) marking the securities as the individual's, the registered spouse's or the spouse's.",
+   "claim_type": "form-number",
+   "source_url": "https://www.gov.il/BlobFolder/service/reporting-and-payment-2025-annual-tax-report-for-individuals/he/Service_Pages_Income_tax_annual-report-2026_1322-2025-ACC.pdf",
+   "raw_snippet": "- 3בן/בת זוג ,שנה לפני הנישואין או מירושה",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "f1301-turnover-question",
+   "claim": "Form 1301 (2025) asks whether the filer or spouse had a turnover of non-exempt sales of exchange-traded securities above NIS 2,810,000.",
+   "claim_type": "currency",
+   "source_url": "https://www.gov.il/BlobFolder/service/reporting-and-payment-2025-annual-tax-report-for-individuals/he/Service_Pages_Income_tax_annual-report-2026_itc1301-2025.pdf",
+   "raw_snippet": "מחזור מכירות מניירות ערך הנסחרים בבורסה שאינו פטור ממס העולה על 2,810,000",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "f1301-schedule-f",
+   "claim": "Schedule F of the filing-exemption regulations: NIS 2,810,000 for 2023 to 2026.",
+   "claim_type": "currency",
+   "source_url": "https://he.wikisource.org/wiki/תקנות_מס_הכנסה_(פטור_מהגשת_דין_וחשבון)",
+   "raw_snippet": "בשנים 2023-2026, 2,810,000 ש״ח",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "f1301-field-256-label",
+   "claim": "Form 1301 line 39: total sales from capital gain on traded securities (field 256), carried from Appendices C, C1 and C2.",
+   "claim_type": "form-number",
+   "source_url": "https://www.gov.il/BlobFolder/service/reporting-and-payment-2025-annual-tax-report-for-individuals/he/Service_Pages_Income_tax_annual-report-2026_itc1301-2025.pdf",
+   "raw_snippet": "סה\"כ סכום המכירות מרווח הון מניירות ערך סחירים",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "f1301-spouse-section",
+   "claim": "Form 1301 section H reports capital-gain income of the registered spouse and the spouse separately.",
+   "claim_type": "form-number",
+   "source_url": "https://www.gov.il/BlobFolder/service/reporting-and-payment-2025-annual-tax-report-for-individuals/he/Service_Pages_Income_tax_annual-report-2026_itc1301-2025.pdf",
+   "raw_snippet": "הכנסות מרווח הון ומשבח מקרקעין של \"בן הזוג הרשום\" ובן/בת הזוג",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "f1301-withheld-line",
+   "claim": "Form 1301 line 87 totals tax withheld at source excluding advances and foreign tax.",
+   "claim_type": "form-number",
+   "source_url": "https://www.gov.il/BlobFolder/service/reporting-and-payment-2025-annual-tax-report-for-individuals/he/Service_Pages_Income_tax_annual-report-2026_itc1301-2025.pdf",
+   "raw_snippet": "סה\"כ הסכומים שנוכו במקור )ללא מקדמות וללא מס ששולם בחו\"ל(",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "s91b1-1b-listed",
+   "claim": "Section 91(b1)(1b): the pre-2012 split of subsection (b1) does not apply to securities listed for trading on an exchange that were listed before the change date (1 January 2012).",
+   "claim_type": "law",
+   "source_url": "https://he.wikisource.org/wiki/פקודת_מס_הכנסה",
+   "raw_snippet": "הוראות סעיף קטן זה לא יחולו במכירת ניירות ערך הרשומים למסחר בבורסה ושנרשמו למסחר לפני מועד השינוי",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "moses-case",
+   "claim": "Supreme Court, Civil Appeal 3555/15 Oded Moses et al. v. Assessing Officer for Large Enterprises (ע\"א 3555/15), given 12.9.16: a loss on securities that results from a fall in the exchange rate is not a loss allowed for set-off against capital gains.",
+   "claim_type": "law",
+   "source_url": "http://www.masfax.co.il/%D7%A4%D7%A1%D7%A7%D7%90%D7%95%D7%AA/%D7%94%D7%A2%D7%9C%D7%99%D7%95%D7%9F-%D7%9C%D7%90-%D7%99%D7%95%D7%AA%D7%A8-%D7%A7%D7%99%D7%96%D7%95%D7%96-%D7%94%D7%A4%D7%A1%D7%93%D7%99%D7%9D-%D7%9E%D7%94%D7%A4%D7%A8%D7%A9%D7%99-%D7%A9%D7%A2%D7%A8-%D7%91%D7%A0%D7%99%D7%99%D7%A8%D7%95%D7%AA-%D7%A2%D7%A8%D7%9A",
+   "raw_snippet": "ביהמ\"ש קבע, כי הפסד מניירות ערך הנובע מירידת שער החליפין, אינו מוכר כהפסדים המוכרים לקיזוז מרווחי הון אשר נצמחו למשקיעים",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "moses-case-number",
+   "claim": "The case is ע\"א 3555/15 עודד מוזס ואח' נ' פקיד שומה למפעלים גדולים.",
+   "claim_type": "law",
+   "source_url": "http://www.masfax.co.il/%D7%A4%D7%A1%D7%A7%D7%90%D7%95%D7%AA/%D7%94%D7%A2%D7%9C%D7%99%D7%95%D7%9F-%D7%9C%D7%90-%D7%99%D7%95%D7%AA%D7%A8-%D7%A7%D7%99%D7%96%D7%95%D7%96-%D7%94%D7%A4%D7%A1%D7%93%D7%99%D7%9D-%D7%9E%D7%94%D7%A4%D7%A8%D7%A9%D7%99-%D7%A9%D7%A2%D7%A8-%D7%91%D7%A0%D7%99%D7%99%D7%A8%D7%95%D7%AA-%D7%A2%D7%A8%D7%9A",
+   "raw_snippet": "ע\"א 3555/15 עודד מוזס ואח' נ' פקיד שומה למפעלים גדולים",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "moses-two-stage",
+   "claim": "Moses: section 92(a)(1) creates a two-stage computation of the allowable loss: first the nominal capital loss under section 88, then isolate the part that would have been taxable had it been a gain; only that part is allowed.",
+   "claim_type": "law",
+   "source_url": "http://www.masfax.co.il/%D7%A4%D7%A1%D7%A7%D7%90%D7%95%D7%AA/%D7%94%D7%A2%D7%9C%D7%99%D7%95%D7%9F-%D7%9C%D7%90-%D7%99%D7%95%D7%AA%D7%A8-%D7%A7%D7%99%D7%96%D7%95%D7%96-%D7%94%D7%A4%D7%A1%D7%93%D7%99%D7%9D-%D7%9E%D7%94%D7%A4%D7%A8%D7%A9%D7%99-%D7%A9%D7%A2%D7%A8-%D7%91%D7%A0%D7%99%D7%99%D7%A8%D7%95%D7%AA-%D7%A2%D7%A8%D7%9A",
+   "raw_snippet": "סעיף 92(א)(1) לפקודה יוצר מנגנון דו-שלבי לחישוב סכום הפסד ההון המותר בקיזוז",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "moses-fx-is-inflationary",
+   "claim": "Moses: for foreign-currency securities the change in the exchange rate is the inflationary amount, because the definition of index makes the currency rate the index.",
+   "claim_type": "law",
+   "source_url": "http://www.masfax.co.il/%D7%A4%D7%A1%D7%A7%D7%90%D7%95%D7%AA/%D7%94%D7%A2%D7%9C%D7%99%D7%95%D7%9F-%D7%9C%D7%90-%D7%99%D7%95%D7%AA%D7%A8-%D7%A7%D7%99%D7%96%D7%95%D7%96-%D7%94%D7%A4%D7%A1%D7%93%D7%99%D7%9D-%D7%9E%D7%94%D7%A4%D7%A8%D7%A9%D7%99-%D7%A9%D7%A2%D7%A8-%D7%91%D7%A0%D7%99%D7%99%D7%A8%D7%95%D7%AA-%D7%A2%D7%A8%D7%9A",
+   "raw_snippet": "סכום השינוי בשער החליפין הוא \" סכום אינפלציוני \"",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "moses-given-date",
+   "claim": "Moses was given on 12.9.16.",
+   "claim_type": "date",
+   "source_url": "http://www.masfax.co.il/%D7%A4%D7%A1%D7%A7%D7%90%D7%95%D7%AA/%D7%94%D7%A2%D7%9C%D7%99%D7%95%D7%9F-%D7%9C%D7%90-%D7%99%D7%95%D7%AA%D7%A8-%D7%A7%D7%99%D7%96%D7%95%D7%96-%D7%94%D7%A4%D7%A1%D7%93%D7%99%D7%9D-%D7%9E%D7%94%D7%A4%D7%A8%D7%A9%D7%99-%D7%A9%D7%A2%D7%A8-%D7%91%D7%A0%D7%99%D7%99%D7%A8%D7%95%D7%AA-%D7%A2%D7%A8%D7%9A",
+   "raw_snippet": "ניתן ביום: 12.9.16",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "moses-real-loss-only-falling",
+   "claim": "As summarised by Alex Shapira and Co. (capitax): under Moses, a capital loss while the index (exchange rate) fell leaves only the real loss; where the index fell and there is a gain, the taxed gain is the smaller nominal shekel gain, because a negative inflationary amount is not taken into account; a loss while the index rose is allowed at its nominal amount. The further-hearing request was denied by President Naor.",
+   "claim_type": "law",
+   "source_url": "https://www.capitax.co.il/content/2/1611",
+   "raw_snippet": "שבו הרווח הממוּסה הוא הרווח הנומינלי המצומצם יותר",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ],
+   "verified_via": "browser",
+   "verified_at": "2026-11-02"
+  },
+  {
+   "claim_id": "moses-further-hearing-denied",
+   "claim": "President Naor denied the request for a further hearing on Moses and rejected the argument that it applies only prospectively.",
+   "claim_type": "law",
+   "source_url": "https://www.capitax.co.il/content/2/1611",
+   "raw_snippet": "הנשיאה נאור דחתה את טענת התחולה הרטרואקטיבית של המבקשים",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ],
+   "verified_via": "browser",
+   "verified_at": "2026-11-02"
+  },
+  {
+   "claim_id": "boi-page",
+   "claim": "Bank of Israel publishes the representative exchange rates of the shekel against foreign currencies every business day in foreign currency in Israel.",
+   "claim_type": "url",
+   "source_url": "https://www.boi.org.il/roles/markets/exchangerates/",
+   "raw_snippet": "בכל יום עסקים במטבע חוץ בישראל מפרסם בנק ישראל את שערי החליפין היציגים של השקל מול מטבעות זרים",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ],
+   "verified_via": "browser",
+   "verified_at": "2026-11-02"
+  },
+  {
+   "claim_id": "treaty-art12-25",
+   "claim": "US-Israel income tax treaty, Article 12(2)(a) (סעיף 12 לאמנה): tax on dividends paid to a resident of the other state may not exceed 25 percent of the gross dividend (12.5 percent for a qualifying corporate holder of 10 percent).",
+   "claim_type": "percentage",
+   "source_url": "https://www.irs.gov/pub/irs-trty/israel.pdf",
+   "raw_snippet": "25 percent of the gross amount of the dividend paid",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "treaty-art15-gains",
+   "claim": "US-Israel treaty Article 15(1) (סעיף 15 לאמנה, סעיף 14 לאמנה for Article 14(2)): a resident of one state is exempt from tax by the other state on gains from the sale of capital assets, subject to listed exceptions (real property, permanent establishment, presence of 183 days or more).",
+   "claim_type": "law",
+   "source_url": "https://www.irs.gov/pub/irs-trty/israel.pdf",
+   "raw_snippet": "shall be exempt from tax by the other Contracting",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "treaty-183",
+   "claim": "Article 15(1)(d) exception: an individual present in the other state 183 days or more in the taxable year.",
+   "claim_type": "threshold",
+   "source_url": "https://www.irs.gov/pub/irs-trty/israel.pdf",
+   "raw_snippet": "period or periods aggregating 183 days or more during the taxable year",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "irs-table1-israel",
+   "claim": "IRS Tax Treaty Table 1 lists Israel (IS) with a 25 percent general dividend rate and 12.5 for qualifying companies.",
+   "claim_type": "percentage",
+   "source_url": "https://www.irs.gov/pub/irs-lbi/tax-treaty-table-1.pdf",
+   "raw_snippet": "Israel.. bbb................. IS 17½ z 13(2) 25 w 12½ w",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "w8ben",
+   "claim": "IRS: give Form W-8BEN to the withholding agent or payer if you are a foreign person and the beneficial owner of an amount subject to withholding; submit it when requested whether or not you claim a reduced rate.",
+   "claim_type": "api-field",
+   "source_url": "https://www.irs.gov/forms-pubs/about-form-w-8-ben",
+   "raw_snippet": "Give Form W-8 BEN to the withholding agent or payer if you are a foreign person and you are the beneficial owner of an amount subject to withholding",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "boi-api-csv",
+   "claim": "The Bank of Israel SDMX API returns daily representative rates (series RER_USD_ILS, and RER_EUR_ILS for the euro) as CSV with TIME_PERIOD and OBS_VALUE columns.",
+   "claim_type": "api-endpoint",
+   "source_url": "https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI.STATISTICS/EXR/1.0/RER_USD_ILS?startperiod=2025-01-01&endperiod=2025-01-10&format=csv",
+   "raw_snippet": "RER_USD_ILS,D,USD,ILS,ILS,OF00,BOI_MRKT,V,F,Y,0,,2025-01-02,3.65,YP",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "boi-api-unitmult",
+   "claim": "BoI series carry a UNIT_MULT column; for the yen it is set so that the published rate is per hundred yen, so the figure must be divided before use.",
+   "claim_type": "api-field",
+   "source_url": "https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI.STATISTICS/EXR/1.0/RER_JPY_ILS?startperiod=2025-06-01&endperiod=2025-06-04&format=csv",
+   "raw_snippet": "RER_JPY_ILS,D,JPY,ILS,ILS,OF00,BOI_MRKT,V,F,Y,2,,2025-06-03,2.4639,YP",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "k60",
+   "claim": "Kol Zchut: individuals aged 60 or over may be entitled to reduced tax rates on capital gains and on interest from deposits and savings plans.",
+   "claim_type": "threshold",
+   "source_url": "https://www.kolzchut.org.il/he/הטבת_מס_מגיל_60_על_רווחי_הון_ועל_ריבית_מפקדונות_ומתוכניות_חיסכון",
+   "raw_snippet": "מי שמלאו להם 60 עשויים להיות זכאים לשיעורי מס מופחתים על רווחי הון ועל ריבית מפקדונות ומתוכניות חיסכון",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  },
+  {
+   "claim_id": "kolim-10y",
+   "claim": "Kol Zchut: for 10 years from aliyah, new immigrants are exempt from tax on all income sourced outside Israel, including capital gains on assets outside Israel.",
+   "claim_type": "threshold",
+   "source_url": "https://www.kolzchut.org.il/he/הטבות_מס_לעולים",
+   "raw_snippet": "במשך 10 שנים מעלייתם לארץ העולים זכאים לפטור ממס על כל הכנסה שמקורה מחוץ לישראל",
+   "fetched_at": "2026-11-02",
+   "confidence": "high",
+   "appears_in": [
+    "SKILL.md",
+    "SKILL_HE.md",
+    "references/foreign-currency-gain-method.md",
+    "references/forms-and-filing.md",
+    "references/domain-checklist.md",
+    "scripts/broker-gains-ils.py"
+   ]
+  }
+ ]
+}
