@@ -1,6 +1,22 @@
 {
   "cycles": [
     {
+      "version": "1.6.0",
+      "date": "2026-11-03",
+      "lessons": [
+        "Description unchanged this cycle, so no holdout run (Phase 5.7 skipped). Deferred: frontmatter description still says 'annual reporting' and lacks the opening legal clause carried by metadata.json; changing it needs the holdout gate.",
+        "CARRY resolved: whole-shekel rounding now sourced (s.139 half up; PCN874 spec rounds per-invoice VAT to the shekel) and implemented as a column computed from rounded boxes; VAT-inclusive inputs supported (--inclusive / vat_included); half-agora rounding fixed with Decimal ROUND_HALF_UP.",
+        "CARRY closed as not applicable: the 1.6.0 WIP patch from 2026-09 (s.13 enumeration, reg. 6A, Eilat routing) was never found on disk; reg. 6A and s.13 list remain out of scope (domain-checklist), with s.13 routed to an accountant via Nevo link.",
+        "Gov.il HTML (Cloudflare) was unreadable from this machine all cycle; 5 evidence entries still rest on the 2026-09-13 browser read (monthly-threshold, allocation-number-schedule, shaam-portal, illustrative-figures, ita-new-dealer-guide). Each fact is now also backed by Nevo, Kol Zchut or an ITA PDF. Re-read with a working browser next cycle.",
+        "2027 figures: monthly/bi-monthly threshold 1,805,000 from 1.1.2027 is on Kol Zchut and a CPA notice (primary gov.il page blocked). Osek patur 2027 figure not published before the 15.12.2026 CPI: add it in January 2027. ITA 2027 reporting calendar not yet seen: add 2027 shifted dates next cycle.",
+        "Deferred (expert minor): six-month window stays a warning, not a hold, because the counting convention is not settled in a primary text; script default VAT is 18% for every record without 'vat' (a 17%-for-pre-2025 default was tried and reverted: it also hit sales). Lines of one invoice with no supplier merge on number+date (warns).",
+        "Deferred reference-only checklist rows: A4d, A4e, A6-A6b, C4, C5, D10, E6, F2, F3, F5, F6, G8, H3, H4 (refund timing, large-refund paper return, provisional and supplementary returns, union of dealers).",
+        "Lesson: a per-line threshold check is wrong for a per-invoice rule, and fixing it by grouping on the bare invoice number created a cross-supplier false hold. Key on supplier + number + date, and let one allocation number on any line cover the invoice.",
+        "Lesson: the Kol Zchut periodic-returns page conflates late-filing and late-payment fines; quote s.94 and s.96 directly.",
+        "Sibling defects (not edited): israeli-freelancer-ops says the 2027 detailed-report deferral test is 90% 'by amount or by count'; the ITA notice says by amount (מהסכום הכולל). il-invoice-organizer sets VAT frequency by turnover only and omits that detailed-report filers are monthly and file by the 23rd."
+      ]
+    },
+    {
       "version": "1.5.2",
       "date": "2026-09-13",
       "holdout_before": 1.0,

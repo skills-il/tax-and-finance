@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0",
   "skill": "israeli-vat-reporting",
-  "generated_at": "2026-09-13T00:00:00Z",
+  "generated_at": "2026-11-03T00:00:00Z",
   "claims": [
     {
       "claim_id": "vat-rate",
@@ -57,9 +57,9 @@
     },
     {
       "claim_id": "late-penalty",
-      "claim": "Late filing of a periodic VAT return triggers late-payment fines, a debt fine, and linkage differentials and interest; an administrative fine under the Administrative Offences Law may also be imposed. Verify current-year amounts with the Tax Authority.",
+      "claim": "An administrative fine under the Administrative Offences Law may also be imposed on a dealer who did not file the periodic return on time (Kol Zchut).",
       "source_url": "https://www.kolzchut.org.il/he/%D7%94%D7%92%D7%A9%D7%AA_%D7%93%D7%95%22%D7%97%D7%95%D7%AA_%D7%AA%D7%A7%D7%95%D7%A4%D7%AA%D7%99%D7%99%D7%9D_%D7%95%D7%AA%D7%A9%D7%9C%D7%95%D7%9D_%D7%9E%D7%A1_%D7%A2%D7%A8%D7%9A_%D7%9E%D7%95%D7%A1%D7%A3",
-      "raw_snippet": "איחור בהגשת הדו\"ח יגרור הטלת קנסות פיגורים, קנס חוב, והוספת הפרשי הצמדה וריבית. בנוסף עלולים להטיל על עוסק שהפר את חובתו להגיש את הדו\"ח במועד גם קנס מנהלי לפי חוק העבירות המנהליות.",
+      "raw_snippet": "בנוסף עלולים להטיל על עוסק שהפר את חובתו להגיש את הדו\"ח במועד גם קנס מנהלי לפי חוק העבירות המנהליות",
       "fetched_at": "2026-05-31T00:00:00Z",
       "appears_in": [
         "SKILL.md",
@@ -155,8 +155,8 @@
       "claim_id": "reg14-private-car",
       "claim": "VAT Regulations reg. 14: input VAT paid on buying or importing a private car is not deductible (with listed exceptions). (Hebrew: תקנה 14 לתקנות מס ערך מוסף)",
       "source_url": "https://www.nevo.co.il/law_html/law01/271_005.htm",
-      "raw_snippet": "מס תשומות ששולם על רכישתו או יבואו של רכב פרטי, לא יהיה ניתן לניכוי.",
-      "fetched_at": "2026-09-13T00:00:00Z",
+      "raw_snippet": "המס שהוטל על מכירת רכב פרטי לעוסק או על ייבוא רכב כאמור בידי עוסק לא יהיה ניתן לניכוי.",
+      "fetched_at": "2026-11-03T00:00:00Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
@@ -204,7 +204,7 @@
     },
     {
       "claim_id": "ita-new-dealer-guide",
-      "claim": "The ITA guide for the new dealer (https://www.gov.il/he/pages/vat-to-the-new-dealer) covers reporting frequency and deadlines; detailed-report filers transmit and pay by the 23rd of the month. Its detailed-report threshold figure (5,000,000) is outdated.",
+      "claim": "The ITA guide for the new dealer covers reporting frequency and deadlines; detailed-report filers transmit and pay by the 23rd of the month (also VAT Law s.67A(d)(1)).",
       "source_url": "https://www.gov.il/he/pages/vat-to-the-new-dealer?chapterIndex=9",
       "raw_snippet": "עוסקים החייבים בדיווח מפורט ישדרו וישלמו את המס הנובע מדו\"ח תקופתי מפורט לא יאוחר מיום   ה – 23 לחודש.",
       "fetched_at": "2026-09-13T00:00:00Z",
@@ -250,19 +250,6 @@
         "SKILL_HE.md",
         "references/vat-regulations.md"
       ]
-    },
-    {
-      "claim_id": "ita-guide-outdated-5m",
-      "claim": "The ITA new-dealer guide page (chapter 11) still shows an outdated detailed-report threshold of NIS 5,000,000 (5,000,000 ₪), superseded by the NIS 500,000 threshold; the skill tells users not to rely on it.",
-      "source_url": "https://www.gov.il/he/pages/vat-to-the-new-dealer?chapterIndex=11",
-      "raw_snippet": "החל מהדיווח התקופתי 9/2025 חלה חובה על כלל העוסקים במשק, עצמאים וחברות, שמחזור עסקאותיהם עולה על 5,000,000 ₪",
-      "fetched_at": "2026-09-13T00:00:00Z",
-      "appears_in": [
-        "SKILL.md",
-        "SKILL_HE.md"
-      ],
-      "verified_via": "browser",
-      "verified_at": "2026-09-13"
     },
     {
       "claim_id": "vat-rate-previous-17",
@@ -334,7 +321,7 @@
     },
     {
       "claim_id": "vat-law-s30a1-export",
-      "claim": "VAT Law section 30(a)(1): a sale of goods is zero-rated if an export declaration (or another document the Director approved) was filed and release was granted, excluding goods under section 33. Exports of goods are therefore zero-rated sales.",
+      "claim": "VAT Law section 30(a)(1) (Hebrew: סעיף 30(א)(1)): a sale of goods is zero-rated if an export declaration (or another document the Director approved) was filed and release was granted, excluding goods under section 33. Exports of goods are therefore zero-rated sales.",
       "source_url": "https://www.nevo.co.il/law_html/law01/271_001.htm",
       "raw_snippet": "30. (א) אלה עסקאות שהמס עליהן יהיה בשיעור אפס: (1) מכירת טובין – למעט טובין כאמור בסעיף 33 – אם הוגשו לגביהם הצהרת ייצוא או מסמך אחר שאישר לעניין זה המנהל, וניתנה לגביהם התרה;",
       "fetched_at": "2026-09-13T00:00:00Z",
@@ -342,6 +329,434 @@
         "SKILL.md",
         "SKILL_HE.md",
         "scripts/calculate_vat.py"
+      ]
+    },
+    {
+      "claim_id": "monthly-threshold-2027",
+      "claim": "From 1 January 2027 the monthly/bi-monthly turnover threshold is NIS 1,805,000 (1,805,000 ₪), replacing NIS 1,775,000.",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%94%D7%92%D7%A9%D7%AA_%D7%93%D7%95%22%D7%97%D7%95%D7%AA_%D7%AA%D7%A7%D7%95%D7%A4%D7%AA%D7%99%D7%99%D7%9D_%D7%95%D7%AA%D7%A9%D7%9C%D7%95%D7%9D_%D7%9E%D7%A1_%D7%A2%D7%A8%D7%9A_%D7%9E%D7%95%D7%A1%D7%A3",
+      "raw_snippet": "החל מיום 01.01.2027 יעמוד סכום מחזור העסקאות הקובע על סך של 1,805,000 ₪",
+      "fetched_at": "2026-11-03T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/reporting-calendar.md",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "frequency-2027-determining-period",
+      "claim": "Reporting frequency for 2027 is set by turnover from 1.9.2025 to 31.8.2026 against the NIS 1,805,000 threshold.",
+      "source_url": "https://www.starkcpa.com/%d7%a2%d7%93%d7%9b%d7%95%d7%9f-%d7%a1%d7%9b%d7%95%d7%9d-%d7%9e%d7%97%d7%96%d7%95%d7%a8-%d7%94%d7%a2%d7%a1%d7%a7%d7%90%d7%95%d7%aa-%d7%a9%d7%9c-%d7%a2%d7%95%d7%a1%d7%a7-%d7%9c%d7%a2%d7%a0%d7%99%d7%99/",
+      "raw_snippet": "תדירות הדיווח למע\"מ בשנת 2027 תיקבע בהתאם למחזור העסקאות בתקופה הקובעת, מיום 1.9.2025 ועד ליום 31.8.2026",
+      "fetched_at": "2026-11-03T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "reg20-determining-year",
+      "claim": "VAT Regulations reg. 20 (Hebrew: תקנה 20): the determining year is the 12 consecutive months ending 31 August of the previous tax year.",
+      "source_url": "https://www.nevo.co.il/law_html/law01/271_005.htm",
+      "raw_snippet": "\"השנה הקובעת\" - תקופה של שנים עשר חדשים רצופים המסתיימת ב-31 באוגוסט של שנת המס שחלפה",
+      "fetched_at": "2026-11-03T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/reporting-calendar.md"
+      ]
+    },
+    {
+      "claim_id": "s126d-september-indexation",
+      "claim": "VAT Law s.126(d) (Hebrew: סעיף 126(ד)): the s.67(a2) monthly/bi-monthly threshold is re-indexed every 1 September, rounded to the nearest NIS 5,000.",
+      "source_url": "https://www.nevo.co.il/law_html/law01/271_001.htm",
+      "raw_snippet": "הסכום שנקבע בסעיף 67(א2) יותאם ב-1 בספטמבר של כל שנה",
+      "fetched_at": "2026-11-03T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/reporting-calendar.md"
+      ]
+    },
+    {
+      "claim_id": "s126a-patur-indexation",
+      "claim": "VAT Law s.126(a) (Hebrew: סעיף 126(א)): the osek patur amount is indexed every 1 January to the CPI published for 15 December of the previous year.",
+      "source_url": "https://www.nevo.co.il/law_html/law01/271_001.htm",
+      "raw_snippet": "יותאמו ב-1 בינואר של כל שנה לעליית מדד המחירים לצרכן שנתפרסם מטעם הלשכה המרכזית לסטטיסטיקה (להלן בסעיף זה – המדד), ליום ה-15 בדצמבר שקדם לו",
+      "fetched_at": "2026-11-03T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/vat-regulations.md"
+      ]
+    },
+    {
+      "claim_id": "s38a-tax-invoice-six-months",
+      "claim": "VAT Law s.38(a) (Hebrew: סעיף 38(א)): input VAT is deductible from a tax invoice lawfully issued to the dealer, an import declaration or another approved document, within six months of the document date.",
+      "source_url": "https://www.nevo.co.il/law_html/law01/271_001.htm",
+      "raw_snippet": "עוסק זכאי לנכות מהמס שהוא חייב בו את מס התשומות הכלול בחשבונית מס שהוצאה לו כדין או בהצהרת ייבוא או במסמך אחר שאישר לענין זה המנהל",
+      "fetched_at": "2026-11-03T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/vat-regulations.md",
+        "scripts/calculate_vat.py"
+      ]
+    },
+    {
+      "claim_id": "s38a-six-months-window",
+      "claim": "VAT Law s.38(a): the deduction must be made within six months of the date the invoice or document was issued.",
+      "source_url": "https://www.nevo.co.il/law_html/law01/271_001.htm",
+      "raw_snippet": "ושהניכוי ייעשה בתוך ששה חדשים מיום הוצאת החשבונית, ההצהרה או המסמך",
+      "fetched_at": "2026-11-03T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "scripts/calculate_vat.py"
+      ]
+    },
+    {
+      "claim_id": "s38a1-allocation-5000",
+      "claim": "VAT Law s.38(a1) (Hebrew: סעיף 38(א1)): no deduction of input VAT on a tax invoice above NIS 5,000 before VAT (5,000 ₪) that does not carry a number allocated by the Director.",
+      "source_url": "https://www.nevo.co.il/law_html/law01/271_001.htm",
+      "raw_snippet": "לא יותר ניכוי מס התשומות הכלול בחשבונית מס שסכומה, בלא המס, עולה על 5,000 שקלים חדשים ושאינה כוללת מספר שהקצה לה המנהל",
+      "fetched_at": "2026-11-03T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/vat-regulations.md",
+        "scripts/calculate_vat.py"
+      ]
+    },
+    {
+      "claim_id": "s40b-system-failure",
+      "claim": "VAT Law s.40B (Hebrew: סעיף 40ב): after exceptional failures of the Tax Authority computer systems the Director may allow deduction from an invoice with no allocated number.",
+      "source_url": "https://www.nevo.co.il/law_html/law01/271_001.htm",
+      "raw_snippet": "נוכח המנהל כי התקיימו נסיבות חריגות בקשר למערכות המחשוב של רשות המסים, שבעטיין מסיבות טכנולוגיות לא התאפשרה הקצאת מספר על ידי המנהל",
+      "fetched_at": "2026-11-03T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "s47a2-issuer-requests",
+      "claim": "VAT Law s.47(a2): the dealer issuing the tax invoice requests the allocation number, must do so on the buyer's demand above the s.38(a1) amount, and writes the number on the invoice.",
+      "source_url": "https://www.nevo.co.il/law_html/law01/271_001.htm",
+      "raw_snippet": "ובעסקה שסכומה, בלא המס, עולה על הסכום האמור בסעיף 38(א1), חייב הוא לעשות כן לפי דרישת הקונה",
+      "fetched_at": "2026-11-03T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "allocation-short-form-9",
+      "claim": "The Israel Invoices API spec (field A30) permits and recommends printing only the rightmost 9 digits of the allocation number; official examples of a full number are 26 digits (e.g. 20240710181226272191063077).",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/hor-software-other/he/vat_software-houses-180724.pdf",
+      "raw_snippet": "מותר ואף מומלץ להדפיס רק את 9 הספרות",
+      "fetched_at": "2026-11-03T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "allocation-25000-2024",
+      "claim": "In 2024 (pilot) the allocation threshold was above NIS 25,000 before VAT (25,000 ₪).",
+      "source_url": "https://www.gov.il/BlobFolder/generalpage/hor-software-other/he/vat_software-houses-180724.pdf",
+      "raw_snippet": "בשנת 2024 - הסכום לפני מע\"מ גבוה מ - 25,000 ₪",
+      "fetched_at": "2026-11-03T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "scripts/calculate_vat.py",
+        "references/domain-checklist.md"
+      ],
+      "snippet_note": "Quoted from the pdftotext text layer of the PDF (RTL order as extracted)."
+    },
+    {
+      "claim_id": "allocation-schedule-2026-directive",
+      "claim": "ITA directive 01/2025: in 2026 the threshold fell in two steps, above NIS 10,000 from 01.01.2026 and above NIS 5,000 from 01.06.2026.",
+      "source_url": "https://www.gov.il/BlobFolder/policy/inst-071225-1/he/vat_inst-071225-1.pdf",
+      "raw_snippet": "01.01.2026 סכום חשבונית המס ללא מע\"מ עולה על . ₪ 10,000",
+      "fetched_at": "2026-11-03T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "scripts/calculate_vat.py"
+      ],
+      "snippet_note": "Quoted from the pdftotext text layer of the PDF (RTL order as extracted)."
+    },
+    {
+      "claim_id": "allocation-superseded-schedule",
+      "claim": "The original schedule in ITA directive 01/2024 (NIS 15,000 in 2026, 10,000 in 2027, 5,000 in 2028 and after) was superseded by the accelerated schedule; the skill tells agents not to use it.",
+      "source_url": "https://www.gov.il/BlobFolder/policy/inst-180824-1/he/vat_inst-180824-1.pdf",
+      "raw_snippet": "לשנת 2026 סכום חשבונית המס ללא מע\"מ עולה על . ₪ 15,000",
+      "fetched_at": "2026-11-03T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/domain-checklist.md"
+      ],
+      "snippet_note": "Quoted from the pdftotext text layer of the PDF (RTL order as extracted)."
+    },
+    {
+      "claim_id": "reg15-residence",
+      "claim": "VAT Regulations reg. 15 (Hebrew: תקנה 15): no input VAT deduction on buying or building the dealer's own residence, even if it is also the place of business.",
+      "source_url": "https://www.nevo.co.il/law_html/law01/271_005.htm",
+      "raw_snippet": "עוסק לא יהא רשאי לנכות מס תשומות על רכישת דירת מגוריו או על בנייתה, כולה או מקצתה",
+      "fetched_at": "2026-11-03T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/vat-regulations.md"
+      ]
+    },
+    {
+      "claim_id": "reg15a-employee-benefits",
+      "claim": "VAT Regulations reg. 15A (Hebrew: תקנה 15א): input VAT on benefits for an employee (including an owner or manager), such as meals, housing, gifts or entertainment, is not deductible unless sold or supplied to the employee and reported as a taxable transaction.",
+      "source_url": "https://www.nevo.co.il/law_html/law01/271_005.htm",
+      "raw_snippet": "מס תשומות שנתחייב בו עוסק על תשומה בשל עובדו אינו ניתן לניכוי אלא אם הוכח",
+      "fetched_at": "2026-11-03T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/vat-regulations.md",
+        "scripts/calculate_vat.py"
+      ]
+    },
+    {
+      "claim_id": "s67b-nil-return",
+      "claim": "VAT Law s.67(b): the periodic return is due within 15 days after the period even if there was no activity, unless the business ceased and the Director was notified.",
+      "source_url": "https://www.nevo.co.il/law_html/law01/271_001.htm",
+      "raw_snippet": "אף אם לא היו באותה תקופה עסקים או פעילות המחייבים בתשלום מס, זולת אם נפסקו כליל העסקים או הפעילות והחייב במס הודיע על כך למנהל",
+      "fetched_at": "2026-11-03T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/reporting-calendar.md"
+      ]
+    },
+    {
+      "claim_id": "s67b1-rest-days",
+      "claim": "VAT Law s.67(b1) and s.67A(e) (Hebrew: סעיף 67(ב1), סעיף 67א(ה)): if at least three rest days fell in the five days before the deadline, it moves to the fourth working day after them; rest days include chol hamoed.",
+      "source_url": "https://www.nevo.co.il/law_html/law01/271_001.htm",
+      "raw_snippet": "המועד האחרון להגשת דו\"ח תקופתי יידחה אם בחמשת הימים שקדמו למועד האמור היו לפחות שלושה ימי מנוחה, והוא יהיה ביום החול הרביעי שמתום ימי המנוחה הבאים ברצף",
+      "fetched_at": "2026-11-03T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/reporting-calendar.md"
+      ]
+    },
+    {
+      "claim_id": "vat-inclusive-arithmetic",
+      "claim": "Illustrative arithmetic at the 18% rate: NIS 11,800 (11,800 ₪) VAT-inclusive is NIS 10,000 base plus NIS 1,800 (1,800 ₪) VAT; base = gross / 1.18.",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%9E%D7%A1_%D7%A2%D7%A8%D7%9A_%D7%9E%D7%95%D7%A1%D7%A3_(%D7%9E%D7%A2%22%D7%9E)",
+      "raw_snippet": "והחל מיום 01.01.2025 הוא עומד על 18% ממחיר הרכישה או השירות",
+      "fetched_at": "2026-11-03T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "scripts/calculate_vat.py"
+      ]
+    },
+    {
+      "claim_id": "allocation-start-05-05-2024",
+      "claim": "The allocation-number condition took effect, after an extension, on 5 May 2024 (05.05.2024) instead of 01.01.2024.",
+      "source_url": "https://www.gov.il/BlobFolder/policy/inst-071225-1/he/vat_inst-071225-1.pdf",
+      "raw_snippet": "החל מיום ( 01.01.2024 לאחר מתן אורכה הוחל מיום ,)05.05.2024 -",
+      "snippet_note": "Quoted from the pdftotext text layer of the PDF (RTL order as extracted).",
+      "fetched_at": "2026-11-03T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "scripts/calculate_vat.py"
+      ]
+    },
+    {
+      "claim_id": "s24-services-on-receipt",
+      "claim": "VAT Law s.24 (Hebrew: סעיף 24): for a service the tax arises on receipt of the consideration and on the amount received.",
+      "source_url": "https://www.nevo.co.il/law_html/law01/271_001.htm",
+      "raw_snippet": "בשירות חל החיוב במס עם קבלת התמורה ועל הסכום שהתקבל",
+      "fetched_at": "2026-11-03T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "s69a-output-in-period",
+      "claim": "VAT Law s.69(a) (Hebrew: סעיף 69(א)): the periodic return includes transactions whose invoicing date fell in the period and transactions on which tax invoices were issued even early, if not reported before.",
+      "source_url": "https://www.nevo.co.il/law_html/law01/271_001.htm",
+      "raw_snippet": "בדו\"ח תקופתי של עוסק ייכללו סך כל העסקאות שהמועד להוצאת חשבוניות עליהן חל בתקופת הדו\"ח",
+      "fetched_at": "2026-11-03T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "s69c-inputs-before-period-end",
+      "claim": "VAT Law s.69(c) (Hebrew: סעיף 69(ג)): the return states deductible input VAT on documents lawfully issued to the dealer before the end of the period.",
+      "source_url": "https://www.nevo.co.il/law_html/law01/271_001.htm",
+      "raw_snippet": "סכום מס התשומות הניתן לניכוי שבמסמכים כאמור בסעיף 38 שהוצאו לו כדין לפני תום תקופת הדו\"ח",
+      "fetched_at": "2026-11-03T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "scripts/calculate_vat.py"
+      ]
+    },
+    {
+      "claim_id": "reg24b-credit-note",
+      "claim": "VAT Regulations reg. 24(b) (Hebrew: תקנה 24(ב)): a dealer receiving a credit notice corrects input VAT in the return of the period in which it was received.",
+      "source_url": "https://www.nevo.co.il/law_html/law01/271_005.htm",
+      "raw_snippet": "(ב) עוסק המקבל הודעת זיכוי במס חייב לתקן לפיה את סכום מס התשומות בדו\"ח התקופתי של התקופה שבה נתקבלה ההודעה",
+      "fetched_at": "2026-11-03T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "scripts/calculate_vat.py"
+      ]
+    },
+    {
+      "claim_id": "s49-invoice-until-cancelled",
+      "claim": "VAT Law s.49 (Hebrew: סעיף 49): where an invoice was issued and the transaction did not happen or was cancelled, tax is paid per the invoice until it is cancelled or corrected as the Minister prescribed.",
+      "source_url": "https://www.nevo.co.il/law_html/law01/271_001.htm",
+      "raw_snippet": "ישולם המס לפי החשבונית כל עוד לא בוטלה או תוקנה כפי שקבע שר האוצר",
+      "fetched_at": "2026-11-03T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "reg1-private-car-definition",
+      "claim": "VAT Regulations reg. 1 (Hebrew: תקנה 1): for regs. 1, 2 and 14 a private car includes a private passenger car, a dual-use private car and a commercial vehicle with a permitted total weight up to 3,500 kg (3,500 ק\"ג).",
+      "source_url": "https://www.nevo.co.il/law_html/law01/271_005.htm",
+      "raw_snippet": "ובלבד שמשקלו הכולל המותר של רכב מסחרי כאמור אינו עולה על 3,500 ק\"ג",
+      "fetched_at": "2026-11-03T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "reg18a-actual-share",
+      "claim": "VAT Regulations reg. 18(a) (Hebrew: תקנה 18(א)): input VAT on assets or services used both for the business and otherwise is deductible in the ratio of business use to total use.",
+      "source_url": "https://www.nevo.co.il/law_html/law01/271_005.htm",
+      "raw_snippet": "יהא ניתן לניכוי בשיעור יחסי שהוא כיחס השימוש לצרכי העסק לכלל השימוש",
+      "fetched_at": "2026-11-03T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "scripts/calculate_vat.py"
+      ]
+    },
+    {
+      "claim_id": "s69a-g1-500k",
+      "claim": "VAT Law s.69A(g)(1) (Hebrew: סעיף 69א(ז)(1)): the detailed report applies to a dealer whose turnover exceeds NIS 500,000 or who must keep double-entry books.",
+      "source_url": "https://www.nevo.co.il/law_html/law01/271_001.htm",
+      "raw_snippet": "מחזור עסקאותיו עולה על 500,000 שקלים חדשים או שחלה עליו חובה לנהל פנקסי חשבונות לפי שיטת החשבונאות הכפולה",
+      "fetched_at": "2026-11-03T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "proforma-approval-not-number",
+      "claim": "ITA directive 01/2025: an allocation approval on a proforma or transaction invoice is not an allocation number and input VAT cannot be offset with it.",
+      "source_url": "https://www.gov.il/BlobFolder/policy/inst-071225-1/he/vat_inst-071225-1.pdf",
+      "raw_snippet": "אישור זה אינו מהווה מספר הקצאה",
+      "fetched_at": "2026-11-03T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "zero-rated-no-number",
+      "claim": "ITA directive 01/2025: no allocation number is required, and none is given, for a tax invoice of exempt transactions only or at the zero rate.",
+      "source_url": "https://www.gov.il/BlobFolder/policy/inst-071225-1/he/vat_inst-071225-1.pdf",
+      "raw_snippet": "לא נדרש מספר הקצאה ועל כן לא יינתן",
+      "fetched_at": "2026-11-03T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "s94-late-filing",
+      "claim": "VAT Law s.94 (Hebrew: סעיף 94): failure to file a return on time carries a late fine per two weeks or part of them.",
+      "source_url": "https://www.nevo.co.il/law_html/law01/271_001.htm",
+      "raw_snippet": "לא הגיש החייב במס במועד דו\"ח שיש להגישו לפי חוק זה יהא חייב בקנס פיגורים",
+      "fetched_at": "2026-11-03T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "s96-late-payment",
+      "claim": "VAT Law s.96 and s.97 (Hebrew: סעיף 96, סעיף 97): tax not paid on time bears linkage differentials and interest under s.97 plus a weekly percentage late fine.",
+      "source_url": "https://www.nevo.co.il/law_html/law01/271_001.htm",
+      "raw_snippet": "לא שולם מס במועד שנקבע לכך, ייווסף עליו, בנוסף להפרשי הצמדה וריבית על פי סעיף 97, קנס פיגורים",
+      "fetched_at": "2026-11-03T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "weekend-shift-rule",
+      "claim": "Tax Authority 2026 reporting calendar (reproduced by the Haifa Chamber of Commerce): when the statutory 15th, 16th or 23rd falls on Friday, Saturday or Sunday the reporting and payment date moves to the next business day (Monday).",
+      "source_url": "https://haifachamber.org.il/%D7%A8%D7%A9%D7%95%D7%AA-%D7%94%D7%9E%D7%A1%D7%99%D7%9D-%D7%A4%D7%A8%D7%A1%D7%9E%D7%94-%D7%90%D7%AA-%D7%9E%D7%95%D7%A2%D7%93%D7%99-%D7%94%D7%93%D7%99%D7%95%D7%95%D7%97-%D7%94%D7%AA%D7%A7%D7%95%D7%A4/",
+      "raw_snippet": "אזי מועד הדיווח והתשלום התקופתי ידחה ליום העסקים שבא לאחר יום המנוחה השבועי",
+      "fetched_at": "2026-11-03T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/reporting-calendar.md"
+      ]
+    },
+    {
+      "claim_id": "calendar-2026-oct",
+      "claim": "Tax Authority 2026 calendar: October 2026 period due 16.11.2026 (periodic) and 23.11.2026 (detailed); remaining periods September 19.10.2026 / 26.10.2026, November 15.12.2026 / 23.12.2026, December 18.1.2027 / 26.1.2027 (19 October, 26 October, 16 November, 23 November, 15 December, 23 December, 18 January 2027, 26 January 2027).",
+      "source_url": "https://haifachamber.org.il/%D7%A8%D7%A9%D7%95%D7%AA-%D7%94%D7%9E%D7%A1%D7%99%D7%9D-%D7%A4%D7%A8%D7%A1%D7%9E%D7%94-%D7%90%D7%AA-%D7%9E%D7%95%D7%A2%D7%93%D7%99-%D7%94%D7%93%D7%99%D7%95%D7%95%D7%97-%D7%94%D7%AA%D7%A7%D7%95%D7%A4/",
+      "raw_snippet": "אוקטובר 16.11.2026",
+      "fetched_at": "2026-11-03T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/reporting-calendar.md"
+      ]
+    },
+    {
+      "claim_id": "reg20-bimonthly-starts",
+      "claim": "VAT Regulations reg. 20(c)(1): each two-month period starts on 1 January, March, May, July, September and November.",
+      "source_url": "https://www.nevo.co.il/law_html/law01/271_005.htm",
+      "raw_snippet": "תחילתה של כל תקופה בת חודשיים היא באחד",
+      "fetched_at": "2026-11-03T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "s41-exempt-inputs",
+      "claim": "VAT Law s.41 (Hebrew: סעיף 41): input tax may not be deducted unless the inputs are for use in a taxable transaction.",
+      "source_url": "https://www.nevo.co.il/law_html/law01/271_001.htm",
+      "raw_snippet": "אין לנכות מס על תשומות אלא אם הן לשימוש בעסקה החייבת במס",
+      "fetched_at": "2026-11-03T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "scripts/calculate_vat.py",
+        "references/domain-checklist.md"
       ]
     }
   ]
