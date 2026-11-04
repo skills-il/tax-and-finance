@@ -4,12 +4,13 @@
 
 | Investor Type | Rate |
 |---------------|------|
-| Individual (non-substantial), real gain | 25% |
+| Individual (non-substantial), real gain | 25% (a ceiling: the gain is the top slice of income at the ordinary brackets, capped at 25%) |
+| Individual aged 60 or over | Up to 25%: the reduced brackets starting at 10% apply to all taxable income at 60+, so a low-income retiree pays less; an Israeli broker withholds 25% and the excess is reclaimed by filing a return |
 | 10% or more shareholder (at the sale or during any of the 12 months before it), real gain | 30% |
 | Foreign resident | Per applicable tax treaty and domestic exemptions |
-| High-income individual (surtax / mas yesef) | Up to +5% on the slice above the threshold, ILS 721,560 in 2026 (3% on all-source income + a further 2% on capital-source income) |
+| High-income individual (surtax / mas yesef) | +3% on total taxable income above ILS 721,560, plus (from 2025) +2% on capital-source income that by itself exceeds ILS 721,560 |
 
-The surtax (mas yesef) is a separate instrument that applies on top of the base rate above an annually indexed threshold (ILS 721,560 in 2026), so on the slice above the threshold the marginal rate is the base rate plus 5% (about 30% for a 25% payer, higher for a substantial shareholder).
+The surtax (mas yesef) is a separate instrument on top of the base rate (Section 121B). The threshold is fixed at ILS 721,560 for 2024 to 2027 (not indexed in those years). It has two limbs: 3% on the part of total taxable income above the threshold, and, from 2025, 2% on the part of capital-source income that itself exceeds the threshold. Capital-source income is the year's capital income together (gains net of capital losses offset that year, dividends, interest, taxable rent that is not business income, real-estate betterment; for a residential apartment the betterment counts only when the sale value exceeds ILS 5,385,285), and the base excludes the inflationary amount. If salary alone is above the threshold the whole gain carries the extra 3%; the further 2% applies only to capital-source income above ILS 721,560. The surtax is not part of the semi-annual advance (it is paid with the annual return), and being liable to it is itself a reason to file a return.
 
 ## Dividend Tax
 
@@ -21,8 +22,9 @@ Dividends are taxed separately from capital gains:
 | Substantial shareholder (10%+) | 30% |
 
 - Withheld at source (nikui mas bemakor) by the paying company or broker.
-- The surtax (mas yesef) also applies to dividend income above the annual threshold (ILS 721,560 in 2026, indexed annually).
-- For dividends from a dual-listed share paid in the US, US withholding (file a W-8BEN so the treaty rate applies) is credited against the Israeli 25%/30% dividend tax under the foreign-tax-credit rules (zikui mas zar).
+- Dividends are capital-source income, so both surtax limbs can apply to them (threshold ILS 721,560, fixed for 2024 to 2027).
+- A dividend from an Israeli-incorporated company (NICE, Teva, ICL) is taxed under the Israeli rules even when the shares are held through a US listing, and it is generally not US-source income, so there is no US tax to credit.
+- For a US-incorporated company, US withholding (file a W-8BEN so the treaty rate applies) is credited against the Israeli 25%/30% dividend tax under the foreign-tax-credit rules (zikui mas zar). For an individual the Israel-US treaty dividend rate is 25%; the 12.5% and 15% treaty rates are for qualifying corporate holders.
 - The credit is capped at the Israeli tax on that same foreign income, computed per income source. Foreign tax above the cap is not refunded; Section 205a allows carrying the excess forward, under conditions.
 
 ## Tax Withheld at Source (Nikui b'Makor)
@@ -39,6 +41,7 @@ Dividends are taxed separately from capital gains:
 
 ### Real vs. Inflationary Gain
 - The 25% rate applies to the REAL gain: the gain is reduced by the rise in the consumer price index over the holding period, and the inflationary component is exempt
+- The inflationary amount is the PART of the gain equal to (adjusted cost minus cost), so it is never negative and never larger than the gain. A capital loss is the nominal excess of cost over consideration: indexation cannot create or enlarge a loss, and a fall in the index cannot create a taxable gain
 - For a security held by an individual that is denominated in (or linked to) a foreign currency, the exchange rate of that currency is the index instead of the CPI (Section 88), so shekel depreciation against the purchase currency is exempt, not taxable gain
 - Securities bought before 1 January 2003 fall under transition rules, and those rules differ between securities traded on TASE and other assets. Do not assume a flat 25% on the whole gain, and do not assume the pre-2003 portion is taxed at ordinary marginal rates either. Route the computation for a pre-2003 holding to the broker's tax statement or a tax adviser.
 
@@ -56,7 +59,7 @@ Source: Meitav Trade investor tax guide (see evidence.json `bonds-funds-rates`).
 ### Loss Offsetting (Kizuz Hefsedim)
 - A capital loss offsets all capital gains, including Israeli or foreign securities and property; a loss on a non-Israeli asset first offsets foreign-source gains
 - A securities loss can also offset interest and dividend income from securities, where that income was taxed at no more than 25%
-- Unused losses carry forward indefinitely, and in later years offset only capital gains
+- Unused losses carry forward indefinitely, and in later years offset only capital gains, provided a return was filed for the year of the loss (so a net-loss year is a reason to file)
 - Report on annual tax return (Doch Shnati)
 
 ### Substantial Shareholder

@@ -46,6 +46,36 @@
         "Deferred MAJOR (expert r2): USD share with a real USD loss but a nominal shekel gain from FX yields no tax, not a deductible loss (s.88 exchange-rate index); consequence for loss offset not source-captured, add next cycle with the Ordinance text.",
         "Deferred MINOR (expert r2): bonds table lacks a foreign-currency-linked / non-shekel TASE bond row; ETF row should say real gain."
       ]
+    },
+    {
+      "version": "1.9.0",
+      "date": "2026-11-04",
+      "holdout_before": 1.0,
+      "holdout_after": 1.0,
+      "buckets": {
+        "improved": [],
+        "regressed": [],
+        "persistent_fail": [],
+        "stable_success": [
+          "Palo Alto TASE symbol (HE)",
+          "800k salary mas yesef on TASE gains",
+          "Apple on NASDAQ (negative)",
+          "Should I buy Bank Hapoalim (guardrail, positive route)"
+        ]
+      },
+      "lessons": [
+        "STALE fixed: surtax threshold said 'indexed each year'; it is fixed at 721,560 for 2024-2027 (s.121B(a), wikisource Ordinance).",
+        "CRITICAL fixed (self-found, arithmetic): the 2% surtax limb applies only to capital-source income that itself exceeds the threshold; the skill applied 5% to the whole slice above it.",
+        "CRITICAL fixed (expert r1): real-gain formula had no floor/cap (s.88 inflationary amount is part of the gain; loss is nominal) - the 1.8.0 deferred MAJOR is resolved; 25% is a ceiling and 60+ get reduced brackets (s.91(b)(1)+s.121(b)(1)); loss carry-forward needs a return for the loss year (s.92(b)).",
+        "MAJOR fixed: dividends of Israeli-incorporated dual-listed companies are not US-source (26 USC 861(a)(2)); surtax excluded from the s.91(d) advance (s.121B(b)) and is a filing trigger (reg.3(a)(8)); surtax base defined (excl. inflationary amount, residential shevach only above 5,385,285).",
+        "CRITICAL introduced by repair and fixed (expert r2): 'all taxable shevach' in the surtax base ignored the residential-apartment carve-out. Remediation-reintroduces-defect pattern held again.",
+        "BUG fixed: fetch_tase_data.py printed fabricated endpoint paths and listed Sapiens; rewritten to call the real Data Hub gateway (datawise.tase.co.il, apikey header, paths from tase-mcp tools.ts, verified 401 vs 403 negative control).",
+        "LEGAL (gate r1 BLOCK, r2 PASS): added body scope guardrail against buy/sell/hold verdicts, renamed Step 5/Example 2 away from 'opportunities/arbitrage assessment', reworded DB prompts[0]/[2].",
+        "Judge: Friday has no TASE/US overlap; openapi/openapigw hosts are NXDOMAIN (the 1.5.0 log line calling the OAuth2 flow 'verified accurate' is obsolete).",
+        "Deferred MINOR: description still says 'evaluate dual-listed companies' (legal gate optional); compound 'Not investment or tax advice' opener (optional); married couples / per-individual surtax attribution (unsourced); foreign-broker annual-return mechanics; ETF row 'real gain'; 10%-track rent in surtax base (unsourced); T+1 settlement only sourced from Clearstream/TASE draft, not re-added.",
+        "Sibling defect: none found in tax-and-finance on the surtax threshold (siblings already say 2024-2027).",
+        "Deferred MINOR (expert r3, sourced): filing trigger also applies when the SPOUSE is liable to surtax (reg.3(a)(8) 'הוא או בן זוגו'); 20% rate on non-linked bonds for a substantial shareholder (s.91(b)(3)(a)); tag the 5,385,285 residential-shevach figure as the 2025-2026 amount (updated from 2027)."
+      ]
     }
   ]
 }

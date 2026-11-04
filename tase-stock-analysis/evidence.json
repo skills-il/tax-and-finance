@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0",
   "skill": "tase-stock-analysis",
-  "generated_at": "2026-09-13T13:00:00Z",
+  "generated_at": "2026-11-04T10:30:00Z",
   "claims": [
     {
       "claim_id": "tase-mon-fri",
@@ -101,7 +101,7 @@
     },
     {
       "claim_id": "tase-api",
-      "claim": "TASE Data Hub access is by API Key issued in the TASE Developers' Portal: register, create an App, then '+Generate Credential' to be assigned an API Key, which you supply via 'Authorize' on the product page. Rate limit 10 requests per 2 seconds with HTTP 429 on excess. Some data products are paid and need commercial approval before activation. Entry point https://www.tase.co.il/he/content/products_lobby/data_services; the older https://openapi.tase.co.il/tase/prod/ and https://datahub.tase.co.il/ addresses redirect to it, and https://openapigw.tase.co.il/tase/prod is bot-filtered.",
+      "claim": "TASE Data Hub access is by API Key issued in the TASE Developers' Portal: register, create an App, then '+Generate Credential' to be assigned an API Key, which you supply via 'Authorize' on the product page. Rate limit 10 requests per 2 seconds with HTTP 429 on excess. Some data products are paid and need commercial approval before activation. Entry point https://www.tase.co.il/he/content/products_lobby/data_services; the older https://datahub.tase.co.il/ address redirects to it. Legacy hosts openapi.tase.co.il and openapigw.tase.co.il no longer resolve (NXDOMAIN, checked 2026-11-04); datahub.tase.co.il redirects to the data-services lobby.",
       "source_url": "https://content.tase.co.il/media/l5xjhjmz/2000_api_guide_eng.pdf",
       "raw_snippet": "Once the app has been set up, a screen will pop up with the app's details. To create an API Key, click on '+Generate Credential' then assign a name of your choice to the credential and click on 'Generate'.",
       "fetched_at": "2026-08-10T00:00:00Z",
@@ -110,8 +110,8 @@
         "SKILL.md"
       ],
       "verified_via": "pdf",
-      "verified_at": "2026-08-10T00:00:00Z",
-      "source_note": "SOURCE REPLACED AND CLAIM NARROWED 2026-08-10. The former entry cited the bare homepage https://datahub.tase.co.il/ (which now 302-redirects to the TASE data-services lobby) for an OAuth2 client-credentials flow. This official TASE Data Hub API guide, linked from https://www.tase.co.il/he/content/products_lobby/data_services, documents API-Key authentication and does not mention OAuth2 or a token endpoint anywhere. The old developer-portal URL https://openapi.tase.co.il/tase/prod/ also now redirects to that lobby, and openapigw.tase.co.il is behind Incapsula (503 to both curl and a real browser), so the previously documented token endpoint could not be confirmed either way. The skill body now documents the API-Key flow and flags the OAuth2 endpoint as legacy and unverified."
+      "verified_at": "2026-11-04T12:30:00Z",
+      "source_note": "SOURCE REPLACED AND CLAIM NARROWED 2026-08-10. The former entry cited the bare homepage https://datahub.tase.co.il/ (which now 302-redirects to the TASE data-services lobby) for an OAuth2 client-credentials flow. This official TASE Data Hub API guide, linked from https://www.tase.co.il/he/content/products_lobby/data_services, documents API-Key authentication and does not mention OAuth2 or a token endpoint anywhere. UPDATED 2026-11-04: DNS probe (dig, system resolver, and the judge's check against the authoritative AWS nameservers) returns NXDOMAIN for both openapi.tase.co.il and openapigw.tase.co.il, so the legacy OAuth2 token endpoint no longer exists. https://datahub.tase.co.il still 302s to /products_lobby/datahub and then 301s to /products_lobby/data_services. The skill body documents the API-Key flow and calls the OAuth2 instructions obsolete."
     },
     {
       "claim_id": "maya-system",
@@ -165,7 +165,7 @@
       "fetched_at": "2026-08-10T00:00:00Z",
       "verified_via": "browser",
       "verified_at": "2026-08-10T00:00:00Z",
-      "source_note": "Reached by navigating to https://openapi.tase.co.il/tase/prod/, which redirects here; location.href asserted after load. This page also carries the link to the official API guide PDF (content.tase.co.il/media/l5xjhjmz/2000_api_guide_eng.pdf).",
+      "source_note": "Reached via https://datahub.tase.co.il, which redirects here (openapi.tase.co.il no longer resolves, checked 2026-11-04); location.href asserted after load. This page also carries the link to the official API guide PDF (content.tase.co.il/media/l5xjhjmz/2000_api_guide_eng.pdf).",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
@@ -176,7 +176,7 @@
     },
     {
       "claim_id": "surtax-threshold",
-      "claim": "The Israeli surtax (mas yesef) threshold is ILS 721,560 in 2026, and is indexed annually. A 3% surtax applies to total taxable income above the threshold; from 2025 a further 2% applies to the capital-source part above it.",
+      "claim": "From 2025 an additional 2% surtax applies to capital-source income above the threshold (ILS 721,560 in 2026); the 3% limb applies to total taxable income above the same threshold.",
       "source_url": "https://taxsummaries.pwc.com/israel/individual/income-determination",
       "raw_snippet": "As of 2025, the portion of an individual's taxable annual income from capital sources (e.g. capital gains, real estate appreciation, dividends, interest, CPI linkage differentials, rental income, passive royalties) exceeding a certain threshold (ILS 721,560 in 2026) is subject to an additional surtax of 2%. This is in addition to 3% surtax on an individual's annual taxable income from all sources exceeding a certain threshold (ILS 721,560 in 2026).",
       "fetched_at": "2026-08-10T00:00:00Z",
@@ -298,6 +298,290 @@
       "source_url": "https://taxsummaries.pwc.com/israel/individual/income-determination",
       "raw_snippet": "(where the income was not subject to tax of more than 25%). Capital losses can generally be carried forward indefinitely and set off only against capital gains.",
       "fetched_at": "2026-09-13T15:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/capital-gains.md"
+      ]
+    },
+    {
+      "claim_id": "surtax-threshold-fixed-2024-2027",
+      "claim": "The Section 121B surtax threshold is ILS 721,560 for each of the years 2024 to 2027 (not indexed in those years).",
+      "source_url": "https://he.wikisource.org/wiki/%D7%A4%D7%A7%D7%95%D7%93%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
+      "raw_snippet": "בשנים 2024–2027, 721,560 ש״ח",
+      "fetched_at": "2026-11-04T10:30:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/capital-gains.md",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "surtax-2pct-capital-income-alone",
+      "claim": "The 2% surtax limb applies only to the part of capital-source taxable income that itself exceeds the threshold.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%A4%D7%A7%D7%95%D7%93%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
+      "raw_snippet": "יחיד אשר הכנסתו החייבת ממקורות הוניים בשנת המס עלתה על הסכום הקבוע באותו סעיף קטן, יהיה חייב במס נוסף על חלק הכנסתו החייבת ממקורות הוניים העולה על הסכום האמור, בשיעור של 2%",
+      "fetched_at": "2026-11-04T10:30:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/capital-gains.md",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "us-treaty-dividend-individual-25",
+      "claim": "Under the Israel-US treaty the dividend rate is 25% for individuals; 12.5% and 15% apply only to qualifying corporate holders.",
+      "source_url": "https://taxsummaries.pwc.com/israel/corporate/withholding-taxes",
+      "raw_snippet": "A 25% rate applies in all other cases",
+      "fetched_at": "2026-11-04T10:30:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/capital-gains.md",
+        "references/domain-checklist.md"
+      ],
+      "note": "Same page: \"United States 12.5/15/25 (31)\" and note 31 \"12.5% but only if ... at least 10% of the outstanding shares of the voting stock of the paying corporation was owned by the recipient corporation\"."
+    },
+    {
+      "claim_id": "tase-preopen-0925",
+      "claim": "TASE pre-opening phase starts at 09:25 (Monday-Thursday and Friday).",
+      "source_url": "https://www.tase.co.il/en/content/knowledge_center/trading_vacation_schedule",
+      "raw_snippet": "Pre-opening phase 09:25 09:25 09:25",
+      "fetched_at": "2026-11-04T10:30:00Z",
+      "verified_via": "browser",
+      "verified_at": "2026-11-04T10:30:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tase-api.md"
+      ],
+      "note": "Rendered with Playwright (location.href asserted), Friday and Monday-Thursday accordions expanded; JS-rendered page, curl body has no table."
+    },
+    {
+      "claim_id": "palo-alto-tase-cybr",
+      "claim": "Palo Alto Networks trades on TASE as security 1236736, symbol CYBR (Nasdaq ticker PANW).",
+      "source_url": "https://market.tase.co.il/en/market_data/security/1236736",
+      "raw_snippet": "More About PALO ALTO 1236736",
+      "fetched_at": "2026-11-04T10:30:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "scripts/fetch_tase_data.py",
+        "references/domain-checklist.md"
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-11-04T10:55:00Z",
+      "note": "Rendered with Playwright (redirects to /major_data). TASE entity list (api.tase.co.il/api/content/searchentities?lang=1, fetched with a market.tase.co.il Referer) has \"Id\":\"1236736\",\"Name\":\"PALO ALTO\",\"Smb\":\"CYBR\",\"ISIN\":\"US6974351057\"."
+    },
+    {
+      "claim_id": "palo-alto-fast-track-ta35",
+      "claim": "Palo Alto entered TA-35 via the fast track in August 2026, temporarily expanding it to 36 shares; index composition is updated twice a year.",
+      "source_url": "https://funder.co.il/article/213201",
+      "raw_snippet": "לאחר שהתרחב זמנית ל-36 מניות בעקבות כניסתה של פאלו אלטו במסגרת המסלול המהיר באוגוסט 2026",
+      "fetched_at": "2026-11-04T10:30:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/domain-checklist.md"
+      ],
+      "note": "TASE Research Unit article (29/10/2026). Same page: \"העדכון, המתבצע פעמיים בשנה\"."
+    },
+    {
+      "claim_id": "new-indices-feb-2026",
+      "claim": "TASE launched TA-Technology 35 and TA-Israel Energy indices on February 6, 2026.",
+      "source_url": "https://www.prnewswire.com/il/news-releases/tase-to-expand-the-range-of-equity-indices-the-ta-technology-35-index-will-include-the-largest-technology-companies-302672632.html",
+      "raw_snippet": "The launch date for both new indices is February 6, 2026",
+      "fetched_at": "2026-11-04T10:30:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tase-api.md",
+        "references/domain-checklist.md",
+        "scripts/fetch_tase_data.py"
+      ],
+      "note": "Same release: \"announces the launch of two new equity indices - TA-Technology 35 and TA-Israel Energy\"."
+    },
+    {
+      "claim_id": "ta-banks5-164",
+      "claim": "TA-Banks5 (164) is a separate index from TA-Bank (194).",
+      "source_url": "https://market.tase.co.il/en/market_data/index/164/about",
+      "raw_snippet": "TA-Banks5 Index About More AboutTA-Banks5 164",
+      "fetched_at": "2026-11-04T10:30:00Z",
+      "appears_in": [
+        "references/tase-api.md"
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-11-04T10:45:00Z",
+      "note": "Rendered with Playwright, location.href asserted. Entity list also has \"Id\":\"164\",\"Name\":\"TA-Banks5\"."
+    },
+    {
+      "claim_id": "discount-691212",
+      "claim": "Bank Discount security number 691212, symbol DSCT.",
+      "source_url": "https://market.tase.co.il/en/market_data/security/691212",
+      "raw_snippet": "More About DISCOUNT 691212 Add To Portfolio Ordinary Share Symbol : DSCT",
+      "fetched_at": "2026-11-04T10:30:00Z",
+      "appears_in": [
+        "scripts/fetch_tase_data.py"
+      ],
+      "verified_via": "browser",
+      "verified_at": "2026-11-04T10:45:00Z",
+      "note": "Rendered with Playwright; redirects to /major_data."
+    },
+    {
+      "claim_id": "datahub-gateway-apikey",
+      "claim": "The TASE Data Hub gateway is https://datawise.tase.co.il and the key is sent in the apikey header.",
+      "source_url": "https://raw.githubusercontent.com/skills-il/mcps/master/tase-mcp/src/client.ts",
+      "raw_snippet": "const BASE_URL = process.env.TASE_BASE_URL ?? \"https://datawise.tase.co.il\";",
+      "fetched_at": "2026-11-04T10:30:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tase-api.md",
+        "scripts/fetch_tase_data.py"
+      ],
+      "note": "Same file sends \"apikey: apiKey\". Probed 2026-11-04 with an invalid key: /api/v2/basic-indices/indices-list and /api/v2/basic-indices/index-components-basic return 401 {\"message\":\"Unauthorized\"}; negative control /api/v2/zzz-nonexistent returns 403 Request Rejected."
+    },
+    {
+      "claim_id": "datahub-index-paths",
+      "claim": "Index endpoints are /api/v2/basic-indices/indices-list and /api/v2/basic-indices/index-components-basic (IndexId, TradeDate).",
+      "source_url": "https://raw.githubusercontent.com/skills-il/mcps/master/tase-mcp/src/tools.ts",
+      "raw_snippet": "const r = await taseClient.get( \"/api/v2/basic-indices/index-components-basic\", { IndexId: indexId, TradeDate: tradeDate },",
+      "fetched_at": "2026-11-04T10:30:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/tase-api.md",
+        "scripts/fetch_tase_data.py"
+      ],
+      "note": "Same file: taseClient.get(\"/api/v2/basic-indices/indices-list\", ...) and params { IndexId: indexId, TradeDate: tradeDate }."
+    },
+    {
+      "claim_id": "s91b1-cap-top-slice",
+      "claim": "An individual's real capital gain is taxed at the ordinary rates as the top slice of income, at a rate not exceeding 25% (30% for a substantial shareholder).",
+      "source_url": "https://he.wikisource.org/wiki/%D7%A4%D7%A7%D7%95%D7%93%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
+      "raw_snippet": "יחיד יהיה חייב במס על רווח הון ריאלי כאמור בסעיף 121 , בשיעור שלא יעלה על 25%, ויראו את רווח ההון כשלב הגבוה ביותר בסולם הכנסתו החייבת",
+      "fetched_at": "2026-11-04T12:30:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/capital-gains.md"
+      ]
+    },
+    {
+      "claim_id": "s121-reduced-brackets-60plus",
+      "claim": "The reduced brackets starting at 10% apply to all taxable income of an individual aged 60 or over.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%A4%D7%A7%D7%95%D7%93%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
+      "raw_snippet": "לגבי הכנסה חייבת בשנת המס מיגיעה אישית ולגבי הכנסה חייבת בשנת המס של יחיד שמלאו לו 60 שנים, יחולו שיעורים אלה: (א) על כל שקל חדש מ־84,120 השקלים החדשים הראשונים – 10%",
+      "fetched_at": "2026-11-04T12:30:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/capital-gains.md"
+      ]
+    },
+    {
+      "claim_id": "s92b-carryforward-needs-return",
+      "claim": "A capital loss carries forward only if a return was filed for the loss year.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%A4%D7%A7%D7%95%D7%93%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
+      "raw_snippet": "ובלבד שהוגש לפקיד השומה דוח לשנת המס שבה היה ההפסד",
+      "fetched_at": "2026-11-04T12:30:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/capital-gains.md"
+      ]
+    },
+    {
+      "claim_id": "s121b-b-surtax-not-in-advance",
+      "claim": "Surtax income is excluded from the s.91(d) advance regime.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%A4%D7%A7%D7%95%D7%93%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
+      "raw_snippet": "לא יחולו הוראות סעיף 91(ד) לעניין מקדמות",
+      "fetched_at": "2026-11-04T12:30:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/capital-gains.md"
+      ]
+    },
+    {
+      "claim_id": "s121b-e-base",
+      "claim": "The surtax base excludes the s.88 inflationary amount and includes real-estate betterment (shevach); for a residential apartment, shevach counts only if the sale value exceeds ILS 5,385,285.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%A4%D7%A7%D7%95%D7%93%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
+      "raw_snippet": "למעט סכום אינפלציוני כהגדרתו בסעיף 88 וסכום אינפלציוני כהגדרתו בסעיף 47 לחוק מיסוי מקרקעין , ולרבות שבח כמשמעותו בחוק מיסוי מקרקעין , ואולם לגבי מכירת זכות במקרקעין בדירת מגורים כהגדרתה בחוק האמור – רק אם שווי מכירתה עולה על 5,385,285 שקלים חדשים",
+      "fetched_at": "2026-11-04T12:30:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/capital-gains.md"
+      ]
+    },
+    {
+      "claim_id": "s88-inflationary-amount-definition",
+      "claim": "The inflationary amount is the part of the gain equal to the excess of the adjusted cost over the cost; a capital loss is the nominal excess of cost over consideration.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%A4%D7%A7%D7%95%D7%93%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
+      "raw_snippet": "סכום אינפלציוני“ – (1) חלק ריווח ההון השווה לסכום שבו עולה יתרת המחיר המקורי המתואם על יתרת המחיר המקורי",
+      "fetched_at": "2026-11-04T12:30:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/capital-gains.md"
+      ]
+    },
+    {
+      "claim_id": "s88-capital-loss-definition",
+      "claim": "A capital loss is the excess of the cost over the consideration (nominal).",
+      "source_url": "https://he.wikisource.org/wiki/%D7%A4%D7%A7%D7%95%D7%93%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
+      "raw_snippet": "”הפסד הון“ – הסכום שבו עולה יתרת המחיר המקורי על התמורה",
+      "fetched_at": "2026-11-04T12:30:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/capital-gains.md"
+      ]
+    },
+    {
+      "claim_id": "surtax-filing-obligation",
+      "claim": "Liability to surtax under s.121B is a ground that removes the exemption from filing a return.",
+      "source_url": "https://he.wikisource.org/wiki/%D7%AA%D7%A7%D7%A0%D7%95%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94_(%D7%A4%D7%98%D7%95%D7%A8_%D7%9E%D7%94%D7%92%D7%A9%D7%AA_%D7%93%D7%99%D7%9F_%D7%95%D7%97%D7%A9%D7%91%D7%95%D7%9F)",
+      "raw_snippet": "הוא או בן זוגו חייבים במס נוסף בהתאם לסעיף 121ב לפקודה",
+      "fetched_at": "2026-11-04T12:30:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/capital-gains.md"
+      ]
+    },
+    {
+      "claim_id": "us-source-dividends-861",
+      "claim": "US-source dividends are those from a domestic (US) corporation, or from a foreign corporation only with substantial US effectively-connected income.",
+      "source_url": "https://www.law.cornell.edu/uscode/text/26/861",
+      "raw_snippet": "The amount received as dividends— (A) from a domestic corporation, or (B) from a foreign corporation unless less than 25 percent of the gross income",
+      "fetched_at": "2026-11-04T12:30:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/capital-gains.md"
+      ]
+    },
+    {
+      "claim_id": "nyse-open-0930",
+      "claim": "US regular session opens at 9:30 a.m. ET.",
+      "source_url": "https://www.nyse.com/markets/hours-calendars",
+      "raw_snippet": "9:30 a.m. to 4:00 p.m. ET",
+      "fetched_at": "2026-11-04T12:30:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "s91b3a-nonlinked-bonds-whole-gain-real",
+      "claim": "Gain on non-CPI-linked bonds is taxed at up to 15% (20% for a substantial shareholder) and the whole gain is treated as real gain (no inflationary amount).",
+      "source_url": "https://he.wikisource.org/wiki/%D7%A4%D7%A7%D7%95%D7%93%D7%AA_%D7%9E%D7%A1_%D7%94%D7%9B%D7%A0%D7%A1%D7%94",
+      "raw_snippet": "רווח הון במכירת איגרת חוב, נייר ערך מסחרי, מילווה או הלוואה, שאינם צמודים למדד, יחויב במס בשיעור שלא יעלה על 15%, או של 20% לענין בעל מניות מהותי, ויראו את כל רווח ההון כרווח הון ריאלי",
+      "fetched_at": "2026-11-04T13:10:00Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",

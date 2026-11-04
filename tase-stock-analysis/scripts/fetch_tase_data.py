@@ -1,13 +1,25 @@
 #!/usr/bin/env python3
-"""Fetch TASE (Tel Aviv Stock Exchange) index data and stock quotes.
+"""Fetch TASE (Tel Aviv Stock Exchange) index data from the TASE Data Hub API.
 
-Retrieves index composition, weights, and performance data for TA-35
-and TA-125 indices. Also supports individual stock lookups and Maya
-filings search.
+What it does:
+  --list-indices   GET /api/v2/basic-indices/indices-list (all index IDs and names)
+  --index KEY      GET /api/v2/basic-indices/index-components-basic for one index
+                   (constituents and weights on a trade date)
+  --stock NUMBER   prints the official market.tase.co.il page for a security number,
+                   so the company name can be read back before the number is used
+  --example        offline demonstration data (no key, no network)
+
+What it does NOT do: it does not read Maya filings (use https://maya.tase.co.il) and it
+does not fetch live stock quotes.
+
+The live calls need a TASE Data Hub API key registered for the "Indices - Basic"
+product (sign in at https://datahubapi.tase.co.il). The key is sent in the `apikey`
+HTTP header, the same way the skills-il tase-mcp server sends it. The response JSON
+is printed as returned; field names are TASE's, not this script's.
 
 Usage:
-    python scripts/fetch_tase_data.py --index TA35
-    python scripts/fetch_tase_data.py --index TA125
+    python scripts/fetch_tase_data.py --list-indices
+    python scripts/fetch_tase_data.py --index TA35 [--date 2026-11-03] [--lang en-US]
     python scripts/fetch_tase_data.py --stock 662577
     python scripts/fetch_tase_data.py --example
 """
@@ -16,189 +28,138 @@ import os
 import sys
 import json
 import argparse
-from datetime import datetime, timedelta
+from datetime import date, datetime
 from typing import Optional
+from urllib.parse import urlencode
 from urllib.request import urlopen, Request
-from urllib.error import URLError
+from urllib.error import HTTPError, URLError
 
 
-# TASE Data Hub gateway base URL. Deliberately NOT hardcoded: the gateway host has
-# moved before and is bot-filtered, so a stale constant here silently sends every
-# call to a dead origin. Read the base URL off the product page in the TASE
-# Developers' Portal and pass it in via TASE_API_BASE.
-TASE_API_BASE = os.environ.get("TASE_API_BASE", "").rstrip("/")
+# Data Hub gateway. Override with TASE_API_BASE if TASE moves it.
+TASE_API_BASE = os.environ.get("TASE_API_BASE", "https://datawise.tase.co.il").rstrip("/")
+INDICES_LIST_PATH = "/api/v2/basic-indices/indices-list"
+INDEX_COMPONENTS_PATH = "/api/v2/basic-indices/index-components-basic"
+SECURITY_PAGE = "https://market.tase.co.il/en/market_data/security/{}"
 
-# Index identifiers
+# Index identifiers (TASE index codes). New indices appear over time (for example
+# TA-Technology 35 and TA-Israel Energy, launched February 2026): use --list-indices
+# for any index not listed here, and pass its numeric ID with --index-id.
 INDICES = {
-    "TA35": {"id": "142", "name": "TA-35", "hebrew": 'ת"א-35'},
-    "TA125": {"id": "137", "name": "TA-125", "hebrew": 'ת"א-125'},
-    "TA90": {"id": "143", "name": "TA-90", "hebrew": 'ת"א-90'},
-    "TABANK": {"id": "194", "name": "TA-Bank", "hebrew": 'ת"א-בנקים'},
-    "TAREAL": {"id": "149", "name": "TA-RealEstate", "hebrew": 'ת"א-נדל"ן'},
-    "TATECH": {"id": "169", "name": "TA-Technology", "hebrew": 'ת"א-טכנולוגיה'},
+    "TA35": {"id": 142, "name": "TA-35", "hebrew": 'ת"א-35'},
+    "TA125": {"id": 137, "name": "TA-125", "hebrew": 'ת"א-125'},
+    "TA90": {"id": 143, "name": "TA-90", "hebrew": 'ת"א-90'},
+    "TABANK": {"id": 194, "name": "TA-Bank", "hebrew": 'ת"א-בנקים'},
+    "TAREAL": {"id": 149, "name": "TA-RealEstate", "hebrew": 'ת"א-נדל"ן'},
+    "TATECH": {"id": 169, "name": "TA-Technology", "hebrew": 'ת"א-טכנולוגיה'},
 }
 
 # Well-known dual-listed Israeli companies (TASE + NASDAQ/NYSE), keyed by US ticker.
-# TASE security numbers are deliberately NOT hardcoded here: they are easy to
-# misattribute, and the dual-listed set itself changes through mergers and
-# take-privates (for example Sapiens stopped trading after being taken private).
-# Check Point is NOT listed here on purpose: it trades only in the US and has no TASE
-# price. The skill's own guidance is to never rely
-# on security numbers from memory. Resolve the current TASE number live by company
-# name on the TASE market-data site before using it. Note that
-# market.tase.co.il/en/market_data/companies/ no longer resolves; the working shape is
-# https://market.tase.co.il/en/market_data/security/662577 with the security code in
-# the final path segment (that example
-# renders "Shares:POALIM 00662577"), so confirm a candidate number by opening that page
-# and reading back the company name.
+# TASE security numbers are deliberately NOT hardcoded: the dual-listed set changes
+# through mergers and take-privates (Sapiens stopped trading on both exchanges in
+# December 2025 after being taken private, so it is not listed here). Check Point is
+# not listed either: it trades only in the US. Palo Alto Networks trades on TASE under
+# the symbol CYBR, not under its Nasdaq ticker PANW.
 DUAL_LISTED_US_TICKERS = {
     "NICE": "NICE Ltd",
     "TEVA": "Teva Pharmaceutical",
-    "SPNS": "Sapiens International",
     "ICL": "ICL Group",
+    "PANW": "Palo Alto Networks (TASE symbol CYBR)",
 }
-# 604611 is Bank Leumi (NOT Check Point and NOT Teva, despite earlier mappings).
 
 
-def fetch_json(url: str, headers: Optional[dict] = None) -> dict:
-    """Fetch JSON from a URL with optional headers.
-
-    Args:
-        url: The URL to fetch.
-        headers: Optional HTTP headers.
-
-    Returns:
-        Parsed JSON response as a dictionary.
-    """
-    req = Request(url)
-    if headers:
-        for key, value in headers.items():
-            req.add_header(key, value)
+def fetch_json(path: str, params: Optional[dict], lang: str) -> object:
+    """GET a Data Hub endpoint and return the parsed JSON body."""
+    api_key = os.environ.get("TASE_API_KEY")
+    if not api_key:
+        print("Error: TASE_API_KEY environment variable is required for live data.")
+        print("Get a key at https://datahubapi.tase.co.il (register it for the product you call).")
+        print("For a demonstration, use the --example flag.")
+        sys.exit(1)
+    url = TASE_API_BASE + path
+    if params:
+        url += "?" + urlencode(params)
+    req = Request(url, headers={
+        "accept": "application/json",
+        "accept-language": lang,
+        "apikey": api_key,
+    })
     try:
-        with urlopen(req, timeout=10) as response:
+        with urlopen(req, timeout=20) as response:
             return json.loads(response.read().decode("utf-8"))
-    except URLError:
-        print("Error: Could not connect to the TASE API Gateway. Please check your network or API status.")
+    except HTTPError as err:
+        hint = {
+            401: "the key was rejected (check TASE_API_KEY)",
+            403: "the key is not registered for this product, or the path was rejected",
+            429: "rate limit exceeded (10 requests per 2 seconds); wait and retry",
+        }.get(err.code, "see the product page in the Developers' Portal")
+        print(f"Error: HTTP {err.code} from {path}: {hint}.")
         sys.exit(1)
-
-
-def fetch_index_data(index_key: str) -> dict:
-    """Fetch index composition and performance data.
-
-    Args:
-        index_key: One of TA35, TA125, TA90, TABANK, TAREAL.
-
-    Returns:
-        Dictionary with index data including components and weights.
-    """
-    if index_key not in INDICES:
-        print(f"Unknown index: {index_key}. Available: {list(INDICES.keys())}")
+    except (URLError, TimeoutError) as err:
+        print(f"Error: could not reach {TASE_API_BASE} ({err}).")
         sys.exit(1)
-
-    index_info = INDICES[index_key]
-    print(f"Fetching {index_info['name']} ({index_info['hebrew']}) data...")
-    base = TASE_API_BASE or "<set TASE_API_BASE from your product page>"
-    print(f"TASE API endpoint: {base}/index/{index_info['id']}/components")
-    print()
-    print("Note: TASE Data Hub requires an API Key issued in the Developers' Portal.")
-    print("For development, use the example data below or register at:")
-    print("  https://www.tase.co.il/he/content/products_lobby/data_services")
-    print()
-
-    return {
-        "index": index_info["name"],
-        "hebrew_name": index_info["hebrew"],
-        "api_endpoint": f"{base}/index/{index_info['id']}/components",
-        "note": "Authenticate at tase.co.il for live data",
-    }
-
-
-def fetch_stock_data(securities_number: str) -> dict:
-    """Fetch individual stock data by TASE securities number.
-
-    Args:
-        securities_number: Numeric TASE securities identifier.
-
-    Returns:
-        Dictionary with stock information.
-    """
-    print(f"Looking up securities number: {securities_number}")
-    base = TASE_API_BASE or "<set TASE_API_BASE from your product page>"
-    print(f"  TASE API: {base}/security/{securities_number}")
-    print(f"  Web check: https://market.tase.co.il/en/market_data/security/662577 -- same path, swap in {securities_number}")
-    print(f"  Resolve the company name and dual-listing status live via the TASE API;")
-    print(f"  do not rely on hardcoded security numbers (they misattribute and go stale).")
-    print(f"  Known dual-listed tickers: {', '.join(sorted(DUAL_LISTED_US_TICKERS))}")
-    print()
-
-    return {
-        "securities_number": securities_number,
-        "api_endpoint": f"{base}/security/{securities_number}",
-    }
+    except json.JSONDecodeError:
+        print(f"Error: {path} did not return JSON.")
+        sys.exit(1)
 
 
 def generate_example() -> dict:
-    """Generate example TA-35 data for demonstration.
-
-    NOTE: Constituent weights and security numbers below are illustrative only
-    and may be stale. Always verify against the live TASE OpenAPI before
-    presenting to users. To verify a security number, open
-    https://market.tase.co.il/en/market_data/security/662577 and swap the final
-    path segment for the code you want.
-    """
+    """Offline example. Security numbers are real; weights are deliberately omitted
+    because they change at every index update. Fetch them with --index TA35."""
     return {
         "index": "TA-35",
         "date": datetime.now().strftime("%Y-%m-%d"),
         "components": [
-            # Security numbers confirmed 2026-09-13 against the TASE entity list; weights are placeholders:
-            {"name": "Bank Hapoalim", "hebrew": "בנק הפועלים", "weight_pct": 6.29, "securities_no": "662577"},
-            {"name": "Bank Leumi", "hebrew": "בנק לאומי", "weight_pct": 7.5, "securities_no": "604611"},
-            # Weight below is a placeholder; verify before quoting. Several legacy entries here had wrong
-            # security numbers (Check Point/Teva/NICE/ICL). Look up by name at
-            # https://market.tase.co.il/en/market_data/security/662577 (swap the final
-            # path segment) instead of trusting hardcoded numbers.
-            {"name": "Bank Discount", "hebrew": "בנק דיסקונט", "weight_pct": 4.0, "securities_no": "691212"},
+            {"name": "Bank Hapoalim", "symbol": "POLI", "securities_no": "662577", "weight_pct": None},
+            {"name": "Bank Leumi", "symbol": "LUMI", "securities_no": "604611", "weight_pct": None},
+            {"name": "Bank Discount", "symbol": "DSCT", "securities_no": "691212", "weight_pct": None},
         ],
-        "note": "Example data for demonstration only. Use the live TASE OpenAPI for production.",
+        "note": ("Example data for demonstration only. Use --index TA35 with an API key "
+                 "for the real constituents and weights."),
     }
 
 
 def main():
-    """Main entry point."""
-    parser = argparse.ArgumentParser(
-        description="Fetch TASE index and stock data"
-    )
-    parser.add_argument("--index", choices=list(INDICES.keys()),
-                        help="Fetch index composition (TA35, TA125, etc.)")
-    parser.add_argument("--stock", help="Fetch stock by TASE securities number")
-    parser.add_argument("--example", action="store_true",
-                        help="Show example TA-35 data")
-
+    parser = argparse.ArgumentParser(description="Fetch TASE index data from the TASE Data Hub API")
+    group = parser.add_mutually_exclusive_group(required=True)
+    group.add_argument("--list-indices", action="store_true", help="List all TASE indices with their IDs")
+    group.add_argument("--index", choices=list(INDICES.keys()), help="Index constituents and weights")
+    group.add_argument("--index-id", type=int, help="Same as --index, by numeric TASE index ID")
+    group.add_argument("--stock", help="Show the official page for a TASE security number")
+    group.add_argument("--example", action="store_true", help="Show offline example TA-35 data")
+    parser.add_argument("--date", help="Trade date YYYY-MM-DD for --index (default: today; "
+                        "use the last trading day, TASE trades Monday-Friday)")
+    parser.add_argument("--lang", choices=["he-IL", "en-US"], default="he-IL", help="Response language")
     args = parser.parse_args()
 
-    if not any([args.index, args.stock, args.example]):
-        parser.print_help()
-        sys.exit(1)
-
-    if (args.index or args.stock) and not os.environ.get("TASE_API_KEY"):
-        print("Error: TASE_API_KEY environment variable is required for live data.")
-        print("Please set it: export TASE_API_KEY='your_api_key_here'")
-        print("For a demonstration, use the --example flag.")
-        sys.exit(1)
-
     if args.example:
-        data = generate_example()
-        print("Example TA-35 index data:")
-        print(json.dumps(data, indent=2, ensure_ascii=False))
+        print(json.dumps(generate_example(), indent=2, ensure_ascii=False))
         return
 
-    if args.index:
-        data = fetch_index_data(args.index)
-        print(json.dumps(data, indent=2, ensure_ascii=False))
-
     if args.stock:
-        data = fetch_stock_data(args.stock)
-        print(json.dumps(data, indent=2, ensure_ascii=False))
+        if not args.stock.isdigit():
+            print("Error: --stock takes a numeric TASE security number, e.g. 662577.")
+            sys.exit(1)
+        print(json.dumps({
+            "securities_number": args.stock,
+            "official_page": SECURITY_PAGE.format(args.stock),
+            "note": "Open the page and read back the company name before using the number.",
+        }, indent=2, ensure_ascii=False))
+        return
+
+    if args.list_indices:
+        print(json.dumps(fetch_json(INDICES_LIST_PATH, None, args.lang), indent=2, ensure_ascii=False))
+        return
+
+    trade_date = args.date or date.today().isoformat()
+    try:
+        datetime.strptime(trade_date, "%Y-%m-%d")
+    except ValueError:
+        print("Error: --date must be YYYY-MM-DD.")
+        sys.exit(1)
+    index_id = args.index_id if args.index_id is not None else INDICES[args.index]["id"]
+    data = fetch_json(INDEX_COMPONENTS_PATH, {"IndexId": index_id, "TradeDate": trade_date}, args.lang)
+    print(json.dumps({"index_id": index_id, "trade_date": trade_date, "response": data},
+                     indent=2, ensure_ascii=False))
 
 
 if __name__ == "__main__":
