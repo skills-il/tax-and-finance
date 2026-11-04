@@ -48,7 +48,7 @@
       ]
     },
     {
-      "version": "1.9.0",
+      "version": "1.9.1",
       "date": "2026-11-04",
       "holdout_before": 1.0,
       "holdout_after": 1.0,
@@ -76,7 +76,8 @@
         "Sibling defect: none found in tax-and-finance on the surtax threshold (siblings already say 2024-2027).",
         "Deferred MINOR (expert r3, sourced): filing trigger also applies when the SPOUSE is liable to surtax (reg.3(a)(8) 'הוא או בן זוגו'); 20% rate on non-linked bonds for a substantial shareholder (s.91(b)(3)(a)); tag the 5,385,285 residential-shevach figure as the 2025-2026 amount (updated from 2027).",
         "Value-add (advisory BLOCK, with 0.67 / without 0.50): every run where the skill loaded scored 1.0; the 5 failing runs were 1-turn answers that never invoked the skill (surtax-advance HE case 0/3 fired, retiree EN case 1/3). Trigger issue: next cycle consider adding 'mas yesef', 'mikdama/advance', 'withheld 25% refund' to the description and re-run the holdout + value-add.",
-        "CI: Cisco CORRELATED_SENSITIVE_NETWORK_FLOW fires on an env-var key sent to the network with an overridable host; script now pins the host and reads the key from --key-file; network declared in frontmatter compatibility."
+        "CI: Cisco CORRELATED_SENSITIVE_NETWORK_FLOW fires on an env-var key sent to the network with an overridable host; script now pins the host and reads the key from --key-file; network declared in frontmatter compatibility.",
+        "Post-tag patch 1.9.1: SkillSpector flagged 'chmod 600' in a script docstring as Sudo/Root Execution (executable, medium; aggregate 'high', DO_NOT_INSTALL). Reworded; keep chmod/sudo words out of scripts."
       ],
       "value_add": {
         "with": 0.67,

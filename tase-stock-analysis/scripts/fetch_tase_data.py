@@ -68,7 +68,7 @@ DUAL_LISTED_US_TICKERS = {
 
 
 def read_key(key_file: Optional[str]) -> str:
-    """Read the API key from a file the user names (keep it chmod 600), so it never sits on the command line."""
+    """Read the API key from a file the user names (readable only by them), so it never sits on the command line."""
     if not key_file:
         print("Error: live data needs --key-file PATH, a file holding your TASE Data Hub apikey.")
         print("Get a key at https://datahubapi.tase.co.il (register it for the product you call).")

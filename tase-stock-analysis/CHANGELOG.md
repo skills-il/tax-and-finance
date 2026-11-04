@@ -2,6 +2,12 @@
 
 All notable changes to this skill are documented here.
 
+## [1.9.1] - 2026-11-04
+
+### Fixed
+
+- ניסוח בהערה בסקריפט fetch_tase_data.py שזוהה בטעות על ידי סורק האבטחה כהרצת הרשאות מנהל. אין שינוי בהתנהגות או בתוכן.
+
 ## [1.9.0] - 2026-11-04
 
 ### Fixed
