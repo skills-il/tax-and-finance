@@ -100,7 +100,7 @@ else:
 - שרת ה-MCP: `npx -y @skills-il/tase-mcp` (Node.js 18 ומעלה)
 
 **הגדרה:**
-הגדירו את משתנה הסביבה `TASE_API_KEY` לערך ה-`apikey` של האפליקציה שלכם.
+ברשומת שרת ה-MCP בהגדרות ה-MCP של הסוכן, הגדירו בבלוק `env` את `TASE_API_KEY` לערך ה-`apikey` של האפליקציה שלכם (כך tase-mcp קורא את המפתח; הסקריפט המצורף משתמש ב-`--key-file` במקום זאת).
 
 **כלים נבחרים** (השרת חושף 36 כלים, אלה השימושיים ביותר לסקיל הזה):
 | כלי | מה עושה |
@@ -121,7 +121,7 @@ else:
 ### דוגמה 1: סקירת מדד ת"א-35
 המשתמש אומר: "הראה לי את הרכב ת"א-35 ואת המניות המובילות"
 פעולות:
-1. הרצת `python scripts/fetch_tase_data.py --index TA35 --date <יום המסחר האחרון>` (או כלי ה-MCP `tase_get_index_components` עם IndexId 142)
+1. הרצת `python scripts/fetch_tase_data.py --index TA35 --date <יום המסחר האחרון> --key-file <קובץ המפתח>` (או כלי ה-MCP `tase_get_index_components` עם IndexId 142)
 2. הצגת האחזקות המובילות לפי משקל מתוך הנתונים שנשלפו, ליום המסחר שצוין (אמתו את מזהה המדד עם `--list-indices` אם יש ספק)
 3. הצגת ביצועים אחרונים בהקשר ריבית בנק ישראל
 4. ציון תאריכי אקס-דיבידנד קרובים לרכיבים מרכזיים
@@ -157,7 +157,7 @@ else:
 ## משאבים מצורפים
 
 ### סקריפטים
-- `scripts/fetch_tase_data.py` -- פונה ל-API של TASE Data Hub (שער `https://datawise.tase.co.il`, המפתח בכותרת `apikey`): `--list-indices` מציג את מזהי כל המדדים, `--index TA35 --date YYYY-MM-DD` מחזיר רכיבים ומשקלות ליום מסחר. `--stock <מספר>` מציג את דף נייר הערך הרשמי לאימות המספר, ו-`--example` רץ בלי רשת. הסקריפט אינו קורא דיווחי מאי"ה ואינו מביא ציטוטי מחיר חיים. נדרש `TASE_API_KEY` שרשום למוצר Indices - Basic. הרצה: `python scripts/fetch_tase_data.py --help`
+- `scripts/fetch_tase_data.py` -- פונה ל-API של TASE Data Hub (שער `https://datawise.tase.co.il`, המפתח בכותרת `apikey`): `--list-indices` מציג את מזהי כל המדדים, `--index TA35 --date YYYY-MM-DD` מחזיר רכיבים ומשקלות ליום מסחר. `--stock <מספר>` מציג את דף נייר הערך הרשמי לאימות המספר, ו-`--example` רץ בלי רשת. הסקריפט אינו קורא דיווחי מאי"ה ואינו מביא ציטוטי מחיר חיים. קריאות חיות דורשות `--key-file <נתיב>`, קובץ שמכיל מפתח API שרשום למוצר Indices - Basic (המפתח נשלח רק לשער הקבוע של הבורסה). הרצה: `python scripts/fetch_tase_data.py --help`
 
 ### חומרי עזר
 - `references/tase-api.md` -- endpoints של API הבורסה לנתוני שוק, הרכב מדדים וחיפוש דיווחי מאי"ה. היעזרו בקובץ זה בעת שילוב נתוני שוק חיים.
@@ -182,7 +182,7 @@ else:
 
 ### שגיאה: "HTTP 401" או "HTTP 403" מ-fetch_tase_data.py
 סיבה: 401 פירושו שהשער דחה את המפתח. 403 פירושו שהמפתח אינו רשום למוצר שנקרא (Indices - Basic עבור `--index` ו-`--list-indices`), או שנתיב הבקשה נדחה. נבדק: גם נתיב לא רשום מחזיר 403, לכן בדקו את רישום המוצר לפני שמניחים שה-API השתנה.
-פתרון: ודאו ש-`TASE_API_KEY` הוא ה-apikey של האפליקציה מ-https://datahubapi.tase.co.il ושהאפליקציה רשומה למוצר.
+פתרון: ודאו שהקובץ שמועבר ב-`--key-file` מכיל את ה-apikey של האפליקציה מ-https://datahubapi.tase.co.il ושהאפליקציה רשומה למוצר.
 
 ### שגיאה: "CERTIFICATE_VERIFY_FAILED" מ-fetch_tase_data.py
 סיבה: לפייתון המקומי אין חבילת אישורי CA (נפוץ בהתקנה של python.org ב-macOS). זו אינה תקלה של הבורסה.

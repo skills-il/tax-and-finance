@@ -13,13 +13,13 @@ What it does NOT do: it does not read Maya filings (use https://maya.tase.co.il)
 does not fetch live stock quotes.
 
 The live calls need a TASE Data Hub API key registered for the "Indices - Basic"
-product (sign in at https://datahubapi.tase.co.il). The key is sent in the `apikey`
-HTTP header, the same way the skills-il tase-mcp server sends it. The response JSON
+product (sign in at https://datahubapi.tase.co.il), saved in a file passed with --key-file.
+The key is sent only to the fixed TASE gateway, in the `apikey` HTTP header, the same way the skills-il tase-mcp server sends it. The response JSON
 is printed as returned; field names are TASE's, not this script's.
 
 Usage:
-    python scripts/fetch_tase_data.py --list-indices
-    python scripts/fetch_tase_data.py --index TA35 [--date 2026-11-03] [--lang en-US]
+    python scripts/fetch_tase_data.py --list-indices --key-file ~/.tase_apikey
+    python scripts/fetch_tase_data.py --index TA35 --key-file ~/.tase_apikey [--date 2026-11-03] [--lang en-US]
     python scripts/fetch_tase_data.py --stock 662577
     python scripts/fetch_tase_data.py --example
 """
@@ -35,8 +35,8 @@ from urllib.request import urlopen, Request
 from urllib.error import HTTPError, URLError
 
 
-# Data Hub gateway. Override with TASE_API_BASE if TASE moves it.
-TASE_API_BASE = os.environ.get("TASE_API_BASE", "https://datawise.tase.co.il").rstrip("/")
+# Data Hub gateway. Fixed on purpose: the API key is only ever sent to this TASE host.
+TASE_API_BASE = "https://datawise.tase.co.il"
 INDICES_LIST_PATH = "/api/v2/basic-indices/indices-list"
 INDEX_COMPONENTS_PATH = "/api/v2/basic-indices/index-components-basic"
 SECURITY_PAGE = "https://market.tase.co.il/en/market_data/security/{}"
@@ -67,14 +67,26 @@ DUAL_LISTED_US_TICKERS = {
 }
 
 
-def fetch_json(path: str, params: Optional[dict], lang: str) -> object:
-    """GET a Data Hub endpoint and return the parsed JSON body."""
-    api_key = os.environ.get("TASE_API_KEY")
-    if not api_key:
-        print("Error: TASE_API_KEY environment variable is required for live data.")
+def read_key(key_file: Optional[str]) -> str:
+    """Read the API key from a file the user names (keep it chmod 600), so it never sits on the command line."""
+    if not key_file:
+        print("Error: live data needs --key-file PATH, a file holding your TASE Data Hub apikey.")
         print("Get a key at https://datahubapi.tase.co.il (register it for the product you call).")
         print("For a demonstration, use the --example flag.")
         sys.exit(1)
+    try:
+        key = open(os.path.expanduser(key_file), encoding="utf-8").read().strip()
+    except OSError as err:
+        print(f"Error: could not read the key file ({err}).")
+        sys.exit(1)
+    if not key:
+        print("Error: the key file is empty.")
+        sys.exit(1)
+    return key
+
+
+def fetch_json(path: str, params: Optional[dict], lang: str, api_key: str) -> object:
+    """GET a Data Hub endpoint and return the parsed JSON body."""
     url = TASE_API_BASE + path
     if params:
         url += "?" + urlencode(params)
@@ -88,7 +100,7 @@ def fetch_json(path: str, params: Optional[dict], lang: str) -> object:
             return json.loads(response.read().decode("utf-8"))
     except HTTPError as err:
         hint = {
-            401: "the key was rejected (check TASE_API_KEY)",
+            401: "the key was rejected (check the key file)",
             403: "the key is not registered for this product, or the path was rejected",
             429: "rate limit exceeded (10 requests per 2 seconds); wait and retry",
         }.get(err.code, "see the product page in the Developers' Portal")
@@ -129,6 +141,7 @@ def main():
     parser.add_argument("--date", help="Trade date YYYY-MM-DD for --index (default: today; "
                         "use the last trading day, TASE trades Monday-Friday)")
     parser.add_argument("--lang", choices=["he-IL", "en-US"], default="he-IL", help="Response language")
+    parser.add_argument("--key-file", help="File holding your TASE Data Hub apikey (needed for live calls)")
     args = parser.parse_args()
 
     if args.example:
@@ -147,7 +160,7 @@ def main():
         return
 
     if args.list_indices:
-        print(json.dumps(fetch_json(INDICES_LIST_PATH, None, args.lang), indent=2, ensure_ascii=False))
+        print(json.dumps(fetch_json(INDICES_LIST_PATH, None, args.lang, read_key(args.key_file)), indent=2, ensure_ascii=False))
         return
 
     trade_date = args.date or date.today().isoformat()
@@ -157,7 +170,8 @@ def main():
         print("Error: --date must be YYYY-MM-DD.")
         sys.exit(1)
     index_id = args.index_id if args.index_id is not None else INDICES[args.index]["id"]
-    data = fetch_json(INDEX_COMPONENTS_PATH, {"IndexId": index_id, "TradeDate": trade_date}, args.lang)
+    data = fetch_json(INDEX_COMPONENTS_PATH, {"IndexId": index_id, "TradeDate": trade_date}, args.lang,
+                      read_key(args.key_file))
     print(json.dumps({"index_id": index_id, "trade_date": trade_date, "response": data},
                      indent=2, ensure_ascii=False))
 

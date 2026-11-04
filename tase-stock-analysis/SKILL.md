@@ -2,6 +2,7 @@
 name: tase-stock-analysis
 description: Not investment advice and not a recommendation to buy or sell. Analyze Israeli stocks on TASE (Tel Aviv Stock Exchange), track TA-35 and TA-125 indices, and evaluate dual-listed companies (TASE + NASDAQ). Use when user asks about Israeli stocks, "boorsa", "TA-35", "TASE", Maya filings, dual-listed companies, or Israeli capital gains or dividend tax on securities. Provides index composition, Maya (TASE disclosure) filings lookup, capital gains tax calculations (25% or 30% on the real gain, plus surtax for high earners), and Bank of Israel interest rate context for valuation. Do NOT use for general international stock analysis unrelated to Israel, or for cryptocurrency trading.
 license: MIT
+compatibility: "Helper script needs Python 3 and network access to the TASE Data Hub API (datawise.tase.co.il) with a Data Hub API key read from a file. Works with Claude Code, Cursor, GitHub Copilot, Windsurf, OpenCode, Codex, Antigravity, Gemini CLI."
 ---
 
 # TASE Stock Analysis
@@ -106,7 +107,7 @@ For live market data, use the **TASE MCP Server** ([tase-mcp](https://agentskill
 - MCP server: `npx -y @skills-il/tase-mcp` (Node.js 18+)
 
 **Setup:**
-Set the environment variable `TASE_API_KEY` to the `apikey` of your application.
+In the MCP server entry of your agent's MCP config, set `TASE_API_KEY` in its `env` block to the `apikey` of your application (this is how tase-mcp reads the key; the bundled script uses `--key-file` instead).
 
 **Selected MCP Tools** (the server exposes 36; these are the ones this skill uses most):
 | Tool | What it does |
@@ -127,7 +128,7 @@ Set the environment variable `TASE_API_KEY` to the `apikey` of your application.
 ### Example 1: TA-35 Index Overview
 User says: "Show me the current TA-35 composition and top performers"
 Actions:
-1. Run `python scripts/fetch_tase_data.py --index TA35 --date <last trading day>` (or the MCP tool `tase_get_index_components` with IndexId 142)
+1. Run `python scripts/fetch_tase_data.py --index TA35 --date <last trading day> --key-file <key file>` (or the MCP tool `tase_get_index_components` with IndexId 142)
 2. Display the top holdings by weight from the fetched data, for the stated trade date (confirm the index ID with `--list-indices` if unsure)
 3. Show recent performance vs. BOI interest rate context
 4. Note upcoming ex-dividend dates for major components
@@ -163,7 +164,7 @@ Result: Summary of recent disclosures with material items highlighted
 ## Bundled Resources
 
 ### Scripts
-- `scripts/fetch_tase_data.py` -- Calls the TASE Data Hub API (gateway `https://datawise.tase.co.il`, key in the `apikey` header): `--list-indices` lists every index ID, `--index TA35 --date YYYY-MM-DD` returns constituents and weights for a trade date. `--stock <number>` prints the official security page to confirm a number, and `--example` runs offline. It does not read Maya filings or live quotes. Needs `TASE_API_KEY` registered for the Indices - Basic product. Run: `python scripts/fetch_tase_data.py --help`
+- `scripts/fetch_tase_data.py` -- Calls the TASE Data Hub API (gateway `https://datawise.tase.co.il`, key in the `apikey` header): `--list-indices` lists every index ID, `--index TA35 --date YYYY-MM-DD` returns constituents and weights for a trade date. `--stock <number>` prints the official security page to confirm a number, and `--example` runs offline. It does not read Maya filings or live quotes. Live calls need `--key-file <path>`, a file holding an API key registered for the Indices - Basic product (the key is only sent to the fixed TASE gateway). Run: `python scripts/fetch_tase_data.py --help`
 
 ### References
 - `references/tase-api.md` -- TASE API endpoints for market data, index composition, and Maya filings search. Consult when integrating live market data.
@@ -188,7 +189,7 @@ Solution: Use the Bank of Israel representative rate (sha'ar yatzig), and check 
 
 ### Error: "HTTP 401" or "HTTP 403" from fetch_tase_data.py
 Cause: 401 means the gateway rejected the key. 403 means the key is not registered for the product being called (Indices - Basic for `--index` and `--list-indices`), or the request path was rejected. Verified: an unregistered path also returns 403, so check the product registration before assuming the API changed.
-Solution: Confirm `TASE_API_KEY` is the application's apikey from https://datahubapi.tase.co.il and that the application is registered for the product.
+Solution: Confirm the file passed with `--key-file` holds the application's apikey from https://datahubapi.tase.co.il and that the application is registered for the product.
 
 ### Error: "CERTIFICATE_VERIFY_FAILED" from fetch_tase_data.py
 Cause: The local Python has no CA bundle (common with the python.org installer on macOS). It is not a TASE fault.
