@@ -1,0 +1,346 @@
+{
+  "skill_slug": "israeli-short-term-rental-host",
+  "schemaVersion": "1.0",
+  "generated_at": "2026-11-08",
+  "claims": [
+    {
+      "id": "exemption-ceiling",
+      "claim": "The exemption ceiling is 5,654 NIS per month for tax years 2024 to 2027",
+      "claim_type": "currency",
+      "source_url": "https://he.wikisource.org/wiki/חוק_מס_הכנסה_(פטור_ממס_על_הכנסה_מהשכרת_דירת_מגורים)",
+      "source_fetched_at": "2026-11-08T00:00:00Z",
+      "raw_snippet": "בשנים 2024–2027, 5,654 ש״ח",
+      "confidence": "high"
+    },
+    {
+      "id": "exemption-law-name",
+      "claim": "The exemption comes from the Income Tax (Exemption from Tax on Income from Renting a Residential Apartment) Law, 5750-1990",
+      "claim_type": "law",
+      "source_url": "https://he.wikisource.org/wiki/חוק_מס_הכנסה_(פטור_ממס_על_הכנסה_מהשכרת_דירת_מגורים)",
+      "source_fetched_at": "2026-11-08T00:00:00Z",
+      "raw_snippet": "חוק מס הכנסה (פטור ממס על הכנסה מהשכרת דירת מגורים), התש״ן–1990",
+      "confidence": "high"
+    },
+    {
+      "id": "exemption-reduced",
+      "claim": "Above the ceiling the exempt amount is the ceiling reduced by the excess",
+      "claim_type": "law",
+      "source_url": "https://he.wikisource.org/wiki/חוק_מס_הכנסה_(פטור_ממס_על_הכנסה_מהשכרת_דירת_מגורים)",
+      "source_fetched_at": "2026-11-08T00:00:00Z",
+      "raw_snippet": "התקרה לאחר שהופחת ממנה הסכום שבו עולה ההכנסה מהשכרת דירות מגורים על התקרה",
+      "confidence": "high"
+    },
+    {
+      "id": "exemption-zero-11308",
+      "claim": "The exemption reaches zero when rent is 11,308 NIS a month or more (2026)",
+      "claim_type": "currency",
+      "source_url": "https://www.kolzchut.org.il/he/פטור_ממס_על_הכנסה_מהשכרת_דירה_למגורים",
+      "source_fetched_at": "2026-11-08T00:00:00Z",
+      "raw_snippet": "סך כל ההכנסות משכר הדירה נמוך מ-11,308 ₪ לחודש",
+      "confidence": "high"
+    },
+    {
+      "id": "exemption-resident-tenant",
+      "claim": "The exemption needs rent from a flat used as a residence by an individual tenant",
+      "claim_type": "law",
+      "source_url": "https://he.wikisource.org/wiki/חוק_מס_הכנסה_(פטור_ממס_על_הכנסה_מהשכרת_דירת_מגורים)",
+      "source_fetched_at": "2026-11-08T00:00:00Z",
+      "raw_snippet": "המשמשת למגורים לשוכר שהוא יחיד",
+      "confidence": "high"
+    },
+    {
+      "id": "exemption-signed-doc",
+      "claim": "The exemption applies only if the landlord holds a document signed by the tenant confirming residential use only",
+      "claim_type": "law",
+      "source_url": "https://he.wikisource.org/wiki/חוק_מס_הכנסה_(פטור_ממס_על_הכנסה_מהשכרת_דירת_מגורים)",
+      "source_fetched_at": "2026-11-08T00:00:00Z",
+      "raw_snippet": "מסמך בחתימת ידו של השוכר המאשר כי הדירה משמשת לו למגורים בלבד",
+      "confidence": "high"
+    },
+    {
+      "id": "exemption-not-business-books",
+      "claim": "A flat recorded or required to be recorded in business books is excluded from the exemption",
+      "claim_type": "law",
+      "source_url": "https://he.wikisource.org/wiki/חוק_מס_הכנסה_(פטור_ממס_על_הכנסה_מהשכרת_דירת_מגורים)",
+      "source_fetched_at": "2026-11-08T00:00:00Z",
+      "raw_snippet": "למעט דירה הרשומה או שיש לרשמה בפנקסים שחייבים לנהל לגבי הכנסת המשכיר מעסק",
+      "confidence": "high"
+    },
+    {
+      "id": "s122-10pct",
+      "claim": "Section 122 lets an individual pay 10% of residential rent income only if it is not business income",
+      "claim_type": "percentage",
+      "source_url": "https://he.wikisource.org/wiki/פקודת_מס_הכנסה",
+      "source_fetched_at": "2026-11-08T00:00:00Z",
+      "raw_snippet": "יהא רשאי לשלם עליה מס בשיעור של 10% ממנה במקום המס שהוא חייב עליה לפי סעיף 121, אם ההכנסה מדמי שכירות אינה הכנסה מעסק",
+      "confidence": "high"
+    },
+    {
+      "id": "s122-no-expenses",
+      "claim": "Under section 122 no depreciation or expenses are deductible",
+      "claim_type": "law",
+      "source_url": "https://he.wikisource.org/wiki/פקודת_מס_הכנסה",
+      "source_fetched_at": "2026-11-08T00:00:00Z",
+      "raw_snippet": "לא יהא זכאי לנכות פחת או הפחתה אחרת בשל הדירה, או הוצאות שהוצאו בייצור ההכנסה מדמי השכירות",
+      "confidence": "high"
+    },
+    {
+      "id": "s122-30-days",
+      "claim": "The 10% tax is paid within 30 days of the end of the tax year unless advances were paid",
+      "claim_type": "threshold",
+      "source_url": "https://he.wikisource.org/wiki/פקודת_מס_הכנסה",
+      "source_fetched_at": "2026-11-08T00:00:00Z",
+      "raw_snippet": "ישולם בתוך 30 ימים מתום שנת המס שבה היתה ליחיד הכנסה מדמי שכירות",
+      "confidence": "high"
+    },
+    {
+      "id": "ita-business-ynet",
+      "claim": "The Tax Authority stated in 2016 that regular short-term renting is a business activity, not one-off rentals",
+      "claim_type": "feature",
+      "source_url": "https://www.ynet.co.il/articles/0,7340,L-4821399,00.html",
+      "source_fetched_at": "2026-11-08T00:00:00Z",
+      "raw_snippet": "ופעולה זו משמשת להם כפעילות עסקית לכל דבר",
+      "confidence": "high"
+    },
+    {
+      "id": "ita-business-globes",
+      "claim": "A Tax Authority spokesperson said in 2017 that short-term rental is like renting a zimmer or any other business and the residential benefits do not apply",
+      "claim_type": "feature",
+      "source_url": "https://www.globes.co.il/news/article.aspx?did=1001202409",
+      "source_fetched_at": "2026-11-08T00:00:00Z",
+      "raw_snippet": "ולא ניתן לקבל בגינה את ההטבות הקבועות בחוק להשכרת דירה למגורים",
+      "confidence": "high",
+      "verified_via": "browser",
+      "verified_at": "2026-11-08"
+    },
+    {
+      "id": "ita-affidavit-2024",
+      "claim": "From tax year 2024 a lease or a lawyer-signed affidavit must be attached to the online rental report",
+      "claim_type": "law",
+      "source_url": "https://www.gov.il/BlobFolder/policy/inst-5-2026/he/IncomeTax_inst-5-2026.pdf",
+      "source_fetched_at": "2026-11-08T00:00:00Z",
+      "raw_snippet": "דרישה זו לצירוף חוזה או תצהיר חלה משנת מס 2024 ואילך",
+      "confidence": "high"
+    },
+    {
+      "id": "vat-31-hotel",
+      "claim": "VAT section 31(1) exempts residential rental up to 25 years except lodging in a hotel",
+      "claim_type": "law",
+      "source_url": "https://he.wikisource.org/wiki/חוק_מס_ערך_מוסף",
+      "source_fetched_at": "2026-11-08T00:00:00Z",
+      "raw_snippet": "השכרה למגורים לתקופה שאינה עולה על 25 שנים, למעט השכרה לשם אירוח בבית מלון",
+      "confidence": "high"
+    },
+    {
+      "id": "vat-hotel-5",
+      "claim": "A hotel for VAT purposes is a place that usually lodges at least five people for payment",
+      "claim_type": "threshold",
+      "source_url": "https://he.wikisource.org/wiki/חוק_מס_ערך_מוסף",
+      "source_fetched_at": "2026-11-08T00:00:00Z",
+      "raw_snippet": "שבו מלינים בדרך כלל בתמורה לפחות חמישה אנשים",
+      "confidence": "high"
+    },
+    {
+      "id": "vat-osek-patur-2026",
+      "claim": "The osek patur ceiling is 122,833 NIS in 2026 and 120,000 NIS in 2024 and 2025",
+      "claim_type": "currency",
+      "source_url": "https://he.wikisource.org/wiki/חוק_מס_ערך_מוסף",
+      "source_fetched_at": "2026-11-08T00:00:00Z",
+      "raw_snippet": "בשנים 2024 ו־2025, 120,000 ש״ח; בשנת 2026, 122,833 ש״ח",
+      "confidence": "high"
+    },
+    {
+      "id": "vat-18",
+      "claim": "VAT is 18% from 1 January 2025",
+      "claim_type": "percentage",
+      "source_url": "https://www.gov.il/he/pages/dec1270-2024",
+      "source_fetched_at": "2026-11-08T00:00:00Z",
+      "raw_snippet": "כך שיעמוד על 18% במקום 17% החל מיום 1 בינואר 2025",
+      "confidence": "high"
+    },
+    {
+      "id": "vat-tourist-hotel",
+      "claim": "The VAT zero rate covers a tourist's lodging in a hotel",
+      "claim_type": "law",
+      "source_url": "https://he.wikisource.org/wiki/חוק_מס_ערך_מוסף",
+      "source_fetched_at": "2026-11-08T00:00:00Z",
+      "raw_snippet": "לינה של תייר בבית מלון",
+      "confidence": "high"
+    },
+    {
+      "id": "btl-350",
+      "claim": "National Insurance does not count section 122 rent or tax-exempt non-work income as income for contributions",
+      "claim_type": "law",
+      "source_url": "https://he.wikisource.org/wiki/חוק_הביטוח_הלאומי",
+      "source_fetched_at": "2026-11-08T00:00:00Z",
+      "raw_snippet": "הכנסה מדמי שכירות שחלות עליה הוראות סעיף 122 לפקודת מס הכנסה",
+      "confidence": "high"
+    },
+    {
+      "id": "btl-self-employed-20h",
+      "claim": "For National Insurance a self-employed person works at least 20 hours a week on average in the occupation",
+      "claim_type": "threshold",
+      "source_url": "https://he.wikisource.org/wiki/חוק_הביטוח_הלאומי",
+      "source_fetched_at": "2026-11-08T00:00:00Z",
+      "raw_snippet": "לפחות עשרים שעות בשבוע בממוצע",
+      "confidence": "high"
+    },
+    {
+      "id": "licence-7-1b",
+      "claim": "A business licence is needed to rent more than four holiday units with services",
+      "claim_type": "law",
+      "source_url": "https://he.wikisource.org/wiki/צו_רישוי_עסקים_(עסקים_טעוני_רישוי)",
+      "source_fetched_at": "2026-11-08T00:00:00Z",
+      "raw_snippet": "השכרת יחידות אירוח למטרת נופש, המלווה במתן שירותים לשוכרים, כשמספר יחידות האירוח המיועדות להשכרה עולה על ארבע",
+      "confidence": "high"
+    },
+    {
+      "id": "insurance-notify",
+      "claim": "The insured must notify the insurer in writing of a material change",
+      "claim_type": "law",
+      "source_url": "https://he.wikisource.org/wiki/חוק_חוזה_הביטוח",
+      "source_fetched_at": "2026-11-08T00:00:00Z",
+      "raw_snippet": "נודע למבוטח שחל שינוי מהותי, עליו להודיע על כך מיד למבטח בכתב",
+      "confidence": "high"
+    },
+    {
+      "id": "planning-ruling-2025",
+      "claim": "A 2025 Tel Aviv magistrate ruling held rentals of less than a month to be a non-conforming use of a residential flat",
+      "claim_type": "feature",
+      "source_url": "https://www.bizportal.co.il/realestates/news/article/20017039",
+      "source_fetched_at": "2026-11-08T00:00:00Z",
+      "raw_snippet": "השכרת דירות לתקופה של פחות מחודש מהווה",
+      "confidence": "high"
+    },
+    {
+      "id": "bylaws-registrar",
+      "claim": "A condominium registrar barred short-term rental in a building",
+      "claim_type": "feature",
+      "source_url": "https://www.calcalist.co.il/articles/0,7340,L-3748170,00.html",
+      "source_fetched_at": "2026-11-08T00:00:00Z",
+      "raw_snippet": "המפקחת אסרה על השמשת הדירה לשכירות לטווח קצר",
+      "confidence": "high",
+      "verified_via": "browser",
+      "verified_at": "2026-11-08"
+    },
+    {
+      "id": "no-mixing-routes",
+      "claim": "Income from the same flat cannot be split between tax routes in the same year",
+      "claim_type": "feature",
+      "source_url": "https://www.kolzchut.org.il/he/פטור_ממס_על_הכנסה_מהשכרת_דירה_למגורים",
+      "source_fetched_at": "2026-11-08T00:00:00Z",
+      "raw_snippet": "אין אפשרות לפצל באותה שנה לכמה מסלולי מיסוי",
+      "confidence": "high"
+    },
+    {
+      "id": "vat-section-31",
+      "claim": "Section 31 of the VAT Law (סעיף 31) lists exempt transactions, including residential rental",
+      "claim_type": "law",
+      "source_url": "https://he.wikisource.org/wiki/חוק_מס_ערך_מוסף",
+      "source_fetched_at": "2026-11-08T00:00:00Z",
+      "raw_snippet": "31. פטור לעסקאות מסוימות",
+      "confidence": "high"
+    },
+    {
+      "id": "s32-personal",
+      "claim": "Section 32(1) of the Income Tax Ordinance (סעיף 32) disallows home and private expenses",
+      "claim_type": "law",
+      "source_url": "https://he.wikisource.org/wiki/פקודת_מס_הכנסה",
+      "source_fetched_at": "2026-11-08T00:00:00Z",
+      "raw_snippet": "לרבות הוצאות הבית, הוצאות פרטיות",
+      "confidence": "high"
+    },
+    {
+      "id": "s175-advances",
+      "claim": "Section 175 of the Ordinance (סעיף 175) requires advance payments",
+      "claim_type": "law",
+      "source_url": "https://he.wikisource.org/wiki/פקודת_מס_הכנסה",
+      "source_fetched_at": "2026-11-08T00:00:00Z",
+      "raw_snippet": "מקדמות שהוא חייב בהן על פי סעיף 175",
+      "confidence": "high"
+    },
+    {
+      "id": "s131-return",
+      "claim": "Section 131 of the Ordinance sets who must file a return",
+      "claim_type": "law",
+      "source_url": "https://he.wikisource.org/wiki/פקודת_מס_הכנסה",
+      "source_fetched_at": "2026-11-08T00:00:00Z",
+      "raw_snippet": "131. מי חייב בדו״ח",
+      "confidence": "high"
+    },
+    {
+      "id": "s122c-addback",
+      "claim": "Under section 122(c), betterment tax on a later sale adds back the depreciation that could have been claimed",
+      "claim_type": "law",
+      "source_url": "https://he.wikisource.org/wiki/פקודת_מס_הכנסה",
+      "source_fetched_at": "2026-11-08T00:00:00Z",
+      "raw_snippet": "יווסף לשווי המכירה הסכום המרבי של הפחת או ההפחתה שניתן היה לנכותו",
+      "confidence": "high"
+    },
+    {
+      "id": "vat-s52-register",
+      "claim": "VAT Law section 52 (סעיף 52) requires a dealer to register",
+      "claim_type": "law",
+      "source_url": "https://he.wikisource.org/wiki/חוק_מס_ערך_מוסף",
+      "source_fetched_at": "2026-11-08T00:00:00Z",
+      "raw_snippet": "עוסק שנרשם לפי סעיף 52",
+      "confidence": "high"
+    },
+    {
+      "id": "regular-route-31",
+      "claim": "Rent on the regular route is taxed as non-earned income, from 31% for a landlord under 60, with lower brackets from 60",
+      "claim_type": "percentage",
+      "source_url": "https://www.kolzchut.org.il/he/ניכוי_מס_הכנסה_מדמי_שכירות_של_דירה_למגורים",
+      "source_fetched_at": "2026-11-08T00:00:00Z",
+      "raw_snippet": "במסלול זה משלם המשכיר מס לפי מדרגות מס להכנסה שלא מיגיעה אישית",
+      "confidence": "high"
+    },
+    {
+      "id": "regular-route-31-table",
+      "claim": "The bracket table shows 31% for a landlord under 60 at the lowest bracket",
+      "claim_type": "percentage",
+      "source_url": "https://www.kolzchut.org.il/he/ניכוי_מס_הכנסה_מדמי_שכירות_של_דירה_למגורים",
+      "source_fetched_at": "2026-11-08T00:00:00Z",
+      "raw_snippet": "שיעור המס למשכיר שטרם מלאו לו 60",
+      "confidence": "high"
+    },
+    {
+      "id": "ita-vat-zero-tourist",
+      "claim": "The Tax Authority said in 2017 that renting a flat to a tourist is generally VAT-liable at a zero rate",
+      "claim_type": "feature",
+      "source_url": "https://www.globes.co.il/news/article.aspx?did=1001202409",
+      "source_fetched_at": "2026-11-08T00:00:00Z",
+      "raw_snippet": "ככלל, השכרת דירה לתייר (ברוב המקרים מדובר בשכירות קצרת מועד) חייבת במע\"מ בשיעור אפס",
+      "confidence": "high",
+      "verified_via": "browser",
+      "verified_at": "2026-11-08"
+    },
+    {
+      "id": "directive-1301-fields",
+      "claim": "Directive 5/2026 says 1301 filers report residential rent income in the return's rent fields",
+      "claim_type": "law",
+      "source_url": "https://www.gov.il/BlobFolder/policy/inst-5-2026/he/IncomeTax_inst-5-2026.pdf",
+      "source_fetched_at": "2026-11-08T00:00:00Z",
+      "raw_snippet": "יש לרשום את סכום ההכנסות משכר דירה למגורים בשדות",
+      "confidence": "high"
+    },
+    {
+      "id": "directive-online-10pct",
+      "claim": "Directive 5/2026 covers online rental income reporting",
+      "claim_type": "law",
+      "source_url": "https://www.gov.il/BlobFolder/policy/inst-5-2026/he/IncomeTax_inst-5-2026.pdf",
+      "source_fetched_at": "2026-11-08T00:00:00Z",
+      "raw_snippet": "דרישה זו לצירוף חוזה או תצהיר חלה משנת מס 2024 ואילך",
+      "confidence": "high"
+    },
+    {
+      "id": "vat-tourist-definition",
+      "claim": "For VAT a tourist is an individual staying in Israel on a transit or visitor visa",
+      "claim_type": "law",
+      "source_url": "https://he.wikisource.org/wiki/חוק_מס_ערך_מוסף",
+      "source_fetched_at": "2026-11-08T00:00:00Z",
+      "raw_snippet": "יחיד השוהה בישראל על פי אשרה ורישיון לישיבת מעבר או לישיבת ביקור",
+      "confidence": "high"
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "author": "skills-il",
+  "version": "1.0.0",
+  "category": "tax-and-finance",
+  "tags": {
+    "he": [
+      "השכרה לטווח קצר",
+      "Airbnb",
+      "מס הכנסה",
+      "מע\"מ",
+      "דירה",
+      "ישראל"
+    ],
+    "en": [
+      "short-term-rental",
+      "airbnb",
+      "income-tax",
+      "vat",
+      "apartment",
+      "israel"
+    ]
+  },
+  "display_name": {
+    "he": "מארחים בהשכרה לטווח קצר",
+    "en": "Israeli Short-Term Rental Host"
+  },
+  "display_description": {
+    "he": "אינו ייעוץ מס ואינו דוח שהוגש. משכירים דירה, חדר או יחידה ב-Airbnb או ב-Booking? הסקיל עושה לכם גיליון רווח לכל הזמנה מתוך הנתונים שלכם, ומראה כמה מס הייתם משלמים בכל אחת מהדרכים: הכנסה מעסק, מסלול 10%, הפטור על שכר דירה או המסלול הרגיל. הוא גם מסביר לאיזו דרך רשות המסים מכוונת לפי מה שאמרה בפומבי. בנוסף הוא בודק את תקרת העוסק הפטור, ומסמן נקודות שכדאי לבדוק: ביטוח לאומי, רישיון עסק, תקנון הבית המשותף וביטוח הדירה. הוא גם כותב תיאור דירה, חוקי בית וכרטיס בטיחות לאורחים בעברית ובאנגלית. ככה לא נופלים בטעות הנפוצה של מי שחושב שהפטור על שכר דירה חל אוטומטית גם על אורחים ללילה. לא מיועד לחוזי שכירות ארוכה (בשביל זה יש את israeli-rental-agreements), וגם לא לבחירת מסלול או להגשת דוח בשמכם.",
+    "en": "Not tax advice and not a filed return. For an Israeli host renting an apartment, room or unit on Airbnb or Booking: builds a per-booking profit sheet from your own figures and shows what the business, 10%, exemption and regular rent treatments would each cost, and which one the Tax Authority's public statements point to. Checks the osek patur ceiling and flags National Insurance, business licence, building-bylaw and insurance risks. Drafts a Hebrew-English listing, house rules and a guest safety card. Prevents the common mistake of assuming the residential rent exemption automatically covers nightly guests. Do NOT use for long-term leases (use israeli-rental-agreements) or for choosing a route or filing on your behalf."
+  },
+  "supported_agents": [
+    "claude-code",
+    "cursor",
+    "github-copilot",
+    "windsurf",
+    "opencode",
+    "codex",
+    "openclaw",
+    "antigravity",
+    "gemini-cli",
+    "grok-build",
+    "chatgpt",
+    "claude-ai",
+    "claude-desktop",
+    "manus",
+    "gemini-spark",
+    "grok"
+  ],
+  "volatility": "legislative",
+  "authoritative_sources": [
+    {
+      "url": "https://he.wikisource.org/wiki/חוק_מס_הכנסה_(פטור_ממס_על_הכנסה_מהשכרת_דירת_מגורים)",
+      "type": "statute",
+      "language": "he"
+    },
+    {
+      "url": "https://he.wikisource.org/wiki/פקודת_מס_הכנסה",
+      "type": "statute",
+      "language": "he"
+    },
+    {
+      "url": "https://he.wikisource.org/wiki/חוק_מס_ערך_מוסף",
+      "type": "statute",
+      "language": "he"
+    },
+    {
+      "url": "https://www.gov.il/BlobFolder/policy/inst-5-2026/he/IncomeTax_inst-5-2026.pdf",
+      "type": "regulator",
+      "language": "he"
+    }
+  ],
+  "domain_checklist_version": 1
+}
