@@ -1,6 +1,6 @@
 # Worked examples
 
-Two end-to-end audits, showing the map format and the reasoning the skill is meant to produce.
+Three end-to-end audits, showing the map format and the reasoning the skill is meant to produce.
 
 ## Example 1. The three-layer health question, worked end to end
 
@@ -15,11 +15,11 @@ Tiering (Step B), splitting the individual policy into its benefit heads:
 | User | שב"ן ניתוחים | שיפוי | 138 | rows 2, 4 | Yes, kupa must re-accept, אכשרה applies | CAPPED |
 | User | Individual policy, ניתוחים בישראל | שיפוי | part of 214 | rows 1, 4 | No, underwritten, bought 2013 | CAPPED |
 | User | Individual policy, ניתוחים בחו"ל / השתלות | שיפוי | part of 214 | nothing | No | NOT A DUPLICATION |
-| User | Individual policy, מחלות קשות rider | פיצוי | part of 214 | nothing held | No | LEGITIMATE STACKING |
+| User | Individual policy, מחלות קשות rider | פיצוי | part of 214 | nothing held | No | NOT A DUPLICATION |
 | User | Employer group ניתוחים | שיפוי | 31 | rows 1, 2 | Group cover, ends with the job | CAPPED |
-| User | Group סיעוד (kupa) | פיצוי at home / שיפוי in institution | 44 | nothing held | Group, underwritten and age-tiered at first joining: not freely reversible | LEGITIMATE STACKING |
+| User | Group סיעוד (kupa) | פיצוי at home / שיפוי in institution | 44 | nothing held | Group, underwritten and age-tiered at first joining: not freely reversible | NOT A DUPLICATION |
 
-What the agent should say. The 2013 purchase date means the שקל ראשון reform never touched this individual policy, and group cover updates only every few years, so the employer layer is very likely still first-shekel too. Confirm the employer policy rather than assuming, but this user is squarely in the population the reform left duplicating. Three separate שיפוי layers are stacked on one surgery, and the user can only recover the actual cost once. The catastrophic tail in row 3 is genuinely additional and must not be cut. Row 4 stacks and is not waste. Cut order is driven by the reversible column, not by premium: the employer row costs least and vanishes with the job anyway; the שב"ן row is the only one that can be re-bought, and the 2013 individual policy is the one that can never be replaced. Deliverable 2 puts the "what does row 2 add over rows 1 and 5" question to the insurer in writing before anything is cancelled.
+What the agent should say. The 2013 purchase date means the שקל ראשון reform never touched this individual policy, and group cover updates only every few years, so the employer layer is very likely still first-shekel too. Confirm the employer policy rather than assuming, but this user is squarely in the population the reform left duplicating. Three separate שיפוי layers are stacked on one surgery, and the user can only recover the actual cost once. The catastrophic tail in row 3 is genuinely additional and must not be cut. Row 4 is fixed-sum and overlaps nothing the user holds, so it is NOT A DUPLICATION rather than LEGITIMATE STACKING: that verdict is reserved for two fixed-sum covers paying on the same event. Cut order is driven by the reversible column, not by premium: the employer row costs least and vanishes with the job anyway; the שב"ן row is the only one that can be re-bought, and the 2013 individual policy is the one that can never be replaced. Deliverable 2 puts the "what does row 2 add over rows 1 and 5" question to the insurer in writing before anything is cancelled. The regulator's own health-area FAQ works the same arithmetic on its 'כפל ביטוח' notice: two 80% surgery-abroad policies on a 100,000 bill pay 80,000 and then 16,000, never 160,000, and two 3,000 personal-accident policies pay 6,000; and its advice before cancelling one is to read the other policies' terms first. Rows 1, 2 and 5 are the kind of overlap its 'כפל ביטוח' notice and its FAQ's 'חפיפה בכיסוי ביטוחי' describe; what this user's own screen shows was not read and must be confirmed by him.
 
 Gaps found (deliverable 3): no אכ"ע anywhere in this inventory for a sole earner. Flag it; do not name a product.
 
@@ -27,7 +27,7 @@ Gaps found (deliverable 3): no אכ"ע anywhere in this inventory for a sole ear
 
 The user says: "My agent says my private אכ"ע is redundant because I have disability cover in my pension. I'm a dentist. Should I cancel it?"
 
-Answer: almost certainly not, and the reason is the test, not the ceiling. The fund pays on עיסוק סביר, so a dentist with a hand injury who could work as a clinic administrator may collect nothing from the fund. The private policy exists to fill exactly that gap.
+Answer: almost certainly not, and the reason is the test, not the ceiling. The fund pays only when the member cannot work "בעבודתו או בכל עבודה אחרת המתאימה לו לפי השכלתו, הכשרתו או ניסיונו", so a dentist with a hand injury who could work as a clinic administrator may collect nothing from the fund. The private policy exists to fill exactly that gap. Tier both instruments before the arithmetic: the fund's disability pension and the private policy's monthly benefit are pre-agreed percentages of insured salary paid regardless of any expense, so both are פיצוי under ס' 54(א); the private policy's 100%-of-income coordination is a contractual clause, not an indemnity cap. In the map the private policy's tier column therefore reads פיצוי, which is why the verdict can be LEGITIMATE STACKING at all; only אכ"ע that pays by actual loss sits in the שיפוי row of the three-tier table.
 
 Then do the arithmetic the user actually needs, on a 30,000 monthly salary where the fund benefit is sixty percent of salary and the private benefit forty percent. Per-policy: the fund benefit is capped at 75% of the insured salary, and the private policy at 75% of the average salary insured under that plan, so neither breaches its own ceiling. Combined, the two together come to exactly one hundred percent of income, which reaches but does not exceed the cross-insurer trigger, since offset bites only above "100% ממוצע השכר של המבוטח מכל מקור הכנסה". So the band between the single-policy cap and 100% is legitimate cover, not waste. Even if the total did exceed 100%, the private policy still pays a floor that "לא יפחת, בכל מקרה, משיעור של 30% מסכום הפיצוי החודשי".
 
