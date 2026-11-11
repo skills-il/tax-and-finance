@@ -313,6 +313,8 @@ def main():
     p.add_argument("--lifetime-limit-usd", dest="lifetime_usd", type=int, default=None,
                    help="lifetime contribution limit set by Israeli law governing the plan, in "
                         "USD")
+    p.add_argument("--annual-usd", dest="old_annual", default=None, help=argparse.SUPPRESS)
+    p.add_argument("--lifetime-usd", dest="old_lifetime", default=None, help=argparse.SUPPRESS)
     p.add_argument("--no-contribution-cap", action="store_true",
                    help="Israeli law sets no contribution limit for this plan")
     p.add_argument("--insurance-policy", action="store_true",
@@ -329,6 +331,11 @@ def main():
                    help="contributions come from sources other than earned income")
     p.add_argument("--example", action="store_true")
     a = p.parse_args()
+    if a.old_annual is not None or a.old_lifetime is not None:
+        p.error("--annual-usd / --lifetime-usd were removed because they mixed up deposits and "
+                "limits. Use --annual-limit-usd / --lifetime-limit-usd for a contribution LIMIT "
+                "set by Israeli law governing the plan (not the amount deposited), or "
+                "--no-contribution-cap")
     for flag in ("all_pfic_value_usd", "indirect_value_usd", "annual_usd", "lifetime_usd",
                  "peak_value_usd"):
         v = getattr(a, flag)
