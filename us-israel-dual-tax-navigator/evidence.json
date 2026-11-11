@@ -1,7 +1,7 @@
 {
   "skill_slug": "us-israel-dual-tax-navigator",
   "schemaVersion": "1.0",
-  "generated_at": "2026-09-13T00:00:00Z",
+  "generated_at": "2026-11-11T00:00:00Z",
   "claims": [
     {
       "id": "fbar-threshold-10000",
@@ -284,7 +284,7 @@
     },
     {
       "id": "sfo-form-14653",
-      "claim": "Form 14653 certification must be completed and signed",
+      "claim": "Form 14653 certification must be completed and signed (טופס 14653)",
       "claim_type": "regulatory",
       "source_url": "https://www.irs.gov/individuals/international-taxpayers/u-s-taxpayers-residing-outside-the-united-states",
       "raw_snippet": "Complete and sign a statement on the Certification by U.S. Person Residing Outside of the U.S. (Form 14653) PDF certifying",
@@ -490,66 +490,480 @@
       "confidence": "high"
     },
     {
-      "id": "il-relief-postponed-to-2026-09-30",
-      "claim": "Notice 2025-53: affected taxpayers have until 30 September 2026 to file tax returns and make tax payments",
-      "claim_type": "regulatory",
-      "source_url": "https://www.irs.gov/pub/irs-drop/n-25-53.pdf",
-      "raw_snippet": "Affected taxpayers have until September 30, 2026 to file tax returns, make tax payments, and perform certain time-sensitive acts",
-      "source_fetched_at": "2026-09-13T00:00:00Z",
-      "confidence": "high"
-    },
-    {
-      "id": "il-relief-affected-principal-residence",
-      "claim": "Affected taxpayers include individuals whose principal residence is in Israel, the West Bank or Gaza, and those whose preparer or necessary records are located there",
-      "claim_type": "regulatory",
-      "source_url": "https://www.irs.gov/pub/irs-drop/n-25-53.pdf",
-      "raw_snippet": "Any individual whose principal residence, and any business entity or sole proprietor whose principal place of business, is located in the State of Israel, the West Bank or Gaza (covered area); - Any individual affiliated with a recognized government or philanthropic organization and who is assisting in the covered area, such as a relief worker; - Any individual, business entity or sole proprietor, or estate or trust whose tax return preparer or records necessary to meet a deadline for postponed acts are located in the covered area",
-      "source_fetched_at": "2026-09-13T00:00:00Z",
-      "confidence": "high"
-    },
-    {
-      "id": "il-relief-automatic-or-hotline",
-      "claim": "IRS applies relief automatically by prior-return address; affected taxpayers outside the covered area call the disaster hotline",
-      "claim_type": "regulatory",
-      "source_url": "https://www.irs.gov/pub/irs-drop/n-25-53.pdf",
-      "raw_snippet": "The IRS automatically identifies taxpayers whose principal residence or principal place of business is located in the covered area based on previously filed returns and applies relief. Affected taxpayers whose principal residence or principal place of business is not located in the covered area should call the IRS disaster hotline",
-      "source_fetched_at": "2026-09-13T00:00:00Z",
-      "confidence": "high"
-    },
-    {
-      "id": "il-relief-acts-listed",
-      "claim": "The postponed acts listed are filing and paying income, estate, gift, GST, excise and employment taxes, among others",
-      "claim_type": "regulatory",
-      "source_url": "https://www.irs.gov/pub/irs-drop/n-25-53.pdf",
-      "raw_snippet": "These acts include, but are not limited to: - Filing any return of income tax, estate tax, gift tax, generation-skipping transfer tax, excise tax (other than firearms tax), harbor maintenance tax, or employment tax; - Paying any income tax, estate tax, gift tax, generation-skipping transfer tax, excise tax (other than firearms tax), harbor maintenance tax, or employment tax, or any installment of those taxes; - Making contributions to a qualified retirement plan; - Filing a petition with the Tax Court; - Filing a claim for credit or refund of any tax; and - Bringing suit upon a claim for credit or refund of any tax. This is not an exhaustive list.",
-      "source_fetched_at": "2026-09-13T00:00:00Z",
-      "confidence": "high"
-    },
-    {
-      "id": "il-relief-section-7508A",
-      "claim": "Notice 2025-53 provides relief under section 7508A of the Internal Revenue Code",
-      "claim_type": "regulatory",
-      "source_url": "https://www.irs.gov/pub/irs-drop/n-25-53.pdf",
-      "raw_snippet": "This notice provides relief under section 7508A of the Internal Revenue Code 1 for persons that the Secretary of the Treasury has determined to be affected by the terroristic action in the State of Israel throughout 2024 and 2025",
-      "source_fetched_at": "2026-09-13T00:00:00Z",
-      "confidence": "high"
-    },
-    {
-      "id": "il-relief-window",
-      "claim": "Acts due on 30 September 2025 and before 30 September 2026 are postponed until 30 September 2026",
-      "claim_type": "regulatory",
-      "source_url": "https://www.irs.gov/pub/irs-drop/n-25-53.pdf",
-      "raw_snippet": "Any taxpayer acts that are due to be performed on September 30, 2025, and before September 30, 2026, are postponed until September 30, 2026",
-      "source_fetched_at": "2026-09-13T00:00:00Z",
-      "confidence": "high"
-    },
-    {
       "id": "treaty-6-4-carveouts",
       "claim": "Article 6(4)(a) preserves benefits under Article 10 (Grants), Article 21 (Social Security Payments), Article 26 (Relief from Double Taxation, סעיף 26), Article 27 (Nondiscrimination) and Article 28 (Mutual Agreement Procedure)",
       "claim_type": "regulatory",
       "source_url": "https://www.irs.gov/pub/irs-trty/israel.pdf",
       "raw_snippet": "4. The provisions of paragraph (3) shall not affect: (a) The benefits conferred by a Contracting State under Articles 10 (Grants), 21 (Social Security Payments), 26 (Relief from Double Taxation), 27 (Nondiscrimination) , and 28 (Mutual Agreement Procedure)",
       "source_fetched_at": "2026-09-13T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "il-relief-postponed-to-2027-09-30",
+      "claim": "Notice 2026-63: affected taxpayers have until 30 September 2027 to file tax returns, make tax payments and perform certain time-sensitive acts due on or after 30 September 2026 and before 30 September 2027",
+      "claim_type": "regulatory",
+      "source_url": "https://www.irs.gov/pub/irs-drop/n-26-63.pdf",
+      "raw_snippet": "Affected taxpayers have until September 30, 2027 to file tax returns, make tax payments, and perform certain time-sensitive acts listed in Section 301.7508A-1(c)(1)",
+      "source_fetched_at": "2026-11-11T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "il-relief-window-2027",
+      "claim": "Acts due on or after 30 September 2026 and before 30 September 2027 are postponed to 30 September 2027",
+      "claim_type": "regulatory",
+      "source_url": "https://www.irs.gov/pub/irs-drop/n-26-63.pdf",
+      "raw_snippet": "that are due to be performed on or after September 30, 2026 and before September 30, 2027",
+      "source_fetched_at": "2026-11-11T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "il-relief-2025-53-further-postponed",
+      "claim": "Acts postponed by Notice 2025-53 are further postponed to 30 September 2027 for taxpayers eligible under both notices",
+      "claim_type": "regulatory",
+      "source_url": "https://www.irs.gov/pub/irs-drop/n-26-63.pdf",
+      "raw_snippet": "are further postponed until September 30, 2027, for taxpayers eligible for relief under this notice",
+      "source_fetched_at": "2026-11-11T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "il-relief-affected-principal-residence",
+      "claim": "Affected taxpayers include individuals whose principal residence is in Israel, the West Bank or Gaza, and those whose preparer or necessary records are located there",
+      "claim_type": "regulatory",
+      "source_url": "https://www.irs.gov/pub/irs-drop/n-26-63.pdf",
+      "raw_snippet": "Any individual whose principal residence, and any business entity or sole proprietor whose principal place of business, is located in the State of Israel, the West Bank or Gaza (covered area)",
+      "source_fetched_at": "2026-11-11T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "il-relief-preparer-records",
+      "claim": "Affected taxpayers include anyone whose tax return preparer or necessary records are located in the covered area",
+      "claim_type": "regulatory",
+      "source_url": "https://www.irs.gov/pub/irs-drop/n-26-63.pdf",
+      "raw_snippet": "whose tax return preparer or records necessary to meet a deadline for postponed acts are located in the covered area",
+      "source_fetched_at": "2026-11-11T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "il-relief-automatic-or-hotline",
+      "claim": "IRS applies relief automatically by prior-return address; affected taxpayers outside the covered area call the disaster hotline",
+      "claim_type": "regulatory",
+      "source_url": "https://www.irs.gov/pub/irs-drop/n-26-63.pdf",
+      "raw_snippet": "The IRS automatically identifies taxpayers whose principal residence or principal place of business is located in the covered area based on previously filed returns and applies relief. Affected taxpayers whose principal residence or principal place of business is not located in the covered area should call the IRS disaster hotline",
+      "source_fetched_at": "2026-11-11T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "il-relief-acts-listed",
+      "claim": "The postponed acts listed are filing and paying income and other federal taxes; the FBAR is not among them",
+      "claim_type": "regulatory",
+      "source_url": "https://www.irs.gov/pub/irs-drop/n-26-63.pdf",
+      "raw_snippet": "Filing any return of income tax, estate tax, gift tax, generation-skipping transfer tax, excise tax (other than firearms tax), harbor maintenance tax, or employment tax",
+      "source_fetched_at": "2026-11-11T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "fincen-israel-fbar-cy2022",
+      "claim": "FinCEN gave Israel-affected filers until 7 October 2024 to file CY2022 FBARs",
+      "claim_type": "regulatory",
+      "source_url": "https://www.fincen.gov/sites/default/files/shared/FBAR_Notice_Terroristic_Action_FINAL508.pdf",
+      "raw_snippet": "have until October 7, 2024, to file FBARs for the 2022 calendar year",
+      "source_fetched_at": "2026-11-11T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "fincen-israel-fbar-cy2023",
+      "claim": "FinCEN gave Israel-affected filers until 30 September 2025 to file CY2023 FBARs",
+      "claim_type": "regulatory",
+      "source_url": "https://www.fincen.gov/sites/default/files/shared/FinCEN-FBAR-Israel-Related-Relief-Notice-FINAL508.pdf",
+      "raw_snippet": "have until September 30, 2025, to file FBARs for the 2023 calendar year",
+      "source_fetched_at": "2026-11-11T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "feie-2027",
+      "claim": "The foreign earned income exclusion amount for taxable years beginning in 2027 is USD 137,300 under section 911(b)(2)(D)(i) (Rev. Proc. 2026-35 item .41)",
+      "claim_type": "currency",
+      "source_url": "https://www.irs.gov/pub/irs-drop/rp-26-35.pdf",
+      "raw_snippet": ".41 Foreign Earned Income Exclusion. For taxable years beginning in 2027, the foreign earned income exclusion amount under § 911(b)(2)(D)(i) is $137,300.",
+      "source_fetched_at": "2026-11-11T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "feie-excludes-unearned",
+      "claim": "Foreign earned income does not include pension and annuity income (including social security), interest, ordinary dividends or capital gains",
+      "claim_type": "regulatory",
+      "source_url": "https://www.irs.gov/pub/irs-pdf/i2555.pdf",
+      "raw_snippet": "Interest, ordinary dividends, capital gains, alimony, etc.",
+      "source_fetched_at": "2026-11-11T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "feie-excludes-pensions",
+      "claim": "Foreign earned income does not include pension and annuity income including social security benefits",
+      "claim_type": "regulatory",
+      "source_url": "https://www.irs.gov/pub/irs-pdf/i2555.pdf",
+      "raw_snippet": "Pension and annuity income (including social security",
+      "source_fetched_at": "2026-11-11T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "nra-spouse-choice",
+      "claim": "A US citizen married to a nonresident alien can choose to treat the nonresident spouse as a US resident",
+      "claim_type": "regulatory",
+      "source_url": "https://www.irs.gov/publications/p54",
+      "raw_snippet": "one spouse is a U.S. citizen or resident alien and the other is a nonresident alien, you can choose to treat the nonresident as a U.S. resident",
+      "source_fetched_at": "2026-11-11T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "nra-spouse-choice-effect",
+      "claim": "Both spouses are treated as US residents for income tax purposes for the election year and all future years until terminated, and must file jointly in the election year",
+      "claim_type": "regulatory",
+      "source_url": "https://www.irs.gov/publications/p54",
+      "raw_snippet": "You and your spouse are treated, for income tax purposes and purposes of wage withholding, as U.S. residents for the tax year in which the election is made and all future tax years until the election is terminated",
+      "source_fetched_at": "2026-11-11T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "nra-spouse-no-treaty",
+      "claim": "Under the choice neither spouse can claim under any tax treaty not to be a US resident",
+      "claim_type": "regulatory",
+      "source_url": "https://www.irs.gov/publications/p54",
+      "raw_snippet": "neither of you can claim under any tax treaty not to be a U.S. resident for a tax year for which the choice is in effect",
+      "source_fetched_at": "2026-11-11T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "nra-spouse-ssn-itin",
+      "claim": "If the nonresident alien spouse is treated as resident, the spouse must have an SSN or ITIN",
+      "claim_type": "regulatory",
+      "source_url": "https://www.irs.gov/publications/p54",
+      "raw_snippet": "If you choose to treat your nonresident alien spouse as a U.S. resident, your spouse must have either an SSN or an individual taxpayer identification number (ITIN)",
+      "source_fetched_at": "2026-11-11T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "nra-spouse-hoh",
+      "claim": "Without the choice, a filer may be able to use head of household status by paying more than half the cost of a household for dependents other than the nonresident alien spouse",
+      "claim_type": "regulatory",
+      "source_url": "https://www.irs.gov/publications/p54",
+      "raw_snippet": "If you do not choose to treat your nonresident alien spouse as a U.S. resident, you may be able to use head of household filing status. To use this status, you must pay more than half the cost of maintaining a household for certain dependents or relatives other than your nonresident alien spouse",
+      "source_fetched_at": "2026-11-11T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "vdp-willful",
+      "claim": "The CI Voluntary Disclosure Practice is for taxpayers who willfully failed to comply",
+      "claim_type": "regulatory",
+      "source_url": "https://www.irs.gov/compliance/criminal-investigation/irs-criminal-investigation-voluntary-disclosure-practice",
+      "raw_snippet": "The VDP is a compliance option if you have willfully failed to comply with tax or tax related obligations",
+      "source_fetched_at": "2026-11-11T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "vdp-statement",
+      "claim": "VDP requires a statement acknowledging the willful failure",
+      "claim_type": "regulatory",
+      "source_url": "https://www.irs.gov/compliance/criminal-investigation/irs-criminal-investigation-voluntary-disclosure-practice",
+      "raw_snippet": "You will be required to provide a statement acknowledging your willful failure to comply with tax or tax related obligations",
+      "source_fetched_at": "2026-11-11T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "vdp-timely",
+      "claim": "A voluntary disclosure is timely only before the IRS commences an examination or investigation or receives third-party information",
+      "claim_type": "regulatory",
+      "source_url": "https://www.irs.gov/compliance/criminal-investigation/irs-criminal-investigation-voluntary-disclosure-practice",
+      "raw_snippet": "Commenced a civil examination or criminal investigation",
+      "source_fetched_at": "2026-11-11T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "diirsp-eligibility",
+      "claim": "Delinquent international information return procedures are for taxpayers not under civil examination or criminal investigation and not already contacted by the IRS about the returns",
+      "claim_type": "regulatory",
+      "source_url": "https://www.irs.gov/individuals/international-taxpayers/delinquent-international-information-return-submission-procedures",
+      "raw_snippet": "who are not under a civil examination or a criminal investigation by the IRS and have not already been contacted by the IRS about the delinquent information returns",
+      "source_fetched_at": "2026-11-11T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "diirsp-penalties",
+      "claim": "Penalties may be assessed under existing procedures",
+      "claim_type": "regulatory",
+      "source_url": "https://www.irs.gov/individuals/international-taxpayers/delinquent-international-information-return-submission-procedures",
+      "raw_snippet": "Penalties may be assessed in accordance with existing procedures",
+      "source_fetched_at": "2026-11-11T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "diirsp-reasonable-cause",
+      "claim": "Taxpayers may attach a reasonable cause statement to each delinquent information return",
+      "claim_type": "regulatory",
+      "source_url": "https://www.irs.gov/individuals/international-taxpayers/delinquent-international-information-return-submission-procedures",
+      "raw_snippet": "Taxpayers may attach a reasonable cause statement to each delinquent information return",
+      "source_fetched_at": "2026-11-11T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "tas-late-fbar",
+      "claim": "Delinquent FBARs are filed through the normal online system with a statement explaining why they are late",
+      "claim_type": "regulatory",
+      "source_url": "https://www.taxpayeradvocate.irs.gov/get-help/international/foreign-bank-financial-accounts/",
+      "raw_snippet": "You need to include a statement explaining why the filing is late",
+      "source_fetched_at": "2026-11-11T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "tas-late-fbar-no-penalty",
+      "claim": "No penalty for delinquent FBARs if the foreign income was reported and tax paid and the IRS has not already contacted the filer about an audit or delinquent returns",
+      "claim_type": "regulatory",
+      "source_url": "https://www.taxpayeradvocate.irs.gov/get-help/international/foreign-bank-financial-accounts/",
+      "raw_snippet": "won’t impose a penalty for failure to file delinquent FBARs if you reported your foreign income properly and paid any associated taxes on your U.S. tax return",
+      "source_fetched_at": "2026-11-11T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "il-amendment-272",
+      "claim": "Amendment 272 to the Israeli Income Tax Ordinance cancelled the 10-year reporting exemption on foreign income for new immigrants and long-term returning residents",
+      "claim_type": "statute",
+      "source_url": "https://www.shibolet.com/en/cancellation-of-reporting-exemption-for-new-immigrants-and-long-term-returning-residents-regarding-foreign-income-and-new-reporting-obligation-for-israeli-resident-trustees-regarding-trusts/",
+      "raw_snippet": "amendment no. 272 was recently published",
+      "source_fetched_at": "2026-11-11T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "il-reporting-exemption-cancelled-2026",
+      "claim": "The cancellation applies to those who attain the status from 1 January 2026",
+      "claim_type": "statute",
+      "source_url": "https://www.shibolet.com/en/cancellation-of-reporting-exemption-for-new-immigrants-and-long-term-returning-residents-regarding-foreign-income-and-new-reporting-obligation-for-israeli-resident-trustees-regarding-trusts/",
+      "raw_snippet": "The cancellation of the reporting exemption shall apply to new immigrants and long-term returning residents who attain such status commencing from January 1, 2026",
+      "source_fetched_at": "2026-11-11T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "il-tax-exemption-continues",
+      "claim": "The 10-year Israeli tax exemption on foreign income continues for new immigrants and long-term returning residents",
+      "claim_type": "statute",
+      "source_url": "https://www.shibolet.com/en/cancellation-of-reporting-exemption-for-new-immigrants-and-long-term-returning-residents-regarding-foreign-income-and-new-reporting-obligation-for-israeli-resident-trustees-regarding-trusts/",
+      "raw_snippet": "shall continue to apply for a period of 10 years from the time of immigration/return to Israel",
+      "source_fetched_at": "2026-11-11T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "il-tax-exemption-kolzchut",
+      "claim": "Kolzchut: olim are exempt from Israeli tax on foreign-source income for 10 years",
+      "claim_type": "statute",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%94%D7%98%D7%91%D7%95%D7%AA_%D7%9E%D7%A1_%D7%9C%D7%A2%D7%95%D7%9C%D7%99%D7%9D",
+      "raw_snippet": "במשך 10 שנים מעלייתם לארץ העולים זכאים לפטור ממס על כל הכנסה שמקורה מחוץ לישראל",
+      "source_fetched_at": "2026-11-11T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "form-2555-instructions",
+      "claim": "Form 2555 (טופס 2555) is the foreign earned income form; its instructions list the income types that are not foreign earned income",
+      "claim_type": "form",
+      "source_url": "https://www.irs.gov/pub/irs-pdf/i2555.pdf",
+      "raw_snippet": "Instructions for Form 2555",
+      "source_fetched_at": "2026-11-11T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "filing-se-400",
+      "claim": "A return is required if net earnings from self-employment were at least USD 400 (Pub 501 Table 3)",
+      "claim_type": "threshold",
+      "source_url": "https://www.irs.gov/publications/p501",
+      "raw_snippet": "You had net earnings from self-employment of at least $400.",
+      "source_fetched_at": "2026-11-11T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "filing-threshold-hoh-2025",
+      "claim": "TY2025 head of household under 65 filing threshold USD 23,625",
+      "claim_type": "threshold",
+      "source_url": "https://www.irs.gov/publications/p501",
+      "raw_snippet": "head of household under 65 $23,625",
+      "source_fetched_at": "2026-11-11T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "filing-threshold-single-2023",
+      "claim": "TY2023 single under 65 filing threshold USD 13,850",
+      "claim_type": "threshold",
+      "source_url": "https://www.irs.gov/pub/irs-prior/p501--2023.pdf",
+      "raw_snippet": "single under 65 $13,850",
+      "source_fetched_at": "2026-11-11T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "filing-threshold-hoh-2023",
+      "claim": "TY2023 head of household under 65 filing threshold USD 20,800",
+      "claim_type": "threshold",
+      "source_url": "https://www.irs.gov/pub/irs-prior/p501--2023.pdf",
+      "raw_snippet": "head of household under 65 $20,800",
+      "source_fetched_at": "2026-11-11T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "filing-threshold-mfj-2023",
+      "claim": "TY2023 married filing jointly, both under 65, filing threshold USD 27,700",
+      "claim_type": "threshold",
+      "source_url": "https://www.irs.gov/pub/irs-prior/p501--2023.pdf",
+      "raw_snippet": "under 65 (both spouses) $27,700",
+      "source_fetched_at": "2026-11-11T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "filing-threshold-mfs-2023",
+      "claim": "TY2023 married filing separately at any age USD 5",
+      "claim_type": "threshold",
+      "source_url": "https://www.irs.gov/pub/irs-prior/p501--2023.pdf",
+      "raw_snippet": "married filing separately any age $5",
+      "source_fetched_at": "2026-11-11T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "filing-threshold-single-2024",
+      "claim": "TY2024 single under 65 filing threshold USD 14,600",
+      "claim_type": "threshold",
+      "source_url": "https://www.irs.gov/pub/irs-prior/p501--2024.pdf",
+      "raw_snippet": "single under 65 $14,600",
+      "source_fetched_at": "2026-11-11T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "filing-threshold-hoh-2024",
+      "claim": "TY2024 head of household under 65 filing threshold USD 21,900",
+      "claim_type": "threshold",
+      "source_url": "https://www.irs.gov/pub/irs-prior/p501--2024.pdf",
+      "raw_snippet": "head of household under 65 $21,900",
+      "source_fetched_at": "2026-11-11T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "filing-threshold-mfj-2024",
+      "claim": "TY2024 married filing jointly, both under 65, filing threshold USD 29,200",
+      "claim_type": "threshold",
+      "source_url": "https://www.irs.gov/pub/irs-prior/p501--2024.pdf",
+      "raw_snippet": "under 65 (both spouses) $29,200",
+      "source_fetched_at": "2026-11-11T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "filing-threshold-mfs-2024",
+      "claim": "TY2024 married filing separately at any age USD 5",
+      "claim_type": "threshold",
+      "source_url": "https://www.irs.gov/pub/irs-prior/p501--2024.pdf",
+      "raw_snippet": "married filing separately any age $5",
+      "source_fetched_at": "2026-11-11T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "f8938-requires-1040",
+      "claim": "Taxpayers not required to file an income tax return are not required to file Form 8938",
+      "claim_type": "regulatory",
+      "source_url": "https://www.irs.gov/businesses/corporations/basic-questions-and-answers-on-form-8938",
+      "raw_snippet": "Taxpayers who are not required to file an income tax return are not required to file Form 8938",
+      "source_fetched_at": "2026-11-11T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "ctc-ssn-precondition",
+      "claim": "CTC requires the filer (or spouse on a joint return) and each child to have an SSN valid for employment issued before the return due date including extensions",
+      "claim_type": "regulatory",
+      "source_url": "https://www.irs.gov/credits-deductions/individuals/child-tax-credit",
+      "raw_snippet": "must have a Social Security number that is valid for employment in the United States and issued before the due date of the tax return (including extensions)",
+      "source_fetched_at": "2026-11-11T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "form-2350-residency-extension",
+      "claim": "An extension beyond 6 months is available if needed to meet the bona fide residence or physical presence test (Form 2350)",
+      "claim_type": "regulatory",
+      "source_url": "https://www.irs.gov/publications/p54",
+      "raw_snippet": "You can get an extension of more than 6 months to file your income tax return if you need the time to meet either the bona fide residence test or the physical presence test",
+      "source_fetched_at": "2026-11-11T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "form-2350-blocks-dec15",
+      "claim": "The discretionary 2-month additional extension is not available to taxpayers with an approved Form 2350 extension (טופס 2350)",
+      "claim_type": "regulatory",
+      "source_url": "https://www.irs.gov/publications/p54",
+      "raw_snippet": "The discretionary 2-month additional extension is not available to taxpayers who have an approved extension of time to file on Form 2350",
+      "source_fetched_at": "2026-11-11T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "nra-spouse-worldwide",
+      "claim": "After the choice both spouses must report worldwide income for that and all future years unless suspended or terminated",
+      "claim_type": "regulatory",
+      "source_url": "https://www.irs.gov/publications/p54",
+      "raw_snippet": "you and your spouse must each report your worldwide income for that and all future years unless or until the choice is suspended or terminated",
+      "source_fetched_at": "2026-11-11T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "7508a-interest",
+      "claim": "A postponement period may be disregarded in determining interest and penalties",
+      "claim_type": "regulatory",
+      "source_url": "https://www.law.cornell.edu/cfr/text/26/301.7508A-1",
+      "raw_snippet": "may be disregarded in determining under the internal revenue laws",
+      "source_fetched_at": "2026-11-11T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "7508a-interest-ii",
+      "claim": "The disregarded items include the amount of interest, penalty and additions to tax",
+      "claim_type": "regulatory",
+      "source_url": "https://www.law.cornell.edu/cfr/text/26/301.7508A-1",
+      "raw_snippet": "The amount of interest , penalty , additional amount, or addition to the tax",
+      "source_fetched_at": "2026-11-11T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "il-relief-chain-prior-notices",
+      "claim": "Notice 2026-63 further postpones acts postponed by 2025-53 including those previously postponed by 2024-72 and 2023-71 for taxpayers eligible for the prior notices",
+      "claim_type": "regulatory",
+      "source_url": "https://www.irs.gov/pub/irs-drop/n-26-63.pdf",
+      "raw_snippet": "acts previously postponed by Notice 2024-72 and Notice 2023-71) are further postponed until September 30, 2027",
+      "source_fetched_at": "2026-11-11T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "il-aliyah-incentive-2026",
+      "claim": "Olim and veteran returning residents arriving 5.11.2025-31.12.2026 may be exempt from Israeli tax on Israeli personal-effort income for 2026-2030",
+      "claim_type": "statute",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%94%D7%98%D7%91%D7%95%D7%AA_%D7%9E%D7%A1_%D7%9C%D7%A2%D7%95%D7%9C%D7%99%D7%9D",
+      "raw_snippet": "עולים חדשים ותושבים חוזרים ותיקים שחזרו לישראל בין 05.11.2025 ועד 31.12.2026, עשויים לקבל פטור ממס הכנסה על הכנסות מיגיעה אישית שהפיקו בישראל בין השנים 2026 ועד 2030",
+      "source_fetched_at": "2026-11-11T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "il-relief-hotline-should",
+      "claim": "Affected taxpayers outside the covered area should call the IRS disaster hotline",
+      "claim_type": "regulatory",
+      "source_url": "https://www.irs.gov/pub/irs-drop/n-26-63.pdf",
+      "raw_snippet": "should call the IRS disaster hotline at (866)",
+      "source_fetched_at": "2026-11-11T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "treaty-6-4a-protocol1",
+      "claim": "Protocol 1 replaced Article 6(4)(a) with a list adding Article 15-A (Charitable Contributions)",
+      "claim_type": "statute",
+      "source_url": "https://www.irs.gov/pub/irs-trty/israel.pdf",
+      "raw_snippet": "Articles 10 (Grants), 15-A",
+      "source_fetched_at": "2026-11-11T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "id": "treaty-6-4a-protocol2",
+      "claim": "Protocol 2 added paragraphs (2) and (3) of Article 20 (Private Pensions and Annuities) to the Article 6(4)(a) carve-outs",
+      "claim_type": "statute",
+      "source_url": "https://www.irs.gov/pub/irs-trty/israel.pdf",
+      "raw_snippet": "paragraphs (2) and (3) of 20 (Private Pensions and Annuities)",
+      "source_fetched_at": "2026-11-11T00:00:00Z",
       "confidence": "high"
     }
   ]

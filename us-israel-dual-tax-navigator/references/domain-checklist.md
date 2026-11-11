@@ -64,8 +64,9 @@ topic list. Every value below is cited to a primary source, per the primary-sour
       why core: users routinely believe FBAR "covers it".
 
 - [ ] FEIE amount by tax year, with the statutory cite: TY2025 USD 130,000, TY2026
-      USD 132,900, both under section 911(b)(2)(D)(i).
-      source: Rev. Proc. 2024-40 section 3.39 ; Rev. Proc. 2025-32 section 3.39
+      USD 132,900, TY2027 USD 137,300, all under section 911(b)(2)(D)(i).
+      source: Rev. Proc. 2024-40 section 3.39 ; Rev. Proc. 2025-32 section 3.39 ;
+      Rev. Proc. 2026-35 section 3.41 (the item number moved; do not assume .39)
       why core: the IRS FEIE landing page is STALE and stops at 2023 (see Known bad sources).
 
 - [ ] FEIE vs Foreign Tax Credit, the interaction rules, not merely the two definitions:
@@ -122,18 +123,59 @@ topic list. Every value below is cited to a primary source, per the primary-sour
       the same-year bar on the additional child tax credit.
       source: https://www.irs.gov/publications/p54
 
+- [ ] Israel disaster-relief postponement (added v1.1.1, refreshed v1.2.0): IRS Notice
+      2026-63 postpones acts due on or after 30 Sep 2026 and before 30 Sep 2027 to 30 Sep 2027, and re-postpones
+      acts already postponed under Notice 2025-53. The FBAR is FinCEN's, not the IRS's;
+      FinCEN Israel FBAR relief exists only for CY2022 and CY2023.
+      source: https://www.irs.gov/pub/irs-drop/n-26-63.pdf ; FinCEN FIN-2023-NTC4 and FIN-2024-NTC5
+      why core: the relief chain is rolled forward every autumn; a stale notice gives a
+      wrong deadline. Re-check for a successor notice every cycle.
+
+- [ ] FEIE never reaches pensions, social security, interest, ordinary dividends or capital
+      gains (added v1.2.0).
+      source: https://www.irs.gov/pub/irs-pdf/i2555.pdf
+
+- [ ] 1040 duty triggers beyond gross income (added v1.2.0): net earnings from
+      self-employment of at least USD 400 (Pub 501 Table 3); under-65 threshold rows for
+      TY2023 to TY2025 incl. head of household. No TY2026 row until Pub 501 (2026) exists.
+      source: https://www.irs.gov/publications/p501 ; irs.gov/pub/irs-prior/p501--2023.pdf, --2024.pdf
+
+- [ ] No 1040 duty, no Form 8938 duty (added v1.2.0).
+      source: https://www.irs.gov/businesses/corporations/basic-questions-and-answers-on-form-8938
+
+- [ ] Postponement and interest (added v1.2.0): a section 7508A postponement period is
+      disregarded in figuring interest and penalties for acts due inside it; the Israel chain
+      (2023-71 to 2026-63) may leave recent 1040 years not yet past due for an eligible
+      never-filer, while FBAR years are not covered.
+      source: https://www.law.cornell.edu/cfr/text/26/301.7508A-1 ; https://www.irs.gov/pub/irs-drop/n-26-63.pdf
+
 ## Should cover (advanced / edge cases)
+
+- [x] Form 2350 extension to meet the residence tests for an arrival-year oleh, and that it
+      rules out the 15 December letter extension (added v1.2.0). source: Pub 54
+- [x] Child tax credit SSN precondition (filer or spouse, and each child, SSN issued before
+      the due date incl. extensions) (added v1.2.0).
+      source: https://www.irs.gov/credits-deductions/individuals/child-tax-credit
+- [x] Israeli 2026 temporary provision for arrivals 5.11.2025 to 31.12.2026 (exemption on
+      Israeli personal-effort income 2026 to 2030), pointer only, because it shrinks the
+      Israeli tax available to credit. source: Kol Zchut, ITA circular 07/2026
 
 - [ ] Which Israeli filing the user is aligning against and that the Israeli tax
       year is the calendar year, so the two systems share a year boundary but not deadlines.
       Defer the Israeli mechanics to `israeli-tax-returns`.
-- [ ] Alternative IRS compliance routes to streamlined (removed from the body 2026-09-13: the
-      IRS delinquent-FBAR procedure page URL returned 404 and no primary text was captured;
-      re-source before re-adding).
+- [x] Alternative IRS compliance routes to streamlined (restored v1.2.0): CI Voluntary
+      Disclosure Practice for willful cases, delinquent international information return
+      procedures, and late FBARs per the Taxpayer Advocate Service page. The IRS
+      delinquent-FBAR procedure page is withdrawn (404 since mid-2026) and must not be cited.
 - [ ] The document pack: what to hand an Israeli accountant vs a US preparer, and what only
       exists on one side (tofes 106, tofes 867, US 1099/W-2 equivalents).
-- [ ] Married-to-a-non-US-spouse filing status choices and why MFS is common in Israel.
-- [ ] State filing residue for those who never formally severed a US state domicile.
+- [x] Married-to-a-non-US-spouse filing status choices (restored v1.2.0): the Pub 54 election
+      to treat a nonresident alien spouse as resident and file jointly, and head of household
+      without it.
+- [ ] Israeli reporting change (added v1.2.0): Amendment 272 cancelled the 10-year Israeli
+      REPORTING exemption for olim and long-term returning residents from 1 Jan 2026; the
+      10-year TAX exemption continues. Pointer only, Israeli mechanics stay with
+      `israeli-tax-returns`.
 
 ## Out of scope (explicit, with rationale)
 
@@ -148,6 +190,9 @@ that information returns from the PFIC/trust skill are part of the same package.
   distinct math. Related skill: `american-freelancer-israel-tax`.
 - Israeli-side return preparation and submission to Reshut HaMisim. Related skill:
   `israeli-tax-returns`.
+- State filing residue for a user who never severed a former US state domicile. Re-litigated
+  2026-11-11: a user may ask, but the answer differs by state and no single primary source
+  covers it. The skill now names it and routes it to the preparer rather than staying silent.
 - Renunciation and the section 877A exit tax -- small audience, and it is an irreversible
   personal-status decision that belongs with counsel, not a worksheet.
 - Completing, signing or submitting any return, and any representation before the IRS or
@@ -168,7 +213,9 @@ that information returns from the PFIC/trust skill are part of the same package.
 - https://www.irs.gov/individuals/international-taxpayers/us-citizens-and-resident-aliens-abroad -- deadlines, extension chain
 - https://www.irs.gov/newsroom/details-on-reporting-foreign-bank-and-financial-accounts -- FBAR threshold and deadline
 - https://www.irs.gov/businesses/comparison-of-form-8938-and-fbar-requirements -- 8938 thresholds, independence of the two duties
+- https://www.irs.gov/pub/irs-drop/rp-26-35.pdf -- TY2027 FEIE amount
 - https://www.irs.gov/pub/irs-drop/rp-25-32.pdf -- TY2026 FEIE amount
+- https://www.irs.gov/pub/irs-drop/n-26-63.pdf -- Israel relief to 30 Sep 2027
 - https://www.irs.gov/pub/irs-drop/rp-24-40.pdf -- TY2025 FEIE amount
 - https://www.irs.gov/individuals/international-taxpayers/foreign-tax-credit -- FTC vs exclusion interaction
 - https://www.irs.gov/publications/p54 -- revocation and the 5-year bar

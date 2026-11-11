@@ -27,14 +27,15 @@ F8938 = {
     (False, True): (100_000, 150_000),
 }
 
-FEIE = {2023: 120_000, 2024: 126_500, 2025: 130_000, 2026: 132_900}
+FEIE = {2023: 120_000, 2024: 126_500, 2025: 130_000, 2026: 132_900, 2027: 137_300}
 
-# Pub 501, tax year 2025, filer(s) under 65. MFS is USD 5 at ANY age.
-FILING_THRESHOLD_2025 = {
-    "single": "single USD 15,750",
-    "mfj": "married filing jointly USD 31,500",
-    "mfs": "married filing separately USD 5 (any age)",
+# Pub 501 Table 1, filer(s) under 65; MFS is USD 5 at ANY age. TY2026 Pub 501 not yet published.
+FILING_THRESHOLD = {
+    2023: {"single": 13_850, "hoh": 20_800, "mfj": 27_700, "mfs": 5},
+    2024: {"single": 14_600, "hoh": 21_900, "mfj": 29_200, "mfs": 5},
+    2025: {"single": 15_750, "hoh": 23_625, "mfj": 31_500, "mfs": 5},
 }
+SE_TRIGGER = 400  # Pub 501: net earnings from self-employment of at least USD 400 -> must file
 
 FBAR_PENALTY = {"non_willful": (10_000, 16_536), "willful": (100_000, 165_353)}
 
@@ -51,13 +52,14 @@ def f8938_required(assets_year_end, assets_peak, lives_abroad, mfj):
 
 def deadlines(lives_abroad):
     rows = [
-        ("15 April", "1040 due; interest on unpaid tax runs from here", "Regardless of extension"),
+        ("15 April", "1040 due; interest on unpaid tax runs from here", "Any extension (Israel relief aside)"),
         ("15 April", "FBAR due", "Filed to FinCEN"),
     ]
     if lives_abroad:
         rows += [
             ("15 June", "1040 and payment on the 2 month abroad extension", "Automatic, attach statement"),
             ("15 October", "1040 if Form 4868 filed BY 15 June", "Must be requested in time"),
+            ("15 December", "1040, discretionary extension beyond 4868", "Letter by 15 October"),
         ]
     else:
         rows += [("--", "Extension rules for US residents are out of scope", "See irs.gov")]
@@ -76,12 +78,16 @@ def build(args):
     out.append("")
 
     out.append("-- Form 1040 --")
-    out.append("  Required only if gross income, INCLUDING income the exclusion would remove,")
-    out.append("  meets the filing threshold for status and age (Pub 501). This script does")
-    if args.year == 2025:
-        out.append("  not test it. TY2025 under 65: " + FILING_THRESHOLD_2025[args.status] + ".")
+    out.append("  Required if gross income, INCLUDING income the exclusion would remove, meets")
+    out.append("  the Pub 501 threshold for status and age, OR if net self-employment earnings")
+    out.append(f"  were at least USD {SE_TRIGGER} (an osek patur or murshe below the threshold")
+    out.append("  still files). This script does not test either.")
+    row = FILING_THRESHOLD.get(args.year)
+    if row:
+        out.append(f"  TY{args.year} under 65, {args.status}: USD {row[args.status]:,}"
+                   + (" (any age)" if args.status == "mfs" else "") + ".")
     else:
-        out.append(f"  not test it. Look up the TY{args.year} row in Pub 501 for that year.")
+        out.append(f"  No TY{args.year} row on file. Use that year's Pub 501; do not guess.")
     out.append("  The FBAR below can apply even when no 1040 is required.")
     out.append("")
 
@@ -91,9 +97,10 @@ def build(args):
     out.append(f"  Threshold: more than USD {FBAR_THRESHOLD:,} at ANY point in the year")
     out.append(f"  REQUIRED: {'YES' if need else 'no'}")
     if not need:
-        out.append("  Note: this is an aggregate PEAK test. Confirm the figure includes kupat")
-        out.append("        gemel and keren hishtalmut (preparer to confirm), dormant and signature-authority")
-        out.append("        accounts, and is the highest point in the year, not year end.")
+        out.append("  Note: this is an aggregate PEAK test. Do not clear the user unless the figure")
+        out.append("        includes kupat gemel and keren hishtalmut (provisionally, until the")
+        out.append("        preparer confirms), dormant and signature-authority accounts, and is")
+        out.append("        the highest point in the year, not year end.")
     out.append("")
 
     out.append("-- Form 8938 (FATCA) --")
@@ -103,11 +110,11 @@ def build(args):
     out.append(f"  Specified assets at peak:     USD {args.assets_peak:,}")
     out.append(f"  Thresholds for this filer: more than USD {last_day:,} on the last day, "
                f"or more than USD {any_time:,} at any time")
-    out.append(f"  REQUIRED: {'YES' if need8938 else 'no'}")
+    out.append(f"  REQUIRED: {'YES, if a 1040 is required (no 1040 duty, no 8938 duty)' if need8938 else 'no'}")
     out.append("")
 
     if need and need8938:
-        out.append("  Both are triggered. They are SEPARATE forms with separate penalties;")
+        out.append("  Both are triggered (8938 only if a 1040 is required). SEPARATE forms, separate penalties;")
         out.append("  filing one does not satisfy the other.")
         out.append("")
 
@@ -126,11 +133,15 @@ def build(args):
     out.append("-- Deadlines --")
     for date, item, mech in deadlines(args.abroad):
         out.append(f"  {date:<12} {item:<52} {mech}")
-    out.append("  An extension to file is not an extension to pay. Interest runs from 15 April.")
-    out.append("  Israel relief: IRS Notice 2025-53 gives affected taxpayers (e.g. principal")
-    out.append("  residence in Israel, the West Bank or Gaza) until 30 Sep 2026 for returns and")
-    out.append("  payments due on or after 30 Sep 2025 and before 30 Sep 2026. Its list of")
-    out.append("  postponed acts does not name the FBAR.")
+    out.append("  An extension to file is not an extension to pay. Interest runs from 15 April,")
+    out.append("  unless the payment falls due inside a disaster postponement you qualify for,")
+    out.append("  in which case that period is disregarded for interest and penalties.")
+    out.append("  Arrival-year oleh not yet meeting the residence test: ask about Form 2350.")
+    out.append("  Israel relief: IRS Notice 2026-63 gives affected taxpayers (e.g. principal")
+    out.append("  residence in Israel, the West Bank or Gaza) until 30 Sep 2027 for returns and")
+    out.append("  payments due on or after 30 Sep 2026 and before 30 Sep 2027, and re-postpones")
+    out.append("  acts already postponed under Notice 2025-53. It does not move the FBAR, which")
+    out.append("  is FinCEN's; FinCEN Israel FBAR relief was found only for 2022 and 2023.")
     out.append("  Check irs.gov for any later notice.")
     out.append("")
 
@@ -156,8 +167,11 @@ def main():
     p = argparse.ArgumentParser(description=__doc__,
                                 formatter_class=argparse.RawDescriptionHelpFormatter)
     p.add_argument("--year", type=int, default=2025)
-    p.add_argument("--status", choices=["single", "mfs", "mfj"], default="single")
-    p.add_argument("--abroad", action="store_true", help="filer lives outside the US")
+    p.add_argument("--status", choices=["single", "mfs", "mfj", "hoh"], default="single",
+                   help="hoh uses the unmarried Form 8938 row")
+    where = p.add_mutually_exclusive_group()
+    where.add_argument("--abroad", action="store_true", help="filer lives outside the US")
+    where.add_argument("--in-us", action="store_true", help="filer lives in the US")
     p.add_argument("--peak-accounts", type=int, default=0,
                    help="highest AGGREGATE balance across all foreign accounts, USD")
     p.add_argument("--assets-year-end", type=int, default=0)
@@ -166,6 +180,13 @@ def main():
     a = p.parse_args()
     if min(a.peak_accounts, a.assets_year_end, a.assets_peak) < 0:
         p.error("balances cannot be negative")
+    if a.example and a.in_us:
+        p.error("--example is a couple living abroad; drop --in-us")
+    if not a.example and not (a.abroad or a.in_us):
+        p.error("say where the filer lives: --abroad or --in-us (it selects the Form 8938 row)")
+    if a.assets_peak < a.assets_year_end:
+        p.error("--assets-peak is the highest value in the year, so it cannot be below "
+                "--assets-year-end")
 
     if a.example:
         a.year, a.status, a.abroad = 2025, "mfj", True

@@ -1,6 +1,6 @@
 ---
 name: us-israel-dual-tax-navigator
-description: "Not tax advice and not a filed return. Maps what a US-Israel dual citizen actually has to file in both systems for a tax year: the US 1040, FBAR (FinCEN 114), Form 8938, and how those line up against the Israeli calendar. Compares the Foreign Earned Income Exclusion against the Foreign Tax Credit, flags the revocation trap, and lays out the Streamlined Foreign Offshore route for someone who never filed after making aliyah. Use when a US citizen or green card holder in Israel asks what they owe the IRS, whether they need an FBAR, which years to catch up, or how to brief an accountant. Produces a filing-obligation map and a document checklist, never a completed or signed return. Do NOT use for Israeli-side filing, for classifying Israeli funds as PFICs, for self-employment tax, or for renouncing citizenship."
+description: "Not tax advice and not a filed return. Maps what a US-Israel dual citizen actually has to file in both systems for a tax year: the US 1040, FBAR (FinCEN 114), Form 8938, and how those line up against the Israeli calendar. Compares the Foreign Earned Income Exclusion against the Foreign Tax Credit, flags the revocation trap, and lays out the Streamlined Foreign Offshore route for someone who never filed after making aliyah. Use when a US citizen or green card holder in Israel asks what they owe the IRS, when their US return and FBAR are due, whether they need an FBAR, which years to catch up, or how to brief an accountant. Produces a filing-obligation map and a document checklist, never a completed or signed return. Do NOT use for Israeli-side filing, for classifying Israeli funds as PFICs, for self-employment tax, or for renouncing citizenship."
 license: MIT
 ---
 
@@ -45,7 +45,7 @@ for five years.
 ## Instructions
 
 Work through the stages in order. Stop and ask the user for a missing input rather than
-assuming a value, and never state a figure that is not in Reference Links.
+assuming a value, and never state a figure that is not in Reference Links or `references/filing-matrix.md`.
 
 ### Stage 1: Establish the filing premise
 
@@ -56,17 +56,36 @@ aliyah and survives owing zero US tax.
 
 The 1040 duty is not automatic, though. It turns on gross income against the filing
 threshold for the filer's status and age, and for this test gross income INCLUDES income
-the foreign earned income exclusion would later remove. For tax year 2025: single under 65
-USD 15,750; married filing jointly, both under 65, USD 31,500; married filing SEPARATELY, at
-any age, USD 5. The last row matters most here: a married US person who files separately, for
-example one married to a non-US spouse, has a return triggered by almost any income. Take other rows from
-Publication 501 for the tax year, since the table changes every year. A low-income single
-filer can have no 1040 duty while an FBAR duty still exists, because the FBAR is a balance
-test.
-Never tell a user they are delinquent on a 1040 before this test has been applied.
+the foreign earned income exclusion would later remove. Under-65 rows from Publication 501:
 
-Do not soften this and do not speculate about enforcement likelihood. Establish it, then
-move on.
+| Tax year | Single | Head of household | Married filing jointly | Married filing separately (any age) |
+|---|---|---|---|---|
+| 2023 | USD 13,850 | USD 20,800 | USD 27,700 | USD 5 |
+| 2024 | USD 14,600 | USD 21,900 | USD 29,200 | USD 5 |
+| 2025 | USD 15,750 | USD 23,625 | USD 31,500 | USD 5 |
+
+The MFS row matters most here: a married US person who files separately, for example one
+married to a non-US spouse, has a return triggered by almost any income. For other ages and
+years take the row from that year's Publication 501 (prior years are archived on irs.gov);
+the 2026 edition is not out yet, so do not invent a TY2026 row. Gross income is not the only
+trigger: Publication 501 also requires a return from anyone with net earnings from
+self-employment of at least USD 400, so an osek patur or osek murshe under the threshold
+still files (the SE tax itself belongs to `american-freelancer-israel-tax`). A low-income
+employee can have no 1040 duty while an FBAR duty still exists, because the FBAR is a balance
+test. Never tell a user they are delinquent on a 1040 before these tests have been applied.
+
+When the spouse is not a US person, raise the filing-status choice instead of defaulting to
+married filing separately. Publication 54 lets a US citizen married to a nonresident alien
+choose to treat the spouse as a US resident and file jointly. Both are then treated as US
+residents for income tax purposes for that year and all future years until the election is
+terminated, neither can claim under any tax treaty not to be a US resident, and the spouse
+needs an SSN or ITIN. Without that choice, a filer who pays more than half the cost of
+maintaining a household for a qualifying dependent, other than the spouse, may be able to use
+head of household status. Once the choice is made, both spouses must report worldwide income
+for that and all future years unless it is suspended or terminated, so the Israeli spouse's
+income comes onto the US return. Which route is better is a preparer's decision; record the facts.
+
+Do not soften this or speculate about enforcement likelihood.
 
 ### Stage 2: Build the filing-obligation map
 
@@ -96,8 +115,9 @@ routinely got wrong, so state them explicitly:
 The FBAR reaches accounts the user has a financial interest in OR signature or other
 authority over, such as bank, brokerage and mutual fund accounts. Ask explicitly about the
 accounts Israelis forget: a bank account held jointly with a parent, a dormant account from a
-previous employer, and any account the user can only sign on. Also list kupat gemel and keren
-hishtalmut balances, and have the preparer confirm how each is treated rather than assuming.
+previous employer, and any account the user can only sign on. Include kupat gemel and keren
+hishtalmut balances in the aggregate provisionally until the preparer confirms their
+treatment; never clear a user under USD 10,000 who left them out.
 
 FBAR is filed to FinCEN through the BSA E-Filing System, separately from the tax return.
 
@@ -110,7 +130,8 @@ in Israel:
 | Unmarried, or married filing separately | More than USD 200,000 on the last day, or more than USD 300,000 at any time | More than USD 50,000 on the last day, or more than USD 75,000 at any time |
 | Married filing jointly | More than USD 400,000 on the last day, or more than USD 600,000 at any time | More than USD 100,000 on the last day, or more than USD 150,000 at any time |
 
-Form 8938 is filed WITH the 1040, while the FBAR goes to FinCEN and is not filed with the
+Form 8938 is filed WITH the 1040, and a taxpayer not required to file an income tax return is
+not required to file Form 8938. The FBAR, by contrast, goes to FinCEN and is not filed with the
 return. The IRS tells filers to check each form's requirements and thresholds and determine
 whether they must file one, the other, or both, and each form has its own penalty regime.
 Say so in as many words, because the belief that "the FBAR covers it" is widespread.
@@ -121,36 +142,61 @@ For a calendar-year filer living in Israel:
 
 | Date | What is due | Mechanism |
 |---|---|---|
-| 15 April | 1040 regular due date. Interest on unpaid tax runs from here. | Interest date, whatever extension follows |
+| 15 April | 1040 regular due date. Interest on unpaid tax runs from here. | Interest date, whatever extension follows (Israel relief aside, below) |
 | 15 April | FBAR regular due date | Filed to FinCEN |
 | 15 June | 1040 and payment, on the automatic 2 month extension for taxpayers abroad | Automatic, but attach a statement to the return saying which situation qualified you |
 | 15 October | 1040, if Form 4868 was filed BY 15 June | Must be requested, and requested in time |
 | 15 December | 1040, discretionary extension for taxpayers out of the country, on top of the Form 4868 extension | Letter to the IRS explaining why, sent by 15 October; not automatic |
 | 15 October | FBAR, on its automatic extension | Automatic, no request needed |
+| Varies | 1040, Form 2350 extension for an arrival-year oleh who expects to meet the bona fide residence or physical presence test only after the due date | Must be requested; rules out the 15 December letter extension |
 
 Two traps worth stating every time:
 
 1. An extension to file is not an extension to pay. Interest runs on unpaid tax from
    15 April even when the filing extension is valid. For a filer who qualifies for the
    automatic 2 month extension, late-payment PENALTIES run from 15 June, but interest
-   still runs from 15 April.
+   still runs from 15 April. The exception is the Israel relief below: for an act whose due
+   date falls inside a postponement period, that period is disregarded in figuring interest
+   and penalties. Have the preparer compute interest with any postponement applied.
 2. Form 4868 has to be filed by the automatic 2 month extension date, not after it.
    A user who remembers in September has already missed the window for the October date.
 
-**Israel relief: check it before applying the dates above.** Under IRS Notice 2025-53,
-affected taxpayers have until 30 September 2026 to file tax returns and make tax payments
-that fall due on or after 30 September 2025 and before 30 September 2026. Affected taxpayers
-include any individual whose principal residence is in the State of Israel, the West Bank or
-Gaza, and also, for example, anyone whose tax return preparer or necessary records are
-located there. The IRS applies the relief automatically based on the address on previously
-filed returns; an affected taxpayer whose principal residence is outside that area must call
-the IRS disaster hotline to request it. The notice's list of postponed acts names returns and
-payments of income tax and other federal taxes and does not name the FBAR, which is filed to FinCEN, so
-confirm FBAR treatment separately. A date on or after 30 September 2026, such as 15 October
-2026, is outside this notice. Check irs.gov for any later notice before relying on a date.
+**Israel relief: check it before applying the dates above.** Under IRS Notice 2026-63,
+affected taxpayers have until 30 September 2027 to file tax returns, make tax payments and
+perform certain time-sensitive acts that are due on or after 30 September 2026 and before
+30 September 2027. Affected taxpayers include any individual whose principal residence is in
+the State of Israel, the West Bank or Gaza, and anyone whose tax return preparer or necessary
+records are located there. The IRS applies the relief automatically based on the address on
+previously filed returns; an affected taxpayer whose principal residence is outside that area
+should call the IRS disaster hotline. So for a resident of Israel, a 1040 for tax year 2026 that would
+be due in 2027 falls inside the window. Check irs.gov for a later notice before relying on any
+date after 30 September 2027.
+
+For a never-filer this cuts both ways. Notice 2026-63 further postpones acts already postponed
+under Notice 2025-53 and the earlier Israel notices, for taxpayers eligible under them, so some
+recent 1040 years may not yet be past due. But the IRS identifies affected taxpayers automatically
+from previously filed returns, which a never-filer does not have, and the FBAR years are not
+covered at all. Which 1040 years are inside the chain, and how that shapes the streamlined
+3-year window, is for the preparer to settle.
+
+The FBAR is filed to FinCEN, not the IRS, and the IRS notice does not move it. FinCEN gave
+Israel-affected filers their own FBAR extensions only for calendar years 2022 (to 7 October
+2024) and 2023 (to 30 September 2025). No FinCEN notice for later years was found on
+fincen.gov, so treat the FBAR's own 15 October extended date as the operative one unless the
+user finds a newer FinCEN notice.
 
 Align this against the user's Israeli deadline, but do not compute the Israeli return here.
 Hand the Israeli side to `israeli-tax-returns`.
+
+One Israeli change matters for the document pack. Israel's 10-year exemption from REPORTING
+foreign income was cancelled by Amendment 272 to the Income Tax Ordinance, but only for olim
+and long-term returning residents who attain that status from 1 January 2026; the 10-year
+exemption from Israeli TAX on foreign-source income continues. So an oleh from 2026 lists
+foreign income on the Israeli return as well, while an earlier oleh usually does not.
+Separately, olim and long-term returning residents who arrived between 5 November 2025 and
+31 December 2026 may be exempt from Israeli tax on Israeli-source personal-effort income for
+2026 to 2030. Less Israeli tax paid means less to credit, so flag this cohort when the
+exclusion-versus-credit question comes up in Stage 4. None of this changes the US filing duty.
 
 ### Stage 4: Compare FEIE against the Foreign Tax Credit
 
@@ -164,6 +210,7 @@ is stale (see Gotchas):
 | 2024 | USD 126,500 |
 | 2025 | USD 130,000 |
 | 2026 | USD 132,900 |
+| 2027 | USD 137,300 |
 
 Check qualification before offering the exclusion at all. It requires a tax home in a
 foreign country, income from personal services performed there, and either the bona fide
@@ -174,7 +221,9 @@ qualify. The same abroad status also governs which Form 8938 row applies.
 Frame the comparison as a decision with a lock-in, not as arithmetic:
 
 - **The exclusion** removes qualifying foreign EARNED income from US gross income up to the
-  cap. Income above the cap remains taxable.
+  cap. Income above the cap remains taxable. It never reaches pension and annuity income
+  (including social security benefits), interest, ordinary dividends or capital gains, so a
+  household living on investment or pension income gets nothing from it.
 - **The Foreign Tax Credit** (Form 1116) offsets US tax with Israeli tax already paid.
   How far it reduces the US liability depends on the Form 1116 limitation, which is for the
   preparer to compute, but it involves no exclusion election and so none of the lock-in below.
@@ -184,7 +233,10 @@ Frame the comparison as a decision with a lock-in, not as arithmetic:
 - **The exclusion blocks the refundable child credit in the same year.** A filer who elects
   the exclusion cannot take the additional child tax credit for that year. For an oleh
   family with children this is often the deciding point, so raise it whenever children are
-  in the household, including on every catch-up year.
+  in the household, including on every catch-up year. First check the precondition: the
+  filer (or a spouse on a joint return) and each child need an SSN valid for employment,
+  issued before the return's due date including extensions. Israeli-born children often
+  have none, and without it the credit is not available whichever route is chosen.
 
 Then the part that matters most, and that a bare comparison misses:
 
@@ -202,7 +254,7 @@ to a licensed preparer rather than making it.
 Convert Israeli figures to USD before any of this. Use Bank of Israel representative rates
 via the boi-exchange MCP where available, and record which date's rate was used.
 
-### Stage 5: Choose the catch-up route if nothing was ever filed
+### Stage 5: Catch-up routes if nothing was ever filed
 
 For a user who has not filed since making aliyah, the Streamlined Foreign Offshore
 Procedures are usually the relevant route. Check eligibility before describing it:
@@ -233,19 +285,11 @@ submission date rather than quoting a range.
 examples. A package without the Israeli fund, trust or company forms is incomplete, so hand
 those to `us-person-israeli-investment-check` before the package is assembled.
 
-The mechanics the IRS page states, which decide whether the package is processed under the
-procedure at all:
-
-- Write "Streamlined Foreign Offshore" in red at the top of the first page of each return
-  and each information return.
-- Complete and sign Form 14653, the certification of eligibility and non-willfulness.
-- Send the returns and payment in paper form to the Austin address given on the IRS page.
-  Electronic submissions are not accepted.
-- File the delinquent FBARs electronically through the BSA E-Filing System, select "Other"
-  as the late-filing reason, and state that they are filed under the Streamlined Filing
-  Compliance Procedures.
-- A filer not eligible for a Social Security number submits an ITIN application with the
-  package.
+The IRS page's mechanics decide whether the package is processed under the procedure at all:
+"Streamlined Foreign Offshore" in red on each return and information return, a signed
+Form 14653, paper submission to the Austin address (electronic is not accepted), FBARs
+e-filed through BSA E-Filing with "Other" as the late-filing reason, and an ITIN application
+for a filer not eligible for an SSN. The full list is in `references/filing-matrix.md`.
 
 Full tax and interest must be paid with the submission. In exchange, an eligible filer who
 follows the instructions is not subject to failure-to-file, failure-to-pay, accuracy-related,
@@ -253,7 +297,22 @@ information-return, or FBAR penalties.
 
 The IRS designed the streamlined procedures for taxpayers whose failures did not result from
 willful conduct, so they do not fit a user who carries willfulness risk. Do not default
-everyone to them: route the choice of route to a licensed preparer or counsel.
+everyone to them. The other routes the IRS lists, each for a different fact pattern:
+
+- **IRS Criminal Investigation Voluntary Disclosure Practice.** For someone who WILLFULLY failed
+  to comply. It requires a statement acknowledging the willful failure, and it is only timely
+  before the IRS has started a civil examination or criminal investigation or received
+  third-party information about the noncompliance.
+- **Delinquent international information return submission procedures.** For missing
+  information returns only, by someone not under civil examination or criminal investigation
+  and not already contacted by the IRS about them. Penalties may still be assessed; a
+  reasonable cause statement can be attached.
+- **Late FBARs alone.** Where the income was reported and the tax paid, the Taxpayer Advocate
+  Service says to file them through the normal online system with a statement explaining the
+  delay, with no penalty if the IRS has not already contacted the filer about an audit or
+  delinquent returns for those years. The old IRS page for this procedure is withdrawn.
+
+Route the choice of route to a licensed preparer or counsel.
 
 ### Stage 6: State the exposure honestly, then the document pack
 
@@ -265,10 +324,8 @@ willful exposure badly on a large account:
 | Non-willful, per report (not per account) | USD 10,000 | USD 16,536 |
 | Willful, per violation | USD 100,000 | USD 165,353 |
 
-For a non-willful violation, the maximum accrues per REPORT, not per account: the US Supreme
-Court held in Bittner v. United States (2023) that the non-willful maximum applies to the
-failure to file a compliant report. Do not multiply the non-willful figure by the number of
-Israeli accounts.
+The non-willful maximum accrues per REPORT, not per account (Bittner v. United States, 2023),
+so never multiply it by the number of Israeli accounts.
 
 For a willful violation the penalty is the GREATER of the adjusted amount or 50 percent of
 the balance in the account at the time of the violation. On a large account the percentage
@@ -286,6 +343,7 @@ Close by producing the deliverable: a document checklist split by who needs what
 
 | For the Israeli accountant | For the US preparer | Exists only on one side |
 |---|---|---|
+| Not needed | SSN, or the status of an SSN application, for the filer, spouse and each child | Decides the child credit and the joint-return route |
 | The annual employer summary | Same, translated and converted to USD | The preparer maps it onto the US return |
 | The annual bank statement of interest and investment income | Same, with per-account detail for FBAR and 8938 | Peak balances are needed for US only |
 | Israeli return once filed | Israeli tax paid, by date, for the credit | The preparer confirms which year each payment is credited in |
@@ -307,6 +365,8 @@ worksheet as the thing to bring to that meeting.
   social security contributions interact across the two systems. Use
   `american-freelancer-israel-tax`.
 - Renunciation of citizenship and the section 877A exit tax.
+- State income tax. If the user kept a home or other ties in a former US state, flag it for the
+  preparer; whether that state still expects a return is outside this skill.
 - Any judgement about whether a past failure to file was willful.
 
 ## Recommended MCP Servers
@@ -333,46 +393,50 @@ Agent failure modes specific to this domain.
    through 2023 and is stale. An agent that reads it will confidently state USD 120,000 for a
    2026 filing. Take the amount from the Revenue Procedure for the tax year in question.
 2. **Using the domestic Form 8938 thresholds for a user living in Israel.** The 50,000 and
-   75,000 figures are everywhere in secondary guides, and they are the wrong row. Abroad
-   filers get 200,000 and 300,000, or 400,000 and 600,000 when filing jointly. Using the
-   domestic row invents a filing duty the user does not have.
+   75,000 figures in secondary guides are the wrong row and invent a duty the user lacks.
 3. **Treating FBAR as a per-account or year-end test.** It is aggregate and it is peak. An
    agent that asks only for year-end balances will clear a user who in fact had to file.
-4. **Getting either FBAR penalty prong wrong.** The willful penalty is the greater of
-   165,353 or 50 percent of the balance, so the flat figure understates a large account.
-   The non-willful maximum is per report under Bittner, so multiplying it by the account
-   count overstates it several-fold.
-5. **Recommending a switch between the exclusion and the credit as if it were free.** It can
+4. **Getting either FBAR penalty prong wrong.** Willful is the greater of the dollar figure
+   or 50 percent of the balance; non-willful is per report, not per account.
+5. **Quoting a superseded Israel relief notice.** The IRS rolls the Israel postponement
+   forward each autumn (2023-71, 2024-72, 2025-53, 2026-63). Check for the newest notice
+   before stating any deadline, and never assume it moves the FBAR.
+6. **Recommending a switch between the exclusion and the credit as if it were free.** It can
    revoke the election and bar it for 5 years, and the additional child tax credit can
    trigger the same revocation without the user ever intending it. Always surface the
    lock-in before discussing which option produces a lower number this year.
-6. **Assuming a treaty prevents US taxation of a dual citizen.** The savings clause preserves
+7. **Assuming a treaty prevents US taxation of a dual citizen.** The savings clause preserves
    exactly that taxation. What survives it is the relief machinery, notably Article 26. An
    agent that says "the treaty protects you" has it backwards.
-7. **Answering the non-willfulness question.** Streamlined eligibility turns on the user's
+8. **Answering the non-willfulness question.** Streamlined eligibility turns on the user's
    state of mind. Describe the requirement, never adjudicate it.
 
 ## Reference Links
 
 | Source | URL | What to check |
 |---|---|---|
-| IRS, US citizens and resident aliens abroad | https://www.irs.gov/individuals/international-taxpayers/us-citizens-and-resident-aliens-abroad | The 15 June automatic extension and the Form 4868 timing |
-| IRS, reporting foreign bank and financial accounts | https://www.irs.gov/newsroom/details-on-reporting-foreign-bank-and-financial-accounts | The USD 10,000 aggregate threshold and FBAR deadlines |
-| IRS, comparison of Form 8938 and FBAR | https://www.irs.gov/businesses/comparison-of-form-8938-and-fbar-requirements | The abroad vs domestic threshold rows, and that the duties are independent |
-| Rev. Proc. 2025-32 | https://www.irs.gov/pub/irs-drop/rp-25-32.pdf | Item .39 for the TY2026 exclusion amount |
-| Rev. Proc. 2024-40 | https://www.irs.gov/pub/irs-drop/rp-24-40.pdf | Item .39 for the TY2025 exclusion amount |
-| Rev. Proc. 2023-34 | https://www.irs.gov/pub/irs-drop/rp-23-34.pdf | Item .39 for the TY2024 exclusion amount |
-| Rev. Proc. 2022-38 | https://www.irs.gov/pub/irs-drop/rp-22-38.pdf | Item .39 for the TY2023 exclusion amount |
-| IRS, streamlined filing compliance procedures | https://www.irs.gov/individuals/international-taxpayers/streamlined-filing-compliance-procedures | The civil examination and criminal investigation bar |
-| IRS, foreign tax credit | https://www.irs.gov/individuals/international-taxpayers/foreign-tax-credit | That no credit is available on excluded income |
-| IRS Publication 54 | https://www.irs.gov/publications/p54 | Revocation and the 5 year bar, the same-year child credit bar, the qualification tests, the extension chain |
-| IRS Notice 2025-53 | https://www.irs.gov/pub/irs-drop/n-25-53.pdf | Israel relief: who is an affected taxpayer, which acts are postponed, the 30 September 2026 end date |
-| IRS Publication 501 | https://www.irs.gov/publications/p501 | The 1040 gross-income filing thresholds for the tax year |
-| Bittner v. United States | https://www.supremecourt.gov/opinions/22pdf/21-1195_h3ci.pdf | The non-willful FBAR maximum accrues per report |
-| IRS, streamlined foreign offshore procedures | https://www.irs.gov/individuals/international-taxpayers/u-s-taxpayers-residing-outside-the-united-states | The 330 day test, the 3 and 6 year lookbacks, and the penalty relief |
-| 31 CFR 1010.821 | https://www.govinfo.gov/content/pkg/CFR-2025-title31-vol3/xml/CFR-2025-title31-vol3-sec1010-821.xml | The current adjusted FBAR penalty amounts |
-| IRM 4.26.16 | https://www.irs.gov/irm/part4/irm_04-026-016 | The 50 percent of balance prong for willful violations |
-| US-Israel income tax treaty | https://www.irs.gov/pub/irs-trty/israel.pdf | Article 6(3) savings clause and the 6(4) carve-outs |
+| IRS, US citizens and resident aliens abroad | https://www.irs.gov/individuals/international-taxpayers/us-citizens-and-resident-aliens-abroad | Abroad extensions |
+| IRS, reporting foreign bank and financial accounts | https://www.irs.gov/newsroom/details-on-reporting-foreign-bank-and-financial-accounts | FBAR threshold, deadlines |
+| IRS, comparison of Form 8938 and FBAR | https://www.irs.gov/businesses/comparison-of-form-8938-and-fbar-requirements | 8938 rows; independent duties |
+| Rev. Proc. 2026-35 | https://www.irs.gov/pub/irs-drop/rp-26-35.pdf | TY2027 exclusion (item .41) |
+| Rev. Proc. 2025-32 | https://www.irs.gov/pub/irs-drop/rp-25-32.pdf | TY2026 exclusion (item .39) |
+| IRS, streamlined filing compliance procedures | https://www.irs.gov/individuals/international-taxpayers/streamlined-filing-compliance-procedures | Examination and investigation bar |
+| IRS, foreign tax credit | https://www.irs.gov/individuals/international-taxpayers/foreign-tax-credit | No credit on excluded income |
+| IRS Publication 54 | https://www.irs.gov/publications/p54 | Revocation, child credit bar, tests, extensions, spouse election |
+| IRS Notice 2026-63 | https://www.irs.gov/pub/irs-drop/n-26-63.pdf | Israel relief to 30 September 2027 |
+| FinCEN Israel FBAR relief (CY2023) | https://www.fincen.gov/sites/default/files/shared/FinCEN-FBAR-Israel-Related-Relief-Notice-FINAL508.pdf | Last FinCEN Israel FBAR relief |
+| Instructions for Form 2555 | https://www.irs.gov/pub/irs-pdf/i2555.pdf | Income that is never foreign earned income |
+| IRS Criminal Investigation Voluntary Disclosure Practice | https://www.irs.gov/compliance/criminal-investigation/irs-criminal-investigation-voluntary-disclosure-practice | Willfulness statement, timeliness |
+| Delinquent international information return procedures | https://www.irs.gov/individuals/international-taxpayers/delinquent-international-information-return-submission-procedures | Eligibility, reasonable cause |
+| Taxpayer Advocate Service, FBAR | https://www.taxpayeradvocate.irs.gov/get-help/international/foreign-bank-financial-accounts/ | Late FBARs |
+| Amendment 272 summary (Shibolet) | https://www.shibolet.com/en/cancellation-of-reporting-exemption-for-new-immigrants-and-long-term-returning-residents-regarding-foreign-income-and-new-reporting-obligation-for-israeli-resident-trustees-regarding-trusts/ | Israeli reporting exemption change |
+| IRS Publication 501 | https://www.irs.gov/publications/p501 | Filing thresholds, USD 400 SE trigger; prior years at irs.gov/pub/irs-prior/p501--YEAR.pdf |
+| Treas. Reg. 301.7508A-1 | https://www.law.cornell.edu/cfr/text/26/301.7508A-1 | Postponement and interest |
+| Bittner v. United States | https://www.supremecourt.gov/opinions/22pdf/21-1195_h3ci.pdf | Non-willful FBAR penalty per report |
+| IRS, streamlined foreign offshore procedures | https://www.irs.gov/individuals/international-taxpayers/u-s-taxpayers-residing-outside-the-united-states | 330 days, 3 and 6 year lookbacks, relief |
+| 31 CFR 1010.821 | https://www.govinfo.gov/content/pkg/CFR-2025-title31-vol3/xml/CFR-2025-title31-vol3-sec1010-821.xml | Adjusted FBAR penalties |
+| IRM 4.26.16 | https://www.irs.gov/irm/part4/irm_04-026-016 | Willful 50 percent prong |
+| US-Israel income tax treaty | https://www.irs.gov/pub/irs-trty/israel.pdf | Article 6(3) and 6(4) |
 
 ## Troubleshooting
 
@@ -382,5 +446,5 @@ Agent failure modes specific to this domain.
 | Two sources give different exclusion amounts | One of them is keyed to a different tax year, or is the stale IRS landing page | Resolve by tax year against the Revenue Procedure. Do not average or pick the larger. |
 | The FBAR total looks lower than expected | Peak balances were not collected, or kupat gemel, keren hishtalmut and signature-authority accounts were omitted | Re-ask for the highest balance each account reached at any point, and enumerate the account types explicitly. |
 | A user who took a child credit now cannot use the exclusion | The credit was treated as revoking the prior election, which triggers the 5 year bar | Confirmed behaviour per Publication 54. This needs a licensed preparer, and possibly a ruling request. Do not attempt to undo it in conversation. |
-| An IRS page will not load or shows an unexpected 404 | IRS reorganises international-taxpayer URLs regularly | Search irs.gov for the page title rather than assuming the content was withdrawn. Verified working URLs are in Reference Links. |
+| An IRS page will not load or shows an unexpected 404 | IRS reorganises international-taxpayer URLs regularly | Search irs.gov for the page title before concluding it was withdrawn. |
 | The user asks which figure applies to their own facts | This is the reserved judgement the skill does not make | Give the rule and the source, produce the worksheet, and route the determination to a licensed adviser. |

@@ -26,6 +26,32 @@
         "Passport snippet extended to Pub 54's refusal/revocation text.",
         "The FBAR is not in Notice 2025-53's list of postponed acts; FinCEN-side Israel relief was not located. Source it if it exists."
       ]
+    },
+    {
+      "version": "1.2.0",
+      "date": "2026-11-11",
+      "lessons": [
+        "Description gained a deadline trigger ('when their US return and FBAR are due'): value-add run 1 showed the skill was never loaded for a TY2026 due-date question (with=0.71 BLOCK); after the change with=1.00 vs without=0.62, delta +0.38 PASS.",
+        "Israel relief rolled forward again: Notice 2026-63 (to 30 Sep 2027) replaced 2025-53. Re-check for a successor every autumn (chain: 2023-71, 2024-72, 2025-53, 2026-63). FinCEN Israel FBAR relief exists only for CY2022 (FIN-2023-NTC4) and CY2023 (FIN-2024-NTC5); re-check fincen.gov each cycle.",
+        "Rev. Proc. 2026-35 put the TY2027 FEIE (137,300) at item .41, not .39: do not assume the item number.",
+        "Pub 501 for TY2026 not published on 2026-11-11; add the TY2026 row (and to scripts/filing_map.py FILING_THRESHOLD) next cycle from the published table, do not derive it from the standard deduction.",
+        "IRS Delinquent FBAR Submission Procedures page withdrawn (404 since mid-2026); late-FBAR route now sourced to the Taxpayer Advocate Service page. Re-check whether the IRS republishes it.",
+        "CARRY resolved this cycle: NRA-spouse election/HOH, alternative routes (VDP, DIIRSP, late FBARs), FEIE never reaches pensions/interest/dividends/gains, state filing routed out of scope, script --abroad default bug, KH/KG FBAR provisional inclusion.",
+        "Expert r1 minors deferred: accept float balances in filing_map.py; make the script's calendar year-aware for past years (point to Stage 5); add a sourced VDP cost sentence; name tofes 106 / 867 in the document pack; cite Amendment 272 to the Reshumot text (fs.knesset.gov.il/25/law/25_lsr_4303082.pdf) instead of the Shibolet summary (pdftotext garbles the Hebrew, verify via browser).",
+        "Discretionary deferred: Form 1116 limitation per income category; 6-year VDP disclosure-period detail once the proposed VDP framework is finalised.",
+        "Word cap: SKILL.md body is ~4,960 words. Next cycle must move material to references/ before adding anything (candidates: Stage 5 route list, Stage 6 penalty table).",
+        "Treaty carve-out list in filing-matrix corrected to Art. 6(4)(a) as amended by both protocols (adds 15-A and 20(2)-(3)); tip from the us-person-israeli-investment-check worker, verified against israel.pdf."
+      ],
+      "holdout_before": 1.0,
+      "holdout_after": 1.0,
+      "buckets": {
+        "improved": [],
+        "regressed": [],
+        "persistent_fail": [],
+        "stable_success": [
+          "frozen eval_queries.txt (12 rows) and a fresh 10-query timing holdout, all stable"
+        ]
+      }
     }
   ]
 }
