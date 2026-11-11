@@ -15,6 +15,39 @@
         "Open reading: 5.04(3) 'USD 10,000 annually or USD 200,000 lifetime' is screened disjunctively; Expert round 1 judged this defensible.",
         "Legal gate low note: English description phrase 'or is deciding what to buy' could be reworded; description changes trigger the 5.7 holdout gate, so deferred."
       ]
+    },
+    {
+      "version": "1.1.0",
+      "date": "2026-11-11",
+      "holdout_before": 1.0,
+      "holdout_after": 1.0,
+      "buckets": {
+        "improved": [],
+        "regressed": [],
+        "persistent_fail": [],
+        "stable_success": [
+          "Does Revenue Procedure 2020-17 cover my kupat gemel?",
+          "Which Israeli savings products are bad for a US citizen to hold?",
+          "How much Israeli tax do I pay on my keren hishtalmut?",
+          "I am an osek murshe, what US self-employment tax do I owe?",
+          "Should I sell my Israeli fund to get out of the PFIC rules?"
+        ]
+      },
+      "lessons": [
+        "Fixed (GAP-CRITICAL): the May 2024 proposed section 6048 regulations (REG-124850-08, 89 FR 39440, proposed 1.6048-5(b)) were missing for two cycles although reliance has been allowed since 2024. Still proposed as of 2026-11-11 (Unified Agenda target 07/2027). Re-check finalization every cycle; if final, rewrite Stage 4 around the final text and drop 'elective'.",
+        "Fixed (CARRY resolved): Reg. 1.1298-1(c)(4) needs a treaty provision taxing the fund's income only when paid; the US-Israel treaty text has none and no pension-fund definition. Art. 20(1) is under the 6(3) saving clause; Protocol 2 (1993) excepts only 20(2) and 20(3).",
+        "Fixed (script BUG): direct TASE shares and bank deposits were run through the foreign-trust screen and the output asked whether a pikadon is a foreign trust. Negative inputs were accepted.",
+        "Fixed (script review C1): Part I exceptions were reported available under a section 1296 mark-to-market election; MTM takes the fund out of section 1291 fund status (Reg. 1.1291-1(b)(2)(v)).",
+        "Fixed (script review C2, then repaired again): 5.03(4)/5.04(3) test limits 'established by the laws of the trust's jurisdiction', not amounts deposited. The first repair over-corrected to 'the plan's law or terms'; a limit only in provider terms is a preparer question. Lesson: a repair to a criterion's input semantics must quote the criterion's lead-in, not paraphrase it.",
+        "Fixed (Judge): Hebrew mirror rendered 'primary residence' as 'דירת מגורים ראשונה' (first home) since v1.0.0; now עיקרית. Hebrew legal terms need a back-translation check, the evidence gate does not read them.",
+        "Fixed (Judge+Expert): proposed de minimis USD 50,000 test is the AGGREGATE of such trusts in Israel, not per product; same defect class as the old per-fund USD 25,000 error.",
+        "Fixed (Legal): English description trigger 'or is deciding what to buy' replaced; enriched 'Buying a TASE ETF' prompt and 'considering buying' bullet reframed to US reporting consequences; both Legal notices now say not investment advice.",
+        "Deferred (Expert R2-m3/R3-m2 MINOR): script uses one --peak-value-usd for both the USD 600,000 retirement value test (1 July rate, retirement trusts) and the USD 50,000 de minimis test (last-day rate, savings trusts); split into two inputs next cycle.",
+        "Deferred (Expert R3-m1 MINOR): --percentage-limited help should say the percentage limit must be set by Israeli law governing the plan; provider-only percentage is a preparer question.",
+        "Deferred (script review r2 SOUND-BUT-INCOMPLETE): when a direct share is reported with only --mtm-elected/--qef-elected, nothing is printed about the exceptions; harmless but silent.",
+        "Open: whether Israeli income tax on an early keren hishtalmut withdrawal is a 5.03(5) 'penalty' still has no IRS source (checked 2026-11-11, Rev. Proc., proposed-reg preamble, Dec 2025 3520 instructions).",
+        "Open: section 4371 foreign-insurer excise for bituach menahalim / polisat chisachon: treaty Art. 8(8) exempts premiums received by an Israeli insurer subject to a no-reinsurance proviso; whether the saving clause lets the US impose it on a US-citizen payor is unsettled, routed as a preparer question only."
+      ]
     }
   ]
 }

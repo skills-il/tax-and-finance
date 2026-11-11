@@ -9,13 +9,17 @@ or a PFIC for US purposes.
 
 Criteria are those in ../references/screening-criteria.md and ../evidence.json.
 
-All USD amounts for the Revenue Procedure 2020-17 limits must already be converted at the US
-Treasury Bureau of the Fiscal Service rate on the last day of the tax year.
+The contribution limits tested are limits set by Israeli law governing the plan, not what the
+user happened to deposit (Rev. Proc. 2020-17 section 5.03: "requirements established by the laws
+of the trust's jurisdiction"). A limit found only in the provider's own terms is a preparer
+question, not an input here. Enter a legal limit converted to USD, or --no-contribution-cap.
+Revenue Procedure 2020-17 caps convert at the US Treasury Bureau of the Fiscal Service rate on
+the last day of the tax year; the proposed-regulation retirement limits at the 1 July rate.
 
 Usage:
   python3 screen_product.py --example
   python3 screen_product.py --name "keren hishtalmut" --wrapper --purpose general \
-      --withdrawal unconditional-after-term --annual-usd 14000
+      --withdrawal unconditional-after-term --peak-value-usd 40000
   python3 screen_product.py --name "TASE ETF" --pooled-securities --all-pfic-value-usd 18000
 """
 
@@ -27,10 +31,13 @@ PFIC_INDIRECT_EXCEPTION = 5_000
 RP_503 = {"annual": 50_000, "lifetime": 1_000_000}
 RP_504 = {"annual": 10_000, "lifetime": 200_000}
 RP_504_PURPOSES = {"medical", "disability", "educational"}
+# Proposed Reg. 1.6048-5(b) (89 FR 39440, 8 May 2024), NOT final. Elective reliance only.
+PROP_RETIREMENT = {"annual": 75_000, "lifetime": 1_000_000, "value": 600_000}
+PROP_DE_MINIMIS_VALUE = 50_000
 
 
 def part1_exception_lines(all_pfic_value_usd, indirect_value_usd, filing, excess_distribution,
-                          sold_at_gain, qef_elected):
+                          sold_at_gain, qef_elected, mtm_elected=False):
     lines = []
     lost = []
     if excess_distribution:
@@ -39,6 +46,9 @@ def part1_exception_lines(all_pfic_value_usd, indirect_value_usd, filing, excess
         lost.append("gain was recognized on selling this fund's stock this year")
     if qef_elected:
         lost.append("a QEF election was made for this fund")
+    if mtm_elected:
+        lost.append("a section 1296 mark-to-market election is in effect, so it is not a "
+                    "section 1291 fund")
     if lost:
         lines.append("  Part I exceptions (USD 25,000 and USD 5,000): NOT available, because "
                      + " and ".join(lost) + ".")
@@ -52,7 +62,7 @@ def part1_exception_lines(all_pfic_value_usd, indirect_value_usd, filing, excess
     elif all_pfic_value_usd <= limit:
         lines.append(f"  USD 25,000 exception: all PFIC stock totals USD {all_pfic_value_usd:,} at")
         lines.append(f"  year end, within USD {limit:,} for a {filing} return, with no excess")
-        lines.append("  distribution, no gain on a sale and no QEF election reported. Part I")
+        lines.append("  distribution, no gain on a sale and no QEF or MTM election reported. Part I")
         lines.append("  appears not required for this fund.")
     else:
         lines.append(f"  USD 25,000 exception: all PFIC stock totals USD {all_pfic_value_usd:,}, "
@@ -74,7 +84,7 @@ def part1_exception_lines(all_pfic_value_usd, indirect_value_usd, filing, excess
 
 
 def pfic_screen(pooled, wrapper, all_pfic_value_usd, indirect_value_usd, filing,
-                excess_distribution, sold_at_gain, qef_elected):
+                excess_distribution, sold_at_gain, qef_elected, mtm_elected=False):
     """Neither PFIC test can be applied without the fund's holdings; report what IS decidable."""
     lines = []
     if wrapper:
@@ -87,8 +97,16 @@ def pfic_screen(pooled, wrapper, all_pfic_value_usd, indirect_value_usd, filing,
         lines.append("  through a wrapper; it counts toward the USD 25,000 aggregate. Check the")
         lines.append("  excess-distribution and gain conditions for EACH underlying fund.")
     if not pooled and not wrapper:
-        lines.append("  Not described as holding pooled securities, so the PFIC tests are")
-        lines.append("  probably not engaged. Confirm what the product actually holds.")
+        lines.append("  A direct holding that is neither a pooled fund nor a wrapper: a deposit is")
+        lines.append("  not stock, so it raises no PFIC question. A share in an Israeli company is")
+        lines.append("  PFIC stock only if THAT company meets the income or asset test; an operating")
+        lines.append("  company usually does not, a holding or cash-rich company can. Check whether")
+        lines.append("  the company publishes a PFIC statement.")
+        if all_pfic_value_usd is not None or sold_at_gain or excess_distribution:
+            lines.append("  If the company IS a PFIC:")
+            lines.extend(part1_exception_lines(all_pfic_value_usd, indirect_value_usd, filing,
+                                               excess_distribution, sold_at_gain, qef_elected,
+                                               mtm_elected))
         return lines
     if pooled:
         lines.append("  Holds pooled securities, so the income test (75% passive, section")
@@ -96,15 +114,23 @@ def pfic_screen(pooled, wrapper, all_pfic_value_usd, indirect_value_usd, filing,
         lines.append("  likely met. This is an inference from the tests, NOT an IRS")
         lines.append("  determination about this fund.")
     lines.extend(part1_exception_lines(all_pfic_value_usd, indirect_value_usd, filing,
-                                       excess_distribution, sold_at_gain, qef_elected))
-    lines.append("  Default treatment absent an election is the section 1291 regime, under")
-    lines.append("  which the ENTIRE gain on disposition is treated as an excess")
-    lines.append("  distribution. Elections are a preparer's call.")
+                                       excess_distribution, sold_at_gain, qef_elected,
+                                       mtm_elected))
+    if mtm_elected or qef_elected:
+        lines.append("  An election is reported for this fund. Whether the section 1291 regime still")
+        lines.append("  reaches any part of the holding (for example a QEF election made after the")
+        lines.append("  first year of holding) and how the election applies is a preparer's call.")
+    else:
+        lines.append("  Default treatment absent an election is the section 1291 regime, under")
+        lines.append("  which the ENTIRE gain on disposition is treated as an excess")
+        lines.append("  distribution. Elections are a preparer's call.")
     return lines
 
 
-def dollar_limbs(annual_usd, lifetime_usd, limits):
-    """Return 'pass', 'fail' or 'unknown' for disjunctive annual-or-lifetime dollar limits."""
+def dollar_limbs(annual_usd, lifetime_usd, limits, no_cap=False):
+    """Return 'pass', 'fail' or 'unknown' for disjunctive annual-or-lifetime dollar CAPS."""
+    if no_cap:
+        return "fail"
     if (annual_usd is not None and annual_usd <= limits["annual"]) or \
        (lifetime_usd is not None and lifetime_usd <= limits["lifetime"]):
         return "pass"
@@ -127,7 +153,7 @@ def report(lines, title, fails, opens, untested):
 
 
 def trust_screen(purpose, withdrawal, annual_usd, lifetime_usd, earned_income_only,
-                 percentage_limited):
+                 percentage_limited, peak_value_usd=None, no_cap=False):
     lines = []
     penalty = withdrawal == "penalty-before-condition"
     # 5.03
@@ -145,14 +171,16 @@ def trust_screen(purpose, withdrawal, annual_usd, lifetime_usd, earned_income_on
     elif earned_income_only is None:
         open_503.append("criterion 5.03(3), earned-income contributions only; not stated")
     if not percentage_limited:
-        limbs = dollar_limbs(annual_usd, lifetime_usd, RP_503)
+        limbs = dollar_limbs(annual_usd, lifetime_usd, RP_503, no_cap)
         if limbs == "fail":
-            fails_503.append(f"criterion 5.03(4): not percentage-limited, annual over USD "
-                             f"{RP_503['annual']:,} AND lifetime over USD {RP_503['lifetime']:,}")
+            fails_503.append(f"criterion 5.03(4): not percentage-limited, and no annual cap of USD "
+                             f"{RP_503['annual']:,} or less nor lifetime cap of USD "
+                             f"{RP_503['lifetime']:,} or less")
         elif limbs == "unknown":
             open_503.append("criterion 5.03(4) is met by a percentage-of-earned-income cap OR "
                             f"annual USD {RP_503['annual']:,} or less OR lifetime USD "
-                            f"{RP_503['lifetime']:,} or less; not enough data to tell")
+                            f"{RP_503['lifetime']:,} or less; a legal limit is missing, and if "
+                            "Israeli law sets none for this plan the dollar limbs fail")
     report(lines, "  Section 5.03, tax-favored foreign retirement trust:", fails_503, open_503,
            "5.03(1), (2) and (6)")
 
@@ -171,22 +199,83 @@ def trust_screen(purpose, withdrawal, annual_usd, lifetime_usd, earned_income_on
         elif penalty:
             open_504.append("criterion 5.04(4) penalty limb: confirm the early-withdrawal cost "
                             "is a penalty")
-    limbs = dollar_limbs(annual_usd, lifetime_usd, RP_504)
+    limbs = dollar_limbs(annual_usd, lifetime_usd, RP_504, no_cap)
     if limbs == "fail":
-        fails_504.append(f"criterion 5.04(3): annual over USD {RP_504['annual']:,} AND lifetime "
-                         f"over USD {RP_504['lifetime']:,} (no percentage limb in 5.04)")
+        fails_504.append(f"criterion 5.04(3): no annual cap of USD {RP_504['annual']:,} or less "
+                         f"nor lifetime cap of USD {RP_504['lifetime']:,} or less (no percentage "
+                         "limb in 5.04)")
     elif limbs == "unknown":
         open_504.append(f"criterion 5.04(3), USD {RP_504['annual']:,} annual or USD "
-                        f"{RP_504['lifetime']:,} lifetime; not enough data to tell")
+                        f"{RP_504['lifetime']:,} lifetime limits; a legal limit is missing, and if "
+                        "Israeli law sets none for this plan this criterion fails")
     report(lines, "  Section 5.04, tax-favored foreign non-retirement savings trust:", fails_504,
            open_504, "5.04(1) and (2)")
 
     if fails_503 and fails_504:
         lines.append("")
-        lines.append("  Neither exemption appears available on these facts. That does NOT mean")
-        lines.append("  the product IS a foreign trust. It means the Revenue Procedure 2020-17")
+        lines.append("  Neither Revenue Procedure 2020-17 exemption appears available on these")
+        lines.append("  facts. That does NOT mean the product IS a foreign trust. It means this")
         lines.append("  safe harbour does not clear it, and a preparer has to reach the")
         lines.append("  underlying question.")
+    lines.append("")
+    lines.extend(proposed_reg_lines(purpose, withdrawal, annual_usd, lifetime_usd,
+                                    percentage_limited, peak_value_usd, earned_income_only,
+                                    no_cap))
+    return lines
+
+
+def proposed_reg_lines(purpose, withdrawal, annual_usd, lifetime_usd, percentage_limited,
+                       peak_value_usd, earned_income_only=None, no_cap=False):
+    """Elective alternative under proposed Reg. 1.6048-5(b). Still proposed, not final."""
+    lines = ["  Elective alternative, proposed Reg. 1.6048-5(b) (8 May 2024, NOT final). A",
+             "  taxpayer may rely on it only if they and all related persons apply the",
+             "  proposed regulations in their entirety and consistently from the first year",
+             "  of reliance. Whether to rely is a preparer's call."]
+    unconditional = withdrawal in ("unconditional", "unconditional-after-term")
+    category_cleared = False
+    if purpose == "retirement":
+        caps = (not no_cap) and (
+            (annual_usd is not None and annual_usd <= PROP_RETIREMENT["annual"])
+            or (lifetime_usd is not None and lifetime_usd <= PROP_RETIREMENT["lifetime"]))
+        value_ok = peak_value_usd is not None and peak_value_usd <= PROP_RETIREMENT["value"]
+        ok_limit = percentage_limited or caps or value_ok
+        lines.append("    Retirement category: percentage cap OR annual cap USD 75,000 or less OR")
+        lines.append("    lifetime cap USD 1,000,000 or less OR aggregate value of such trusts in")
+        lines.append("    Israel no more than USD 600,000 at any point in the year (base figures,")
+        lines.append("    indexed in the proposed text; value and caps at the 1 July rate).")
+        lines.append("    Limit: " + ("appears met." if ok_limit else
+                                     "not shown to be met on the data given."))
+        if earned_income_only is False:
+            lines.append("    OPEN  earned-income-only, with an allowance for limited contributions")
+            lines.append("          by unemployed individuals; confirm the other sources qualify.")
+        if unconditional:
+            lines.append("    The withdrawal condition is worded exactly as 5.03(5), so it fails here too.")
+        elif withdrawal == "penalty-before-condition":
+            lines.append("    OPEN  penalty limb, worded as 5.03(5): confirm the early-withdrawal cost")
+            lines.append("          is a penalty.")
+        category_cleared = (ok_limit and withdrawal == "retirement-conditioned"
+                            and earned_income_only is True)
+    elif purpose in RP_504_PURPOSES:
+        lines.append("    Non-retirement category: same purpose and withdrawal tests as 5.04, with")
+        lines.append("    the USD 10,000 / 200,000 caps indexed in the proposed text.")
+    lines.append("    De minimis savings trust category (applies only if the arrangement is NOT")
+    lines.append("    within the retirement or non-retirement category): a tax-favored savings")
+    lines.append("    vehicle reported to the local tax authority, where the aggregate value of")
+    lines.append("    such trusts in Israel is no more than USD 50,000 at EVERY point in the year")
+    lines.append("    (last-day rate).")
+    if category_cleared:
+        lines.append("    Not needed: the retirement category above appears met on these facts.")
+    elif peak_value_usd is None:
+        lines.append("    Not evaluated: provide --peak-value-usd (aggregate of all such")
+        lines.append("    arrangements in Israel, at its highest point in the year).")
+    elif peak_value_usd <= PROP_DE_MINIMIS_VALUE:
+        lines.append(f"    Peak aggregate value USD {peak_value_usd:,} is within USD 50,000, so this")
+        lines.append("    category may be in play. CAUTION: the operative paragraph (b)(1) lists only")
+        lines.append("    the retirement and non-retirement categories, so whether de minimis trusts")
+        lines.append("    are actually exempted under the proposed text is a preparer question.")
+    else:
+        lines.append(f"    Peak aggregate value USD {peak_value_usd:,} exceeds USD 50,000, so this")
+        lines.append("    category does not appear available.")
     return lines
 
 
@@ -211,13 +300,27 @@ def main():
                    help="gain was recognized on selling this fund's stock this year")
     p.add_argument("--qef-elected", action="store_true",
                    help="a QEF election was made for this fund")
+    p.add_argument("--mtm-elected", action="store_true",
+                   help="a section 1296 mark-to-market election is in effect for this fund")
     p.add_argument("--purpose", choices=["retirement", "medical", "disability", "educational",
                                          "general"], default="general")
     p.add_argument("--withdrawal", choices=["retirement-conditioned", "penalty-before-condition",
                                             "unconditional-after-term", "unconditional"],
                    default="unconditional")
-    p.add_argument("--annual-usd", type=int, default=None)
-    p.add_argument("--lifetime-usd", type=int, default=None)
+    p.add_argument("--annual-limit-usd", dest="annual_usd", type=int, default=None,
+                   help="annual contribution limit set by Israeli law governing the plan, in "
+                        "USD (not what was deposited)")
+    p.add_argument("--lifetime-limit-usd", dest="lifetime_usd", type=int, default=None,
+                   help="lifetime contribution limit set by Israeli law governing the plan, in "
+                        "USD")
+    p.add_argument("--no-contribution-cap", action="store_true",
+                   help="Israeli law sets no contribution limit for this plan")
+    p.add_argument("--insurance-policy", action="store_true",
+                   help="the wrapper is an insurance policy (bituach menahalim, polisat chisachon)")
+    p.add_argument("--peak-value-usd", type=int, default=None,
+                   help="highest aggregate value during the year of all such arrangements in "
+                        "Israel, in USD, for the proposed-regulation value tests (1 July rate "
+                        "for the USD 600,000 test, last-day rate for the USD 50,000 test)")
     p.add_argument("--percentage-limited", action="store_true",
                    help="contributions are capped as a percentage of earned income (5.03(4))")
     p.add_argument("--earned-income-only", dest="earned_only", action="store_true", default=None,
@@ -226,14 +329,27 @@ def main():
                    help="contributions come from sources other than earned income")
     p.add_argument("--example", action="store_true")
     a = p.parse_args()
-    if a.wrapper and a.indirect_value_usd is not None:
-        p.error("--indirect-value-usd is for stock held through another PFIC; the USD 5,000 "
-                "exception does not reach stock owned through a wrapper")
+    for flag in ("all_pfic_value_usd", "indirect_value_usd", "annual_usd", "lifetime_usd",
+                 "peak_value_usd"):
+        v = getattr(a, flag)
+        if v is not None and v < 0:
+            p.error(f"{flag} cannot be negative")
+    if a.pooled_securities and a.wrapper:
+        p.error("choose one: --pooled-securities for a fund held directly, --wrapper for a "
+                "pension, gemel, hishtalmut or policy")
+    if a.insurance_policy and not a.wrapper:
+        p.error("--insurance-policy describes a wrapper; add --wrapper")
+    if a.no_contribution_cap and (a.annual_usd is not None or a.lifetime_usd is not None):
+        p.error("--no-contribution-cap conflicts with a cap value")
+    if a.indirect_value_usd is not None and not a.pooled_securities:
+        p.error("--indirect-value-usd is for a fund held through another PFIC; use it with "
+                "--pooled-securities. The USD 5,000 exception does not reach stock owned "
+                "through a wrapper")
 
     if a.example:
         a.name = "keren hishtalmut (example)"
         a.wrapper, a.filing, a.earned_only = True, "joint", True
-        a.purpose, a.withdrawal, a.annual_usd = "general", "unconditional-after-term", 14_000
+        a.purpose, a.withdrawal = "general", "unconditional-after-term"
         print("(example: a salaried employee's keren hishtalmut on an equity track)\n")
 
     print(f"SCREENING: {a.name}")
@@ -241,29 +357,50 @@ def main():
     print("-- PFIC screen --")
     for l in pfic_screen(a.pooled_securities, a.wrapper, a.all_pfic_value_usd,
                          a.indirect_value_usd, a.filing, a.excess_distribution, a.sold_at_gain,
-                         a.qef_elected):
+                         a.qef_elected, a.mtm_elected):
         print(l)
-    fund_only = a.pooled_securities and not a.wrapper
+    direct = not a.wrapper
     print("\n-- Foreign trust screen (Revenue Procedure 2020-17) --")
-    if fund_only:
+    if direct and a.pooled_securities:
         print("  Not a trust question: a directly held fund or ETF is screened as PFIC stock only.")
+    elif direct:
+        print("  Not a trust question: a direct share or a bank deposit is not a trust")
+        print("  arrangement. Use --wrapper for a pension, gemel, hishtalmut or policy.")
     else:
         print("  Scope: this Revenue Procedure exempts from section 6048 REPORTING only. It does")
         print("  not change taxation or any other reporting duty. Eligibility is limited to")
         print("  individuals already compliant on the related income tax.")
         for l in trust_screen(a.purpose, a.withdrawal, a.annual_usd, a.lifetime_usd,
-                              a.earned_only, a.percentage_limited):
+                              a.earned_only, a.percentage_limited, a.peak_value_usd,
+                              a.no_contribution_cap):
             print(l)
     print("\n-- Ask your preparer --")
-    if not fund_only:
-        print(f"  1. Is {a.name} a foreign trust for US purposes on its actual plan terms?")
-        print("  2. If it is, does any exemption outside Revenue Procedure 2020-17 apply?")
-    if a.pooled_securities or a.wrapper:
-        print("  3. What are the underlying fund holdings, and does any of them meet a PFIC test?")
+    qs = []
     if a.wrapper:
-        print("  4. Does the US-Israel treaty bring this arrangement within Reg. 1.1298-1(c)(4)?")
-    print("\n  Dollar limits are measured at the US Treasury Bureau of the Fiscal Service rate")
-    print("  on the last day of each tax year.")
+        qs.append(f"Is {a.name} a foreign trust for US purposes on its actual plan terms?")
+        qs.append("If it is, should I rely on Revenue Procedure 2020-17 or, all-or-nothing, on "
+                  "the 2024 proposed section 6048 regulations?")
+        qs.append("What funds does the investment track hold, and does any of them meet a PFIC "
+                  "test?")
+        qs.append("Reg. 1.1298-1(c)(4) needs a treaty provision taxing the fund's income only "
+                  "when paid, and the US-Israel treaty text has none; if you rely on it, on what "
+                  "basis?")
+        if a.insurance_policy:
+            qs.append("Is the excise tax on premiums paid to foreign insurers (Form 720, IRS No. "
+                      "30) due on this policy, or does Article 8(8) of the US-Israel treaty "
+                      "relieve it?")
+    elif a.pooled_securities:
+        qs.append("Does this fund meet a PFIC test on its actual holdings, and does it issue a "
+                  "PFIC Annual Information Statement?")
+    else:
+        qs.append(f"Does {a.name} raise any PFIC question at all (for a company share: is the "
+                  "company a PFIC)?")
+    for i, q in enumerate(qs, 1):
+        print(f"  {i}. {q}")
+    if a.wrapper:
+        print("\n  Revenue Procedure 2020-17 dollar limits use the US Treasury Bureau of the Fiscal")
+        print("  Service rate on the last day of the tax year; the proposed-regulation retirement")
+        print("  limits use the 1 July rate, and its USD 50,000 de minimis test the last-day rate.")
     return 0
 
 

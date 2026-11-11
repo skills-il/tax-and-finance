@@ -37,8 +37,8 @@ source, and no secondary source was used for a value.
       why core: explains WHY PFIC status matters rather than merely asserting that it does.
 
 - [ ] The USD 5,000 Part I exception, limited to a fund owned THROUGH ANOTHER PFIC (per fund,
-      same no-excess-distribution, no-gain and no-QEF conditions; it does not reach stock held
-      through a grantor-trust wrapper), and the aggregate carve-outs and no-QEF condition of the
+      same no-excess-distribution, no-gain and no-election (QEF or mark-to-market) conditions; it does not reach stock held
+      through a grantor-trust wrapper), and the aggregate carve-outs and no-QEF-or-MTM condition of the
       USD 25,000 exception. (Scope corrected 2026-09-13 after Expert iteration 2.)
       source: Instructions for Form 8621; Treas. Reg. 1.1298-1(c)(2)
 
@@ -94,7 +94,30 @@ source, and no secondary source was used for a value.
       output is a screen and never a classification.
       why core: this is simultaneously the honest position and the legally safe one.
 
+- [ ] The ELECTIVE alternative under proposed Reg. 1.6048-5(b) (May 2024, still proposed):
+      all-or-nothing reliance including related persons; USD 75,000 annual or USD 600,000
+      value alternatives for retirement trusts at the 1 July rate; new de minimis savings trust
+      category at USD 50,000, with the (b)(1) drafting caveat. Added 2026-11-11; the 2026-09-13
+      cycle applied Rev. Proc. 2020-17 alone.
+      source: 89 FR 39440, proposed 1.6048-5(b) and preamble section VI
+
+- [ ] Reg. 1.1298-1(c)(4) and the US-Israel treaty: (c)(4) needs a treaty provision taxing the
+      fund's income only when paid; the treaty text has none and no pension-fund definition;
+      Article 20(1) is subject to the Article 6(3) saving clause (Protocol 2 exempts only
+      20(2) and 20(3)). Resolved 2026-11-11 (was an
+      open CARRY from 2026-09-13).
+      source: Treas. Reg. 1.1298-1(c)(4); US-Israel treaty Articles 6(3), 20
+
+- [ ] Products outside the two regimes, named so the screen does not invent a trust question:
+      directly held TASE company shares (PFIC only if the company itself qualifies) and a bank
+      deposit (neither regime). Added 2026-11-11 after the script screened a deposit as a
+      possible foreign trust.
+
 ## Should cover (advanced / edge cases)
+
+- [ ] Insurance-company savings policies (polisat chisachon) and bituach menahalim: the
+      foreign-insurer premium excise (Form 720, IRS No. 30) and treaty Article 8(8), routed as
+      a preparer question. Added 2026-11-11.
 
 - [ ] Bituach menahalim, which is genuinely indeterminate without the policy terms.
 - [ ] The interaction with Form 8938, which reports many of these as specified foreign
@@ -112,6 +135,13 @@ source, and no secondary source was used for a value.
 - Making or choosing between QEF and mark-to-market elections. Reserved to a preparer.
 - Any buy, sell, hold or switch recommendation. That is investment advice, separately
   regulated, and out of scope on purpose.
+
+Out-of-scope re-check 2026-11-11: each row above was re-examined. Users do ask about filing
+mechanics, Israeli-side tax and SE tax, and each has a dedicated sibling skill that answers
+them, so routing is a real answer, not silence. Elections and buy/sell advice stay out because
+they are reserved (preparer judgement; Israeli Investment Advice Law). None became capturable.
+The English description's trigger "or is deciding what to buy" was replaced the same day so the
+skill is not invoked as a purchase adviser.
 
 ## Known bad sources and framings (do not regress to these)
 
