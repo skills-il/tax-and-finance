@@ -34,8 +34,9 @@ Reference Links before relying on it.
 
 An American freelancing in Israel pays Bituach Leumi like everyone else, and then discovers a
 second social tax bill from a country they may not have lived in for years. The United States
-has social security agreements with thirty countries that stop exactly this double charge, and
-Israel is not one of them. Worse, the relief most Americans abroad rely on, the foreign earned
+has social security agreements with thirty-one countries that stop exactly this double charge,
+and Israel is not one of them. Since 2026 Israel relieves part of the double charge on its own
+side for recent olim from the United States (Stage 1), but nothing removes the US charge. Worse, the relief most Americans abroad rely on, the foreign earned
 income exclusion, does not touch self-employment tax at all. So a freelancer can owe zero US
 income tax and still owe thousands of dollars of US self-employment tax, usually finding out
 when a penalty notice arrives.
@@ -58,21 +59,60 @@ Three conditions have to hold together. Check each rather than assuming:
 
 Then state the two facts that make this different from every other country's expats:
 
-**There is no US-Israel totalization agreement.** The United States has social security
+**There is no US-Israel totalization agreement.** The 2026 Schedule SE instructions list
 agreements with Australia, Austria, Belgium, Brazil, Canada, Chile, the Czech Republic,
 Denmark, Finland, France, Germany, Greece, Hungary, Iceland, Ireland, Italy, Japan,
 Luxembourg, the Netherlands, Norway, Poland, Portugal, the Slovak Republic, Slovenia, South
-Korea, Spain, Sweden, Switzerland, the United Kingdom, and Uruguay. Israel is absent from that
-list. Under such an agreement a person generally pays social taxes to only the country where
-they live. Without one, both systems charge.
+Korea, Spain, Sweden, Switzerland, the United Kingdom, and Uruguay. SSA's own list adds
+Romania, in force from September 1, 2026, for thirty-one in all; the IRS list lags, so check
+SSA for later additions. Israel is absent from both. Under such an agreement a person
+generally pays social taxes to only the country where they live. Without one, both systems
+charge, subject to the Israeli-side exemption below.
+
+**Recent olim from the United States: an Israeli-side exemption.** National Insurance Law
+Amendment No. 262, a temporary provision passed on 25 February 2026, applies from 1 January
+2026 to 31 December 2035 and adds section 350A. An Israeli resident who is a new oleh from a
+country in Schedule ט"ז1 (it lists only the United States) is exempt from Bituach Leumi
+contributions on business or employment income for which they pay social security in the
+United States, until five years have passed from the oleh visa or certificate, or from the
+Ministry of Aliyah and Integration certificate for someone eligible for assistance as an oleh.
+The Minister may amend the schedule and may extend the period by order, so check both are
+still current. Three things follow, and state all three:
+
+- It changes nothing on the US side. SE tax is still owed in full.
+- It is conditional on paying US social security on that income, so for this group paying SE
+  tax is also what supports the Israeli exemption.
+- Health insurance contributions (דמי ביטוח בריאות) are not exempt, and Bituach Leumi may still
+  be due on other income that bears no US social security, once it passes minimum monthly
+  amounts (section 350A(c); confirm the amounts with Bituach Leumi). The exempt period counts as if
+  contributions were paid for benefits that need a qualifying period. The exemption is claimed
+  at the local Bituach Leumi branch.
+
+Ask the aliyah date. The text defines the oleh by the five-year clock and does not require
+aliyah in 2026 or later, and it applies to contributions due for January 2026 onward (section
+5). On that wording an oleh whose five years run past January 2026 appears covered for the
+remaining months, but confirm with Bituach Leumi before relying on it. Two more questions for
+Bituach Leumi, not for this skill: whether income above the US wage base, which bears only the
+2.9 percent Medicare tax, counts as income on which US social security is paid; and the amount
+due on any non-exempt income. Computing Bituach Leumi itself stays out of scope.
 
 **The exclusion does not help.** Foreign earnings from self-employment cannot be reduced by
 the foreign earned income exclusion when computing SE tax, and a self-employed US citizen
 living outside the United States must in most cases pay SE tax. This is the point users find
 hardest to believe, so state it plainly and cite it.
 
-The result: Bituach Leumi and Israeli income tax on one side, US self-employment tax on the
-other, with the exclusion or the credit reaching only the US INCOME tax and never the SE tax.
+The result: Bituach Leumi (for an exempt oleh, health insurance, plus Bituach Leumi on other
+income above the minimums) and Israeli income tax on one side, US self-employment tax on the other, with the exclusion or the credit reaching
+only the US INCOME tax and never the SE tax. What the US tax buys: SSA uses the information
+from Schedule SE to figure benefits under the US social security program.
+
+Two questions to ask before projecting anything. First, were earlier years filed with Schedule
+SE? A user only now learning about SE tax usually has open prior years; that is a separate
+exposure for a professional and `us-israel-dual-tax-navigator`, not something to fold into
+this year's figure. Second, can the Bituach Leumi they pay be credited? Pub 514 bars a credit
+or deduction only for social security taxes paid to an agreement country, and Israel is not
+one, so this is a live US INCOME-tax question for the preparer and
+`us-israel-dual-tax-navigator`. It never reduces SE tax. Do not assert the answer.
 
 **The income tax treaty does not help either.** Users ask this next. The US-Israel convention
 covers, for the United States, "the Federal income taxes imposed by the Internal Revenue
@@ -96,11 +136,22 @@ Medicare. Note that the 15.3 percent applies to the reduced base from step 2, no
 net earnings, which is why a rough estimate using 15.3 percent of net earnings slightly
 overstates the bill.
 
+**Which profit figure.** Step 1 is Schedule C net profit, computed under US rules. An Israeli
+figure the user quotes may be taxable income after personal deductions, or profit after the
+owner's own pension or keren hishtalmut deposits, or after Bituach Leumi. Ask which figure it
+is and have the preparer reconcile it. For US plans, the Schedule C instructions put
+contributions made on the owner's own behalf on Schedule 1, not on Schedule C.
+
+**Shekels to dollars.** The IRS rule is to use "the exchange rate prevailing when you receive,
+pay, or accrue the item", and the IRS also publishes yearly average rates. Which convention
+fits the return is a preparer question. For a projection, state the rate you assumed, and for
+a future year say plainly that it is an assumption.
+
 **The social security wage base is annual and it changes.** For 2025 the maximum amount of
-self-employment income subject to social security tax is USD 176,100. For 2026 the maximum
-amount of earned income (wages and net earnings from self-employment) subject to social
-security tax is USD 184,500, published in the 2026 Form 1040-ES before that year's Schedule SE
-instructions exist. Use the figure for the year you are computing, never a prior year's. The
+self-employment income subject to social security tax is USD 176,100. For 2026 it is USD
+184,500, stated in both the 2026 Form 1040-ES and the 2026 Schedule SE instructions. For 2027
+SSA has published the base as USD 192,300; the 2027 IRS forms were not yet out when this was
+checked (2026-11-11). Use the figure for the year you are computing, never a prior year's. The
 Medicare portion has no cap, so income above the base is still charged at 2.9 percent.
 
 The base is shared with wages. If the user also has social security wages on a US Form W-2,
@@ -108,7 +159,10 @@ Schedule SE subtracts them from the base (lines 8a and 9) and applies 12.4 perce
 smaller of the SE amount or what remains. Skipping this overstates the bill for anyone with
 US wages.
 
-**Additional Medicare Tax thresholds:**
+**Additional Medicare Tax thresholds.** Ask marital status and the spouse's residency first.
+With a nonresident alien spouse, the user can choose to treat the spouse as a US resident (Pub
+54); that choice drives the filing status and so the threshold. Let the preparer settle it.
+
 
 | Filing status | Threshold |
 |---|---|
@@ -153,15 +207,23 @@ under-paid purely because of SE tax.
 
 The periods are not equal quarters, so say which instalment is next from today's date. The
 fourth is not required if the 2026 return is filed by February 1, 2027 with the whole balance
-paid.
+paid. For 2027, take the dates from the 2027 Form 1040-ES once published, not from this
+table.
 
 **Who must pay and how much avoids a penalty.** Estimated tax is generally required where the
 user expects to owe at least USD 1,000 for the year. Paying the smaller of 90 percent of the
 current year's tax or 100 percent of the prior year's tax (for 2026, the 2025 return, which
 must cover all 12 months) avoids the penalty. If the prior year's adjusted gross income was
 more than USD 150,000 (USD 75,000 married filing separately), the 100 percent becomes 110
-percent. Explain these tests and let the preparer apply them; they depend on the whole return,
-not the SE figure alone.
+percent. The prior-year test needs a filed prior-year return: per Form 1040-ES, if no 2025
+return was filed or the 2025 tax year was less than 12 full months, that test is skipped and
+only the current-year test is left. A user who is behind on returns cannot lean on "100
+percent of last year". Explain these tests and let the preparer apply them; they depend on the
+whole return, not the SE figure alone.
+
+**Uneven income.** The annualized income installment method can lower or eliminate a required
+payment for one or more periods, and using it means filing Form 2210 with Schedule AI. Name it
+as a preparer question for anyone whose income arrived late in the year.
 
 **Catching up later does not erase earlier penalties.** Per Form 1040-ES, the penalty is
 imposed on each underpayment for the number of days it remains unpaid. A user who skipped the
@@ -177,7 +239,10 @@ None of this moves the quarterly instalment dates above.
 Practical framing that helps more than a lecture: convert the projected annual SE tax into a
 percentage of each invoice the user should set aside as they get paid, in shekels, so the
 money exists when the instalment is due. Show the arithmetic rather than asserting a
-percentage.
+percentage. The script's percentage is of net profit, so apply it to profit, never to an
+invoice total that includes VAT. It covers US SE-related tax only: US income tax depends on
+the exclusion or credit choice (`us-israel-dual-tax-navigator`), and Israeli mikdamot and
+Bituach Leumi are a separate layer (`israeli-freelancer-ops`).
 
 ### Stage 4: Lay out the structural options without recommending one
 
@@ -187,7 +252,7 @@ clearly that choosing among them is not something this skill does.
 
 | Option | The idea | What it costs or risks |
 |---|---|---|
-| Stay an osek and pay both | No restructuring | The full double charge every year |
+| Stay an osek and pay both | No restructuring | The full double charge every year, except the Bituach Leumi part (not health insurance) for an oleh inside the section 350A exemption |
 | Operate through an Israeli company | Income may be characterised as corporate profit and salary rather than self-employment earnings | Israeli corporate compliance, payroll, accounting cost, and a set of US anti-deferral rules for owning a foreign corporation that are their own significant problem |
 | Operate through a US entity | Whether anything changes depends on the entity type and its tax elections; do not assume forming one alters the SE tax | US filing obligations, possible Israeli tax residence of the entity, and cost |
 
@@ -201,9 +266,9 @@ incorporation as a clean fix.
 
 Output: the projected SE tax for the year with each step shown, the Additional Medicare Tax
 position as a separate Form 8959 line, the amount to set aside per invoice, the instalment
-dates still ahead, and a short list of questions for a preparer (including which safe-harbor
-test applies). State which year's wage base you used and where it came
-from.
+dates still ahead, and a short list of questions for a preparer (which safe-harbor test
+applies, whether a prior-year return was filed, open earlier years, filing status). State
+which year's wage base and which exchange rate you used and where they came from.
 
 ## Do NOT use this skill for
 
@@ -217,7 +282,8 @@ from.
   `us-person-israeli-investment-check`.
 - Israeli-side bookkeeping, VAT, invoicing or the osek patur and osek murshe thresholds. Use
   `israeli-freelancer-ops` and `israeli-vat-reporting`.
-- Bituach Leumi rates and entitlements on the Israeli side.
+- Bituach Leumi rates and entitlements on the Israeli side. Use `israeli-freelancer-ops`;
+  this skill only flags the section 350A exemption for recent US olim.
 
 ## Recommended MCP Servers
 
@@ -247,8 +313,8 @@ from.
 4. **Treating the SE tax deduction as reducing the SE tax.** It reduces adjusted gross income
    for income tax purposes only.
 5. **Assuming a totalization agreement exists because most developed countries have one.**
-   Thirty countries have one and Israel is not among them. Check the list rather than
-   generalising.
+   Thirty-one countries have one (Romania since September 2026, not yet in the IRS list) and
+   Israel is not among them. Check SSA's list rather than generalising.
 6. **Recommending an Israeli company as the fix.** It moves the problem into US anti-deferral
    territory for owners of foreign corporations, which is out of scope here and frequently
    worse. Present options, never a recommendation.
@@ -258,6 +324,11 @@ from.
    half-deduction applies to the SE tax only.
 9. **Ignoring US wages.** Social security wages on a Form W-2 use up the wage base first, and a
    spouse's income counts toward the joint Additional Medicare threshold.
+10. **Telling a recent US oleh they pay Bituach Leumi in full, or nothing.** Section 350A
+    exempts the Bituach Leumi part (not health insurance) on income that bears US social
+    security, for five years from the oleh visa or certificate. It never reduces SE tax.
+11. **Offering the prior-year safe harbor to a non-filer.** With no prior-year return filed,
+    only the current-year test exists.
 
 ## Reference Links
 
@@ -270,7 +341,9 @@ from.
 | Instructions for Form 8959 | https://www.irs.gov/pub/irs-pdf/i8959.pdf | Additional Medicare Tax, the wage reduction, and joint-return combination |
 | Publication 54 | https://www.irs.gov/pub/irs-pdf/p54.pdf | Extensions of time to file versus time to pay |
 | US-Israel income tax treaty | https://www.irs.gov/pub/irs-trty/israel.pdf | The taxes covered and the saving clause |
-| SSA International Programs | Named in the Schedule SE instructions (search "SSA International Programs") | Whether any new social security agreement has been entered into since the instructions were published |
+| SSA, US social security agreements | https://www.ssa.gov/international/agreements_overview.html | The live agreement list (Romania from September 1, 2026); may block automated clients |
+| SSA, contribution and benefit base | https://www.ssa.gov/oact/cola/cbb.html | The wage base by year, including 2027 |
+| Kol Zchut, Bituach Leumi exemption for olim | https://www.kolzchut.org.il/he/פטור_מתשלום_דמי_ביטוח_לאומי_לעולים_חדשים | Section 350A: who qualifies, five years, health insurance still due |
 
 ## Troubleshooting
 
@@ -281,4 +354,5 @@ from.
 | A high earner's figure looks too high or too low | The wage base was applied to both portions, or to neither | The 12.4 percent social security portion is capped at the wage base. The 2.9 percent Medicare portion is not capped. |
 | The user was told by a forum that an Israeli company solves it | It changes the characterisation but opens US anti-deferral rules for foreign corporations | Present it as one option with that cost named, decline to recommend, and route to a cross-border professional. |
 | Two sources give different wage bases | The figure changes annually | Use the base for the tax year being computed and state which year it is. |
+| A recent oleh says they pay no Bituach Leumi and asks if they still owe the US | Section 350A exempts the Israeli side only, and only while US social security is paid | Yes, SE tax is still owed. Confirm the aliyah date and route the Israeli eligibility question to Bituach Leumi. |
 | The user asks what percentage of each invoice to save | Reasonable request, but it depends on their own numbers | Compute it from their projected net earnings and show the arithmetic. Do not quote a generic percentage. |

@@ -10,9 +10,9 @@ threshold and list below is cited to a primary source.
 ## Must cover (core)
 
 - [ ] The absence of a US-Israel totalization agreement, evidenced by the FULL country list
-      rather than asserted. Thirty countries are named in the Schedule SE instructions and
-      Israel is not among them.
-      source: Instructions for Schedule SE
+      rather than asserted. Thirty countries are named in the 2026 Schedule SE instructions;
+      SSA adds Romania (in force 2026-09-01) for 31. Israel is in neither. Updated 2026-11-11.
+      source: Instructions for Schedule SE; SSA agreements overview
       why core: this is the premise of the whole skill, and it is the kind of negative claim
       that must be shown from an enumerated list, not from a secondary source saying so.
 
@@ -34,7 +34,9 @@ threshold and list below is cited to a primary source.
       why core: omitting it overstates every projection by roughly 8 percent.
 
 - [ ] The social security wage base as a TEMPORAL row (Step C.1a): it is set annually, the
-      2025 figure is USD 176,100, and a prior year's figure must never be carried forward. The
+      2025 figure is USD 176,100, 2026 USD 184,500, 2027 USD 192,300 (SSA), and a prior
+      year's figure must never be carried forward. The script holds 2023 to 2027 and requires
+      an explicit --year (2026-11-11). The
       Medicare portion is uncapped, so the two components behave differently above the base.
       source: Instructions for Schedule SE
       why core: capping both components, or neither, is the main high-earner error.
@@ -53,7 +55,9 @@ threshold and list below is cited to a primary source.
 - [ ] The quarterly estimated payment cycle, and that a filing extension is not a payment
       extension. Added 2026-09-13: the current-year due dates, the USD 1,000 requirement, and
       the 90 / 100 / 110 percent safe-harbor tests, all from the current Form 1040-ES; the
-      filing-versus-payment extension wording from Publication 54.
+      filing-versus-payment extension wording from Publication 54. Added 2026-11-11: the
+      prior-year test needs a filed 12-month prior-year return (1040-ES line 12b), and the
+      annualized income installment method (Form 2210 Schedule AI).
       source: Form 1040-ES (2026), Publication 54
 
 - [ ] The current-year wage base as soon as it is published (Form 1040-ES precedes the
@@ -75,6 +79,11 @@ threshold and list below is cited to a primary source.
       hidden cost of the "just open an Israeli company" answer.
       why core: it is the most common forum advice and the most under-examined.
 
+- [ ] The Israeli-side Bituach Leumi exemption for recent US olim (National Insurance Law
+      s.350A, Amendment 262, 2026-2035): flagged, conditional on paying US social security,
+      health insurance still due, never reduces SE tax. Added 2026-11-11.
+      source: Amendment 262 gazette text; Kol Zchut
+
 ## Should cover (advanced / edge cases)
 
 - [ ] Distinguishing an osek from a sachir on a tlush at the outset, since the analysis differs.
@@ -82,6 +91,10 @@ threshold and list below is cited to a primary source.
       to shekels.
 - [ ] Interaction with the income-tax side (exclusion versus credit), owned by
       `us-israel-dual-tax-navigator` and cross-referenced only.
+- [ ] Added 2026-11-11: which profit figure the user is quoting (Schedule C vs Israeli
+      figures), the IRS exchange-rate rule, open prior years, Bituach Leumi creditability as a
+      US income-tax question (routed), filing status with a nonresident alien spouse, and what
+      SE tax buys (SSA uses Schedule SE for benefits).
 
 ## Out of scope (explicit, with rationale)
 
@@ -94,7 +107,10 @@ threshold and list below is cited to a primary source.
 - PFIC and foreign-trust classification. Related skill: `us-person-israeli-investment-check`.
 - Israeli bookkeeping, VAT, invoicing, osek thresholds. Related skills:
   `israeli-freelancer-ops`, `israeli-vat-reporting`.
-- Bituach Leumi rates and entitlements on the Israeli side.
+- Bituach Leumi rates and entitlements on the Israeli side. Re-litigated 2026-11-11: users do
+  ask for the total set-aside, so the body now routes Israeli mikdamot and Bituach Leumi to
+  `israeli-freelancer-ops`, and flags the s.350A oleh exemption. Computing Bituach Leumi stays
+  out of scope because that sibling owns the rate table.
 
 ## Known bad framings (do not regress to these)
 

@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0",
   "skill": "american-freelancer-israel-tax",
-  "generated_at": "2026-09-13T00:00:00Z",
+  "generated_at": "2026-11-11T00:00:00Z",
   "claims": [
     {
       "claim_id": "se-rate-153",
@@ -61,10 +61,10 @@
     },
     {
       "claim_id": "totalization-country-list",
-      "claim": "The United States has social security totalization agreements with 30 named countries and Israel is not among them, so the dual-taxation relief those agreements provide is unavailable to a US person self-employed in Israel",
+      "claim": "The IRS 2026 Instructions for Schedule SE print 30 named social security agreement countries, and Israel is not among them",
       "source_url": "https://www.irs.gov/pub/irs-pdf/i1040sse.pdf",
       "raw_snippet": "The United States now has social security agreements with the following countries: Australia, Austria, Belgium, Brazil, Canada, Chile, the Czech Republic, Denmark, Finland, France, Germany, Greece, Hungary, Iceland, Ireland, Italy, Japan, Luxembourg, the Netherlands, Norway, Poland, Portugal, the Slovak Republic, Slovenia, South Korea, Spain, Sweden, Switzerland, the United Kingdom, and Uruguay. If you have questions about international social security agreements, or to see i",
-      "fetched_at": "2026-08-23T00:00:00Z",
+      "fetched_at": "2026-11-11T00:00:00Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
@@ -75,10 +75,10 @@
     },
     {
       "claim_id": "ss-wage-base-2025",
-      "claim": "For 2025 the maximum amount of self-employment income subject to social security tax is USD 176,100",
-      "source_url": "https://www.irs.gov/pub/irs-pdf/i1040sse.pdf",
+      "claim": "For 2025 the maximum amount of self-employment income subject to social security tax is USD 176,100 (2025 Instructions for Schedule SE, now at the IRS prior-year URL)",
+      "source_url": "https://www.irs.gov/pub/irs-prior/i1040sse--2025.pdf",
       "raw_snippet": "Maximum income subject to social security tax. For 2025, the maximum amount of self-employment income subject to social security tax is $176,100. Reminders Form 1040-SS. ",
-      "fetched_at": "2026-08-23T00:00:00Z",
+      "fetched_at": "2026-11-11T00:00:00Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
@@ -520,6 +520,344 @@
         "scripts/se_tax_projection.py"
       ],
       "confidence": "high"
+    },
+    {
+      "claim_id": "ss-wage-base-2026-sse-instructions",
+      "claim": "The 2026 Instructions for Schedule SE state the 2026 maximum self-employment income subject to social security tax as USD 184,500",
+      "source_url": "https://www.irs.gov/pub/irs-pdf/i1040sse.pdf",
+      "raw_snippet": "Maximum income subject to social security tax. For 2026, the maximum amount of self-employment income subject to social security tax is $184,500.",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/se-tax-mechanics.md"
+      ],
+      "fetched_at": "2026-11-11T00:00:00Z"
+    },
+    {
+      "claim_id": "ss-wage-base-2027-ssa",
+      "claim": "SSA contribution and benefit base for 2027 is USD 192,300",
+      "source_url": "https://www.ssa.gov/oact/cola/cbb.html",
+      "raw_snippet": "For earnings in 2027, this base is $192,300.",
+      "verified_via": "browser",
+      "verified_at": "2026-11-11",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/se-tax-mechanics.md",
+        "scripts/se_tax_projection.py"
+      ],
+      "fetched_at": "2026-11-11T00:00:00Z"
+    },
+    {
+      "claim_id": "ssa-cbb-table-2023-2027",
+      "claim": "SSA table of contribution and benefit bases: 2023 USD 160,200, 2024 USD 168,600, 2025 USD 176,100, 2026 USD 184,500, 2027 USD 192,300",
+      "source_url": "https://www.ssa.gov/oact/cola/cbb.html",
+      "raw_snippet": "2023 160,200 2024 168,600 2025 176,100 2026 184,500 2027 192,300",
+      "verified_via": "browser",
+      "verified_at": "2026-11-11",
+      "appears_in": [
+        "references/se-tax-mechanics.md",
+        "scripts/se_tax_projection.py"
+      ],
+      "fetched_at": "2026-11-11T00:00:00Z"
+    },
+    {
+      "claim_id": "totalization-ssa-romania",
+      "claim": "SSA lists 31 US social security agreements, the newest being Romania with entry into force September 1, 2026; Israel is not listed",
+      "source_url": "https://www.ssa.gov/international/agreements_overview.html",
+      "raw_snippet": "Slovenia February 1, 2019 Iceland March 1, 2019 Romania September 1, 2026",
+      "verified_via": "browser",
+      "verified_at": "2026-11-11",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/se-tax-mechanics.md"
+      ],
+      "fetched_at": "2026-11-11T00:00:00Z"
+    },
+    {
+      "claim_id": "bl-350a-statute",
+      "claim": "National Insurance Law Amendment No. 262 (temporary provision), passed 25 February 2026, applies from 1 January 2026 to 31 December 2035 and adds section 350A (סעיף 350א): an Israeli resident new oleh from a country listed in Schedule ט\"ז1 (which lists the United States) is exempt from national insurance contributions on income under Income Tax Ordinance section 2(1) or 2(2) for which they pay social security contributions in the country they came from, until five years from the oleh visa or certificate; benefit entitlement is treated as if contributions were paid",
+      "source_url": "https://www.capitax.co.il/Attachments/01032026.pdf",
+      "raw_snippet": "תושב ישראל שהוא עולה חדש יהיה פטור מתשלום דמי ביטוח בעד הכנסה לפי סעיף",
+      "verified_via": "pdf",
+      "verified_at": "2026-11-11",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/se-tax-mechanics.md"
+      ],
+      "fetched_at": "2026-11-11T00:00:00Z"
+    },
+    {
+      "claim_id": "bl-oleh-exemption-us",
+      "claim": "From January 2026 olim from the United States who pay US social security on their work income are exempt from Bituach Leumi contributions on that income, for the first 5 years after aliyah",
+      "source_url": "https://www.kolzchut.org.il/he/פטור_מתשלום_דמי_ביטוח_לאומי_לעולים_חדשים",
+      "raw_snippet": "מינואר 2026 עולים מארצות הברית שמשלמים על הכנסותיהם מעבודה דמי ביטוח סוציאלי בארצות הברית פטורים מתשלום דמי ביטוח לאומי על אותן הכנסות. הפטור ניתן לעולים ב-5 השנים הראשונות לעלייתם לארץ.",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/se-tax-mechanics.md"
+      ],
+      "fetched_at": "2026-11-11T00:00:00Z"
+    },
+    {
+      "claim_id": "bl-oleh-health-not-exempt",
+      "claim": "The exempt income is not exempt from health insurance contributions; the exemption is claimed at the local Bituach Leumi branch; the exempt period counts as a contribution period for benefits",
+      "source_url": "https://www.kolzchut.org.il/he/פטור_מתשלום_דמי_ביטוח_לאומי_לעולים_חדשים",
+      "raw_snippet": "הכנסות העולים שפטורות מתשלום דמי ביטוח לאומי לא פטורות מ תשלום דמי ביטוח בריאות",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/se-tax-mechanics.md"
+      ],
+      "fetched_at": "2026-11-11T00:00:00Z"
+    },
+    {
+      "claim_id": "bl-oleh-apply-branch",
+      "claim": "To claim the exemption, contact the Bituach Leumi branch in the area of residence",
+      "source_url": "https://www.kolzchut.org.il/he/פטור_מתשלום_דמי_ביטוח_לאומי_לעולים_חדשים",
+      "raw_snippet": "תהליך מימוש הזכות יש לפנות ל סניף הביטוח הלאומי באזור המגורים",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "fetched_at": "2026-11-11T00:00:00Z"
+    },
+    {
+      "claim_id": "bl-oleh-benefits-as-if-paid",
+      "claim": "The exempt period counts as if contributions had been paid for benefits that require a qualifying period",
+      "source_url": "https://www.kolzchut.org.il/he/פטור_מתשלום_דמי_ביטוח_לאומי_לעולים_חדשים",
+      "raw_snippet": "התקופה שבה העולים פטורים מתשלום דמי ביטוח לאומי תיחשב כאילו שילמו בה דמי ביטוח על ההכנסה הפטורה",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "fetched_at": "2026-11-11T00:00:00Z"
+    },
+    {
+      "claim_id": "ssa-uses-schedule-se",
+      "claim": "SSA uses Schedule SE information to figure social security benefits",
+      "source_url": "https://www.irs.gov/pub/irs-pdf/i1040sse.pdf",
+      "raw_snippet": "The Social Security Administration (SSA) uses the information from Schedule SE to figure your benefits under the social security program.",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "fetched_at": "2026-11-11T00:00:00Z"
+    },
+    {
+      "claim_id": "es-prior-year-needs-filed-return",
+      "claim": "The prior-year safe harbor needs a filed 12-month prior-year return: if no 2025 return was filed or the 2025 tax year was under 12 months, line 12b is skipped and line 12a (the current-year test) is used",
+      "source_url": "https://www.irs.gov/pub/irs-pdf/f1040es.pdf",
+      "raw_snippet": "If you didn’t file a return for 2025 or your 2025 tax year was less than 12 full months, don’t complete line 12b. Instead, enter the amount from line 12a on line 12c.",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/se-tax-mechanics.md"
+      ],
+      "fetched_at": "2026-11-11T00:00:00Z"
+    },
+    {
+      "claim_id": "es-annualized-method",
+      "claim": "The annualized income installment method can lower or eliminate a required estimated payment for one or more periods (בעברית: טופס 2210)",
+      "source_url": "https://www.irs.gov/pub/irs-pdf/f1040es.pdf",
+      "raw_snippet": "you may be able to lower or eliminate the amount of your required estimated tax payment for one or more periods by using the annualized income installment method.",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "fetched_at": "2026-11-11T00:00:00Z"
+    },
+    {
+      "claim_id": "es-annualized-form-2210",
+      "claim": "Using the annualized income installment method requires filing Form 2210 with Schedule AI (בעברית: טופס 2210)",
+      "source_url": "https://www.irs.gov/pub/irs-pdf/f1040es.pdf",
+      "raw_snippet": "If you use the annualized income installment method, file Form 2210, including Schedule AI, with your 2026 tax return even if no penalty is owed.",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "fetched_at": "2026-11-11T00:00:00Z"
+    },
+    {
+      "claim_id": "p514-agreement-country-bar",
+      "claim": "Pub 514 bars a deduction or credit for social security taxes paid to a country with which the US has a social security agreement",
+      "source_url": "https://www.irs.gov/pub/irs-pdf/p514.pdf",
+      "raw_snippet": "No deduction or credit is allowed, however, for social security taxes paid or accrued to a foreign country with which the United States has a social security agreement.",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "fetched_at": "2026-11-11T00:00:00Z"
+    },
+    {
+      "claim_id": "irs-fx-prevailing-rate",
+      "claim": "IRS: translate foreign-currency items at the exchange rate prevailing when received, paid or accrued",
+      "source_url": "https://www.irs.gov/individuals/international-taxpayers/foreign-currency-and-currency-exchange-rates",
+      "raw_snippet": "Use the exchange rate prevailing when you receive, pay, or accrue the item. If there is more than one exchange rate, use the one that most properly reflects your income.",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "fetched_at": "2026-11-11T00:00:00Z"
+    },
+    {
+      "claim_id": "irs-fx-yearly-average-link",
+      "claim": "The IRS foreign currency page links to its yearly average currency exchange rates",
+      "source_url": "https://www.irs.gov/individuals/international-taxpayers/foreign-currency-and-currency-exchange-rates",
+      "raw_snippet": "Related Yearly average currency exchange rates",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "fetched_at": "2026-11-11T00:00:00Z"
+    },
+    {
+      "claim_id": "p54-nra-spouse-choice",
+      "claim": "A US citizen married to a nonresident alien can choose to treat the spouse as a US resident",
+      "source_url": "https://www.irs.gov/pub/irs-pdf/p54.pdf",
+      "raw_snippet": "If, at the end of your tax year, you are married and one spouse is a U.S. citizen or resident alien and the other is a nonresident alien, you can choose to treat the nonresident as a U.S. resident.",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "fetched_at": "2026-11-11T00:00:00Z"
+    },
+    {
+      "claim_id": "schc-owner-plan-contrib",
+      "claim": "Plan contributions made as an employer on behalf of a self-employed person go on Schedule 1, not on Schedule C",
+      "source_url": "https://www.irs.gov/pub/irs-pdf/i1040sc.pdf",
+      "raw_snippet": "enter the contributions made as an employer on your behalf on Schedule 1 (Form 1040), line 16, not on Schedule C.",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "fetched_at": "2026-11-11T00:00:00Z"
+    },
+    {
+      "fetched_at": "2026-11-11T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/se-tax-mechanics.md"
+      ],
+      "claim_id": "bl-350a-period",
+      "claim": "Temporary provision period 1 January 2026 to 31 December 2035 (s.1)",
+      "source_url": "https://www.capitax.co.il/Attachments/01032026.pdf",
+      "raw_snippet": "בתקופה שמיום י\"ב בטבת התשפ\"ו (1 בינואר 2026) ועד יום ל' בכסלו התשצ\"ו (31 בדצמבר 2035)",
+      "verified_via": "pdf",
+      "verified_at": "2026-11-11"
+    },
+    {
+      "fetched_at": "2026-11-11T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/se-tax-mechanics.md"
+      ],
+      "claim_id": "bl-350a-five-years-docs",
+      "claim": "New oleh: came from a Schedule ט\"ז1 country and five years have not passed since the oleh visa or certificate under the Law of Return, or a Ministry of Aliyah and Integration certificate for someone eligible for assistance as an oleh",
+      "source_url": "https://www.capitax.co.il/Attachments/01032026.pdf",
+      "raw_snippet": "וטרם חלפו חמש שנים מיום שניתנה לו אשרת עולה או תעודת עולה לפי חוק השבות, התש\"י-1950, או תעודה שמנפיק משרד העלייה והקליטה למי שנמצא זכאי לסיוע כעולה לפי נוהלי המשרד",
+      "verified_via": "pdf",
+      "verified_at": "2026-11-11"
+    },
+    {
+      "fetched_at": "2026-11-11T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/se-tax-mechanics.md"
+      ],
+      "claim_id": "bl-350a-passed",
+      "claim": "Passed by the Knesset on 25 February 2026",
+      "source_url": "https://www.capitax.co.il/Attachments/01032026.pdf",
+      "raw_snippet": "התקבל בכנסת ביום ח' באדר התשפ\"ו (25 בפברואר 2026)",
+      "verified_via": "pdf",
+      "verified_at": "2026-11-11"
+    },
+    {
+      "fetched_at": "2026-11-11T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/se-tax-mechanics.md"
+      ],
+      "claim_id": "bl-350a-schedule-us",
+      "claim": "Schedule ט\"ז1 (section 350A) lists the United States; s.350A(d) lets the Minister of Labour amend the schedule",
+      "source_url": "https://www.capitax.co.il/Attachments/01032026.pdf",
+      "raw_snippet": "לוח ט\"ז1 (סעיף 350א) ארצות הברית",
+      "verified_via": "image",
+      "verified_at": "2026-11-11"
+    },
+    {
+      "fetched_at": "2026-11-11T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/se-tax-mechanics.md"
+      ],
+      "source_url": "https://www.capitax.co.il/Attachments/01032026.pdf",
+      "verified_via": "image",
+      "verified_at": "2026-11-11",
+      "claim_id": "bl-350a-s3-extension",
+      "claim": "Section 3 (סעיף 3): the temporary provision may be extended by order for two further periods of up to five years each",
+      "raw_snippet": "רשאי, בצו, להאריך את תקופת הוראת השעה בשתי תקופות נוספות שכל אחת מהן לא תעלה על חמש שנים"
+    },
+    {
+      "fetched_at": "2026-11-11T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/se-tax-mechanics.md"
+      ],
+      "source_url": "https://www.capitax.co.il/Attachments/01032026.pdf",
+      "verified_via": "image",
+      "verified_at": "2026-11-11",
+      "claim_id": "bl-350a-s5-application",
+      "claim": "Section 5 (סעיף 5): the law applies to contributions due for January 2026 onward",
+      "raw_snippet": "חוק זה יחול לגבי דמי ביטוח המגיעים בעד חודש ינואר 2026 ואילך"
+    },
+    {
+      "fetched_at": "2026-11-11T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/se-tax-mechanics.md"
+      ],
+      "source_url": "https://www.capitax.co.il/Attachments/01032026.pdf",
+      "verified_via": "image",
+      "verified_at": "2026-11-11",
+      "claim_id": "bl-350a-s2-health-insurance",
+      "claim": "Section 2 amends the State Health Insurance Law so the income exempt under 350A(a) is counted for health insurance contributions",
+      "raw_snippet": "תובא בחשבון גם הכנסה הפטורה מתשלום דמי ביטוח לאומי לפי סעיף 350א(א)"
+    },
+    {
+      "fetched_at": "2026-11-11T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/se-tax-mechanics.md"
+      ],
+      "claim_id": "bl-oleh-other-income-still-due",
+      "claim": "Olim pay Bituach Leumi on additional income on which no US social security was paid, in listed cases above monthly minimum amounts",
+      "source_url": "https://www.kolzchut.org.il/he/פטור_מתשלום_דמי_ביטוח_לאומי_לעולים_חדשים",
+      "raw_snippet": "העולים צריכים לשלם דמי ביטוח לאומי על הכנסות נוספות (שלא שילמו עליהן דמי ביטוח סוציאלי בארצות הברית) במקרים הבאים"
+    },
+    {
+      "claim_id": "bl-350a-c-minimum",
+      "claim": "350A(c) (סעיף 350א(ג)): s.348(b) minimum-contribution rule does not apply to an exempt oleh with no other income, or with other income below the Schedule 11 minimum",
+      "source_url": "https://www.capitax.co.il/Attachments/01032026.pdf",
+      "raw_snippet": "בסעיף קטן (א) שאין לו הכנסה אחרת מלבד ההכנסה שהוא פטור לגביה לפי אותו סעיף קטן או שיש לו הכנסה אחרת כאמור שאינה מגיעה לסכום המזערי האמור לגביו בלוח י\"א",
+      "verified_via": "pdf",
+      "verified_at": "2026-11-11",
+      "fetched_at": "2026-11-11T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/se-tax-mechanics.md"
+      ]
     }
   ]
 }

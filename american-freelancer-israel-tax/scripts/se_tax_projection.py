@@ -12,7 +12,7 @@ Usage:
   python3 se_tax_projection.py --example
   python3 se_tax_projection.py --net-earnings-usd 100000 --year 2026 --filing single
   python3 se_tax_projection.py --net-earnings-usd 150000 --wages-usd 100000 \\
-      --medicare-wages-usd 100000 --filing mfs
+      --medicare-wages-usd 100000 --filing mfs --year 2026
 """
 
 import argparse
@@ -24,10 +24,11 @@ MEDICARE_RATE = 0.029       # Schedule SE line 11, uncapped
 ADDL_MEDICARE_RATE = 0.009  # Form 8959 lines 7 and 13, NOT part of Schedule SE
 SE_MIN_LINE_4C = 400        # Schedule SE line 4c: tested AFTER the 92.35% factor
 
-# Social security wage base by tax year. 2025 from the Schedule SE instructions, 2026 from
-# the 2026 Form 1040-ES (published before that year's Schedule SE instructions). Add each new
-# year from its own source; do NOT carry a prior year forward.
-WAGE_BASE = {2025: 176_100, 2026: 184_500}
+# Social security wage base (SSA "contribution and benefit base") by tax year, from the SSA
+# table at ssa.gov/oact/cola/cbb.html, read 2026-11-11. 2026 is also printed in the 2026
+# Schedule SE instructions and the 2026 Form 1040-ES. 2023 and 2024 are kept for catch-up
+# years. Add each new year from its own source; do NOT carry a prior year forward.
+WAGE_BASE = {2023: 160_200, 2024: 168_600, 2025: 176_100, 2026: 184_500, 2027: 192_300}
 
 ADDL_MEDICARE_THRESHOLD = {
     "mfj": 250_000,
@@ -49,10 +50,13 @@ def schedule_se(net_usd, year, ss_wages_usd):
     wb = WAGE_BASE.get(year)
     if wb is None:
         notes.append(f"No social security wage base on file for {year}. The 12.4% portion is "
-                     "shown UNCAPPED below, which overstates it for higher earners. Look up "
-                     f"the {year} base (Form 1040-ES or Schedule SE instructions) and re-run.")
+                     "shown UNCAPPED above, which overstates it for higher earners. Look up "
+                     f"the {year} base (SSA contribution and benefit base, Form 1040-ES or "
+                     "Schedule SE instructions) and re-run.")
+        out.append(f"   Wage base for {year}: NOT ON FILE, social security shown uncapped")
         ss_base = base
     else:
+        out.append(f"   Wage base used: USD {wb:,} for tax year {year}")
         room = max(0, wb - ss_wages_usd)      # Schedule SE lines 7, 8a, 9
         ss_base = min(base, room)             # Schedule SE line 10
         if ss_wages_usd:
@@ -83,7 +87,9 @@ def main():
                                 formatter_class=argparse.RawDescriptionHelpFormatter)
     p.add_argument("--net-earnings-usd", type=float, default=0,
                    help="Net profit from Schedule C, in USD, before the 92.35%% step.")
-    p.add_argument("--year", type=int, default=2026)
+    p.add_argument("--year", type=int, default=None,
+                   help="Tax year being projected. Required (except with --example), so a "
+                        "prior or later year's wage base is never applied silently.")
     p.add_argument("--filing", choices=["single", "mfj", "mfs"], default="single",
                    help="single also covers head of household and qualifying surviving "
                         "spouse, which share the USD 200,000 threshold.")
@@ -101,6 +107,9 @@ def main():
     if a.example:
         a.net_earnings_usd, a.year, a.filing = 100_000, 2026, "single"
         print("(example: USD 100,000 of net profit, single, tax year 2026)\n")
+    if a.year is None:
+        p.error("--year is required: the wage base differs every year, so state the tax "
+                "year you are projecting.")
     if a.medicare_wages_usd is None:
         if a.wages_usd:
             p.error("--wages-usd was given without --medicare-wages-usd. Box 5 can differ from "
@@ -138,7 +147,7 @@ def main():
                      "added together, and a spouse's own self-employment income must be "
                      "added by a preparer; this script models one person's Schedule SE.")
 
-    if a.net_earnings_usd > 0 and total > 0:
+    if a.net_earnings_usd > 0 and se_tax + part2 > 0:
         pct = (se_tax + part2) / a.net_earnings_usd * 100
         print(f"  SE-related share of net profit            {pct:>15.1f}%")
         print(f"\n  Set aside roughly {pct:.1f}% of net profit as income comes in, converted")

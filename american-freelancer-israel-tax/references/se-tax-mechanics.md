@@ -28,11 +28,15 @@ Applying 15.3 percent directly to net earnings, skipping step 2, overstates the 
 
 ## Wage base
 
-For 2025 the maximum self-employment income subject to social security tax is USD 176,100.
-For 2026 the maximum amount of earned income (wages and net earnings from self-employment)
-subject to social security tax is USD 184,500, published in the 2026 Form 1040-ES. The figure
-changes annually; take it from the current-year Form 1040-ES or that year's Schedule SE
-instructions, never from a prior year.
+| Tax year | Base | Source |
+|---|---|---|
+| 2023 | USD 160,200 | SSA contribution and benefit base table |
+| 2024 | USD 168,600 | SSA contribution and benefit base table |
+| 2025 | USD 176,100 | 2025 Schedule SE instructions; SSA table |
+| 2026 | USD 184,500 | 2026 Form 1040-ES and 2026 Schedule SE instructions; SSA table |
+| 2027 | USD 192,300 | SSA ("For earnings in 2027, this base is $192,300"); 2027 IRS forms not yet published on 2026-11-11 |
+
+The figure changes annually; take it for the year being computed, never from a prior year.
 
 ## Estimated payments, 2026 (Form 1040-ES)
 
@@ -45,7 +49,11 @@ instructions, never from a prior year.
 
 Generally required if at least USD 1,000 of tax is expected. The penalty is avoided by paying
 the smaller of 90 percent of the 2026 tax or 100 percent of the 2025 tax (110 percent if 2025
-AGI exceeded USD 150,000, or USD 75,000 married filing separately). The additional 4 months
+AGI exceeded USD 150,000, or USD 75,000 married filing separately). The prior-year test needs
+a filed 2025 return covering 12 full months; otherwise only the 90 percent test remains (Form
+1040-ES worksheet, line 12b). For uneven income the annualized income installment method (Form
+2210 with Schedule AI) can lower a required payment. 2027 dates come from the 2027 Form
+1040-ES once published. The additional 4 months
 of time to file is not an extension of time to pay (Publication 54).
 
 ## Additional Medicare Tax thresholds
@@ -88,6 +96,26 @@ France, Germany, Greece, Hungary, Iceland, Ireland, Italy, Japan, Luxembourg, th
 Norway, Poland, Portugal, the Slovak Republic, Slovenia, South Korea, Spain, Sweden,
 Switzerland, the United Kingdom, and Uruguay.
 
-**Israel is not on this list.** That absence is the whole reason this skill exists. Re-check
-the list in the current Schedule SE instructions before relying on it, since agreements can be
-added.
+That is the list printed in the 2026 Schedule SE instructions (30 countries). SSA's own list
+adds Romania, in force September 1, 2026, for 31 in all
+(https://www.ssa.gov/international/agreements_overview.html, read 2026-11-11).
+
+**Israel is not on either list.** That absence is the whole reason this skill exists. Re-check
+SSA's list before relying on it, since the IRS list lags and agreements can be added.
+
+## The Israeli-side exemption for recent US olim (section 350A)
+
+National Insurance Law Amendment No. 262 (temporary provision), passed 25 February 2026, in
+force 1 January 2026 to 31 December 2035. A new oleh from a country in Schedule ט"ז1 (only the
+United States) who is an Israeli resident is exempt from Bituach Leumi contributions on
+business or employment income on which US social security is paid, until five years from the
+oleh visa or certificate (or the Ministry of Aliyah and Integration certificate). Health
+insurance contributions are still due (section 2 counts the exempt income for health
+insurance), Bituach Leumi may still be due on other income without US social security once it
+passes minimum monthly amounts (350A(c)), the exempt
+period counts toward benefit qualifying periods, and it is claimed at the local Bituach Leumi
+branch. Section 3 lets the Minister extend the period by order for two further periods of up
+to five years each, and 350A(d) lets the Minister amend the schedule. It does nothing to US SE
+tax. The definition does not require aliyah in 2026 or later and the law applies to
+contributions due for January 2026 onward (section 5), so an oleh still inside the five years
+appears covered for the remaining months; confirm with Bituach Leumi.
