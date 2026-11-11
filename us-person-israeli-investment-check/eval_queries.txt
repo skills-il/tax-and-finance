@@ -4,7 +4,7 @@
 POSITIVE | TRAIN | Is my keren hishtalmut a problem for my US taxes? | MATCH | "whether their keren hishtalmut, pension, kupat gemel or Israeli fund creates a US reporting problem"
 POSITIVE | TRAIN | Do I need to file 8621 for my Israeli mutual fund? | MATCH | "whether the holding is a PFIC needing Form 8621"
 POSITIVE | TRAIN | Is my Israeli pension a foreign trust for the IRS? | MATCH | "whether it is a foreign trust needing Forms 3520 and 3520-A"
-POSITIVE | TRAIN | I am American, should I buy a TASE ETF or does it cause tax trouble? | MATCH | "or is deciding what to buy"
+POSITIVE | TRAIN | I am American, should I buy a TASE ETF or does it cause tax trouble? | MATCH (engage on the US reporting consequence only, decline the buy recommendation) | "or what US reporting a type of Israeli product would bring"
 POSITIVE | TEST  | Does Revenue Procedure 2020-17 cover my kupat gemel? | MATCH | "the Revenue Procedure 2020-17 exemption criteria"
 POSITIVE | TEST  | Which Israeli savings products are bad for a US citizen to hold? | MATCH | "Screens the Israeli savings and investment products a US person holds"
 

@@ -20,14 +20,16 @@ Part I exception to check FIRST (per section 1291 fund):
 - [ ] no excess distribution was received from that fund during the year, AND
 - [ ] no gain was recognized on selling or disposing of that fund's stock during the year
 
-- [ ] no QEF election has been made for that fund
+- [ ] the fund is a section 1291 fund for the user: no QEF election and no section 1296
+      mark-to-market election in effect (Reg. 1.1291-1(b)(2)(v))
 
 If all hold, the shareholder is not required to complete Part I for that fund. The aggregate
 excludes PFIC stock held through another US person or another PFIC.
 
 Separate USD 5,000 exception for a section 1291 fund owned indirectly THROUGH ANOTHER PFIC
 (Reg. 1.1298-1(c)(2)(i)(A)(2), referring to 1.1291-1(b)(8)(ii)(B)): worth USD 5,000 or less on
-the last day of the tax year, no excess distribution, no gain on disposition, no QEF election.
+the last day of the tax year, no excess distribution, no gain on disposition, no QEF or
+mark-to-market election.
 It applies per fund even when total PFIC stock exceeds USD 25,000. It does NOT reach stock
 owned through a grantor-trust wrapper (pension, gemel, hishtalmut), which is attributed under
 1.1291-1(b)(8)(iii)(D) and counts toward the USD 25,000 aggregate.
@@ -38,9 +40,13 @@ do not affect any other duty.
 Look-through: a person treated as owner of a trust under sections 671 to 679 is considered to
 own the stock the trust holds (Reg. 1.1291-1(b)(8)(iii)(D)). A pension, gemel or hishtalmut
 treated as a grantor trust can therefore carry indirect PFIC stock. Revenue Procedure 2020-17
-does not relieve that. Reg. 1.1298-1(c)(4) excepts PFIC stock held through a foreign pension
-fund only as defined by a US income tax treaty; whether the US-Israel treaty qualifies is a
-preparer question.
+does not relieve that. Reg. 1.1298-1(c)(4) excepts PFIC stock held through an arrangement
+treated as a foreign pension fund under a US income tax treaty, and only if, under that treaty,
+the fund's income may be taxed to the participant only when and to the extent it is paid. The
+US-Israel treaty text has no such provision and no definition of a pension fund; Article 20(1)
+covers periodic pension payments and is subject to the Article 6(3) saving clause (the 1993
+Protocol exempts only Article 20(2) and 20(3) from it). Do not
+present (c)(4) as relieving an Israeli pension.
 
 Default regime if no election is in place: the holding is a section 1291 fund, an excess
 distribution is subject to special rules, and the ENTIRE gain on disposition is treated as an
@@ -65,7 +71,8 @@ obligations relating to the trust, may rely on it.
 - [ ] (2) Annual information reporting is provided or available to the local tax authority
 - [ ] (3) Only contributions with respect to income earned from personal services are permitted
 - [ ] (4) Contributions limited by a percentage of earned income, OR to USD 50,000 or less
-      annually, OR to USD 1,000,000 or less lifetime
+      annually, OR to USD 1,000,000 or less lifetime. These are limits established by the laws
+      of the trust's jurisdiction, not the amounts actually deposited
 - [ ] (5) Withdrawals conditioned on reaching a specified retirement age, disability, or death,
       or penalties apply to earlier withdrawals. Carve-out only for in-service loans, hardship,
       educational purposes, or purchase of a primary residence
@@ -85,18 +92,38 @@ Criterion (5) is the one most Israeli non-pension products fail.
 
 5.04 has its OWN purpose test. Failing 5.03 does not move a general savings product into 5.04.
 
+### Elective alternative: proposed Reg. 1.6048-5(b) (89 FR 39440, 8 May 2024), NOT final
+
+Reliance is allowed for tax years ending after 8 May 2024, only if the taxpayer and all related
+persons apply the proposed regulations in their entirety and consistently from the first year
+of reliance. A preparer's decision.
+
+- [ ] Retirement category, limit met by ANY of: percentage of earned income, USD 75,000 or less
+      annually, USD 1,000,000 or less lifetime, or aggregate value of such trusts in the country
+      no more than USD 600,000 at any point in the year. Converted at the 1 July Treasury rate.
+      Base figures, indexed in the proposed text.
+- [ ] Earned income only, generally, with allowances for limited contributions by unemployed
+      individuals
+- [ ] Withdrawal condition worded exactly as 5.03(5)
+- [ ] De minimis savings trust: a savings vehicle not within the other two categories (so it
+      can also reach a pension or gemel that fails the retirement category), locally
+      tax-favored, reported to the local tax authority, aggregate value in the country no more
+      than USD 50,000 at any point in the year, at the last-day rate. CAUTION: operative
+      paragraph (b)(1) lists only the retirement and non-retirement categories.
+
 ## C. Forms
 
 | Form | Who files | Trigger |
 |---|---|---|
 | 8621 | The US shareholder | Ownership of PFIC stock, subject to the de minimis exception |
+| 720 (IRS No. 30) | The person who pays the premium to a foreign insurer | Excise tax on premiums paid to foreign insurers; Article 8(8) of the US-Israel treaty addresses it, a preparer question for bituach menahalim and savings policies |
 | 3520 | The US person | Certain transactions with foreign trusts, ownership under sections 671 to 679, and certain large foreign gifts or bequests |
 | 3520-A | The foreign trust with at least one US owner | Annual information about the trust, its US beneficiaries and US owners |
 
 ## D. Conversion
 
-The 5.03(4) dollar limbs and the 5.04(3) limits are in US dollars and every Israeli
-contribution is in shekels. Revenue Procedure 2020-17 fixes the rate: the US Treasury Bureau of
+The 5.03(4) dollar limbs and the 5.04(3) limits are in US dollars and any Israeli plan limit
+is set in shekels. Revenue Procedure 2020-17 fixes the rate: the US Treasury Bureau of
 the Fiscal Service foreign currency conversion rate on the last day of the tax year. Record the
 rate and its date. A product can sit on either side of a limit depending on that rate. Check
 the 5.03(4) percentage-of-earned-income limb first, because it needs no conversion at all.

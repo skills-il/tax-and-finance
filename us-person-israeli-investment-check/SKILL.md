@@ -1,6 +1,6 @@
 ---
 name: us-person-israeli-investment-check
-description: "Not tax advice and not a filed return. Screens the Israeli savings and investment products a US person holds, keren hishtalmut, kupat gemel, pension, kranot neemanut, TASE ETFs, bituach menahalim, for two separate US exposures: whether the holding is a PFIC needing Form 8621, and whether it is a foreign trust needing Forms 3520 and 3520-A. Walks the actual statutory tests and the Revenue Procedure 2020-17 exemption criteria rather than guessing, and outputs a per-product table saying which test each product passes or fails and what to ask a preparer. Use when a US citizen or green card holder in Israel asks whether their keren hishtalmut, pension, kupat gemel or Israeli fund creates a US reporting problem, or is deciding what to buy. Do NOT use for annual filing mechanics or FBAR, for Israeli-side tax, for self-employment tax, or to obtain a final classification of any specific product."
+description: "Not tax advice and not a filed return. Screens the Israeli savings and investment products a US person holds, keren hishtalmut, kupat gemel, pension, kranot neemanut, TASE ETFs, bituach menahalim, for two separate US exposures: whether the holding is a PFIC needing Form 8621, and whether it is a foreign trust needing Forms 3520 and 3520-A. Walks the actual statutory tests and the Revenue Procedure 2020-17 exemption criteria rather than guessing, and outputs a per-product table saying which test each product passes or fails and what to ask a preparer. Use when a US citizen or green card holder in Israel asks whether their keren hishtalmut, pension, kupat gemel or Israeli fund creates a US reporting problem, or what US reporting a type of Israeli product would bring. Do NOT use for annual filing mechanics or FBAR, for Israeli-side tax, for self-employment tax, or to obtain a final classification of any specific product."
 license: MIT
 ---
 
@@ -14,7 +14,8 @@ features you describe, and produces a screening table. It does all of this witho
 involvement, review, or approval of a licensed tax adviser, accountant, or attorney.
 
 It is not tax advice, it is not a filed return, and it is not a professional opinion. It does
-not, and cannot, give you a final classification of any product. The IRS has never issued
+not, and cannot, give you a final classification of any product. Nor is it investment advice
+or a recommendation to buy, sell or hold any security or fund. The IRS has never issued
 guidance naming Israeli savings products, whether a particular arrangement is a foreign trust
 or a PFIC for US purposes turns on that specific plan's terms and on that specific fund's
 holdings, and practitioners genuinely differ. What this tool produces is a preliminary
@@ -58,7 +59,7 @@ the classification turns on precisely these details:
 | Product name and provider | Distinguishes a pension from a gemel from a hishtalmut |
 | Roughly what it holds | Pooled securities points at PFIC, a pure deposit usually does not |
 | Who contributes and from what | Section 5.03 accepts only earned-income contributions |
-| Annual and lifetime contribution amounts, and whether they are set as a percentage of salary | 5.03 accepts a percentage-of-earned-income limit OR a dollar limit; 5.04 uses dollar limits only |
+| Any annual or lifetime contribution limit that Israeli law governing the product sets, and whether that law sets contributions as a percentage of salary | 5.03 accepts a percentage-of-earned-income limit OR a dollar limit; 5.04 uses dollar limits only. The test is a limit established by law, not what the user happened to deposit, and a limit found only in the provider's own terms is a preparer question |
 | Withdrawal conditions | The single criterion most Israeli products fail |
 
 ### Stage 2: Treat the two questions as separate
@@ -98,10 +99,10 @@ conditions hold for the year:
 | No gain recognized on selling or disposing of that fund's stock | A sale at a gain in the year removes the exception, whatever the year-end value |
 
 The aggregate excludes PFIC stock held through another US person or through another PFIC. The
-exception is also unavailable for a fund the user has made a QEF election for. A separate
-USD 5,000 exception covers a section 1291 fund owned indirectly THROUGH ANOTHER PFIC, measured
-per fund on the last day of the tax year with the same no-excess-distribution, no-gain and
-no-QEF conditions, and it can apply even when total PFIC stock exceeds USD 25,000. It does NOT
+exception is unavailable for a fund with a QEF election, and for a fund with a section 1296
+mark-to-market election in effect, which takes the fund out of section 1291 fund status. A separate USD 5,000 exception covers a section 1291 fund owned
+indirectly THROUGH ANOTHER PFIC, measured per fund on the last day of the tax year with the same
+no-excess-distribution, no-gain and no-election conditions, and it can apply even when total PFIC stock exceeds USD 25,000. It does NOT
 reach fund stock owned through a pension, gemel or hishtalmut wrapper treated as a grantor
 trust, which counts toward the USD 25,000 aggregate instead, see the look-through note in
 Stage 5.
@@ -141,7 +142,10 @@ almost exclusively to provide pension or retirement benefits, and must be locall
 reported to the local tax authority, and funded only from earned income. Criterion 5.03(4) is
 met in ANY of three ways: contributions limited by a percentage of the participant's earned
 income, OR an annual limit of USD 50,000 or less, OR a lifetime limit of USD 1,000,000 or less.
-A plan whose contributions are capped as a percentage of salary can meet 5.03(4) even when a
+These are requirements established by the laws of the trust's jurisdiction, so the test is a
+limit set by Israeli law governing the plan, not the amount deposited: a plan with no such limit
+does not pass a dollar limb just because the user deposited little, and a limit that appears
+only in the provider's own terms is a preparer question. A plan whose contributions are capped as a percentage of salary can meet 5.03(4) even when a
 high earner's shekel contributions exceed USD 50,000. For an employer-maintained plan,
 criterion 5.03(6) adds a nondiscrimination requirement. Criterion 5.03(5) is the one
 that decides most Israeli cases: withdrawals must be conditioned on reaching a specified
@@ -151,7 +155,8 @@ residence.
 
 **Section 5.04, tax-favored foreign non-retirement savings trust.** The trust must operate
 exclusively or almost exclusively to provide MEDICAL, DISABILITY, or EDUCATIONAL benefits, and
-contributions must be limited to USD 10,000 or less annually or USD 200,000 or less lifetime.
+contributions must be limited, again by a limit established by the laws of the trust's
+jurisdiction, to USD 10,000 or less annually or USD 200,000 or less lifetime.
 There is no percentage-of-income limb in 5.04.
 
 **Which exchange rate.** Both 5.03(4) and 5.04(3) are measured using the US Treasury Bureau of
@@ -160,6 +165,29 @@ Bank of Israel rate and not an average. Record the rate and the date used.
 
 Apply these literally. A general-purpose savings vehicle is not within 5.04 merely because it
 is not a pension, because 5.04 has its own purpose test.
+
+**An elective alternative: the 2024 proposed regulations.** Proposed Treasury Regulation
+1.6048-5(b), published on 8 May 2024, carries its own version of these exemptions. It is still
+proposed, not final. A taxpayer may rely on it for tax years ending after 8 May 2024, but only
+if the taxpayer and all related persons apply the proposed regulations in their entirety and
+consistently for every year from the first year of reliance. Whether to rely on it is a
+preparer's decision, never this screen's. Where it differs from Revenue Procedure 2020-17:
+
+| Point | Revenue Procedure 2020-17 | Proposed 1.6048-5(b) |
+|---|---|---|
+| Retirement trust contribution limit | Percentage of earned income, OR USD 50,000 annual, OR USD 1,000,000 lifetime | Percentage of earned income, OR USD 75,000 annual, OR USD 1,000,000 lifetime |
+| Alternative value test for a retirement trust | None | Aggregate value of such trusts in that country no more than USD 600,000 at any point in the year |
+| Exchange rate for the retirement limits | Treasury rate on the last day of the tax year | Treasury rate on 1 July of the tax year |
+| Earned income only | Yes | Generally, with allowances for limited contributions by unemployed individuals |
+| De minimis savings trust | No such category | A tax-favored savings vehicle not within the other two categories, reported to the local tax authority, where the aggregate value of such trusts in that country is no more than USD 50,000 at any point in the year, at the last-day rate. It can therefore also reach a pension or gemel that fails the retirement category |
+
+The proposed dollar figures are base amounts that the proposed text indexes for inflation, so
+treat a result close to a limit as open. Two cautions. The proposed withdrawal condition is
+worded exactly as 5.03(5), so it does not cure the keren hishtalmut withdrawal problem under the
+retirement category. And although the preamble describes de minimis savings trusts as exempted,
+the operative paragraph (b)(1) of the proposed text names only the retirement and
+non-retirement categories, so whether a small keren hishtalmut can rely on the de minimis
+category is itself a preparer question. Never present the proposed regulations as final.
 
 ### Stage 5: Where each Israeli product usually lands, and why
 
@@ -170,10 +198,13 @@ part that matters, because it is what a preparer will actually test against the 
 |---|---|---|---|
 | Kranot neemanut, Israeli mutual funds | Pooled passive holdings meet both PFIC tests | Not a trust question | Treated as a PFIC. Check the de minimis exception first |
 | TASE-listed ETFs, kranot sal | Same as above | Not a trust question | Same as above |
-| Keren pensia, pension fund | Not only a trust question. If the owner is treated as owning the arrangement, they are treated as owning the fund stock it holds, see the look-through note below | Purpose is retirement, withdrawals are retirement conditioned | Often within 5.03, provided 5.03(4) is met. Check the plan terms for whether contributions are capped as a percentage of salary before testing the dollar limbs |
+| Keren pensia, pension fund | Not only a trust question. If the owner is treated as owning the arrangement, they are treated as owning the fund stock it holds, see the look-through note below | Purpose is retirement, withdrawals are retirement conditioned | Often within 5.03, provided 5.03(4) is met. Check whether the Israeli law governing the plan limits contributions as a percentage of salary before testing the dollar limbs |
 | Kupat gemel used for retirement | Same as above | Same as above | Often within 5.03, subject to the same limits |
-| Keren hishtalmut | Depends on the underlying investment track | Purpose is not retirement, and after the maturity period (6 years from the start of deposits, or 3 for training or after retirement age) withdrawal is not conditioned on retirement age, disability or death. 5.03(5) also accepts plans where penalties apply to earlier withdrawals, so whether Israeli tax on an early withdrawal counts as such a penalty is the live preparer question | Commonly fails 5.03(5), and its purpose is not medical, disability or educational so 5.04 does not fit either. This is the product most likely to need advice |
-| Bituach menahalim | Depends on structure and track | Depends heavily on the individual policy terms | Genuinely indeterminate without the policy. Always escalate |
+| Keren hishtalmut | Depends on the underlying investment track | Purpose is not retirement, and after the maturity period (6 years from the start of deposits, or 3 for training or after retirement age) withdrawal is not conditioned on retirement age, disability or death. 5.03(5) also accepts plans where penalties apply to earlier withdrawals, so whether Israeli tax on an early withdrawal counts as such a penalty is the live preparer question | Commonly fails 5.03(5), and its purpose is not medical, disability or educational so 5.04 does not fit either. If the aggregate value of all such savings arrangements the user holds in Israel never exceeded USD 50,000 at any point in the year, name the de minimis category of the proposed regulations as a preparer question, with its caveats. This is the product most likely to need advice |
+| Bituach menahalim | Depends on structure and track | Depends heavily on the individual policy terms | Genuinely indeterminate without the policy. Always escalate, and also ask about the excise tax on premiums paid to foreign insurers (Form 720, IRS No. 30), which Article 8(8) of the US-Israel treaty addresses |
+| Polisat chisachon, an insurance-company savings policy | Depends on how the policy is characterised and on its investment track | Depends on the policy terms | Indeterminate without the policy. Escalate, with the same foreign-insurer excise question as bituach menahalim |
+| Shares of an Israeli company held directly on TASE | A PFIC only if that company itself meets the income or asset test. An operating company usually does not; a holding or cash-rich company can | Not a trust question | Usually neither regime. Ask whether the company publishes a statement on its PFIC status |
+| Pikadon, a bank deposit | Not stock in a foreign corporation, so not a PFIC question | A deposit is not a trust arrangement | Neither regime. It is still a foreign financial account for FBAR and Form 8938, which `us-israel-dual-tax-navigator` covers |
 | Chisachon le'chol yeled | Small balances, often under any de minimis | General-purpose child savings, not a 5.04 purpose | Usually low stakes, still worth naming to a preparer |
 
 **Look-through note, for every wrapper row.** Under Treasury Regulation 1.1291-1(b)(8)(iii)(D),
@@ -182,10 +213,16 @@ considered to own that stock. So if a pension, gemel or hishtalmut arrangement i
 grantor trust owned by the user, the Israeli funds or ETFs its investment track holds can be
 PFIC stock the user owns indirectly, a Form 8621 question in its own right. Revenue Procedure
 2020-17 does not help here: it states that it does not affect reporting obligations under any
-other provision of US law. Regulation 1.1298-1(c)(4) has a Part I exception for PFIC stock
-held through a foreign pension fund, but only where a US income tax treaty treats the fund
-that way; whether the US-Israel treaty does is a question for the preparer, not for this
-screen. Always list the underlying PFIC question for wrapper products.
+other provision of US law. Regulation 1.1298-1(c)(4) excuses Form 8621 for PFIC stock held
+through an arrangement treated as a foreign pension fund under a US income tax treaty, but only
+if, under that treaty, the fund's income may be taxed to the participant only when and to the
+extent it is paid out. The US-Israel treaty text contains no such provision and no definition
+of a pension fund. Its pensions paragraph, Article 20(1), covers periodic payments and is
+subject to the Article 6(3) saving clause, under which the US may tax its citizens as if the
+treaty had not come into effect; the 1993 Protocol exempts only Article 20(2) and 20(3), alimony
+and annuities and child support, from that clause. So do not tell a user that 1.1298-1(c)(4) relieves an Israeli pension, and if
+a preparer relies on it, ask on what basis. Always list the underlying PFIC question for
+wrapper products.
 
 The keren hishtalmut row is the reason this skill exists. Give the user the two specific
 criteria it appears to fail, not a verdict, so they can put a precise question to a preparer
@@ -226,7 +263,7 @@ applied to the user's description of the product rather than to the plan documen
 |---|---|
 | `references/domain-checklist.md` | Coverage contract with the primary source behind each item |
 | `references/screening-criteria.md` | The PFIC tests and the full 5.03 and 5.04 criteria as checklists |
-| `scripts/screen_product.py` | Walks the 5.03 and 5.04 criteria and the PFIC de minimis test for one product |
+| `scripts/screen_product.py` | Walks the 5.03 and 5.04 criteria, the proposed-regulation alternative and the PFIC de minimis test for one product, and keeps direct shares and deposits out of the trust screen |
 | `evidence.json` | Every factual claim with its source URL and a verbatim snippet |
 
 ## Gotchas
@@ -252,6 +289,10 @@ applied to the user's description of the product rather than to the plan documen
    capped as a percentage of salary can pass 5.03(4) whatever the dollar amount. Where a dollar
    limb is used, convert at the US Treasury Bureau of the Fiscal Service rate on the last day
    of the tax year, because a product can sit on either side of the limit depending on it.
+8. **Presenting Revenue Procedure 2020-17 as the only route, or the 2024 proposed regulations
+   as law.** The proposed section 6048 regulations offer an elective, all-or-nothing reliance
+   alternative with higher limits and a de minimis category. They are not final, and the choice
+   belongs to a preparer.
 
 ## Reference Links
 
@@ -262,6 +303,8 @@ applied to the user's description of the product rather than to the plan documen
 | Revenue Procedure 2020-17 | https://www.irs.gov/pub/irs-drop/rp-20-17.pdf | Sections 5.02, 5.03 and 5.04, and the scope limited to section 6048 |
 | About Form 3520 | https://www.irs.gov/forms-pubs/about-form-3520 | What transactions and ownership trigger it |
 | About Form 3520-A | https://www.irs.gov/forms-pubs/about-form-3520-a | The annual duty of a foreign trust with a US owner |
+| Proposed regulations under section 6048 (8 May 2024) | https://www.govinfo.gov/content/pkg/FR-2024-05-08/pdf/2024-09434.pdf | Proposed 1.6048-5(b), the reliance condition, and whether final regulations have since been published |
+| US-Israel income tax treaty | https://www.irs.gov/pub/irs-trty/israel.pdf | Article 6(3) saving clause, Article 20 pensions, and Article 8(8) on the insurance premium excise |
 | Treasury Reporting Rates of Exchange | https://fiscaldata.treasury.gov/datasets/treasury-reporting-rates-exchange/treasury-reporting-rates-of-exchange | The year-end shekel rate used for the 5.03(4) and 5.04(3) dollar limits |
 
 ## Troubleshooting
@@ -271,5 +314,5 @@ applied to the user's description of the product rather than to the plan documen
 | The user wants a yes or no on their keren hishtalmut | The question cannot be answered without the plan terms, and no IRS guidance names the product | Give the two criteria it appears to fail, say plainly that this is a screen, and hand them the exact question for a preparer. |
 | Two sources disagree on whether Israeli pensions are reportable | One is describing the reporting exemption and the other the income treatment | Separate the two. Revenue Procedure 2020-17 addresses reporting only. |
 | A product looks exempt but the user has never filed a US return | The exemption is available only to eligible, already-compliant individuals | Route to `us-israel-dual-tax-navigator` for the catch-up question first. The order matters. |
-| The contribution limit test flips between years | The dollar limbs are applied to shekel contributions | First check whether 5.03(4) is met by its percentage-of-earned-income limb. If a dollar limb decides it, convert at the Treasury year-end rate for each year and record the rate used. |
+| The contribution limit test flips between years | The plan's cap is set in shekels and converted at each year's rate | First check whether 5.03(4) is met by its percentage-of-earned-income limb. If a dollar limb decides it, convert at the Treasury year-end rate for each year and record the rate used. |
 | The user asks whether to sell the fund to avoid the regime | That is investment advice and it is also a taxable event | Decline the recommendation, explain that disposing of a section 1291 fund triggers the excess distribution treatment on the entire gain, and route to a preparer. |
