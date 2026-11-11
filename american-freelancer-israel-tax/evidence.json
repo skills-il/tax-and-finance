@@ -858,6 +858,101 @@
         "SKILL_HE.md",
         "references/se-tax-mechanics.md"
       ]
+    },
+    {
+      "claim_id": "n2663-affected-israel",
+      "claim": "Notice 2026-63 (הודעה 2026-63): affected taxpayers include any individual whose principal residence, and any sole proprietor whose principal place of business, is in Israel, the West Bank or Gaza",
+      "source_url": "https://www.irs.gov/pub/irs-drop/n-26-63.pdf",
+      "raw_snippet": "Any individual whose principal residence, and any business entity or sole proprietor whose principal place of business, is located in the State of Israel, the West Bank or Gaza (covered area)",
+      "fetched_at": "2026-11-11T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/se-tax-mechanics.md"
+      ]
+    },
+    {
+      "claim_id": "n2663-postponed-window",
+      "claim": "Affected taxpayers have until September 30, 2027 to file and pay, including any installment, for acts due on or after September 30, 2026 and before September 30, 2027",
+      "source_url": "https://www.irs.gov/pub/irs-drop/n-26-63.pdf",
+      "raw_snippet": "Affected taxpayers have until September 30, 2027 to file tax returns, make tax payments, and perform certain time-sensitive acts listed in Section 301.7508A-1(c)(1) and Revenue Procedure 2018-58, 2018-50 IRB 990 (December 10, 2018), that are due to be performed on or after September 30, 2026 and before September 30, 2027.",
+      "fetched_at": "2026-11-11T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/se-tax-mechanics.md"
+      ]
+    },
+    {
+      "claim_id": "n2663-installments",
+      "claim": "Postponed acts include paying income tax or any installment of those taxes",
+      "source_url": "https://www.irs.gov/pub/irs-drop/n-26-63.pdf",
+      "raw_snippet": "Paying any income tax, estate tax, gift tax, generation-skipping transfer tax, excise tax (other than firearms tax), harbor maintenance tax, or employment tax, or any installment of those taxes",
+      "fetched_at": "2026-11-11T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/se-tax-mechanics.md"
+      ]
+    },
+    {
+      "claim_id": "n2663-carry-forward-2025-53",
+      "claim": "Acts postponed by Notice 2025-53 (due on or after September 30, 2025, and before September 30, 2026) are further postponed until September 30, 2027 for taxpayers eligible under both notices; prior notices date from 2023 (Notice 2023-71)",
+      "source_url": "https://www.irs.gov/pub/irs-drop/n-26-63.pdf",
+      "raw_snippet": "taxpayer acts postponed by Notice 2025-53 (including, for taxpayers eligible for the applicable prior notices, acts previously postponed by Notice 2024-72 and Notice 202371) are further postponed until September 30, 2027, for taxpayers eligible for relief under this notice",
+      "fetched_at": "2026-11-11T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/se-tax-mechanics.md"
+      ]
+    },
+    {
+      "claim_id": "n2663-2025-53-window",
+      "claim": "Notice 2025-53 covered acts due on or after September 30, 2025, and before September 30, 2026",
+      "source_url": "https://www.irs.gov/pub/irs-drop/n-26-63.pdf",
+      "raw_snippet": "Notice 2025-53 provided taxpayers affected by the terroristic action in the State of Israel throughout 2024 and 2025 until September 30, 2026, to perform acts due to be performed on or after September 30, 2025, and before September 30, 2026.",
+      "fetched_at": "2026-11-11T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "n2663-automatic",
+      "claim": "The IRS automatically identifies taxpayers in the covered area based on previously filed returns and applies relief",
+      "source_url": "https://www.irs.gov/pub/irs-drop/n-26-63.pdf",
+      "raw_snippet": "The IRS automatically identifies taxpayers whose principal residence or principal place of business is located in the covered area based on previously filed returns and applies relief.",
+      "fetched_at": "2026-11-11T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/se-tax-mechanics.md"
+      ]
+    },
+    {
+      "claim_id": "irc-7508a-interest-penalty",
+      "claim": "IRC section 7508A (סעיף 7508A) lets the Secretary specify a period of up to 1 year disregarded in determining interest and penalties",
+      "source_url": "https://www.law.cornell.edu/uscode/text/26/7508A",
+      "raw_snippet": "the Secretary may specify a period of up to 1 year that may be disregarded in determining, under the internal revenue laws, in respect of any tax liability of such taxpayer",
+      "fetched_at": "2026-11-11T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/se-tax-mechanics.md"
+      ]
+    },
+    {
+      "claim_id": "irc-7508a-2-interest",
+      "claim": "7508A(a)(2): the disregarded period applies to the amount of any interest, penalty, additional amount, or addition to the tax",
+      "source_url": "https://www.law.cornell.edu/uscode/text/26/7508A",
+      "raw_snippet": "(2) the amount of any interest, penalty, additional amount, or addition to the tax for periods after such date",
+      "fetched_at": "2026-11-11T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/se-tax-mechanics.md"
+      ]
     }
   ]
 }

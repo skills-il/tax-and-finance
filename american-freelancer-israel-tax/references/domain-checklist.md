@@ -84,6 +84,10 @@ threshold and list below is cited to a primary source.
       health insurance still due, never reduces SE tax. Added 2026-11-11.
       source: Amendment 262 gazette text; Kol Zchut
 
+- [ ] Israel-resident disaster/terroristic-action postponement of filing and payment due dates
+      (IRS Notice 2026-63, to 2027-09-30; renewed yearly since 2023). Added 2026-11-11 (v1.2.1).
+      source: Notice 2026-63; IRC s.7508A
+
 ## Should cover (advanced / edge cases)
 
 - [ ] Distinguishing an osek from a sachir on a tlush at the outset, since the analysis differs.

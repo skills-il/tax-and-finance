@@ -20,9 +20,10 @@
       ]
     },
     {
-      "version": "1.2.0",
+      "version": "1.2.1",
       "date": "2026-11-11",
       "lessons": [
+        "Post-ship patch 1.2.1 (same day): IRS Notice 2026-63 postpones payments incl. installments due 2026-09-30 to 2027-09-30 for Israel residents, carrying forward Notice 2025-53. Flagged by a sibling worker, missed by research, coverage and expert. Each cycle: check irs.gov for the current Israel terroristic-action notice.",
         "EN description unchanged; HE frontmatter description got a parity fix only (green card holder, the exclusion trigger, FBAR restored per Judge r1). 5.7 holdout not run; eval_pass_rate carried.",
         "Resolved this cycle: 2027 wage base (SSA 192,300) in body and script, script --year now required, set-aside gate fixed; Romania 31st agreement; prior-year safe harbor needs a filed return; annualized method (Form 2210 Schedule AI); FX rule; BL creditability, prior years and Israeli mikdamot routed; filing status with NRA spouse; what SE tax buys.",
         "NEW domain fact: National Insurance Law s.350A (Amendment 262, 2026-2035) exempts US olim from Bituach Leumi (not health insurance) on income bearing US social security for 5 years. Found by the 3a research agent, missed by the coverage audit. Re-check each cycle: schedule amendments (350A(d)), extension by order (s.3), and whether BL publishes guidance on pre-2026 olim and on Medicare-only income above the US wage base.",
@@ -31,7 +32,8 @@
         "Deferred MINOR: Gotcha 10 abbreviates the five-year start documents (omits the Ministry of Aliyah certificate that Stage 1 lists).",
         "Deferred MINOR: Schedule SE optional methods (line 4b); paying instalments from an Israeli bank account (Direct Pay / EFTPS from abroad unverified).",
         "Next cycle: add the 2027 Form 1040-ES due dates and safe-harbor text once published; re-point i1040sse 2026 evidence to irs-prior when the 2027 instructions replace it; re-read SSA agreements list.",
-        "Value-add 2026-11-11: with 1.00 vs without 0.48 (+0.52), PASS, 4 cases."
+        "Value-add 2026-11-11: with 1.00 vs without 0.48 (+0.52), PASS, 4 cases.",
+        "Deferred MINOR (Judge r2): HE description PFIC exclusion lacks 'ישראליות'."
       ]
     }
   ]

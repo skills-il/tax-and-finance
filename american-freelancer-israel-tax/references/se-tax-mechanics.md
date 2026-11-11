@@ -47,6 +47,14 @@ The figure changes annually; take it for the year being computed, never from a p
 | 3rd | Sept. 15, 2026 |
 | 4th | Jan. 15, 2027 |
 
+Israel residents: IRS Notice 2026-63 postpones to September 30, 2027 filing and payment acts,
+including "any installment of those taxes", due on or after September 30, 2026 and before
+September 30, 2027, for individuals whose principal residence (or sole proprietors whose
+principal place of business) is in Israel, the West Bank or Gaza, and carries forward acts
+postponed by Notice 2025-53. Section 7508A allows the period to be disregarded for interest and
+penalties. Relief is applied automatically based on previously filed returns. Check for a later
+notice each year.
+
 Generally required if at least USD 1,000 of tax is expected. The penalty is avoided by paying
 the smaller of 90 percent of the 2026 tax or 100 percent of the 2025 tax (110 percent if 2025
 AGI exceeded USD 150,000, or USD 75,000 married filing separately). The prior-year test needs

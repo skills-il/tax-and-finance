@@ -210,6 +210,22 @@ fourth is not required if the 2026 return is filed by February 1, 2027 with the 
 paid. For 2027, take the dates from the 2027 Form 1040-ES once published, not from this
 table.
 
+**Israel residents: check the postponement first.** IRS Notice 2026-63 treats any individual
+whose principal residence, or any sole proprietor whose principal place of business, is in
+Israel, the West Bank or Gaza as an affected taxpayer. It gives them until September 30, 2027
+to file returns and make tax payments, including "any installment of those taxes", that are
+due on or after September 30, 2026 and before September 30, 2027. That window holds the
+January 15, 2027 instalment and the April, June and September 2027 ones. The notice also
+carries forward acts already postponed by Notice 2025-53 (due on or after September 30, 2025
+and before September 30, 2026, which holds the April, June and September 2026 instalments) to
+September 30, 2027 for those eligible under both. Section 7508A lets such a period be
+disregarded in determining interest and penalties; ask the preparer how it applies to the
+user's own payments. The IRS applies the relief automatically "based on previously filed
+returns", so a user with no recent return on file should ask the preparer how to make sure it
+is applied. These notices have been issued year by year since 2023, so check irs.gov for a
+later one before relying on September 30, 2027. A postponement moves the due date; it does not
+reduce the tax, so keep setting money aside.
+
 **Who must pay and how much avoids a penalty.** Estimated tax is generally required where the
 user expects to owe at least USD 1,000 for the year. Paying the smaller of 90 percent of the
 current year's tax or 100 percent of the prior year's tax (for 2026, the 2025 return, which
@@ -226,8 +242,11 @@ payment for one or more periods, and using it means filing Form 2210 with Schedu
 as a preparer question for anyone whose income arrived late in the year.
 
 **Catching up later does not erase earlier penalties.** Per Form 1040-ES, the penalty is
-imposed on each underpayment for the number of days it remains unpaid. A user who skipped the
-first three instalments and pays it all in January still owes the penalty on each missed one.
+imposed on each underpayment for the number of days it remains unpaid. A user outside any
+postponement who skipped the first three instalments and pays it all in January still owes the
+penalty on each missed one. For an Israel resident covered by the postponement above, the
+instalments inside its window, including the 2026 ones carried forward from Notice 2025-53 for
+those eligible under both notices, are not yet late.
 
 **Extensions do not stop interest.** Per Publication 54, a US citizen or resident alien who
 qualifies (living outside the United States and Puerto Rico on the regular due date, see the
@@ -329,6 +348,10 @@ which year's wage base and which exchange rate you used and where they came from
     security, for five years from the oleh visa or certificate. It never reduces SE tax.
 11. **Offering the prior-year safe harbor to a non-filer.** With no prior-year return filed,
     only the current-year test exists.
+12. **Quoting the 1040-ES dates to an Israel resident as hard deadlines.** Notice 2026-63
+    moves payments due on or after September 30, 2026 and before September 30, 2027, plus those
+    already postponed by Notice 2025-53, to September 30, 2027. Check for a later
+    notice, and never present the postponement as a reduction of the tax.
 
 ## Reference Links
 
@@ -339,6 +362,7 @@ which year's wage base and which exchange rate you used and where they came from
 | Schedule SE (form) | https://www.irs.gov/pub/irs-pdf/f1040sse.pdf | Line 4a and the 92.35 percent factor, line 4c, lines 8a to 10 (wages reduce the base), line 13 |
 | Form 1040-ES (current year) | https://www.irs.gov/pub/irs-pdf/f1040es.pdf | The current-year wage base, the instalment due dates, and the 90 / 100 / 110 percent tests |
 | Instructions for Form 8959 | https://www.irs.gov/pub/irs-pdf/i8959.pdf | Additional Medicare Tax, the wage reduction, and joint-return combination |
+| IRS Notice 2026-63 | https://www.irs.gov/pub/irs-drop/n-26-63.pdf | Who is an affected taxpayer in Israel, the postponed window, and the September 30, 2027 date |
 | Publication 54 | https://www.irs.gov/pub/irs-pdf/p54.pdf | Extensions of time to file versus time to pay |
 | US-Israel income tax treaty | https://www.irs.gov/pub/irs-trty/israel.pdf | The taxes covered and the saving clause |
 | SSA, US social security agreements | https://www.ssa.gov/international/agreements_overview.html | The live agreement list (Romania from September 1, 2026); may block automated clients |
