@@ -1,146 +1,1015 @@
 {
   "schemaVersion": "1.0",
   "skill": "grow-payment-gateway",
-  "generated_at": "2026-08-27T02:34:32.566582+00:00",
+  "generated_at": "2026-11-11T12:59:28Z",
   "claims": [
     {
-      "claim_id": "grow-base-urls-and-format",
-      "claim": "The Light API is served at https://sandbox.meshulam.co.il and https://secure.meshulam.co.il under /api/light/server/1.0/, accepts multipart/form-data, and reports every outcome in the body with HTTP 200 (status 1 success, status 0 failure).",
-      "source_url": "https://secure.meshulam.co.il/api/light/server/1.0/createPaymentProcess",
-      "raw_snippet": "{\"err\":{\"id\":707,\"message\":\"\\u05d4\\u05e1\\u05db\\u05d5\\u05dd \\u05d0\\u05d9\\u05e0\\u05d5 \\u05ea\\u05e7\\u05d9\\u05df\"},\"status\":\"0\",\"data\":\"\"}",
-      "fetched_at": "2026-08-18",
+      "claim_id": "sandbox-url",
+      "claim": "Sandbox Light API base URL is https://sandbox.meshulam.co.il/api/light/server/1.0/ .",
+      "source_url": "https://developers.grow.business/reference/testing-environment",
+      "raw_snippet": "Use the following URL for testing purposes: https://sandbox.meshulam.co.il/api/light/server/1.0/",
+      "fetched_at": "2026-11-11T12:59:28Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/api-endpoints.md",
         "scripts/grow-payment-helper.sh"
-      ],
-      "verified_via": "api-raw-http",
-      "verified_at": "2026-08-27T02:36:08.021747+00:00"
+      ]
     },
     {
-      "claim_id": "grow-endpoints",
-      "claim": "The Light API router answers an unrecognised endpoint name with err as the plain STRING \"unknown method\", which is the negative control that makes endpoint existence testable without credentials. Endpoints verified to EXIST on both sandbox.meshulam.co.il and secure.meshulam.co.il: /api/light/server/1.0/createPaymentProcess /api/light/server/1.0/approveTransaction /api/light/server/1.0/getTransactionInfo /api/light/server/1.0/getPaymentProcessInfo /api/light/server/1.0/createPaymentLink /api/light/server/1.0/getPaymentLinkInfo /api/light/server/1.0/createTransactionWithToken /api/light/server/1.0/getTokenTransactionsByExternalIdentifiers /api/light/server/1.0/refundTransaction /api/light/server/1.0/cancelBitTransaction /api/light/server/1.0/settleSuspendedTransaction /api/light/server/1.0/createFarPaymentRequest /api/light/server/1.0/updateDirectDebit . Verified NOT to exist on either host: /api/light/server/1.0/getTokenOnly /api/light/server/1.0/updatePaymentLink /api/light/server/1.0/updateRecurringPayment . All are invoked as POST, i.e. POST /api/light/server/1.0/createPaymentProcess POST /api/light/server/1.0/approveTransaction POST /api/light/server/1.0/getTransactionInfo POST /api/light/server/1.0/getPaymentProcessInfo POST /api/light/server/1.0/createPaymentLink POST /api/light/server/1.0/getPaymentLinkInfo POST /api/light/server/1.0/createTransactionWithToken POST /api/light/server/1.0/getTokenTransactionsByExternalIdentifiers POST /api/light/server/1.0/refundTransaction POST /api/light/server/1.0/cancelBitTransaction POST /api/light/server/1.0/settleSuspendedTransaction POST /api/light/server/1.0/createFarPaymentRequest POST /api/light/server/1.0/updateDirectDebit . The non-existent ones are also referenced in the skill as POST /api/light/server/1.0/getTokenOnly .",
-      "source_url": "https://sandbox.meshulam.co.il/api/light/server/1.0/thisEndpointDoesNotExist",
-      "raw_snippet": "{\"err\":\"unknown method\",\"status\":\"0\",\"data\":{\"message\":\"\\u05de\\u05ea\\u05d5\\u05d3\\u05d4 \\u05dc\\u05d0 \\u05e7\\u05d9\\u05d9\\u05de\\u05ea\"}}",
-      "fetched_at": "2026-08-19",
+      "claim_id": "sandbox-separate-identifiers",
+      "claim": "Each environment has its own pageCode, userId and apiKey.",
+      "source_url": "https://developers.grow.business/reference/testing-environment",
+      "raw_snippet": "Each environment has its own unique identifiers, such as pageCode , userId , and apiKey , if relevant to your integration.",
+      "fetched_at": "2026-11-11T12:59:28Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/api-endpoints.md"
-      ],
-      "verified_via": "api-raw-http",
-      "verified_at": "2026-08-27T02:34:32.566582+00:00"
+      ]
     },
     {
-      "claim_id": "createpaymentprocess-params",
-      "claim": "createPaymentProcess is served at /api/light/server/1.0/createPaymentProcess with a multipart/form-data request body. transactionTypes entries are declared type integer with documented method values: [0] Credit Card example 1, [1] bit example 6, [2] Apple Pay example 13, [3] Google Pay example 14, [4] bank transfer example 15, [5] Pay Box default 5. The array index selects the slot AND the value is a numeric method code; the v1.2.1 claim that no numeric value-codes exist was wrong.",
-      "source_url": "https://developers.grow.business/reference/post_api-light-server-1-0-createpaymentprocess-1",
-      "raw_snippet": "\"/api/light/server/1.0/createPaymentProcess\":{\"post\":{\"tags\":[\"default\"],\"summary\":\"Regular Payment SDK\",\"requestBody\":{\"content\":{\"multipart/form-data\":{\"schema\":{\"type\":\"object\",\"properties\":{\"pageCode\":{\"type\":\"string\"",
-      "fetched_at": "2026-08-18",
+      "claim_id": "test-card-4580458045804580",
+      "claim": "Test card 4580458045804580 is valid for regular single payments only and suits testing failed multi-payment transactions.",
+      "source_url": "https://developers.grow.business/reference/testing-environment",
+      "raw_snippet": "4580458045804580 - Valid for regular single-payment transactions only. Suitable for testing failed transactions in multiple payments.",
+      "fetched_at": "2026-11-11T12:59:28Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "test-cards-other",
+      "claim": "Other sandbox test cards: 4580000000000000 and 4580111111111121.",
+      "source_url": "https://developers.grow.business/reference/testing-environment",
+      "raw_snippet": "4580000000000000 4580111111111121",
+      "fetched_at": "2026-11-11T12:59:28Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "test-bank",
+      "claim": "Sandbox bank-transfer test details: bank 41, branch 410, account 411111111.",
+      "source_url": "https://developers.grow.business/reference/testing-environment",
+      "raw_snippet": "Bank: 41 Branch: 410 Account: 411111111",
+      "fetched_at": "2026-11-11T12:59:28Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "no-sandbox-bit-applepay-googlepay",
+      "claim": "Bit, Google Pay and Apple Pay have no test environment; their transactions are processed live and charged as real transactions.",
+      "source_url": "https://developers.grow.business/reference/testing-environment",
+      "raw_snippet": "Transactions made using these payment methods are processed in the Live environment and will be charged as real transactions.",
+      "fetched_at": "2026-11-11T12:59:28Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "paybox-no-sandbox",
+      "claim": "PayBox payments cannot be completed in the sandbox.",
+      "source_url": "https://developers.grow.business/reference/testing-environment",
+      "raw_snippet": "PayBox payments cannot be completed in the Sandbox environment.",
+      "fetched_at": "2026-11-11T12:59:28Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "production-url",
+      "claim": "Production base URL is https://secure.meshulam.co.il/api/light/server/1.0 .",
+      "source_url": "https://developers.grow.business/reference/live-environment",
+      "raw_snippet": "Production Environment URL: https://secure.meshulam.co.il/api/light/server/1.0",
+      "fetched_at": "2026-11-11T12:59:28Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
-        "references/api-endpoints.md"
-      ],
-      "verified_via": "browser",
-      "verified_at": "2026-08-27T02:34:32.566582+00:00"
+        "references/api-endpoints.md",
+        "scripts/grow-payment-helper.sh"
+      ]
     },
     {
-      "claim_id": "approve-transaction",
-      "claim": "approveTransaction requires pageCode, transactionId AND transactionToken. Probed live: sending pageCode plus only transactionId returns err.id 54 naming transactionToken as the missing field, and sending only transactionToken returns 54 naming transactionId.",
-      "source_url": "https://sandbox.meshulam.co.il/api/light/server/1.0/approveTransaction?pageCode=XX&transactionToken=abc",
-      "raw_snippet": "{\"err\":{\"id\":54,\"message\":\"\\u05d7\\u05e1\\u05e8\\u05d9\\u05dd \\u05e0\\u05ea\\u05d5\\u05e0\\u05d9\\u05dd:transactionId\"},\"status\":\"0\",\"data\":\"\"}",
-      "fetched_at": "2026-08-18",
+      "claim_id": "prod-review-http200",
+      "claim": "Grow's production review checks the server returns HTTP 200 for server updates.",
+      "source_url": "https://developers.grow.business/reference/live-environment",
+      "raw_snippet": "Your server returns HTTP 200 for server updates",
+      "fetched_at": "2026-11-11T12:59:28Z",
       "appears_in": [
         "SKILL.md",
-        "SKILL_HE.md",
-        "references/api-endpoints.md"
-      ],
-      "verified_via": "api-raw-http",
-      "verified_at": "2026-08-27T02:36:08.021747+00:00"
+        "SKILL_HE.md"
+      ]
     },
     {
-      "claim_id": "webhook-fields",
-      "claim": "Grow webhooks are authenticated via a webhookKey field carried in the payload (there is no X-Grow-Signature header). Common webhook fields: webhookKey, transactionCode, paymentSum, paymentDate, fullName, payerPhone, payerEmail, cardSuffix, cardBrand, asmachta, paymentSource. Recurring adds directDebitId, paymentsNum, periodicalPaymentSum. Failed recurring adds error_message, charges_attempts, regular_payment_id. Invoice webhook adds invoiceNumber, invoiceUrl.",
-      "source_url": "https://developers.grow.business/docs/overview-7",
-      "raw_snippet": "\"quantity\": \"1\", \"price\": \"2\", \"price_mark\": \"0\" } ], \"shipping\": { \"type\": \"משלוח עד הבית -7 ימי עסקים\", \"amount\": \"10\" }, \"dynamicFields\": [ { \"key\": \"\", \"label\": \"תרצו שנארוז כמתנה?\", \"option_label\": \"כן\", \"option_key\": \"\", \"field_value\": \"כן\" }, { \"key\": \"\", \"label\": \"אנא הזן מועד הגעה רצוי\", \"option_label\": \"\", \"option_key\": \"\", \"field_value\": \"01/1/25\" }, { \"key\": \"\", \"label\": \"תרצו להוסיף פפיון ?",
-      "fetched_at": "2026-08-18",
+      "claim_id": "prod-review-approve",
+      "claim": "The production review checks that ApproveTransaction is sent when required.",
+      "source_url": "https://developers.grow.business/reference/live-environment",
+      "raw_snippet": "The ApproveTransaction request is sent when required",
+      "fetched_at": "2026-11-11T12:59:28Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "prod-review-fields",
+      "claim": "Validate customer fields such as name and phone before sending, to avoid preventable errors.",
+      "source_url": "https://developers.grow.business/reference/live-environment",
+      "raw_snippet": "You should also validate customer fields, such as customer name and phone number, before sending the request to Grow, in order to avoid preventable errors on your side.",
+      "fetched_at": "2026-11-11T12:59:28Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "prod-webhooks-reconfigure",
+      "claim": "Webhooks configured in the sandbox must be configured again in production.",
+      "source_url": "https://developers.grow.business/reference/live-environment",
+      "raw_snippet": "If you configured webhooks in the Sandbox environment, they must be configured again in the Production environment.",
+      "fetched_at": "2026-11-11T12:59:28Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/webhook-payloads.md"
+      ]
+    },
+    {
+      "claim_id": "prod-commercial",
+      "claim": "Platform integrations need a signed commercial agreement before production.",
+      "source_url": "https://developers.grow.business/reference/live-environment",
+      "raw_snippet": "make sure that a signed commercial agreement is completed with the relevant commercial teams before moving to Production.",
+      "fetched_at": "2026-11-11T12:59:28Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "prod-ecommerce-terms",
+      "claim": "E-commerce site requirements: contact phone, business address, terms checkbox with link, terms clauses incl. age restriction, cancellation, privacy.",
+      "source_url": "https://developers.grow.business/reference/live-environment",
+      "raw_snippet": "Contact Phone Number - A contact phone number must be clearly displayed on the website, either on the homepage or on a dedicated contact page.",
+      "fetched_at": "2026-11-11T12:59:28Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "prod-apple-domain",
+      "claim": "Apple Pay setup must be completed for the production domain even if the sandbox domain was configured.",
+      "source_url": "https://developers.grow.business/reference/live-environment",
+      "raw_snippet": "Make sure to complete the Apple Pay setup for the Production domain, even if the Sandbox domain was already configured.",
+      "fetched_at": "2026-11-11T12:59:28Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "support-email",
+      "claim": "Grow's documentation names support@grow.business as the contact for the production review.",
+      "source_url": "https://developers.grow.business/reference/live-environment",
+      "raw_snippet": "Email: [support@grow.business](mailto:support@grow.business)",
+      "fetched_at": "2026-11-11T12:59:28Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/webhook-payloads.md",
+        "references/domain-checklist.md"
       ],
-      "verified_via": "cited page fetched; 54 of 62 of the claim's distinctive terms occur on it, and the snippet is the page's own wording around \"fields\"",
-      "verified_at": "2026-08-18"
+      "verified_via": "page-source: the address is in the page's embedded markdown; the rendered view shows a Cloudflare-obfuscated [email protected], so a text match on visible HTML cannot see it",
+      "verified_at": "2026-11-11T12:59:28Z"
+    },
+    {
+      "claim_id": "token-consent",
+      "claim": "If the integration saves card tokens, the payment page must include a checkbox for the customer to actively approve saving the token.",
+      "source_url": "https://developers.grow.business/reference/live-environment",
+      "raw_snippet": "If your integration saves card tokens, the payment page must include a checkbox that allows the end customer to actively approve saving the card token.",
+      "fetched_at": "2026-11-11T12:59:28Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "paymentlink-apikey-prod",
+      "claim": "For CreatePaymentLink the X-API-KEY header must be updated to a production value Grow publishes on this page.",
+      "source_url": "https://developers.grow.business/reference/live-environment",
+      "raw_snippet": "If you are using the CreatePaymentLink API, make sure to update the X-API-KEY header to the following production value:",
+      "fetched_at": "2026-11-11T12:59:28Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/api-endpoints.md"
+      ]
+    },
+    {
+      "claim_id": "callback-not-json",
+      "claim": "The server-to-server callback is an HTTP POST sent like CreatePaymentProcess data and NOT as JSON.",
+      "source_url": "https://developers.grow.business/reference/server-to-server-callback",
+      "raw_snippet": "The method takes in parameters as an HTTP POST, the same way as you would send the data to the CreatePaymentProcess method and NOT as JSON.",
+      "fetched_at": "2026-11-11T12:59:28Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/webhook-payloads.md"
+      ]
+    },
+    {
+      "claim_id": "approve-not-required-for-processing",
+      "claim": "The transaction is processed even if ApproveTransaction is not executed or fails.",
+      "source_url": "https://developers.grow.business/reference/server-to-server-callback",
+      "raw_snippet": "The transaction will be processed even if the ApproveTransaction request is not executed or fails.",
+      "fetched_at": "2026-11-11T12:59:28Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "updatemyurl",
+      "claim": "updateMyUrl is a GET request that simulates the callback by sending an HTTP request to the URL you specify.",
+      "source_url": "https://developers.grow.business/reference/server-to-server-callback",
+      "raw_snippet": "This GET request simulates the callback notification by sending an HTTP request to the URL you specify.",
+      "fetched_at": "2026-11-11T12:59:28Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "approve-resend-5",
+      "claim": "When acknowledgments are not received, Grow resends the server update up to 5 additional times.",
+      "source_url": "https://developers.grow.business/reference/approve-transaction",
+      "raw_snippet": "When Grow consistently does not receive these acknowledgments, Grow will resend the server update up to 5 additional times.",
+      "fetched_at": "2026-11-11T12:59:28Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "approve-does-not-alter",
+      "claim": "approveTransaction does not alter, cancel or approve the transaction status.",
+      "source_url": "https://developers.grow.business/reference/approve-transaction",
+      "raw_snippet": "This step does not alter the transaction status nor does it cancel or approve it; the charging process proceeds as planned.",
+      "fetched_at": "2026-11-11T12:59:28Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "approve-exclusions",
+      "claim": "Do not send approveTransaction for token transactions, J4J5, or save-token-only.",
+      "source_url": "https://developers.grow.business/reference/approve-transaction",
+      "raw_snippet": "Do not send this request in the case of token transactions (created with createTransactionWithToken) or delayed transactions (J4J5), or for save token only scenarios.",
+      "fetched_at": "2026-11-11T12:59:28Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "cardtoken-callback-field",
+      "claim": "The save-token server response carries a cardToken field distinct from transactionToken.",
+      "source_url": "https://developers.grow.business/reference/token-server-response",
+      "raw_snippet": "\"cardToken\": \"9294decf1dg5g2g5g2g5g2g58fd286\",",
+      "fetched_at": "2026-11-11T12:59:28Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/webhook-payloads.md",
+        "scripts/grow-payment-helper.sh"
+      ]
+    },
+    {
+      "claim_id": "save-token-status-11",
+      "claim": "The save-token example callback shows statusCode 11 (suspended transaction).",
+      "source_url": "https://developers.grow.business/reference/token-server-response",
+      "raw_snippet": "\"status\": \"עסקה מושהית\", \"statusCode\": \"11\",",
+      "fetched_at": "2026-11-11T12:59:28Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/webhook-payloads.md"
+      ]
+    },
+    {
+      "claim_id": "token-in-cardtoken-field",
+      "claim": "The credit card token is received in the server-to-server update's cardToken field.",
+      "source_url": "https://developers.grow.business/reference/token",
+      "raw_snippet": "credit card token would be received after making the transaction via payment form (Server to Server update), cardToken field.",
+      "fetched_at": "2026-11-11T12:59:28Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "no-reveal-ids",
+      "claim": "Do not reveal transactionId and token to the paying customer; asmachta may be revealed.",
+      "source_url": "https://developers.grow.business/reference/token",
+      "raw_snippet": "You must not reveal any inner transaction’s identification details to the paying customer such as transactionId and token.",
+      "fetched_at": "2026-11-11T12:59:28Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "token-only-flow",
+      "claim": "Token-only flow sets chargeType=3 and saveCardToken=1.",
+      "source_url": "https://developers.grow.business/reference/work-with-token",
+      "raw_snippet": "Set parameters: chargeType=3 and saveCardToken=1.",
+      "fetched_at": "2026-11-11T12:59:28Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/api-endpoints.md"
+      ]
+    },
+    {
+      "claim_id": "token-only-sum1",
+      "claim": "Token-only flow uses createPaymentProcess with sum=1.",
+      "source_url": "https://developers.grow.business/reference/work-with-token",
+      "raw_snippet": "Execute a call to create Payment Process with sum= 1.",
+      "fetched_at": "2026-11-11T12:59:28Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "token-with-regular",
+      "claim": "Regular transaction with token save adds saveCardToken=1.",
+      "source_url": "https://developers.grow.business/reference/work-with-token",
+      "raw_snippet": "Simultaneously save the token by adding the parameter saveCardToken=1.",
+      "fetched_at": "2026-11-11T12:59:28Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "get-token-only-page",
+      "claim": "The 'Get Token Only' reference documents createPaymentProcess with an amount that must be 1.",
+      "source_url": "https://developers.grow.business/reference/create-payment-process-6",
+      "raw_snippet": "Total amount must be 1",
+      "fetched_at": "2026-11-11T12:59:28Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "createpaymentprocess-names",
+      "claim": "createPaymentProcess requires pageField[fullName] with at least two names; transactionTypes are valid for SDK wallet only.",
+      "source_url": "https://developers.grow.business/reference/post_api-light-server-1-0-createpaymentprocess-1",
+      "raw_snippet": "Full name must consist of at least two names.",
+      "fetched_at": "2026-11-11T12:59:28Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/api-endpoints.md",
+        "scripts/grow-payment-helper.sh"
+      ]
+    },
+    {
+      "claim_id": "transactiontypes-sdk-only",
+      "claim": "transactionTypes[0..5] (1, 6, 13, 14, 15, 5) are valid for payment in SDK wallet only.",
+      "source_url": "https://developers.grow.business/reference/post_api-light-server-1-0-createpaymentprocess-1",
+      "raw_snippet": "optional - Valid for payment in SDK wallet only - specify which payment method to display - Credit Card",
+      "fetched_at": "2026-11-11T12:59:28Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/api-endpoints.md"
+      ]
+    },
+    {
+      "claim_id": "cwt-paymenttype",
+      "claim": "createTransactionWithToken paymentType: 1 Direct Debit, 2 Regular, 4 Payments.",
+      "source_url": "https://developers.grow.business/reference/create-transaction-with-token-4",
+      "raw_snippet": "Required field - 1-Direct Debit, 2-Regular, 4-Payments",
+      "fetched_at": "2026-11-11T12:59:28Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/api-endpoints.md",
+        "scripts/grow-payment-helper.sh"
+      ]
+    },
+    {
+      "claim_id": "cwt-unique-id",
+      "claim": "A reused transactionUniqueIdentifier is rejected outright regardless of the first request's status.",
+      "source_url": "https://developers.grow.business/reference/create-transaction-with-token-4",
+      "raw_snippet": "If it finds that a request has been sent with this ID, then the current request will be rejected outright regardless of the status of the first request with this ID.",
+      "fetched_at": "2026-11-11T12:59:28Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "scripts/grow-payment-helper.sh"
+      ]
+    },
+    {
+      "claim_id": "cwt-group-id",
+      "claim": "transactionGroupIdentifier: rejected if a successful payment with this value exists.",
+      "source_url": "https://developers.grow.business/reference/create-transaction-with-token-4",
+      "raw_snippet": "if you send a value in this field, then a check will be made if there is a succesful payment with this value,  then the request will be rejected .",
+      "fetched_at": "2026-11-11T12:59:28Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "scripts/grow-payment-helper.sh"
+      ]
+    },
+    {
+      "claim_id": "premium-first-payment",
+      "claim": "Premium recurring first payment uses createTransactionWithToken with isRecurringDebitPayment=1 and returns recurringDebitId.",
+      "source_url": "https://developers.grow.business/reference/billing-premium-recurring-overview",
+      "raw_snippet": "When creating the initial recurring payment, call createTransactionWithToken with the parameter isRecurringDebitPayment=1.",
+      "fetched_at": "2026-11-11T12:59:28Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/api-endpoints.md"
+      ]
+    },
+    {
+      "claim_id": "premium-next-payment",
+      "claim": "Subsequent premium payments send recurringDebitId.",
+      "source_url": "https://developers.grow.business/reference/billing-premium-recurring-overview",
+      "raw_snippet": "For subsequent runs, send the recurring debit code in the call to createTransactionWithToken under the recurringDebitId parameter.",
+      "fetched_at": "2026-11-11T12:59:28Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "premium-features",
+      "claim": "Premium recurring updates the token on card expiration.",
+      "source_url": "https://developers.grow.business/reference/premium-recurring-payment",
+      "raw_snippet": "In case of credit card expiration, the existing token is seamlessly updated with the new expiration date.",
+      "fetched_at": "2026-11-11T12:59:28Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "premium-permission",
+      "claim": "Premium recurring requires permission from Grow.",
+      "source_url": "https://developers.grow.business/reference/premium-recurring-payment",
+      "raw_snippet": "Request permission from Grow to access the premium recurring payment service.",
+      "fetched_at": "2026-11-11T12:59:28Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "refund-stopdirectdebit",
+      "claim": "refundTransaction stopDirectDebit=1 stops upcoming payments on a direct-debit transaction.",
+      "source_url": "https://developers.grow.business/reference/refund-transaction",
+      "raw_snippet": "in case this is a direct debit transaction you need to send the value of 1 to stop the upcoming payments",
+      "fetched_at": "2026-11-11T12:59:28Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/api-endpoints.md"
+      ]
+    },
+    {
+      "claim_id": "updatedirectdebit-asmachta",
+      "claim": "updateDirectDebit requires asmachta, the card company's approval for the payment; changeStatus 1 active 2 canceled.",
+      "source_url": "https://developers.grow.business/reference/update-direct-debit",
+      "raw_snippet": "Required field - An approval from the credit card company for the payment",
+      "fetched_at": "2026-11-11T12:59:28Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/api-endpoints.md"
+      ]
+    },
+    {
+      "claim_id": "cancelbit-documented-path",
+      "claim": "cancelBitTransaction is documented at /api/light/andriod/1.0/cancelBitTransaction/ .",
+      "source_url": "https://developers.grow.business/reference/cancel-bit-transaction",
+      "raw_snippet": "Cancel Bit Transaction post https://sandbox.meshulam.co.il /api/light/andriod/1.0/cancelBitTransaction/",
+      "fetched_at": "2026-11-11T12:59:28Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/api-endpoints.md"
+      ]
+    },
+    {
+      "claim_id": "createpaymentlink-v11",
+      "claim": "CreatePaymentLink is documented at POST /api/light/server/1.1/CreatePaymentLink on sandboxapi.grow.link.",
+      "source_url": "https://developers.grow.business/reference/create-payment-link",
+      "raw_snippet": "Create Payment Link post http://sandboxapi.grow.link /api/light/server/1.1/CreatePaymentLink",
+      "fetched_at": "2026-11-11T12:59:28Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/api-endpoints.md",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "updatepaymentlink-doc",
+      "claim": "UpdatePaymentLink is documented at POST https://sandboxapi.grow.link/api/light/server/1.0/UpdatePaymentLink .",
+      "source_url": "https://developers.grow.business/reference/post_api-light-server-1-0-updatepaymentlink-1",
+      "raw_snippet": "Update Payment Link post https://sandboxapi.grow.link /api/light/server/1.0/UpdatePaymentLink",
+      "fetched_at": "2026-11-11T12:59:28Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/api-endpoints.md",
+        "references/domain-checklist.md"
+      ]
+    },
+    {
+      "claim_id": "updatepaymentlink-apikey",
+      "claim": "The x-api-key header is mandatory for UpdatePaymentLink.",
+      "source_url": "https://developers.grow.business/reference/post_api-light-server-1-0-updatepaymentlink-1",
+      "raw_snippet": "The x-api-key header is mandatory and must be included in every request.",
+      "fetched_at": "2026-11-11T12:59:28Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "platform-apikey",
+      "claim": "For platform partner integrations each request must include the platform's apiKey.",
+      "source_url": "https://developers.grow.business/reference/api-guidelines-for-platforms-system-integrators",
+      "raw_snippet": "For platform partner integrations, each API request must include your unique apiKey .",
+      "fetched_at": "2026-11-11T12:59:28Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/api-endpoints.md",
+        "scripts/grow-payment-helper.sh"
+      ]
+    },
+    {
+      "claim_id": "authentication-flows",
+      "claim": "UserId identifies the business, PageCode the payment page or method.",
+      "source_url": "https://developers.grow.business/reference/authentication",
+      "raw_snippet": "The UserId identifies the business, while the PageCode identifies the relevant payment page or payment method",
+      "fetched_at": "2026-11-11T12:59:28Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "ip-addresses",
+      "claim": "Grow publishes IP addresses that must be allowed at the firewall.",
+      "source_url": "https://developers.grow.business/reference/ip-address",
+      "raw_snippet": "The following IP addresses must be allowed at the firewall for testing and production transactions",
+      "fetched_at": "2026-11-11T12:59:28Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "threeds-cancel",
+      "claim": "cancel3DS=True deactivates 3DS for specific transactions.",
+      "source_url": "https://developers.grow.business/reference/3ds-1",
+      "raw_snippet": "utilize the \"cancel3DS=True\" parameter to deactivate the service for specific transactions.",
+      "fetched_at": "2026-11-11T12:59:28Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "threeds-mechanism",
+      "claim": "3DS sends a code to the cardholder's mobile number registered with the card company.",
+      "source_url": "https://developers.grow.business/reference/3ds-1",
+      "raw_snippet": "This service operates by sending a unique code to the updated mobile number registered with the credit card company of the cardholder each time a transaction is initiated.",
+      "fetched_at": "2026-11-11T12:59:28Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "threeds-default",
+      "claim": "Once purchased, 3DS is active for every transaction by default.",
+      "source_url": "https://developers.grow.business/reference/3ds-1",
+      "raw_snippet": "active for every transaction by default.",
+      "fetched_at": "2026-11-11T12:59:28Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "success-url-behaviour",
+      "claim": "successUrl redirect carries no transaction details, only cFields.",
+      "source_url": "https://developers.grow.business/reference/success-url",
+      "raw_snippet": "In this request, no actual details regarding the transaction will be sent. Only customer fields (cField), if there were any that have been pre-defined, will be sent.",
+      "fetched_at": "2026-11-11T12:59:28Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "billing-once-a-month",
+      "claim": "Billing recurring payments are processed once a month.",
+      "source_url": "https://developers.grow.business/reference/recurring-vs-token",
+      "raw_snippet": "Recurring payments are processed once a month.",
+      "fetched_at": "2026-11-11T12:59:28Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "postmessage-events",
+      "claim": "PostMessage credit card success event is 'payment'.",
+      "source_url": "https://developers.grow.business/reference/postmessage",
+      "raw_snippet": "Success : payment",
+      "fetched_at": "2026-11-11T12:59:28Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "webhook-enable",
+      "claim": "Webhooks are enabled by Grow support.",
+      "source_url": "https://developers.grow.business/docs/overview-7",
+      "raw_snippet": "Contact our support team to enable Webhooks for your account.",
+      "fetched_at": "2026-11-11T12:59:28Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/webhook-payloads.md"
+      ]
+    },
+    {
+      "claim_id": "webhook-failed-recurring",
+      "claim": "Failed recurring webhook uses snake_case fields incl. charges_attempts.",
+      "source_url": "https://developers.grow.business/docs/overview-7",
+      "raw_snippet": "\"charges_attempts\": \"6\",",
+      "fetched_at": "2026-11-11T12:59:28Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/webhook-payloads.md"
+      ]
+    },
+    {
+      "claim_id": "webhook-paymentlinks",
+      "claim": "Payment-link webhooks carry paymentLinkProcessToken under data.",
+      "source_url": "https://developers.grow.business/docs/overview-7",
+      "raw_snippet": "\"paymentLinkProcessToken\": \"7ab1c9133444a8507ebf24ff2\",",
+      "fetched_at": "2026-11-11T12:59:28Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/webhook-payloads.md"
+      ]
+    },
+    {
+      "claim_id": "err-717",
+      "claim": "Error 717: name and phone not sent or invalid.",
+      "source_url": "https://developers.grow.business/reference/errors",
+      "raw_snippet": "לא נשלח שם וטלפון או שאינו תקין",
+      "fetched_at": "2026-11-11T12:59:28Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/error-codes.md"
+      ]
+    },
+    {
+      "claim_id": "err-724",
+      "claim": "Error 724: userId or pageCode required.",
+      "source_url": "https://developers.grow.business/reference/errors",
+      "raw_snippet": "נדרש שדה userId או pageCode",
+      "fetched_at": "2026-11-11T12:59:28Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/error-codes.md"
+      ]
+    },
+    {
+      "claim_id": "err-812",
+      "claim": "Error 812: invalid company identifier (apiKey).",
+      "source_url": "https://developers.grow.business/reference/errors",
+      "raw_snippet": "קוד זיהוי חברה אינו תקין (apiKey)",
+      "fetched_at": "2026-11-11T12:59:28Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/error-codes.md"
+      ]
+    },
+    {
+      "claim_id": "err-271",
+      "claim": "Error 271: Bit payment above 3,600 NIS.",
+      "source_url": "https://developers.grow.business/reference/errors",
+      "raw_snippet": "לא ניתן לשלם בביט סכום הגבוה מ-3600ש\"ח",
+      "fetched_at": "2026-11-11T12:59:28Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/error-codes.md"
+      ]
+    },
+    {
+      "claim_id": "err-734",
+      "claim": "Error 734: credit transaction minimum 3 payments and 25 NIS.",
+      "source_url": "https://developers.grow.business/reference/errors",
+      "raw_snippet": "מספר התשלומים המינימלי בעסקת קרדיט הוא 3 תשלומים, הסכום המינימלי לתשלום הוא 25 ש\"ח",
+      "fetched_at": "2026-11-11T12:59:28Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/error-codes.md"
+      ]
+    },
+    {
+      "claim_id": "err-814",
+      "claim": "Error 814: the maximum settle charge is up to 30 percent above the transaction amount.",
+      "source_url": "https://developers.grow.business/reference/errors",
+      "raw_snippet": "הסכום המירבי לביצוע החיוב הוא עד 30% יותר מסכום העסקה.",
+      "fetched_at": "2026-11-11T12:59:28Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/error-codes.md"
+      ]
+    },
+    {
+      "claim_id": "err-403",
+      "claim": "Error 403: Forbidden, X-API-KEY not sent.",
+      "source_url": "https://developers.grow.business/reference/errors",
+      "raw_snippet": "Forbidden - לא נשלח X-API-KEY",
+      "fetched_at": "2026-11-11T12:59:28Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/error-codes.md"
+      ]
+    },
+    {
+      "claim_id": "token-permission",
+      "claim": "Working with tokens requires permission from Grow.",
+      "source_url": "https://developers.grow.business/reference/token",
+      "raw_snippet": "Working with tokens requires permission from Grow.",
+      "fetched_at": "2026-11-11T12:59:28Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "token-not-bit-ap-gp",
+      "claim": "Token saving is not applicable to Bit, Apple Pay or Google Pay.",
+      "source_url": "https://developers.grow.business/reference/token",
+      "raw_snippet": "or only save the token without immediate payment (not applicable to Bit, Apple Pay, or Google Pay).",
+      "fetched_at": "2026-11-11T12:59:28Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "token-180",
+      "claim": "Tokens can be saved for up to 180 payments.",
+      "source_url": "https://developers.grow.business/reference/token",
+      "raw_snippet": "Tokens can be saved for up to 180 payments, offering flexibility in transaction planning.",
+      "fetched_at": "2026-11-11T12:59:28Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "token-final-error",
+      "claim": "On a final tokenized-charge error stop charging, delete the token, update the card.",
+      "source_url": "https://developers.grow.business/reference/token",
+      "raw_snippet": "If a tokenized charge encounters a final error (e.g., card expired, stolen card), cease charging the token, delete it, and update the customer's new card number.",
+      "fetched_at": "2026-11-11T12:59:28Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/error-codes.md"
+      ]
+    },
+    {
+      "claim_id": "token-103-nonfinal",
+      "claim": "Error 103 'credit company did not approve' is non-final.",
+      "source_url": "https://developers.grow.business/reference/token",
+      "raw_snippet": "חברת האשראי לא אשרה את העסקה",
+      "fetched_at": "2026-11-11T12:59:28Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/error-codes.md"
+      ]
+    },
+    {
+      "claim_id": "token-451-final",
+      "claim": "Error 451 card inactive or expired is final.",
+      "source_url": "https://developers.grow.business/reference/token",
+      "raw_snippet": "כרטיס האשראי אינו פעיל/פג תוקף, נא לפנות ללקוח לקבלת כרטיס חדש",
+      "fetched_at": "2026-11-11T12:59:28Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/error-codes.md"
+      ]
+    },
+    {
+      "claim_id": "token-452-final",
+      "claim": "Error 452 card blocked by the card company is final.",
+      "source_url": "https://developers.grow.business/reference/token",
+      "raw_snippet": "חברת האשראי חסמה את הכרטיס, נא לפנות ללקוח לבדיקה",
+      "fetched_at": "2026-11-11T12:59:28Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/error-codes.md"
+      ]
+    },
+    {
+      "claim_id": "approve-all-data",
+      "claim": "approveTransaction: send the pageCode and all data received from the server update.",
+      "source_url": "https://developers.grow.business/reference/approve-transaction",
+      "raw_snippet": "This step involves sending the pageCode and all data received frome the server update.",
+      "fetched_at": "2026-11-11T12:59:28Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/api-endpoints.md",
+        "scripts/grow-payment-helper.sh"
+      ]
+    },
+    {
+      "claim_id": "approve-schema-required",
+      "claim": "The approveTransaction schema marks server-update fields such as sum as required.",
+      "source_url": "https://developers.grow.business/reference/approve-transaction-1",
+      "raw_snippet": "Required field - Sum from server notification",
+      "fetched_at": "2026-11-11T12:59:28Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/api-endpoints.md"
+      ]
+    },
+    {
+      "claim_id": "premium-paymentnum-2-12",
+      "claim": "The Premium Recurring Payment Managed by Grow via Token schema gives paymentType 1 with paymentNum 2-12.",
+      "source_url": "https://developers.grow.business/reference/create-transaction-with-token",
+      "raw_snippet": "Determine payments number. 2-12",
+      "fetched_at": "2026-11-11T12:59:28Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "premium-isrecurringdebitid",
+      "claim": "The Premium Recurring page writes isRecurringDebitId = 1 and says recurringDebitId arrives in the server update.",
+      "source_url": "https://developers.grow.business/reference/premium-recurring-payment",
+      "raw_snippet": "The first action is to set up the recurring payment by sending the createTransactionWithToken call with the parameter isRecurringDebitId = 1.",
+      "fetched_at": "2026-11-11T12:59:28Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "getpaymentlinkinfo-schema",
+      "claim": "getPaymentLinkInfo schema marks paymentLinkProcessId (process identifier) as required, with pageCode and paymentLinkProcessToken.",
+      "source_url": "https://developers.grow.business/reference/get-payment-link-info",
+      "raw_snippet": "Required field - process identifier",
+      "fetched_at": "2026-11-11T12:59:28Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/api-endpoints.md"
+      ]
+    },
+    {
+      "claim_id": "gettokentx-schema",
+      "claim": "getTokenTransactionsByExternalIdentifiers requires userId and cardToken.",
+      "source_url": "https://developers.grow.business/reference/post_api-light-server-1-0-gettokentransactionsbyexternalidentifiers-1",
+      "raw_snippet": "cardToken string Required field - credit card token .",
+      "fetched_at": "2026-11-11T12:59:28Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/api-endpoints.md"
+      ]
+    },
+    {
+      "claim_id": "paymentlink-sendingmode",
+      "claim": "CreatePaymentLink sendingMode: 1=SMS, 2=Mail.",
+      "source_url": "https://developers.grow.business/reference/create-payment-link",
+      "raw_snippet": "Optional   - 1=SMS,2=Mail",
+      "fetched_at": "2026-11-11T12:59:28Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "sdk-production-env",
+      "claim": "Growin Wallet SDK: change environment from DEV to PRODUCTION in configureGrowSdk.",
+      "source_url": "https://developers.grow.business/reference/live-environment",
+      "raw_snippet": "make sure to update the SDK environment value in the configureGrowSdk function.",
+      "fetched_at": "2026-11-11T12:59:28Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
     },
     {
       "claim_id": "reference-urls",
-      "claim": "Documentation, support, and example URLs cited in the skill. Covers these references: https://developers.grow.business/ https://developers.grow.business/docs https://developers.grow.business/docs/about-grow-products https://developers.grow.business/reference/overview https://sandbox.meshulam.co.il https://sandbox.meshulam.co.il/api/light/server/1.0/createPaymentProcess https://sandbox.meshulam.co.il/api/light/server/1.0/approveTransaction https://sandbox.meshulam.co.il/api/light/server/1.0/createTransactionWithToken https://secure.meshulam.co.il https://secure.meshulam.co.il/ https://grow.business/invoice/... https://support.wix.com/en/article/connecting-grow-by-meshulam-as-a-payment-provider https://example.com/api/grow/webhook https://example.com/cancel https://example.com/payment/cancel https://example.com/payment/success https://example.com/success https://yoursite.com/api/grow/webhook https://yoursite.com/payment/success https://yoursite.com/payment/cancel",
-      "source_url": "https://developers.grow.business/reference/post_api-light-server-1-0-createpaymentprocess-1",
-      "raw_snippet": "data-testid=\"serverurl\" title=\"https://sandbox.meshulam.co.il/api/light/server/1.0/createPaymentProcess\">https://sandbox.meshulam.co.il",
-      "fetched_at": "2026-08-18",
+      "claim": "Reference links cited in the skill: https://developers.grow.business/ https://developers.grow.business/reference/introduction https://developers.grow.business/reference/errors https://developers.grow.business/reference/testing-environment https://developers.grow.business/reference/live-environment https://developers.grow.business/reference/server-to-server-callback https://developers.grow.business/reference/ip-address https://developers.grow.business/reference/3ds-1 https://developers.grow.business/docs/overview-7 https://sandboxapi.grow.link/api/light/server/1.1/CreatePaymentLink https://sandboxapi.grow.link/api/light/server/1.0/UpdatePaymentLink",
+      "source_url": "https://developers.grow.business/reference/introduction",
+      "raw_snippet": "With a single integration, Grow enables businesses to manage the entire payment lifecycle, from payment collection to recurring billing, refunds, invoicing, and real-time transaction updates.",
+      "fetched_at": "2026-11-11T12:59:28Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ]
+    },
+    {
+      "claim_id": "endpoint-paths-exist",
+      "claim": "Endpoints answering with a validation error object (so they exist) on sandbox.meshulam.co.il: POST /api/light/server/1.0/createPaymentProcess POST /api/light/server/1.0/approveTransaction POST /api/light/server/1.0/getTransactionInfo POST /api/light/server/1.0/getPaymentProcessInfo POST /api/light/server/1.0/refundTransaction /api/light/server/1.0/cancelBitTransaction POST /api/light/server/1.0/createTransactionWithToken POST /api/light/server/1.0/updateDirectDebit POST /api/light/server/1.0/settleSuspendedTransaction POST /api/light/server/1.0/getTokenTransactionsByExternalIdentifiers POST /api/light/server/1.0/getPaymentLinkInfo POST /api/light/server/1.0/createFarPaymentRequest; on sandboxapi.grow.link: POST /api/light/server/1.1/CreatePaymentLink POST /api/light/server/1.0/UpdatePaymentLink. Not existing: POST /api/light/server/1.0/getTokenOnly POST /api/light/server/1.0/updateRecurringPayment.",
+      "source_url": "https://sandbox.meshulam.co.il/api/light/server/1.0/createPaymentProcess",
+      "raw_snippet": "{\"err\":{\"id\":707,\"message\":\"\\u05d4\\u05e1\\u05db\\u05d5\\u05dd \\u05d0\\u05d9\\u05e0\\u05d5 \\u05ea\\u05e7\\u05d9\\u05df\"},\"status\":\"0\",\"data\":\"\"} | {\"err\":{\"id\":54,\"message\":\"\\u05d7\\u05e1\\u05e8\\u05d9\\u05dd \\u05e0\\u05ea\\u05d5\\u05e0\\u05d9\\u05dd:transactionToken\"},\"status\":\"0\",\"data\":\"\"} | {\"err\":{\"id\":54,\"message\":\"\\u05d7\\u05e1\\u05e8\\u05d9\\u05dd \\u05e0\\u05ea\\u05d5\\u05e0\\u05d9\\u05dd:transactionToken\"},\"status\":\"0\",\"data\":\"\"} | {\"err\":{\"id\":54,\"message\":\"\\u05d7\\u05e1\\u05e8\\u05d9\\u05dd \\u05e0\\u05ea\\u05d5\\u05e0\\u05d9\\u05dd:processToken\"},\"status\":\"0\",\"data\":\"\"} | {\"err\":{\"id\":724,\"message\":\"\\u05e0\\u05d3\\u05e8\\u05e9 \\u05e9\\u05d3\\u05d4 userId \\u05d0\\u05d5 pageCode\"},\"status\":\"0\",\"data\":\"\"} | {\"err\":{\"id\":54,\"message\":\"\\u05d7\\u05e1\\u05e8\\u05d9\\u05dd \\u05e0\\u05ea\\u05d5\\u05e0\\u05d9\\u05dd:pageCode\"},\"status\":\"0\",\"data\":\"\"} | {\"err\":{\"id\":54,\"message\":\"\\u05d7\\u05e1\\u05e8\\u05d9\\u05dd \\u05e0\\u05ea\\u05d5\\u05e0\\u05d9\\u05dd:userId\"},\"status\":\"0\",\"data\":\"\"} | {\"err\":{\"id\":54,\"message\":\"\\u05d7\\u05e1\\u05e8\\u05d9\\u05dd \\u05e0\\u05ea\\u05d5\\u05e0\\u05d9\\u05dd:transactionId\"},\"status\":\"0\",\"data\":\"\"} | {\"err\":{\"id\":54,\"message\":\"\\u05d7\\u05e1\\u05e8\\u05d9\\u05dd \\u05e0\\u05ea\\u05d5\\u05e0\\u05d9\\u05dd:userId\"},\"status\":\"0\",\"data\":\"\"} | {\"status\":0,\"err\":{\"id\":{\"id\":1012,\"content\":\"\\u05d9\\u05e9 \\u05dc\\u05e9\\u05dc\\u05d5\\u05d7 \\u05e8\\u05e7 \\u05d0\\u05ea \\u05d0\\u05d7\\u05d3 \\u05d4\\u05de\\u05d6\\u05d4\\u05d9\\u05dd. \\u05d0\\u05dd \\u05d1\\u05e8\\u05e6\\u05d5\\u05e0\\u05da \\u05dc\\u05ea\\u05d7\\u05e7\\u05e8 \\u05dc\\u05e4\\u05d9 \\u05d4\\u05e9\\u05de\\u05d6\\u05d4\\u05d4 \\u05d4\\u05e9\\u05e0\\u05d9, \\u05e2\\u05e9\\u05d4 \\u05d6\\u05d0\\u05ea \\u05d1\\u05e7\\u05e8\\u05d9\\u05d0\\u05d4 \\u05e0\\u05d5\\u05e1\\u05e4\\u05ea.\"},\"message\":\"\\u05e9\\u05d2\\u05d9\\u05d0\\u05d4 \\u05db\\u05dc\\u05dc\\u05d9\\u05ea\"},\"data\":{\"transactions\":[]}} | {\"err\":{\"id\":54,\"message\":\"\\u05d7\\u05e1\\u05e8\\u05d9\\u05dd \\u05e0\\u05ea\\u05d5\\u05e0\\u05d9\\u05dd:paymentLinkProcessToken\"},\"status\":\"0\",\"data\":\"\"} | {\"err\":{\"id\":707,\"message\":\"\\u05d4\\u05e1\\u05db\\u05d5\\u05dd \\u05d0\\u05d9\\u05e0\\u05d5 \\u05ea\\u05e7\\u05d9\\u05df\"},\"status\":\"0\",\"data\":\"\"} | {\"status\": 0, \"err\": {\"id\": 998, \"message\": \"\\u05d4\\u05d9\\u05e0\\u05d5 \\u05e9\\u05d3\\u05d4 \\u05d7\\u05d5\\u05d1\\u05d4 userId \\u05d4\\u05e9\\u05d3\\u05d4\"}, \"data\": {}} | {\"status\": 0, \"err\": {\"id\": 998, \"message\": \"\\u05d4\\u05d9\\u05e0\\u05d5 \\u05e9\\u05d3\\u05d4 \\u05d7\\u05d5\\u05d1\\u05d4 paymentLinkProcessId \\u05d4\\u05e9\\u05d3\\u05d4\"}, \"data\": {}} | {\"err\":\"unknown method\",\"status\":\"0\",\"data\":{\"message\":\"\\u05de\\u05ea\\u05d5\\u05d3\\u05d4 \\u05dc\\u05d0 \\u05e7\\u05d9\\u05d9\\u05de\\u05ea\"}} | {\"err\":\"unknown method\",\"status\":\"0\",\"data\":{\"message\":\"\\u05de\\u05ea\\u05d5\\u05d3\\u05d4 \\u05dc\\u05d0 \\u05e7\\u05d9\\u05d9\\u05de\\u05ea\"}}",
+      "fetched_at": "2026-11-11T12:59:28Z",
+      "verified_via": "api-raw-http",
+      "verified_at": "2026-11-11T12:59:28Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/api-endpoints.md",
-        "references/webhook-payloads.md",
         "scripts/grow-payment-helper.sh"
-      ],
-      "verified_via": "browser",
-      "verified_at": "2026-08-27T02:34:32.566582+00:00"
+      ]
     },
     {
-      "claim_id": "createtransactionwithtoken-params",
-      "claim": "createTransactionWithToken parameters (Grow Light API): the saved-card-token parameter is `cardToken` (NOT `token`); `paymentType` value 2 = Regular; a recurring series is linked by `recurringDebitId` (the value returned by the first premium-recurring payment; there is no `isRecurringDebitId` flag); the endpoint uses `userId` (not `pageCode`) and its required fields are cardToken, userId, sum, description, paymentType, pageField[fullName], pageField[phone], recurringDebitId, transactionUniqueIdentifier.",
-      "source_url": "https://developers.grow.business/reference/post_api-light-server-1-0-createtransactionwithtoken-1",
-      "raw_snippet": "\"/api/light/server/1.0/createTransactionWithToken\":{\"post\":{\"tags\":[\"default\"],\"summary\":\"Further Payment -Premium Recurring By Token\",\"requestBody\":{\"content\":{\"multipart/form-data\":{\"schema\":{\"type\":\"object\",\"properties\":{\"cardToken\":{\"type\":\"string\",\"description\":\"Required field - credit card tok",
-      "fetched_at": "2026-08-18",
-      "appears_in": [
-        "SKILL.md",
-        "SKILL_HE.md",
-        "scripts/grow-payment-helper.sh"
-      ],
-      "verified_via": "cited page fetched and confirmed to contain \"1347\"; snippet replaced with the page's own wording around it",
-      "verified_at": "2026-08-27T02:36:08.021747+00:00"
-    },
-    {
-      "claim_id": "grow-error-codes",
-      "claim": "Grow publishes a numeric error-code table on its Errors reference page. It includes 403 = Forbidden, X-API-KEY not sent; 271 = a Bit payment above 3,600 NIS; 734 = a credit transaction requires at least 3 instalments and a 25 NIS minimum; 736 = paymentNum and maxPaymentNum cannot be sent in the same call.",
-      "source_url": "https://developers.grow.business/reference/errors",
-      "raw_snippet": "לא ניתן לשלם בביט סכום הגבוה מ-3600ש\"ח",
-      "fetched_at": "2026-08-27T02:24:35.387607+00:00",
-      "verified_via": "browser",
-      "verified_at": "2026-08-27T02:24:35.387607+00:00",
+      "claim_id": "unknown-method-and-dead-endpoints",
+      "claim": "An unrecognised method name returns err as the string 'unknown method' on both meshulam hosts; getTokenOnly, updateRecurringPayment and UpdatePaymentLink on the meshulam host return it.",
+      "source_url": "https://sandbox.meshulam.co.il/api/light/server/1.0/thisDoesNotExist",
+      "raw_snippet": "{\"err\":\"unknown method\",\"status\":\"0\",\"data\":{\"message\":\"\\u05de\\u05ea\\u05d5\\u05d3\\u05d4 \\u05dc\\u05d0 \\u05e7\\u05d9\\u05d9\\u05de\\u05ea\"}} | {\"err\":\"unknown method\",\"status\":\"0\",\"data\":{\"message\":\"\\u05de\\u05ea\\u05d5\\u05d3\\u05d4 \\u05dc\\u05d0 \\u05e7\\u05d9\\u05d9\\u05de\\u05ea\"}} | {\"err\":\"unknown method\",\"status\":\"0\",\"data\":{\"message\":\"\\u05de\\u05ea\\u05d5\\u05d3\\u05d4 \\u05dc\\u05d0 \\u05e7\\u05d9\\u05d9\\u05de\\u05ea\"}} | {\"err\":\"unknown method\",\"status\":\"0\",\"data\":{\"message\":\"\\u05de\\u05ea\\u05d5\\u05d3\\u05d4 \\u05dc\\u05d0 \\u05e7\\u05d9\\u05d9\\u05de\\u05ea\"}} | {\"err\":\"unknown method\",\"status\":\"0\",\"data\":{\"message\":\"\\u05de\\u05ea\\u05d5\\u05d3\\u05d4 \\u05dc\\u05d0 \\u05e7\\u05d9\\u05d9\\u05de\\u05ea\"}}",
+      "fetched_at": "2026-11-11T12:59:28Z",
+      "verified_via": "api-raw-http",
+      "verified_at": "2026-11-11T12:59:28Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/api-endpoints.md",
+        "references/error-codes.md",
         "references/domain-checklist.md"
       ]
     },
     {
-      "claim_id": "grow-error-credit-minimum",
-      "claim": "Grow error 734: a credit (kredit) transaction requires a minimum of 3 instalments and a minimum payment of 25 NIS.",
-      "source_url": "https://developers.grow.business/reference/errors",
-      "raw_snippet": "מספר התשלומים המינימלי בעסקת קרדיט הוא 3 תשלומים, הסכום המינימלי לתשלום הוא 25 ש\"ח",
-      "fetched_at": "2026-08-27T02:24:35.387607+00:00",
-      "verified_via": "browser",
-      "verified_at": "2026-08-27T02:24:35.387607+00:00",
+      "claim_id": "json-body-gives-707",
+      "claim": "A JSON body to createPaymentProcess returns err.id 707 invalid amount with HTTP 200; an application/x-www-form-urlencoded body is parsed (approveTransaction reports the next missing field).",
+      "source_url": "https://sandbox.meshulam.co.il/api/light/server/1.0/createPaymentProcess",
+      "raw_snippet": "{\"err\":{\"id\":707,\"message\":\"\\u05d4\\u05e1\\u05db\\u05d5\\u05dd \\u05d0\\u05d9\\u05e0\\u05d5 \\u05ea\\u05e7\\u05d9\\u05df\"},\"status\":\"0\",\"data\":\"\"} | {\"err\":{\"id\":54,\"message\":\"\\u05d7\\u05e1\\u05e8\\u05d9\\u05dd \\u05e0\\u05ea\\u05d5\\u05e0\\u05d9\\u05dd:transactionToken\"},\"status\":\"0\",\"data\":\"\"}",
+      "fetched_at": "2026-11-11T12:59:28Z",
+      "verified_via": "api-raw-http",
+      "verified_at": "2026-11-11T12:59:28Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
-        "references/domain-checklist.md"
+        "references/api-endpoints.md"
       ]
     },
     {
-      "claim_id": "grow-error-403-apikey",
-      "claim": "Grow's own error table gives the cause of HTTP 403 as a missing X-API-KEY header, not a client-side request.",
-      "source_url": "https://developers.grow.business/reference/errors",
-      "raw_snippet": "Forbidden - לא נשלח X-API-KEY",
-      "fetched_at": "2026-08-27T02:24:35.387607+00:00",
-      "verified_via": "browser",
-      "verified_at": "2026-08-27T02:24:35.387607+00:00",
+      "claim_id": "approve-needs-both-ids",
+      "claim": "approveTransaction with pageCode and only transactionId returns 54 naming transactionToken; getTransactionInfo and getPaymentProcessInfo likewise need the token.",
+      "source_url": "https://sandbox.meshulam.co.il/api/light/server/1.0/approveTransaction",
+      "raw_snippet": "{\"err\":{\"id\":54,\"message\":\"\\u05d7\\u05e1\\u05e8\\u05d9\\u05dd \\u05e0\\u05ea\\u05d5\\u05e0\\u05d9\\u05dd:transactionToken\"},\"status\":\"0\",\"data\":\"\"} | {\"err\":{\"id\":54,\"message\":\"\\u05d7\\u05e1\\u05e8\\u05d9\\u05dd \\u05e0\\u05ea\\u05d5\\u05e0\\u05d9\\u05dd:transactionToken\"},\"status\":\"0\",\"data\":\"\"} | {\"err\":{\"id\":54,\"message\":\"\\u05d7\\u05e1\\u05e8\\u05d9\\u05dd \\u05e0\\u05ea\\u05d5\\u05e0\\u05d9\\u05dd:processToken\"},\"status\":\"0\",\"data\":\"\"}",
+      "fetched_at": "2026-11-11T12:59:28Z",
+      "verified_via": "api-raw-http",
+      "verified_at": "2026-11-11T12:59:28Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
@@ -149,44 +1018,121 @@
       ]
     },
     {
-      "claim_id": "live-endpoints-updatedirectdebit-farpayment",
-      "claim": "The Light API endpoints /api/light/server/1.0/updateDirectDebit and /api/light/server/1.0/createFarPaymentRequest exist on both sandbox.meshulam.co.il and secure.meshulam.co.il: each returns a validation error object, whereas an unrecognised endpoint name returns the string \"unknown method\". Conversely getTokenOnly, updatePaymentLink and updateRecurringPayment return \"unknown method\" on both hosts and therefore do not exist. Referenced in the skill as `POST /api/light/server/1.0/updateDirectDebit` and `/api/light/server/1.0/createFarPaymentRequest`.",
+      "claim_id": "refund-724-and-refundsum",
+      "claim": "refundTransaction without userId and pageCode returns 724; sending sum instead of refundSum returns 707.",
+      "source_url": "https://sandbox.meshulam.co.il/api/light/server/1.0/refundTransaction",
+      "raw_snippet": "{\"err\":{\"id\":724,\"message\":\"\\u05e0\\u05d3\\u05e8\\u05e9 \\u05e9\\u05d3\\u05d4 userId \\u05d0\\u05d5 pageCode\"},\"status\":\"0\",\"data\":\"\"} | {\"err\":{\"id\":707,\"message\":\"\\u05d4\\u05e1\\u05db\\u05d5\\u05dd \\u05d0\\u05d9\\u05e0\\u05d5 \\u05ea\\u05e7\\u05d9\\u05df\"},\"status\":\"0\",\"data\":\"\"}",
+      "fetched_at": "2026-11-11T12:59:28Z",
+      "verified_via": "api-raw-http",
+      "verified_at": "2026-11-11T12:59:28Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/api-endpoints.md",
+        "references/error-codes.md"
+      ]
+    },
+    {
+      "claim_id": "cwt-required-order-and-1013",
+      "claim": "createTransactionWithToken: with only sum, 54 userId; then 54 cardToken; then paymentType; without paymentNum, 54 paymentNum; identifiers outside a positive 32-bit integer without leading zeros return 1013; valid identifiers with unknown userId return 880; omitting the identifier with unknown user returns 104.",
+      "source_url": "https://sandbox.meshulam.co.il/api/light/server/1.0/createTransactionWithToken",
+      "raw_snippet": "{\"err\":{\"id\":54,\"message\":\"\\u05d7\\u05e1\\u05e8\\u05d9\\u05dd \\u05e0\\u05ea\\u05d5\\u05e0\\u05d9\\u05dd:userId\"},\"status\":\"0\",\"data\":\"\"} | {\"err\":{\"id\":54,\"message\":\"\\u05d7\\u05e1\\u05e8\\u05d9\\u05dd \\u05e0\\u05ea\\u05d5\\u05e0\\u05d9\\u05dd:cardToken\"},\"status\":\"0\",\"data\":\"\"} | {\"err\":{\"id\":54,\"message\":\"\\u05d7\\u05e1\\u05e8\\u05d9\\u05dd \\u05e0\\u05ea\\u05d5\\u05e0\\u05d9\\u05dd:paymentType\"},\"status\":\"0\",\"data\":\"\"} | {\"err\":{\"id\":54,\"message\":\"\\u05d7\\u05e1\\u05e8\\u05d9\\u05dd \\u05e0\\u05ea\\u05d5\\u05e0\\u05d9\\u05dd:paymentNum\"},\"status\":\"0\",\"data\":\"\"} | {\"status\":0,\"err\":{\"id\":1013,\"message\":\"\\u05de\\u05d6\\u05d4\\u05d4 \\u05dc\\u05d0 \\u05ea\\u05e7\\u05d9\\u05df. \\u05e2\\u05dc \\u05d4\\u05de\\u05d6\\u05d4\\u05d4 \\u05dc\\u05d4\\u05d9\\u05d5\\u05ea \\u05de\\u05e1\\u05e4\\u05e8 \\u05e9\\u05dc\\u05dd \\u05d7\\u05d9\\u05d5\\u05d1\\u05d9, \\u05dc\\u05dc\\u05d0 \\u05d0\\u05e4\\u05e1\\u05d9\\u05dd \\u05de\\u05d5\\u05d1\\u05d9\\u05dc\\u05d9\\u05dd \\u05d5\\u05e9\\u05e0\\u05d9\\u05ea\\u05df \\u05dc\\u05d9\\u05d9\\u05e6\\u05d5\\u05d2 \\u05d132 \\u05d1\\u05d9\\u05d8 (\\u05db\\u05dc\\u05d5\\u05de\\u05e8, \\u05e7\\u05d8\\u05df \\u05de 4,294,967,295)\"},\"data\":\"\"} | {\"status\":0,\"err\":{\"id\":880,\"message\":\"\\u05dc\\u05d0 \\u05e0\\u05de\\u05e6\\u05d0 \\u05e2\\u05e1\\u05e7 \\u05de\\u05ea\\u05d0\\u05d9\\u05dd \\u05dcUserId\"},\"data\":\"\"} | {\"status\":0,\"err\":{\"id\":104,\"message\":\"\\u05de\\u05e9\\u05ea\\u05de\\u05e9 \\u05d6\\u05d4 \\u05d0\\u05d9\\u05e0\\u05d5 \\u05e7\\u05d9\\u05d9\\u05dd \\u05d1\\u05de\\u05e2\\u05e8\\u05db\\u05ea\"},\"data\":\"\"}",
+      "fetched_at": "2026-11-11T12:59:28Z",
+      "verified_via": "api-raw-http",
+      "verified_at": "2026-11-11T12:59:28Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/api-endpoints.md",
+        "references/error-codes.md",
+        "scripts/grow-payment-helper.sh"
+      ]
+    },
+    {
+      "claim_id": "updatedirectdebit-live-order",
+      "claim": "updateDirectDebit names transactionId after userId, then asmachta.",
       "source_url": "https://sandbox.meshulam.co.il/api/light/server/1.0/updateDirectDebit",
-      "raw_snippet": "{\"err\":{\"id\":54,\"message\":\"\\u05d7\\u05e1\\u05e8\\u05d9\\u05dd \\u05e0\\u05ea\\u05d5\\u05e0\\u05d9\\u05dd:userId\"},\"status\":\"0\",\"data\":\"\"}",
-      "fetched_at": "2026-08-27T02:24:35.387607+00:00",
+      "raw_snippet": "{\"err\":{\"id\":54,\"message\":\"\\u05d7\\u05e1\\u05e8\\u05d9\\u05dd \\u05e0\\u05ea\\u05d5\\u05e0\\u05d9\\u05dd:transactionId\"},\"status\":\"0\",\"data\":\"\"} | {\"err\":{\"id\":54,\"message\":\"\\u05d7\\u05e1\\u05e8\\u05d9\\u05dd \\u05e0\\u05ea\\u05d5\\u05e0\\u05d9\\u05dd:asmachta\"},\"status\":\"0\",\"data\":\"\"}",
+      "fetched_at": "2026-11-11T12:59:28Z",
       "verified_via": "api-raw-http",
-      "verified_at": "2026-08-27T02:24:35.387607+00:00",
+      "verified_at": "2026-11-11T12:59:28Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/api-endpoints.md"
+      ]
+    },
+    {
+      "claim_id": "cancelbit-both-paths",
+      "claim": "cancelBitTransaction answers with the same validation on /api/light/andriod/1.0/ and /api/light/server/1.0/.",
+      "source_url": "https://sandbox.meshulam.co.il/api/light/andriod/1.0/cancelBitTransaction/",
+      "raw_snippet": "{\"err\":{\"id\":54,\"message\":\"\\u05d7\\u05e1\\u05e8\\u05d9\\u05dd \\u05e0\\u05ea\\u05d5\\u05e0\\u05d9\\u05dd:pageCode\"},\"status\":\"0\",\"data\":\"\"} | {\"err\":{\"id\":54,\"message\":\"\\u05d7\\u05e1\\u05e8\\u05d9\\u05dd \\u05e0\\u05ea\\u05d5\\u05e0\\u05d9\\u05dd:pageCode\"},\"status\":\"0\",\"data\":\"\"}",
+      "fetched_at": "2026-11-11T12:59:28Z",
+      "verified_via": "api-raw-http",
+      "verified_at": "2026-11-11T12:59:28Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/api-endpoints.md"
+      ]
+    },
+    {
+      "claim_id": "gtt-1012-object-id",
+      "claim": "getTokenTransactionsByExternalIdentifiers returns err.id as an object {id:1012, content} when both identifiers are sent.",
+      "source_url": "https://sandbox.meshulam.co.il/api/light/server/1.0/getTokenTransactionsByExternalIdentifiers",
+      "raw_snippet": "{\"status\":0,\"err\":{\"id\":{\"id\":1012,\"content\":\"\\u05d9\\u05e9 \\u05dc\\u05e9\\u05dc\\u05d5\\u05d7 \\u05e8\\u05e7 \\u05d0\\u05ea \\u05d0\\u05d7\\u05d3 \\u05d4\\u05de\\u05d6\\u05d4\\u05d9\\u05dd. \\u05d0\\u05dd \\u05d1\\u05e8\\u05e6\\u05d5\\u05e0\\u05da \\u05dc\\u05ea\\u05d7\\u05e7\\u05e8 \\u05dc\\u05e4\\u05d9 \\u05d4\\u05e9\\u05de\\u05d6\\u05d4\\u05d4 \\u05d4\\u05e9\\u05e0\\u05d9, \\u05e2\\u05e9\\u05d4 \\u05d6\\u05d0\\u05ea \\u05d1\\u05e7\\u05e8\\u05d9\\u05d0\\u05d4 \\u05e0\\u05d5\\u05e1\\u05e4\\u05ea.\"},\"message\":\"\\u05e9\\u05d2\\u05d9\\u05d0\\u05d4 \\u05db\\u05dc\\u05dc\\u05d9\\u05ea\"},\"data\":{\"transactions\":[]}}",
+      "fetched_at": "2026-11-11T12:59:28Z",
+      "verified_via": "api-raw-http",
+      "verified_at": "2026-11-11T12:59:28Z",
       "appears_in": [
         "SKILL.md",
         "SKILL_HE.md",
         "references/api-endpoints.md",
-        "references/domain-checklist.md"
+        "references/error-codes.md"
       ]
     },
     {
-      "claim_id": "error-743-and-104",
-      "claim": "Error codes exist beyond the published table: settleSuspendedTransaction with an unmatched userId returns err.id 743 (אין עסק תואם ל userId שנשלח).",
-      "source_url": "https://sandbox.meshulam.co.il/api/light/server/1.0/settleSuspendedTransaction?userId=XX&transactionId=1&transactionToken=a&sum=5",
-      "raw_snippet": "{\"status\":0,\"err\":{\"id\":743,\"message\":\"\\u05d0\\u05d9\\u05df \\u05e2\\u05e1\\u05e7 \\u05ea\\u05d5\\u05d0\\u05dd \\u05dc userId \\u05e9\\u05e0\\u05e9\\u05dc\\u05d7\"},\"data\":\"\"}",
-      "fetched_at": "2026-08-27T02:34:32.566582+00:00",
+      "claim_id": "paymentlinkinfo-and-legacy-cpl",
+      "claim": "getPaymentLinkInfo requires paymentLinkProcessToken; the meshulam host's createPaymentLink asks for sum, then pageCode, then userId (legacy contract); createFarPaymentRequest exists (707).",
+      "source_url": "https://sandbox.meshulam.co.il/api/light/server/1.0/getPaymentLinkInfo",
+      "raw_snippet": "{\"err\":{\"id\":54,\"message\":\"\\u05d7\\u05e1\\u05e8\\u05d9\\u05dd \\u05e0\\u05ea\\u05d5\\u05e0\\u05d9\\u05dd:paymentLinkProcessToken\"},\"status\":\"0\",\"data\":\"\"} | {\"err\":{\"id\":54,\"message\":\"\\u05d7\\u05e1\\u05e8\\u05d9\\u05dd \\u05e0\\u05ea\\u05d5\\u05e0\\u05d9\\u05dd:pageCode\"},\"status\":\"0\",\"data\":\"\"} | {\"err\":{\"id\":54,\"message\":\"\\u05d7\\u05e1\\u05e8\\u05d9\\u05dd \\u05e0\\u05ea\\u05d5\\u05e0\\u05d9\\u05dd:userId\"},\"status\":\"0\",\"data\":\"\"} | {\"err\":{\"id\":707,\"message\":\"\\u05d4\\u05e1\\u05db\\u05d5\\u05dd \\u05d0\\u05d9\\u05e0\\u05d5 \\u05ea\\u05e7\\u05d9\\u05df\"},\"status\":\"0\",\"data\":\"\"}",
+      "fetched_at": "2026-11-11T12:59:28Z",
       "verified_via": "api-raw-http",
-      "verified_at": "2026-08-27T02:34:32.566582+00:00",
+      "verified_at": "2026-11-11T12:59:28Z",
       "appears_in": [
         "SKILL.md",
-        "SKILL_HE.md"
+        "SKILL_HE.md",
+        "references/api-endpoints.md"
       ]
     },
     {
-      "claim_id": "grow-3ds-reference-page",
-      "claim": "Grow documents a 3D Secure service on a dedicated reference page at https://developers.grow.business/reference/3ds-1 .",
-      "source_url": "https://developers.grow.business/reference/3ds-1",
-      "raw_snippet": "Enhance the security of your transactions with the Grow 3DS service, a robust defence against fraudulent activ",
-      "fetched_at": "2026-08-27T02:43:37.666176+00:00",
-      "verified_via": "browser",
-      "verified_at": "2026-08-27T02:43:37.666176+00:00",
+      "claim_id": "growlink-routing",
+      "claim": "sandboxapi.grow.link routes /1.1/CreatePaymentLink (998/427) and /1.0/UpdatePaymentLink (998/5069) and answers a lowercase createPaymentLink with HTTP 403 Missing Authentication Token.",
+      "source_url": "https://sandboxapi.grow.link/api/light/server/1.1/CreatePaymentLink",
+      "raw_snippet": "{\"status\": 0, \"err\": {\"id\": 998, \"message\": \"\\u05d4\\u05d9\\u05e0\\u05d5 \\u05e9\\u05d3\\u05d4 \\u05d7\\u05d5\\u05d1\\u05d4 userId \\u05d4\\u05e9\\u05d3\\u05d4\"}, \"data\": {}} | {\"status\": 0, \"err\": {\"id\": 427, \"message\": \"\\u05e9\\u05d3\\u05d4 \\u05dc\\u05d0 \\u05ea\\u05e7\\u05d9\\u05df: userId\"}, \"data\": {}} | {\"message\":\"Missing Authentication Token\"} | {\"status\": 0, \"err\": {\"id\": 998, \"message\": \"\\u05d4\\u05d9\\u05e0\\u05d5 \\u05e9\\u05d3\\u05d4 \\u05d7\\u05d5\\u05d1\\u05d4 paymentLinkProcessId \\u05d4\\u05e9\\u05d3\\u05d4\"}, \"data\": {}} | {\"status\": 0, \"err\": {\"id\": 5069, \"message\": \"\\u05dc\\u05d0 \\u05e0\\u05de\\u05e6\\u05d0 \\u05e2\\u05de\\u05d5\\u05d3 \\u05e2\\u05dd \\u05de\\u05d6\\u05d4\\u05d4 \\u05d6\\u05d4\"}, \"data\": {}}",
+      "fetched_at": "2026-11-11T12:59:28Z",
+      "verified_via": "api-raw-http",
+      "verified_at": "2026-11-11T12:59:28Z",
       "appears_in": [
         "SKILL.md",
-        "SKILL_HE.md"
+        "SKILL_HE.md",
+        "references/api-endpoints.md",
+        "references/error-codes.md"
+      ]
+    },
+    {
+      "claim_id": "settle-userid-743",
+      "claim": "settleSuspendedTransaction is keyed by userId (pageCode returns 54 userId); unmatched userId returns 743.",
+      "source_url": "https://sandbox.meshulam.co.il/api/light/server/1.0/settleSuspendedTransaction",
+      "raw_snippet": "{\"err\":{\"id\":54,\"message\":\"\\u05d7\\u05e1\\u05e8\\u05d9\\u05dd \\u05e0\\u05ea\\u05d5\\u05e0\\u05d9\\u05dd:userId\"},\"status\":\"0\",\"data\":\"\"} | {\"status\":0,\"err\":{\"id\":743,\"message\":\"\\u05d0\\u05d9\\u05df \\u05e2\\u05e1\\u05e7 \\u05ea\\u05d5\\u05d0\\u05dd \\u05dc userId \\u05e9\\u05e0\\u05e9\\u05dc\\u05d7\"},\"data\":\"\"}",
+      "fetched_at": "2026-11-11T12:59:28Z",
+      "verified_via": "api-raw-http",
+      "verified_at": "2026-11-11T12:59:28Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/api-endpoints.md",
+        "references/error-codes.md"
       ]
     }
   ]

@@ -1,93 +1,133 @@
-# Grow Webhook Payload Reference
+# Grow Webhook and Callback Payloads
+
+Field names below come from the examples on Grow's Webhooks page (developers.grow.business/docs/overview-7) and its Server-to-Server Callback pages. Values are placeholders.
 
 ## Setup
 
-Contact `apisupport@grow.business` to enable webhooks for your account.
+Webhooks are enabled per account by Grow support (`support@grow.business`). A sandbox configuration is not copied to production.
 
-## Trigger Options
+## Webhook options
 
-1. All one-time transactions across all pages
-2. Specific static payment pages
-3. Specific payment links
-4. WordPress plugin transactions
-5. Recurring payments (from 2nd charge onward)
-6. Failed recurring payments
-7. POS device transactions
-8. Invoice creation
-9. Mobile app transactions
+1. All one-time transactions (all single payments across all pages and sources)
+2. All static payment pages (legacy system)
+3. Specific static payment pages (legacy system)
+4. Specific payment links (new system)
+5. WordPress plugin transactions
+6. Recurring payments (from the second charge)
+7. Failed recurring payments
+8. POS devices
+9. Invoice creation
+10. Grow mobile application transactions
 
-## Standard Payment Webhook
+## Flat `webhookKey` family (API one-time, recurring, legacy pages)
 
 ```json
 {
-  "webhookKey": "unique-webhook-id",
-  "statusCode": "2",
-  "transactionToken": "818bf8333e7a3f0c53ef8e7",
-  "transactionCode": "txn-reference",
-  "paymentSum": "149.90",
-  "paymentDate": "2026-03-17 14:30:00",
-  "fullName": "Israel Israeli",
-  "payerPhone": "0501234567",
-  "payerEmail": "customer@example.com",
+  "webhookKey": "ABC1234",
+  "transactionCode": "ABCD1234",
+  "transactionType": "אשראי",
+  "paymentSum": 2.00,
+  "paymentsNum": 1,
+  "allPaymentNum": 2,
+  "firstPaymentSum": 1,
+  "periodicalPaymentSum": 1,
+  "paymentType": "רגיל",
+  "paymentDate": "14/10/21",
+  "asmachta": "123456789",
+  "paymentDesc": "Description",
+  "fullName": "Full Name",
+  "payerPhone": "0500000000",
+  "payerEmail": "test@test.com",
   "cardSuffix": "1234",
-  "cardBrand": "Visa",
-  "cardType": "Credit",
-  "paymentSource": "page",
-  "asmachta": "0012345",
-  "paymentDesc": "Monthly subscription"
+  "cardBrand": "Mastercard",
+  "cardType": "Local",
+  "paymentSource": "מערכת חיצונית"
 }
 ```
 
-## Recurring Payment Webhook (2nd charge+)
+Recurring payloads add `directDebitId` (the standing-order id, not a transaction id). Legacy static-page payloads add `purchasePageKey`, `purchasePageTitle`, `amount` and `purchaseCustomField`. This family has no `statusCode`, `transactionId` or `transactionToken`, so it cannot be fed to `getTransactionInfo` or `approveTransaction`.
 
-Additional fields beyond standard:
+## Failed recurring payment
 
 ```json
 {
-  "directDebitId": "recurring-series-id",
-  "paymentsNum": "3",
-  "periodicalPaymentSum": "99.00"
+  "regular_payment_id": "55545",
+  "payer_name": "Full Name",
+  "phone": "0500000000",
+  "email": "test@test.com",
+  "transaction_type": "הוראת קבע",
+  "card_suffix": "4580",
+  "sum": "1",
+  "description": "תיאור עסקה",
+  "business_title": "שם העסק",
+  "error_message": "פג תוקף",
+  "charges_attempts": "6",
+  "webhook_key": "123456ABCD"
 }
 ```
 
-## Failed Recurring Payment Webhook
+`regular_payment_id` is the standing-order id, not a transaction id.
+
+## Invoice webhook (VAT invoice/receipt and automatically generated invoices)
 
 ```json
 {
-  "error_message": "Card declined",
-  "charges_attempts": "2",
-  "regular_payment_id": "recurring-payment-id"
+  "transactionCode": "ABCD1234",
+  "invoiceNumber": "20",
+  "invoiceUrl": "https://secure.meshulam.co.il"
 }
 ```
 
-## Invoice Webhook (via invoiceNotifyUrl)
+## Payment links (new system)
+
+Same envelope as the server-to-server callback:
 
 ```json
 {
-  "transactionCode": "txn-reference",
-  "invoiceNumber": "INV-2026-001",
-  "invoiceUrl": "https://grow.business/invoice/..."
+  "err": "",
+  "status": "1",
+  "data": {
+    "statusCode": "2",
+    "status": "שולם",
+    "sum": "13",
+    "transactionId": "1234567",
+    "transactionToken": "818bf8333e7a3f0c53ef8e7",
+    "paymentLinkProcessId": "1234567",
+    "paymentLinkProcessToken": "7ab1c9133444a8507ebf24ff2",
+    "asmachta": "12345",
+    "invoice_license_number": "123456789",
+    "invoice_name": "שם לחשבונית",
+    "productData": [
+      {"product_id": "0", "name": "...", "catalog_number": "", "vat": "1", "quantity": "1", "price": "1", "price_mark": "0"}
+    ],
+    "shipping": {"type": "...", "amount": "10"},
+    "dynamicFields": [{"key": "", "label": "...", "option_label": "", "option_key": "", "field_value": "..."}]
+  }
 }
 ```
 
-## Payment Link Webhook (New System)
+## Server-to-server callback (`notifyUrl`)
 
-Extended format with product and shipping data:
+Sent as a form POST ("NOT as JSON"), shown here as JSON. Fields sit under `data`:
 
 ```json
 {
-  "processToken": "process-token",
-  "transactionCode": "txn-reference",
-  "paymentSum": "299.00",
-  "productData": [
-    {
-      "catalogNumber": "SKU-001",
-      "quantity": 2,
-      "price": 149.50,
-      "itemDescription": "Widget Pro"
-    }
-  ],
-  "shipping": {},
-  "dynamicFields": {}
+  "err": "",
+  "status": "1",
+  "data": {
+    "statusCode": "2",
+    "status": "שולם",
+    "sum": "269",
+    "transactionId": "145111110",
+    "transactionToken": "c68d98D4c3f19b30hgy7362e9g5g5g5862",
+    "processId": "332002",
+    "processToken": "f01644c3f19b30h825eg5g5g5g3b0",
+    "asmachta": "0289199",
+    "cardSuffix": "1177",
+    "cardExp": "0126",
+    "customFields": {"cField1": "3ba543214f1"}
+  }
 }
 ```
+
+When the payment saved a card (`saveCardToken=1`), `data.cardToken` carries the reusable card token; `transactionToken` is NOT the card token. The save-token-only example arrives with `statusCode` `11` (suspended). Recurring callbacks add `directDebitId` and `recurringDebitId`.

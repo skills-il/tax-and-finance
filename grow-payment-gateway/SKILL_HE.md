@@ -2,146 +2,134 @@
 
 ## סקירה
 
-Grow (לשעבר משולם) היא אחת מחברות הסליקה המובילות בישראל, המפעילה אלפי עסקים עם סליקת כרטיסי אשראי, תשלומי Bit, Apple Pay, Google Pay ועוד. בניגוד לשערי תשלום ישראליים אחרים, Grow מציעה API אחיד ("Light API") שמכסה דפי תשלום, טוקניזציה, חיובים חוזרים, דרישות תשלום, חשבוניות ו-webhooks באינטגרציה אחת.
+חברת Grow (לשעבר משולם) היא שער תשלומים ישראלי לכרטיסי אשראי, Bit, Apple Pay, Google Pay, העברה בנקאית ועוד. ה-"Light API" שלה מכסה דפי תשלום, טוקניזציה, חיובים חוזרים, דרישות תשלום, חשבוניות ו-webhooks.
 
-מדריך זה מנחה אינטגרציה עם Light API של Grow לכל מחזור חיי התשלום: קבלת תשלומים, שמירת טוקנים לחיובים חוזרים, יצירת דרישות תשלום, עיבוד החזרים וטיפול בהתראות webhook בזמן אמת.
+המדריך מנחה אינטגרציה עם ה-Light API לכל מחזור חיי התשלום: קבלת תשלומים, שמירת טוקנים וחיובם, דרישות תשלום, זיכויים והתראות שרת.
 
 **תיעוד רשמי:** `https://developers.grow.business/`
 
-**תמיכה למפתחים:** `apisupport@grow.business` (נישא ממחזור קודם; לא אומת מול התיעוד המפורסם של Grow במחזור הזה, ולכן אמתו אותו בפורטל בית העסק שלכם לפני הסתמכות).
+**תמיכה:** הכתובת `support@grow.business` היא זו שהתיעוד של Grow עצמו נותן לבקשת מעבר לייצור. (גרסאות קודמות של הסקיל ציינו `apisupport@grow.business`; הכתובת הזו לא מופיעה בשום מקום בתיעוד המפורסם של Grow.)
 
 ## הוראות
 
 ### שלב 1: הבנת אימות Grow
 
-Grow משתמשת בשלושה פרטי גישה שמסופקים בעת הצטרפות:
-
 | פרט גישה | תפקיד | הערות |
 |------------|---------|-------|
-| `userId` | מזהה בית עסק | ייחודי לכל חשבון עסקי |
-| `pageCode` | הגדרת דף תשלום | page codes שונים לסוגי תשלום שונים (אשראי, Bit, חיוב חוזר וכו') |
-| `apiKey` | אימות API | נדרש בניהול מספר עסקים או הגדרות ספציפיות |
+| `userId` | מזהה את העסק | ייחודי לכל חשבון עסקי |
+| `pageCode` | מזהה דף תשלום או אמצעי תשלום | קודי דף שונים לאשראי, Bit, הוראת קבע וכו' |
+| `apiKey` | מזהה פלטפורמה שסולקת עבור כמה עסקים | רק בהגדרת פלטפורמה או אינטגרטור. עסק ישיר שולח `userId` + `pageCode` |
 
-**סביבות:**
+**לכל סביבה מזהים משלה.** לסביבת הבדיקות ולסביבת הייצור יש `pageCode`, `userId` ו-`apiKey` (אם רלוונטי) נפרדים.
+
+**סביבות (Light API):**
 
 | סביבה | כתובת בסיס |
 |-------------|----------|
-| Sandbox (בדיקות) | `https://sandbox.meshulam.co.il` |
-| Production | `https://secure.meshulam.co.il` |
+| בדיקות (Sandbox) | `https://sandbox.meshulam.co.il/api/light/server/1.0/` |
+| ייצור | `https://secure.meshulam.co.il/api/light/server/1.0` |
 
-**חשוב: צד שרת בלבד.** כל בקשות ה-API חייבות להגיע מהשרת שלכם. בקשות מצד הלקוח (דפדפן) נחסמות על ידי Grow.
+ניהול דרישות תשלום הוא היוצא מן הכלל ונמצא על שרת נפרד, ראו שלב 8.
 
-**חשוב: פורמט FormData.** כל גוף הבקשות משתמש ב-`multipart/form-data`, לא JSON. אם תשלחו `application/json` ה-API לא מפענח את השדות בכלל, ולכן תקבלו שגיאת ולידציה מטעה על שדה חסר או לא תקין ולא שגיאת content-type.
+**קריטי: צד שרת בלבד.** כל קריאות ה-API חייבות לצאת מהשרת שלכם.
 
-**חשוב: כל תגובה היא HTTP 200.** ה-Light API מדווח על כישלון בגוף התשובה ולעולם לא בשורת הסטטוס. קריאה מוצלחת מחזירה `status: 1`, וכישלון מחזיר `status: 0` עם אובייקט `err`. תסתעפו לפי `status` ו-`err` ולעולם לא לפי קוד ה-HTTP. ראו את פרק קודי השגיאה.
+**קריטי: קידוד טופס, לא JSON.** גוף הבקשה הוא `multipart/form-data` (בבדיקה נמצא שגם `application/x-www-form-urlencoded` מפוענח), ולא JSON. גוף JSON לא מפוענח בכלל, ולכן מתקבלת שגיאת אימות מטעה על שדה חסר או לא תקין במקום שגיאת content-type.
 
-**`err` משנה צורה בשלוש דרכים.** בכישלון ולידציה `err` הוא אובייקט `{"id": 707, "message": "..."}`. כששם ה-endpoint אינו מוכר `err` הוא המחרוזת `"unknown method"`. ובנוסף `err.id` עצמו הוא לפעמים אובייקט: `getTokenTransactionsByExternalIdentifiers` מחזיר `err.id = {"id": 1012, "content": "..."}` כשהטקסט המועיל נמצא ב-`err.id.content` ו-`err.message` גנרי. קוד שעושה `err.id === 54` לא יתאים שם בשקט, ורישום `err.id` ידפיס `[object Object]`. נרמלו לפני השוואה.
+**קריטי: כל תגובה היא HTTP 200.** ה-Light API מסמן כישלון בגוף התגובה. הצלחה מחזירה `status: 1`; כישלון מחזיר `status: 0` עם אובייקט `err`. הסתעפו לפי `status` ו-`err`, לעולם לא לפי קוד ה-HTTP.
 
-**`status` הוא לפעמים מחרוזת JSON ולפעמים מספר.** אותו endpoint מחזיר `"status":"0"` בקלט אחד ו-`"status":0` באחר. השוו בהמרה למחרוזת ולא ב-`=== 1` קשיח.
+**המבנה של `err` משתנה, בשלוש דרכים.** בכישלון אימות `err` הוא אובייקט `{"id": 707, "message": "..."}`. בשם endpoint לא מוכר `err` הוא המחרוזת `"unknown method"`. ולפעמים `err.id` עצמו הוא אובייקט: `getTokenTransactionsByExternalIdentifiers` מחזיר `err.id = {"id": 1012, "content": "..."}` והטקסט השימושי ב-`err.id.content`. נרמלו לפני השוואה.
+
+**השדה `status` מגיע לפעמים כמחרוזת ולפעמים כמספר.** השוו באופן רופף (המרה למחרוזת) ולא עם `=== 1` קשיח.
 
 ### שלב 2: בחירת דפוס אינטגרציה
 
 | דפוס | איך זה עובד | מתאים ל- |
 |---------|-------------|----------|
-| **דף תשלום (iframe/redirect)** | Grow מארחת את טופס התשלום; הטמיעו באמצעות iframe או הפניה | צ'קאאוט באיקומרס, תשלומים חד-פעמיים |
-| **SDK Wallet** | ווידג'ט JS מודולרי מוטמע בדף שלכם | חוויה מותאמת ללא iframe/redirect |
-| **דרישת תשלום** | יצירת URL תשלום לשליחה ללקוחות | חשבונות, חיוב פרילנסרים, תשלומים מרחוק |
-| **חיוב טוקן (שרת-לשרת)** | חיוב טוקן שמור ישירות | חיובים חוזרים, מנויים, לקוחות חוזרים |
+| **דף תשלום (iframe/הפניה)** | Grow מארחת את טופס התשלום; אתם מטמיעים ב-iframe או מפנים | צ'קאאוט במסחר מקוון, תשלום חד-פעמי |
+| **ארנק SDK** | SDK מודולרי ב-JS בתוך הדף שלכם | חוויה מותאמת בלי iframe או הפניה |
+| **דרישת תשלום** | יצירת קישור שנשלח ללקוח | חשבוניות, תשלום מרחוק |
+| **חיוב טוקן (שרת-לשרת)** | חיוב ישיר של טוקן כרטיס שמור | לוגיקת מנויים משלכם, לקוחות חוזרים |
 
-רוב בתי העסק הישראליים משתמשים ב**דף תשלום** לתשלום הראשון (שגם שומר טוקן), ואז **חיוב טוקן** לחיובים חוזרים.
+התיעוד של Grow מציג את הבחירה כ-**Billing מול Tokens**: ב-Billing חברת Grow מנהלת את לוח החיובים (סכום, יום חיוב, מספר חיובים, פעם בחודש) ואתם עורכים או מבטלים דרך Update Direct Debit; ב-Tokens המערכת שלכם מחליטה מתי וכמה לחייב.
 
 ### שלב 3: מימוש דף תשלום
 
-זו האינטגרציה הנפוצה ביותר -- יצירת דף תשלום מתארח והפניית הלקוח אליו.
+**נקודת קצה:** `POST /api/light/server/1.0/createPaymentProcess`
 
-**Endpoint:** `POST /api/light/server/1.0/createPaymentProcess`
-
-**פרמטרים נדרשים:**
+**פרמטרים חובה** (כולם מסומנים "Required field" בסכמה הרשמית):
 
 | פרמטר | סוג | תיאור |
 |-----------|------|-------------|
-| `pageCode` | string | מזהה דף תשלום (מסופק על ידי Grow) |
-| `userId` | string | מזהה בית העסק |
+| `pageCode` | string | מזהה דף התשלום |
+| `userId` | string | מזהה העסק |
 | `sum` | number | סכום התשלום (למשל `10.99`) |
-| `successUrl` | string | כתובת הפניה לאחר תשלום מוצלח (HTTPS חובה) |
-| `cancelUrl` | string | כתובת הפניה אם התשלום בוטל |
-| `description` | string | תיאור המוצר/שירות |
-| `pageField[fullName]` | string | שם הלקוח (חייב להכיל לפחות שני שמות) |
-| `pageField[phone]` | string | מספר טלפון נייד ישראלי תקין |
+| `successUrl` | string | הפניה אחרי הצלחה. HTTPS, כתובת חיצונית, לא localhost |
+| `cancelUrl` | string | הפניה אם התשלום בוטל |
+| `description` | string | תיאור המוצר או השירות |
+| `pageField[fullName]` | string | שם הלקוח, לפחות שני שמות |
+| `pageField[phone]` | string | מספר נייד ישראלי תקין |
+
+אמתו שם וטלפון בעצמכם לפני הקריאה: בדיקת המעבר לייצור של Grow בודקת שהאינטגרציה לא יוצרת שגיאות שאפשר היה למנוע בגלל שדות לקוח חסרים או שגויים (`err.id` 717 הוא "לא נשלח שם וטלפון או שאינו תקין").
 
 **פרמטרים אופציונליים:**
 
 | פרמטר | סוג | תיאור |
 |-----------|------|-------------|
 | `pageField[email]` | string | אימייל הלקוח |
+| `pageField[invoiceName]` / `pageField[invoiceLicenseNumber]` | string | שם ומספר עוסק לחשבונית |
 | `paymentNum` | integer | מספר תשלומים קבוע (1-12) |
-| `maxPaymentNum` | integer | מקסימום תשלומים שהלקוח יכול לבחור (2-N) |
-| `chargeType` | integer | `1` = חיוב רגיל |
+| `maxPaymentNum` | integer | מקסימום תשלומים שהלקוח יכול לבחור (לפחות 2) |
+| `chargeType` | integer | `1` = חיוב רגיל, `3` = יצירת טוקן בלבד (ראו שלב 9) |
+| `saveCardToken` | integer | `1` = שמירת הכרטיס גם כטוקן (ראו שלב 9) |
 | `notifyUrl` | string | כתובת callback שרת-לשרת |
 | `invoiceNotifyUrl` | string | כתובת webhook לחשבונית |
-| `cField1` - `cField9` | string | שדות מותאמים (מוחזרים ב-callbacks) |
-| `transactionTypes[]` | array | הגבלת אמצעי התשלום שיוצגו (בדפי SDK wallet בלבד). לכל אמצעי יש אינדקס קבוע וגם ערך מספרי, ראו טבלה למטה |
+| `cField1` - `cField9` | string | שדות מותאמים שחוזרים אליכם |
+| `transactionTypes[]` | integer array | הגבלת אמצעי תשלום, בדפי ארנק SDK בלבד, ראו למטה |
 
-**אמצעי תשלום (transactionTypes) -- בדפי SDK wallet בלבד.** שני דברים חשובים כאן, וגרסאות קודמות של הכישור טעו בשני. ה-index במערך בוחר את המשבצת, וה-value הוא קוד אמצעי תשלום מספרי. שניהם מגיעים מהסכמה של `createPaymentProcess` בדף התיעוד הרשמי:
+**אמצעי תשלום (transactionTypes), בדפי ארנק SDK בלבד.** האינדקס במערך בוחר את המשבצת והערך הוא קוד אמצעי תשלום מספרי: `[0]`=`1` אשראי, `[1]`=`6` Bit, `[2]`=`13` Apple Pay, `[3]`=`14` Google Pay, `[4]`=`15` העברה בנקאית, `[5]`=`5` Pay Box (טבלה ב-`references/api-endpoints.md`).
 
-| פרמטר | אמצעי תשלום | ערך מתועד |
-|-----------|---------------|------------|
-| `transactionTypes[0]` | כרטיס אשראי | `1` |
-| `transactionTypes[1]` | Bit | `6` |
-| `transactionTypes[2]` | Apple Pay | `13` |
-| `transactionTypes[3]` | Google Pay | `14` |
-| `transactionTypes[4]` | העברה בנקאית | `15` |
-| `transactionTypes[5]` | Pay Box | ברירת מחדל `5` |
+**שורות חשבונית (אופציונלי):** `productData[0][catalogNumber]`, `productData[0][quantity]`, `productData[0][price]`, `productData[0][itemDescription]`. שורות שלא מסתכמות ב-`sum` נכשלות עם `err.id` 617.
 
-**פריטי חשבונית (אופציונלי):**
-
-| פרמטר | סוג | תיאור |
-|-----------|------|-------------|
-| `productData[0][catalogNumber]` | integer | מספר קטלוגי |
-| `productData[0][quantity]` | integer | כמות |
-| `productData[0][price]` | number | מחיר |
-| `productData[0][itemDescription]` | string | תיאור הפריט |
-
-**בקשה לדוגמה:**
+**דוגמת בקשה:**
 
 ```bash
 curl -X POST https://sandbox.meshulam.co.il/api/light/server/1.0/createPaymentProcess \
   -F "pageCode=YOUR_PAGE_CODE" \
   -F "userId=YOUR_USER_ID" \
   -F "sum=149.90" \
-  -F "successUrl=https://yoursite.com/payment/success" \
-  -F "cancelUrl=https://yoursite.com/payment/cancel" \
-  -F "description=מנוי חודשי" \
-  -F "pageField[fullName]=ישראל ישראלי" \
+  -F "successUrl=https://example.com/payment/success" \
+  -F "cancelUrl=https://example.com/payment/cancel" \
+  -F "description=Monthly subscription" \
+  -F "pageField[fullName]=Israel Israeli" \
   -F "pageField[phone]=0501234567" \
-  -F "pageField[email]=customer@example.com" \
-  -F "paymentNum=1" \
-  -F "notifyUrl=https://yoursite.com/api/grow/webhook" \
+  -F "notifyUrl=https://example.com/api/grow/webhook" \
   -F "cField1=order-12345"
 ```
 
-התגובה כוללת שדה `url` -- הפנו את הלקוח לשם או הטמיעו כ-iframe.
-
-**חשוב:** כתובת דף התשלום תקפה ל-10 דקות. צרו כתובת חדשה לכל סשן צ'קאאוט.
+התגובה כוללת `url`: הפנו את הלקוח אליו או הטמיעו אותו ב-iframe. צרו כתובת חדשה לכל סשן צ'קאאוט; קישור שפג תוקפו מחזיר `err.id` 709.
 
 ### שלב 4: טיפול בתגובת התשלום
 
-לאחר שהלקוח משלים את התשלום, קורים שני דברים:
+אחרי התשלום קורים שני דברים:
 
-1. **הפניית לקוח:** הלקוח מופנה ל-`successUrl` עם `response=success`
-2. **callback שרת:** Grow שולחת POST ל-`notifyUrl` עם פרטי העסקה המלאים
+1. **הפניית לקוח:** הלקוח מגיע ל-`successUrl` עם `response=success` וערכי ה-`cField` שלכם. בהפניה הזו לא נשלחים פרטי עסקה.
+2. **קריאה חוזרת מהשרת (callback):** חברת Grow שולחת POST ל-`notifyUrl` שלכם עם פרטי העסקה המלאים.
 
-**תמיד אמתו דרך callback השרת**, לא דרך ההפניה בצד הלקוח (שניתנת לזיוף). ב-callback, אשרו הצלחה על ידי בדיקת `statusCode` (`2` = שולם), אל תתייחסו לעצם ההגעה של ההפניה ל-`successUrl` כהוכחת תשלום.
+**ספקו הזמנה רק לפי callback השרת**, לעולם לא לפי ההפניה, ואשרו הצלחה לפי `statusCode` (`2` = שולם; תהליך של שמירת טוקן בלבד מדווח `11`, ראו שלב 9). שמרו ברשומת ההזמנה את `processId` ו-`processToken` שהחזירה קריאת `createPaymentProcess` שלכם, והכניסו את מספר ההזמנה ל-`cField1`; הם מה שקושר callback להזמנה.
 
-**קינון ה-payload (חשוב):** ב-callback שרת-לשרת של `notifyUrl` השדות מקוננים תחת אובייקט `data` (הרמה העליונה היא `{err, status, data}`), ולכן קראו את `data.statusCode`, `data.transactionToken` ו-`data.transactionId` (המזהה שמעבירים ל-`approveTransaction`), ולא את הרמה העליונה. מערכת ה-webhook הנפרדת שמבוססת על webhookKey (שלב 11) מספקת payload שטוח יותר.
+**ה-callback הוא POST של טופס, לא JSON.** לפי Grow הוא נשלח "the same way as you would send the data to the CreatePaymentProcess method and NOT as JSON". התיעוד מציג אותו כ-JSON לנוחות הקריאה, עם השדות מקוננים תחת `data` (רמה עליונה `{err, status, data}`): קראו את `data.statusCode`, `data.transactionId`, `data.transactionToken`, וכשנשמר טוקן גם את `data.cardToken`. handler שמפענח רק `application/json` יראה גוף ריק. התיעוד לא מפרט את שמות המפתחות בפועל לשדות המקוננים (שטוחים, או בסוגריים כמו `data[statusCode]` בדומה לבקשה), ולכן רשמו ללוג גוף גולמי אחד מהסימולטור שלמטה ומפו את המפתחות לפיו, במקום לנחש.
+
+**החזירו HTTP 200 מנקודת הקצה של ה-callback.** בדיקת המעבר לייצור של Grow בודקת את זה.
+
+**בדקו את ה-handler לפני העלייה לאוויר** עם הסימולטור של Grow: בקשת GET ל-`https://sandbox.meshulam.co.il/api/light/server/1.0/updateMyUrl/?url=<your endpoint>` שולחת callback לדוגמה לכתובת שתתנו.
 
 ### שלב 5: אישור העסקה (חובה)
 
-לאחר קבלת callback השרת, חובה לקרוא ל-`approveTransaction` כדי לאשר קבלה. זה לא משנה את התשלום -- זה סוגר את מחזור העסקה מול Grow.
+אחרי ה-callback קראו ל-`approveTransaction` כדי לאשר קבלה. לפי התיעוד של Grow הקריאה לא משנה את סטטוס העסקה, וחובה לבצע אותה לכל עסקה מוצלחת. עמוד האישור אומר לשלוח "the pageCode and all data received from the server update", והסכמה של ה-endpoint מסמנת כל שדה של ה-callback כחובה, ולכן החזירו את `pageCode` ועוד כל שדה שה-callback מסר.
 
-**Endpoint:** `POST /api/light/server/1.0/approveTransaction`
+**נקודת קצה:** `POST /api/light/server/1.0/approveTransaction`
 
-הקריאה דורשת את **שני** המזהים מה-callback. שליחת `transactionId` בלבד נכשלת עם `err.id` 54 (`חסרים נתונים:transactionToken`), ושליחת `transactionToken` בלבד נכשלת עם 54 על `transactionId`.
+בפועל הנתב בודק קודם את שני המזהים: שליחת `transactionId` בלבד נכשלת עם `err.id` 54 (`חסרים נתונים:transactionToken`), וכך גם להפך. הקריאה עם שלושת השדות שלמטה היא המינימום שעובר אימות, לא החוזה המתועד.
 
 | פרמטר | חובה | מקור |
 |-----------|------|------|
@@ -154,356 +142,284 @@ curl -X POST https://sandbox.meshulam.co.il/api/light/server/1.0/approveTransact
   -F "pageCode=YOUR_PAGE_CODE" \
   -F "transactionId=TRANSACTION_ID_FROM_CALLBACK" \
   -F "transactionToken=TRANSACTION_TOKEN_FROM_CALLBACK"
+  # ...plus every other field from the callback (sum, asmachta, paymentDate, processId, ...)
 ```
 
 **אל תקראו ל-approveTransaction עבור:** שמירת טוקן בלבד, עסקאות נדחות (J4J5), או חיובי `createTransactionWithToken`.
 
-**מה קורה אם לא קוראים לה בכלל אינו מתועד, והכישור הזה לא מנחש.** התיעוד של Grow מסמן את השלב כחובה, ו-`err.id` 722 (`לא ניתן לבצע אישור לעסקה שלא בוצעה או בוטלה`) מראה שאישור יכול להידחות. האם הכסף נתפס בלי הקריאה, האם יש חלון תפוגה, והאם אישור מאוחר עדיין מתקבל, לא ניתן היה לקבוע בלי חשבון סוחר. אם אתם משחזרים אישורים אחרי תקלה, בררו מול Grow לפני שתבחרו בין שחזור אישורים לבין זיכוי, ואל תניחו לשום כיוון.
+**מה קורה אם מדלגים (מתועד):** התשלום עובר בכל מקרה. חברת Grow כותבת שהעסקה מעובדת גם אם approveTransaction לא בוצע או נכשל. מה שמשתנה הוא ההתראה: כש-Grow לא מקבלת אישורים היא שולחת שוב את עדכון השרת עד 5 פעמים נוספות ועשויה לפנות לעסק, ובדיקת המעבר לייצור בודקת שהאישורים נשלחים. לכן אישור חסר לא משאיר תשלום "תלוי" או לא נגבה, ושחזור אישורים אחרי תקלה לא "מציל" חיוב. צפו לשליחות החוזרות, ולכן הדה-דופליקציה בשלב 5.5 היא חובה.
 
 ### שלב 5.5: אל תסמכו על גוף ה-callback לבדו
 
-ה-callback של השרת הוא עוגן האמון לאספקה, והוא POST ציבורי בלי אימות. Grow לא שולחת כותרת חתימה; `webhookKey` מזהה את ה-webhook והוא אינו סוד משותף שאפשר לאמת מולו payload. מי שיגלה את ה-`notifyUrl` שלכם יכול לזייף `{statusCode: 2, ...}` ולקבל סחורה בחינם.
+ה-callback הוא POST ציבורי. עמודי ה-callback וה-webhook של Grow לא מתארים כותרת חתימה או סוד משותף, ו-`webhookKey` מזהה webhook ולא מאמת אותו. מי שמגלה את ה-`notifyUrl` שלכם יכול לזייף `statusCode: 2`.
 
 לפני אספקה של כל הזמנה:
 
-1. בצעו שאילתה חוזרת שרת-לשרת מול Grow עם `getTransactionInfo` (`transactionId` + `transactionToken`) או `getPaymentProcessInfo` (`processId` + `processToken`). התשובה של ה-API היא האמת, לא גוף ה-callback.
-2. ודאו שהסכום שחזר זהה לסכום ברשומת ההזמנה שלכם. callback מזויף או משוחזר שנוקב בסכום אחר לא יוביל לאספקה.
-3. השתמשו בנתיב `notifyUrl` שלא ניתן לניחוש, ואל תרשמו אותו במקום שלקוחות רואים.
-4. בצעו דה-דופליקציה לפי `transactionId`: callback שנשלח שוב יוביל לאספקה אחת, לא שתיים.
+1. בצעו שאילתה חוזרת שרת-לשרת עם `getTransactionInfo` (`transactionId` + `transactionToken`) או `getPaymentProcessInfo` (`processId` + `processToken`). התשובה של ה-API היא האמת.
+2. ודאו שהסכום שחזר זהה לסכום ברשומת ההזמנה שלכם, ושה-`processId` שחזר (או `cField1`) הוא זה ששמרתם להזמנה הזו. בדיקת סכום בלבד מאפשרת לשחזר תשלום אמיתי מול הזמנה שנייה באותו מחיר.
+3. השתמשו בנתיב `notifyUrl` שלא ניתן לניחוש. חברת Grow גם מפרסמת כתובות IP שיש לאפשר בחומת האש שלכם (עמוד IP Addresses); הגבלת הנתיב אליהן היא שכבה נוספת, אבל העמוד לא מגדיר אותן כמקור הבלעדי של ה-callback, ולכן אל תסתמכו עליה במקום הבדיקה הראשונה.
+4. בצעו דה-דופליקציה לפי `transactionId` עם אילוץ ייחודיות על כל ההזמנות, ובצעו את הבדיקה והסימון בטרנזקציית מסד נתונים אחת: חברת Grow שולחת שוב עדכונים שלדעתה לא אושרו, והשליחות החוזרות יכולות להגיע במקביל.
+5. השלימו callbacks שהוחמצו. אם נקודת הקצה הייתה למטה אחרי כל השליחות החוזרות, הזמנות נשארות ממתינות לנצח; משימה תקופתית צריכה לקרוא ל-`getPaymentProcessInfo` עם ה-`processId`/`processToken` השמורים להזמנות שממתינות זמן רב, ולסגור אותן לפי התשובה.
 
-### שלב 5.6: אידמפוטנטיות וניסיונות חוזרים
+### שלב 5.6: אידמפוטנטיות וניסיונות חוזרים בחיובי טוקן
 
-`transactionUniqueIdentifier` הוא מפתח האידמפוטנטיות שלכם ב-`createTransactionWithToken`. שלחו ערך יציב לכל חיוב לוגי, ולא לכל ניסיון.
+ל-`createTransactionWithToken` יש שני שדות מניעת כפילות עם כללים שונים, לפי הסכמה הרשמית:
 
-- בתקלת רשת או שגיאת 5xx שבה אינכם יודעים אם הכרטיס חויב, אל תנסו שוב עם מזהה חדש: ככה לקוח מחויב פעמיים. שלחו שוב את אותו `transactionUniqueIdentifier`, או בצעו התאמה קודם עם `getTokenTransactionsByExternalIdentifiers`.
-- `err.id` 712 (`העסקה כבר בוצעה`) הוא סימן לשחזור ולא באג. התייחסו אליו כ"כבר חויב, הצלחה" ולא ככישלון שצריך לנסות שוב.
+| שדה | כלל |
+|-------|------|
+| `transactionUniqueIdentifier` (חובה, מספר שלם) | אם Grow כבר ראתה את הערך עבור העסק, הבקשה נדחית מיד, **בלי קשר לסטטוס של הבקשה הראשונה** |
+| `transactionGroupIdentifier` (אופציונלי, מספר שלם) | נדחה רק אם כבר קיים תשלום מוצלח עם הערך הזה |
+
+שניהם חייבים להיות מספר שלם חיובי בלי אפסים מובילים, קטן מ-4,294,967,295 (ערך של 32 ביט); כל דבר אחר, כולל מילישניות epoch או מחרוזת, נכשל עם `err.id` 1013.
+
+ההשלכות:
+
+- דחייה על `transactionUniqueIdentifier` שחזר על עצמו לא אומרת דבר על השאלה אם הניסיון הראשון חויב. לעולם אל תפרשו אותה כ"כבר שולם".
+- כדי להבטיח לכל היותר חיוב מוצלח אחד לכל חיוב לוגי, שלחו `transactionGroupIdentifier` יציב לחיוב הלוגי ו-`transactionUniqueIdentifier` חדש לכל ניסיון.
+- חברת Grow לא אומרת אם בדיקת הקבוצה מוגבלת לטוקן הכרטיס או לכל העסק. הניחו שלכל העסק: קבעו ערך קבוצה ייחודי לכל (לקוח, תקופת חיוב), למשל המפתח הראשי המספרי של שורת "חיוב" שאתם מכניסים לפני הקריאה, ולעולם אל תגזרו אותו מתאריך בלבד, אחרת הלקוח הראשון שחויב בתקופה חוסם את החיוב של כל השאר באותה תקופה.
+- אחרי timeout, בצעו קודם התאמה עם `getTokenTransactionsByExternalIdentifiers` (`userId`, `cardToken`, ואחד משני המזהים בכל קריאה; שליחת שניהם מחזירה 1012), ונסו שוב רק אם אין חיוב מוצלח.
+- שמרו את שני הערכים לפני הקריאה, כדי שמפתח החיפוש יהיה קיים גם אם התשובה לא הגיעה.
 
 ### שלב 6: שליפת פרטי עסקה
 
-**קבלת פרטי עסקה:**
+הקריאה `POST /api/light/server/1.0/getTransactionInfo` מקבלת `pageCode`, `transactionId`, `transactionToken` (כולם חובה; בלי הטוקן מתקבל `err.id` 54).
 
-`POST /api/light/server/1.0/getTransactionInfo`
-
-| פרמטר | סוג | תיאור |
-|-----------|------|-------------|
-| `pageCode` | string | מזהה דף |
-| `transactionId` | string | מזהה העסקה לשליפה |
-| `transactionToken` | string | טוקן העסקה. חובה: בלעדיו הקריאה מחזירה `err.id` 54 |
-
-**קבלת פרטי תהליך תשלום:**
-
-`POST /api/light/server/1.0/getPaymentProcessInfo`
-
-| פרמטר | סוג | תיאור |
-|-----------|------|-------------|
-| `pageCode` | string | מזהה דף |
-| `processId` | string | מזהה התהליך מ-createPaymentProcess |
-| `processToken` | string | טוקן התהליך מ-createPaymentProcess. חובה: בלעדיו הקריאה מחזירה `err.id` 54 |
+הקריאה `POST /api/light/server/1.0/getPaymentProcessInfo` מקבלת `pageCode`, `processId`, `processToken` (כולם חובה; בלי `processToken` מתקבל `err.id` 54).
 
 ### שלב 7: עיבוד החזרים
 
-**החזר עסקת כרטיס אשראי:**
+**זיכוי עסקת אשראי:** `POST /api/light/server/1.0/refundTransaction`
 
-`POST /api/light/server/1.0/refundTransaction`
+| פרמטר | חובה | תיאור |
+|-----------|----------|-------------|
+| `userId` או `pageCode` | אחד מהם | הסכמה מסמנת `userId` כחובה ו-`pageCode` כאופציונלי; בפועל הקריאה מקבלת כל אחד מהם ומחזירה `err.id` 724 ("נדרש שדה userId או pageCode") כששניהם חסרים. בחיובי טוקן, שאין להם קוד דף, השתמשו ב-`userId` |
+| `transactionId` | כן | העסקה לזיכוי |
+| `transactionToken` | כן | טוקן העסקה |
+| `refundSum` | כן | סכום הזיכוי (חלקי או מלא). שם הפרמטר הוא `refundSum`; `sum` לא מתקבל |
+| `stopDirectDebit` | לא | הערך `1` בעסקת הוראת קבע עוצר את החיובים הבאים בסדרה |
 
-| פרמטר | סוג | תיאור |
-|-----------|------|-------------|
-| `pageCode` | string | מזהה דף |
-| `transactionId` | string | עסקה להחזר |
-| `transactionToken` | string | טוקן העסקה. חובה: בלעדיו הקריאה מחזירה `err.id` 54 |
-| `refundSum` | number | סכום ההחזר (חלקי או מלא). שם הפרמטר הוא `refundSum`; `sum` אינו מתקבל כאן והקריאה נשארת עם `err.id` 707 |
+כישלונות זיכוי שכדאי לטפל בהם: 105 / 190 / 218 (זיכוי גדול מהמקור), 130 ו-207 (זיכוי חלקי על עסקה שבוצעה היום או שעדיין לא שודרה), 210 (כבר זוכתה), 110 (הכסף כבר בחשבון הבנק; הבקשה עוברת לאישור ידני).
 
-שגיאות החזר שכדאי לטפל בהן: 105 ו-218 (החזר גדול מהעסקה המקורית), 130 ו-207 (החזר חלקי על עסקה שסולקה או שודרה היום), 210 (כבר בוצע החזר), 110 (הכסף כבר הועבר לבנק ולכן הבקשה עוברת לאישור ידני).
-
-**ביטול עסקת Bit:**
-
-`POST /api/light/server/1.0/cancelBitTransaction`
-
-הקריאה מזוהה לפי התהליך ולא לפי העסקה. שליחת `transactionId` מחזירה `err.id` 54 על `processId`.
-
-| פרמטר | סוג | תיאור |
-|-----------|------|-------------|
-| `pageCode` | string | מזהה דף |
-| `processId` | string | מזהה תהליך התשלום |
-| `processToken` | string | טוקן תהליך התשלום |
+**ביטול עסקת Bit:** הקריאה `cancelBitTransaction` ממופתחת לפי התהליך (`pageCode`, `processId`, `processToken`), לא לפי העסקה. התיעוד מציין את הנתיב `/api/light/andriod/1.0/cancelBitTransaction/` (בכתיב של Grow); גם `/api/light/server/1.0/cancelBitTransaction` עונה עם אותו אימות.
 
 ### שלב 8: יצירת דרישות תשלום
 
-דרישות תשלום מאפשרות לשלוח כתובת תשלום ללקוחות באימייל, SMS או WhatsApp. שימושי לחיובים ותשלומים מרחוק.
+דרישות תשלום הן קישורי תשלום לשיתוף. חברת Grow יכולה לשלוח אותם בעצמה ב-SMS או באימייל (`sendingMode` 1 / 2), או שאתם משתפים את הכתובת בדרך שלכם.
 
-**Endpoint:** `POST /api/light/server/1.0/createPaymentLink`
+**ה-API המתועד נמצא על שרת וגרסה שונים משאר ה-Light API:**
 
-| פרמטר | סוג | תיאור |
-|-----------|------|-------------|
-| `pageCode` | string | מזהה דף |
-| `userId` | string | מזהה בית עסק |
-| `sum` | number | סכום התשלום |
-| `description` | string | תיאור התשלום |
-| `pageField[fullName]` | string | שם הלקוח |
-| `pageField[phone]` | string | טלפון הלקוח |
-| `pageField[email]` | string | אימייל הלקוח |
+| פעולה | Endpoint מתועד (sandbox) | הערות |
+|-----------|-------------------------------|-------|
+| יצירה | `POST https://sandboxapi.grow.link/api/light/server/1.1/CreatePaymentLink` | רגיש לאותיות: `createPaymentLink` באות קטנה לא מנותב בשרת הזה |
+| עדכון או השבתה | `POST https://sandboxapi.grow.link/api/light/server/1.0/UpdatePaymentLink` | דורש `pageCode`, `isActive` (1/0), `paymentLinkProcessId`, `paymentLinkProcessToken` |
 
-התגובה כוללת כתובת תשלום לשיתוף. לשליפת דרישה קיימת השתמשו ב-`getPaymentLinkInfo`, שדורש `paymentLinkProcessToken` (בלעדיו מתקבל `err.id` 54 על השדה הזה).
+שתי הקריאות נושאות כותרת `X-API-KEY`. חברת Grow מפרסמת את ערך הייצור של CreatePaymentLink בעמוד Transition to Production; קחו אותו משם ולא מקטע קוד של צד שלישי. העמודים של Grow נותנים רק את שרת ה-sandbox לשתי הקריאות האלה, ולכן אמתו את שרת הייצור מול Grow כשהיא מנפיקה מזהי ייצור, ואל תנחשו.
 
-**`updatePaymentLink` אינו קיים ב-Light API.** בבדיקה מול `sandbox.meshulam.co.il` ומול `secure.meshulam.co.il` הוא מחזיר `{"err":"unknown method"}`, בדיוק כמו שם endpoint שאינו קיים, ובשונה משגיאות ההרשאה (300, 714, 715) שמתקבלות מ-endpoint אמיתי שאין אליו הרשאה. צרו דרישת תשלום חדשה במקום.
+החוזה של CreatePaymentLink שונה מ-`createPaymentProcess`: אין `sum`; הסכום נלקח מ-`products[data][N][price]`. השדות החובה כוללים `userId`, `pageCode`, `paymentLinkType`, `isActive`, `title`, `paymentTypes[0][type]` עם `paymentTypes[0][payments][paymentsPaymentNum]` או `...[paymentsMaxPaymentNum]`, `pageFieldSettings[fullName][value]`, `pageFieldSettings[phone][value]`, ולכל מוצר `name`, `price` ו-`vatType`. העתיקו את רשימת הפרמטרים המלאה מעמוד התיעוד.
+
+**אל תערבבו חוזים.** גם שרתי `meshulam.co.il` עונים למתודה `createPaymentLink`, אבל עם חוזה אחר ולא מתועד (היא מבקשת קודם `sum`). בנו על החוזה המתועד.
+
+שליפת קישור קיים נעשית עם `getPaymentLinkInfo`, שהסכמה מתעדת עבורה את `pageCode`, `paymentLinkProcessId` ו-`paymentLinkProcessToken` כשדות חובה.
 
 ### שלב 9: טוקניזציה וחיובים חוזרים
 
-**מאיפה מגיע הטוקן:** טוקן הכרטיס השמור מגיע בשדה `transactionToken` של ה-webhook של התשלום אחרי התשלום הראשון. השתמשו בערך הזה כ-`cardToken` בקריאות `createTransactionWithToken` שלמטה.
+**דרישות מוקדמות (עמוד Token):** עבודה עם טוקנים דורשת הרשאה מ-Grow; שמירת טוקן אינה רלוונטית ל-Bit, Apple Pay או Google Pay, ולכן צ'קאאוט של מנוי חייב להשתמש בדף אשראי; טוקן נשמר לעד 180 תשלומים, ולכן תכננו טוקניזציה מחדש למנויים ארוכים.
 
-**`getTokenOnly` אינו נפתר בנתיב של ה-Light API.** התפריט בתיעוד של Grow עדיין מציג פעולה בשם "Get Token Only", אבל `POST /api/light/server/1.0/getTokenOnly` מחזיר `{"err":"unknown method"}` בשני השרתים וגם בווריאציות אותיות, וזו התשובה של הראוטר לשם שאינו מוכר לו. אל תכתבו קוד מול הנתיב הזה. כדי לשמור כרטיס בלי לחייב, העבירו תשלום דרך page code שמוגדר לטוקניזציה וקחו את הטוקן מה-callback, או אמתו את הפעולה העדכנית מול התמיכה של Grow.
+**שמירת טוקן.** שני תהליכים מתועדים, שניהם דרך `createPaymentProcess`:
 
-Grow תומכת בשלושה מודלים לחיובים חוזרים:
+| תהליך | פרמטרים |
+|------|-----------|
+| שמירת טוקן בלבד | `chargeType=3`, `sum=1` (הסכמה קובעת שהסכום חייב להיות 1), `saveCardToken=1` |
+| תשלום רגיל שגם שומר טוקן | הפרמטרים הרגילים ועוד `saveCardToken=1` |
+
+אין endpoint נפרד בשם `getTokenOnly`: הקריאה `POST /api/light/server/1.0/getTokenOnly` מחזירה `{"err":"unknown method"}` בשני השרתים. עמוד "Get Token Only" בתיעוד של Grow מתאר את תהליך `chargeType=3` שלמעלה.
+
+**מאיפה מגיע הטוקן:** מהשדה `data.cardToken` ב-callback. אל תשתמשו ב-`transactionToken` כטוקן הכרטיס: `transactionToken` מזהה עסקה אחת (זה מה ש-`approveTransaction`, `getTransactionInfo` ו-`refundTransaction` צריכים), ואילו `cardToken` הוא אמצעי הגישה החוזר לכרטיס. דוגמת ה-callback של שמירת טוקן בלבד מגיעה עם `statusCode` `11` (עסקה מושהית), לא `2`.
+
+**נדרשת הסכמת לקוח.** רשימת הבדיקה של Grow למעבר לייצור דורשת בדף התשלום תיבת סימון שבה הלקוח מאשר באופן פעיל את שמירת טוקן הכרטיס לפני שהוא נשמר.
 
 #### אפשרות א: מנוהל על ידי Grow דרך Page Code
 
-השתמשו ב-page code ייעודי לחיובים חוזרים שמוגדר בלוח הבקרה של Grow:
-
-1. צרו תשלום עם `createPaymentProcess` עם page code לחיובים חוזרים
-2. הגדירו `sum` לסכום החיוב החודשי ו-`paymentNum` למספר החיובים הכולל
-3. Grow מטפלת בכל החיובים הבאים אוטומטית
+1. צרו את התשלום עם `createPaymentProcess` וקוד דף להוראת קבע שהוגדר בדשבורד של Grow
+2. קבעו את `sum` לסכום כל חיוב ואת `paymentNum` למספר החיובים
+3. חברת Grow מריצה את החיובים הבאים
 
 #### אפשרות ב: חיוב טוקן שמור (שרת-לשרת)
 
-חייבו טוקן כרטיס שמור ישירות. שם הפרמטר לטוקן הוא `cardToken` (ולא `token`), ו-`paymentType=2` הוא חיוב רגיל:
+הקריאה היא `POST /api/light/server/1.0/createTransactionWithToken`. היא ממופתחת לפי `userId`, לא `pageCode`. פרמטר הטוקן הוא `cardToken` (ולא `token`).
+
+| פרמטר | חובה | הערות |
+|-----------|----------|-------|
+| `userId`, `cardToken`, `sum`, `description` | כן | בפועל, קריאה עם `sum` בלבד מדווחת על `userId` חסר ואחר כך על `cardToken` |
+| `paymentType` | כן | `1` הוראת קבע בניהול Grow, `2` רגיל, `4` תשלומים. עבור `1` העמודים של Grow סותרים זה את זה לגבי טווח `paymentNum` (Work with Token: 1-48; הסכמה של פרימיום דרך טוקן: 2-12); אמתו מול Grow |
+| `paymentNum` | כן | בפועל, השמטה מחזירה `err.id` 54. `1` לחיוב יחיד בלי תשלומים |
+| `pageField[fullName]`, `pageField[phone]` | כן | אותו אימות כמו בדף התשלום |
+| `transactionUniqueIdentifier` | כן | מספר שלם של 32 ביט, חדש לכל ניסיון, ראו שלב 5.6 |
+| `transactionGroupIdentifier` | לא | מספר שלם, יציב לכל חיוב לוגי, ראו שלב 5.6 |
 
 ```bash
 curl -X POST https://sandbox.meshulam.co.il/api/light/server/1.0/createTransactionWithToken \
   -F "userId=YOUR_USER_ID" \
+  -F "cardToken=CARD_TOKEN_FROM_CALLBACK" \
   -F "sum=99.00" \
   -F "description=Monthly subscription" \
-  -F "cardToken=SAVED_CARD_TOKEN" \
   -F "paymentType=2" \
+  -F "paymentNum=1" \
   -F "pageField[fullName]=Israel Israeli" \
   -F "pageField[phone]=0501234567" \
-  -F "transactionUniqueIdentifier=UNIQUE_PER_CHARGE"
+  -F "transactionGroupIdentifier=48213" \
+  -F "transactionUniqueIdentifier=100001"
 ```
 
-`cardToken` הוא טוקן הכרטיס השמור, והוא מגיע בשדה `transactionToken` של ה-webhook של התשלום. בדקו את `statusCode` בתגובה (`2` = שולם) כדי לאשר שהחיוב הצליח. נקודת קצה זו משתמשת ב-`userId` ולא ב-`pageCode`, והיא דורשת גם `paymentNum` (בלעדיו מתקבל `err.id` 54 על `paymentNum`); שלחו `paymentNum=1` לחיוב בודד ללא תשלומים.
+בדקו את `statusCode` בתגובה (`2` = שולם) ושמרו את `transactionId`, `transactionToken` ו-`asmachta` שבה: זיכויים ו-`updateDirectDebit` יצטרכו אותם בהמשך. אל תקראו ל-`approveTransaction` אחר כך.
 
-#### אפשרות ג: סדרת חיובים חוזרים פרימיום (recurringDebitId)
+**חיובי טוקן שנדחו.** עמוד ה-Token של Grow קובע ששגיאה סופית (כרטיס פג תוקף, גנוב או חסום) פירושה להפסיק לחייב את הטוקן, למחוק אותו ולקבל מהלקוח כרטיס חדש. הטבלה שלו משתמשת ב-`err.id` 103 לשני הסוגים, ולכן סווגו לפי `err.id` וגם לפי `err.message`:
 
-לסדרת חיובים חוזרים בניהול Grow, כל חיוב נושא `recurringDebitId` שמקשר אותו לסדרה. הערך הזה מוחזר בתגובה של התשלום החוזר-פרימיום הראשון; העבירו אותו בכל קריאת `createTransactionWithToken` הבאה, לצד `cardToken`, `paymentType=2`, והשדות הנדרשים למעלה:
+| `err.id` | הודעה (כפי שחוזרת) | סופי? |
+|---------|------------------------------|--------|
+| 103 | כרטיס פג תוקף / כרטיס גנוב / כרטיס חסום | סופי |
+| 103 | חברת האשראי לא אשרה את העסקה | לא סופי |
+| 451 / 452 / 453 | כרטיס לא פעיל או פג תוקף / חברת האשראי חסמה את הכרטיס / חסימת מערכת | סופי |
 
-```bash
-curl -X POST https://sandbox.meshulam.co.il/api/light/server/1.0/createTransactionWithToken \
-  -F "userId=YOUR_USER_ID" \
-  -F "sum=99.00" \
-  -F "description=Monthly subscription" \
-  -F "cardToken=SAVED_CARD_TOKEN" \
-  -F "paymentType=2" \
-  -F "pageField[fullName]=Israel Israeli" \
-  -F "pageField[phone]=0501234567" \
-  -F "recurringDebitId=RECURRING_DEBIT_ID" \
-  -F "transactionUniqueIdentifier=UNIQUE_PER_CHARGE"
-```
+בשגיאה סופית, עצרו את לוח החיובים ושלחו ללקוח דף תשלום חדש עם `saveCardToken=1`. בשגיאה לא סופית, נסו שוב מספר מוגבל של פעמים עם `transactionUniqueIdentifier` חדש ואותו `transactionGroupIdentifier`.
 
-אמתו את פרמטרי האתחול המדויקים של החיוב-החוזר-פרימיום בעמוד הייחוס של `createTransactionWithToken` (ראו קישורי עזר) במקום להניח שם דגל.
+#### אפשרות ג: הוראת קבע פרימיום דרך טוקן
 
-**עדכון חיוב חוזר:**
+הוראת קבע פרימיום דורשת הרשאה מ-Grow. היא שומרת את הטוקן בתוקף כשהכרטיס פג, יכולה להעביר את הסדרה לכרטיס חדש באישור הלקוח, ומציגה את החיובים כהוראת קבע בפירוט חברת האשראי. עם טוקן שמור:
 
-`updateRecurringPayment` אינו קיים ב-Light API: בבדיקה מול שני השרתים הוא מחזיר `{"err":"unknown method"}`. ה-endpoint החי לשינוי סדרת הוראת קבע הוא `POST /api/light/server/1.0/updateDirectDebit`. אמתו את סט הפרמטרים שלו בדף התיעוד לפני חיווט, וצפו ל-`err.id` 180 (`פעולת עידכון לא בוצעה, רשומה לא נמצאה`) כשמזהה הסדרה לא תואם.
+1. **תשלום ראשון:** קריאה ל-`createTransactionWithToken` עם שדות אפשרות ב ועוד `isRecurringDebitPayment=1` (השם בסכמת ה-endpoint; עמוד סקירה אחד כותב `isRecurringDebitId=1` ואומר שהמזהה מגיע בעדכון השרת ולא בתגובה, אז בדקו את שניהם). שמרו את `recurringDebitId`.
+2. **כל תשלום הבא:** קריאה ל-`createTransactionWithToken` עם שדות אפשרות ב ועוד `recurringDebitId`.
+3. בחיובי טוקן רגילים, שאינם הוראת קבע, אל תשלחו אף אחד מהשניים.
 
-**חיפוש עסקאות טוקן:**
+**עדכון או ביטול סדרה בניהול Grow:** הקריאה `POST /api/light/server/1.0/updateDirectDebit` (המתודה `updateRecurringPayment` לא קיימת ומחזירה `unknown method`).
 
-`POST /api/light/server/1.0/getTokenTransactionsByExternalIdentifiers` -- מציאת כל העסקאות לטוקן נתון לפי מזהים חיצוניים.
+| פרמטר | חובה | הערות |
+|-----------|----------|-------|
+| `userId`, `transactionId`, `transactionToken`, `asmachta` | כן | בפועל הקריאה מציינת כחסרים את `userId`, אחר כך `transactionId`, אחר כך `asmachta` |
+| `changeStatus` | לא | `1` פעיל, `2` מבוטל |
+| `sum`, `paymentNum` (1-48), `chargeDay` (1-31) | לא | סכום חדש, מספר חיובים, יום בחודש |
+| `fullName`, `phone`, `email` | לא | עדכון פרטי המשלם |
+| `updateCard` | לא | `0` בלי עדכון, `1` עדכון |
 
-**יתרונות חיוב חוזר פרימיום:**
-- עדכון כרטיס אוטומטי בתפוגה (תאריך תפוגה חדש מוחל על טוקן קיים)
-- תמיכה בהעברת כרטיס כשהלקוח מחליף כרטיס
-- שורת חיוב ייחודית בדף פירוט כרטיס האשראי של הלקוח
+השגיאה `err.id` 180 (`פעולת עידכון לא בוצעה, רשומה לא נמצאה`) פירושה שהרשומה לא נמצאה.
 
-### שלב 10: תשלומים נדחים (תשלומי J4J5)
+### שלב 10: תשלומים נדחים (J4J5)
 
-J4J5 מאפשר 4 תשלומים ללא ריבית, אפשרות תשלום פופולרית בישראל:
+צרו את התשלום הנדחה עם `createPaymentProcess` וקוד דף של J4J5, ואז שחררו אותו:
 
-**יצירת תשלום נדחה:**
+הקריאה `POST /api/light/server/1.0/settleSuspendedTransaction` ממופתחת לפי `userId` (לא `pageCode`; שליחת `pageCode` מחזירה `err.id` 54 על `userId`), ועוד `transactionId`, `transactionToken` ו-`sum`.
 
-`POST /api/light/server/1.0/createPaymentProcess` עם page code של J4J5
+השחרור מוגבל: `err.id` 814 פירושו שהחיוב חרג מתפיסת המסגרת ביותר מ-30 אחוז, 804 שחרג מתפיסת המסגרת, 803 שתוקף J5 פג, 808 שהעסקה כבר שוחררה. אל תשלחו `approveTransaction` בתהליכי J4/J5.
 
-**סילוק כשמוכנים:**
-
-`POST /api/light/server/1.0/settleSuspendedTransaction`
-
-| פרמטר | סוג | תיאור |
-|-----------|------|-------------|
-| `userId` | string | מזהה בית העסק |
-| `transactionId` | string | עסקה מושהית לסילוק |
-| `transactionToken` | string | טוקן העסקה |
-| `sum` | number | הסכום לסילוק |
-
-הקריאה מזוהה לפי `userId` ולא לפי `pageCode`. שליחת `pageCode` מחזירה `err.id` 54 על `userId`. הסילוק מוגבל: `err.id` 814 פירושו חיוב שחרג מתפיסת המסגרת ביותר מ-30 אחוז, 804 חריגה מהמסגרת, 803 פקיעת תוקף J5, ו-808 עסקה שכבר שוחררה.
-
-**קשור:** גם `createFarPaymentRequest` קיים ב-Light API (אומת חי בשני השרתים). הכישור הזה לא מכסה אותו; קראו את דף התיעוד שלו לפני שימוש.
+גם `createFarPaymentRequest` קיימת בשני השרתים; היא לא מכוסה כאן, קראו את עמוד התיעוד שלה לפני שימוש.
 
 ### שלב 11: הגדרת Webhooks
 
-Grow שולחת התראות בזמן אמת לשרת שלכם לאירועים שונים. פנו ל-`apisupport@grow.business` להפעלת webhooks לחשבון שלכם.
+ה-Webhooks נפרדים מה-callback של `notifyUrl` ומופעלים לכל חשבון על ידי התמיכה של Grow, לפי טריגר (עסקאות חד-פעמיות, דרישות תשלום, הוראות קבע מהחיוב השני, הוראות קבע שנכשלו, POS, חשבוניות ועוד; רשימה מלאה ב-`references/webhook-payloads.md`).
 
-**אפשרויות טריגר ל-webhook:**
+**שתי משפחות payload, וקוראים אותן אחרת:**
 
-| טריגר | תיאור |
-|---------|-------------|
-| כל העסקאות החד-פעמיות | כל תשלום בכל הדפים |
-| דפי תשלום ספציפיים | סינון לפי page code |
-| דרישות תשלום ספציפיות | סינון לפי דרישת תשלום |
-| חיובים חוזרים | מהחיוב השני והלאה |
-| חיובים חוזרים שנכשלו | כשחיוב חוזר נכשל |
-| עסקאות POS | תשלומים פיזיים |
-| יצירת חשבונית | כשחשבוניות מופקות |
-| עסקאות אפליקציה | תשלומים דרך אפליקציית Grow |
+| משפחה | מבנה | שדות מרכזיים |
+|--------|-------|-----------|
+| דפים ישנים, הוראות קבע, חד-פעמי דרך API | אובייקט שטוח עם `webhookKey` | `transactionCode`, `paymentSum`, `paymentsNum`, `allPaymentNum`, `paymentType`, `asmachta`, `paymentSource`, `directDebitId` (הוראת קבע). בלי `statusCode`, `transactionId` או `transactionToken` |
+| דרישות תשלום (מערכת חדשה) | `{err, status, data}` כמו ה-callback | `data.statusCode`, `data.transactionId`, `data.transactionToken`, `data.paymentLinkProcessId`, `data.paymentLinkProcessToken`, `productData`, `shipping` |
 
-**שדות נפוצים ב-webhook:**
+ה-payload של הוראת קבע שנכשלה כתוב ב-snake_case (`regular_payment_id`, `error_message`, `charges_attempts`, `webhook_key`). ה-webhook של חשבונית נושא `transactionCode`, `invoiceNumber` ו-`invoiceUrl`. דוגמאות מלאות: `references/webhook-payloads.md`.
 
-| שדה | תיאור |
-|-------|-------------|
-| `webhookKey` | מזהה webhook ייחודי |
-| `statusCode` | קוד סטטוס תשלום, `2` = שולם (הצלחה). בדקו את זה בצד השרת כדי לאשר שהתשלום הצליח לפני אספקה; הפניה בצד הלקוח לבדה אינה הוכחה |
-| `transactionToken` | טוקן כרטיס שמור, שמרו אותו כדי לחייב מאוחר יותר דרך `createTransactionWithToken` לחיובים חוזרים |
-| `transactionCode` | מזהה עסקה |
-| `paymentSum` | סכום שחויב |
-| `paymentDate` | חותמת זמן |
-| `fullName` | שם המשלם |
-| `payerPhone` | טלפון המשלם |
-| `payerEmail` | אימייל המשלם |
-| `cardSuffix` | 4 ספרות אחרונות של הכרטיס |
-| `cardBrand` | מותג כרטיס (Visa, Mastercard וכו') |
-| `asmachta` | מספר אסמכתא |
-| `paymentSource` | מקור (דף, דרישה, POS וכו') |
+בסדרות הוראת קבע בניהול Grow, החיובים מהשני והלאה מדווחים רק דרך ה-webhooks האלה, והמשפחה השטוחה לא נושאת `transactionId`/`transactionToken`, ולכן השאילתה החוזרת של שלב 5.5 לא יכולה לאמת אותם. התייחסו אליהם כהתראות: התאימו מול הדוחות של Grow או ממשק הסוחר לפני שאתם מאריכים גישה בתשלום על סמך אותם.
 
-**שדות נוספים ב-webhook חיוב חוזר:**
-
-| שדה | תיאור |
-|-------|-------------|
-| `directDebitId` | מזהה סדרת החיובים |
-| `allPaymentNum` | מספר התשלומים הכולל בסדרה (בפורמט PaymentLinks החדש מאויית `allPaymentsNum`) |
-| `paymentsNum` | מספר תשלום בסדרה |
-| `periodicalPaymentSum` | סכום חיוב חוזר |
-
-**שדות נוספים ב-webhook חיוב חוזר שנכשל:**
-
-| שדה | תיאור |
-|-------|-------------|
-| `error_message` | סיבת הכישלון |
-| `charges_attempts` | מספר ניסיונות חוזרים |
-| `regular_payment_id` | מזהה החיוב שנכשל |
-
-**webhook חשבונית (מוגדר דרך `invoiceNotifyUrl`):**
-
-| שדה | תיאור |
-|-------|-------------|
-| `transactionCode` | עסקה קשורה |
-| `invoiceNumber` | מספר חשבונית שהופק |
-| `invoiceUrl` | כתובת להורדת PDF החשבונית |
+**הגדרת webhooks ב-sandbox לא מועתקת לייצור;** צריך להגדיר אותם שוב.
 
 ### שלב 12: 3D Secure
 
-3DS רץ על משטח התשלום המתארח של Grow ולא בקוד השרת שלכם: הדף או ה-SDK wallet מציגים את האתגר לבעל הכרטיס, והאינטגרציה שלכם רואה רק את התוצאה הסופית ב-callback. Grow מתעדת את זה בדף ייעודי (ראו קישורי עזר).
+לפי עמוד ה-3DS של Grow, זה שירות שהעסק רוכש. אחרי הרכישה הוא פעיל כברירת מחדל בכל עסקה, והוא שולח קוד לטלפון הנייד של בעל הכרטיס כפי שרשום בחברת האשראי. כדי לדלג עליו בעסקה מסוימת, שלחו `cancel3DS=True` בקריאת ה-API.
 
-הכישור הזה לא משכתב את המנגנון, כי אילו סוגי דפים מריצים אתגר, האם זה ניתן להגדרה על ידי הסוחר, ואיך העברת האחריות חלה על חיוב שרת-לשרת ב-`createTransactionWithToken` (עסקה ביוזמת הסוחר ולא בנוכחות בעל הכרטיס), לא ניתן היה לאמת בלי חשבון סוחר. קראו את דף ה-3DS לפני שאתם מסתמכים על הנחת העברת אחריות, ואל תניחו שחיוב בטוקן יורש את מצב ה-3DS של התשלום המקורי.
+העמוד לא מסביר איך חל העברת האחריות (liability shift), וגם לא אם חיוב שרת-לשרת דרך `createTransactionWithToken` עובר 3DS. אל תניחו שחיוב טוקן יורש את סטטוס ה-3DS של התשלום המקורי; בררו מול Grow.
 
 ### שלב 13: סוגי דפי תשלום
 
-Grow מציעה סוגי דפי תשלום מוכנים מראש, כל אחד עם `pageCode` שונה:
+לכל סוג דף יש `pageCode` משלו: ארנק SDK (ווידג'ט JS), גנרי (אשראי + Bit), כרטיס אשראי, Google Pay (דורש `allow="payment"` ב-iframe), Apple Pay (דורש אימות דומיין, שוב גם לדומיין הייצור), Bit (עדיף במסך מלא בנייד), Bit QR (מחשב או חנות).
 
-| סוג דף | תיאור | הערות |
-|-----------|-------------|-------|
-| SDK Wallet | ווידג'ט JS מודולרי | ללא צורך ב-iframe/redirect |
-| גנרי | כרטיס אשראי + Bit | ניתן להתאמה, עד 2 שדות נוספים |
-| כרטיס אשראי | תשלומי כרטיס בלבד | תומך ברגיל וחוזר |
-| Google Pay | Google Pay בלבד | Chrome באנדרואיד; דורש `allow="payment"` ב-iframe |
-| Apple Pay | Apple Pay בלבד | דורש אימות דומיין ל-iframe |
-| Bit | תשלום נייד Bit | מומלץ למסך מלא במובייל |
-| Bit QR | קוד QR ל-Bit | לתצוגת דסקטופ/בחנות |
-
-**אינטגרציית iframe:**
 ```html
-<iframe src="PAYMENT_URL_FROM_API"
-        width="100%" height="600"
-        allow="payment"
-        style="border: none;">
-</iframe>
+<iframe src="PAYMENT_URL_FROM_API" width="100%" height="600"
+        allow="payment" style="border: none;"></iframe>
 ```
 
-**HTTPS חובה** לאינטגרציות iframe. HTTP לא יעבוד.
+חיבור HTTPS הוא חובה באינטגרציית iframe. בתוך iframe, ממשק ה-PostMessage של Grow מדווח על אירועים בצד הדפדפן (הצלחת אשראי `payment`, הצלחת Bit `bit_payment`); התייחסו אליהם כאותות חוויית משתמש בלבד, והמשיכו לספק לפי callback השרת.
 
-**מגבלת אורך כתובת:** 2000 תווים. השתמשו בערכי `cField` במקום query strings ארוכים.
+הימנעו מתווים מיוחדים בפרמטרים.
+
+### שלב 14: בדיקות ב-Sandbox ומעבר לייצור
+
+**כרטיסי בדיקה ב-sandbox** (עמוד Testing Environment): `4580458045804580` (רק תשלום יחיד רגיל; מתאים לבדיקת כישלון בעסקת תשלומים), `4580000000000000`, `4580111111111121`. פרטי העברה בנקאית לבדיקה: בנק `41`, סניף `410`, חשבון `411111111`.
+
+**ל-Bit, Google Pay ו-Apple Pay אין סביבת בדיקות.** עסקאות בהם מעובדות בסביבה החיה ומחויבות כעסקאות אמיתיות, גם בזמן פיתוח. אי אפשר להשלים תשלום PayBox ב-sandbox.
+
+**ארנק Growin SDK:** בעלייה לאוויר שנו את `environment` ב-`configureGrowSdk` מ-`"DEV"` ל-`"PRODUCTION"`.
+
+**המעבר לייצור מותנה.** חברת Grow מנפיקה מזהי ייצור רק אחרי בדיקת הלוגים של האינטגרציה: בקשות שנשלחו נכון, callbacks שנענו ב-HTTP 200, approveTransaction שנשלח במקומות הנדרשים, שדות לקוח שאומתו. פלטפורמות צריכות גם הסכם מסחרי חתום. אתרי מסחר מקוון חייבים להציג טלפון ליצירת קשר, כתובת העסק, תיבת סימון לתקנון עם קישור, ותקנון שמכסה משלוח, אחריות, הגבלת גיל, ביטול ופרטיות. בקשו את הבדיקה ב-`support@grow.business`.
+
+**חשבוניות.** חברת Grow יכולה להפיק חשבוניות (`invoiceNotifyUrl`, `productData`). התיעוד למפתחים לא חושף שדה או התנהגות של מספר הקצאה. אם Grow מפיקה את חשבוניות המס שלכם לעסקים, שאלו את Grow איך היא משיגה מספרי הקצאה; הספים מכוסים בסקיל `il-invoice-organizer`.
 
 ## קודי שגיאה
 
-Grow מחזירה שגיאות בגוף התשובה עם `status: 0` ואובייקט `err` שנושא `id` מספרי. הטבלה המלאה נמצאת בדף השגיאות (ראו קישורי עזר); אלה הקודים שאינטגרציה פוגשת הכי הרבה.
+חברת Grow מחזירה שגיאות בגוף התגובה עם `status: 0` ואובייקט `err`. הקודים הנפוצים בטבלה; הרשימה המלאה, כולל קודים שנצפו בפועל ואינם בטבלה של Grow, נמצאת ב-`references/error-codes.md`.
 
 | קוד | משמעות |
-|------|--------|
-| 12 | שגיאה כללית |
-| 54 | חסר שדה חובה; ההודעה נוקבת בשם השדה |
-| 105 / 190 / 218 | סכום ההחזר גדול מהעסקה המקורית |
-| 110 | הכסף כבר הועבר לבנק; ההחזר נשלח לאישור ידני |
-| 130 / 207 | החזר חלקי אינו אפשרי עדיין (סולק היום או טרם שודר) |
-| 170 | העסקה אינה קיימת |
-| 210 | כבר בוצע החזר לעסקה |
-| 271 | תשלום Bit מעל 3,600 שקל |
-| 300 | בית העסק אינו מורשה לשירות API |
-| 617 | סכום העסקה אינו זהה לסכום המוצרים |
-| 701 | קוד זיהוי לא תקין: `userId` / `pageCode` |
-| 707 | סכום לא תקין |
-| 709 | פג תוקף הלינק |
-| 712 | העסקה כבר בוצעה |
-| 714 | הגישה נחסמה |
-| 716 | קוד עסקה או טוקן לא תקין |
-| 722 | אי אפשר לאשר עסקה שלא בוצעה או שבוטלה |
-| 723 | `apiKey` הוא שדה חובה |
-| 730 | קוד תהליך או טוקן לא תקין |
-| 731 | `pageCode` אינו תואם את זה שאיתו בוצע הזיהוי |
-| 734 | עסקת קרדיט דורשת לפחות 3 תשלומים ו-25 שקל |
-| 736 | אי אפשר לשלוח `paymentNum` ו-`maxPaymentNum` יחד |
-| 763 | JSON לא תקין בשדה `productData` |
-| 803 | פג תוקף J5 |
-| 814 | החיוב חורג מתפיסת המסגרת ביותר מ-30 אחוז |
-| 403 | Forbidden: לא נשלחה `X-API-KEY` |
+|------|---------|
+| 54 | שדה חובה חסר; ההודעה מציינת את השדה |
+| 707 | סכום לא תקין (גם מה שגוף JSON מייצר) |
+| 717 | לא נשלח שם וטלפון או שאינו תקין |
+| 722 | לא ניתן לאשר עסקה שלא בוצעה או בוטלה |
+| 724 | נדרש `userId` או `pageCode` |
+| 1013 | המזהה אינו מספר שלם חיובי של 32 ביט |
+| 103 / 451 / 452 / 453 | דחיות של חיוב טוקן; ראו שלב 9 לגבי סופי ולא סופי |
+| 403 | אסור: לא נשלחה כותרת `X-API-KEY` |
 
-קיימים קודים נוספים מעבר לטבלה המפורסמת. `settleSuspendedTransaction` עם `userId` שאינו תואם מחזיר `err.id` 743 (`אין עסק תואם ל userId שנשלח`), ו-`createTransactionWithToken` עם `userId` לא מוכר מחזיר 104. תתייחסו לכל `err.id` לא מוכר ככישלון ותציגו את `err.message` במקום להניח הצלחה.
+התייחסו לכל `err.id` לא מוכר ככישלון והציגו את `err.message`.
 
 ## מלכודות נפוצות
-- הטעות הנפוצה ביותר באינטגרציה: ה-API של Grow דורש multipart/form-data לכל הבקשות, לא application/json. שליחת JSON לא מייצרת שגיאת content-type. השדות פשוט לא מפוענחים, ולכן מתקבלת שגיאת ולידציה על השדה החסר הראשון (בדרך כלל `err.id` 707, סכום לא תקין), וסוכנים מתחילים לחפש באג בסכום.
-- כל תגובה היא HTTP 200, כולל כל כישלון. סוכן שבודק `response.ok` או את קוד הסטטוס יפרש קריאה שנדחתה כהצלחה. תסתעפו לפי השדה `status` בגוף התשובה (`1` הצלחה, `0` כישלון) ולפי `err`.
-- `err` הוא אובייקט `{id, message}` בכישלון ולידציה, אבל המחרוזת `"unknown method"` כששם ה-endpoint אינו מוכר. תבדקו טיפוס לפני קריאת `err.id`.
-- כל בקשות ה-API של Grow חייבות להגיע מהשרת, אבל לא בגלל ש-403 מוחזר לדפדפן. ה-API עונה כרגיל גם לבקשה שנושאת `Origin` ו-`Referer` של דפדפן; מה שמונע שימוש מצד הלקוח הוא שה-API לא שולח כותרות CORS, ולכן הדפדפן חוסם את קריאת התשובה. הסימפטום הוא שגיאת CORS בקונסול ולא 403. שגיאת 403 אמיתית מ-Grow פירושה שלא נשלחה כותרת `X-API-KEY`.
-- `cardToken` ו-`transactionToken` אינם נתוני כרטיס, אבל הם כן אישורי גישה: מי שמחזיק `cardToken` יכול לחייב את הכרטיס דרך חשבון הסוחר שלכם. אל תרשמו אותם בלוגים, אל תשימו אותם בכתובת או בקוד צד לקוח, והצפינו אותם באחסון. דפוסי הדף המתארח, ה-iframe ודרישת התשלום קיימים כדי שמספרי כרטיס לא יגעו בשרת שלכם; אל תקבלו, תרשמו או תעבירו PAN בעצמכם.
-- הסכומים הם בשקלים. תקרת Bit (3,600) ורצפת הקרדיט (25) בטבלת השגיאות של Grow שתיהן בשקלים. ה-API לא חושף פרמטר מטבע בקריאות שהכישור הזה מכסה, ולכן אל תניחו שאפשר לבטא חיוב במטבע זר על ידי שינוי `sum`.
-- `paymentNum` ו-`maxPaymentNum` אינם יכולים לבוא יחד: שליחת שניהם מחזירה `err.id` 736. `maxPaymentNum` נדחה גם בעמוד הוראת קבע (739) וגם בחשבון שמוגדר לתשלום רגיל בלבד (740).
-- ל-Bit יש תקרה לעסקה: `err.id` 271 מוחזר לתשלום Bit מעל 3,600 שקל. לעסקת קרדיט יש רצפה משלה, `err.id` 734: מינימום 3 תשלומים ו-25 שקל.
-- אחרי קבלת webhook תשלום, חובה לקרוא ל-approveTransaction כדי לסגור את המעגל. סוכנים מדלגים לעתים על השלב הזה, מה שמשאיר עסקאות במצב ממתין במערכת של Grow.
-- כתובות דפי תשלום פגות אחרי 10 דקות. סוכנים עלולים לשמור ולהשתמש מחדש בכתובת בין סשנים, מה שמוביל לדפים ריקים או שגיאות.
+- חברת Grow דורשת `multipart/form-data` ולא `application/json`. גוף JSON מייצר שגיאת אימות על השדה החסר הראשון (בדרך כלל `err.id` 707, סכום לא תקין), וסוכנים מחפשים אז באג בסכום.
+- כל תגובה היא HTTP 200, כולל כל כישלון. הסתעפו לפי `status` ו-`err` שבגוף.
+- טוקן הכרטיס הוא `data.cardToken`, לא `data.transactionToken`. חיוב `transactionToken` כטוקן כרטיס נכשל, ושמירת `cardToken` במקום שמצפה לטוקן עסקה שוברת אישור, זיכוי ושליפה.
+- ערך `transactionUniqueIdentifier` שחוזר על עצמו נדחה בין אם הניסיון הראשון הצליח ובין אם לא. מי שמפרש את הדחייה כ"כבר שולם" שולח סחורה בלי תשלום; בצעו התאמה קודם.
+- דילוג על `approveTransaction` לא עוצר את החיוב. הוא גורם לשליחות חוזרות של ה-callback ולכישלון בבדיקת המעבר לייצור. אל תגידו למשתמש שתשלומים שלא אושרו "תלויים".
+- ל-Bit, Apple Pay ו-Google Pay אין sandbox: תשלום "בדיקה" בהם הוא חיוב אמיתי.
+- גם `cardToken` וגם `transactionToken` הם אמצעי גישה. אל תרשמו אותם ללוג, אל תציגו אותם ללקוח המשלם (Grow כותבת זאת במפורש; את `asmachta` מותר להציג), והצפינו אותם במנוחה. אל תקבלו, תרשמו או תעבירו מספר כרטיס גולמי בעצמכם.
+- הכלל "צד שרת בלבד" נאכף בהיעדר כותרות CORS, ולכן קריאה מהדפדפן מציגה שגיאת CORS בקונסול, לא 403.
 
 ## פתרון בעיות
 
 | בעיה | סיבה | פתרון |
 |---------|-------|---------|
-| HTTP 403 Forbidden | לא נשלחה כותרת `X-API-KEY`. זו הסיבה שטבלת השגיאות של Grow עצמה נותנת ל-403 | שלחו כותרת `X-API-KEY` בקריאות שדורשות אותה |
-| בקשה מדפדפן נכשלת בלי 403 | ה-API לא שולח כותרות CORS ולכן הדפדפן חוסם את קריאת התשובה. אומת: בקשה שנושאת `Origin` ו-`Referer` של דפדפן נענית כרגיל | העבירו את הקריאה לשרת. אל תחפשו 403; הסימפטום הוא שגיאת CORS בקונסול |
-| `err.id` 707 "סכום לא תקין" בבקשה שהסכום בה תקין | הסיבה הסבירה ביותר היא גוף JSON: השדות לא מפוענחים ולכן בדיקת הוולידציה הראשונה נופלת על הסכום. לא אומת שזה הטריגר היחיד | תעברו ל-`multipart/form-data` (FormData) ושלחו שוב |
-| `err.id` 54 ב-`approveTransaction` | נשלח רק אחד משני המזהים הנדרשים | שלחו את `transactionId` וגם את `transactionToken` מה-callback |
-| `err.id` 54 ב-`cancelBitTransaction` | הקריאה מזוהה לפי תהליך ולא לפי עסקה | שלחו `processId` ו-`processToken` ולא `transactionId` |
-| `{"err":"unknown method"}` | שם ה-endpoint אינו קיים ב-Light API. `getTokenOnly`, `updatePaymentLink` ו-`updateRecurringPayment` מחזירים את זה בשני השרתים | השתמשו ב-endpoint חי; ראו שלב 9 ופרק קודי השגיאה |
-| כל קריאה "מצליחה" אבל כלום לא קורה | הסתעפות לפי קוד ה-HTTP. כל תגובה היא 200, כולל כישלונות | תסתעפו לפי השדה `status` בגוף התשובה ולפי `err` |
-| כתובת דף תשלום פגה (`err.id` 709) | הלינק עבר את חלון התוקף. החלון שמצוטט בדרך כלל הוא 10 דקות, אבל המספר לא אומת בתיעוד המפורסם של Grow | קראו ל-`createPaymentProcess` שוב לכתובת חדשה |
-| Webhook לא התקבל | webhooks לא מופעלים | פנו ל-`apisupport@grow.business` להפעלה |
-| עסקה לא נמצאה | סביבה לא נכונה | ודאו שעסקאות sandbox נשאלות מול כתובת sandbox |
-| חיוב חוזר נכשל | כרטיס שפג תוקפו | הפעילו חיוב חוזר פרימיום לעדכון תפוגת כרטיס אוטומטי |
-| localhost ב-successUrl | לא מורשה | השתמשו בטונל (ngrok) או כתובת מפורסת לבדיקות |
-| iframe ריק ב-HTTP | HTTPS נדרש | הגישו את הדף שלכם דרך HTTPS |
-| iframe של Apple Pay נכשל | דומיין לא מאומת | השלימו אימות דומיין Apple דרך לוח הבקרה של Grow |
-| סקריפט העזר נעצר עם ההודעה "GROW_API_KEY was renamed to MESHULAM_API_KEY" | שם משתנה הסביבה השתנה. הסקריפט `scripts/grow-payment-helper.sh` קרא בעבר את `GROW_API_KEY`, ועכשיו הוא קורא רק את `MESHULAM_API_KEY` ועוצר במקום לפנות ל-API בלי המפתח | שנו את שם המשתנה בפרופיל ה-shell, בקובץ `.env` או בסודות של ה-CI (`export MESHULAM_API_KEY=...`) ומחקו את `GROW_API_KEY`. הערך עצמו לא משתנה |
+| שגיאת HTTP 403 Forbidden | לא נשלחה כותרת `X-API-KEY`, זו הסיבה שטבלת השגיאות של Grow נותנת. הכותרת מתועדת לקריאות של דרישות תשלום | שלחו את כותרת `X-API-KEY` בקריאות שדורשות אותה |
+| בקשה מהדפדפן נכשלת בלי 403 | ה-API לא שולח כותרות CORS. נבדק: בקשה עם `Origin` ו-`Referer` של דפדפן נענית כרגיל | העבירו את הקריאה לצד השרת |
+| שגיאה `err.id` 707 על בקשה שהסכום בה תקין | הסיבה הסבירה היא גוף JSON: השדות לא מפוענחים, ולכן האימות נכשל קודם על הסכום. לא אומת שזה הטריגר היחיד | עברו ל-`multipart/form-data` ושלחו שוב |
+| שגיאה `err.id` 54 ב-`approveTransaction` | נשלח רק אחד משני המזהים | שלחו גם `transactionId` וגם `transactionToken` |
+| חיוב טוקן נכשל אחרי תשלום ראשון מוצלח | נשמר `transactionToken` כטוקן הכרטיס, או שהתשלום הראשון לא כלל `saveCardToken=1` | שמרו את `data.cardToken` מתשלום שנוצר עם `saveCardToken=1` |
+| ה-handler של ה-callback מקבל גוף ריק | הוא מפענח רק JSON; Grow שולחת נתוני טופס | פענחו גוף טופס או multipart בנתיב הזה |
+| אותו callback מגיע כמה פעמים | חברת Grow שולחת שוב עדכונים שלדעתה לא אושרו | קראו ל-`approveTransaction` ובצעו דה-דופליקציה לפי `transactionId` |
+| תשובה `{"err":"unknown method"}` | שם המתודה לא קיים בשרת הזה (למשל `getTokenOnly`, `updateRecurringPayment`) | השתמשו ב-endpoint הקיים שמצוין בשלב 8 או 9 |
+| תשובת HTTP 403 `{"message":"Missing Authentication Token"}` מ-`sandboxapi.grow.link` | נתיב שהשרת לא מנתב, לרוב `createPaymentLink` באות קטנה | השתמשו בכתיב המתועד: `/1.1/CreatePaymentLink`, `/1.0/UpdatePaymentLink` |
+| תשלום "בדיקה" ב-Bit או Apple Pay חייב כרטיס אמיתי | לאמצעים האלה אין sandbox | זכו אותו, ובדקו את האמצעים האלה רק בסכומים שאתם מתכוונים לזכות |
+| הסקריפט נעצר עם "GROW_API_KEY was renamed to MESHULAM_API_KEY" | שם משתנה סביבה שהשתנה | שנו את השם (`export MESHULAM_API_KEY=...`) ובטלו את `GROW_API_KEY`; הערך עצמו לא משתנה |
+
+## משאבים מצורפים
+
+- הסקריפט `scripts/grow-payment-helper.sh`: כלי עזר שמתחיל ב-sandbox ל-createPaymentProcess, שליפת עסקה ותהליך, אישור, זיכוי, ביטול Bit וחיובי טוקן. הוא יוצא עם קוד שגיאה על כישלון API, שולח פרטי גישה רק לשני שרתי `meshulam.co.il` הקבועים, מרחיק טוקנים ומפתחות מרשימת התהליכים, ממסך טוקנים בפלט, ומסרב לעבוד מול ייצור בלי `GROW_ALLOW_PRODUCTION=1`.
+- הקובץ `references/api-endpoints.md`: טבלת endpoints, שרתים, והמתודות שלא קיימות.
+- הקובץ `references/webhook-payloads.md`: דוגמאות payload של webhooks ו-callback מהתיעוד של Grow.
+- הקובץ `references/error-codes.md`: טבלת קודי השגיאה המלאה.
 
 ## קישורי עזר
 
-| מקור | קישור | מה לבדוק |
-|------|-------|---------|
-| תיעוד 3DS של Grow | https://developers.grow.business/reference/3ds-1 | איך 3DS מתנהג ואיפה חלה העברת האחריות |
-| טבלת השגיאות של Grow | https://developers.grow.business/reference/errors | טבלת קודי השגיאה המספריים המלאה |
-| תיעוד API של Grow | https://developers.grow.business/reference/overview | endpoints נוכחיים, אינדקסי transactionTypes, מבני בקשה ותגובה |
-| תיעוד Grow | https://developers.grow.business/docs | טוקניזציה, חיובים חוזרים, תשלומי J-code, webhooks |
-| סקירת מוצרי Grow | https://developers.grow.business/docs/about-grow-products | אילו מוצרים קיימים ב-Grow ואיך הם ממופים ל-API |
-| כתובת בסיס פרודקשן (Meshulam) | https://secure.meshulam.co.il/ | אישור שכתובת הפרודקשן נכונה, לא להפנות תעבורה לסביבת sandbox |
-| מדריך אינטגרציית Wix | https://support.wix.com/en/article/connecting-grow-by-meshulam-as-a-payment-provider | הדרכה ברמה גבוהה למרכזי Wix |
+| מקור | כתובת | מה לבדוק |
+|--------|-----|---------------|
+| תיעוד API של Grow | https://developers.grow.business/reference/introduction | נקודת כניסה ל-endpoints ולסכמות בקשה עדכניים |
+| טבלת שגיאות | https://developers.grow.business/reference/errors | טבלת קודי השגיאה המלאה |
+| סביבת בדיקות | https://developers.grow.business/reference/testing-environment | כתובת sandbox, כרטיסי בדיקה, אמצעים בלי sandbox |
+| מעבר לייצור | https://developers.grow.business/reference/live-environment | כתובת ייצור, רשימת בדיקה, `X-API-KEY` לדרישות תשלום |
+| callback שרת-לשרת | https://developers.grow.business/reference/server-to-server-callback | מבנה ה-callback, התנהגות approveTransaction, updateMyUrl |
+| כתובות IP | https://developers.grow.business/reference/ip-address | כתובות לאפשר בחומת האש |
+| 3DS של Grow | https://developers.grow.business/reference/3ds-1 | שירות 3DS ו-`cancel3DS` |
+| Webhooks של Grow | https://developers.grow.business/docs/overview-7 | אפשרויות webhook ו-payloads |

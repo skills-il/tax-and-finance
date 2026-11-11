@@ -1,72 +1,55 @@
 # Grow API Endpoints Reference
 
-## Base URLs
+Re-verified 2026-11-11 against the official reference (developers.grow.business) and by live probes with invalid input (no merchant account, no charge).
 
-| Environment | URL |
-|-------------|-----|
-| Sandbox | `https://sandbox.meshulam.co.il` |
-| Production | `https://secure.meshulam.co.il` |
+## Hosts
+
+| Host | Use |
+|------|-----|
+| `https://sandbox.meshulam.co.il/api/light/server/1.0/` | Light API, sandbox (Testing Environment page) |
+| `https://secure.meshulam.co.il/api/light/server/1.0` | Light API, production (Transition to Production page) |
+| `https://sandboxapi.grow.link` | Payment-link management (CreatePaymentLink, UpdatePaymentLink, SetAccountDetails), sandbox. Grow's pages give no production host for these; obtain it from Grow |
 
 ## Authentication
 
-All requests require:
-- `userId` -- Merchant identifier
-- `pageCode` -- Payment page configuration identifier
-- `apiKey` -- API key (for multi-business accounts)
+- Direct business: `userId` + `pageCode`.
+- Platform / system integrator acting for several businesses: also `apiKey` (error 723 when missing, 812 when invalid).
+- Payment-link endpoints on `sandboxapi.grow.link`: `X-API-KEY` header (403 "X-API-KEY not sent" when missing).
+- Each environment has its own identifiers.
 
-## Request Format
+## Request and response format
 
-- **Method:** POST (all endpoints)
-- **Content-Type:** multipart/form-data
-- **Server-side only.** Not because a browser request is rejected (the API answers one carrying `Origin` and `Referer` normally) but because the API sends no CORS headers, so the browser blocks reading the response.
+- POST, `multipart/form-data`, server-side only (the API sends no CORS headers).
+- Every response is HTTP 200 on the `meshulam.co.il` hosts. Success is `status: 1`; failure is `status: 0` with `err`. `err` is an object `{"id": N, "message": "..."}` or the string `"unknown method"`. See `error-codes.md`.
 
-## Response Format
+## Light API endpoints (`/api/light/server/1.0/`)
 
-Every response is **HTTP 200**, including every failure. Success is `status: 1`; failure is `status: 0` with an `err`. `err` is an object `{"id": N, "message": "..."}` for validation failures and the plain string `"unknown method"` when the endpoint name is unrecognised. Branch on the body, never on the HTTP status, and type-check `err` before reading `err.id`. The full numeric code table is at https://developers.grow.business/reference/errors .
+| Endpoint | Required parameters | Notes |
+|----------|--------------------|-------|
+| `createPaymentProcess` | `pageCode`, `userId`, `sum`, `successUrl`, `cancelUrl`, `description`, `pageField[fullName]`, `pageField[phone]` | `saveCardToken=1` saves the card; `chargeType=3` + `sum=1` + `saveCardToken=1` is the save-token-only flow |
+| `approveTransaction` | `pageCode` plus ALL fields from the server update (the schema marks each one required; live, `transactionId` and `transactionToken` are checked first) | Not for token charges, J4J5, or save-token-only. `apiKey` for platforms |
+| `getTransactionInfo` | `pageCode`, `transactionId`, `transactionToken` | |
+| `getPaymentProcessInfo` | `pageCode`, `processId`, `processToken` | |
+| `refundTransaction` | `userId` or `pageCode`, `transactionId`, `transactionToken`, `refundSum` | `stopDirectDebit=1` stops the series. 724 when neither `userId` nor `pageCode` is sent |
+| `cancelBitTransaction` | `pageCode`, `processId`, `processToken` | Documented at `/api/light/andriod/1.0/cancelBitTransaction/`; the `/server/1.0/` path answers the same way |
+| `createTransactionWithToken` | `userId`, `cardToken`, `sum`, `description`, `paymentType`, `paymentNum` (live: omitting it returns 54), `pageField[fullName]`, `pageField[phone]`, `transactionUniqueIdentifier` | `paymentType` 1 recurring / 2 regular / 4 installments; `transactionGroupIdentifier` optional; premium recurring adds `isRecurringDebitPayment=1` (first) or `recurringDebitId` (later) |
+| `updateDirectDebit` | `userId`, `transactionId`, `transactionToken`, `asmachta` | Optional `changeStatus` (1 active, 2 canceled), `sum`, `paymentNum`, `chargeDay`, `fullName`, `phone`, `email`, `updateCard` |
+| `getTokenTransactionsByExternalIdentifiers` | `userId`, `cardToken`, and ONE of `transactionUniqueIdentifier` / `transactionGroupIdentifier` | Both identifiers at once returns 1012 |
+| `settleSuspendedTransaction` | `userId`, `transactionId`, `transactionToken`, `sum` | J4J5 capture |
+| `getPaymentLinkInfo` | `pageCode`, `paymentLinkProcessId`, `paymentLinkProcessToken` (schema) | Its schema lists both the meshulam and grow.link sandbox hosts |
+| `createFarPaymentRequest` | not established | Exists on both hosts; not covered |
+| `updateMyUrl` (GET, sandbox) | `url` query parameter | Sends a sample server-to-server callback to your URL |
 
-## Endpoints
+## Payment-link endpoints (`sandboxapi.grow.link`)
 
-### Payment Processing
+| Endpoint | Required parameters (per the reference schema) | Notes |
+|----------|-----------------------------------------------|-------|
+| `POST /api/light/server/1.1/CreatePaymentLink` | `userId`, `pageCode`, `paymentLinkType`, `isActive`, `title`, `paymentTypes[0][type]`, `paymentTypes[0][payments][paymentsPaymentNum]` or `[paymentsMaxPaymentNum]`, `pageFieldSettings[fullName][value]`, `pageFieldSettings[phone][value]`, per product `products[data][N][name]`, `[price]`, `[vatType]` | No `sum` field. Path is case-sensitive |
+| `POST /api/light/server/1.0/UpdatePaymentLink` | `pageCode`, `isActive`, `paymentLinkProcessId`, `paymentLinkProcessToken` | `X-API-KEY` header |
 
-| Endpoint | Path | Description |
-|----------|------|-------------|
-| Create Payment Process | `/api/light/server/1.0/createPaymentProcess` | Create hosted payment page, returns URL |
-| Approve Transaction | `/api/light/server/1.0/approveTransaction` | Confirm receipt of server callback (mandatory). Requires `pageCode` + `transactionId` + `transactionToken` |
-| Get Transaction Info | `/api/light/server/1.0/getTransactionInfo` | Query transaction details. Requires `pageCode` + `transactionId` + `transactionToken` |
-| Get Payment Process Info | `/api/light/server/1.0/getPaymentProcessInfo` | Query payment process details. Requires `pageCode` + `processId` + `processToken` |
-| Create Far Payment Request | `/api/light/server/1.0/createFarPaymentRequest` | Exists on both hosts; not covered by this skill, read its reference page |
+The `meshulam.co.il` hosts also answer a `createPaymentLink` method with a different, undocumented contract (asks for `sum`, then `pageCode`, then `userId`). Do not build on it.
 
-### Payment Links
-
-| Endpoint | Path | Description |
-|----------|------|-------------|
-| Create Payment Link | `/api/light/server/1.0/createPaymentLink` | Generate shareable payment URL |
-| Get Payment Link Info | `/api/light/server/1.0/getPaymentLinkInfo` | Query payment link details |
-
-### Tokenization & Recurring
-
-| Endpoint | Path | Description |
-|----------|------|-------------|
-| Create Transaction With Token | `/api/light/server/1.0/createTransactionWithToken` | Charge a saved token. Uses `userId` (not `pageCode`) and also requires `paymentNum` |
-| Update Direct Debit | `/api/light/server/1.0/updateDirectDebit` | Modify a direct-debit series (the live replacement for the non-existent `updateRecurringPayment`) |
-| Get Token Transactions | `/api/light/server/1.0/getTokenTransactionsByExternalIdentifiers` | Lookup token transactions |
-
-### Refunds
-
-| Endpoint | Path | Description |
-|----------|------|-------------|
-| Refund Transaction | `/api/light/server/1.0/refundTransaction` | Refund a card transaction. Requires `pageCode` + `transactionId` + `transactionToken` + `refundSum` (the amount parameter is `refundSum`; `sum` is not accepted) |
-| Cancel Bit Transaction | `/api/light/server/1.0/cancelBitTransaction` | Cancel a Bit payment. Keyed by PROCESS: requires `pageCode` + `processId` + `processToken` |
-
-### Delayed Payments (J4J5)
-
-| Endpoint | Path | Description |
-|----------|------|-------------|
-| Settle Suspended Transaction | `/api/light/server/1.0/settleSuspendedTransaction` | Settle a delayed J4J5 payment. Keyed by `userId` (NOT `pageCode`), plus `transactionId` + `transactionToken` + `sum` |
-
-## Payment Methods (transactionTypes) -- SDK-wallet pages only
-
-The array INDEX selects the slot and the VALUE is an integer method code. Earlier versions of this reference asserted there were no numeric value-codes; the `createPaymentProcess` schema on the official reference page contradicts that, declaring each entry `"type": "integer"` with a documented example value.
+## Payment methods (transactionTypes), SDK-wallet pages only
 
 | Parameter | Method | Documented value |
 |-----------|--------|------------------|
@@ -77,25 +60,12 @@ The array INDEX selects the slot and the VALUE is an integer method code. Earlie
 | `transactionTypes[4]` | Bank transfer | `15` |
 | `transactionTypes[5]` | Pay Box | defaults to `5` |
 
-## Page Code Types
+## Methods that do NOT exist
 
-| Type | Description |
-|------|-------------|
-| SDK Wallet | Modular JS widget (no iframe) |
-| Generic | Credit card + Bit, customizable |
-| Credit Card | Card payments only |
-| Google Pay | Google Pay only (Chrome/Android) |
-| Apple Pay | Apple Pay only (requires domain verification) |
-| Bit | Bit mobile payment |
-| Bit QR | QR code for Bit payments |
-
-
-## Endpoints that do NOT exist on the Light API
-
-Probed 2026-08-27 against both `sandbox.meshulam.co.il` and `secure.meshulam.co.il`. Each returns `{"err":"unknown method","status":"0","data":{"message":"מתודה לא קיימת"}}`, which is the router's response for an unrecognised method name, and is distinct from the permission errors (300, 714, 715) a real-but-unauthorised endpoint returns.
+Each returns `{"err":"unknown method","status":"0","data":{"message":"מתודה לא קיימת"}}` on both `meshulam.co.il` hosts (re-probed 2026-11-11).
 
 | Name | Use instead |
 |------|-------------|
-| `getTokenOnly` | Run a payment through a tokenization-configured page code and take the token from the callback |
-| `updatePaymentLink` | Create a replacement payment link |
+| `getTokenOnly` | `createPaymentProcess` with `chargeType=3`, `sum=1`, `saveCardToken=1` |
 | `updateRecurringPayment` | `updateDirectDebit` |
+| `updatePaymentLink` / `UpdatePaymentLink` on `meshulam.co.il` | `UpdatePaymentLink` on `sandboxapi.grow.link` (earlier versions of this skill wrongly said link updates were impossible) |

@@ -46,6 +46,24 @@
       "lessons": [
         "Env var rename (Cisco CORRELATED_SENSITIVE_NETWORK_FLOW remediation) broke users on the old name. A fallback that reads both names re-triggers HIGH because the correlation analyzer unions provider tokens from every contributing env name and requires exactly one; shipped a migration error message plus a troubleshooting entry instead."
       ]
+    },
+    {
+      "version": "1.5.0",
+      "date": "2026-11-11",
+      "lessons": [
+        "CRITICAL fixed: the skill told agents the reusable card token arrives in transactionToken. Grow's Token and token-server-response pages put it in data.cardToken (with saveCardToken=1); transactionToken identifies one transaction. Introduced in v1.3.0 from a webhook-table guess and carried two cycles.",
+        "CRITICAL fixed: Step 5.6 told agents to re-send the same transactionUniqueIdentifier after a timeout and to treat 712 as 'already charged, succeed'. The createTransactionWithToken schema says a reused unique identifier is rejected outright regardless of the first request's status; transactionGroupIdentifier is the success-aware dedupe field. Sibling israeli-payment-orchestrator repeats the old rule.",
+        "CRITICAL fixed (script): charge-token defaulted transactionUniqueIdentifier to '$(date +%s)-$$', which live probing shows fails err 1013 (identifiers must be positive 32-bit integers, no leading zeros). The shipped helper's token charge could never succeed. create-payment omitted the required pageField[fullName]/[phone]. Both fixed; the key now goes as the apiKey form field via stdin, production requires GROW_ALLOW_PRODUCTION=1, unknown commands exit 2.",
+        "MAJOR fixed: 'what happens if approveTransaction is never called is NOT documented' was wrong. The callback pages say the transaction is processed even if approve is not sent; the Approve page says Grow resends the update up to 5 more times. The gotcha claiming unapproved transactions stay pending was removed.",
+        "MAJOR fixed: 'updatePaymentLink is not available' was wrong in substance. Payment-link management is documented on a separate host, sandboxapi.grow.link, at /1.1/CreatePaymentLink and /1.0/UpdatePaymentLink (case-sensitive, X-API-KEY header). The v1.4.0 probe only tested the meshulam hosts. Lesson: a negative-control probe proves absence on the HOST probed, not in the API; check the reference page's servers[] first.",
+        "Resolved carries: sandbox test cards and no-sandbox methods (Bit/Apple Pay/Google Pay charge for real), refund keyed by userId or pageCode with stopDirectDebit, updateDirectDebit full parameters and changeStatus=2 cancel, pageField name/phone required, callback must return HTTP 200, support@grow.business replaces the unverifiable apisupport@ address, 3DS cancel3DS, token-only flow (chargeType=3, sum=1, saveCardToken=1), premium first payment isRecurringDebitPayment=1.",
+        "Word budget: moved the full error table to references/error-codes.md and webhook examples to references/webhook-payloads.md (rewritten from Grow's own examples; the old 'Standard Payment Webhook' JSON mixed callback fields into the webhookKey family). SKILL.md 4,917 -> about 4,550 words.",
+        "Deferred: production host for the grow.link payment-link endpoints is not published (api.grow.link answers, but it is undocumented and not asserted). createFarPaymentRequest parameters still not captured (its 'overview' page describes SMS payment requests but has no schema). Invoice allocation numbers: Grow docs carry no field; routed to il-invoice-organizer.",
+        "Review: judge 2 rounds (R1 FAIL on the approveTransaction contract and paymentNum, R2 PASS), expert 2 rounds (R1 FAIL on date-shaped group-id example and missing decline handling, R2 PASS, 0 critical/0 major), legal PASS incl. enriched fields.",
+        "Deferred minors (expert R2): add curl -q so ~/.curlrc is ignored; move transactionToken/processToken off the script's own argv too; note 1012 also fires with zero identifiers; a Next.js route-handler snippet (word cap). Expert also claimed the premium-by-token schema says 1-12, not 2-12; re-checked the 'Premium Recurring Payment Managed by Grow via Token' schema (reference/create-transaction-with-token): it says 2-12, and the judge confirmed. Kept as written.",
+        "Judge note: 'charges from the 2nd onward are reported only via webhooks' is an inference from the recurring docs, conservative in effect; reword next cycle if Grow documents a per-charge callback for managed series.",
+        "Value-add (sonnet, WebSearch baseline): with=0.88 without=0.46 delta=+0.42 PASS."
+      ]
     }
   ]
 }
