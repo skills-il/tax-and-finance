@@ -45,10 +45,10 @@ Determine which insurance product the user is comparing. Israeli insurance falls
 
 ### Step 2: Gather Required Details for Comparison
 
-Before comparing, collect these details from the user:
+For cars, first load the [workflow](references/car-workflow.md). Collect only missing details:
 
 **For car insurance:**
-- Full name and Israeli ID number (teudat zehut)
+- Identity details: the user enters them directly in the provider's secure flow, not in chat
 - Date of birth and driving license issue date
 - Vehicle details: manufacturer, model, year, engine size, license plate number
 - City of residence (affects premium significantly)
@@ -125,27 +125,9 @@ After getting the government baseline, check private platforms for potentially b
 
 ### Step 5: Compare Car Insurance Quotes
 
-When comparing car insurance, build a comparison table with these columns:
+Follow the [car-insurance workflow and post-issue checklist](references/car-workflow.md). It extends Step 2's intake, obtains the consolidated three-year **דוח עבר ביטוחי** from Har HaBituach first (previous-insurer certificates as fallback), and compares written offers for matching periods and drivers.
 
-| Factor | Insurer A | Insurer B | Insurer C |
-|--------|-----------|-----------|-----------|
-| Annual premium | | | |
-| Monthly payment (if available) | | | |
-| Deductible (hashtatfut atzmit) | | | |
-| Towing included | | | |
-| Replacement car (rechev chalufi) | | | |
-| Glass coverage (without deductible) | | | |
-| New-for-old car policy (age limit) | | | |
-| Roadside assistance | | | |
-| Approved garages vs. free choice | | | |
-| Permitted drivers on the hova certificate, and additional-driver terms on the makif | | | |
-| CMA Service Index rank (state year) | | | |
-
-Key considerations:
-- **Shin-nun discount**: More years without claims means lower premiums. Verify your shin-nun status is correctly reported.
-- **Deductible tradeoff**: Lower deductible means higher premium. For good drivers, a higher deductible often saves money overall.
-- **Approved garages**: Some policies require using the insurer's approved garage network. Free-choice (bchirat musach chofshit) costs more but gives you flexibility.
-- **Replacement car**: Check how many days of replacement car are included and what size vehicle.
+Use its table for total payable, third-party property limits, per-coverage deductibles, garages, windshield, towing, replacement car and protection waivers/exclusions. Keep missing terms unresolved. Follow its approval, sensitive-link, no-OTP/payment and post-issue checks. This is administrative assistance, not licensed advice.
 
 ### Step 6: Compare Home Insurance Quotes
 
@@ -212,7 +194,7 @@ Price and coverage are only two of the three axes. The CMA publishes an annual *
 
 After gathering comparison data:
 
-1. **Contact your current insurer** with competitor quotes. Retention departments often match or beat competitor pricing.
+1. **Draft a request to your current insurer**. Before every outward message, show the exact recipient, text and attachments and obtain explicit approval for that send. Never disclose competitor names, prices, terms or documents without permission. Changed drafts need fresh approval; verify each send by reading it back.
 2. **Bundle policies**: Ask about discounts for holding multiple policies (car + home) with the same insurer.
 3. **Timing**: Renew or switch 30-60 days before policy expiration. Last-minute renewals reduce negotiating power.
 4. **Annual payment**: Paying annually instead of monthly is commonly cheaper than the monthly instalment total. Ask each insurer for both figures rather than assuming a fixed discount.
