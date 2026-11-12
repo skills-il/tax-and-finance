@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.4.0 - 2026-11-12
+
+Added a bilingual car-insurance workflow covering missing intake details, Har HaBituach's consolidated three-year insurance-history report first and previous-insurer certificates as fallback, comparable written quotes, protection requirements versus written waivers/exclusions, and a post-issue document checklist. Moved and extended Step 5's comparison table into linked references to keep the main skill below 5,000 words.
+
+Replaced Step 8's blanket instruction to disclose competitor quotes with explicit approval for every message and disclosure. Added sensitive proposal-link handling, untrusted-document boundaries, no OTP entry or payment, and separate approval for binding, transferring or cancelling cover. The workflow remains administrative assistance, not licensed advice. Recorded official source excerpts in evidence.json; state-employee tender examples are explicitly not private-market entitlements. Contributed by @SharonSx.
+
 ## 1.3.1 - 2026-09-24
 
 Added the CMA's official home insurance calculator, dira.cma.gov.il, as the government baseline for home insurance in Step 3, in Example 2, and in the Reference Links, contributed by @Akiva5 (PR #24). Its prices are tied to the standard home insurance policy, so the skill treats them as a baseline, not a quote. Corrected the contents-cover term from "tochen" to "tchula" (תכולה), the term the CMA and insurers use.

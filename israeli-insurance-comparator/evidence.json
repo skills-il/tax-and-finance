@@ -1,8 +1,48 @@
 {
   "schemaVersion": "1.0",
   "skill": "israeli-insurance-comparator",
-  "generated_at": "2026-09-24T19:54:41Z",
+  "generated_at": "2026-11-12T16:11:32Z",
   "claims": [
+    {
+      "claim_id": "harb-consolidated-three-year-history",
+      "claim": "Har HaBituach offers a consolidated insurance-history report for the three years preceding issue, avoiding requests to each previous insurer; its public introduction says the report can be printed, saved or sent directly. This is distinct from its policy inventory.",
+      "source_url": "https://harb.cma.gov.il/",
+      "raw_snippet": "האתר כולל אפשרות לשליפת דוח מרוכז של העבר הביטוחי ללא צורך בבירור החברה בה נרכש ביטוח בשלוש שנים הקודמות להנפקתו וחוסך את הצורך במעבר לאזור האישי בכל אחת מחברות הביטוח או פניה ישירה לסוכן הביטוח או חברת הביטוח על מנת לקבל את הדוח.",
+      "fetched_at": "2026-11-12",
+      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/car-workflow.md", "references/car-workflow-he.md"],
+      "verified_via": "Public CMA introduction rendered in an Israeli browser; no authenticated personal report accessed",
+      "verified_at": "2026-11-12"
+    },
+    {
+      "claim_id": "insurer-history-certificate-fallback",
+      "claim": "The Ministry of Finance's 2026 state-employee car-insurance FAQ describes annual insurer-issued no-claims/history records, requesting them from insurers for the preceding three years, and the alternative consolidated Har HaBituach report. The workflow uses these as evidence routes only, not a promise of private-insurer acceptance or tender discounts.",
+      "source_url": "https://www.gov.il/he/pages/car-insurance-2026-faq",
+      "raw_snippet": "טופס העדר תביעות או דוח עבר ביטוחי הינו מסמך הנשלח למבוטח מחברת הביטוח בתום כל שנת ביטוח, ומפרט את מספר תביעות הרכוש של המבוטח בתקופה זו. | על מנת לקבל הנחה זו, על העובד לפנות לחברות הביטוח בהן היה מבוטח ב-3 השנים האחרונות ולבקש לקבל לידיו את הטופס. | לחלופין ניתן לקבל דוח מרוכז בהר הביטוח.",
+      "fetched_at": "2026-11-12",
+      "appears_in": ["SKILL.md", "SKILL_HE.md", "references/car-workflow.md", "references/car-workflow-he.md"],
+      "verified_via": "Official Ministry of Finance FAQ extracted; separated excerpts delimited by |; state-employee tender scope retained",
+      "verified_at": "2026-11-12"
+    },
+    {
+      "claim_id": "tender-protection-service-examples",
+      "claim": "The 2026 state-employee tender FAQ has distinct protection requirements and supplementary service packages, including towing/roadside assistance, windshield and replacement-car services, and discusses network/non-network deductibles. These illustrate questions to ask; the workflow does not generalize the tender's amounts, equipment thresholds or entitlements to the private market, or infer the legal effect of a waiver.",
+      "source_url": "https://www.gov.il/he/pages/car-insurance-2026-faq",
+      "raw_snippet": "אילו אמצעי מיגון רשאית חברת הביטוח לדרוש? | חברת הביטוח רשאית לדרוש את אמצעי המיגון הבאים: | כתבי שירות הינם שירותים משלימים לביטוח הרכב שאינם נכללים במסגרת פוליסת ביטוח תקנית. במסגרת המכרז, כוללת חבילת כתבי שירות סטנדרטיים לביטוח מקיף שירותי גרירה ודרך, שבר שמשות ורכב חליפי (חבילת כתבי השירות לביטוח צד ג' אינה כוללת רכב חליפי).",
+      "fetched_at": "2026-11-12",
+      "appears_in": ["references/car-workflow.md", "references/car-workflow-he.md"],
+      "verified_via": "Official Ministry of Finance FAQ extracted; separated excerpts delimited by |; all numeric tender terms deliberately omitted from workflow",
+      "verified_at": "2026-11-12"
+    },
+    {
+      "claim_id": "car-coverage-specific-deductibles",
+      "claim": "The CMA general-insurance FAQ distinguishes a separate diminution-in-value deductible and the possibility of a third-party deductible even where an own-vehicle total-loss deductible is waived. The workflow therefore asks for per-coverage amounts and percentage bases instead of one undifferentiated deductible; it does not prescribe a universal rate.",
+      "source_url": "https://www.gov.il/he/pages/general-insurance",
+      "raw_snippet": "לרכב פרטי אכן יש השתתפות עצמית נפרדת במקרה של ירידת ערך. ההשתתפות העצמית היא בשיעור מסוים מערך הרכב | במקרים בהם נגרם לרכב שלך אובדן גמור, והינך פטור מתשלום השתתפות עצמית בשל הנזק לרכב שלך, רשאית חברת הביטוח לדרוש השתתפות עצמית בגין תשלום הנזק לצד ג'.",
+      "fetched_at": "2026-11-12",
+      "appears_in": ["references/car-workflow.md", "references/car-workflow-he.md"],
+      "verified_via": "Official CMA FAQ extracted; separated excerpts delimited by |; no legal coverage interpretation or universal rate added",
+      "verified_at": "2026-11-12"
+    },
     {
       "claim_id": "gov-calculators",
       "claim": "Official government insurance tools: car.cma.gov.il is the CMA mandatory-car (hova) standardized-tariff calculator; govcarins.mof.gov.il is the Ministry of Finance comprehensive (makif) cost-estimation simulator. Covers these references: https://car.cma.gov.il/ https://govcarins.mof.gov.il/",

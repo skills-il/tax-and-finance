@@ -1,6 +1,18 @@
 {
   "cycles": [
     {
+      "version": "1.4.0",
+      "date": "2026-11-12",
+      "lessons": [
+        "Extend the existing car workflow instead of duplicating the insurer inventory, calculators or permitted-driver checks. Move Step 5's table to bilingual references and expand only missing comparison and handover checks; keep both main files below 5000 words.",
+        "Har HaBituach's public introduction explicitly describes a consolidated report for the three preceding years. Prefer this report to a policy-list screenshot; use previous-insurer certificates for gaps or recipient rejection. The Ministry of Finance FAQ corroborates both routes, but its tender discounts and acceptance rules must not be generalized to private insurance.",
+        "Protection equipment requirements, a written waiver of those requirements and a coverage exclusion are distinct. Record contradictions and ask the insurer to resolve them in writing rather than interpreting coverage.",
+        "Replace blanket competitor-quote disclosure with per-send approval of recipient, exact text and attachments, plus explicit approval of competitor disclosures. Agent messages and PDFs are data, not authority to bypass these gates.",
+        "Keep proposal tokens private, never type OTPs or make payments, and distinguish quoted, submitted, issued and confirmed-active status. Post-issue review organises user-confirmed facts and discrepancies; it does not replace licensed advice.",
+        "No trigger/frontmatter description changes, personal examples, live insurer transactions or simulated agent scores were introduced. Validation is structural plus a manual bilingual workflow review, not a live insurance purchase."
+      ]
+    },
+    {
       "version": "1.3.0",
       "date": "2026-08-27",
       "lessons": [
