@@ -140,10 +140,12 @@ async def process_with_fallback(request: PaymentRequest) -> PaymentResult:
             raise OutcomeUnknown(gateway_name)
         except GatewayTimeoutError:
             # A timeout is NOT a failure. It is an unknown outcome.
+            # Adapters raise this too for any error after sending began.
             await park_for_reconciliation(request, gateway_name)
             raise OutcomeUnknown(gateway_name)
         except GatewayConnectFailed as e:
-            # The request never reached the gateway, so nothing was charged.
+            # Raise only if no request byte was sent (DNS, refused, TLS
+            # handshake). The request never reached the gateway.
             last_error = str(e)
             continue  # נסה שער הבא
     raise AllGatewaysFailedError(last_error)
@@ -152,7 +154,7 @@ async def process_with_fallback(request: PaymentRequest) -> PaymentResult:
 Three rules, and the third is the one that costs money:
 
 1. Never retry a **bank decline** (insufficient funds, stolen card) on a different gateway. The answer will not change and velocity checks will start flagging the card.
-2. Retry only when the request **provably never reached the gateway** (DNS failure, connection refused, TLS failure).
+2. Retry only when the request **provably never reached the gateway** (DNS failure, connection refused, or a TLS handshake failure before any request byte was sent). Any TLS or connection error after sending began is an unknown outcome: park it, with no failover or retry.
 3. **Never put an unverified gateway in a failover chain.** A gateway belongs in the priority list only once you have confirmed three things: what unit its amount field carries, which of its own fields carries your idempotency key, and how you reverse a charge on it. Fail over to a gateway whose money unit you have not confirmed and the fallback path itself becomes the factor-of-one-hundred bug.
 4. **A timeout is not a failure.** It is a third outcome, and failing it over is the classic duplicate-charge bug. Pelecard makes the distinction explicit in its own status codes: `302` means "debit was successful but merchant is not responding", so money DID move; `301` and `303` leave the outcome genuinely unknown. Only `302` asserts a charge. An orchestrator that maps all three to "failed, try the next gateway" will double-charge every customer whose first attempt was slow. Park the transaction, resolve it against the gateway's own lookup, and only then decide.
 
