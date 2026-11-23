@@ -127,7 +127,7 @@ Two different kinds of key appear below. A **correlator** identifies one attempt
 | Cardcom | `Transactions/ListTransactions` over a date range (requires `ApiPassword`) | your own external deal id |
 | Tranzila | the transaction-reports API | your own reference |
 | PayMe | `api/get-sales` (exists; parameters unverified) | unverified |
-| Meshulam (Grow) | For Grow, do not use this skill's retry or verification steps: follow the `grow-payment-gateway` skill for idempotency, retries and payment confirmation. Never automatically retry a Grow charge whose outcome is unknown, and do not fulfil until the server-side checks in that skill's Step 5.5 (and Step 5.6 for token charges) pass. | See `grow-payment-gateway` |
+| Meshulam (Grow) | For Grow, do not use this skill's retry or verification steps: follow the `grow-payment-gateway` skill. Grow documents no way to authenticate its server update, so treat an update as a trigger only, never as proof of payment. For a payment page, do not fulfil until that skill's Step 5.5 checks pass. For a token charge, use its Step 9 Option B, and after a timeout reconcile under its Step 5.6 before any fulfilment. Never automatically retry a Grow charge whose outcome is unknown. | See `grow-payment-gateway` |
 | iCredit | unverified | unverified |
 | Pelecard | `PaymentGW/GetTransaction`; `/services/GetTransDataBeforeBc` for anything not yet broadcast | `ParamX`: a CORRELATOR, unique per attempt as `<order-id>-<attempt-n>`, reconciled by prefix match |
 

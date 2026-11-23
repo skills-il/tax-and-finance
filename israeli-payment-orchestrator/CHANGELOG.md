@@ -1,5 +1,5 @@
 # Changelog
 
-## 1.3.2 (2026-11-23)
+## 1.4.0 (2026-11-23)
 
-Grow retry correction only. This skill no longer gives its own retry or verification steps for Grow and routes them to `grow-payment-gateway`. A Grow charge whose outcome is unknown is never retried automatically, and the order is not fulfilled until the server-side checks in that skill's Step 5.5 (and Step 5.6 for token charges) pass. No other gateway changed.
+Grow retry and fulfilment correction. This skill no longer gives its own retry or verification steps for Grow and routes them to `grow-payment-gateway`: Step 5.5 for a payment page, Step 9 Option B for a token charge, and Step 5.6 after a timeout. Grow documents no way to authenticate its server update, so an update is a trigger only and never proof of payment. A Grow charge whose outcome is unknown is never retried automatically. The per-gateway void and refund table moved to `references/gateway-matrix.md`.
