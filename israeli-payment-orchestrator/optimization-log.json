@@ -9,6 +9,7 @@
         "Round 2: narrowed Step 6 rule 2. A TLS error after the gateway received the request is an unknown outcome, so only a failure before any request byte was sent justifies failover.",
         "Final pass: every retry and resend instruction now says never to re-send until the gateway's own lookup settles the outcome, and an outcome on a gateway with no documented lookup goes to a person.",
         "Cardcom and Pelecard lookup cells no longer name a call as settling a timed-out charge: a person confirms the outcome, and an empty or not-found answer never means no charge. The undocumented Pelecard prefix match was removed from this skill.",
+        "Added one general order-binding rule for non-Grow gateways: successful charge in the gateway's own record, matching amount and currency, bound to this order server-side, transaction id not used for another order, otherwise blocked for a person. Example 3 moved byte-identical to references/cost-comparison-example.md for headroom.",
         "CARRY to the next full cycle: Grow documents no way to authenticate its server update, while its inquiry page says queries should not run for every transaction. Also per-gateway retry contracts, refund-timeout handling, Grow partial-refund wording, Pelecard ReverseTransaction, Cardcom CreditType request versus response values, Tranzila required identifiers, and the refund credit-document hand-off."
       ]
     },

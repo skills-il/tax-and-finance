@@ -219,14 +219,7 @@ Actions:
 4. Only if the terminal genuinely cannot be provisioned does a second gateway become the answer, and then it is a commercial decision, not a technical one.
 Result: In most cases, one enablement call instead of a second integration
 
-### Example 3: Cost Comparison
-User says: "Which gateway is cheapest for our 500 daily transactions averaging 200 NIS?"
-Actions:
-1. Say plainly that no one can answer this from public information. None of the six publishes a rate card, and the rate is negotiated per merchant on volume, industry and chargeback profile. Any table that names a winner is inventing the inputs.
-2. Give them what actually decides it: the monthly volume to negotiate with, here 500 * 30 * 200 = 3,000,000 NIS, and the instruction to get a written quote from each gateway at that volume.
-3. Name the costs the discount rate hides, which routinely dominate at this size: merchant-subsidized interest-free instalments, the settlement cycle's working-capital cost, per-refund and chargeback charges, and the fact that a charge-then-credit pair clears twice while a void clears never.
-4. Compare on capability where capability is knowable: `python scripts/compare_gateways.py --example`.
-Result: A negotiating position and a capability comparison, not a false ranking
+A worked cost-comparison example is in `references/cost-comparison-example.md`.
 
 ## Bundled Resources
 
@@ -256,7 +249,7 @@ Result: A negotiating position and a capability comparison, not a false ranking
 - Israeli payment processing requires Israeli business registration (osek murshe/patur). Agents may suggest setting up payment processing before verifying the business has proper registration with the Tax Authority.
 - Bit (Israel's dominant mobile payment) refunds use a different API endpoint than credit card refunds on most gateways. Agents may use the credit card refund endpoint for Bit transactions.
 - **Saved-card tokens are NOT portable across gateways.** A Cardcom token, a Tranzila `TranzilaTK`, and a PayMe `buyer_key` are proprietary and mutually incompatible, each usable only on the gateway that issued it. This means the fallback/failover pattern in this skill applies to first-charge and one-time transactions only. A tokenized or recurring charge cannot fail over to a second gateway, recurring billing is pinned to its originating gateway. True cross-gateway resilience for saved cards requires network tokenization or a multi-vault strategy, not this token field. Agents may wrongly assume a stored token works on any gateway in the priority list.
-- **A gateway's client-side "success" is spoofable, always re-verify server-side.** Do not trust the browser redirect or a client-posted status as proof of payment. Confirm every non-Grow transaction with a server-to-server query to the issuing gateway (the gateway's transaction-lookup or webhook-signature/notify verification) before fulfilling the order. Webhook/IPN payloads must be authenticated per each gateway's scheme, they are not interchangeable. For Grow, follow this skill's Step 6.
+- **A gateway's client-side "success" is spoofable, always re-verify server-side.** A callback or redirect alone never proves payment. For every non-Grow gateway, fulfil only when the gateway's own record shows a successful charge, amount and currency match your stored order, the record is bound to this order by a value you stored server-side, and its transaction id has not been used for another order. If any of these cannot be established, keep the order blocked and a person decides. On Tranzila, the amount must not be buyer-editable; see `tranzila-payment-gateway`. Webhook/IPN payloads must be authenticated per each gateway's scheme, they are not interchangeable. For Grow, follow this skill's Step 6.
 - **3DS2 is an asynchronous challenge flow, not a single call.** A card-not-present charge may return "frictionless" (approved inline) or trigger a challenge that redirects the customer to the issuer and returns via a callback URL. The orchestrator must persist the transaction, resume on the callback, and keep the challenge return on the SAME gateway that started it (the 3DS session is gateway-scoped). Agents may model 3DS as a synchronous boolean and lose challenged transactions.
 
 ## Troubleshooting
