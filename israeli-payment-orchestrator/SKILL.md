@@ -75,7 +75,7 @@ Define routing rules for selecting the optimal gateway:
 |------|----------|-------|---------|
 | Reversal and settlement cost | Medium | Route on costs the merchant can actually know, from its own contracts | A charge that is likely to be cancelled goes to a gateway whose batch stays open longest, because a void clears nothing while a credit clears twice |
 | Feature match | High | Route based on required features | Bit-eligible sales to a gateway whose terminal has Bit enabled |
-| Availability | Critical | Route away from failed/degraded gateways | If Tranzila is down, failover to Cardcom |
+| Availability | Critical | Route away from failed/degraded gateways | If Tranzila is down, route new charges to Cardcom |
 | Volume balancing | Low | Distribute load across gateways | 60/40 split between primary and secondary |
 | Card type | High | Some gateways handle specific cards better | Diners Club routing |
 
@@ -161,8 +161,8 @@ Three rules, and the third is the one that costs money:
 **Parking is only half the job; design the reconciliation before you ship the retry.** `park_for_reconciliation` is not a stub you fill in later, it is what turns an unknown outcome back into money or goods. Three things have to exist before the first charge, not after the first incident:
 
 - **A key you persisted BEFORE the call, that you can look the transaction up by afterwards.** The gateway's own transaction id does not exist yet at the moment the request times out, so it cannot be that key. Use a passthrough field you control. **Two different fields with two opposite rules live here, and mixing them up is the double charge itself.** A *correlator* identifies one attempt, so it is unique per attempt and reconciliation is a prefix match on the order id: Pelecard's `ParamX` works this way, as `<order-id>-<attempt-n>`. An *idempotency key* is what the gateway dedupes on, so it must be STABLE per logical charge and re-sent unchanged on every retry. Check which of the two a given field is in the per-gateway skill before you generate it. For Grow, do not use this skill's retry or verification steps: follow the `grow-payment-gateway` skill. Grow documents no way to authenticate its server update, so treat an update as a trigger only, never as proof of payment. For a payment page, do not fulfil until that skill's Step 5.5 checks pass and Grow's query answer shows the transaction itself as paid, not merely a successful query. For a token charge, use its Step 9 Option B. After a timeout, look the charge up under its Step 5.6. Fulfil only on a result that clearly shows a successful charge. Anything else, including no successful charge found or an unreadable answer, stays unknown and blocked. Never automatically retry an unknown outcome: only a person may clear a retry, under Step 5.6.
-- **The same key on the retry (not on Grow).** On a timeout or a 5xx, re-sending with a FRESH idempotency key is how a customer gets billed twice. Re-send the same one, or reconcile first.
-- **A per-gateway lookup, a polling window, and a terminal decision** (capture and ship, refund, or escalate to a human). `references/gateway-matrix.md` names the lookup call for each gateway except Grow. An unknown still unknown at the end of the window is an operations task, and someone has to own it. Those three messages are Pelecard's own wording, retrievable without credentials from `/services/GetErrorMessageEn` with parameter `errorCode`; an unassigned code comes back as Pelecard's misspelled `UnkownError`, which is how you tell a real code from an invented one. Build the equivalent three-state map for every gateway you route to, from that gateway's own code table, before you write any retry logic.
+- **The same key on the retry (not on Grow).** On a timeout or a 5xx, re-sending with a FRESH idempotency key is how a customer gets billed twice. Never re-send after a timeout or a 5xx until the gateway's own lookup settles the outcome. If a retry is then allowed, re-send the same key on a gateway whose dedupe field you have confirmed is active.
+- **A per-gateway lookup, a polling window, and a terminal decision** (capture and ship, refund, or escalate to a human). `references/gateway-matrix.md` names the lookup call for each gateway except Grow. An unknown still unknown at the end of the window is an operations task, and someone has to own it. If a gateway has no documented lookup, the outcome goes to a person. Build the equivalent three-state map for every gateway you route to, from that gateway's own code table, before you write any retry logic.
 
 ### Step 7: Handle Authorizations, Voids, Refunds and Partial Refunds
 
@@ -207,7 +207,7 @@ Actions:
 1. Assess: instalments (regular and credit) plus high availability.
 2. Compare: `python scripts/compare_gateways.py --features installments,recurring`. Pick two gateways whose cells are documented rather than unverified.
 3. Design: one canonical amount unit, one idempotency key mapped onto each gateway's own field, and a three-state outcome.
-4. Implement: route instalment sales to the primary, fail over only on a provable connect failure.
+4. Implement: route instalment sales to the primary, fail over only on a failure before any request byte was sent.
 Result: Orchestration layer with primary/fallback routing and instalment handling
 
 ### Example 2: Adding Bit
@@ -267,11 +267,11 @@ Solution: Send `8` for regular installments or `6` for issuer-financed credit. I
 
 ### Error: "Gateway timeout on fallback"
 Cause: Either every configured gateway is degraded, or, far more often, one gateway timed out and the orchestrator treated that as a failure and moved on.
-Solution: Separate the two. A timeout leaves the outcome unknown and must be parked for reconciliation, not failed over (Step 6). Only a provable connect failure justifies moving to the next gateway. Once that distinction is in place, add a circuit breaker with health checks and alert on degradation.
+Solution: Separate the two. A timeout leaves the outcome unknown and must be parked for reconciliation, not failed over (Step 6). Only a connect failure before any request byte was sent justifies moving to the next gateway. Once that distinction is in place, add a circuit breaker with health checks and alert on degradation.
 
 ### Error: "Duplicate transaction detected"
 Cause: Retry logic sent the same payment twice, usually after treating a timeout as a failure.
-Solution: Map your idempotency key onto the gateway's own duplicate-detection field, and treat a timeout as an unknown outcome rather than a failure (Step 6). Look the transaction up before retrying anything. Never retry a bank decline.
+Solution: Map your idempotency key onto the gateway's own duplicate-detection field, and treat a timeout as an unknown outcome rather than a failure (Step 6). Never re-send until the gateway's own lookup settles the outcome. Never retry a bank decline.
 
 ### Error: A refund call returns success but the customer says the money never came back
 Cause: Likeliest cause, not confirmed for every gateway: the credit was queued rather than completed, or it was a void on an already-settled transaction. Verified negative: on Pelecard this is NOT a `/PaymentGW` refund endpoint failing, because no such endpoint exists.

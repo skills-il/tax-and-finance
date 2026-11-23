@@ -120,15 +120,15 @@ An authorization recorded as "approved" and never captured collects nothing, and
 
 When a charge times out the outcome is unknown, and the gateway's own transaction id does not exist yet, so you must look the transaction up by a key YOU sent. Persist that key before the call.
 
-Two different kinds of key appear below. A **correlator** identifies one attempt and is unique per attempt. An **idempotency key** is what the gateway dedupes on and must stay stable across retries of the same logical charge. Sending a fresh value where the gateway expects a stable one defeats its duplicate detection.
+Two different kinds of key appear below. A **correlator** identifies one attempt and is unique per attempt. An **idempotency key** is what the gateway dedupes on and must stay stable across retries of the same logical charge. Sending a fresh value where the gateway expects a stable one defeats its duplicate detection. Never re-send after a timeout or a 5xx until the gateway's own lookup settles the outcome. If a retry is then allowed, re-send the same key on a gateway whose dedupe field you have confirmed is active. If a gateway has no documented lookup, the outcome goes to a person.
 
 | Gateway | Look up with | Key you must have sent first |
 |---------|--------------|------------------------------|
 | Cardcom | `Transactions/ListTransactions` over a date range (requires `ApiPassword`) | your own external deal id |
 | Tranzila | the transaction-reports API | your own reference |
-| PayMe | `api/get-sales` (exists; parameters unverified) | unverified |
+| PayMe | `api/get-sales` (exists; parameters unverified), so an unknown outcome goes to a person | unverified |
 | Meshulam (Grow) | For Grow, do not use this skill's retry or verification steps: follow the `grow-payment-gateway` skill. Grow documents no way to authenticate its server update, so treat an update as a trigger only, never as proof of payment. For a payment page, do not fulfil until that skill's Step 5.5 checks pass and Grow's query answer shows the transaction itself as paid, not merely a successful query. For a token charge, use its Step 9 Option B. After a timeout, look the charge up under its Step 5.6. Fulfil only on a result that clearly shows a successful charge. Anything else, including no successful charge found or an unreadable answer, stays unknown and blocked. Never automatically retry an unknown outcome: only a person may clear a retry, under Step 5.6. | See `grow-payment-gateway` |
-| iCredit | unverified | unverified |
+| iCredit | no documented lookup, so an unknown outcome goes to a person | unverified |
 | Pelecard | `PaymentGW/GetTransaction`; `/services/GetTransDataBeforeBc` for anything not yet broadcast | `ParamX`: a CORRELATOR, unique per attempt as `<order-id>-<attempt-n>`, reconciled by prefix match |
 
 ## Void, Refund and Partial Refund

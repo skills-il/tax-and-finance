@@ -7,6 +7,7 @@
         "Grow retry and fulfilment correction: this skill's Grow-specific retry and verification claims were removed and Grow routes to grow-payment-gateway by flow (payment page Step 5.5, token charge Step 9 Option B, Step 5.6 after a timeout). The duplicate void/refund table moved to references/gateway-matrix.md to free body words.",
         "Round 1: the fulfilment gate now requires the transaction itself to show as paid, because a successful query is not a paid transaction, and a lookup that finds no successful charge stays unknown and blocked until a person clears it. CARRY for grow-payment-gateway: state the paid check in Step 5.5, a token-charge path, and the lookup response shape in Step 5.6.",
         "Round 2: narrowed Step 6 rule 2. A TLS error after the gateway received the request is an unknown outcome, so only a failure before any request byte was sent justifies failover.",
+        "Final pass: every retry and resend instruction now says never to re-send until the gateway's own lookup settles the outcome, and an outcome on a gateway with no documented lookup goes to a person.",
         "CARRY to the next full cycle: Grow documents no way to authenticate its server update, while its inquiry page says queries should not run for every transaction. Also per-gateway retry contracts, refund-timeout handling, Grow partial-refund wording, Pelecard ReverseTransaction, Cardcom CreditType request versus response values, Tranzila required identifiers, and the refund credit-document hand-off."
       ]
     },
