@@ -387,6 +387,18 @@
         "references/gateway-matrix.md",
         "scripts/compare_gateways.py"
       ]
+    },
+    {
+      "claim_id": "grow-query-status-not-paid",
+      "claim": "The top-level status in a Grow query answer reports whether the query succeeded, so it does not by itself show the transaction was paid",
+      "source_url": "https://developers.grow.business/reference/response-get-transaction-info",
+      "raw_snippet": "status is referred to success or failure (1 or 0 respectively)",
+      "fetched_at": "2026-11-23T00:00:00Z",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/gateway-matrix.md"
+      ]
     }
   ]
 }

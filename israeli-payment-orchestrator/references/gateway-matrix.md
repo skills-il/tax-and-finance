@@ -49,7 +49,7 @@ Only the API host and the existence of the `refund-sale` route were confirmed he
 
 ### Meshulam (Grow)
 - **Base URL:** `https://secure.meshulam.co.il/api/light/server/1.0/`
-- **Auth:** endpoint-dependent. `refundTransaction` is keyed by `pageCode`; `createTransactionWithToken` by `userId`; `cancelBitTransaction` by `processId`
+- **Auth:** endpoint-dependent. `refundTransaction` is keyed by `pageCode`; `createTransactionWithToken` by `userId`; for `cancelBitTransaction` see `grow-payment-gateway`
 - **Format:** multipart/form-data (NOT JSON), server-side only
 - **Tokenization:** Yes
 - **Hosted page:** iframe + redirect
@@ -127,7 +127,7 @@ Two different kinds of key appear below. A **correlator** identifies one attempt
 | Cardcom | `Transactions/ListTransactions` over a date range (requires `ApiPassword`) | your own external deal id |
 | Tranzila | the transaction-reports API | your own reference |
 | PayMe | `api/get-sales` (exists; parameters unverified) | unverified |
-| Meshulam (Grow) | For Grow, do not use this skill's retry or verification steps: follow the `grow-payment-gateway` skill. Grow documents no way to authenticate its server update, so treat an update as a trigger only, never as proof of payment. For a payment page, do not fulfil until that skill's Step 5.5 checks pass. For a token charge, use its Step 9 Option B, and after a timeout reconcile under its Step 5.6 before any fulfilment. Never automatically retry a Grow charge whose outcome is unknown. | See `grow-payment-gateway` |
+| Meshulam (Grow) | For Grow, do not use this skill's retry or verification steps: follow the `grow-payment-gateway` skill. Grow documents no way to authenticate its server update, so treat an update as a trigger only, never as proof of payment. For a payment page, do not fulfil until that skill's Step 5.5 checks pass and Grow's query answer shows the transaction itself as paid, not merely a successful query. For a token charge, use its Step 9 Option B. After a timeout, look the charge up under its Step 5.6. Fulfil only on a result that clearly shows a successful charge. Anything else, including no successful charge found or an unreadable answer, stays unknown and blocked. Never automatically retry an unknown outcome: only a person may clear a retry, under Step 5.6. | See `grow-payment-gateway` |
 | iCredit | unverified | unverified |
 | Pelecard | `PaymentGW/GetTransaction`; `/services/GetTransDataBeforeBc` for anything not yet broadcast | `ParamX`: a CORRELATOR, unique per attempt as `<order-id>-<attempt-n>`, reconciled by prefix match |
 
@@ -138,9 +138,9 @@ Two different kinds of key appear below. A **correlator** identifies one attempt
 | Cardcom | `Transactions/RefundByTransactionId` with `CancelOnly: true`, documented as "cancellation only, before deposit of the transaction" | same endpoint without `CancelOnly` | Yes, `PartialSum`. `AllowMultipleRefunds` defaults to false |
 | Tranzila | `txn_type=cancel` on API V2 | legacy `tranmode=C{index}` with the separate `CreditPass` credential and `authnr`; `txn_type=credit` on API V2 referencing `reference_txn_id` | Yes |
 | PayMe | unverified | `api/refund-sale` exists | unverified |
-| Meshulam (Grow) | no card void; Bit only, via `cancelBitTransaction`, which requires `pageCode` | `refundTransaction`, amount field is `refundSum` (`sum` is rejected) | Yes, but blocked on a settled or transmitted transaction, and once funds are at the bank it needs manual approval. See `grow-payment-gateway` for the codes |
+| Meshulam (Grow) | no card void; Bit only, via `cancelBitTransaction`, which requires `pageCode`; confirm its full parameter set in `grow-payment-gateway` | `refundTransaction`, amount field is `refundSum` (`sum` is rejected) | Yes, but blocked on a settled or transmitted transaction, and once funds are at the bank it needs manual approval. See `grow-payment-gateway` for the codes |
 | iCredit | unverified | unverified | unverified |
-| Pelecard | `/services/DeleteTran`, while the batch is open. `/services/GetTransDataBeforeBc` lists what is still voidable | no refund endpoint exists on `/PaymentGW`; a credit is a new opposite transaction whose path is not publicly documented | No, `DeleteTran` is whole-transaction |
+| Pelecard | `/services/DeleteTran`, while the batch is open. `/services/GetTransDataBeforeBc` lists what is still voidable | no refund endpoint exists on `/PaymentGW`; a credit is a new opposite transaction whose path is not publicly documented, so do not guess it | No, `DeleteTran` is whole-transaction |
 
 A void never settles, so it carries no clearing fee. A credit clears in its own right, so a charge-then-refund is paid for twice.
 
