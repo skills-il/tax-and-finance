@@ -127,7 +127,7 @@ Two different kinds of key appear below. A **correlator** identifies one attempt
 | Cardcom | `Transactions/ListTransactions` over a date range (requires `ApiPassword`) | your own external deal id |
 | Tranzila | the transaction-reports API | your own reference |
 | PayMe | `api/get-sales` (exists; parameters unverified) | unverified |
-| Meshulam (Grow) | `getTokenTransactionsByExternalIdentifiers` | `transactionUniqueIdentifier`: an IDEMPOTENCY KEY, stable per logical charge, re-sent unchanged on a retry |
+| Meshulam (Grow) | For Grow, do not use this skill's retry or verification steps: follow the `grow-payment-gateway` skill for idempotency, retries and payment confirmation. Never automatically retry a Grow charge whose outcome is unknown, and do not fulfil the order until that skill's confirmation step is complete. | See `grow-payment-gateway` |
 | iCredit | unverified | unverified |
 | Pelecard | `PaymentGW/GetTransaction`; `/services/GetTransDataBeforeBc` for anything not yet broadcast | `ParamX`: a CORRELATOR, unique per attempt as `<order-id>-<attempt-n>`, reconciled by prefix match |
 
