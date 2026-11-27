@@ -1,8 +1,8 @@
 {
   "skill_slug": "israeli-insurance-duplication-checker",
   "schemaVersion": "1.0",
-  "generated_at": "2026-09-20T00:00:00Z",
-  "notes": "Statutory snippets were sliced from the source text programmatically, not retyped. Sections 54(a)/(b) cite Nevo because the wikitext source wraps cross-references in templates, which drops the section numbers from the plain-text layer. PDF-sourced entries carry verified_via=pdf: the PDFs were downloaded, converted with pdftotext, and stripped of Unicode bidi controls (U+202A/B/C) before the snippet was located. Without that strip no Hebrew snippet matches.",
+  "generated_at": "2026-11-08T09:25:00Z",
+  "notes": "Statutory snippets were sliced from the source text programmatically, not retyped. Sections 54(a)/(b) cite Nevo because the wikitext source wraps cross-references in templates, which drops the section numbers from the plain-text layer. PDF-sourced entries carry verified_via=pdf: the PDFs were downloaded, converted with pdftotext, and stripped of Unicode bidi controls (U+202A/B/C) before the snippet was located. Without that strip no Hebrew snippet matches. v1.4.0 (2026-11-08): entries fetched_at 2026-11-08 were verified in a Claude session with WebFetch/WebSearch; 'verified_via: pdf' there means the PDF was read through the fetch tool's text layer, not pdftotext. Press-sourced entries carry confidence medium and a notes field naming the corroboration. v1.5.0 (2026-11-08): entries verified_via=browser were read on the public pages of hit.cma.gov.il (home, about, faq/1000-1007, the login landing page) with Claude in Chrome, without logging in; the logged-in personal screens ('תמונת מצב', the cover cards) were not read and no claim describes them beyond what the FAQ says.",
   "claims": [
     {
       "id": "sec59-property-only",
@@ -131,7 +131,8 @@
       "raw_snippet": "עוד נמצא, כי הנתונים האישיים המופיעים בהר הביטוח אינם כוללים את המידע בדבר התוכניות בשב\"ן ולכן המידע בדבר החפיפה בין הביטוחים המסחריים לתוכניות השב\"ן, של המבוטח גם אינו מונגש לציבור.",
       "verified_via": "pdf",
       "verified_at": "2026-08-13T00:40:00Z",
-      "confidence": "high"
+      "confidence": "high",
+      "notes": "SCOPE NARROWED v1.4.0: true of the main register (harb.cma.gov.il), which lists only insurer-issued products. Since 2023 the separate health area (hit.cma.gov.il) shows the kupa's cover beside the policies; see harb-health-area-includes-kupa-cover and circular-2023-1-2-show-shaban-surgery-cover."
     },
     {
       "id": "overpayment-hundreds-of-millions",
@@ -840,7 +841,8 @@
         "references/domain-checklist.md"
       ],
       "verified_via": "browser",
-      "verified_at": "2026-09-26"
+      "verified_at": "2026-11-08T10:30:00Z",
+      "notes": "Re-read on the live page in Claude in Chrome on 2026-11-08: unchanged."
     },
     {
       "id": "ltc-group-full-amount-under-49",
@@ -893,7 +895,8 @@
         "references/worked-examples-he.md"
       ],
       "verified_via": "browser",
-      "verified_at": "2026-09-26"
+      "verified_at": "2026-11-08T10:30:00Z",
+      "notes": "Re-read on the live page in Claude in Chrome on 2026-11-08: unchanged."
     },
     {
       "id": "ltc-group-age-tiers",
@@ -913,7 +916,8 @@
         "references/worked-examples-he.md"
       ],
       "verified_via": "browser",
-      "verified_at": "2026-09-26"
+      "verified_at": "2026-11-08T10:30:00Z",
+      "notes": "Re-read on the live page in Claude in Chrome on 2026-11-08: unchanged."
     },
     {
       "id": "ltc-group-age-tiers-institution",
@@ -1049,6 +1053,964 @@
         "SKILL.md",
         "SKILL_HE.md"
       ]
+    },
+    {
+      "id": "harb-health-area-includes-kupa-cover",
+      "claim": "The regulator announced (January 2023) an upgraded health-insurance area of הר הביטוח, built with מערך הדיגיטל הלאומי and משרד הבריאות, that for the first time includes the member's existing cover at the kupat cholim, next to the commercial policies and their cost.",
+      "claim_type": "official-source",
+      "confidence": "high",
+      "source_url": "https://www.ice.co.il/research/news/article/926641",
+      "raw_snippet": "השדרוג יאפשר צפייה בנתונים אודות עלות והיקף הכיסוי הביטוחי הקיים למבוטח ויכלול לראשונה התייחסות לכיסוי הקיים בקופות החולים",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/line-by-line-detail.md",
+        "references/line-by-line-detail-he.md",
+        "references/domain-checklist.md"
+      ],
+      "notes": "The regulator's own notice as reproduced verbatim by ice.co.il; gov.il page not re-fetched. Supersedes the 2020 Comptroller finding for the health area only; the main register still lists no שב\"ן product.",
+      "source_fetched_at": "2026-11-08T08:30:00Z",
+      "fetched_at": "2026-11-08T08:30:00Z"
+    },
+    {
+      "id": "harb-health-area-compares-kupa",
+      "claim": "The health area gives detail of the health covers and their cost and a comparison to the member's existing cover at the kupat cholim.",
+      "claim_type": "official-source",
+      "confidence": "high",
+      "source_url": "https://www.ice.co.il/research/news/article/926641",
+      "raw_snippet": "פירוט על הכיסויים הביטוחיים בתחום הבריאות ועלותם והשוואה לכיסוי הקיים למבוטח בקופת החולים",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/line-by-line-detail.md"
+      ],
+      "source_fetched_at": "2026-11-08T08:30:00Z",
+      "fetched_at": "2026-11-08T08:30:00Z"
+    },
+    {
+      "id": "circular-2023-1-2-health-area-named",
+      "claim": "The health-insurance circular (2022-1-14 as amended 7.2.2023) names the health area of הר הביטוח as a permitted visual/digital sales medium.",
+      "claim_type": "regulation",
+      "confidence": "high",
+      "verified_via": "pdf",
+      "verified_at": "2026-11-08T08:30:00Z",
+      "source_url": "https://www.gov.il/BlobFolder/dynamiccollectorresultitem/notice-2022-7-2-2/he/Health-Insurance-Circular-pdf-07-02-2023.pdf",
+      "raw_snippet": "לרבות אזור ביטוחי הבריאות בהר הביטוח",
+      "appears_in": [
+        "references/line-by-line-detail.md",
+        "references/line-by-line-detail-he.md"
+      ],
+      "source_fetched_at": "2026-11-08T08:30:00Z",
+      "fetched_at": "2026-11-08T08:30:00Z"
+    },
+    {
+      "id": "circular-2023-1-2-show-shaban-surgery-cover",
+      "claim": "Before extending Israeli surgery cover, the marketer must show the candidate the surgery cover they already hold in the kupa's שב\"ן as it appears on הר הביטוח, and explain what the extension adds (duty conditional on the candidate expressing interest in such an extension).",
+      "claim_type": "regulation",
+      "confidence": "high",
+      "verified_via": "pdf",
+      "verified_at": "2026-11-08T08:30:00Z",
+      "source_url": "https://www.gov.il/BlobFolder/dynamiccollectorresultitem/notice-2022-7-2-2/he/Health-Insurance-Circular-pdf-07-02-2023.pdf",
+      "raw_snippet": "כפי שמופיע באתר הר הביטוח",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/line-by-line-detail.md",
+        "references/line-by-line-detail-he.md",
+        "references/domain-checklist.md"
+      ],
+      "source_fetched_at": "2026-11-08T08:30:00Z",
+      "fetched_at": "2026-11-08T08:30:00Z"
+    },
+    {
+      "id": "circular-2023-1-2-basic-policy-tier",
+      "claim": "The reformed individual health product has a tiered structure whose first tier is a basic health policy; Israeli surgery is a separate tier with a משלים שב\"ן option carrying a 5,000 NIS deductible, which must be presented first.",
+      "claim_type": "regulation",
+      "confidence": "high",
+      "verified_via": "pdf",
+      "verified_at": "2026-11-08T08:30:00Z",
+      "source_url": "https://www.gov.il/BlobFolder/dynamiccollectorresultitem/notice-2022-7-2-2/he/Health-Insurance-Circular-pdf-07-02-2023.pdf",
+      "raw_snippet": "רובד ראשון - פוליסת בריאות בסיסית",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/line-by-line-detail.md",
+        "references/line-by-line-detail-he.md"
+      ],
+      "source_fetched_at": "2026-11-08T08:30:00Z",
+      "fetched_at": "2026-11-08T08:30:00Z"
+    },
+    {
+      "id": "reform-new-sales-start-1-10-2023",
+      "claim": "The start date of the health-insurance reform circulars (2022-1-14 and 2023-1-2) was set to 1 October 2023, aligned with section 53 of the 2023-2024 Economic Arrangements Law, replacing the earlier 1 May 2023 date.",
+      "claim_type": "date",
+      "confidence": "high",
+      "verified_via": "pdf",
+      "verified_at": "2026-11-08T08:30:00Z",
+      "source_url": "https://www.gov.il/BlobFolder/dynamiccollectorresultitem/notice-2023-005/he/health-Insurance-Circular-pdf-01-10-2023.pdf",
+      "raw_snippet": "באוקטובר 1 ביום",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/line-by-line-detail.md",
+        "references/line-by-line-detail-he.md",
+        "references/domain-checklist.md"
+      ],
+      "notes": "PDF text layer is reversed/OCR-damaged; the date 1.10.2023 and the reference to section 53 of the Arrangements Law are legible. Corroborated by funder.co.il 18.9.2023 (insurers stopping sales ahead of 1 October).",
+      "source_fetched_at": "2026-11-08T08:30:00Z",
+      "fetched_at": "2026-11-08T08:30:00Z"
+    },
+    {
+      "id": "reform-transfer-window-feb2016-sep2023",
+      "claim": "The June 2024 automatic transfer covered שקל ראשון individual policies bought between 1 February 2016 and 30 September 2023 whose holders were also in a שב\"ן.",
+      "claim_type": "date",
+      "confidence": "medium",
+      "source_url": "https://www.mako.co.il/finances-money/Article-0d165325444bf81026.htm",
+      "raw_snippet": "שנרכשה בין ה-1 בפברואר 2016 לבין ה-30 בספטמבר 2023",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/line-by-line-detail.md",
+        "references/domain-checklist.md"
+      ],
+      "notes": "Press; consistent with the reform's new-sales start date of 1.10.2023.",
+      "source_fetched_at": "2026-11-08T08:30:00Z",
+      "fetched_at": "2026-11-08T08:30:00Z"
+    },
+    {
+      "id": "reform-outcome-636k-transferred-42pct-returned",
+      "claim": "Of about 1.65 million שקל ראשון individual policyholders about 636,000 were transferred to משלים שב\"ן in June 2024 (the rest bought before February 2016), and about 42% of those transferred returned to שקל ראשון; the Treasury estimated an average excess payment of about 1,300 NIS a year per שקל ראשון holder.",
+      "claim_type": "statistic",
+      "confidence": "medium",
+      "source_url": "https://www.calcalist.co.il/local_news/article/h1buk1zzxx",
+      "raw_snippet": "מתוך כ־1.65 מיליון מבוטחים בפוליסות פרט מסוג שקל ראשון, כ־636 אלף הועברו אוטומטית",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/line-by-line-detail.md",
+        "references/domain-checklist.md"
+      ],
+      "notes": "Press report of Treasury data (May 2025); not an official publication.",
+      "source_fetched_at": "2026-11-08T08:30:00Z",
+      "fetched_at": "2026-11-08T08:30:00Z"
+    },
+    {
+      "id": "ltc-adl-tightening-group-only",
+      "claim": "The December 2024 amendments to the group LTC terms apply only to group LTC plans for members of the kupot cholim, per the regulator's own statement; private policies keep their own definitions.",
+      "claim_type": "regulation",
+      "confidence": "medium",
+      "source_url": "https://polisa.news/%D7%A8%D7%A9%D7%95%D7%AA-%D7%A9%D7%95%D7%A7-%D7%94%D7%94%D7%95%D7%9F-%D7%A4%D7%A8%D7%A1%D7%9E%D7%94-%D7%98%D7%99%D7%95%D7%98%D7%AA-%D7%94%D7%95%D7%A8%D7%90%D7%95%D7%AA-%D7%91%D7%9E%D7%98%D7%A8%D7%94/",
+      "raw_snippet": "התיקונים המוצעים יחולו רק לגבי תוכניות ביטוח סיעודי קבוצתי לחברי קופות חולים",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/line-by-line-detail.md",
+        "references/line-by-line-detail-he.md"
+      ],
+      "notes": "Trade press quoting the regulator's draft notice; the same sentence is quoted by autism.org.il. Not the regulation text itself.",
+      "source_fetched_at": "2026-11-08T08:30:00Z",
+      "fetched_at": "2026-11-08T08:30:00Z"
+    },
+    {
+      "id": "ltc-maccabi-tashush-nefesh-route",
+      "claim": "Maccabi's own group LTC policy page states that a member whom a specialist declares cognitively frail (תשוש נפש) qualifies, in addition to the 4-of-6 ADL (or 3 with continence) route.",
+      "claim_type": "policy-term",
+      "confidence": "medium",
+      "source_url": "https://www.maccabi4u.co.il/insurance-plans/nursing/about_the_policy/",
+      "raw_snippet": "תשוש נפש",
+      "appears_in": [
+        "references/line-by-line-detail.md",
+        "references/line-by-line-detail-he.md"
+      ],
+      "notes": "Kupa page, read via fetch summary; confirm against the policy booklet.",
+      "source_fetched_at": "2026-11-08T08:30:00Z",
+      "fetched_at": "2026-11-08T08:30:00Z"
+    },
+    {
+      "id": "ltc-maccabi-age-tiers-and-waiting",
+      "claim": "Maccabi's page gives benefits by age at first joining (under 49: 10,000 institution / 5,000 home; 50-59: 6,500 / 4,100; 60+: 4,500 / 3,200 NIS a month, indexed to the November 2023 CPI), institution payment capped at 80% of the amount actually paid, 60 months of benefit and a 60-day waiting period; the page is branded מכבי סיעודי - מנורה.",
+      "claim_type": "policy-term",
+      "confidence": "medium",
+      "source_url": "https://www.maccabi4u.co.il/insurance-plans/nursing/about_the_policy/",
+      "raw_snippet": "תקופת המתנה - בת 60 ימים",
+      "appears_in": [
+        "references/line-by-line-detail.md",
+        "references/line-by-line-detail-he.md"
+      ],
+      "source_fetched_at": "2026-11-08T08:30:00Z",
+      "fetched_at": "2026-11-08T08:30:00Z"
+    },
+    {
+      "id": "kolzchut-group-ltc-joining-health-declaration",
+      "claim": "Joining the kupot group LTC policy is possible at any age with a health declaration, and the insurers are not obliged to approve every application; children may be added from birth to 17 without premium; moving between kupot preserves rights without underwriting or waiting period when proof is given within 180 days.",
+      "claim_type": "fact",
+      "confidence": "medium",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%91%D7%99%D7%98%D7%95%D7%97_%D7%A1%D7%99%D7%A2%D7%95%D7%93%D7%99_%D7%A7%D7%91%D7%95%D7%A6%D7%AA%D7%99_%D7%90%D7%97%D7%99%D7%93_%D7%A9%D7%9C_%D7%A7%D7%95%D7%A4%D7%95%D7%AA_%D7%94%D7%97%D7%95%D7%9C%D7%99%D7%9D",
+      "raw_snippet": "אינן מחויבות לאשר את כל הבקשות להצטרפות",
+      "appears_in": [
+        "references/line-by-line-detail.md",
+        "references/reference-links.md"
+      ],
+      "source_fetched_at": "2026-11-08T08:30:00Z",
+      "fetched_at": "2026-11-08T08:30:00Z"
+    },
+    {
+      "id": "clalit-ltc-ayalon-from-2027",
+      "claim": "Clalit announced (16.8.2026) that Ayalon, the only bidder in its tender, will operate its group LTC policy from 1 January 2027 for three years with options up to eight; terms unchanged for members; events from 2027 are claimed from Ayalon.",
+      "claim_type": "fact",
+      "confidence": "medium",
+      "source_url": "https://www.calcalist.co.il/local_news/article/bydzfxjvmx",
+      "raw_snippet": "איילון תתפעל את הפוליסה של כללית החל מ-1 בינואר 2027 ולמשך שלוש שנים",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/line-by-line-detail.md",
+        "references/line-by-line-detail-he.md",
+        "references/domain-checklist.md"
+      ],
+      "notes": "Press report of Clalit's announcement, corroborated by Globes, TheMarker and Maariv the same day; no Clalit document read. Claims routing by event date (up to 31.12.2026 to Harel) per biber-law.co.il and autism.org.il summaries of the announcement. Press reports differ on the contract term: Calcalist three years with options up to eight; Globes eight years; TheMarker 2027-2031. Clalit's own LTC page carried no notice on 8.11.2026.",
+      "source_fetched_at": "2026-11-08T08:30:00Z",
+      "fetched_at": "2026-11-08T08:30:00Z"
+    },
+    {
+      "id": "ltc-regulator-split-by-age-proposal-oct-2026",
+      "claim": "In early October 2026 the Capital Market Authority published, as a press notice, a proposed new model for the kupot LTC: members under 55 to move to insurer-run personal long-term accumulation chosen by tender, members 55 and over to remain a closed group with rights preserved; it requires legislation and the Budget Division opposes it.",
+      "claim_type": "fact",
+      "confidence": "medium",
+      "source_url": "https://www.calcalist.co.il/local_news/article/h1godxxsgl",
+      "raw_snippet": "מבוטחים בני 55 ומעלה יישארו במסגרת המבנה הביטוחי הקיים",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/line-by-line-detail.md",
+        "references/line-by-line-detail-he.md",
+        "references/domain-checklist.md"
+      ],
+      "notes": "Calcalist analysis (sjvmcuzjzg) states the Authority circulated a notice with main points rather than a formal document and that the decision falls to the next finance minister.",
+      "source_fetched_at": "2026-11-08T08:30:00Z",
+      "fetched_at": "2026-11-08T08:30:00Z"
+    },
+    {
+      "id": "circular-2015-1-19-renewal-60-day-cancel",
+      "claim": "Under circular 2015-1-19 an individual health policy renewed without the insured's explicit consent may be cancelled by notice within 60 days after the renewal date, effective from the renewal date with that period's premium refunded, provided no claim was filed for an event in those 60 days; the insurer must send the renewal notice at least 60 days before renewal.",
+      "claim_type": "regulation",
+      "confidence": "medium",
+      "source_url": "https://www.funder.co.il/article/49081",
+      "raw_snippet": "תבוטל הפוליסה לגביו במועד חידוש הביטוח ויושבו למבוטח דמי הביטוח שנגבו בשל תקופה זו",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/line-by-line-detail.md",
+        "references/line-by-line-detail-he.md"
+      ],
+      "notes": "Circular text as republished by funder.co.il (2.4.2015 draft/final wording); the two-year renewal cycle and the 60-120 day notice window per Kol-Zchut's page on the same circular.",
+      "source_fetched_at": "2026-11-08T08:30:00Z",
+      "fetched_at": "2026-11-08T08:30:00Z"
+    },
+    {
+      "id": "kolzchut-health-renewal-every-two-years",
+      "claim": "Individual health policies bought after 1.2.2016 are updated/renewed automatically every two years, and the insured is entitled to a renewal notice 60 to 120 days before the renewal.",
+      "claim_type": "fact",
+      "confidence": "medium",
+      "source_url": "https://www.kolzchut.org.il/he/%D7%94%D7%95%D7%93%D7%A2%D7%94_%D7%9C%D7%9E%D7%91%D7%95%D7%98%D7%97_%D7%A2%D7%9C_%D7%97%D7%99%D7%93%D7%95%D7%A9_%D7%95%D7%A9%D7%99%D7%A0%D7%95%D7%99%D7%99%D7%9D_%D7%91%D7%A4%D7%95%D7%9C%D7%99%D7%A1%D7%AA_%D7%91%D7%A8%D7%99%D7%90%D7%95%D7%AA_%D7%A4%D7%A8%D7%98%D7%99-%D7%90%D7%99%D7%A9%D7%99",
+      "raw_snippet": "ההודעה צריכה להישלח אליהם בתוך 120-60 ימים לפני חידוש הפוליסה",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/line-by-line-detail.md"
+      ],
+      "source_fetched_at": "2026-11-08T08:30:00Z",
+      "fetched_at": "2026-11-08T08:30:00Z"
+    },
+    {
+      "id": "circular-2016-1-7-amended-2023-1-5",
+      "claim": "The 2016-1-7 'צירוף לביטוח' circular remains the base instrument and has been amended several times, most recently by circular 2023-1-5 (1.3.2023), which the regulator cites as the current 'חוזר צירוף'.",
+      "claim_type": "regulation",
+      "confidence": "high",
+      "verified_via": "pdf",
+      "verified_at": "2026-11-08T08:30:00Z",
+      "source_url": "https://www.gov.il/BlobFolder/dynamiccollectorresultitem/notice-2023-1-5/he/Selling-insurance-1-3-23-pdf.pdf",
+      "raw_snippet": "2023-1-5חוזר ביטוח",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md"
+      ],
+      "source_fetched_at": "2026-11-08T08:30:00Z",
+      "fetched_at": "2026-11-08T08:30:00Z"
+    },
+    {
+      "id": "hit-cma-about-purpose",
+      "claim": "The health area (hit.cma.gov.il, 'ביטוחי הבריאות שלי') describes itself as created by the Capital Market Authority and the National Digital Agency to answer which insurances the user holds and with which companies, the monthly payment, what the cover gives, and whether the user has duplicate insurances.",
+      "claim_type": "official-source",
+      "confidence": "high",
+      "source_url": "https://hit.cma.gov.il/about",
+      "raw_snippet": "האתר נותן מענה לשאלות חשובות, כמו למשל: • איזה ביטוחים יש לי היום ובאיזה חברות? • מה גובה התשלום החודשי שלי? • מה מעניק לי הכיסוי הביטוחי שלי? • האם יש לי ביטוחים כפולים? • איזה ביטוחים קיימים בשוק ומה הם מעניקים?",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/line-by-line-detail.md",
+        "references/line-by-line-detail-he.md"
+      ],
+      "notes": "Re-read directly on 2026-11-08 (public page). The about page names two bodies, רשות שוק ההון and מערך הדיגיטל הלאומי; משרד הבריאות appears only in the January 2023 announcement.",
+      "source_fetched_at": "2026-11-08T09:25:00Z",
+      "fetched_at": "2026-11-08T09:25:00Z",
+      "verified_via": "browser",
+      "verified_at": "2026-11-08T09:25:00Z"
+    },
+    {
+      "id": "hit-cma-overlap-tag-and-tier-tag",
+      "claim": "In the health area each cover is a card; a card with more than one source carries a red 'חפיפה בין כיסויים' tag, the detail window lists the sources including the kupa plan, and a second tag reads 'החזר על הוצאות' (indemnity) or 'פיצוי חד פעמי' (fixed sum).",
+      "claim_type": "feature",
+      "confidence": "low",
+      "source_url": "https://erenfeld-ins.co.il/find-funds-policies/articles/har-habituach-self-check",
+      "raw_snippet": "על כרטיס שיש לו יותר ממקור אחד מופיעה תגית אדומה: \"חפיפה בין כיסויים\".",
+      "appears_in": [
+        "references/line-by-line-detail.md",
+        "references/line-by-line-detail-he.md"
+      ],
+      "notes": "Secondary consumer guide. Superseded 2026-11-08 by the site's own FAQ, which calls the notice 'כפל ביטוח' (faq/1003) and uses 'חפיפה בכיסוי ביטוחי' for שב\"ן-against-insurer (faq/1005) and the payment types 'החזר (שיפוי)', 'הסדר', 'מענק (פיצוי)' (faq/1004). The logged-in cards were not read; do not quote this guide's tag wording in skill text.",
+      "source_fetched_at": "2026-11-08T08:30:00Z",
+      "fetched_at": "2026-11-08T08:30:00Z",
+      "status": "superseded"
+    },
+    {
+      "id": "ltc-group-amendment-start-1-1-2025",
+      "claim": "The amending provisions for the kupot group LTC (published by the Capital Market Authority on 14.11.2024) take effect on 1 January 2025 and apply to group LTC contracts for kupa members concluded or renewed from publication.",
+      "claim_type": "regulation",
+      "confidence": "high",
+      "source_url": "https://www.gov.il/BlobFolder/dynamiccollectorresultitem/notice-2024-109/he/LTC_regulation_14112024_pdf.pdf",
+      "raw_snippet": "2025בינואר  1",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/line-by-line-detail.md",
+        "references/line-by-line-detail-he.md",
+        "references/domain-checklist.md"
+      ],
+      "notes": "gov.il PDF; text layer reversed. The RIA of 22.12.2024 (notice-2024-114) restates the 4-of-6 / 3-with-continence rule. Resolves the December 2024 vs 2025 wording: published December 2024, in force 1.1.2025.",
+      "source_fetched_at": "2026-11-08T10:40:00Z",
+      "fetched_at": "2026-11-08T10:40:00Z"
+    },
+    {
+      "id": "ltc-aids-not-qualifying-from-2025",
+      "claim": "For Clalit's group LTC, for insured events from 1.1.2025, using an aid to perform an ADL activity does not count as a qualifying inability, and entering or leaving the bath is no longer examined under 'bathing'.",
+      "claim_type": "policy-term",
+      "confidence": "high",
+      "source_url": "https://www.harel-group.co.il/Insurance/long-term-care/claim/DocLib/%D7%9B%D7%9C%D7%9C%D7%99%D7%9D%20%D7%95%D7%9E%D7%91%D7%97%D7%A0%D7%99%D7%9D%20%D7%9C%D7%A7%D7%91%D7%99%D7%A2%D7%AA%20%D7%96%D7%9B%D7%90%D7%95%D7%AA%20%D7%9C%D7%A7%D7%91%D7%9C%D7%AA%20%D7%92%D7%9E%D7%9C%D7%AA%20%D7%A1%D7%99%D7%A2%D7%95%D7%93.pdf",
+      "raw_snippet": "היעזרות באביזר לצורך ביצוע הפעולה - לא תיחשב כמצב מזכה",
+      "appears_in": [
+        "references/line-by-line-detail.md",
+        "references/line-by-line-detail-he.md"
+      ],
+      "notes": "Insurer's own claims guide (הראל, Feb 2025 edition); ynet's report of the regulator's draft states the same aids rule for all kupot.",
+      "source_fetched_at": "2026-11-08T10:40:00Z",
+      "fetched_at": "2026-11-08T10:40:00Z"
+    },
+    {
+      "id": "hit-home-lists-covers-and-duplicates",
+      "claim": "The health area's home page says it gathers the user's health covers including the monthly price and will notify the user of multiple duplicate covers.",
+      "source_url": "https://hit.cma.gov.il/home",
+      "raw_snippet": "ריכזנו עבורך את המידע על כיסויי הבריאות שלך, כולל מחיר חודשי. בנוסף, ניידע אותך אם יש לך מספר כיסויים כפולים.",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/line-by-line-detail.md",
+        "references/line-by-line-detail-he.md"
+      ],
+      "claim_type": "official-source",
+      "confidence": "high",
+      "verified_via": "browser",
+      "verified_at": "2026-11-08T09:25:00Z",
+      "source_fetched_at": "2026-11-08T09:25:00Z",
+      "fetched_at": "2026-11-08T09:25:00Z",
+      "notes": "Read directly on the regulator's health area (public page, no login) with Claude in Chrome on 2026-11-08; snippet copied from the page text."
+    },
+    {
+      "id": "hit-about-created-by",
+      "claim": "The about page names the Capital Market Authority and the National Digital Agency as the site's creators (the Ministry of Health is named only in the January 2023 announcement).",
+      "source_url": "https://hit.cma.gov.il/about",
+      "raw_snippet": "האתר נוצר על ידי רשות שוק ההון, הביטוח והחיסכון ומערך הדיגיטל הלאומי, כדי לספק לך מידע על כיסויי הבריאות שלך.",
+      "appears_in": [
+        "references/line-by-line-detail.md",
+        "references/line-by-line-detail-he.md"
+      ],
+      "claim_type": "official-source",
+      "confidence": "high",
+      "verified_via": "browser",
+      "verified_at": "2026-11-08T09:25:00Z",
+      "source_fetched_at": "2026-11-08T09:25:00Z",
+      "fetched_at": "2026-11-08T09:25:00Z",
+      "notes": "Read directly on the regulator's health area (public page, no login) with Claude in Chrome on 2026-11-08; snippet copied from the page text."
+    },
+    {
+      "id": "hit-faq-update-cadence-and-default-scope",
+      "claim": "Kupa data in the health area refreshes daily and insurer data monthly; by default all of the user's health covers (statutory, שב\"ן, private and group) appear.",
+      "source_url": "https://hit.cma.gov.il/faq/1006",
+      "raw_snippet": "המידע מקופת החולים שלך מתעדכן בכל יום, המידע מחברות הביטוח מתעדכן אחת לחודש. ברירת המחדל היא שכל ביטוחי הבריאות שלך: ממלכתי, שירותי בריאות נוספים של קופת החולים, ביטוח פרטי וקבוצתי יופיעו באתר.",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/line-by-line-detail.md",
+        "references/line-by-line-detail-he.md"
+      ],
+      "claim_type": "official-source",
+      "confidence": "high",
+      "verified_via": "browser",
+      "verified_at": "2026-11-08T09:25:00Z",
+      "source_fetched_at": "2026-11-08T09:25:00Z",
+      "fetched_at": "2026-11-08T09:25:00Z",
+      "notes": "Read directly on the regulator's health area (public page, no login) with Claude in Chrome on 2026-11-08; snippet copied from the page text."
+    },
+    {
+      "id": "hit-faq-privacy-optout-hides-policies",
+      "claim": "A privacy form signed at purchase refusing data transfer to הר הביטוח hides those policies from the health area; the site cannot tell whether one was signed and suggests checking with an agent, the pension clearing house or each insurer.",
+      "source_url": "https://hit.cma.gov.il/faq/1006",
+      "raw_snippet": "במידה ומלאת בעבר טופס שבו אתה מבקש שלא להעביר מידע על ביטוחי הבריאות שלך ל\"הר הביטוח\" ייתכן שהמידע שתראה יהיה חסר. לצערנו, אין לנו דרך לדעת האם מלאת טופס כזה בעבר.",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/line-by-line-detail.md",
+        "references/line-by-line-detail-he.md",
+        "references/domain-checklist.md"
+      ],
+      "claim_type": "official-source",
+      "confidence": "high",
+      "verified_via": "browser",
+      "verified_at": "2026-11-08T09:25:00Z",
+      "source_fetched_at": "2026-11-08T09:25:00Z",
+      "fetched_at": "2026-11-08T09:25:00Z",
+      "notes": "Read directly on the regulator's health area (public page, no login) with Claude in Chrome on 2026-11-08; snippet copied from the page text."
+    },
+    {
+      "id": "hit-faq-no-family-members",
+      "claim": "The health area currently shows the logged-in person's own data only, with no family members, children or wards.",
+      "source_url": "https://hit.cma.gov.il/faq/1006",
+      "raw_snippet": "בשלב זה האתר מציג מידע אישי בלבד ללא בני משפחה נוספים.",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/line-by-line-detail.md",
+        "references/line-by-line-detail-he.md",
+        "references/intake-questionnaire-he.md",
+        "references/domain-checklist.md"
+      ],
+      "claim_type": "official-source",
+      "confidence": "high",
+      "verified_via": "browser",
+      "verified_at": "2026-11-08T09:25:00Z",
+      "source_fetched_at": "2026-11-08T09:25:00Z",
+      "fetched_at": "2026-11-08T09:25:00Z",
+      "notes": "Read directly on the regulator's health area (public page, no login) with Claude in Chrome on 2026-11-08; snippet copied from the page text."
+    },
+    {
+      "id": "hit-faq-agent-access-and-sales-duty",
+      "claim": "Personal data in the health area is visible only to the user; an agent or insurer representative may view it only with the user's permission; and by law a seller must offer, in a sales conversation, to go over the user's health covers as shown on the site and reflect which covers already exist.",
+      "source_url": "https://hit.cma.gov.il/faq/1006",
+      "raw_snippet": "סוכן או סוכנת הביטוח שלך או נציגים של חברת הביטוח יכולים להתחבר ולצפות בפרטי הביטוח שלך רק אם נתת להם אישור לכך. חשוב לדעת שעל פי החוק, בעת שיחת מכירת ביטוח, המוכר חייב להציע לך לעבור יחד איתו על ביטוחי הבריאות שלך כפי שהם מופיעים באתר",
+      "appears_in": [
+        "references/line-by-line-detail.md",
+        "references/line-by-line-detail-he.md"
+      ],
+      "claim_type": "official-source",
+      "confidence": "high",
+      "verified_via": "browser",
+      "verified_at": "2026-11-08T09:25:00Z",
+      "source_fetched_at": "2026-11-08T09:25:00Z",
+      "fetched_at": "2026-11-08T09:25:00Z",
+      "notes": "Read directly on the regulator's health area (public page, no login) with Claude in Chrome on 2026-11-08; snippet copied from the page text."
+    },
+    {
+      "id": "hit-faq-missing-policy-causes",
+      "claim": "Three reasons a health policy may be missing from the area: a privacy form at purchase, the monthly update not yet run for a recent policy, or a technical fault; the fallback is the insurer's personal area and the annual report the insurer must send.",
+      "source_url": "https://hit.cma.gov.il/faq/1006",
+      "raw_snippet": "התוכן באתר מבוסס על המידע שחברות הביטוח וקופות החולים מעבירות לרשות שוק ההון. מקרים בהם ייתכן שיהיה חסר מידע באתר: אם חתמת על טופס פרטיות: אם בזמן רכישת ביטוח,חתמת על טופס למניעת העברת מידע לאתר הביטוח, אותם ביטוחים לא יופיעו באתר. ... אם המידע באתר עוד לא התעדכן: המידע באתר מתעדכן אחת לחודש. אם הצטרפת לאחרונה לביטוח והוא לא מופיע כאן, יכול להיות שהמידע עדיין לא התעדכן ... אם חסר לנו מידע בגלל תקלה טכנית: ... או לבדוק באיזור האישי באתר של חברת הביטוח. בנוסף מומלץ לעיין בדוחות השנתיים שחברת הביטוח מחוייבת לשלוח לך אחת לשנה.",
+      "appears_in": [
+        "references/line-by-line-detail.md",
+        "references/line-by-line-detail-he.md"
+      ],
+      "claim_type": "official-source",
+      "confidence": "high",
+      "verified_via": "browser",
+      "verified_at": "2026-11-08T09:25:00Z",
+      "source_fetched_at": "2026-11-08T09:25:00Z",
+      "fetched_at": "2026-11-08T09:25:00Z",
+      "notes": "Read directly on the regulator's health area (public page, no login) with Claude in Chrome on 2026-11-08; snippet copied from the page text."
+    },
+    {
+      "id": "hit-faq-kefel-definition-and-examples",
+      "claim": "The site's own 'כפל ביטוח' notice means two or more covers for the same event; for reimbursement (שיפוי) covers recovery is capped at the treatment cost (worked example: two 80% surgery-abroad policies pay 80,000 then 16,000 on a 100,000 bill); for fixed-sum (פיצוי) covers each policy pays its sum (two 3,000 personal-accident policies pay 6,000).",
+      "source_url": "https://hit.cma.gov.il/faq/1003",
+      "raw_snippet": "כתוב באתר שיש לי 'כפל ביטוח'. מה זה אומר? במצב של 'כפל ביטוח', יש לך 2 ביטוחים או יותר שמכסים אותו מקרה. מה זה אומר? תלוי בסוג הביטוח. בביטוחים שכוללים החזר על הוצאות (שיפוי) אפשר לקבל החזר רק עד גובה עלות הטיפול. לדוגמה: יש לך שני ביטוחי ניתוחים בחו\"ל. כל אחד מהביטוחים מכסה 80% מעלות הניתוח. עברת ניתוח בחו\"ל ושילמת עבורו 100,000 ש\"ח. הגשת את הקבלה לחברת הביטוח הראשונה, והיא החזירה 80% מהסכום: 80,000 ש\"ח. לאחר מכן הגשת את הקבלה גם לחברת הביטוח השניה, והיא החזירה 80% משארית הסכום: 16,000 ש\"ח. בביטוחים שכוללים מענק (פיצוי) אפשר לקבל מ-2 הביטוחים את הסכום שמופיע בפוליסה. לדוגמה: יש לך שני ביטוחי תאונות אישיות. במקרה של תאונה, כל אחד מהביטוחים ייתן לך סכום קבוע של 3,000 ש\"ח. ... הגשת תביעה ל-2 חברות הביטוח, וקיבלת 6,000 ש\"ח בסך הכל (3,000 ש\"ח מכל חברה).",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/line-by-line-detail.md",
+        "references/line-by-line-detail-he.md",
+        "references/worked-examples.md",
+        "references/worked-examples-he.md"
+      ],
+      "claim_type": "official-source",
+      "confidence": "high",
+      "verified_via": "browser",
+      "verified_at": "2026-11-08T09:25:00Z",
+      "source_fetched_at": "2026-11-08T09:25:00Z",
+      "fetched_at": "2026-11-08T09:25:00Z",
+      "notes": "Read directly on the regulator's health area (public page, no login) with Claude in Chrome on 2026-11-08; snippet copied from the page text."
+    },
+    {
+      "id": "hit-faq-kefel-read-other-policies-first",
+      "claim": "The regulator's own advice on a 'כפל ביטוח' notice: check the policies in depth because not all are really needed, and before cancelling one read the terms of the others and confirm they are in force and give the cover wanted.",
+      "source_url": "https://hit.cma.gov.il/faq/1003",
+      "raw_snippet": "בכל מקרה של כפל ביטוח מומלץ לבדוק לעומק את פרטי הביטוחים - כי לא תמיד יש צורך אמיתי בכולם. לפני שמבטלים את אחד הביטוחים חשוב לקרוא את תנאי הביטוחים האחרים ולוודא שהם בתוקף ומעניקים לך את הכיסוי הרצוי.",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/line-by-line-detail.md",
+        "references/line-by-line-detail-he.md"
+      ],
+      "claim_type": "official-source",
+      "confidence": "high",
+      "verified_via": "browser",
+      "verified_at": "2026-11-08T09:25:00Z",
+      "source_fetched_at": "2026-11-08T09:25:00Z",
+      "fetched_at": "2026-11-08T09:25:00Z",
+      "notes": "Read directly on the regulator's health area (public page, no login) with Claude in Chrome on 2026-11-08; snippet copied from the page text."
+    },
+    {
+      "id": "hit-faq-hafifa-definition",
+      "claim": "The site uses 'חפיפה בכיסוי ביטוחי' for cover held through the kupa's שב\"ן and also through an insurer for a similar event, and tells the user to check the rights under each.",
+      "source_url": "https://hit.cma.gov.il/faq/1005",
+      "raw_snippet": "מה המשמעות של חפיפה בכיסוי ביטוחי? מצב שבו יש לך כיסוי דרך שירותי הבריאות הנוספים של קופת החולים וגם דרך חברת ביטוח המכסה מקרה דומה, כדאי לבדוק מה הזכויות שלך בכל כיסוי.",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/line-by-line-detail.md",
+        "references/line-by-line-detail-he.md"
+      ],
+      "claim_type": "official-source",
+      "confidence": "high",
+      "verified_via": "browser",
+      "verified_at": "2026-11-08T09:25:00Z",
+      "source_fetched_at": "2026-11-08T09:25:00Z",
+      "fetched_at": "2026-11-08T09:25:00Z",
+      "notes": "Read directly on the regulator's health area (public page, no login) with Claude in Chrome on 2026-11-08; snippet copied from the page text."
+    },
+    {
+      "id": "hit-faq-kefel-100pct-cap-and-fixed-sum",
+      "claim": "In 'כפל ביטוח' a reimbursement claim is paid by all insurers together at most 100% of the medical expense, while a fixed-sum claim is paid by each insurer in full regardless of the other; for personal-accident fixed-sum policies the site advises weighing whether more than one is needed.",
+      "source_url": "https://hit.cma.gov.il/faq/1005",
+      "raw_snippet": "מה המשמעות של כפל ביטוח? כשיש ברשותך כיסוי אחד או יותר עבור מקרה רפואי דומה. במצכ כזה ייתכן ותהיה השפעה על ההחזר הכספי שמגיע לך מחברת הביטוח. - במקרה של תביעה להחזר הוצאות עקב מקרה רפואי, ההחזר הכספי מכל חברות הביטוח יחד יהיה לכל היותר 100% מגובה ההוצאה הרפואית. - במקרה של תביעה לפיצוי כספי עקב מקרה רפואי, כל אחת מהחברות תצטרך לשלם לך את הסכום שהוגדר בפוליסה, בלי קשר אחת לשניה. בפוליסות פיצוי מסוג \"תאונות אישיות\" הסיכוי שתתבע את חברות הביטוח והפיצוי הכספי המשולם עבור תביעה יחסית נמוכים, לכן מומלץ לשקול את הצורך בתשלום על יותר מביטוח אחד מאותו הסוג.",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/line-by-line-detail.md",
+        "references/line-by-line-detail-he.md"
+      ],
+      "claim_type": "official-source",
+      "confidence": "high",
+      "verified_via": "browser",
+      "verified_at": "2026-11-08T09:25:00Z",
+      "source_fetched_at": "2026-11-08T09:25:00Z",
+      "fetched_at": "2026-11-08T09:25:00Z",
+      "notes": "Read directly on the regulator's health area (public page, no login) with Claude in Chrome on 2026-11-08; snippet copied from the page text ('במצכ' is the page's own typo). The same personal-accident sentence also appears under faq/1004."
+    },
+    {
+      "id": "hit-faq-cancel-15-days-and-stopped-payment",
+      "claim": "After a cancellation request the insurer must by law cancel within 15 days; stopping payment without a cancellation request lets the insurer demand the premium for that period.",
+      "source_url": "https://hit.cma.gov.il/faq/1005",
+      "raw_snippet": "לאחר הגשת הבקשה לביטול, חברת הביטוח מחוייבת לפי החוק לבטל את הביטוח בתוך 15 ימים. חשוב לדעת, במידה והפסקת את התשלום עבור הביטוח, מבלי שהגשת בקשה לביטול הפוליסה, חברת הביטוח יכולה לדרוש ממך תשלום עבור התקופה הזו.",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/line-by-line-detail.md",
+        "references/line-by-line-detail-he.md",
+        "references/cancellation-letter-he.md"
+      ],
+      "claim_type": "official-source",
+      "confidence": "high",
+      "verified_via": "browser",
+      "verified_at": "2026-11-08T09:25:00Z",
+      "source_fetched_at": "2026-11-08T09:25:00Z",
+      "fetched_at": "2026-11-08T09:25:00Z",
+      "notes": "Read directly on the regulator's health area (public page, no login) with Claude in Chrome on 2026-11-08; snippet copied from the page text."
+    },
+    {
+      "id": "hit-faq-regret-60-days-rejoin",
+      "claim": "A user who cancelled a private health policy and regrets it within the first 60 days of the cancellation may tell the insurer and re-join on the same terms.",
+      "source_url": "https://hit.cma.gov.il/faq/1002",
+      "raw_snippet": "במידה וביקשת לבטל פוליסת בריאות פרטית והתחרטת במהלך 60 הימים הראשונים לביטול, באפשרותך לעדכן בכך את חברת הביטוח ולהצטרף מחדש באותם תנאים.",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/line-by-line-detail.md",
+        "references/line-by-line-detail-he.md",
+        "references/cancellation-letter-he.md"
+      ],
+      "claim_type": "official-source",
+      "confidence": "high",
+      "verified_via": "browser",
+      "verified_at": "2026-11-08T09:25:00Z",
+      "source_fetched_at": "2026-11-08T09:25:00Z",
+      "fetched_at": "2026-11-08T09:25:00Z",
+      "notes": "Read directly on the regulator's health area (public page, no login) with Claude in Chrome on 2026-11-08; snippet copied from the page text."
+    },
+    {
+      "id": "hit-faq-cancel-checklist",
+      "claim": "Before cancelling, the regulator's checklist: the financial exposure without the cover, whether another cover already gives the same reimbursement or service, that a new application is re-priced on current health and age, and never cancel a policy replaced by a new one until the new insurer confirms acceptance.",
+      "source_url": "https://hit.cma.gov.il/faq/1002",
+      "raw_snippet": "במידה והביטול נעשה כי רכשת ביטוח חדש, אל תבטל אותו עד שלא תקבל אישור מחברת הביטוח החדשה שצורפת לפוליסה.",
+      "appears_in": [
+        "references/line-by-line-detail.md",
+        "references/line-by-line-detail-he.md"
+      ],
+      "claim_type": "official-source",
+      "confidence": "high",
+      "verified_via": "browser",
+      "verified_at": "2026-11-08T09:25:00Z",
+      "source_fetched_at": "2026-11-08T09:25:00Z",
+      "fetched_at": "2026-11-08T09:25:00Z",
+      "notes": "Read directly on the regulator's health area (public page, no login) with Claude in Chrome on 2026-11-08; snippet copied from the page text."
+    },
+    {
+      "id": "hit-faq-modular-basics-first-split-insurers",
+      "claim": "Anyone joining private cover for consultations and tests or Israeli surgery must first hold the basic covers (drugs, transplants, surgery abroad), and the basic layer and the add-ons may be bought from different insurers.",
+      "source_url": "https://hit.cma.gov.il/faq/1002",
+      "raw_snippet": "כן. ביטוחי תרופות, השתלות וניתוחים בחו\"ל נחשבים לביטוחי בסיס, כי הם מגנים עלינו ממצבים בהם מקרה רפואי נדיר יחסית, מוביל לעלויות כספיות גבוהות מאוד. רשות שוק ההון המפקחת על חברות הביטוח קבעה שכל מי שמעוניין להצטרף לביטוח פרטי עבור ייעוצים ובדיקות או ניתוחים בארץ, חייב קודם כל להצטרף לביטוחי הבסיס. ... לא חייבים להצטרף לכל הביטוחים דרך אותה החברה, אפשר להצטרף לביטוחי הבסיס בחברה אחת ולביטוחים נוספים בחברה אחרת.",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/line-by-line-detail.md",
+        "references/line-by-line-detail-he.md"
+      ],
+      "claim_type": "official-source",
+      "confidence": "high",
+      "verified_via": "browser",
+      "verified_at": "2026-11-08T09:25:00Z",
+      "source_fetched_at": "2026-11-08T09:25:00Z",
+      "fetched_at": "2026-11-08T09:25:00Z",
+      "notes": "Read directly on the regulator's health area (public page, no login) with Claude in Chrome on 2026-11-08; snippet copied from the page text."
+    },
+    {
+      "id": "hit-faq-shipui-hesder-pitzui-typology",
+      "claim": "The regulator's consumer typology has three payment types, under the headings 'החזר (שיפוי)', 'הסדר' and 'מענק (פיצוי)': reimbursement of defined expenses against receipts, claimable from several policies up to the total expense; a pre-approved treatment with a listed provider that the insurer then settles directly with the provider; and a one-off pre-set sum paid even with no expense, claimable from each policy separately.",
+      "source_url": "https://hit.cma.gov.il/faq/1004",
+      "raw_snippet": "מה זה 'שיפוי', 'הסדר' ו'פיצוי'? מה ההבדל ביניהם? שיפוי, פיצוי והסדר הם סוגים שונים של החזר כספי שחברת הביטוח מתחייבת לתת לך במקרה של תביעה: החזר (שיפוי) החזר כספי מלא או חלקי על הוצאות רפואיות המוגדרות בפוליסה, למשל: החזר כספי על ייעוץ רפואי שקיבלת. בדרך כלל ההחזר יבוצע רק לאחר הגשת קבלות תשלום לחברת הביטוח. אם יש מספר פוליסות עם כיסוי דומה, יהיה ניתן לתבוע החזר כספי מכמה פוליסות עד לקבלת סכום כולל השווה לסכום ההוצאה הרפואית. ... הסדר החזר כספי עבור הוצאה רפואית שבוצעה מול אחד מנותני השירות שהוגדרו מראש על ידי חברת הביטוח. במקרים כאלו עוד לפני ביצוע הטיפול הרפואי, יש לבקש אישור מחברת הביטוח להחזר כספי עבור טיפול שיבוצע על ידי נותן השירות. לאחר שחברת הביטוח תאשר את הבקשה, היא תסדיר את התשלום ישירות מול נותן השירות ובכך נחסך ממך לשלם עבור השירות. (בחלק מהפוליסות מוגדר סכום של השתתפות עצמית של המבוטח). ... מענק (פיצוי) תשלום חד פעמי הניתן על ידי חברת הביטוח במקרה של אירוע רפואי שהוגדר בפוליסה. התשלום החד פעמי הוא בהתאם לסכומים שהוגדרו מראש בפוליסה והוא ישולם לך גם לא נגרמה לך הוצאה כספית עקב המקרה הרפואי. אם יש לך שתי פוליסות עם כיסוי דומה אפשר לקבל תשלום פיצוי מכל פוליסה בנפרד.",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/line-by-line-detail.md",
+        "references/line-by-line-detail-he.md"
+      ],
+      "claim_type": "official-source",
+      "confidence": "high",
+      "verified_via": "browser",
+      "verified_at": "2026-11-08T09:25:00Z",
+      "source_fetched_at": "2026-11-08T09:25:00Z",
+      "fetched_at": "2026-11-08T09:25:00Z",
+      "notes": "Read directly on the regulator's health area (public page, no login) with Claude in Chrome on 2026-11-08; snippet copied from the page text."
+    },
+    {
+      "id": "hit-faq-group-ltc-continuity-right",
+      "claim": "Per the regulator's FAQ, a member who joined or renewed group LTC from 1.7.2004 must, after three consecutive years, be allowed to move to a similar individual LTC policy without new medical underwriting (whether an insurer still offers such a policy is a separate question).",
+      "source_url": "https://hit.cma.gov.il/faq/1004",
+      "raw_snippet": "אם הצטרפת או חידשת ביטוח סיעודי קבוצתי החל מ-1.7.2004, אחריי תקופת ביטוח של שלוש שנים רצופות, חברת הביטוח חייבת לאפשר לכם לעבור לפוליסת סיעוד אישית דומה, בלי לבדוק מחדש את המצב הרפואי שלכם.",
+      "appears_in": [
+        "references/line-by-line-detail.md",
+        "references/line-by-line-detail-he.md"
+      ],
+      "claim_type": "official-source",
+      "confidence": "high",
+      "verified_via": "browser",
+      "verified_at": "2026-11-08T09:25:00Z",
+      "source_fetched_at": "2026-11-08T09:25:00Z",
+      "fetched_at": "2026-11-08T09:25:00Z",
+      "notes": "Read directly on the regulator's health area (public page, no login) with Claude in Chrome on 2026-11-08; snippet copied from the page text."
+    },
+    {
+      "id": "hit-faq-ltc-multiple-policies-allowed",
+      "claim": "The regulator's FAQ states that one may hold several LTC policies in parallel to raise the benefit or its duration, and that the kupa group policies' monthly benefit and payment period are uniform across kupot.",
+      "source_url": "https://hit.cma.gov.il/faq/1000",
+      "raw_snippet": "אפשר להצטרף למספר פוליסות סיעוד במקביל ובכך להגדיל את גובה או תקופת התשלום. ... ביטוח דרך קופת החולים: ביטוח סיעודי קבוצתי של חברת ביטוח שמיועד לחברי קופות החולים. ... גובה הקצבה החודשית ותקופת התשלום אחידות בין ביטוחי הסיעוד של הקופות שונות.",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/line-by-line-detail.md",
+        "references/line-by-line-detail-he.md"
+      ],
+      "claim_type": "official-source",
+      "confidence": "high",
+      "verified_via": "browser",
+      "verified_at": "2026-11-08T09:25:00Z",
+      "source_fetched_at": "2026-11-08T09:25:00Z",
+      "fetched_at": "2026-11-08T09:25:00Z",
+      "notes": "Read directly on the regulator's health area (public page, no login) with Claude in Chrome on 2026-11-08; snippet copied from the page text."
+    },
+    {
+      "id": "hit-faq-ltc-kupa-switch-automatic",
+      "claim": "On switching kupa the kupa group LTC policy moves to the new kupa automatically; the FAQ advises confirming with the new kupa that it is active.",
+      "source_url": "https://hit.cma.gov.il/faq/1000",
+      "raw_snippet": "במקרה של מעבר בין קופות החולים גם הביטוח הסיעודי דרך קופת החולים עובר לקופה החדשה באופן אוטומטי. ליתר ביטחון, כדאי לוודא מול שירות הלקוחות של החברה החדשה שהביטוח הסיעודי מעודכן ופעיל.",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/line-by-line-detail.md",
+        "references/line-by-line-detail-he.md"
+      ],
+      "claim_type": "official-source",
+      "confidence": "high",
+      "verified_via": "browser",
+      "verified_at": "2026-11-08T09:25:00Z",
+      "source_fetched_at": "2026-11-08T09:25:00Z",
+      "fetched_at": "2026-11-08T09:25:00Z",
+      "notes": "Read directly on the regulator's health area (public page, no login) with Claude in Chrome on 2026-11-08; snippet copied from the page text."
+    },
+    {
+      "id": "hit-faq-ltc-kupa-plus-insurer-two-claims",
+      "claim": "Holding the kupa LTC policy and an insurer's LTC policy can pay from both but not necessarily: two separate claims, each assessed on its own policy terms.",
+      "source_url": "https://hit.cma.gov.il/faq/1000",
+      "raw_snippet": "כן אך לא בהכרח. במקרה של תביעת סיעוד עלייך להגיש שתי תביעות נפרדות עבור כל אחד מהביטוחים. כל תביעה תיבדק בהתאם לתנאי הפוליסה",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/line-by-line-detail.md",
+        "references/line-by-line-detail-he.md"
+      ],
+      "claim_type": "official-source",
+      "confidence": "high",
+      "verified_via": "browser",
+      "verified_at": "2026-11-08T09:25:00Z",
+      "source_fetched_at": "2026-11-08T09:25:00Z",
+      "fetched_at": "2026-11-08T09:25:00Z",
+      "notes": "Read directly on the regulator's health area (public page, no login) with Claude in Chrome on 2026-11-08; snippet copied from the page text."
+    },
+    {
+      "id": "hit-faq-ltc-paid-up-values-status-page",
+      "claim": "Some LTC policies carry paid-up values (ערכי סילוק), a reduced monthly benefit after cancellation; the health area's 'תמונת מצב' page shows the policy type and whether it includes them, and the user should confirm with the insurer before cancelling.",
+      "source_url": "https://hit.cma.gov.il/faq/1000",
+      "raw_snippet": "בחלק מהפוליסות קיימת אפשרות לתבוע את חברת הביטוח ולקבל תשלום חודשי מופחת (\"ערכי סילוק\"). באתר זה, בעמוד \"תמונת מצב\" אפשר לראות את סוג הביטוח שלך והאם הוא כולל \"ערכי סילוק\".",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/line-by-line-detail.md",
+        "references/line-by-line-detail-he.md"
+      ],
+      "claim_type": "official-source",
+      "confidence": "high",
+      "verified_via": "browser",
+      "verified_at": "2026-11-08T09:25:00Z",
+      "source_fetched_at": "2026-11-08T09:25:00Z",
+      "fetched_at": "2026-11-08T09:25:00Z",
+      "notes": "Read directly on the regulator's health area (public page, no login) with Claude in Chrome on 2026-11-08; snippet copied from the page text."
+    },
+    {
+      "id": "hit-faq-ltc-adl-generic-50pct-and-cognitive",
+      "claim": "The regulator's consumer FAQ still describes the LTC trigger generically as inability to perform at least 50% of the six ADL activities, and adds that for LTC joined after 2005 cognitive frailty (תשישות נפש) also qualifies; this generic wording predates the 1.1.2025 group-policy amendment and is not the group policies' current four-of-six test.",
+      "source_url": "https://hit.cma.gov.il/faq/1001",
+      "raw_snippet": "מי שלא מסוגל לבצע לפחות 50% מהפעולות הללו מוגדר כסיעודי. במידה והצטרפת לביטוח סיעודי אחרי שנת 2005 ההגדרה היא שגם הסובלים מתשישות נפש- כלומר, ירידה משמעותית ביכולת הקוגנטיבית וזקוקים להשגחה.",
+      "appears_in": [
+        "references/line-by-line-detail.md",
+        "references/line-by-line-detail-he.md"
+      ],
+      "claim_type": "official-source",
+      "confidence": "high",
+      "verified_via": "browser",
+      "verified_at": "2026-11-08T09:25:00Z",
+      "source_fetched_at": "2026-11-08T09:25:00Z",
+      "fetched_at": "2026-11-08T09:25:00Z",
+      "notes": "Read directly on the regulator's health area (public page, no login) with Claude in Chrome on 2026-11-08; snippet copied from the page text."
+    },
+    {
+      "id": "hit-faq-limitation-3-to-5-years",
+      "claim": "The regulator's FAQ puts the limitation period for a health claim at usually three to five years from the medical event, stated in the policy terms.",
+      "source_url": "https://hit.cma.gov.il/faq/1001",
+      "raw_snippet": "בדרך כלל מדובר בתקופה של בין שלוש לחמש שנים מרגע המקרה הרפואי. תקופת ההתיישנות מצויינת בתנאי הפוליסה",
+      "appears_in": [
+        "references/claims-and-escalation.md",
+        "references/claims-and-escalation-he.md"
+      ],
+      "claim_type": "official-source",
+      "confidence": "high",
+      "verified_via": "browser",
+      "verified_at": "2026-11-08T09:25:00Z",
+      "source_fetched_at": "2026-11-08T09:25:00Z",
+      "fetched_at": "2026-11-08T09:25:00Z",
+      "notes": "Read directly on the regulator's health area (public page, no login) with Claude in Chrome on 2026-11-08; snippet copied from the page text."
+    },
+    {
+      "id": "hit-faq-terms-fixed-pre-2016-updated-post-2016",
+      "claim": "Health policies joined before 2016 keep fixed terms while active and paid; policies joined after 2016 are updated automatically every two years, and a material change in premium or cover needs the insured's consent.",
+      "source_url": "https://hit.cma.gov.il/faq/1007",
+      "raw_snippet": "אם הצטרפת לביטוח בריאות לפני שנת 2016 כל עוד הביטוח פעיל ומשולם התנאים בו קבועים ולא ניתנים לשינוי, אלא אם כן מדובר בהסכמה הדדית שלך ושל חברת הביטוח. אם הצטרפת לביטוח בריאות אחרי שנת 2016 תנאי הביטוח המופיעים בפוליסה מתעדכנים באופן אוטומטי אחת לשנתיים, כדי להתאים את הכיסויים הביטוחיים לטיפולים וגישות רפואיות חדשות. אם יש שינוי מהותי בעלות החודשית או בתנאי הכיסויים, חברת הביטוח חייבת לקבל את הסכמתך לעדכון.",
+      "appears_in": [
+        "references/line-by-line-detail.md",
+        "references/line-by-line-detail-he.md"
+      ],
+      "claim_type": "official-source",
+      "confidence": "high",
+      "verified_via": "browser",
+      "verified_at": "2026-11-08T09:25:00Z",
+      "source_fetched_at": "2026-11-08T09:25:00Z",
+      "fetched_at": "2026-11-08T09:25:00Z",
+      "notes": "Read directly on the regulator's health area (public page, no login) with Claude in Chrome on 2026-11-08; snippet copied from the page text."
+    },
+    {
+      "id": "hit-faq-switching-insurer-waiting-period",
+      "claim": "When moving health cover to another insurer, new cover may start only after a waiting period, so the old policy may have to be kept until the new one is in force, and nothing is in force until the insurer's final acceptance.",
+      "source_url": "https://hit.cma.gov.il/faq/1002",
+      "raw_snippet": "הביטוח שלך לא נכנס לתוקף עד קבלת אישור סופי מחברת הביטוח, לכן כדאי לקבל את האישור ורק לאחר מכן לבטל את הכיסוי הישן.",
+      "appears_in": [
+        "references/line-by-line-detail.md",
+        "references/line-by-line-detail-he.md"
+      ],
+      "claim_type": "official-source",
+      "confidence": "high",
+      "verified_via": "browser",
+      "verified_at": "2026-11-08T09:25:00Z",
+      "source_fetched_at": "2026-11-08T09:25:00Z",
+      "fetched_at": "2026-11-08T09:25:00Z",
+      "notes": "Read directly on the regulator's health area (public page, no login) with Claude in Chrome on 2026-11-08; snippet copied from the page text."
+    },
+    {
+      "id": "hit-faq-escalation-route",
+      "claim": "The regulator's own escalation route: the insurer's public-complaints department in writing first, then a complaint through the public-inquiries route on the Capital Market Authority's site as the supervising body.",
+      "source_url": "https://hit.cma.gov.il/faq/1001",
+      "raw_snippet": "במידה ואינך מרוצה גם מהתשובה שקיבלת ממחלקת פניות הציבור, אפשר להעביר תלונה על חברת הביטוח דרך פניות הציבור באתר של רשות שוק ההון שהיא הגוף המפקח על חברות הביטוח.",
+      "appears_in": [
+        "references/claims-and-escalation.md",
+        "references/claims-and-escalation-he.md"
+      ],
+      "claim_type": "official-source",
+      "confidence": "high",
+      "verified_via": "browser",
+      "verified_at": "2026-11-08T09:25:00Z",
+      "source_fetched_at": "2026-11-08T09:25:00Z",
+      "fetched_at": "2026-11-08T09:25:00Z",
+      "notes": "Read directly on the regulator's health area (public page, no login) with Claude in Chrome on 2026-11-08; snippet copied from the page text."
+    },
+    {
+      "id": "hit-login-national-identification",
+      "claim": "The health area's login goes through the national identification system (login.gov.il): a password login with ID number (the route the site opens is named usernamePasswordSMSOtp, i.e. password plus SMS one-time code), or a biometric ID card or smart card.",
+      "source_url": "https://hit.cma.gov.il/sso/current-state",
+      "raw_snippet": "מערכת הזדהות לאומית ... הזדהות וכניסה לשירות מבוקש ... כניסה עם סיסמה ... מספר זהות בן 9 ספרות (כולל ספרת ביקורת) ... סיסמה ... דרכים נוספות להזדהות ... תעודת זהות ביומטרית ... כרטיס חכם",
+      "appears_in": [
+        "references/line-by-line-detail.md",
+        "references/line-by-line-detail-he.md"
+      ],
+      "claim_type": "official-source",
+      "confidence": "high",
+      "verified_via": "browser",
+      "verified_at": "2026-11-08T09:25:00Z",
+      "source_fetched_at": "2026-11-08T09:25:00Z",
+      "fetched_at": "2026-11-08T09:25:00Z",
+      "notes": "Landing page reached from hit.cma.gov.il/sso/current-state on 2026-11-08; redirected to https://login.gov.il/nidp/saml2/sso?id=usernamePasswordSMSOtp&option=credential. Nothing was entered. The SMS step is inferred from the route name, not from page text."
+    },
+    {
+      "id": "hit-faq-appeal-rejected-claim",
+      "source_url": "https://hit.cma.gov.il/faq/1003",
+      "claim": "On a rejected claim the regulator's FAQ tells the user to appeal to the insurer in writing, stating why the rejection is wrong and attaching medical documents, expert opinions or references to law; the appeal can be written alone without consulting a lawyer.",
+      "raw_snippet": "אם חברת הביטוח דחתה את התביעה שלך, באפשרותך להגיש ערעור על ההחלטה. ... יש לפרט בכתב מדוע ההחלטה לדחות את התביעה היא שגויה בעינייך ולצרף מסמכים רלוונטיים לטענות שלך- מסמכים רפואיים, חוות דעת של מומחים, הפניה לחוקים וכדומה. ... חשוב שתדע- את בקשת הערעור אפשר לכתוב לבד ולא חייבים להתייעץ עם עורך דין.",
+      "appears_in": [
+        "references/claims-and-escalation.md",
+        "references/claims-and-escalation-he.md"
+      ],
+      "claim_type": "official-source",
+      "confidence": "high",
+      "verified_via": "browser",
+      "verified_at": "2026-11-08T09:25:00Z",
+      "source_fetched_at": "2026-11-08T09:25:00Z",
+      "fetched_at": "2026-11-08T09:25:00Z",
+      "notes": "Read directly on the regulator's health area (public page, no login) with Claude in Chrome on 2026-11-08; snippet copied from the page text."
+    },
+    {
+      "id": "hit-faq-ltc-appeal-routes",
+      "source_url": "https://hit.cma.gov.il/faq/1000",
+      "claim": "The insurer must explain the reason for rejecting an LTC claim, and an appeal with supporting medical documents can go through the insurer, the Capital Market Authority or the court.",
+      "raw_snippet": "חברת הביטוח חייבת להסביר לך את הסיבה לדחיית התביעה. אם ברצונך לערער על החלטת החברה ויש לך מסמכים רפואיים שמעידים על מצבך הרפואי, אפשר להגיש ערעור דרך חברת הביטוח, רשות שוק ההון, או בית המשפט.",
+      "appears_in": [
+        "references/claims-and-escalation.md",
+        "references/claims-and-escalation-he.md"
+      ],
+      "claim_type": "official-source",
+      "confidence": "high",
+      "verified_via": "browser",
+      "verified_at": "2026-11-08T09:25:00Z",
+      "source_fetched_at": "2026-11-08T09:25:00Z",
+      "fetched_at": "2026-11-08T09:25:00Z",
+      "notes": "Read directly on the regulator's health area (public page, no login) with Claude in Chrome on 2026-11-08; snippet copied from the page text."
+    },
+    {
+      "id": "clalit-ltc-page-no-ayalon-notice-2026-11",
+      "source_url": "https://mushlam.clalit.co.il/he/gold/siudi/Pages/siudi_info.aspx",
+      "claim": "As of 8.11.2026 Clalit's own LTC information page still presents the policy as operated by and under the responsibility of הראל, states the period 1.1.2025 to 31.12.2026, and carries no notice about איילון or 2027; the Ayalon transfer therefore remains sourced to press reports of Clalit's 16.8.2026 announcement.",
+      "raw_snippet": "לידיעתכם, הביטוח הסיעודי ללקוחות כללית באמצעות חברת הראל חברה לביטוח הוארך: תקופת הביטוח החדשה תהיה החל מיום 1.1.2025 (מועד חידוש הפוליסה) ועד ליום 31.12.2026 ... הפוליסה היא באמצעות ובאחריות הראל חברה לביטוח בע\"מ.",
+      "appears_in": [
+        "references/line-by-line-detail.md",
+        "references/line-by-line-detail-he.md",
+        "references/domain-checklist.md",
+        "references/reference-links.md",
+        "references/reference-links-he.md"
+      ],
+      "claim_type": "official-source",
+      "confidence": "high",
+      "verified_via": "browser",
+      "verified_at": "2026-11-08T10:30:00Z",
+      "source_fetched_at": "2026-11-08T10:30:00Z",
+      "fetched_at": "2026-11-08T10:30:00Z",
+      "notes": "Clalit Mushlam's own LTC information page, rendered in Claude in Chrome on 2026-11-08 (the WebFetch text layer of this SharePoint page returned an older version with 5,500/4,500/3,500 and a 2018 premium table; the browser render is the live page)."
+    },
+    {
+      "id": "clalit-ltc-kupa-switch-consent-180-days",
+      "source_url": "https://mushlam.clalit.co.il/he/gold/siudi/Pages/siudi_info.aspx",
+      "claim": "Per Clalit's page, LTC continuity on switching kupa depends on the member approving, at registration with the new kupa, the transfer of entitlement data (checked through הר הביטוח); without that approval there is no continuous LTC cover unless the previous insurer's certificate is sent within 180 days of the switch.",
+      "raw_snippet": "בעת הרישום לקופה החדשה, עליך לציין אם אתה מאשר/ת העברת נתוני הזכאות מהביטוח הסיעודי במסגרת הביטוח של הקופה הקודמת. אם מסומן אישור, יעברו הפרטים להר הביטוח לבדיקה. במידה ולא סימנת כי הנך מאשר/ת את העברת המידע, לא יועברו הפרטים ולא יהיה ביטוח סיעודי ברצף. ... את אישור הביטוח עליך להמציא בתוך 180 ימים ממועד המעבר.",
+      "appears_in": [
+        "SKILL.md",
+        "SKILL_HE.md",
+        "references/line-by-line-detail.md",
+        "references/line-by-line-detail-he.md"
+      ],
+      "claim_type": "official-source",
+      "confidence": "high",
+      "verified_via": "browser",
+      "verified_at": "2026-11-08T10:30:00Z",
+      "source_fetched_at": "2026-11-08T10:30:00Z",
+      "fetched_at": "2026-11-08T10:30:00Z",
+      "notes": "Clalit Mushlam's own LTC information page, rendered in Claude in Chrome on 2026-11-08 (the WebFetch text layer of this SharePoint page returned an older version with 5,500/4,500/3,500 and a 2018 premium table; the browser render is the live page)."
+    },
+    {
+      "id": "clalit-ltc-2025-amendment-definitions",
+      "source_url": "https://mushlam.clalit.co.il/he/gold/siudi/Pages/siudi_info.aspx",
+      "claim": "Clalit's page states that from 1.1.2025 premiums and benefit amounts did not change, while the group-LTC regulations amendment changed the policy definitions: a claim needs either specialist-determined תשישות נפש (cognitive impairment requiring supervision most of the day, e.g. Alzheimer's or dementias) or inability to perform a substantial part (at least 50%) of at least 4 of the 6 ADL, or 3 where one is continence.",
+      "raw_snippet": "לידיעתכם, החל מה- 1.1.2025 לא יחול שינוי בגובה דמי הביטוח ובסכומי תגמולי הביטוח. עם זאת, בעקבות תיקון הוראות הפיקוח על שירותים פיננסים (ביטוח) (ביטוח סיעודי קבוצתי לחברי קופת חולים), תשע\"ו- 2015, יחולו בפוליסות של הביטוח הסיעודי מספר שינוים. ... א. תשישות נפש שנקבעה על ידי רופא מומחה בתחום; ... הדורשים השגחה במרבית שעות היממה ... ב. מצב בריאות ותפקוד ירודים אשר בשלו המבוטח אינו יכול לבצע בכוחות עצמו חלק מהותי (לפחות 50% מהפעולה) של 4 פעולות לפחות, או 3 פעולות לפחות, אשר אחת מהן היא שליטה בסוגרים",
+      "appears_in": [
+        "references/line-by-line-detail.md",
+        "references/line-by-line-detail-he.md",
+        "references/domain-checklist.md"
+      ],
+      "claim_type": "official-source",
+      "confidence": "high",
+      "verified_via": "browser",
+      "verified_at": "2026-11-08T10:30:00Z",
+      "source_fetched_at": "2026-11-08T10:30:00Z",
+      "fetched_at": "2026-11-08T10:30:00Z",
+      "notes": "Clalit Mushlam's own LTC information page, rendered in Claude in Chrome on 2026-11-08 (the WebFetch text layer of this SharePoint page returned an older version with 5,500/4,500/3,500 and a 2018 premium table; the browser render is the live page)."
+    },
+    {
+      "id": "clalit-ltc-premium-table-children-free",
+      "source_url": "https://mushlam.clalit.co.il/he/gold/siudi/Pages/siudi_info.aspx",
+      "claim": "Clalit's premium table (stated as correct for 01/11/2026, CPI-indexed) charges 0 for ages 0-17, so a child's line in the kupa group LTC costs nothing and is never a cut candidate; benefit sums are indexed to the CPI published 15.12.23 and are uniform across the kupot by age at joining.",
+      "raw_snippet": "0-17 0 ... * התעריף נכון לתאריך 01/11/2026, ומתעדכן בהתאם למדד ובכפוף לפוליסת הסיעוד. ... סכומי הביטוח החודשיים צמודים למדד כאשר מדד הבסיס הוא זה שפורסם ב -15.12.23 ... קיימת אחידות מלאה בתנאי הזכאות לתגמולי ביטוח, בסכום תגמולי הביטוח ובתקופת תשלום תגמולי הביטוח אשר יהיו אחידים בכל הקופות בהתאם לגיל ההצטרפות של המבוטח.",
+      "appears_in": [
+        "references/line-by-line-detail.md",
+        "references/line-by-line-detail-he.md"
+      ],
+      "claim_type": "official-source",
+      "confidence": "high",
+      "verified_via": "browser",
+      "verified_at": "2026-11-08T10:30:00Z",
+      "source_fetched_at": "2026-11-08T10:30:00Z",
+      "fetched_at": "2026-11-08T10:30:00Z",
+      "notes": "Clalit Mushlam's own LTC information page, rendered in Claude in Chrome on 2026-11-08 (the WebFetch text layer of this SharePoint page returned an older version with 5,500/4,500/3,500 and a 2018 premium table; the browser render is the live page)."
     }
   ]
 }

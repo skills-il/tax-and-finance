@@ -1,0 +1,11 @@
+covered_person,benefit,tier,monthly_premium,overlaps_with,reversible,verdict,flags
+Dani,רכב מקיף (includes צד ג' chapter),נכס/אחריות,340,row 2,yes annual policy,NOT A DUPLICATION,
+Dani,Standalone צד ג' bought separately,נכס/אחריות,95,row 1,yes annual policy,REAL WASTE,
+Dani + Maya,ביטוח מבנה tied to the mortgage,נכס,88,row 4,"yes, 451 allows cancelling without fee",REAL WASTE,mortgage_linked
+Dani + Maya,מבנה section of separate ביטוח דירה,נכס,included,row 3,yes,CAPPED,
+Children,Group dental via Dani's employer,שיפוי,62,"rows 6, 7","group, ends with the job",REAL WASTE,
+Children,Group dental via Maya's employer,שיפוי,58,"rows 5, 7","group, ends with the job",CAPPED,
+Children,Basket dental (under 18),שיפוי,0,"rows 5, 6",n/a statutory,NOT A DUPLICATION,
+Children,ביטוח תאונות אישיות לתלמידים (compulsory),פיצוי,69/yr,row 9,n/a statutory,NOT A DUPLICATION,
+Child (14),Private personal-accident rider,פיצוי,29,row 8,underwritten,LEGITIMATE STACKING,
+Maya,אכ"ע private policy (pre-agreed % of salary),פיצוי,180,,underwritten,NOT A DUPLICATION,

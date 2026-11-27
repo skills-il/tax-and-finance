@@ -20,18 +20,23 @@ attaches to the BENEFIT, not to the policy: one contract can sit in two tiers.
 
 ## Who the skill is actually for
 
-The שקל ראשון reform took effect in June 2024 and applied to individual policies
-only, catching those bought after February 2016 whose holder was also in a שב"ן.
-The reversal window ran to 31 May 2025, a year from the transfer, but some
-insurers extended their own, so it is a question to ask rather than a closed door.
+The reform has two dates. New-sales rules (the modular structure, משלים שב"ן as
+the default for שב"ן members, the duty to show the candidate's שב"ן surgery cover
+"כפי שמופיע באתר הר הביטוח") took effect on 1.10.2023. The automatic transfer took
+effect in June 2024 and applied to individual policies only, catching those bought
+between February 2016 and 30.9.2023 whose holder was also in a שב"ן. The reversal
+window ran to 31 May 2025, a year from the transfer, but some insurers extended
+their own, and press reporting (Calcalist, May 2025) puts the returners at about
+42% of the roughly 636,000 transferred, so it is a question to ask rather than a
+closed door.
 The GROUP market was affected far less and with delay, because group policies
 update only every few years under the policyholder-insurer agreement, so much
 group surgery cover is still מהשקל הראשון. **Do NOT assert that group policies
 were never auto-converted**: that was checked in the 2026-08-13 cycle and no
 source supports it, and one industry source points the other way. Anyone who
 bought individually before February 2016 was not caught either. Group-policy
-holders and pre-2016 buyers remain the core audience; have them check their own
-policy rather than being told a categorical rule.
+holders, pre-2016 buyers and the returners remain the core audience; have them
+check their own policy rather than being told a categorical rule.
 
 ## Non-negotiables
 
@@ -48,15 +53,23 @@ policy rather than being told a categorical rule.
   two exceptions that still need an audit: near-identical מחלות קשות condition
   lists (compare and cut on price), and שאירים cover for a member with no
   שאירים (a waiver exists, but re-adding it permits medical underwriting).
-- הר הביטוח holds no שב"ן data, no travel policy of three months or less, no standalone service-company
-  subscriptions and no card benefits. It DOES list the insurer-issued כתבי שירות
-  next to the policies, with the premium paid, so audit those from the file.
-  It also carries the kupot group סיעוד, reported since 1.1.2018 and layer by layer
-  since 1.6.2021
-  (חוזר 2021-1-3); an older version of this skill said the opposite.
-  It also opens files for a minor, a deceased relative and a person under
-  guardianship. The only official domain is `harb.cma.gov.il`. The pension internals
-  come from המסלקה הפנסיונית instead, at `swiftness.co.il`.
+- The main הר הביטוח register lists no שב"ן plan as a product, no travel policy of
+  three months or less, no standalone service-company subscriptions and no card
+  benefits. It DOES list the insurer-issued כתבי שירות next to the policies, with
+  the premium paid, so audit those from the file. It also carries the kupot group
+  סיעוד, reported since 1.1.2018 and layer by layer since 1.6.2021 (חוזר 2021-1-3);
+  an older version of this skill said the opposite. Its health area
+  (`hit.cma.gov.il`, created by רשות שוק ההון with מערך הדיגיטל הלאומי) lists the
+  user's health covers with the monthly price and reports 'כפל ביטוח'; its FAQ
+  uses 'חפיפה בכיסוי ביטוחי' for שב"ן against an insurer and the payment types
+  'החזר (שיפוי)', 'הסדר', 'מענק (פיצוי)'. Kupa data refreshes daily, insurer data
+  monthly; it currently shows the logged-in adult only, no children or spouse;
+  a privacy opt-out signed at purchase may hide a policy. Two older versions said
+  הר הביטוח held no שב"ן data at all. It is an inventory aid, never the verdict.
+  The main register also opens files for a minor, a deceased relative and a
+  person under guardianship. The official domains are `harb.cma.gov.il` and
+  `hit.cma.gov.il`. The pension internals come from המסלקה הפנסיונית instead, at
+  `swiftness.co.il`.
 - Run the inventory per ADULT. A household verdict from one file is unsafe.
 - Cancellation by the insured takes effect after three days, not fifteen. The
   consumer-protection distance-selling withdrawal does not apply to insurers.
@@ -102,7 +115,27 @@ These were searched for this cycle and NOT established. Do not fill from memory.
   Comptroller report treats the arrangement as operating, and Clalit's own page
   gives its current policy term as running to 31.12.2026.
 - Whether receiving גמלת סיעוד from ביטוח לאומי offsets a policy payout.
-- Any successor arrangement to the group סיעוד policy.
+- Any successor arrangement to the group סיעוד policy as a done thing. The
+  regulator's October 2026 split-by-age model (under-55 personal accumulation,
+  55+ closed group) is a press-notice proposal that needs legislation; name it as
+  a proposal only, with no date.
+- Anything about the Clalit-to-איילון transfer beyond what Clalit announced on
+  16.8.2026 as reported in the press: start 1.1.2027, terms unchanged, automatic,
+  claims routed by the date of the insured event. The secondary-source extras (no
+  new health declaration, running payments stay with הראל) may be relayed only as
+  "reported, confirm with the kupa". Clalit's own LTC page was read on 8.11.2026:
+  it still names הראל for 1.1.2025-31.12.2026 and carries no 2027 notice, so no
+  Clalit document on the transfer exists yet; and the press disagree on the term
+  (three years plus options to eight / eight / 2027-2031), so give no length.
+- That the health area (hit.cma.gov.il) shows anything beyond what its own public
+  pages say (home, about and FAQ, read 8.11.2026, quoted in `evidence.json`).
+  Its vocabulary is 'כפל ביטוח' (insurer against insurer), 'חפיפה בכיסוי ביטוחי'
+  (שב"ן against insurer) and the payment types 'החזר (שיפוי)', 'הסדר' and
+  'מענק (פיצוי)'; the only personal screen it names is "תמונת מצב". The logged-in
+  cards were not read: do not describe their layout, colours or tag wording, and
+  do not repeat the older consumer-guide wording "חפיפה בין כיסויים" /
+  "פיצוי חד פעמי" as the site's. It shows the policyholder only: never send a
+  parent there for a child's covers.
 - That GROUP health policies were never auto-converted by the שקל ראשון reform.
   Searched 2026-08-13, not supported; the sourced position is "less, and with
   delay". Restate, never assert the absolute.
@@ -113,8 +146,11 @@ These were searched for this cycle and NOT established. Do not fill from memory.
   20 ₪ and 14 ש"ח for the same one-off all-products request.
 - Any reported cut to the at-home סיעוד benefit beyond what the June 2026
   Comptroller report states. The ADL threshold IS now sourced there (4 of 6, or 3
-  including continence, from December 2024) and may be stated; other eligibility
-  routes may not.
+  including continence; amendment published December 2024, in force 1.1.2025) and
+  may be stated. The only other eligibility route that may be stated is the
+  specialist-declared תשוש נפש that מכבי's and כללית's own pages give (Clalit's
+  page carries the definition verbatim), hedged to the user's policy wording; no
+  other route.
 - A circular number or effective date for a תאונות אישיות uniform-policy reform.
 - The group-to-individual conversion window and terms, any retroactive premium
   refund for שב"ן-duplicating cover, and any group-health specific כפל rule.
